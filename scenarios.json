@@ -1,0 +1,378 @@
+{
+  "defaults": {
+    "responseType": "template",
+    "guidelines": {
+      "important": [
+        "Verify order information first",
+        "Check inventory before promising availability",
+        "Offer discounts only when appropriate"
+      ],
+      "tone": [
+        "Close the convo once the client takes over",
+        "Don't use emojis/special characters",
+        "Be professional but friendly"
+      ],
+      "templates": [
+        "Use shipping template for delivery questions",
+        "Use discount template for promo code requests",
+        "Use fragrance finder template for recommendations"
+      ]
+    },
+    "rightPanel": {
+      "source": {
+        "label": "Source",
+        "value": "Initiated by Subscriber",
+        "date": "05/24/25"
+      },
+      "recommended": [
+        "Happy Eau De Parfum Spray 3.4 Oz",
+        "Lattafa Yara Eau De Parfum Spray 3.4 Oz",
+        "Armaf Club De Nuit Intense Edt Spray 3.6 Oz"
+      ],
+      "browsingHistory": [
+        {
+          "item": "Black Opium Eau De Parfum Spray 3...",
+          "timeAgo": "20 h ago",
+          "icon": "shopping-cart"
+        },
+        {
+          "item": "Replica Jazz Club Edt Refillable Spra...",
+          "timeAgo": "1 d ago",
+          "icon": "eye"
+        },
+        {
+          "item": "Mont Blanc Explorer Eau De Parfum ...",
+          "timeAgo": "1 d ago",
+          "icon": "shopping-cart"
+        }
+      ],
+      "templates": [
+        {
+          "name": "Shipping Policy",
+          "shortcut": "shp",
+          "content": "Our processing time takes 1-2 business days and we usually ship via USPS, UPS, Ontrac or FedEx. Once shipped it will take 4-7 business days domestically and 4-15 business days internationally."
+        },
+        {
+          "name": "Return Policy",
+          "shortcut": "rp",
+          "content": "We offer 30-day returns for unworn items. Please use our return portal or contact customer service for assistance."
+        }
+      ]
+    }
+  },
+  "scenarios": {
+    "1": {
+      "companyName": "FragranceNet",
+      "agentName": "Sarah",
+      "agentInitial": "F",
+      "customerPhone": "+1 401-588-0009",
+      "customerMessage": "Hey! I got a text with code WELCOME15 for 15% off. I added a $110 sweater to my cart, applied the code, but it didn't work?? Also why is it still trying to charge me $7.95 for shipping?",
+      "guidelines": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Don't use emojis/special characters"
+        ],
+        "templates": [
+          "For issues relating to free shipping with no minimum purchase, use \"FSB\" shortcut"
+        ]
+      },
+      "rightPanel": {
+        "promotions": {
+          "title": "Back to School Sale",
+          "active_status": "Active",
+          "content": [
+            "Extra 10% off orders over $100 (auto-applied at checkout)",
+            "Free gift on fragrance orders over $75 while supplies last"
+          ]
+        },
+        "recommended": [
+          "Chanel No. 5 Eau De Parfum 100ml",
+          "Tom Ford Black Orchid 50ml",
+          "Creed Aventus Eau De Parfum 120ml"
+        ],
+        "browsingHistory": [
+          {
+            "item": "Dior Sauvage Eau De Toilette 100ml",
+            "timeAgo": "2 h ago",
+            "icon": "shopping-cart"
+          },
+          {
+            "item": "Giorgio Armani Acqua Di Gio 100ml",
+            "timeAgo": "5 h ago",
+            "icon": "eye"
+          },
+          {
+            "item": "Versace Eros Eau De Toilette 100ml",
+            "timeAgo": "1 d ago",
+            "icon": "shopping-cart"
+          }
+        ],
+        "templates": [
+          {
+            "name": "Promo Code Help",
+            "shortcut": "promo",
+            "content": "I can help you with that promo code! Let me check the terms. WELCOME15 requires a minimum purchase of $75 and excludes sale items. I'll apply it manually for you."
+          },
+          {
+            "name": "Shipping Policy",
+            "shortcut": "ship",
+            "content": "We offer free shipping on orders over $99. For orders under $99, standard shipping is $7.95. Express shipping options are available."
+          },
+          {
+            "name": "Fragrance Finder",
+            "shortcut": "find",
+            "content": "Let me help you find the perfect fragrance! Can you tell me about scents you currently enjoy or what occasion this is for?"
+          }
+        ]
+      }
+    },
+    "2": {
+      "companyName": "ShirtHub",
+      "agentName": "Emma",
+      "agentInitial": "S",
+      "customerPhone": "+1 555-283-9471",
+      "customerMessage": "Hi, I need to return this shirt (Order #98765). It's unworn, I got it 20 days ago. The return portal link from your site gives me an error 'Return Not Allowed'. Can you just process it for me?",
+      "rightPanel": {
+        "recommended": [
+          "Classic Cotton Button-Down - White",
+          "Premium Polo Shirt - Navy",
+          "Casual Henley - Heather Gray"
+        ],
+        "browsingHistory": [
+          {
+            "item": "Dress Shirt - Blue Striped (Order #98765)",
+            "timeAgo": "20 d ago",
+            "icon": "shopping-cart"
+          },
+          {
+            "item": "Casual T-Shirt - Black",
+            "timeAgo": "25 d ago",
+            "icon": "eye"
+          },
+          {
+            "item": "Polo Shirt - White",
+            "timeAgo": "1 mo ago",
+            "icon": "shopping-cart"
+          }
+        ],
+        "templates": [
+          {
+            "name": "Return Processing",
+            "shortcut": "return",
+            "content": "I can help process your return! Our return window is 30 days for unworn items. Let me check your order and generate a return label for you."
+          },
+          {
+            "name": "Return Policy",
+            "shortcut": "rp",
+            "content": "We accept returns within 30 days of purchase. Items must be unworn with tags attached. We'll email you a prepaid return label."
+          },
+          {
+            "name": "Order Lookup",
+            "shortcut": "order",
+            "content": "Let me look up your order details. I can see your purchase history and help with any issues you're experiencing."
+          }
+        ]
+      }
+    },
+    "3": {
+      "companyName": "ElectroMart",
+      "agentName": "Marcus",
+      "agentInitial": "E",
+      "customerPhone": "+1 718-942-6583",
+      "customerMessage": "This is the THIRD time I'm messaging about my broken order #XYZ987! Your last agent 'escalated' it days ago but NOTHING! I'm done waiting. Consider this notice I'm contacting the Better Business Bureau and my lawyer about your defective products and terrible service",
+      "guidelines": {
+        "important": [
+          "De-escalate immediately with empathy",
+          "Offer immediate resolution options",
+          "Avoid making promises without manager approval",
+          "Document all interactions for legal compliance",
+          "Close every conversation"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Don't use emojis/special characters",
+          "Be professional but friendly"
+        ],
+        "templates": [
+          "Use shipping template for delivery questions",
+          "Use discount template for promo code requests",
+          "Use fragrance finder template for recommendations"
+        ]
+      },
+      "rightPanel": {
+        "source": {
+          "label": "Source",
+          "value": "Escalated Complaint",
+          "date": "07/25/25"
+        },
+        "recommended": [
+          "Replacement Unit Available",
+          "Full Refund Option",
+          "Store Credit + Bonus"
+        ],
+        "browsingHistory": [
+          {
+            "item": "Gaming Laptop XYZ987 (DEFECTIVE)",
+            "timeAgo": "15 d ago",
+            "icon": "alert-triangle"
+          },
+          {
+            "item": "Previous Support Chat #1",
+            "timeAgo": "10 d ago",
+            "icon": "message-circle"
+          },
+          {
+            "item": "Previous Support Chat #2",
+            "timeAgo": "5 d ago",
+            "icon": "message-circle"
+          }
+        ],
+        "templates": [
+          {
+            "name": "Escalation Apology",
+            "shortcut": "apology",
+            "content": "I sincerely apologize for the frustration and poor experience. This is absolutely not the service standard we strive for. Let me personally ensure we resolve this immediately."
+          },
+          {
+            "name": "Immediate Resolution",
+            "shortcut": "resolve",
+            "content": "I'm escalating this to my manager right now and we'll provide immediate options: full refund, replacement unit, or store credit with bonus compensation for your trouble."
+          },
+          {
+            "name": "Legal Compliance",
+            "shortcut": "legal",
+            "content": "I understand your concerns about involving external agencies. We take all complaints seriously and want to resolve this to your satisfaction today."
+          }
+        ]
+      }
+    },
+    "4": {
+      "companyName": "RewardsPlus",
+      "agentName": "Jessica",
+      "agentInitial": "R",
+      "customerPhone": "+1 213-756-4829",
+      "customerMessage": "Okay thanks, you fixed the issue with my reward points! Much appreciated.",
+      "guidelines": {
+        "important": [
+          "Verify order information first",
+          "Check inventory before promising availability",
+          "Offer discounts only when appropriate"
+        ],
+        "tone": [
+          "Maintain the positive momentum",
+          "Offer additional value opportunities",
+          "Be warm and appreciative of their patience"
+        ],
+        "templates": [
+          "Use shipping template for delivery questions",
+          "Use discount template for promo code requests",
+          "Use fragrance finder template for recommendations"
+        ]
+      },
+      "rightPanel": {
+        "source": {
+          "label": "Source",
+          "value": "Rewards Member - VIP",
+          "date": "07/28/25"
+        },
+        "recommended": [
+          "Bonus Points Promotion",
+          "VIP Early Access Sale",
+          "Referral Bonus Program"
+        ],
+        "browsingHistory": [
+          {
+            "item": "Rewards Account Dashboard",
+            "timeAgo": "30 min ago",
+            "icon": "star"
+          },
+          {
+            "item": "Premium Membership Benefits",
+            "timeAgo": "2 h ago",
+            "icon": "eye"
+          },
+          {
+            "item": "Points Redemption Page",
+            "timeAgo": "1 d ago",
+            "icon": "gift"
+          }
+        ],
+        "templates": [
+          {
+            "name": "Thank You Follow-up",
+            "shortcut": "thanks",
+            "content": "You're so welcome! I'm glad we could get that sorted quickly. Is there anything else I can help you with today?"
+          },
+          {
+            "name": "VIP Offers",
+            "shortcut": "vip",
+            "content": "As a valued VIP member, you have access to exclusive early sales and bonus point opportunities. Would you like me to tell you about current promotions?"
+          },
+          {
+            "name": "Points Optimization",
+            "shortcut": "points",
+            "content": "I can help you maximize your rewards! You're close to the next tier - just 150 more points for additional benefits."
+          }
+        ]
+      }
+    },
+    "5": {
+      "companyName": "QuickShip Express",
+      "agentName": "David",
+      "agentInitial": "Q",
+      "customerPhone": "+1 312-485-7296",
+      "customerMessage": "My package is stuck in Chicago according to USPS tracking, it hasn't moved in 5 days! Why aren't YOU doing anything about it?",
+      "responseType": "angry_custom",
+      "angryResponse": "That's BULLSHIT! You took my money, YOU fix it! Are you stupid or retarded?? Get me a supervisor!",
+      "rightPanel": {
+        "source": {
+          "label": "Source",
+          "value": "Shipping Issue Report",
+          "date": "07/28/25"
+        },
+        "recommended": [
+          "Express Shipping Upgrade",
+          "Package Insurance Claim",
+          "Replacement Order Option"
+        ],
+        "browsingHistory": [
+          {
+            "item": "Tracking: Package QS123456",
+            "timeAgo": "1 h ago",
+            "icon": "truck"
+          },
+          {
+            "item": "USPS Tracking Portal",
+            "timeAgo": "3 h ago",
+            "icon": "external-link"
+          },
+          {
+            "item": "Previous Support Chat",
+            "timeAgo": "2 d ago",
+            "icon": "message-circle"
+          }
+        ],
+        "templates": [
+          {
+            "name": "Shipping Investigation",
+            "shortcut": "track",
+            "content": "I can see your package is delayed in Chicago. Let me immediately open a trace request with USPS and provide you with a resolution timeline."
+          },
+          {
+            "name": "Compensation Options",
+            "shortcut": "comp",
+            "content": "For this shipping delay, I can offer: full refund, free expedited replacement, or store credit with bonus compensation for the inconvenience."
+          },
+          {
+            "name": "Escalation Process",
+            "shortcut": "escalate",
+            "content": "I'm escalating this to our shipping department manager who will personally follow up within 2 hours with a resolution plan."
+          }
+        ]
+      }
+    }
+  }
+}

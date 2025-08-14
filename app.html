@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training - Loading...</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Simple icon library (Feather Icons) for demonstration -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Bar (Simplified) -->
+        <div class="top-bar">            
+            <div class="agent-status">
+                <span class="agent-name">Loading...</span>
+                <button id="logoutBtn" class="logout-btn"><i data-feather="log-out" class="icon-small"></i> Logout</button>
+            </div>
+            <span class="timer-display" id="sessionTimer">00:00</span>
+<div class="top-bar-actions">
+                <button class="action-btn" id="closeBtn">Close</button>
+                <button class="action-btn" id="unsubscribeBtn">Unsubscribe</button>
+                <button class="action-btn" id="blockBtn">Block</button>
+            </div>
+            <div class="scenario-nav">
+                <select id="scenarioDropdown" class="scenario-dropdown">
+                    <option value="">Select Scenario...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Left Panel -->
+            <aside class="left-panel">
+                <div class="company-header">
+                    <h3 id="companyName">Loading...</h3>
+                </div>
+                <div class="company-info">
+                    <h4>GUIDE</h4>
+                </div>
+
+                <!-- Dynamic guidelines container -->
+                <div id="dynamic-guidelines-container">
+                    <!-- Guidelines will be dynamically loaded here -->
+                </div>
+
+                <!-- Dynamic Promotions Section (rendered from scenarios.json if provided) -->
+                <div id="promotionsContainer"></div>
+
+                <div class="agent-profile">
+                    <p><i data-feather="user" class="icon-small"></i> <span id="agentName">Loading...</span></p>
+                </div>
+
+                <div class="offer-status">
+                    <i data-feather="tag" class="icon-small"></i> No offer
+                </div>
+            </aside>
+
+            <!-- Middle Panel (Chat) -->
+            <main class="chat-panel">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="system-message">
+                        <i data-feather="bell" class="icon-small"></i> Concierge conversation started
+                    </div>
+                    <div class="message received">
+                        <div class="message-sender-icon">C</div>
+                        <div class="message-content">
+                            <p id="customerMessage">Loading customer message...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <textarea id="chatInput" placeholder="Type your message..." rows="3"></textarea>
+                    <button id="sendButton"><i data-feather="send"></i></button>
+                </div>
+            </main>
+
+            <!-- Right Panel -->
+            <aside class="right-panel">
+                <div class="customer-section">
+                    <h4>CUSTOMER</h4>
+                    <p class="customer-phone" id="customerPhone">Loading...</p>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span id="sourceLabel">Source</span>
+                        <span id="sourceValue">Loading...</span>
+                    </div>
+                    <div class="info-block-content" id="sourceDate">
+                        Loading...
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span><i data-feather="zap" class="icon-small"></i> Recommended</span>
+                    </div>
+                    <ul class="info-list" id="recommendedItems">
+                        <!-- Dynamic content will be loaded here -->
+                    </ul>
+                </div>
+                
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>Browsing History</span>
+                    </div>
+                    <ul class="info-list browsing-history" id="browsingHistory">
+                        <!-- Dynamic content will be loaded here -->
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span>TEMPLATES</span>
+                    </div>
+                    <div class="search-templates">
+                        <i data-feather="search" class="icon-small"></i>
+                        <input type="text" placeholder="Search templates (ctrl + /)" id="templateSearch">
+                    </div>
+                    <div id="templateItems">
+                        <!-- Dynamic template content will be loaded here -->
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        feather.replace(); // Initialize Feather Icons
+    </script>
+</body>
+</html>
