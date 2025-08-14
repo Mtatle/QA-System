@@ -51,21 +51,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         return requestedScenario === currentUnlocked;
     }
     
-    // Get scenario from URL with validation
+    // Use a single dynamic scenario
     function getCurrentScenarioNumber() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const requestedScenario = urlParams.get('scenario') || '1';
-        
-        // Check if the requested scenario can be accessed (only current scenario allowed)
-        if (!canAccessScenario(requestedScenario)) {
-            // Redirect to the current allowed scenario
-            const currentScenario = getCurrentUnlockedScenario();
-            console.log(`Can only access scenario ${currentScenario}. Redirecting from ${requestedScenario}`);
-            window.location.href = `app.html?scenario=${currentScenario}`;
-            return currentScenario.toString();
-        }
-        
-        return requestedScenario;
+        return '1';
     }
 
     
@@ -288,12 +276,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // Update right panel content
         loadRightPanelContent(scenario);
-        
-        // Update dropdown selection
-        const dropdown = document.getElementById('scenarioDropdown');
-        if (dropdown) {
-            dropdown.value = scenarioNumber;
-        }
         
         // Store current scenario data
         currentScenario = scenarioNumber;
@@ -886,13 +868,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Event listeners
-    sendButton.addEventListener('click', handleSendMessage);
-
-    chatInput.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
-            handleSendMessage();
-        }
-    });
+    if (sendButton) {
+        sendButton.addEventListener('click', handleSendMessage);
+    }
+    if (chatInput) {
+        chatInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                handleSendMessage();
+            }
+        });
+    }
 
     // Action buttons: Close / Unsubscribe / Block
     const closeBtn = document.getElementById('closeBtn');
@@ -1178,51 +1163,192 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initialize everything
     const scenarios = await loadScenariosData();
     if (scenarios) {
-        const scenarioNumber = getCurrentScenarioNumber();
-        generateScenarioNavigation(scenarios);
-        loadScenarioContent(scenarioNumber, scenarios);
+        loadScenarioContent('1', scenarios);
     } else {
         console.error('Could not load scenarios data');
     }
-    
-    // Initialize timer
-    initSessionTimer();
 
     // If this scenario was previously ended (via action buttons), keep input disabled IF it's NOT the current unlocked scenario.
     // This prevents stale ended flags from blocking a fresh session when logging back in or starting a new unlocked scenario.
-    const currentScenarioNumber = getCurrentScenarioNumber();
-    const ended = localStorage.getItem(`scenarioEnded_${currentScenarioNumber}`);
-    const isCurrentUnlocked = parseInt(currentScenarioNumber) === getCurrentUnlockedScenario();
-
-    if (ended && !isCurrentUnlocked) {
-        if (chatInput) {
-            chatInput.disabled = true;
-            chatInput.placeholder = 'Conversation ended. Proceed to the next scenario.';
-        }
-        if (sendButton) {
-            sendButton.disabled = true;
-        }
-        if (typeof feather !== 'undefined') feather.replace();
-    } else if (ended && isCurrentUnlocked) {
-        // The current unlocked scenario should always start fresh. Clear any stale end flag.
-        localStorage.removeItem(`scenarioEnded_${currentScenarioNumber}`);
-        if (chatInput) {
-            chatInput.disabled = false;
-            chatInput.placeholder = 'Type your message...';
-        }
-        if (sendButton) {
-            sendButton.disabled = false;
-        }
-    }
+    // Conversation end state and timer removed
     
     // Initialize new features
     initTemplateSearchKeyboardShortcut();
+
+    // Custom form submission -> Google Sheets
+    const customForm = document.getElementById('customForm');
+    if (customForm) {
+        const formStatus = document.getElementById('formStatus');
+        const formSubmitBtn = document.getElementById('formSubmitBtn');
+        const clearFormBtn = document.getElementById('clearFormBtn');
+        
+        // Clear form functionality
+        if (clearFormBtn) {
+            clearFormBtn.addEventListener('click', () => {
+                customForm.reset();
+                if (formStatus) {
+                    formStatus.textContent = '';
+                }
+            });
+        }
+        
+        customForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Collect all form data
+            const formData = new FormData(customForm);
+            const data = {};
+            
+            // Process checkboxes (multiple values per category)
+            const checkboxCategories = ['issue_identification', 'proper_resolution', 'product_sales', 'accuracy', 'workflow', 'clarity', 'tone'];
+            checkboxCategories.forEach(category => {
+                data[category] = formData.getAll(category);
+            });
+            
+            // Process dropdowns
+            data.troubleshooting_miss = formData.get('troubleshooting_miss') || '';
+            data.zero_tolerance = formData.get('zero_tolerance') || '';
+            data.notes = formData.get('notes') || '';
+            
+            // Validate required fields
+            if (!data.notes.trim()) {
+                if (formStatus) { 
+                    formStatus.textContent = 'Notes field is required.'; 
+                    formStatus.style.color = '#e74c3c'; 
+                }
+                return;
+            }
+            
+            const agentUsername = localStorage.getItem('agentName') || 'Unknown Agent';
+            
+            try {
+                if (formSubmitBtn) formSubmitBtn.disabled = true;
+                if (formStatus) { 
+                    formStatus.textContent = 'Submitting...'; 
+                    formStatus.style.color = '#555'; 
+                }
+                
+                // Format data for Google Sheets
+                const submissionData = JSON.stringify(data);
+                await sendToGoogleSheetsWithTimer(agentUsername, 'Evaluation Form', 'Form Submission', submissionData, 'N/A');
+                
+                if (formStatus) { 
+                    formStatus.textContent = 'Submitted successfully.'; 
+                    formStatus.style.color = '#28a745'; 
+                }
+                customForm.reset();
+            } catch (err) {
+                console.error('Form submission error:', err);
+                if (formStatus) { 
+                    formStatus.textContent = 'Submission failed. Please try again.'; 
+                    formStatus.style.color = '#e74c3c'; 
+                }
+            } finally {
+                if (formSubmitBtn) formSubmitBtn.disabled = false;
+            }
+        });
+    }
+
+    // Panel resizing functionality
+    initPanelResizing();
 
     // Attempt to record logout on tab close/navigation
     window.addEventListener('beforeunload', () => {
         sendSessionLogout();
     });
 });
+
+// Panel resizing functionality
+function initPanelResizing() {
+    const resizeHandles = document.querySelectorAll('.resize-handle');
+    let isResizing = false;
+    let currentHandle = null;
+    let startX = 0;
+    let startWidths = {};
+
+    resizeHandles.forEach(handle => {
+        handle.addEventListener('mousedown', (e) => {
+            isResizing = true;
+            currentHandle = handle;
+            startX = e.clientX;
+            
+            // Get current panel widths
+            const panels = getPanelsForHandle(handle);
+            startWidths = {
+                left: panels.left.offsetWidth,
+                right: panels.right.offsetWidth
+            };
+            
+            handle.classList.add('resizing');
+            document.body.style.cursor = 'col-resize';
+            document.body.style.userSelect = 'none';
+            
+            e.preventDefault();
+        });
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (!isResizing || !currentHandle) return;
+        
+        const deltaX = e.clientX - startX;
+        const panels = getPanelsForHandle(currentHandle);
+        const container = document.querySelector('.main-content');
+        const containerWidth = container.offsetWidth;
+        
+        // Calculate new widths
+        const newLeftWidth = startWidths.left + deltaX;
+        const newRightWidth = startWidths.right - deltaX;
+        
+        // Set minimum widths
+        const minWidth = 200;
+        if (newLeftWidth < minWidth || newRightWidth < minWidth) return;
+        
+        // Calculate percentages
+        const leftPercent = (newLeftWidth / containerWidth) * 100;
+        const rightPercent = (newRightWidth / containerWidth) * 100;
+        
+        // Apply new flex-basis values
+        panels.left.style.flexBasis = `${leftPercent}%`;
+        panels.right.style.flexBasis = `${rightPercent}%`;
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (!isResizing) return;
+        
+        isResizing = false;
+        if (currentHandle) {
+            currentHandle.classList.remove('resizing');
+            currentHandle = null;
+        }
+        
+        document.body.style.cursor = '';
+        document.body.style.userSelect = '';
+    });
+
+    function getPanelsForHandle(handle) {
+        const resizeType = handle.getAttribute('data-resize');
+        
+        switch (resizeType) {
+            case 'form-left':
+                return {
+                    left: document.querySelector('.form-panel'),
+                    right: document.querySelector('.left-panel')
+                };
+            case 'left-chat':
+                return {
+                    left: document.querySelector('.left-panel'),
+                    right: document.querySelector('.chat-panel')
+                };
+            case 'chat-right':
+                return {
+                    left: document.querySelector('.chat-panel'),
+                    right: document.querySelector('.right-panel')
+                };
+            default:
+                return { left: null, right: null };
+        }
+    }
+}
 
 // ==================
 // NEW FEATURES CODE
