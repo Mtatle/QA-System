@@ -8,9 +8,9 @@ function doPost(e) {
     // Parse the incoming data
     const data = JSON.parse(e.postData.contents);
     
-    const spreadsheetId = '16WVs50b01sCwRyHI_4NHjxAXMKWNDzFAO-s2zSbhBoE'; 
-    const spreadsheet = SpreadsheetApp.openById(spreadsheetId);
-    const sheet = spreadsheet.getActiveSheet();
+    const spreadsheetId = '1aFwtxh9kxwZ-YFqxKVVO6DCQ9AlK1Hb4uqXVrNWDQPA'; 
+  const spreadsheet = SpreadsheetApp.openById(spreadsheetId);
+  const sheet = spreadsheet.getActiveSheet();
 
     // Handle session login/logout events to a dedicated tab
     if (data && data.eventType && (data.eventType === 'sessionLogin' || data.eventType === 'sessionLogout')) {
@@ -18,7 +18,9 @@ function doPost(e) {
       let logsSheet = spreadsheet.getSheetByName(logsSheetName);
       if (!logsSheet) {
         logsSheet = spreadsheet.insertSheet(logsSheetName);
-        logsSheet.appendRow(['Date (EST)', 'Agent Name', 'Agent Email', 'Event', 'Global Session ID', 'Login Method', 'Login At', 'Logout At', 'Duration (mins)']);
+          logsSheet.getRange(1, 1, 1, 9).setValues([
+            ['Date (EST)', 'Agent Name', 'Agent Email', 'Event', 'Global Session ID', 'Login Method', 'Login At', 'Logout At', 'Duration (mins)']
+          ]);
       }
 
       const sessionId = data.sessionId || '';
@@ -34,7 +36,7 @@ function doPost(e) {
           '',
           ''
         ];
-        logsSheet.appendRow(row);
+          safeAppendRow(logsSheet, row);
       } else if (data.eventType === 'sessionLogout') {
         const lastRow = logsSheet.getLastRow();
         // Try to find matching login row by Session ID, starting from bottom
@@ -59,7 +61,7 @@ function doPost(e) {
           }
         }
         // If no matching login found, append a standalone logout row
-        logsSheet.appendRow([
+          safeAppendRow(logsSheet, [
           data.logoutAt || '',
           data.agentUsername || '',
           data.agentEmail || '',
@@ -69,12 +71,46 @@ function doPost(e) {
           '',
           data.logoutAt || '',
           ''
-        ]);
+          ]);
         return ContentService.createTextOutput(JSON.stringify({ status: 'success' })).setMimeType(ContentService.MimeType.JSON);
       }
       return ContentService.createTextOutput(JSON.stringify({ status: 'success' })).setMimeType(ContentService.MimeType.JSON);
     }
     
+    // Handle new Evaluation Form submissions to "Data" tab
+    if (data && data.eventType === 'evaluationFormSubmission') {
+      const dataSheetName = 'Data';
+      let dataSheet = spreadsheet.getSheetByName(dataSheetName);
+      if (!dataSheet) {
+        dataSheet = spreadsheet.insertSheet(dataSheetName);
+          dataSheet.getRange(1, 1, 1, 14).setValues([
+            ['Timestamp', 'Email Address', 'Message ID', 'Audit Time',
+            'Issue Identification', 'Proper Resolution', 'Product Sales', 'Accuracy',
+            'Workflow', 'Clarity', 'Tone',
+            'Efficient Troubleshooting Miss', 'Zero Tolerance', 'Notes']
+          ]);
+      }
+
+      const row = [
+        data.timestamp || '',
+        data.emailAddress || '',
+        data.messageId || '',
+        data.auditTime || '',
+        data.issueIdentification || '',
+        data.properResolution || '',
+        data.productSales || '',
+        data.accuracy || '',
+        data.workflow || '',
+        data.clarity || '',
+        data.tone || '',
+        data.efficientTroubleshootingMiss || '',
+        data.zeroTolerance || '',
+        data.notes || ''
+      ];
+        safeAppendRow(dataSheet, row);
+      return ContentService.createTextOutput(JSON.stringify({ status: 'success' })).setMimeType(ContentService.MimeType.JSON);
+    }
+
     // Create a unique session key using session ID
     const sessionKey = data.sessionId;
     const scenario = data.scenario;
@@ -184,4 +220,12 @@ function testFunction() {
   
   const result = doPost(testEvent);
   console.log('Test result:', result.getContent());
+}
+
+// Helper: append a row without using appendRow to avoid auto-resizing side effects
+function safeAppendRow(targetSheet, values) {
+  if (!targetSheet || !values) return;
+  var nextRow = targetSheet.getLastRow() + 1;
+  var numCols = values.length;
+  targetSheet.getRange(nextRow, 1, 1, numCols).setValues([values]);
 }

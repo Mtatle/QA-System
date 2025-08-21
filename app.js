@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const logoutBtn = document.getElementById('logoutBtn');
     
     // Google Sheets integration
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw2QItqEKnA9flsplRYiO-TF5jSZ_8zXH7YA5SAwVCGlmkZhlojwv5wZk0EVuKtSTpvog/exec'; // Replace with the new deployment URL
-    
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxSTqGjhuR_AjFUNIeJOalTvVk1hGDLs0lazVoLKG7qmAKCErfAOkSRAHU84SyYIs98zw/exec';
     // Current scenario data
     let currentScenario = null;
     let scenarioData = null;
@@ -365,13 +364,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     function loadRightPanelContent(scenario) {
         if (!scenario.rightPanel) return;
 
-        // Render promotions dynamically if provided
-        const promos = scenario.rightPanel.promotions;
+        // Render promotions dynamically, supporting multiple keys: promotions, promotions_2, promotions_3, ...
         const promosContainer = document.getElementById('promotionsContainer');
-        if (promos) {
-            renderPromotions(promos);
-        } else if (promosContainer) {
+        if (promosContainer) {
             promosContainer.innerHTML = '';
+        }
+        const rightPanel = scenario.rightPanel || {};
+        const promoKeys = Object.keys(rightPanel)
+            .filter(k => /^promotions(_\d+)?$/.test(k))
+            .sort((a, b) => {
+                const na = a === 'promotions' ? 1 : parseInt(a.split('_')[1] || '0', 10);
+                const nb = b === 'promotions' ? 1 : parseInt(b.split('_')[1] || '0', 10);
+                return na - nb;
+            });
+        if (promoKeys.length > 0) {
+            promoKeys.forEach(key => {
+                const block = rightPanel[key];
+                if (block) {
+                    renderPromotions(block);
+                }
+            });
         }
         
         // Update source information
@@ -398,7 +410,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
         
-        // Update browsing history
+    // Update browsing history
         if (scenario.rightPanel.browsingHistory) {
             const historyContainer = document.getElementById('browsingHistory');
             if (historyContainer) {
@@ -412,6 +424,30 @@ document.addEventListener('DOMContentLoaded', async () => {
                     `;
                     historyContainer.appendChild(li);
                 });
+            }
+        }
+
+        // Purchased items (simple text + time). Hide section when not present or empty.
+        const purchasedSection = document.getElementById('purchasedSection');
+        const purchasedList = document.getElementById('purchasedList');
+        if (purchasedSection && purchasedList) {
+            purchasedList.innerHTML = '';
+            const purchased = Array.isArray(scenario.rightPanel.purchased) ? scenario.rightPanel.purchased : [];
+            if (purchased.length > 0) {
+                purchased.forEach(p => {
+                    const li = document.createElement('li');
+                    const name = document.createElement('span');
+                    name.textContent = (p && p.item) ? p.item : '';
+                    const when = document.createElement('span');
+                    when.className = 'time-ago';
+                    when.textContent = (p && p.timeAgo) ? p.timeAgo : '';
+                    li.appendChild(name);
+                    li.appendChild(when);
+                    purchasedList.appendChild(li);
+                });
+                purchasedSection.style.display = '';
+            } else {
+                purchasedSection.style.display = 'none';
             }
         }
         
@@ -465,6 +501,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         const estDate = now.toLocaleDateString('en-US', options);
         return estDate; // Returns in format: "MM/DD/YYYY"
+    }
+
+    // Helper: EST datetime format like "1/30/2025 13:24:49" (no comma, month/day numeric)
+    function toESTDateTimeNoComma() {
+        const now = new Date();
+        const str = now.toLocaleString('en-US', {
+            timeZone: 'America/New_York',
+            year: 'numeric',
+            month: 'numeric', // no leading zero
+            day: 'numeric',   // no leading zero
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+        // Many browsers include a comma between date and time; remove it
+        return str.replace(", ", " ");
     }
 
     // Helper function to get current timer time
@@ -1175,7 +1228,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initialize new features
     initTemplateSearchKeyboardShortcut();
 
-    // Custom form submission -> Google Sheets
+    // Start the session timer after content is loaded
+    initSessionTimer();
+
+    // Custom form submission -> Google Sheets (Data tab)
     const customForm = document.getElementById('customForm');
     if (customForm) {
         const formStatus = document.getElementById('formStatus');
@@ -1198,20 +1254,66 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Collect all form data
             const formData = new FormData(customForm);
             const data = {};
-            
+
+            // Full ordered labels and slug->label maps for each category
+            const CATEGORY_LABELS = {
+                issue_identification: ['Intent Identified', 'Necessary Reply'],
+                proper_resolution: ['Efficient Troubleshooting', 'Correct Escalation', 'Double Text', 'Partial Reply'],
+                product_sales: ['General Recommendation', 'Discount Upsell', 'Restock Question', 'Upsell'],
+                accuracy: [
+                    'Credible Source', 'Promo - Active', 'Promo - Correct', 'Promo - Hallucinated',
+                    'Link - Broken', 'Link - Correct Page', 'Link - Correct Region', 'Link - Correct Website',
+                    'Link - Filtered', 'Link - Relevant Item'
+                ],
+                workflow: [
+                    'Checkout Page', 'Company Profile', 'Conversation', 'Customer Profile', 'Notes',
+                    'Product Information', 'Promo Notes', 'Templates', 'Website'
+                ],
+                clarity: ['Correct Grammar', 'No Typos', 'No Repetition', 'Understandable Message'],
+                tone: ['Preferred tone followed', 'Personalized', 'Empathetic']
+            };
+            const VALUE_TO_LABEL = {
+                issue_identification: { intent_identified: 'Intent Identified', necessary_reply: 'Necessary Reply' },
+                proper_resolution: { efficient_troubleshooting: 'Efficient Troubleshooting', correct_escalation: 'Correct Escalation', double_text: 'Double Text', partial_reply: 'Partial Reply' },
+                product_sales: { general_recommendation: 'General Recommendation', discount_upsell: 'Discount Upsell', restock_question: 'Restock Question', upsell: 'Upsell' },
+                accuracy: {
+                    credible_source: 'Credible Source', promo_active: 'Promo - Active', promo_correct: 'Promo - Correct', promo_hallucinated: 'Promo - Hallucinated',
+                    link_broken: 'Link - Broken', link_correct_page: 'Link - Correct Page', link_correct_region: 'Link - Correct Region', link_correct_website: 'Link - Correct Website',
+                    link_filtered: 'Link - Filtered', link_relevant_item: 'Link - Relevant Item'
+                },
+                workflow: {
+                    checkout_page: 'Checkout Page', company_profile: 'Company Profile', conversation: 'Conversation', customer_profile: 'Customer Profile',
+                    notes: 'Notes', product_information: 'Product Information', promo_notes: 'Promo Notes', templates: 'Templates', website: 'Website'
+                },
+                clarity: { correct_grammar: 'Correct Grammar', no_typos: 'No Typos', no_repetition: 'No Repetition', understandable_message: 'Understandable Message' },
+                tone: { preferred_tone_followed: 'Preferred tone followed', personalized: 'Personalized', empathetic: 'Empathetic' }
+            };
+
             // Process checkboxes (multiple values per category)
             const checkboxCategories = ['issue_identification', 'proper_resolution', 'product_sales', 'accuracy', 'workflow', 'clarity', 'tone'];
+            const selectedByCategory = {};
             checkboxCategories.forEach(category => {
-                data[category] = formData.getAll(category);
+                selectedByCategory[category] = formData.getAll(category); // array of slugs
             });
-            
-            // Process dropdowns
-            data.troubleshooting_miss = formData.get('troubleshooting_miss') || '';
-            data.zero_tolerance = formData.get('zero_tolerance') || '';
-            data.notes = formData.get('notes') || '';
+
+            function buildCategoryCell(categoryKey) {
+                const full = CATEGORY_LABELS[categoryKey] || [];
+                const valueMap = VALUE_TO_LABEL[categoryKey] || {};
+                const selected = new Set((selectedByCategory[categoryKey] || []).map(v => valueMap[v]).filter(Boolean));
+                // Include all items unless selected; keep original order
+                const included = full.filter(label => !selected.has(label));
+                return included.join(', ');
+            }
+
+            // Process dropdowns: capture human-readable labels
+            const troubleshootSel = document.getElementById('troubleshootingMiss');
+            const zeroTolSel = document.getElementById('zeroTolerance');
+            const troubleshootingMissLabel = (troubleshootSel && troubleshootSel.value) ? troubleshootSel.options[troubleshootSel.selectedIndex].text : '';
+            const zeroToleranceLabel = (zeroTolSel && zeroTolSel.value) ? zeroTolSel.options[zeroTolSel.selectedIndex].text : '';
+            const notesVal = formData.get('notes') || '';
             
             // Validate required fields
-            if (!data.notes.trim()) {
+            if (!notesVal.trim()) {
                 if (formStatus) { 
                     formStatus.textContent = 'Notes field is required.'; 
                     formStatus.style.color = '#e74c3c'; 
@@ -1220,6 +1322,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
             
             const agentUsername = localStorage.getItem('agentName') || 'Unknown Agent';
+            const agentEmail = localStorage.getItem('agentEmail') || '';
+            const emailAddress = agentEmail || agentUsername;
+            const auditTime = getCurrentTimerTime();
+            // Reset timer after capturing audit time
+            resetTimer();
             
             try {
                 if (formSubmitBtn) formSubmitBtn.disabled = true;
@@ -1228,15 +1335,58 @@ document.addEventListener('DOMContentLoaded', async () => {
                     formStatus.style.color = '#555'; 
                 }
                 
-                // Format data for Google Sheets
-                const submissionData = JSON.stringify(data);
-                await sendToGoogleSheetsWithTimer(agentUsername, 'Evaluation Form', 'Form Submission', submissionData, 'N/A');
-                
-                if (formStatus) { 
-                    formStatus.textContent = 'Submitted successfully.'; 
-                    formStatus.style.color = '#28a745'; 
+                // Build Data tab payload
+                const payload = {
+                    eventType: 'evaluationFormSubmission',
+                    timestamp: toESTDateTimeNoComma(), // e.g., 1/30/2025 13:24:49
+                    emailAddress,
+                    messageId: '',
+                    auditTime,
+                    issueIdentification: buildCategoryCell('issue_identification'),
+                    properResolution: buildCategoryCell('proper_resolution'),
+                    productSales: buildCategoryCell('product_sales'),
+                    accuracy: buildCategoryCell('accuracy'),
+                    workflow: buildCategoryCell('workflow'),
+                    clarity: buildCategoryCell('clarity'),
+                    tone: buildCategoryCell('tone'),
+                    efficientTroubleshootingMiss: troubleshootingMissLabel || '',
+                    zeroTolerance: zeroToleranceLabel || '',
+                    notes: notesVal
+                };
+
+                const res = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'cors',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify(payload)
+                });
+                let success = false;
+                let serverMsg = '';
+                try {
+                    const json = await res.json();
+                    success = res.ok && json && json.status === 'success';
+                    serverMsg = (json && json.message) ? json.message : '';
+                } catch (parseErr) {
+                    // Fall back to text for debugging
+                    try {
+                        const txt = await res.text();
+                        serverMsg = txt || '';
+                    } catch (_) {}
+                    success = res.ok; // if 2xx, treat as success even if body not JSON
                 }
-                customForm.reset();
+
+                if (success) {
+                    if (formStatus) { 
+                        formStatus.textContent = 'Submitted successfully.'; 
+                        formStatus.style.color = '#28a745'; 
+                    }
+                    customForm.reset();
+                } else {
+                    if (formStatus) {
+                        formStatus.textContent = 'Submission failed. ' + (serverMsg ? `Details: ${serverMsg}` : 'Please try again.');
+                        formStatus.style.color = '#e74c3c';
+                    }
+                }
             } catch (err) {
                 console.error('Form submission error:', err);
                 if (formStatus) { 

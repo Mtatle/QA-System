@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <!-- Simple icon library (Feather Icons) for demonstration -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="app-container">
@@ -17,6 +20,8 @@
                 <span class="agent-name">Loading...</span>
                 <button id="logoutBtn" class="logout-btn"><i data-feather="log-out" class="icon-small"></i> Logout</button>
             </div>
+            <!-- Centered session timer -->
+            <div class="timer-display" id="sessionTimer">00:00</div>
             <div class="top-bar-right">
                 <button id="nextConversationBtn" class="next-conversation-btn">Next Conversation</button>
             </div>
@@ -347,6 +352,14 @@
                 <div class="customer-section">
                     <h4>CUSTOMER</h4>
                     <p class="customer-phone" id="customerPhone">Loading...</p>
+                </div>
+
+                <!-- Purchased Items Section (hidden if empty) -->
+                <div class="info-block" id="purchasedSection" style="display:none;">
+                    <div class="info-block-header">
+                        <span><i data-feather="shopping-bag" class="icon-small"></i> Purchased</span>
+                    </div>
+                    <ul class="info-list" id="purchasedList"></ul>
                 </div>
 
                 <div class="info-block">
