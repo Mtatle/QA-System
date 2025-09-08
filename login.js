@@ -214,8 +214,9 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'app.html?scenario=1';
     });
 
-    // Auto-redirect if already logged in
-    if (localStorage.getItem('agentName') && localStorage.getItem('sessionStartTime')) {
+    // Auto-redirect if already logged in (only when served over http/https to avoid file:// origin issues)
+    const isHttpProtocol = window.location.protocol === 'http:' || window.location.protocol === 'https:';
+    if (isHttpProtocol && localStorage.getItem('agentName') && localStorage.getItem('sessionStartTime')) {
         const sessionAge = Date.now() - parseInt(localStorage.getItem('sessionStartTime'));
         const maxSessionAge = 24 * 60 * 60 * 1000; // 24 hours
         

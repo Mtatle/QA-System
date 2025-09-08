@@ -472,6 +472,9 @@ polyline[points="6 9 12 15 18 9"] {
     z-index: 10;
 }
 
+/* Temporarily hide the timer */
+.timer-display { display: none; }
+
 /* Top Bar Action Buttons */
 .top-bar-actions {
     position: absolute;
@@ -769,6 +772,43 @@ input:checked + .slider:before {
     background-color: #f8f9fa;
     flex-shrink: 0;
     align-items: flex-end;
+}
+#internalNotes {
+    width: 100%;
+    resize: vertical;
+}
+.internal-notes-container {
+    padding: 12px 20px 20px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+}
+.resize-handle-horizontal {
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    cursor: row-resize;
+}
+.internal-notes-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+}
+.internal-notes-container textarea {
+    width: 100%;
+    min-height: 60px;
+    max-height: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95em;
+}
+.internal-notes-container textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.15);
 }
 #chatInput {
     flex-grow: 1;

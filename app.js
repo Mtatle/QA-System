@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const chatMessages = document.getElementById('chatMessages');
     const chatInput = document.getElementById('chatInput');
     const sendButton = document.getElementById('sendButton');
+    const internalNotesEl = document.getElementById('internalNotes');
     const logoutBtn = document.getElementById('logoutBtn');
     
     // Google Sheets integration
@@ -58,6 +59,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Load scenarios data
     async function loadScenariosData() {
+        // Immediate fallback when running from file:// to avoid CORS/network errors
+        if (window.location.protocol === 'file:') {
+            return {
+                '1': {
+                    companyName: 'Demo Company',
+                    agentName: localStorage.getItem('agentName') || 'Agent',
+                    customerPhone: '(000) 000-0000',
+                    customerMessage: 'Welcome! Start the conversation here.',
+                    agentInitial: 'A',
+                    guidelines: {
+                        important: ['Run with a local server to load full scenarios.json']
+                    },
+                    rightPanel: { source: { label: 'Source', value: 'Local Demo', date: '' } }
+                }
+            };
+        }
         try {
             const response = await fetch('scenarios.json');
             const data = await response.json();
@@ -283,6 +300,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Re-initialize Feather icons after DOM changes
         if (typeof feather !== 'undefined') {
             feather.replace();
+        }
+
+        // Load internal notes for this scenario
+        if (internalNotesEl) {
+            const saved = localStorage.getItem(`internalNotes_scenario_${scenarioNumber}`) || '';
+            internalNotesEl.value = saved;
         }
     }
     
@@ -671,8 +694,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
     
-    // Check if user is logged in (redirect to login if not)
-    if (!localStorage.getItem('agentName') && !window.location.href.includes('login.html') && 
+    // Check if user is logged in (redirect to login if not). Only enforce on http/https to avoid file:// loops
+    const isHttpProtocol = window.location.protocol === 'http:' || window.location.protocol === 'https:';
+    if (isHttpProtocol && !localStorage.getItem('agentName') && !window.location.href.includes('login.html') && 
         !window.location.href.includes('index.html')) {
         window.location.href = 'index.html';
     }
@@ -1227,6 +1251,50 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Initialize new features
     initTemplateSearchKeyboardShortcut();
+    
+    // Persist internal notes per scenario
+    if (internalNotesEl) {
+        const scenarioNumForNotes = getCurrentScenarioNumber();
+        internalNotesEl.addEventListener('input', () => {
+            localStorage.setItem(`internalNotes_scenario_${scenarioNumForNotes}`, internalNotesEl.value);
+        });
+        // Add drag-to-resize behavior via handle below the textarea
+        const notesContainer = document.getElementById('internalNotesContainer');
+        const resizeHandle = document.querySelector('.resize-handle-horizontal[data-resize="internal-notes"]');
+        if (notesContainer && resizeHandle && internalNotesEl) {
+            let isResizingNotes = false;
+            let startY = 0;
+            let startHeight = 0;
+            resizeHandle.addEventListener('mousedown', (e) => {
+                isResizingNotes = true;
+                startY = e.clientY;
+                startHeight = internalNotesEl.offsetHeight;
+                document.body.style.cursor = 'row-resize';
+                document.body.style.userSelect = 'none';
+                e.preventDefault();
+            });
+            document.addEventListener('mousemove', (e) => {
+                if (!isResizingNotes) return;
+                const delta = e.clientY - startY;
+                // Handle is on top: moving up (smaller clientY) should increase height
+                const newHeight = Math.max(60, Math.min(300, startHeight - delta));
+                internalNotesEl.style.height = newHeight + 'px';
+                // Persist height
+                try { localStorage.setItem('internalNotesHeight', String(newHeight)); } catch (_) {}
+            });
+            document.addEventListener('mouseup', () => {
+                if (!isResizingNotes) return;
+                isResizingNotes = false;
+                document.body.style.cursor = '';
+                document.body.style.userSelect = '';
+            });
+        }
+        // Restore saved height
+        const savedHeight = parseInt(localStorage.getItem('internalNotesHeight') || '0', 10);
+        if (!isNaN(savedHeight) && savedHeight > 0) {
+            internalNotesEl.style.height = savedHeight + 'px';
+        }
+    }
 
     // Start the session timer after content is loaded
     initSessionTimer();
@@ -1238,10 +1306,58 @@ document.addEventListener('DOMContentLoaded', async () => {
         const formSubmitBtn = document.getElementById('formSubmitBtn');
         const clearFormBtn = document.getElementById('clearFormBtn');
         
+        // Ensure all checkboxes are checked by default (and on reset)
+        const checkboxInputs = customForm.querySelectorAll('input[type="checkbox"]');
+        checkboxInputs.forEach(cb => {
+            cb.checked = true;
+            cb.defaultChecked = true;
+        });
+        
+        // ---- Form autosave/restore ----
+        function saveCustomFormState() {
+            const state = {};
+            const formElements = customForm.elements;
+            for (let i = 0; i < formElements.length; i++) {
+                const el = formElements[i];
+                if (!el.name && !el.id) continue;
+                if (el.type === 'checkbox') {
+                    state[`${el.name}::${el.value}`] = el.checked;
+                } else if (el.tagName === 'SELECT' || el.tagName === 'TEXTAREA' || el.type === 'text') {
+                    const key = el.name || el.id;
+                    state[key] = el.value;
+                }
+            }
+            try { localStorage.setItem('customFormState', JSON.stringify(state)); } catch (_) {}
+        }
+        function restoreCustomFormState() {
+            let parsed = null;
+            try { parsed = JSON.parse(localStorage.getItem('customFormState') || 'null'); } catch (_) { parsed = null; }
+            if (!parsed) return;
+            const formElements = customForm.elements;
+            for (let i = 0; i < formElements.length; i++) {
+                const el = formElements[i];
+                if (el.type === 'checkbox') {
+                    const key = `${el.name}::${el.value}`;
+                    if (key in parsed) el.checked = !!parsed[key];
+                } else if (el.tagName === 'SELECT' || el.tagName === 'TEXTAREA' || el.type === 'text') {
+                    const key = el.name || el.id;
+                    if (key in parsed) el.value = parsed[key];
+                }
+            }
+        }
+        customForm.addEventListener('input', saveCustomFormState);
+        customForm.addEventListener('change', saveCustomFormState);
+        restoreCustomFormState();
+
         // Clear form functionality
         if (clearFormBtn) {
             clearFormBtn.addEventListener('click', () => {
                 customForm.reset();
+                // Re-apply default checked state
+                checkboxInputs.forEach(cb => {
+                    cb.checked = true;
+                });
+                try { localStorage.removeItem('customFormState'); } catch (_) {}
                 if (formStatus) {
                     formStatus.textContent = '';
                 }
@@ -1381,6 +1497,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                         formStatus.style.color = '#28a745'; 
                     }
                     customForm.reset();
+                    checkboxInputs.forEach(cb => { cb.checked = true; });
+                    try { localStorage.removeItem('customFormState'); } catch (_) {}
                 } else {
                     if (formStatus) {
                         formStatus.textContent = 'Submission failed. ' + (serverMsg ? `Details: ${serverMsg}` : 'Please try again.');
@@ -1498,6 +1616,7 @@ function initPanelResizing() {
                 return { left: null, right: null };
         }
     }
+
 }
 
 // ==================
