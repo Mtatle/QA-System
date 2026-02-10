@@ -281,7 +281,11 @@ function getRepoConfig(env) {
   const owner = env.GH_OWNER;
   const repo = env.GH_REPO;
   const templatesPath = env.GH_TEMPLATES_PATH || 'templates.json';
-  const scenariosPath = env.GH_SCENARIOS_PATH || 'scenarios.json';
+  const configuredScenariosPath = env.GH_SCENARIOS_PATH;
+  const scenariosPath =
+    !configuredScenariosPath || configuredScenariosPath === 'scenarios-uploads.json'
+      ? 'scenarios.json'
+      : configuredScenariosPath;
   const branch = env.GH_BRANCH || 'main';
   const token = env.GH_TOKEN;
 
