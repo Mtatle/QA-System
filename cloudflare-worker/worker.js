@@ -16,21 +16,23 @@ export default {
             const data = await readTemplates(env);
             return jsonResponse({ templates: data.templates }, corsHeaders);
         } catch (error) {
-            return jsonResponse({ error: 'Failed to load templates.' }, corsHeaders, 500);
+            console.error('GET /templates failed', error);
+            return jsonResponse({ error: 'Failed to load templates.', details: error.message || String(error) }, corsHeaders, 500);
         }
     }
 
     if (url.pathname === '/templates' && request.method === 'POST') {
-      try {
-        const payload = await request.json();
-        const incoming = Array.isArray(payload.templates) ? payload.templates : [];
-        if (!incoming.length) {
-          return jsonResponse({ error: 'No templates provided.' }, corsHeaders, 400);
-        }
-        const updated = await mergeAndSaveTemplates(env, incoming);
-        return jsonResponse({ templates: updated.templates }, corsHeaders);
-      } catch (error) {
-        return jsonResponse({ error: 'Failed to update templates.' }, corsHeaders, 500);
+        try {
+            const payload = await request.json();
+            const incoming = Array.isArray(payload.templates) ? payload.templates : [];
+            if (!incoming.length) {
+                return jsonResponse({ error: 'No templates provided.' }, corsHeaders, 400);
+            }
+            const updated = await mergeAndSaveTemplates(env, incoming);
+            return jsonResponse({ templates: updated.templates }, corsHeaders);
+        } catch (error) {
+            console.error('POST /templates failed', error);
+            return jsonResponse({ error: 'Failed to update templates.', details: error.message || String(error) }, corsHeaders, 500);
         }
     }
 
@@ -39,7 +41,8 @@ export default {
             await clearTemplates(env);
             return jsonResponse({ templates: [] }, corsHeaders);
         } catch (error) {
-            return jsonResponse({ error: 'Failed to clear templates.' }, corsHeaders, 500);
+            console.error('DELETE /templates failed', error);
+            return jsonResponse({ error: 'Failed to clear templates.', details: error.message || String(error) }, corsHeaders, 500);
         }
     }
 
@@ -48,7 +51,8 @@ export default {
             const data = await readScenarios(env);
             return jsonResponse({ scenarios: data.scenarios }, corsHeaders);
         } catch (error) {
-            return jsonResponse({ error: 'Failed to load scenarios.' }, corsHeaders, 500);
+            console.error('GET /scenarios failed', error);
+            return jsonResponse({ error: 'Failed to load scenarios.', details: error.message || String(error) }, corsHeaders, 500);
         }
     }
 
@@ -62,7 +66,8 @@ export default {
             const updated = await mergeAndSaveScenarios(env, incoming);
             return jsonResponse({ scenarios: updated.scenarios }, corsHeaders);
         } catch (error) {
-            return jsonResponse({ error: 'Failed to update scenarios.' }, corsHeaders, 500);
+            console.error('POST /scenarios failed', error);
+            return jsonResponse({ error: 'Failed to update scenarios.', details: error.message || String(error) }, corsHeaders, 500);
         }
     }
 
@@ -71,7 +76,8 @@ export default {
             await clearScenarios(env);
             return jsonResponse({ scenarios: [] }, corsHeaders);
         } catch (error) {
-            return jsonResponse({ error: 'Failed to clear scenarios.' }, corsHeaders, 500);
+            console.error('DELETE /scenarios failed', error);
+            return jsonResponse({ error: 'Failed to clear scenarios.', details: error.message || String(error) }, corsHeaders, 500);
         }
     }
 
