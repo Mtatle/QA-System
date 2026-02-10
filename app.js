@@ -4,13 +4,120 @@ document.addEventListener('DOMContentLoaded', async () => {
     const sendButton = document.getElementById('sendButton');
     const internalNotesEl = document.getElementById('internalNotes');
     const logoutBtn = document.getElementById('logoutBtn');
-    
+    const csvUploadContainer = document.getElementById('csvUploadContainer');
+    const csvFileInput = document.getElementById('csvFileInput');
+    const csvUploadBtn = document.getElementById('csvUploadBtn');
+    const csvClearBtn = document.getElementById('csvClearBtn');
+    const csvStatus = document.getElementById('csvStatus');
+    const templatesUploadContainer = document.getElementById('templatesUploadContainer');
+    const templatesFileInput = document.getElementById('templatesFileInput');
+    const templatesUploadBtn = document.getElementById('templatesUploadBtn');
+    const templatesClearBtn = document.getElementById('templatesClearBtn');
+    const templatesStatus = document.getElementById('templatesStatus');
+    const API_BASE_URL = 'https://qa-templates-worker.qasystem.workers.dev'; // e.g. https://your-worker.example.workers.dev
+
     // Google Sheets integration
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxSTqGjhuR_AjFUNIeJOalTvVk1hGDLs0lazVoLKG7qmAKCErfAOkSRAHU84SyYIs98zw/exec';
     // Current scenario data
     let currentScenario = null;
     let scenarioData = null;
     let hasRespondedOnce = false; // For scenario 5 angry response
+    let totalScenarioCount = 0;
+    let templatesData = [];
+    
+    // CSV upload permission lists
+    let csvUploadAllowedAgents = [];
+    let csvUploadAllowedEmails = [];
+    let templateUploadAllowedAgents = [];
+    let templateUploadAllowedEmails = [];
+
+    async function loadCsvUploadPermissions() {
+        try {
+            const response = await fetch('allowed-agents.json');
+            const data = await response.json();
+            csvUploadAllowedAgents = (data.csvUploadAllowedAgents || []).map(a => a.toLowerCase());
+            csvUploadAllowedEmails = (data.csvUploadAllowedEmails || []).map(e => e.toLowerCase());
+            templateUploadAllowedAgents = (data.templateUploadAllowedAgents || []).map(a => a.toLowerCase());
+            templateUploadAllowedEmails = (data.templateUploadAllowedEmails || []).map(e => e.toLowerCase());
+        } catch (error) {
+            console.error('Error loading CSV upload permissions:', error);
+            csvUploadAllowedAgents = [];
+            csvUploadAllowedEmails = [];
+            templateUploadAllowedAgents = [];
+            templateUploadAllowedEmails = [];
+        }
+    }
+
+    function canUploadCsv() {
+        const agentName = (localStorage.getItem('agentName') || '').toLowerCase();
+        const agentEmail = (localStorage.getItem('agentEmail') || '').toLowerCase();
+        if (!agentName && !agentEmail) return false;
+        if (agentEmail && csvUploadAllowedEmails.includes(agentEmail)) return true;
+        if (agentName && csvUploadAllowedAgents.includes(agentName)) return true;
+        return false;
+    }
+
+    function canUploadTemplates() {
+        const agentName = (localStorage.getItem('agentName') || '').toLowerCase();
+        const agentEmail = (localStorage.getItem('agentEmail') || '').toLowerCase();
+        if (!agentName && !agentEmail) return false;
+        if (agentEmail && templateUploadAllowedEmails.includes(agentEmail)) return true;
+        if (agentName && templateUploadAllowedAgents.includes(agentName)) return true;
+        return false;
+    }
+
+    function setCsvStatus(message) {
+        if (csvStatus) {
+            csvStatus.textContent = message || '';
+        }
+    }
+
+    function getUploadedScenarios() {
+        try {
+            const raw = localStorage.getItem('uploadedScenarios');
+            if (!raw) return [];
+            const parsed = JSON.parse(raw);
+            return Array.isArray(parsed) ? parsed : [];
+        } catch (_) {
+            return [];
+        }
+    }
+
+    function setUploadedScenarios(list) {
+        localStorage.setItem('uploadedScenarios', JSON.stringify(list || []));
+        localStorage.setItem('uploadedScenariosAt', String(Date.now()));
+    }
+
+    function hasUploadedScenarios() {
+        const list = getUploadedScenarios();
+        return Array.isArray(list) && list.length > 0;
+    }
+
+    function isCsvScenarioMode() {
+        return hasUploadedScenarios();
+    }
+
+    function getUploadedTemplates() {
+        try {
+            const raw = localStorage.getItem('uploadedTemplates');
+            if (!raw) return [];
+            const parsed = JSON.parse(raw);
+            return Array.isArray(parsed) ? parsed : [];
+        } catch (_) {
+            return [];
+        }
+    }
+
+    function setUploadedTemplates(list) {
+        localStorage.setItem('uploadedTemplates', JSON.stringify(list || []));
+        localStorage.setItem('uploadedTemplatesAt', String(Date.now()));
+    }
+
+    function setTemplatesStatus(message) {
+        if (templatesStatus) {
+            templatesStatus.textContent = message || '';
+        }
+    }
     
     // Scenario progression system
     function getCurrentUnlockedScenario() {
@@ -39,11 +146,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     function isScenarioUnlocked(scenarioNumber) {
+        if (isCsvScenarioMode()) return true;
         const unlockedScenario = getCurrentUnlockedScenario();
         return parseInt(scenarioNumber) <= unlockedScenario;
     }
     
     function canAccessScenario(scenarioNumber) {
+        if (isCsvScenarioMode()) return true;
         const currentUnlocked = getCurrentUnlockedScenario();
         const requestedScenario = parseInt(scenarioNumber);
         
@@ -51,17 +160,295 @@ document.addEventListener('DOMContentLoaded', async () => {
         return requestedScenario === currentUnlocked;
     }
     
-    // Use a single dynamic scenario
+    function getScenarioNumberFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const value = params.get('scenario');
+        return value ? String(value) : null;
+    }
+
+    function setCurrentScenarioNumber(value) {
+        if (value) {
+            localStorage.setItem('currentScenarioNumber', String(value));
+        }
+    }
+
     function getCurrentScenarioNumber() {
-        return '1';
+        return getScenarioNumberFromUrl() ||
+            localStorage.getItem('currentScenarioNumber') ||
+            '1';
+    }
+
+    function parseCsv(text) {
+        const rows = [];
+        const normalized = (text || '').replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+        let row = [];
+        let field = '';
+        let inQuotes = false;
+
+        for (let i = 0; i < normalized.length; i++) {
+            const char = normalized[i];
+            const next = normalized[i + 1];
+
+            if (inQuotes) {
+                if (char === '"' && next === '"') {
+                    field += '"';
+                    i++;
+                } else if (char === '"') {
+                    inQuotes = false;
+                } else {
+                    field += char;
+                }
+            } else {
+                if (char === '"') {
+                    inQuotes = true;
+                } else if (char === ',') {
+                    row.push(field);
+                    field = '';
+                } else if (char === '\n') {
+                    row.push(field);
+                    rows.push(row);
+                    row = [];
+                    field = '';
+                } else {
+                    field += char;
+                }
+            }
+        }
+
+        if (field.length > 0 || row.length > 0) {
+            row.push(field);
+            rows.push(row);
+        }
+
+        return rows;
+    }
+
+    function cleanQuotedValue(value) {
+        if (value == null) return '';
+        let text = String(value).trim();
+        while (text.startsWith('"') && text.endsWith('"') && text.length >= 2) {
+            text = text.slice(1, -1).trim();
+        }
+        text = text.replace(/""/g, '"').trim();
+        return text;
+    }
+
+    function parseConversationField(value) {
+        const text = cleanQuotedValue(value);
+        if (!text) return [];
+        const normalized = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+        const matches = Array.from(normalized.matchAll(/(SystemMessage|customerMessage|agentMessage)\d*\s*:\s*/g));
+        if (matches.length === 0) return [];
+
+        const messages = [];
+        matches.forEach((match, index) => {
+            const start = match.index + match[0].length;
+            const end = index + 1 < matches.length ? matches[index + 1].index : normalized.length;
+            let content = normalized.slice(start, end);
+            content = cleanQuotedValue(content);
+            content = content.replace(/\n{3,}/g, '\n\n').trim();
+            if (!content) return;
+            const type = match[1].toLowerCase();
+            let role = 'system';
+            if (type === 'customermessage') role = 'customer';
+            if (type === 'agentmessage') role = 'agent';
+            messages.push({ role, content });
+        });
+        return messages;
+    }
+
+    function safeJsonParse(raw) {
+        if (!raw) return null;
+        try {
+            return JSON.parse(cleanQuotedValue(raw));
+        } catch (_) {
+            return null;
+        }
+    }
+
+    function normalizeName(value) {
+        return String(value || '').trim().toLowerCase();
+    }
+
+    function convertCsvRowToTemplate(row) {
+        const id = cleanQuotedValue(row.TEMPLATE_ID);
+        const companyName = cleanQuotedValue(row.COMPANY_NAME);
+        const title = cleanQuotedValue(row.TEMPLATE_TITLE);
+        const shortcut = cleanQuotedValue(row.TEMPLATE_SHORTCUT);
+        const textField = row.TEMPLETE_TEXT ?? row.TEMPLATE_TEXT ?? '';
+        const content = cleanQuotedValue(textField);
+
+        if (!title && !content) return null;
+
+        return {
+            id: id || '',
+            companyName: companyName || '',
+            name: title || 'Untitled',
+            shortcut: shortcut || '',
+            content: content || ''
+        };
+    }
+
+    function convertCsvRowToScenario(row, index) {
+        const sendId = cleanQuotedValue(row.SEND_ID);
+        const companyName = cleanQuotedValue(row.COMPANY_NAME) || 'Unknown Company';
+        const companyWebsite = cleanQuotedValue(row.COMPANY_WEBSITE);
+        const persona = cleanQuotedValue(row.PERSONA);
+        const messageTone = cleanQuotedValue(row.MESSAGE_TONE);
+        const companyNotes = cleanQuotedValue(row.COMPANY_NOTES);
+        const conversation = parseConversationField(row.PARAPHRASED_CONVERSATION);
+
+        const lastProducts = safeJsonParse(row.LAST_5_PRODUCTS) || [];
+        const orders = safeJsonParse(row.ORDERS) || [];
+
+        const recommended = Array.isArray(lastProducts)
+            ? lastProducts.map(item => item && item.product_name).filter(Boolean)
+            : [];
+
+        const purchased = [];
+        if (Array.isArray(orders)) {
+            orders.forEach(order => {
+                const orderNumber = order && order.order_number ? String(order.order_number) : '';
+                const products = Array.isArray(order && order.products) ? order.products : [];
+                products.forEach(product => {
+                    const itemName = product && product.product_name ? product.product_name : '';
+                    if (!itemName) return;
+                    purchased.push({
+                        item: itemName,
+                        timeAgo: orderNumber ? `Order ${orderNumber}` : ''
+                    });
+                });
+            });
+        }
+
+        const importantNotes = [];
+        if (companyNotes) importantNotes.push(companyNotes);
+        if (persona) importantNotes.push(`Persona: ${persona}`);
+        if (companyWebsite) importantNotes.push(`Website: ${companyWebsite}`);
+
+        let customerMessage = 'New conversation';
+        const firstCustomer = conversation.find(m => m.role === 'customer');
+        if (firstCustomer && firstCustomer.content) {
+            customerMessage = firstCustomer.content;
+        } else if (conversation.length > 0) {
+            customerMessage = conversation[0].content;
+        }
+
+        const agentName = persona || localStorage.getItem('agentName') || 'Agent';
+        const agentInitial = agentName ? agentName.charAt(0).toUpperCase() : 'A';
+
+        const guidelines = {};
+        if (importantNotes.length) guidelines.important = importantNotes;
+        if (messageTone) guidelines.tone = [messageTone];
+
+        return {
+            id: sendId || '',
+            companyName,
+            agentName,
+            agentInitial,
+            customerPhone: sendId || '',
+            customerMessage,
+            responseType: 'template',
+            guidelines,
+            rightPanel: {
+                source: {
+                    label: 'Website',
+                    value: companyWebsite || 'N/A',
+                    date: ''
+                },
+                recommended,
+                purchased
+            },
+            conversation
+        };
+    }
+
+    function appendUploadedScenarios(scenarios, uploadedList) {
+        const uploaded = Array.isArray(uploadedList) ? uploadedList : [];
+        if (!uploaded.length) return scenarios;
+        const keys = Object.keys(scenarios).map(k => parseInt(k, 10)).filter(n => !isNaN(n));
+        let nextKey = keys.length ? Math.max(...keys) + 1 : 1;
+        uploaded.forEach(item => {
+            scenarios[String(nextKey)] = item;
+            nextKey++;
+        });
+        return scenarios;
+    }
+
+    async function loadTemplatesData() {
+        if (API_BASE_URL) {
+            try {
+                const response = await fetch(`${API_BASE_URL}/templates`, { method: 'GET' });
+                if (!response.ok) throw new Error('API error');
+                const data = await response.json();
+                return Array.isArray(data.templates) ? data.templates : [];
+            } catch (error) {
+                console.error('Error loading templates via API:', error);
+            }
+        }
+
+        if (window.location.protocol === 'file:') {
+            return getUploadedTemplates();
+        }
+        try {
+            const response = await fetch('templates.json');
+            const data = await response.json();
+            const base = Array.isArray(data.templates) ? data.templates : [];
+            const uploaded = getUploadedTemplates();
+            return uploaded.length ? uploaded : base;
+        } catch (error) {
+            console.error('Error loading templates data:', error);
+            return getUploadedTemplates();
+        }
+    }
+
+    async function loadUploadedScenarios() {
+        if (!API_BASE_URL) return getUploadedScenarios();
+        try {
+            const response = await fetch(`${API_BASE_URL}/scenarios`, { method: 'GET' });
+            if (!response.ok) throw new Error('API error');
+            const data = await response.json();
+            const list = Array.isArray(data.scenarios) ? data.scenarios : [];
+            setUploadedScenarios(list);
+            return list;
+        } catch (error) {
+            console.error('Error loading scenarios via API:', error);
+            return [];
+        }
+    }
+
+    function getTemplatesForScenario(scenario) {
+        const sourceTemplates = Array.isArray(templatesData) && templatesData.length
+            ? templatesData
+            : (scenario.rightPanel && Array.isArray(scenario.rightPanel.templates) ? scenario.rightPanel.templates : []);
+
+        if (!sourceTemplates.length) return [];
+
+        if (sourceTemplates === templatesData) {
+            const companyKey = normalizeName(scenario.companyName);
+            const matching = [];
+            const global = [];
+            sourceTemplates.forEach(template => {
+                const templateCompany = normalizeName(template.companyName);
+                if (!templateCompany) {
+                    global.push(template);
+                } else if (templateCompany === companyKey) {
+                    matching.push(template);
+                }
+            });
+            return matching.concat(global);
+        }
+
+        return sourceTemplates;
     }
 
     
     // Load scenarios data
     async function loadScenariosData() {
+        const uploaded = await loadUploadedScenarios();
         // Immediate fallback when running from file:// to avoid CORS/network errors
         if (window.location.protocol === 'file:') {
-            return {
+            const fallback = {
                 '1': {
                     companyName: 'Demo Company',
                     agentName: localStorage.getItem('agentName') || 'Agent',
@@ -74,6 +461,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     rightPanel: { source: { label: 'Source', value: 'Local Demo', date: '' } }
                 }
             };
+            return appendUploadedScenarios(fallback, uploaded);
         }
         try {
             const response = await fetch('scenarios.json');
@@ -100,7 +488,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 };
             });
             
-            return scenarios;
+            return appendUploadedScenarios(scenarios, uploaded);
         } catch (error) {
             console.error('Error loading scenarios data:', error);
             return null;
@@ -116,15 +504,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         dropdown.innerHTML = '';
         
         const currentAllowed = getCurrentUnlockedScenario();
+        const scenarioNumbers = Object.keys(scenarios)
+            .map(k => parseInt(k, 10))
+            .filter(n => !isNaN(n))
+            .sort((a, b) => a - b)
+            .map(n => String(n));
         
         // Add scenario options
-        Object.keys(scenarios).forEach(scenarioNumber => {
+        scenarioNumbers.forEach(scenarioNumber => {
             const option = document.createElement('option');
             option.value = scenarioNumber;
             
             const scenarioNum = parseInt(scenarioNumber);
             
-            if (scenarioNum === currentAllowed) {
+            if (isCsvScenarioMode()) {
+                option.textContent = `Scenario ${scenarioNumber}`;
+            } else if (scenarioNum === currentAllowed) {
                 // Current scenario - accessible
                 option.textContent = `Scenario ${scenarioNumber}`;
             } else if (scenarioNum < currentAllowed) {
@@ -204,6 +599,63 @@ document.addEventListener('DOMContentLoaded', async () => {
             icon: 'info' 
         };
     }
+
+    function renderConversationMessages(conversation, scenario) {
+        if (!chatMessages) return;
+        chatMessages.innerHTML = '';
+
+        const systemStart = document.createElement('div');
+        systemStart.className = 'system-message';
+        systemStart.innerHTML = '<i data-feather="bell" class="icon-small"></i> Concierge conversation started';
+        chatMessages.appendChild(systemStart);
+
+        if (!Array.isArray(conversation) || conversation.length === 0) {
+            const fallbackMessage = document.createElement('div');
+            fallbackMessage.className = 'message received';
+            fallbackMessage.innerHTML = `
+                <div class="message-sender-icon">C</div>
+                <div class="message-content">
+                    <p>${scenario.customerMessage || ''}</p>
+                </div>
+            `;
+            chatMessages.appendChild(fallbackMessage);
+            return;
+        }
+
+        conversation.forEach(message => {
+            if (!message || !message.content) return;
+            if (message.role === 'system') {
+                const systemMessage = document.createElement('div');
+                systemMessage.className = 'system-message';
+                systemMessage.innerHTML = `<i data-feather="bell" class="icon-small"></i> ${message.content}`;
+                chatMessages.appendChild(systemMessage);
+                return;
+            }
+
+            const isAgent = message.role === 'agent';
+            const wrapper = document.createElement('div');
+            wrapper.className = `message ${isAgent ? 'sent' : 'received'}`;
+
+            const icon = document.createElement('div');
+            icon.className = 'message-sender-icon';
+            icon.textContent = isAgent ? (scenario.agentInitial || 'A') : 'C';
+
+            const content = document.createElement('div');
+            content.className = 'message-content';
+            const p = document.createElement('p');
+            p.textContent = message.content;
+            content.appendChild(p);
+
+            if (isAgent) {
+                wrapper.appendChild(content);
+                wrapper.appendChild(icon);
+            } else {
+                wrapper.appendChild(icon);
+                wrapper.appendChild(content);
+            }
+            chatMessages.appendChild(wrapper);
+        });
+    }
     
     // Load scenario content into the page
     function loadScenarioContent(scenarioNumber, data) {
@@ -235,6 +687,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         if (messageElement) messageElement.textContent = scenario.customerMessage;
         else console.error('customerMessage element not found');
+
+        // Render preloaded conversation if provided
+        if (scenario.conversation && Array.isArray(scenario.conversation) && scenario.conversation.length > 0) {
+            renderConversationMessages(scenario.conversation, scenario);
+        }
         
         // Update guidelines dynamically
         const guidelinesContainer = document.getElementById('dynamic-guidelines-container');
@@ -475,11 +932,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         
         // Update template items
-        if (scenario.rightPanel.templates) {
+        const templatesForScenario = getTemplatesForScenario(scenario);
+        if (templatesForScenario && templatesForScenario.length) {
             const templatesContainer = document.getElementById('templateItems');
             if (templatesContainer) {
                 templatesContainer.innerHTML = '';
-                scenario.rightPanel.templates.forEach(template => {
+                templatesForScenario.forEach(template => {
                     const templateDiv = document.createElement('div');
                     templateDiv.className = 'template-item';
 
@@ -506,7 +964,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 });
                 
                 // Initialize template search functionality
-                initializeTemplateSearch(scenario.rightPanel.templates);
+                initializeTemplateSearch(templatesForScenario);
             }
         }
     }
@@ -863,11 +1321,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Function to check if we should unlock the next scenario
     function checkAndUnlockNextScenario(scenarioNumber, messageCount) {
+        if (isCsvScenarioMode()) return;
         if (messageCount >= 2) {
             const nextScenario = unlockNextScenario();
             
             // Show notification about unlocked scenario
-            if (nextScenario <= 5) { // Assuming you have 5 scenarios total
+            if (totalScenarioCount === 0 || nextScenario <= totalScenarioCount) {
                 setTimeout(() => {
                     const notification = document.createElement('div');
                     notification.style.cssText = `
@@ -945,6 +1404,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Event listeners
+    const nextConversationBtn = document.getElementById('nextConversationBtn');
+    if (nextConversationBtn) {
+        nextConversationBtn.addEventListener('click', async () => {
+            const data = await loadScenariosData();
+            if (!data) return;
+            const keys = Object.keys(data)
+                .map(k => parseInt(k, 10))
+                .filter(n => !isNaN(n))
+                .sort((a, b) => a - b)
+                .map(n => String(n));
+            if (!keys.length) return;
+            const current = String(getCurrentScenarioNumber());
+            const currentIndex = keys.indexOf(current);
+            const nextIndex = currentIndex >= 0 && currentIndex + 1 < keys.length ? currentIndex + 1 : 0;
+            const nextScenario = keys[nextIndex];
+            if (!isCsvScenarioMode() && !canAccessScenario(nextScenario)) return;
+            setCurrentScenarioNumber(nextScenario);
+            window.location.href = `app.html?scenario=${nextScenario}`;
+        });
+    }
+
     if (sendButton) {
         sendButton.addEventListener('click', handleSendMessage);
     }
@@ -1237,13 +1717,311 @@ document.addEventListener('DOMContentLoaded', async () => {
         return text;
     }
 
+    async function initializeCsvUpload() {
+        if (!csvUploadContainer) return;
+        await loadCsvUploadPermissions();
+
+        if (!canUploadCsv()) {
+            csvUploadContainer.style.display = 'none';
+            return;
+        }
+
+        csvUploadContainer.style.display = 'flex';
+
+        const uploaded = getUploadedScenarios();
+        if (uploaded.length > 0) {
+            setCsvStatus(`Loaded ${uploaded.length} uploaded scenario(s)`);
+        }
+
+        if (csvUploadBtn && csvFileInput) {
+            csvUploadBtn.addEventListener('click', () => {
+                csvFileInput.click();
+            });
+
+            csvFileInput.addEventListener('change', async (event) => {
+                const file = event.target.files && event.target.files[0];
+                if (!file) return;
+                setCsvStatus('Reading CSV...');
+
+                const reader = new FileReader();
+                reader.onload = async () => {
+                    try {
+                        const text = String(reader.result || '');
+                        const rows = parseCsv(text);
+                        if (!rows.length) {
+                            setCsvStatus('No rows found.');
+                            return;
+                        }
+
+                        const headers = rows[0].map((h, i) => {
+                            const text = String(h || '').trim();
+                            return i === 0 ? text.replace(/^\uFEFF/, '') : text;
+                        });
+                        const requiredHeaders = [
+                            'SEND_ID',
+                            'COMPANY_NAME',
+                            'COMPANY_WEBSITE',
+                            'PERSONA',
+                            'MESSAGE_TONE',
+                            'PARAPHRASED_CONVERSATION',
+                            'LAST_5_PRODUCTS',
+                            'ORDERS',
+                            'COMPANY_NOTES'
+                        ];
+                        const missing = requiredHeaders.filter(h => !headers.includes(h));
+                        if (missing.length) {
+                            setCsvStatus(`Missing headers: ${missing.join(', ')}`);
+                            return;
+                        }
+
+                        const rowData = rows.slice(1)
+                            .filter(row => row.some(cell => String(cell || '').trim() !== ''))
+                            .map(row => {
+                                const obj = {};
+                                headers.forEach((header, i) => {
+                                    obj[header] = row[i] ?? '';
+                                });
+                                return obj;
+                            });
+
+                        if (!rowData.length) {
+                            setCsvStatus('No data rows found.');
+                            return;
+                        }
+
+                        const scenarios = rowData.map(convertCsvRowToScenario);
+
+                        if (API_BASE_URL) {
+                            const response = await fetch(`${API_BASE_URL}/scenarios`, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ scenarios })
+                            });
+                            if (!response.ok) {
+                                throw new Error('API update failed');
+                            }
+                            const data = await response.json();
+                            setCsvStatus(`Saved ${scenarios.length} scenario(s) via API`);
+                            setUploadedScenarios(data.scenarios || []);
+                        } else {
+                            setUploadedScenarios(scenarios);
+                        }
+
+                        const merged = await loadScenariosData();
+                        const keys = Object.keys(merged)
+                            .map(k => parseInt(k, 10))
+                            .filter(n => !isNaN(n))
+                            .sort((a, b) => a - b)
+                            .map(n => String(n));
+                        const uploadedCount = scenarios.length;
+                        const firstUploadedKey = keys.length - uploadedCount >= 0 ? keys[keys.length - uploadedCount] : keys[0];
+
+                        localStorage.setItem('unlockedScenario', String(keys.length));
+                        setCurrentScenarioNumber(firstUploadedKey);
+                        setCsvStatus(`Loaded ${scenarios.length} scenario(s) from ${file.name}`);
+                        window.location.href = `app.html?scenario=${firstUploadedKey}`;
+                    } catch (error) {
+                        console.error('CSV parsing failed:', error);
+                        setCsvStatus('CSV parsing failed. Check the file format.');
+                    } finally {
+                        csvFileInput.value = '';
+                    }
+                };
+
+                reader.onerror = () => {
+                    setCsvStatus('Failed to read CSV file.');
+                };
+
+                reader.readAsText(file);
+            });
+        }
+
+        if (csvClearBtn) {
+            csvClearBtn.addEventListener('click', async () => {
+                if (API_BASE_URL) {
+                    try {
+                        const response = await fetch(`${API_BASE_URL}/scenarios`, { method: 'DELETE' });
+                        if (!response.ok) throw new Error('API delete failed');
+                        setCsvStatus('Cleared uploaded scenarios via API.');
+                        localStorage.removeItem('uploadedScenarios');
+                        localStorage.removeItem('uploadedScenariosAt');
+                    } catch (error) {
+                        setCsvStatus('Failed to clear scenarios via API.');
+                        return;
+                    }
+                } else {
+                    localStorage.removeItem('uploadedScenarios');
+                    localStorage.removeItem('uploadedScenariosAt');
+                    setCsvStatus('Cleared uploaded scenarios.');
+                }
+                window.location.href = 'app.html?scenario=1';
+            });
+        }
+    }
+
+    async function initializeTemplatesUpload() {
+        if (!templatesUploadContainer) return;
+        await loadCsvUploadPermissions();
+
+        if (!canUploadTemplates()) {
+            templatesUploadContainer.style.display = 'none';
+            return;
+        }
+
+        templatesUploadContainer.style.display = 'flex';
+
+        const uploaded = getUploadedTemplates();
+        if (uploaded.length > 0) {
+            setTemplatesStatus(`Loaded ${uploaded.length} uploaded template(s)`);
+        }
+
+        if (templatesUploadBtn && templatesFileInput) {
+            templatesUploadBtn.addEventListener('click', () => {
+                templatesFileInput.click();
+            });
+
+            templatesFileInput.addEventListener('change', async (event) => {
+                const file = event.target.files && event.target.files[0];
+                if (!file) return;
+                setTemplatesStatus('Reading CSV...');
+
+                const reader = new FileReader();
+                reader.onload = async () => {
+                    try {
+                        const text = String(reader.result || '');
+                        const rows = parseCsv(text);
+                        if (!rows.length) {
+                            setTemplatesStatus('No rows found.');
+                            return;
+                        }
+
+                        const headers = rows[0].map((h, i) => {
+                            const text = String(h || '').trim();
+                            return i === 0 ? text.replace(/^\uFEFF/, '') : text;
+                        });
+                        const requiredHeaders = [
+                            'TEMPLATE_ID',
+                            'COMPANY_NAME',
+                            'TEMPLATE_TITLE',
+                            'TEMPLETE_TEXT',
+                            'TEMPLATE_SHORTCUT'
+                        ];
+                        const missing = requiredHeaders.filter(h => !headers.includes(h));
+                        if (missing.length) {
+                            setTemplatesStatus(`Missing headers: ${missing.join(', ')}`);
+                            return;
+                        }
+
+                        const rowData = rows.slice(1)
+                            .filter(row => row.some(cell => String(cell || '').trim() !== ''))
+                            .map(row => {
+                                const obj = {};
+                                headers.forEach((header, i) => {
+                                    obj[header] = row[i] ?? '';
+                                });
+                                return obj;
+                            });
+
+                        if (!rowData.length) {
+                            setTemplatesStatus('No data rows found.');
+                            return;
+                        }
+
+                        const templates = rowData
+                            .map(convertCsvRowToTemplate)
+                            .filter(Boolean);
+
+                        if (!templates.length) {
+                            setTemplatesStatus('No valid templates found.');
+                            return;
+                        }
+
+                        if (API_BASE_URL) {
+                            const response = await fetch(`${API_BASE_URL}/templates`, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ templates })
+                            });
+                            if (!response.ok) {
+                                throw new Error('API update failed');
+                            }
+                            const data = await response.json();
+                            templatesData = Array.isArray(data.templates) ? data.templates : [];
+                            setTemplatesStatus(`Saved ${templates.length} template(s) via API`);
+                        } else {
+                            setUploadedTemplates(templates);
+                            templatesData = await loadTemplatesData();
+                            setTemplatesStatus(`Loaded ${templates.length} template(s) from ${file.name}`);
+                        }
+                        if (scenarioData) {
+                            loadRightPanelContent(scenarioData);
+                        }
+                    } catch (error) {
+                        console.error('Templates CSV parsing failed:', error);
+                        setTemplatesStatus('CSV parsing failed. Check the file format.');
+                    } finally {
+                        templatesFileInput.value = '';
+                    }
+                };
+
+                reader.onerror = () => {
+                    setTemplatesStatus('Failed to read CSV file.');
+                };
+
+                reader.readAsText(file);
+            });
+        }
+
+        if (templatesClearBtn) {
+            templatesClearBtn.addEventListener('click', async () => {
+                if (API_BASE_URL) {
+                    try {
+                        const response = await fetch(`${API_BASE_URL}/templates`, { method: 'DELETE' });
+                        if (!response.ok) throw new Error('API delete failed');
+                        templatesData = [];
+                        setTemplatesStatus('Cleared templates via API.');
+                        if (scenarioData) {
+                            loadRightPanelContent(scenarioData);
+                        }
+                    } catch (error) {
+                        setTemplatesStatus('Failed to clear templates via API.');
+                    }
+                } else {
+                    localStorage.removeItem('uploadedTemplates');
+                    localStorage.removeItem('uploadedTemplatesAt');
+                    templatesData = [];
+                    setTemplatesStatus('Cleared uploaded templates.');
+                    if (scenarioData) {
+                        loadRightPanelContent(scenarioData);
+                    }
+                }
+            });
+        }
+    }
+
     // Initialize everything
     const scenarios = await loadScenariosData();
     if (scenarios) {
-        loadScenarioContent('1', scenarios);
+        const scenarioKeys = Object.keys(scenarios)
+            .map(k => parseInt(k, 10))
+            .filter(n => !isNaN(n))
+            .sort((a, b) => a - b)
+            .map(n => String(n));
+        totalScenarioCount = scenarioKeys.length;
+        const requestedScenario = getCurrentScenarioNumber();
+        const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
+        setCurrentScenarioNumber(activeScenario);
+        loadScenarioContent(activeScenario, scenarios);
+        if (templatesData && templatesData.length) {
+            loadRightPanelContent(scenarios[activeScenario]);
+        }
     } else {
         console.error('Could not load scenarios data');
     }
+
+    templatesData = await loadTemplatesData();
+    await initializeCsvUpload();
+    await initializeTemplatesUpload();
 
     // If this scenario was previously ended (via action buttons), keep input disabled IF it's NOT the current unlocked scenario.
     // This prevents stale ended flags from blocking a fresh session when logging back in or starting a new unlocked scenario.

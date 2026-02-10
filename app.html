@@ -23,6 +23,12 @@
             <!-- Centered session timer -->
             <div class="timer-display" id="sessionTimer">00:00</div>
             <div class="top-bar-right">
+                <div class="csv-upload" id="csvUploadContainer" style="display:none;">
+                    <input type="file" id="csvFileInput" accept=".csv,text/csv" hidden>
+                    <button id="csvUploadBtn" class="csv-upload-btn">Upload CSV</button>
+                    <button id="csvClearBtn" class="csv-clear-btn">Clear Upload</button>
+                    <span id="csvStatus" class="csv-status" aria-live="polite"></span>
+                </div>
                 <button id="nextConversationBtn" class="next-conversation-btn">Next Conversation</button>
             </div>
         </div>
@@ -385,6 +391,12 @@
                 <div class="info-block">
                     <div class="info-block-header">
                         <span>TEMPLATES</span>
+                    </div>
+                    <div class="templates-upload" id="templatesUploadContainer" style="display:none;">
+                        <input type="file" id="templatesFileInput" accept=".csv,text/csv" hidden>
+                        <button id="templatesUploadBtn" class="templates-upload-btn">Upload Templates CSV</button>
+                        <button id="templatesClearBtn" class="templates-clear-btn">Clear Templates</button>
+                        <span id="templatesStatus" class="templates-status" aria-live="polite"></span>
                     </div>
                     <div class="search-templates">
                         <i data-feather="search" class="icon-small"></i>
