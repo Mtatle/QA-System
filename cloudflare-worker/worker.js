@@ -95,6 +95,15 @@ function jsonResponse(body, headers, status = 200) {
   });
 }
 
+function toBase64Utf8(str) {
+  const bytes = new TextEncoder().encode(str);
+  let binary = '';
+  bytes.forEach(b => {
+    binary += String.fromCharCode(b);
+  });
+  return btoa(binary);
+}
+
 async function readTemplates(env) {
   const { owner, repo, templatesPath, branch, token } = getRepoConfig(env);
   const path = templatesPath;
@@ -176,7 +185,7 @@ async function writeTemplates(env, templates, sha) {
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
   const body = {
     message: 'Update templates.json via uploader',
-    content: btoa(JSON.stringify({ templates }, null, 2)),
+    content: toBase64Utf8(JSON.stringify({ templates }, null, 2)),
     branch
   };
   if (sha) {
@@ -242,7 +251,7 @@ async function writeScenarios(env, scenarios, sha) {
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${scenariosPath}`;
   const body = {
     message: 'Update scenarios upload via uploader',
-    content: btoa(JSON.stringify({ scenarios }, null, 2)),
+    content: toBase64Utf8(JSON.stringify({ scenarios }, null, 2)),
     branch
   };
   if (sha) {
