@@ -274,8 +274,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         const id = cleanQuotedValue(row.TEMPLATE_ID);
         const companyName = cleanQuotedValue(row.COMPANY_NAME);
         const title = cleanQuotedValue(row.TEMPLATE_TITLE);
-        const shortcut = cleanQuotedValue(row.TEMPLATE_SHORTCUT);
-        const textField = row.TEMPLETE_TEXT ?? row.TEMPLATE_TEXT ?? '';
+        const shortcut = cleanQuotedValue(row.SHORTCUT);
+        const textField = row.TEMPLATE_TEXT ?? row.TEMPLATE_TEXT ?? '';
         const content = cleanQuotedValue(textField);
 
         if (!title && !content) return null;
@@ -1903,8 +1903,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                             'TEMPLATE_ID',
                             'COMPANY_NAME',
                             'TEMPLATE_TITLE',
-                            'TEMPLETE_TEXT',
-                            'TEMPLATE_SHORTCUT'
+                            'TEMPLATE_TEXT',
+                            'SHORTCUT'
                         ];
                         const missing = requiredHeaders.filter(h => !headers.includes(h));
                         if (missing.length) {

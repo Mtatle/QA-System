@@ -419,6 +419,7 @@ polyline[points="6 9 12 15 18 9"] {
 .templates-upload {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     margin: 10px 12px 12px;
     padding: 8px 10px;
@@ -427,6 +428,8 @@ polyline[points="6 9 12 15 18 9"] {
     border-radius: 8px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
     flex-wrap: wrap;
+    text-align: center;
+    width: calc(100% - 24px);
 }
 
 .templates-upload-btn,
@@ -462,6 +465,44 @@ polyline[points="6 9 12 15 18 9"] {
 .templates-status {
     font-size: 0.75em;
     color: #4a4a4a;
+}
+
+.right-panel-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+    min-height: 0;
+    padding-right: 2px;
+}
+
+.right-panel-templates {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.templates-block {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+}
+
+.templates-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.templates-upload {
+    margin-top: auto;
+}
+
+.templates-upload-panel {
+    margin: 0;
+    width: 100%;
+    flex: 0 0 auto;
 }
 
 /* Scenario Navigation */
@@ -980,10 +1021,11 @@ input:checked + .slider:before {
     background-color: #f8f9fa;
     padding: 15px;
     border-left: 1px solid #e0e0e0;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 2fr 3fr auto;
     gap: 15px;
+    overflow: hidden;
+    min-height: 0;
 }
 
 .form-group {
