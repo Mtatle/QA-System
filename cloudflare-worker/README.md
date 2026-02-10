@@ -12,7 +12,7 @@ This worker exposes:
 - `GH_REPO`: repo name
 - `GH_BRANCH`: branch name (default `main`)
 - `GH_TEMPLATES_PATH`: path to `templates.json` (default `templates.json`)
-- `GH_SCENARIOS_PATH`: path to uploaded scenarios file (default `scenarios-uploads.json`)
+- `GH_SCENARIOS_PATH`: path to uploaded scenarios file (default `scenarios.json`)
 
 ## Local dev (optional)
 ```bash
