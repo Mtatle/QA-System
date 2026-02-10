@@ -235,26 +235,166 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function parseConversationField(value) {
         const text = cleanQuotedValue(value);
-        if (!text) return [];
+        if (!text) return {};
         const normalized = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
-        const matches = Array.from(normalized.matchAll(/(SystemMessage|customerMessage|agentMessage)\d*\s*:\s*/g));
-        if (matches.length === 0) return [];
+        const messageRegex = /(SystemMessage|customerMessage|agentMessage|agentMessages)(\d*)/gi;
+        const matches = [];
+        let match;
 
+        while ((match = messageRegex.exec(normalized)) !== null) {
+            matches.push({
+                index: match.index,
+                rawPrefix: match[1],
+                number: match[2] || '',
+                matchedText: match[0]
+            });
+        }
+
+        if (matches.length === 0) return {};
+
+        const conversation = {};
+        const counters = {
+            SystemMessage: 1,
+            customerMessage: 1,
+            AgentMessage: 1
+        };
+
+        const prefixFor = (rawPrefix) => {
+            const lower = rawPrefix.toLowerCase();
+            if (lower.startsWith('system')) return 'SystemMessage';
+            if (lower.startsWith('customer')) return 'customerMessage';
+            if (lower.startsWith('agent')) return 'AgentMessage';
+            return null;
+        };
+
+        matches.forEach((entry, idx) => {
+            const canonicalPrefix = prefixFor(entry.rawPrefix);
+            if (!canonicalPrefix) return;
+
+            const colonIndex = normalized.indexOf(':', entry.index + entry.matchedText.length);
+            const nextIndex = idx + 1 < matches.length ? matches[idx + 1].index : normalized.length;
+            if (colonIndex === -1 || colonIndex > nextIndex) {
+                return;
+            }
+
+            let rawValue = normalized.slice(colonIndex + 1, nextIndex).trim();
+            if (rawValue.endsWith(',')) {
+                rawValue = rawValue.slice(0, -1).trim();
+            }
+            if (rawValue.length >= 2) {
+                const quotePairs = [
+                    ['"', '"'],
+                    ['“', '”'],
+                    ['‘', '’']
+                ];
+                const matchingPair = quotePairs.find(([open, close]) => rawValue.startsWith(open) && rawValue.endsWith(close));
+                if (matchingPair) {
+                    rawValue = rawValue.slice(matchingPair[0].length, rawValue.length - matchingPair[1].length).trim();
+                }
+            }
+            rawValue = rawValue.replace(/\r?\n/g, '\n').trim();
+            rawValue = rawValue.replace(/\\"/g, '"').replace(/""/g, '"');
+            if (!rawValue) return;
+
+            let number = entry.number;
+            if (number) {
+                counters[canonicalPrefix] = Math.max(counters[canonicalPrefix], parseInt(number, 10) + 1);
+            } else {
+                number = String(counters[canonicalPrefix]);
+                counters[canonicalPrefix] += 1;
+            }
+
+            let key = `${canonicalPrefix}${number}`;
+            while (Object.prototype.hasOwnProperty.call(conversation, key)) {
+                number = String(parseInt(number, 10) + 1);
+                key = `${canonicalPrefix}${number}`;
+                counters[canonicalPrefix] = Math.max(counters[canonicalPrefix], parseInt(number, 10) + 1);
+            }
+
+            conversation[key] = rawValue;
+        });
+
+        return conversation;
+    }
+
+    function looksLikePromoNote(text) {
+        const value = String(text || '').toLowerCase();
+        if (!value) return false;
+        if (/(https?:\/\/|www\.)/.test(value)) return true;
+        return /(promo|promotion|sale|discount|% off|free shipping|free gift|shop now|use code|code|limited time|offer)/.test(value);
+    }
+
+    function getCompanyInitial(companyName) {
+        const name = String(companyName || '').trim();
+        return name ? name.charAt(0).toUpperCase() : '';
+    }
+
+    function parseCompanyNotes(notesText) {
+        if (!notesText) return {};
+
+        const notes = {};
+        const categories = {
+            '📬 SEND TO CS': 'send_to_cs',
+            '🛑 ESCALATE': 'escalate',
+            '📢 TONE': 'tone',
+            '⚡ TEMPLATES': 'templates',
+            '✅ DOs AND DON\'Ts': 'dos_and_donts',
+            '🛒 DRIVE TO PURCHASE': 'drive_to_purchase',
+            '✨ PROMO & PROMO EXCLUSIONS': 'promo_and_exclusions',
+            '🚨 IMPORTANT': 'important'
+        };
+
+        const sections = String(notesText).split('#').filter(section => section.trim());
+        sections.forEach(section => {
+            const lines = section.trim().split('\n');
+            if (!lines.length) return;
+            const header = lines[0].trim();
+            const categoryKey = Object.keys(categories).find(key =>
+                header.includes(key) || header.includes(key.replace(/[📬🛑📢⚡✅🛒✨🚨]/g, '').trim())
+            );
+            if (!categoryKey) return;
+            const notesKey = categories[categoryKey];
+            const bulletPoints = lines
+                .slice(1)
+                .map(line => line.trim())
+                .filter(line => line.startsWith('•'))
+                .map(line => line.substring(1).trim())
+                .filter(line => line.length > 0);
+            if (bulletPoints.length > 0) {
+                notes[notesKey] = bulletPoints;
+            }
+        });
+
+        return notes;
+    }
+
+    function buildConversationFromScenario(scenario) {
+        if (!scenario) return [];
+        if (Array.isArray(scenario.conversation) && scenario.conversation.length) {
+            return scenario.conversation.slice();
+        }
         const messages = [];
-        matches.forEach((match, index) => {
-            const start = match.index + match[0].length;
-            const end = index + 1 < matches.length ? matches[index + 1].index : normalized.length;
-            let content = normalized.slice(start, end);
-            content = cleanQuotedValue(content);
-            content = content.replace(/\n{3,}/g, '\n\n').trim();
-            if (!content) return;
-            const type = match[1].toLowerCase();
-            let role = 'system';
-            if (type === 'customermessage') role = 'customer';
-            if (type === 'agentmessage') role = 'agent';
-            messages.push({ role, content });
+        const entries = Object.entries(scenario);
+        entries.forEach(([key, value]) => {
+            if (!value || typeof value !== 'string') return;
+            if (/^SystemMessage\d+$/i.test(key)) {
+                messages.push({ role: 'system', content: value });
+            } else if (/^customerMessage\d*$/i.test(key)) {
+                messages.push({ role: 'customer', content: value });
+            } else if (/^AgentMessage\d+$/i.test(key)) {
+                messages.push({ role: 'agent', content: value });
+            }
         });
         return messages;
+    }
+
+    function getFirstCustomerMessageFromScenario(scenario, conversation) {
+        if (scenario && typeof scenario.customerMessage === 'string' && scenario.customerMessage.trim()) {
+            return scenario.customerMessage;
+        }
+        const conv = Array.isArray(conversation) ? conversation : [];
+        const firstCustomer = conv.find(m => m && m.role === 'customer' && m.content);
+        return firstCustomer ? firstCustomer.content : '';
     }
 
     function safeJsonParse(raw) {
@@ -296,60 +436,50 @@ document.addEventListener('DOMContentLoaded', async () => {
         const persona = cleanQuotedValue(row.PERSONA);
         const messageTone = cleanQuotedValue(row.MESSAGE_TONE);
         const companyNotes = cleanQuotedValue(row.COMPANY_NOTES);
-        const conversation = parseConversationField(row.PARAPHRASED_CONVERSATION);
+        const promoNotesRaw = cleanQuotedValue(row.PROMO_NOTES);
+        const conversationFields = parseConversationField(row.PARAPHRASED_CONVERSATION);
 
         const lastProducts = safeJsonParse(row.LAST_5_PRODUCTS) || [];
         const orders = safeJsonParse(row.ORDERS) || [];
 
-        const recommended = Array.isArray(lastProducts)
-            ? lastProducts.map(item => item && item.product_name).filter(Boolean)
-            : [];
-
+        const recommended = [];
         const purchased = [];
-        if (Array.isArray(orders)) {
-            orders.forEach(order => {
-                const orderNumber = order && order.order_number ? String(order.order_number) : '';
-                const products = Array.isArray(order && order.products) ? order.products : [];
-                products.forEach(product => {
-                    const itemName = product && product.product_name ? product.product_name : '';
-                    if (!itemName) return;
-                    purchased.push({
-                        item: itemName,
-                        timeAgo: orderNumber ? `Order ${orderNumber}` : ''
-                    });
-                });
-            });
+
+        const notes = parseCompanyNotes(companyNotes);
+        const promoNotes = promoNotesRaw
+            ? promoNotesRaw.split(/\r?\n/).map(line => line.trim()).filter(Boolean)
+            : [];
+        if (promoNotes.length) {
+            notes.promo_and_exclusions = (notes.promo_and_exclusions || []).concat(promoNotes);
         }
 
-        const importantNotes = [];
-        if (companyNotes) importantNotes.push(companyNotes);
-        if (persona) importantNotes.push(`Persona: ${persona}`);
-        if (companyWebsite) importantNotes.push(`Website: ${companyWebsite}`);
-
-        let customerMessage = 'New conversation';
-        const firstCustomer = conversation.find(m => m.role === 'customer');
-        if (firstCustomer && firstCustomer.content) {
-            customerMessage = firstCustomer.content;
-        } else if (conversation.length > 0) {
-            customerMessage = conversation[0].content;
-        }
-
-        const agentName = persona || localStorage.getItem('agentName') || 'Agent';
-        const agentInitial = agentName ? agentName.charAt(0).toUpperCase() : 'A';
+        const agentName = persona || '';
+        const agentInitial = getCompanyInitial(companyName);
 
         const guidelines = {};
-        if (importantNotes.length) guidelines.important = importantNotes;
-        if (messageTone) guidelines.tone = [messageTone];
+        Object.keys(notes).forEach(key => {
+            if (Array.isArray(notes[key]) && notes[key].length) {
+                guidelines[key] = notes[key];
+            }
+        });
+        if (messageTone) {
+            guidelines.tone = (guidelines.tone || []).concat([messageTone]);
+            notes.tone = (notes.tone || []).concat([messageTone]);
+        }
 
         return {
             id: sendId || '',
             companyName,
+            companyWebsite: companyWebsite || '',
             agentName,
             agentInitial,
-            customerPhone: sendId || '',
-            customerMessage,
+            messageTone: messageTone || '',
+            customerPhone: '',
+            customerMessage: '',
             responseType: 'template',
+            notes,
             guidelines,
+            ...conversationFields,
             rightPanel: {
                 source: {
                     label: 'Website',
@@ -357,9 +487,32 @@ document.addEventListener('DOMContentLoaded', async () => {
                     date: ''
                 },
                 recommended,
-                purchased
+                purchased,
+                browsingHistory: Array.isArray(lastProducts)
+                    ? lastProducts.map(item => ({
+                        item: item && item.product_name ? String(item.product_name) : '',
+                        link: item && item.product_link ? String(item.product_link) : '',
+                        icon: 'shopping-cart'
+                    })).filter(entry => entry.item)
+                    : [],
+                orders: Array.isArray(orders)
+                    ? orders.map(order => {
+                        const products = Array.isArray(order && order.products) ? order.products : [];
+                        return {
+                            orderNumber: order && order.order_number ? String(order.order_number) : '',
+                            link: order && order.order_status_url ? String(order.order_status_url) : '',
+                            trackingLink: order && order.tracking_url ? String(order.tracking_url) : '',
+                            items: products.map(product => ({
+                                name: product && product.product_name ? String(product.product_name) : '',
+                                price: product && product.product_price != null ? String(product.product_price) : '',
+                                product_link: product && product.product_link ? String(product.product_link) : ''
+                            })).filter(p => p.name),
+                            subtotal: order && order.total != null ? `$${order.total}` : ''
+                        };
+                    }).filter(order => order.orderNumber || order.items.length)
+                    : []
             },
-            conversation
+            orders: Array.isArray(orders) ? orders : [],
         };
     }
 
@@ -455,7 +608,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     customerPhone: '(000) 000-0000',
                     customerMessage: 'Welcome! Start the conversation here.',
                     agentInitial: 'A',
-                    guidelines: {
+                    notes: {
                         important: ['Run with a local server to load full scenarios.json']
                     },
                     rightPanel: { source: { label: 'Source', value: 'Local Demo', date: '' } }
@@ -472,7 +625,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             const defaults = data.defaults || {};
             
             Object.keys(data.scenarios).forEach(scenarioKey => {
-                scenarios[scenarioKey] = {
+                const scenarioNotes = (data.scenarios[scenarioKey].notes || data.scenarios[scenarioKey].guidelines) || {};
+                const defaultNotes = (defaults.notes || defaults.guidelines) || {};
+                const mergedScenario = {
                     ...defaults,
                     ...data.scenarios[scenarioKey],
                     // Merge guidelines specifically
@@ -480,12 +635,21 @@ document.addEventListener('DOMContentLoaded', async () => {
                         ...defaults.guidelines,
                         ...data.scenarios[scenarioKey].guidelines
                     },
+                    notes: {
+                        ...defaultNotes,
+                        ...scenarioNotes
+                    },
                     // Merge rightPanel specifically  
                     rightPanel: {
                         ...defaults.rightPanel,
                         ...data.scenarios[scenarioKey].rightPanel
                     }
                 };
+                if (!mergedScenario.agentName) {
+                    mergedScenario.agentName = '';
+                }
+                mergedScenario.agentInitial = getCompanyInitial(mergedScenario.companyName);
+                scenarios[scenarioKey] = mergedScenario;
             });
             
             return appendUploadedScenarios(scenarios, uploaded);
@@ -670,37 +834,87 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Update page title
         document.title = `Training - Scenario ${scenarioNumber}`;
         
+        // Build conversation from scenario mapping or preloaded array
+        let conversation = buildConversationFromScenario(scenario);
+        if (conversation.length) {
+            const promoNotes = [];
+            conversation = conversation.filter(message => {
+                if (!message || message.role !== 'system') return true;
+                if (!looksLikePromoNote(message.content)) return true;
+                promoNotes.push(String(message.content || '').trim());
+                return false;
+            });
+            if (promoNotes.length) {
+                const promoItems = promoNotes.map(content => ({
+                    title: 'Promo Notes',
+                    content
+                }));
+                scenario.rightPanel = scenario.rightPanel || {};
+                const existing = scenario.rightPanel.promotions;
+                if (existing) {
+                    scenario.rightPanel.promotions = Array.isArray(existing)
+                        ? existing.concat(promoItems)
+                        : [existing].concat(promoItems);
+                } else {
+                    scenario.rightPanel.promotions = promoItems.length === 1 ? promoItems[0] : promoItems;
+                }
+            }
+        }
+        scenario.conversation = conversation;
+
         // Update company info with error checking
-        const companyElement = document.getElementById('companyName');
+        const companyLink = document.getElementById('companyNameLink');
         const agentElement = document.getElementById('agentName');
         const phoneElement = document.getElementById('customerPhone');
         const messageElement = document.getElementById('customerMessage');
         
-        if (companyElement) companyElement.textContent = scenario.companyName;
-        else console.error('companyName element not found');
+        if (companyLink) {
+            companyLink.textContent = scenario.companyName;
+            const websiteRaw = (scenario.companyWebsite || (scenario.rightPanel && scenario.rightPanel.source && scenario.rightPanel.source.value) || '').trim();
+            const hasWebsite = websiteRaw && websiteRaw.toLowerCase() !== 'n/a';
+            if (hasWebsite) {
+                const url = /^https?:\/\//i.test(websiteRaw) ? websiteRaw : `https://${websiteRaw}`;
+                companyLink.href = url;
+                companyLink.target = '_blank';
+                companyLink.rel = 'noopener';
+                companyLink.classList.remove('is-disabled');
+            } else {
+                companyLink.removeAttribute('href');
+                companyLink.removeAttribute('target');
+                companyLink.removeAttribute('rel');
+                companyLink.classList.add('is-disabled');
+            }
+        } else {
+            console.error('companyNameLink element not found');
+        }
         
-        if (agentElement) agentElement.textContent = scenario.agentName;
+        if (agentElement) {
+            agentElement.textContent = scenario.agentName || '';
+        }
         else console.error('agentName element not found');
         
-        if (phoneElement) phoneElement.textContent = scenario.customerPhone;
+        if (phoneElement) phoneElement.textContent = scenario.customerPhone || '';
         else console.error('customerPhone element not found');
         
-        if (messageElement) messageElement.textContent = scenario.customerMessage;
+        if (messageElement) {
+            messageElement.textContent = getFirstCustomerMessageFromScenario(scenario, conversation);
+        }
         else console.error('customerMessage element not found');
 
         // Render preloaded conversation if provided
-        if (scenario.conversation && Array.isArray(scenario.conversation) && scenario.conversation.length > 0) {
-            renderConversationMessages(scenario.conversation, scenario);
+        if (conversation && Array.isArray(conversation) && conversation.length > 0) {
+            renderConversationMessages(conversation, scenario);
         }
         
         // Update guidelines dynamically
         const guidelinesContainer = document.getElementById('dynamic-guidelines-container');
-        if (guidelinesContainer && scenario.guidelines) {
+        const notesData = scenario.notes || scenario.guidelines;
+        if (guidelinesContainer && notesData) {
             guidelinesContainer.innerHTML = '';
             
             // Create categories dynamically based on scenario data
-            Object.keys(scenario.guidelines).forEach(categoryKey => {
-                const categoryData = scenario.guidelines[categoryKey];
+            Object.keys(notesData).forEach(categoryKey => {
+                const categoryData = notesData[categoryKey];
                 if (Array.isArray(categoryData) && categoryData.length > 0) {
                     // Get category display info
                     const categoryInfo = getCategoryInfo(categoryKey);
@@ -871,10 +1085,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             const sourceLabel = document.getElementById('sourceLabel');
             const sourceValue = document.getElementById('sourceValue');
             const sourceDate = document.getElementById('sourceDate');
+            const sourceBlock = document.getElementById('sourceBlock');
+            const sourceValueText = String(scenario.rightPanel.source.value || '').trim();
+            const hideWebsiteSource = scenario.rightPanel.source.label === 'Website' && sourceValueText;
             
             if (sourceLabel) sourceLabel.textContent = scenario.rightPanel.source.label;
             if (sourceValue) sourceValue.textContent = scenario.rightPanel.source.value;
             if (sourceDate) sourceDate.textContent = scenario.rightPanel.source.date;
+            if (sourceBlock) {
+                sourceBlock.style.display = hideWebsiteSource ? 'none' : '';
+            }
         }
         
         // Update recommended items
@@ -897,11 +1117,31 @@ document.addEventListener('DOMContentLoaded', async () => {
                 historyContainer.innerHTML = '';
                 scenario.rightPanel.browsingHistory.forEach(historyItem => {
                     const li = document.createElement('li');
-                    li.innerHTML = `
-                        ${historyItem.item} 
-                        <span class="time-ago">${historyItem.timeAgo}</span> 
-                        <i data-feather="${historyItem.icon}" class="icon-small"></i>
-                    `;
+                    const itemText = historyItem && historyItem.item ? String(historyItem.item) : '';
+                    const itemLink = historyItem && historyItem.link ? String(historyItem.link) : '';
+                    const itemEl = itemLink ? document.createElement('a') : document.createElement('span');
+                    itemEl.textContent = itemText;
+                    if (itemLink && itemEl.tagName.toLowerCase() === 'a') {
+                        itemEl.href = itemLink;
+                        itemEl.target = '_blank';
+                        itemEl.rel = 'noopener';
+                    }
+                    li.appendChild(itemEl);
+
+                    if (historyItem && historyItem.timeAgo) {
+                        const time = document.createElement('span');
+                        time.className = 'time-ago';
+                        time.textContent = historyItem.timeAgo;
+                        li.appendChild(time);
+                    }
+
+                    if (historyItem && historyItem.icon) {
+                        const icon = document.createElement('i');
+                        icon.setAttribute('data-feather', historyItem.icon);
+                        icon.className = 'icon-small';
+                        li.appendChild(icon);
+                    }
+
                     historyContainer.appendChild(li);
                 });
             }
@@ -912,8 +1152,31 @@ document.addEventListener('DOMContentLoaded', async () => {
         const purchasedList = document.getElementById('purchasedList');
         if (purchasedSection && purchasedList) {
             purchasedList.innerHTML = '';
+            const orders = Array.isArray(scenario.rightPanel.orders) ? scenario.rightPanel.orders : [];
             const purchased = Array.isArray(scenario.rightPanel.purchased) ? scenario.rightPanel.purchased : [];
-            if (purchased.length > 0) {
+            if (orders.length > 0) {
+                const header = purchasedSection.querySelector('.info-block-header span');
+                if (header) header.textContent = 'Orders';
+                orders.forEach(order => {
+                    const li = document.createElement('li');
+                    const name = document.createElement(order && order.link ? 'a' : 'span');
+                    name.textContent = (order && order.orderNumber) ? order.orderNumber : '';
+                    if (order && order.link && name.tagName.toLowerCase() === 'a') {
+                        name.href = order.link;
+                        name.target = '_blank';
+                        name.rel = 'noopener';
+                    }
+                    const when = document.createElement('span');
+                    when.className = 'time-ago';
+                    when.textContent = (order && order.subtotal) ? order.subtotal : '';
+                    li.appendChild(name);
+                    li.appendChild(when);
+                    purchasedList.appendChild(li);
+                });
+                purchasedSection.style.display = '';
+            } else if (purchased.length > 0) {
+                const header = purchasedSection.querySelector('.info-block-header span');
+                if (header) header.textContent = 'Purchased';
                 purchased.forEach(p => {
                     const li = document.createElement('li');
                     const name = document.createElement('span');
