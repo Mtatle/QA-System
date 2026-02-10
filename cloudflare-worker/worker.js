@@ -111,7 +111,8 @@ async function readTemplates(env) {
   }
 
   if (!response.ok) {
-    throw new Error('GitHub fetch failed');
+    const body = await response.text();
+    throw new Error(`GitHub fetch failed: ${response.status} ${body}`);
   }
 
   const json = await response.json();
@@ -216,7 +217,8 @@ async function readScenarios(env) {
   }
 
   if (!response.ok) {
-    throw new Error('GitHub fetch failed');
+    const body = await response.text();
+    throw new Error(`GitHub fetch failed: ${response.status} ${body}`);
   }
 
   const json = await response.json();
