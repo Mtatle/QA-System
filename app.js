@@ -113,6 +113,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         localStorage.setItem('uploadedTemplatesAt', String(Date.now()));
     }
 
+    function splitTemplatesIntoBatches(templates, maxBatchBytes = 900000) {
+        const encoder = new TextEncoder();
+        const batches = [];
+        let current = [];
+
+        const bytesForPayload = (items) => encoder.encode(JSON.stringify({ templates: items })).length;
+
+        templates.forEach(template => {
+            if (!template) return;
+            const singleSize = bytesForPayload([template]);
+            if (singleSize > maxBatchBytes) {
+                throw new Error(`Template ${template.id || '(missing id)'} is too large to upload.`);
+            }
+
+            const candidate = current.concat([template]);
+            if (current.length > 0 && bytesForPayload(candidate) > maxBatchBytes) {
+                batches.push(current);
+                current = [template];
+            } else {
+                current = candidate;
+            }
+        });
+
+        if (current.length > 0) {
+            batches.push(current);
+        }
+
+        return batches;
+    }
+
     function setTemplatesStatus(message) {
         if (templatesStatus) {
             templatesStatus.textContent = message || '';
@@ -317,13 +347,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         return conversation;
     }
 
-    function looksLikePromoNote(text) {
-        const value = String(text || '').toLowerCase();
-        if (!value) return false;
-        if (/(https?:\/\/|www\.)/.test(value)) return true;
-        return /(promo|promotion|sale|discount|% off|free shipping|free gift|shop now|use code|code|limited time|offer)/.test(value);
-    }
-
     function getCompanyInitial(companyName) {
         const name = String(companyName || '').trim();
         return name ? name.charAt(0).toUpperCase() : '';
@@ -410,6 +433,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         return String(value || '').trim().toLowerCase();
     }
 
+    function formatDollarAmount(rawValue) {
+        if (rawValue == null) return '';
+        const text = String(rawValue).trim();
+        if (!text) return '';
+        if (text.startsWith('$')) return text;
+        return `$${text}`;
+    }
+
     function convertCsvRowToTemplate(row) {
         const id = cleanQuotedValue(row.TEMPLATE_ID);
         const companyName = cleanQuotedValue(row.COMPANY_NAME);
@@ -442,10 +473,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const lastProducts = safeJsonParse(row.LAST_5_PRODUCTS) || [];
         const orders = safeJsonParse(row.ORDERS) || [];
 
-        const recommended = [];
-        const purchased = [];
-
-        const notes = parseCompanyNotes(companyNotes);
+        const guidelines = parseCompanyNotes(companyNotes);
         const promoNotes = promoNotesRaw
             ? promoNotesRaw.split(/\r?\n/).map(line => line.trim()).filter(Boolean)
             : [];
@@ -453,45 +481,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         const agentName = persona || '';
         const agentInitial = getCompanyInitial(companyName);
 
-        const guidelines = {};
-        Object.keys(notes).forEach(key => {
-            if (Array.isArray(notes[key]) && notes[key].length) {
-                guidelines[key] = notes[key];
-            }
-        });
-        if (messageTone) {
-            guidelines.tone = (guidelines.tone || []).concat([messageTone]);
-            notes.tone = (notes.tone || []).concat([messageTone]);
-        }
-
         const rightPanel = {
             source: {
                 label: 'Website',
                 value: companyWebsite || 'N/A',
                 date: ''
             },
-            recommended,
-            purchased,
             browsingHistory: Array.isArray(lastProducts)
                 ? lastProducts.map(item => ({
                     item: item && item.product_name ? String(item.product_name) : '',
                     link: item && item.product_link ? String(item.product_link) : '',
-                    icon: 'shopping-cart'
+                    icon: 'eye'
                 })).filter(entry => entry.item)
                 : [],
             orders: Array.isArray(orders)
                 ? orders.map(order => {
                     const products = Array.isArray(order && order.products) ? order.products : [];
+                    const currency = order && order.currency ? String(order.currency) : '';
                     return {
                         orderNumber: order && order.order_number ? String(order.order_number) : '',
+                        orderDate: order && order.order_date ? String(order.order_date) : '',
                         link: order && order.order_status_url ? String(order.order_status_url) : '',
                         trackingLink: order && order.tracking_url ? String(order.tracking_url) : '',
+                        currency,
                         items: products.map(product => ({
                             name: product && product.product_name ? String(product.product_name) : '',
                             price: product && product.product_price != null ? String(product.product_price) : '',
-                            product_link: product && product.product_link ? String(product.product_link) : ''
+                            currency: product && product.product_currency ? String(product.product_currency) : currency,
+                            productLink: product && product.product_link ? String(product.product_link) : ''
                         })).filter(p => p.name),
-                        subtotal: order && order.total != null ? `$${order.total}` : ''
+                        total: order && order.total != null ? String(order.total) : ''
                     };
                 }).filter(order => order.orderNumber || order.items.length)
                 : []
@@ -515,7 +534,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             customerPhone: '',
             customerMessage: '',
             responseType: 'template',
-            notes,
             guidelines,
             ...conversationFields,
             rightPanel,
@@ -544,22 +562,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return Array.isArray(data.templates) ? data.templates : [];
             } catch (error) {
                 console.error('Error loading templates via API:', error);
+                return [];
             }
         }
 
-        if (window.location.protocol === 'file:') {
-            return getUploadedTemplates();
-        }
-        try {
-            const response = await fetch('templates.json');
-            const data = await response.json();
-            const base = Array.isArray(data.templates) ? data.templates : [];
-            const uploaded = getUploadedTemplates();
-            return uploaded.length ? uploaded : base;
-        } catch (error) {
-            console.error('Error loading templates data:', error);
-            return getUploadedTemplates();
-        }
+        return [];
     }
 
     async function loadUploadedScenarios() {
@@ -584,22 +591,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (!sourceTemplates.length) return [];
 
-        if (sourceTemplates === templatesData) {
-            const companyKey = normalizeName(scenario.companyName);
-            const matching = [];
-            const global = [];
-            sourceTemplates.forEach(template => {
-                const templateCompany = normalizeName(template.companyName);
-                if (!templateCompany) {
-                    global.push(template);
-                } else if (templateCompany === companyKey) {
-                    matching.push(template);
-                }
-            });
-            return matching.concat(global);
-        }
+        const companyKey = normalizeName(scenario.companyName);
+        const matching = [];
+        const global = [];
 
-        return sourceTemplates;
+        sourceTemplates.forEach(template => {
+            const templateCompany = normalizeName(template && template.companyName);
+            if (!templateCompany) {
+                global.push(template);
+            } else if (templateCompany === companyKey) {
+                matching.push(template);
+            }
+        });
+
+        return matching.concat(global);
     }
 
     
@@ -830,45 +835,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // Build conversation from scenario mapping or preloaded array
         let conversation = buildConversationFromScenario(scenario);
-        const hasStructuredPromotions = (() => {
-            const rightPanel = scenario.rightPanel || {};
-            const promoKeys = Object.keys(rightPanel).filter(k => /^promotions(_\d+)?$/.test(k));
-            return promoKeys.some(key => {
-                const value = rightPanel[key];
-                if (Array.isArray(value)) return value.length > 0;
-                return !!value;
-            });
-        })();
-
-        if (conversation.length && !hasStructuredPromotions) {
-            const promoNotes = [];
-            conversation = conversation.filter(message => {
-                if (!message || message.role !== 'system') return true;
-                if (!looksLikePromoNote(message.content)) return true;
-                promoNotes.push(String(message.content || '').trim());
-                return false;
-            });
-            if (promoNotes.length) {
-                const promoItems = promoNotes.map(content => ({
-                    title: 'Promo Notes',
-                    content
-                }));
-                scenario.rightPanel = scenario.rightPanel || {};
-                const existing = scenario.rightPanel.promotions;
-                if (existing) {
-                    scenario.rightPanel.promotions = Array.isArray(existing)
-                        ? existing.concat(promoItems)
-                        : [existing].concat(promoItems);
-                } else {
-                    scenario.rightPanel.promotions = promoItems.length === 1 ? promoItems[0] : promoItems;
-                }
-            }
-        }
         scenario.conversation = conversation;
 
         // Update company info with error checking
         const companyLink = document.getElementById('companyNameLink');
         const agentElement = document.getElementById('agentName');
+        const messageToneElement = document.getElementById('messageTone');
         const phoneElement = document.getElementById('customerPhone');
         const messageElement = document.getElementById('customerMessage');
         
@@ -896,6 +868,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             agentElement.textContent = scenario.agentName || '';
         }
         else console.error('agentName element not found');
+
+        if (messageToneElement) {
+            const tone = String(scenario.messageTone || '').trim();
+            messageToneElement.textContent = tone;
+            messageToneElement.style.display = tone ? 'inline-block' : 'none';
+        } else {
+            console.error('messageTone element not found');
+        }
         
         if (phoneElement) phoneElement.textContent = scenario.customerPhone || '';
         else console.error('customerPhone element not found');
@@ -1107,20 +1087,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
         
-        // Update recommended items
-        if (scenario.rightPanel.recommended) {
-            const recommendedContainer = document.getElementById('recommendedItems');
-            if (recommendedContainer) {
-                recommendedContainer.innerHTML = '';
-                scenario.rightPanel.recommended.forEach(item => {
-                    const li = document.createElement('li');
-                    li.textContent = item;
-                    recommendedContainer.appendChild(li);
-                });
-            }
-        }
-        
-    // Update browsing history
+        // Update browsing history
         if (scenario.rightPanel.browsingHistory) {
             const historyContainer = document.getElementById('browsingHistory');
             if (historyContainer) {
@@ -1145,62 +1112,106 @@ document.addEventListener('DOMContentLoaded', async () => {
                         li.appendChild(time);
                     }
 
-                    if (historyItem && historyItem.icon) {
-                        const icon = document.createElement('i');
-                        icon.setAttribute('data-feather', historyItem.icon);
-                        icon.className = 'icon-small';
-                        li.appendChild(icon);
-                    }
+                    const icon = document.createElement('i');
+                    icon.setAttribute('data-feather', 'eye');
+                    icon.className = 'icon-small';
+                    li.appendChild(icon);
 
                     historyContainer.appendChild(li);
                 });
             }
         }
 
-        // Purchased items (simple text + time). Hide section when not present or empty.
-        const purchasedSection = document.getElementById('purchasedSection');
-        const purchasedList = document.getElementById('purchasedList');
-        if (purchasedSection && purchasedList) {
-            purchasedList.innerHTML = '';
+        // Orders (expandable). Hide section when not present or empty.
+        const ordersSection = document.getElementById('ordersSection');
+        const ordersList = document.getElementById('ordersList');
+        if (ordersSection && ordersList) {
+            ordersList.innerHTML = '';
             const orders = Array.isArray(scenario.rightPanel.orders) ? scenario.rightPanel.orders : [];
-            const purchased = Array.isArray(scenario.rightPanel.purchased) ? scenario.rightPanel.purchased : [];
             if (orders.length > 0) {
-                const header = purchasedSection.querySelector('.info-block-header span');
-                if (header) header.textContent = 'Orders';
                 orders.forEach(order => {
                     const li = document.createElement('li');
-                    const name = document.createElement(order && order.link ? 'a' : 'span');
-                    name.textContent = (order && order.orderNumber) ? order.orderNumber : '';
-                    if (order && order.link && name.tagName.toLowerCase() === 'a') {
-                        name.href = order.link;
-                        name.target = '_blank';
-                        name.rel = 'noopener';
+
+                    const details = document.createElement('details');
+                    details.className = 'order-details';
+
+                    const summary = document.createElement('summary');
+                    summary.className = 'order-summary';
+
+                    const summaryLeft = document.createElement('span');
+                    summaryLeft.className = 'order-summary-left';
+
+                    const orderLabel = document.createElement(order && order.link ? 'a' : 'span');
+                    orderLabel.textContent = (order && order.orderNumber) ? `#${order.orderNumber}` : 'Order';
+                    if (order && order.link && orderLabel.tagName.toLowerCase() === 'a') {
+                        orderLabel.href = order.link;
+                        orderLabel.target = '_blank';
+                        orderLabel.rel = 'noopener';
                     }
-                    const when = document.createElement('span');
-                    when.className = 'time-ago';
-                    when.textContent = (order && order.subtotal) ? order.subtotal : '';
-                    li.appendChild(name);
-                    li.appendChild(when);
-                    purchasedList.appendChild(li);
+
+                    const orderDate = document.createElement('span');
+                    orderDate.className = 'time-ago';
+                    orderDate.textContent = (order && order.orderDate) ? order.orderDate : '';
+
+                    summaryLeft.appendChild(orderLabel);
+                    summaryLeft.appendChild(orderDate);
+
+                    const arrow = document.createElement('span');
+                    arrow.className = 'order-chevron-text';
+                    arrow.setAttribute('aria-hidden', 'true');
+
+                    summary.appendChild(summaryLeft);
+                    summary.appendChild(arrow);
+                    details.appendChild(summary);
+
+                    const body = document.createElement('div');
+                    body.className = 'order-body';
+
+                    const products = Array.isArray(order && order.items) ? order.items : [];
+                    products.forEach(product => {
+                        const row = document.createElement('div');
+                        row.className = 'order-product-row';
+
+                        const resolvedProductLink = product && (product.productLink || product.product_link)
+                            ? String(product.productLink || product.product_link)
+                            : '';
+                        const productName = document.createElement(resolvedProductLink ? 'a' : 'span');
+                        productName.textContent = product && product.name ? product.name : '';
+                        if (resolvedProductLink && productName.tagName.toLowerCase() === 'a') {
+                            productName.href = resolvedProductLink;
+                            productName.target = '_blank';
+                            productName.rel = 'noopener';
+                        }
+
+                        const productPrice = document.createElement('span');
+                        const productPriceRaw = (product && product.price != null) ? String(product.price).trim() : '';
+                        productPrice.textContent = formatDollarAmount(productPriceRaw);
+
+                        row.appendChild(productName);
+                        row.appendChild(productPrice);
+                        body.appendChild(row);
+                    });
+
+                    const totalRow = document.createElement('div');
+                    totalRow.className = 'order-total-row';
+                    const totalLabel = document.createElement('strong');
+                    totalLabel.textContent = 'Total';
+                    const totalValue = document.createElement('strong');
+                    const orderTotalRaw = (order && order.total != null)
+                        ? String(order.total).trim()
+                        : (order && order.subtotal != null ? String(order.subtotal).trim() : '');
+                    totalValue.textContent = formatDollarAmount(orderTotalRaw);
+                    totalRow.appendChild(totalLabel);
+                    totalRow.appendChild(totalValue);
+                    body.appendChild(totalRow);
+
+                    details.appendChild(body);
+                    li.appendChild(details);
+                    ordersList.appendChild(li);
                 });
-                purchasedSection.style.display = '';
-            } else if (purchased.length > 0) {
-                const header = purchasedSection.querySelector('.info-block-header span');
-                if (header) header.textContent = 'Purchased';
-                purchased.forEach(p => {
-                    const li = document.createElement('li');
-                    const name = document.createElement('span');
-                    name.textContent = (p && p.item) ? p.item : '';
-                    const when = document.createElement('span');
-                    when.className = 'time-ago';
-                    when.textContent = (p && p.timeAgo) ? p.timeAgo : '';
-                    li.appendChild(name);
-                    li.appendChild(when);
-                    purchasedList.appendChild(li);
-                });
-                purchasedSection.style.display = '';
+                ordersSection.style.display = '';
             } else {
-                purchasedSection.style.display = 'none';
+                ordersSection.style.display = 'none';
             }
         }
         
@@ -2130,11 +2141,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         templatesUploadContainer.style.display = 'flex';
 
-        const uploaded = getUploadedTemplates();
-        if (uploaded.length > 0) {
-            setTemplatesStatus(`Loaded ${uploaded.length} uploaded template(s)`);
-        }
-
         if (templatesUploadBtn && templatesFileInput) {
             templatesUploadBtn.addEventListener('click', () => {
                 templatesFileInput.click();
@@ -2197,28 +2203,42 @@ document.addEventListener('DOMContentLoaded', async () => {
                         }
 
                         if (API_BASE_URL) {
-                            const response = await fetch(`${API_BASE_URL}/templates`, {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify({ templates })
-                            });
-                            if (!response.ok) {
-                                throw new Error('API update failed');
+                            const batches = splitTemplatesIntoBatches(templates);
+                            let latestTemplates = [];
+
+                            for (let i = 0; i < batches.length; i++) {
+                                const batch = batches[i];
+                                setTemplatesStatus(`Uploading batch ${i + 1}/${batches.length}...`);
+                                const response = await fetch(`${API_BASE_URL}/templates`, {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({ templates: batch })
+                                });
+
+                                if (!response.ok) {
+                                    const errorBody = await response.text().catch(() => '');
+                                    const trimmed = errorBody ? `: ${errorBody.slice(0, 180)}` : '';
+                                    throw new Error(`API update failed (${response.status})${trimmed}`);
+                                }
+
+                                if (i === batches.length - 1) {
+                                    const data = await response.json();
+                                    latestTemplates = Array.isArray(data.templates) ? data.templates : [];
+                                }
                             }
-                            const data = await response.json();
-                            templatesData = Array.isArray(data.templates) ? data.templates : [];
-                            setTemplatesStatus(`Saved ${templates.length} template(s) via API`);
+
+                            templatesData = latestTemplates;
+                            setTemplatesStatus(`Saved ${templates.length} template(s) via API (${batches.length} batch${batches.length === 1 ? '' : 'es'})`);
                         } else {
-                            setUploadedTemplates(templates);
-                            templatesData = await loadTemplatesData();
-                            setTemplatesStatus(`Loaded ${templates.length} template(s) from ${file.name}`);
+                            setTemplatesStatus('Templates API is not configured.');
+                            return;
                         }
                         if (scenarioData) {
                             loadRightPanelContent(scenarioData);
                         }
                     } catch (error) {
                         console.error('Templates CSV parsing failed:', error);
-                        setTemplatesStatus('CSV parsing failed. Check the file format.');
+                        setTemplatesStatus(`Template upload failed. ${error && error.message ? error.message : 'Check the CSV/API.'}`);
                     } finally {
                         templatesFileInput.value = '';
                     }
@@ -2237,23 +2257,22 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (API_BASE_URL) {
                     try {
                         const response = await fetch(`${API_BASE_URL}/templates`, { method: 'DELETE' });
-                        if (!response.ok) throw new Error('API delete failed');
+                        if (!response.ok) {
+                            const errorBody = await response.text().catch(() => '');
+                            const trimmed = errorBody ? `: ${errorBody.slice(0, 180)}` : '';
+                            throw new Error(`API delete failed (${response.status})${trimmed}`);
+                        }
                         templatesData = [];
                         setTemplatesStatus('Cleared templates via API.');
-                        if (scenarioData) {
-                            loadRightPanelContent(scenarioData);
-                        }
                     } catch (error) {
-                        setTemplatesStatus('Failed to clear templates via API.');
+                        setTemplatesStatus(`Failed to clear templates via API. ${error.message || ''}`.trim());
                     }
                 } else {
-                    localStorage.removeItem('uploadedTemplates');
-                    localStorage.removeItem('uploadedTemplatesAt');
-                    templatesData = [];
-                    setTemplatesStatus('Cleared uploaded templates.');
-                    if (scenarioData) {
-                        loadRightPanelContent(scenarioData);
-                    }
+                    setTemplatesStatus('Templates API is not configured.');
+                    return;
+                }
+                if (scenarioData) {
+                    loadRightPanelContent(scenarioData);
                 }
             });
         }
