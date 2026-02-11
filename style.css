@@ -345,6 +345,62 @@ polyline[points="6 9 12 15 18 9"] {
     gap: 12px;
 }
 
+.assignments-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 320px;
+}
+
+.assignments-label {
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #303030;
+}
+
+.assignments-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.assignment-select {
+    flex: 1 1 auto;
+    min-width: 180px;
+    border: 1px solid #d4c75e;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 0.82em;
+    background: #fffbe6;
+    color: #222;
+}
+
+.assignment-btn {
+    background: #fff;
+    color: #222;
+    border: 1px solid #d4c75e;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.assignment-btn:hover {
+    background: #fff6bf;
+}
+
+.assignment-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.assignments-status {
+    font-size: 0.74em;
+    color: #4a4a4a;
+    min-height: 1em;
+}
+
 .csv-upload {
     display: flex;
     align-items: center;
@@ -1694,6 +1750,27 @@ mark {
         padding: 8px 4px;
         font-size: 0.75em;
         text-align: center;
+    }
+
+    .top-bar-right {
+        order: 5;
+        margin: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .assignments-panel {
+        min-width: 0;
+    }
+
+    .assignments-controls {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .assignment-select {
+        min-width: 0;
     }
 }
 

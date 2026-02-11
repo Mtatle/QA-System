@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const templatesUploadBtn = document.getElementById('templatesUploadBtn');
     const templatesClearBtn = document.getElementById('templatesClearBtn');
     const templatesStatus = document.getElementById('templatesStatus');
+    const assignmentSelect = document.getElementById('assignmentSelect');
+    const assignmentRefreshBtn = document.getElementById('assignmentRefreshBtn');
+    const assignmentOpenBtn = document.getElementById('assignmentOpenBtn');
+    const assignmentsStatus = document.getElementById('assignmentsStatus');
+    const nextConversationBtn = document.getElementById('nextConversationBtn');
     const API_BASE_URL = 'https://qa-templates-worker.qasystem.workers.dev'; // e.g. https://your-worker.example.workers.dev
 
     // Google Sheets integration
@@ -24,6 +29,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     let hasRespondedOnce = false; // For scenario 5 angry response
     let totalScenarioCount = 0;
     let templatesData = [];
+    let assignmentQueue = [];
+    let assignmentContext = null;
+    let draftSaveTimer = null;
     
     // CSV upload permission lists
     let csvUploadAllowedAgents = [];
@@ -46,6 +54,49 @@ document.addEventListener('DOMContentLoaded', async () => {
             templateUploadAllowedAgents = [];
             templateUploadAllowedEmails = [];
         }
+    }
+
+    async function refreshAssignmentQueue() {
+        const email = getLoggedInEmail();
+        if (!email) throw new Error('Missing logged-in email.');
+        const response = await fetchAssignmentGet('queue', {
+            email,
+            app_base: getCurrentAppBaseUrl()
+        });
+        const assignments = Array.isArray(response.assignments) ? response.assignments : [];
+        renderAssignmentQueue(assignments);
+        return assignments;
+    }
+
+    async function loadAssignmentContextFromUrl(scenarios) {
+        const params = getAssignmentParamsFromUrl();
+        if (!params.aid) return null;
+        if (!params.token) throw new Error('Missing assignment token in URL.');
+
+        const response = await fetchAssignmentGet('getAssignment', {
+            assignment_id: params.aid,
+            token: params.token
+        });
+        const assignment = response && response.assignment ? response.assignment : null;
+        if (!assignment) throw new Error('Assignment payload is missing.');
+
+        const scenarioMatch = findScenarioBySendId(scenarios, assignment.send_id);
+        if (!scenarioMatch) {
+            throw new Error(`Scenario for send_id ${assignment.send_id} was not found in loaded scenarios.`);
+        }
+
+        assignmentContext = {
+            assignment_id: assignment.assignment_id,
+            send_id: assignment.send_id,
+            role: assignment.role === 'viewer' ? 'viewer' : 'editor',
+            mode: params.mode,
+            token: params.token,
+            status: assignment.status || '',
+            scenarioKey: scenarioMatch.scenarioKey,
+            form_state_json: assignment.form_state_json || '',
+            internal_note: assignment.internal_note || ''
+        };
+        return assignmentContext;
     }
 
     function canUploadCsv() {
@@ -176,6 +227,235 @@ document.addEventListener('DOMContentLoaded', async () => {
         return getScenarioNumberFromUrl() ||
             localStorage.getItem('currentScenarioNumber') ||
             '1';
+    }
+
+    function getAssignmentParamsFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const aid = params.get('aid');
+        const token = params.get('token');
+        const mode = (params.get('mode') || 'edit').toLowerCase();
+        return {
+            aid: aid ? String(aid) : '',
+            token: token ? String(token) : '',
+            mode: mode === 'view' ? 'view' : 'edit'
+        };
+    }
+
+    function getLoggedInEmail() {
+        return String(localStorage.getItem('agentEmail') || '').trim().toLowerCase();
+    }
+
+    function setAssignmentsStatus(message, isError) {
+        if (!assignmentsStatus) return;
+        assignmentsStatus.textContent = message || '';
+        assignmentsStatus.style.color = isError ? '#b00020' : '#4a4a4a';
+    }
+
+    function getCurrentAppBaseUrl() {
+        const origin = window.location.origin || '';
+        const path = window.location.pathname || '/app.html';
+        return `${origin}${path}`;
+    }
+
+    async function fetchAssignmentGet(action, queryParams) {
+        const params = new URLSearchParams({ action });
+        Object.keys(queryParams || {}).forEach((key) => {
+            if (queryParams[key] != null && queryParams[key] !== '') {
+                params.set(key, String(queryParams[key]));
+            }
+        });
+        const res = await fetch(`${GOOGLE_SCRIPT_URL}?${params.toString()}`, {
+            method: 'GET',
+            mode: 'cors'
+        });
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok || (json && json.error)) {
+            throw new Error((json && json.error) ? json.error : `Request failed (${res.status})`);
+        }
+        return json;
+    }
+
+    async function fetchAssignmentPost(action, payload) {
+        const params = new URLSearchParams({ action });
+        const res = await fetch(`${GOOGLE_SCRIPT_URL}?${params.toString()}`, {
+            method: 'POST',
+            mode: 'cors',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify(payload || {})
+        });
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok || (json && json.error)) {
+            throw new Error((json && json.error) ? json.error : `Request failed (${res.status})`);
+        }
+        return json;
+    }
+
+    function renderAssignmentQueue(assignments) {
+        assignmentQueue = Array.isArray(assignments) ? assignments : [];
+        if (!assignmentSelect) return;
+
+        assignmentSelect.innerHTML = '';
+        if (!assignmentQueue.length) {
+            const emptyOption = document.createElement('option');
+            emptyOption.value = '';
+            emptyOption.textContent = 'No active assignments';
+            assignmentSelect.appendChild(emptyOption);
+            if (assignmentOpenBtn) assignmentOpenBtn.disabled = true;
+            return;
+        }
+
+        assignmentQueue.forEach((assignment) => {
+            const option = document.createElement('option');
+            option.value = assignment.assignment_id || '';
+            option.textContent = `${assignment.send_id || assignment.assignment_id} (${assignment.status || 'ASSIGNED'})`;
+            option.dataset.editUrl = assignment.edit_url || '';
+            option.dataset.viewUrl = assignment.view_url || '';
+            assignmentSelect.appendChild(option);
+        });
+        if (assignmentOpenBtn) assignmentOpenBtn.disabled = false;
+    }
+
+    function selectCurrentAssignmentInQueue() {
+        if (!assignmentContext || !assignmentSelect) return;
+        const currentAid = assignmentContext.assignment_id;
+        if (!currentAid) return;
+        for (let i = 0; i < assignmentSelect.options.length; i++) {
+            if (assignmentSelect.options[i].value === currentAid) {
+                assignmentSelect.selectedIndex = i;
+                return;
+            }
+        }
+    }
+
+    function openSelectedAssignmentFromList() {
+        if (!assignmentSelect || !assignmentSelect.value) return;
+        const selectedOption = assignmentSelect.options[assignmentSelect.selectedIndex];
+        if (!selectedOption) return;
+        const url = selectedOption.dataset.editUrl || '';
+        if (url) window.location.href = url;
+    }
+
+    function findScenarioBySendId(scenarios, sendId) {
+        const target = String(sendId || '').trim();
+        const entries = Object.entries(scenarios || {});
+        for (let i = 0; i < entries.length; i++) {
+            const [scenarioKey, scenario] = entries[i];
+            if (String((scenario && scenario.id) || '').trim() === target) {
+                return { scenarioKey, scenario };
+            }
+        }
+        return null;
+    }
+
+    function assignmentNotesStorageKey() {
+        if (!assignmentContext || !assignmentContext.assignment_id) return '';
+        return `internalNotes_assignment_${assignmentContext.assignment_id}`;
+    }
+
+    function assignmentFormStateStorageKey() {
+        if (!assignmentContext || !assignmentContext.assignment_id) return '';
+        return `customFormState_assignment_${assignmentContext.assignment_id}`;
+    }
+
+    function setAssignmentReadOnlyState(isReadOnly) {
+        const customForm = document.getElementById('customForm');
+        const formSubmitBtn = document.getElementById('formSubmitBtn');
+        const clearFormBtn = document.getElementById('clearFormBtn');
+        if (customForm) {
+            const controls = customForm.querySelectorAll('input, select, textarea, button');
+            controls.forEach((el) => {
+                if (el.id === 'clearFormBtn') return;
+                el.disabled = !!isReadOnly;
+            });
+        }
+        if (formSubmitBtn) formSubmitBtn.disabled = !!isReadOnly;
+        if (clearFormBtn) clearFormBtn.disabled = !!isReadOnly;
+        if (internalNotesEl) internalNotesEl.disabled = !!isReadOnly;
+        if (nextConversationBtn) nextConversationBtn.disabled = !!isReadOnly;
+        if (chatInput) chatInput.disabled = !!isReadOnly;
+        if (sendButton) sendButton.disabled = !!isReadOnly;
+    }
+
+    function parseStoredFormState(raw) {
+        if (!raw) return null;
+        try {
+            return JSON.parse(raw);
+        } catch (_) {
+            return null;
+        }
+    }
+
+    function applyCustomFormState(customForm, parsedState) {
+        if (!customForm || !parsedState || typeof parsedState !== 'object') return;
+        const formElements = customForm.elements;
+        for (let i = 0; i < formElements.length; i++) {
+            const el = formElements[i];
+            if (el.type === 'checkbox') {
+                const key = `${el.name}::${el.value}`;
+                if (Object.prototype.hasOwnProperty.call(parsedState, key)) {
+                    el.checked = !!parsedState[key];
+                }
+            } else if (el.tagName === 'SELECT' || el.tagName === 'TEXTAREA' || el.type === 'text') {
+                const key = el.name || el.id;
+                if (Object.prototype.hasOwnProperty.call(parsedState, key)) {
+                    el.value = parsedState[key];
+                }
+            }
+        }
+    }
+
+    function collectCustomFormState(customForm) {
+        const state = {};
+        if (!customForm) return state;
+        const formElements = customForm.elements;
+        for (let i = 0; i < formElements.length; i++) {
+            const el = formElements[i];
+            if (!el.name && !el.id) continue;
+            if (el.type === 'checkbox') {
+                state[`${el.name}::${el.value}`] = el.checked;
+            } else if (el.tagName === 'SELECT' || el.tagName === 'TEXTAREA' || el.type === 'text') {
+                const key = el.name || el.id;
+                state[key] = el.value;
+            }
+        }
+        return state;
+    }
+
+    async function saveAssignmentDraft(customForm) {
+        if (!assignmentContext || assignmentContext.role !== 'editor') return;
+        if (!assignmentContext.assignment_id || !assignmentContext.token) return;
+
+        const formState = collectCustomFormState(customForm);
+        const notesValue = internalNotesEl ? internalNotesEl.value : '';
+        const formStateRaw = JSON.stringify(formState);
+
+        const formKey = assignmentFormStateStorageKey();
+        if (formKey) localStorage.setItem(formKey, formStateRaw);
+        const notesKey = assignmentNotesStorageKey();
+        if (notesKey) localStorage.setItem(notesKey, notesValue || '');
+
+        await fetchAssignmentPost('saveDraft', {
+            assignment_id: assignmentContext.assignment_id,
+            token: assignmentContext.token,
+            form_state_json: formStateRaw,
+            internal_note: notesValue
+        });
+    }
+
+    function scheduleAssignmentDraftSave(customForm) {
+        if (!assignmentContext || assignmentContext.role !== 'editor') return;
+        if (draftSaveTimer) {
+            clearTimeout(draftSaveTimer);
+        }
+        draftSaveTimer = setTimeout(async () => {
+            try {
+                await saveAssignmentDraft(customForm);
+                setAssignmentsStatus('Draft saved.', false);
+            } catch (error) {
+                console.error('Draft save failed:', error);
+                setAssignmentsStatus(`Draft save failed: ${error.message || error}`, true);
+            }
+        }, 1200);
     }
 
     function parseCsv(text) {
@@ -929,7 +1209,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Load internal notes for this scenario
         if (internalNotesEl) {
-            const saved = localStorage.getItem(`internalNotes_scenario_${scenarioNumber}`) || '';
+            const assignmentKey = assignmentNotesStorageKey();
+            const scenarioKey = `internalNotes_scenario_${scenarioNumber}`;
+            const fallback = localStorage.getItem(scenarioKey) || '';
+            const saved = assignmentKey ? (localStorage.getItem(assignmentKey) || fallback) : fallback;
             internalNotesEl.value = saved;
         }
     }
@@ -1645,7 +1928,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Event listeners
-    const nextConversationBtn = document.getElementById('nextConversationBtn');
     if (nextConversationBtn) {
         nextConversationBtn.addEventListener('click', async () => {
             const data = await loadScenariosData();
@@ -2240,22 +2522,77 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Initialize everything
     const scenarios = await loadScenariosData();
-    if (scenarios) {
-        const scenarioKeys = Object.keys(scenarios)
-            .map(k => parseInt(k, 10))
-            .filter(n => !isNaN(n))
-            .sort((a, b) => a - b)
-            .map(n => String(n));
-        totalScenarioCount = scenarioKeys.length;
-        const requestedScenario = getCurrentScenarioNumber();
-        const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
-        setCurrentScenarioNumber(activeScenario);
-        loadScenarioContent(activeScenario, scenarios);
-        if (templatesData && templatesData.length) {
-            loadRightPanelContent(scenarios[activeScenario]);
-        }
-    } else {
+    if (!scenarios) {
         console.error('Could not load scenarios data');
+    } else {
+        const assignmentParams = getAssignmentParamsFromUrl();
+        const hasAid = !!assignmentParams.aid;
+
+        try {
+            if (hasAid) {
+                await refreshAssignmentQueue().catch(() => []);
+                await loadAssignmentContextFromUrl(scenarios);
+                loadScenarioContent(assignmentContext.scenarioKey, scenarios);
+                const serverFormState = parseStoredFormState(assignmentContext.form_state_json);
+                const localFormStateKey = assignmentFormStateStorageKey();
+                const localFormState = localFormStateKey ? parseStoredFormState(localStorage.getItem(localFormStateKey)) : null;
+                const customForm = document.getElementById('customForm');
+                applyCustomFormState(customForm, serverFormState || localFormState);
+
+                if (internalNotesEl) {
+                    const notesKey = assignmentNotesStorageKey();
+                    const localNote = notesKey ? (localStorage.getItem(notesKey) || '') : '';
+                    internalNotesEl.value = assignmentContext.internal_note || localNote || '';
+                }
+
+                const forceView = assignmentContext.role === 'viewer' || assignmentContext.mode === 'view';
+                setAssignmentReadOnlyState(forceView);
+                setAssignmentsStatus(
+                    forceView
+                        ? `Opened ${assignmentContext.send_id} in view-only mode.`
+                        : `Opened ${assignmentContext.send_id} in editor mode.`,
+                    false
+                );
+                selectCurrentAssignmentInQueue();
+            } else {
+                const queue = await refreshAssignmentQueue();
+                if (queue.length) {
+                    setAssignmentsStatus('Queue loaded. Opening first assignment...', false);
+                    const firstEditUrl = queue[0].edit_url || '';
+                    if (firstEditUrl) {
+                        window.location.href = firstEditUrl;
+                        return;
+                    }
+                } else {
+                    setAssignmentsStatus('No assignments available.', false);
+                }
+
+                const scenarioKeys = Object.keys(scenarios)
+                    .map(k => parseInt(k, 10))
+                    .filter(n => !isNaN(n))
+                    .sort((a, b) => a - b)
+                    .map(n => String(n));
+                totalScenarioCount = scenarioKeys.length;
+                const requestedScenario = getCurrentScenarioNumber();
+                const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
+                setCurrentScenarioNumber(activeScenario);
+                loadScenarioContent(activeScenario, scenarios);
+            }
+        } catch (assignmentError) {
+            console.error('Assignment flow error:', assignmentError);
+            setAssignmentsStatus(`Assignment error: ${assignmentError.message || assignmentError}`, true);
+
+            const scenarioKeys = Object.keys(scenarios)
+                .map(k => parseInt(k, 10))
+                .filter(n => !isNaN(n))
+                .sort((a, b) => a - b)
+                .map(n => String(n));
+            totalScenarioCount = scenarioKeys.length;
+            const requestedScenario = getCurrentScenarioNumber();
+            const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
+            setCurrentScenarioNumber(activeScenario);
+            loadScenarioContent(activeScenario, scenarios);
+        }
     }
 
     templatesData = await loadTemplatesData();
@@ -2268,12 +2605,48 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Initialize new features
     initTemplateSearchKeyboardShortcut();
+
+    if (assignmentRefreshBtn) {
+        assignmentRefreshBtn.addEventListener('click', async () => {
+            try {
+                setAssignmentsStatus('Refreshing assignments...', false);
+                const queue = await refreshAssignmentQueue();
+                if (!queue.length) {
+                    setAssignmentsStatus('No assignments available.', false);
+                } else {
+                    setAssignmentsStatus('Assignments refreshed.', false);
+                    selectCurrentAssignmentInQueue();
+                }
+            } catch (error) {
+                setAssignmentsStatus(`Refresh failed: ${error.message || error}`, true);
+            }
+        });
+    }
+
+    if (assignmentOpenBtn) {
+        assignmentOpenBtn.addEventListener('click', () => {
+            openSelectedAssignmentFromList();
+        });
+    }
+
+    if (assignmentSelect) {
+        assignmentSelect.addEventListener('dblclick', () => {
+            openSelectedAssignmentFromList();
+        });
+    }
     
-    // Persist internal notes per scenario
+    // Persist internal notes and assignment drafts
     if (internalNotesEl) {
-        const scenarioNumForNotes = getCurrentScenarioNumber();
         internalNotesEl.addEventListener('input', () => {
-            localStorage.setItem(`internalNotes_scenario_${scenarioNumForNotes}`, internalNotesEl.value);
+            if (assignmentContext && assignmentContext.assignment_id) {
+                const key = assignmentNotesStorageKey();
+                if (key) localStorage.setItem(key, internalNotesEl.value);
+                const customForm = document.getElementById('customForm');
+                scheduleAssignmentDraftSave(customForm);
+            } else {
+                const scenarioNumForNotes = getCurrentScenarioNumber();
+                localStorage.setItem(`internalNotes_scenario_${scenarioNumForNotes}`, internalNotesEl.value);
+            }
         });
         // Add drag-to-resize behavior via handle below the textarea
         const notesContainer = document.getElementById('internalNotesContainer');
@@ -2332,35 +2705,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // ---- Form autosave/restore ----
         function saveCustomFormState() {
-            const state = {};
-            const formElements = customForm.elements;
-            for (let i = 0; i < formElements.length; i++) {
-                const el = formElements[i];
-                if (!el.name && !el.id) continue;
-                if (el.type === 'checkbox') {
-                    state[`${el.name}::${el.value}`] = el.checked;
-                } else if (el.tagName === 'SELECT' || el.tagName === 'TEXTAREA' || el.type === 'text') {
-                    const key = el.name || el.id;
-                    state[key] = el.value;
-                }
-            }
-            try { localStorage.setItem('customFormState', JSON.stringify(state)); } catch (_) {}
+            const state = collectCustomFormState(customForm);
+            const key = assignmentContext && assignmentContext.assignment_id
+                ? assignmentFormStateStorageKey()
+                : 'customFormState';
+            try { localStorage.setItem(key, JSON.stringify(state)); } catch (_) {}
+            scheduleAssignmentDraftSave(customForm);
         }
         function restoreCustomFormState() {
             let parsed = null;
-            try { parsed = JSON.parse(localStorage.getItem('customFormState') || 'null'); } catch (_) { parsed = null; }
+            const key = assignmentContext && assignmentContext.assignment_id
+                ? assignmentFormStateStorageKey()
+                : 'customFormState';
+            try { parsed = JSON.parse(localStorage.getItem(key) || 'null'); } catch (_) { parsed = null; }
             if (!parsed) return;
-            const formElements = customForm.elements;
-            for (let i = 0; i < formElements.length; i++) {
-                const el = formElements[i];
-                if (el.type === 'checkbox') {
-                    const key = `${el.name}::${el.value}`;
-                    if (key in parsed) el.checked = !!parsed[key];
-                } else if (el.tagName === 'SELECT' || el.tagName === 'TEXTAREA' || el.type === 'text') {
-                    const key = el.name || el.id;
-                    if (key in parsed) el.value = parsed[key];
-                }
-            }
+            applyCustomFormState(customForm, parsed);
         }
         customForm.addEventListener('input', saveCustomFormState);
         customForm.addEventListener('change', saveCustomFormState);
@@ -2374,7 +2733,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 checkboxInputs.forEach(cb => {
                     cb.checked = true;
                 });
-                try { localStorage.removeItem('customFormState'); } catch (_) {}
+                try {
+                    const key = assignmentContext && assignmentContext.assignment_id
+                        ? assignmentFormStateStorageKey()
+                        : 'customFormState';
+                    localStorage.removeItem(key);
+                } catch (_) {}
+                scheduleAssignmentDraftSave(customForm);
                 if (formStatus) {
                     formStatus.textContent = '';
                 }
@@ -2383,10 +2748,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         customForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            if (assignmentContext && (assignmentContext.role !== 'editor' || assignmentContext.mode === 'view')) {
+                if (formStatus) {
+                    formStatus.textContent = 'View-only link cannot submit.';
+                    formStatus.style.color = '#e74c3c';
+                }
+                return;
+            }
             
             // Collect all form data
             const formData = new FormData(customForm);
-            const data = {};
 
             // Full ordered labels and slug->label maps for each category
             const CATEGORY_LABELS = {
@@ -2473,7 +2844,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     eventType: 'evaluationFormSubmission',
                     timestamp: toESTDateTimeNoComma(), // e.g., 1/30/2025 13:24:49
                     emailAddress,
-                    messageId: '',
+                    messageId: assignmentContext ? (assignmentContext.send_id || '') : '',
                     auditTime,
                     issueIdentification: buildCategoryCell('issue_identification'),
                     properResolution: buildCategoryCell('proper_resolution'),
@@ -2509,13 +2880,32 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
 
                 if (success) {
+                    if (assignmentContext && assignmentContext.role === 'editor') {
+                        await saveAssignmentDraft(customForm).catch(() => {});
+                        const doneRes = await fetchAssignmentPost('done', {
+                            assignment_id: assignmentContext.assignment_id,
+                            token: assignmentContext.token,
+                            app_base: getCurrentAppBaseUrl()
+                        });
+                        const nextQueue = Array.isArray(doneRes.assignments) ? doneRes.assignments : [];
+                        renderAssignmentQueue(nextQueue);
+                        if (nextQueue.length && nextQueue[0].edit_url) {
+                            window.location.href = nextQueue[0].edit_url;
+                            return;
+                        }
+                    }
                     if (formStatus) { 
                         formStatus.textContent = 'Submitted successfully.'; 
                         formStatus.style.color = '#28a745'; 
                     }
                     customForm.reset();
                     checkboxInputs.forEach(cb => { cb.checked = true; });
-                    try { localStorage.removeItem('customFormState'); } catch (_) {}
+                    try {
+                        const key = assignmentContext && assignmentContext.assignment_id
+                            ? assignmentFormStateStorageKey()
+                            : 'customFormState';
+                        localStorage.removeItem(key);
+                    } catch (_) {}
                 } else {
                     if (formStatus) {
                         formStatus.textContent = 'Submission failed. ' + (serverMsg ? `Details: ${serverMsg}` : 'Please try again.');

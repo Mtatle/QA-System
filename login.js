@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sendSessionLogin({ agentName: name, agentEmail: email, loginMethod: 'google' });
                 
                 // Redirect to app
-                window.location.href = 'app.html?scenario=1';
+                window.location.href = 'app.html';
             } else {
                 showError('Your email is not authorized to access this training portal.');
             }
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('loginMethod', 'username');
         // Log session login (email unknown)
         sendSessionLogin({ agentName: username, agentEmail: '', loginMethod: 'username' });
-        window.location.href = 'app.html?scenario=1';
+        window.location.href = 'app.html';
     });
 
     // Auto-redirect if already logged in (only when served over http/https to avoid file:// origin issues)
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const maxSessionAge = 24 * 60 * 60 * 1000; // 24 hours
         
         if (sessionAge < maxSessionAge) {
-            window.location.href = 'app.html?scenario=1';
+            window.location.href = 'app.html';
         } else {
             // Session expired, clear storage
             localStorage.removeItem('agentName');

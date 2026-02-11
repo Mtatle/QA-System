@@ -23,6 +23,17 @@
             <!-- Centered session timer -->
             <div class="timer-display" id="sessionTimer">00:00</div>
             <div class="top-bar-right">
+                <div class="assignments-panel" id="assignmentsPanel">
+                    <label for="assignmentSelect" class="assignments-label">My Assignments</label>
+                    <div class="assignments-controls">
+                        <select id="assignmentSelect" class="assignment-select">
+                            <option value="">Loading assignments...</option>
+                        </select>
+                        <button type="button" id="assignmentRefreshBtn" class="assignment-btn">Refresh</button>
+                        <button type="button" id="assignmentOpenBtn" class="assignment-btn">Open</button>
+                    </div>
+                    <p id="assignmentsStatus" class="assignments-status" aria-live="polite"></p>
+                </div>
                 <div class="csv-upload" id="csvUploadContainer" style="display:none;">
                     <input type="file" id="csvFileInput" accept=".csv,text/csv" hidden>
                     <button id="csvUploadBtn" class="csv-upload-btn">Upload Scenarios</button>
