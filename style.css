@@ -321,7 +321,7 @@ polyline[points="6 9 12 15 18 9"] {
 
 /* Logout button styling */
 .logout-btn {
-    background-color: #FFDAD6;
+    background-color: #FFC5B9;
     color: black;
     border: none;
     border-radius: 4px;
@@ -330,7 +330,6 @@ polyline[points="6 9 12 15 18 9"] {
     cursor: pointer;
     display: flex;
     align-items: center;
-    transition: background-color 0.2s;
 }
 .logout-btn:hover {
     background-color: #FFC5B9;
@@ -354,9 +353,9 @@ polyline[points="6 9 12 15 18 9"] {
 
 .csv-upload-btn,
 .csv-clear-btn {
-    background: #e9f1ff;
+    background: #E2FA9F;
     color: #0d2a52;
-    border: 1px solid #c7dbff;
+    border: 1px solid #81B045;
     border-radius: 8px;
     padding: 6px 12px;
     font-size: 0.85em;
@@ -367,8 +366,9 @@ polyline[points="6 9 12 15 18 9"] {
 
 .csv-upload-btn:hover,
 .csv-clear-btn:hover {
-    background: #cfe2ff;
-    border-color: #9ec1ff;
+    background: #81B045;
+    border-color: #81B045;
+    color: #fff;
 }
 
 .csv-clear-btn {
@@ -378,8 +378,9 @@ polyline[points="6 9 12 15 18 9"] {
 }
 
 .csv-clear-btn:hover {
-    background: #ffdcdc;
-    border-color: #ef9c9c;
+    background: #7a1d1d;
+    border-color: #7a1d1d;
+    color: #fff;
 }
 
 .csv-status {
@@ -392,7 +393,7 @@ polyline[points="6 9 12 15 18 9"] {
 }
 
 .next-conversation-btn {
-    background: #FFDAD6;
+    background: #FFC5B9;
     color: #000;
     border: 0;
     border-radius: 8px;
@@ -400,7 +401,6 @@ polyline[points="6 9 12 15 18 9"] {
     font-size: 0.9em;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 1s;
 }
 
 .next-conversation-btn:hover {
@@ -436,7 +436,7 @@ polyline[points="6 9 12 15 18 9"] {
 .templates-clear-btn {
     background: #f2f7ff;
     color: #0d2a52;
-    border: 1px solid #c7dbff;
+    border: 1px solid #81B045;
     border-radius: 8px;
     padding: 6px 10px;
     font-size: 0.8em;
@@ -447,8 +447,9 @@ polyline[points="6 9 12 15 18 9"] {
 
 .templates-upload-btn:hover,
 .templates-clear-btn:hover {
-    background: #dbe9ff;
-    border-color: #9ec1ff;
+    background: #81B045;
+    border-color: #81B045;
+    color: #fff;
 }
 
 .templates-clear-btn {
@@ -458,8 +459,8 @@ polyline[points="6 9 12 15 18 9"] {
 }
 
 .templates-clear-btn:hover {
-    background: #ffdcdc;
-    border-color: #ef9c9c;
+    background: #7a1d1d;
+    border-color: #7a1d1d;
 }
 
 .templates-status {
@@ -813,20 +814,23 @@ input:checked + .slider:before {
     min-height: 0;
 }
 .system-message {
-    text-align: center;
-    color: #fff;
-    font-size: 0.85em;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: left;
+    color: #333;
+    margin: 0;
+    background-color: #fff;
 }
-.system-message .icon-small {
-    color: #fff;
+.chat-messages .system-message + .system-message {
+    margin-top: -4px;
 }
-.system-message .timestamp {
-    margin-left: 8px;
-    font-style: italic;
+.system-message .message-content p {
+    margin-bottom: 0;
+}
+.system-message .message-sender-icon {
+    font-weight: 400;
+}
+.system-message .message-sender-icon .icon-small {
+    color: #555;
+    margin-right: 0;
 }
 
 .message {
@@ -834,6 +838,7 @@ input:checked + .slider:before {
     border-radius: 18px;
     max-width: 70%;
     line-height: 1.4;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -892,6 +897,9 @@ input:checked + .slider:before {
 .message.sent {
     background-color: #e6fffb;
     align-self: flex-end;
+}
+.message.sent.system-message {
+    background-color: #fff !important;
 }
 .message.sent .message-sender-icon {
     order: 1;
@@ -1068,7 +1076,7 @@ input:checked + .slider:before {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #FFDAD6;
+    border-color: #FFC5B9;
     box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
 }
 
@@ -1185,7 +1193,7 @@ input:checked + .slider:before {
 
 .submit-btn {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #FFDAD6;
+    background-color: #FFC5B9;
     color: black;
     border: none;
     font-weight: bold;
@@ -1422,7 +1430,7 @@ mark {
 
 /* Promotions/Gifts Section */
 .promotions-section {
-    background: #FFDAD6;
+    background: #FFC5B9;
     border-radius: 12px;
     padding: 16px;
     margin-bottom: 20px;
@@ -1673,4 +1681,12 @@ mark {
 
 #dynamic-guidelines-container {
     margin-bottom: 20px;
+}
+
+/* Final chat overrides */
+.system-message,
+.message.system-message,
+.message.sent.system-message,
+.message.system-message .message-content {
+    background-color: #fff !important;
 }

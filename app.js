@@ -449,9 +449,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         const promoNotes = promoNotesRaw
             ? promoNotesRaw.split(/\r?\n/).map(line => line.trim()).filter(Boolean)
             : [];
-        if (promoNotes.length) {
-            notes.promo_and_exclusions = (notes.promo_and_exclusions || []).concat(promoNotes);
-        }
 
         const agentName = persona || '';
         const agentInitial = getCompanyInitial(companyName);
@@ -467,6 +464,47 @@ document.addEventListener('DOMContentLoaded', async () => {
             notes.tone = (notes.tone || []).concat([messageTone]);
         }
 
+        const rightPanel = {
+            source: {
+                label: 'Website',
+                value: companyWebsite || 'N/A',
+                date: ''
+            },
+            recommended,
+            purchased,
+            browsingHistory: Array.isArray(lastProducts)
+                ? lastProducts.map(item => ({
+                    item: item && item.product_name ? String(item.product_name) : '',
+                    link: item && item.product_link ? String(item.product_link) : '',
+                    icon: 'shopping-cart'
+                })).filter(entry => entry.item)
+                : [],
+            orders: Array.isArray(orders)
+                ? orders.map(order => {
+                    const products = Array.isArray(order && order.products) ? order.products : [];
+                    return {
+                        orderNumber: order && order.order_number ? String(order.order_number) : '',
+                        link: order && order.order_status_url ? String(order.order_status_url) : '',
+                        trackingLink: order && order.tracking_url ? String(order.tracking_url) : '',
+                        items: products.map(product => ({
+                            name: product && product.product_name ? String(product.product_name) : '',
+                            price: product && product.product_price != null ? String(product.product_price) : '',
+                            product_link: product && product.product_link ? String(product.product_link) : ''
+                        })).filter(p => p.name),
+                        subtotal: order && order.total != null ? `$${order.total}` : ''
+                    };
+                }).filter(order => order.orderNumber || order.items.length)
+                : []
+        };
+
+        // Promotions panel uses PROMO_NOTES only.
+        if (promoNotes.length) {
+            rightPanel.promotions = {
+                title: 'Promotion',
+                content: promoNotes
+            };
+        }
+
         return {
             id: sendId || '',
             companyName,
@@ -480,38 +518,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             notes,
             guidelines,
             ...conversationFields,
-            rightPanel: {
-                source: {
-                    label: 'Website',
-                    value: companyWebsite || 'N/A',
-                    date: ''
-                },
-                recommended,
-                purchased,
-                browsingHistory: Array.isArray(lastProducts)
-                    ? lastProducts.map(item => ({
-                        item: item && item.product_name ? String(item.product_name) : '',
-                        link: item && item.product_link ? String(item.product_link) : '',
-                        icon: 'shopping-cart'
-                    })).filter(entry => entry.item)
-                    : [],
-                orders: Array.isArray(orders)
-                    ? orders.map(order => {
-                        const products = Array.isArray(order && order.products) ? order.products : [];
-                        return {
-                            orderNumber: order && order.order_number ? String(order.order_number) : '',
-                            link: order && order.order_status_url ? String(order.order_status_url) : '',
-                            trackingLink: order && order.tracking_url ? String(order.tracking_url) : '',
-                            items: products.map(product => ({
-                                name: product && product.product_name ? String(product.product_name) : '',
-                                price: product && product.product_price != null ? String(product.product_price) : '',
-                                product_link: product && product.product_link ? String(product.product_link) : ''
-                            })).filter(p => p.name),
-                            subtotal: order && order.total != null ? `$${order.total}` : ''
-                        };
-                    }).filter(order => order.orderNumber || order.items.length)
-                    : []
-            },
+            rightPanel,
             orders: Array.isArray(orders) ? orders : [],
         };
     }
@@ -768,16 +775,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!chatMessages) return;
         chatMessages.innerHTML = '';
 
-        const systemStart = document.createElement('div');
-        systemStart.className = 'system-message';
-        systemStart.innerHTML = '<i data-feather="bell" class="icon-small"></i> Concierge conversation started';
-        chatMessages.appendChild(systemStart);
-
         if (!Array.isArray(conversation) || conversation.length === 0) {
             const fallbackMessage = document.createElement('div');
             fallbackMessage.className = 'message received';
             fallbackMessage.innerHTML = `
-                <div class="message-sender-icon">C</div>
                 <div class="message-content">
                     <p>${scenario.customerMessage || ''}</p>
                 </div>
@@ -790,8 +791,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!message || !message.content) return;
             if (message.role === 'system') {
                 const systemMessage = document.createElement('div');
-                systemMessage.className = 'system-message';
-                systemMessage.innerHTML = `<i data-feather="bell" class="icon-small"></i> ${message.content}`;
+                systemMessage.className = 'message sent system-message';
+                systemMessage.innerHTML = `
+                    <div class="message-content">
+                        <p>${message.content}</p>
+                    </div>
+                `;
                 chatMessages.appendChild(systemMessage);
                 return;
             }
@@ -800,23 +805,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             const wrapper = document.createElement('div');
             wrapper.className = `message ${isAgent ? 'sent' : 'received'}`;
 
-            const icon = document.createElement('div');
-            icon.className = 'message-sender-icon';
-            icon.textContent = isAgent ? (scenario.agentInitial || 'A') : 'C';
-
             const content = document.createElement('div');
             content.className = 'message-content';
             const p = document.createElement('p');
             p.textContent = message.content;
             content.appendChild(p);
-
-            if (isAgent) {
-                wrapper.appendChild(content);
-                wrapper.appendChild(icon);
-            } else {
-                wrapper.appendChild(icon);
-                wrapper.appendChild(content);
-            }
+            wrapper.appendChild(content);
             chatMessages.appendChild(wrapper);
         });
     }
@@ -836,7 +830,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // Build conversation from scenario mapping or preloaded array
         let conversation = buildConversationFromScenario(scenario);
-        if (conversation.length) {
+        const hasStructuredPromotions = (() => {
+            const rightPanel = scenario.rightPanel || {};
+            const promoKeys = Object.keys(rightPanel).filter(k => /^promotions(_\d+)?$/.test(k));
+            return promoKeys.some(key => {
+                const value = rightPanel[key];
+                if (Array.isArray(value)) return value.length > 0;
+                return !!value;
+            });
+        })();
+
+        if (conversation.length && !hasStructuredPromotions) {
             const promoNotes = [];
             conversation = conversation.filter(message => {
                 if (!message || message.role !== 'system') return true;
@@ -983,15 +987,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Render dynamic Promotions/Gifts from scenarios.json if provided
     function renderPromotions(promotions) {
         const container = document.getElementById('promotionsContainer');
-        if (!container) return;
-
-        container.innerHTML = '';
+        if (!container) return 0;
 
         // Allow single object or array
         const items = Array.isArray(promotions) ? promotions : [promotions];
+        let rendered = 0;
 
         items.forEach(promo => {
             if (!promo) return;
+            const contentLines = (() => {
+                if (Array.isArray(promo.content)) {
+                    return promo.content.map(line => String(line || '').trim()).filter(Boolean);
+                }
+                if (typeof promo.content === 'string') {
+                    return promo.content.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+                }
+                return [];
+            })();
+            if (!contentLines.length) return;
 
             const section = document.createElement('div');
             section.className = 'promotions-section';
@@ -1025,21 +1038,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             const desc = document.createElement('div');
             desc.className = 'promotions-description';
 
-            // Content can be string or array -> render as bullet lines
-            if (Array.isArray(promo.content)) {
-                promo.content.forEach(line => {
-                    const p = document.createElement('p');
-                    p.textContent = `• ${line}`;
-                    desc.appendChild(p);
-                });
-            } else if (typeof promo.content === 'string') {
-                const lines = promo.content.split(/\r?\n/).filter(Boolean);
-                lines.forEach(line => {
-                    const p = document.createElement('p');
-                    p.textContent = `• ${line}`;
-                    desc.appendChild(p);
-                });
-            }
+            contentLines.forEach(line => {
+                const p = document.createElement('p');
+                p.textContent = `• ${line}`;
+                desc.appendChild(p);
+            });
 
             info.appendChild(titleRow);
             info.appendChild(desc);
@@ -1047,22 +1050,25 @@ document.addEventListener('DOMContentLoaded', async () => {
             header.appendChild(info);
             section.appendChild(header);
             container.appendChild(section);
+            rendered += 1;
         });
 
-        if (typeof feather !== 'undefined') {
+        if (rendered > 0 && typeof feather !== 'undefined') {
             feather.replace();
         }
+        return rendered;
     }
 
     // Function to load right panel dynamic content
     function loadRightPanelContent(scenario) {
-        if (!scenario.rightPanel) return;
-
-        // Render promotions dynamically, supporting multiple keys: promotions, promotions_2, promotions_3, ...
         const promosContainer = document.getElementById('promotionsContainer');
         if (promosContainer) {
             promosContainer.innerHTML = '';
+            promosContainer.style.display = 'none';
         }
+        if (!scenario.rightPanel) return;
+
+        // Render promotions dynamically, supporting multiple keys: promotions, promotions_2, promotions_3, ...
         const rightPanel = scenario.rightPanel || {};
         const promoKeys = Object.keys(rightPanel)
             .filter(k => /^promotions(_\d+)?$/.test(k))
@@ -1071,13 +1077,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const nb = b === 'promotions' ? 1 : parseInt(b.split('_')[1] || '0', 10);
                 return na - nb;
             });
+        let renderedPromotions = 0;
         if (promoKeys.length > 0) {
             promoKeys.forEach(key => {
                 const block = rightPanel[key];
                 if (block) {
-                    renderPromotions(block);
+                    renderedPromotions += renderPromotions(block);
                 }
             });
+        }
+        if (promosContainer) {
+            promosContainer.style.display = renderedPromotions > 0 ? '' : 'none';
         }
         
         // Update source information
@@ -1477,9 +1487,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('message', type);
-
-        const senderIconDiv = document.createElement('div');
-        senderIconDiv.classList.add('message-sender-icon');
         
         const messageContentDiv = document.createElement('div');
         messageContentDiv.classList.add('message-content');
@@ -1496,17 +1503,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         messageContentDiv.appendChild(messageTextP);
         messageContentDiv.appendChild(timestampSpan);
-        
-        if (type === 'sent') {
-            senderIconDiv.classList.add('self');
-            senderIconDiv.textContent = scenarioData ? scenarioData.agentInitial : 'A'; // Use scenario-specific initial
-            messageDiv.appendChild(messageContentDiv); // Content first
-            messageDiv.appendChild(senderIconDiv); // Icon second
-        } else { // received
-            senderIconDiv.textContent = 'C'; // Customer initial
-            messageDiv.appendChild(senderIconDiv);
-            messageDiv.appendChild(messageContentDiv);
-        }
+        messageDiv.appendChild(messageContentDiv);
 
         chatMessages.appendChild(messageDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to bottom
