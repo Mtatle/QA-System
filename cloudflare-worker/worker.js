@@ -28,7 +28,7 @@ export default {
             if (!incoming.length) {
                 return jsonResponse({ error: 'No templates provided.' }, corsHeaders, 400);
             }
-            const updated = await mergeAndSaveTemplates(env, incoming);
+            const updated = await saveTemplatesReplace(env, incoming);
             return jsonResponse({ templates: updated.templates }, corsHeaders);
         } catch (error) {
             console.error('POST /templates failed', error);
@@ -96,11 +96,15 @@ function jsonResponse(body, headers, status = 200) {
 }
 
 function toBase64Utf8(str) {
+  if (typeof Buffer !== 'undefined') {
+    return Buffer.from(str, 'utf8').toString('base64');
+  }
   const bytes = new TextEncoder().encode(str);
   let binary = '';
-  bytes.forEach(b => {
-    binary += String.fromCharCode(b);
-  });
+  const chunkSize = 0x8000;
+  for (let i = 0; i < bytes.length; i += chunkSize) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + chunkSize));
+  }
   return btoa(binary);
 }
 
@@ -138,6 +142,13 @@ async function mergeAndSaveTemplates(env, incomingTemplates) {
   const merged = mergeTemplates(existing.templates, incomingTemplates);
   await writeTemplates(env, merged, existing.sha);
   return { templates: merged };
+}
+
+async function saveTemplatesReplace(env, templates) {
+  const { owner, repo, templatesPath, branch, token } = getRepoConfig(env);
+  const sha = await getFileSha(owner, repo, templatesPath, branch, token);
+  await writeTemplates(env, templates, sha);
+  return { templates };
 }
 
 function mergeTemplates(existing, incoming) {
@@ -208,7 +219,7 @@ async function writeTemplates(env, templates, sha) {
 }
 
 async function clearTemplates(env) {
-  await writeTemplates(env, [], (await readTemplates(env)).sha);
+  await saveTemplatesReplace(env, []);
 }
 
 async function readScenarios(env) {
@@ -275,6 +286,43 @@ async function writeScenarios(env, scenarios, sha) {
 
 async function clearScenarios(env) {
   await writeScenarios(env, [], (await readScenarios(env)).sha);
+}
+
+async function getFileSha(owner, repo, filePath, branch, token) {
+  const branchUrl = `https://api.github.com/repos/${owner}/${repo}/branches/${encodeURIComponent(branch)}`;
+  const branchResponse = await fetch(branchUrl, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'User-Agent': 'qa-templates-worker'
+    }
+  });
+  if (!branchResponse.ok) {
+    const body = await branchResponse.text();
+    throw new Error(`GitHub branch lookup failed: ${branchResponse.status} ${body}`);
+  }
+
+  const branchData = await branchResponse.json();
+  const rootTreeSha = branchData && branchData.commit && branchData.commit.commit && branchData.commit.commit.tree && branchData.commit.commit.tree.sha;
+  if (!rootTreeSha) {
+    throw new Error('GitHub branch lookup returned no tree SHA');
+  }
+
+  const treeUrl = `https://api.github.com/repos/${owner}/${repo}/git/trees/${rootTreeSha}?recursive=1`;
+  const treeResponse = await fetch(treeUrl, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'User-Agent': 'qa-templates-worker'
+    }
+  });
+  if (!treeResponse.ok) {
+    const body = await treeResponse.text();
+    throw new Error(`GitHub tree lookup failed: ${treeResponse.status} ${body}`);
+  }
+
+  const treeData = await treeResponse.json();
+  const treeItems = Array.isArray(treeData && treeData.tree) ? treeData.tree : [];
+  const match = treeItems.find(item => item && item.path === filePath);
+  return match && match.sha ? match.sha : null;
 }
 
 function getRepoConfig(env) {

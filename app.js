@@ -113,36 +113,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         localStorage.setItem('uploadedTemplatesAt', String(Date.now()));
     }
 
-    function splitTemplatesIntoBatches(templates, maxBatchBytes = 900000) {
-        const encoder = new TextEncoder();
-        const batches = [];
-        let current = [];
-
-        const bytesForPayload = (items) => encoder.encode(JSON.stringify({ templates: items })).length;
-
-        templates.forEach(template => {
-            if (!template) return;
-            const singleSize = bytesForPayload([template]);
-            if (singleSize > maxBatchBytes) {
-                throw new Error(`Template ${template.id || '(missing id)'} is too large to upload.`);
-            }
-
-            const candidate = current.concat([template]);
-            if (current.length > 0 && bytesForPayload(candidate) > maxBatchBytes) {
-                batches.push(current);
-                current = [template];
-            } else {
-                current = candidate;
-            }
-        });
-
-        if (current.length > 0) {
-            batches.push(current);
-        }
-
-        return batches;
-    }
-
     function setTemplatesStatus(message) {
         if (templatesStatus) {
             templatesStatus.textContent = message || '';
@@ -2203,32 +2173,22 @@ document.addEventListener('DOMContentLoaded', async () => {
                         }
 
                         if (API_BASE_URL) {
-                            const batches = splitTemplatesIntoBatches(templates);
-                            let latestTemplates = [];
+                            setTemplatesStatus('Uploading templates...');
+                            const response = await fetch(`${API_BASE_URL}/templates`, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ templates })
+                            });
 
-                            for (let i = 0; i < batches.length; i++) {
-                                const batch = batches[i];
-                                setTemplatesStatus(`Uploading batch ${i + 1}/${batches.length}...`);
-                                const response = await fetch(`${API_BASE_URL}/templates`, {
-                                    method: 'POST',
-                                    headers: { 'Content-Type': 'application/json' },
-                                    body: JSON.stringify({ templates: batch })
-                                });
-
-                                if (!response.ok) {
-                                    const errorBody = await response.text().catch(() => '');
-                                    const trimmed = errorBody ? `: ${errorBody.slice(0, 180)}` : '';
-                                    throw new Error(`API update failed (${response.status})${trimmed}`);
-                                }
-
-                                if (i === batches.length - 1) {
-                                    const data = await response.json();
-                                    latestTemplates = Array.isArray(data.templates) ? data.templates : [];
-                                }
+                            if (!response.ok) {
+                                const errorBody = await response.text().catch(() => '');
+                                const trimmed = errorBody ? `: ${errorBody.slice(0, 240)}` : '';
+                                throw new Error(`API update failed (${response.status})${trimmed}`);
                             }
 
-                            templatesData = latestTemplates;
-                            setTemplatesStatus(`Saved ${templates.length} template(s) via API (${batches.length} batch${batches.length === 1 ? '' : 'es'})`);
+                            const data = await response.json();
+                            templatesData = Array.isArray(data.templates) ? data.templates : [];
+                            setTemplatesStatus(`Saved ${templates.length} template(s) via API`);
                         } else {
                             setTemplatesStatus('Templates API is not configured.');
                             return;
