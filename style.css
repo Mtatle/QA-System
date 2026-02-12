@@ -560,19 +560,23 @@ polyline[points="6 9 12 15 18 9"] {
     display: flex;
     flex-direction: column;
     min-height: 0;
+    min-width: 0;
 }
 
 .templates-block {
     display: flex;
     flex-direction: column;
     min-height: 0;
+    min-width: 0;
     height: 100%;
 }
 
 .templates-scroll {
     flex: 1;
     min-height: 0;
+    min-width: 0;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .templates-upload {
@@ -909,10 +913,14 @@ input:checked + .slider:before {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     height: 0;
     max-height: none;
     min-height: 0;
+}
+.chat-messages > .message,
+.chat-messages > .system-message {
+    margin: 0 !important;
 }
 .system-message {
     text-align: left;
@@ -920,11 +928,8 @@ input:checked + .slider:before {
     margin: 0;
     background-color: #fff;
 }
-.chat-messages .system-message + .system-message {
-    margin-top: -4px;
-}
 .system-message .message-content p {
-    margin-bottom: 0;
+    margin: 0;
 }
 .system-message .message-sender-icon {
     font-weight: 400;
@@ -935,6 +940,7 @@ input:checked + .slider:before {
 }
 
 .message {
+    margin: 0;
     padding: 10px 15px;
     border-radius: 18px;
     max-width: 70%;
@@ -977,7 +983,7 @@ input:checked + .slider:before {
     justify-content: center;
 }
 .message-content p {
-    margin-bottom: 5px;
+    margin: 0 0 5px;
     word-wrap: break-word;
     overflow-wrap: break-word;
     word-break: break-word;
@@ -1536,18 +1542,35 @@ body.assignment-view-only #internalNotesContainer {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
+
+.template-item--global {
+    background-color: #fffbe6;
+}
+
 .template-item:last-child {
     margin-bottom: 0;
 }
 .template-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 8px;
+    min-width: 0;
     font-weight: 500;
     margin-bottom: 5px;
     font-size: 0.9em;
 }
+
+.template-header > span:first-child {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 .template-shortcut {
     background-color: #e0e0e0;
     color: #555;
@@ -1555,11 +1578,17 @@ body.assignment-view-only #internalNotesContainer {
     border-radius: 3px;
     font-size: 0.8em;
     font-weight: normal;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 .template-item p {
     font-size: 0.85em;
     color: #555;
     line-height: 1.4;
+    margin: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 /* Search highlighting */

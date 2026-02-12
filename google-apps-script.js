@@ -3,6 +3,8 @@ const ASSIGNMENTS_SHEET = 'Assignments';
 const POOL_SHEET = 'Pool';
 const SESSION_LOGS_SHEET = 'Session Logs';
 const DATA_SHEET = 'Data';
+const UPLOADED_SCENARIOS_SHEET = 'Uploaded Scenarios';
+const UPLOADED_TEMPLATES_SHEET = 'Uploaded Templates';
 
 const ASSIGNMENTS_HEADERS = [
   'send_id',
@@ -19,6 +21,7 @@ const ASSIGNMENTS_HEADERS = [
 ];
 
 const POOL_HEADERS = ['send_id', 'status'];
+const UPLOADED_JSON_HEADERS = ['record_id', 'payload_json', 'updated_at'];
 const ACTIVE_ASSIGNMENT_STATUSES = { ASSIGNED: true, IN_PROGRESS: true };
 
 function doGet(e) {
@@ -62,6 +65,14 @@ function doGet(e) {
           role: role
         }
       });
+    }
+
+    if (action === 'getUploadedScenarios') {
+      return jsonResponse_({ scenarios: readUploadedJsonList_(UPLOADED_SCENARIOS_SHEET) });
+    }
+
+    if (action === 'getUploadedTemplates') {
+      return jsonResponse_({ templates: readUploadedJsonList_(UPLOADED_TEMPLATES_SHEET) });
     }
 
     return jsonResponse_({ status: 'ok', message: 'Agent Training Data Collector is running' });
@@ -122,6 +133,80 @@ function doPost(e) {
         const result = addSendIdsToPool_(sendIds);
         if (result.error) return jsonResponse_({ error: result.error });
         return jsonResponse_(result);
+      } finally {
+        lock.releaseLock();
+      }
+    }
+
+    if (action === 'setUploadedScenarios') {
+      const scenarios = Array.isArray(data.scenarios) ? data.scenarios : [];
+      const lock = LockService.getScriptLock();
+      lock.waitLock(30000);
+      try {
+        writeUploadedJsonList_(UPLOADED_SCENARIOS_SHEET, scenarios);
+        return jsonResponse_({ ok: true, scenarios: scenarios });
+      } finally {
+        lock.releaseLock();
+      }
+    }
+
+    if (action === 'appendUploadedScenarios') {
+      const scenarios = Array.isArray(data.scenarios) ? data.scenarios : [];
+      const reset = !!data.reset;
+      const lock = LockService.getScriptLock();
+      lock.waitLock(30000);
+      try {
+        const result = appendUploadedJsonList_(UPLOADED_SCENARIOS_SHEET, scenarios, { reset: reset });
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_({ ok: true, added: result.added, total: result.total });
+      } finally {
+        lock.releaseLock();
+      }
+    }
+
+    if (action === 'clearUploadedScenarios') {
+      const lock = LockService.getScriptLock();
+      lock.waitLock(30000);
+      try {
+        writeUploadedJsonList_(UPLOADED_SCENARIOS_SHEET, []);
+        return jsonResponse_({ ok: true, scenarios: [] });
+      } finally {
+        lock.releaseLock();
+      }
+    }
+
+    if (action === 'setUploadedTemplates') {
+      const templates = Array.isArray(data.templates) ? data.templates : [];
+      const lock = LockService.getScriptLock();
+      lock.waitLock(30000);
+      try {
+        writeUploadedJsonList_(UPLOADED_TEMPLATES_SHEET, templates);
+        return jsonResponse_({ ok: true, templates: templates });
+      } finally {
+        lock.releaseLock();
+      }
+    }
+
+    if (action === 'appendUploadedTemplates') {
+      const templates = Array.isArray(data.templates) ? data.templates : [];
+      const reset = !!data.reset;
+      const lock = LockService.getScriptLock();
+      lock.waitLock(30000);
+      try {
+        const result = appendUploadedJsonList_(UPLOADED_TEMPLATES_SHEET, templates, { reset: reset });
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_({ ok: true, added: result.added, total: result.total });
+      } finally {
+        lock.releaseLock();
+      }
+    }
+
+    if (action === 'clearUploadedTemplates') {
+      const lock = LockService.getScriptLock();
+      lock.waitLock(30000);
+      try {
+        writeUploadedJsonList_(UPLOADED_TEMPLATES_SHEET, []);
+        return jsonResponse_({ ok: true, templates: [] });
       } finally {
         lock.releaseLock();
       }
@@ -197,6 +282,78 @@ function addSendIdsToPool_(sendIds) {
   }
 
   return { ok: true, added: added, reactivated: reactivated, total: uniqueIds.length };
+}
+
+function readUploadedJsonList_(sheetName) {
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const sheet = getOrCreateSheet_(spreadsheet, sheetName, UPLOADED_JSON_HEADERS);
+  const rows = getSheetDataRows_(sheet, UPLOADED_JSON_HEADERS.length);
+  const items = [];
+
+  for (let i = 0; i < rows.length; i++) {
+    const raw = String(rows[i][1] || '').trim();
+    if (!raw) continue;
+    try {
+      items.push(JSON.parse(raw));
+    } catch (error) {
+      console.warn('Skipping invalid JSON row in sheet %s at index %s', sheetName, i + 2);
+    }
+  }
+
+  return items;
+}
+
+function writeUploadedJsonList_(sheetName, list) {
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const sheet = getOrCreateSheet_(spreadsheet, sheetName, UPLOADED_JSON_HEADERS);
+  const lastRow = sheet.getLastRow();
+
+  if (lastRow > 1) {
+    sheet.getRange(2, 1, lastRow - 1, UPLOADED_JSON_HEADERS.length).clearContent();
+  }
+
+  const items = Array.isArray(list) ? list : [];
+  if (!items.length) return;
+
+  const now = nowIso_();
+  const rows = items.map(function(item) {
+    const fallbackId = Utilities.getUuid();
+    const recordId = item && item.id != null ? String(item.id) : fallbackId;
+    return [
+      recordId,
+      stringifyMaybe_(item),
+      now
+    ];
+  });
+
+  sheet.getRange(2, 1, rows.length, UPLOADED_JSON_HEADERS.length).setValues(rows);
+}
+
+function appendUploadedJsonList_(sheetName, list, options) {
+  const items = Array.isArray(list) ? list : [];
+  if (!items.length) return { added: 0, total: 0 };
+
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const sheet = getOrCreateSheet_(spreadsheet, sheetName, UPLOADED_JSON_HEADERS);
+  const reset = !!(options && options.reset);
+
+  if (reset) {
+    const existingLastRow = sheet.getLastRow();
+    if (existingLastRow > 1) {
+      sheet.getRange(2, 1, existingLastRow - 1, UPLOADED_JSON_HEADERS.length).clearContent();
+    }
+  }
+
+  const now = nowIso_();
+  const rows = items.map(function(item) {
+    const fallbackId = Utilities.getUuid();
+    const recordId = item && item.id != null ? String(item.id) : fallbackId;
+    return [recordId, stringifyMaybe_(item), now];
+  });
+
+  const startRow = sheet.getLastRow() + 1;
+  sheet.getRange(startRow, 1, rows.length, UPLOADED_JSON_HEADERS.length).setValues(rows);
+  return { added: rows.length, total: rows.length };
 }
 
 function handleLegacyPost_(data) {

@@ -20,8 +20,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const assignmentsStatus = document.getElementById('assignmentsStatus');
     const previousConversationBtn = document.getElementById('previousConversationBtn');
     const nextConversationBtn = document.getElementById('nextConversationBtn');
-    const API_BASE_URL = 'https://qa-templates-worker.qasystem.workers.dev'; // e.g. https://your-worker.example.workers.dev
-
     // Google Sheets integration
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyGbsJuilfRrAi111vKpEnlXBmhiHU3z1-YsIESqdKO0lTYRkkoV9r-Z9l07a-27ZJBdA/exec';
     // Current scenario data
@@ -33,6 +31,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     let assignmentQueue = [];
     let assignmentContext = null;
     let draftSaveTimer = null;
+    const SCENARIO_UPLOAD_CHUNK_SIZE = 100;
+    const TEMPLATE_UPLOAD_CHUNK_SIZE = 50;
+    const POOL_SYNC_CHUNK_SIZE = 200;
     
     // CSV upload permission lists
     let csvUploadAllowedAgents = [];
@@ -291,6 +292,34 @@ document.addEventListener('DOMContentLoaded', async () => {
         return json;
     }
 
+    function chunkArray(items, size) {
+        const list = Array.isArray(items) ? items : [];
+        const chunkSize = Math.max(1, Number(size) || 1);
+        const chunks = [];
+        for (let i = 0; i < list.length; i += chunkSize) {
+            chunks.push(list.slice(i, i + chunkSize));
+        }
+        return chunks;
+    }
+
+    async function postChunkedList(action, listKey, items, chunkSize, onProgress) {
+        const chunks = chunkArray(items, chunkSize);
+        if (!chunks.length) return { chunks: 0, added: 0, total: 0 };
+
+        let added = 0;
+        for (let i = 0; i < chunks.length; i++) {
+            const payload = {};
+            payload[listKey] = chunks[i];
+            payload.reset = i === 0;
+            const result = await fetchAssignmentPost(action, payload);
+            added += Number(result.added || chunks[i].length);
+            if (typeof onProgress === 'function') {
+                onProgress(i + 1, chunks.length, added);
+            }
+        }
+        return { chunks: chunks.length, added, total: items.length };
+    }
+
     async function syncScenarioIdsToAssignmentPool(scenarios) {
         const sendIds = (Array.isArray(scenarios) ? scenarios : [])
             .map((scenario) => String((scenario && scenario.id) || '').trim())
@@ -298,11 +327,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!sendIds.length) {
             return { added: 0, reactivated: 0, total: 0 };
         }
-        const result = await fetchAssignmentPost('addToPool', { send_ids: sendIds });
+        const chunks = chunkArray(sendIds, POOL_SYNC_CHUNK_SIZE);
+        let added = 0;
+        let reactivated = 0;
+        let total = 0;
+        for (let i = 0; i < chunks.length; i++) {
+            const result = await fetchAssignmentPost('addToPool', { send_ids: chunks[i] });
+            added += Number(result.added || 0);
+            reactivated += Number(result.reactivated || 0);
+            total += Number(result.total || chunks[i].length);
+        }
         return {
-            added: Number(result.added || 0),
-            reactivated: Number(result.reactivated || 0),
-            total: Number(result.total || sendIds.length)
+            added,
+            reactivated,
+            total
         };
     }
 
@@ -707,6 +745,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         return String(value || '').trim().toLowerCase();
     }
 
+    function isGlobalTemplate(template) {
+        return !normalizeName(template && template.companyName);
+    }
+
     function formatDollarAmount(rawValue) {
         if (rawValue == null) return '';
         const text = String(rawValue).trim();
@@ -828,33 +870,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function loadTemplatesData() {
-        if (API_BASE_URL) {
-            try {
-                const response = await fetch(`${API_BASE_URL}/templates`, { method: 'GET' });
-                if (!response.ok) throw new Error('API error');
-                const data = await response.json();
-                return Array.isArray(data.templates) ? data.templates : [];
-            } catch (error) {
-                console.error('Error loading templates via API:', error);
-                return [];
+        try {
+            const data = await fetchAssignmentGet('getUploadedTemplates', {});
+            const uploaded = Array.isArray(data.templates) ? data.templates : [];
+            if (uploaded.length) {
+                return uploaded;
             }
+        } catch (error) {
+            console.error('Error loading uploaded templates via Apps Script:', error);
         }
 
-        return [];
+        try {
+            const response = await fetch('templates.json', { method: 'GET' });
+            if (!response.ok) throw new Error(`templates.json load failed (${response.status})`);
+            const data = await response.json();
+            return Array.isArray(data.templates) ? data.templates : [];
+        } catch (error) {
+            console.error('Error loading templates.json fallback:', error);
+            return [];
+        }
     }
 
     async function loadUploadedScenarios() {
-        if (!API_BASE_URL) return getUploadedScenarios();
         try {
-            const response = await fetch(`${API_BASE_URL}/scenarios`, { method: 'GET' });
-            if (!response.ok) throw new Error('API error');
-            const data = await response.json();
+            const data = await fetchAssignmentGet('getUploadedScenarios', {});
             const list = Array.isArray(data.scenarios) ? data.scenarios : [];
             setUploadedScenarios(list);
             return list;
         } catch (error) {
-            console.error('Error loading scenarios via API:', error);
-            return [];
+            console.error('Error loading uploaded scenarios via Apps Script:', error);
+            return getUploadedScenarios();
         }
     }
 
@@ -1501,6 +1546,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 templatesForScenario.forEach(template => {
                     const templateDiv = document.createElement('div');
                     templateDiv.className = 'template-item';
+                    if (isGlobalTemplate(template)) {
+                        templateDiv.classList.add('template-item--global');
+                    }
 
                     const headerDiv = document.createElement('div');
                     headerDiv.className = 'template-header';
@@ -2289,6 +2337,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             filteredTemplates.forEach(template => {
                 const templateDiv = document.createElement('div');
                 templateDiv.className = 'template-item';
+                if (isGlobalTemplate(template)) {
+                    templateDiv.classList.add('template-item--global');
+                }
 
                 const headerDiv = document.createElement('div');
                 headerDiv.className = 'template-header';
@@ -2401,21 +2452,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                         const scenarios = rowData.map(convertCsvRowToScenario);
 
-                        if (API_BASE_URL) {
-                            const response = await fetch(`${API_BASE_URL}/scenarios`, {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify({ scenarios })
-                            });
-                            if (!response.ok) {
-                                throw new Error('API update failed');
+                        setCsvStatus('Uploading scenarios to Sheets...');
+                        const uploaded = await postChunkedList(
+                            'appendUploadedScenarios',
+                            'scenarios',
+                            scenarios,
+                            SCENARIO_UPLOAD_CHUNK_SIZE,
+                            (current, totalChunks) => {
+                                setCsvStatus(`Uploading scenarios... chunk ${current}/${totalChunks}`);
                             }
-                            const data = await response.json();
-                            setCsvStatus(`Saved ${scenarios.length} scenario(s) via API`);
-                            setUploadedScenarios(data.scenarios || []);
-                        } else {
-                            setUploadedScenarios(scenarios);
-                        }
+                        );
+                        const savedScenarios = scenarios;
+                        setCsvStatus(`Saved ${savedScenarios.length} scenario(s) to Sheets in ${uploaded.chunks} chunk(s)`);
+                        setUploadedScenarios(savedScenarios);
 
                         const poolSync = await syncScenarioIdsToAssignmentPool(scenarios);
 
@@ -2450,21 +2499,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (csvClearBtn) {
             csvClearBtn.addEventListener('click', async () => {
-                if (API_BASE_URL) {
-                    try {
-                        const response = await fetch(`${API_BASE_URL}/scenarios`, { method: 'DELETE' });
-                        if (!response.ok) throw new Error('API delete failed');
-                        setCsvStatus('Cleared uploaded scenarios via API.');
-                        localStorage.removeItem('uploadedScenarios');
-                        localStorage.removeItem('uploadedScenariosAt');
-                    } catch (error) {
-                        setCsvStatus('Failed to clear scenarios via API.');
-                        return;
-                    }
-                } else {
+                try {
+                    await fetchAssignmentPost('clearUploadedScenarios', {});
                     localStorage.removeItem('uploadedScenarios');
                     localStorage.removeItem('uploadedScenariosAt');
-                    setCsvStatus('Cleared uploaded scenarios.');
+                    setCsvStatus('Cleared uploaded scenarios from Sheets.');
+                } catch (error) {
+                    setCsvStatus(`Failed to clear scenarios: ${error && error.message ? error.message : 'unknown error'}`);
+                    return;
                 }
                 window.location.href = 'app.html?scenario=1';
             });
@@ -2543,27 +2585,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                             return;
                         }
 
-                        if (API_BASE_URL) {
-                            setTemplatesStatus('Uploading templates...');
-                            const response = await fetch(`${API_BASE_URL}/templates`, {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify({ templates })
-                            });
-
-                            if (!response.ok) {
-                                const errorBody = await response.text().catch(() => '');
-                                const trimmed = errorBody ? `: ${errorBody.slice(0, 240)}` : '';
-                                throw new Error(`API update failed (${response.status})${trimmed}`);
+                        setTemplatesStatus('Uploading templates to Sheets...');
+                        const uploaded = await postChunkedList(
+                            'appendUploadedTemplates',
+                            'templates',
+                            templates,
+                            TEMPLATE_UPLOAD_CHUNK_SIZE,
+                            (current, totalChunks) => {
+                                setTemplatesStatus(`Uploading templates... chunk ${current}/${totalChunks}`);
                             }
-
-                            const data = await response.json();
-                            templatesData = Array.isArray(data.templates) ? data.templates : [];
-                            setTemplatesStatus(`Saved ${templates.length} template(s) via API`);
-                        } else {
-                            setTemplatesStatus('Templates API is not configured.');
-                            return;
-                        }
+                        );
+                        templatesData = templates;
+                        setTemplatesStatus(`Saved ${templates.length} template(s) to Sheets in ${uploaded.chunks} chunk(s)`);
                         if (scenarioData) {
                             loadRightPanelContent(scenarioData);
                         }
@@ -2585,21 +2618,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (templatesClearBtn) {
             templatesClearBtn.addEventListener('click', async () => {
-                if (API_BASE_URL) {
-                    try {
-                        const response = await fetch(`${API_BASE_URL}/templates`, { method: 'DELETE' });
-                        if (!response.ok) {
-                            const errorBody = await response.text().catch(() => '');
-                            const trimmed = errorBody ? `: ${errorBody.slice(0, 180)}` : '';
-                            throw new Error(`API delete failed (${response.status})${trimmed}`);
-                        }
-                        templatesData = [];
-                        setTemplatesStatus('Cleared templates via API.');
-                    } catch (error) {
-                        setTemplatesStatus(`Failed to clear templates via API. ${error.message || ''}`.trim());
-                    }
-                } else {
-                    setTemplatesStatus('Templates API is not configured.');
+                try {
+                    await fetchAssignmentPost('clearUploadedTemplates', {});
+                    templatesData = [];
+                    setTemplatesStatus('Cleared uploaded templates from Sheets.');
+                } catch (error) {
+                    setTemplatesStatus(`Failed to clear templates: ${error && error.message ? error.message : 'unknown error'}`);
                     return;
                 }
                 if (scenarioData) {
@@ -2610,6 +2634,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Initialize everything
+    templatesData = await loadTemplatesData();
     const scenarios = await loadScenariosData();
     if (!scenarios) {
         console.error('Could not load scenarios data');
@@ -2684,7 +2709,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    templatesData = await loadTemplatesData();
     await initializeCsvUpload();
     await initializeTemplatesUpload();
 
