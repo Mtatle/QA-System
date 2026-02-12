@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Google Sign-In
     function initializeGoogleSignIn() {
-        const GOOGLE_CLIENT_ID = '859624417507-jih3s0ub8apicj7cr4sja0l7rj2t3kbt.apps.googleusercontent.com';
+        const GOOGLE_CLIENT_ID = '221055611291-bubr5o9bq85cuds4m2r44vabu1nv4gg0.apps.googleusercontent.com';
         
         console.log('Current origin:', window.location.origin);
         console.log('Current URL:', window.location.href);
