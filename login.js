@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw2QItqEKnA9flsplRYiO-TF5jSZ_8zXH7YA5SAwVCGlmkZhlojwv5wZk0EVuKtSTpvog/exec';
+    const GOOGLE_CLIENT_ID = '221055611291-bubr5o9bq85cuds4m2r44vabu1nv4gg0.apps.googleusercontent.com';
     // Load allowed agents and emails list
     let allowedAgents = [];
     let allowedEmails = [];
+    let googleTokenClient = null;
 
     // Load allowed agents from JSON file
     async function loadAllowedUsers() {
@@ -68,8 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Google Sign-In
     function initializeGoogleSignIn() {
-        const GOOGLE_CLIENT_ID = '221055611291-bubr5o9bq85cuds4m2r44vabu1nv4gg0.apps.googleusercontent.com';
-        
         console.log('Current origin:', window.location.origin);
         console.log('Current URL:', window.location.href);
         
@@ -83,6 +83,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 
                 console.log('Google Sign-In initialized successfully');
+                console.log('Allowed emails loaded:', allowedEmails);
+
+                if (google.accounts.oauth2 && google.accounts.oauth2.initTokenClient) {
+                    googleTokenClient = google.accounts.oauth2.initTokenClient({
+                        client_id: GOOGLE_CLIENT_ID,
+                        scope: 'openid email profile',
+                        callback: handleGoogleTokenResponse
+                    });
+                    console.log('Google OAuth token client initialized');
+                } else {
+                    console.warn('Google OAuth token client unavailable');
+                }
                 
             } catch (error) {
                 console.error('Google Sign-In initialization failed:', error);
@@ -119,6 +131,48 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } catch (error) {
             console.error('Error handling Google sign-in:', error);
+            showError('Error signing in with Google. Please try again.');
+        }
+    }
+
+    async function handleGoogleTokenResponse(response) {
+        try {
+            if (!response || response.error || !response.access_token) {
+                const err = response && response.error ? response.error : 'token_missing';
+                console.error('Google token response error:', err, response);
+                showError(`Google OAuth failed (${err}).`);
+                return;
+            }
+
+            const profileRes = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+                headers: {
+                    Authorization: `Bearer ${response.access_token}`
+                }
+            });
+            if (!profileRes.ok) {
+                throw new Error(`userinfo_failed_${profileRes.status}`);
+            }
+            const profile = await profileRes.json();
+            const email = String(profile.email || '').toLowerCase();
+            const name = String(profile.name || profile.given_name || email || 'Agent');
+
+            if (!email) {
+                showError('Google sign-in did not return an email.');
+                return;
+            }
+
+            if (allowedEmails.includes(email)) {
+                localStorage.setItem('agentName', name);
+                localStorage.setItem('agentEmail', email);
+                localStorage.setItem('sessionStartTime', Date.now());
+                localStorage.setItem('loginMethod', 'google');
+                sendSessionLogin({ agentName: name, agentEmail: email, loginMethod: 'google' });
+                window.location.href = 'app.html';
+            } else {
+                showError('Your email is not authorized to access this training portal.');
+            }
+        } catch (error) {
+            console.error('Error handling Google OAuth token response:', error);
             showError('Error signing in with Google. Please try again.');
         }
     }
@@ -175,10 +229,43 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Google Sign-In button clicked');
         hideError();
         
+        if (googleTokenClient) {
+            try {
+                googleTokenClient.requestAccessToken({ prompt: 'select_account' });
+                return;
+            } catch (error) {
+                console.error('Google OAuth popup failed:', error);
+            }
+        }
+
         if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
             try {
                 console.log('Attempting to show Google Sign-In prompt');
-                google.accounts.id.prompt();
+                google.accounts.id.prompt((notification) => {
+                    try {
+                        if (notification.isNotDisplayed && notification.isNotDisplayed()) {
+                            const reason = notification.getNotDisplayedReason ? notification.getNotDisplayedReason() : 'unknown_not_displayed_reason';
+                            console.warn('Google Sign-In not displayed:', reason);
+                            showError(`Google Sign-In not displayed (${reason}). Check OAuth authorized origins and Test users.`);
+                            return;
+                        }
+                        if (notification.isSkippedMoment && notification.isSkippedMoment()) {
+                            const reason = notification.getSkippedReason ? notification.getSkippedReason() : 'unknown_skipped_reason';
+                            console.warn('Google Sign-In skipped:', reason);
+                            showError(`Google Sign-In skipped (${reason}). Try disabling strict tracking/popup blockers or use username fallback.`);
+                            return;
+                        }
+                        if (notification.isDismissedMoment && notification.isDismissedMoment()) {
+                            const reason = notification.getDismissedReason ? notification.getDismissedReason() : 'unknown_dismissed_reason';
+                            console.warn('Google Sign-In dismissed:', reason);
+                            if (reason && reason !== 'credential_returned') {
+                                showError(`Google Sign-In dismissed (${reason}).`);
+                            }
+                        }
+                    } catch (momentError) {
+                        console.warn('Could not inspect Google prompt notification:', momentError);
+                    }
+                });
             } catch (error) {
                 console.error('Google Sign-In prompt failed:', error);
                 showError('Google Sign-In failed: ' + error.message);

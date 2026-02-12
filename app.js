@@ -290,6 +290,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         return json;
     }
 
+    async function syncScenarioIdsToAssignmentPool(scenarios) {
+        const sendIds = (Array.isArray(scenarios) ? scenarios : [])
+            .map((scenario) => String((scenario && scenario.id) || '').trim())
+            .filter((id) => !!id);
+        if (!sendIds.length) {
+            return { added: 0, reactivated: 0, total: 0 };
+        }
+        const result = await fetchAssignmentPost('addToPool', { send_ids: sendIds });
+        return {
+            added: Number(result.added || 0),
+            reactivated: Number(result.reactivated || 0),
+            total: Number(result.total || sendIds.length)
+        };
+    }
+
     function renderAssignmentQueue(assignments) {
         assignmentQueue = Array.isArray(assignments) ? assignments : [];
         if (!assignmentSelect) return;
@@ -2330,6 +2345,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                             setUploadedScenarios(scenarios);
                         }
 
+                        const poolSync = await syncScenarioIdsToAssignmentPool(scenarios);
+
                         const merged = await loadScenariosData();
                         const keys = Object.keys(merged)
                             .map(k => parseInt(k, 10))
@@ -2341,11 +2358,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                         localStorage.setItem('unlockedScenario', String(keys.length));
                         setCurrentScenarioNumber(firstUploadedKey);
-                        setCsvStatus(`Loaded ${scenarios.length} scenario(s) from ${file.name}`);
+                        setCsvStatus(`Loaded ${scenarios.length} scenario(s). Pool +${poolSync.added}, reactivated ${poolSync.reactivated}.`);
                         window.location.href = `app.html?scenario=${firstUploadedKey}`;
                     } catch (error) {
                         console.error('CSV parsing failed:', error);
-                        setCsvStatus('CSV parsing failed. Check the file format.');
+                        setCsvStatus(`CSV parsing failed. ${error && error.message ? error.message : 'Check the file format.'}`);
                     } finally {
                         csvFileInput.value = '';
                     }

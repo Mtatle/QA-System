@@ -114,12 +114,89 @@ function doPost(e) {
       }
     }
 
+    if (action === 'addToPool') {
+      const sendIds = Array.isArray(data.send_ids) ? data.send_ids : [];
+      const lock = LockService.getScriptLock();
+      lock.waitLock(30000);
+      try {
+        const result = addSendIdsToPool_(sendIds);
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_(result);
+      } finally {
+        lock.releaseLock();
+      }
+    }
+
     // Existing session logging/evaluation/chat logging behavior
     return handleLegacyPost_(data);
   } catch (error) {
     console.error('Error in doPost:', error);
     return jsonResponse_({ status: 'error', message: String(error), error: String(error) });
   }
+}
+
+function addSendIdsToPool_(sendIds) {
+  const ids = Array.isArray(sendIds)
+    ? sendIds.map(function(v) { return String(v || '').trim(); }).filter(function(v) { return !!v; })
+    : [];
+  if (!ids.length) {
+    return { error: 'Missing send_ids' };
+  }
+
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const poolSheet = getOrCreateSheet_(spreadsheet, POOL_SHEET, POOL_HEADERS);
+  const poolValues = getSheetDataRows_(poolSheet, POOL_HEADERS.length);
+
+  const uniqueIds = [];
+  const seen = {};
+  for (let i = 0; i < ids.length; i++) {
+    if (seen[ids[i]]) continue;
+    seen[ids[i]] = true;
+    uniqueIds.push(ids[i]);
+  }
+
+  const indexBySendId = {};
+  for (let i = 0; i < poolValues.length; i++) {
+    const existing = String(poolValues[i][0] || '').trim();
+    if (!existing) continue;
+    if (indexBySendId[existing] == null) {
+      indexBySendId[existing] = i;
+    }
+  }
+
+  let added = 0;
+  let reactivated = 0;
+  const newRows = [];
+
+  for (let i = 0; i < uniqueIds.length; i++) {
+    const sendId = uniqueIds[i];
+    const idx = indexBySendId[sendId];
+    if (idx == null) {
+      newRows.push([sendId, 'AVAILABLE']);
+      added++;
+      continue;
+    }
+
+    const currentStatus = String(poolValues[idx][1] || '').trim().toUpperCase();
+    if (currentStatus !== 'ASSIGNED') {
+      if (currentStatus !== 'AVAILABLE') {
+        reactivated++;
+      }
+      poolValues[idx][1] = 'AVAILABLE';
+    }
+  }
+
+  if (poolValues.length > 0) {
+    const statusColumn = poolValues.map(function(row) { return [row[1]]; });
+    poolSheet.getRange(2, 2, statusColumn.length, 1).setValues(statusColumn);
+  }
+
+  if (newRows.length > 0) {
+    const startRow = poolSheet.getLastRow() + 1;
+    poolSheet.getRange(startRow, 1, newRows.length, POOL_HEADERS.length).setValues(newRows);
+  }
+
+  return { ok: true, added: added, reactivated: reactivated, total: uniqueIds.length };
 }
 
 function handleLegacyPost_(data) {
