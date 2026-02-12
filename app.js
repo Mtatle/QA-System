@@ -374,6 +374,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function setAssignmentReadOnlyState(isReadOnly) {
+        const isAssignmentViewMode = !!(
+            isReadOnly &&
+            assignmentContext &&
+            (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view')
+        );
+        document.body.classList.toggle('assignment-view-only', isAssignmentViewMode);
+
         const customForm = document.getElementById('customForm');
         const formSubmitBtn = document.getElementById('formSubmitBtn');
         const clearFormBtn = document.getElementById('clearFormBtn');
@@ -1996,6 +2003,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    function isTypingTarget(target) {
+        if (!target) return false;
+        const tag = String(target.tagName || '').toUpperCase();
+        return target.isContentEditable || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+    }
+
     // Event listeners
     if (previousConversationBtn) {
         previousConversationBtn.addEventListener('click', async () => {
@@ -2118,6 +2131,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.addEventListener('keydown', (event) => {
         // Ignore if any modifier other than Shift is pressed
         if (event.altKey || event.ctrlKey || event.metaKey) return;
+
+        if (!event.shiftKey && !isTypingTarget(event.target)) {
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                navigateConversation(-1);
+                return;
+            }
+            if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                navigateConversation(1);
+                return;
+            }
+        }
 
         if (event.shiftKey) {
             const key = event.key.toLowerCase();

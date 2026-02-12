@@ -1125,6 +1125,19 @@ input:checked + .slider:before {
     gap: 12px;
 }
 
+/* Assignment view-only mode hides form and internal notes */
+body.assignment-view-only .form-panel {
+    display: none;
+}
+
+body.assignment-view-only .resize-handle[data-resize="form-left"] {
+    display: none;
+}
+
+body.assignment-view-only #internalNotesContainer {
+    display: none;
+}
+
 .left-panel {
     flex: 1;
     min-width: 240px;
