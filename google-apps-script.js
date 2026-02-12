@@ -1,4 +1,4 @@
-const SPREADSHEET_ID = '1aFwtxh9kxwZ-YFqxKVVO6DCQ9AlK1Hb4uqXVrNWDQPA';
+const SPREADSHEET_ID = '1JJpkiAxa-l6t-UMcTY64SOtbhqtJYMrctLVuBjj5Oiw';
 const ASSIGNMENTS_SHEET = 'Assignments';
 const POOL_SHEET = 'Pool';
 const SESSION_LOGS_SHEET = 'Session Logs';
