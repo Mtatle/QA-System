@@ -284,7 +284,7 @@ polyline[points="6 9 12 15 18 9"] {
 
 /* Top Bar */
 .top-bar {
-    background-color: #FFF382; /* Dark blue-grey */
+    background-color: #FFF382;
     color: black;
     font-weight: bold;
     padding: 10px 20px;
@@ -1572,15 +1572,20 @@ body.assignment-view-only #internalNotesContainer {
 }
 
 .template-shortcut {
+    display: inline-block;
+    flex: 0 0 auto;
     background-color: #e0e0e0;
     color: #555;
     padding: 2px 6px;
     border-radius: 3px;
     font-size: 0.8em;
     font-weight: normal;
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+    max-width: 45%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: normal;
+    word-break: normal;
 }
 .template-item p {
     font-size: 0.85em;

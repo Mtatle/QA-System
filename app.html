@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training - Loading...</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="qa_site_icon.png">
     <link rel="stylesheet" href="style.css">
     <!-- Simple icon library (Feather Icons) for demonstration -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -31,12 +31,6 @@
                         <option value="">Loading assignments...</option>
                     </select>
                     <p id="assignmentsStatus" class="assignments-status" aria-live="polite"></p>
-                </div>
-                <div class="csv-upload" id="csvUploadContainer" style="display:none;">
-                    <input type="file" id="csvFileInput" accept=".csv,text/csv" hidden>
-                    <button id="csvUploadBtn" class="csv-upload-btn">Upload Scenarios</button>
-                    <button id="csvClearBtn" class="csv-clear-btn">Clear Scenarios</button>
-                    <span id="csvStatus" class="csv-status" aria-live="polite"></span>
                 </div>
                 <button id="previousConversationBtn" class="next-conversation-btn">PREVIOUS CONVERSATION</button>
                 <button id="nextConversationBtn" class="next-conversation-btn">NEXT CONVERSATION</button>
@@ -405,12 +399,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="templates-upload templates-upload-panel" id="templatesUploadContainer" style="display:none;">
-                    <input type="file" id="templatesFileInput" accept=".csv,text/csv" hidden>
-                    <button id="templatesUploadBtn" class="templates-upload-btn">Upload Templates</button>
-                    <button id="templatesClearBtn" class="templates-clear-btn">Clear Templates</button>
-                    <span id="templatesStatus" class="templates-status" aria-live="polite"></span>
                 </div>
             </aside>
         </div>

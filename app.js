@@ -4,16 +4,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const sendButton = document.getElementById('sendButton');
     const internalNotesEl = document.getElementById('internalNotes');
     const logoutBtn = document.getElementById('logoutBtn');
-    const csvUploadContainer = document.getElementById('csvUploadContainer');
-    const csvFileInput = document.getElementById('csvFileInput');
-    const csvUploadBtn = document.getElementById('csvUploadBtn');
-    const csvClearBtn = document.getElementById('csvClearBtn');
-    const csvStatus = document.getElementById('csvStatus');
-    const templatesUploadContainer = document.getElementById('templatesUploadContainer');
-    const templatesFileInput = document.getElementById('templatesFileInput');
-    const templatesUploadBtn = document.getElementById('templatesUploadBtn');
-    const templatesClearBtn = document.getElementById('templatesClearBtn');
-    const templatesStatus = document.getElementById('templatesStatus');
     const assignmentSelect = document.getElementById('assignmentSelect');
     const assignmentRefreshBtn = document.getElementById('assignmentRefreshBtn');
     const assignmentOpenBtn = document.getElementById('assignmentOpenBtn');
@@ -25,38 +15,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Current scenario data
     let currentScenario = null;
     let scenarioData = null;
+    let allScenariosData = null;
     let hasRespondedOnce = false; // For scenario 5 angry response
     let totalScenarioCount = 0;
     let templatesData = [];
     let assignmentQueue = [];
     let assignmentContext = null;
     let draftSaveTimer = null;
-    const SCENARIO_UPLOAD_CHUNK_SIZE = 100;
-    const TEMPLATE_UPLOAD_CHUNK_SIZE = 50;
-    const POOL_SYNC_CHUNK_SIZE = 200;
-    
-    // CSV upload permission lists
-    let csvUploadAllowedAgents = [];
-    let csvUploadAllowedEmails = [];
-    let templateUploadAllowedAgents = [];
-    let templateUploadAllowedEmails = [];
-
-    async function loadCsvUploadPermissions() {
-        try {
-            const response = await fetch('allowed-agents.json');
-            const data = await response.json();
-            csvUploadAllowedAgents = (data.csvUploadAllowedAgents || []).map(a => a.toLowerCase());
-            csvUploadAllowedEmails = (data.csvUploadAllowedEmails || []).map(e => e.toLowerCase());
-            templateUploadAllowedAgents = (data.templateUploadAllowedAgents || []).map(a => a.toLowerCase());
-            templateUploadAllowedEmails = (data.templateUploadAllowedEmails || []).map(e => e.toLowerCase());
-        } catch (error) {
-            console.error('Error loading CSV upload permissions:', error);
-            csvUploadAllowedAgents = [];
-            csvUploadAllowedEmails = [];
-            templateUploadAllowedAgents = [];
-            templateUploadAllowedEmails = [];
-        }
-    }
 
     async function refreshAssignmentQueue() {
         const email = getLoggedInEmail();
@@ -101,30 +66,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         return assignmentContext;
     }
 
-    function canUploadCsv() {
-        const agentName = (localStorage.getItem('agentName') || '').toLowerCase();
-        const agentEmail = (localStorage.getItem('agentEmail') || '').toLowerCase();
-        if (!agentName && !agentEmail) return false;
-        if (agentEmail && csvUploadAllowedEmails.includes(agentEmail)) return true;
-        if (agentName && csvUploadAllowedAgents.includes(agentName)) return true;
-        return false;
-    }
-
-    function canUploadTemplates() {
-        const agentName = (localStorage.getItem('agentName') || '').toLowerCase();
-        const agentEmail = (localStorage.getItem('agentEmail') || '').toLowerCase();
-        if (!agentName && !agentEmail) return false;
-        if (agentEmail && templateUploadAllowedEmails.includes(agentEmail)) return true;
-        if (agentName && templateUploadAllowedAgents.includes(agentName)) return true;
-        return false;
-    }
-
-    function setCsvStatus(message) {
-        if (csvStatus) {
-            csvStatus.textContent = message || '';
-        }
-    }
-
     function getUploadedScenarios() {
         try {
             const raw = localStorage.getItem('uploadedScenarios');
@@ -150,28 +91,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         return hasUploadedScenarios();
     }
 
-    function getUploadedTemplates() {
-        try {
-            const raw = localStorage.getItem('uploadedTemplates');
-            if (!raw) return [];
-            const parsed = JSON.parse(raw);
-            return Array.isArray(parsed) ? parsed : [];
-        } catch (_) {
-            return [];
-        }
-    }
-
-    function setUploadedTemplates(list) {
-        localStorage.setItem('uploadedTemplates', JSON.stringify(list || []));
-        localStorage.setItem('uploadedTemplatesAt', String(Date.now()));
-    }
-
-    function setTemplatesStatus(message) {
-        if (templatesStatus) {
-            templatesStatus.textContent = message || '';
-        }
-    }
-    
     // Scenario progression system
     function getCurrentUnlockedScenario() {
         const unlockedScenario = localStorage.getItem('unlockedScenario');
@@ -199,12 +118,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     function isScenarioUnlocked(scenarioNumber) {
+        if (isAdminUser()) return true;
         if (isCsvScenarioMode()) return true;
         const unlockedScenario = getCurrentUnlockedScenario();
         return parseInt(scenarioNumber) <= unlockedScenario;
     }
     
     function canAccessScenario(scenarioNumber) {
+        if (isAdminUser()) return true;
         if (isCsvScenarioMode()) return true;
         const currentUnlocked = getCurrentUnlockedScenario();
         const requestedScenario = parseInt(scenarioNumber);
@@ -212,11 +133,76 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Can only access the current unlocked scenario (no going back)
         return requestedScenario === currentUnlocked;
     }
+
+    function isAdminUser() {
+        const agentName = String(localStorage.getItem('agentName') || '').trim().toLowerCase();
+        return agentName === 'admin';
+    }
     
     function getScenarioNumberFromUrl() {
         const params = new URLSearchParams(window.location.search);
         const value = params.get('scenario');
         return value ? String(value) : null;
+    }
+
+    function getScenarioIdFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const value = params.get('sid');
+        return value ? String(value).trim() : '';
+    }
+
+    function getPageModeFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const mode = String(params.get('mode') || 'edit').toLowerCase();
+        return mode === 'view' ? 'view' : 'edit';
+    }
+
+    function findScenarioKeyById(scenarios, scenarioId) {
+        const target = String(scenarioId || '').trim();
+        if (!target) return '';
+        const entries = Object.entries(scenarios || {});
+        for (let i = 0; i < entries.length; i++) {
+            const [key, scenario] = entries[i];
+            if (String((scenario && scenario.id) || '').trim() === target) {
+                return key;
+            }
+        }
+        return '';
+    }
+
+    function resolveRequestedScenarioKey(scenarios) {
+        const sid = getScenarioIdFromUrl();
+        if (sid) {
+            const byId = findScenarioKeyById(scenarios, sid);
+            if (byId) return byId;
+        }
+
+        const byNumber = getScenarioNumberFromUrl();
+        if (byNumber && scenarios && scenarios[byNumber]) {
+            return byNumber;
+        }
+
+        const stored = localStorage.getItem('currentScenarioNumber');
+        if (stored && scenarios && scenarios[stored]) {
+            return stored;
+        }
+
+        return '';
+    }
+
+    function buildScenarioUrl(scenarioKey, scenariosOverride) {
+        const key = String(scenarioKey || '').trim();
+        if (!key) return 'app.html';
+
+        const scenarios = scenariosOverride || allScenariosData || {};
+        const scenario = scenarios && scenarios[key] ? scenarios[key] : null;
+        const scenarioId = scenario && scenario.id ? String(scenario.id).trim() : '';
+
+        const params = new URLSearchParams();
+        params.set('scenario', key);
+        if (scenarioId) params.set('sid', scenarioId);
+        params.set('mode', getPageModeFromUrl());
+        return `app.html?${params.toString()}`;
     }
 
     function setCurrentScenarioNumber(value) {
@@ -290,58 +276,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             throw new Error((json && json.error) ? json.error : `Request failed (${res.status})`);
         }
         return json;
-    }
-
-    function chunkArray(items, size) {
-        const list = Array.isArray(items) ? items : [];
-        const chunkSize = Math.max(1, Number(size) || 1);
-        const chunks = [];
-        for (let i = 0; i < list.length; i += chunkSize) {
-            chunks.push(list.slice(i, i + chunkSize));
-        }
-        return chunks;
-    }
-
-    async function postChunkedList(action, listKey, items, chunkSize, onProgress) {
-        const chunks = chunkArray(items, chunkSize);
-        if (!chunks.length) return { chunks: 0, added: 0, total: 0 };
-
-        let added = 0;
-        for (let i = 0; i < chunks.length; i++) {
-            const payload = {};
-            payload[listKey] = chunks[i];
-            payload.reset = i === 0;
-            const result = await fetchAssignmentPost(action, payload);
-            added += Number(result.added || chunks[i].length);
-            if (typeof onProgress === 'function') {
-                onProgress(i + 1, chunks.length, added);
-            }
-        }
-        return { chunks: chunks.length, added, total: items.length };
-    }
-
-    async function syncScenarioIdsToAssignmentPool(scenarios) {
-        const sendIds = (Array.isArray(scenarios) ? scenarios : [])
-            .map((scenario) => String((scenario && scenario.id) || '').trim())
-            .filter((id) => !!id);
-        if (!sendIds.length) {
-            return { added: 0, reactivated: 0, total: 0 };
-        }
-        const chunks = chunkArray(sendIds, POOL_SYNC_CHUNK_SIZE);
-        let added = 0;
-        let reactivated = 0;
-        let total = 0;
-        for (let i = 0; i < chunks.length; i++) {
-            const result = await fetchAssignmentPost('addToPool', { send_ids: chunks[i] });
-            added += Number(result.added || 0);
-            reactivated += Number(result.reactivated || 0);
-            total += Number(result.total || chunks[i].length);
-        }
-        return {
-            added,
-            reactivated,
-            total
-        };
     }
 
     function renderAssignmentQueue(assignments) {
@@ -520,187 +454,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         }, 1200);
     }
 
-    function parseCsv(text) {
-        const rows = [];
-        const normalized = (text || '').replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').replace(/\r/g, '\n');
-        let row = [];
-        let field = '';
-        let inQuotes = false;
-
-        for (let i = 0; i < normalized.length; i++) {
-            const char = normalized[i];
-            const next = normalized[i + 1];
-
-            if (inQuotes) {
-                if (char === '"' && next === '"') {
-                    field += '"';
-                    i++;
-                } else if (char === '"') {
-                    inQuotes = false;
-                } else {
-                    field += char;
-                }
-            } else {
-                if (char === '"') {
-                    inQuotes = true;
-                } else if (char === ',') {
-                    row.push(field);
-                    field = '';
-                } else if (char === '\n') {
-                    row.push(field);
-                    rows.push(row);
-                    row = [];
-                    field = '';
-                } else {
-                    field += char;
-                }
-            }
-        }
-
-        if (field.length > 0 || row.length > 0) {
-            row.push(field);
-            rows.push(row);
-        }
-
-        return rows;
-    }
-
-    function cleanQuotedValue(value) {
-        if (value == null) return '';
-        let text = String(value).trim();
-        while (text.startsWith('"') && text.endsWith('"') && text.length >= 2) {
-            text = text.slice(1, -1).trim();
-        }
-        text = text.replace(/""/g, '"').trim();
-        return text;
-    }
-
-    function parseConversationField(value) {
-        const text = cleanQuotedValue(value);
-        if (!text) return {};
-        const normalized = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
-        const messageRegex = /(SystemMessage|customerMessage|agentMessage|agentMessages)(\d*)/gi;
-        const matches = [];
-        let match;
-
-        while ((match = messageRegex.exec(normalized)) !== null) {
-            matches.push({
-                index: match.index,
-                rawPrefix: match[1],
-                number: match[2] || '',
-                matchedText: match[0]
-            });
-        }
-
-        if (matches.length === 0) return {};
-
-        const conversation = {};
-        const counters = {
-            SystemMessage: 1,
-            customerMessage: 1,
-            AgentMessage: 1
-        };
-
-        const prefixFor = (rawPrefix) => {
-            const lower = rawPrefix.toLowerCase();
-            if (lower.startsWith('system')) return 'SystemMessage';
-            if (lower.startsWith('customer')) return 'customerMessage';
-            if (lower.startsWith('agent')) return 'AgentMessage';
-            return null;
-        };
-
-        matches.forEach((entry, idx) => {
-            const canonicalPrefix = prefixFor(entry.rawPrefix);
-            if (!canonicalPrefix) return;
-
-            const colonIndex = normalized.indexOf(':', entry.index + entry.matchedText.length);
-            const nextIndex = idx + 1 < matches.length ? matches[idx + 1].index : normalized.length;
-            if (colonIndex === -1 || colonIndex > nextIndex) {
-                return;
-            }
-
-            let rawValue = normalized.slice(colonIndex + 1, nextIndex).trim();
-            if (rawValue.endsWith(',')) {
-                rawValue = rawValue.slice(0, -1).trim();
-            }
-            if (rawValue.length >= 2) {
-                const quotePairs = [
-                    ['"', '"'],
-                    ['“', '”'],
-                    ['‘', '’']
-                ];
-                const matchingPair = quotePairs.find(([open, close]) => rawValue.startsWith(open) && rawValue.endsWith(close));
-                if (matchingPair) {
-                    rawValue = rawValue.slice(matchingPair[0].length, rawValue.length - matchingPair[1].length).trim();
-                }
-            }
-            rawValue = rawValue.replace(/\r?\n/g, '\n').trim();
-            rawValue = rawValue.replace(/\\"/g, '"').replace(/""/g, '"');
-            if (!rawValue) return;
-
-            let number = entry.number;
-            if (number) {
-                counters[canonicalPrefix] = Math.max(counters[canonicalPrefix], parseInt(number, 10) + 1);
-            } else {
-                number = String(counters[canonicalPrefix]);
-                counters[canonicalPrefix] += 1;
-            }
-
-            let key = `${canonicalPrefix}${number}`;
-            while (Object.prototype.hasOwnProperty.call(conversation, key)) {
-                number = String(parseInt(number, 10) + 1);
-                key = `${canonicalPrefix}${number}`;
-                counters[canonicalPrefix] = Math.max(counters[canonicalPrefix], parseInt(number, 10) + 1);
-            }
-
-            conversation[key] = rawValue;
-        });
-
-        return conversation;
-    }
-
     function getCompanyInitial(companyName) {
         const name = String(companyName || '').trim();
         return name ? name.charAt(0).toUpperCase() : '';
-    }
-
-    function parseCompanyNotes(notesText) {
-        if (!notesText) return {};
-
-        const notes = {};
-        const categories = {
-            '📬 SEND TO CS': 'send_to_cs',
-            '🛑 ESCALATE': 'escalate',
-            '📢 TONE': 'tone',
-            '⚡ TEMPLATES': 'templates',
-            '✅ DOs AND DON\'Ts': 'dos_and_donts',
-            '🛒 DRIVE TO PURCHASE': 'drive_to_purchase',
-            '✨ PROMO & PROMO EXCLUSIONS': 'promo_and_exclusions',
-            '🚨 IMPORTANT': 'important'
-        };
-
-        const sections = String(notesText).split('#').filter(section => section.trim());
-        sections.forEach(section => {
-            const lines = section.trim().split('\n');
-            if (!lines.length) return;
-            const header = lines[0].trim();
-            const categoryKey = Object.keys(categories).find(key =>
-                header.includes(key) || header.includes(key.replace(/[📬🛑📢⚡✅🛒✨🚨]/g, '').trim())
-            );
-            if (!categoryKey) return;
-            const notesKey = categories[categoryKey];
-            const bulletPoints = lines
-                .slice(1)
-                .map(line => line.trim())
-                .filter(line => line.startsWith('•'))
-                .map(line => line.substring(1).trim())
-                .filter(line => line.length > 0);
-            if (bulletPoints.length > 0) {
-                notes[notesKey] = bulletPoints;
-            }
-        });
-
-        return notes;
     }
 
     function buildConversationFromScenario(scenario) {
@@ -732,15 +488,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         return firstCustomer ? firstCustomer.content : '';
     }
 
-    function safeJsonParse(raw) {
-        if (!raw) return null;
-        try {
-            return JSON.parse(cleanQuotedValue(raw));
-        } catch (_) {
-            return null;
-        }
-    }
-
     function normalizeName(value) {
         return String(value || '').trim().toLowerCase();
     }
@@ -755,106 +502,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!text) return '';
         if (text.startsWith('$')) return text;
         return `$${text}`;
-    }
-
-    function convertCsvRowToTemplate(row) {
-        const id = cleanQuotedValue(row.TEMPLATE_ID);
-        const companyName = cleanQuotedValue(row.COMPANY_NAME);
-        const title = cleanQuotedValue(row.TEMPLATE_TITLE);
-        const shortcut = cleanQuotedValue(row.SHORTCUT);
-        const textField = row.TEMPLATE_TEXT ?? row.TEMPLATE_TEXT ?? '';
-        const content = cleanQuotedValue(textField);
-
-        if (!title && !content) return null;
-
-        return {
-            id: id || '',
-            companyName: companyName || '',
-            name: title || 'Untitled',
-            shortcut: shortcut || '',
-            content: content || ''
-        };
-    }
-
-    function convertCsvRowToScenario(row, index) {
-        const sendId = cleanQuotedValue(row.SEND_ID);
-        const companyName = cleanQuotedValue(row.COMPANY_NAME) || 'Unknown Company';
-        const companyWebsite = cleanQuotedValue(row.COMPANY_WEBSITE);
-        const persona = cleanQuotedValue(row.PERSONA);
-        const messageTone = cleanQuotedValue(row.MESSAGE_TONE);
-        const companyNotes = cleanQuotedValue(row.COMPANY_NOTES);
-        const promoNotesRaw = cleanQuotedValue(row.PROMO_NOTES);
-        const conversationFields = parseConversationField(row.PARAPHRASED_CONVERSATION);
-
-        const lastProducts = safeJsonParse(row.LAST_5_PRODUCTS) || [];
-        const orders = safeJsonParse(row.ORDERS) || [];
-
-        const guidelines = parseCompanyNotes(companyNotes);
-        const promoNotes = promoNotesRaw
-            ? promoNotesRaw.split(/\r?\n/).map(line => line.trim()).filter(Boolean)
-            : [];
-
-        const agentName = persona || '';
-        const agentInitial = getCompanyInitial(companyName);
-
-        const rightPanel = {
-            source: {
-                label: 'Website',
-                value: companyWebsite || 'N/A',
-                date: ''
-            },
-            browsingHistory: Array.isArray(lastProducts)
-                ? lastProducts.map(item => ({
-                    item: item && item.product_name ? String(item.product_name) : '',
-                    link: item && item.product_link ? String(item.product_link) : '',
-                    icon: 'eye'
-                })).filter(entry => entry.item)
-                : [],
-            orders: Array.isArray(orders)
-                ? orders.map(order => {
-                    const products = Array.isArray(order && order.products) ? order.products : [];
-                    const currency = order && order.currency ? String(order.currency) : '';
-                    return {
-                        orderNumber: order && order.order_number ? String(order.order_number) : '',
-                        orderDate: order && order.order_date ? String(order.order_date) : '',
-                        link: order && order.order_status_url ? String(order.order_status_url) : '',
-                        trackingLink: order && order.tracking_url ? String(order.tracking_url) : '',
-                        currency,
-                        items: products.map(product => ({
-                            name: product && product.product_name ? String(product.product_name) : '',
-                            price: product && product.product_price != null ? String(product.product_price) : '',
-                            currency: product && product.product_currency ? String(product.product_currency) : currency,
-                            productLink: product && product.product_link ? String(product.product_link) : ''
-                        })).filter(p => p.name),
-                        total: order && order.total != null ? String(order.total) : ''
-                    };
-                }).filter(order => order.orderNumber || order.items.length)
-                : []
-        };
-
-        // Promotions panel uses PROMO_NOTES only.
-        if (promoNotes.length) {
-            rightPanel.promotions = {
-                title: 'Promotion',
-                content: promoNotes
-            };
-        }
-
-        return {
-            id: sendId || '',
-            companyName,
-            companyWebsite: companyWebsite || '',
-            agentName,
-            agentInitial,
-            messageTone: messageTone || '',
-            customerPhone: '',
-            customerMessage: '',
-            responseType: 'template',
-            guidelines,
-            ...conversationFields,
-            rightPanel,
-            orders: Array.isArray(orders) ? orders : [],
-        };
     }
 
     function appendUploadedScenarios(scenarios, uploadedList) {
@@ -999,6 +646,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         dropdown.innerHTML = '';
         
         const currentAllowed = getCurrentUnlockedScenario();
+        const adminMode = isAdminUser();
         const scenarioNumbers = Object.keys(scenarios)
             .map(k => parseInt(k, 10))
             .filter(n => !isNaN(n))
@@ -1012,7 +660,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             const scenarioNum = parseInt(scenarioNumber);
             
-            if (isCsvScenarioMode()) {
+            if (isCsvScenarioMode() || adminMode) {
                 option.textContent = `Scenario ${scenarioNumber}`;
             } else if (scenarioNum === currentAllowed) {
                 // Current scenario - accessible
@@ -1043,7 +691,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         dropdown.addEventListener('change', (e) => {
             const selectedScenario = e.target.value;
             if (selectedScenario && canAccessScenario(selectedScenario)) {
-                window.location.href = `app.html?scenario=${selectedScenario}`;
+                window.location.href = buildScenarioUrl(selectedScenario, scenarios);
             } else {
                 // Reset dropdown to current scenario if they try to select something else
                 dropdown.value = getCurrentScenarioNumber();
@@ -1556,12 +1204,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const nameSpan = document.createElement('span');
                     nameSpan.textContent = template.name;
 
-                    const shortcutSpan = document.createElement('span');
-                    shortcutSpan.className = 'template-shortcut';
-                    shortcutSpan.textContent = template.shortcut;
-
                     headerDiv.appendChild(nameSpan);
-                    headerDiv.appendChild(shortcutSpan);
+                    const shortcutText = String((template && template.shortcut) || '').trim();
+                    if (shortcutText) {
+                        const shortcutSpan = document.createElement('span');
+                        shortcutSpan.className = 'template-shortcut';
+                        shortcutSpan.textContent = shortcutText;
+                        headerDiv.appendChild(shortcutSpan);
+                    }
 
                     const contentP = document.createElement('p');
                     contentP.textContent = template.content;
@@ -1944,7 +1594,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     
                     // Make notification clickable to go to next scenario
                     notification.addEventListener('click', () => {
-                        window.location.href = `app.html?scenario=${nextScenario}`;
+                        window.location.href = buildScenarioUrl(String(nextScenario));
                     });
                     
                     document.body.appendChild(notification);
@@ -2017,7 +1667,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const targetScenario = keys[targetIndex];
         if (!isCsvScenarioMode() && !canAccessScenario(targetScenario)) return;
         setCurrentScenarioNumber(targetScenario);
-        window.location.href = `app.html?scenario=${targetScenario}`;
+        window.location.href = buildScenarioUrl(targetScenario, data);
     }
 
     async function navigateAssignmentQueue(direction) {
@@ -2144,7 +1794,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             `;
             notification.textContent = `🎉 Scenario ${nextScenario} unlocked! Click here to continue.`;
             notification.addEventListener('click', () => {
-                window.location.href = `app.html?scenario=${nextScenario}`;
+                window.location.href = buildScenarioUrl(String(nextScenario));
             });
             document.body.appendChild(notification);
             setTimeout(() => notification.style.opacity = '1', 100);
@@ -2328,9 +1978,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             // Filter templates based on search term
             const filteredTemplates = originalTemplates.filter(template => {
-                return template.name.toLowerCase().includes(searchTerm) ||
-                       template.shortcut.toLowerCase().includes(searchTerm) ||
-                       template.content.toLowerCase().includes(searchTerm);
+                const name = String((template && template.name) || '').toLowerCase();
+                const shortcut = String((template && template.shortcut) || '').toLowerCase();
+                const content = String((template && template.content) || '').toLowerCase();
+                return name.includes(searchTerm) ||
+                       shortcut.includes(searchTerm) ||
+                       content.includes(searchTerm);
             });
             
             // Display filtered templates
@@ -2347,12 +2000,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const nameSpan = document.createElement('span');
                 nameSpan.appendChild(createHighlightedFragment(template.name, searchTerm));
 
-                const shortcutSpan = document.createElement('span');
-                shortcutSpan.className = 'template-shortcut';
-                shortcutSpan.appendChild(createHighlightedFragment(template.shortcut, searchTerm));
-
                 headerDiv.appendChild(nameSpan);
-                headerDiv.appendChild(shortcutSpan);
+                const shortcutText = String((template && template.shortcut) || '').trim();
+                if (shortcutText) {
+                    const shortcutSpan = document.createElement('span');
+                    shortcutSpan.className = 'template-shortcut';
+                    shortcutSpan.appendChild(createHighlightedFragment(shortcutText, searchTerm));
+                    headerDiv.appendChild(shortcutSpan);
+                }
 
                 const contentP = document.createElement('p');
                 contentP.appendChild(createHighlightedFragment(template.content, searchTerm));
@@ -2378,264 +2033,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         return text;
     }
 
-    async function initializeCsvUpload() {
-        if (!csvUploadContainer) return;
-        await loadCsvUploadPermissions();
-
-        if (!canUploadCsv()) {
-            csvUploadContainer.style.display = 'none';
-            return;
-        }
-
-        csvUploadContainer.style.display = 'flex';
-
-        const uploaded = getUploadedScenarios();
-        if (uploaded.length > 0) {
-            setCsvStatus(`Loaded ${uploaded.length} uploaded scenario(s)`);
-        }
-
-        if (csvUploadBtn && csvFileInput) {
-            csvUploadBtn.addEventListener('click', () => {
-                csvFileInput.click();
-            });
-
-            csvFileInput.addEventListener('change', async (event) => {
-                const file = event.target.files && event.target.files[0];
-                if (!file) return;
-                setCsvStatus('Reading CSV...');
-
-                const reader = new FileReader();
-                reader.onload = async () => {
-                    try {
-                        const text = String(reader.result || '');
-                        const rows = parseCsv(text);
-                        if (!rows.length) {
-                            setCsvStatus('No rows found.');
-                            return;
-                        }
-
-                        const headers = rows[0].map((h, i) => {
-                            const text = String(h || '').trim();
-                            return i === 0 ? text.replace(/^\uFEFF/, '') : text;
-                        });
-                        const requiredHeaders = [
-                            'SEND_ID',
-                            'COMPANY_NAME',
-                            'COMPANY_WEBSITE',
-                            'PERSONA',
-                            'MESSAGE_TONE',
-                            'PARAPHRASED_CONVERSATION',
-                            'LAST_5_PRODUCTS',
-                            'ORDERS',
-                            'COMPANY_NOTES'
-                        ];
-                        const missing = requiredHeaders.filter(h => !headers.includes(h));
-                        if (missing.length) {
-                            setCsvStatus(`Missing headers: ${missing.join(', ')}`);
-                            return;
-                        }
-
-                        const rowData = rows.slice(1)
-                            .filter(row => row.some(cell => String(cell || '').trim() !== ''))
-                            .map(row => {
-                                const obj = {};
-                                headers.forEach((header, i) => {
-                                    obj[header] = row[i] ?? '';
-                                });
-                                return obj;
-                            });
-
-                        if (!rowData.length) {
-                            setCsvStatus('No data rows found.');
-                            return;
-                        }
-
-                        const scenarios = rowData.map(convertCsvRowToScenario);
-
-                        setCsvStatus('Uploading scenarios to Sheets...');
-                        const uploaded = await postChunkedList(
-                            'appendUploadedScenarios',
-                            'scenarios',
-                            scenarios,
-                            SCENARIO_UPLOAD_CHUNK_SIZE,
-                            (current, totalChunks) => {
-                                setCsvStatus(`Uploading scenarios... chunk ${current}/${totalChunks}`);
-                            }
-                        );
-                        const savedScenarios = scenarios;
-                        setCsvStatus(`Saved ${savedScenarios.length} scenario(s) to Sheets in ${uploaded.chunks} chunk(s)`);
-                        setUploadedScenarios(savedScenarios);
-
-                        const poolSync = await syncScenarioIdsToAssignmentPool(scenarios);
-
-                        const merged = await loadScenariosData();
-                        const keys = Object.keys(merged)
-                            .map(k => parseInt(k, 10))
-                            .filter(n => !isNaN(n))
-                            .sort((a, b) => a - b)
-                            .map(n => String(n));
-                        const uploadedCount = scenarios.length;
-                        const firstUploadedKey = keys.length - uploadedCount >= 0 ? keys[keys.length - uploadedCount] : keys[0];
-
-                        localStorage.setItem('unlockedScenario', String(keys.length));
-                        setCurrentScenarioNumber(firstUploadedKey);
-                        setCsvStatus(`Loaded ${scenarios.length} scenario(s). Pool +${poolSync.added}, reactivated ${poolSync.reactivated}.`);
-                        window.location.href = `app.html?scenario=${firstUploadedKey}`;
-                    } catch (error) {
-                        console.error('CSV parsing failed:', error);
-                        setCsvStatus(`CSV parsing failed. ${error && error.message ? error.message : 'Check the file format.'}`);
-                    } finally {
-                        csvFileInput.value = '';
-                    }
-                };
-
-                reader.onerror = () => {
-                    setCsvStatus('Failed to read CSV file.');
-                };
-
-                reader.readAsText(file);
-            });
-        }
-
-        if (csvClearBtn) {
-            csvClearBtn.addEventListener('click', async () => {
-                try {
-                    await fetchAssignmentPost('clearUploadedScenarios', {});
-                    localStorage.removeItem('uploadedScenarios');
-                    localStorage.removeItem('uploadedScenariosAt');
-                    setCsvStatus('Cleared uploaded scenarios from Sheets.');
-                } catch (error) {
-                    setCsvStatus(`Failed to clear scenarios: ${error && error.message ? error.message : 'unknown error'}`);
-                    return;
-                }
-                window.location.href = 'app.html?scenario=1';
-            });
-        }
-    }
-
-    async function initializeTemplatesUpload() {
-        if (!templatesUploadContainer) return;
-        await loadCsvUploadPermissions();
-
-        if (!canUploadTemplates()) {
-            templatesUploadContainer.style.display = 'none';
-            return;
-        }
-
-        templatesUploadContainer.style.display = 'flex';
-
-        if (templatesUploadBtn && templatesFileInput) {
-            templatesUploadBtn.addEventListener('click', () => {
-                templatesFileInput.click();
-            });
-
-            templatesFileInput.addEventListener('change', async (event) => {
-                const file = event.target.files && event.target.files[0];
-                if (!file) return;
-                setTemplatesStatus('Reading CSV...');
-
-                const reader = new FileReader();
-                reader.onload = async () => {
-                    try {
-                        const text = String(reader.result || '');
-                        const rows = parseCsv(text);
-                        if (!rows.length) {
-                            setTemplatesStatus('No rows found.');
-                            return;
-                        }
-
-                        const headers = rows[0].map((h, i) => {
-                            const text = String(h || '').trim();
-                            return i === 0 ? text.replace(/^\uFEFF/, '') : text;
-                        });
-                        const requiredHeaders = [
-                            'TEMPLATE_ID',
-                            'COMPANY_NAME',
-                            'TEMPLATE_TITLE',
-                            'TEMPLATE_TEXT',
-                            'SHORTCUT'
-                        ];
-                        const missing = requiredHeaders.filter(h => !headers.includes(h));
-                        if (missing.length) {
-                            setTemplatesStatus(`Missing headers: ${missing.join(', ')}`);
-                            return;
-                        }
-
-                        const rowData = rows.slice(1)
-                            .filter(row => row.some(cell => String(cell || '').trim() !== ''))
-                            .map(row => {
-                                const obj = {};
-                                headers.forEach((header, i) => {
-                                    obj[header] = row[i] ?? '';
-                                });
-                                return obj;
-                            });
-
-                        if (!rowData.length) {
-                            setTemplatesStatus('No data rows found.');
-                            return;
-                        }
-
-                        const templates = rowData
-                            .map(convertCsvRowToTemplate)
-                            .filter(Boolean);
-
-                        if (!templates.length) {
-                            setTemplatesStatus('No valid templates found.');
-                            return;
-                        }
-
-                        setTemplatesStatus('Uploading templates to Sheets...');
-                        const uploaded = await postChunkedList(
-                            'appendUploadedTemplates',
-                            'templates',
-                            templates,
-                            TEMPLATE_UPLOAD_CHUNK_SIZE,
-                            (current, totalChunks) => {
-                                setTemplatesStatus(`Uploading templates... chunk ${current}/${totalChunks}`);
-                            }
-                        );
-                        templatesData = templates;
-                        setTemplatesStatus(`Saved ${templates.length} template(s) to Sheets in ${uploaded.chunks} chunk(s)`);
-                        if (scenarioData) {
-                            loadRightPanelContent(scenarioData);
-                        }
-                    } catch (error) {
-                        console.error('Templates CSV parsing failed:', error);
-                        setTemplatesStatus(`Template upload failed. ${error && error.message ? error.message : 'Check the CSV/API.'}`);
-                    } finally {
-                        templatesFileInput.value = '';
-                    }
-                };
-
-                reader.onerror = () => {
-                    setTemplatesStatus('Failed to read CSV file.');
-                };
-
-                reader.readAsText(file);
-            });
-        }
-
-        if (templatesClearBtn) {
-            templatesClearBtn.addEventListener('click', async () => {
-                try {
-                    await fetchAssignmentPost('clearUploadedTemplates', {});
-                    templatesData = [];
-                    setTemplatesStatus('Cleared uploaded templates from Sheets.');
-                } catch (error) {
-                    setTemplatesStatus(`Failed to clear templates: ${error && error.message ? error.message : 'unknown error'}`);
-                    return;
-                }
-                if (scenarioData) {
-                    loadRightPanelContent(scenarioData);
-                }
-            });
-        }
-    }
-
     // Initialize everything
     templatesData = await loadTemplatesData();
     const scenarios = await loadScenariosData();
+    allScenariosData = scenarios || {};
     if (!scenarios) {
         console.error('Could not load scenarios data');
     } else {
@@ -2687,7 +2088,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     .sort((a, b) => a - b)
                     .map(n => String(n));
                 totalScenarioCount = scenarioKeys.length;
-                const requestedScenario = getCurrentScenarioNumber();
+                const requestedScenario = resolveRequestedScenarioKey(scenarios) || getCurrentScenarioNumber();
                 const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
                 setCurrentScenarioNumber(activeScenario);
                 loadScenarioContent(activeScenario, scenarios);
@@ -2702,15 +2103,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 .sort((a, b) => a - b)
                 .map(n => String(n));
             totalScenarioCount = scenarioKeys.length;
-            const requestedScenario = getCurrentScenarioNumber();
+            const requestedScenario = resolveRequestedScenarioKey(scenarios) || getCurrentScenarioNumber();
             const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
             setCurrentScenarioNumber(activeScenario);
             loadScenarioContent(activeScenario, scenarios);
         }
     }
-
-    await initializeCsvUpload();
-    await initializeTemplatesUpload();
 
     // If this scenario was previously ended (via action buttons), keep input disabled IF it's NOT the current unlocked scenario.
     // This prevents stale ended flags from blocking a fresh session when logging back in or starting a new unlocked scenario.
