@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const API_BASE_URL = 'https://qa-templates-worker.qasystem.workers.dev'; // e.g. https://your-worker.example.workers.dev
 
     // Google Sheets integration
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxSTqGjhuR_AjFUNIeJOalTvVk1hGDLs0lazVoLKG7qmAKCErfAOkSRAHU84SyYIs98zw/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyGbsJuilfRrAi111vKpEnlXBmhiHU3z1-YsIESqdKO0lTYRkkoV9r-Z9l07a-27ZJBdA/exec';
     // Current scenario data
     let currentScenario = null;
     let scenarioData = null;
