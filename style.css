@@ -336,6 +336,32 @@ polyline[points="6 9 12 15 18 9"] {
     color: white;
 }
 
+.assignment-refresh-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: #fff;
+    color: #222;
+    border: 1px solid #d4c75e;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.assignment-refresh-icon-btn .icon-small {
+    margin-right: 0;
+}
+
+.assignment-refresh-icon-btn:hover {
+    background: #fff6bf;
+}
+
+.assignment-refresh-icon-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
 /* Top bar right section */
 .top-bar-right {
     margin-left: auto;
@@ -346,10 +372,7 @@ polyline[points="6 9 12 15 18 9"] {
 }
 
 .assignments-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    min-width: 320px;
+    display: none;
 }
 
 .assignments-label {

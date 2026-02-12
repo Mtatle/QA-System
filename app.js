@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const assignmentRefreshBtn = document.getElementById('assignmentRefreshBtn');
     const assignmentOpenBtn = document.getElementById('assignmentOpenBtn');
     const assignmentsStatus = document.getElementById('assignmentsStatus');
+    const previousConversationBtn = document.getElementById('previousConversationBtn');
     const nextConversationBtn = document.getElementById('nextConversationBtn');
     const API_BASE_URL = 'https://qa-templates-worker.qasystem.workers.dev'; // e.g. https://your-worker.example.workers.dev
 
@@ -386,6 +387,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (formSubmitBtn) formSubmitBtn.disabled = !!isReadOnly;
         if (clearFormBtn) clearFormBtn.disabled = !!isReadOnly;
         if (internalNotesEl) internalNotesEl.disabled = !!isReadOnly;
+        if (previousConversationBtn) previousConversationBtn.disabled = !!isReadOnly;
         if (nextConversationBtn) nextConversationBtn.disabled = !!isReadOnly;
         if (chatInput) chatInput.disabled = !!isReadOnly;
         if (sendButton) sendButton.disabled = !!isReadOnly;
@@ -1942,24 +1944,68 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    async function navigateScenarioList(direction) {
+        const data = await loadScenariosData();
+        if (!data) return;
+        const keys = Object.keys(data)
+            .map(k => parseInt(k, 10))
+            .filter(n => !isNaN(n))
+            .sort((a, b) => a - b)
+            .map(n => String(n));
+        if (!keys.length) return;
+        const current = String(getCurrentScenarioNumber());
+        const currentIndex = keys.indexOf(current);
+        const fallbackIndex = direction > 0 ? 0 : keys.length - 1;
+        const targetIndex = currentIndex >= 0
+            ? (currentIndex + direction + keys.length) % keys.length
+            : fallbackIndex;
+        const targetScenario = keys[targetIndex];
+        if (!isCsvScenarioMode() && !canAccessScenario(targetScenario)) return;
+        setCurrentScenarioNumber(targetScenario);
+        window.location.href = `app.html?scenario=${targetScenario}`;
+    }
+
+    async function navigateAssignmentQueue(direction) {
+        let queue = assignmentQueue;
+        if (!Array.isArray(queue) || !queue.length) {
+            queue = await refreshAssignmentQueue().catch(() => []);
+        }
+        if (!Array.isArray(queue) || !queue.length) return false;
+
+        const currentId = assignmentContext && assignmentContext.assignment_id
+            ? String(assignmentContext.assignment_id)
+            : '';
+        const currentIndex = currentId
+            ? queue.findIndex(item => String((item && item.assignment_id) || '') === currentId)
+            : -1;
+        const fallbackIndex = direction > 0 ? 0 : queue.length - 1;
+        const targetIndex = currentIndex >= 0
+            ? (currentIndex + direction + queue.length) % queue.length
+            : fallbackIndex;
+        const target = queue[targetIndex];
+        const url = target && target.edit_url ? String(target.edit_url) : '';
+        if (!url) return false;
+        window.location.href = url;
+        return true;
+    }
+
+    async function navigateConversation(direction) {
+        const movedByAssignment = await navigateAssignmentQueue(direction);
+        if (!movedByAssignment) {
+            await navigateScenarioList(direction);
+        }
+    }
+
     // Event listeners
+    if (previousConversationBtn) {
+        previousConversationBtn.addEventListener('click', async () => {
+            await navigateConversation(-1);
+        });
+    }
+
     if (nextConversationBtn) {
         nextConversationBtn.addEventListener('click', async () => {
-            const data = await loadScenariosData();
-            if (!data) return;
-            const keys = Object.keys(data)
-                .map(k => parseInt(k, 10))
-                .filter(n => !isNaN(n))
-                .sort((a, b) => a - b)
-                .map(n => String(n));
-            if (!keys.length) return;
-            const current = String(getCurrentScenarioNumber());
-            const currentIndex = keys.indexOf(current);
-            const nextIndex = currentIndex >= 0 && currentIndex + 1 < keys.length ? currentIndex + 1 : 0;
-            const nextScenario = keys[nextIndex];
-            if (!isCsvScenarioMode() && !canAccessScenario(nextScenario)) return;
-            setCurrentScenarioNumber(nextScenario);
-            window.location.href = `app.html?scenario=${nextScenario}`;
+            await navigateConversation(1);
         });
     }
 
@@ -2821,9 +2867,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const full = CATEGORY_LABELS[categoryKey] || [];
                 const valueMap = VALUE_TO_LABEL[categoryKey] || {};
                 const selected = new Set((selectedByCategory[categoryKey] || []).map(v => valueMap[v]).filter(Boolean));
-                // Include all items unless selected; keep original order
-                const included = full.filter(label => !selected.has(label));
-                return included.join(', ');
+                // Include selected items only, keeping original category order.
+                const included = full.filter(label => selected.has(label));
+                return included.join(',');
             }
 
             // Process dropdowns: capture human-readable labels
