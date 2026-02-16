@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training - Loading...</title>
+    <title>Audit - Loading...</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <!-- Simple icon library (Feather Icons) for demonstration -->
@@ -309,9 +309,9 @@
                     <h4>GUIDE</h4>
                 </div>
 
-                <!-- Dynamic guidelines container -->
-                <div id="dynamic-guidelines-container">
-                    <!-- Guidelines will be dynamically loaded here -->
+                <!-- Dynamic notes container -->
+                <div id="dynamic-notes-container">
+                    <!-- Notes will be dynamically loaded here -->
                 </div>
 
                 <!-- Dynamic Promotions Section (rendered from scenarios.json if provided) -->
@@ -335,12 +335,6 @@
                     <div class="system-message">
                         <i data-feather="bell" class="icon-small"></i> Concierge conversation started
                     </div>
-                    <div class="message received">
-                        <div class="message-sender-icon">C</div>
-                        <div class="message-content">
-                            <p id="customerMessage">Loading customer message...</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="internal-notes-container" id="internalNotesContainer">
                     <div class="resize-handle-horizontal" data-resize="internal-notes"></div>
@@ -354,57 +348,78 @@
 
             <!-- Right Panel -->
             <aside class="right-panel">
-                <div class="customer-section">
-                    <h4>CUSTOMER</h4>
-                    <p class="customer-phone" id="customerPhone">Loading...</p>
+                <!-- Customer Information Panel -->
+                <div class="customer-info-panel">
+                    <div class="customer-section">
+                        <h4>CUSTOMER</h4>
+                        <p class="customer-phone" id="customerPhone">Loading...</p>
+                    </div>
+
+                    <div class="panel-block">
+                        <div class="info-block-header">
+                            <span id="sourceLabel">Source</span>
+                            <span id="sourceValue">Loading...</span>
+                        </div>
+                        <div class="info-block-content" id="sourceDate">
+                            Loading...
+                        </div>
+                    </div>
+
+                    <div class="panel-block">
+                        <div class="info-block-header">
+                            <span><i data-feather="zap" class="icon-small"></i> Recommended</span>
+                        </div>
+                        <ul class="info-list" id="recommendedItems">
+                            <!-- Dynamic content will be loaded here -->
+                        </ul>
+                    </div>
+                    
+                    <div class="panel-block">
+                        <div class="info-block-header">
+                            <span><i data-feather="shopping-cart" class="icon-small"></i> Browsing History</span>
+                        </div>
+                        <ul class="info-list browsing-history" id="browsingHistory">
+                            <!-- Dynamic content will be loaded here -->
+                        </ul>
+                    </div>
+
+                    <!-- Orders section: hidden by default, shown when data exists -->
+                    <div class="panel-block" id="ordersSection" style="display:none;">
+                        <div class="info-block-header">
+                            <span><i data-feather="package" class="icon-small"></i> Orders</span>
+                        </div>
+                        <div id="ordersList">
+                            <!-- Dynamic order content will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Purchased section: hidden by default, shown when data exists -->
+                    <div class="panel-block" id="purchasedSection" style="display:none;">
+                        <div class="info-block-header">
+                            <span><i data-feather="shopping-bag" class="icon-small"></i> Purchased</span>
+                        </div>
+                        <ul class="info-list" id="purchasedList">
+                            <!-- Dynamic content will be loaded here -->
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Purchased Items Section (hidden if empty) -->
-                <div class="info-block" id="purchasedSection" style="display:none;">
-                    <div class="info-block-header">
-                        <span><i data-feather="shopping-bag" class="icon-small"></i> Purchased</span>
-                    </div>
-                    <ul class="info-list" id="purchasedList"></ul>
-                </div>
-
-                <div class="info-block">
-                    <div class="info-block-header">
-                        <span id="sourceLabel">Source</span>
-                        <span id="sourceValue">Loading...</span>
-                    </div>
-                    <div class="info-block-content" id="sourceDate">
-                        Loading...
-                    </div>
-                </div>
-
-                <div class="info-block">
-                    <div class="info-block-header">
-                        <span><i data-feather="zap" class="icon-small"></i> Recommended</span>
-                    </div>
-                    <ul class="info-list" id="recommendedItems">
-                        <!-- Dynamic content will be loaded here -->
-                    </ul>
-                </div>
-                
-                <div class="info-block">
-                    <div class="info-block-header">
-                        <span>Browsing History</span>
-                    </div>
-                    <ul class="info-list browsing-history" id="browsingHistory">
-                        <!-- Dynamic content will be loaded here -->
-                    </ul>
-                </div>
-
-                <div class="info-block">
-                    <div class="info-block-header">
-                        <span>TEMPLATES</span>
-                    </div>
-                    <div class="search-templates">
-                        <i data-feather="search" class="icon-small"></i>
-                        <input type="text" placeholder="Search templates (ctrl + /)" id="templateSearch">
-                    </div>
-                    <div id="templateItems">
-                        <!-- Dynamic template content will be loaded here -->
+                <!-- Templates Section -->
+                <div class="templates-panel">
+                    <div class="panel-block">
+                        <div class="info-block-header templates-header" id="templatesHeader">
+                            <span>TEMPLATES</span>
+                            <i data-feather="chevron-up" class="icon-small expand-icon" id="templatesExpandIcon"></i>
+                        </div>
+                        <div class="templates-content" id="templatesContent">
+                            <div class="search-templates">
+                                <i data-feather="search" class="icon-small"></i>
+                                <input type="text" placeholder="Search templates (ctrl + /)" id="templateSearch">
+                            </div>
+                            <div id="templateItems">
+                                <!-- Dynamic template content will be loaded here -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </aside>

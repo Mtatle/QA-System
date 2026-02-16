@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     customerPhone: '(000) 000-0000',
                     customerMessage: 'Welcome! Start the conversation here.',
                     agentInitial: 'A',
-                    guidelines: {
+                    notes: {
                         important: ['Run with a local server to load full scenarios.json']
                     },
                     rightPanel: { source: { label: 'Source', value: 'Local Demo', date: '' } }
@@ -87,10 +87,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 scenarios[scenarioKey] = {
                     ...defaults,
                     ...data.scenarios[scenarioKey],
-                    // Merge guidelines specifically
-                    guidelines: {
-                        ...defaults.guidelines,
-                        ...data.scenarios[scenarioKey].guidelines
+                    // Merge notes specifically
+                    notes: {
+                        ...defaults.notes,
+                        ...data.scenarios[scenarioKey].notes
                     },
                     // Merge rightPanel specifically  
                     rightPanel: {
@@ -205,6 +205,165 @@ document.addEventListener('DOMContentLoaded', async () => {
         };
     }
     
+    // Function to load conversation messages in the correct order
+    function loadConversationMessages(scenario) {
+        const chatMessages = document.getElementById('chatMessages');
+        if (!chatMessages) {
+            console.error('Chat messages container not found');
+            return;
+        }
+        
+        // Clear existing messages except the system message
+        const systemMessage = chatMessages.querySelector('.system-message');
+        chatMessages.innerHTML = '';
+        if (systemMessage) {
+            chatMessages.appendChild(systemMessage);
+        }
+        
+        // Get company initial for system messages
+        const companyName = scenario.companyName || 'S';
+        const companyInitial = companyName.charAt(0).toUpperCase();
+        
+        // Find all SystemMessage keys (SystemMessage1, SystemMessage2, SystemMessage3, etc.)
+        const systemMessageKeys = Object.keys(scenario)
+            .filter(key => /^SystemMessage\d+$/.test(key))
+            .sort((a, b) => {
+                const numA = parseInt(a.replace('SystemMessage', ''));
+                const numB = parseInt(b.replace('SystemMessage', ''));
+                return numA - numB;
+            });
+
+        // Find all AgentMessage keys (AgentMessage1, AgentMessage2, AgentMessage3, etc.)
+        const agentMessageKeys = Object.keys(scenario)
+            .filter(key => /^AgentMessage\d+$/.test(key))
+            .sort((a, b) => {
+                const numA = parseInt(a.replace('AgentMessage', ''));
+                const numB = parseInt(b.replace('AgentMessage', ''));
+                return numA - numB;
+            });
+
+        // Find all customer message keys (customerMessage, customerMessage2, customerMessage3, etc.)
+        const customerMessageKeys = Object.keys(scenario)
+            .filter(key => /^customerMessage\d*$/.test(key))
+            .sort((a, b) => {
+                if (a === 'customerMessage') return -1;
+                if (b === 'customerMessage') return 1;
+                const numA = parseInt(a.replace('customerMessage', ''));
+                const numB = parseInt(b.replace('customerMessage', ''));
+                return numA - numB;
+            });
+
+        // Load messages in alternating order: SystemMessage1, customerMessage, AgentMessage1, customerMessage2, etc.
+        const maxMessages = Math.max(systemMessageKeys.length, agentMessageKeys.length, customerMessageKeys.length);
+        
+        for (let i = 0; i < maxMessages; i++) {
+            // Add SystemMessage if it exists
+            if (systemMessageKeys[i]) {
+                addSystemMessage(scenario[systemMessageKeys[i]], companyInitial);
+            }
+            
+            // Add customer message if it exists
+            if (customerMessageKeys[i]) {
+                addCustomerMessage(scenario[customerMessageKeys[i]]);
+            }
+            
+            // Add AgentMessage if it exists
+            if (agentMessageKeys[i]) {
+                addAgentMessage(scenario[agentMessageKeys[i]], scenario);
+            }
+        }
+        
+        // Initialize Feather icons for new messages
+        if (typeof feather !== 'undefined') {
+            feather.replace();
+        }
+    }
+    
+    // Function to add system message
+    function addSystemMessage(messageText, companyInitial) {
+        const chatMessages = document.getElementById('chatMessages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'message system dynamic';
+        
+        const senderIconDiv = document.createElement('div');
+        senderIconDiv.className = 'message-sender-icon';
+        senderIconDiv.textContent = companyInitial;
+        
+        const messageContentDiv = document.createElement('div');
+        messageContentDiv.className = 'message-content';
+        
+        const messageTextP = document.createElement('p');
+        messageTextP.textContent = messageText;
+        
+        messageContentDiv.appendChild(messageTextP);
+        
+        messageDiv.appendChild(senderIconDiv);
+        messageDiv.appendChild(messageContentDiv);
+        
+        chatMessages.appendChild(messageDiv);
+    }
+    
+    // Function to add customer message
+    function addCustomerMessage(messageText) {
+        const chatMessages = document.getElementById('chatMessages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'message received';
+        
+        const senderIcon = document.createElement('div');
+        senderIcon.className = 'message-sender-icon';
+        senderIcon.textContent = 'C';
+        
+        const messageContent = document.createElement('div');
+        messageContent.className = 'message-content';
+        
+        const messageTextP = document.createElement('p');
+        messageTextP.textContent = messageText;
+        
+        const timestamp = document.createElement('span');
+        timestamp.className = 'message-time';
+        timestamp.textContent = 'now';
+        
+        messageContent.appendChild(messageTextP);
+        messageContent.appendChild(timestamp);
+        
+        messageDiv.appendChild(senderIcon);
+        messageDiv.appendChild(messageContent);
+        
+        chatMessages.appendChild(messageDiv);
+    }
+    
+    // Function to add agent message
+    function addAgentMessage(messageText, scenario) {
+        const chatMessages = document.getElementById('chatMessages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'message agent dynamic';
+        
+        const senderIconDiv = document.createElement('div');
+        senderIconDiv.className = 'message-sender-icon';
+        senderIconDiv.textContent = scenario.agentInitial || 'A';
+        
+        const messageContentDiv = document.createElement('div');
+        messageContentDiv.className = 'message-content';
+        
+        const messageTextP = document.createElement('p');
+        messageTextP.textContent = messageText;
+        
+        const timestampSpan = document.createElement('span');
+        timestampSpan.className = 'timestamp';
+        const now = new Date();
+        const formattedDate = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) + 
+                             ', ' + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        timestampSpan.textContent = formattedDate;
+        
+        messageContentDiv.appendChild(messageTextP);
+        messageContentDiv.appendChild(timestampSpan);
+        
+        messageDiv.appendChild(senderIconDiv);
+        messageDiv.appendChild(messageContentDiv);
+        
+        chatMessages.appendChild(messageDiv);
+    }
+
     // Load scenario content into the page
     function loadScenarioContent(scenarioNumber, data) {
         const scenario = data[scenarioNumber];
@@ -216,13 +375,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log('Loading scenario:', scenarioNumber, scenario);
         
         // Update page title
-        document.title = `Training - Scenario ${scenarioNumber}`;
+        document.title = `Audit - Convo ${scenarioNumber}`;
         
         // Update company info with error checking
         const companyElement = document.getElementById('companyName');
         const agentElement = document.getElementById('agentName');
         const phoneElement = document.getElementById('customerPhone');
-        const messageElement = document.getElementById('customerMessage');
         
         if (companyElement) companyElement.textContent = scenario.companyName;
         else console.error('companyName element not found');
@@ -233,28 +391,28 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (phoneElement) phoneElement.textContent = scenario.customerPhone;
         else console.error('customerPhone element not found');
         
-        if (messageElement) messageElement.textContent = scenario.customerMessage;
-        else console.error('customerMessage element not found');
+        // Load conversation messages
+        loadConversationMessages(scenario);
         
-        // Update guidelines dynamically
-        const guidelinesContainer = document.getElementById('dynamic-guidelines-container');
-        if (guidelinesContainer && scenario.guidelines) {
-            guidelinesContainer.innerHTML = '';
+        // Update notes dynamically
+        const notesContainer = document.getElementById('dynamic-notes-container');
+        if (notesContainer && scenario.notes) {
+            notesContainer.innerHTML = '';
             
             // Create categories dynamically based on scenario data
-            Object.keys(scenario.guidelines).forEach(categoryKey => {
-                const categoryData = scenario.guidelines[categoryKey];
+            Object.keys(scenario.notes).forEach(categoryKey => {
+                const categoryData = scenario.notes[categoryKey];
                 if (Array.isArray(categoryData) && categoryData.length > 0) {
                     // Get category display info
                     const categoryInfo = getCategoryInfo(categoryKey);
                     
                     // Create category section
                     const categorySection = document.createElement('div');
-                    categorySection.className = 'guidelines-section';
+                    categorySection.className = 'notes-section';
                     
                     // Create category header
                     const categoryHeader = document.createElement('div');
-                    categoryHeader.className = 'guidelines-header';
+                    categoryHeader.className = 'notes-header';
                     
                     // Create icon element
                     const iconElement = document.createElement('i');
@@ -269,23 +427,23 @@ document.addEventListener('DOMContentLoaded', async () => {
                     categoryHeader.appendChild(iconElement);
                     categoryHeader.appendChild(titleElement);
                     
-                    // Create guidelines list
-                    const guidelinesList = document.createElement('ul');
-                    guidelinesList.className = 'guidelines-list';
+                    // Create notes list
+                    const notesList = document.createElement('ul');
+                    notesList.className = 'notes-list';
                     
-                    // Add guidelines items
+                    // Add notes items
                     categoryData.forEach(item => {
                         const li = document.createElement('li');
                         li.textContent = item;
-                        guidelinesList.appendChild(li);
+                        notesList.appendChild(li);
                     });
                     
                     // Assemble category section
                     categorySection.appendChild(categoryHeader);
-                    categorySection.appendChild(guidelinesList);
+                    categorySection.appendChild(notesList);
                     
                     // Add to container
-                    guidelinesContainer.appendChild(categorySection);
+                    notesContainer.appendChild(categorySection);
                 }
             });
         }
@@ -383,6 +541,110 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    // Function to create order card (simple or detailed)
+    function createOrderCard(order, index) {
+        const orderCard = document.createElement('div');
+        orderCard.className = 'order-card';
+        
+        // Create header for ALL orders (with expand arrow)
+        const orderHeader = document.createElement('div');
+        orderHeader.className = 'order-header';
+        
+        const orderNumber = document.createElement('a');
+        orderNumber.className = 'order-number';
+        orderNumber.href = order.link || '#';
+        orderNumber.textContent = order.orderNumber ? `Order ${order.orderNumber}` : `Order #${index + 1}`;
+        orderNumber.target = '_blank';
+        
+        const expandIcon = document.createElement('i');
+        expandIcon.setAttribute('data-feather', 'chevron-up');
+        expandIcon.className = 'order-expand-icon';
+        
+        orderHeader.appendChild(orderNumber);
+        orderHeader.appendChild(expandIcon);
+        orderCard.appendChild(orderHeader);
+        
+        if (order.items && Array.isArray(order.items) && order.items.length > 0) {
+            // Detailed order with expandable details
+            orderHeader.addEventListener('click', () => toggleOrderDetails(orderCard));
+            
+            const orderDetails = document.createElement('div');
+            orderDetails.className = 'order-details';
+            
+            const summaryTitle = document.createElement('div');
+            summaryTitle.className = 'order-summary-title';
+            summaryTitle.textContent = 'Order summary';
+            orderDetails.appendChild(summaryTitle);
+            
+            // Add each item
+            order.items.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'order-item';
+                
+                const itemDetails = document.createElement('div');
+                itemDetails.className = 'order-item-details';
+                
+                const itemName = document.createElement('div');
+                itemName.className = 'order-item-name';
+                itemName.textContent = item.name || 'Unknown Item';
+                
+                const itemPrice = document.createElement('div');
+                itemPrice.className = 'order-item-price';
+                itemPrice.textContent = item.price || '$0.00';
+                
+                itemDetails.appendChild(itemName);
+                itemDiv.appendChild(itemDetails);
+                itemDiv.appendChild(itemPrice);
+                orderDetails.appendChild(itemDiv);
+            });
+            
+            // Add subtotal
+            if (order.subtotal) {
+                const subtotalDiv = document.createElement('div');
+                subtotalDiv.className = 'order-subtotal';
+                subtotalDiv.innerHTML = `<span>Order subtotal</span><span>${order.subtotal}</span>`;
+                orderDetails.appendChild(subtotalDiv);
+            }
+            
+            orderCard.appendChild(orderDetails);
+            
+        } else {
+            // Simple order - still add click handler but no details to show
+            orderHeader.addEventListener('click', () => toggleOrderDetails(orderCard));
+        }
+        
+        return orderCard;
+    }
+    
+    // Function to toggle order details
+    function toggleOrderDetails(orderCard) {
+        const details = orderCard.querySelector('.order-details');
+        const icon = orderCard.querySelector('.order-expand-icon');
+        
+        // Only toggle if there are details to show
+        if (details) {
+            if (details.classList.contains('expanded')) {
+                details.classList.remove('expanded');
+                icon.classList.remove('expanded');
+            } else {
+                details.classList.add('expanded');
+                icon.classList.add('expanded');
+            }
+        } else {
+            // For simple orders, just rotate the icon for visual feedback
+            if (icon.classList.contains('expanded')) {
+                icon.classList.remove('expanded');
+            } else {
+                icon.classList.add('expanded');
+            }
+        }
+        
+        // Re-initialize Feather icons after DOM changes
+        if (typeof feather !== 'undefined') {
+            feather.replace();
+        }
+    }
+
     // Function to load right panel dynamic content
     function loadRightPanelContent(scenario) {
         if (!scenario.rightPanel) return;
@@ -474,6 +736,28 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
         
+        // Update orders section. Show section only if present and non-empty.
+        const ordersSection = document.getElementById('ordersSection');
+        const ordersList = document.getElementById('ordersList');
+        if (ordersList && ordersSection) {
+            ordersList.innerHTML = '';
+            const ordersData = scenario.rightPanel.orders;
+            if (Array.isArray(ordersData) && ordersData.length > 0) {
+                ordersData.forEach((order, index) => {
+                    const orderCard = createOrderCard(order, index);
+                    ordersList.appendChild(orderCard);
+                });
+                ordersSection.style.display = '';
+                
+                // Initialize Feather icons for the new order cards
+                if (typeof feather !== 'undefined') {
+                    feather.replace();
+                }
+            } else {
+                ordersSection.style.display = 'none';
+            }
+        }
+        
         // Update template items
         if (scenario.rightPanel.templates) {
             const templatesContainer = document.getElementById('templateItems');
@@ -482,6 +766,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 scenario.rightPanel.templates.forEach(template => {
                     const templateDiv = document.createElement('div');
                     templateDiv.className = 'template-item';
+                    templateDiv.tabIndex = 0; // keyboard focusable
+                    templateDiv.setAttribute('role', 'button');
 
                     const headerDiv = document.createElement('div');
                     headerDiv.className = 'template-header';
@@ -491,10 +777,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     const shortcutSpan = document.createElement('span');
                     shortcutSpan.className = 'template-shortcut';
-                    shortcutSpan.textContent = template.shortcut;
-
+                    // Append shortcut pill only if a non-empty shortcut exists
                     headerDiv.appendChild(nameSpan);
-                    headerDiv.appendChild(shortcutSpan);
+                    if (template.shortcut && String(template.shortcut).trim().length > 0) {
+                        shortcutSpan.textContent = template.shortcut;
+                        headerDiv.appendChild(shortcutSpan);
+                    }
 
                     const contentP = document.createElement('p');
                     contentP.textContent = template.content;
@@ -508,6 +796,52 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Initialize template search functionality
                 initializeTemplateSearch(scenario.rightPanel.templates);
             }
+        }
+        
+        // Initialize template panel expand/collapse functionality
+        initTemplatesExpandCollapse();
+    }
+    
+    // Templates expand/collapse functionality
+    function initTemplatesExpandCollapse() {
+        const templatesHeader = document.getElementById('templatesHeader');
+        const templatesContent = document.getElementById('templatesContent');
+        const templatesPanel = document.querySelector('.templates-panel');
+        const customerPanel = document.querySelector('.customer-info-panel');
+        const expandIcon = document.getElementById('templatesExpandIcon');
+        
+        if (templatesHeader && templatesContent && templatesPanel && expandIcon) {
+            // Start with templates in normal state (arrow pointing up)
+            let isExpanded = false;
+            
+            templatesHeader.addEventListener('click', () => {
+                isExpanded = !isExpanded;
+                
+                if (isExpanded) {
+                    // Expand to fill whole right panel
+                    templatesPanel.classList.add('expanded');
+                    templatesHeader.classList.add('expanded');
+                    templatesContent.classList.add('expanded');
+                    // Hide customer panel with smooth transition
+                    if (customerPanel) {
+                        customerPanel.classList.add('hidden');
+                    }
+                } else {
+                    // Return to normal state
+                    templatesPanel.classList.remove('expanded');
+                    templatesHeader.classList.remove('expanded');
+                    templatesContent.classList.remove('expanded');
+                    // Show customer panel with smooth transition
+                    if (customerPanel) {
+                        customerPanel.classList.remove('hidden');
+                    }
+                }
+                
+                // Re-initialize Feather icons after DOM changes
+                if (typeof feather !== 'undefined') {
+                    feather.replace();
+                }
+            });
         }
     }
     
@@ -1199,6 +1533,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             filteredTemplates.forEach(template => {
                 const templateDiv = document.createElement('div');
                 templateDiv.className = 'template-item';
+                templateDiv.tabIndex = 0; // keyboard focusable
+                templateDiv.setAttribute('role', 'button');
 
                 const headerDiv = document.createElement('div');
                 headerDiv.className = 'template-header';
@@ -1208,10 +1544,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 const shortcutSpan = document.createElement('span');
                 shortcutSpan.className = 'template-shortcut';
-                shortcutSpan.appendChild(createHighlightedFragment(template.shortcut, searchTerm));
-
+                // Append shortcut pill only if a non-empty shortcut exists
                 headerDiv.appendChild(nameSpan);
-                headerDiv.appendChild(shortcutSpan);
+                if (template.shortcut && String(template.shortcut).trim().length > 0) {
+                    shortcutSpan.appendChild(createHighlightedFragment(template.shortcut, searchTerm));
+                    headerDiv.appendChild(shortcutSpan);
+                }
 
                 const contentP = document.createElement('p');
                 contentP.appendChild(createHighlightedFragment(template.content, searchTerm));

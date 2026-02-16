@@ -1,7 +1,7 @@
 {
   "defaults": {
     "responseType": "template",
-    "guidelines": {
+    "notes": {
       "important": [
         "Verify order information first",
         "Check inventory before promising availability",
@@ -46,6 +46,27 @@
           "icon": "shopping-cart"
         }
       ],
+      "orders": [
+        {
+          "orderNumber": "#123456789",
+          "link": "https://example.com/order/123456789",
+          "items": [
+            {
+              "name": "Black Opium Eau De Parfum Spray 3.4 Oz",
+              "price": "$89.99"
+            },
+            {
+              "name": "Replica Jazz Club Edt Refillable Spray 3.4 Oz",
+              "price": "$125.00"
+            }
+          ],
+          "subtotal": "$214.99"
+        },
+        {
+          "orderNumber": "#987654321",
+          "link": "https://example.com/order/987654321"
+        }
+      ],
       "templates": [
         {
           "name": "Shipping Policy",
@@ -66,7 +87,12 @@
       "agentName": "Sarah",
       "agentInitial": "F",
       "customerPhone": "+1 401-588-0009",
+      "SystemMessage1": "Customer has been waiting for 2 minutes",
       "customerMessage": "Hey! I got a text with code WELCOME15 for 15% off. I added a $110 sweater to my cart, applied the code, but it didn't work?? Also why is it still trying to charge me $7.95 for shipping?",
+      "AgentMessage1": "Promotion WELCOME15 is currently active",
+      "customerMessage2": "Okay :( What would you recommend I add to my cart? I was also looking for straight leg, cotton pants. Green if possible!",
+      "customerFollowup1": "Thanks for your help! I'll try adding those items.",
+      "customerFollowup2": "Perfect, I'll place the order now.",
       "guidelines": {
         "send_to_cs": [
           "No ESC for this client, send everything to CS"
@@ -134,7 +160,12 @@
       "agentName": "Emma",
       "agentInitial": "S",
       "customerPhone": "+1 555-283-9471",
+      "SystemMessage1": "Return policy: 30 days from delivery",
       "customerMessage": "Hi, I need to return this shirt (Order #98765). It's unworn, I got it 20 days ago. The return portal link from your site gives me an error 'Return Not Allowed'. Can you just process it for me?",
+      "SystemMessage2": "Customer has been waiting for 3 minutes",
+      "customerMessage2": "I understand, but I never even wore it, and it still has the tags. Is there anything you can do as a one-time exception?",
+      "customerFollowup1": "That sounds fair, thank you for the help!",
+      "customerFollowup2": "I'll go ahead and process the return then.",
       "rightPanel": {
         "recommended": [
           "Classic Cotton Button-Down - White",
