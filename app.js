@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const logoutBtn = document.getElementById('logoutBtn');
     const assignmentSelect = document.getElementById('assignmentSelect');
     const assignmentRefreshBtn = document.getElementById('assignmentRefreshBtn');
-    const assignmentOpenBtn = document.getElementById('assignmentOpenBtn');
     const assignmentsStatus = document.getElementById('assignmentsStatus');
     const previousConversationBtn = document.getElementById('previousConversationBtn');
     const nextConversationBtn = document.getElementById('nextConversationBtn');
@@ -115,13 +114,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         localStorage.setItem('unlockedScenario', nextScenario);
         console.log(`Unlocked scenario ${nextScenario}`);
         return nextScenario;
-    }
-    
-    function isScenarioUnlocked(scenarioNumber) {
-        if (isAdminUser()) return true;
-        if (isCsvScenarioMode()) return true;
-        const unlockedScenario = getCurrentUnlockedScenario();
-        return parseInt(scenarioNumber) <= unlockedScenario;
     }
     
     function canAccessScenario(scenarioNumber) {
@@ -288,7 +280,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             emptyOption.value = '';
             emptyOption.textContent = 'No active assignments';
             assignmentSelect.appendChild(emptyOption);
-            if (assignmentOpenBtn) assignmentOpenBtn.disabled = true;
             return;
         }
 
@@ -300,7 +291,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             option.dataset.viewUrl = assignment.view_url || '';
             assignmentSelect.appendChild(option);
         });
-        if (assignmentOpenBtn) assignmentOpenBtn.disabled = false;
     }
 
     function selectCurrentAssignmentInQueue() {
@@ -1266,67 +1256,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         return timerElement ? timerElement.textContent : '00:00';
     }
 
-    // Function to send data to Google Sheets
-    async function sendToGoogleSheets(agentUsername, scenario, customerMessage, agentResponse) {
-        try {
-            // Create a unique session ID per scenario that persists throughout the session
-            let scenarioSessionId = localStorage.getItem(`scenarioSession_${currentScenario}`);
-            if (!scenarioSessionId) {
-                scenarioSessionId = `${currentScenario}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-                localStorage.setItem(`scenarioSession_${currentScenario}`, scenarioSessionId);
-            }
-            
-            const data = {
-                timestampEST: toESTTimestamp(),
-                agentUsername: agentUsername,
-                scenario: scenario,
-                customerMessage: customerMessage,
-                agentResponse: agentResponse,
-                sessionId: scenarioSessionId, // Use scenario-specific session ID
-                sendTime: getCurrentTimerTime()
-            };
-            
-            console.log('Sending to Google Sheets:', data);
-            
-            const response = await fetch(GOOGLE_SCRIPT_URL, {
-                method: 'POST',
-                mode: 'cors',
-                headers: {
-                    'Content-Type': 'text/plain',
-                },
-                body: JSON.stringify(data)
-            });
-            
-            if (response.ok) {
-                console.log('Successfully sent to Google Sheets');
-                const result = await response.json();
-                console.log('Sheet response:', result);
-            } else {
-                console.error('Failed to send to Google Sheets:', response.status);
-            }
-        } catch (error) {
-            console.error('Error sending to Google Sheets:', error);
-            // Store locally if Google Sheets fails
-            try {
-                const failedData = JSON.parse(localStorage.getItem('failedSheetData') || '[]');
-                // Guard: data might be undefined if error occurred before it was built
-                const safeData = typeof data === 'object' && data ? data : {
-                    timestampEST: toESTTimestamp(),
-                    agentUsername,
-                    scenario,
-                    customerMessage,
-                    agentResponse,
-                    sessionId: localStorage.getItem(`scenarioSession_${currentScenario}`) || 'unknown',
-                    sendTime: getCurrentTimerTime()
-                };
-                failedData.push(safeData);
-                localStorage.setItem('failedSheetData', JSON.stringify(failedData));
-            } catch (e) {
-                console.error('Failed to persist failedSheetData:', e);
-            }
-        }
-    }
-
     // Function to send data to Google Sheets with custom timer value
     async function sendToGoogleSheetsWithTimer(agentUsername, scenario, customerMessage, agentResponse, timerValue) {
         try {
@@ -2028,11 +1957,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
     
-    // Deprecated: previous text highlighter used with innerHTML (kept for backward compatibility, not used)
-    function highlightSearchTerm(text, searchTerm) {
-        return text;
-    }
-
     // Initialize everything
     templatesData = await loadTemplatesData();
     const scenarios = await loadScenariosData();
@@ -2131,12 +2055,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             } catch (error) {
                 setAssignmentsStatus(`Refresh failed: ${error.message || error}`, true);
             }
-        });
-    }
-
-    if (assignmentOpenBtn) {
-        assignmentOpenBtn.addEventListener('click', () => {
-            openSelectedAssignmentFromList();
         });
     }
 

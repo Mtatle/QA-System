@@ -295,22 +295,12 @@ polyline[points="6 9 12 15 18 9"] {
     height: 60px; /* Increased height */
     position: relative; /* For absolute positioning of timer */
 }
-.logo-area .logo-img {
-    height: 30px;
-    filter: invert(1);
-}
 .agent-status {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
     margin-left: 25px;
-}
-.status-toggle {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.9em;
 }
 .agent-name {
     font-weight: 500;
@@ -375,18 +365,6 @@ polyline[points="6 9 12 15 18 9"] {
     display: none;
 }
 
-.assignments-label {
-    font-size: 0.78em;
-    font-weight: 600;
-    color: #303030;
-}
-
-.assignments-controls {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
 .assignment-select {
     flex: 1 1 auto;
     min-width: 180px;
@@ -398,77 +376,10 @@ polyline[points="6 9 12 15 18 9"] {
     color: #222;
 }
 
-.assignment-btn {
-    background: #fff;
-    color: #222;
-    border: 1px solid #d4c75e;
-    border-radius: 6px;
-    padding: 6px 10px;
-    font-size: 0.8em;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.assignment-btn:hover {
-    background: #fff6bf;
-}
-
-.assignment-btn:disabled {
-    opacity: 0.55;
-    cursor: not-allowed;
-}
-
 .assignments-status {
     font-size: 0.74em;
     color: #4a4a4a;
     min-height: 1em;
-}
-
-.csv-upload {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.csv-upload-btn,
-.csv-clear-btn {
-    background: #E2FA9F;
-    color: #0d2a52;
-    border: 1px solid #81B045;
-    border-radius: 8px;
-    padding: 6px 12px;
-    font-size: 0.85em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-}
-
-.csv-upload-btn:hover,
-.csv-clear-btn:hover {
-    background: #81B045;
-    border-color: #81B045;
-    color: #fff;
-}
-
-.csv-clear-btn {
-    background: #fff1f1;
-    border-color: #f2c2c2;
-    color: #7a1d1d;
-}
-
-.csv-clear-btn:hover {
-    background: #7a1d1d;
-    border-color: #7a1d1d;
-    color: #fff;
-}
-
-.csv-status {
-    font-size: 0.8em;
-    color: #4a4a4a;
-    max-width: 240px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .next-conversation-btn {
@@ -495,57 +406,6 @@ polyline[points="6 9 12 15 18 9"] {
     outline: none;
 }
 
-.templates-upload {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin: 10px 12px 12px;
-    padding: 8px 10px;
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-    flex-wrap: wrap;
-    text-align: center;
-    width: calc(100% - 24px);
-}
-
-.templates-upload-btn,
-.templates-clear-btn {
-    background: #E2FA9F;
-    color: #0d2a52;
-    border: 1px solid #81B045;
-    border-radius: 8px;
-    padding: 6px 10px;
-    font-size: 0.8em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-}
-
-.templates-upload-btn:hover,
-.templates-clear-btn:hover {
-    background: #81B045;
-    border-color: #81B045;
-    color: #fff;
-}
-
-.templates-clear-btn {
-    background: #fff1f1;
-    border-color: #f2c2c2;
-    color: #7a1d1d;
-}
-
-.templates-clear-btn:hover {
-    background: #7a1d1d;
-    border-color: #7a1d1d;
-}
-
-.templates-status {
-    font-size: 0.75em;
-    color: #4a4a4a;
-}
 
 .right-panel-scroll {
     display: flex;
@@ -579,15 +439,6 @@ polyline[points="6 9 12 15 18 9"] {
     overflow-x: hidden;
 }
 
-.templates-upload {
-    margin-top: auto;
-}
-
-.templates-upload-panel {
-    margin: 0;
-    width: 100%;
-    flex: 0 0 auto;
-}
 
 /* Scenario Navigation */
 .scenario-nav {
@@ -1073,49 +924,6 @@ input:checked + .slider:before {
     border-color: #007bff;
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.15);
 }
-#chatInput {
-    flex-grow: 1;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    margin-right: 15px;
-    font-size: 1em;
-    min-height: 60px;
-    max-height: 150px;
-    resize: vertical;
-    font-family: inherit;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    overflow-x: hidden;
-    overflow-y: auto;
-    line-height: 1.4;
-}
-#chatInput:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
-#sendButton {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-}
-#sendButton:hover {
-    background-color: #0056b3;
-}
-#sendButton .feather {
-    width: 20px;
-    height: 20px;
-}
-
 
 
 /* 4-column layout: Form | Left | Chat | Right */
@@ -1832,11 +1640,6 @@ mark {
 
     .assignments-panel {
         min-width: 0;
-    }
-
-    .assignments-controls {
-        width: 100%;
-        flex-wrap: wrap;
     }
 
     .assignment-select {
