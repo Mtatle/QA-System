@@ -1,0 +1,1386 @@
+const SPREADSHEET_ID = '1JJpkiAxa-l6t-UMcTY64SOtbhqtJYMrctLVuBjj5Oiw';
+const ASSIGNMENTS_SHEET = 'Assignments';
+const POOL_SHEET = 'Pool';
+const SESSION_LOGS_SHEET = 'Session Logs';
+const DATA_SHEET = 'Data';
+const UPLOADED_SCENARIOS_SHEET = 'Uploaded Scenarios';
+const UPLOADED_TEMPLATES_SHEET = 'Uploaded Templates';
+const QA_SESSIONS_SHEET = 'qa_sessions';
+const QA_ASSIGNMENT_HISTORY_SHEET = 'qa_assignment_history';
+
+const SESSION_CAP = 20;
+const TARGET_QUEUE_SIZE = 5;
+const STALE_HEARTBEAT_MINUTES = 15;
+
+const ASSIGNMENTS_HEADERS = [
+  'send_id',
+  'assignee_email',
+  'status',
+  'assignment_id',
+  'created_at',
+  'updated_at',
+  'done_at',
+  'editor_token',
+  'viewer_token',
+  'form_state_json',
+  'internal_note',
+  'assigned_session_id',
+  'assigned_at'
+];
+
+const POOL_HEADERS = ['send_id', 'status'];
+const SESSION_HEADERS = [
+  'session_id',
+  'agent_email',
+  'state',
+  'submitted_count',
+  'cap',
+  'started_at',
+  'last_heartbeat_at',
+  'ended_at',
+  'end_reason',
+  'app_base'
+];
+const HISTORY_HEADERS = [
+  'event_at',
+  'event_type',
+  'assignment_id',
+  'send_id',
+  'from_status',
+  'to_status',
+  'agent_email',
+  'session_id',
+  'detail'
+];
+
+const UPLOADED_JSON_HEADERS = ['record_id', 'payload_json', 'updated_at'];
+const ACTIVE_ASSIGNMENT_STATUSES = { ASSIGNED: true, IN_PROGRESS: true };
+
+function doGet(e) {
+  try {
+    const action = getRequestAction_(e);
+
+    if (action === 'queue') {
+      const email = normalizeEmail_(getParam_(e, 'email'));
+      const appBase = getParam_(e, 'app_base');
+      const sessionId = getParam_(e, 'session_id');
+      if (!email) return jsonResponse_({ error: 'Missing required query param: email' });
+      if (!sessionId) return jsonResponse_({ error: 'Missing required query param: session_id' });
+
+      return withScriptLock_(function() {
+        return jsonResponse_(getOrTopUpQueueForSession_(email, appBase, sessionId));
+      });
+    }
+
+    if (action === 'getAssignment') {
+      const assignmentId = getParam_(e, 'assignment_id');
+      const token = getParam_(e, 'token');
+      const sessionId = getParam_(e, 'session_id');
+      if (!assignmentId || !token || !sessionId) {
+        return jsonResponse_({ error: 'Missing required query params: assignment_id, token, session_id' });
+      }
+
+      return withScriptLock_(function() {
+        const result = getAssignmentForSession_(assignmentId, token, sessionId);
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_(result);
+      });
+    }
+
+    if (action === 'getUploadedScenarios') {
+      return jsonResponse_({ scenarios: readUploadedJsonList_(UPLOADED_SCENARIOS_SHEET) });
+    }
+
+    if (action === 'getUploadedTemplates') {
+      return jsonResponse_({ templates: readUploadedJsonList_(UPLOADED_TEMPLATES_SHEET) });
+    }
+
+    return jsonResponse_({ status: 'ok', message: 'Agent Training Data Collector is running' });
+  } catch (error) {
+    console.error('Error in doGet:', error);
+    return jsonResponse_({ error: String(error) });
+  }
+}
+
+function doPost(e) {
+  try {
+    if (!e || !e.postData || !e.postData.contents) {
+      throw new Error('No POST data received. This function should be called via HTTP POST.');
+    }
+
+    const data = JSON.parse(e.postData.contents);
+    const action = getRequestAction_(e, data);
+
+    if (action === 'saveDraft') {
+      const assignmentId = data.assignment_id;
+      const token = data.token;
+      const sessionId = data.session_id;
+      if (!assignmentId || !token || !sessionId) {
+        return jsonResponse_({ error: 'Missing assignment_id, token, or session_id' });
+      }
+
+      return withScriptLock_(function() {
+        const result = updateAssignmentDraftForSession_(assignmentId, token, sessionId, data.form_state_json, data.internal_note);
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_(result);
+      });
+    }
+
+    if (action === 'done') {
+      const assignmentId = data.assignment_id;
+      const token = data.token;
+      const sessionId = data.session_id;
+      if (!assignmentId || !token || !sessionId) {
+        return jsonResponse_({ error: 'Missing assignment_id, token, or session_id' });
+      }
+
+      return withScriptLock_(function() {
+        const result = markAssignmentDoneForSession_(assignmentId, token, sessionId, data.app_base);
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_(result);
+      });
+    }
+
+    if (action === 'heartbeat') {
+      const email = normalizeEmail_(data.email);
+      const sessionId = String(data.session_id || '').trim();
+      if (!email || !sessionId) return jsonResponse_({ error: 'Missing email or session_id' });
+
+      return withScriptLock_(function() {
+        const result = heartbeatSession_(email, sessionId, data.client_ts);
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_(result);
+      });
+    }
+
+    if (action === 'releaseSession') {
+      const email = normalizeEmail_(data.email);
+      const sessionId = String(data.session_id || '').trim();
+      const reason = String(data.reason || 'manual').trim();
+      if (!email || !sessionId) return jsonResponse_({ error: 'Missing email or session_id' });
+
+      return withScriptLock_(function() {
+        const result = releaseSession_(email, sessionId, reason || 'manual');
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_(result);
+      });
+    }
+
+    if (action === 'addToPool') {
+      const sendIds = Array.isArray(data.send_ids) ? data.send_ids : [];
+      return withScriptLock_(function() {
+        const result = addSendIdsToPool_(sendIds);
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_(result);
+      });
+    }
+
+    if (action === 'setUploadedScenarios') {
+      const scenarios = Array.isArray(data.scenarios) ? data.scenarios : [];
+      return withScriptLock_(function() {
+        writeUploadedJsonList_(UPLOADED_SCENARIOS_SHEET, scenarios);
+        return jsonResponse_({ ok: true, scenarios: scenarios });
+      });
+    }
+
+    if (action === 'appendUploadedScenarios') {
+      const scenarios = Array.isArray(data.scenarios) ? data.scenarios : [];
+      const reset = !!data.reset;
+      return withScriptLock_(function() {
+        const result = appendUploadedJsonList_(UPLOADED_SCENARIOS_SHEET, scenarios, { reset: reset });
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_({ ok: true, added: result.added, total: result.total });
+      });
+    }
+
+    if (action === 'clearUploadedScenarios') {
+      return withScriptLock_(function() {
+        writeUploadedJsonList_(UPLOADED_SCENARIOS_SHEET, []);
+        return jsonResponse_({ ok: true, scenarios: [] });
+      });
+    }
+
+    if (action === 'setUploadedTemplates') {
+      const templates = Array.isArray(data.templates) ? data.templates : [];
+      return withScriptLock_(function() {
+        writeUploadedJsonList_(UPLOADED_TEMPLATES_SHEET, templates);
+        return jsonResponse_({ ok: true, templates: templates });
+      });
+    }
+
+    if (action === 'appendUploadedTemplates') {
+      const templates = Array.isArray(data.templates) ? data.templates : [];
+      const reset = !!data.reset;
+      return withScriptLock_(function() {
+        const result = appendUploadedJsonList_(UPLOADED_TEMPLATES_SHEET, templates, { reset: reset });
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_({ ok: true, added: result.added, total: result.total });
+      });
+    }
+
+    if (action === 'clearUploadedTemplates') {
+      return withScriptLock_(function() {
+        writeUploadedJsonList_(UPLOADED_TEMPLATES_SHEET, []);
+        return jsonResponse_({ ok: true, templates: [] });
+      });
+    }
+
+    // Existing session logging/evaluation/chat logging behavior.
+    return handleLegacyPost_(data);
+  } catch (error) {
+    console.error('Error in doPost:', error);
+    return jsonResponse_({ status: 'error', message: String(error), error: String(error) });
+  }
+}
+
+function getOrTopUpQueueForSession_(email, appBaseUrl, sessionId) {
+  const state = loadAssignmentState_();
+  const now = nowIso_();
+  const baseUrl = resolveAppBaseUrl_(appBaseUrl);
+
+  cleanupStaleSessions_(state, now);
+  const session = getOrCreateSession_(state, email, sessionId, baseUrl, now);
+
+  if (isSessionActive_(session)) {
+    releaseOtherActiveSessionsForEmail_(state, email, sessionId, now);
+    releaseActiveAssignmentsForEmailOutsideSession_(state, email, sessionId, now, 'superseded');
+    ensureSessionCapState_(state, session, now, 'cap_reached');
+    if (isSessionActive_(session)) {
+      topUpQueueForSession_(state, email, sessionId, now, baseUrl);
+    }
+  }
+
+  persistAssignmentState_(state);
+
+  const assignments = getActiveAssignmentsForSession_(state.assignmentsRows, email, sessionId)
+    .slice(0, TARGET_QUEUE_SIZE)
+    .map(function(a) {
+      return {
+        assignment_id: a.assignment_id,
+        send_id: a.send_id,
+        status: a.status,
+        edit_url: buildAssignmentUrl_(baseUrl, a.assignment_id, a.editor_token, 'edit'),
+        view_url: buildAssignmentUrl_(baseUrl, a.assignment_id, a.viewer_token, 'view')
+      };
+    });
+
+  return {
+    assignments: assignments,
+    session: sessionToPayload_(session)
+  };
+}
+
+function getAssignmentForSession_(assignmentId, token, sessionId) {
+  const state = loadAssignmentState_();
+  const now = nowIso_();
+
+  cleanupStaleSessions_(state, now);
+
+  const sessionIndex = findSessionIndex_(state.sessionsRows, sessionId);
+  if (sessionIndex < 0) return { error: 'Session not found' };
+  const session = rowToSessionObject_(state.sessionsRows[sessionIndex]);
+  ensureSessionCapState_(state, session, now, 'cap_reached');
+  state.sessionsRows[sessionIndex] = sessionToRow_(session);
+
+  const assignmentWithIndex = findAssignmentById_(state.assignmentsRows, assignmentId);
+  if (!assignmentWithIndex) return { error: 'Assignment not found' };
+  const assignment = assignmentWithIndex.assignment;
+
+  const role = tokenRoleForAssignment_(assignment, token);
+  if (!role) return { error: 'Unauthorized token' };
+
+  const ownerSessionId = String(assignment.assigned_session_id || '').trim();
+  const status = String(assignment.status || '').toUpperCase();
+  if (status !== 'DONE' && ownerSessionId !== sessionId) {
+    return { error: 'Assignment is not reserved for this session' };
+  }
+
+  persistAssignmentState_(state);
+
+  return {
+    assignment: {
+      assignment_id: assignment.assignment_id,
+      send_id: assignment.send_id,
+      status: assignment.status,
+      form_state_json: assignment.form_state_json || '',
+      internal_note: assignment.internal_note || '',
+      role: role
+    },
+    session: sessionToPayload_(session)
+  };
+}
+
+function updateAssignmentDraftForSession_(assignmentId, token, sessionId, formStateJson, internalNote) {
+  const state = loadAssignmentState_();
+  const now = nowIso_();
+
+  cleanupStaleSessions_(state, now);
+
+  const sessionIndex = findSessionIndex_(state.sessionsRows, sessionId);
+  if (sessionIndex < 0) return { error: 'Session not found' };
+  const session = rowToSessionObject_(state.sessionsRows[sessionIndex]);
+
+  const found = findAssignmentById_(state.assignmentsRows, assignmentId);
+  if (!found) return { error: 'Assignment not found' };
+  const assignment = found.assignment;
+
+  if (String(assignment.editor_token || '') !== String(token || '')) {
+    return { error: 'Unauthorized: editor token required' };
+  }
+
+  const status = String(assignment.status || '').toUpperCase();
+  if (status !== 'DONE' && String(assignment.assigned_session_id || '') !== sessionId) {
+    return { error: 'Assignment is not reserved for this session' };
+  }
+
+  assignment.form_state_json = stringifyMaybe_(formStateJson);
+  assignment.internal_note = internalNote != null ? String(internalNote) : '';
+  assignment.updated_at = now;
+  if (status === 'ASSIGNED') {
+    assignment.status = 'IN_PROGRESS';
+  }
+
+  if (isSessionActive_(session)) {
+    session.last_heartbeat_at = now;
+  }
+
+  state.assignmentsRows[found.index] = assignmentToRow_(assignment);
+  state.sessionsRows[sessionIndex] = sessionToRow_(session);
+  persistAssignmentState_(state);
+
+  return { ok: true, session: sessionToPayload_(session) };
+}
+
+function markAssignmentDoneForSession_(assignmentId, token, sessionId, appBaseUrl) {
+  const state = loadAssignmentState_();
+  const now = nowIso_();
+  const baseUrl = resolveAppBaseUrl_(appBaseUrl);
+
+  cleanupStaleSessions_(state, now);
+
+  const sessionIndex = findSessionIndex_(state.sessionsRows, sessionId);
+  if (sessionIndex < 0) return { error: 'Session not found' };
+  const session = rowToSessionObject_(state.sessionsRows[sessionIndex]);
+  const email = normalizeEmail_(session.agent_email);
+
+  ensureSessionCapState_(state, session, now, 'cap_reached');
+  if (!isSessionActive_(session)) {
+    state.sessionsRows[sessionIndex] = sessionToRow_(session);
+    persistAssignmentState_(state);
+    return {
+      assignments: [],
+      session: sessionToPayload_(session)
+    };
+  }
+
+  const found = findAssignmentById_(state.assignmentsRows, assignmentId);
+  if (!found) return { error: 'Assignment not found' };
+  const assignment = found.assignment;
+
+  if (String(assignment.editor_token || '') !== String(token || '')) {
+    return { error: 'Unauthorized: editor token required' };
+  }
+
+  if (String(assignment.assigned_session_id || '') !== sessionId) {
+    return { error: 'Assignment is not reserved for this session' };
+  }
+
+  const beforeStatus = String(assignment.status || '').toUpperCase();
+  if (!ACTIVE_ASSIGNMENT_STATUSES[beforeStatus]) {
+    return { error: 'Assignment is not in an active state' };
+  }
+
+  assignment.status = 'DONE';
+  assignment.updated_at = now;
+  assignment.done_at = now;
+
+  const poolIndex = findPoolIndexBySendId_(state.poolRows, assignment.send_id);
+  if (poolIndex >= 0) {
+    state.poolRows[poolIndex][1] = 'DONE';
+  }
+
+  appendHistoryRow_(state.historyRowsToAppend, {
+    event_type: 'assignment_done',
+    assignment_id: assignment.assignment_id,
+    send_id: assignment.send_id,
+    from_status: beforeStatus,
+    to_status: 'DONE',
+    agent_email: email,
+    session_id: sessionId,
+    detail: ''
+  });
+
+  const submitted = toInt_(session.submitted_count, 0) + 1;
+  session.submitted_count = submitted;
+  session.last_heartbeat_at = now;
+
+  ensureSessionCapState_(state, session, now, 'cap_reached');
+  if (isSessionActive_(session)) {
+    assignFromPool_(state, email, sessionId, now, baseUrl, 1);
+  }
+
+  state.assignmentsRows[found.index] = assignmentToRow_(assignment);
+  state.sessionsRows[sessionIndex] = sessionToRow_(session);
+  persistAssignmentState_(state);
+
+  const assignments = getActiveAssignmentsForSession_(state.assignmentsRows, email, sessionId)
+    .slice(0, TARGET_QUEUE_SIZE)
+    .map(function(a) {
+      return {
+        assignment_id: a.assignment_id,
+        send_id: a.send_id,
+        status: a.status,
+        edit_url: buildAssignmentUrl_(baseUrl, a.assignment_id, a.editor_token, 'edit'),
+        view_url: buildAssignmentUrl_(baseUrl, a.assignment_id, a.viewer_token, 'view')
+      };
+    });
+
+  return {
+    assignments: assignments,
+    session: sessionToPayload_(session)
+  };
+}
+
+function heartbeatSession_(email, sessionId, clientTs) {
+  const state = loadAssignmentState_();
+  const now = nowIso_();
+
+  cleanupStaleSessions_(state, now);
+  let sessionIndex = findSessionIndex_(state.sessionsRows, sessionId);
+  let session;
+  if (sessionIndex < 0) {
+    session = createSessionObject_(email, sessionId, '', now);
+    state.sessionsRows.push(sessionToRow_(session));
+    appendHistoryRow_(state.historyRowsToAppend, {
+      event_type: 'session_created',
+      assignment_id: '',
+      send_id: '',
+      from_status: '',
+      to_status: '',
+      agent_email: email,
+      session_id: sessionId,
+      detail: 'created_from_heartbeat'
+    });
+    sessionIndex = state.sessionsRows.length - 1;
+  } else {
+    session = rowToSessionObject_(state.sessionsRows[sessionIndex]);
+  }
+
+  session.agent_email = email;
+  if (isSessionActive_(session)) {
+    session.last_heartbeat_at = now;
+  }
+
+  ensureSessionCapState_(state, session, now, 'cap_reached');
+  state.sessionsRows[sessionIndex] = sessionToRow_(session);
+  persistAssignmentState_(state);
+
+  return {
+    ok: true,
+    session: sessionToPayload_(session),
+    client_ts: clientTs || ''
+  };
+}
+
+function releaseSession_(email, sessionId, reason) {
+  const state = loadAssignmentState_();
+  const now = nowIso_();
+
+  cleanupStaleSessions_(state, now);
+
+  const sessionIndex = findSessionIndex_(state.sessionsRows, sessionId);
+  if (sessionIndex < 0) {
+    persistAssignmentState_(state);
+    return { ok: true, released_count: 0 };
+  }
+
+  const session = rowToSessionObject_(state.sessionsRows[sessionIndex]);
+  if (normalizeEmail_(session.agent_email) !== normalizeEmail_(email)) {
+    return { error: 'Session email mismatch' };
+  }
+
+  const releasedCount = releaseAssignmentsForSession_(state, sessionId, reason || 'manual', now);
+  if (isSessionActive_(session)) {
+    session.state = 'LOGGED_OUT';
+    session.ended_at = now;
+    session.end_reason = reason || 'logout';
+  }
+  session.last_heartbeat_at = now;
+
+  appendHistoryRow_(state.historyRowsToAppend, {
+    event_type: 'session_released',
+    assignment_id: '',
+    send_id: '',
+    from_status: '',
+    to_status: '',
+    agent_email: session.agent_email,
+    session_id: sessionId,
+    detail: `released=${releasedCount}`
+  });
+
+  state.sessionsRows[sessionIndex] = sessionToRow_(session);
+  persistAssignmentState_(state);
+
+  return {
+    ok: true,
+    released_count: releasedCount,
+    session: sessionToPayload_(session)
+  };
+}
+
+function loadAssignmentState_() {
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const assignmentsSheet = getOrCreateSheet_(spreadsheet, ASSIGNMENTS_SHEET, ASSIGNMENTS_HEADERS);
+  const poolSheet = getOrCreateSheet_(spreadsheet, POOL_SHEET, POOL_HEADERS);
+  const sessionsSheet = getOrCreateSheet_(spreadsheet, QA_SESSIONS_SHEET, SESSION_HEADERS);
+  const historySheet = getOrCreateSheet_(spreadsheet, QA_ASSIGNMENT_HISTORY_SHEET, HISTORY_HEADERS);
+
+  return {
+    assignmentsSheet: assignmentsSheet,
+    poolSheet: poolSheet,
+    sessionsSheet: sessionsSheet,
+    historySheet: historySheet,
+    assignmentsRows: getSheetDataRows_(assignmentsSheet, ASSIGNMENTS_HEADERS.length),
+    poolRows: getSheetDataRows_(poolSheet, POOL_HEADERS.length),
+    sessionsRows: getSheetDataRows_(sessionsSheet, SESSION_HEADERS.length),
+    historyRowsToAppend: []
+  };
+}
+
+function persistAssignmentState_(state) {
+  writeSheetDataRows_(state.assignmentsSheet, state.assignmentsRows, ASSIGNMENTS_HEADERS.length);
+  writeSheetDataRows_(state.poolSheet, state.poolRows, POOL_HEADERS.length);
+  writeSheetDataRows_(state.sessionsSheet, state.sessionsRows, SESSION_HEADERS.length);
+
+  if (state.historyRowsToAppend && state.historyRowsToAppend.length > 0) {
+    const startRow = state.historySheet.getLastRow() + 1;
+    state.historySheet
+      .getRange(startRow, 1, state.historyRowsToAppend.length, HISTORY_HEADERS.length)
+      .setValues(state.historyRowsToAppend);
+  }
+}
+
+function writeSheetDataRows_(sheet, rows, colCount) {
+  const existing = Math.max(0, sheet.getLastRow() - 1);
+  const next = Array.isArray(rows) ? rows : [];
+
+  if (next.length > 0) {
+    sheet.getRange(2, 1, next.length, colCount).setValues(next);
+  }
+
+  if (existing > next.length) {
+    sheet.getRange(next.length + 2, 1, existing - next.length, colCount).clearContent();
+  }
+}
+
+function cleanupStaleSessions_(state, nowIso) {
+  const nowMs = parseIsoMs_(nowIso);
+  const staleAfterMs = STALE_HEARTBEAT_MINUTES * 60 * 1000;
+
+  for (let i = 0; i < state.sessionsRows.length; i++) {
+    const session = rowToSessionObject_(state.sessionsRows[i]);
+    if (!isSessionActive_(session)) continue;
+
+    const heartbeat = session.last_heartbeat_at || session.started_at;
+    const heartbeatMs = parseIsoMs_(heartbeat);
+    if (!heartbeatMs) continue;
+    if ((nowMs - heartbeatMs) < staleAfterMs) continue;
+
+    const released = releaseAssignmentsForSession_(state, session.session_id, 'timeout', nowIso);
+    session.state = 'TIMED_OUT';
+    session.ended_at = nowIso;
+    session.end_reason = 'heartbeat_timeout';
+    session.last_heartbeat_at = nowIso;
+    state.sessionsRows[i] = sessionToRow_(session);
+
+    appendHistoryRow_(state.historyRowsToAppend, {
+      event_type: 'session_timed_out',
+      assignment_id: '',
+      send_id: '',
+      from_status: '',
+      to_status: '',
+      agent_email: session.agent_email,
+      session_id: session.session_id,
+      detail: `released=${released}`
+    });
+  }
+}
+
+function getOrCreateSession_(state, email, sessionId, appBase, nowIso) {
+  const idx = findSessionIndex_(state.sessionsRows, sessionId);
+  if (idx >= 0) {
+    const session = rowToSessionObject_(state.sessionsRows[idx]);
+    session.agent_email = email;
+    if (appBase) session.app_base = appBase;
+    if (isSessionActive_(session)) {
+      session.last_heartbeat_at = nowIso;
+    }
+    state.sessionsRows[idx] = sessionToRow_(session);
+    return session;
+  }
+
+  const created = createSessionObject_(email, sessionId, appBase, nowIso);
+  state.sessionsRows.push(sessionToRow_(created));
+  appendHistoryRow_(state.historyRowsToAppend, {
+    event_type: 'session_created',
+    assignment_id: '',
+    send_id: '',
+    from_status: '',
+    to_status: '',
+    agent_email: email,
+    session_id: sessionId,
+    detail: `cap=${created.cap}`
+  });
+  return created;
+}
+
+function createSessionObject_(email, sessionId, appBase, nowIso) {
+  return {
+    session_id: sessionId,
+    agent_email: email,
+    state: 'ACTIVE',
+    submitted_count: 0,
+    cap: SESSION_CAP,
+    started_at: nowIso,
+    last_heartbeat_at: nowIso,
+    ended_at: '',
+    end_reason: '',
+    app_base: appBase || ''
+  };
+}
+
+function ensureSessionCapState_(state, session, nowIso, reason) {
+  if (!session) return;
+  const submitted = toInt_(session.submitted_count, 0);
+  const cap = Math.max(1, toInt_(session.cap, SESSION_CAP));
+  session.submitted_count = submitted;
+  session.cap = cap;
+
+  if (session.state === 'COMPLETED') return;
+  if (submitted < cap) return;
+
+  const released = releaseAssignmentsForSession_(state, session.session_id, reason || 'cap_reached', nowIso);
+  session.state = 'COMPLETED';
+  session.ended_at = nowIso;
+  session.end_reason = reason || 'cap_reached';
+  session.last_heartbeat_at = nowIso;
+
+  appendHistoryRow_(state.historyRowsToAppend, {
+    event_type: 'session_completed',
+    assignment_id: '',
+    send_id: '',
+    from_status: '',
+    to_status: '',
+    agent_email: session.agent_email,
+    session_id: session.session_id,
+    detail: `released=${released}`
+  });
+}
+
+function releaseOtherActiveSessionsForEmail_(state, email, keepSessionId, nowIso) {
+  for (let i = 0; i < state.sessionsRows.length; i++) {
+    const session = rowToSessionObject_(state.sessionsRows[i]);
+    if (session.session_id === keepSessionId) continue;
+    if (normalizeEmail_(session.agent_email) !== normalizeEmail_(email)) continue;
+    if (!isSessionActive_(session)) continue;
+
+    const released = releaseAssignmentsForSession_(state, session.session_id, 'superseded', nowIso);
+    session.state = 'LOGGED_OUT';
+    session.ended_at = nowIso;
+    session.end_reason = 'superseded_by_new_session';
+    session.last_heartbeat_at = nowIso;
+    state.sessionsRows[i] = sessionToRow_(session);
+
+    appendHistoryRow_(state.historyRowsToAppend, {
+      event_type: 'session_superseded',
+      assignment_id: '',
+      send_id: '',
+      from_status: '',
+      to_status: '',
+      agent_email: email,
+      session_id: session.session_id,
+      detail: `released=${released}`
+    });
+  }
+}
+
+function releaseActiveAssignmentsForEmailOutsideSession_(state, email, keepSessionId, nowIso, reason) {
+  for (let i = 0; i < state.assignmentsRows.length; i++) {
+    const assignment = rowToAssignmentObject_(state.assignmentsRows[i]);
+    const status = String(assignment.status || '').toUpperCase();
+    if (!ACTIVE_ASSIGNMENT_STATUSES[status]) continue;
+    if (normalizeEmail_(assignment.assignee_email) !== normalizeEmail_(email)) continue;
+    if (String(assignment.assigned_session_id || '') === keepSessionId) continue;
+
+    const released = releaseSingleAssignment_(state, assignment, status, nowIso, reason || 'superseded');
+    if (released) {
+      state.assignmentsRows[i] = assignmentToRow_(assignment);
+    }
+  }
+}
+
+function topUpQueueForSession_(state, email, sessionId, nowIso, appBase) {
+  const active = getActiveAssignmentsForSession_(state.assignmentsRows, email, sessionId);
+  const needed = Math.max(0, TARGET_QUEUE_SIZE - active.length);
+  if (needed <= 0) return;
+  assignFromPool_(state, email, sessionId, nowIso, appBase, needed);
+}
+
+function assignFromPool_(state, email, sessionId, nowIso, appBase, count) {
+  let needed = Math.max(0, toInt_(count, 0));
+  if (!needed) return;
+
+  for (let i = 0; i < state.poolRows.length && needed > 0; i++) {
+    const poolSendId = String(state.poolRows[i][0] || '').trim();
+    const poolStatus = String(state.poolRows[i][1] || '').toUpperCase();
+    if (!poolSendId) continue;
+    if (poolStatus && poolStatus !== 'AVAILABLE') continue;
+
+    const assignment = {
+      send_id: poolSendId,
+      assignee_email: email,
+      status: 'ASSIGNED',
+      assignment_id: Utilities.getUuid(),
+      created_at: nowIso,
+      updated_at: nowIso,
+      done_at: '',
+      editor_token: generateOpaqueToken_(),
+      viewer_token: generateOpaqueToken_(),
+      form_state_json: '',
+      internal_note: '',
+      assigned_session_id: sessionId,
+      assigned_at: nowIso
+    };
+
+    state.assignmentsRows.push(assignmentToRow_(assignment));
+    state.poolRows[i][1] = 'ASSIGNED';
+
+    appendHistoryRow_(state.historyRowsToAppend, {
+      event_type: 'assignment_assigned',
+      assignment_id: assignment.assignment_id,
+      send_id: assignment.send_id,
+      from_status: 'UNASSIGNED',
+      to_status: 'ASSIGNED',
+      agent_email: email,
+      session_id: sessionId,
+      detail: appBase ? `app_base=${appBase}` : ''
+    });
+
+    needed--;
+  }
+}
+
+function releaseAssignmentsForSession_(state, sessionId, reason, nowIso) {
+  let releasedCount = 0;
+  for (let i = 0; i < state.assignmentsRows.length; i++) {
+    const assignment = rowToAssignmentObject_(state.assignmentsRows[i]);
+    const status = String(assignment.status || '').toUpperCase();
+    if (!ACTIVE_ASSIGNMENT_STATUSES[status]) continue;
+    if (String(assignment.assigned_session_id || '') !== String(sessionId || '')) continue;
+
+    const released = releaseSingleAssignment_(state, assignment, status, nowIso, reason || 'released');
+    if (!released) continue;
+    state.assignmentsRows[i] = assignmentToRow_(assignment);
+    releasedCount++;
+  }
+  return releasedCount;
+}
+
+function releaseSingleAssignment_(state, assignment, fromStatus, nowIso, reason) {
+  if (!assignment) return false;
+  const sendId = String(assignment.send_id || '');
+  const poolIndex = findPoolIndexBySendId_(state.poolRows, sendId);
+  if (poolIndex >= 0) {
+    const poolStatus = String(state.poolRows[poolIndex][1] || '').toUpperCase();
+    if (poolStatus !== 'DONE') {
+      state.poolRows[poolIndex][1] = 'AVAILABLE';
+    }
+  }
+
+  const agentEmail = normalizeEmail_(assignment.assignee_email);
+  const sessionId = String(assignment.assigned_session_id || '');
+
+  assignment.status = 'RELEASED';
+  assignment.assignee_email = '';
+  assignment.updated_at = nowIso;
+  assignment.form_state_json = '';
+  assignment.internal_note = '';
+  assignment.assigned_session_id = '';
+  assignment.assigned_at = '';
+
+  appendHistoryRow_(state.historyRowsToAppend, {
+    event_type: 'assignment_released',
+    assignment_id: assignment.assignment_id,
+    send_id: assignment.send_id,
+    from_status: fromStatus,
+    to_status: 'UNASSIGNED',
+    agent_email: agentEmail,
+    session_id: sessionId,
+    detail: reason || ''
+  });
+  return true;
+}
+
+function addSendIdsToPool_(sendIds) {
+  const ids = Array.isArray(sendIds)
+    ? sendIds.map(function(v) { return String(v || '').trim(); }).filter(function(v) { return !!v; })
+    : [];
+  if (!ids.length) {
+    return { error: 'Missing send_ids' };
+  }
+
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const poolSheet = getOrCreateSheet_(spreadsheet, POOL_SHEET, POOL_HEADERS);
+  const poolValues = getSheetDataRows_(poolSheet, POOL_HEADERS.length);
+
+  const uniqueIds = [];
+  const seen = {};
+  for (let i = 0; i < ids.length; i++) {
+    if (seen[ids[i]]) continue;
+    seen[ids[i]] = true;
+    uniqueIds.push(ids[i]);
+  }
+
+  const indexBySendId = {};
+  for (let i = 0; i < poolValues.length; i++) {
+    const existing = String(poolValues[i][0] || '').trim();
+    if (!existing) continue;
+    if (indexBySendId[existing] == null) {
+      indexBySendId[existing] = i;
+    }
+  }
+
+  let added = 0;
+  let reactivated = 0;
+  const newRows = [];
+
+  for (let i = 0; i < uniqueIds.length; i++) {
+    const sendId = uniqueIds[i];
+    const idx = indexBySendId[sendId];
+    if (idx == null) {
+      newRows.push([sendId, 'AVAILABLE']);
+      added++;
+      continue;
+    }
+
+    const currentStatus = String(poolValues[idx][1] || '').trim().toUpperCase();
+    if (currentStatus !== 'ASSIGNED') {
+      if (currentStatus !== 'AVAILABLE') {
+        reactivated++;
+      }
+      poolValues[idx][1] = 'AVAILABLE';
+    }
+  }
+
+  if (poolValues.length > 0) {
+    const statusColumn = poolValues.map(function(row) { return [row[1]]; });
+    poolSheet.getRange(2, 2, statusColumn.length, 1).setValues(statusColumn);
+  }
+
+  if (newRows.length > 0) {
+    const startRow = poolSheet.getLastRow() + 1;
+    poolSheet.getRange(startRow, 1, newRows.length, POOL_HEADERS.length).setValues(newRows);
+  }
+
+  return { ok: true, added: added, reactivated: reactivated, total: uniqueIds.length };
+}
+
+function readUploadedJsonList_(sheetName) {
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const sheet = getOrCreateSheet_(spreadsheet, sheetName, UPLOADED_JSON_HEADERS);
+  const rows = getSheetDataRows_(sheet, UPLOADED_JSON_HEADERS.length);
+  const items = [];
+
+  for (let i = 0; i < rows.length; i++) {
+    const raw = String(rows[i][1] || '').trim();
+    if (!raw) continue;
+    try {
+      items.push(JSON.parse(raw));
+    } catch (error) {
+      console.warn('Skipping invalid JSON row in sheet %s at index %s', sheetName, i + 2);
+    }
+  }
+
+  return items;
+}
+
+function writeUploadedJsonList_(sheetName, list) {
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const sheet = getOrCreateSheet_(spreadsheet, sheetName, UPLOADED_JSON_HEADERS);
+  const lastRow = sheet.getLastRow();
+
+  if (lastRow > 1) {
+    sheet.getRange(2, 1, lastRow - 1, UPLOADED_JSON_HEADERS.length).clearContent();
+  }
+
+  const items = Array.isArray(list) ? list : [];
+  if (!items.length) return;
+
+  const now = nowIso_();
+  const rows = items.map(function(item) {
+    const fallbackId = Utilities.getUuid();
+    const recordId = item && item.id != null ? String(item.id) : fallbackId;
+    return [
+      recordId,
+      stringifyMaybe_(item),
+      now
+    ];
+  });
+
+  sheet.getRange(2, 1, rows.length, UPLOADED_JSON_HEADERS.length).setValues(rows);
+}
+
+function appendUploadedJsonList_(sheetName, list, options) {
+  const items = Array.isArray(list) ? list : [];
+  if (!items.length) return { added: 0, total: 0 };
+
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const sheet = getOrCreateSheet_(spreadsheet, sheetName, UPLOADED_JSON_HEADERS);
+  const reset = !!(options && options.reset);
+
+  if (reset) {
+    const existingLastRow = sheet.getLastRow();
+    if (existingLastRow > 1) {
+      sheet.getRange(2, 1, existingLastRow - 1, UPLOADED_JSON_HEADERS.length).clearContent();
+    }
+  }
+
+  const now = nowIso_();
+  const rows = items.map(function(item) {
+    const fallbackId = Utilities.getUuid();
+    const recordId = item && item.id != null ? String(item.id) : fallbackId;
+    return [recordId, stringifyMaybe_(item), now];
+  });
+
+  const startRow = sheet.getLastRow() + 1;
+  sheet.getRange(startRow, 1, rows.length, UPLOADED_JSON_HEADERS.length).setValues(rows);
+  return { added: rows.length, total: rows.length };
+}
+
+function handleLegacyPost_(data) {
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const sheet = spreadsheet.getActiveSheet();
+
+  if (data && data.eventType && (data.eventType === 'sessionLogin' || data.eventType === 'sessionLogout')) {
+    let logsSheet = spreadsheet.getSheetByName(SESSION_LOGS_SHEET);
+    if (!logsSheet) {
+      logsSheet = spreadsheet.insertSheet(SESSION_LOGS_SHEET);
+      logsSheet.getRange(1, 1, 1, 9).setValues([[
+        'Date (EST)', 'Agent Name', 'Agent Email', 'Event', 'Global Session ID', 'Login Method', 'Login At', 'Logout At', 'Duration (mins)'
+      ]]);
+    }
+
+    const sessionId = data.sessionId || '';
+    if (data.eventType === 'sessionLogin') {
+      safeAppendRow(logsSheet, [
+        data.loginAt || '',
+        data.agentUsername || '',
+        data.agentEmail || '',
+        'login',
+        sessionId,
+        data.loginMethod || '',
+        data.loginAt || '',
+        '',
+        ''
+      ]);
+      return jsonResponse_({ status: 'success' });
+    }
+
+    if (data.eventType === 'sessionLogout') {
+      const lastRow = logsSheet.getLastRow();
+      for (let i = lastRow; i >= 2; i--) {
+        const existingSessionId = logsSheet.getRange(i, 5).getValue();
+        const eventCell = logsSheet.getRange(i, 4).getValue();
+        if (existingSessionId && existingSessionId.toString() === sessionId && eventCell === 'login') {
+          logsSheet.getRange(i, 8).setValue(data.logoutAt || '');
+          logsSheet.getRange(i, 9).setValue('');
+          return jsonResponse_({ status: 'success' });
+        }
+      }
+
+      safeAppendRow(logsSheet, [
+        data.logoutAt || '',
+        data.agentUsername || '',
+        data.agentEmail || '',
+        'logout',
+        sessionId,
+        data.loginMethod || '',
+        '',
+        data.logoutAt || '',
+        ''
+      ]);
+      return jsonResponse_({ status: 'success' });
+    }
+
+    return jsonResponse_({ status: 'success' });
+  }
+
+  if (data && data.eventType === 'evaluationFormSubmission') {
+    let dataSheet = spreadsheet.getSheetByName(DATA_SHEET);
+    if (!dataSheet) {
+      dataSheet = spreadsheet.insertSheet(DATA_SHEET);
+      dataSheet.getRange(1, 1, 1, 14).setValues([[
+        'Timestamp', 'Email Address', 'Message ID', 'Audit Time',
+        'Issue Identification', 'Proper Resolution', 'Product Sales', 'Accuracy',
+        'Workflow', 'Clarity', 'Tone',
+        'Efficient Troubleshooting Miss', 'Zero Tolerance', 'Notes'
+      ]]);
+    }
+
+    safeAppendRow(dataSheet, [
+      data.timestamp || '',
+      data.emailAddress || '',
+      data.messageId || '',
+      data.auditTime || '',
+      data.issueIdentification || '',
+      data.properResolution || '',
+      data.productSales || '',
+      data.accuracy || '',
+      data.workflow || '',
+      data.clarity || '',
+      data.tone || '',
+      data.efficientTroubleshootingMiss || '',
+      data.zeroTolerance || '',
+      data.notes || ''
+    ]);
+
+    return jsonResponse_({ status: 'success' });
+  }
+
+  const sessionKey = data.sessionId;
+  let targetRow = null;
+  const lastRow = sheet.getLastRow();
+
+  for (let i = 2; i <= lastRow; i++) {
+    const existingSessionId = sheet.getRange(i, 4).getValue();
+    if (existingSessionId && existingSessionId.toString() === sessionKey) {
+      targetRow = i;
+      break;
+    }
+  }
+
+  if (targetRow === null) {
+    targetRow = lastRow + 1;
+    sheet.getRange(targetRow, 1).setValue(String(data.timestampEST || ''));
+    sheet.getRange(targetRow, 2).setValue(data.agentUsername || '');
+    sheet.getRange(targetRow, 3).setValue(data.scenario || '');
+    sheet.getRange(targetRow, 4).setValue(data.sessionId || '');
+  }
+
+  let messageColumn = 5;
+  const possibleColumns = [5, 8];
+  for (let i = 0; i < possibleColumns.length; i++) {
+    const col = possibleColumns[i];
+    const customerMsgValue = sheet.getRange(targetRow, col).getValue();
+    if (!customerMsgValue) {
+      messageColumn = col;
+      break;
+    }
+  }
+
+  if (messageColumn === 5) {
+    const firstMsgValue = sheet.getRange(targetRow, 5).getValue();
+    if (firstMsgValue) messageColumn = 8;
+  }
+
+  sheet.getRange(targetRow, messageColumn).setValue(data.customerMessage || '');
+  sheet.getRange(targetRow, messageColumn + 1).setValue(data.agentResponse || '');
+  sheet.getRange(targetRow, messageColumn + 2).setValue(data.sendTime || '');
+
+  const messageNumber = messageColumn === 5 ? 1 : 2;
+  return jsonResponse_({
+    status: 'success',
+    message: 'Data saved successfully',
+    row: targetRow,
+    messageNumber: messageNumber,
+    sessionId: sessionKey
+  });
+}
+
+function getActiveAssignmentsForSession_(rows, email, sessionId) {
+  const list = [];
+  for (let i = 0; i < rows.length; i++) {
+    const assignment = rowToAssignmentObject_(rows[i]);
+    const assignee = normalizeEmail_(assignment.assignee_email);
+    const status = String(assignment.status || '').toUpperCase();
+    const ownerSession = String(assignment.assigned_session_id || '');
+    if (assignee === email && ownerSession === sessionId && ACTIVE_ASSIGNMENT_STATUSES[status]) {
+      list.push(assignment);
+    }
+  }
+  list.sort(function(a, b) {
+    return String(a.created_at || '').localeCompare(String(b.created_at || ''));
+  });
+  return list;
+}
+
+function findAssignmentById_(rows, assignmentId) {
+  for (let i = 0; i < rows.length; i++) {
+    const assignment = rowToAssignmentObject_(rows[i]);
+    if (String(assignment.assignment_id || '') === String(assignmentId || '')) {
+      return { index: i, assignment: assignment };
+    }
+  }
+  return null;
+}
+
+function findPoolIndexBySendId_(poolRows, sendId) {
+  for (let i = 0; i < poolRows.length; i++) {
+    if (String(poolRows[i][0] || '') === String(sendId || '')) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+function findSessionIndex_(sessionsRows, sessionId) {
+  for (let i = 0; i < sessionsRows.length; i++) {
+    if (String(sessionsRows[i][0] || '') === String(sessionId || '')) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+function isSessionActive_(session) {
+  return session && String(session.state || '').toUpperCase() === 'ACTIVE';
+}
+
+function sessionToPayload_(session) {
+  const submitted = toInt_(session && session.submitted_count, 0);
+  const cap = Math.max(1, toInt_(session && session.cap, SESSION_CAP));
+  const state = String((session && session.state) || 'ACTIVE').toUpperCase();
+  return {
+    session_id: String((session && session.session_id) || ''),
+    state: state,
+    submitted_count: submitted,
+    cap: cap,
+    session_complete: state === 'COMPLETED' || submitted >= cap
+  };
+}
+
+function rowToSessionObject_(row) {
+  return {
+    session_id: String(row[0] || ''),
+    agent_email: normalizeEmail_(row[1]),
+    state: String(row[2] || 'ACTIVE').toUpperCase(),
+    submitted_count: toInt_(row[3], 0),
+    cap: Math.max(1, toInt_(row[4], SESSION_CAP)),
+    started_at: String(row[5] || ''),
+    last_heartbeat_at: String(row[6] || ''),
+    ended_at: String(row[7] || ''),
+    end_reason: String(row[8] || ''),
+    app_base: String(row[9] || '')
+  };
+}
+
+function sessionToRow_(session) {
+  return [
+    String(session.session_id || ''),
+    normalizeEmail_(session.agent_email),
+    String(session.state || 'ACTIVE').toUpperCase(),
+    toInt_(session.submitted_count, 0),
+    Math.max(1, toInt_(session.cap, SESSION_CAP)),
+    String(session.started_at || ''),
+    String(session.last_heartbeat_at || ''),
+    String(session.ended_at || ''),
+    String(session.end_reason || ''),
+    String(session.app_base || '')
+  ];
+}
+
+function appendHistoryRow_(historyRowsToAppend, event) {
+  historyRowsToAppend.push([
+    nowIso_(),
+    String(event.event_type || ''),
+    String(event.assignment_id || ''),
+    String(event.send_id || ''),
+    String(event.from_status || ''),
+    String(event.to_status || ''),
+    normalizeEmail_(event.agent_email),
+    String(event.session_id || ''),
+    String(event.detail || '')
+  ]);
+}
+
+function rowToAssignmentObject_(row) {
+  return {
+    send_id: String(row[0] || ''),
+    assignee_email: normalizeEmail_(row[1]),
+    status: String(row[2] || ''),
+    assignment_id: String(row[3] || ''),
+    created_at: String(row[4] || ''),
+    updated_at: String(row[5] || ''),
+    done_at: String(row[6] || ''),
+    editor_token: String(row[7] || ''),
+    viewer_token: String(row[8] || ''),
+    form_state_json: String(row[9] || ''),
+    internal_note: String(row[10] || ''),
+    assigned_session_id: String(row[11] || ''),
+    assigned_at: String(row[12] || '')
+  };
+}
+
+function assignmentToRow_(assignment) {
+  return [
+    String(assignment.send_id || ''),
+    normalizeEmail_(assignment.assignee_email),
+    String(assignment.status || ''),
+    String(assignment.assignment_id || ''),
+    String(assignment.created_at || ''),
+    String(assignment.updated_at || ''),
+    String(assignment.done_at || ''),
+    String(assignment.editor_token || ''),
+    String(assignment.viewer_token || ''),
+    String(assignment.form_state_json || ''),
+    String(assignment.internal_note || ''),
+    String(assignment.assigned_session_id || ''),
+    String(assignment.assigned_at || '')
+  ];
+}
+
+function tokenRoleForAssignment_(assignment, token) {
+  const rawToken = String(token || '');
+  if (!rawToken) return '';
+  if (rawToken === String(assignment.editor_token || '')) return 'editor';
+  if (rawToken === String(assignment.viewer_token || '')) return 'viewer';
+  return '';
+}
+
+function withScriptLock_(fn) {
+  const lock = LockService.getScriptLock();
+  lock.waitLock(30000);
+  try {
+    return fn();
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function getOrCreateSheet_(spreadsheet, sheetName, headers) {
+  let sheet = spreadsheet.getSheetByName(sheetName);
+  if (!sheet) {
+    sheet = spreadsheet.insertSheet(sheetName);
+  }
+
+  if (sheet.getLastRow() < 1) {
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+  } else {
+    const existingHeaders = sheet.getRange(1, 1, 1, headers.length).getValues()[0];
+    let mismatch = false;
+    for (let i = 0; i < headers.length; i++) {
+      if (String(existingHeaders[i] || '') !== String(headers[i])) {
+        mismatch = true;
+        break;
+      }
+    }
+    if (mismatch) {
+      sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+    }
+  }
+
+  return sheet;
+}
+
+function getSheetDataRows_(sheet, expectedCols) {
+  const lastRow = sheet.getLastRow();
+  if (lastRow < 2) return [];
+  return sheet.getRange(2, 1, lastRow - 1, expectedCols).getValues();
+}
+
+function generateOpaqueToken_() {
+  return Utilities.getUuid().replace(/-/g, '') + Utilities.getUuid().replace(/-/g, '');
+}
+
+function resolveAppBaseUrl_(appBaseUrl) {
+  const raw = String(appBaseUrl || '').trim();
+  if (raw) return raw;
+  return 'app.html';
+}
+
+function buildAssignmentUrl_(baseUrl, assignmentId, token, mode) {
+  if (!baseUrl) return '';
+  const hasQuery = baseUrl.indexOf('?') >= 0;
+  const params = [
+    'aid=' + encodeURIComponent(String(assignmentId || '')),
+    'token=' + encodeURIComponent(String(token || '')),
+    'mode=' + encodeURIComponent(String(mode || 'edit'))
+  ];
+  return baseUrl + (hasQuery ? '&' : '?') + params.join('&');
+}
+
+function getRequestAction_(e, body) {
+  const fromQuery = getParam_(e, 'action');
+  if (fromQuery) return fromQuery;
+  return body && body.action ? String(body.action) : '';
+}
+
+function getParam_(e, key) {
+  if (!e || !e.parameter) return '';
+  const raw = e.parameter[key];
+  return raw == null ? '' : String(raw);
+}
+
+function normalizeEmail_(email) {
+  return String(email || '').trim().toLowerCase();
+}
+
+function nowIso_() {
+  return new Date().toISOString();
+}
+
+function parseIsoMs_(value) {
+  const t = Date.parse(String(value || ''));
+  if (!isFinite(t)) return 0;
+  return t;
+}
+
+function toInt_(value, fallback) {
+  const n = Number(value);
+  if (!isFinite(n)) return fallback;
+  return Math.floor(n);
+}
+
+function stringifyMaybe_(value) {
+  if (value == null) return '';
+  if (typeof value === 'string') return value;
+  try {
+    return JSON.stringify(value);
+  } catch (_) {
+    return String(value);
+  }
+}
+
+function jsonResponse_(obj) {
+  return ContentService
+    .createTextOutput(JSON.stringify(obj || {}))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+function safeAppendRow(targetSheet, values) {
+  if (!targetSheet || !values) return;
+  const nextRow = targetSheet.getLastRow() + 1;
+  const numCols = values.length;
+  targetSheet.getRange(nextRow, 1, 1, numCols).setValues([values]);
+}
+
+function testFunction() {
+  const testData = {
+    timestampEST: '07/31/2025',
+    agentUsername: 'test_agent',
+    scenario: 'Scenario 1',
+    customerMessage: 'Test customer message',
+    agentResponse: 'Test agent response',
+    sessionId: '1_test_session_123',
+    sendTime: '02:30'
+  };
+
+  const testEvent = {
+    postData: {
+      contents: JSON.stringify(testData)
+    }
+  };
+
+  const result = doPost(testEvent);
+  console.log('Test result:', result.getContent());
+}

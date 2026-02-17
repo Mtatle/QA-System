@@ -1,0 +1,461 @@
+{
+  "version": 1,
+  "chunk": "chunk_0042",
+  "scenarios": {
+    "206": {
+      "agentName": "Robert",
+      "id": "019bccb4-5623-4a53-f000-00004a4c7e13",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://leesdiscountliquor.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://leesdiscountliquor.com",
+      "companyName": "Lee's Discount Liquor",
+      "notes": {
+        "important": [
+          "They offer local delivery and in store pick ups in Las Vegas!"
+        ],
+        "templates": [
+          "If customers want to buy items not on the site and pay online - use the temp!"
+        ],
+        "dos_and_donts": [
+          "For holiday working hours check their IG page"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "subscriber",
+          "message_text": "I am trying to place a pickup order for the wendover store but it won't let me choose a time?",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Site won't work - All brands\"; last updated: 2025-07-16 17:54:02.115",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Screenshot 2 - All brands\"; last updated: 2023-10-10 18:10:03.294",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bccb4-5623-4a53-f000-00004a4c7e13",
+          "message_text": "Lee's Discount Liquor: This is Robert at Lee's Discount Liquor. I'm sorry for the inconvenience. Can you please send me a screenshot of what you're seeing on your end? I'll be more than happy to look into this for you!\n\nIn the meantime, I might suggest trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes.",
+          "message_media": []
+        }
+      ]
+    },
+    "207": {
+      "agentName": "Sarah",
+      "id": "019bf67b-7d66-4fda-f000-00005b7e95c0",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://statelinetack.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.statelinetack.com/products/silver-royal-williston-wade-saddle?variant=43798062399625",
+            "item": "Silver Royal Williston Wade Saddle - Roughout / 17\"",
+            "timeAgo": "2026-01-25"
+          },
+          {
+            "link": "https://www.statelinetack.com/products/silver-royal-williston-wade-saddle?variant=43798062399625",
+            "item": "Silver Royal Williston Wade Saddle - Roughout / 16\"",
+            "timeAgo": "2026-01-25"
+          },
+          {
+            "link": "https://www.statelinetack.com/products/silver-royal-williston-wade-saddle?variant=43798062366857",
+            "item": "Silver Royal Williston Wade Saddle - Roughout / 16\"",
+            "timeAgo": "2026-01-25"
+          },
+          {
+            "link": "https://www.statelinetack.com/products/silver-royal-williston-wade-saddle?variant=43798062366857",
+            "item": "Silver Royal Williston Wade Saddle - Roughout / 10\"",
+            "timeAgo": "2026-01-25"
+          },
+          {
+            "link": "https://www.statelinetack.com/products/silver-royal-williston-wade-saddle?utm_campaign=Concierge&utm_medium=sms&utm_source=attentive&externalId=uglqB",
+            "item": "Silver Royal Williston Wade Saddle - Roughout / 10\"",
+            "timeAgo": "2026-01-25"
+          }
+        ]
+      },
+      "companyWebsite": "https://statelinetack.com",
+      "companyName": "State Line Tack",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Some items aren’t eligible for discounts due to manufacturers’ policy, add to cart to double-check!"
+        ]
+      },
+      "messageTone": "Casual",
+      "blocklisted_words": [],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: End the year with a bang! Enjoy up to 30% OFF + 5X REWARDS points today! Don't miss out on our exciting offers! slt.attn.tv/afClVuDmf20Y ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Kick the new year off with savings! Get up to 30% OFF off over $49 & 2X REWARDS points today! slt.attn.tv/aI6P-EuvA8Hj Some exclusions apply.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Attention VIP Rewards members! Get early access to our Winter CLEARANCE up to 85% OFF! slt.attn.tv/aE9DBZUaK-pM Act fast supplies are limited!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Ooops! We had an issue but its fixed! Last shot at Winter CLEARANCE with up to 85% OFF top brands! slt.attn.tv/a9wfUBKqcRVi Limited supplies! ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Stay warm with these hot deals! Shop our current promotions with up to 60% OFF top brands & best sellers! slt.attn.tv/aCkM2FVK83WK ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: HISTORIC Winter Storm is coming get ready with our top winter gear up to 65% OFF & 5X Rewards points!slt.attn.tv/a0Na206jnID0 Text Stop to Stop",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Hey, this is Sarah. Thanks for checking out our site! https://slt.attn.tv/aRGM68c8X8Rz\n\nAre you looking for anything in particular today?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Im trying to find a budget friendly western saddle but the  horse i have is a draft mix 16hh horse.",
+          "message_media": [
+            "[\"https://attentive-files.s3.amazonaws.com/receive-event-media/1769364170430_739672df-90be-4a92-a547-31a35b9b8cc9-1.jpeg\"]"
+          ]
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Im not sure where to really start because he's wide too",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf657-d952-46cf-f000-00005b7e95c0",
+          "message_text": "State Line Tack: I appreciate your interest, and thanks for sharing the photo. What do you think about these options? \n- https://slt.attn.tv/aF1x0Ot-FuTq\n- https://slt.attn.tv/a9xr0ICDO5jS\n- https://slt.attn.tv/aUn2r_1U3qhF",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I need a 16 inch seat. Im coming from the english world and used a 17.5\"",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "For my HDR saddle",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf668-e0be-4241-f000-00005b7e95c0",
+          "message_text": "State Line Tack: For a 16-inch seat, consider the Silver Royal Williston Wade Saddle. It's suitable for wider horses. Check it out here: https://slt.attn.tv/aYkMDRluYux7/",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I did the conversion right? 17.5 english saddle would be equal to a 16 or 17 western saddle",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf66a-6ce5-4619-f000-00005b7e95c0",
+          "message_text": "State Line Tack: Yes, a 17.5\" English saddle generally converts to a 16\" or 17\" Western saddle. Always try the saddle for the best fit.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Im like 6' tall and just over 200lb so im not sure if a 16 or 17 would be best.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Should I size up to the 17?",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf66b-f3a2-4379-f000-00005b7e95c0",
+          "message_text": "State Line Tack: For your height and weight, a 17\" Western saddle might offer more comfort and better fit. Consider trying both sizes if possible.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "If one doesn't work out can I return it?",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf66f-e745-4605-f000-00005b7e95c0",
+          "message_text": "State Line Tack: If you are not completely satisfied with an item, State Line Tack's return policy allows you to return it within 30 days from the date received. You can check out our detailed return policy here: https://slt.attn.tv/a1nqbNCCIZod ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Thank you. There was like a 19.99 extra charge at checkout for returns",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf672-0592-49f5-f000-00005b7e95c0",
+          "message_text": "State Line Tack: Thanks for letting me know, and I'm sorry about that. Please know that items may be subject to a 10% handling and restocking fee. In case you'll need to initiate a return, please call us at 1-888-809-0751 to obtain a Return Authorization Number (RA#) and shipping instructions.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Should I pay that 20 dollar fee or no",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf67b-7d66-4fda-f000-00005b7e95c0",
+          "message_text": "State Line Tack: Can you please send a screenshot of the extra charge you're seeing at checkout? I'm happy to take a look and check. ",
+          "message_media": []
+        }
+      ]
+    },
+    "208": {
+      "agentName": "Charlotte",
+      "id": "019bb909-fe30-41fa-f000-0000775d0e5a",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://us.elemis.com/",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://us.elemis.com/",
+      "companyName": "ELEMIS",
+      "notes": {
+        "tone": [
+          "Let the customer have the last word!"
+        ],
+        "dos_and_donts": [
+          "Don't reply to messages like \"ok\", \"thanks\", etc"
+        ],
+        "promo_and_exclusions": [
+          "Welcome Code:",
+          "➜ Cannot be used for new products!",
+          "➜ Recommend to cx to take advantage of the Gift With Purchase (found on the Offers page) with new products so they can get a deal",
+          "Check their offers page for up-to-date info on codes & offers",
+          "If cx asks about a code that isn't on this page, it's likely expired!",
+          "Offers page: https://us.elemis.com/offers"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "ELEMIS: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "ELEMIS: Fancy seeing you here, enjoy 15% off your first purchase! \n\nAnd now that we text, you'll get exclusive perks, early access to new launches & more sent straight to your phone.\n\nShop now using code: MBL913NI >> https://elemis.attn.tv/aUlpONbau7ge .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "ELEMIS: Hi! Charlotte here- don't miss out on the items in your ELEMIS cart!\n\nText back with any questions you may have! \n\nComplete your purchase now >> elemis.attn.tv/aC_mafYToByz .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Hi, is everything 30% off right now?",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb909-fe30-41fa-f000-0000775d0e5a",
+          "message_text": "ELEMIS: Thank you so much for your interest. Unfortunately, we don't have a sitewide sale. Our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! Feel free to use your code MBL913NI for 15% off, except for new products.",
+          "message_media": []
+        }
+      ]
+    },
+    "209": {
+      "agentName": "Sarah",
+      "id": "019bd383-123c-4dfa-f000-0000f45e1680",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://fragrancenet.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://fragrancenet.com",
+      "companyName": "FragranceNet",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Don't use emojis/special characters"
+        ],
+        "templates": [
+          "For issues relating to free shipping with no minimum purchase, use \"FSB\" shortcut",
+          "If a product is not available on their website, use \"PNA\" shortcut"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from FragranceNet.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/dkv",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Welcome to the world of elevated fragrance! Enjoy 30% OFF sitewide to start your journey: https://fragrancenet.attn.tv/aVc4AoXHKrBT ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nDiscover your new scent!\n\nShop now: https://fragrancenet.attn.tv/a7oWvk5Yd-2x .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Your 1st order is in! You can still earn 5 points per $1 spent when you sign up for Purpl Rewards now: https://fragrancenet.attn.tv/avebJbJjuHuK .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "How can i track my order?",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Order status / tracking\"; last updated: 2024-05-06 17:15:10.288",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bd383-123c-4dfa-f000-0000f45e1680",
+          "message_text": "FragranceNet: Happy to help! You can use our convenient online tool to see the latest updates on your order: https://fragrancenet.attn.tv/a7JCNadMZM6J",
+          "message_media": []
+        }
+      ]
+    },
+    "210": {
+      "agentName": "Grace",
+      "id": "019be720-75bd-46b9-f000-000012cdffbd",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://stonewallkitchen.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://stonewallkitchen.com",
+      "companyName": "Stonewall Kitchen",
+      "notes": {
+        "dos_and_donts": [
+          "Don't send links from the UI directly!",
+          "➜ Open their website https://www.stonewallkitchen.com/ and send links from there!"
+        ],
+        "promo_and_exclusions": [
+          "Active codes and promotions are online only and can't be redeemed at retail locations."
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Stonewall Kitchen: Save up to 50% on 150+ markdowns! Hurry, shop our online Barn Sale & get your favorites before they're gone: swk.attn.tv/afgj9vMVPna5 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Stonewall Kitchen: Don't wait! Get up to 50% OFF 150+ markdowns in our online Barn Sale while supplies last: swk.attn.tv/au9KjnzVprak ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Stonewall Kitchen: Going, going ... almost gone! Get up to 50% OFF 150+ markdowns in our online Barn Sale: swk.attn.tv/aK5I10xOkrd8 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Stonewall Kitchen: Last call! Get up to 50% OFF 150+ markdowns in our online Barn Sale (once they're gone, they're gone!): swk.attn.tv/a1nAdfQjaHiw ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Stonewall Kitchen: Start your year off right with our delicious jams, crafted with less sugar and packed with fruity flavor! Perfect for toast, yogurt, or oatmeal. Treat yourself today! swk.attn.tv/azx04T7xIjeG ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Stonewall Kitchen: New year, new products! Say hello to our expertly crafted Spicy Fig Jam & Caesar Dressing: swk.attn.tv/a8EKMKifAzli",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Stonewall Kitchen: We miss you! Have you seen our new products? Get free shipping on orders $75+ with FC-W6LLGS9SDHN3: swk.attn.tv/aq7GPPeDdosN",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "If you offered free shipping, I would buy something.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be706-049a-4ba4-f000-000012cdffbd",
+          "message_text": "Stonewall Kitchen: Happy to help! You can get free shipping with the code FC-W6LLGS9SDHN3 on your $75 or more order. You may also want to check out our new items here: https://swk.attn.tv/a30r2kTEomVg Let me know how that goes! ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I would like free shipping without a dollar figure for my order order placed on it. Such as free shipping no matter how much your order is.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Do you have a better deal? - All brands\"; last updated: 2023-10-10 16:38:01.496",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be720-75bd-46b9-f000-000012cdffbd",
+          "message_text": "Stonewall Kitchen: Thank you for sharing this with me. I'll forward this to my team for future consideration. This is the best SMS deal we have at the moment. I hope this helps you decide to go for it, and definitely keep an eye out for upcoming offers!",
+          "message_media": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,518 @@
+{
+  "version": 1,
+  "chunk": "chunk_0022",
+  "scenarios": {
+    "106": {
+      "agentName": "Pete",
+      "id": "019be2a3-ccc0-469e-f000-0000f54d51d7",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://banded.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://banded.com",
+      "companyName": "Banded",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!"
+        ],
+        "promo_and_exclusions": [
+          "IF cx asks for code share SAVE15, it will work on all non-sale items"
+        ]
+      },
+      "messageTone": "Casual",
+      "blocklisted_words": [],
+      "escalation_preferences": [
+        "Discount code errors"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Banded: Welcome to Banded! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Banded: Hey this is Pete, how can I help you?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I need to exchange an item.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "(attn) Hey, I need help with something:",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"How do I start a return?\"; last updated: 2025-12-18 16:23:04.154",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Return policy\"; last updated: 2023-12-02 12:04:32.103",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be2a3-ccc0-469e-f000-0000f54d51d7",
+          "message_text": "Banded: I'm sorry to hear that! You can check out our detailed return/exchange policy here: https://banded.attn.tv/ai5P9Z2CBy1i/ You can start the process here: https://banded.attn.tv/antM3yfP_OLD/#/ ",
+          "message_media": []
+        }
+      ]
+    },
+    "107": {
+      "agentName": "Avery",
+      "id": "019be37e-3c77-43db-f000-0000d365a565",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://snipesusa.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://snipesusa.com",
+      "companyName": "Snipes",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS immediately for post-purchase issues",
+          "Send to CS for payment processing issues"
+        ],
+        "tone": [
+          "Don't use the term restock",
+          "Don't tell customers that we'll be restocking",
+          "Don't respond to blank messages",
+          "Don't use formal language",
+          "Close the conversation when a customer responds 'no'"
+        ],
+        "templates": [
+          "If a cx reaches out regarding the Early Access event, use EAE shortcut",
+          "For cx reaching out in Spanish use SSC shortcut",
+          "For checkout issues use the \"Check out Issues\" temp",
+          "For store item availability, use SPA shortcut",
+          "If cx's email doesn't work for early access, use EEA shortcut"
+        ],
+        "dos_and_donts": [
+          "They occasionally run sign-up campaigns where cx text certain keywords (“releases,” “early access”) to join a list. If a customer sends a similar keyword:",
+          "➜ Check the website banner or landing page to confirm if it's a current keyword trigger",
+          "➜ If confirmed, close the convo, if not you can respond",
+          "All clothing is true to size unless otherwise stated on the product page",
+          "You can use these sizing charts for reference (for internal use only): https://docs.google.com/spreadsheets/d/1kmra_vOwCJuHoAx9D4L4Qx95rxafHcrqn-ZGutfzLgg/edit?usp=sharing",
+          "🅿️ If customers say they want to purchase in store - encourage them to buy online & pick up in-store",
+          "For store info q's (phone number/additional info) - use the store locator with your VPN turned on!"
+        ],
+        "drive_to_purchase": [
+          "🅿️ If customers are looking for an outfit recommendation/item pairing - direct them to the \"shop the look\" section on each product page or use the LK shortcut"
+        ]
+      },
+      "messageTone": "Formal",
+      "blocklisted_words": [
+        "restock"
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Welcome to SNIPES! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Welcome to the crew! Download the app and join RESERVE for $10 OFF your first purchase over $75. Download here: snipes.attn.tv/aePZWfAzKiFn .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Don't forget to save our contact to get exclusive updates!",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Where's my code",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be37c-1bca-485a-f000-0000d365a565",
+          "message_text": "SNIPES: Have you tried checking if you've received an email about it in your spam or promo folders as it sometimes ends up there?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Yes.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Tells me to download the app. I have. Still no code. 😔",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I got the app. Made an account. Signed up for texts. All of it",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be37e-3c77-43db-f000-0000d365a565",
+          "message_text": "SNIPES: To get your $10 off, please download the SNIPES app and join RESERVE. Once you sign up through the app, your code will be available for your first purchase of $75 or more. You can download here: https://snipes.attn.tv/aPrxIvC2xLTv",
+          "message_media": []
+        }
+      ]
+    },
+    "108": {
+      "agentName": "Ava",
+      "id": "019bf567-3141-4e7a-f000-0000f5d9bf51",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://brilliantearth.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://brilliantearth.com",
+      "companyName": "Brilliant Earth",
+      "notes": {
+        "send_to_cs": [
+          "Inquiries regarding orders",
+          "Shipping inquiries on a current order",
+          "Post-purchase issues",
+          "For product or general inquiries you can't find the answer to, use PGI shortcut"
+        ],
+        "escalate": [
+          "No escalations for this client, send everything to CS"
+        ],
+        "tone": [
+          "Don't use the word \"unfortunately\" to discuss our appointment structure",
+          "Don't use the word \"best\" to reference a product (e.g., best ring, etc.)"
+        ],
+        "templates": [
+          "If cx are looking for an engagement ring and don't provide specifics, use LER shortcut"
+        ],
+        "dos_and_donts": [
+          "If the customer responds incorrectly to the journey, don't send jny temp, recommend items based on their selection instead",
+          "Cx can create their own engagement ring on the webiste by choosing a setting, stone and size",
+          "Cx can customize rings by working with designers who will use their ideas, drawings, images to create the ring they want",
+          "Don't disclose the locations of their labs/production facilities"
+        ],
+        "drive_to_purchase": [
+          "**Be MORE SALESY, if the customer is showing intent to purchase then:**",
+          "**➜ Ask open-ended general questions such as style & material**",
+          "➜ After asking open-ended questions, transition to specific questions such as center stone, etc.",
+          "➜ If the customer liked our recommendation, push for the sale by asking about payment options or when they hope to have the item"
+        ],
+        "promo_and_exclusions": [
+          "Please see here for current offer details: https://www.brilliantearth.com/promo-codes-and-offers/",
+          "Codes can be used in-store"
+        ]
+      },
+      "messageTone": "Casual",
+      "blocklisted_words": [
+        "bestsellers",
+        "sale",
+        "sales",
+        "budget"
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns",
+        "For questions regarding order, service, shipping questions on a current order, post-purchase will go to cssupport@brilliantearth.com",
+        "For product or general inquiry questions, please contact info@brilliantearth.com"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Brilliant Earth.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: Welcome to Brilliant Earth! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: Hi! I'm Ava, your personal jewelry concierge. Do you have any questions I can help answer? brilliantearth.attn.tv/a9mYJiXBAXIT .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Do u all do payment",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Do you offer financing or layaway?\"; last updated: 2025-07-21 16:52:58.141",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf567-3141-4e7a-f000-0000f5d9bf51",
+          "message_text": "Brilliant Earth: Thanks for your interest! I'm happy to help clarify. If you're asking about payment methods, we accept all major US, Canadian, UK, and Australian credit cards, bank wire payments, Wells Fargo Financing, layaway, Affirm, and PayPal. If you're asking about financing options, for our US customers we offer Affirm financing with rates from as low as 0% APR with approved credit, as well as Wells Fargo special 12-month financing with approved credit. We also have a layaway option that lets you pay with 20% down and monthly installments. You can learn more about all our flexible payment options here: https://brilliantearth.attn.tv/a_Y1fT53eQ6I",
+          "message_media": []
+        }
+      ]
+    },
+    "109": {
+      "agentName": "Sam",
+      "id": "019bccc6-46fc-4203-f000-0000f46bd077",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://dreamcloudsleep.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.dreamcloudsleep.com/mattresses/memory-foam-mattress",
+            "item": "DreamCloud Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-17"
+          },
+          {
+            "link": "https://www.dreamcloudsleep.com/mattress?utm_campaign=B-(D)_TH-(BAU)_T-(flow)_ST-()_N-(welcome)_S-()_CT-(nonpurchasers)_SG-()_Nu-(1)_O-(percentoff)_CR-()_TE-(wel010526)_V-(1)_D-(010526)&utm_medium=sms&utm_source=Attentive&externalId=00jjp",
+            "item": "DreamCloud Classic Hybrid Mattress",
+            "timeAgo": "2026-01-17"
+          },
+          {
+            "link": "https://www.dreamcloudsleep.com/mattress",
+            "item": "DreamCloud Classic Hybrid Mattress",
+            "timeAgo": "2026-01-17"
+          },
+          {
+            "link": "https://www.dreamcloudsleep.com/mattress-bundles/adjustable-frame-bundle",
+            "item": "DreamCloud Classic Hybrid Mattress",
+            "timeAgo": "2026-01-17"
+          }
+        ]
+      },
+      "companyWebsite": "https://dreamcloudsleep.com",
+      "companyName": "DreamCloud",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS, use ESC shortcut",
+          "Use escalation template if customer mentions any of the following:",
+          "➜ Exchanges or returns",
+          "➜ Premuim In - Home Setup Questions",
+          "➜ Discount code errors",
+          "➜ Recalls",
+          "➜ Better Business Bureau (BBB)",
+          "➜ Fiberglass",
+          "➜ Lawyers/Lawsuits",
+          "➜ Class Action",
+          "➜ Post Purchase Issues"
+        ],
+        "tone": [
+          "Let the customer have the last word"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [
+        "organic"
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Discount code errors",
+        "Shipping questions",
+        "Recall",
+        "BBB",
+        "fiberglass",
+        "lawyer",
+        "class action"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "DreamCloud: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from DreamCloud.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "DreamCloud: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (833) 237-3269.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "DreamCloud: You're in (& your deal is here)!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "DreamCloud: Upgrade your old mattress for less. Save up to 60% + FREE bedding bundle worth $599. \n\nClaim your savings:\ndreamcloud.attn.tv/aDFKY9iobUEP .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "DreamCloud: Hello, this is Sam! We noticed you left the DreamCloud Premier Memory Foam Mattress in your cart! You can save up to 60%. Complete your purchase now to lock in these savings: dreamcloud.attn.tv/asFUVpQe8XrJ \n\nIf you have questions before you check out, text me back!\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I'm comparing you and nectar and the nectar bundle of memory foam and adjusting base is a better value and adds more features",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bccb0-4375-4911-f000-0000f46bd077",
+          "message_text": "DreamCloud: DreamCloud offers luxurious hybrid mattresses with pressure-relieving memory foam and supportive coils. For more details, visit https://dreamcloud.attn.tv/aiV_dbTbMrmo.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I don't want a hybrid I want memory foam.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bccb1-1c69-4dbd-f000-0000f46bd077",
+          "message_text": "DreamCloud: Our DreamCloud Premier Memory Foam Mattress offers premium comfort and support. Check it out here: https://dreamcloud.attn.tv/a5TDJv0zoyNj.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Can you provide an additional $200 off my in cart price?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "If you can reduce the price by another $200 for the items in my cart I'll buy it",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bccbf-2209-48df-f000-0000f46bd077",
+          "message_text": "DreamCloud: Thanks for letting me know. Here's a code for you to use: DCLABORDAY25 to get $599 off, as shown here - https://dreamcloud.attn.tv/a3U1Q6V59GJ9",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "That coupon increased my price",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bccc6-46fc-4203-f000-0000f46bd077",
+          "message_text": "DreamCloud: I'm sorry to hear that. Can you please send a screenshot of your cart so I can check?",
+          "message_media": []
+        }
+      ]
+    },
+    "110": {
+      "agentName": "Jamie",
+      "id": "019be1f8-4f1e-476a-f000-0000f52de00e",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://capillus.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.capillus.com/collections/holiday-event/products/capillus-spectrum",
+            "item": "Capillus Spectrum",
+            "timeAgo": "2026-01-21"
+          },
+          {
+            "link": "https://www.capillus.com/products/capillus-spectrum?variant=42742491807883&_gsid=s3a73D1omgEb&utm_source=chatgpt.com",
+            "item": "Capillus Spectrum",
+            "timeAgo": "2026-01-21"
+          },
+          {
+            "link": "https://www.capillus.com/products/capillus-spectrum?variant=42742491807883&_gsid=s3a73D1omgEb&utm_source=chatgpt.com",
+            "item": "Capillus Spectrum",
+            "timeAgo": "2026-01-21"
+          }
+        ]
+      },
+      "companyWebsite": "https://capillus.com",
+      "companyName": "Capillus",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS if a subscriber mentions a medical issue or an adverse effect from using products from this brand"
+        ],
+        "escalate": [
+          "ESC immediately discount code issues"
+        ],
+        "dos_and_donts": [
+          "Do not share any medical advice or guidance to subscribers outside of recommending appropriate products or directing them to purchase the right item",
+          "Do not comment on their medical situations",
+          "Close the covo if the customer says they're receiving too many messages/we're texting them too often - don't send TMT"
+        ],
+        "drive_to_purchase": [
+          "If cx says they will be ordering soon, offer to schedule a call if they need further assistance with their purchase (shortcut OS) - do not upsell"
+        ],
+        "tone": [
+          "Don't use the term \"hang tight\", just say that you've passed the information to the team",
+          "Close the conversation once the client takes over"
+        ],
+        "templates": [
+          "If cx already purchased, use specific TFP template"
+        ],
+        "promo_and_exclusions": [
+          "We do not offer any discounts for the SPECTRUM"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [
+        "Curallux",
+        "hang"
+      ],
+      "escalation_preferences": [
+        "Discount code errors",
+        "Exchanges and returns"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Capillus.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Welcome to Capillus! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Welcome to Capillus 👋\nYou're officially in. Discover science-backed red light therapy designed for hair regrowth, recovery, and everyday wellness. Explore here: capillus.attn.tv/atdIRFAn8y_a \n*Up to 30% OFF. Discount is applied on site. No code needed. \n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Don't forget to save our contact to get exclusive updates!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hey there, don't forget to complete your purchase of Capillus Spectrum before it's gone! https://capillus.attn.tv/abJREDKdfo09 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hey there, this is Jamie! We saw you checking out Capillus Spectrum! \n\nDon't wait, transform your confidence back today: capillus.attn.tv/ac326v-4EVis .\n\nText back if you need assistance.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Hi Jamie! Thanks so much for reaching out. I’m really interested in the Capillus Spectrum, but the price is what’s holding me back right now. If there’s any coupon code or additional discount available, that might make it doable for me. I’d really appreciate it!",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be1f8-4f1e-476a-f000-0000f52de00e",
+          "message_text": "Capillus: Thanks for reaching out! We currently don't offer any discounts for the SPECTRUM, but you may check out this link: https://capillus.attn.tv/aO6tkKE4hNrL Please let me know how that goes. I'm just one click away!",
+          "message_media": []
+        }
+      ]
+    }
+  }
+}

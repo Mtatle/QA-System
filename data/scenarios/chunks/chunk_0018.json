@@ -1,0 +1,870 @@
+{
+  "version": 1,
+  "chunk": "chunk_0018",
+  "scenarios": {
+    "86": {
+      "agentName": "Rebecca",
+      "id": "019bb288-98bd-4fdb-f000-0000f3aab2bb",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://julievos.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://julievos.com",
+      "companyName": "Julie Vos",
+      "notes": {
+        "escalate": [
+          "When ESC during the weekend/late Friday use the \"Weekend escalation template\" template"
+        ],
+        "tone": [
+          "Don't use the term \"customer service team\", use \"customer care\" instead"
+        ],
+        "dos_and_donts": [
+          "Do not direct cx to contact the carrier",
+          "Do not provide customers with dates for restock before checking with our team."
+        ],
+        "promo_and_exclusions": [
+          "They have only 2 sales per year (June/November) - when those end the sale items are removed from the site"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Julie Vos: Welcome to Julie Vos! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/N9l",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Julie Vos: Hey this is Rebecca , how can I help you?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Does this ring come in size 9",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I need a 9.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Julie Vos: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nIn the meantime, check out our newest arrivals > https://julievos.attn.tv/aoRs1_9BU_Gr .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Does the ring come in a size 9",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Customer wants an item we don't offer\"; last updated: 2025-08-19 18:29:49.178",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb288-98bd-4fdb-f000-0000f3aab2bb",
+          "message_text": "Julie Vos: Are you referring to the Windsor Trio Ring? - https://julievos.attn.tv/aKCdj52Sba6L If so, I'm afraid we don't carry that size at the moment, but I'll definitely pass this along to the team to consider. If you have any more questions, feel free to let me know. For now, what do you think about this instead? - https://julievos.attn.tv/alZKNzbSnALC",
+          "message_media": []
+        }
+      ]
+    },
+    "87": {
+      "agentName": "Sarah",
+      "id": "019bb93a-d4f5-4f33-f000-000069d14a49",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://missionmercantile.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://missionmercantile.com",
+      "companyName": "Mission Mercantile",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for repair/customization requests"
+        ],
+        "escalate": [
+          "If a cx had issues after a sale is over, ESC to see if they can honor the deal",
+          "ESC immediately, if the customer asks when an order will ship",
+          "If a cx has a request for urgent delivery ESC and they'll prioritize it",
+          "ESC if a cx is having trouble placing an order",
+          "If a cx asks for an update regarding an email they sent, ask for their email address, then ESC",
+          "ESC immediately if a cx is very upset",
+          "ESC if cx's have issues applying both loyalty codes"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "templates": [
+          "For Ellington repair:",
+          "➜ Ask which item the customer has",
+          "➜ If it's an Ellington item from before 2016, use ECR shortcut"
+        ],
+        "dos_and_donts": [
+          "For stock questions, check the product page to look for possible back-in-stock dates",
+          "If cx calls after hours, advise them to leave a voicemail and the team will be sure to call back"
+        ],
+        "drive_to_purchase": [
+          "When recommending a pre-order item - set proper expectations and mention the date it'll be back in stock"
+        ],
+        "promo_and_exclusions": [
+          "They have a loyalty program where cx's can use code MMLEGACY20 & FAITHFULSHIPPING at the same time to receive 20% off plus free shipping. The MMLEGACY20 code only applies to cxs who have spent $2000+",
+          "➜ These are the only 2 codes that can be stacked, and they can only be stacked with each other and no other code",
+          "Welcome code works on discounted/sale items",
+          "DO NOT share the WELCOME15 code with cx's, it's no longer valid"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Mission Mercantile: Welcome to Mission Mercantile! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Mission Mercantile: Hey this is Sarah, how can I help you?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "As I stated I need a leather duffle for march 1st guaranteed to be approved for a carry on do you have any",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb8e1-4e62-41b6-f000-000069d14a49",
+          "message_text": "Mission Mercantile: Thanks for your interest! I'll be happy to check on this with my team! As soon as I hear back, I will send you a message right away! ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Mission Mercantile: The Theodore Weekender will ship around Jan 23rd! https://www.missionmercantile.com/products/theodore-leather-weekender-duffle-bag The Benjamin Duffle will ship around February 6th! https://www.missionmercantile.com/products/benjamin-leather-duffle-bag If you prefer rolling luggage, we also have the Theodore Wheeled Carry-On, which will ship February 20th. https://www.missionmercantile.com/products/theodore-leather-wheeled-rolling-carry-on-duffle-bag. ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Ok because my flight schedule I leave march 1st I have to get it before then",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb929-bf66-4eda-f000-000069d14a49",
+          "message_text": "Mission Mercantile: What do you think of the options I shared in my previous message? It looks like the shipping timelines will work for your flight schedule. Please note that we customize and ship in-stock products within 24-48 hours. Once shipped, it takes 1-5 days domestically. Expedited shipping is available, for an upcharge.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I think I would like to order the Theodore weekender today",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I'd like to personalize it with an NLG also",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb936-5684-43fc-f000-000069d14a49",
+          "message_text": "Mission Mercantile: Great choice! You can place your order here: https://missionmercantile.attn.tv/aqXzl-O_iY6O. Please click the \"Add Personalization\" button to personalize your order. Let me know how it goes.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I already ordered it thank you",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb937-dad8-49b5-f000-000069d14a49",
+          "message_text": "Mission Mercantile: That's great! Thank you for shopping with us, and I hope you enjoy your new purchase. Feel free to reach out anytime if you have questions! ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I ordered it but forgot to personalize it what do I do now",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Can I personalize / customize any product, even if it doesn't show the option to do that?\"; last updated: 2022-07-25 13:52:51.248",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb93a-d4f5-4f33-f000-000069d14a49",
+          "message_text": "Mission Mercantile: Sorry to hear that. You can reach out to shopkeeper@missionmercantile or 210-504-6698, and Lori will check if the personalization can be added to your purchase. ",
+          "message_media": []
+        }
+      ]
+    },
+    "88": {
+      "agentName": "Taylor",
+      "id": "019bc710-2622-421f-f000-0000d9f4ee5b",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://birkenstock.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.birkenstock.com/us/arizona-bs-synthetik/arizonabs-birkoflorptint-0-S004930-eva-w_12173.html",
+            "item": "Buy Arizona BS Synthetik for USD 117.95 | Birkenstock US",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/tokio-suede-leather/tokio-265588-suedeleather-0-eva-u_11945.html?gad_source=1&gad_campaignid=9432284340&gclid=Cj0KCQiAsNPKBhCqARIsACm01fQTckcgiPseTATW8b1lSFU3_VlcUYMGPVGyAk3GCfVwF-58jAV67GsaArfQEALw_wcB",
+            "item": "Buy Tokio Suede Leather for USD 164.95 | Birkenstock US",
+            "timeAgo": "2025-12-31"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/milano-shearling-suede-leather%2Ffur/milanosuedeshearling-shearling-suedeleatherfur-0-eva-w_491.html",
+            "item": "Buy Milano Shearling Suede Leather/Fur for USD 170.00 | Birkenstock US",
+            "timeAgo": "2025-12-31"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/sibyl-ring-buckle-nubuck-leather-embossed/sibyl-255680-embossedleather-0-tpu-w_595.html",
+            "item": "Buy Sibyl Embossed Leather Burnt Orange for USD 150.00 | Birkenstock US",
+            "timeAgo": "2025-12-31"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/gizeh-nubuk-leather/gizeh-nubuk-nubuckleather-0-eva-w_595.html",
+            "item": "Buy Gizeh Nubuk Leather for USD 139.95 | Birkenstock US",
+            "timeAgo": "2025-12-31"
+          }
+        ]
+      },
+      "companyWebsite": "https://birkenstock.com",
+      "companyName": "Birkenstock",
+      "notes": {
+        "escalate": [
+          "For all pre-purchase and post purchase ESC always include the customers full name in the notes",
+          "Don't ESC if they get an error with the fs code while logged in"
+        ],
+        "templates": [
+          "For free shipping retroactive code requests, use SRP shortcut",
+          "For holiday/extended returns - use the template"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over",
+          "🤖 If someone sends a product category, link them to the category and ask if they are looking for something specific"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [
+        "Shipping codes"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Send a gift certificate. They choose their style, you win last-minute gifting. Purchase here: birkenstock.attn.tv/aHeUZn5ROJPZ .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Hey Maria A! Thanks for stopping by 😊\n\nShop now for classic comfort & quality: https://birkenstock.attn.tv/a9D-NfanzTjW .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: A last-minute gift they'll love just as much. Send them a gift certificate: birkenstock.attn.tv/a0JBACQGXifZ .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Imagine your day with the Boston Shearling Nubuck Leather Clog—easy comfort awaits every step you take.  \n\nHurry! 42 people added this to their cart.  \n\nShop now: https://birkenstock.attn.tv/aj8EFI6qMcEu .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Classics crafted for your holiday traditions. Shop warm pairs to support every ribbon tied & cookie baked: birkenstock.attn.tv/aDzdYDH8IC5o .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Soft, snowy winter whites. Shop the color of the season on clogs, sandals & shoes: birkenstock.attn.tv/aW5R0qMpb0QC .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Imagine slipping your feet into the Zermatt Premium Suede for cozy comfort at home or outdoors. 🧦\n\n347 people recently added this to their cart.\n\nShop now: https://birkenstock.attn.tv/a_9XN6sqrpRm .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Glittery sandals that'll make it to midnight. Shop Shiny Glitter in Silver & Faded Purple: birkenstock.attn.tv/amqR0M_UiRsx .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Wear your party sandals to NYE. \nShop Shiny Glitter in Silver & Faded Purple: birkenstock.attn.tv/aLqg43pAR8KJ .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Start next year on a high note. Shop wedges with a fresh outlook on style & comfort: birkenstock.attn.tv/ahi4KlM0jylu .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Step into lasting comfort with our Zermatt Premium Suede, made for cozy days indoors and sturdy walks outside. \n\nEnjoy free returns for 30 days except for Final Sale items. \n\nFind your new favorite pair here: https://birkenstock.attn.tv/aS8bYnU1Uft5 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Ski-lodge cozy. Shearling slippers & slides for mountain getaways & après moments. Shop now: birkenstock.attn.tv/ak5mD7mW9nKL .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Your ticket to après-ski cozy. Slip into Zermatt Shearling slippers & plush teddy slides: birkenstock.attn.tv/asH_Fxiy0zXl .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Step into all-day comfort with our Tokio Suede Clog, featuring a contoured cork-latex footbed and adjustable leather straps for support.\n\nEnjoy free returns for 30 days, except for Final Sale items.\n\nFind your new favorite pair here: https://birkenstock.attn.tv/aqA6eHZydFY5 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: The year's best, ready for what's next. Shop Best of 2025, like Kyoto, clogs & Mary Janes: birkenstock.attn.tv/acTj6GcTeXZB .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: New Last Chance styles for the new year. Shop fresh finds in Tokio, Lutry, Droplet Buckle & more: birkenstock.attn.tv/auqZfAf0KJor .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Cozy slides to make you a winter person. Shop Boston, Buckley & Arizona Shearling: birkenstock.attn.tv/abZzQrzQB2Og .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Leather, braids, shine. There's a Boston for everyone. Feel at-ease in a clog that feels like you: birkenstock.attn.tv/aGbOEjOfULMP .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Classic, never clunky. Shop winter boots with rugged leather, warm shearling & footbed support: birkenstock.attn.tv/aHcOBLan96-e .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Find your winter boot style. From rugged leather to warm shearling. Shop our best for cold weather: birkenstock.attn.tv/a-Z6piM7PPj2 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Winter vacation styles for sun and snow. Shop water-friendly pairs, plus warm boots & shearling: birkenstock.attn.tv/anCcn2XOF-Ee .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: What to pack for warm getaways & snowy retreats. Shop water-friendly, plus warm pairs: birkenstock.attn.tv/a1AuCKzswZ1A .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Hey Maria A! Thanks for stopping by!\n\nDiscover classic comfort in ribbed suede and heritage oiled leather here: https://birkenstock.attn.tv/aBbtUtNCEyFW .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Hi, it's Taylor. I'm a personal concierge here to help you find the perfect pair of Birkenstocks. Is there anything I can help you with today?\n\nhttps://birkenstock.attn.tv/aBnWqmKtqx-7 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Let the Arizona Leopard Print Sandal make your steps feel polished and easy, giving you more confident days. 🐆\n\nFree returns for 30 days.\n\nYour next pair is here: https://birkenstock.attn.tv/ak2G5rqwuzDN .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: More than stylish support, they're a comfort essential. Slip into Exquisite leather-wrapped footbeds: birkenstock.attn.tv/aoyonsQbi_Ug .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Rich, warm and wearable year-round. Cognac fits every style moment. Shop the shade: birkenstock.attn.tv/aZYz9Unn7-b4 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Naturally unique leather. Oiled for a heritage finish, shop it on the Naples, Arizona & more: birkenstock.attn.tv/as5OMY67VQrf .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Part clog, part moccasin. Totally relaxed. Shop Buckley clogs in Taupe, Black & Cognac: birkenstock.attn.tv/a6gQmZLe-KxQ .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": ".yes",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Go far with our footbed in your sneakers. Shop the Bend, Honnef City & more made for walking: birkenstock.attn.tv/a4SXrtrZqfBV .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Trends change, icons don't need to. Keep it classic in Arizona, Boston and Mayari: birkenstock.attn.tv/agQzqz982uzW .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "How are you",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "This are the pictures of the shoes I got",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bc2b3-7669-4eb6-f000-0000d9f4ee5b",
+          "message_text": "Birkenstock: Thank you for sending me your photo. Do you have any questions about it? Please let me know so I can assist you further.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "This ones are the one I saw online.\nI guess looks more orange",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bc2b4-6805-4f22-f000-0000d9f4ee5b",
+          "message_text": "Birkenstock: Please note that the actual product color may vary slightly from what you see in the photos due to screen displays and lighting conditions. If you need further assistance, feel free to ask!",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Wich other colors you have that I can exchange it?",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bc2c5-1843-495f-f000-0000d9f4ee5b",
+          "message_text": "Birkenstock: I'm sorry, but it looks like the Women's Zermatt Clog Slippers are no longer available on our website. To be sure, did you order it directly from our website? Can you please send a screenshot of the order confirmation so I can take a look? ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: These colors are leaving Last Chance soon. Shop Light Rose, Concrete Gray & Midnight: birkenstock.attn.tv/aw33MkHsd90W .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Do you have this ones available?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I bought mines through Nordstrom",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bc710-2622-421f-f000-0000d9f4ee5b",
+          "message_text": "Birkenstock: Good morning! It's available, but in limited sizes. You can check it out here: https://birkenstock.attn.tv/aPxDQX1Jl-Gc",
+          "message_media": []
+        }
+      ]
+    },
+    "89": {
+      "agentName": "Quinn",
+      "id": "019bf738-109d-438f-f000-0000ecb19550",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://nectarsleep.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.nectarsleep.com/mattress?utm_campaign=concierge&utm_medium=sms&utm_source=Attentive&externalId=QbHtJ",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-25"
+          },
+          {
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?utm_medium=ps&utm_content=Facebook_Stories&utm_source=fb&utm_campaign=p_120217195288900205_120233469641890205_120233469662820205&fbclid=IwZXh0bgNhZW0BMABhZGlkAastuFaQTe1zcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR7bzcRvagXftInfo-2WcippqYeUkWRTezrdohBxYnlVoRJpnu3FB_v4qpQX6Q_aem_ibHS-brY43DE9W-d4WN4Ng&utm_id=120217195288900205&utm_term=120233469641890205",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-25"
+          },
+          {
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?utm_medium=ps&utm_content=Facebook_Mobile_Feed&utm_source=fb&utm_campaign=p_120217195288900205_120240421647490205_120240421660880205&fbclid=IwZXh0bgNhZW0BMABhZGlkAasuBsmfRj1zcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR7pOgPohl0zkhCzj_610p_JNyIND70goqGE3oxpsoZU3xpR75xPFjb2BBH9aw_aem_RGeZEF0R7qvIzRf7Up2bHA&utm_id=120217195288900205&utm_term=120240421647490205",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-25"
+          },
+          {
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?utm_medium=ps&utm_content=Facebook_Mobile_Reels&utm_source=fb&utm_campaign=p_120217195288900205_120236016305600205_120236826348800205&fbclid=IwZXh0bgNhZW0BMABhZGlkAasqwayO4v1zcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR4ersXwWF2vfz8mASgx0IERJgtT9qOU3NEpXsSedcVAqEmWTIz_mmHEPOPIMw_aem_Okx507mhdePagtVk4_SPyA&utm_id=120217195288900205&utm_term=120236016305600205",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-13"
+          },
+          {
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?utm_medium=ps&utm_content=Facebook_Mobile_Feed&utm_source=fb&utm_campaign=p_120217195288900205_120236427244270205_120236427244290205&fbclid=IwZXh0bgNhZW0BMABhZGlkAasqZMs2nK1zcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR7qOIoZi3jLyjCadNXJEAmftgef8vziYb7vdDGP0HJZQN3ZnXCZvw84z-q2pA_aem_Ct1QS_4YPDbYHOz1GXghRg&utm_id=120217195288900205&utm_term=120236427244270205",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2025-12-27"
+          }
+        ]
+      },
+      "companyWebsite": "https://nectarsleep.com",
+      "companyName": "Nectar Sleep",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS",
+          "Send to CS for refund inquiries"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Close the convo if the cx first message is ok, no, etc.",
+          "Don't use the word \"off\" when talking about promotions"
+        ],
+        "dos_and_donts": [
+          "Don't proactively offer to find pricing info, redirect them to the website instead"
+        ],
+        "promo_and_exclusions": [
+          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns",
+        "Discount code errors",
+        "Recall",
+        "BBB",
+        "fiberglass",
+        "lawyer",
+        "class action"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Wrapping up the year? See if your HSA or expiring FSA can cover up to 90% of a mattress. Check eligibility now: nectarsleep.attn.tv/aUsRNhOs8Uxb\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Bundle for bigger savings! Save up to 66% on our best-selling adjustable bundle (mattress + base + bedding):\nnectarsleep.attn.tv/a6xbmPNyN0KK \n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Ends tomorrow! Sleep cooler with 2 FREE Tri-Comfort Pillows ($258 value) with mattress order. Use code STP25: nectarsleep.attn.tv/a98QGEGRs-XN\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Ends tonight! Pick your size (Standard or King) & enjoy 2 FREE Tri-Comfort Pillows with mattress order. Code STP25: nectarsleep.attn.tv/aO80fMqPwdUm\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Tired from tossing & turning? Our memory foam eases aches & isolates partner movement so you both sleep soundly.\nnectarsleep.attn.tv/aUqFk-S-j5bz\n. ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Clock's ticking! FSAs expire 12/31. See if your HSA or FSA can cover up to 90% of a mattress. Check eligibility: nectarsleep.attn.tv/aIBYqKxmI3Px\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Upgrade your bedroom! Our stylish frames & bases perfectly complement a new mattress. Build your bundle:\nnectarsleep.attn.tv/aCB9LhuHK3VA\n. ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Countdowns, confetti, cooler sleep! Save up to 50% on America's most awarded mattress brand before the ball drops: nectarsleep.attn.tv/acvj0RbD1rPa\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: This year's upgrade? Sleep that adjusts to you! Save up to 66% on the Adjustable Bundle: mattress + base + bedding: nectarsleep.attn.tv/aC7LOdU_dwls\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Better sleep a resolution? Check it off! Save up to 66% on our Foundation Bundle: bed, base & bedding included: nectarsleep.attn.tv/abrYhQ-gsKld\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Why sleep flat? Recline your way with our Adjustable Bundle & save up to 66%. Includes mattress, base & bedding: nectarsleep.attn.tv/aPvVmiK5Lux4\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: 2026 goal: better sleep. Your HSA/FSA may cover up to 90% of a Nectar mattress. Check eligibility & rest easy: nectarsleep.attn.tv/amMFhdSR6ueO\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Did you know? Great sleep can come in a box. Our mattresses arrive ready to unbox & unwind. Save up to 50% now: nectarsleep.attn.tv/abJtC_hTGYAl\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Tired of waking up tired? Save up to 50% + free delivery (usually within a week). Order today and sleep better soon.\nnectarsleep.attn.tv/aNCj-mEtGhcO \n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Save up to 66% on a Split King bundle with adjustable base + mattress + sheets + pillows. Everything you need, one order. \nnectarsleep.attn.tv/a6k2ubYiUB38\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Save up to 66% on our Adjustable Bundle. A setup that adjusts to you with bed, base & bedding. Easier nights ahead: nectarsleep.attn.tv/aE8MKr6XtIPL\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Save up to 50% on mattresses made for cooler rest. Less waking up sweaty, more cozy comfort for restful nights: nectarsleep.attn.tv/aHQNctZkn6SS\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Hi, this is Quinn. Thanks for stopping by! Save up to 50% on mattresses plus get free delivery (usually within a week). Sleep better and wake up energized every morning.\n\nnectarsleep.attn.tv/aqivmObnQ0pb\n\nQuestions? Text us back!\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Bundle for bigger savings! Save up to 66% on our best-selling adjustable bundle (mattress + base + bedding):\nnectarsleep.attn.tv/adwkBMxBxKHU \n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Tired from tossing & turning? Our memory foam eases aches & isolates partner movement so you both sleep soundly.\nnectarsleep.attn.tv/aJ2qUPE_v_OX\n. ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Never sleep hot again. Our cool-to-the-touch cover keeps you cool. Save up to 50% on mattresses, starting at $349:\nnectarsleep.attn.tv/arRYfLEsKbyO \n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Want an upgrade? Start here! Our Classic Foam Queen is at $649 (a $1,548 total value). Everyday savings up to 50%: nectarsleep.attn.tv/ajgasqlYNVoz\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Upgrade your bedroom! Our stylish frames & bases perfectly complement a new mattress. Build your bundle:\nnectarsleep.attn.tv/axGNOYuEXhot\n. ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Zero gravity mode unlocked! Save up to 66% on the Adjustable Bundle. Better sleep = better mornings.\nnectarsleep.attn.tv/aUtctgez4z50 \n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Winter = hibernation mode? Get next-level comfort & save up to 66% on our Adjustable Bundle (bedding included): nectarsleep.attn.tv/aO6e6PnVkN9j\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Save up to 50% on America's most awarded mattress brand. Better sleep delivered free (usually within a week).\n\nnectarsleep.attn.tv/akcTWqcLp-Kp\n.\n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Ditch your saggy mattress. Save up to 66% on the adjustable bundle. Mattress, base & bedding. All included.\n\nnectarsleep.attn.tv/aIN-DEd2aApu\n.\n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Cool, comfortable sleep for less! Our Classic Foam Queen is $649 (a $1,548 total value). Savings of up to 50%: nectarsleep.attn.tv/a7PIkfrzuYZ8\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Hi, this is Quinn. Save up to 50% on mattresses plus get free delivery (usually within a week). Everything you need to sleep better, delivered to your door.\n\nnectarsleep.attn.tv/ajX0XWb7Yla4\n\nQuestions? Text us back!\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I see twin XL Do you sell a regular size twin?",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf731-681e-434f-f000-0000ecb19550",
+          "message_text": "Nectar: Yes, we offer a regular size Twin mattress. You can find it here: https://nectarsleep.attn.tv/a7612WWy_iq5",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Can I get a bundle with 2 regular twins and 2 adjustable frames? I wish to have a split adjustable but do not have the space for the XL.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf738-109d-438f-f000-0000ecb19550",
+          "message_text": "Nectar: Thanks for reaching out! At this time, we don't offer a pre-set bundle with 2 regular twin frames and 2 adjustable bases. Our adjustable frames are available in Twin XL sizes only, which is why a split adjustable requires XL dimensions. If space is a concern, you may consider pairing regular twin frames with our standard bases instead. ",
+          "message_media": []
+        }
+      ]
+    },
+    "90": {
+      "agentName": "Hannah",
+      "id": "019bdd3a-f861-4d18-f000-00007a88396d",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://olly.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://olly.com",
+      "companyName": "OLLY",
+      "notes": {
+        "escalate": [
+          "ESC order/subscription cancellation requests"
+        ],
+        "dos_and_donts": [
+          "If the customer wants to 'lose weight', don't give out product recommendations, tell them to consult with a healthcare provider",
+          "Don't recommend any products to diagnose, treat, cure, or prevent any disease"
+        ],
+        "drive_to_purchase": [
+          "Refer the customer to Amazon if the product is not available on the website but in-stock there"
+        ],
+        "promo_and_exclusions": [
+          "Codes can NOT be applied to subscription orders",
+          "welcome/rewards codes cannot be applied to seasonal at the moment"
+        ],
+        "unavailable_products": [
+          "Olly has removed the products \"Lovin Libido\" and \"Mighty Mojo\" off the site. The product are still available on Amazon and in stores."
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [
+        "managment"
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Shipping questions",
+        "Order issues",
+        "Melted products",
+        "side effects",
+        "allergic reactions",
+        "cancel order"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "OLLY PBC: End the year feeling your best. Explore wellness your way at OLLY now! olly.attn.tv/aoQCotB7MBS0 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "OLLY PBC: Thank you for your purchase! Your current rewards balance is 1527.53! Log in to see if you can redeem them: https://olly.attn.tv/a7NU3qU3QP92 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "OLLY PBC: Thanks for your purchase! We know you'll love Lovin' Libido and can't wait for you to enjoy it. Visit our site to shop anything you may have left behind https://olly.attn.tv/azPPqJu6ktKf .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "OLLY PBC: Treat yourself to some more Olly goodies! You have 1527.53 points available to redeem: https://olly.attn.tv/ahmsGDxst8fN",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "OLLY PBC: 2026? Bring it on. No judgment, pressure or grand gestures here-just a new year with your wellness bff on your side. Here's to doing 2026 on your terms! olly.attn.tv/a3rnRaOJYMSO ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "OLLY PBC: OLLY Body Washes & Serums for just $6.99 - limited time only! New year, new glow! olly.attn.tv/aea89xvMoKV- ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "OLLY PBC: EVERY OLLY Body just $6.99 for a limited time! Take that Monday blahs!! olly.attn.tv/axqupIG_QBeG ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "OLLY PBC: Need to go post-holiday hush mode? Your bite-sized unwind awaits. Grab a bottle (or three) of Relaxing Magnesium: olly.attn.tv/aSj1FpCfkx2k ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "OLLY PBC: Saving 30% off OLLY Body during a long weekend? Yes, please! $6.99 for a limited time only. olly.attn.tv/aW8rhlLbRRE3 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "OLLY PBC: Hello! You have a subscription order coming up in 5 business days. Check the order status here: https://olly.attn.tv/aS4N-W8cPx6k ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I want to cancel my subscription please.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bdd37-496e-453a-f000-00007a88396d",
+          "message_text": "OLLY PBC: We're sorry to see you go! Have you tried cancelling it on your account already? https://olly.attn.tv/at_UBs0efj-p ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I have but I was unable to cancel it. Please don't send me the shipment. Thank you.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bdd3a-f861-4d18-f000-00007a88396d",
+          "message_text": "OLLY PBC: Thanks for getting back to us! I'm really sorry for the inconvenience. I'd be happy to have our team look into this. Could you confirm the email address you use for your account?",
+          "message_media": []
+        }
+      ]
+    }
+  }
+}

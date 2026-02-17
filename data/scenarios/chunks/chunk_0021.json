@@ -1,0 +1,595 @@
+{
+  "version": 1,
+  "chunk": "chunk_0021",
+  "scenarios": {
+    "101": {
+      "agentName": "Sarah",
+      "id": "019bf220-65ab-4d1d-f000-0000f5b63922",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://montblanc.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.montblanc.com/en-us/medium-notebook-meisterstuck-romeo-juliet-lined-pages-MB136633.html?utm_campaign=MTBHQ-AD-OTHER-CO-4-2024-V0-NA-TRG_ATTENTIVE_BROWSEABADONMENT-SMS-DIR-JRNBR-INM-OT-CORP-EN-NA&utm_medium=SMS&utm_source=OT&externalId=Jz8bT",
+            "item": "Medium Notebook, Meisterstück Romeo & Juliet, Lined Pages",
+            "timeAgo": "2026-01-24"
+          },
+          {
+            "link": "https://www.montblanc.com/en-us/medium-notebook-meisterstuck-romeo-juliet-lined-pages-MB136633.html?utm_campaign=MTBHQ-AD-OTHER-CO-1-2024-V0-NA-TRG_ATTENTIVE_PRODUCTBROWSECONCIERGE2-SMS-DIR-JRNBR-INM-OT-MTP-EN-NA&utm_source=OT&utm_medium=SMS&externalId=Jz8bT",
+            "item": "Medium Notebook, Meisterstück Romeo & Juliet, Lined Pages",
+            "timeAgo": "2026-01-24"
+          },
+          {
+            "link": "https://www.montblanc.com/en-us/medium-notebook-meisterstuck-romeo-juliet-lined-pages-MB136633.html?utm_campaign=MTBHQ-AD-OTHER-CO-1-2024-V0-NA-TRG_ATTENTIVE_PRODUCTBROWSECONCIERGE2-SMS-DIR-JRNBR-INM-OT-MTP-EN-NA&utm_source=OT&utm_medium=SMS&externalId=Jz8bT",
+            "item": "Medium Notebook, Meisterstück Romeo & Juliet, Lined Pages",
+            "timeAgo": "2026-01-24"
+          },
+          {
+            "link": "https://www.montblanc.com/en-us/medium-notebook-meisterstuck-romeo-juliet-lined-pages-MB136633.html",
+            "item": "Medium Notebook, Meisterstück Romeo & Juliet, Lined Pages",
+            "timeAgo": "2026-01-24"
+          }
+        ]
+      },
+      "companyWebsite": "https://montblanc.com",
+      "companyName": "Montblanc",
+      "notes": {
+        "send_to_cs": [
+          "If escalated do NOT send to CS"
+        ],
+        "escalate": [
+          "ESC if a cx wants to purchase an out of stock item",
+          "ESC if cx want someone from the cs team to call them directly",
+          "ESC when a cx asks for a call back",
+          "ESC if uncertain about refills or product specific questions",
+          "ESC if cx has issues registering",
+          "ESC if cx asks for help putting through an order"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Don't use too many exclamation points",
+          "Use more formal language such as \"Hello\" instead of \"Hey\"",
+          "Avoid using smiley faces/emojis",
+          "Avoid responding to anything related to politics"
+        ],
+        "dos_and_donts": [
+          "Always use your VPN when accessing their website & make sure you're sending US links",
+          "Don't ever release information on personnel related to the company",
+          "Don't share any authorized retailers, only boutiques",
+          "Don't ask cx to leave product reviews as they don't collect them",
+          "Don't offer holiday discounts/promos",
+          "Don't mention discounted items"
+        ],
+        "drive_to_purchase": [
+          "When D2P'ing, do not send links of the search results page, send either a related collection or product page",
+          "Do not recommend gift sets"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [
+        "deals",
+        "sales",
+        "promos",
+        "promo",
+        "promotion",
+        "promotions",
+        "sale",
+        "shoot",
+        "coupon",
+        "Hey"
+      ],
+      "escalation_preferences": [
+        "Discount code errors",
+        "Exchanges and returns",
+        "Shipping questions",
+        "Store location",
+        "store inventory",
+        "help placing an order",
+        "shipping times",
+        "cancel order"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Montblanc: Welcome to Montblanc! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Montblanc: Text us back with any questions you have while shopping and don't forget to save our contact to get exclusive updates!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Montblanc: Welcome to the inspirational world of Montblanc. Enjoy $15 off your next order above $300 using code WORLDOFMTB at checkout https://montblanc.attn.tv/aGiJILb9eDCz .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Montblanc: Hi there, this is Sarah. Thanks for visiting Montblanc.com. Are you looking for anything in particular today? https://montblanc.attn.tv/ab7nDuLHlGgE ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Montblanc: We noticed you were viewing one of our beautiful creations. Take another look and enjoy complimentary shipping: montblanc.attn.tv/a7v4mPpDHdNY .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Do you repair pen caps.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Do you have a repair shop?\"; last updated: 2023-10-27 20:42:34.455",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf220-65ab-4d1d-f000-0000f5b63922",
+          "message_text": "Montblanc: Hi, thanks for reaching out. To ensure the highest quality of service and care when your item needs to be repaired or serviced, Montblanc has partnered with My Jewelry Repair. My Jewelry Repair specializes in repairs for all Montblanc products including Writing Instruments, Watches, Leather Goods, and Accessories, and accepts Montblanc products from everywhere across the United States.\n\nTo request a repair online with My Jewelry Repair for your Montblanc item, please access this link - https://montblanc.attn.tv/a7Qs6pQMuxZu/\n\nYou can also contact My Jewelry Repair directly by calling 833-625-1930 Monday to Friday between 12 PM to 8 PM ET or by email at montblancservice@myjewelryrepair.com for all inquiries related to repairing your product.\n\nYou can also bring your Montblanc product to a Montblanc boutique. Please use our Store Locator tool - https://montblanc.attn.tv/a2WaJAinN3Ak to find your nearest boutique.\n\nFor additional Montblanc authorized repair locations for watches in the United States, please check here for a list of locations: https://montblanc.attn.tv/avtrj5yflE8e",
+          "message_media": []
+        }
+      ]
+    },
+    "102": {
+      "agentName": "Quinn",
+      "id": "019becd2-86c3-421a-f000-00009593912b",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://nectarsleep.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.nectarsleep.com/mattress?vdt_id=Cj0KCQiA1czLBhDhARIsAIEc7uizhCAYE9EOyq1BAuiQrwFBXNgKdnT4HgF5s77Bx2TE3KSA-lTLHjcaApBUEALw_wcB&CIDIMP=X-n05QSTsxycUnZRP6yK-SBbUkpSqaUIrRFlRw0&irgwc=1&afsrc=1&utm_campaign=IMPACT&utm_content=Mattress%20Category%20Page_TEXT_LINK&utm_source=mverdict&utm_medium=AFF&utm_sharedid=130091543458&utm_account=8338",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-23"
+          },
+          {
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?CIDIMP=X-n05QSTsxycUnZRP6yK-SBbUkpSqaz4rRFlRw0&irgwc=1&afsrc=1&utm_campaign=IMPACT&utm_content=Adjustable%20Bundle%20-%20Mattress%2C%20Frame%20%26%20Bedding%20Set_TEXT_LINK&utm_source=TrafficPoint%E2%80%8A&utm_medium=AFF&utm_sharedid=%2Fadjustable-beds%2F&utm_account=8338",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-23"
+          },
+          {
+            "link": "https://www.nectarsleep.com/mattresses/premier-memory-foam-mattress?utm_campaign=concierge&utm_medium=sms&utm_source=Attentive&externalId=UjfKI",
+            "item": "Nectar Premier Memory Foam Mattress",
+            "timeAgo": "2026-01-23"
+          },
+          {
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?CIDIMP=X-n05QSTsxycUnZRP6yK-SBbUkpSqf1UrRFlRw0&irgwc=1&afsrc=1&utm_campaign=IMPACT&utm_content=Adjustable%20Bundle%20-%20Mattress%2C%20Frame%20%26%20Bedding%20Set_TEXT_LINK&utm_source=TrafficPoint%E2%80%8A&utm_medium=AFF&utm_sharedid=%2Fadjustable-beds%2F&utm_account=8338",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-23"
+          },
+          {
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-23"
+          }
+        ]
+      },
+      "companyWebsite": "https://nectarsleep.com",
+      "companyName": "Nectar Sleep",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS",
+          "Send to CS for refund inquiries"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Close the convo if the cx first message is ok, no, etc.",
+          "Don't use the word \"off\" when talking about promotions"
+        ],
+        "dos_and_donts": [
+          "Don't proactively offer to find pricing info, redirect them to the website instead"
+        ],
+        "promo_and_exclusions": [
+          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns",
+        "Discount code errors",
+        "Recall",
+        "BBB",
+        "fiberglass",
+        "lawyer",
+        "class action"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (888) 863-2827.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: You're in!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Sleep goals? Unlocked.\n\nMattress + adjustable base + bedding set = savings of up to 66% on your complete setup:\nnectarsleep.attn.tv/a0pVtyMpIfVB ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Winter = hibernation mode? Get next-level comfort & save up to 66% on our Adjustable Bundle (bedding included): nectarsleep.attn.tv/a2nCFftywmXe\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Quinn here: You can save up to 50% on your cart.\nWondering if now's the time? It is. Need help? Just say the word: nectarsleep.attn.tv/a7tLzyyZABTj\n.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "What is the difference between the classic and premier mattress besides the price",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019becc8-f3c3-4b97-f000-00009593912b",
+          "message_text": "Nectar: The Nectar Premier offers a cooler sleep with more cool-to-the-touch polyethylene and phase change material for temperature regulation. More details at https://nectarsleep.attn.tv/aPF85uj0EJZ5.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "If I purchase the split king do I need 2 adjustable bases",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019becd2-86c3-421a-f000-00009593912b",
+          "message_text": "Nectar: Yes, the Split King is made from two Twin XL adjustable bases and two Twin XL mattresses being placed side by side to create a King-sized bed.",
+          "message_media": []
+        }
+      ]
+    },
+    "103": {
+      "agentName": "Sarah",
+      "id": "019bb960-d34a-4faa-f000-00003fe5b212",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://halloweencostumes.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://halloweencostumes.com",
+      "companyName": "HalloweenCostumes.com",
+      "notes": {
+        "escalate": [
+          "ESC expired codes/discount code issues, ask for cart ID and add it in esc notes",
+          "Don't send to CS for this client, ESC if needed",
+          "For retroactive discount requests add discount % in ESC note",
+          "ESC if a customer requests a different resolution, after their escalation was resolved"
+        ],
+        "dos_and_donts": [
+          "Fun Bucks AREN'T rewards points, those are given during exchanges"
+        ],
+        "promo_and_exclusions": [
+          "This brand does not use coupon codes or promotions. All of their discounts are exclusively link-based and are applied automatically to the shopping cart upon checkout when the appropriate conditions are met",
+          "Please do not advise customers to use promotional codes, do not provide them with any codes, and do not direct them to look on the website for additional codes",
+          "They do not have any promotional code text fields on site to facilitate use"
+        ]
+      },
+      "messageTone": "Casual",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nHoliday Flash Sale! 15% OFF $100+ but only 'til 1PM CST. Fast clicks = festive savings. Shop now:\nhalloweencostumes.attn.tv/aB9ycI8Ce4oH",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nClosing out the year with deals! Clearance is stacked for our End of Year Sale. Shop now:\nhalloweencostumes.attn.tv/acMQEg-6VLK5",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nThanks for shopping with us! Come back & discover more festive finds to make your season magical!\nhalloweencostumes.attn.tv/aUXd31m_b2lL",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nAll the styles. All the sizes. Made By Us costumes = ready for whatever you're into this year.\nhalloweencostumes.attn.tv/aqaL9Z8TkAS-",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nSail into Gasparilla with $15 OFF $100+ in pirate costumes. From captains to full crews! Shop now:\nhalloweencostumes.attn.tv/anxB1G9BT8VC",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nFor you and your favorite human: BOGO 30% OFF just ahead of time for Valentine's Day. Shop today:\nhalloweencostumes.attn.tv/axpBpCIBc8Hm",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "How do I exchange a costume for a larger size?",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"How do I start a return?\"; last updated: 2022-09-23 23:40:40.889",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Return policy\"; last updated: 2023-03-03 19:53:05.094",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb960-d34a-4faa-f000-00003fe5b212",
+          "message_text": "Halloween Costumes: Thanks for reaching out! You can start your return/exchange here: https://halloweencostumes.attn.tv/a22dSeIn0GwT You can check out our detailed return policy here - https://halloweencostumes.attn.tv/aOwYmQjohuIE/ ",
+          "message_media": []
+        }
+      ]
+    },
+    "104": {
+      "agentName": "Sarah",
+      "id": "019be808-e5d9-4624-f000-00009677c22b",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://hellobonafide.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://hellobonafide.com/products/clairvee",
+            "item": "Clairvee Probiotic",
+            "timeAgo": "2026-01-22"
+          },
+          {
+            "link": "https://hellobonafide.com/products/clairvee",
+            "item": "Clairvee Probiotic",
+            "timeAgo": "2026-01-22"
+          },
+          {
+            "link": "https://hellobonafide.com/products/clairvee",
+            "item": "Clairvee Probiotic",
+            "timeAgo": "2026-01-21"
+          },
+          {
+            "link": "https://hellobonafide.com/products/clairvee",
+            "item": "Clairvee Probiotic",
+            "timeAgo": "2026-01-21"
+          },
+          {
+            "link": "https://hellobonafide.com/products/gut-probiotic",
+            "item": "Gut Probiotic",
+            "timeAgo": "2026-01-16"
+          }
+        ]
+      },
+      "companyWebsite": "https://hellobonafide.com",
+      "companyName": "Bonafide",
+      "notes": {
+        "escalate": [
+          "ESC all medical/scientific inquiries immediately",
+          "ESC return requests that are past the 30-day policy"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "templates": [
+          "For exact measurements of ingredients, use \"MOI\" shortcut"
+        ],
+        "dos_and_donts": [
+          "When sending the quiz - always suggest a specific product if customers mention a certain symptom"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Reply Y to receive recurring automated personalized marketing alerts (e.g. cart reminders) from Bonafide.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Welcome to Bonafide! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Welcome to menopause, minus the suffering. Save over 40% on your 1st subscription order with code SMS20. Shop now: https://bonafide.attn.tv/a91cXwGqtCsh",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Stay connected on your menopause journey with Bonafide! Save our number to your contacts for easy access to expert advice, tips, and support. https://bonafide.attn.tv/aa-pRww6XLQi ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: There's a reason Bonafide is trusted by over 1 million women. Check out our solutions for hot flashes, vaginal dryness and odor, sexual satisfaction, mood swings, wrinkles, and thinning hair. bonafide.attn.tv/afaHlcEMlqiL ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Hi, this is Heather from Bonafide! Let me know if you have any product questions about Clairvee! bonafide.attn.tv/aTn2q6dF2zH9\n\n",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Is subscription cheaper than 3 month plan",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be806-b8cb-4843-f000-00009677c22b",
+          "message_text": "Bonafide: Thanks for reaching out! The 3-month plan is cheaper per month than the standard subscription because shipping costs are reduced. If you're planning to stay consistent with your routine, the 3- or 6-month options are the best way to save.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Is 6 month option better or same price as 3 month option?",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be808-e5d9-4624-f000-00009677c22b",
+          "message_text": "Bonafide: Thanks for the follow-up question! The 6-month plan is a better value than the 3-month option. It lowers your monthly cost even more. Both multi-month plans are cheaper than the standard subscription, so if you're planning to stay consistent, the 6-month option gives you the best savings.",
+          "message_media": []
+        }
+      ]
+    },
+    "105": {
+      "agentName": "Annie",
+      "id": "019bd8b3-a0a3-4f7a-f000-0000f447ed82",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://beistravel.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://beistravel.com/products/the-small-carry-on-roller-in-olive?utm_content=5+DAY+VIEWED%2FATC+-+ALL+PRODUCTS+IN+STOCK+-+SITE+ONLY&utm_source=ig&variant=42511529312392&utm_medium=paidsocial&utm_campaign=US+-+RETARGETING+DPA+-+ALL+PRODUCTS&utm_term=CORE+PRODUCTS+-+SLIDESHOW+-+NO+PRICE+-+LANDED&fbadid=120237131942590569&audience=existing&utm_id=23855591506230568_v2_s01&fbclid=PAZXh0bgNhZW0BMABhZGlkAasrEJnXiPlzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAae8Qqzic8sreMyuZ8zlarqtK6KhaXnNZPRRGoTpGPpDpjHsVeJDNlIUO3fBGQ_aem_8LFQRdFI0bFQ1NDhzv0XmQ&campaign_id=23855591506230568&ad_id=120237131942590569",
+            "item": "The Small Carry-On Roller in Olive",
+            "timeAgo": "2026-01-19"
+          },
+          {
+            "link": "https://beistravel.com/products/the-in-flight-cosmetic-set-in-olive?utm_content=5+DAY+VIEWED%2FATC+-+ALL+PRODUCTS+IN+STOCK+-+SITE+ONLY&utm_source=ig&variant=41771566891144&utm_medium=paidsocial&utm_campaign=US+-+RETARGETING+DPA+-+ALL+PRODUCTS&utm_term=CORE+PRODUCTS+-+SLIDESHOW+-+NO+PRICE+-+LANDED&fbadid=120237131942590569&audience=existing&utm_id=23855591506230568_v2_s04&fbclid=PAZXh0bgNhZW0BMABhZGlkAasrEJnXiPlzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeNI_5xbSHaa80HYR7nd5EyGKpaoWS7Z6nsJN9DBAoO5xQ8i0uk_j0hr6rAUw_aem_U4I5PxYm9rNnnJpmGr50Vw&campaign_id=23855591506230568&ad_id=120237131942590569",
+            "item": "The In Flight Cosmetic Set in Olive",
+            "timeAgo": "2026-01-18"
+          },
+          {
+            "link": "https://beistravel.com/products/the-carry-on-roller-in-maple?utm_content=5+DAY+VIEWED%2FATC+-+ALL+PRODUCTS+IN+STOCK+-+SITE+ONLY&utm_source=ig&variant=40855809917064&utm_medium=paidsocial&utm_campaign=US+-+RETARGETING+DPA+-+ALL+PRODUCTS&utm_term=CORE+PRODUCTS+-+STATIC+-+RED+PRICE+-+FORGOT+SOMETHING%3F&fbadid=120237131942570569&audience=existing&utm_id=23855591506230568_v2_s04&fbclid=PAZXh0bgNhZW0BMABhZGlkAasrCN4nwslzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafhym3Fqz_3vbwLKTpVkgyQzbgUi3Raj2Yxc1a2k97CPlDAQnnC1MkiAI_J7g_aem_zRpyPSIb1I0DNfICYoS8JA&campaign_id=23855591506230568&ad_id=120237131942570569",
+            "item": "The Carry-On Roller in Maple",
+            "timeAgo": "2026-01-16"
+          },
+          {
+            "link": "https://beistravel.com/products/the-carry-on-roller-in-maple?utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&tw_source=google&tw_adid=&tw_campaign=18296846049&tw_kwdid=&gad_source=1&gad_campaignid=17335594035&gbraid=0AAAAAC8mptp5-HnPzONZRhsDzb0Qrcpqe&gclid=CjwKCAiAvaLLBhBFEiwAYCNTf2jROHdpb5Gz4e-Vwu2m0kTYBdsdQbT7P5yA78hxb1nYbYEriECKMBoCex4QAvD_BwE",
+            "item": "The Carry-On Roller in Maple",
+            "timeAgo": "2026-01-16"
+          },
+          {
+            "link": "https://beistravel.com/products/the-carry-on-roller-in-maple",
+            "item": "The Carry-On Roller in Maple",
+            "timeAgo": "2026-01-16"
+          }
+        ]
+      },
+      "companyWebsite": "https://beistravel.com",
+      "companyName": "Beis Travel",
+      "notes": {
+        "escalate": [
+          "We don't ESC for this client, use ESC shortcut",
+          "If cx ask how to get/redeem the discount for downloading the app use ESC shortcut"
+        ],
+        "templates": [
+          "For Limited edition items don't use restock temps, they will not be restocked"
+        ],
+        "dos_and_donts": [
+          "Don't share the duration of the sale/sale dates with customers!"
+        ]
+      },
+      "messageTone": "Casual",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Welcome to BÉIS Travel! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Hey there, newbie! First time shopping with us? We've handpicked some essentials to get you started: https://beistravel.attn.tv/ayV_qeg9svql . \n\nEnjoy 20% OFF with code WELCOMEoU2moI \nbeistravel.attn.tv/aBnrXIj7GEg4 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Bags designed to make your every day easier. Save our contact to make getting all of our latest updates easy.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Still thinking about The Carry-On Roller in Olive? Your taste is spot on - Treat yourself with 15% off using code welcomeiPPT8A: beistravel.attn.tv/aiS48pmCHI__ .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Psst! Your items are in someone else's cart... Get 15% OFF using code welcomeiPPT8A when you check out now before they're gone. beistravel.attn.tv/aWchdGRp17-y .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Hi there. If you need additional help please reach us at hello@beistravel.com. Text STOP to opt out.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Up to 30% off newly marked-down styles!\n\nMOVE FAST: beistravel.attn.tv/abXwKjsOJbh0 .\n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Still thinking about The In Flight Cosmetic Set in Olive? Great taste - Take another look before it's gone!\nbeistravel.attn.tv/adTkRrSXVWX1 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Still thinking about The Small Carry-On Roller in Olive? Great taste - Take another look before it's gone!\nbeistravel.attn.tv/aBS7dfIfxa6l .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Hi there. If you need additional help please reach us at hello@beistravel.com. Text STOP to opt out.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I already bought a suitcase!! I love it, thanks ",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bd880-21c4-4269-f000-0000f447ed82",
+          "message_text": "BÉIS Travel: No problem. Feel free to reach out anytime, I'm always here to help!",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Awesome, thank you so much!",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I love my suitcase so much! Do you have a deal for the large one and the same color I purchased!?",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bd8b3-a0a3-4f7a-f000-0000f447ed82",
+          "message_text": "BÉIS Travel: I'm sorry, I don't have any codes available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our sales collection here: https://beistravel.attn.tv/aVEm8vZZ8hGQ",
+          "message_media": []
+        }
+      ]
+    }
+  }
+}

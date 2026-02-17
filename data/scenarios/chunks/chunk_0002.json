@@ -1,0 +1,716 @@
+{
+  "version": 1,
+  "chunk": "chunk_0002",
+  "scenarios": {
+    "6": {
+      "agentName": "Jamie",
+      "id": "019bf03a-dc30-40c2-f000-0000f237fbf0",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://capillus.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.capillus.com/collections/skin-health/products/capillus-red-light-therapy-panel",
+            "item": "Capillus Red Light Therapy Panel",
+            "timeAgo": "2026-01-24"
+          },
+          {
+            "link": "https://www.capillus.com/collections/skin-health/products/capillus-red-light-therapy-panel",
+            "item": "Capillus Red Light Therapy Panel - White",
+            "timeAgo": "2026-01-24"
+          },
+          {
+            "link": "https://www.capillus.com/products/capillus-healing-pod?variant=43177855221899",
+            "item": "Capillus Healing Pod",
+            "timeAgo": "2026-01-24"
+          },
+          {
+            "link": "https://www.capillus.com/products/capillus-healing-pod?variant=43177855221899&_rdiscovery-handle=capillus-healing-pod&_rdiscovery-widget=231468",
+            "item": "Capillus Healing Pod",
+            "timeAgo": "2026-01-24"
+          },
+          {
+            "link": "https://www.capillus.com/products/capillus-healing-pod?variant=43177855221899&_rdiscovery-handle=capillus-healing-pod&_rdiscovery-widget=231468",
+            "item": "Capillus Healing Pod",
+            "timeAgo": "2026-01-24"
+          }
+        ]
+      },
+      "companyWebsite": "https://capillus.com",
+      "companyName": "Capillus",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS if a subscriber mentions a medical issue or an adverse effect from using products from this brand"
+        ],
+        "escalate": [
+          "ESC immediately discount code issues"
+        ],
+        "dos_and_donts": [
+          "Do not share any medical advice or guidance to subscribers outside of recommending appropriate products or directing them to purchase the right item",
+          "Do not comment on their medical situations",
+          "Close the covo if the customer says they're receiving too many messages/we're texting them too often - don't send TMT"
+        ],
+        "drive_to_purchase": [
+          "If cx says they will be ordering soon, offer to schedule a call if they need further assistance with their purchase (shortcut OS) - do not upsell"
+        ],
+        "tone": [
+          "Don't use the term \"hang tight\", just say that you've passed the information to the team",
+          "Close the conversation once the client takes over"
+        ],
+        "templates": [
+          "If cx already purchased, use specific TFP template"
+        ],
+        "promo_and_exclusions": [
+          "We do not offer any discounts for the SPECTRUM"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [
+        "Curallux",
+        "hang"
+      ],
+      "escalation_preferences": [
+        "Discount code errors",
+        "Exchanges and returns"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Capillus.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Welcome to Capillus! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: You made it just in time 🥂 Your End of Year Sale access is LIVE! Enjoy up to 40% OFF hair regrowth + wellness must-haves. Dive in -> capillus.attn.tv/a4dkgVj48EpT \n*Discount is applied on site. No code needed.\n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Don't forget to save our contact to get exclusive updates!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Discover our best-selling hair regrowth solutions! Embrace a fuller, healthier head of hair with our innovative laser therapy products. Don't miss out! Shop now capillus.attn.tv/ahzesKvEJGQ9 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hey there, this is Jamie! You left Capillus Spectrum in your cart. \n\nBoost your confidence with Capillus Red Light Therapy. Complete your purchase now capillus.attn.tv/amhAgO9E6KE_\n\nText to speak to someone!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hi there, it's Jamie. I'm a personal concierge here to answer your questions or share recommendations. Is there anything I can help you with today?\n\nhttps://capillus.attn.tv/a-RaqZ4WxI-5 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hi there - Jamie here. Not sure where to start? \n\nTake our Find My Treatment quiz to discover the best products for your hair! Get personalized results now: capillus.attn.tv/agLkB45ZOSBH \n\nText me back with questions!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hey there! We saw you checking out Capillus Spectrum! Don't wait, get your confidence today: capillus.attn.tv/aR0Oxv0EOtcO .\n\nText back with questions! - Jamie",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Hello I'm looking into getting the Capillus Spectrum, but I'm waiting for there to be a good discount on it",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Sales Page\"; last updated: 2025-08-19 18:29:23.714",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf03a-dc30-40c2-f000-0000f237fbf0",
+          "message_text": "Capillus: I'm really sorry about that, and I completely understand wanting to wait for the best possible value. At the moment, we do not offer discounts on the Capillus Spectrum outside of our Black Friday sale. In the meantime, feel free to take a look at our exclusive deals here: https://capillus.attn.tv/a70mRuR3zGpc and prime deals here: https://capillus.attn.tv/aQ5-kiAa6ALZ",
+          "message_media": []
+        }
+      ]
+    },
+    "7": {
+      "agentName": "Sarah",
+      "id": "019bdc96-4712-4cdb-f000-0000f46f47d4",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://jaanuu.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.jaanuu.com/products/mens-rhodes-everyday-straight-leg-scrub-pant-cider?variant=51118532231457",
+            "item": "Rhodes Everyday Straight-Leg Scrub Pant - Royal Blue - Royal Blue / XS / Regular",
+            "timeAgo": "2026-01-20"
+          },
+          {
+            "link": "https://www.jaanuu.com/products/mens-rhodes-everyday-straight-leg-scrub-pant-cider",
+            "item": "Rhodes Everyday Straight-Leg Scrub Pant - Royal Blue - Royal Blue / XS / Regular",
+            "timeAgo": "2026-01-20"
+          },
+          {
+            "link": "https://www.jaanuu.com/products/mens-rhodes-everyday-straight-leg-scrub-pant-royal-blue",
+            "item": "Rhodes Everyday Straight-Leg Scrub Pant - Royal Blue - Royal Blue / XS / Regular",
+            "timeAgo": "2026-01-20"
+          },
+          {
+            "link": "https://www.jaanuu.com/products/mens-osmo-8-pocket-scrub-jogger-cider",
+            "item": "Osmo 8-Pocket Scrub Jogger - Cider - Cider / XS / Regular",
+            "timeAgo": "2026-01-20"
+          },
+          {
+            "link": "https://www.jaanuu.com/products/mens-osmo-8-pocket-scrub-jogger-cider?pr_prod_strat=pinned&pr_rec_id=5412bff8e&pr_rec_pid=9937327325473&pr_ref_pid=9937271324961&pr_seq=uniform",
+            "item": "Osmo 8-Pocket Scrub Jogger - Cider - Cider / XS / Regular",
+            "timeAgo": "2026-01-20"
+          }
+        ]
+      },
+      "companyWebsite": "https://jaanuu.com",
+      "companyName": "Jaanuu",
+      "notes": {
+        "drive_to_purchase": [
+          "Push these three collections when customers reach out asking for assistance:",
+          "The Lawren Set - all colors",
+          "https://www.jaanuu.com/scrub-sets-layering/the-lawren-essential-scrub-set/black",
+          "Heather Gray across Men's & Women's style",
+          "https://www.jaanuu.com/mens/collection/mens-heather-gray-scrubs",
+          "https://www.jaanuu.com/collection/heather-gray-womens-scrubs"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from JAANUU.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/SnU",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Welcome to comfort, quality, and all-around better scrubs. Use your code for 15% off your first order: WELCOMESiBe6j\n\nShop Now: jaanuu.attn.tv/aZLCmjMc_Acb \n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nReady to upgrade your workwear? Shop best-sellers and discover your next go-to: https://jaanuu.attn.tv/aO7fDvuXs4dR .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Your cart has Embroidery Fee, Holmes Everyday 1-Pocket Scrub Top - Cider, and Rhodes Everyday Straight-Leg Scrub Pant - Cider.\n\nUse code WELCOMESiBe6j for 15% off your first order: https://jaanuu.attn.tv/aPO8oxuZusbX .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: 1.1K people recently added Embroidery Fee to their cart.\n\nUse code WELCOMESiBe6j for 15% off your first order. Free shipping on orders $50+.\n\nShop now: https://jaanuu.attn.tv/aNLIlF8Ec3du .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Grab the Everyday 1-Pocket Scrub Top, Noah—tuckable V-neck with PFC-free water repellency feels great and works hard.\n\nIt's 25% off right now.\n\nShop now: https://jaanuu.attn.tv/a8tyP-B3heoi .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Noah, check the women's tops known for breathable, stretchy fabrics and clean, professional lines.\n\nFree shipping on orders $50+.\n\nThis pick is waiting: https://jaanuu.attn.tv/axJxjGNocH1h .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Feel confident and nimble in the Osmo 8-Pocket Scrub Jogger, so your shift feels smoother and more focused for you.\n\nThe Osmo 8-Pocket Scrub Jogger is 25% off.\n\nTry them on for work and life: https://jaanuu.attn.tv/aDejgOcupmzJ .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Can I cancel/update an order?",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Cancel / edit order \"; last updated: 2022-12-12 18:26:18.808",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bdc96-4712-4cdb-f000-0000f46f47d4",
+          "message_text": "JAANUU: I'm sorry to hear that you wanted to cancel the order. To cancel your order, please go to \"My Orders\", enter your order ID number, email address, and cancel the order - https://jaanuu.attn.tv/ao-21aS8WEqp ",
+          "message_media": []
+        }
+      ]
+    },
+    "8": {
+      "agentName": "Jordan",
+      "id": "019bf7e8-2c0b-4a7f-f000-0000588de9b6",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://sheex.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.sheex.com/products/original-performance-sheet-set?variant=18028646203463",
+            "item": "Original Performance Sheet Set - Bright White / Full",
+            "timeAgo": "2026-01-26"
+          },
+          {
+            "link": "https://www.sheex.com/products/original-performance-sheet-set?variant=18028646400071",
+            "item": "Original Performance Sheet Set - Pearl Blue / Full",
+            "timeAgo": "2026-01-26"
+          },
+          {
+            "link": "https://www.sheex.com/products/original-performance-sheet-set",
+            "item": "Original Performance Sheet Set - Pearl Blue / Twin/TwinXL",
+            "timeAgo": "2026-01-26"
+          },
+          {
+            "link": "https://www.sheex.com/products/original-performance-sheet-set?variant=18028646203463",
+            "item": "Original Performance Sheet Set - Bright White / Full",
+            "timeAgo": "2026-01-05"
+          },
+          {
+            "link": "https://www.sheex.com/products/original-performance-sheet-set?variant=18028646563911",
+            "item": "Original Performance Sheet Set - Bright White / Queen",
+            "timeAgo": "2026-01-05"
+          }
+        ]
+      },
+      "companyWebsite": "https://sheex.com",
+      "companyName": "SHEEX",
+      "notes": {
+        "templates": [
+          "If cx received products with stains use PWS shortcut",
+          "For pilling issues use PLS shortcut",
+          "If cx text in about the code THANKS25 use TCE shortcut"
+        ],
+        "dos_and_donts": [
+          "Always use VPN when accessing their website",
+          "🤖 If asked about an item's price, ONLY provide the link to the item and state that the website will provide the current pricing"
+        ],
+        "promo_and_exclusions": [
+          "Currently, multiple promo codes CAN NOT be used at check out",
+          "Discounts can be used on sale items, unless otherwise noted in disclaimer. Sales exclude gift cards",
+          "If cx ask if they won the gift card, use CRD shortcut"
+        ]
+      },
+      "messageTone": "Casual",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Our End-of-Year Warehouse Sale is live! It's the perfect time to upgrade your sleep.\n\nShop over $4M in markdowns: sheex.attn.tv/a-X38UkwUVRB ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: A little end-of-year comfort goes a long way! Save up to 75% on luxurious bedding, perfect for treating yourself.\n\nShop now: sheex.attn.tv/almeaKsXhiYR ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Wrap up the year with better sleep. Treat yourself to up to 75% off!\n\nShop the End-of-Year Warehouse Sale: sheex.attn.tv/a8JV0E2hGBVx ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Happy New Year! Start the year with better sleep.\n\nOur Warehouse Sale ends soon. Shop over $4 million in markdowns: sheex.attn.tv/aAM09xlJjdiv ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Ends Soon! Last chance to save up to 75% off during our Warehouse Sale. Once it's over, it's over.\n\nDon't miss it: sheex.attn.tv/aKqvtCifpxzH ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Did you leave something behind? Your cart is not reserved. Click here to finish your order: sheex.attn.tv/akClgUmzjPS9\n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Sweaty in bed for all the wrong reasons? Come back and shop our most popular cooling sheets today: https://sheex.attn.tv/ap54-VHDdYyA . ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Hey Megan, this is Jordan. Thanks for checking out our site! https://sheex.attn.tv/aRhIU_kJSUHV \n\nAny questions I can answer for you? ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Thank you for your purchase! Your order number is 609112. View more information about your order here: https://sheex.attn.tv/apK956EjGoOG .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: New Year, New Sheets! Enjoy 30% off our ridiculously soft sheets. Because better sleep is always worth it.\n\nShop now: sheex.attn.tv/a0AVDIGLYF-j ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Holidays throw off your sleep?\n\nReset your routine with our latest blog & save 30% on better sleep with new sheets!\n\nShop Now: sheex.attn.tv/aM5vmfOtECmn",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Let us help you reach your sleep goals!\n\nSave 30% on best-selling sheets made to help you wake feeling refreshed.\n\nShop now: sheex.attn.tv/anBUbsbyBWVI ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Sweaty in bed for all the wrong reasons? Come back and shop our most popular cooling sheets today: https://sheex.attn.tv/aBoBEVzsDmEX . ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Today only! Bonus deal exclusive for SMS subscribers!\n\nSave 30% on sheets + stack an extra 10% with code: BONUS10.\n\nEnds soon: sheex.attn.tv/a8LhdMx4qHWY",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Thank you for your purchase! Your order number is 609889. View more information about your order here: https://sheex.attn.tv/auP2A7UXRJWW .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Sweaty in bed for all the wrong reasons? Come back and shop our most popular cooling sheets today: https://sheex.attn.tv/ajrutBUn8Zaa . ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Sweaty in bed for all the wrong reasons? Come back and shop our most popular cooling sheets today: sheex.attn.tv/aYWe5icdY4wC ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Sweaty in bed for all the wrong reasons? Come back and shop our most popular cooling sheets today: https://sheex.attn.tv/aoylYbP_W8yh . ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: FINAL HOURS! This is your last chance to shop our biggest flash sale EVER.\n\nUp to 50% off better sleep - ends tonight: sheex.attn.tv/aaJZJBDencuv ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Our Winter Clearance Event is live!\n\nEnjoy up to 75% off select styles and 20% off sitewide.\n\nShop now: sheex.attn.tv/a_ot9qIuhdzC ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Your best sleep just got more affordable.\n\n20% off everything + select customer favorites are up to 75% off!\n\nDon't wait: sheex.attn.tv/aQAmhGGiWh5g ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SHEEX: Hey Megan, this is Jordan. Thanks for checking out our site! https://sheex.attn.tv/a0DBGUAbg0es \n\nAny questions I can answer for you?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I have an order I placed on Jan 4 and still have not received it .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf7d5-6416-4c24-f000-0000588de9b6",
+          "message_text": "SHEEX: I'm sorry for the trouble. I've checked the tracking, and it seems that UPS hasn't scanned the package yet. I'll check this with our team and get back to you as soon as possible, hang tight! ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I did receive the Ecru duvet this week . I have not received the Graphite duvet cover",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"My item has been with UPS / USPS/ FedEx for a while now, it's not moving - All brands\"; last updated: 2023-10-10 16:48:27.752",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf7e8-2c0b-4a7f-f000-0000588de9b6",
+          "message_text": "SHEEX: No worries. I see it's already shipped with UPS. Here's the tracking link https://sheex.attn.tv/aoe91o1eea58 I'd recommend reaching out to them for more info on the status.",
+          "message_media": []
+        }
+      ]
+    },
+    "9": {
+      "agentName": "Olivia",
+      "id": "019bc2f4-f6dc-4756-f000-000083eb7171",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://shop.bucks.com/",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://shop.bucks.com/",
+      "companyName": "Milwaukee Bucks",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut",
+          "Send to CS for Gift Card Errors, use GCI shortcut"
+        ],
+        "tone": [
+          "DON'T reply to any cx messages about:",
+          "→ Reports",
+          "→ Rumors",
+          "→ Trades",
+          "→ Firings",
+          "→ Coaches",
+          "→ Player transactions",
+          "→ And anything else related to the on court performance of their team that's NEGATIVE",
+          "Don't reply to insults regarding the uniforms"
+        ],
+        "templates": [
+          "For inquiries related to Adrian Griffin or anything coaching-related, use CQS shortcut",
+          "When cx shares feedback for what we should sell in the Bucks Pro Shop (Journey response), use JRC shortcut",
+          "For membership - specific inquiries, use MMQ shortcut",
+          "Before sending the SHP temp, check the delivery time on the product page as some items have longer delivery time-frames",
+          "If cx text the code to themselves, use CTC shortcut",
+          "If a cx asks for player-specific inquiries, use PCQ shortcut"
+        ],
+        "dos_and_donts": [
+          "DON'T comment on any ticketing platforms that aren't Ticketmaster or Fevo",
+          "DON'T comment on other teams",
+          "DON'T reference the team's performance",
+          "For sweepstakes, inform cxs to reply with FYF keyword to enter to win",
+          "Refer to this roster page for current players: https://www.nba.com/bucks/roster"
+        ],
+        "drive_to_purchase": [
+          "Don't send links from https://www.nbastore",
+          "Send links from https://shop.bucks.com/ for merchandise",
+          "Don't recommend bestsellers if the convo topic isn't about merchandise (e.g. cx share positive feedback about the team), instead use NW shortcut",
+          "When recommending bestsellers, send a link to all collections not specific items"
+        ],
+        "promo_and_exclusions": [
+          "The City Edition collection has been released, any new City Edition products (including Damian Lillard's) will be shared with SMS subscribers first"
+        ]
+      },
+      "messageTone": "Formal",
+      "blocklisted_words": [
+        "wrong",
+        "nbastore"
+      ],
+      "escalation_preferences": [
+        "team/roster questions",
+        "player trades"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Bucks: Let's rock on, Mil-rock-ee! 2026 NBA All-Star voting is now open and you can vote daily through January 14. It's time to send your favorite Bucks to LA 🤩\n\n🤟 VOTE NOW: bucks.attn.tv/a7RnJ0fywCbf .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bucks: It's the FINAL day to vote *and* the final day to TRIPLE IT! Get your Bucks to All-Star 2026.\n\n🤟 VOTE NOW: bucks.attn.tv/aWaVisM5WQkb .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Is there a rep I can talk to about getting tickets for an upcoming game",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Phone support\"; last updated: 2023-09-20 18:23:48.950",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bc2f4-f6dc-4756-f000-000083eb7171",
+          "message_text": "Bucks: Thank you so much for your interest. You can get your tickets here: https://bucks.attn.tv/amcvYgwKew8p Unfortunately, we don't offer phone support right now. Let me know if you're encountering issues.",
+          "message_media": []
+        }
+      ]
+    },
+    "10": {
+      "agentName": "Darby",
+      "id": "019bc8a4-fd4b-41f9-f000-0000f1662b30",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://johnnie-o.com/",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.johnnie-o.com/collections/sale/products/jmbz100360_ferris_25fa?color=Charcoal",
+            "item": "Ferris Top Shelf Woven Sport Coat",
+            "timeAgo": "2026-01-16"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/end-of-season-sale-2025/products/jmbz100360_ferris_25fa?color=Charcoal&variant=44967970668719",
+            "item": "Ferris Top Shelf Woven Sport Coat",
+            "timeAgo": "2026-01-16"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/sale/products/jmbz100360_ferris_25fa?color=Charcoal",
+            "item": "Ferris Top Shelf Woven Sport Coat",
+            "timeAgo": "2026-01-15"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/mens-sport-coats/products/jmbz100360_ferris_25fa?color=Charcoal&variant=44967970668719",
+            "item": "Ferris Top Shelf Woven Sport Coat",
+            "timeAgo": "2026-01-11"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/mens-sport-coats/products/jmbz100360_ferris_25fa?color=Charcoal&variant=44967970668719",
+            "item": "Ferris Top Shelf Woven Sport Coat",
+            "timeAgo": "2026-01-10"
+          }
+        ]
+      },
+      "companyWebsite": "https://johnnie-o.com/",
+      "companyName": "johnnie-O",
+      "notes": {
+        "escalate": [
+          "ESC restock inquiries",
+          "ESC shipping/order inquiries",
+          "ESC cxs looking for a discount code"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [
+        "Untuck-it"
+      ],
+      "escalation_preferences": [
+        "Restock questions",
+        "shipping",
+        "site issues",
+        "out of stock issues"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Johnnie-O.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Welcome to johnnie-O! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: https://johnnie-o.attn.tv/a1oPbFoM6l7P .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Welcome to the Family! Your 10% off coupon code is SMS10hIbCxC . Click here to shop now: https://johnnie-o.attn.tv/ajNFn6ImrOeY .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Don't forget to save our contact!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Still deciding? In case you missed it, enter SMS10hIbCxC at checkout for 10% off your purchase! https://johnnie-o.attn.tv/a884Tx_vCugR .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Looks like you left something behind! Ferris Top Shelf Woven Sport Coat grab it now or shop New Arrivals johnnie-o.attn.tv/aYupFpBGHBhT ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: What makes JO different? It's what we call \"Top Spin\" - we take the classics and make them that much better. https://johnnie-o.attn.tv/aRfWqU2dl4QJ . \n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Shop up to 50% off for everyone!\n\nMen\njohnnie-o.attn.tv/aYBDxTKtLJ7g \n\nWomen\njohnnie-o.attn.tv/aKHCmnQawukW \n\nBoys\njohnnie-o.attn.tv/a2C4bN6bvvQc ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: The perfect vest completes any look, from coffee runs to drinks with the boys we have you covered. Shop up to 50% off johnnie-o.attn.tv/a6cIiTxy87iB ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Hi there! Don't forget to take advantage of your welcome coupon. Explore our newest arrivals and enjoy 10% OFF your purchase with code: SMS10hIbCxC. \n\nhttps://johnnie-o.attn.tv/aZR13AFoJdAB .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Get up to 50% our best in class button downs, from featherweight performance to ultra soft flannels and more! johnnie-o.attn.tv/aUwwOjjVrCSJ ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Hey Mark , this is Darby . Thanks for checking us out! 😊 johnnie-o.attn.tv/axnK5-43MGhV \n\nAny questions I can answer for you? ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Any discount codes that may push me over the edge on my Johnnie-O cart? Looking for something better than 10%.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bc366-3750-4738-f000-0000f1662b30",
+          "message_text": "Johnnie-O: I currently have a 10% off coupon code SMS10hIbCxC for you to use at johnnie-o.com. For more deals, check the website for the latest promotions and sales.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Our end of season sale ends tonight! Don't miss your last chance to refresh your wardrobe at some of our best prices. johnnie-o.attn.tv/asSAwP5E63mO ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "My discount code isn't working, please advise",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bc8a1-99be-44b5-f000-0000f1662b30",
+          "message_text": "Johnnie-O: Please share a screenshot of the issue with the discount code. Meanwhile, check johnnie-o.com for the latest promotions and sales.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bc8a4-fd4b-41f9-f000-0000f1662b30",
+          "message_text": "Johnnie-O: Thank you for sending that over. I just checked, and what you're looking to purchase already has a discount pre-applied, which is why the code isn't working. Discount codes can't be used in conjunction with other promotional offers in the same order. Let me know if this clears things up, I'll be here if you have any other questions. ",
+          "message_media": []
+        }
+      ]
+    }
+  }
+}

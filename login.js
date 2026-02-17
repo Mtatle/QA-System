@@ -31,6 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return sessionId;
     }
 
+    function createAssignmentSessionId() {
+        return `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    }
+
+    function resetAssignmentSessionId() {
+        localStorage.setItem('assignmentSessionId', createAssignmentSessionId());
+    }
+
     function toESTDateTimeString() {
         const now = new Date();
         return now.toLocaleString('en-US', {
@@ -121,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('agentEmail', email);
                 localStorage.setItem('sessionStartTime', Date.now());
                 localStorage.setItem('loginMethod', 'google');
+                resetAssignmentSessionId();
                 // Log session login
                 sendSessionLogin({ agentName: name, agentEmail: email, loginMethod: 'google' });
                 
@@ -166,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('agentEmail', email);
                 localStorage.setItem('sessionStartTime', Date.now());
                 localStorage.setItem('loginMethod', 'google');
+                resetAssignmentSessionId();
                 sendSessionLogin({ agentName: name, agentEmail: email, loginMethod: 'google' });
                 window.location.href = 'app.html';
             } else {
@@ -296,6 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('agentName', username);
         localStorage.setItem('sessionStartTime', Date.now());
         localStorage.setItem('loginMethod', 'username');
+        resetAssignmentSessionId();
         // Log session login (email unknown)
         sendSessionLogin({ agentName: username, agentEmail: '', loginMethod: 'username' });
         window.location.href = 'app.html';
@@ -308,6 +319,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const maxSessionAge = 24 * 60 * 60 * 1000; // 24 hours
         
         if (sessionAge < maxSessionAge) {
+            if (!localStorage.getItem('assignmentSessionId')) {
+                resetAssignmentSessionId();
+            }
             window.location.href = 'app.html';
         } else {
             // Session expired, clear storage
@@ -315,6 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.removeItem('agentEmail');
             localStorage.removeItem('sessionStartTime');
             localStorage.removeItem('loginMethod');
+            localStorage.removeItem('assignmentSessionId');
         }
     }
 });

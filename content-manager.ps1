@@ -883,6 +883,198 @@ function Convert-CsvRowToScenario {
     }
 }
 
+function Ensure-Directory {
+    param([Parameter(Mandatory = $true)][string]$Path)
+    if (-not (Test-Path -LiteralPath $Path)) {
+        New-Item -ItemType Directory -Path $Path -Force | Out-Null
+    }
+}
+
+function Normalize-CompanyKey {
+    param([string]$Name)
+    $text = (Get-StringValue $Name).Trim().ToLowerInvariant()
+    if (-not $text) { return "" }
+    $text = [regex]::Replace($text, "\s+", " ")
+    return $text
+}
+
+function Convert-CompanyKeyToSlug {
+    param([string]$CompanyKey)
+    $slug = [regex]::Replace(($CompanyKey.ToLowerInvariant()), "[^a-z0-9]+", "-").Trim("-")
+    if (-not $slug) { return "company" }
+    return $slug
+}
+
+function Get-TemplateListFromContainer {
+    param($Container)
+
+    if ($null -eq $Container) { return @() }
+    if ($Container -is [System.Array]) { return @($Container) }
+    if ($Container.PSObject.Properties.Name -contains 'templates' -and $Container.templates -is [System.Array]) {
+        return @($Container.templates)
+    }
+    return @()
+}
+
+function Build-RuntimeArtifacts {
+    param(
+        [switch]$Quiet
+    )
+
+    $dataRoot = Join-Path $script:CurrentFolder "data"
+    $scenarioRoot = Join-Path $dataRoot "scenarios"
+    $scenarioChunksRoot = Join-Path $scenarioRoot "chunks"
+    $templateRoot = Join-Path $dataRoot "templates"
+    $templateCompaniesRoot = Join-Path $templateRoot "companies"
+
+    Ensure-Directory -Path $dataRoot
+    Ensure-Directory -Path $scenarioRoot
+    Ensure-Directory -Path $scenarioChunksRoot
+    Ensure-Directory -Path $templateRoot
+    Ensure-Directory -Path $templateCompaniesRoot
+
+    $chunkSize = 5
+
+    # ---- Scenarios runtime index/chunks ----
+    $scenarioContainer = Get-JsonObject -Path (Get-ScenariosPath)
+    $scenarioList = @(Convert-ScenarioContainerToList -Container $scenarioContainer)
+    if ($null -eq $scenarioList) { $scenarioList = @() }
+
+    $scenarioOrder = @()
+    $scenarioByKey = [ordered]@{}
+    $scenarioById = [ordered]@{}
+    $scenarioChunkBuckets = @{}
+
+    for ($i = 0; $i -lt $scenarioList.Count; $i++) {
+        $scenarioKey = [string]($i + 1)
+        $scenarioRecord = Normalize-ScenarioRecordForStorage -Scenario $scenarioList[$i]
+        $scenarioOrder += $scenarioKey
+
+        $chunkNumber = [math]::Floor($i / $chunkSize) + 1
+        $chunkBase = ("chunk_{0:D4}" -f $chunkNumber)
+        $chunkFileName = "$chunkBase.json"
+        if (-not $scenarioChunkBuckets.ContainsKey($chunkFileName)) {
+            $scenarioChunkBuckets[$chunkFileName] = [ordered]@{}
+        }
+        $scenarioChunkBuckets[$chunkFileName][$scenarioKey] = $scenarioRecord
+
+        $scenarioId = (Get-StringValue $scenarioRecord.id).Trim()
+        $companyName = (Get-StringValue $scenarioRecord.companyName).Trim()
+        $scenarioByKey[$scenarioKey] = [ordered]@{
+            id        = $scenarioId
+            companyName = $companyName
+            chunkFile = "data/scenarios/chunks/$chunkFileName"
+        }
+        if ($scenarioId -and -not $scenarioById.ContainsKey($scenarioId)) {
+            $scenarioById[$scenarioId] = $scenarioKey
+        }
+    }
+
+    $keptScenarioChunks = @{}
+    foreach ($chunkFileName in $scenarioChunkBuckets.Keys) {
+        $chunkPath = Join-Path $scenarioChunksRoot $chunkFileName
+        Write-JsonObject -Path $chunkPath -Value ([ordered]@{
+            version = 1
+            chunk = [System.IO.Path]::GetFileNameWithoutExtension($chunkFileName)
+            scenarios = $scenarioChunkBuckets[$chunkFileName]
+        })
+        $keptScenarioChunks[$chunkFileName] = $true
+    }
+
+    Get-ChildItem -LiteralPath $scenarioChunksRoot -File -Filter "*.json" | ForEach-Object {
+        if (-not $keptScenarioChunks.ContainsKey($_.Name)) {
+            Remove-Item -LiteralPath $_.FullName -Force
+        }
+    }
+
+    Write-JsonObject -Path (Join-Path $scenarioRoot "index.json") -Value ([ordered]@{
+        version = 1
+        chunkSize = $chunkSize
+        order = $scenarioOrder
+        byKey = $scenarioByKey
+        byId = $scenarioById
+    })
+
+    # ---- Templates runtime index/global/company bundles ----
+    $templatesContainer = Get-JsonObject -Path (Get-TemplatesPath)
+    $templateList = @(Get-TemplateListFromContainer -Container $templatesContainer)
+    if ($null -eq $templateList) { $templateList = @() }
+
+    $scenarioCompanyKeys = @{}
+    foreach ($scenario in $scenarioList) {
+        $companyKey = Normalize-CompanyKey -Name $scenario.companyName
+        if ($companyKey) { $scenarioCompanyKeys[$companyKey] = $true }
+    }
+
+    $globalTemplates = @()
+    $templatesByCompany = @{}
+    foreach ($template in $templateList) {
+        $companyKey = Normalize-CompanyKey -Name $template.companyName
+        if (-not $companyKey) {
+            $globalTemplates += $template
+            continue
+        }
+        if (-not $scenarioCompanyKeys.ContainsKey($companyKey)) {
+            continue
+        }
+        if (-not $templatesByCompany.ContainsKey($companyKey)) {
+            $templatesByCompany[$companyKey] = @()
+        }
+        $templatesByCompany[$companyKey] += $template
+    }
+
+    Write-JsonObject -Path (Join-Path $templateRoot "global.json") -Value @{ templates = $globalTemplates }
+
+    $templateCompaniesMap = [ordered]@{}
+    $usedSlugs = @{}
+    $keptCompanyTemplateFiles = @{}
+    $companyKeys = @($templatesByCompany.Keys | Sort-Object)
+    foreach ($companyKey in $companyKeys) {
+        $baseSlug = Convert-CompanyKeyToSlug -CompanyKey $companyKey
+        $slug = $baseSlug
+        $suffix = 2
+        while ($usedSlugs.ContainsKey($slug)) {
+            $slug = "$baseSlug-$suffix"
+            $suffix++
+        }
+        $usedSlugs[$slug] = $true
+
+        $fileName = "$slug.json"
+        $filePath = Join-Path $templateCompaniesRoot $fileName
+        Write-JsonObject -Path $filePath -Value ([ordered]@{
+            companyKey = $companyKey
+            templates = $templatesByCompany[$companyKey]
+        })
+
+        $templateCompaniesMap[$companyKey] = "data/templates/companies/$fileName"
+        $keptCompanyTemplateFiles[$fileName] = $true
+    }
+
+    Get-ChildItem -LiteralPath $templateCompaniesRoot -File -Filter "*.json" | ForEach-Object {
+        if (-not $keptCompanyTemplateFiles.ContainsKey($_.Name)) {
+            Remove-Item -LiteralPath $_.FullName -Force
+        }
+    }
+
+    Write-JsonObject -Path (Join-Path $templateRoot "index.json") -Value ([ordered]@{
+        version = 1
+        globalFile = "data/templates/global.json"
+        companies = $templateCompaniesMap
+    })
+
+    $summary = [ordered]@{
+        scenarios = $scenarioList.Count
+        scenarioChunks = $scenarioChunkBuckets.Keys.Count
+        templates = $templateList.Count
+        templateCompanies = $companyKeys.Count
+    }
+
+    if (-not $Quiet) {
+        Set-Status -Message "Runtime artifacts built. Scenarios: $($summary.scenarios), Chunks: $($summary.scenarioChunks), Templates: $($summary.templates), Template companies: $($summary.templateCompanies)."
+    }
+    return $summary
+}
+
 function Import-JsonToPath {
     param(
         [Parameter(Mandatory = $true)][string]$TargetPath,
@@ -924,16 +1116,18 @@ function Import-JsonToPath {
             }
 
             Write-JsonObject -Path $TargetPath -Value @{ templates = $templates }
+            $artifactSummary = Build-RuntimeArtifacts -Quiet
             Refresh-Meta
-            Set-Status -Message "$Label updated from CSV ($($templates.Count) template(s))."
+            Set-Status -Message "$Label updated from CSV ($($templates.Count) template(s)). Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) scenario chunks, $($artifactSummary.templateCompanies) template company bundles)."
             return
         }
 
         $raw = Get-Content -LiteralPath $dialog.FileName -Raw -ErrorAction Stop
         $parsed = $raw | ConvertFrom-Json
         Write-JsonObject -Path $TargetPath -Value $parsed
+        $artifactSummary = Build-RuntimeArtifacts -Quiet
         Refresh-Meta
-        Set-Status -Message "$Label updated from $($dialog.SafeFileName)."
+        Set-Status -Message "$Label updated from $($dialog.SafeFileName). Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) scenario chunks, $($artifactSummary.templateCompanies) template company bundles)."
     } catch {
         Set-Status -Message ("Invalid JSON for ${Label}: " + $_.Exception.Message) -IsError $true
     }
@@ -965,8 +1159,9 @@ function Import-ScenariosFromFile {
             if ($null -eq $incomingScenarios) { $incomingScenarios = @() }
             $merge = Merge-ScenariosById -Existing $existingList -Incoming $incomingScenarios
             Write-JsonObject -Path $TargetPath -Value @{ scenarios = $merge.scenarios }
+            $artifactSummary = Build-RuntimeArtifacts -Quiet
             Refresh-Meta
-            Set-Status -Message "scenarios.json updated from CSV. Added: $($merge.added), Updated: $($merge.updated)."
+            Set-Status -Message "scenarios.json updated from CSV. Added: $($merge.added), Updated: $($merge.updated). Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) chunks)."
             return
         }
 
@@ -979,8 +1174,9 @@ function Import-ScenariosFromFile {
         if ($null -eq $incomingList) { $incomingList = @() }
         $merge = Merge-ScenariosById -Existing $existingList -Incoming $incomingList
         Write-JsonObject -Path $TargetPath -Value @{ scenarios = $merge.scenarios }
+        $artifactSummary = Build-RuntimeArtifacts -Quiet
         Refresh-Meta
-        Set-Status -Message "scenarios.json updated from $($dialog.SafeFileName). Added: $($merge.added), Updated: $($merge.updated)."
+        Set-Status -Message "scenarios.json updated from $($dialog.SafeFileName). Added: $($merge.added), Updated: $($merge.updated). Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) chunks)."
     } catch {
         Set-Status -Message ("Failed to import scenarios source: " + $_.Exception.Message) -IsError $true
     }
@@ -1018,8 +1214,9 @@ $clearScenariosBtn.Add_Click({
 
     try {
         Write-JsonObject -Path (Get-ScenariosPath) -Value @{ scenarios = @() }
+        $artifactSummary = Build-RuntimeArtifacts -Quiet
         Refresh-Meta
-        Set-Status -Message "scenarios.json cleared."
+        Set-Status -Message "scenarios.json cleared. Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) chunks)."
     } catch {
         Set-Status -Message ("Failed to clear scenarios.json: " + $_.Exception.Message) -IsError $true
     }
@@ -1036,8 +1233,9 @@ $clearTemplatesBtn.Add_Click({
 
     try {
         Write-JsonObject -Path (Get-TemplatesPath) -Value @{ templates = @() }
+        $artifactSummary = Build-RuntimeArtifacts -Quiet
         Refresh-Meta
-        Set-Status -Message "templates.json cleared."
+        Set-Status -Message "templates.json cleared. Runtime artifacts refreshed ($($artifactSummary.templateCompanies) template company bundles)."
     } catch {
         Set-Status -Message ("Failed to clear templates.json: " + $_.Exception.Message) -IsError $true
     }
@@ -1050,6 +1248,12 @@ $openFolderBtn.Add_Click({
         Set-Status -Message ("Could not open folder: " + $_.Exception.Message) -IsError $true
     }
 })
+
+try {
+    Build-RuntimeArtifacts -Quiet | Out-Null
+} catch {
+    Set-Status -Message ("Failed to build runtime artifacts on startup: " + $_.Exception.Message) -IsError $true
+}
 
 Refresh-Meta
 [void]$form.ShowDialog()

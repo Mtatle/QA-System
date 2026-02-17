@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const nextConversationBtn = document.getElementById('nextConversationBtn');
     // Google Sheets integration
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyGbsJuilfRrAi111vKpEnlXBmhiHU3z1-YsIESqdKO0lTYRkkoV9r-Z9l07a-27ZJBdA/exec';
+    const RUNTIME_SCENARIO_INDEX_PATH = 'data/scenarios/index.json';
+    const RUNTIME_TEMPLATE_INDEX_PATH = 'data/templates/index.json';
+    const ASSIGNMENT_SESSION_CAP = 20;
+    const ASSIGNMENT_HEARTBEAT_INTERVAL_MS = 60 * 1000;
     // Current scenario data
     let currentScenario = null;
     let scenarioData = null;
@@ -17,48 +21,69 @@ document.addEventListener('DOMContentLoaded', async () => {
     let assignmentQueue = [];
     let assignmentContext = null;
     let draftSaveTimer = null;
+    let monolithicScenariosLoaded = false;
+    let runtimeScenariosIndex = null;
+    let runtimeScenariosIndexPromise = null;
+    let runtimeScenarioChunkCache = {};
+    let runtimeScenarioChunkPromises = {};
+    let runtimeScenariosUnavailable = false;
+    let runtimeTemplatesIndex = null;
+    let runtimeTemplatesIndexPromise = null;
+    let runtimeTemplateGlobalTemplates = [];
+    let runtimeTemplateGlobalLoaded = false;
+    let runtimeTemplateCompanyCache = {};
+    let runtimeTemplateFilePromises = {};
+    let runtimeTemplatesUnavailable = false;
+    let templateSearchSourceTemplates = [];
+    let templateSearchBound = false;
+    let assignmentSessionState = null;
+    let assignmentSessionComplete = false;
+    let assignmentHeartbeatTimer = null;
+    let assignmentHeartbeatWarningShown = false;
+    let isExplicitLogoutInProgress = false;
+    let pendingLogoutReleasePayload = null;
 
     async function refreshAssignmentQueue() {
+        if (!canUseAssignmentMode()) {
+            throw new Error('Assignment mode requires email login.');
+        }
         const email = getLoggedInEmail();
-        if (!email) throw new Error('Missing logged-in email.');
+        const sessionId = getAssignmentSessionId({ createIfMissing: true });
+        if (!sessionId) throw new Error('Missing assignment session id.');
         const response = await fetchAssignmentGet('queue', {
             email,
-            app_base: getCurrentAppBaseUrl()
+            app_base: getCurrentAppBaseUrl(),
+            session_id: sessionId
         });
+        applyAssignmentSessionState(response && response.session, { silent: true });
         const assignments = Array.isArray(response.assignments) ? response.assignments : [];
         renderAssignmentQueue(assignments);
+        if (!assignmentSessionComplete && assignmentContext && assignmentContext.assignment_id && assignments.length) {
+            prefetchAssignmentWindow(assignmentContext.assignment_id).catch((error) => {
+                console.warn('Assignment prefetch after queue refresh failed:', error);
+            });
+        }
         return assignments;
     }
 
-    async function loadAssignmentContextFromUrl(scenarios) {
-        const params = getAssignmentParamsFromUrl();
-        if (!params.aid) return null;
-        if (!params.token) throw new Error('Missing assignment token in URL.');
+    async function resolveScenarioKeyForSendId(sendId, scenariosOverride) {
+        const target = String(sendId || '').trim();
+        if (!target) return '';
 
-        const response = await fetchAssignmentGet('getAssignment', {
-            assignment_id: params.aid,
-            token: params.token
-        });
-        const assignment = response && response.assignment ? response.assignment : null;
-        if (!assignment) throw new Error('Assignment payload is missing.');
-
-        const scenarioMatch = findScenarioBySendId(scenarios, assignment.send_id);
-        if (!scenarioMatch) {
-            throw new Error(`Scenario for send_id ${assignment.send_id} was not found in loaded scenarios.`);
+        const scenarioIndex = await loadRuntimeScenariosIndex();
+        if (scenarioIndex && scenarioIndex.byId && scenarioIndex.byId[target]) {
+            return String(scenarioIndex.byId[target]);
         }
 
-        assignmentContext = {
-            assignment_id: assignment.assignment_id,
-            send_id: assignment.send_id,
-            role: assignment.role === 'viewer' ? 'viewer' : 'editor',
-            mode: params.mode,
-            token: params.token,
-            status: assignment.status || '',
-            scenarioKey: scenarioMatch.scenarioKey,
-            form_state_json: assignment.form_state_json || '',
-            internal_note: assignment.internal_note || ''
-        };
-        return assignmentContext;
+        const candidateScenarios = scenariosOverride || allScenariosData || {};
+        const directMatch = findScenarioBySendId(candidateScenarios, target);
+        if (directMatch && directMatch.scenarioKey) {
+            return String(directMatch.scenarioKey);
+        }
+
+        const fullScenarios = await loadScenariosDataMonolith();
+        const fallbackMatch = findScenarioBySendId(fullScenarios || {}, target);
+        return fallbackMatch && fallbackMatch.scenarioKey ? String(fallbackMatch.scenarioKey) : '';
     }
 
     function isCsvScenarioMode() {
@@ -184,6 +209,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         };
     }
 
+    function getAssignmentParamsFromHref(urlValue) {
+        if (!urlValue) return null;
+        try {
+            const resolved = new URL(String(urlValue), window.location.href);
+            const params = new URLSearchParams(resolved.search);
+            const aid = String(params.get('aid') || '').trim();
+            const token = String(params.get('token') || '').trim();
+            if (!aid || !token) return null;
+            const modeRaw = String(params.get('mode') || 'edit').toLowerCase();
+            return {
+                aid,
+                token,
+                mode: modeRaw === 'view' ? 'view' : 'edit',
+                href: `app.html?${params.toString()}`
+            };
+        } catch (_) {
+            return null;
+        }
+    }
+
     function getLoggedInEmail() {
         return String(localStorage.getItem('agentEmail') || '').trim().toLowerCase();
     }
@@ -194,10 +239,413 @@ document.addEventListener('DOMContentLoaded', async () => {
         assignmentsStatus.style.color = isError ? '#b00020' : '#4a4a4a';
     }
 
+    function createAssignmentSessionId() {
+        return `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    }
+
+    function getAssignmentSessionId(options = {}) {
+        const createIfMissing = !!options.createIfMissing;
+        let sessionId = String(localStorage.getItem('assignmentSessionId') || '').trim();
+        if (!sessionId && createIfMissing) {
+            sessionId = createAssignmentSessionId();
+            localStorage.setItem('assignmentSessionId', sessionId);
+        }
+        return sessionId;
+    }
+
+    function clearAssignmentSessionId() {
+        localStorage.removeItem('assignmentSessionId');
+    }
+
+    function canUseAssignmentMode() {
+        return !!getLoggedInEmail();
+    }
+
+    function getSessionSubmittedCount(sessionLike) {
+        const raw = sessionLike && sessionLike.submitted_count != null ? Number(sessionLike.submitted_count) : 0;
+        return Number.isFinite(raw) ? Math.max(0, raw) : 0;
+    }
+
+    function getSessionCap(sessionLike) {
+        const raw = sessionLike && sessionLike.cap != null ? Number(sessionLike.cap) : ASSIGNMENT_SESSION_CAP;
+        return Number.isFinite(raw) && raw > 0 ? raw : ASSIGNMENT_SESSION_CAP;
+    }
+
+    function isSessionCompleteState(sessionLike) {
+        if (!sessionLike || typeof sessionLike !== 'object') return false;
+        const state = String(sessionLike.state || '').trim().toUpperCase();
+        if (sessionLike.session_complete === true) return true;
+        if (state === 'COMPLETED') return true;
+        return getSessionSubmittedCount(sessionLike) >= getSessionCap(sessionLike);
+    }
+
+    function setAssignmentSessionUiLocked(isLocked) {
+        if (assignmentRefreshBtn) assignmentRefreshBtn.disabled = !!isLocked;
+        if (assignmentSelect) assignmentSelect.disabled = !!isLocked;
+    }
+
+    function showSessionCompleteScreen(sessionLike) {
+        const submitted = getSessionSubmittedCount(sessionLike);
+        const cap = getSessionCap(sessionLike);
+        const text = `Session complete (${submitted}/${cap}).`;
+        let banner = document.getElementById('sessionCompleteBanner');
+        if (!banner) {
+            banner = document.createElement('div');
+            banner.id = 'sessionCompleteBanner';
+            banner.setAttribute('role', 'status');
+            banner.style.position = 'fixed';
+            banner.style.top = '72px';
+            banner.style.left = '50%';
+            banner.style.transform = 'translateX(-50%)';
+            banner.style.padding = '12px 18px';
+            banner.style.borderRadius = '10px';
+            banner.style.background = '#1f2937';
+            banner.style.color = '#fff';
+            banner.style.fontWeight = '600';
+            banner.style.fontSize = '14px';
+            banner.style.boxShadow = '0 6px 20px rgba(0,0,0,0.18)';
+            banner.style.zIndex = '999';
+            banner.style.pointerEvents = 'none';
+            document.body.appendChild(banner);
+        }
+        banner.textContent = `${text} Log out to start a new session.`;
+    }
+
+    function hideSessionCompleteScreen() {
+        const banner = document.getElementById('sessionCompleteBanner');
+        if (banner) banner.remove();
+    }
+
+    function applyAssignmentSessionState(sessionLike, options = {}) {
+        if (!sessionLike || typeof sessionLike !== 'object') return;
+        assignmentSessionState = sessionLike;
+        assignmentSessionComplete = isSessionCompleteState(sessionLike);
+        const sessionId = String(sessionLike.session_id || '').trim();
+        if (sessionId) {
+            localStorage.setItem('assignmentSessionId', sessionId);
+        }
+
+        setAssignmentSessionUiLocked(assignmentSessionComplete);
+
+        if (assignmentSessionComplete) {
+            stopAssignmentHeartbeat();
+            showSessionCompleteScreen(sessionLike);
+            setAssignmentsStatus(`Session complete (${getSessionSubmittedCount(sessionLike)}/${getSessionCap(sessionLike)}).`, false);
+            const forceView = !!(assignmentContext && (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view'));
+            setAssignmentReadOnlyState(forceView);
+            return;
+        }
+
+        hideSessionCompleteScreen();
+        if (!options.silent) {
+            setAssignmentsStatus('', false);
+        }
+        if (assignmentContext) {
+            const forceView = assignmentContext.role === 'viewer' || assignmentContext.mode === 'view';
+            setAssignmentReadOnlyState(forceView);
+        }
+    }
+
     function getCurrentAppBaseUrl() {
         const origin = window.location.origin || '';
         const path = window.location.pathname || '/app.html';
         return `${origin}${path}`;
+    }
+
+    function normalizeRuntimePath(pathValue) {
+        return String(pathValue || '').trim().replace(/\\/g, '/').replace(/^\.\//, '');
+    }
+
+    function buildDemoScenarioFallback() {
+        return {
+            '1': normalizeScenarioRecord({
+                companyName: 'Demo Company',
+                agentName: localStorage.getItem('agentName') || 'Agent',
+                customerPhone: '(000) 000-0000',
+                customerMessage: 'Welcome! Start the conversation here.',
+                notes: {
+                    important: ['Run with a local server to load full scenarios.json']
+                },
+                rightPanel: { source: { label: 'Source', value: 'Local Demo', date: '' } }
+            }, {}, '1')
+        };
+    }
+
+    async function loadScenariosDataMonolith() {
+        if (monolithicScenariosLoaded && allScenariosData && Object.keys(allScenariosData).length) {
+            return allScenariosData;
+        }
+
+        if (window.location.protocol === 'file:') {
+            allScenariosData = buildDemoScenarioFallback();
+            monolithicScenariosLoaded = true;
+            return allScenariosData;
+        }
+
+        try {
+            const response = await fetch('scenarios.json');
+            if (!response.ok) throw new Error(`scenarios.json load failed (${response.status})`);
+            const data = await response.json();
+            const scenarios = coerceScenariosPayloadToMap(data);
+            allScenariosData = scenarios || {};
+            monolithicScenariosLoaded = true;
+            return allScenariosData;
+        } catch (error) {
+            console.error('Error loading scenarios data:', error);
+            return allScenariosData;
+        }
+    }
+
+    async function loadTemplatesDataMonolith() {
+        if (Array.isArray(templatesData) && templatesData.length) {
+            return templatesData;
+        }
+        try {
+            const response = await fetch('templates.json', { method: 'GET' });
+            if (!response.ok) throw new Error(`templates.json load failed (${response.status})`);
+            const data = await response.json();
+            templatesData = Array.isArray(data.templates) ? data.templates : [];
+            return templatesData;
+        } catch (error) {
+            console.error('Error loading templates.json fallback:', error);
+            return templatesData;
+        }
+    }
+
+    async function loadRuntimeScenariosIndex() {
+        if (runtimeScenariosUnavailable) return null;
+        if (runtimeScenariosIndex) return runtimeScenariosIndex;
+        if (runtimeScenariosIndexPromise) return runtimeScenariosIndexPromise;
+
+        runtimeScenariosIndexPromise = (async () => {
+            try {
+                const response = await fetch(RUNTIME_SCENARIO_INDEX_PATH, { method: 'GET' });
+                if (!response.ok) throw new Error(`Scenario runtime index unavailable (${response.status})`);
+                const data = await response.json();
+                const hasShape = data && typeof data === 'object' &&
+                    Array.isArray(data.order) &&
+                    data.byKey && typeof data.byKey === 'object';
+                if (!hasShape) throw new Error('Scenario runtime index has invalid shape.');
+                runtimeScenariosIndex = data;
+                return runtimeScenariosIndex;
+            } catch (error) {
+                runtimeScenariosUnavailable = true;
+                console.warn('Falling back to monolithic scenarios:', error);
+                return null;
+            } finally {
+                runtimeScenariosIndexPromise = null;
+            }
+        })();
+        return runtimeScenariosIndexPromise;
+    }
+
+    async function loadRuntimeScenarioChunk(chunkPath) {
+        const normalizedPath = normalizeRuntimePath(chunkPath);
+        if (!normalizedPath) return {};
+        if (runtimeScenarioChunkCache[normalizedPath]) return runtimeScenarioChunkCache[normalizedPath];
+        if (runtimeScenarioChunkPromises[normalizedPath]) return runtimeScenarioChunkPromises[normalizedPath];
+
+        runtimeScenarioChunkPromises[normalizedPath] = (async () => {
+            const response = await fetch(normalizedPath, { method: 'GET' });
+            if (!response.ok) throw new Error(`Scenario chunk load failed (${response.status}): ${normalizedPath}`);
+            const data = await response.json();
+            const scenariosRaw = (data && typeof data === 'object' && data.scenarios && typeof data.scenarios === 'object')
+                ? data.scenarios
+                : {};
+            const normalizedScenarios = {};
+            Object.keys(scenariosRaw).forEach((scenarioKey) => {
+                normalizedScenarios[String(scenarioKey)] = normalizeScenarioRecord(scenariosRaw[scenarioKey], {}, String(scenarioKey));
+            });
+            runtimeScenarioChunkCache[normalizedPath] = normalizedScenarios;
+            return normalizedScenarios;
+        })();
+
+        try {
+            return await runtimeScenarioChunkPromises[normalizedPath];
+        } finally {
+            delete runtimeScenarioChunkPromises[normalizedPath];
+        }
+    }
+
+    async function ensureScenariosLoaded(keys) {
+        const requestedKeys = Array.from(new Set((Array.isArray(keys) ? keys : []).map(k => String(k || '').trim()).filter(Boolean)));
+        if (!requestedKeys.length) return allScenariosData || {};
+        allScenariosData = allScenariosData || {};
+
+        const missingKeys = requestedKeys.filter(k => !allScenariosData[k]);
+        if (!missingKeys.length) return allScenariosData;
+
+        if (window.location.protocol === 'file:') {
+            if (!Object.keys(allScenariosData).length) {
+                allScenariosData = buildDemoScenarioFallback();
+            }
+            return allScenariosData;
+        }
+
+        const scenarioIndex = await loadRuntimeScenariosIndex();
+        if (scenarioIndex) {
+            try {
+                const chunkFiles = Array.from(new Set(
+                    missingKeys
+                        .map((scenarioKey) => scenarioIndex.byKey && scenarioIndex.byKey[scenarioKey] ? normalizeRuntimePath(scenarioIndex.byKey[scenarioKey].chunkFile) : '')
+                        .filter(Boolean)
+                ));
+                for (let i = 0; i < chunkFiles.length; i++) {
+                    const chunkMap = await loadRuntimeScenarioChunk(chunkFiles[i]);
+                    Object.keys(chunkMap).forEach((scenarioKey) => {
+                        allScenariosData[scenarioKey] = chunkMap[scenarioKey];
+                    });
+                }
+            } catch (error) {
+                runtimeScenariosUnavailable = true;
+                console.warn('Scenario chunk load failed, switching to monolithic mode:', error);
+            }
+        }
+
+        const stillMissing = requestedKeys.filter(k => !allScenariosData[k]);
+        if (stillMissing.length) {
+            await loadScenariosDataMonolith();
+        }
+        return allScenariosData || {};
+    }
+
+    async function loadRuntimeTemplatesIndex() {
+        if (runtimeTemplatesUnavailable) return null;
+        if (runtimeTemplatesIndex) return runtimeTemplatesIndex;
+        if (runtimeTemplatesIndexPromise) return runtimeTemplatesIndexPromise;
+
+        runtimeTemplatesIndexPromise = (async () => {
+            try {
+                const response = await fetch(RUNTIME_TEMPLATE_INDEX_PATH, { method: 'GET' });
+                if (!response.ok) throw new Error(`Template runtime index unavailable (${response.status})`);
+                const data = await response.json();
+                const hasShape = data && typeof data === 'object' &&
+                    data.companies && typeof data.companies === 'object' &&
+                    typeof data.globalFile === 'string';
+                if (!hasShape) throw new Error('Template runtime index has invalid shape.');
+                runtimeTemplatesIndex = data;
+                return runtimeTemplatesIndex;
+            } catch (error) {
+                runtimeTemplatesUnavailable = true;
+                console.warn('Falling back to monolithic templates:', error);
+                return null;
+            } finally {
+                runtimeTemplatesIndexPromise = null;
+            }
+        })();
+        return runtimeTemplatesIndexPromise;
+    }
+
+    async function loadRuntimeTemplateFile(pathValue) {
+        const normalizedPath = normalizeRuntimePath(pathValue);
+        if (!normalizedPath) return null;
+        if (runtimeTemplateFilePromises[normalizedPath]) return runtimeTemplateFilePromises[normalizedPath];
+
+        runtimeTemplateFilePromises[normalizedPath] = (async () => {
+            const response = await fetch(normalizedPath, { method: 'GET' });
+            if (!response.ok) throw new Error(`Template bundle load failed (${response.status}): ${normalizedPath}`);
+            return response.json();
+        })();
+
+        try {
+            return await runtimeTemplateFilePromises[normalizedPath];
+        } finally {
+            delete runtimeTemplateFilePromises[normalizedPath];
+        }
+    }
+
+    async function ensureRuntimeTemplateGlobalLoaded() {
+        if (runtimeTemplateGlobalLoaded) return true;
+        const templateIndex = await loadRuntimeTemplatesIndex();
+        if (!templateIndex) return false;
+        const globalFile = normalizeRuntimePath(templateIndex.globalFile);
+        if (!globalFile) return false;
+        try {
+            const globalData = await loadRuntimeTemplateFile(globalFile);
+            runtimeTemplateGlobalTemplates = Array.isArray(globalData && globalData.templates) ? globalData.templates : [];
+            runtimeTemplateGlobalLoaded = true;
+            return true;
+        } catch (error) {
+            runtimeTemplatesUnavailable = true;
+            console.warn('Template global bundle failed, switching to monolithic mode:', error);
+            return false;
+        }
+    }
+
+    async function ensureRuntimeTemplateCompanyLoaded(companyKey) {
+        const normalizedCompany = normalizeName(companyKey);
+        if (!normalizedCompany) return true;
+        if (runtimeTemplateCompanyCache[normalizedCompany]) return true;
+
+        const templateIndex = await loadRuntimeTemplatesIndex();
+        if (!templateIndex) return false;
+
+        const relativePath = templateIndex.companies ? templateIndex.companies[normalizedCompany] : '';
+        if (!relativePath) {
+            runtimeTemplateCompanyCache[normalizedCompany] = [];
+            return true;
+        }
+
+        try {
+            const companyData = await loadRuntimeTemplateFile(relativePath);
+            runtimeTemplateCompanyCache[normalizedCompany] = Array.isArray(companyData && companyData.templates) ? companyData.templates : [];
+            return true;
+        } catch (error) {
+            runtimeTemplatesUnavailable = true;
+            console.warn('Template company bundle failed, switching to monolithic mode:', error);
+            return false;
+        }
+    }
+
+    async function ensureTemplatesLoadedForScenarioKeys(scenarioKeys) {
+        const keys = Array.from(new Set((Array.isArray(scenarioKeys) ? scenarioKeys : []).map(k => String(k || '').trim()).filter(Boolean)));
+        if (!keys.length) return;
+
+        if (window.location.protocol === 'file:') {
+            await loadTemplatesDataMonolith();
+            return;
+        }
+
+        const templateIndex = await loadRuntimeTemplatesIndex();
+        if (!templateIndex) {
+            await loadTemplatesDataMonolith();
+            return;
+        }
+
+        const globalLoaded = await ensureRuntimeTemplateGlobalLoaded();
+        if (!globalLoaded) {
+            await loadTemplatesDataMonolith();
+            return;
+        }
+
+        const companyKeys = Array.from(new Set(keys
+            .map((scenarioKey) => {
+                const scenario = allScenariosData && allScenariosData[scenarioKey];
+                return normalizeName(scenario && scenario.companyName);
+            })
+            .filter(Boolean)));
+
+        for (let i = 0; i < companyKeys.length; i++) {
+            const ok = await ensureRuntimeTemplateCompanyLoaded(companyKeys[i]);
+            if (!ok) break;
+        }
+
+        if (runtimeTemplatesUnavailable) {
+            await loadTemplatesDataMonolith();
+        }
+    }
+
+    function getCenteredWindowItems(list, currentIndex, windowSize) {
+        const safeList = Array.isArray(list) ? list : [];
+        if (!safeList.length) return [];
+        if (safeList.length <= windowSize) return safeList.slice();
+        const max = Math.floor(windowSize / 2);
+        const selected = [];
+        for (let offset = -max; offset <= max; offset++) {
+            const idx = (currentIndex + offset + safeList.length) % safeList.length;
+            selected.push(safeList[idx]);
+        }
+        return selected;
     }
 
     async function fetchAssignmentGet(action, queryParams) {
@@ -231,6 +679,86 @@ document.addEventListener('DOMContentLoaded', async () => {
             throw new Error((json && json.error) ? json.error : `Request failed (${res.status})`);
         }
         return json;
+    }
+
+    function stopAssignmentHeartbeat() {
+        if (assignmentHeartbeatTimer) {
+            clearInterval(assignmentHeartbeatTimer);
+            assignmentHeartbeatTimer = null;
+        }
+    }
+
+    async function sendAssignmentHeartbeat() {
+        if (!canUseAssignmentMode() || assignmentSessionComplete) return;
+        const email = getLoggedInEmail();
+        const sessionId = getAssignmentSessionId();
+        if (!email || !sessionId) return;
+        try {
+            const response = await fetchAssignmentPost('heartbeat', {
+                email,
+                session_id: sessionId,
+                client_ts: new Date().toISOString()
+            });
+            applyAssignmentSessionState(response && response.session, { silent: true });
+            assignmentHeartbeatWarningShown = false;
+        } catch (error) {
+            console.warn('Assignment heartbeat failed:', error);
+            if (!assignmentHeartbeatWarningShown) {
+                setAssignmentsStatus('Assignment heartbeat warning. Your queue is still open; keep working.', true);
+                assignmentHeartbeatWarningShown = true;
+            }
+        }
+    }
+
+    function startAssignmentHeartbeat() {
+        if (!canUseAssignmentMode() || assignmentSessionComplete) return;
+        if (!assignmentSessionState || !assignmentSessionState.session_id) return;
+        const sessionId = getAssignmentSessionId();
+        if (!sessionId) return;
+        stopAssignmentHeartbeat();
+        sendAssignmentHeartbeat();
+        assignmentHeartbeatTimer = setInterval(() => {
+            sendAssignmentHeartbeat();
+        }, ASSIGNMENT_HEARTBEAT_INTERVAL_MS);
+    }
+
+    async function releaseAssignmentSession(reason) {
+        const email = getLoggedInEmail();
+        const sessionId = getAssignmentSessionId();
+        if (!email || !sessionId) return { ok: false, released_count: 0 };
+        try {
+            const response = await fetchAssignmentPost('releaseSession', {
+                email,
+                session_id: sessionId,
+                reason: String(reason || 'manual')
+            });
+            applyAssignmentSessionState(response && response.session, { silent: true });
+            return response;
+        } catch (error) {
+            console.warn('releaseSession failed:', error);
+            return { ok: false, released_count: 0 };
+        }
+    }
+
+    function sendBeaconReleaseSession(reason, payloadOverride) {
+        if (!navigator.sendBeacon) return;
+        const override = payloadOverride && typeof payloadOverride === 'object' ? payloadOverride : null;
+        const email = override
+            ? String(override.email || '').trim().toLowerCase()
+            : String(localStorage.getItem('agentEmail') || '').trim().toLowerCase();
+        const sessionId = override
+            ? String(override.session_id || '').trim()
+            : String(localStorage.getItem('assignmentSessionId') || '').trim();
+        if (!email || !sessionId) return;
+        const payload = JSON.stringify({
+            email,
+            session_id: sessionId,
+            reason: String(reason || 'logout')
+        });
+        const params = new URLSearchParams({ action: 'releaseSession' });
+        const endpoint = `${GOOGLE_SCRIPT_URL}?${params.toString()}`;
+        const blob = new Blob([payload], { type: 'text/plain' });
+        navigator.sendBeacon(endpoint, blob);
     }
 
     function renderAssignmentQueue(assignments) {
@@ -268,12 +796,31 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    function openSelectedAssignmentFromList() {
+    async function openSelectedAssignmentFromList() {
+        if (assignmentSessionComplete) {
+            setAssignmentsStatus('Session complete (20/20). Log out to start a new session.', false);
+            return;
+        }
         if (!assignmentSelect || !assignmentSelect.value) return;
         const selectedOption = assignmentSelect.options[assignmentSelect.selectedIndex];
         if (!selectedOption) return;
-        const url = selectedOption.dataset.editUrl || '';
-        if (url) window.location.href = url;
+        const prefersViewUrl = !!(assignmentContext && (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view'));
+        const editUrl = String(selectedOption.dataset.editUrl || '').trim();
+        const viewUrl = String(selectedOption.dataset.viewUrl || '').trim();
+        const url = prefersViewUrl ? (viewUrl || editUrl) : (editUrl || viewUrl);
+        if (!url) return;
+        if (assignmentContext && assignmentContext.assignment_id) {
+            const opened = await openAssignmentInPageByUrl(url, {
+                updateHistory: true,
+                replaceHistory: false,
+                refreshQueue: false
+            });
+            if (!opened) {
+                window.location.href = url;
+            }
+            return;
+        }
+        window.location.href = url;
     }
 
     function findScenarioBySendId(scenarios, sendId) {
@@ -298,13 +845,181 @@ document.addEventListener('DOMContentLoaded', async () => {
         return `customFormState_assignment_${assignmentContext.assignment_id}`;
     }
 
+    function buildAssignmentContextRecord(assignment, params, scenarioKey) {
+        return {
+            assignment_id: assignment.assignment_id,
+            send_id: assignment.send_id,
+            role: assignment.role === 'viewer' ? 'viewer' : 'editor',
+            mode: (params && params.mode) ? params.mode : getPageModeFromUrl(),
+            token: (params && params.token) ? params.token : '',
+            status: assignment.status || '',
+            scenarioKey: String(scenarioKey || ''),
+            form_state_json: assignment.form_state_json || '',
+            internal_note: assignment.internal_note || ''
+        };
+    }
+
+    function buildAssignmentPageUrl(params, scenarioKey) {
+        const query = new URLSearchParams();
+        query.set('aid', String(params && params.aid ? params.aid : ''));
+        query.set('token', String(params && params.token ? params.token : ''));
+        query.set('mode', String(params && params.mode ? params.mode : 'edit'));
+        if (scenarioKey) {
+            query.set('scenario', String(scenarioKey));
+            const scenario = allScenariosData && allScenariosData[String(scenarioKey)];
+            const scenarioId = scenario && scenario.id ? String(scenario.id).trim() : '';
+            if (scenarioId) {
+                query.set('sid', scenarioId);
+            }
+        }
+        return `app.html?${query.toString()}`;
+    }
+
+    async function getScenarioKeysForAssignmentWindow(targetAssignmentId) {
+        const queue = Array.isArray(assignmentQueue) ? assignmentQueue : [];
+        if (!queue.length) return [];
+        const targetId = String(targetAssignmentId || (assignmentContext && assignmentContext.assignment_id) || '').trim();
+        const currentIndex = targetId
+            ? queue.findIndex(item => String((item && item.assignment_id) || '') === targetId)
+            : 0;
+        const resolvedIndex = currentIndex >= 0 ? currentIndex : 0;
+        const windowAssignments = getCenteredWindowItems(queue, resolvedIndex, 5);
+        const scenarioKeys = [];
+
+        for (let i = 0; i < windowAssignments.length; i++) {
+            const assignmentItem = windowAssignments[i] || {};
+            const assignmentId = String(assignmentItem.assignment_id || '').trim();
+            let sendId = String(assignmentItem.send_id || '').trim();
+            if (!sendId && assignmentContext && assignmentId && String(assignmentContext.assignment_id) === assignmentId) {
+                sendId = String(assignmentContext.send_id || '').trim();
+            }
+            if (!sendId) continue;
+            const scenarioKey = await resolveScenarioKeyForSendId(sendId, allScenariosData);
+            if (scenarioKey) scenarioKeys.push(String(scenarioKey));
+        }
+
+        return Array.from(new Set(scenarioKeys));
+    }
+
+    async function prefetchAssignmentWindow(targetAssignmentId) {
+        const scenarioKeys = await getScenarioKeysForAssignmentWindow(targetAssignmentId);
+        if (!scenarioKeys.length) return;
+        await ensureScenariosLoaded(scenarioKeys);
+        await ensureTemplatesLoadedForScenarioKeys(scenarioKeys);
+    }
+
+    async function applyAssignmentContextToUi(options = {}) {
+        if (!assignmentContext || !assignmentContext.scenarioKey) return;
+
+        await ensureScenariosLoaded([assignmentContext.scenarioKey]);
+        await ensureTemplatesLoadedForScenarioKeys([assignmentContext.scenarioKey]);
+        if (!assignmentSessionComplete) {
+            await prefetchAssignmentWindow(assignmentContext.assignment_id).catch((error) => {
+                console.warn('Assignment prefetch window failed:', error);
+            });
+        }
+
+        setCurrentScenarioNumber(assignmentContext.scenarioKey);
+        loadScenarioContent(assignmentContext.scenarioKey, allScenariosData || {});
+
+        const customForm = document.getElementById('customForm');
+        const serverFormState = parseStoredFormState(assignmentContext.form_state_json);
+        const localFormStateKey = assignmentFormStateStorageKey();
+        const localFormState = localFormStateKey ? parseStoredFormState(localStorage.getItem(localFormStateKey)) : null;
+        applyCustomFormState(customForm, serverFormState || localFormState);
+
+        if (internalNotesEl) {
+            const notesKey = assignmentNotesStorageKey();
+            const localNote = notesKey ? (localStorage.getItem(notesKey) || '') : '';
+            internalNotesEl.value = assignmentContext.internal_note || localNote || '';
+        }
+
+        const forceView = assignmentContext.role === 'viewer' || assignmentContext.mode === 'view';
+        setAssignmentReadOnlyState(forceView);
+        if (assignmentSessionComplete) {
+            setAssignmentsStatus(`Session complete (${getSessionSubmittedCount(assignmentSessionState)}/${getSessionCap(assignmentSessionState)}).`, false);
+        } else {
+            setAssignmentsStatus(
+                forceView
+                    ? `Opened ${assignmentContext.send_id} in view-only mode.`
+                    : `Opened ${assignmentContext.send_id} in editor mode.`,
+                false
+            );
+            startAssignmentHeartbeat();
+        }
+        selectCurrentAssignmentInQueue();
+
+        if (options.updateHistory) {
+            const method = options.replaceHistory ? 'replaceState' : 'pushState';
+            const nextUrl = buildAssignmentPageUrl(options.params || {}, assignmentContext.scenarioKey);
+            window.history[method](
+                {
+                    aid: String((options.params && options.params.aid) || ''),
+                    token: String((options.params && options.params.token) || ''),
+                    mode: String((options.params && options.params.mode) || assignmentContext.mode || 'edit')
+                },
+                '',
+                nextUrl
+            );
+        }
+    }
+
+    async function openAssignmentInPage(params, options = {}) {
+        if (!params || !params.aid || !params.token) return false;
+        if (!canUseAssignmentMode()) {
+            setAssignmentsStatus('Assignment mode requires email login.', true);
+            return false;
+        }
+        try {
+            const sessionId = getAssignmentSessionId({ createIfMissing: true });
+            if (!sessionId) throw new Error('Missing assignment session id.');
+            const response = await fetchAssignmentGet('getAssignment', {
+                assignment_id: params.aid,
+                token: params.token,
+                session_id: sessionId
+            });
+            applyAssignmentSessionState(response && response.session, { silent: true });
+            const assignment = response && response.assignment ? response.assignment : null;
+            if (!assignment) throw new Error('Assignment payload is missing.');
+
+            const scenarioKey = await resolveScenarioKeyForSendId(assignment.send_id, allScenariosData);
+            if (!scenarioKey) throw new Error(`Scenario for send_id ${assignment.send_id} was not found.`);
+
+            assignmentContext = buildAssignmentContextRecord(assignment, params, scenarioKey);
+
+            if (options.refreshQueue) {
+                await refreshAssignmentQueue().catch(() => []);
+            }
+
+            await applyAssignmentContextToUi({
+                updateHistory: !!options.updateHistory,
+                replaceHistory: !!options.replaceHistory,
+                params
+            });
+            return true;
+        } catch (error) {
+            console.error('Assignment open failed:', error);
+            setAssignmentsStatus(`Assignment error: ${error.message || error}`, true);
+            return false;
+        }
+    }
+
+    async function openAssignmentInPageByUrl(url, options = {}) {
+        const params = getAssignmentParamsFromHref(url);
+        if (!params) return false;
+        return openAssignmentInPage(params, options);
+    }
+
     function setAssignmentReadOnlyState(isReadOnly) {
+        const lockForSession = !!assignmentSessionComplete;
+        const effectiveReadOnly = !!isReadOnly || lockForSession;
         const isAssignmentViewMode = !!(
             isReadOnly &&
             assignmentContext &&
             (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view')
         );
         document.body.classList.toggle('assignment-view-only', isAssignmentViewMode);
+        setAssignmentSessionUiLocked(lockForSession);
 
         const customForm = document.getElementById('customForm');
         const formSubmitBtn = document.getElementById('formSubmitBtn');
@@ -313,14 +1028,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             const controls = customForm.querySelectorAll('input, select, textarea, button');
             controls.forEach((el) => {
                 if (el.id === 'clearFormBtn') return;
-                el.disabled = !!isReadOnly;
+                el.disabled = effectiveReadOnly;
             });
         }
-        if (formSubmitBtn) formSubmitBtn.disabled = !!isReadOnly;
-        if (clearFormBtn) clearFormBtn.disabled = !!isReadOnly;
-        if (internalNotesEl) internalNotesEl.disabled = !!isReadOnly;
-        if (previousConversationBtn) previousConversationBtn.disabled = !!isReadOnly;
-        if (nextConversationBtn) nextConversationBtn.disabled = !!isReadOnly;
+        if (formSubmitBtn) formSubmitBtn.disabled = effectiveReadOnly;
+        if (clearFormBtn) clearFormBtn.disabled = effectiveReadOnly;
+        if (internalNotesEl) internalNotesEl.disabled = effectiveReadOnly;
+        if (previousConversationBtn) previousConversationBtn.disabled = effectiveReadOnly;
+        if (nextConversationBtn) nextConversationBtn.disabled = effectiveReadOnly;
     }
 
     function parseStoredFormState(raw) {
@@ -369,8 +1084,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function saveAssignmentDraft(customForm) {
+        if (assignmentSessionComplete) return;
         if (!assignmentContext || assignmentContext.role !== 'editor') return;
         if (!assignmentContext.assignment_id || !assignmentContext.token) return;
+        const sessionId = getAssignmentSessionId();
+        if (!sessionId) return;
 
         const formState = collectCustomFormState(customForm);
         const notesValue = internalNotesEl ? internalNotesEl.value : '';
@@ -381,15 +1099,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         const notesKey = assignmentNotesStorageKey();
         if (notesKey) localStorage.setItem(notesKey, notesValue || '');
 
-        await fetchAssignmentPost('saveDraft', {
+        const response = await fetchAssignmentPost('saveDraft', {
             assignment_id: assignmentContext.assignment_id,
             token: assignmentContext.token,
+            session_id: sessionId,
             form_state_json: formStateRaw,
             internal_note: notesValue
         });
+        applyAssignmentSessionState(response && response.session, { silent: true });
     }
 
     function scheduleAssignmentDraftSave(customForm) {
+        if (assignmentSessionComplete) return;
         if (!assignmentContext || assignmentContext.role !== 'editor') return;
         if (draftSaveTimer) {
             clearTimeout(draftSaveTimer);
@@ -636,15 +1357,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function loadTemplatesData() {
-        try {
-            const response = await fetch('templates.json', { method: 'GET' });
-            if (!response.ok) throw new Error(`templates.json load failed (${response.status})`);
-            const data = await response.json();
-            return Array.isArray(data.templates) ? data.templates : [];
-        } catch (error) {
-            console.error('Error loading templates.json fallback:', error);
-            return [];
-        }
+        return loadTemplatesDataMonolith();
     }
 
     async function loadUploadedScenarios() {
@@ -652,6 +1365,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function getTemplatesForScenario(scenario) {
+        if (runtimeTemplatesIndex && runtimeTemplateGlobalLoaded && !runtimeTemplatesUnavailable) {
+            const companyKey = normalizeName(scenario && scenario.companyName);
+            const companyTemplates = companyKey && Array.isArray(runtimeTemplateCompanyCache[companyKey])
+                ? runtimeTemplateCompanyCache[companyKey]
+                : [];
+            const globalTemplates = Array.isArray(runtimeTemplateGlobalTemplates) ? runtimeTemplateGlobalTemplates : [];
+            const runtimeTemplates = companyTemplates.concat(globalTemplates);
+            if (runtimeTemplates.length) {
+                return runtimeTemplates;
+            }
+        }
+
         const sourceTemplates = Array.isArray(templatesData) && templatesData.length
             ? templatesData
             : (scenario.rightPanel && Array.isArray(scenario.rightPanel.templates) ? scenario.rightPanel.templates : []);
@@ -677,33 +1402,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Load scenarios data
     async function loadScenariosData() {
-        // Immediate fallback when running from file:// to avoid CORS/network errors
-        if (window.location.protocol === 'file:') {
-            const fallback = {
-                '1': {
-                    companyName: 'Demo Company',
-                    agentName: localStorage.getItem('agentName') || 'Agent',
-                    customerPhone: '(000) 000-0000',
-                    customerMessage: 'Welcome! Start the conversation here.',
-                    agentInitial: 'A',
-                    notes: {
-                        important: ['Run with a local server to load full scenarios.json']
-                    },
-                    rightPanel: { source: { label: 'Source', value: 'Local Demo', date: '' } }
-                }
-            };
-            return fallback;
-        }
-        try {
-            const response = await fetch('scenarios.json');
-            const data = await response.json();
-
-            const scenarios = coerceScenariosPayloadToMap(data);
-            return scenarios;
-        } catch (error) {
-            console.error('Error loading scenarios data:', error);
-            return null;
-        }
+        return loadScenariosDataMonolith();
     }
     
     // Helper function to get display name and icon for guideline categories
@@ -898,6 +1597,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             chatMessages.appendChild(wrapper);
         });
     }
+
+    function scrollChatToBottomAfterRender() {
+        if (!chatMessages) return;
+        requestAnimationFrame(() => {
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        });
+    }
     
     // Load scenario content into the page
     function loadScenarioContent(scenarioNumber, data) {
@@ -992,10 +1698,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         else console.error('customerMessage element not found');
 
-        // Render preloaded conversation if provided
-        if (conversation && Array.isArray(conversation) && conversation.length > 0) {
-            renderConversationMessages(conversation, scenario);
-        }
+        // Render conversation and always land on the latest message.
+        renderConversationMessages(Array.isArray(conversation) ? conversation : [], scenario);
+        scrollChatToBottomAfterRender();
         
         // Update guidelines dynamically
         const guidelinesContainer = document.getElementById('dynamic-guidelines-container');
@@ -1359,45 +2064,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // Update template items
         const templatesForScenario = getTemplatesForScenario(scenario);
-        if (templatesForScenario && templatesForScenario.length) {
-            const templatesContainer = document.getElementById('templateItems');
-            if (templatesContainer) {
-                templatesContainer.innerHTML = '';
-                templatesForScenario.forEach(template => {
-                    const templateDiv = document.createElement('div');
-                    templateDiv.className = 'template-item';
-                    if (isGlobalTemplate(template)) {
-                        templateDiv.classList.add('template-item--global');
-                    }
-
-                    const headerDiv = document.createElement('div');
-                    headerDiv.className = 'template-header';
-
-                    const nameSpan = document.createElement('span');
-                    nameSpan.textContent = template.name;
-
-                    headerDiv.appendChild(nameSpan);
-                    const shortcutText = String((template && template.shortcut) || '').trim();
-                    if (shortcutText) {
-                        const shortcutSpan = document.createElement('span');
-                        shortcutSpan.className = 'template-shortcut';
-                        shortcutSpan.textContent = shortcutText;
-                        headerDiv.appendChild(shortcutSpan);
-                    }
-
-                    const contentP = document.createElement('p');
-                    contentP.textContent = template.content;
-
-                    templateDiv.appendChild(headerDiv);
-                    templateDiv.appendChild(contentP);
-
-                    templatesContainer.appendChild(templateDiv);
-                });
-                
-                // Initialize template search functionality
-                initializeTemplateSearch(templatesForScenario);
-            }
-        }
+        initializeTemplateSearch(templatesForScenario);
     }
     
     // Helper function to convert timestamp to EST - just date
@@ -1565,10 +2232,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     if (logoutBtn) {
-        logoutBtn.addEventListener('click', () => {
-            // Log session logout before clearing
+        logoutBtn.addEventListener('click', async () => {
+            isExplicitLogoutInProgress = true;
+            pendingLogoutReleasePayload = {
+                email: getLoggedInEmail(),
+                session_id: getAssignmentSessionId()
+            };
+            stopAssignmentHeartbeat();
+            await releaseAssignmentSession('logout').catch(() => ({ ok: false }));
             sendSessionLogout();
+            assignmentSessionState = null;
+            assignmentSessionComplete = false;
+            hideSessionCompleteScreen();
+            clearAssignmentSessionId();
             localStorage.removeItem('agentName');
+            localStorage.removeItem('agentEmail');
+            localStorage.removeItem('sessionStartTime');
+            localStorage.removeItem('loginMethod');
             localStorage.removeItem('unlockedScenario'); // Reset scenario progression
             
             // Clear all scenario timer and message count data
@@ -1619,6 +2299,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function navigateAssignmentQueue(direction) {
+        if (assignmentSessionComplete) {
+            setAssignmentsStatus('Session complete (20/20). Log out to start a new session.', false);
+            return true;
+        }
+        if (!canUseAssignmentMode()) return false;
         let queue = assignmentQueue;
         if (!Array.isArray(queue) || !queue.length) {
             queue = await refreshAssignmentQueue().catch(() => []);
@@ -1636,14 +2321,38 @@ document.addEventListener('DOMContentLoaded', async () => {
             ? (currentIndex + direction + queue.length) % queue.length
             : fallbackIndex;
         const target = queue[targetIndex];
-        const url = target && target.edit_url ? String(target.edit_url) : '';
+        const prefersViewUrl = !!(assignmentContext && (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view'));
+        const editUrl = target && target.edit_url ? String(target.edit_url) : '';
+        const viewUrl = target && target.view_url ? String(target.view_url) : '';
+        const url = prefersViewUrl ? (viewUrl || editUrl) : (editUrl || viewUrl);
         if (!url) return false;
+
+        if (assignmentContext && assignmentContext.assignment_id) {
+            const opened = await openAssignmentInPageByUrl(url, {
+                updateHistory: true,
+                replaceHistory: false,
+                refreshQueue: false
+            });
+            if (!opened) {
+                window.location.href = url;
+                return true;
+            }
+            return true;
+        }
+
         window.location.href = url;
         return true;
     }
 
     async function navigateConversation(direction) {
+        if (assignmentSessionComplete && assignmentContext && assignmentContext.assignment_id) {
+            setAssignmentsStatus('Session complete (20/20). Log out to start a new session.', false);
+            return;
+        }
         const movedByAssignment = await navigateAssignmentQueue(direction);
+        if (assignmentContext && assignmentContext.assignment_id) {
+            return;
+        }
         if (!movedByAssignment) {
             await navigateScenarioList(direction);
         }
@@ -1765,11 +2474,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Initial scroll to bottom if there's pre-loaded content
-    if(chatMessages) {
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
     // Session Timer functionality - persists across page refreshes
     let timerStartTime = Date.now();
     let timerInterval = null;
@@ -1867,123 +2571,108 @@ document.addEventListener('DOMContentLoaded', async () => {
         return fragment;
     }
 
+    function renderTemplateItems(templates, searchTerm) {
+        const templatesContainer = document.getElementById('templateItems');
+        if (!templatesContainer) return;
+        templatesContainer.innerHTML = '';
+
+        const safeSearch = String(searchTerm || '').toLowerCase().trim();
+        const sourceTemplates = Array.isArray(templates) ? templates : [];
+        const filteredTemplates = sourceTemplates.filter(template => {
+            const name = String((template && template.name) || '').toLowerCase();
+            const shortcut = String((template && template.shortcut) || '').toLowerCase();
+            const content = String((template && template.content) || '').toLowerCase();
+            return name.includes(safeSearch) ||
+                shortcut.includes(safeSearch) ||
+                content.includes(safeSearch);
+        });
+
+        filteredTemplates.forEach(template => {
+            const templateDiv = document.createElement('div');
+            templateDiv.className = 'template-item';
+            if (isGlobalTemplate(template)) {
+                templateDiv.classList.add('template-item--global');
+            }
+
+            const headerDiv = document.createElement('div');
+            headerDiv.className = 'template-header';
+
+            const nameSpan = document.createElement('span');
+            nameSpan.appendChild(createHighlightedFragment(String(template && template.name ? template.name : ''), safeSearch));
+
+            headerDiv.appendChild(nameSpan);
+            const shortcutText = String((template && template.shortcut) || '').trim();
+            if (shortcutText) {
+                const shortcutSpan = document.createElement('span');
+                shortcutSpan.className = 'template-shortcut';
+                shortcutSpan.appendChild(createHighlightedFragment(shortcutText, safeSearch));
+                headerDiv.appendChild(shortcutSpan);
+            }
+
+            const contentP = document.createElement('p');
+            contentP.appendChild(createHighlightedFragment(String(template && template.content ? template.content : ''), safeSearch));
+
+            templateDiv.appendChild(headerDiv);
+            templateDiv.appendChild(contentP);
+            templatesContainer.appendChild(templateDiv);
+        });
+
+        if (filteredTemplates.length === 0 && safeSearch !== '') {
+            const noResultsDiv = document.createElement('div');
+            noResultsDiv.className = 'no-results';
+            noResultsDiv.textContent = 'No templates found';
+            templatesContainer.appendChild(noResultsDiv);
+        }
+    }
+
     // Function to initialize template search functionality
     function initializeTemplateSearch(templates) {
         const searchInput = document.querySelector('.search-templates input');
         const templatesContainer = document.getElementById('templateItems');
-        
         if (!searchInput || !templatesContainer) return;
-        
-        // Store original templates for filtering
-        const originalTemplates = templates;
-        
-        searchInput.addEventListener('input', function(e) {
-            const searchTerm = e.target.value.toLowerCase().trim();
-            
-            // Clear current templates
-            templatesContainer.innerHTML = '';
-            
-            // Filter templates based on search term
-            const filteredTemplates = originalTemplates.filter(template => {
-                const name = String((template && template.name) || '').toLowerCase();
-                const shortcut = String((template && template.shortcut) || '').toLowerCase();
-                const content = String((template && template.content) || '').toLowerCase();
-                return name.includes(searchTerm) ||
-                       shortcut.includes(searchTerm) ||
-                       content.includes(searchTerm);
+
+        templateSearchSourceTemplates = Array.isArray(templates) ? templates : [];
+
+        if (!templateSearchBound) {
+            searchInput.addEventListener('input', function(e) {
+                const searchTerm = e && e.target ? e.target.value : '';
+                renderTemplateItems(templateSearchSourceTemplates, searchTerm);
             });
-            
-            // Display filtered templates
-            filteredTemplates.forEach(template => {
-                const templateDiv = document.createElement('div');
-                templateDiv.className = 'template-item';
-                if (isGlobalTemplate(template)) {
-                    templateDiv.classList.add('template-item--global');
-                }
+            templateSearchBound = true;
+        }
 
-                const headerDiv = document.createElement('div');
-                headerDiv.className = 'template-header';
-
-                const nameSpan = document.createElement('span');
-                nameSpan.appendChild(createHighlightedFragment(template.name, searchTerm));
-
-                headerDiv.appendChild(nameSpan);
-                const shortcutText = String((template && template.shortcut) || '').trim();
-                if (shortcutText) {
-                    const shortcutSpan = document.createElement('span');
-                    shortcutSpan.className = 'template-shortcut';
-                    shortcutSpan.appendChild(createHighlightedFragment(shortcutText, searchTerm));
-                    headerDiv.appendChild(shortcutSpan);
-                }
-
-                const contentP = document.createElement('p');
-                contentP.appendChild(createHighlightedFragment(template.content, searchTerm));
-
-                templateDiv.appendChild(headerDiv);
-                templateDiv.appendChild(contentP);
-
-                templatesContainer.appendChild(templateDiv);
-            });
-            
-            // Show "No results" message if no templates match
-            if (filteredTemplates.length === 0 && searchTerm !== '') {
-                const noResultsDiv = document.createElement('div');
-                noResultsDiv.className = 'no-results';
-                noResultsDiv.textContent = 'No templates found';
-                templatesContainer.appendChild(noResultsDiv);
-            }
-        });
+        renderTemplateItems(templateSearchSourceTemplates, searchInput.value || '');
     }
     
     // Initialize everything
-    templatesData = await loadTemplatesData();
-    const scenarios = await loadScenariosData();
-    allScenariosData = scenarios || {};
-    if (!scenarios) {
-        console.error('Could not load scenarios data');
-    } else {
-        const assignmentParams = getAssignmentParamsFromUrl();
-        const hasAid = !!assignmentParams.aid;
+    const assignmentParams = getAssignmentParamsFromUrl();
+    const hasAid = !!assignmentParams.aid;
 
+    if (hasAid) {
+        await loadRuntimeScenariosIndex();
+        await loadRuntimeTemplatesIndex();
         try {
-            if (hasAid) {
-                await refreshAssignmentQueue().catch(() => []);
-                await loadAssignmentContextFromUrl(scenarios);
-                loadScenarioContent(assignmentContext.scenarioKey, scenarios);
-                const serverFormState = parseStoredFormState(assignmentContext.form_state_json);
-                const localFormStateKey = assignmentFormStateStorageKey();
-                const localFormState = localFormStateKey ? parseStoredFormState(localStorage.getItem(localFormStateKey)) : null;
-                const customForm = document.getElementById('customForm');
-                applyCustomFormState(customForm, serverFormState || localFormState);
+            if (!canUseAssignmentMode()) {
+                throw new Error('Assignment mode requires email login.');
+            }
+            getAssignmentSessionId({ createIfMissing: true });
+            await refreshAssignmentQueue().catch(() => []);
+            const opened = await openAssignmentInPage(assignmentParams, {
+                updateHistory: true,
+                replaceHistory: true,
+                refreshQueue: false
+            });
+            if (!opened) {
+                throw new Error('Failed to open assignment in-page.');
+            }
+        } catch (assignmentError) {
+            console.error('Assignment flow error:', assignmentError);
+            setAssignmentsStatus(`Assignment error: ${assignmentError.message || assignmentError}`, true);
 
-                if (internalNotesEl) {
-                    const notesKey = assignmentNotesStorageKey();
-                    const localNote = notesKey ? (localStorage.getItem(notesKey) || '') : '';
-                    internalNotesEl.value = assignmentContext.internal_note || localNote || '';
-                }
-
-                const forceView = assignmentContext.role === 'viewer' || assignmentContext.mode === 'view';
-                setAssignmentReadOnlyState(forceView);
-                setAssignmentsStatus(
-                    forceView
-                        ? `Opened ${assignmentContext.send_id} in view-only mode.`
-                        : `Opened ${assignmentContext.send_id} in editor mode.`,
-                    false
-                );
-                selectCurrentAssignmentInQueue();
-            } else {
-                const queue = await refreshAssignmentQueue();
-                if (queue.length) {
-                    setAssignmentsStatus('Queue loaded. Opening first assignment...', false);
-                    const firstEditUrl = queue[0].edit_url || '';
-                    if (firstEditUrl) {
-                        window.location.href = firstEditUrl;
-                        return;
-                    }
-                } else {
-                    setAssignmentsStatus('No assignments available.', false);
-                }
-
+            templatesData = await loadTemplatesData();
+            const scenarios = await loadScenariosData();
+            allScenariosData = scenarios || {};
+            if (scenarios && Object.keys(scenarios).length) {
                 const scenarioKeys = Object.keys(scenarios)
                     .map(k => parseInt(k, 10))
                     .filter(n => !isNaN(n))
@@ -1994,9 +2683,37 @@ document.addEventListener('DOMContentLoaded', async () => {
                 setCurrentScenarioNumber(activeScenario);
                 loadScenarioContent(activeScenario, scenarios);
             }
-        } catch (assignmentError) {
-            console.error('Assignment flow error:', assignmentError);
-            setAssignmentsStatus(`Assignment error: ${assignmentError.message || assignmentError}`, true);
+        }
+    } else {
+        templatesData = await loadTemplatesData();
+        const scenarios = await loadScenariosData();
+        allScenariosData = scenarios || {};
+        if (!scenarios) {
+            console.error('Could not load scenarios data');
+        } else {
+            if (canUseAssignmentMode()) {
+                getAssignmentSessionId({ createIfMissing: true });
+                try {
+                    const queue = await refreshAssignmentQueue();
+                    if (queue.length) {
+                        setAssignmentsStatus('Queue loaded. Opening first assignment...', false);
+                        const firstEditUrl = queue[0].edit_url || queue[0].view_url || '';
+                        if (firstEditUrl) {
+                            window.location.href = firstEditUrl;
+                            return;
+                        }
+                    } else if (assignmentSessionComplete) {
+                        setAssignmentsStatus(`Session complete (${getSessionSubmittedCount(assignmentSessionState)}/${getSessionCap(assignmentSessionState)}).`, false);
+                    } else {
+                        setAssignmentsStatus('No assignments available.', false);
+                    }
+                } catch (assignmentError) {
+                    console.error('Assignment flow error:', assignmentError);
+                    setAssignmentsStatus(`Assignment error: ${assignmentError.message || assignmentError}`, true);
+                }
+            } else {
+                setAssignmentsStatus('Assignment mode requires email login.', true);
+            }
 
             const scenarioKeys = Object.keys(scenarios)
                 .map(k => parseInt(k, 10))
@@ -2019,11 +2736,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (assignmentRefreshBtn) {
         assignmentRefreshBtn.addEventListener('click', async () => {
+            if (assignmentSessionComplete) {
+                setAssignmentsStatus('Session complete (20/20). Log out to start a new session.', false);
+                return;
+            }
+            if (!canUseAssignmentMode()) {
+                setAssignmentsStatus('Assignment mode requires email login.', true);
+                return;
+            }
             try {
                 setAssignmentsStatus('Refreshing assignments...', false);
                 const queue = await refreshAssignmentQueue();
                 if (!queue.length) {
-                    setAssignmentsStatus('No assignments available.', false);
+                    if (assignmentSessionComplete) {
+                        setAssignmentsStatus(`Session complete (${getSessionSubmittedCount(assignmentSessionState)}/${getSessionCap(assignmentSessionState)}).`, false);
+                    } else {
+                        setAssignmentsStatus('No assignments available.', false);
+                    }
                 } else {
                     setAssignmentsStatus('Assignments refreshed.', false);
                     selectCurrentAssignmentInQueue();
@@ -2039,6 +2768,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             openSelectedAssignmentFromList();
         });
     }
+
+    window.addEventListener('popstate', async () => {
+        const params = getAssignmentParamsFromUrl();
+        if (!params.aid || !params.token) return;
+        const currentAid = assignmentContext ? String(assignmentContext.assignment_id || '') : '';
+        const currentToken = assignmentContext ? String(assignmentContext.token || '') : '';
+        const currentMode = assignmentContext ? String(assignmentContext.mode || '') : '';
+        if (currentAid === params.aid && currentToken === params.token && currentMode === params.mode) return;
+        await openAssignmentInPage(params, {
+            updateHistory: false,
+            replaceHistory: false,
+            refreshQueue: false
+        });
+    });
     
     // Persist internal notes and assignment drafts
     if (internalNotesEl) {
@@ -2153,6 +2896,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         customForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            if (assignmentSessionComplete) {
+                if (formStatus) {
+                    formStatus.textContent = 'Session complete (20/20). Log out to start a new session.';
+                    formStatus.style.color = '#e74c3c';
+                }
+                return;
+            }
             if (assignmentContext && (assignmentContext.role !== 'editor' || assignmentContext.mode === 'view')) {
                 if (formStatus) {
                     formStatus.textContent = 'View-only link cannot submit.';
@@ -2283,16 +3033,38 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 if (success) {
                     if (assignmentContext && assignmentContext.role === 'editor') {
+                        const sessionId = getAssignmentSessionId();
+                        if (!sessionId) {
+                            throw new Error('Missing assignment session id.');
+                        }
                         await saveAssignmentDraft(customForm).catch(() => {});
                         const doneRes = await fetchAssignmentPost('done', {
                             assignment_id: assignmentContext.assignment_id,
                             token: assignmentContext.token,
+                            session_id: sessionId,
                             app_base: getCurrentAppBaseUrl()
                         });
+                        applyAssignmentSessionState(doneRes && doneRes.session, { silent: true });
                         const nextQueue = Array.isArray(doneRes.assignments) ? doneRes.assignments : [];
                         renderAssignmentQueue(nextQueue);
-                        if (nextQueue.length && nextQueue[0].edit_url) {
-                            window.location.href = nextQueue[0].edit_url;
+                        if (assignmentSessionComplete) {
+                            if (formStatus) {
+                                formStatus.textContent = `Session complete (${getSessionSubmittedCount(assignmentSessionState)}/${getSessionCap(assignmentSessionState)}).`;
+                                formStatus.style.color = '#28a745';
+                            }
+                            return;
+                        }
+                        const nextUrl = nextQueue.length
+                            ? String(nextQueue[0].edit_url || nextQueue[0].view_url || '').trim()
+                            : '';
+                        if (nextUrl) {
+                            const opened = await openAssignmentInPageByUrl(nextUrl, {
+                                updateHistory: true,
+                                replaceHistory: false,
+                                refreshQueue: false
+                            });
+                            if (opened) return;
+                            window.location.href = nextUrl;
                             return;
                         }
                     }
@@ -2331,7 +3103,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Attempt to record logout on tab close/navigation
     window.addEventListener('beforeunload', () => {
-        sendSessionLogout();
+        stopAssignmentHeartbeat();
+        if (isExplicitLogoutInProgress) {
+            sendBeaconReleaseSession('logout', pendingLogoutReleasePayload);
+            pendingLogoutReleasePayload = null;
+        }
     });
 });
 

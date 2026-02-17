@@ -1,0 +1,673 @@
+{
+  "version": 1,
+  "chunk": "chunk_0020",
+  "scenarios": {
+    "96": {
+      "agentName": "Rebecca",
+      "id": "019bb7fd-28c7-449f-f000-000092f526cf",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://julievos.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://julievos.com",
+      "companyName": "Julie Vos",
+      "notes": {
+        "escalate": [
+          "When ESC during the weekend/late Friday use the \"Weekend escalation template\" template"
+        ],
+        "tone": [
+          "Don't use the term \"customer service team\", use \"customer care\" instead"
+        ],
+        "dos_and_donts": [
+          "Do not direct cx to contact the carrier",
+          "Do not provide customers with dates for restock before checking with our team."
+        ],
+        "promo_and_exclusions": [
+          "They have only 2 sales per year (June/November) - when those end the sale items are removed from the site"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Julie Vos: Welcome to Julie Vos! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/N9l",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Julie Vos: Hey this is Rebecca , how can I help you?",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Julie Vos: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nIn the meantime, check out our newest arrivals > https://julievos.attn.tv/aUNx3BLpmpZ5 .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I purchased a JV bracelet at Christmas and the stones have started falling out. What should I do? I use many many of your pieces and have never had a problem before",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb7fd-28c7-449f-f000-000092f526cf",
+          "message_text": "Julie Vos: Thank you so much for reaching out, and I'm really sorry to hear about this issue. I understand how disappointing it must be, especially since you've purchased and enjoyed many of our pieces without any problems before. We truly appreciate your loyalty.\n\nThe best next step is to review our warranty policy, which you can find here: https://julievos.attn.tv/aLYXZc8t3zGU\n\nFor assistance with your JV bracelet, please email our customer care team at customercare@julievos.com and include the following so they can help you as quickly as possible:\n\nProof of purchase, such as your order number\nYour name, email address, and order number\nClear images of the damaged bracelet\nA brief description of what you are requesting, such as a repair or replacement\n\nOnce they receive this information, the team will guide you through the next steps. Please don't hesitate to reach back out if you need help putting this together or have any other questions.",
+          "message_media": []
+        }
+      ]
+    },
+    "97": {
+      "agentName": "Sarah",
+      "id": "019bca1a-e6a6-494a-f000-0000f16f0e6a",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://backcountry.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "total": 34.98,
+            "orderDate": "2026-01-05",
+            "orderNumber": "b4925298903",
+            "items": [
+              {
+                "price": 34,
+                "productLink": "https://www.levelninesports.com/b/skida-alpine-neckwarmer-womens?CMP_SKU=SKDB01F&MER=0406&skid=SKDB01F-LIM-ONESIZ",
+                "name": "Alpine Neckwarmer - Women's"
+              },
+              {
+                "price": 34,
+                "productLink": "https://www.backcountry.com/b/skida-alpine-neckwarmer-womens?CMP_SKU=SKDB01F&MER=0406&skid=SKDB01F-LIM-ONESIZ",
+                "name": "Alpine Neckwarmer - Women's"
+              },
+              {
+                "price": 0.98,
+                "name": "Worry-Free Delivery Fee"
+              }
+            ]
+          },
+          {
+            "total": 115.02,
+            "orderDate": "2026-01-05",
+            "orderNumber": "b4925325454",
+            "items": [
+              {
+                "price": 17.46,
+                "productLink": "https://www.levelninesports.com/b/hydro-flask-16oz-all-around-tumbler?CMP_SKU=HYFZ043&MER=0406&skid=HYFZ043-AGAA-ONESIZ",
+                "name": "16oz All Around Tumbler"
+              },
+              {
+                "price": 17.46,
+                "productLink": "https://www.backcountry.com/b/hydro-flask-16oz-all-around-tumbler?CMP_SKU=HYFZ043&MER=0406&skid=HYFZ043-OATA-ONESIZ",
+                "name": "16oz All Around Tumbler"
+              },
+              {
+                "price": 59,
+                "productLink": "https://www.backcountry.com/b/the-north-face-thermoball-traction-mule-ii-shoe-womens?CMP_SKU=TNF05O2&MER=0406&skid=TNF05O2-TNFBLABK-S8",
+                "name": "Thermoball Traction Mule V Shoe - Women's"
+              },
+              {
+                "price": 59,
+                "productLink": "https://www.steepandcheap.com/the-north-face-thermoball-traction-mule-ii-shoe-womens",
+                "name": "Thermoball Traction Mule V Shoe - Women's"
+              },
+              {
+                "price": 59,
+                "productLink": "https://www.backcountry.com/b/the-north-face-thermoball-traction-mule-ii-shoe-womens?CMP_SKU=TNF05O2&MER=0406&skid=TNF05O2-PHGRHEPRTNBL-S9",
+                "name": "Thermoball Traction Mule V Shoe - Women's"
+              },
+              {
+                "price": 20.98,
+                "productLink": "https://www.levelninesports.com/b/grand-trunk-trunktech-double-hammock?CMP_SKU=GTRH00D&MER=0406&skid=GTRH00D-HERPRI-ONESIZ",
+                "name": "TrunkTech Double Hammock"
+              },
+              {
+                "price": 20.98,
+                "name": "TrunkTech Double Hammock"
+              },
+              {
+                "price": 20.98,
+                "productLink": "https://www.backcountry.com/b/grand-trunk-trunktech-double-hammock?CMP_SKU=GTRH00D&MER=0406&skid=GTRH00D-HERPRI-ONESIZ",
+                "name": "TrunkTech Double Hammock"
+              },
+              {
+                "price": 2.59,
+                "name": "Worry-Free Delivery Fee"
+              },
+              {
+                "price": 14.99,
+                "productLink": "https://www.levelninesports.com/b/defeet-x-backcountry-aireator-6in-sock?CMP_SKU=DFTB02M&MER=0406&skid=DFTB02M-EGR-S",
+                "name": "X Backcountry Aireator 6in Sock"
+              },
+              {
+                "price": 14.99,
+                "productLink": "https://www.backcountry.com/b/defeet-x-backcountry-aireator-6in-sock?CMP_SKU=DFTB02M&MER=0406&skid=DFTB02M-TOP-L",
+                "name": "X Backcountry Aireator 6in Sock"
+              },
+              {
+                "price": 14.99,
+                "productLink": "https://www.competitivecyclist.com/b/defeet-x-backcountry-aireator-6in-sock?CMP_SKU=DFTB02M&MER=0406&skid=DFTB02M-EGR-M",
+                "name": "X Backcountry Aireator 6in Sock"
+              }
+            ]
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://www.backcountry.com/b/hydro-flask-200ml-micro-hydro-water-bottle?CMP_SKU=HYFZ07A&MER=0406&skid=HYFZ07A-SUR-ONESIZ&attn_identity=&utm_campaign=Back%20in%20Stock%20Message%202%20(reminder)&utm_medium=sms&utm_source=attentive&externalId=O6nnT",
+            "item": "200ml Micro Hydro Water Bottle",
+            "timeAgo": "2026-01-17"
+          },
+          {
+            "link": "https://www.backcountry.com/dakine-accessory-case",
+            "item": "Accessory Case",
+            "timeAgo": "2026-01-17"
+          },
+          {
+            "link": "https://www.backcountry.com/dakine-accessory-case",
+            "item": "Accessory Case",
+            "timeAgo": "2026-01-17"
+          },
+          {
+            "link": "https://www.backcountry.com/skida-alpine-neckwarmer-womens",
+            "item": "Alpine Neckwarmer - Women's",
+            "timeAgo": "2026-01-17"
+          },
+          {
+            "link": "https://www.backcountry.com/skida-alpine-neckwarmer-womens",
+            "item": "Alpine Neckwarmer - Women's",
+            "timeAgo": "2026-01-17"
+          }
+        ]
+      },
+      "companyWebsite": "https://backcountry.com",
+      "companyName": "Backcountry",
+      "notes": {
+        "escalate": [
+          "No escalations for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "promo_and_exclusions": [
+          "Welcome offer page:   https://www.backcountry.com/sc/new-customer-coupon-rules"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: Welcome to Backcountry! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/iVG",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: Welcome to the Herd! You gave us your digits, we'll give you some, too. Your code for 15% off is here: http://bctxt.co/aWMHbB22syGN\nExclusions apply.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nSome of our favorite gear just went on sale! Get the best deals on our top brands before they're gone: http://bctxt.co/a7PIWIuTonD2 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: You are already subscribed. Click here to shop now: https://backcountry.attn.tv/cl/RM4.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: You are already subscribed. Click here to shop now: https://backcountry.attn.tv/cl/RM4.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: Imagine how relaxed your days will feel with the Birkenstock Boston Leather Clog bringing comfort and timeless style to your routine.\n\nEnjoy free shipping on orders over $69.\n\nShop now: http://bctxt.co/az8mdop9ANQD .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: Organize your cords and chargers with the Accessory Case—compact, eco-friendly, and secure.  \n\nThis handy pouch is 45% off right now.  \n\nShop now: http://bctxt.co/atxPiU2c7ew0 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: Step into adventure with women's footwear made for comfort and style wherever you roam. \n\nEnjoy free shipping on orders over $69. \n\nFind your new favorite pair here: http://bctxt.co/atttnfFH7Uae .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: Take 20% off full-price sunglasses & goggles from Oakley, 100%, Smith + more here: http://bctxt.co/aWDYMFq2YBu_ \n\nDiscount applies in cart.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: Winter's MVPs? Baselayers. Stay out longer with the right layers and see our selection here:http://bctxt.co/acKQBQTAP-p6 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: Don't miss out! Snag that 200ml Micro Hydro Water Bottle while supplies last. Check out now: http://bctxt.co/aahDJShpf35B",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: Fresh price drops just landed! Scoop newly discounted gear, from boots to shells to packs, before your size bails: http://bctxt.co/aeWgq073VlaN ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Backcountry: You are already subscribed. Click here to shop now: https://backcountry.attn.tv/cl/RM4.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "hi",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bca17-494c-4368-f000-0000f16f0e6a",
+          "message_text": "Backcountry: Hi there, thank you for reaching out! How may I help you today?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "are you a real person",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bca17-f8d5-4160-f000-0000f16f0e6a",
+          "message_text": "Backcountry: I'm definitely a real person. I'm part of the customer support team and here to help with anything you need, so feel free to ask away. ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "hello",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bca18-9ebf-4db6-f000-0000f16f0e6a",
+          "message_text": "Backcountry: Hi again! Could you please share more details about your concern so I can assist you accordingly? ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "i need sex",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "clothes",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bca1a-e6a6-494a-f000-0000f16f0e6a",
+          "message_text": "Backcountry: No worries. You can find our clothing here: \n\nhttp://bctxt.co/aXj_558_yuog\nhttp://bctxt.co/ageRgIX8vlcH\nhttp://bctxt.co/atc1U6DfYezT\n",
+          "message_media": []
+        }
+      ]
+    },
+    "98": {
+      "agentName": "Taylor",
+      "id": "019bf77f-5a3e-4858-f000-0000acbc60c6",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://nakednutrition.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://nakednutrition.com",
+      "companyName": "Naked Nutrition",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for order status inquiries",
+          "Send to CS immediately for discount code errors"
+        ],
+        "promo_and_exclusions": [
+          "The text or quiz code is only valid for first-time orders"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [
+        "browser"
+      ],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Hey, we noticed you checking us out. Can I help you with anything? See our top-rated and use NNJD4C3Z2V for 20% off https://nakednutrition.attn.tv/a3MbZdTbN1JT .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Hey, we noticed you checking us out. Can I help you with anything? See our top-rated and use NNJD4C3Z2V for 20% off https://nakednutrition.attn.tv/aRDrzw2NYoQs .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Don't miss out on Grass Fed Whey Isolate Protein Powder | Naked Whey Isolate - 2LB! Add products with nothing artificial to your wellness routine and get 20% off with NN3N9M64 https://nakednutrition.attn.tv/a4OPtdAIvM6m .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: New Drop! Naked Lean Creatine!\n\nRetain Gains, Not Water.\n\nCon-Cret Creatine HCl that aligns with your aesthetics goals.\n\nOrganic prickly pear and electrolytes team up for natural water balance and performance.\n\n20% 0ff till 1/13. Code: LEAN20\n\nShop: nakednutrition.attn.tv/aTGUoZrQwjv6 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Hey, we noticed you checking us out. Can I help you with anything? See our top-rated and use NNJD4C3Z2V for 20% off https://nakednutrition.attn.tv/aRxufc-FPseA .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: New Drop!\n\nChocolate & Vanilla Naked Collagen Advanced! \n\nHigh-absorption collagen that goes deeper. \n\nFortified with hyaluronic acid & vitamin C for advanced joint support, deep hydration, & increased vitality.\n\nNo artificial flavors.\n\nShop:nakednutrition.attn.tv/aruOtoezuPyB ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Hey, we noticed you checking us out. Can I help you with anything? See our top-rated here: \n\nhttps://nakednutrition.attn.tv/aYZMbr5HMaeV ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: New Flavor Drop!\n\nHazelnut Latte Protein Coffee!\n\nA Potent Blend:\n- 20g of grass-fed whey from small dairy farms\n- 95 mg of premium Colombian coffee (one cup of coffee)\n\nAn energizing mind and body boost in the morning!\n\nShop:nakednutrition.attn.tv/ad6-QJr_RRpo ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Hey, we noticed you checking us out. Can I help you with anything? See our top-rated and use NNJD4C3Z2V for 20% off https://nakednutrition.attn.tv/a9rEQsVpSAu- .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Don't miss out on Vegan Mass Gainer Supplement | Naked Vegan Mass - 8LB! Add products with nothing artificial to your wellness routine and get 20% off with NN3N9M64 https://nakednutrition.attn.tv/asf5ufUeTQRP .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Hey, we noticed you checking us out. Can I help you with anything? See our top-rated and use NNJD4C3Z2V for 20% off https://nakednutrition.attn.tv/aq2rct8d6dWg .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I need to change my subscription. But the page won't load.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Site won't work - All brands\"; last updated: 2025-07-16 17:54:02.115",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf77f-5a3e-4858-f000-0000acbc60c6",
+          "message_text": "Naked Nutrition: Thank you for sharing this with me. I'm sorry to hear that. First, I might suggest trying to open the site in an incognito or private window to rule out any cache or extension issues. Let me know how that goes. ",
+          "message_media": []
+        }
+      ]
+    },
+    "99": {
+      "agentName": "Emma",
+      "id": "019bf6d1-64af-457f-f000-0000dde02a59",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://cecilandlou.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.cecilandlou.com/products/blue-birthday-balloon-heirloom-short-set3",
+            "item": "Blue Birthday Balloon Heirloom Short Set - 12M",
+            "timeAgo": "2026-01-10"
+          },
+          {
+            "link": "https://www.cecilandlou.com/products/embroidered-heirloom-birthday-short-set4",
+            "item": "Embroidered Heirloom Birthday Short Set - 3T",
+            "timeAgo": "2026-01-10"
+          },
+          {
+            "link": "https://www.cecilandlou.com/products/boys-pastel-birthday-knit-zipper-pajamas9?variant=50819854008618&gad_source=1&gad_campaignid=21263676147&gbraid=0AAAAADPPSFTmOmpWwtS_4gqyt-p-_WLO4&gclid=CjwKCAiAjojLBhAlEiwAcjhrDq2yiG8IzsfBrkBTHQ9HRPwjl4TBeZj9bw13yWRTJGhXzwOT5MUo6hoCpZ8QAvD_BwE",
+            "item": "Boy's Pastel Birthday Knit Zipper Pajamas - 3T",
+            "timeAgo": "2026-01-10"
+          },
+          {
+            "link": "https://www.cecilandlou.com/products/blue-windowpane-rashguard3?variant=51036567044394",
+            "item": "Blue Windowpane Rashguard - 18/24M",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://www.cecilandlou.com/products/blue-windowpane-rashguard3",
+            "item": "Blue Windowpane Rashguard - 0/3M",
+            "timeAgo": "2026-01-09"
+          }
+        ]
+      },
+      "companyWebsite": "https://cecilandlou.com",
+      "companyName": "Cecil and Lou",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "ai_instructions": [
+          "Do not escalate anything, if the customer question cannot be handled, send template titled Customer support",
+          "If inbound question references 'pre-order' or 'preorder' send template titled Customer Support"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [
+        "Pre Orders"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: Hey Kelsey! I'm Emma and I'm here to be a personal shopping assistant for you!\n\nDo you have any questions or need a recommendation? Let me know how I can help. \n\nhttps://candl.attn.tv/am3UGklXzWm6 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 💗 We miss you! Have you seen the latest at Cecil and Lou? Shop now: https://candl.attn.tv/almzrwZow6l7 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🥳 FREE monograms sitewide to kick off the New Year in style! Shop NOW! candl.attn.tv/aSm0z9VtbA7L ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: ⏰ Final Hours for FREE Monograms Sitewide! Shop Now: candl.attn.tv/aYi_ZY4Yw06_ ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: Sweet details. Classic charm. The Caitlin Wilson × Cecil and Lou collection has officially arrived.\ncandl.attn.tv/anNVoFsEc62Z ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🎉 Flash Sale! Swim Styles Just $21.99 with FREE monogram - Shop NOW! candl.attn.tv/axh2OJBat8nH ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 💗 Thanks for visiting Cecil and Lou! This is Emma, I'm happy to help you discover darling styles!\n\nWho are you shopping for today?",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🚨 Last Chance! Grab darling styles for just $21.99 with FREE monograms! candl.attn.tv/armVeJPZeKUf ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🎉 Sale EXTENDED! $21.99 and FREE monograms! Ends TONIGHT! candl.attn.tv/aqeRz0OBpMdW ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: Hey, we noticed you checking us out. Shop all our collections now. https://candl.attn.tv/aWfJas3FE4LS ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: Hey it's Emma! Thanks for checking us out. Do you need help finding what you're looking for? ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I'm trying to figure out when my valentines pre order will arrive it looks like it hasn't even shipped",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf6cf-61e6-4c44-f000-0000dde02a59",
+          "message_text": "Cecil and Lou: I completely understand your concern, and I'm sorry for any inconvenience. Just to confirm, are you referring to Order #509551 and Order #523970? If so, please email us directly at help@cecilandlou.com. Our team is happy to help out! Please note, our team's business hours are Monday - Friday 8am - 5pm CST. ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Yes",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf6d1-64af-457f-f000-0000dde02a59",
+          "message_text": "Cecil and Lou: Thanks for confirming. Our support team is better equipped to help you with this request. Please submit your concern now so they can start looking into this.",
+          "message_media": []
+        }
+      ]
+    },
+    "100": {
+      "agentName": "Taylor",
+      "id": "019be64b-73b9-47ea-f000-00004a3a94d4",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://thehappyplanner.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://thehappyplanner.com/products/deluxe-work-life-classic-planner-cover-metropolitan?pr_prod_strat=jac&pr_rec_id=a3051efbd&pr_rec_pid=7121351311422&pr_ref_pid=7121351147582&pr_seq=uniform",
+            "item": "Work + Life Metropolitan - DELUXE Classic Planner Cover",
+            "timeAgo": "2026-01-03"
+          },
+          {
+            "link": "https://thehappyplanner.com/products/big-custom-planner-build-your-own?variant=41677249708094",
+            "item": "Big Custom Planner - Build Your Own",
+            "timeAgo": "2026-01-03"
+          },
+          {
+            "link": "https://thehappyplanner.com/collections/extension-packs/products/fresh-bouquet-classic-mom-dashboard-extension-pack-4-months",
+            "item": "Mom's Fresh Bouquet - Classic Mom Dashboard Extension Pack - 4 Months",
+            "timeAgo": "2026-01-03"
+          },
+          {
+            "link": "https://thehappyplanner.com/collections/extension-packs/products/fresh-bouquet-classic-mom-dashboard-extension-pack-4-months",
+            "item": "Mom's Fresh Bouquet - Classic Mom Dashboard Extension Pack - 4 Months",
+            "timeAgo": "2026-01-03"
+          },
+          {
+            "link": "https://thehappyplanner.com/collections/notebooks/products/textured-canvas-dotted-lined-classic-notebook-60-sheets",
+            "item": "Textured Canvas - Dotted Lined Classic Notebook - 60 Sheets",
+            "timeAgo": "2026-01-03"
+          }
+        ]
+      },
+      "companyWebsite": "https://thehappyplanner.com",
+      "companyName": "The Happy Planner",
+      "notes": {
+        "important": [
+          "Make sure links you're sending customers are for THE HAPPY PLANNER!",
+          "Example of what NOT to send: thehappinessplanner.com (The Happiness Planner is completely different company)"
+        ],
+        "tone": [
+          "Use a more upbeat, but professional tone",
+          "Don't say \"My bad\""
+        ],
+        "promo_and_exclusions": [
+          "🅿️ Promote customers to sign up to Happy Rewards, use RWD shortcut",
+          "DON'T ask customers to check their email if they didn't get the code for signing up for emails & texts OR for spinning the wheel! The code should be in the texts!",
+          "Custom Planners are excluded from discount codes"
+        ],
+        "old_expired_codes": [
+          "Please do not send old or expired codes to subscribers. This includes recycling old codes that may have previously gone to the sub and is no longer valid."
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [
+        "cheers",
+        "gear"
+      ],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Last chance! Up to 75% OFF End of Year Clearance ends today.\n\nSMS VIPs: Enjoy free shipping w/ code: SMSFREESHIP\n\n happyp.attn.tv/awVNR_FGl04z \n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Hey Jessica! Flexible, functional, and totally you. Our planners let you swap pages, add what you need, and make it your own. happyp.attn.tv/a48hknWvhau- \n\nNeed help picking the right one? \n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Your 2026 goals start NOW! Save 40% OFF goal-setting tools + extra 15% off for Rewards Members! \n\nUse code: VIP15 happyp.attn.tv/ajITJAeeWuDU \n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Hey Jessica, don't leave your happy behind! Pick up where you left off and complete your purchase! happyp.attn.tv/ap-qRqESj1cO .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: You've got your planner...now customize your setup!\n\nTake 35% OFF snap-in accessories w/ code OHSNAP.\n\nShop now: happyp.attn.tv/a-JCkpqcBE-E \n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: It's National Sticker Day! Celebrate with deals up to 85% OFF. Trust us, your planner wants this.\n\nGet the deals: happyp.attn.tv/alYurtIo09x1 \n.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: We've missed you! Check out the latest and enjoy 15% OFF your next purchase with code: wb2-zx7f7v .\n\nShop now! happyp.attn.tv/aeHuL5lvOGBu .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Hey Jessica, we noticed you checking us out. Have you seen our best sellers yet? https://happyp.attn.tv/avwp1g2JFME_ . \n\nWe would love to help you find the perfect planner for your day-to-day! Do you have a specific goal in mind for your planning journey?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I was actually checking on the status of my recent order. Theresa tracking says it is lost",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be64b-73b9-47ea-f000-00004a3a94d4",
+          "message_text": "Happy Planner: Thank you for reaching out. I'm sorry about that. I will check this out with our team and see what happened. Are you referring to Order #2287829? If yes, then can I also have your email address?",
+          "message_media": []
+        }
+      ]
+    }
+  }
+}

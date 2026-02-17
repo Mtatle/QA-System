@@ -1,0 +1,930 @@
+{
+  "version": 1,
+  "chunk": "chunk_0001",
+  "scenarios": {
+    "1": {
+      "agentName": "Ava",
+      "id": "019be0c6-d73e-4429-f000-000061beacf3",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://brilliantearth.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://brilliantearth.com",
+      "companyName": "Brilliant Earth",
+      "notes": {
+        "send_to_cs": [
+          "Inquiries regarding orders",
+          "Shipping inquiries on a current order",
+          "Post-purchase issues",
+          "For product or general inquiries you can't find the answer to, use PGI shortcut"
+        ],
+        "escalate": [
+          "No escalations for this client, send everything to CS"
+        ],
+        "tone": [
+          "Don't use the word \"unfortunately\" to discuss our appointment structure",
+          "Don't use the word \"best\" to reference a product (e.g., best ring, etc.)"
+        ],
+        "templates": [
+          "If cx are looking for an engagement ring and don't provide specifics, use LER shortcut"
+        ],
+        "dos_and_donts": [
+          "If the customer responds incorrectly to the journey, don't send jny temp, recommend items based on their selection instead",
+          "Cx can create their own engagement ring on the webiste by choosing a setting, stone and size",
+          "Cx can customize rings by working with designers who will use their ideas, drawings, images to create the ring they want",
+          "Don't disclose the locations of their labs/production facilities"
+        ],
+        "drive_to_purchase": [
+          "**Be MORE SALESY, if the customer is showing intent to purchase then:**",
+          "**➜ Ask open-ended general questions such as style & material**",
+          "➜ After asking open-ended questions, transition to specific questions such as center stone, etc.",
+          "➜ If the customer liked our recommendation, push for the sale by asking about payment options or when they hope to have the item"
+        ],
+        "promo_and_exclusions": [
+          "Please see here for current offer details: https://www.brilliantearth.com/promo-codes-and-offers/",
+          "Codes can be used in-store"
+        ]
+      },
+      "messageTone": "Casual",
+      "blocklisted_words": [
+        "bestsellers",
+        "sale",
+        "sales",
+        "budget"
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns",
+        "For questions regarding order, service, shipping questions on a current order, post-purchase will go to cssupport@brilliantearth.com",
+        "For product or general inquiry questions, please contact info@brilliantearth.com"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: Welcome to Brilliant Earth! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: Hi! I'm Ava, your personal jewelry concierge. Do you have any questions I can help answer? brilliantearth.attn.tv/a8blQcXISIQu .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: What jewelry are you shopping for next? \n\nReply with a number to let us know:\n\n1 - Engagement Rings\n2 - Wedding Rings\n3 - Fine Jewelry\n4 - Everything!",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Rings",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be0c6-d73e-4429-f000-000061beacf3",
+          "message_text": "Brilliant Earth: Thank you so much for reaching out. Are you looking for engagement, wedding, or personal rings? Also, is there a specific style and material you're looking to get? ",
+          "message_media": []
+        }
+      ]
+    },
+    "2": {
+      "agentName": "Sarah",
+      "id": "019bdd3a-51f7-4310-f000-0000c73e5ea7",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://modgents.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://modgents.com/products/the-nala-gold?merchandise=41975204348099",
+            "item": "The Nala - Gold",
+            "timeAgo": "2026-01-11"
+          },
+          {
+            "link": "https://modgents.com/products/the-nala-rose-gold?group=true&Title=Default+Title",
+            "item": "The Nala - Rose Gold",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://modgents.com/products/the-nala?group=true&Title=Default+Title",
+            "item": "The Nala",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://modgents.com/products/the-nala?group=true&Title=Default+Title",
+            "item": "The Nala",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://modgents.com/products/the-nala-rose-gold?group=true&Title=Default+Title",
+            "item": "The Nala - Rose Gold",
+            "timeAgo": "2026-01-09"
+          }
+        ]
+      },
+      "companyWebsite": "https://modgents.com",
+      "companyName": "Modern Gents Trading Co",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: You have Xmas Store Credit!\n\nUse code SCX258 @checkout - ends soon!\nmodgents.attn.tv/ajSufHX0rUHj \n\nNeed a gift? Get a Modgents gift card!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Merry Christmas! We hope your day is filled with joy\n\nDon't forget your store credit :)\nUse code: SCX258 @checkout\n\nmodgents.attn.tv/a-pUCg_9uG9J",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Your Store Credit is Expiring!\n\nUse code SCX258 @checkout b4 it's gone!\nmodgents.attn.tv/axxFKYRnwqX_\n\nShop Now Pay later w/Shop, Klarna or Sezzle",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Elaine, add a chic touch with The Violet Hoops still waiting in your cart.\n\nUse code AB35FCs for 35% off during our biggest sale of the year.\n\nShop now: https://modgents.attn.tv/anQ4_jmPERFY .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Elaine, these Ladies Rings feature elegant, modern styles you can wear every day or for special moments. Enjoy FREE standard SHIPPING on every order. Find your favorite look here: https://modgents.attn.tv/aYTVn7zZsNUJ .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: YOUR STORE CREDIT EXPIRES TOMORROW!\n\nUse code SCX258 @checkout b4 it's gone!\nmodgents.attn.tv/aqVG_Li-2wBD \n\nHurry! Use it or lose it :(",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: DOUBLE DISCOUNTS ARE BACK\n\nSTACK two codes @checkout to SAVE MORE!\n\nUse Codes:\nHAPPY\nNY2026\n\nmodgents.attn.tv/aaEr_XUdaTnl\n\nHURRY! EXPIRES SOON",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: HAPPY NEW YEAR! \n\nTime to TREAT YOURSELF :)\n\nmodgents.attn.tv/aED0polHJK-c \n\nStack these codes for BIG SAVINGS:\nHAPPY\nNY2026\n\nHurry, expires soon!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: We dropped something NEW!\n\nSEE IT FIRST: modgents.attn.tv/ae5ySvMMW-ON \n\nPS: Stack these codes to save more $$ (exp soon)\n\nUse Codes:\nHAPPY\nNY2026",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: FINAL HOURS! Exclusive deal ends tomorrow\n\nUse both codes to SAVE BIG:\nHAPPY\nNY2026\n\nmodgents.attn.tv/a3wl_6UWXbxj\n\nShop now pay later @checkout",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Hey Elaine! Thanks for stopping by! \n\nUse code BA30zS for 30% off your favorites. ACT FAST before it disappears! 🎉 \n\nJewelry finds await: https://modgents.attn.tv/aaa2V7tkpnJ4 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: OMG you unlocked 70% off a single item!\n\nmodgents.attn.tv/a7YWUFoNMN45\n\nShop now, pay later w/ Klarna, Sezzle or Shop Pay\n\nHurry! Offer ends soon!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Oh no! Your 70% off a single item offer expires this weekend!\n\nUse code: MY70 @checkout\n\nmodgents.attn.tv/aBw5k2vJcJSs\n\nMust have 2 items in cart",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Elaine, finish your look with The Nala Earrings—lightweight, gold plated, and perfect for sensitive skin.\n\nUse code AB35FCs for 35% off. Our Biggest Sale of The Year!\n\nShop now: https://modgents.attn.tv/aE2CLchnFbqh .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Elaine, these ladies' rings are crafted with modern style and fresh details to elevate your look.  \n\nEnjoy free standard shipping on every order.  \n\nShop now: https://modgents.attn.tv/aRFvNQOtmRiX .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: FYI your VIP offer ends tomorrow!\n\n70% OFF A SINGLE ITEM!\n*must have 2 items in cart\n\nmodgents.attn.tv/a_i8gxhN4STx\n\nPay later w/ Klarna or Sezzle",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: We dropped store credit in your acct!\n\nUse code: STBN8W @checkout (exp soon) modgents.attn.tv/aj1UDnRPn_Dt\n\nPay later w/Shop, Klarna or Sezzle",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Something exciting is here, Elaine—thanks for visiting!\n\nUse code BA30zS for 30% off applicable items.\n\nShop now: https://modgents.attn.tv/a1XObgO49xFT .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Your Store Credit expires soon :(\n\nRedeem it at checkout with code: STBN8W\n\nmodgents.attn.tv/ag-gnQaRkLyx\n\nPS: It's use it or lose it!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: OMG. WE JUST DROPPED A NEW RING!\n\nmodgents.attn.tv/akHElHKmXD7c\n\nPS: Your Store Credit Expires this weekend!\n\nUse Your VIP Code: STBN8W @checkout",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: LAST CHANCE\nYour store credit expires tomorrow\n\nUse code: STBN8W @checkout b4 it's gone!\nmodgents.attn.tv/a-oeTLwT_EPH\n\nPay Later w/Shop or Klarna",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Hi this is the messages saying order not found",
+          "message_media": [
+            "[\"https://attentive-files.s3.amazonaws.com/receive-event-media/1768943026958_4604847c-54bf-4b45-9025-0ca465d78694-1.jpeg\"]"
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Customer support\"; last updated: 2023-01-11 21:08:45.644",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"How do I start a return?\"; last updated: 2025-07-31 21:44:55.785",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bdd3a-51f7-4310-f000-0000c73e5ea7",
+          "message_text": "Modern Gents: Thank you for reaching out, and sorry to hear that! The best way to handle this is to email us directly at hello@modgents.com or give us a call at 800-619-7078. Our team is happy to help!",
+          "message_media": []
+        }
+      ]
+    },
+    "3": {
+      "agentName": "Katie",
+      "id": "019bc3df-d0ca-47b2-f000-000033cefaa5",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://goclove.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://goclove.com/products/clove-forte-2-womens-crimson-mauve-marble",
+            "item": "Women's Forte 2 - Crimson Mauve Marble",
+            "timeAgo": "2026-01-12"
+          },
+          {
+            "link": "https://goclove.com/products/clove-aeros-womens-arctic-pink",
+            "item": "Women's Aeros - Arctic Pink",
+            "timeAgo": "2026-01-12"
+          },
+          {
+            "link": "https://goclove.com/products/clove-shoe-womens-grey-matter",
+            "item": "Women's Classic - Grey Matter",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://goclove.com/products/clove-shoe-womens-grey-matter",
+            "item": "Women's Classic - Grey Matter",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://goclove.com/products/clove-shoe-womens-all-black-option",
+            "item": "Women's Classic - All Black Option",
+            "timeAgo": "2026-01-09"
+          }
+        ]
+      },
+      "companyWebsite": "https://goclove.com",
+      "companyName": "Clove",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this brand, send everything to CS",
+          "If customers have issues receiving referral links - send to CS"
+        ],
+        "tone": [
+          "Don't say \"make this up to you\" or overdo it trying to be friendly"
+        ],
+        "templates": [
+          "If a customer slipped/got injured, use the SOI temp",
+          "There is a separate return policy for their apparel"
+        ],
+        "dos_and_donts": [
+          "Always check the product page when they ask about processing times",
+          "Don't give out medical advice",
+          "Don't send the Canadian return link/policy"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [
+        "Neg remarks about Clove’s involvement with pride",
+        "When someone claims an injury (and don't apologize)",
+        "Complicated fit issues (even outside the 30 day return window)",
+        "returns for worn shoes",
+        "Aeros Aurora shoe pre-order shipping status"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Clove: Find your sole-mate in seconds with our Shoe Quiz! Just a few Qs and we'll share your perfect match: https://goclove.attn.tv/aDX_KZv6jrad .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Hey Gloria! Thanks for stopping by!\n\nShop now to see why Clove Sneakers make long shifts way easier: https://goclove.attn.tv/aCG5ChfLByAh .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Forte 1 is 20% OFF through the end of December! Shop the original now: goclove.attn.tv/awJwlSIYmz8i .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Gloria, grab your Forte SuperCushTM Sneakers for waterproof comfort—perfect for those LONG shifts.  \n\nUse code CLOVESOCKS2025 for free socks with your first shoe purchase.  \n\nShop now: https://goclove.attn.tv/ahqV0MNXEEUI .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Surprise! Use code CLOVESOCKS2025 for FREE compression socks. Just add shoes + socks to your cart! Valid for 24 hours only.\ngoclove.attn.tv/aARffsJO9FS0 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Gloria, Forte sneakers bring you easy-clean comfort and fun color pops—perfect for long shifts.\n\nSee what feels right for you: https://goclove.attn.tv/aUhclrHmv-qj .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: There's still time for 12/24 delivery! Order TODAY via 2nd Day Air to get what you need for the holidays: goclove.attn.tv/aVmK0xtfocjS .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Need it by 12/24? It's not too late! Order TODAY via Next Day Air to get your gifts in time: goclove.attn.tv/atceZkTSWe1Y .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Don't forget to use expiring FSA/HSA funds by 12/31! Shop our qualifying products via TrueMed: goclove.attn.tv/a_p9OcjFHZej .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Need a (really great) last-minute gift? Send instant Clove Gift cards via text or email: goclove.attn.tv/a4eJB5k4eoLz .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Good news: the shoes you were eyeing are still on SALE. Bad news: they're almost out of stock. Shop ASAP! https://goclove.attn.tv/aKEEc5_tSw2s .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Imagine your next shift feeling lighter with the Classic Electron Rose Shoes—made for you to move with joy.\n\nThe Classic Electron Rose Shoes are $40 off—such a good time to treat yourself.\n\nYour next pair is waiting: https://goclove.attn.tv/aVk_Dfh4ZyX_ .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Night Shift on a holiday? We see you. Gear up for the night (shift) before Christmas. Shop late-shift necessities: goclove.attn.tv/aQK4Rnx0jsu4 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Hey Gloria! Thanks for stopping by!\n\nShop now for Clove Sneakers made for your busy days: https://goclove.attn.tv/aIQGpSm7_adR .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Newness Alert! Brand New Forte 2 and Strada colors just dropped! Shop bold new looks here: goclove.attn.tv/a_8PDRnvzcIx .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Great news: We're having a SAMPLE SALE! Huge savings, amazing selection, don't miss it: goclove.attn.tv/a4-2Byl_AL2O .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: It's the last day of our Sample Sale! Shop our very best deals while you can: goclove.attn.tv/aM04YI3g1rhG .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Up to 50% OFF shoes! Sample Sale discounts just increased. Limited inventory - once they're gone, they're gone. Shop now: goclove.attn.tv/ab1U59y_H-89 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Last call for FSA/HSAs expiring 12/31 (that's TOMORROW)! Shop healthcare shoes & more, pre-tax: goclove.attn.tv/abbHhaYKhZHk .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Last chance! 20% off Forte 1 ends TODAY, 12/31! Shop now: goclove.attn.tv/a2aHWD6Ohp2X .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Gloria, try the Forte SuperCush Comfort Sneakers for all-day comfort and waterproof durability. \n\nEnjoy $33 off these sneakers right now. \n\nShop now: https://goclove.attn.tv/aT8G3OujoCNd .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Students, bundle & save for next semester! Shop everything you need: goclove.attn.tv/aNTVkbZfaPYE .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Hey Gloria! Thanks for stopping by! \n\nShop now for Clove Sneakers designed for your long shifts: https://goclove.attn.tv/a9rxct0F8Nmy .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Take 20% OFF The Pitt Collection with code PITT20 & tune in with us on HBO! Shop now: goclove.attn.tv/aHcBKqdpiUbU .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Gloria, your Forte SuperCushTM Sneakers with all-day comfort and easy-clean style are still waiting for you.\n\nUse code CLOVESOCKS2025 for free socks with your first shoe purchase.\n\nShop now: https://goclove.attn.tv/aHWjsLOiXmMw .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Gloria, the Forte sneakers bring SuperCushTM comfort and easy-clean COLORS to every shift—just slip on and go. \n\nFind your new favorite pair here: https://goclove.attn.tv/a4IZWcR9mreA .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Step into comfort with our Classic Sneaker—fluid-repellent, easy to clean, and ready for your busy days.\n\nClassic Sneaker is selling fast—422 people added this to their cart.\n\nShop now: https://goclove.attn.tv/a7taAzxKZGPr .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Thanks for your purchase! We know you'll love Women's Alto and can't wait for you to enjoy it. goclove.attn.tv/absbNC9OECqu .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Today's your last chance to claim $30 OFF your next full-price shoe order! Use code CLOVE30-M3T4 at checkout: goclove.attn.tv/aOWyqRkvWeHz .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Now extended for 1 more day! Take $30 OFF your next full-price pair of shoes with code CLOVE30-M3T4 at checkout: goclove.attn.tv/aVXcR66pKJrw .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: You deserve shoes that support every shift—our Forte 2 Sneakers have max-cushion comfort and slip-resistant soles for your day. \n\nHurry! 278 people added these to their cart—LIMITED pairs available. \n\nSHOP NOW: https://goclove.attn.tv/aY9UxJfmIHmD .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Great news! Your order #71343959 has shipped and will be to you soon. Click here to track your order: goclove.attn.tv/akVquMwwq9tb .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Hey Gloria, order #71343959 has been delivered! Track your order here: goclove.attn.tv/aQVw78b7kdjn .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Price Drop Alert: Women's Forte - Steel Blue / Electric Red - Steel Blue / Electric Red / 9 is 20% off! Save now: goclove.attn.tv/auQ-l4-jqvHl .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Clove: Don't miss out! Get 20% off on Women's Forte - Steel Blue / Electric Red - Steel Blue / Electric Red / 9 . Shop asap: goclove.attn.tv/acBlAT4w1e5w .\n",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Can I please talk to someone",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bc3d8-8d88-44b6-f000-000033cefaa5",
+          "message_text": "Clove: Hi, this is Katie! How can I help you today? I'll be happy to assist. ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I bought one shoe from glove is too tight for and I wear it I have to remove from my feet",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "This one",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "What can I do",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"How do I return my Clove order?\"; last updated: 2025-10-07 19:38:25.452",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Return policy\"; last updated: 2025-10-02 19:40:38.817",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bc3df-d0ca-47b2-f000-000033cefaa5",
+          "message_text": "Clove: Thanks for letting me know, and sorry to hear that. If it helps, you can process a return request directly in our Returns Center: https://goclove.attn.tv/axOUDDPAbDfC Once your return has been received, your refund will be processed. You can also check out our detailed return policy here: https://goclove.attn.tv/a3ARiSYrIDff",
+          "message_media": []
+        }
+      ]
+    },
+    "4": {
+      "agentName": "Sam",
+      "id": "019bdcea-e203-4f09-f000-000007fef4f9",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://shadyrays.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://shadyrays.com/products/titan-metal-tf-matte-gunmetal-23xi-sr-pro-red-polarized",
+            "item": "Metal Titan - 23XI Edition Red Polarized",
+            "timeAgo": "2026-01-20"
+          },
+          {
+            "link": "https://shadyrays.com/products/titan-metal-tf-matte-gunmetal-23xi-sr-pro-red-polarized",
+            "item": "Metal Titan - Gunmetal Polarized",
+            "timeAgo": "2026-01-19"
+          },
+          {
+            "link": "https://shadyrays.com/products/metal-titan-gunmetal-polarized?utm_campaign=email_sessionrecap_cust_2_of_3&utm_medium=email&utm_source=wunderkind&utm_term=triggered&ibx_source=d5l9ktdqljjc73cbd040&ueh=6f89d9a9b5e7e0b52a031f006e175e4b00b7a00490489dfb3ceef98bf169671e&_kx=-VDGqf0KQuBlGV47oc0OyEeUhj5ruTOcpZpHRVuj4_A.P2cmbG",
+            "item": "Metal Titan - Gunmetal Polarized",
+            "timeAgo": "2026-01-19"
+          },
+          {
+            "link": "https://shadyrays.com/products/titan-metal-tf-matte-gunmetal-23xi-sr-pro-red-polarized?utm_campaign=Browse-Abandonment-Text-Message-A-(Email-+-SMS-Journey)&utm_source=attentive&utm_medium=sms&externalId=fA9KU",
+            "item": "Metal Titan - 23XI Edition Red Polarized",
+            "timeAgo": "2026-01-19"
+          },
+          {
+            "link": "https://shadyrays.com/products/titan-metal-tf-matte-gunmetal-23xi-sr-pro-red-polarized?utm_campaign=Browse-Abandonment-Text-Message-A-(Email-+-SMS-Journey)&utm_source=attentive&utm_medium=sms&externalId=fA9KU",
+            "item": "Metal Titan - 23XI Edition Red Polarized",
+            "timeAgo": "2026-01-19"
+          }
+        ]
+      },
+      "companyWebsite": "https://shadyrays.com",
+      "companyName": "Shady Rays",
+      "notes": {
+        "escalate": [
+          "ESC restock inquiries, but use STOF shortcut first"
+        ],
+        "tone": [
+          "Close the convo if the cx first message doesn't warrant a response (e.g. Them thanking us, saying they're browsing, etc.)"
+        ],
+        "templates": [
+          "For product prescription inquiries use RPP shortcut",
+          "For prescription orders questions use RPO shortcut"
+        ],
+        "dos_and_donts": [
+          "If customers want to return an item - clarify if they’re trying to return a recently purchased pair or if they need a replacement"
+        ]
+      },
+      "messageTone": "Casual",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Last chance! Get 20% off e-gift cards just in time for the holidays. Instant delivery, zero stress. Ends tonight: shadyrays.attn.tv/aywEtc84K49_ ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Our gift to you: $25 Mystery Pairs! Don't miss out, this limited deal won't last long: shadyrays.attn.tv/aeSaD9e6YtZT \n\nEnds 12/23 @ 11:59pm PST.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: What's your next move? Check out all of our newest releases here: https://shadyrays.attn.tv/aZdE7KuzxUk4 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: You earned it. Check out our favorite shades of 2025 and get ready to start the new year in style.\n\nFind your pair: shadyrays.attn.tv/aPflyThrGc_Y ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: 30% off shades ends tonight! Save and stock up for 2026 with code END30: shadyrays.attn.tv/av0qvci6VsRv \n\nValid until 11:59pm PST.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: New Year, New Shades! Active frames, fresh style, and 30% OFF sitewide starts NOW.\n\nShop online and in-store: shadyrays.attn.tv/a3jEnFfLpVX2 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: 30% Off Sitewide ends tonight! Save big and hit your goals in style: shadyrays.attn.tv/aS_4mMpK_y0I \n\nValid until 11:59pm PST.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: It's your birthday month! Celebrate w/ 40% off shades using code: BD1-bwfw87. Hurry, offer ends 1/31!\n\nShop: shadyrays.attn.tv/aRXRZFgerynT\n\nExcludes RX",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Don't miss out on 35% off all Green Wolf legacy golf shades. Use code GREEN35 at checkout. \n\nUpgrade your game: shadyrays.attn.tv/aec0u-wYMn1L ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Nice pick! Don't wait any longer for your new favorite shades. Get Metal Titan - 23XI Edition Red Polarized Now: shadyrays.attn.tv/aXm3y-rPY0KZ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Time to celebrate! Use your 40% off birthday code: BDAY12W0MLE7 before it expires on 1/31! Exclusions apply.\n\nShop here: shadyrays.attn.tv/aoCnOb6pzRzz",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: We think you and Metal Classic - 23XI Edition Red Polarized are a perfect pair! Come back and check out now: shadyrays.attn.tv/aiALgZo9rK2m\n\nAny final questions I can help with while these are still available?\n\n- Sam",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Yes, I was sent a birthday code for a discount. Will it work on these glasses?Because I tried yesterday and it didn't.And I reached out to customer service, and no one got back to me",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bd2c4-4251-41dc-f000-000007fef4f9",
+          "message_text": "Shady Rays: Thank you for sharing this with me, and I'm sorry to hear the code isn't working! I'd be happy to check this further for you. Can you please share a screenshot of the error message you're getting when using the code BDAY12W0MLE7? ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Hi, unfortunately.I'm driving right now.But it showed a message regarding snow goggles",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bd2c9-f732-4fd3-f000-000007fef4f9",
+          "message_text": "Shady Rays: No worries! I want to make sure I give you the most accurate information, so I'll check in with my team. Since it's the weekend, I may not hear back until Monday, but I'll be sure to follow up with you as soon as I do! ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Thank you",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bd2cd-453e-4322-f000-000007fef4f9",
+          "message_text": "Shady Rays: You're welcome! I'll be in touch. ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bdce5-4e2d-407e-f000-000007fef4f9",
+          "message_text": "Shady Rays: Thanks for your patience! I just heard from the team, and we understand how important this is. We apologize for the inconvenience this has caused. May we know which pair were you wanting to purchase?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "the 23xl Edition Red Metal Titan. thx",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bdcea-e203-4f09-f000-000007fef4f9",
+          "message_text": "Shady Rays: Thanks! Let me pass this on to my team. I'll be in touch as soon as I get an update. ",
+          "message_media": []
+        }
+      ]
+    },
+    "5": {
+      "agentName": "Avery",
+      "id": "019bc2da-40bf-40ed-f000-0000f2827328",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://snipesusa.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.snipesusa.com/account",
+            "item": "https://www.snipesusa.com/account",
+            "timeAgo": "2026-01-14"
+          },
+          {
+            "link": "https://www.snipesusa.com/account",
+            "item": "https://www.snipesusa.com/account",
+            "timeAgo": "2026-01-14"
+          },
+          {
+            "link": "https://www.snipesusa.com/air-max2-cb-94-nike-black---white-dc1411-001-1000087542.html",
+            "item": "Air Max2 CB 94",
+            "timeAgo": "2026-01-13"
+          },
+          {
+            "link": "https://www.snipesusa.com/air-max2-cb-94-nike-black---white-dc1411-001-1000087542.html",
+            "item": "Air Max2 CB 94",
+            "timeAgo": "2026-01-13"
+          },
+          {
+            "link": "https://www.snipesusa.com/account",
+            "item": "https://www.snipesusa.com/account",
+            "timeAgo": "2026-01-12"
+          }
+        ]
+      },
+      "companyWebsite": "https://snipesusa.com",
+      "companyName": "Snipes",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS immediately for post-purchase issues",
+          "Send to CS for payment processing issues"
+        ],
+        "tone": [
+          "Don't use the term restock",
+          "Don't tell customers that we'll be restocking",
+          "Don't respond to blank messages",
+          "Don't use formal language",
+          "Close the conversation when a customer responds 'no'"
+        ],
+        "templates": [
+          "If a cx reaches out regarding the Early Access event, use EAE shortcut",
+          "For cx reaching out in Spanish use SSC shortcut",
+          "For checkout issues use the \"Check out Issues\" temp",
+          "For store item availability, use SPA shortcut",
+          "If cx's email doesn't work for early access, use EEA shortcut"
+        ],
+        "dos_and_donts": [
+          "They occasionally run sign-up campaigns where cx text certain keywords (“releases,” “early access”) to join a list. If a customer sends a similar keyword:",
+          "➜ Check the website banner or landing page to confirm if it's a current keyword trigger",
+          "➜ If confirmed, close the convo, if not you can respond",
+          "All clothing is true to size unless otherwise stated on the product page",
+          "You can use these sizing charts for reference (for internal use only): https://docs.google.com/spreadsheets/d/1kmra_vOwCJuHoAx9D4L4Qx95rxafHcrqn-ZGutfzLgg/edit?usp=sharing",
+          "🅿️ If customers say they want to purchase in store - encourage them to buy online & pick up in-store",
+          "For store info q's (phone number/additional info) - use the store locator with your VPN turned on!"
+        ],
+        "drive_to_purchase": [
+          "🅿️ If customers are looking for an outfit recommendation/item pairing - direct them to the \"shop the look\" section on each product page or use the LK shortcut"
+        ]
+      },
+      "messageTone": "Formal",
+      "blocklisted_words": [
+        "restock"
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Welcome to SNIPES! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Thanks for subscribing! Get ready for exclusive updates on new releases, events, and more. Don't miss out on what's coming your way. Stay tuned!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Don't forget to save our contact to get exclusive updates!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Hey - you left somethin' behind! Hurry & grab it today: snipes.attn.tv/aGnySlPXEj2S .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Cozy layers are marked down. Shop fleece from top brands like Nike, UGG, Polo and more for men, women & kids. Limited time: snipes.attn.tv/aJKkv7M9I7hA ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Thanks for texting us! If you need additional help, please contact us at customerservice@snipesusa.com. Text STOP to opt out.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Time's almost up. Sign up for early access for your chance to reserve the Air Jordan 4 Retro Flight Club: snipes.attn.tv/axJiH3WoxD20 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Thanks for texting us! If you need additional help, please contact us at customerservice@snipesusa.com. Text STOP to opt out.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I still need assistance with my account ",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb40a-969a-4afe-f000-0000f2827328",
+          "message_text": "SNIPES: I'm very sorry to hear this happened. I totally understand the frustration with this! Our team handles emails in the order they come in and sending additional ones will further delay the team's response. Rest assured that one of my colleagues will follow up with you in no time!",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Over the past week, my account has been subject to purchase restrictions due to fraud prevention measures. These restrictions are currently only in effect on your website, as my bank has already resolved the card restriction. I kindly request that you forward my case to a representative who can assist me.\nI have consistently encountered issues with returning purchases. One instance involved a single item being canceled without being credited. I took the initiative to visit a physical store to seek assistance from your retail associates. They promptly issued me a gift card to complete my online order after undergoing the entire verification process at the store.\nTherefore, I kindly request your assistance in resolving this matter.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb41a-fa42-43ca-f000-0000f2827328",
+          "message_text": "SNIPES: I'm sorry to hear about that. I'm really sorry for all the inconvenience. Kindly wait for our team's response. We are dealing with an influx of support messages but this does not make your concern any less important. The team is working as hard as possible to address each issue promptly. I know my apologies won't help in this situation but rest assured, I understand how frustrating this can be and I'm very sorry I can't provide you with an immediate solution. I'm thankful for your patience and understanding. ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Just dropped. Nike Air Max2 CB 94, Pegasus Premium in new colorways, adidas Samba Jane, & more. Shop now: snipes.attn.tv/ayXokT3LqmiW ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "5619006460",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Air Jordan 4 Retro \"Flight Club\" early reserve is live! Use your email georgeg21990@gmail.com to join the VIP queue. Join here: snipes.attn.tv/aq9rGikZVOR4 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: If you had trouble entering the Air Jordan 4 Retro \"Flight Club\" queue, please try again using the same email as your Reserve account. Join the VIP Queue here: snipes.attn.tv/aD0T6iCOuIeE .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "My account is still restricted",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bc2da-40bf-40ed-f000-0000f2827328",
+          "message_text": "SNIPES: I sincerely apologize for the inconvenience. I want to assure you that we take each request very seriously and are doing our best to respond to everyone as promptly as possible. Your concern is very important to us, and I promise that a member of our team will get back to you as soon as possible. We hope for your continued understanding, and thank you for allowing us to assist you.",
+          "message_media": []
+        }
+      ]
+    }
+  }
+}

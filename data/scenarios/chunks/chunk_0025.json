@@ -1,0 +1,551 @@
+{
+  "version": 1,
+  "chunk": "chunk_0025",
+  "scenarios": {
+    "121": {
+      "agentName": "Miles",
+      "id": "019be744-a82f-4d93-f000-0000cd08eec4",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://bonobos.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://bonobos.com/products/primo-chino?color=sand%20linen",
+            "item": "Primo Chino",
+            "timeAgo": "2026-01-18"
+          },
+          {
+            "link": "https://bonobos.com/products/stretch-washed-chino?color=deep%20navy",
+            "item": "The Chino 2.0",
+            "timeAgo": "2026-01-18"
+          },
+          {
+            "link": "https://bonobos.com/products/stretch-washed-chino-1?color=the%20khakis",
+            "item": "The Original Chino",
+            "timeAgo": "2026-01-18"
+          },
+          {
+            "link": "https://bonobos.com/products/stretch-washed-chino-1?color=chestnuts",
+            "item": "The Original Chino",
+            "timeAgo": "2026-01-18"
+          },
+          {
+            "link": "https://bonobos.com/products/stretch-wool-dress-pants?color=navy",
+            "item": "Italian Stretch Wool Dress Pants",
+            "timeAgo": "2026-01-18"
+          }
+        ]
+      },
+      "companyWebsite": "https://bonobos.com",
+      "companyName": "Bonobos",
+      "notes": {
+        "tone": [
+          "Close journey replies asking customers to text in their birthday to receive a gift"
+        ],
+        "dos_and_donts": [
+          "Offer help if the customer replies back to the automated message with number 0"
+        ],
+        "templates": [
+          "For checkout issues use COI shortcut",
+          "If the site doesn't accept the customers payment method use PME shortcut"
+        ],
+        "promo_and_exclusions": [
+          "The welcome code can be applied to discounted items",
+          "For issues with the code GETSTARTED15 use GSE shortcut",
+          "The 20% off welcome offer will automatically be added at checkout for their first order"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/eEr",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Congratulations! We might be biased, but we think you just signed up for the best text alerts in the game 😎 To put money where our mouth is, here's a coupon code for 20% off your first order - hello20_nfxunh ! Welcome to Bonobos! \n\nGet Your 20% Off Now: bonobos.attn.tv/aMT0mBKbAGaM \n\nTerms apply. ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nReady for a style upgrade? Take a look at the newest arrivals and see what you discover: https://bonobos.attn.tv/a1uYI5T9qFza .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Grab The Harrington Jacket in your cart for a versatile, easy style boost.\n\nUse code hello20_nfxunh for 20% off.\n\nShop now: https://bonobos.attn.tv/aluOl6aNP3nE .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: 9.5K people have recently viewed The Harrington Jacket.\n\nUse code hello20_nfxunh for 20% OFF. \n\nSee for yourself 🧥: https://bonobos.attn.tv/aktX9p9Knd74 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: It's your last chance to snag some serious SAVINGS! Our extra 30% off sale is wrapping up tonight—don't miss out on these deals! Go get your favorites! \n\nShop Quick: bonobos.attn.tv/a206SSpt6ZDB ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Level up your look with Weekday Warrior Dress Pants—easy comfort meets sharp style. \n\n1.3K people recently added these to their cart. \n\nShop now: https://bonobos.attn.tv/aEjSLdMJI8i7 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Welcome and thanks for stopping by!  \n\nShop now for comfortable styles built for you: https://bonobos.attn.tv/aqxi7Cq0At3m .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Ready to refresh your office wardrobe for the new year? We've put together a collection that'll make you the best-dressed at the water cooler. Shop now and don't miss out!\n\nShop Now: bonobos.attn.tv/avUL3fh_lBfy ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Check out Jetsetter Knit Blazer — comfy, sharp, and easy to dress up or down.\n\n428 people added this blazer to their cart.\n\nBuy here: https://bonobos.attn.tv/a9umYm6-B9-C .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Looking for colors that match your vibe? Whether you want beachy blues for that sunny escapade or deep navy to keep things grounded, we've got you covered!\n\nShop Blue: bonobos.attn.tv/anPiLrKzZYkb ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Heads up if you use our app: We'll be retiring it this month, but we're still here 24/7 at bonobos.com, in-store at the Guideshop, or right here via text!\n\nAs a thank you for understanding, here's a code for 20% off your next purchase:\n\nsmsapp20_pewnfy\n\nShop Here: https://bonobos.attn.tv/a9WJwaxRtnmo \n\nExclusions apply. Valid thru 3/31/25.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Have you peeked at our bundles page lately? We've refreshed it with more fan favorites and you can save BIG - over 25%! Don't miss out on these awesome deals!\n\nShop Exclusive Specials: bonobos.attn.tv/aMKiRRI4Le1F \n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Thanks for checking us out!\n\nShop now for comfortable, stylish picks that fit your life: https://bonobos.attn.tv/arxPSbd6CvU_ .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Hey there! Starting today, you can snag an extra 50% off all sale items. That's up to 70% off original prices! Don't miss out on these deals—your wardrobe will thank you!\n\nShop 50% Off: bonobos.attn.tv/a8KqloxdWJbJ ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Snag those Weekday Warrior Dress Pants—STYLE and comfort in every move! 🕺\n\nGet $60 OFF these right now.\n\nShop now: https://bonobos.attn.tv/a8UGumKN6pxr .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: You will find sharp details and tailored comfort in every pair of Dress Pants here. Just between you and us, the perfect fit is waiting for you: https://bonobos.attn.tv/axSsdEjOIf5t .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonobos: Hey hey! If you have any questions, don't hesitate to reach out. We're always ready to help.\n\nVisit bonobos.attn.tv/alizovvnp0zY for order help, or hit us back here for some product and style tips.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I bought a pair of jeans and it's missing a belt loop on the right side, causing my belt to slip up off the jeans.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be38e-b420-4433-f000-0000cd08eec4",
+          "message_text": "Bonobos: Oh no, we're so sorry about that! If you could take a photo of the damage/defect, the front and back of the inner QR code tag, and have your order number on hand - we can see what necessary steps need to be taken. Please contact us here: https://bonobos.attn.tv/aVtx_n6pWHMd or use the Live Chat feature on our website.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be744-a82f-4d93-f000-0000cd08eec4",
+          "message_text": "Bonobos: Thanks for the photos! Just to clarify, have you reached out to the link that I've sent out? Please let me know how that goes. I'm just one click away!",
+          "message_media": []
+        }
+      ]
+    },
+    "122": {
+      "agentName": "Jordan",
+      "id": "019bd2b0-6901-490c-f000-0000f1d811ca",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://drschollsshoes.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://drschollsshoes.com",
+      "companyName": "Dr. Scholl's Shoes",
+      "notes": {
+        "escalate": [
+          "For all ESC use ESC shortcut",
+          "When ESC code issues, include the promo code in the ESC notes"
+        ],
+        "promo_and_exclusions": [
+          "Coupon codes CAN be combined with sale items"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Dr. Scholl's Shoes: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Dr. Scholl's Shoes.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Scholl's Shoes: Welcome to Dr. Scholl's Shoes! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/E6K",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Scholl's Shoes: Here's your 15% off + free shipping on cool, comfy, classic looks for the whole family! \n\nShop now: drschollsshoes.attn.tv/aJ-9lhWxszdf ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Scholl's Shoes: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nNot exactly sure what you're looking for? Check out our newest arrivals for some inspiration: https://drschollsshoes.attn.tv/axKWyZmfDA7v .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Scholl's Shoes: Hey, we noticed you checking us out. Have you seen our best sellers yet? drschollsshoes.attn.tv/aVc3qBhikz7a . ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Scholl's Shoes: STARTS NOW: Snag an EXTRA 20% off select styles + FREE shipping on orders $65+\n\nCode EXTRA20: drschollsshoes.attn.tv/ay_M59mxqU-M . ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Scholl's Shoes: Extra 20% off sneaks, booties & casuals is on NOW! PLUS, free ship on orders $65+\n\nUse code EXTRA20: drschollsshoes.attn.tv/a8x3hcE2MVrH . ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Scholl's Shoes: Mary Janes start @$31.99? Say less. Use code EXTRA20 for an extra 20% off select styles! \n\nGO: drschollsshoes.attn.tv/ac5Z4LIOWrR7 . ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Scholl's Shoes: Hey, we noticed you checking us out. Have you seen our best sellers yet? drschollsshoes.attn.tv/apvszEVQbjgC . ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Scholl's Shoes: New Year, New Shoes! EXTRA 20% OFF select styles! Start your shoedrobe refresh NOW.\n\nCode EXTRA20: drschollsshoes.attn.tv/akOL6Nonjl2S .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Scholl's Shoes: EXTRA 20% off styles for you, him & the kiddos! New Year DEALS, wear NOW styles. HURRY!\n\nCode EXTRA20: drschollsshoes.attn.tv/aLhfvyqYlV_l .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Dr. Scholls, what is this",
+          "message_media": [
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1768764783820_00b6b91f-bd35-49b0-ac1a-3ce5ef90127b-1.jpeg",
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1768764783820_00b6b91f-bd35-49b0-ac1a-3ce5ef90127b-1.png"
+          ]
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bd29f-de22-4f60-f000-0000f1d811ca",
+          "message_text": "Dr. Scholl's Shoes: If you're asking which shoes these are, I'm afraid we don't carry this style. I'll make sure to share this with the team so they can consider it in the future. \n\nIn the meantime, feel free to explore our new arrivals here: https://drschollsshoes.attn.tv/afvzCBFmu5UY You might find something to buy instead.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Yes I am aware. I ordered Women's nice day Loafers and recorded kitten heeled pumps",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Received",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bd2a3-8af7-4ef0-f000-0000f1d811ca",
+          "message_text": "Dr. Scholl's Shoes: I'm sorry for the inconvenience. Can I have your full name, email, order number, phone number and your zip code please?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Mary Williams Crislermary@gmail.comOrder #005028812788678-531-681430011",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bd2b0-6901-490c-f000-0000f1d811ca",
+          "message_text": "Dr. Scholl's Shoes: I'm sorry, to be sure, your name is Mary Williams and your email address is crislermary@gmail.com?",
+          "message_media": []
+        }
+      ]
+    },
+    "123": {
+      "agentName": "Sarah",
+      "id": "019be33f-33b4-45dc-f000-0000d8061888",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://simplyearth.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://simplyearth.com",
+      "companyName": "Simply Earth",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Cx can use both a gift card and a promo code per order!"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Simply Earth: The Butters + Balms Recipe Box is here! Kickstart your New Year with a FUN new hobby! Grab yours now and create NATURAL products at home! \n\nShop now: simplyearth.attn.tv/aKoci7diZTH1 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Simply Earth: Today only, use code NEROLI for $30 off our Neroli Essential Oil, making it just $19.99! \n\nShop now: simplyearth.attn.tv/aENrZ3PvxSlX ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Simply Earth: Hey, there! Thanks for stopping by. \n\nYou checked simplyearth.attn.tv/aiQdLFEpdwBZ\nMost Earthies love it because it makes every DIY project effortless.\n\nDo you have questions about it?\nLet me know so I can help you. ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Simply Earth: LIMITED TIME: Get a free Succulent Diffuser w/ your 1st Recipe Box! Use code SUCCULENT at checkout + enjoy making your own nourishing balms this winter. \nShop now: simplyearth.attn.tv/azjcL0azAS9z ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Simply Earth: Hey, we noticed you checking us out. \n\nHave you seen our Monthly Recipe Box, yet? You can get all-natural goodies delivered directly to your door!\n\nGrab it now: https://simplyearth.attn.tv/aGs0fSSq-AWd ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Yes. I've noticed I'm missing my bottle cap sticker sheet.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be21b-4680-4f48-f000-0000d8061888",
+          "message_text": "Simply Earth: I'm really sorry for the inconvenience. Could you please share your email address and confirm the order number?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "It will be either camonvtx09@gmail.com  or dixielhensley@gmail.com.  I'm sure which email I  used.\nWhat do you mean by  order  number?",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be2ed-d12e-4910-f000-0000d8061888",
+          "message_text": "Simply Earth: The order number is indicated in the order confirmation you received when you placed the order. If you believe that something is missing from your order, please email your request to help@simplyearth.com or feel free to call this number 866-330-8165 Monday-Friday 7 am-3 pm CST. Please let me know if you have any questions about our products, I'm more than happy to help you here!",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I'm sure this is it,9400140105949000518053",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be33f-33b4-45dc-f000-0000d8061888",
+          "message_text": "Simply Earth: Thanks for the info! I truly wish I could resolve this directly for you. However, I have limited access to orders. Please reach out to our specialized team using the info I sent above. They'll be much better equipped to help you with this. ",
+          "message_media": []
+        }
+      ]
+    },
+    "124": {
+      "agentName": "Taylor",
+      "id": "019bf829-44cd-4a5c-f000-0000eaf48e75",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://us.laneige.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://us.laneige.com",
+      "companyName": "LANEIGE",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for any order related inquiries"
+        ],
+        "promo_and_exclusions": [
+          "Free gift with purchase codes are entered in the cart and discount codes at checkout"
+        ]
+      },
+      "messageTone": "Casual",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "LANEIGE: Don't forget your 15% off offer, use code HELLO15 and claim today! https://laneige.attn.tv/agw1YsXHz2lV ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "LANEIGE: NEW Donut Delight Duo: Bestselling Glaze Craze shades & an exclusive keychain in one sweet set. SHOP NOW: laneige.attn.tv/a_iykHfnA8Px .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "LANEIGE: FREE New Years Gifts! Get hydration essentials with orders $60+ and $80+. Ends 12/16. SHOP NOW: laneige.attn.tv/avz05RcQ4Fjt .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "LANEIGE: Loyalty Exclusive! Get a FREE Laneige headband for your skincare routine with orders $55+! Use code DEWY. Ends 1/31. Join Dewy Skin Rewards to unlock this perk! SIGN UP: laneige.attn.tv/a5aPLALgzGMn .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "LANEIGE: Strawberry Shortcake lip mask & classic mini lip balms! Get the best of both worlds for AM to PM lip care.\nSHOP NOW: laneige.attn.tv/arHGfOUeHoE4 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "LANEIGE: Soothing, nourishing skincare essentials, FREE on orders $60+ and $90+.\nSHOP NOW: laneige.attn.tv/alAiu49z6eF0 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "LANEIGE: Almost gone! FREE Laneige headband with orders $55+ with code DEWY.\nSIGN UP TO REDEEM: laneige.attn.tv/a3oaEJ9JR4kt .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "LANEIGE: Looks like you're already subscribed! Need a refresher on our current deals & offers? Discover them here: https://laneige.attn.tv/l/xOz/AAAAA .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "LANEIGE: Looks like you're already subscribed! Need a refresher on our current deals & offers? Discover them here: https://laneige.attn.tv/l/xOz/AAAAA .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "(attn) Hey, I need help with something:",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf825-fba1-42bc-f000-0000eaf48e75",
+          "message_text": "LANEIGE: I would be more than happy to help out, ask away!",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "When looking at my cart it says \"free hydration duo\" which should be cica sleeping mask and cream skin toner and moisturizer but when the reward got added to my cart only one of the duo items showed up the cica sleeping mask",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "All of the other reward items got added the headband & the dry skin trio but only one of the hydration duo items would you happen to know why it's not adding the second item which I should have as a reward",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bf829-44cd-4a5c-f000-0000eaf48e75",
+          "message_text": "LANEIGE: Apologies for the trouble. I'm happy to check it out. Could you send me a screenshot of what's showing on your end including the item(s) in your cart? ",
+          "message_media": []
+        }
+      ]
+    },
+    "125": {
+      "agentName": "Sarah",
+      "id": "019bcdc5-9bf9-4538-f000-0000e619771e",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://bartesian.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://bartesian.com",
+      "companyName": "Bartesian CA",
+      "notes": {
+        "send_to_cs": [
+          "For hardware maintenance issues, use shortcut HMI",
+          "Send to CS for post-purchase inquiries"
+        ],
+        "tone": [
+          "Speak in first person, \"Our cocktails, Our dispensers\"",
+          "Do not use \"pod(s)\", use \"capsules\" instead"
+        ],
+        "drive_to_purchase": [
+          "Unless cx specifies, default to recommending \"THE BARTESIAN COCKTAIL MAKER\""
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [
+        "pod"
+      ],
+      "escalation_preferences": [
+        "upset/angry customer"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Bartesian: Ready for NYE? Stock up on cocktails or upgrade to the Bartesian Duet - $100 off, delivered by NYE. Shop now: bartesian-ca.attn.tv/alrrDkOIfd58 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bartesian: Still thinking it over? The Be Mine Bundle includes everything for Valentine cocktails & saves over $50. Shop now: bartesian-ca.attn.tv/awFDvrgDdrg1 ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I'm waiting for my free bartesian that I won I will buy some valentine cocktails once it comes in but I haven't heard anything in a long time",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bcdc5-9bf9-4538-f000-0000e619771e",
+          "message_text": "Bartesian: I'm sorry about that! Let me check on this with the team for you. Mind sharing your email address, please? ",
+          "message_media": []
+        }
+      ]
+    }
+  }
+}

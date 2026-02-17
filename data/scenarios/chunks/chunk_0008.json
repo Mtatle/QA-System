@@ -1,0 +1,526 @@
+{
+  "version": 1,
+  "chunk": "chunk_0008",
+  "scenarios": {
+    "36": {
+      "agentName": "Samantha",
+      "id": "019beceb-5973-4f86-f000-0000ceeddbf7",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://comfrt.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://comfrt.com/products/pastel-sweatpants?variant=44359302610988",
+            "item": "Pastel Sweatpants",
+            "timeAgo": "2026-01-19"
+          },
+          {
+            "link": "https://comfrt.com/products/pastel-sweatpants?variant=44359302610988",
+            "item": "Pastel Sweatpants",
+            "timeAgo": "2026-01-19"
+          },
+          {
+            "link": "https://comfrt.com/products/pastel-sweatpants?variant=44359302479916",
+            "item": "Pastel Sweatpants",
+            "timeAgo": "2026-01-19"
+          },
+          {
+            "link": "https://comfrt.com/products/pastel-sweatpants?variant=44359302479916",
+            "item": "Pastel Sweatpants",
+            "timeAgo": "2026-01-19"
+          },
+          {
+            "link": "https://comfrt.com/products/cloud-zip-hoodie?variant=44741734858796",
+            "item": "Cloud Zip Hoodie",
+            "timeAgo": "2026-01-19"
+          }
+        ]
+      },
+      "companyWebsite": "https://comfrt.com",
+      "companyName": "Comfrt",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post-purchase issues"
+        ],
+        "escalate": [
+          "ESC if the discount % is not the same as indicated in the automated message"
+        ],
+        "templates": [
+          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Sizing questions",
+        "Discount code errors"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Don't overthink it...\n\nStep into the new year with the styles everyone's reordering. \n\nGet yours: comfrt.attn.tv/auFGMblEQt5o ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Upcoming trip?!\n\nBring ease to the journey with our dreamy soft sets and thoughtfully designed luggage.\n\nLet's get you packed: comfrt.attn.tv/aXI4Eh_ytT1K",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Close out the year in Comfrt. Best-selling layers are almost gone. \n\nGrab yours before the new year: comfrt.attn.tv/aW0dCaGe0vw8 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: You are already subscribed. Click here to shop now: comfrt.com.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: First look: Petal Pink Camo Collection\n\nWe're so excited to share this NEW standout pattern in 5 styles.\n\nEnjoy first access: comfrt.attn.tv/aa8zVPWR1c-3",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Something sweet is in the air.\n\nOur Valentine's Day Gift Guide is live, and it's made for every kind of love.\n\nShop now:\ncomfrt.attn.tv/a2xNxRBITcmr ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Don't miss out, your fave is almost gone!\n\nGet 15% OFF with code GETCOZY15 before it's too late: \ncomfrt.attn.tv/aRZ7_zxHWVWa \n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Winter storm? We've got you covered.\n\nShop up to 70% off sitewide on the coziest essentials.\n\nShop now: comfrt.attn.tv/a3E4er9_kuFB ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I'd like my order that was lost before I buy more",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Customer support\"; last updated: 2022-09-13 01:43:33.168",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019beceb-5973-4f86-f000-0000ceeddbf7",
+          "message_text": "Comfrt: I'm sorry to hear that! Are you referring to Order #8940605? If so, the best way to handle this is to email us directly at info@comfrt.com. Our team is happy to help! ",
+          "message_media": []
+        }
+      ]
+    },
+    "37": {
+      "agentName": "Maria",
+      "id": "019be150-04ba-468d-f000-000094b46eaf",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://fazolis.com/",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://fazolis.com/",
+      "companyName": "Fazoli's",
+      "notes": {
+        "escalate": [
+          "If cx's want to change their order, direct them to contact the location, use CED shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Coupon codes can be used at stores",
+          "If cx's ask for a discount code:",
+          "➜ First send the 'dhd' shortcut",
+          "➜ If cx says they ALREADY HAVE the rewards app, then you can share our Concierge discount"
+        ]
+      },
+      "messageTone": "Casual",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Fazoli's: Get $5 OFF $30 when you order at fazolis.attn.tv/aR4-BfJ2WTEE w/ code: KF5592. Valid until 12/29. Dinner made easy with fresh pasta and breadsticks!",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fazoli's: Happy New Year! Start the year off right and order now at fazolis.attn.tv/aRE_ciOZXAU4 Enjoy $3 off $10 with code TW7283. Valid until 1/11.\n\n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fazoli's: Craving Breadsticks? We got you covered with $5 off $20 when you order now at fazolis.attn.tv/a52SKmc3AoSg Use code QA3455 valid until 1/26.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Closed",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Store location / retailer\"; last updated: 2022-10-07 23:50:46.806",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be150-04ba-468d-f000-000094b46eaf",
+          "message_text": "Fazoli's: Sorry to hear that. You can find the other stores near you here: https://fazolis.attn.tv/aVEWd8B9ThRw \n\nTo find the phone number, hours, or address for a specific location, select a store, click on 'begin order' and then choose 'store information' or 'view menus'.",
+          "message_media": []
+        }
+      ]
+    },
+    "38": {
+      "agentName": "Sarah",
+      "id": "019bba5a-f47f-49a5-f000-00007305c7b0",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://jaanuu.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.jaanuu.com/products/womens-perri-ultrasoft-yoga-scrub-pant-wild-berry?variant=51952779985185",
+            "item": "Perri UltraSOFTTM Yoga Scrub Pant - Wild Berry - Wild Berry / S / Petite",
+            "timeAgo": "2026-01-14"
+          },
+          {
+            "link": "https://www.jaanuu.com/products/womens-perri-ultrasoft-yoga-scrub-pant-wild-berry",
+            "item": "Perri UltraSOFTTM Yoga Scrub Pant - Wild Berry - Wild Berry / XXS / Regular",
+            "timeAgo": "2026-01-14"
+          },
+          {
+            "link": "https://www.jaanuu.com/products/womens-perri-ultrasoft-yoga-scrub-pant-wild-berry?variant=51952779985185",
+            "item": "Perri UltraSOFTTM Yoga Scrub Pant - Wild Berry - Wild Berry / S / Petite",
+            "timeAgo": "2026-01-14"
+          },
+          {
+            "link": "https://www.jaanuu.com/products/womens-perri-ultrasoft-yoga-scrub-pant-wild-berry?variant=51952779985185",
+            "item": "Perri UltraSOFTTM Yoga Scrub Pant - Wild Berry - Wild Berry / S / Petite",
+            "timeAgo": "2026-01-14"
+          },
+          {
+            "link": "https://www.jaanuu.com/products/womens-perri-ultrasoft-yoga-scrub-pant-wild-berry?variant=51952779952417&utm_campaign=Low+Inventory+reminder+SMS&utm_source=attentive&utm_medium=sms&externalId=QPV9u",
+            "item": "Perri UltraSOFTTM Yoga Scrub Pant - Wild Berry - Wild Berry / S / Regular",
+            "timeAgo": "2026-01-14"
+          }
+        ]
+      },
+      "companyWebsite": "https://jaanuu.com",
+      "companyName": "Jaanuu",
+      "notes": {
+        "drive_to_purchase": [
+          "Push these three collections when customers reach out asking for assistance:",
+          "The Lawren Set - all colors",
+          "https://www.jaanuu.com/scrub-sets-layering/the-lawren-essential-scrub-set/black",
+          "Heather Gray across Men's & Women's style",
+          "https://www.jaanuu.com/mens/collection/mens-heather-gray-scrubs",
+          "https://www.jaanuu.com/collection/heather-gray-womens-scrubs"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: The Jumpsuit is back in a brand-new hue. Grab it while you can during the Holiday 2025 event.\n\nShop Now: jaanuu.attn.tv/avKU9UpTsjw8 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Eyda, get the comfort and style of the UltraSOFT Yoga Scrub Pant before it's gone.\n\nOnly 27 left.\n\nShop now: https://jaanuu.attn.tv/a6hDCZ2Nmi9j .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Eyda, the Women's Wild Berry Scrubs are known for their durable fabric and modern fit, making your workday a bit more comfortable.\n\nGet free shipping on orders over $50.\n\nShop now: https://jaanuu.attn.tv/ap6KzMjFVeRS .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: As if you need another reason to love our scrubs, now you get 20% off. You deserve it. Use code: NEWSCRUBS20 \n\nShop: jaanuu.attn.tv/aloMi0OETThp ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Ends tonight: 30% off layers + 20% off sitewide.\n\nWomen's: jaanuu.attn.tv/awGszBKfACVn \nMen's: jaanuu.attn.tv/a0WPqVgTQ3xf ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Feel confident and comfortable in your day with the UltraSOFT Yoga Scrub Pant made for how you move.\n\nOver 20K people have recently viewed this pant.\n\nReady for something better? Buy here: https://jaanuu.attn.tv/aRUtytQYYrXB .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Now is the time to act. That style you were looking at is low in stock. Grab your size before it's gone.\n\nShop Now: https://jaanuu.attn.tv/ah1eAW5eylOx",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Soon to sell out: Perri UltraSOFTTM Yoga Scrub Pant - Wild Berry - Wild Berry / S / Petite. Grab it now before it's too late\n\nShop Now: https://jaanuu.attn.tv/a4De7C3ZCuO-",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: You deserve comfort and confidence every shift with the Perri UltraSOFT Yoga Scrub Pant in your rotation. \n\nOver 20K people have recently viewed these pants. \n\nReady to move in style? Check them out: https://jaanuu.attn.tv/a4G-VMh9DS-x .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: A fresh start begins with better scrubs. Upgrade with these scrub kits.\n\nWomen's: jaanuu.attn.tv/arIROawj3DnG \nMen's: jaanuu.attn.tv/ap_KRc6j5-9u ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Earn 2x rewards points on every purchase for a limited time.\n\nShop Now: jaanuu.attn.tv/ae2myKXbiYI1 \nJoin Rewards: jaanuu.attn.tv/aV_4I1taVJp8 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Low stock alert. Shop The Jumpsuit before it sells out.\n\nShop Now: jaanuu.attn.tv/anRrVeAbwkDH \n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Early Access: shop the all-new color Deep Eggplant.\n\nShop Women's: jaanuu.attn.tv/aoKyAoJea2oQ \nShop Men's: jaanuu.attn.tv/annlKw6OuAmj ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Eyda, get the Perri UltraSOFT Yoga Scrub Pant in your cart—super flattering and comfy for long shifts.\n\n2.9K people added this to their cart.\n\nShop now: https://jaanuu.attn.tv/aSF1LPWwGuSA .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Eyda, the Women's Ultrasoft Scrubs are made for all-day comfort and durability with innovative fabric. Take a look and see what fits your style. \n\nShop now: https://jaanuu.attn.tv/aMJmFlsRq2g3 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Everyone's favorite purple has arrived. Shop Deep Eggplant.\n\nShop Women's: jaanuu.attn.tv/aHzJe8ZX-FbA \nShop Men's: jaanuu.attn.tv/arlH-fU4k6E8 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Eyda, try the Perri UltraSOFT Yoga Scrub Pant with a flattering fit and handy pockets. \n\nGet free shipping on orders over $50. \n\nShop now: https://jaanuu.attn.tv/af0K7O--sedd .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Low stock alert: Wild Berry is almost gone.\n\nShop while you can: jaanuu.attn.tv/aRW3O_wqZG6F \n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Soon to sell out: Perri UltraSOFTTM Yoga Scrub Pant - Wild Berry - Wild Berry / S / Regular. Grab it now before it's too late\n\nShop Now: https://jaanuu.attn.tv/aFSp8TmX_GnF",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: End of Season Sale early access starts now. Get up to 60% off.\n\nShop Women's: jaanuu.attn.tv/acQ2WAsgqRwI \nShop Men's: jaanuu.attn.tv/a02gs_AeojJK ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Eyda, get your UltraSOFT Yoga Scrub Pant before it is gone—super comfy waistband and pockets.\n\n1.5K people recently added this to their cart.\n\nShop now: https://jaanuu.attn.tv/aMvbeiBD7AoR .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Hello, When will Perri Ultrasoft Yoga Scrub Pant in Wild Berry size Small in petite be back in stock?",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Restock (notifications)\"; last updated: 2025-10-09 21:41:40.249",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bba5a-f47f-49a5-f000-00007305c7b0",
+          "message_text": "JAANUU: Thank you for your interest! Are you referring to this - https://jaanuu.attn.tv/aEnCJmspVUxB ? If so, I'm sorry, I currently don't have the exact date of a possible restock, but I recommend signing up on the product page so you're notified the second it comes back in! In the meantime, what do you think about this instead? https://jaanuu.attn.tv/aMA--9zmwuEs",
+          "message_media": []
+        }
+      ]
+    },
+    "39": {
+      "agentName": "Sarah",
+      "id": "019bb4ed-63fc-4676-f000-00009efad2fd",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://covercraft.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://covercraft.com",
+      "companyName": "Covercraft",
+      "notes": {
+        "templates": [
+          "For custom full vehicle covers use FVC shortcut",
+          "For cx that can't see the cover pattern/images of their vehicle use CPI shortcut",
+          "If we don't have a pattern/color the cx is looking for use PRR shortcut"
+        ],
+        "dos_and_donts": [
+          "Do not tell customers that the base price is the final price! The cost changes by the fitment and depends on the vehicle",
+          "Rebates are discounts for this brand!",
+          "Custom dim pattern sheets are only available for Vehicle Covers (Car, Truck, Van,RV)",
+          "➜https://www.covercraft.com/us/en/covercrafter"
+        ],
+        "drive_to_purchase": [
+          "Before sharing any product links, confirm the vehicle’s Year, Make, and Model"
+        ]
+      },
+      "messageTone": "Casual",
+      "blocklisted_words": [],
+      "escalation_preferences": [
+        "Discount code errors"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: You are already subscribed.  Click here to shop now: covercraft.com.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Hey there, this is Sarah. Thanks for checking out our site! 😊 https://covercraft.attn.tv/aF7sZIV0GKcB \n\nAre you looking for anything in particular today? ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "2025 gmc sierra 2500 HD denali crew cab",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Trying to look at the leatherette or leather",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb4ed-63fc-4676-f000-00009efad2fd",
+          "message_text": "Covercraft: Are you perhaps looking for a seat cover? If so, what do you think of these? \nhttps://covercraft.attn.tv/alSrmqpvAMqy\n",
+          "message_media": []
+        }
+      ]
+    },
+    "40": {
+      "agentName": "Sarah",
+      "id": "019be25f-585f-40d1-f000-0000d56cb59d",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://hottopic.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://hottopic.com",
+      "companyName": "Hot Topic",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS!"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over!"
+        ],
+        "promo_and_exclusions": [
+          "Welcome code & promotion terms and conditions: https://www.hottopic.com/details/?viewType=desktop"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Hot Topic: Merry Christmas! Unwrap up to 50% OFF tons of styles for a limited time. Shop now. hottopic.attn.tv/aBxljsok0EIj .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Hot Topic: Our Semi-Annual Sale is HERE. Up to 70% OFF thousands of styles + $7 Tees. Shop now. hottopic.attn.tv/aR2NwSrrszkc .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Hot Topic: Kick off the new year with Buy One, Get One 70% OFF sitewide! Save big time, now thru 7PM PT / 10PM ET. Shop now. hottopic.attn.tv/aPmNwwY6-qzS .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Hot Topic: Buy 2, Get 1 FREE sitewide just started! This new sale lasts for a limited time. Don't miss it. Shop now. hottopic.attn.tv/aRmh1fwpq731 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Hot Topic: FLASH SALE! Grab 30% off sitewide TODAY + earn $15 Hot Cash for EVERY $30 spent. Shop now. hottopic.attn.tv/aS2kn_bLCzT0 .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Hot Topic: Text subscriber exclusive: 40% off a single item today ONLY! Use code 40FORU. Don't wait. Shop now. hottopic.attn.tv/ad1QTnt6v0GG .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Hot Topic: NEW STYLES ADDED! Limited time to shop Up to 70% off clearance styles + $7 tees. Start clicking, shop now. hottopic.attn.tv/aQogUWQJ7lLZ .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Hot Topic: Be first. Save more. BOGO 70% OFF thousands of styles 'til 2PM PT/5PM ET! Savings lower after. Shop now. hottopic.attn.tv/aWnnNDiRG_DS .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Hot Topic: Buy 1, Get 2 FREE on already reduced styles, for two days only! Our Semi-Annual Sale is heating up. Shop now. hottopic.attn.tv/aZm5i1Fq-Po8 .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Hey so uh you guys called me yesterday erm... Was it for something important?",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be257-3469-489b-f000-0000d56cb59d",
+          "message_text": "Hot Topic: Hello! I'm afraid I don't have more information, but you can give us a call back at 1-800-892-8674, Monday - Sunday 7am - 5pm PT. The team would be happy to assist further.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "okay THANK YOU💜",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"You're welcome! - All brands\"; last updated: 2023-10-10 18:02:00.150",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019be25f-585f-40d1-f000-0000d56cb59d",
+          "message_text": "Hot Topic: You're welcome! You will be in excellent hands!",
+          "message_media": []
+        }
+      ]
+    }
+  }
+}

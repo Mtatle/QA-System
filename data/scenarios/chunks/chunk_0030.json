@@ -1,0 +1,695 @@
+{
+  "version": 1,
+  "chunk": "chunk_0030",
+  "scenarios": {
+    "146": {
+      "agentName": "Megan",
+      "id": "019bd881-8dbc-4319-f000-0000f4a9fef4",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://venusetfleur.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.venusetfleur.com/products/large-square-white-classic?variant=39770995818540&utm_campaign=Message-05-19-22-8-52&utm_source=attentive&utm_medium=text&externalId=sJPIc",
+            "item": "Large Square - White Classic / Blush",
+            "timeAgo": "2026-01-19"
+          },
+          {
+            "link": "https://www.venusetfleur.com/products/mini-round-black-classic-rose?variant=39774367088684&utm_campaign=Browse_Abandon_-Message-(new-)-past-purchaser&utm_source=attentive&utm_medium=sms&externalId=sJPIc",
+            "item": "Le Mini Round - Black Classic / Red",
+            "timeAgo": "2026-01-19"
+          },
+          {
+            "link": "https://www.venusetfleur.com/products/large-square-white-classic?variant=39770995818540",
+            "item": "Large Square - White Classic / Pink",
+            "timeAgo": "2026-01-19"
+          },
+          {
+            "link": "https://www.venusetfleur.com/products/large-square-white-classic?variant=39770995818540",
+            "item": "Large Square - White Classic / Blush",
+            "timeAgo": "2026-01-19"
+          },
+          {
+            "link": "https://www.venusetfleur.com/products/large-square-white-classic?variant=39770995818540",
+            "item": "Large Square - White Classic / Pink",
+            "timeAgo": "2026-01-19"
+          }
+        ]
+      },
+      "companyWebsite": "https://venusetfleur.com",
+      "companyName": "Venus ET Fleur",
+      "notes": {
+        "escalate": [
+          "ESC if cx wants their account name to be changed",
+          "ESC if cx complains that their order was canceled",
+          "If cx's ask when their order will arrive/estimated delivery date",
+          "➜  Ask what shipping method they selected at checkout",
+          "➜ If it's standard shipping use STS shortcut",
+          "➜ If they insist to know exactly when ESC",
+          "Cx gets a code for free shipping for the first purchase; you can escalate any issues after troubleshooting"
+        ],
+        "tone": [
+          "Don't thank the cx for the purchase, thank them for their continuous support",
+          "Don't ask the customer to contact the courier"
+        ],
+        "drive_to_purchase": [
+          "Don't D2P when the cx already made a purchase"
+        ],
+        "promo_and_exclusions": [
+          "Free shipping code is only valid for standard shipping",
+          "Standard shipping charge is usually ~ $20, if you see a charge higher than that, it means the method selected is NOT standard (create a mock cart to double-check)"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [
+        "preserved",
+        "chemical",
+        "cant"
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "arrangement damages",
+        "delivery issues",
+        "post-purchase questions",
+        "inventory"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Venus et Fleur: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Venus et Fleur: Welcome! I'm Katie, your personal concierge. I would love to assist you today. I've arranged for Complimentary Standard Shipping on your first order with the code T3V8NV. \n\nDiscover our garden of Real Flowers That Last A Year: \nhttps://venusetfleur.attn.tv/aFdGuR1rPLIb ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Venus et Fleur: Hi there! I noticed you recently took a stroll through our Eternity® Blooms. Enjoy Complimentary Standard Shipping on your first order: T3V8NV\nvenusetfleur.attn.tv/aAy1OoJcJ_fA .\n\nPlease don't hesitate to reach out if you need assistance or help finding the perfect selection for your occasion.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Venus et Fleur: Hello ! This is Megan from Venus et Fleur. I noticed a selection of our Eternity® florals caught your eye, and I would love to assist you. \n\nI've arranged for you to have Complimentary Standard Shipping with code: T3V8NV. Here's a link to your cart: venusetfleur.attn.tv/aKKnUdKcgnzB .",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "i get charged for shipping !",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bd881-8dbc-4319-f000-0000f4a9fef4",
+          "message_text": "Venus et Fleur: Sorry about that. Did you apply the code T3V8NV at checkout? Mind sending me a screenshot so I can check?",
+          "message_media": []
+        }
+      ]
+    },
+    "147": {
+      "agentName": "Jordan",
+      "id": "019bb380-804f-434d-f000-0000db79d541",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://samedelman.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.samedelman.com/product/womens-ivey-lace-up-sneaker-3030151/french-merlot-suede-ec0208238",
+            "item": "ivey lace up sneaker",
+            "timeAgo": "2026-01-11"
+          },
+          {
+            "link": "https://www.samedelman.com/product/womens-ivey-lace-up-sneaker-3030151/cafe-noir-brown-nylon-ec0202682?et_cid=4942395&et_rid=8000640356&om_rid=8000640356&partnerID=email_Marketing_SFMC_NonPromo_Brown-Color-Story_20251214-WK46-SAMUS&wk_rid=1407188947&em=YW5uZW1lY2tlQHlhaG9vLmNvbQ==",
+            "item": "ivey lace up sneaker",
+            "timeAgo": "2026-01-10"
+          },
+          {
+            "link": "https://www.samedelman.com/product/womens-ivey-lace-up-sneaker-3030151/cafe-noir-brown-nylon-ec0202682",
+            "item": "ivey lace up sneaker",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://www.samedelman.com/product/womens-ivey-lace-up-sneaker-3030151/french-merlot-suede-ec0208238?icid=orderdetails_productdescription_99900_EC0208238",
+            "item": "ivey lace up sneaker",
+            "timeAgo": "2026-01-06"
+          },
+          {
+            "link": "https://www.samedelman.com/product/womens-ivey-lace-up-sneaker-3030151/cafe-noir-brown-nylon-ec0202682",
+            "item": "ivey lace up sneaker",
+            "timeAgo": "2026-01-03"
+          }
+        ]
+      },
+      "companyWebsite": "https://samedelman.com",
+      "companyName": "Sam Edelman",
+      "notes": {
+        "send_to_cs": [
+          "If the cx sends us their credit card information (written or screenshot) and it's an issue we can't resolve - send the customer to CS",
+          "➜ Do NOT ESC any conversation that contains this type of information in the thread"
+        ],
+        "escalate": [
+          "When you ESC use ESC shortcut fisrt",
+          "ESC if the charge on cx account is pending"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Savings start now: Take $20 off orders of $150+ when you join or sign into our loyalty program. Use code: BYE2025\n \nLog in or sign up to access: samedelman.attn.tv/ao7BLddbV3qJ \n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Ready for the holiday party circuit? So are our favorites from ReLove.\n\nShop now: samedelman.attn.tv/aDNAN7FaUNcQ ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: The loafer we love. Shop this bestseller.\n\nShop now: samedelman.attn.tv/a5lD_JhWcHXr ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: The cult-favorite boot is back. Now available in wide and extra-wide calf sizing. \n\nShop now: samedelman.attn.tv/almHTBWnVqBX ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: For every last-minute gift on your holiday list, our digital gift cards are just the thing. \n\nShop now: samedelman.attn.tv/adrsJfTRXqZV ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Your last-minute NYE edit has arrived. \n\nShop now: samedelman.attn.tv/aE-R95SNn_z9 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Final day of this year's best offer: Save $20 off $150+ with our loyalty program. Join now or log in.\n \nLog in or sign up to access: samedelman.attn.tv/aPTyJv2qARK1 \n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Explore the timeless styles every wardrobe needs and why we call them icons. Shop Edelman Icons: https://samedelman.attn.tv/a9siMIunM9wc .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Take another look before your size sells out! https://samedelman.attn.tv/a0H8PLLrTErZ\n\nYou can always text me back with questions!\n\n-Jordan",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Elevated sneakers, from day to night.\n\nShop now: samedelman.attn.tv/aXYL2e6o21Ri ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Bags you'll carry everywhere. Shop the latest. \n\nShop now: samedelman.attn.tv/aAtK22nVQzxU ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Thanks for your recent purchase! Don't forget to check out our newest arrivals: https://samedelman.attn.tv/aOlsRFvZN4LQ .",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Looks like you forgot something! Don't worry I saved it for you: https://samedelman.attn.tv/aoXP6owgWGal . Snag ivey lace up sneaker before it's gone!\n\nLet me know if you have any questions!\n\n-Jordan",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Jordan, bought a pair of these but your shipper can't seem to get their act together(FedEx). I have initiated a return because your shipper is so incompetent.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "It doesn't take 4 business days to deliver a package that was 6 hours away. First their tracking said package would be delivered last Friday...then it says Saturday and now it says next Tuesday....ordered on Jan 1 and still don't have them.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019baf00-cc8c-40cf-f000-0000db79d541",
+          "message_text": "Sam Edelman: Thanks for reaching out, and I'm sorry to hear about this. Since you've already initiated the return, you're all set on that end. But if you'd prefer help placing a replacement order, I'm here to support however I can.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I initiated the return but I am no longer at the hotel address that I was at when I placed the order. I would like you to make sure that FedEx DOES NOT deliver the order to a hotel I am no longer at to accept the package.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I could no longer pay and stay at a location just to wait longer for a package.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "The address was 6848 E Camelback Rd Scottsdale AZ 85251 (this is a Motel 6)",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019baf37-910b-4997-f000-0000db79d541",
+          "message_text": "Sam Edelman: I'm really sorry for all the inconvenience. Since the package is already with the carrier, it's best to contact them directly. Have you tried giving them a call? They should have the most up-to-date information. ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I have already contacted FedEx and they said to contact the shipper....which is you and I am not taking on a new part time job doing business with your company.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "This has left a VERY bad taste in my mouth by the way and I can't be the first customer to say this. FedEx isn't going to string me along and neither are you.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "That package was in Tempe (less than 10 miles from the delivery location at 2:20am yesterday. Not only did they not deliver it yesterday, they are now saying it will be 3 business days into next week before they deliver it. Find a company that does better and don't expect your customers to put up with this. There was no way I'm hell I or anyone else is going to pay for 3 more days in a hotel while FedEx strings them along.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Correction....I meant 2 more business days..Including Sunday that would be the extra 3 days in a hotel.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019baf5b-d5dd-45db-f000-0000db79d541",
+          "message_text": "Sam Edelman: I do understand and would like to apologize for the inconvenience. Let me check with my team regarding possible options and recommendations. To help with this, can I have your full name, email, order number, phone number, and your zip code, please?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Anne Mecke; annemecke@yahoo.com;; (775) 564+3357;zip was 85251; order # (don't have wifi right now....will send in a separate text.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Will also send FedEx tracking #",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019baf97-3a8d-414e-f000-0000db79d541",
+          "message_text": "Sam Edelman: Thanks for the info. I will wait for the order number and tracking number as well. ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Yes sir. Thank you for listening to my feedback.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bafa2-5c74-47cb-f000-0000db79d541",
+          "message_text": "Sam Edelman: Don't mention it, I am willing to help you anytime. ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "We may have a big problem ...I got a text this morning that says the package is out for delivery today.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "And an email....",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb32c-a2fd-482f-f000-0000db79d541",
+          "message_text": "Sam Edelman: Sorry for the trouble! Let me check with my team on what we can do. I'll wait for the order number.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I just sent pictures of order # and tracking #",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Order # is 005028762118",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Tracking # is 61299535443121879789",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb330-3025-45d2-f000-0000db79d541",
+          "message_text": "Sam Edelman: Thanks for the info! I will pass this along to my team and get back to you as soon as possible, hang tight! \n\n",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Ok thank you.🙂",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb333-c710-4397-f000-0000db79d541",
+          "message_text": "Sam Edelman: You're welcome! Have a great day for now.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "The hotel just called me; they refused the package. I would assume it will be enroute back to Sam Edelman. Please let me know when you process my refund.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bb380-804f-434d-f000-0000db79d541",
+          "message_text": "Sam Edelman: Thank you for sharing that update. I'm so sorry this happened, and I completely understand how inconvenient this must be for you. I've passed this information along to my team and will follow up as soon as I hear back from them regarding your concern. I truly appreciate your patience while we get this sorted.",
+          "message_media": []
+        }
+      ]
+    },
+    "148": {
+      "agentName": "Kiara",
+      "id": "019bc223-3332-4b23-f000-0000f3d4c16e",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://dorado.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://dorado.com",
+      "companyName": "Dorado Fashion",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues"
+        ]
+      },
+      "messageTone": "Casual",
+      "blocklisted_words": [],
+      "escalation_preferences": [
+        "Shipping Issues: Where's my order? Any order issues, direct to customer service"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from DORADO.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Hey it's Kiara, Welcome to the VIP List! If you have any questions just reply. :)\n\nClick to continue shopping: \nhttps://dorado.attn.tv/aqbkMsTKHMRu ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Yes I will like to know how long will my order take?",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bc223-3332-4b23-f000-0000f3d4c16e",
+          "message_text": "DORADO: Thanks for your purchase! Since your order includes personalized items, they are made to order and typically require 2-3 weeks for production. We'll send you updates via email along the way so you can stay informed.\n\nYou can also check the status of your personalized items anytime by visiting our Tracking Page here: https://dorado.attn.tv/au6fu1_LtI8f ",
+          "message_media": []
+        }
+      ]
+    },
+    "149": {
+      "agentName": "Samantha",
+      "id": "019bd916-8205-451d-f000-0000d41e474c",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://comfrt.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://comfrt.com",
+      "companyName": "Comfrt",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post-purchase issues"
+        ],
+        "escalate": [
+          "ESC if the discount % is not the same as indicated in the automated message"
+        ],
+        "templates": [
+          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Sizing questions",
+        "Discount code errors"
+      ],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Last-minute shopper?\n\nSend an E-Gift Card instantly or schedule it in advance. \n\nFor a limited-time, earn 20% back when you purchase a Comfrt E-Gift Card $50+\n\nGift now: comfrt.attn.tv/a0pQnkK_1sQL ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Don't miss out, your fave is almost gone!\n\nGet 15% OFF with code GETCOZY15 before it's too late: comfrt.attn.tv/aH6jMc2gVoww \n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Upcoming trip?!\n\nBring ease to the journey with our dreamy soft sets and thoughtfully designed luggage.\n\nLet's get you packed: comfrt.attn.tv/acYMK5YaC3Yy",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Close out the year in Comfrt. Best-selling layers are almost gone. \n\nGrab yours before the new year: comfrt.attn.tv/atnFrvWRgJZi ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Embrace the NEW\n\nWe just dropped TWO special-edition colors in our Signature Collection.\n\nPick your 2026 mood: comfrt.attn.tv/af77xHYxYJCZ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: First look: Petal Pink Camo Collection\n\nWe're so excited to share this NEW standout pattern in 5 styles.\n\nEnjoy first access: comfrt.attn.tv/aisxOONi86yv",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Something sweet is in the air.\n\nOur Valentine's Day Gift Guide is live, and it's made for every kind of love.\n\nShop now:\ncomfrt.attn.tv/aNN_McWdqOj4 ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Passing up Comfrt? Couldn't be you.\n\nThe cart you started belongs at your doorstep.\n\nGo on, treat yourself before it's gone: comfrt.attn.tv/as1BcepXwgfV \n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Thanks for texting us! For any questions, please contact us here: https://comfrt.com/content/contact\n\nYou can also view our help desk here: https://comfrt.com/content/faqs?hcUrl=%2Fen-US\n\nTo stop receiving texts from us, reply STOP at any time.",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I have a return ",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bd904-484e-47b0-f000-0000d41e474c",
+          "message_text": "Comfrt: Returns must be submitted within 30 days of delivery. May I know if you already initiated the return? If so, store Credit will be issued within 1 week of your return being received by our warehouse. If there is an issue with your return upon arrival, you will be contacted by info@comfrt.com.\nFeel free to check more details here: https://comfrt.attn.tv/aY9RaNONH-_J\nLet me know if I can help you with anything else!",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I can't initiate it. It will not allow it on the app",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"Return policy\"; last updated: 2024-07-01 11:58:09.975",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Template used: \"How do I start a return?\"; last updated: 2024-10-10 16:30:30.595",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bd916-8205-451d-f000-0000d41e474c",
+          "message_text": "Comfrt: I'm sorry to hear that! If possible, try using a different browser or device, as some may have issues with e-commerce sites. Clearing your browser's cache and cookies or using incognito mode might also help. \n\nYou can start your return here: https://comfrt.attn.tv/aMqDbsaoQuYn/#/\nYou can check out our detailed return policy here: https://comfrt.attn.tv/aKWSmP89qytF",
+          "message_media": []
+        }
+      ]
+    },
+    "150": {
+      "agentName": "Jordan",
+      "id": "019bdc8e-f9c5-49d9-f000-00002a02a706",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://annabeck.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.annabeck.com/collections/winter-sample-sale-25-26/products/black-onyx-cocktail-ring-1?variant=41699968614446",
+            "item": "Black Onyx Cocktail Ring - 9",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://www.annabeck.com/collections/winter-sample-sale-25-26/products/black-onyx-cocktail-ring-1?variant=41699968548910",
+            "item": "Black Onyx Cocktail Ring - 7",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://www.annabeck.com/collections/winter-sample-sale-25-26/products/black-onyx-cocktail-ring-1?variant=41699968581678",
+            "item": "Black Onyx Cocktail Ring - 8",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://www.annabeck.com/collections/winter-sample-sale-25-26/products/black-onyx-cocktail-ring-1?variant=41699968516142",
+            "item": "Black Onyx Cocktail Ring - 6",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://www.annabeck.com/collections/winter-sample-sale-25-26/products/turquoise-medium-round-ring?variant=41518561787950",
+            "item": "Turquoise Medium Cocktail Ring - 6",
+            "timeAgo": "2026-01-09"
+          }
+        ]
+      },
+      "companyWebsite": "https://annabeck.com",
+      "companyName": "Anna Beck",
+      "notes": {
+        "templates": [
+          "If cx left a review and didn't receive the code, use RNC shortcut"
+        ]
+      },
+      "messageTone": "Polished",
+      "blocklisted_words": [
+        "!"
+      ],
+      "escalation_preferences": [],
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Anna Beck: ✨ SURPRISE ✨ Sample Sale Starts Now! \n\nWho said the gifts were ending - our biannual Sample Sale is officially here! This is the only time we offer archive designs, rare samples, and unique stones at unbeatable prices.\n\nShop the Sample Sale: annabeck.attn.tv/akM2NEi8nX_L ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Anna Beck: Have you seen our rarest sale yet???\n\nWe only do our Sample Sales twice a year - it's your only chance to shop exclusive samples, rare stones, and archive designs at the lowest prices of the year. \n\nDon't miss it: annabeck.attn.tv/aU53qbxOQ6qH ",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Anna Beck: Hey, this is Jordan. Thanks for checking out our site! https://annabeck.attn.tv/aQvzrXIC8cE- \n\nAny questions I can answer for you?",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Anna Beck: Going, Going, Gone! \n\nSample Sale is coming to an end, but there's still a few rare gems left, don't miss them! \n\nShop now: annabeck.attn.tv/af2RFW3jp19G \n\n",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "Anna Beck: 25% Off Just For You, VIP ❤️\n\nJanuary calls for a refresh of staples - just for our text subscribers, take 25% off our bestsellers until tomorrow! \n\nUse code VIP25 at checkout: annabeck.attn.tv/aq_8aJN0ZmbG ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Thanks for all your help. Any update on my order 89663? I'm not receiving any updates on the status and haven't received my jewelry yet.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bdc52-1c79-4898-f000-00002a02a706",
+          "message_text": "Anna Beck: You're welcome, and I apologize for that. Could you let me know when you placed your order and if you received any tracking info? Sometimes our emails can end up in your spam or promo folder, so please check there as well. If it also helps, our processing time takes 1-2 business days, and we usually ship via UPS. Once shipped, it will take 5-7 business days for domestic orders. ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Order was placed on 12/26/25",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "#89662",
+          "message_media": []
+        },
+        {
+          "message_type": "system",
+          "message_text": "",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bdc7b-4bc9-46d7-f000-00002a02a706",
+          "message_text": "Anna Beck: Thank you for sharing that photo. As explained before, this order was part of our Sample Sale. Our artisans in Bali carefully prepare the Sample Sale items, and due to the high volume of holiday shipping, transit times have been longer than usual. I'll check it again with my team to get an update. We appreciate your patience, and I'll be in touch. ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "I accidentally placed my order under a different email (languagelark@gmail.com) since I was on my phone when I made the purchase. It's under my same name and billing address. Is there a way to change it to my monicaji1@gmail.com?",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "Liked “Thank you for sharing that photo. As explained bef...”",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bdc81-46a6-4ea9-f000-00002a02a706",
+          "message_text": "Anna Beck: I understand your concern, and I'm truly sorry for the inconvenience. Let me resend the message I sent yesterday, just in case you missed it. \n\n\"Thanks for your patience. I just heard from the team, and we understand how important this is. We apologize for the inconvenience this has caused. Sorry, but order 89663 was placed under a different email address, and we can't change it so it won't be in your account.\"\n\nI'm truly sorry about this. ",
+          "message_media": []
+        },
+        {
+          "message_type": "subscriber",
+          "message_text": "How unfortunate. This was purchased as a gift for my mom's birthday and I've never had a sample sale item take a month to arrive.",
+          "message_media": []
+        },
+        {
+          "message_type": "agent",
+          "message_id": "019bdc8e-f9c5-49d9-f000-00002a02a706",
+          "message_text": "Anna Beck: My sincere apologies for all these. Rest assured, I'm reaching out to my team, and I'll be in touch the moment I get an update about the status of your order. ",
+          "message_media": []
+        }
+      ]
+    }
+  }
+}
