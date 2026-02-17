@@ -916,6 +916,266 @@ function Get-TemplateListFromContainer {
     return @()
 }
 
+function Convert-RecordToHashtable {
+    param($InputObject)
+
+    $map = @{}
+    if ($null -eq $InputObject) { return $map }
+
+    if ($InputObject -is [System.Collections.IDictionary]) {
+        foreach ($key in $InputObject.Keys) {
+            $map[[string]$key] = $InputObject[$key]
+        }
+        return $map
+    }
+
+    if ($InputObject.PSObject -and $InputObject.PSObject.Properties) {
+        foreach ($p in $InputObject.PSObject.Properties) {
+            $map[$p.Name] = $p.Value
+        }
+    }
+
+    return $map
+}
+
+function Normalize-TemplateRecordForStorage {
+    param($Template)
+
+    $source = Convert-RecordToHashtable -InputObject $Template
+    $canonical = @('name', 'content', 'id', 'shortcut', 'companyName')
+    $out = [ordered]@{}
+
+    $name = (Get-StringValue $source.name).Trim()
+    $content = (Get-StringValue $source.content).Trim()
+    $id = (Get-StringValue $source.id).Trim()
+    $shortcut = (Get-StringValue $source.shortcut).Trim()
+    $companyName = (Get-StringValue $source.companyName).Trim()
+
+    $out.name = $name
+    $out.content = $content
+    if ($id) { $out.id = $id }
+    if ($shortcut) { $out.shortcut = $shortcut }
+    if ($companyName) { $out.companyName = $companyName }
+
+    foreach ($key in $source.Keys) {
+        if ($canonical -contains [string]$key) { continue }
+        $out[[string]$key] = $source[$key]
+    }
+
+    return $out
+}
+
+function Normalize-TemplateKeyComponent {
+    param([string]$Value)
+
+    $text = (Get-StringValue $Value).Trim().ToLowerInvariant()
+    if (-not $text) { return "" }
+    $text = [regex]::Replace($text, "\s+", " ")
+    return $text
+}
+
+function Get-TemplateCompositeKey {
+    param($Template)
+
+    $normalized = Normalize-TemplateRecordForStorage -Template $Template
+    $companyKey = Normalize-TemplateKeyComponent -Value $normalized.companyName
+    $nameKey = Normalize-TemplateKeyComponent -Value $normalized.name
+    $shortcutKey = Normalize-TemplateKeyComponent -Value $normalized.shortcut
+    if (-not $nameKey) { return "" }
+    return "$companyKey|$nameKey|$shortcutKey"
+}
+
+function Get-TemplateIdentity {
+    param($Template)
+
+    $normalized = Normalize-TemplateRecordForStorage -Template $Template
+    $idRaw = (Get-StringValue $normalized.id).Trim()
+    $idKey = ""
+    if ($idRaw) {
+        $idKey = Normalize-TemplateKeyComponent -Value $idRaw
+    }
+    $compositeKey = Get-TemplateCompositeKey -Template $normalized
+
+    return @{
+        idKey = $idKey
+        compositeKey = $compositeKey
+    }
+}
+
+function Merge-TemplateRecord {
+    param($ExistingTemplate, $IncomingTemplate)
+
+    $baseMap = Convert-RecordToHashtable -InputObject (Normalize-TemplateRecordForStorage -Template $ExistingTemplate)
+    $incomingMap = Convert-RecordToHashtable -InputObject (Normalize-TemplateRecordForStorage -Template $IncomingTemplate)
+    $merged = @{}
+
+    foreach ($key in $baseMap.Keys) {
+        $merged[$key] = $baseMap[$key]
+    }
+    foreach ($key in $incomingMap.Keys) {
+        $merged[$key] = $incomingMap[$key]
+    }
+
+    return (Normalize-TemplateRecordForStorage -Template $merged)
+}
+
+function Get-TemplateCanonicalSnapshot {
+    param($Template)
+
+    $normalized = Normalize-TemplateRecordForStorage -Template $Template
+    return [ordered]@{
+        id = (Get-StringValue $normalized.id).Trim()
+        companyName = (Get-StringValue $normalized.companyName).Trim()
+        name = (Get-StringValue $normalized.name).Trim()
+        shortcut = (Get-StringValue $normalized.shortcut).Trim()
+        content = (Get-StringValue $normalized.content).Trim()
+    }
+}
+
+function Test-TemplateCanonicalChanged {
+    param($ExistingTemplate, $CandidateTemplate)
+
+    $existingSnapshot = Get-TemplateCanonicalSnapshot -Template $ExistingTemplate
+    $candidateSnapshot = Get-TemplateCanonicalSnapshot -Template $CandidateTemplate
+    $existingSig = $existingSnapshot | ConvertTo-Json -Compress -Depth 10
+    $candidateSig = $candidateSnapshot | ConvertTo-Json -Compress -Depth 10
+    return $existingSig -ne $candidateSig
+}
+
+function Merge-TemplatesIncremental {
+    param(
+        [array]$Existing = @(),
+        [array]$Incoming = @()
+    )
+
+    if ($null -eq $Existing) { $Existing = @() }
+    if ($null -eq $Incoming) { $Incoming = @() }
+
+    $result = @()
+    foreach ($item in $Existing) {
+        $result += (Normalize-TemplateRecordForStorage -Template $item)
+    }
+
+    # Token maps let incoming rows collapse deterministically; last row wins.
+    $tokenById = @{}
+    $tokenByComposite = @{}
+    for ($i = 0; $i -lt $result.Count; $i++) {
+        $token = "E:$i"
+        $identity = Get-TemplateIdentity -Template $result[$i]
+        if ($identity.idKey -and -not $tokenById.ContainsKey($identity.idKey)) {
+            $tokenById[$identity.idKey] = $token
+        }
+        if ($identity.compositeKey -and -not $tokenByComposite.ContainsKey($identity.compositeKey)) {
+            $tokenByComposite[$identity.compositeKey] = $token
+        }
+    }
+
+    $winnerByToken = @{}
+    $tokenOrder = @()
+    $seenIncomingTokens = @{}
+
+    $invalidSkipped = 0
+    $incomingDuplicates = 0
+
+    foreach ($item in $Incoming) {
+        $normalizedIncoming = Normalize-TemplateRecordForStorage -Template $item
+        $name = (Get-StringValue $normalizedIncoming.name).Trim()
+        $content = (Get-StringValue $normalizedIncoming.content).Trim()
+        if (-not $name -or -not $content) {
+            $invalidSkipped++
+            continue
+        }
+
+        $identity = Get-TemplateIdentity -Template $normalizedIncoming
+        if (-not $identity.idKey -and -not $identity.compositeKey) {
+            $invalidSkipped++
+            continue
+        }
+
+        $token = ""
+        $resolvedBy = "new"
+
+        if ($identity.idKey -and $tokenById.ContainsKey($identity.idKey)) {
+            $token = [string]$tokenById[$identity.idKey]
+            $resolvedBy = "id"
+        } elseif ($identity.compositeKey -and $tokenByComposite.ContainsKey($identity.compositeKey)) {
+            $token = [string]$tokenByComposite[$identity.compositeKey]
+            $resolvedBy = "composite"
+        } else {
+            $token = "N:$($tokenOrder.Count + 1)"
+        }
+
+        if ($seenIncomingTokens.ContainsKey($token)) {
+            $incomingDuplicates++
+        } else {
+            $seenIncomingTokens[$token] = $true
+            $tokenOrder += $token
+        }
+
+        $winnerByToken[$token] = @{
+            template = $normalizedIncoming
+            resolvedBy = $resolvedBy
+        }
+
+        if ($identity.idKey) {
+            $tokenById[$identity.idKey] = $token
+        }
+        if ($identity.compositeKey) {
+            $tokenByComposite[$identity.compositeKey] = $token
+        }
+    }
+
+    $added = 0
+    $updated = 0
+    $unchanged = 0
+    $matchedById = 0
+    $matchedByComposite = 0
+
+    foreach ($token in $tokenOrder) {
+        $winner = $winnerByToken[$token]
+        if ($token -like "E:*") {
+            $indexText = $token.Substring(2)
+            $targetIndex = -1
+            if (-not [int]::TryParse($indexText, [ref]$targetIndex)) {
+                continue
+            }
+            if ($targetIndex -lt 0 -or $targetIndex -ge $result.Count) {
+                continue
+            }
+
+            if ($winner.resolvedBy -eq "id") {
+                $matchedById++
+            } elseif ($winner.resolvedBy -eq "composite") {
+                $matchedByComposite++
+            }
+
+            $existingRecord = $result[$targetIndex]
+            $mergedRecord = Merge-TemplateRecord -ExistingTemplate $existingRecord -IncomingTemplate $winner.template
+            if (Test-TemplateCanonicalChanged -ExistingTemplate $existingRecord -CandidateTemplate $mergedRecord) {
+                $result[$targetIndex] = $mergedRecord
+                $updated++
+            } else {
+                $unchanged++
+            }
+            continue
+        }
+
+        $result += $winner.template
+        $added++
+    }
+
+    return @{
+        templates = $result
+        added = $added
+        updated = $updated
+        unchanged = $unchanged
+        incomingDuplicates = $incomingDuplicates
+        matchedById = $matchedById
+        matchedByComposite = $matchedByComposite
+        invalidSkipped = $invalidSkipped
+    }
+}
+
 function Build-RuntimeArtifacts {
     param(
         [switch]$Quiet
@@ -1092,34 +1352,63 @@ function Import-JsonToPath {
     }
 
     try {
+        $isTemplateImport = [string]::Equals(
+            [System.IO.Path]::GetFileName($TargetPath),
+            "templates.json",
+            [System.StringComparison]::OrdinalIgnoreCase
+        )
         $ext = [System.IO.Path]::GetExtension($dialog.FileName).ToLowerInvariant()
-        if ($ext -eq ".csv") {
-            $rows = Import-Csv -LiteralPath $dialog.FileName
-            $templates = @()
-            foreach ($row in $rows) {
-                $name = (Get-StringValue ($row.TEMPLATE_TITLE, $row.TEMPLATE_NAME, $row.NAME, $row.TEMPLATE, $row.TITLE | Where-Object { $_ } | Select-Object -First 1)).Trim()
-                $content = (Get-StringValue ($row.TEMPLATE_TEXT, $row.CONTENT, $row.TEMPLATE_CONTENT, $row.BODY, $row.TEXT, $row.MESSAGE | Where-Object { $_ } | Select-Object -First 1)).Trim()
-                $shortcut = (Get-StringValue ($row.SHORTCUT, $row.CODE, $row.KEYWORD | Where-Object { $_ } | Select-Object -First 1)).Trim()
-                $company = (Get-StringValue ($row.COMPANY_NAME, $row.COMPANY, $row.BRAND | Where-Object { $_ } | Select-Object -First 1)).Trim()
-                $templateId = (Get-StringValue ($row.TEMPLATE_ID, $row.ID | Where-Object { $_ } | Select-Object -First 1)).Trim()
 
-                if (-not $name -or -not $content) { continue }
+        # Template imports are incremental: add/update only, keep missing existing rows.
+        if ($isTemplateImport) {
+            $incomingTemplates = @()
+            if ($ext -eq ".csv") {
+                $rows = Import-Csv -LiteralPath $dialog.FileName
+                foreach ($row in $rows) {
+                    $name = (Get-StringValue ($row.TEMPLATE_TITLE, $row.TEMPLATE_NAME, $row.NAME, $row.TEMPLATE, $row.TITLE | Where-Object { $_ } | Select-Object -First 1)).Trim()
+                    $content = (Get-StringValue ($row.TEMPLATE_TEXT, $row.CONTENT, $row.TEMPLATE_CONTENT, $row.BODY, $row.TEXT, $row.MESSAGE | Where-Object { $_ } | Select-Object -First 1)).Trim()
+                    $shortcut = (Get-StringValue ($row.SHORTCUT, $row.CODE, $row.KEYWORD | Where-Object { $_ } | Select-Object -First 1)).Trim()
+                    $company = (Get-StringValue ($row.COMPANY_NAME, $row.COMPANY, $row.BRAND | Where-Object { $_ } | Select-Object -First 1)).Trim()
+                    $templateId = (Get-StringValue ($row.TEMPLATE_ID, $row.ID | Where-Object { $_ } | Select-Object -First 1)).Trim()
 
-                $template = @{
-                    name    = $name
-                    content = $content
+                    if (-not $name -or -not $content) { continue }
+
+                    $template = @{
+                        name = $name
+                        content = $content
+                    }
+                    if ($templateId) { $template.id = $templateId }
+                    if ($shortcut) { $template.shortcut = $shortcut }
+                    if ($company) { $template.companyName = $company }
+                    $incomingTemplates += $template
                 }
-                if ($templateId) { $template.id = $templateId }
-                if ($shortcut) { $template.shortcut = $shortcut }
-                if ($company) { $template.companyName = $company }
-                $templates += $template
+            } else {
+                $raw = Get-Content -LiteralPath $dialog.FileName -Raw -ErrorAction Stop
+                $parsed = $raw | ConvertFrom-Json
+                $incomingTemplates = @(Get-TemplateListFromContainer -Container $parsed)
             }
+            if ($null -eq $incomingTemplates) { $incomingTemplates = @() }
 
-            Write-JsonObject -Path $TargetPath -Value @{ templates = $templates }
+            $existingContainer = Get-JsonObject -Path $TargetPath
+            $existingTemplates = @(Get-TemplateListFromContainer -Container $existingContainer)
+            if ($null -eq $existingTemplates) { $existingTemplates = @() }
+
+            $merge = Merge-TemplatesIncremental -Existing $existingTemplates -Incoming $incomingTemplates
+            Write-JsonObject -Path $TargetPath -Value @{ templates = $merge.templates }
             $artifactSummary = Build-RuntimeArtifacts -Quiet
             Refresh-Meta
-            Set-Status -Message "$Label updated from CSV ($($templates.Count) template(s)). Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) scenario chunks, $($artifactSummary.templateCompanies) template company bundles)."
+
+            $sourceName = if ($ext -eq ".csv") { "CSV" } else { $dialog.SafeFileName }
+            Set-Status -Message (
+                "$Label merged from $sourceName. Added: $($merge.added), Updated: $($merge.updated), Unchanged: $($merge.unchanged), " +
+                "Duplicates: $($merge.incomingDuplicates), MatchedById: $($merge.matchedById), MatchedByComposite: $($merge.matchedByComposite), " +
+                "Skipped: $($merge.invalidSkipped). Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) scenario chunks, $($artifactSummary.templateCompanies) template company bundles)."
+            )
             return
+        }
+
+        if ($ext -eq ".csv") {
+            throw "CSV import is only supported for templates.json in this manager."
         }
 
         $raw = Get-Content -LiteralPath $dialog.FileName -Raw -ErrorAction Stop
@@ -1129,7 +1418,7 @@ function Import-JsonToPath {
         Refresh-Meta
         Set-Status -Message "$Label updated from $($dialog.SafeFileName). Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) scenario chunks, $($artifactSummary.templateCompanies) template company bundles)."
     } catch {
-        Set-Status -Message ("Invalid JSON for ${Label}: " + $_.Exception.Message) -IsError $true
+        Set-Status -Message ("Failed to import ${Label}: " + $_.Exception.Message) -IsError $true
     }
 }
 
