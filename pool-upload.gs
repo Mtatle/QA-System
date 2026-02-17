@@ -11,6 +11,7 @@ const QA_SNAPSHOTS_SHEET = 'qa_snapshots';
 
 const SESSION_CAP = 20; // Legacy compatibility field; no longer enforced.
 const TARGET_QUEUE_SIZE = 5;
+const SESSION_TIMEOUT_MINUTES = 10;
 const SNAPSHOT_TTL_HOURS = 48;
 const MAX_SNAPSHOT_PAYLOAD_CHARS = 45000;
 
@@ -749,9 +750,38 @@ function writeSheetDataRows_(sheet, rows, colCount) {
 }
 
 function cleanupStaleSessions_(state, nowIso) {
-  // Inactivity timeout intentionally disabled.
-  // Assignments remain reserved until explicitly released/superseded.
-  return;
+  const nowMs = parseIsoMs_(nowIso);
+  const timeoutMs = SESSION_TIMEOUT_MINUTES * 60 * 1000;
+
+  for (let i = 0; i < state.sessionsRows.length; i++) {
+    const session = rowToSessionObject_(state.sessionsRows[i]);
+    const stateName = String(session.state || '').toUpperCase();
+    if (stateName !== 'ACTIVE' && stateName !== 'COOLDOWN') continue;
+
+    const anchor = session.last_heartbeat_at || session.started_at;
+    const anchorMs = parseIsoMs_(anchor);
+    if (!anchorMs) continue;
+    if ((nowMs - anchorMs) < timeoutMs) continue;
+
+    const timeoutReason = stateName === 'COOLDOWN' ? 'logout_cooldown_timeout' : 'heartbeat_timeout';
+    const released = releaseAssignmentsForSession_(state, session.session_id, timeoutReason, nowIso);
+    session.state = 'TIMED_OUT';
+    session.ended_at = nowIso;
+    session.end_reason = timeoutReason;
+    session.last_heartbeat_at = nowIso;
+    state.sessionsRows[i] = sessionToRow_(session);
+
+    appendHistoryRow_(state.historyRowsToAppend, {
+      event_type: 'session_timed_out',
+      assignment_id: '',
+      send_id: '',
+      from_status: '',
+      to_status: '',
+      agent_email: session.agent_email,
+      session_id: session.session_id,
+      detail: `released=${released};from=${stateName}`
+    });
+  }
 }
 
 function resolveQueueSession_(state, email, requestedSessionId, appBase, nowIso) {

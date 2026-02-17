@@ -65,17 +65,21 @@ Mark each as PASS/FAIL with evidence (screenshot or row IDs).
 5. Explicit logout:
    - `releaseSession` succeeds.
    - Session moves to `COOLDOWN`.
-   - Assigned unfinished rows remain reserved.
+   - Assigned unfinished rows remain reserved for 10 minutes.
 6. Reconnect/cooldown fallback:
-   - Relogin with same email restores the same reserved queue.
-7. Reload behavior:
+   - Relogin with same email within 10 minutes restores the same reserved queue.
+   - After 10+ minutes in `COOLDOWN`, unfinished rows are released.
+7. Browser close / internet loss fallback:
+   - If heartbeat stops for 10+ minutes in `ACTIVE`, unfinished rows are released.
+   - Returning within 10 minutes restores reserved queue.
+8. Reload behavior:
    - Active session resumes without duplicate reservation.
-8. Multi-auditor concurrency:
+9. Multi-auditor concurrency:
    - Two auditors never receive same active assignment.
-9. Username login (no email):
+10. Username login (no email):
    - Assignment mode blocked with clear message.
-10. History/data integrity:
-   - `qa_assignment_history` logs assign/done/release events.
+11. History/data integrity:
+   - `qa_assignment_history` logs assign/done/release/timeout events.
    - Legacy evaluation submission still writes to `Data`.
 
 ## Phase 5: Production Pilot
@@ -92,7 +96,7 @@ Mark each as PASS/FAIL with evidence (screenshot or row IDs).
 ## Phase 6: Rollback
 Rollback immediately if:
 1. Duplicate active assignment ownership appears.
-2. Frequent failures in queue reclaim behavior (same-email resume not restoring reserved queue).
+2. Frequent failures in cooldown reclaim/release behavior (resume within 10 minutes or release after cooldown).
 
 Rollback steps:
 1. Re-point `qa-config.js` to previous stable backend URL.
@@ -105,6 +109,7 @@ Rollback steps:
 ## Acceptance Criteria
 1. No duplicate active assignment ownership.
 2. Queue policy holds: max 5 active, +1 refill after each successful `done`, with no cap lockout.
-3. No inactivity timeout auto-release occurs.
-4. Reclaim policy holds: same email reconnect restores reserved queue.
-5. Legacy logging/evaluation behavior still works.
+3. Logout cooldown policy holds: release after 10-minute cooldown if no reconnect.
+4. Browser-close/internet-loss policy holds: release after 10 minutes with no heartbeat.
+5. Reclaim policy holds: same email reconnect within 10 minutes restores reserved queue.
+6. Legacy logging/evaluation behavior still works.

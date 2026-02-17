@@ -6,8 +6,8 @@ The assignment/session logic is now merged into `pool-upload.gs`.
 1. Queue refill to keep up to 5 active assignments.
 2. +1 refill after each successful `done`.
 3. No per-session cap; refill continues indefinitely while session is active.
-4. `releaseSession` starts cooldown hold (no immediate release).
-5. No inactivity timeout auto-release.
+4. `releaseSession` starts a 10-minute cooldown hold (no immediate release).
+5. Auto-release occurs after 10 minutes with no heartbeat (applies to logout cooldown and browser-close/internet-loss cases).
 6. Session + assignment history tabs (`qa_sessions`, `qa_assignment_history`).
 7. Existing upload/pool endpoints remain in the same script (`addToPool`, uploaded scenarios/templates handlers).
 
