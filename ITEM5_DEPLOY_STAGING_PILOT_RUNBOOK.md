@@ -59,17 +59,16 @@ Mark each as PASS/FAIL with evidence (screenshot or row IDs).
 3. Skip navigation without submit:
    - Next/Previous works only inside assigned queue.
    - No extra assignment pulled.
-4. Reach cap 20:
-   - Session becomes `COMPLETED`.
-   - Remaining assigned unfinished rows are released.
-   - Mutating actions are blocked by UI.
+4. Submit beyond 20:
+   - No lockout/complete state appears.
+   - Queue continues to refill +1 after each successful `done`.
 5. Explicit logout:
    - `releaseSession` succeeds.
-   - Unfinished rows released immediately.
-6. Crash/close fallback:
-   - Stop activity without logout.
-   - After 15 minutes, session becomes `TIMED_OUT`.
-   - Unfinished rows released.
+   - Session moves to `COOLDOWN`.
+   - Assigned unfinished rows remain reserved during cooldown.
+6. Reconnect/cooldown fallback:
+   - Relogin within 10 minutes with same email restores the same reserved queue.
+   - If no reconnect for 10+ minutes, session becomes `TIMED_OUT` and unfinished rows release.
 7. Reload behavior:
    - Active session resumes without duplicate reservation.
 8. Multi-auditor concurrency:
@@ -94,7 +93,7 @@ Mark each as PASS/FAIL with evidence (screenshot or row IDs).
 ## Phase 6: Rollback
 Rollback immediately if:
 1. Duplicate active assignment ownership appears.
-2. Frequent failures to release assignments on logout/timeout.
+2. Frequent failures in cooldown reclaim/release behavior (reconnect within 10 minutes or release after timeout).
 
 Rollback steps:
 1. Re-point `qa-config.js` to previous stable backend URL.
@@ -106,8 +105,7 @@ Rollback steps:
 
 ## Acceptance Criteria
 1. No duplicate active assignment ownership.
-2. Queue policy holds: max 5 active, +1 refill after each successful `done`.
-3. Session cap enforced at 20 successful `done`.
-4. Release policy works for logout and timeout.
-5. Session-complete lock is enforced and non-destructive.
-6. Legacy logging/evaluation behavior still works.
+2. Queue policy holds: max 5 active, +1 refill after each successful `done`, with no cap lockout.
+3. Cooldown policy holds: logout/close/disconnect keeps assignments for 10 minutes, then releases if no return.
+4. Reclaim policy holds: same email reconnect within 10 minutes restores reserved queue.
+5. Legacy logging/evaluation behavior still works.

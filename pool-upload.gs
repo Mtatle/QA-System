@@ -9,9 +9,9 @@ const QA_SESSIONS_SHEET = 'qa_sessions';
 const QA_ASSIGNMENT_HISTORY_SHEET = 'qa_assignment_history';
 const QA_SNAPSHOTS_SHEET = 'qa_snapshots';
 
-const SESSION_CAP = 20;
+const SESSION_CAP = 20; // Legacy compatibility field; no longer enforced.
 const TARGET_QUEUE_SIZE = 5;
-const STALE_HEARTBEAT_MINUTES = 15;
+const STALE_HEARTBEAT_MINUTES = 10;
 const SNAPSHOT_TTL_HOURS = 48;
 const MAX_SNAPSHOT_PAYLOAD_CHARS = 45000;
 
@@ -290,20 +290,18 @@ function getOrTopUpQueueForSession_(email, appBaseUrl, sessionId) {
   const baseUrl = resolveAppBaseUrl_(appBaseUrl);
 
   cleanupStaleSessions_(state, now);
-  const session = getOrCreateSession_(state, email, sessionId, baseUrl, now);
+  const session = resolveQueueSession_(state, email, sessionId, baseUrl, now);
+  const activeSessionId = String(session && session.session_id ? session.session_id : '').trim();
 
-  if (isSessionActive_(session)) {
-    releaseOtherActiveSessionsForEmail_(state, email, sessionId, now);
-    releaseActiveAssignmentsForEmailOutsideSession_(state, email, sessionId, now, 'superseded');
-    ensureSessionCapState_(state, session, now, 'cap_reached');
-    if (isSessionActive_(session)) {
-      topUpQueueForSession_(state, email, sessionId, now, baseUrl);
-    }
+  if (activeSessionId && isSessionActive_(session)) {
+    releaseOtherActiveSessionsForEmail_(state, email, activeSessionId, now);
+    releaseActiveAssignmentsForEmailOutsideSession_(state, email, activeSessionId, now, 'superseded');
+    topUpQueueForSession_(state, email, activeSessionId, now, baseUrl);
   }
 
   persistAssignmentState_(state);
 
-  const assignments = getActiveAssignmentsForSession_(state.assignmentsRows, email, sessionId)
+  const assignments = getActiveAssignmentsForSession_(state.assignmentsRows, email, activeSessionId)
     .slice(0, TARGET_QUEUE_SIZE)
     .map(function(a) {
       return {
@@ -330,7 +328,6 @@ function getAssignmentForSession_(assignmentId, token, sessionId) {
   const sessionIndex = findSessionIndex_(state.sessionsRows, sessionId);
   if (sessionIndex < 0) return { error: 'Session not found' };
   const session = rowToSessionObject_(state.sessionsRows[sessionIndex]);
-  ensureSessionCapState_(state, session, now, 'cap_reached');
   state.sessionsRows[sessionIndex] = sessionToRow_(session);
 
   const assignmentWithIndex = findAssignmentById_(state.assignmentsRows, assignmentId);
@@ -414,16 +411,6 @@ function markAssignmentDoneForSession_(assignmentId, token, sessionId, appBaseUr
   const session = rowToSessionObject_(state.sessionsRows[sessionIndex]);
   const email = normalizeEmail_(session.agent_email);
 
-  ensureSessionCapState_(state, session, now, 'cap_reached');
-  if (!isSessionActive_(session)) {
-    state.sessionsRows[sessionIndex] = sessionToRow_(session);
-    persistAssignmentState_(state);
-    return {
-      assignments: [],
-      session: sessionToPayload_(session)
-    };
-  }
-
   const found = findAssignmentById_(state.assignmentsRows, assignmentId);
   if (!found) return { error: 'Assignment not found' };
   const assignment = found.assignment;
@@ -465,7 +452,6 @@ function markAssignmentDoneForSession_(assignmentId, token, sessionId, appBaseUr
   session.submitted_count = submitted;
   session.last_heartbeat_at = now;
 
-  ensureSessionCapState_(state, session, now, 'cap_reached');
   if (isSessionActive_(session)) {
     assignFromPool_(state, email, sessionId, now, baseUrl, 1);
   }
@@ -515,14 +501,22 @@ function heartbeatSession_(email, sessionId, clientTs) {
     sessionIndex = state.sessionsRows.length - 1;
   } else {
     session = rowToSessionObject_(state.sessionsRows[sessionIndex]);
+    if (
+      normalizeEmail_(session.agent_email) &&
+      normalizeEmail_(session.agent_email) !== normalizeEmail_(email)
+    ) {
+      return { error: 'Session email mismatch' };
+    }
   }
 
   session.agent_email = email;
-  if (isSessionActive_(session)) {
+  if (isSessionLive_(session)) {
+    session.state = 'ACTIVE';
+    session.ended_at = '';
+    session.end_reason = '';
     session.last_heartbeat_at = now;
   }
 
-  ensureSessionCapState_(state, session, now, 'cap_reached');
   state.sessionsRows[sessionIndex] = sessionToRow_(session);
   persistAssignmentState_(state);
 
@@ -550,23 +544,22 @@ function releaseSession_(email, sessionId, reason) {
     return { error: 'Session email mismatch' };
   }
 
-  const releasedCount = releaseAssignmentsForSession_(state, sessionId, reason || 'manual', now);
-  if (isSessionActive_(session)) {
-    session.state = 'LOGGED_OUT';
-    session.ended_at = now;
-    session.end_reason = reason || 'logout';
+  if (isSessionLive_(session)) {
+    session.state = 'COOLDOWN';
+    session.ended_at = '';
+    session.end_reason = reason || 'cooldown_started';
+    session.last_heartbeat_at = now;
   }
-  session.last_heartbeat_at = now;
 
   appendHistoryRow_(state.historyRowsToAppend, {
-    event_type: 'session_released',
+    event_type: 'session_cooldown_started',
     assignment_id: '',
     send_id: '',
     from_status: '',
     to_status: '',
     agent_email: session.agent_email,
     session_id: sessionId,
-    detail: `released=${releasedCount}`
+    detail: `reason=${reason || 'manual'}`
   });
 
   state.sessionsRows[sessionIndex] = sessionToRow_(session);
@@ -574,7 +567,7 @@ function releaseSession_(email, sessionId, reason) {
 
   return {
     ok: true,
-    released_count: releasedCount,
+    released_count: 0,
     session: sessionToPayload_(session)
   };
 }
@@ -762,17 +755,18 @@ function cleanupStaleSessions_(state, nowIso) {
 
   for (let i = 0; i < state.sessionsRows.length; i++) {
     const session = rowToSessionObject_(state.sessionsRows[i]);
-    if (!isSessionActive_(session)) continue;
+    if (!isSessionLive_(session)) continue;
 
     const heartbeat = session.last_heartbeat_at || session.started_at;
     const heartbeatMs = parseIsoMs_(heartbeat);
     if (!heartbeatMs) continue;
     if ((nowMs - heartbeatMs) < staleAfterMs) continue;
 
+    const previousState = String(session.state || '').toUpperCase();
     const released = releaseAssignmentsForSession_(state, session.session_id, 'timeout', nowIso);
     session.state = 'TIMED_OUT';
     session.ended_at = nowIso;
-    session.end_reason = 'heartbeat_timeout';
+    session.end_reason = previousState === 'COOLDOWN' ? 'cooldown_timeout' : 'heartbeat_timeout';
     session.last_heartbeat_at = nowIso;
     state.sessionsRows[i] = sessionToRow_(session);
 
@@ -784,25 +778,80 @@ function cleanupStaleSessions_(state, nowIso) {
       to_status: '',
       agent_email: session.agent_email,
       session_id: session.session_id,
-      detail: `released=${released}`
+      detail: `released=${released};from=${previousState}`
     });
   }
 }
 
-function getOrCreateSession_(state, email, sessionId, appBase, nowIso) {
-  const idx = findSessionIndex_(state.sessionsRows, sessionId);
-  if (idx >= 0) {
-    const session = rowToSessionObject_(state.sessionsRows[idx]);
-    session.agent_email = email;
-    if (appBase) session.app_base = appBase;
-    if (isSessionActive_(session)) {
-      session.last_heartbeat_at = nowIso;
+function resolveQueueSession_(state, email, requestedSessionId, appBase, nowIso) {
+  const normalizedEmail = normalizeEmail_(email);
+  const requested = String(requestedSessionId || '').trim();
+  const requestedIndex = requested ? findSessionIndex_(state.sessionsRows, requested) : -1;
+
+  if (requested && requestedIndex >= 0) {
+    const existingRequested = rowToSessionObject_(state.sessionsRows[requestedIndex]);
+    if (
+      normalizeEmail_(existingRequested.agent_email) === normalizedEmail &&
+      isSessionReclaimable_(existingRequested)
+    ) {
+      existingRequested.state = 'ACTIVE';
+      existingRequested.agent_email = normalizedEmail;
+      existingRequested.last_heartbeat_at = nowIso;
+      existingRequested.ended_at = '';
+      existingRequested.end_reason = '';
+      if (appBase) existingRequested.app_base = appBase;
+      state.sessionsRows[requestedIndex] = sessionToRow_(existingRequested);
+      appendHistoryRow_(state.historyRowsToAppend, {
+        event_type: 'session_reclaimed',
+        assignment_id: '',
+        send_id: '',
+        from_status: '',
+        to_status: '',
+        agent_email: normalizedEmail,
+        session_id: existingRequested.session_id,
+        detail: 'source=requested_session_id'
+      });
+      return existingRequested;
     }
-    state.sessionsRows[idx] = sessionToRow_(session);
-    return session;
   }
 
-  const created = createSessionObject_(email, sessionId, appBase, nowIso);
+  let bestIndex = -1;
+  let bestHeartbeatMs = -1;
+  for (let i = 0; i < state.sessionsRows.length; i++) {
+    const candidate = rowToSessionObject_(state.sessionsRows[i]);
+    if (normalizeEmail_(candidate.agent_email) !== normalizedEmail) continue;
+    if (!isSessionReclaimable_(candidate)) continue;
+    const heartbeatMs = parseIsoMs_(candidate.last_heartbeat_at || candidate.started_at);
+    if (heartbeatMs >= bestHeartbeatMs) {
+      bestHeartbeatMs = heartbeatMs;
+      bestIndex = i;
+    }
+  }
+
+  if (bestIndex >= 0) {
+    const reclaimed = rowToSessionObject_(state.sessionsRows[bestIndex]);
+    reclaimed.state = 'ACTIVE';
+    reclaimed.agent_email = normalizedEmail;
+    reclaimed.last_heartbeat_at = nowIso;
+    reclaimed.ended_at = '';
+    reclaimed.end_reason = '';
+    if (appBase) reclaimed.app_base = appBase;
+    state.sessionsRows[bestIndex] = sessionToRow_(reclaimed);
+    appendHistoryRow_(state.historyRowsToAppend, {
+      event_type: 'session_reclaimed',
+      assignment_id: '',
+      send_id: '',
+      from_status: '',
+      to_status: '',
+      agent_email: normalizedEmail,
+      session_id: reclaimed.session_id,
+      detail: 'source=email_lookup'
+    });
+    return reclaimed;
+  }
+
+  const newSessionId = (requested && requestedIndex < 0) ? requested : createServerSessionId_();
+  const created = createSessionObject_(normalizedEmail, newSessionId, appBase, nowIso);
   state.sessionsRows.push(sessionToRow_(created));
   appendHistoryRow_(state.historyRowsToAppend, {
     event_type: 'session_created',
@@ -810,11 +859,19 @@ function getOrCreateSession_(state, email, sessionId, appBase, nowIso) {
     send_id: '',
     from_status: '',
     to_status: '',
-    agent_email: email,
-    session_id: sessionId,
-    detail: `cap=${created.cap}`
+    agent_email: normalizedEmail,
+    session_id: newSessionId,
+    detail: 'source=new_queue_session'
   });
   return created;
+}
+
+function createServerSessionId_() {
+  return Utilities.getUuid();
+}
+
+function isSessionReclaimable_(session) {
+  return isSessionLive_(session);
 }
 
 function createSessionObject_(email, sessionId, appBase, nowIso) {
@@ -832,43 +889,15 @@ function createSessionObject_(email, sessionId, appBase, nowIso) {
   };
 }
 
-function ensureSessionCapState_(state, session, nowIso, reason) {
-  if (!session) return;
-  const submitted = toInt_(session.submitted_count, 0);
-  const cap = Math.max(1, toInt_(session.cap, SESSION_CAP));
-  session.submitted_count = submitted;
-  session.cap = cap;
-
-  if (session.state === 'COMPLETED') return;
-  if (submitted < cap) return;
-
-  const released = releaseAssignmentsForSession_(state, session.session_id, reason || 'cap_reached', nowIso);
-  session.state = 'COMPLETED';
-  session.ended_at = nowIso;
-  session.end_reason = reason || 'cap_reached';
-  session.last_heartbeat_at = nowIso;
-
-  appendHistoryRow_(state.historyRowsToAppend, {
-    event_type: 'session_completed',
-    assignment_id: '',
-    send_id: '',
-    from_status: '',
-    to_status: '',
-    agent_email: session.agent_email,
-    session_id: session.session_id,
-    detail: `released=${released}`
-  });
-}
-
 function releaseOtherActiveSessionsForEmail_(state, email, keepSessionId, nowIso) {
   for (let i = 0; i < state.sessionsRows.length; i++) {
     const session = rowToSessionObject_(state.sessionsRows[i]);
     if (session.session_id === keepSessionId) continue;
     if (normalizeEmail_(session.agent_email) !== normalizeEmail_(email)) continue;
-    if (!isSessionActive_(session)) continue;
+    if (!isSessionLive_(session)) continue;
 
     const released = releaseAssignmentsForSession_(state, session.session_id, 'superseded', nowIso);
-    session.state = 'LOGGED_OUT';
+    session.state = 'TIMED_OUT';
     session.ended_at = nowIso;
     session.end_reason = 'superseded_by_new_session';
     session.last_heartbeat_at = nowIso;
@@ -1430,6 +1459,11 @@ function isSessionActive_(session) {
   return session && String(session.state || '').toUpperCase() === 'ACTIVE';
 }
 
+function isSessionLive_(session) {
+  const state = String((session && session.state) || '').toUpperCase();
+  return state === 'ACTIVE' || state === 'COOLDOWN';
+}
+
 function sessionToPayload_(session) {
   const submitted = toInt_(session && session.submitted_count, 0);
   const cap = Math.max(1, toInt_(session && session.cap, SESSION_CAP));
@@ -1439,7 +1473,7 @@ function sessionToPayload_(session) {
     state: state,
     submitted_count: submitted,
     cap: cap,
-    session_complete: state === 'COMPLETED' || submitted >= cap
+    session_complete: false
   };
 }
 

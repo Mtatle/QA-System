@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     ).trim();
     const RUNTIME_SCENARIO_INDEX_PATH = 'data/scenarios/index.json';
     const RUNTIME_TEMPLATE_INDEX_PATH = 'data/templates/index.json';
-    const ASSIGNMENT_SESSION_CAP = 20;
     const ASSIGNMENT_HEARTBEAT_INTERVAL_MS = 60 * 1000;
     // Current scenario data
     let currentScenario = null;
@@ -41,7 +40,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     let templateSearchSourceTemplates = [];
     let templateSearchBound = false;
     let assignmentSessionState = null;
-    let assignmentSessionComplete = false;
     let assignmentHeartbeatTimer = null;
     let assignmentHeartbeatWarningShown = false;
     let isExplicitLogoutInProgress = false;
@@ -67,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         applyAssignmentSessionState(response && response.session, { silent: true });
         const assignments = Array.isArray(response.assignments) ? response.assignments : [];
         renderAssignmentQueue(assignments);
-        if (!assignmentSessionComplete && assignmentContext && assignmentContext.assignment_id && assignments.length) {
+        if (assignmentContext && assignmentContext.assignment_id && assignments.length) {
             prefetchAssignmentWindow(assignmentContext.assignment_id).catch((error) => {
                 console.warn('Assignment prefetch after queue refresh failed:', error);
             });
@@ -285,82 +283,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         return !!getLoggedInEmail();
     }
 
-    function getSessionSubmittedCount(sessionLike) {
-        const raw = sessionLike && sessionLike.submitted_count != null ? Number(sessionLike.submitted_count) : 0;
-        return Number.isFinite(raw) ? Math.max(0, raw) : 0;
-    }
-
-    function getSessionCap(sessionLike) {
-        const raw = sessionLike && sessionLike.cap != null ? Number(sessionLike.cap) : ASSIGNMENT_SESSION_CAP;
-        return Number.isFinite(raw) && raw > 0 ? raw : ASSIGNMENT_SESSION_CAP;
-    }
-
-    function isSessionCompleteState(sessionLike) {
-        if (!sessionLike || typeof sessionLike !== 'object') return false;
-        const state = String(sessionLike.state || '').trim().toUpperCase();
-        if (sessionLike.session_complete === true) return true;
-        if (state === 'COMPLETED') return true;
-        return getSessionSubmittedCount(sessionLike) >= getSessionCap(sessionLike);
-    }
-
     function setAssignmentSessionUiLocked(isLocked) {
         if (assignmentRefreshBtn) assignmentRefreshBtn.disabled = !!isLocked;
         if (assignmentSelect) assignmentSelect.disabled = !!isLocked;
     }
 
-    function showSessionCompleteScreen(sessionLike) {
-        const submitted = getSessionSubmittedCount(sessionLike);
-        const cap = getSessionCap(sessionLike);
-        const text = `Session complete (${submitted}/${cap}).`;
-        let banner = document.getElementById('sessionCompleteBanner');
-        if (!banner) {
-            banner = document.createElement('div');
-            banner.id = 'sessionCompleteBanner';
-            banner.setAttribute('role', 'status');
-            banner.style.position = 'fixed';
-            banner.style.top = '72px';
-            banner.style.left = '50%';
-            banner.style.transform = 'translateX(-50%)';
-            banner.style.padding = '12px 18px';
-            banner.style.borderRadius = '10px';
-            banner.style.background = '#1f2937';
-            banner.style.color = '#fff';
-            banner.style.fontWeight = '600';
-            banner.style.fontSize = '14px';
-            banner.style.boxShadow = '0 6px 20px rgba(0,0,0,0.18)';
-            banner.style.zIndex = '999';
-            banner.style.pointerEvents = 'none';
-            document.body.appendChild(banner);
-        }
-        banner.textContent = `${text} Log out to start a new session.`;
-    }
-
-    function hideSessionCompleteScreen() {
-        const banner = document.getElementById('sessionCompleteBanner');
-        if (banner) banner.remove();
-    }
-
     function applyAssignmentSessionState(sessionLike, options = {}) {
         if (!sessionLike || typeof sessionLike !== 'object') return;
         assignmentSessionState = sessionLike;
-        assignmentSessionComplete = isSessionCompleteState(sessionLike);
         const sessionId = String(sessionLike.session_id || '').trim();
         if (sessionId) {
             localStorage.setItem('assignmentSessionId', sessionId);
         }
 
-        setAssignmentSessionUiLocked(assignmentSessionComplete);
-
-        if (assignmentSessionComplete) {
-            stopAssignmentHeartbeat();
-            showSessionCompleteScreen(sessionLike);
-            setAssignmentsStatus(`Session complete (${getSessionSubmittedCount(sessionLike)}/${getSessionCap(sessionLike)}).`, false);
-            const forceView = !!(assignmentContext && (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view'));
-            setAssignmentReadOnlyState(forceView);
-            return;
-        }
-
-        hideSessionCompleteScreen();
+        setAssignmentSessionUiLocked(false);
         if (!options.silent) {
             setAssignmentsStatus('', false);
         }
@@ -714,7 +650,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function sendAssignmentHeartbeat() {
         if (isSnapshotMode) return;
-        if (!canUseAssignmentMode() || assignmentSessionComplete) return;
+        if (!canUseAssignmentMode()) return;
         const email = getLoggedInEmail();
         const sessionId = getAssignmentSessionId();
         if (!email || !sessionId) return;
@@ -737,7 +673,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function startAssignmentHeartbeat() {
         if (isSnapshotMode) return;
-        if (!canUseAssignmentMode() || assignmentSessionComplete) return;
+        if (!canUseAssignmentMode()) return;
         if (!assignmentSessionState || !assignmentSessionState.session_id) return;
         const sessionId = getAssignmentSessionId();
         if (!sessionId) return;
@@ -898,9 +834,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         assignmentQueue = [];
         assignmentContext = null;
         assignmentSessionState = null;
-        assignmentSessionComplete = false;
         setAssignmentSessionUiLocked(false);
-        hideSessionCompleteScreen();
         document.body.classList.remove('assignment-view-only');
         document.body.classList.add('snapshot-share-view');
         updateSnapshotShareButtonVisibility();
@@ -1003,10 +937,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function openSelectedAssignmentFromList() {
         if (isSnapshotMode) return;
-        if (assignmentSessionComplete) {
-            setAssignmentsStatus('Session complete (20/20). Log out to start a new session.', false);
-            return;
-        }
         if (!assignmentSelect || !assignmentSelect.value) return;
         const selectedOption = assignmentSelect.options[assignmentSelect.selectedIndex];
         if (!selectedOption) return;
@@ -1119,11 +1049,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         await ensureScenariosLoaded([assignmentContext.scenarioKey]);
         await ensureTemplatesLoadedForScenarioKeys([assignmentContext.scenarioKey]);
-        if (!assignmentSessionComplete) {
-            await prefetchAssignmentWindow(assignmentContext.assignment_id).catch((error) => {
-                console.warn('Assignment prefetch window failed:', error);
-            });
-        }
+        await prefetchAssignmentWindow(assignmentContext.assignment_id).catch((error) => {
+            console.warn('Assignment prefetch window failed:', error);
+        });
 
         setCurrentScenarioNumber(assignmentContext.scenarioKey);
         loadScenarioContent(assignmentContext.scenarioKey, allScenariosData || {});
@@ -1142,17 +1070,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const forceView = assignmentContext.role === 'viewer' || assignmentContext.mode === 'view';
         setAssignmentReadOnlyState(forceView);
-        if (assignmentSessionComplete) {
-            setAssignmentsStatus(`Session complete (${getSessionSubmittedCount(assignmentSessionState)}/${getSessionCap(assignmentSessionState)}).`, false);
-        } else {
-            setAssignmentsStatus(
-                forceView
-                    ? `Opened ${assignmentContext.send_id} in view-only mode.`
-                    : `Opened ${assignmentContext.send_id} in editor mode.`,
-                false
-            );
-            startAssignmentHeartbeat();
-        }
+        setAssignmentsStatus(
+            forceView
+                ? `Opened ${assignmentContext.send_id} in view-only mode.`
+                : `Opened ${assignmentContext.send_id} in editor mode.`,
+            false
+        );
+        startAssignmentHeartbeat();
         selectCurrentAssignmentInQueue();
         updateSnapshotShareButtonVisibility();
 
@@ -1219,15 +1143,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function setAssignmentReadOnlyState(isReadOnly) {
         if (isSnapshotMode) return;
-        const lockForSession = !!assignmentSessionComplete;
-        const effectiveReadOnly = !!isReadOnly || lockForSession;
+        const effectiveReadOnly = !!isReadOnly;
         const isAssignmentViewMode = !!(
             isReadOnly &&
             assignmentContext &&
             (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view')
         );
         document.body.classList.toggle('assignment-view-only', isAssignmentViewMode);
-        setAssignmentSessionUiLocked(lockForSession);
+        setAssignmentSessionUiLocked(false);
 
         const customForm = document.getElementById('customForm');
         const formSubmitBtn = document.getElementById('formSubmitBtn');
@@ -1293,7 +1216,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function saveAssignmentDraft(customForm) {
         if (isSnapshotMode) return;
-        if (assignmentSessionComplete) return;
         if (!assignmentContext || assignmentContext.role !== 'editor') return;
         if (!assignmentContext.assignment_id || !assignmentContext.token) return;
         const sessionId = getAssignmentSessionId();
@@ -1320,7 +1242,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function scheduleAssignmentDraftSave(customForm) {
         if (isSnapshotMode) return;
-        if (assignmentSessionComplete) return;
         if (!assignmentContext || assignmentContext.role !== 'editor') return;
         if (draftSaveTimer) {
             clearTimeout(draftSaveTimer);
@@ -2452,8 +2373,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             await releaseAssignmentSession('logout').catch(() => ({ ok: false }));
             sendSessionLogout();
             assignmentSessionState = null;
-            assignmentSessionComplete = false;
-            hideSessionCompleteScreen();
             clearAssignmentSessionId();
             localStorage.removeItem('agentName');
             localStorage.removeItem('agentEmail');
@@ -2510,10 +2429,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function navigateAssignmentQueue(direction) {
         if (isSnapshotMode) return false;
-        if (assignmentSessionComplete) {
-            setAssignmentsStatus('Session complete (20/20). Log out to start a new session.', false);
-            return true;
-        }
         if (!canUseAssignmentMode()) return false;
         let queue = assignmentQueue;
         if (!Array.isArray(queue) || !queue.length) {
@@ -2557,10 +2472,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function navigateConversation(direction) {
         if (isSnapshotMode) return;
-        if (assignmentSessionComplete && assignmentContext && assignmentContext.assignment_id) {
-            setAssignmentsStatus('Session complete (20/20). Log out to start a new session.', false);
-            return;
-        }
         const movedByAssignment = await navigateAssignmentQueue(direction);
         if (assignmentContext && assignmentContext.assignment_id) {
             return;
@@ -2920,8 +2831,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                             window.location.href = firstEditUrl;
                             return;
                         }
-                    } else if (assignmentSessionComplete) {
-                        setAssignmentsStatus(`Session complete (${getSessionSubmittedCount(assignmentSessionState)}/${getSessionCap(assignmentSessionState)}).`, false);
                     } else {
                         setAssignmentsStatus('No assignments available.', false);
                     }
@@ -2961,10 +2870,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (assignmentRefreshBtn) {
         assignmentRefreshBtn.addEventListener('click', async () => {
             if (isSnapshotMode) return;
-            if (assignmentSessionComplete) {
-                setAssignmentsStatus('Session complete (20/20). Log out to start a new session.', false);
-                return;
-            }
             if (!canUseAssignmentMode()) {
                 setAssignmentsStatus('Assignment mode requires email login.', true);
                 return;
@@ -2973,11 +2878,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 setAssignmentsStatus('Refreshing assignments...', false);
                 const queue = await refreshAssignmentQueue();
                 if (!queue.length) {
-                    if (assignmentSessionComplete) {
-                        setAssignmentsStatus(`Session complete (${getSessionSubmittedCount(assignmentSessionState)}/${getSessionCap(assignmentSessionState)}).`, false);
-                    } else {
-                        setAssignmentsStatus('No assignments available.', false);
-                    }
+                    setAssignmentsStatus('No assignments available.', false);
                 } else {
                     setAssignmentsStatus('Assignments refreshed.', false);
                     selectCurrentAssignmentInQueue();
@@ -3140,13 +3041,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
                 return;
             }
-            if (assignmentSessionComplete) {
-                if (formStatus) {
-                    formStatus.textContent = 'Session complete (20/20). Log out to start a new session.';
-                    formStatus.style.color = '#e74c3c';
-                }
-                return;
-            }
             if (assignmentContext && (assignmentContext.role !== 'editor' || assignmentContext.mode === 'view')) {
                 if (formStatus) {
                     formStatus.textContent = 'View-only link cannot submit.';
@@ -3291,13 +3185,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                         applyAssignmentSessionState(doneRes && doneRes.session, { silent: true });
                         const nextQueue = Array.isArray(doneRes.assignments) ? doneRes.assignments : [];
                         renderAssignmentQueue(nextQueue);
-                        if (assignmentSessionComplete) {
-                            if (formStatus) {
-                                formStatus.textContent = `Session complete (${getSessionSubmittedCount(assignmentSessionState)}/${getSessionCap(assignmentSessionState)}).`;
-                                formStatus.style.color = '#28a745';
-                            }
-                            return;
-                        }
                         const nextUrl = nextQueue.length
                             ? String(nextQueue[0].edit_url || nextQueue[0].view_url || '').trim()
                             : '';
