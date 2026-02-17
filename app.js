@@ -1488,11 +1488,44 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function loadTemplatesData() {
+        if (window.location.protocol === 'file:') {
+            return loadTemplatesDataMonolith();
+        }
+
+        const templateIndex = await loadRuntimeTemplatesIndex();
+        if (templateIndex) {
+            const globalLoaded = await ensureRuntimeTemplateGlobalLoaded();
+            if (globalLoaded) {
+                templatesData = Array.isArray(runtimeTemplateGlobalTemplates) ? runtimeTemplateGlobalTemplates.slice() : [];
+                return templatesData;
+            }
+        }
+
         return loadTemplatesDataMonolith();
     }
 
     async function loadUploadedScenarios() {
         return [];
+    }
+
+    function resolveScenarioKeyFromRuntimeIndex(runtimeIndex) {
+        if (!runtimeIndex || typeof runtimeIndex !== 'object') return '';
+        const byId = runtimeIndex.byId && typeof runtimeIndex.byId === 'object' ? runtimeIndex.byId : {};
+        const byKey = runtimeIndex.byKey && typeof runtimeIndex.byKey === 'object' ? runtimeIndex.byKey : {};
+        const order = Array.isArray(runtimeIndex.order)
+            ? runtimeIndex.order.map(v => String(v || '').trim()).filter(Boolean)
+            : [];
+
+        const sid = getScenarioIdFromUrl();
+        if (sid && byId[sid]) return String(byId[sid]);
+
+        const fromUrl = getScenarioNumberFromUrl();
+        if (fromUrl && byKey[fromUrl]) return fromUrl;
+
+        const stored = String(localStorage.getItem('currentScenarioNumber') || '').trim();
+        if (stored && byKey[stored]) return stored;
+
+        return order.length ? order[0] : '';
     }
 
     function getTemplatesForScenario(scenario) {
@@ -1533,6 +1566,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Load scenarios data
     async function loadScenariosData() {
+        if (window.location.protocol === 'file:') {
+            return loadScenariosDataMonolith();
+        }
+
+        const runtimeIndex = await loadRuntimeScenariosIndex();
+        if (runtimeIndex) {
+            const preferredScenarioKey = resolveScenarioKeyFromRuntimeIndex(runtimeIndex);
+            if (preferredScenarioKey) {
+                await ensureScenariosLoaded([preferredScenarioKey]);
+                return allScenariosData || {};
+            }
+        }
+
         return loadScenariosDataMonolith();
     }
     
@@ -2407,13 +2453,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function navigateScenarioList(direction) {
-        const data = await loadScenariosData();
-        if (!data) return;
-        const keys = Object.keys(data)
-            .map(k => parseInt(k, 10))
-            .filter(n => !isNaN(n))
-            .sort((a, b) => a - b)
-            .map(n => String(n));
+        let data = allScenariosData || {};
+        let keys = [];
+
+        const runtimeIndex = await loadRuntimeScenariosIndex();
+        if (runtimeIndex && Array.isArray(runtimeIndex.order) && runtimeIndex.order.length) {
+            keys = runtimeIndex.order.map(v => String(v || '').trim()).filter(Boolean);
+        }
+
+        if (!keys.length) {
+            data = await loadScenariosData();
+            if (!data) return;
+            keys = Object.keys(data)
+                .map(k => parseInt(k, 10))
+                .filter(n => !isNaN(n))
+                .sort((a, b) => a - b)
+                .map(n => String(n));
+        }
+
         if (!keys.length) return;
         const current = String(getCurrentScenarioNumber());
         const currentIndex = keys.indexOf(current);
@@ -2423,6 +2480,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             : fallbackIndex;
         const targetScenario = keys[targetIndex];
         if (!isCsvScenarioMode() && !canAccessScenario(targetScenario)) return;
+
+        if (!data[targetScenario]) {
+            await ensureScenariosLoaded([targetScenario]).catch(() => {});
+            data = allScenariosData || data;
+        }
+
         setCurrentScenarioNumber(targetScenario);
         window.location.href = buildScenarioUrl(targetScenario, data);
     }
@@ -2810,6 +2873,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const requestedScenario = resolveRequestedScenarioKey(scenarios) || getCurrentScenarioNumber();
                 const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
                 setCurrentScenarioNumber(activeScenario);
+                await ensureTemplatesLoadedForScenarioKeys([activeScenario]).catch(() => {});
                 loadScenarioContent(activeScenario, scenarios);
             }
         }
@@ -2850,6 +2914,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const requestedScenario = resolveRequestedScenarioKey(scenarios) || getCurrentScenarioNumber();
             const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
             setCurrentScenarioNumber(activeScenario);
+            await ensureTemplatesLoadedForScenarioKeys([activeScenario]).catch(() => {});
             loadScenarioContent(activeScenario, scenarios);
         }
     }

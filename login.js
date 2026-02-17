@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load allowed agents and emails list
     let allowedAgents = [];
     let allowedEmails = [];
-    let googleTokenClient = null;
 
     // Load allowed agents from JSON file
     async function loadAllowedUsers() {
@@ -95,17 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 console.log('Google Sign-In initialized successfully');
                 console.log('Allowed emails loaded:', allowedEmails);
-
-                if (google.accounts.oauth2 && google.accounts.oauth2.initTokenClient) {
-                    googleTokenClient = google.accounts.oauth2.initTokenClient({
-                        client_id: GOOGLE_CLIENT_ID,
-                        scope: 'openid email profile',
-                        callback: handleGoogleTokenResponse
-                    });
-                    console.log('Google OAuth token client initialized');
-                } else {
-                    console.warn('Google OAuth token client unavailable');
-                }
                 
             } catch (error) {
                 console.error('Google Sign-In initialization failed:', error);
@@ -143,49 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } catch (error) {
             console.error('Error handling Google sign-in:', error);
-            showError('Error signing in with Google. Please try again.');
-        }
-    }
-
-    async function handleGoogleTokenResponse(response) {
-        try {
-            if (!response || response.error || !response.access_token) {
-                const err = response && response.error ? response.error : 'token_missing';
-                console.error('Google token response error:', err, response);
-                showError(`Google OAuth failed (${err}).`);
-                return;
-            }
-
-            const profileRes = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
-                headers: {
-                    Authorization: `Bearer ${response.access_token}`
-                }
-            });
-            if (!profileRes.ok) {
-                throw new Error(`userinfo_failed_${profileRes.status}`);
-            }
-            const profile = await profileRes.json();
-            const email = String(profile.email || '').toLowerCase();
-            const name = String(profile.name || profile.given_name || email || 'Agent');
-
-            if (!email) {
-                showError('Google sign-in did not return an email.');
-                return;
-            }
-
-            if (allowedEmails.includes(email)) {
-                localStorage.setItem('agentName', name);
-                localStorage.setItem('agentEmail', email);
-                localStorage.setItem('sessionStartTime', Date.now());
-                localStorage.setItem('loginMethod', 'google');
-                resetAssignmentSessionId();
-                sendSessionLogin({ agentName: name, agentEmail: email, loginMethod: 'google' });
-                window.location.href = 'app.html';
-            } else {
-                showError('Your email is not authorized to access this training portal.');
-            }
-        } catch (error) {
-            console.error('Error handling Google OAuth token response:', error);
             showError('Error signing in with Google. Please try again.');
         }
     }
@@ -241,15 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('googleSignInBtn').addEventListener('click', function() {
         console.log('Google Sign-In button clicked');
         hideError();
-        
-        if (googleTokenClient) {
-            try {
-                googleTokenClient.requestAccessToken({ prompt: 'select_account' });
-                return;
-            } catch (error) {
-                console.error('Google OAuth popup failed:', error);
-            }
-        }
 
         if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
             try {
