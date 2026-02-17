@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training - Loading...</title>
+    <link rel="icon" type="image/png" href="qa_site_icon.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Simple icon library (Feather Icons) for demonstration -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Bar (Simplified) -->
+        <div class="top-bar">            
+            <div class="agent-status">
+                <span class="agent-name">Loading...</span>
+                <button id="logoutBtn" class="logout-btn"><i data-feather="log-out" class="icon-small"></i> LOG OUT</button>
+                <button type="button" id="assignmentRefreshBtn" class="assignment-refresh-icon-btn" title="Refresh assignments" aria-label="Refresh assignments">
+                    <i data-feather="refresh-cw" class="icon-small"></i>
+                </button>
+            </div>
+            <!-- Centered session timer -->
+            <div class="timer-display" id="sessionTimer">00:00</div>
+            <div class="top-bar-right">
+                <div class="assignments-panel" id="assignmentsPanel">
+                    <select id="assignmentSelect" class="assignment-select" hidden aria-hidden="true">
+                        <option value="">Loading assignments...</option>
+                    </select>
+                    <p id="assignmentsStatus" class="assignments-status" aria-live="polite"></p>
+                </div>
+                <button id="previousConversationBtn" class="next-conversation-btn">PREVIOUS</button>
+                <button id="nextConversationBtn" class="next-conversation-btn">NEXT</button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Leftmost: Custom Form Panel -->
+            <aside class="form-panel">
+                <div class="info-block">
+                    <div class="info-block-header">
+                        <span><i data-feather="edit-3" class="icon-small"></i> Submission Form</span>
+                    </div>
+                    <div class="info-block-content">
+                        <form id="customForm">
+                            <!-- Issue Identification -->
+                            <div class="form-section">
+                                <h4>Issue Identification</h4>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="issue_identification" value="intent_identified">
+                                    <span class="checkmark"></span>
+                                    Intent Identified
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="issue_identification" value="necessary_reply">
+                                    <span class="checkmark"></span>
+                                    Necessary Reply
+                                </label>
+                            </div>
+
+                            <!-- Proper Resolution -->
+                            <div class="form-section">
+                                <h4>Proper Resolution</h4>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="proper_resolution" value="efficient_troubleshooting">
+                                    <span class="checkmark"></span>
+                                    Efficient Troubleshooting
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="proper_resolution" value="correct_escalation">
+                                    <span class="checkmark"></span>
+                                    Correct Escalation
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="proper_resolution" value="double_text">
+                                    <span class="checkmark"></span>
+                                    Double Text
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="proper_resolution" value="partial_reply">
+                                    <span class="checkmark"></span>
+                                    Partial Reply
+                                </label>
+                            </div>
+
+                            <!-- Product Sales -->
+                            <div class="form-section">
+                                <h4>Product Sales</h4>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="product_sales" value="general_recommendation">
+                                    <span class="checkmark"></span>
+                                    General Recommendation
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="product_sales" value="discount_upsell">
+                                    <span class="checkmark"></span>
+                                    Discount Upsell
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="product_sales" value="restock_question">
+                                    <span class="checkmark"></span>
+                                    Restock Question
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="product_sales" value="upsell">
+                                    <span class="checkmark"></span>
+                                    Upsell
+                                </label>
+                            </div>
+
+                            <!-- Accuracy -->
+                            <div class="form-section">
+                                <h4>Accuracy</h4>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="accuracy" value="credible_source">
+                                    <span class="checkmark"></span>
+                                    Credible Source
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="accuracy" value="promo_active">
+                                    <span class="checkmark"></span>
+                                    Promo - Active
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="accuracy" value="promo_correct">
+                                    <span class="checkmark"></span>
+                                    Promo - Correct
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="accuracy" value="promo_hallucinated">
+                                    <span class="checkmark"></span>
+                                    Promo - Hallucinated
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="accuracy" value="link_broken">
+                                    <span class="checkmark"></span>
+                                    Link - Broken
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="accuracy" value="link_correct_page">
+                                    <span class="checkmark"></span>
+                                    Link - Correct Page
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="accuracy" value="link_correct_region">
+                                    <span class="checkmark"></span>
+                                    Link - Correct Region
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="accuracy" value="link_correct_website">
+                                    <span class="checkmark"></span>
+                                    Link - Correct Website
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="accuracy" value="link_filtered">
+                                    <span class="checkmark"></span>
+                                    Link - Filtered
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="accuracy" value="link_relevant_item">
+                                    <span class="checkmark"></span>
+                                    Link - Relevant Item
+                                </label>
+                            </div>
+
+                            <!-- Workflow -->
+                            <div class="form-section">
+                                <h4>Workflow</h4>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="workflow" value="checkout_page">
+                                    <span class="checkmark"></span>
+                                    Checkout Page
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="workflow" value="company_profile">
+                                    <span class="checkmark"></span>
+                                    Company Profile
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="workflow" value="conversation">
+                                    <span class="checkmark"></span>
+                                    Conversation
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="workflow" value="customer_profile">
+                                    <span class="checkmark"></span>
+                                    Customer Profile
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="workflow" value="notes">
+                                    <span class="checkmark"></span>
+                                    Notes
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="workflow" value="product_information">
+                                    <span class="checkmark"></span>
+                                    Product Information
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="workflow" value="promo_notes">
+                                    <span class="checkmark"></span>
+                                    Promo Notes
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="workflow" value="templates">
+                                    <span class="checkmark"></span>
+                                    Templates
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="workflow" value="website">
+                                    <span class="checkmark"></span>
+                                    Website
+                                </label>
+                            </div>
+
+                            <!-- Clarity -->
+                            <div class="form-section">
+                                <h4>Clarity</h4>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="clarity" value="correct_grammar">
+                                    <span class="checkmark"></span>
+                                    Correct Grammar
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="clarity" value="no_typos">
+                                    <span class="checkmark"></span>
+                                    No Typos
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="clarity" value="no_repetition">
+                                    <span class="checkmark"></span>
+                                    No Repetition
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="clarity" value="understandable_message">
+                                    <span class="checkmark"></span>
+                                    Understandable Message
+                                </label>
+                            </div>
+
+                            <!-- Tone -->
+                            <div class="form-section">
+                                <h4>Tone</h4>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="tone" value="preferred_tone_followed">
+                                    <span class="checkmark"></span>
+                                    Preferred tone followed
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="tone" value="personalized">
+                                    <span class="checkmark"></span>
+                                    Personalized
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="tone" value="empathetic">
+                                    <span class="checkmark"></span>
+                                    Empathetic
+                                </label>
+                            </div>
+
+                            <!-- Zero Tolerance -->
+                            <div class="form-section">
+                                <h4>Zero Tolerance</h4>
+                                <div class="form-group">
+                                    <select name="zero_tolerance" id="zeroTolerance">
+                                        <option value="">Choose</option>
+                                        <option value="inappropriate_language">Inappropriate Language</option>
+                                        <option value="opt_out">Opt Out</option>
+                                        <option value="personal_information">Personal Information</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Notes -->
+                            <div class="form-section">
+                                <h4>Notes <span class="required">*</span></h4>
+                                <div class="form-group">
+                                    <textarea name="notes" id="notes" rows="4" placeholder="Your answer" required></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Submit -->
+                            <div class="form-actions">
+                                <button type="submit" class="submit-btn" id="formSubmitBtn">Submit</button>
+                                <button type="button" class="clear-btn" id="clearFormBtn">Reset</button>
+                            </div>
+                            
+                            <p id="formStatus" class="form-status" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Resize handle -->
+            <div class="resize-handle" data-resize="form-left"></div>
+
+            <!-- Left Panel (Original) -->
+            <aside class="left-panel">
+                <div class="company-header">
+                    <h3><a id="companyNameLink" class="company-name-link" href="#" target="_blank" rel="noopener">Loading...</a></h3>
+                </div>
+
+                <!-- Dynamic guidelines container -->
+                <div id="dynamic-guidelines-container">
+                    <!-- Guidelines will be dynamically loaded here -->
+                </div>
+
+                <!-- Dynamic Promotions Section (rendered from scenarios.json if provided) -->
+                <div id="promotionsContainer"></div>
+
+                <div class="agent-profile">
+                    <p id="agentMetaRow" class="agent-meta-row">
+                        <span class="agent-meta-left"><i data-feather="user" class="icon-small"></i> <span id="agentName">Loading...</span></span>
+                        <span id="messageTone" class="agent-tone-inline" style="display:none;">Loading...</span>
+                    </p>
+                    <div id="blocklistedWordsRow" class="agent-badges-row agent-badges-row--blocklist" style="display:none;"></div>
+                    <div id="escalationPreferencesRow" class="agent-badges-row agent-badges-row--escalation" style="display:none;"></div>
+                </div>
+            </aside>
+
+            <!-- Resize handle -->
+            <div class="resize-handle" data-resize="left-chat"></div>
+
+            <!-- Middle Panel (Chat) -->
+            <main class="chat-panel">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message received">
+                        <div class="message-content">
+                            <p id="customerMessage">Loading customer message...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="internal-notes-container" id="internalNotesContainer">
+                    <div class="resize-handle-horizontal" data-resize="internal-notes"></div>
+                    <label for="internalNotes"><i data-feather="file-text" class="icon-small"></i> Internal Notes</label>
+                    <textarea id="internalNotes" rows="4" placeholder="Write internal notes here..."></textarea>
+                </div>
+            </main>
+
+            <!-- Resize handle -->
+            <div class="resize-handle" data-resize="chat-right"></div>
+
+            <!-- Right Panel -->
+            <aside class="right-panel">
+                <div class="customer-section">
+                    <h4>CUSTOMER</h4>
+                    <p class="customer-phone" id="customerPhone">Loading...</p>
+                </div>
+
+                <div class="right-panel-scroll" id="infoScroll">
+                <div class="info-block" id="sourceBlock">
+                    <div class="info-block-header">
+                        <span id="sourceLabel">Source</span>
+                        <span id="sourceValue">Loading...</span>
+                    </div>
+                    <div class="info-block-content" id="sourceDate">
+                            Loading...
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <div class="info-block-header">
+                            <span>Browsing History</span>
+                        </div>
+                        <ul class="info-list browsing-history" id="browsingHistory">
+                            <!-- Dynamic content will be loaded here -->
+                        </ul>
+                    </div>
+
+                    <!-- Orders Section (hidden if empty) -->
+                    <div class="info-block" id="ordersSection" style="display:none;">
+                        <div class="info-block-header">
+                            <span><i data-feather="shopping-bag" class="icon-small"></i> Orders</span>
+                        </div>
+                        <ul class="info-list" id="ordersList"></ul>
+                    </div>
+                </div>
+
+                <div class="right-panel-templates">
+                    <div class="info-block templates-block">
+                        <div class="info-block-header">
+                            <span>TEMPLATES</span>
+                        </div>
+                        <div class="search-templates">
+                            <i data-feather="search" class="icon-small"></i>
+                            <input type="text" placeholder="Search templates (ctrl + /)" id="templateSearch">
+                        </div>
+                        <div class="templates-scroll">
+                            <div id="templateItems">
+                                <!-- Dynamic template content will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        feather.replace(); // Initialize Feather Icons
+    </script>
+</body>
+</html>
