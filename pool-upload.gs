@@ -11,7 +11,6 @@ const QA_SNAPSHOTS_SHEET = 'qa_snapshots';
 
 const SESSION_CAP = 20; // Legacy compatibility field; no longer enforced.
 const TARGET_QUEUE_SIZE = 5;
-const STALE_HEARTBEAT_MINUTES = 10;
 const SNAPSHOT_TTL_HOURS = 48;
 const MAX_SNAPSHOT_PAYLOAD_CHARS = 45000;
 
@@ -750,37 +749,9 @@ function writeSheetDataRows_(sheet, rows, colCount) {
 }
 
 function cleanupStaleSessions_(state, nowIso) {
-  const nowMs = parseIsoMs_(nowIso);
-  const staleAfterMs = STALE_HEARTBEAT_MINUTES * 60 * 1000;
-
-  for (let i = 0; i < state.sessionsRows.length; i++) {
-    const session = rowToSessionObject_(state.sessionsRows[i]);
-    if (!isSessionLive_(session)) continue;
-
-    const heartbeat = session.last_heartbeat_at || session.started_at;
-    const heartbeatMs = parseIsoMs_(heartbeat);
-    if (!heartbeatMs) continue;
-    if ((nowMs - heartbeatMs) < staleAfterMs) continue;
-
-    const previousState = String(session.state || '').toUpperCase();
-    const released = releaseAssignmentsForSession_(state, session.session_id, 'timeout', nowIso);
-    session.state = 'TIMED_OUT';
-    session.ended_at = nowIso;
-    session.end_reason = previousState === 'COOLDOWN' ? 'cooldown_timeout' : 'heartbeat_timeout';
-    session.last_heartbeat_at = nowIso;
-    state.sessionsRows[i] = sessionToRow_(session);
-
-    appendHistoryRow_(state.historyRowsToAppend, {
-      event_type: 'session_timed_out',
-      assignment_id: '',
-      send_id: '',
-      from_status: '',
-      to_status: '',
-      agent_email: session.agent_email,
-      session_id: session.session_id,
-      detail: `released=${released};from=${previousState}`
-    });
-  }
+  // Inactivity timeout intentionally disabled.
+  // Assignments remain reserved until explicitly released/superseded.
+  return;
 }
 
 function resolveQueueSession_(state, email, requestedSessionId, appBase, nowIso) {

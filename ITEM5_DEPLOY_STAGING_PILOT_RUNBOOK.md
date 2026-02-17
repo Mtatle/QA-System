@@ -65,10 +65,9 @@ Mark each as PASS/FAIL with evidence (screenshot or row IDs).
 5. Explicit logout:
    - `releaseSession` succeeds.
    - Session moves to `COOLDOWN`.
-   - Assigned unfinished rows remain reserved during cooldown.
+   - Assigned unfinished rows remain reserved.
 6. Reconnect/cooldown fallback:
-   - Relogin within 10 minutes with same email restores the same reserved queue.
-   - If no reconnect for 10+ minutes, session becomes `TIMED_OUT` and unfinished rows release.
+   - Relogin with same email restores the same reserved queue.
 7. Reload behavior:
    - Active session resumes without duplicate reservation.
 8. Multi-auditor concurrency:
@@ -76,7 +75,7 @@ Mark each as PASS/FAIL with evidence (screenshot or row IDs).
 9. Username login (no email):
    - Assignment mode blocked with clear message.
 10. History/data integrity:
-   - `qa_assignment_history` logs assign/done/release/timeout events.
+   - `qa_assignment_history` logs assign/done/release events.
    - Legacy evaluation submission still writes to `Data`.
 
 ## Phase 5: Production Pilot
@@ -93,7 +92,7 @@ Mark each as PASS/FAIL with evidence (screenshot or row IDs).
 ## Phase 6: Rollback
 Rollback immediately if:
 1. Duplicate active assignment ownership appears.
-2. Frequent failures in cooldown reclaim/release behavior (reconnect within 10 minutes or release after timeout).
+2. Frequent failures in queue reclaim behavior (same-email resume not restoring reserved queue).
 
 Rollback steps:
 1. Re-point `qa-config.js` to previous stable backend URL.
@@ -106,6 +105,6 @@ Rollback steps:
 ## Acceptance Criteria
 1. No duplicate active assignment ownership.
 2. Queue policy holds: max 5 active, +1 refill after each successful `done`, with no cap lockout.
-3. Cooldown policy holds: logout/close/disconnect keeps assignments for 10 minutes, then releases if no return.
-4. Reclaim policy holds: same email reconnect within 10 minutes restores reserved queue.
+3. No inactivity timeout auto-release occurs.
+4. Reclaim policy holds: same email reconnect restores reserved queue.
 5. Legacy logging/evaluation behavior still works.
