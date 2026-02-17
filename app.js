@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const logoutBtn = document.getElementById('logoutBtn');
     const assignmentSelect = document.getElementById('assignmentSelect');
     const assignmentRefreshBtn = document.getElementById('assignmentRefreshBtn');
+    const snapshotShareBtn = document.getElementById('snapshotShareBtn');
     const assignmentsStatus = document.getElementById('assignmentsStatus');
     const previousConversationBtn = document.getElementById('previousConversationBtn');
     const nextConversationBtn = document.getElementById('nextConversationBtn');
@@ -45,8 +46,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     let assignmentHeartbeatWarningShown = false;
     let isExplicitLogoutInProgress = false;
     let pendingLogoutReleasePayload = null;
+    let isSnapshotMode = false;
+    let snapshotContext = null;
 
     async function refreshAssignmentQueue() {
+        if (isSnapshotMode) {
+            throw new Error('Snapshot view is read-only.');
+        }
         if (!canUseAssignmentMode()) {
             throw new Error('Assignment mode requires email login.');
         }
@@ -230,6 +236,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         } catch (_) {
             return null;
         }
+    }
+
+    function getSnapshotParamsFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const snapshotId = String(params.get('snap') || '').trim();
+        const snapshotToken = String(params.get('st') || '').trim();
+        return {
+            snapshotId,
+            snapshotToken
+        };
+    }
+
+    function isSnapshotLinkActive() {
+        const snapshotParams = getSnapshotParamsFromUrl();
+        return !!(snapshotParams.snapshotId && snapshotParams.snapshotToken);
     }
 
     function getLoggedInEmail() {
@@ -692,6 +713,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function sendAssignmentHeartbeat() {
+        if (isSnapshotMode) return;
         if (!canUseAssignmentMode() || assignmentSessionComplete) return;
         const email = getLoggedInEmail();
         const sessionId = getAssignmentSessionId();
@@ -714,6 +736,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function startAssignmentHeartbeat() {
+        if (isSnapshotMode) return;
         if (!canUseAssignmentMode() || assignmentSessionComplete) return;
         if (!assignmentSessionState || !assignmentSessionState.session_id) return;
         const sessionId = getAssignmentSessionId();
@@ -726,6 +749,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function releaseAssignmentSession(reason) {
+        if (isSnapshotMode) return { ok: false, released_count: 0 };
         const email = getLoggedInEmail();
         const sessionId = getAssignmentSessionId();
         if (!email || !sessionId) return { ok: false, released_count: 0 };
@@ -764,6 +788,184 @@ document.addEventListener('DOMContentLoaded', async () => {
         navigator.sendBeacon(endpoint, blob);
     }
 
+    function updateSnapshotShareButtonVisibility() {
+        if (!snapshotShareBtn) return;
+        const canShow = !isSnapshotMode &&
+            !!assignmentContext &&
+            !!assignmentContext.assignment_id &&
+            assignmentContext.role === 'editor';
+        snapshotShareBtn.style.display = canShow ? 'inline-flex' : 'none';
+        snapshotShareBtn.disabled = !canShow;
+    }
+
+    async function copyTextToClipboard(text) {
+        const value = String(text || '');
+        if (!value) return false;
+        if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+            try {
+                await navigator.clipboard.writeText(value);
+                return true;
+            } catch (_) {}
+        }
+
+        try {
+            const temp = document.createElement('textarea');
+            temp.value = value;
+            temp.style.position = 'fixed';
+            temp.style.opacity = '0';
+            temp.style.pointerEvents = 'none';
+            document.body.appendChild(temp);
+            temp.focus();
+            temp.select();
+            const ok = document.execCommand('copy');
+            document.body.removeChild(temp);
+            return !!ok;
+        } catch (_) {
+            return false;
+        }
+    }
+
+    function buildSnapshotPayloadForShare() {
+        if (!assignmentContext || !assignmentContext.assignment_id) {
+            throw new Error('No assignment is currently open.');
+        }
+        if (!scenarioData || typeof scenarioData !== 'object') {
+            throw new Error('Scenario data is not available yet.');
+        }
+
+        const scenarioClone = JSON.parse(JSON.stringify(scenarioData));
+        const templatesForScenario = getTemplatesForScenario(scenarioData);
+        const templatesClone = JSON.parse(JSON.stringify(Array.isArray(templatesForScenario) ? templatesForScenario : []));
+        const internalNote = internalNotesEl ? String(internalNotesEl.value || '') : '';
+
+        return {
+            version: 1,
+            assignment_id: String(assignmentContext.assignment_id || ''),
+            send_id: String((assignmentContext && assignmentContext.send_id) || (scenarioClone && scenarioClone.id) || ''),
+            scenario: scenarioClone,
+            templates: templatesClone,
+            internal_note: internalNote,
+            created_at: new Date().toISOString()
+        };
+    }
+
+    function formatSnapshotExpiry(expiryIso) {
+        const t = Date.parse(String(expiryIso || ''));
+        if (!Number.isFinite(t)) return '';
+        return new Date(t).toLocaleString();
+    }
+
+    async function createSnapshotAndCopyLink() {
+        if (isSnapshotMode) return;
+        if (!assignmentContext || assignmentContext.role !== 'editor') {
+            setAssignmentsStatus('Open an editable assignment first to create a snapshot link.', true);
+            return;
+        }
+        const sessionId = getAssignmentSessionId();
+        if (!sessionId) {
+            setAssignmentsStatus('Missing assignment session id.', true);
+            return;
+        }
+
+        try {
+            setAssignmentsStatus('Creating snapshot link...', false);
+            const payload = buildSnapshotPayloadForShare();
+            const response = await fetchAssignmentPost('createSnapshot', {
+                assignment_id: assignmentContext.assignment_id,
+                token: assignmentContext.token,
+                session_id: sessionId,
+                agent_email: getLoggedInEmail(),
+                app_base: getCurrentAppBaseUrl(),
+                snapshot_payload: payload
+            });
+            const shareUrl = String((response && response.share_url) || '').trim();
+            if (!shareUrl) throw new Error('Snapshot URL was not returned.');
+
+            const copied = await copyTextToClipboard(shareUrl);
+            if (copied) {
+                setAssignmentsStatus(`Snapshot link copied. Expires ${formatSnapshotExpiry(response && response.expires_at)}.`, false);
+            } else {
+                setAssignmentsStatus(`Snapshot created but copy failed. Link: ${shareUrl}`, true);
+            }
+        } catch (error) {
+            setAssignmentsStatus(`Snapshot failed: ${error.message || error}`, true);
+        }
+    }
+
+    function enterSnapshotModeUi() {
+        isSnapshotMode = true;
+        stopAssignmentHeartbeat();
+        assignmentQueue = [];
+        assignmentContext = null;
+        assignmentSessionState = null;
+        assignmentSessionComplete = false;
+        setAssignmentSessionUiLocked(false);
+        hideSessionCompleteScreen();
+        document.body.classList.remove('assignment-view-only');
+        document.body.classList.add('snapshot-share-view');
+        updateSnapshotShareButtonVisibility();
+    }
+
+    function setSnapshotErrorState(message) {
+        const text = String(message || 'This snapshot link is invalid or expired.');
+        if (chatMessages) {
+            chatMessages.innerHTML = '';
+            addSystemStatusMessage(text);
+        }
+        if (internalNotesEl) {
+            internalNotesEl.value = '';
+            internalNotesEl.readOnly = true;
+            internalNotesEl.disabled = false;
+        }
+        setAssignmentsStatus(text, true);
+    }
+
+    async function loadSnapshotFromLink(snapshotId, snapshotToken) {
+        enterSnapshotModeUi();
+        try {
+            const response = await fetchAssignmentGet('getSnapshot', {
+                snapshot_id: snapshotId,
+                snapshot_token: snapshotToken
+            });
+            const snapshot = response && response.snapshot ? response.snapshot : null;
+            if (!snapshot || !snapshot.payload || typeof snapshot.payload !== 'object') {
+                throw new Error('Snapshot payload is missing.');
+            }
+
+            const payload = snapshot.payload;
+            const scenarioRaw = payload.scenario && typeof payload.scenario === 'object' ? payload.scenario : {};
+            const snapshotScenario = normalizeScenarioRecord(scenarioRaw, {}, 'snapshot');
+            const templates = Array.isArray(payload.templates) ? payload.templates : [];
+            if (!snapshotScenario.rightPanel || typeof snapshotScenario.rightPanel !== 'object') {
+                snapshotScenario.rightPanel = {};
+            }
+            snapshotScenario.rightPanel.templates = templates;
+            if (!snapshotScenario.id) {
+                snapshotScenario.id = String(payload.send_id || '');
+            }
+
+            snapshotContext = {
+                snapshot_id: String(snapshot.snapshot_id || ''),
+                expires_at: String(snapshot.expires_at || '')
+            };
+            templatesData = templates;
+            allScenariosData = { snapshot: snapshotScenario };
+            loadScenarioContent('snapshot', allScenariosData);
+
+            if (internalNotesEl) {
+                internalNotesEl.value = String(payload.internal_note || '');
+                internalNotesEl.readOnly = true;
+                internalNotesEl.disabled = false;
+            }
+            setAssignmentsStatus(`Snapshot view${snapshotContext.expires_at ? ` (expires ${formatSnapshotExpiry(snapshotContext.expires_at)})` : ''}.`, false);
+            return true;
+        } catch (error) {
+            console.error('Snapshot load failed:', error);
+            setSnapshotErrorState(error && error.message ? error.message : 'This snapshot link is invalid or expired.');
+            return false;
+        }
+    }
+
     function renderAssignmentQueue(assignments) {
         assignmentQueue = Array.isArray(assignments) ? assignments : [];
         if (!assignmentSelect) return;
@@ -800,6 +1002,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function openSelectedAssignmentFromList() {
+        if (isSnapshotMode) return;
         if (assignmentSessionComplete) {
             setAssignmentsStatus('Session complete (20/20). Log out to start a new session.', false);
             return;
@@ -951,6 +1154,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             startAssignmentHeartbeat();
         }
         selectCurrentAssignmentInQueue();
+        updateSnapshotShareButtonVisibility();
 
         if (options.updateHistory) {
             const method = options.replaceHistory ? 'replaceState' : 'pushState';
@@ -1014,6 +1218,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function setAssignmentReadOnlyState(isReadOnly) {
+        if (isSnapshotMode) return;
         const lockForSession = !!assignmentSessionComplete;
         const effectiveReadOnly = !!isReadOnly || lockForSession;
         const isAssignmentViewMode = !!(
@@ -1087,6 +1292,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function saveAssignmentDraft(customForm) {
+        if (isSnapshotMode) return;
         if (assignmentSessionComplete) return;
         if (!assignmentContext || assignmentContext.role !== 'editor') return;
         if (!assignmentContext.assignment_id || !assignmentContext.token) return;
@@ -1113,6 +1319,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function scheduleAssignmentDraftSave(customForm) {
+        if (isSnapshotMode) return;
         if (assignmentSessionComplete) return;
         if (!assignmentContext || assignmentContext.role !== 'editor') return;
         if (draftSaveTimer) {
@@ -2199,7 +2406,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Check if user is logged in (redirect to login if not). Only enforce on http/https to avoid file:// loops
     const isHttpProtocol = window.location.protocol === 'http:' || window.location.protocol === 'https:';
-    if (isHttpProtocol && !localStorage.getItem('agentName') && !window.location.href.includes('login.html') && 
+    if (isHttpProtocol && !isSnapshotLinkActive() && !localStorage.getItem('agentName') && !window.location.href.includes('login.html') && 
         !window.location.href.includes('index.html')) {
         window.location.href = 'index.html';
     }
@@ -2302,6 +2509,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function navigateAssignmentQueue(direction) {
+        if (isSnapshotMode) return false;
         if (assignmentSessionComplete) {
             setAssignmentsStatus('Session complete (20/20). Log out to start a new session.', false);
             return true;
@@ -2348,6 +2556,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function navigateConversation(direction) {
+        if (isSnapshotMode) return;
         if (assignmentSessionComplete && assignmentContext && assignmentContext.assignment_id) {
             setAssignmentsStatus('Session complete (20/20). Log out to start a new session.', false);
             return;
@@ -2446,6 +2655,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Shift + D => Unsubscribe
     // Shift + N => Close
     document.addEventListener('keydown', (event) => {
+        if (isSnapshotMode) return;
         // Ignore if any modifier other than Shift is pressed
         if (event.altKey || event.ctrlKey || event.metaKey) return;
 
@@ -2648,10 +2858,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     // Initialize everything
+    updateSnapshotShareButtonVisibility();
+    const snapshotParams = getSnapshotParamsFromUrl();
+    const hasSnapshot = !!(snapshotParams.snapshotId && snapshotParams.snapshotToken);
     const assignmentParams = getAssignmentParamsFromUrl();
     const hasAid = !!assignmentParams.aid;
 
-    if (hasAid) {
+    if (hasSnapshot) {
+        await loadSnapshotFromLink(snapshotParams.snapshotId, snapshotParams.snapshotToken);
+    } else if (hasAid) {
         await loadRuntimeScenariosIndex();
         await loadRuntimeTemplatesIndex();
         try {
@@ -2737,8 +2952,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initialize new features
     initTemplateSearchKeyboardShortcut();
 
+    if (snapshotShareBtn) {
+        snapshotShareBtn.addEventListener('click', async () => {
+            await createSnapshotAndCopyLink();
+        });
+    }
+
     if (assignmentRefreshBtn) {
         assignmentRefreshBtn.addEventListener('click', async () => {
+            if (isSnapshotMode) return;
             if (assignmentSessionComplete) {
                 setAssignmentsStatus('Session complete (20/20). Log out to start a new session.', false);
                 return;
@@ -2773,6 +2995,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     window.addEventListener('popstate', async () => {
+        const snapshotParamsNow = getSnapshotParamsFromUrl();
+        if (snapshotParamsNow.snapshotId && snapshotParamsNow.snapshotToken) {
+            await loadSnapshotFromLink(snapshotParamsNow.snapshotId, snapshotParamsNow.snapshotToken);
+            return;
+        }
+        if (isSnapshotMode) {
+            window.location.reload();
+            return;
+        }
         const params = getAssignmentParamsFromUrl();
         if (!params.aid || !params.token) return;
         const currentAid = assignmentContext ? String(assignmentContext.assignment_id || '') : '';
@@ -2789,6 +3020,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Persist internal notes and assignment drafts
     if (internalNotesEl) {
         internalNotesEl.addEventListener('input', () => {
+            if (isSnapshotMode) return;
             if (assignmentContext && assignmentContext.assignment_id) {
                 const key = assignmentNotesStorageKey();
                 if (key) localStorage.setItem(key, internalNotesEl.value);
@@ -2837,8 +3069,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // Start the session timer after content is loaded
-    initSessionTimer();
+    // Start the session timer after content is loaded (not used in anonymous snapshot mode)
+    if (!isSnapshotMode) {
+        initSessionTimer();
+    }
 
     // Custom form submission -> Google Sheets (Data tab)
     const customForm = document.getElementById('customForm');
@@ -2899,6 +3133,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         customForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            if (isSnapshotMode) {
+                if (formStatus) {
+                    formStatus.textContent = 'Snapshot view is read-only.';
+                    formStatus.style.color = '#e74c3c';
+                }
+                return;
+            }
             if (assignmentSessionComplete) {
                 if (formStatus) {
                     formStatus.textContent = 'Session complete (20/20). Log out to start a new session.';

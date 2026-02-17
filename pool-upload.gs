@@ -7,10 +7,13 @@ const UPLOADED_SCENARIOS_SHEET = 'Uploaded Scenarios';
 const UPLOADED_TEMPLATES_SHEET = 'Uploaded Templates';
 const QA_SESSIONS_SHEET = 'qa_sessions';
 const QA_ASSIGNMENT_HISTORY_SHEET = 'qa_assignment_history';
+const QA_SNAPSHOTS_SHEET = 'qa_snapshots';
 
 const SESSION_CAP = 20;
 const TARGET_QUEUE_SIZE = 5;
 const STALE_HEARTBEAT_MINUTES = 15;
+const SNAPSHOT_TTL_HOURS = 48;
+const MAX_SNAPSHOT_PAYLOAD_CHARS = 45000;
 
 const ASSIGNMENTS_HEADERS = [
   'send_id',
@@ -51,6 +54,17 @@ const HISTORY_HEADERS = [
   'agent_email',
   'session_id',
   'detail'
+];
+const SNAPSHOT_HEADERS = [
+  'snapshot_id',
+  'snapshot_token',
+  'assignment_id',
+  'send_id',
+  'created_by_email',
+  'created_at',
+  'expires_at',
+  'status',
+  'payload_json'
 ];
 
 const UPLOADED_JSON_HEADERS = ['record_id', 'payload_json', 'updated_at'];
@@ -93,6 +107,20 @@ function doGet(e) {
 
     if (action === 'getUploadedTemplates') {
       return jsonResponse_({ templates: readUploadedJsonList_(UPLOADED_TEMPLATES_SHEET) });
+    }
+
+    if (action === 'getSnapshot') {
+      const snapshotId = getParam_(e, 'snapshot_id');
+      const snapshotToken = getParam_(e, 'snapshot_token');
+      if (!snapshotId || !snapshotToken) {
+        return jsonResponse_({ error: 'Missing required query params: snapshot_id, snapshot_token' });
+      }
+
+      return withScriptLock_(function() {
+        const result = getSnapshotByToken_(snapshotId, snapshotToken);
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_(result);
+      });
     }
 
     return jsonResponse_({ status: 'ok', message: 'Agent Training Data Collector is running' });
@@ -161,6 +189,29 @@ function doPost(e) {
 
       return withScriptLock_(function() {
         const result = releaseSession_(email, sessionId, reason || 'manual');
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_(result);
+      });
+    }
+
+    if (action === 'createSnapshot') {
+      const assignmentId = String(data.assignment_id || '').trim();
+      const token = String(data.token || '').trim();
+      const sessionId = String(data.session_id || '').trim();
+      const appBase = String(data.app_base || '').trim();
+      if (!assignmentId || !token || !sessionId) {
+        return jsonResponse_({ error: 'Missing assignment_id, token, or session_id' });
+      }
+
+      return withScriptLock_(function() {
+        const result = createSnapshotForSession_({
+          assignment_id: assignmentId,
+          token: token,
+          session_id: sessionId,
+          agent_email: normalizeEmail_(data.agent_email),
+          app_base: appBase,
+          snapshot_payload: data.snapshot_payload
+        });
         if (result.error) return jsonResponse_({ error: result.error });
         return jsonResponse_(result);
       });
@@ -525,6 +576,138 @@ function releaseSession_(email, sessionId, reason) {
     ok: true,
     released_count: releasedCount,
     session: sessionToPayload_(session)
+  };
+}
+
+function createSnapshotForSession_(options) {
+  const assignmentId = String((options && options.assignment_id) || '').trim();
+  const token = String((options && options.token) || '').trim();
+  const sessionId = String((options && options.session_id) || '').trim();
+  const agentEmail = normalizeEmail_((options && options.agent_email) || '');
+  const appBase = String((options && options.app_base) || '').trim();
+  const snapshotPayloadInput = options ? options.snapshot_payload : null;
+
+  if (!assignmentId || !token || !sessionId) {
+    return { error: 'Missing assignment_id, token, or session_id' };
+  }
+  if (!agentEmail) {
+    return { error: 'Missing agent_email' };
+  }
+  if (!snapshotPayloadInput || typeof snapshotPayloadInput !== 'object') {
+    return { error: 'Missing snapshot_payload' };
+  }
+
+  const state = loadAssignmentState_();
+  const now = nowIso_();
+
+  cleanupStaleSessions_(state, now);
+
+  const sessionIndex = findSessionIndex_(state.sessionsRows, sessionId);
+  if (sessionIndex < 0) return { error: 'Session not found' };
+  const session = rowToSessionObject_(state.sessionsRows[sessionIndex]);
+  if (normalizeEmail_(session.agent_email) !== agentEmail) {
+    return { error: 'Session email mismatch' };
+  }
+  if (!isSessionActive_(session)) {
+    return { error: 'Session is not active' };
+  }
+
+  const found = findAssignmentById_(state.assignmentsRows, assignmentId);
+  if (!found) return { error: 'Assignment not found' };
+  const assignment = found.assignment;
+  if (String(assignment.editor_token || '') !== token) {
+    return { error: 'Unauthorized: editor token required' };
+  }
+
+  const status = String(assignment.status || '').toUpperCase();
+  if (status !== 'DONE' && String(assignment.assigned_session_id || '') !== sessionId) {
+    return { error: 'Assignment is not reserved for this session' };
+  }
+
+  const payload = normalizeSnapshotPayload_(snapshotPayloadInput, assignment, now);
+  if (!payload) {
+    return { error: 'Snapshot payload is invalid' };
+  }
+  const payloadJson = JSON.stringify(payload);
+  if (payloadJson.length > MAX_SNAPSHOT_PAYLOAD_CHARS) {
+    return { error: 'Snapshot payload is too large' };
+  }
+
+  const snapshotId = Utilities.getUuid();
+  const snapshotToken = generateOpaqueToken_();
+  const expiresAt = addHoursToIso_(now, SNAPSHOT_TTL_HOURS);
+  const snapshotsSheet = getSnapshotsSheet_();
+  appendSnapshotRow_(snapshotsSheet, {
+    snapshot_id: snapshotId,
+    snapshot_token: snapshotToken,
+    assignment_id: assignment.assignment_id,
+    send_id: assignment.send_id,
+    created_by_email: agentEmail,
+    created_at: now,
+    expires_at: expiresAt,
+    status: 'ACTIVE',
+    payload_json: payloadJson
+  });
+
+  appendHistoryRow_(state.historyRowsToAppend, {
+    event_type: 'snapshot_created',
+    assignment_id: assignment.assignment_id,
+    send_id: assignment.send_id,
+    from_status: '',
+    to_status: '',
+    agent_email: agentEmail,
+    session_id: sessionId,
+    detail: snapshotId
+  });
+  persistAssignmentState_(state);
+
+  const baseUrl = resolveAppBaseUrl_(appBase || session.app_base || '');
+  return {
+    ok: true,
+    snapshot_id: snapshotId,
+    snapshot_token: snapshotToken,
+    expires_at: expiresAt,
+    share_url: buildSnapshotUrl_(baseUrl, snapshotId, snapshotToken)
+  };
+}
+
+function getSnapshotByToken_(snapshotId, snapshotToken) {
+  const id = String(snapshotId || '').trim();
+  const token = String(snapshotToken || '').trim();
+  if (!id || !token) return { error: 'Missing snapshot_id or snapshot_token' };
+
+  const sheet = getSnapshotsSheet_();
+  const rows = getSheetDataRows_(sheet, SNAPSHOT_HEADERS.length);
+  const found = findSnapshotRowById_(rows, id);
+  if (!found) return { error: 'This snapshot link is invalid or expired.' };
+
+  const snapshot = rowToSnapshotObject_(found.row);
+  if (String(snapshot.snapshot_token || '') !== token) {
+    return { error: 'This snapshot link is invalid or expired.' };
+  }
+
+  const nowMs = Date.now();
+  const status = String(snapshot.status || 'ACTIVE').toUpperCase();
+  if (status !== 'ACTIVE' || isSnapshotExpired_(snapshot, nowMs)) {
+    if (status !== 'EXPIRED') {
+      updateSnapshotStatus_(sheet, found.index, 'EXPIRED');
+    }
+    return { error: 'This snapshot link is invalid or expired.' };
+  }
+
+  const payload = parseJsonSafe_(snapshot.payload_json);
+  if (!payload || typeof payload !== 'object') {
+    return { error: 'Snapshot payload is invalid' };
+  }
+
+  return {
+    ok: true,
+    snapshot: {
+      snapshot_id: snapshot.snapshot_id,
+      created_at: snapshot.created_at,
+      expires_at: snapshot.expires_at,
+      payload: payload
+    }
   };
 }
 
@@ -1142,6 +1325,107 @@ function findSessionIndex_(sessionsRows, sessionId) {
   return -1;
 }
 
+function getSnapshotsSheet_() {
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  return getOrCreateSheet_(spreadsheet, QA_SNAPSHOTS_SHEET, SNAPSHOT_HEADERS);
+}
+
+function appendSnapshotRow_(sheet, snapshot) {
+  const nextRow = sheet.getLastRow() + 1;
+  sheet.getRange(nextRow, 1, 1, SNAPSHOT_HEADERS.length).setValues([[
+    String(snapshot.snapshot_id || ''),
+    String(snapshot.snapshot_token || ''),
+    String(snapshot.assignment_id || ''),
+    String(snapshot.send_id || ''),
+    normalizeEmail_(snapshot.created_by_email),
+    String(snapshot.created_at || ''),
+    String(snapshot.expires_at || ''),
+    String(snapshot.status || 'ACTIVE').toUpperCase(),
+    String(snapshot.payload_json || '')
+  ]]);
+}
+
+function findSnapshotRowById_(snapshotRows, snapshotId) {
+  for (let i = 0; i < snapshotRows.length; i++) {
+    if (String(snapshotRows[i][0] || '') === String(snapshotId || '')) {
+      return { index: i, row: snapshotRows[i] };
+    }
+  }
+  return null;
+}
+
+function rowToSnapshotObject_(row) {
+  return {
+    snapshot_id: String(row[0] || ''),
+    snapshot_token: String(row[1] || ''),
+    assignment_id: String(row[2] || ''),
+    send_id: String(row[3] || ''),
+    created_by_email: normalizeEmail_(row[4]),
+    created_at: String(row[5] || ''),
+    expires_at: String(row[6] || ''),
+    status: String(row[7] || 'ACTIVE').toUpperCase(),
+    payload_json: String(row[8] || '')
+  };
+}
+
+function updateSnapshotStatus_(sheet, dataIndex, nextStatus) {
+  const rowNumber = Number(dataIndex) + 2;
+  sheet.getRange(rowNumber, 8).setValue(String(nextStatus || '').toUpperCase());
+}
+
+function normalizeSnapshotPayload_(rawPayload, assignment, nowIso) {
+  const payloadMap = (rawPayload && typeof rawPayload === 'object') ? rawPayload : {};
+  const scenario = cloneJsonSafe_(payloadMap.scenario, {});
+  const templates = Array.isArray(payloadMap.templates) ? cloneJsonSafe_(payloadMap.templates, []) : [];
+  const note = payloadMap.internal_note != null
+    ? String(payloadMap.internal_note)
+    : String(assignment.internal_note || '');
+
+  if (!scenario || typeof scenario !== 'object' || Array.isArray(scenario)) {
+    return null;
+  }
+
+  const snapshotScenario = cloneJsonSafe_(scenario, {});
+  if (!snapshotScenario.id) {
+    snapshotScenario.id = String(assignment.send_id || '');
+  }
+
+  return {
+    version: 1,
+    assignment_id: String(assignment.assignment_id || ''),
+    send_id: String(assignment.send_id || ''),
+    scenario: snapshotScenario,
+    templates: Array.isArray(templates) ? templates : [],
+    internal_note: note,
+    created_at: String(nowIso || nowIso_())
+  };
+}
+
+function buildSnapshotUrl_(baseUrl, snapshotId, snapshotToken) {
+  const safeBase = String(baseUrl || '').trim();
+  if (!safeBase) return '';
+  const hasQuery = safeBase.indexOf('?') >= 0;
+  const params = [
+    'snap=' + encodeURIComponent(String(snapshotId || '')),
+    'st=' + encodeURIComponent(String(snapshotToken || ''))
+  ];
+  return safeBase + (hasQuery ? '&' : '?') + params.join('&');
+}
+
+function addHoursToIso_(iso, hours) {
+  const baseMs = parseIsoMs_(iso);
+  const startMs = baseMs > 0 ? baseMs : Date.now();
+  const durationMs = Math.max(0, Number(hours) || 0) * 60 * 60 * 1000;
+  return new Date(startMs + durationMs).toISOString();
+}
+
+function isSnapshotExpired_(snapshot, nowMs) {
+  const expiresMs = parseIsoMs_(snapshot && snapshot.expires_at);
+  if (!expiresMs) return true;
+  const nowValue = Number(nowMs) || Date.now();
+  return nowValue >= expiresMs;
+}
+
 function isSessionActive_(session) {
   return session && String(session.state || '').toUpperCase() === 'ACTIVE';
 }
@@ -1348,6 +1632,22 @@ function stringifyMaybe_(value) {
     return JSON.stringify(value);
   } catch (_) {
     return String(value);
+  }
+}
+
+function parseJsonSafe_(value) {
+  try {
+    return JSON.parse(String(value || ''));
+  } catch (_) {
+    return null;
+  }
+}
+
+function cloneJsonSafe_(value, fallback) {
+  try {
+    return JSON.parse(JSON.stringify(value));
+  } catch (_) {
+    return fallback;
   }
 }
 

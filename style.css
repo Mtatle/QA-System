@@ -385,6 +385,32 @@ polyline[points="6 9 12 15 18 9"] {
     cursor: not-allowed;
 }
 
+.snapshot-share-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: #fff;
+    color: #222;
+    border: 1px solid #d4c75e;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.snapshot-share-icon-btn .icon-small {
+    margin-right: 0;
+}
+
+.snapshot-share-icon-btn:hover {
+    background: #fff6bf;
+}
+
+.snapshot-share-icon-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
 /* Top bar right section */
 .top-bar-right {
     margin-left: auto;
@@ -1047,6 +1073,22 @@ body.assignment-view-only .resize-handle[data-resize="form-left"] {
 
 body.assignment-view-only #internalNotesContainer {
     display: none;
+}
+
+/* Anonymous snapshot links: hide controls/form and show context-only layout */
+body.snapshot-share-view .top-bar {
+    display: none;
+}
+
+body.snapshot-share-view .form-panel,
+body.snapshot-share-view .resize-handle,
+body.snapshot-share-view .resize-handle-horizontal {
+    display: none !important;
+}
+
+body.snapshot-share-view #internalNotes {
+    background: #fff;
+    border-color: #d8d8d8;
 }
 
 .left-panel {
