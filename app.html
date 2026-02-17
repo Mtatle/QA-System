@@ -32,8 +32,8 @@
                     </select>
                     <p id="assignmentsStatus" class="assignments-status" aria-live="polite"></p>
                 </div>
-                <button id="previousConversationBtn" class="next-conversation-btn">PREVIOUS CONVERSATION</button>
-                <button id="nextConversationBtn" class="next-conversation-btn">NEXT CONVERSATION</button>
+                <button id="previousConversationBtn" class="next-conversation-btn">PREVIOUS</button>
+                <button id="nextConversationBtn" class="next-conversation-btn">NEXT</button>
             </div>
         </div>
 
@@ -285,7 +285,7 @@
                             <!-- Submit -->
                             <div class="form-actions">
                                 <button type="submit" class="submit-btn" id="formSubmitBtn">Submit</button>
-                                <button type="button" class="clear-btn" id="clearFormBtn">Clear form</button>
+                                <button type="button" class="clear-btn" id="clearFormBtn">Reset</button>
                             </div>
                             
                             <p id="formStatus" class="form-status" aria-live="polite"></p>
@@ -302,9 +302,6 @@
                 <div class="company-header">
                     <h3><a id="companyNameLink" class="company-name-link" href="#" target="_blank" rel="noopener">Loading...</a></h3>
                 </div>
-                <div class="company-info">
-                    <h4>GUIDE</h4>
-                </div>
 
                 <!-- Dynamic guidelines container -->
                 <div id="dynamic-guidelines-container">
@@ -319,10 +316,8 @@
                         <span class="agent-meta-left"><i data-feather="user" class="icon-small"></i> <span id="agentName">Loading...</span></span>
                         <span id="messageTone" class="agent-tone-inline" style="display:none;">Loading...</span>
                     </p>
-                </div>
-
-                <div class="offer-status">
-                    <i data-feather="tag" class="icon-small"></i> No offer
+                    <div id="blocklistedWordsRow" class="agent-badges-row agent-badges-row--blocklist" style="display:none;"></div>
+                    <div id="escalationPreferencesRow" class="agent-badges-row agent-badges-row--escalation" style="display:none;"></div>
                 </div>
             </aside>
 

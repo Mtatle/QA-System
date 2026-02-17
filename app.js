@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const chatMessages = document.getElementById('chatMessages');
-    const chatInput = document.getElementById('chatInput');
-    const sendButton = document.getElementById('sendButton');
     const internalNotesEl = document.getElementById('internalNotes');
     const logoutBtn = document.getElementById('logoutBtn');
     const assignmentSelect = document.getElementById('assignmentSelect');
@@ -15,8 +13,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     let currentScenario = null;
     let scenarioData = null;
     let allScenariosData = null;
-    let hasRespondedOnce = false; // For scenario 5 angry response
-    let totalScenarioCount = 0;
     let templatesData = [];
     let assignmentQueue = [];
     let assignmentContext = null;
@@ -65,47 +61,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         return assignmentContext;
     }
 
-    function getUploadedScenarios() {
-        try {
-            const raw = localStorage.getItem('uploadedScenarios');
-            if (!raw) return [];
-            const parsed = JSON.parse(raw);
-            return Array.isArray(parsed) ? parsed : [];
-        } catch (_) {
-            return [];
-        }
-    }
-
-    function setUploadedScenarios(list) {
-        localStorage.setItem('uploadedScenarios', JSON.stringify(list || []));
-        localStorage.setItem('uploadedScenariosAt', String(Date.now()));
-    }
-
-    function hasUploadedScenarios() {
-        const list = getUploadedScenarios();
-        return Array.isArray(list) && list.length > 0;
-    }
-
     function isCsvScenarioMode() {
-        return hasUploadedScenarios();
+        return false;
     }
 
     // Scenario progression system
     function getCurrentUnlockedScenario() {
         const unlockedScenario = localStorage.getItem('unlockedScenario');
         return unlockedScenario ? parseInt(unlockedScenario) : 1; // Default to scenario 1
-    }
-    
-    function getMessageCountForScenario(scenarioNumber) {
-        const messageCount = localStorage.getItem(`messageCount_scenario_${scenarioNumber}`);
-        return messageCount ? parseInt(messageCount) : 0;
-    }
-    
-    function incrementMessageCount(scenarioNumber) {
-        const currentCount = getMessageCountForScenario(scenarioNumber);
-        const newCount = currentCount + 1;
-        localStorage.setItem(`messageCount_scenario_${scenarioNumber}`, newCount);
-        return newCount;
     }
     
     function unlockNextScenario() {
@@ -358,8 +321,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (internalNotesEl) internalNotesEl.disabled = !!isReadOnly;
         if (previousConversationBtn) previousConversationBtn.disabled = !!isReadOnly;
         if (nextConversationBtn) nextConversationBtn.disabled = !!isReadOnly;
-        if (chatInput) chatInput.disabled = !!isReadOnly;
-        if (sendButton) sendButton.disabled = !!isReadOnly;
     }
 
     function parseStoredFormState(raw) {
@@ -449,10 +410,153 @@ document.addEventListener('DOMContentLoaded', async () => {
         return name ? name.charAt(0).toUpperCase() : '';
     }
 
+    function mapMessageTypeToRole(messageType) {
+        const type = String(messageType || '').trim().toLowerCase();
+        if (type === 'subscriber' || type === 'customer' || type === 'user') return 'customer';
+        if (type === 'agent') return 'agent';
+        if (type === 'system') return 'system';
+        return '';
+    }
+
+    function normalizeMessageMedia(media) {
+        if (!Array.isArray(media)) return [];
+        return media
+            .map(item => {
+                if (typeof item === 'string') return item.trim();
+                if (item && typeof item === 'object' && typeof item.url === 'string') return item.url.trim();
+                return '';
+            })
+            .filter(Boolean);
+    }
+
+    function normalizeConversationMessage(message) {
+        if (!message || typeof message !== 'object') return null;
+
+        const explicitRole = String(message.role || '').trim().toLowerCase();
+        const mappedRole = mapMessageTypeToRole(message.message_type);
+        const role = explicitRole || mappedRole;
+        if (!role) return null;
+
+        const contentRaw = message.content != null ? message.content : message.message_text;
+        const content = typeof contentRaw === 'string' ? contentRaw : (contentRaw == null ? '' : String(contentRaw));
+        if (!content.trim()) return null;
+
+        const normalized = { role, content };
+        const media = normalizeMessageMedia(message.media || message.message_media);
+        if (media.length) normalized.media = media;
+
+        const id = String(message.id || message.message_id || '').trim();
+        if (id) normalized.id = id;
+
+        return normalized;
+    }
+
+    function isConversationMessageObject(item) {
+        if (!item || typeof item !== 'object') return false;
+        return (
+            Object.prototype.hasOwnProperty.call(item, 'message_text') ||
+            Object.prototype.hasOwnProperty.call(item, 'message_type') ||
+            Object.prototype.hasOwnProperty.call(item, 'content') ||
+            Object.prototype.hasOwnProperty.call(item, 'role')
+        );
+    }
+
+    function isMessageArray(value) {
+        return Array.isArray(value) && value.length > 0 && value.every(isConversationMessageObject);
+    }
+
+    function normalizeConversationList(list) {
+        if (!Array.isArray(list)) return [];
+        return list
+            .map(normalizeConversationMessage)
+            .filter(Boolean);
+    }
+
+    function normalizeScenarioRecord(rawScenario, defaults, scenarioKey) {
+        const scenarioObject = Array.isArray(rawScenario)
+            ? { conversation: rawScenario }
+            : ((rawScenario && typeof rawScenario === 'object') ? rawScenario : {});
+
+        const scenarioNotes = (scenarioObject.notes || scenarioObject.guidelines) || {};
+        const defaultNotes = (defaults.notes || defaults.guidelines) || {};
+        const mergedScenario = {
+            ...defaults,
+            ...scenarioObject,
+            guidelines: {
+                ...(defaults.guidelines || {}),
+                ...(scenarioObject.guidelines || {})
+            },
+            notes: {
+                ...defaultNotes,
+                ...scenarioNotes
+            },
+            rightPanel: {
+                ...(defaults.rightPanel || {}),
+                ...(scenarioObject.rightPanel || {})
+            }
+        };
+
+        const preloadedConversation = Array.isArray(scenarioObject.conversation)
+            ? scenarioObject.conversation
+            : (Array.isArray(scenarioObject.messages) ? scenarioObject.messages : []);
+        if (preloadedConversation.length) {
+            mergedScenario.conversation = preloadedConversation;
+        }
+
+        mergedScenario.conversation = buildConversationFromScenario(mergedScenario);
+        if (!mergedScenario.customerMessage) {
+            const firstCustomer = mergedScenario.conversation.find(m => m && m.role === 'customer' && m.content);
+            if (firstCustomer) mergedScenario.customerMessage = firstCustomer.content;
+        }
+        if (!mergedScenario.agentName) mergedScenario.agentName = '';
+        if (!mergedScenario.companyName) mergedScenario.companyName = `Scenario ${scenarioKey}`;
+        mergedScenario.agentInitial = getCompanyInitial(mergedScenario.companyName);
+        return mergedScenario;
+    }
+
+    function coerceScenariosPayloadToMap(data) {
+        const scenarios = {};
+        const defaults = (data && typeof data === 'object' && !Array.isArray(data)) ? (data.defaults || {}) : {};
+
+        const addScenario = (key, rawScenario) => {
+            scenarios[String(key)] = normalizeScenarioRecord(rawScenario, defaults, String(key));
+        };
+
+        if (data && typeof data === 'object' && !Array.isArray(data) && data.scenarios && !Array.isArray(data.scenarios)) {
+            Object.keys(data.scenarios).forEach(scenarioKey => {
+                addScenario(scenarioKey, data.scenarios[scenarioKey]);
+            });
+            return scenarios;
+        }
+
+        const asArray = Array.isArray(data)
+            ? data
+            : ((data && typeof data === 'object' && Array.isArray(data.scenarios)) ? data.scenarios : null);
+
+        if (!asArray) return scenarios;
+
+        if (isMessageArray(asArray)) {
+            addScenario('1', { conversation: asArray });
+            return scenarios;
+        }
+
+        asArray.forEach((item, index) => {
+            const key = String(index + 1);
+            addScenario(key, item);
+        });
+        return scenarios;
+    }
+
     function buildConversationFromScenario(scenario) {
         if (!scenario) return [];
+        if (Array.isArray(scenario) && scenario.length) {
+            return normalizeConversationList(scenario);
+        }
         if (Array.isArray(scenario.conversation) && scenario.conversation.length) {
-            return scenario.conversation.slice();
+            return normalizeConversationList(scenario.conversation);
+        }
+        if (Array.isArray(scenario.messages) && scenario.messages.length) {
+            return normalizeConversationList(scenario.messages);
         }
         const messages = [];
         const entries = Object.entries(scenario);
@@ -466,7 +570,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 messages.push({ role: 'agent', content: value });
             }
         });
-        return messages;
+        return normalizeConversationList(messages);
     }
 
     function getFirstCustomerMessageFromScenario(scenario, conversation) {
@@ -476,6 +580,31 @@ document.addEventListener('DOMContentLoaded', async () => {
         const conv = Array.isArray(conversation) ? conversation : [];
         const firstCustomer = conv.find(m => m && m.role === 'customer' && m.content);
         return firstCustomer ? firstCustomer.content : '';
+    }
+
+    function normalizeScenarioLabelList(value) {
+        if (Array.isArray(value)) {
+            return value
+                .map(item => String(item || '').trim())
+                .filter(item => item && item !== '[object Object]')
+                .map(item => item.replace(/^['"]|['"]$/g, ''))
+                .filter(Boolean);
+        }
+        if (value && typeof value === 'object') {
+            const objValues = Object.values(value)
+                .map(item => String(item || '').trim())
+                .filter(item => item && item !== '[object Object]')
+                .map(item => item.replace(/^['"]|['"]$/g, ''))
+                .filter(Boolean);
+            return objValues;
+        }
+        if (value == null) return [];
+        const text = String(value).trim();
+        if (!text) return [];
+        return text
+            .split(/[\n,|;]+/)
+            .map(item => item.trim().replace(/^['"]|['"]$/g, ''))
+            .filter(Boolean);
     }
 
     function normalizeName(value) {
@@ -500,23 +629,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         const keys = Object.keys(scenarios).map(k => parseInt(k, 10)).filter(n => !isNaN(n));
         let nextKey = keys.length ? Math.max(...keys) + 1 : 1;
         uploaded.forEach(item => {
-            scenarios[String(nextKey)] = item;
+            scenarios[String(nextKey)] = normalizeScenarioRecord(item, {}, String(nextKey));
             nextKey++;
         });
         return scenarios;
     }
 
     async function loadTemplatesData() {
-        try {
-            const data = await fetchAssignmentGet('getUploadedTemplates', {});
-            const uploaded = Array.isArray(data.templates) ? data.templates : [];
-            if (uploaded.length) {
-                return uploaded;
-            }
-        } catch (error) {
-            console.error('Error loading uploaded templates via Apps Script:', error);
-        }
-
         try {
             const response = await fetch('templates.json', { method: 'GET' });
             if (!response.ok) throw new Error(`templates.json load failed (${response.status})`);
@@ -529,15 +648,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function loadUploadedScenarios() {
-        try {
-            const data = await fetchAssignmentGet('getUploadedScenarios', {});
-            const list = Array.isArray(data.scenarios) ? data.scenarios : [];
-            setUploadedScenarios(list);
-            return list;
-        } catch (error) {
-            console.error('Error loading uploaded scenarios via Apps Script:', error);
-            return getUploadedScenarios();
-        }
+        return [];
     }
 
     function getTemplatesForScenario(scenario) {
@@ -566,7 +677,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Load scenarios data
     async function loadScenariosData() {
-        const uploaded = await loadUploadedScenarios();
         // Immediate fallback when running from file:// to avoid CORS/network errors
         if (window.location.protocol === 'file:') {
             const fallback = {
@@ -582,111 +692,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                     rightPanel: { source: { label: 'Source', value: 'Local Demo', date: '' } }
                 }
             };
-            return appendUploadedScenarios(fallback, uploaded);
+            return fallback;
         }
         try {
             const response = await fetch('scenarios.json');
             const data = await response.json();
-            
-            // Merge defaults with each scenario
-            const scenarios = {};
-            const defaults = data.defaults || {};
-            
-            Object.keys(data.scenarios).forEach(scenarioKey => {
-                const scenarioNotes = (data.scenarios[scenarioKey].notes || data.scenarios[scenarioKey].guidelines) || {};
-                const defaultNotes = (defaults.notes || defaults.guidelines) || {};
-                const mergedScenario = {
-                    ...defaults,
-                    ...data.scenarios[scenarioKey],
-                    // Merge guidelines specifically
-                    guidelines: {
-                        ...defaults.guidelines,
-                        ...data.scenarios[scenarioKey].guidelines
-                    },
-                    notes: {
-                        ...defaultNotes,
-                        ...scenarioNotes
-                    },
-                    // Merge rightPanel specifically  
-                    rightPanel: {
-                        ...defaults.rightPanel,
-                        ...data.scenarios[scenarioKey].rightPanel
-                    }
-                };
-                if (!mergedScenario.agentName) {
-                    mergedScenario.agentName = '';
-                }
-                mergedScenario.agentInitial = getCompanyInitial(mergedScenario.companyName);
-                scenarios[scenarioKey] = mergedScenario;
-            });
-            
-            return appendUploadedScenarios(scenarios, uploaded);
+
+            const scenarios = coerceScenariosPayloadToMap(data);
+            return scenarios;
         } catch (error) {
             console.error('Error loading scenarios data:', error);
             return null;
         }
-    }
-    
-    // Generate dynamic navigation with scenario locking
-    function generateScenarioNavigation(scenarios) {
-        const dropdown = document.getElementById('scenarioDropdown');
-        if (!dropdown) return;
-        
-        // Clear and do NOT add a placeholder (centered single option looks like a pill button)
-        dropdown.innerHTML = '';
-        
-        const currentAllowed = getCurrentUnlockedScenario();
-        const adminMode = isAdminUser();
-        const scenarioNumbers = Object.keys(scenarios)
-            .map(k => parseInt(k, 10))
-            .filter(n => !isNaN(n))
-            .sort((a, b) => a - b)
-            .map(n => String(n));
-        
-        // Add scenario options
-        scenarioNumbers.forEach(scenarioNumber => {
-            const option = document.createElement('option');
-            option.value = scenarioNumber;
-            
-            const scenarioNum = parseInt(scenarioNumber);
-            
-            if (isCsvScenarioMode() || adminMode) {
-                option.textContent = `Scenario ${scenarioNumber}`;
-            } else if (scenarioNum === currentAllowed) {
-                // Current scenario - accessible
-                option.textContent = `Scenario ${scenarioNumber}`;
-            } else if (scenarioNum < currentAllowed) {
-                // Previous scenarios - completed but not accessible
-                option.textContent = `Scenario ${scenarioNumber} ✅ Completed`;
-                option.disabled = true;
-                option.style.color = '#28a745';
-            } else {
-                // Future scenarios - locked
-                option.textContent = `Scenario ${scenarioNumber} 🔒`;
-                option.disabled = true;
-                option.style.color = '#999';
-            }
-            
-            dropdown.appendChild(option);
-        });
-        
-        // Set current scenario as selected
-        const currentScenario = getCurrentScenarioNumber();
-        if (currentScenario) {
-            // Ensure the current scenario appears as the selected option (even with no placeholder)
-            dropdown.value = currentScenario;
-        }
-        
-        // Add change event listener for navigation (but they can't actually navigate anywhere)
-        dropdown.addEventListener('change', (e) => {
-            const selectedScenario = e.target.value;
-            if (selectedScenario && canAccessScenario(selectedScenario)) {
-                window.location.href = buildScenarioUrl(selectedScenario, scenarios);
-            } else {
-                // Reset dropdown to current scenario if they try to select something else
-                dropdown.value = getCurrentScenarioNumber();
-            }
-        });
     }
     
     // Helper function to get display name and icon for guideline categories
@@ -737,6 +754,82 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!chatMessages) return;
         chatMessages.innerHTML = '';
 
+        const lastAgentConversationIndex = (() => {
+            for (let i = conversation.length - 1; i >= 0; i--) {
+                if (conversation[i] && conversation[i].role === 'agent' && conversation[i].content) return i;
+            }
+            return -1;
+        })();
+
+        const getPriorCustomerMessage = (index) => {
+            for (let i = index - 1; i >= 0; i--) {
+                const msg = conversation[i];
+                if (msg && msg.role === 'customer' && msg.content) return msg.content;
+            }
+            return 'N/A';
+        };
+
+        const submitSelectedAgentMessage = async (message, index, checkbox) => {
+            const agentUsername = localStorage.getItem('agentName') || 'Unknown Agent';
+            const scenarioLabel = `Scenario ${currentScenario}`;
+            const customerContext = getPriorCustomerMessage(index);
+            const messageId = String((message && message.id) || '').trim();
+            const uniquePart = messageId || String(index + 1);
+            const sessionIdOverride = `${currentScenario}_selected_agent_${uniquePart}`;
+            const timerValue = getCurrentTimerTime();
+            checkbox.disabled = true;
+            const ok = await sendToGoogleSheetsWithTimer(
+                agentUsername,
+                scenarioLabel,
+                customerContext,
+                message.content,
+                timerValue,
+                {
+                    sessionIdOverride,
+                    messageId
+                }
+            );
+            if (!ok) {
+                checkbox.disabled = false;
+                checkbox.checked = false;
+            }
+        };
+
+        const appendMedia = (container, mediaList) => {
+            if (!Array.isArray(mediaList) || mediaList.length === 0) return;
+            const mediaWrap = document.createElement('div');
+            mediaWrap.className = 'message-media-list';
+            mediaList.forEach(mediaUrl => {
+                const url = String(mediaUrl || '').trim();
+                if (!url) return;
+                const lower = url.toLowerCase();
+                const isImage = /\.(png|jpe?g|gif|webp|bmp|svg)(\?|#|$)/.test(lower);
+                if (isImage) {
+                    const img = document.createElement('img');
+                    img.src = url;
+                    img.alt = 'Message media';
+                    img.loading = 'lazy';
+                    img.style.maxWidth = '220px';
+                    img.style.borderRadius = '8px';
+                    img.style.display = 'block';
+                    img.style.marginTop = '6px';
+                    mediaWrap.appendChild(img);
+                    return;
+                }
+                const link = document.createElement('a');
+                link.href = url;
+                link.target = '_blank';
+                link.rel = 'noopener';
+                link.textContent = url;
+                link.style.display = 'block';
+                link.style.marginTop = '6px';
+                mediaWrap.appendChild(link);
+            });
+            if (mediaWrap.childNodes.length > 0) {
+                container.appendChild(mediaWrap);
+            }
+        };
+
         if (!Array.isArray(conversation) || conversation.length === 0) {
             const fallbackMessage = document.createElement('div');
             fallbackMessage.className = 'message received';
@@ -749,16 +842,19 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        conversation.forEach(message => {
+        conversation.forEach((message, index) => {
             if (!message || !message.content) return;
             if (message.role === 'system') {
+                const systemText = String(message.content || '').trim();
+                const isCenteredSystemNote = /^(template used:|escalation notes?:)/i.test(systemText);
                 const systemMessage = document.createElement('div');
-                systemMessage.className = 'message sent system-message';
+                systemMessage.className = `message sent system-message${isCenteredSystemNote ? ' center-system-note' : ''}`;
                 systemMessage.innerHTML = `
                     <div class="message-content">
                         <p>${message.content}</p>
                     </div>
                 `;
+                appendMedia(systemMessage.querySelector('.message-content'), message.media);
                 chatMessages.appendChild(systemMessage);
                 return;
             }
@@ -772,6 +868,32 @@ document.addEventListener('DOMContentLoaded', async () => {
             const p = document.createElement('p');
             p.textContent = message.content;
             content.appendChild(p);
+            appendMedia(content, message.media);
+
+            if (isAgent && index !== lastAgentConversationIndex) {
+                wrapper.classList.add('has-agent-selector');
+                const selectorWrap = document.createElement('label');
+                selectorWrap.className = 'agent-message-selector';
+
+                const selectorInput = document.createElement('input');
+                selectorInput.type = 'checkbox';
+                selectorInput.className = 'agent-message-selector-input';
+                selectorInput.setAttribute('aria-label', 'Send this agent message to sheet');
+
+                selectorInput.addEventListener('change', async () => {
+                    if (!selectorInput.checked) return;
+                    const confirmed = window.confirm('Send this message to the sheet?');
+                    if (!confirmed) {
+                        selectorInput.checked = false;
+                        return;
+                    }
+                    await submitSelectedAgentMessage(message, index, selectorInput);
+                });
+
+                selectorWrap.appendChild(selectorInput);
+                wrapper.appendChild(selectorWrap);
+            }
+
             wrapper.appendChild(content);
             chatMessages.appendChild(wrapper);
         });
@@ -798,6 +920,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         const companyLink = document.getElementById('companyNameLink');
         const agentElement = document.getElementById('agentName');
         const messageToneElement = document.getElementById('messageTone');
+        const blocklistedWordsRow = document.getElementById('blocklistedWordsRow');
+        const escalationPreferencesRow = document.getElementById('escalationPreferencesRow');
         const phoneElement = document.getElementById('customerPhone');
         const messageElement = document.getElementById('customerMessage');
         
@@ -833,6 +957,32 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else {
             console.error('messageTone element not found');
         }
+
+        const renderBadges = (rowElement, items) => {
+            if (!rowElement) return;
+            rowElement.innerHTML = '';
+            if (!items.length) {
+                rowElement.style.display = 'none';
+                return;
+            }
+            items.forEach(item => {
+                const badge = document.createElement('span');
+                badge.className = 'agent-badge';
+                badge.textContent = item;
+                rowElement.appendChild(badge);
+            });
+            rowElement.style.display = 'flex';
+        };
+
+        const blocklistedWords = normalizeScenarioLabelList(
+            scenario.blocklisted_words != null ? scenario.blocklisted_words : scenario.blocklistedWords
+        );
+        const escalationPreferences = normalizeScenarioLabelList(
+            scenario.escalation_preferences != null ? scenario.escalation_preferences : scenario.escalationPreferences
+        );
+
+        renderBadges(blocklistedWordsRow, blocklistedWords);
+        renderBadges(escalationPreferencesRow, escalationPreferences);
         
         if (phoneElement) phoneElement.textContent = scenario.customerPhone || '';
         else console.error('customerPhone element not found');
@@ -888,7 +1038,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                     // Add guidelines items
                     categoryData.forEach(item => {
                         const li = document.createElement('li');
-                        li.textContent = item;
+                        const text = String(item || '').trim();
+                        const match = text.match(/^\*\*(.*)\*\*$/);
+                        if (match) {
+                            const strong = document.createElement('strong');
+                            strong.textContent = match[1];
+                            li.appendChild(strong);
+                        } else {
+                            li.textContent = text;
+                        }
                         guidelinesList.appendChild(li);
                     });
                     
@@ -1047,25 +1205,49 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
         
-        // Update browsing history
-        if (scenario.rightPanel.browsingHistory) {
-            const historyContainer = document.getElementById('browsingHistory');
-            if (historyContainer) {
-                historyContainer.innerHTML = '';
-                scenario.rightPanel.browsingHistory.forEach(historyItem => {
+        // Update browsing history (support multiple key shapes + show explicit empty state)
+        const historyContainer = document.getElementById('browsingHistory');
+        if (historyContainer) {
+            historyContainer.innerHTML = '';
+            const rawHistory =
+                (Array.isArray(scenario.rightPanel.browsingHistory) && scenario.rightPanel.browsingHistory) ||
+                (Array.isArray(scenario.rightPanel.browsing_history) && scenario.rightPanel.browsing_history) ||
+                (Array.isArray(scenario.rightPanel.last5Products) && scenario.rightPanel.last5Products) ||
+                (Array.isArray(scenario.rightPanel.last_5_products) && scenario.rightPanel.last_5_products) ||
+                [];
+
+            const normalizedHistory = rawHistory
+                .map(historyItem => {
+                    if (!historyItem || typeof historyItem !== 'object') return null;
+                    const itemText =
+                        String(historyItem.item || historyItem.product_name || historyItem.name || '').trim();
+                    const itemLink =
+                        String(historyItem.link || historyItem.product_link || historyItem.url || '').trim();
+                    const timeAgo =
+                        String(historyItem.timeAgo || historyItem.view_date || historyItem.date || '').trim();
+                    if (!itemText && !itemLink) return null;
+                    return { itemText: itemText || itemLink, itemLink, timeAgo };
+                })
+                .filter(Boolean);
+
+            if (!normalizedHistory.length) {
+                const empty = document.createElement('li');
+                empty.textContent = 'No browsing history for this scenario.';
+                empty.style.color = '#8a8a8a';
+                historyContainer.appendChild(empty);
+            } else {
+                normalizedHistory.forEach(historyItem => {
                     const li = document.createElement('li');
-                    const itemText = historyItem && historyItem.item ? String(historyItem.item) : '';
-                    const itemLink = historyItem && historyItem.link ? String(historyItem.link) : '';
-                    const itemEl = itemLink ? document.createElement('a') : document.createElement('span');
-                    itemEl.textContent = itemText;
-                    if (itemLink && itemEl.tagName.toLowerCase() === 'a') {
-                        itemEl.href = itemLink;
+                    const itemEl = historyItem.itemLink ? document.createElement('a') : document.createElement('span');
+                    itemEl.textContent = historyItem.itemText;
+                    if (historyItem.itemLink && itemEl.tagName.toLowerCase() === 'a') {
+                        itemEl.href = historyItem.itemLink;
                         itemEl.target = '_blank';
                         itemEl.rel = 'noopener';
                     }
                     li.appendChild(itemEl);
 
-                    if (historyItem && historyItem.timeAgo) {
+                    if (historyItem.timeAgo) {
                         const time = document.createElement('span');
                         time.className = 'time-ago';
                         time.textContent = historyItem.timeAgo;
@@ -1257,10 +1439,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Function to send data to Google Sheets with custom timer value
-    async function sendToGoogleSheetsWithTimer(agentUsername, scenario, customerMessage, agentResponse, timerValue) {
+    async function sendToGoogleSheetsWithTimer(agentUsername, scenario, customerMessage, agentResponse, timerValue, options = {}) {
         try {
             // Create a unique session ID per scenario that persists throughout the session
-            let scenarioSessionId = localStorage.getItem(`scenarioSession_${currentScenario}`);
+            let scenarioSessionId = options.sessionIdOverride || localStorage.getItem(`scenarioSession_${currentScenario}`);
             if (!scenarioSessionId) {
                 scenarioSessionId = `${currentScenario}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
                 localStorage.setItem(`scenarioSession_${currentScenario}`, scenarioSessionId);
@@ -1273,7 +1455,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 customerMessage: customerMessage,
                 agentResponse: agentResponse,
                 sessionId: scenarioSessionId, // Use scenario-specific session ID
-                sendTime: timerValue // Use the provided timer value instead of getCurrentTimerTime()
+                sendTime: (options.sendTimeOverride || timerValue), // Use the provided timer value instead of getCurrentTimerTime()
+                messageId: options.messageId || ''
             };
             
             console.log('Sending to Google Sheets:', data);
@@ -1291,8 +1474,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 console.log('Successfully sent to Google Sheets');
                 const result = await response.json();
                 console.log('Sheet response:', result);
+                return true;
             } else {
                 console.error('Failed to send to Google Sheets:', response.status);
+                return false;
             }
         } catch (error) {
             console.error('Error sending to Google Sheets:', error);
@@ -1307,13 +1492,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                     customerMessage,
                     agentResponse,
                     sessionId: localStorage.getItem(`scenarioSession_${currentScenario}`) || 'unknown',
-                    sendTime: timerValue || getCurrentTimerTime()
+                    sendTime: timerValue || getCurrentTimerTime(),
+                    messageId: (options && options.messageId) || ''
                 };
                 failedData.push(safeData);
                 localStorage.setItem('failedSheetData', JSON.stringify(failedData));
             } catch (e) {
                 console.error('Failed to persist failedSheetData:', e);
             }
+            return false;
         }
     }
     
@@ -1397,185 +1584,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
     
-    function addMessage(text, type = 'sent') {
-        if (!text.trim()) return;
-
+    function addSystemStatusMessage(text) {
+        if (!chatMessages || !text) return;
         const messageDiv = document.createElement('div');
-        messageDiv.classList.add('message', type);
-        
-        const messageContentDiv = document.createElement('div');
-        messageContentDiv.classList.add('message-content');
-
-        const messageTextP = document.createElement('p');
-        messageTextP.textContent = text;
-
-        const timestampSpan = document.createElement('span');
-        timestampSpan.classList.add('timestamp');
-        const now = new Date();
-        const formattedDate = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) + 
-                             ', ' + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        timestampSpan.textContent = formattedDate;
-
-        messageContentDiv.appendChild(messageTextP);
-        messageContentDiv.appendChild(timestampSpan);
-        messageDiv.appendChild(messageContentDiv);
-
+        messageDiv.className = 'message sent system-message center-system-note';
+        messageDiv.innerHTML = `
+            <div class="message-content">
+                <p>${text}</p>
+            </div>
+        `;
         chatMessages.appendChild(messageDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to bottom
-    }
-    
-    function handleSendMessage() {
-        const messageText = chatInput.value;
-        if (!messageText.trim()) return; // Don't send empty messages
-        
-        // Get current timer value BEFORE resetting it
-        const currentTimerValue = getCurrentTimerTime();
-        
-        // Get current context for logging
-        const agentUsername = localStorage.getItem('agentName') || 'Unknown Agent';
-        const currentScenarioName = `Scenario ${currentScenario}`;
-        const lastCustomerMessage = getLastCustomerMessage();
-        
-        // UI updates happen immediately for fast response
-        addMessage(messageText, 'sent');
-        resetTimer();
-        chatInput.value = ''; // Clear input
-        chatInput.focus();
-        
-        // Send to Google Sheets in the next tick (completely non-blocking)
-        setTimeout(() => {
-            sendToGoogleSheetsWithTimer(agentUsername, currentScenarioName, lastCustomerMessage, messageText, currentTimerValue);
-        }, 0);
-
-        // Increment message count for current scenario
-        const messageCount = incrementMessageCount(currentScenario);
-        console.log(`Message ${messageCount} sent for scenario ${currentScenario}`);
-
-        // Generate scenario-specific response
-        generateScenarioResponse(currentScenario, messageText);
-        
-        // Check if we should unlock next scenario after customer response
-        // We'll handle this in the generateScenarioResponse function
-    }
-
-    // Function to generate scenario-specific customer responses
-    function generateScenarioResponse(scenarioNumber, agentMessage) {
-        if (!scenarioData) return;
-        
-        const messageCount = getMessageCountForScenario(scenarioNumber);
-        
-        if (scenarioData.responseType === 'angry_custom' && scenarioNumber === '5') {
-            // Special handling for scenario 5
-            if (!hasRespondedOnce) {
-                hasRespondedOnce = true;
-                setTimeout(() => {
-                    addMessage(scenarioData.angryResponse, 'received');
-                    // Check if this is the second message and unlock next scenario
-                    checkAndUnlockNextScenario(scenarioNumber, messageCount);
-                }, 1000);
-            } else if (messageCount >= 2) {
-                // No more responses after 2nd message
-                checkAndUnlockNextScenario(scenarioNumber, messageCount);
-            }
-        } else if (scenarioData.responseType === 'template') {
-            // Template responses for scenarios 1-4
-            if (messageCount === 1) {
-                // First message - customer responds
-                setTimeout(() => {
-                    addMessage("[Customer response - please reply again]", 'received');
-                }, 1000);
-            } else if (messageCount >= 2) {
-                // Second message - scenario complete, unlock next
-                setTimeout(() => {
-                    addMessage("[Thank you! This scenario is now complete.]", 'received');
-                    checkAndUnlockNextScenario(scenarioNumber, messageCount);
-                }, 1000);
-            }
-        }
-    }
-    
-    // Function to check if we should unlock the next scenario
-    function checkAndUnlockNextScenario(scenarioNumber, messageCount) {
-        if (isCsvScenarioMode()) return;
-        if (messageCount >= 2) {
-            const nextScenario = unlockNextScenario();
-            
-            // Show notification about unlocked scenario
-            if (totalScenarioCount === 0 || nextScenario <= totalScenarioCount) {
-                setTimeout(() => {
-                    const notification = document.createElement('div');
-                    notification.style.cssText = `
-                        position: fixed;
-                        top: 20px;
-                        right: 20px;
-                        background: #28a745;
-                        color: white;
-                        padding: 15px 20px;
-                        border-radius: 8px;
-                        font-weight: 500;
-                        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                        z-index: 1000;
-                        opacity: 0;
-                        transition: opacity 0.3s ease;
-                    `;
-                    notification.textContent = `🎉 Scenario ${nextScenario} unlocked! Click here to continue.`;
-                    notification.style.cursor = 'pointer';
-                    
-                    // Make notification clickable to go to next scenario
-                    notification.addEventListener('click', () => {
-                        window.location.href = buildScenarioUrl(String(nextScenario));
-                    });
-                    
-                    document.body.appendChild(notification);
-                    
-                    // Fade in
-                    setTimeout(() => notification.style.opacity = '1', 100);
-                    
-                    // Fade out and remove after 5 seconds (longer since it's clickable)
-                    setTimeout(() => {
-                        notification.style.opacity = '0';
-                        setTimeout(() => notification.remove(), 300);
-                    }, 5000);
-                    
-                    // Update dropdown to show newly unlocked scenario
-                    loadScenariosData().then(scenarios => {
-                        if (scenarios) {
-                            generateScenarioNavigation(scenarios);
-                        }
-                    });
-                }, 1000);
-            } else {
-                // All scenarios completed
-                setTimeout(() => {
-                    const notification = document.createElement('div');
-                    notification.style.cssText = `
-                        position: fixed;
-                        top: 20px;
-                        right: 20px;
-                        background: #007bff;
-                        color: white;
-                        padding: 15px 20px;
-                        border-radius: 8px;
-                        font-weight: 500;
-                        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                        z-index: 1000;
-                        opacity: 0;
-                        transition: opacity 0.3s ease;
-                    `;
-                    notification.textContent = `🎉 Congratulations! All scenarios completed!`;
-                    document.body.appendChild(notification);
-                    
-                    // Fade in
-                    setTimeout(() => notification.style.opacity = '1', 100);
-                    
-                    // Keep it visible longer for completion
-                    setTimeout(() => {
-                        notification.style.opacity = '0';
-                        setTimeout(() => notification.remove(), 300);
-                    }, 7000);
-                }, 1000);
-            }
-        }
+        chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
     async function navigateScenarioList(direction) {
@@ -1649,22 +1668,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    if (sendButton) {
-        sendButton.addEventListener('click', handleSendMessage);
-    }
-    if (chatInput) {
-        chatInput.addEventListener('keypress', (event) => {
-            if (event.key === 'Enter') {
-                handleSendMessage();
-            }
-        });
-    }
-
-    // Action buttons: Close / Unsubscribe / Block
-    const closeBtn = document.getElementById('closeBtn');
-    const unsubscribeBtn = document.getElementById('unsubscribeBtn');
-    const blockBtn = document.getElementById('blockBtn');
-
     function endConversation(action) {
         // Map for display message and sheet value
         const actionConfig = {
@@ -1677,16 +1680,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!cfg) return;
 
         // Add the end message from the AGENT side (wrapped in brackets)
-        addMessage(`[This conversation has been ${cfg.display}.]`, 'sent');
-
-        // Disable further sending in this scenario
-        if (chatInput) {
-            chatInput.disabled = true;
-            chatInput.placeholder = 'Conversation ended. Proceed to the next scenario.';
-        }
-        if (sendButton) {
-            sendButton.disabled = true;
-        }
+        addSystemStatusMessage(`[This conversation has been ${cfg.display}.]`);
 
         // Persist a flag that this scenario is ended to prevent further input on reload
         localStorage.setItem(`scenarioEnded_${currentScenario}`, action);
@@ -1732,23 +1726,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 setTimeout(() => notification.remove(), 300);
             }, 5000);
 
-            // Refresh dropdown to reflect unlock state
-            loadScenariosData().then(scenarios => {
-                if (scenarios) {
-                    generateScenarioNavigation(scenarios);
-                }
-            });
         }, 500);
-    }
-
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => endConversation('closed'));
-    }
-    if (unsubscribeBtn) {
-        unsubscribeBtn.addEventListener('click', () => endConversation('unsubscribed'));
-    }
-    if (blockBtn) {
-        blockBtn.addEventListener('click', () => endConversation('blocked'));
     }
 
     // Keyboard shortcuts for actions:
@@ -2011,7 +1989,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     .filter(n => !isNaN(n))
                     .sort((a, b) => a - b)
                     .map(n => String(n));
-                totalScenarioCount = scenarioKeys.length;
                 const requestedScenario = resolveRequestedScenarioKey(scenarios) || getCurrentScenarioNumber();
                 const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
                 setCurrentScenarioNumber(activeScenario);
@@ -2026,7 +2003,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 .filter(n => !isNaN(n))
                 .sort((a, b) => a - b)
                 .map(n => String(n));
-            totalScenarioCount = scenarioKeys.length;
             const requestedScenario = resolveRequestedScenarioKey(scenarios) || getCurrentScenarioNumber();
             const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
             setCurrentScenarioNumber(activeScenario);
@@ -2239,9 +2215,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             // Process dropdowns: capture human-readable labels
-            const troubleshootSel = document.getElementById('troubleshootingMiss');
             const zeroTolSel = document.getElementById('zeroTolerance');
-            const troubleshootingMissLabel = (troubleshootSel && troubleshootSel.value) ? troubleshootSel.options[troubleshootSel.selectedIndex].text : '';
             const zeroToleranceLabel = (zeroTolSel && zeroTolSel.value) ? zeroTolSel.options[zeroTolSel.selectedIndex].text : '';
             const notesVal = formData.get('notes') || '';
             
@@ -2282,7 +2256,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     workflow: buildCategoryCell('workflow'),
                     clarity: buildCategoryCell('clarity'),
                     tone: buildCategoryCell('tone'),
-                    efficientTroubleshootingMiss: troubleshootingMissLabel || '',
                     zeroTolerance: zeroToleranceLabel || '',
                     notes: notesVal
                 };

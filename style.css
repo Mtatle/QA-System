@@ -303,27 +303,60 @@ polyline[points="6 9 12 15 18 9"] {
     margin-left: 25px;
 }
 .agent-name {
-    font-weight: 500;
+    font-weight: 700;
     margin-right: 5px;
 }
 .agent-name .icon-small {
     color: #bdc3c7;
 }
 
-/* Logout button styling */
-.logout-btn {
+/* Top bar action buttons */
+.logout-btn,
+.next-conversation-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    appearance: none;
+    font-family: 'Montserrat', sans-serif;
     background: #FFC5B9;
     color: #000;
     border: 0;
     border-radius: 8px;
-    padding: 8px 16px;
+    height: 34px;
+    padding: 0 16px;
     font-size: 0.9em;
-    font-weight: 600;
+    font-weight: 700;
+    line-height: normal;
     cursor: pointer;
+    box-sizing: border-box;
 }
-.logout-btn:hover {
+
+.logout-btn:hover,
+.next-conversation-btn:hover {
     background-color: #FFA175;
     color: white;
+}
+
+.logout-btn:active,
+.next-conversation-btn:active {
+    background: #f9895d;
+}
+
+.logout-btn:focus-visible,
+.next-conversation-btn:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+.logout-btn .icon-small {
+    display: block;
+    margin-right: 6px;
+    color: currentColor;
+    position: static;
+    transform: none;
+    flex: 0 0 auto;
+    vertical-align: baseline;
 }
 
 .assignment-refresh-icon-btn {
@@ -380,30 +413,6 @@ polyline[points="6 9 12 15 18 9"] {
     font-size: 0.74em;
     color: #4a4a4a;
     min-height: 1em;
-}
-
-.next-conversation-btn {
-    background: #FFC5B9;
-    color: #000;
-    border: 0;
-    border-radius: 8px;
-    padding: 8px 16px;
-    font-size: 0.9em;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.next-conversation-btn:hover {
-    background: #FFA175;
-    color: white;
-}
-
-.next-conversation-btn:active {
-    background: linear-gradient(135deg, #336fe0 0%, #56bde9 100%);
-}
-
-.next-conversation-btn:focus-visible {
-    outline: none;
 }
 
 
@@ -648,15 +657,6 @@ input:checked + .slider:before {
     font-size: 0.9em;
     color: #666;
 }
-.company-info {
-    margin-bottom: 20px;
-}
-.company-info h4 {
-    font-size: 0.8em;
-    color: #888;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
 .company-name-display {
     font-weight: 500;
 }
@@ -710,9 +710,9 @@ input:checked + .slider:before {
     align-items: center;
 }
 .agent-profile .agent-tone-inline {
-    background: #E2FA9F;
-    color: #0d2a52;
-    border: 1px solid #81B045;
+    background: #4a4a4a;
+    color: #fff;
+    border: 1px solid #3b3b3b;
     border-radius: 8px;
     padding: 2px 8px;
     font-weight: 600;
@@ -721,6 +721,37 @@ input:checked + .slider:before {
     margin-left: auto;
     transition: none;
     cursor: default;
+}
+.agent-profile .agent-badges-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.agent-profile .agent-badge {
+    border-radius: 8px;
+    padding: 2px 8px;
+    font-weight: 600;
+    font-size: 0.82em;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.agent-profile .agent-badges-row--blocklist .agent-badge {
+    background: #FFC5B9;
+    color: #000;
+    border: 1px solid #FFA175;
+}
+
+.agent-profile .agent-badges-row--escalation .agent-badge {
+    background: #E2FA9F;
+    color: #0d2a52;
+    border: 1px solid #81B045;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    max-width: 100%;
 }
 .status-indicator {
     background-color: #e6f7ff;
@@ -796,7 +827,7 @@ input:checked + .slider:before {
     border-radius: 18px;
     max-width: 70%;
     line-height: 1.4;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    box-shadow: none;
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -850,14 +881,74 @@ input:checked + .slider:before {
 }
 .message.received {
     background-color: #f0f0f0;
+    border: 0.5px solid #d8dde4;
+    --bubble-bg: #f0f0f0;
+    --bubble-border: #d8dde4;
     align-self: flex-start;
 }
 .message.sent {
-    background-color: #e6fffb;
+    background-color: #FFFBE6;
+    border: 0.5px solid #e7dea8;
+    --bubble-bg: #FFFBE6;
+    --bubble-border: #e7dea8;
     align-self: flex-end;
 }
 .message.sent.system-message {
     background-color: #fff !important;
+    border: 0.5px solid #d8dde4;
+    --bubble-bg: #fff;
+    --bubble-border: #d8dde4;
+}
+
+.message.received::after,
+.message.sent::after {
+    display: none;
+}
+
+.message.received::after {
+    left: 0;
+}
+
+.message.sent::after {
+    right: 0;
+}
+
+.message.received::before,
+.message.sent::before {
+    display: none;
+}
+
+.message.received::before {
+    left: 0;
+}
+
+.message.sent::before {
+    right: 0;
+}
+
+.message.center-system-note::before,
+.message.center-system-note::after {
+    display: none;
+}
+.message.center-system-note {
+    align-self: center;
+    max-width: 88%;
+    background: transparent !important;
+    border: 0;
+    box-shadow: none;
+    padding: 2px 6px;
+}
+
+.message.center-system-note .message-content {
+    align-items: center;
+    text-align: center;
+    background: transparent !important;
+}
+
+.message.center-system-note .message-content p {
+    color: #666;
+    font-size: 0.84em;
+    margin: 0;
 }
 .message.sent .message-sender-icon {
     order: 1;
@@ -865,28 +956,34 @@ input:checked + .slider:before {
 .message.sent .message-content {
     order: 0;
 }
-
-.message-options {
+.agent-message-selector {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: 10px;
-    right: -25px;
+    left: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.message.sent.has-agent-selector {
+    overflow: visible;
+}
+
+.agent-message-selector-input {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    accent-color: #2f6fed;
     cursor: pointer;
-    color: #aaa;
-}
-.message.sent .message-options {
-    left: -25px;
-    right: auto;
 }
 
-
-.chat-input-area {
-    display: flex;
-    padding: 20px;
-    border-top: 1px solid #e0e0e0;
-    background-color: #f8f9fa;
-    flex-shrink: 0;
-    align-items: flex-end;
+.agent-message-selector-input:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
 }
+
 #internalNotes {
     width: 100%;
     resize: vertical;
@@ -1260,9 +1357,17 @@ body.assignment-view-only #internalNotesContainer {
     font-size: 0.9em;
     margin-left: auto;
     margin-right: 10px;
+    white-space: nowrap;
+    flex: 0 0 auto;
 }
 .browsing-history .icon-small {
     color: #888;
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    flex: 0 0 12px;
+    margin-right: 0;
+    display: block;
 }
 
 #ordersList li {
@@ -1283,9 +1388,17 @@ body.assignment-view-only #internalNotesContainer {
 }
 
 .order-summary-left {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 8px;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.order-summary-left .time-ago {
+    margin-left: auto;
+    white-space: nowrap;
+    flex: 0 0 auto;
 }
 
 .order-chevron-text {
@@ -1665,6 +1778,8 @@ mark {
 
 /* Dynamic Guidelines Styles */
 .guidelines-section {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
     background-color: #FFFBE6;
     border: 1px solid #FFE58F;
     border-radius: 4px;
@@ -1675,6 +1790,7 @@ mark {
 .guidelines-header {
     display: flex;
     align-items: center;
+    font-size: inherit;
     font-weight: 600;
     margin-bottom: 8px;
     color: #333;
@@ -1695,7 +1811,8 @@ mark {
 
 .guidelines-list li {
     margin-bottom: 5px;
-    font-size: 0.9em;
+    font-size: inherit;
+    font-weight: 400;
     color: #555;
     position: relative;
     padding-left: 15px;
@@ -1719,4 +1836,9 @@ mark {
 .message.sent.system-message,
 .message.system-message .message-content {
     background-color: #fff !important;
+}
+
+.message.center-system-note,
+.message.center-system-note .message-content {
+    background-color: transparent !important;
 }
