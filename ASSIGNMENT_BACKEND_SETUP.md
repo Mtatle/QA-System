@@ -18,6 +18,17 @@ The assignment/session logic is now merged into `pool-upload.gs`.
 
 Do not deploy `google-assignment-session-backend.gs` alongside it, since duplicate `doGet`/`doPost` handlers will conflict.
 
+## Frontend URL Config
+Use `qa-config.js` as the single source for the backend URL:
+
+`GOOGLE_SCRIPT_URL: 'https://script.google.com/macros/s/<deployment-id>/exec'`
+
+Both `app.js` and `login.js` read from this same value.
+
+For Item 5 rollout steps and validation matrix, use:
+
+`ITEM5_DEPLOY_STAGING_PILOT_RUNBOOK.md`
+
 ## Required Sheets
 1. `Assignments`
 2. `Pool`

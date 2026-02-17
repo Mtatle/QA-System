@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw2QItqEKnA9flsplRYiO-TF5jSZ_8zXH7YA5SAwVCGlmkZhlojwv5wZk0EVuKtSTpvog/exec';
+    const GOOGLE_SCRIPT_URL = String(
+        (window.QA_CONFIG && window.QA_CONFIG.GOOGLE_SCRIPT_URL) ||
+        'https://script.google.com/macros/s/AKfycbyGbsJuilfRrAi111vKpEnlXBmhiHU3z1-YsIESqdKO0lTYRkkoV9r-Z9l07a-27ZJBdA/exec'
+    ).trim();
     const GOOGLE_CLIENT_ID = '221055611291-bubr5o9bq85cuds4m2r44vabu1nv4gg0.apps.googleusercontent.com';
     // Load allowed agents and emails list
     let allowedAgents = [];
