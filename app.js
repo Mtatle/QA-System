@@ -2068,11 +2068,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         loadScenarioContent(assignmentContext.scenarioKey, allScenariosData || {});
 
         const customForm = document.getElementById('customForm');
+        const formStatusEl = document.getElementById('formStatus');
         const serverFormState = parseStoredFormState(assignmentContext.form_state_json);
         const localFormStateKey = assignmentFormStateStorageKey();
         const localFormState = localFormStateKey ? parseStoredFormState(localStorage.getItem(localFormStateKey)) : null;
         applyDefaultCustomFormState(customForm);
         applyCustomFormState(customForm, serverFormState || localFormState);
+        if (formStatusEl) {
+            formStatusEl.textContent = '';
+            formStatusEl.style.color = '';
+        }
 
         if (internalNotesEl) {
             const notesKey = assignmentNotesStorageKey();
