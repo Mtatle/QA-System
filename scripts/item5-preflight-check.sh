@@ -45,6 +45,12 @@ check_grep "qa-config\\.js" "app.html" "app.html loads qa-config.js"
 check_grep "window\\.QA_CONFIG" "app.js" "app.js reads backend URL from shared config"
 check_grep "window\\.QA_CONFIG" "login.js" "login.js reads backend URL from shared config"
 
-check_grep "ITEM5_DEPLOY_STAGING_PILOT_RUNBOOK\\.md" "ASSIGNMENT_BACKEND_SETUP.md" "Backend setup links to Item 5 runbook"
+PRIVATE_DOC_DIR=".private-docs"
+BACKEND_SETUP_DOC="$PRIVATE_DOC_DIR/ASSIGNMENT_BACKEND_SETUP.md"
+if [[ -f "$BACKEND_SETUP_DOC" ]]; then
+    check_grep "ITEM5_DEPLOY_STAGING_PILOT_RUNBOOK\\.md" "$BACKEND_SETUP_DOC" "Backend setup links to Item 5 runbook"
+else
+    pass "Backend setup links to Item 5 runbook (skipped; optional private doc missing)"
+fi
 
 pass "Item 5 repo preflight checks complete"
