@@ -18,6 +18,16 @@ The assignment/session logic is now merged into `pool-upload.gs`.
 
 Do not deploy `google-assignment-session-backend.gs` alongside it, since duplicate `doGet`/`doPost` handlers will conflict.
 
+## Install 5-Minute Auto-Cleanup Trigger
+To release stale assigned conversations even when no users are online:
+
+1. In Apps Script editor, run `installSessionCleanupTriggerEveryFiveMinutes()` once.
+2. Approve permissions when prompted.
+3. (Optional) Run `runScheduledSessionCleanup()` once to verify it executes.
+
+Utility:
+- `removeSessionCleanupTriggers()` removes existing scheduled cleanup triggers for rollback/testing.
+
 ## Frontend URL Config
 Use `qa-config.js` as the single source for the backend URL:
 

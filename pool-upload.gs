@@ -902,6 +902,8 @@ function writeSheetDataRows_(sheet, rows, colCount) {
 function cleanupStaleSessions_(state, nowIso) {
   const nowMs = parseIsoMs_(nowIso);
   const timeoutMs = SESSION_TIMEOUT_MINUTES * 60 * 1000;
+  let timedOutCount = 0;
+  let releasedCount = 0;
 
   for (let i = 0; i < state.sessionsRows.length; i++) {
     const session = rowToSessionObject_(state.sessionsRows[i]);
@@ -915,11 +917,13 @@ function cleanupStaleSessions_(state, nowIso) {
 
     const timeoutReason = stateName === 'COOLDOWN' ? 'logout_cooldown_timeout' : 'heartbeat_timeout';
     const released = releaseAssignmentsForSession_(state, session.session_id, timeoutReason, nowIso);
+    releasedCount += Math.max(0, Number(released) || 0);
     session.state = 'TIMED_OUT';
     session.ended_at = nowIso;
     session.end_reason = timeoutReason;
     session.last_heartbeat_at = nowIso;
     state.sessionsRows[i] = sessionToRow_(session);
+    timedOutCount += 1;
 
     appendHistoryRow_(state.historyRowsToAppend, {
       event_type: 'session_timed_out',
@@ -932,6 +936,11 @@ function cleanupStaleSessions_(state, nowIso) {
       detail: `released=${released};from=${stateName}`
     });
   }
+
+  return {
+    timed_out_count: timedOutCount,
+    released_count: releasedCount
+  };
 }
 
 function resolveQueueSession_(state, email, requestedSessionId, appBase, nowIso) {
@@ -1754,6 +1763,79 @@ function withScriptLock_(fn) {
   } finally {
     lock.releaseLock();
   }
+}
+
+function runScheduledSessionCleanup() {
+  return withScriptLock_(function() {
+    const state = loadAssignmentState_();
+    const now = nowIso_();
+    const cleanupResult = cleanupStaleSessions_(state, now);
+    persistAssignmentState_(state);
+    return {
+      ok: true,
+      ran_at: now,
+      timeout_minutes: SESSION_TIMEOUT_MINUTES,
+      timed_out_count: Math.max(0, Number(cleanupResult && cleanupResult.timed_out_count) || 0),
+      released_count: Math.max(0, Number(cleanupResult && cleanupResult.released_count) || 0)
+    };
+  });
+}
+
+function installSessionCleanupTriggerEveryFiveMinutes() {
+  const handlerName = 'runScheduledSessionCleanup';
+  const triggers = ScriptApp.getProjectTriggers();
+  let removedExisting = 0;
+
+  for (let i = 0; i < triggers.length; i++) {
+    const trigger = triggers[i];
+    if (
+      trigger.getHandlerFunction &&
+      trigger.getEventType &&
+      String(trigger.getHandlerFunction() || '') === handlerName &&
+      String(trigger.getEventType() || '') === String(ScriptApp.EventType.CLOCK)
+    ) {
+      ScriptApp.deleteTrigger(trigger);
+      removedExisting += 1;
+    }
+  }
+
+  ScriptApp
+    .newTrigger(handlerName)
+    .timeBased()
+    .everyMinutes(5)
+    .create();
+
+  return {
+    ok: true,
+    handler: handlerName,
+    interval_minutes: 5,
+    removed_existing: removedExisting
+  };
+}
+
+function removeSessionCleanupTriggers() {
+  const handlerName = 'runScheduledSessionCleanup';
+  const triggers = ScriptApp.getProjectTriggers();
+  let removed = 0;
+
+  for (let i = 0; i < triggers.length; i++) {
+    const trigger = triggers[i];
+    if (
+      trigger.getHandlerFunction &&
+      trigger.getEventType &&
+      String(trigger.getHandlerFunction() || '') === handlerName &&
+      String(trigger.getEventType() || '') === String(ScriptApp.EventType.CLOCK)
+    ) {
+      ScriptApp.deleteTrigger(trigger);
+      removed += 1;
+    }
+  }
+
+  return {
+    ok: true,
+    handler: handlerName,
+    removed: removed
+  };
 }
 
 function getOrCreateSheet_(spreadsheet, sheetName, headers) {
