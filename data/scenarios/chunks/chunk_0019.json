@@ -3,770 +3,289 @@
   "chunk": "chunk_0019",
   "scenarios": {
     "91": {
+      "id": "019bd6c4-798d-48e4-f000-0000f4a839a1",
+      "companyName": "Modern Gents Trading Co",
+      "companyWebsite": "https://modgents.com",
       "agentName": "Sarah",
-      "id": "019bc7cb-dd17-4bce-f000-0000f12afc6c",
+      "agentInitial": "M",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "SystemMessage1": "Modern Gents: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Modern Gents.",
+      "SystemMessage2": "Modern Gents: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/Rnh",
+      "SystemMessage3": "Modern Gents: Yay! You're in :)\n\nShop more & save more!\n\n$15 off $75+ code: MOD15\n$35 off $150+ code: MOD35\n$60 off $200+ code: MOD60\n\nShop Now: modgents.attn.tv/aDZnrWH6QvYo",
+      "SystemMessage4": "Modern Gents: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nExplore our latest additions! Don't miss out: https://modgents.attn.tv/a6aalTLshHZs .",
+      "customerMessage1": "Found what I wanted what about payment plan I saw 32.50 a month",
+      "AgentMessage1": "Modern Gents: Thank you for letting me know! We have a couple of installment options for you. You can check more about it here: https://modgents.attn.tv/a8zBo4a8Ubyo\n\nIn the meantime, you can check our new arrivals here: https://modgents.attn.tv/aeWhPkFdQDS9",
+      "customerMessage2": "\"",
+      "AgentMessage2": "Modern Gents: I appreciate the photo. Unfortunately, the one in the photo you sent is not included. You can find the financing options we offer on the link I shared above. I'll be here if you need further help.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://greenpan.us",
+          "value": "https://modgents.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.greenpan.us/products/valencia-pro-ceramic-nonstick-8-9-5-and-11-frypan-set-gray-1?utm_source=Viewed%20Valencia%20%28Last%2030%20Days%29&utm_medium=email&utm_campaign=011626_Promo_Flash_Canterbury%20%282026-01-16%29&utm_klaviyo_id=01KDZXPCAMYJ1987FZ48SHQTE0&_kx=wjKh_xXJSF_ScKiqA_1IzXY7ltU8h4Zu0O2R8blQ2rE.RA8TsL",
-            "item": "Valencia Pro Ceramic Nonstick 8\", 9.5\", and 11\" Frypan Set | Gray",
-            "timeAgo": "2026-01-16"
+            "item": "The Meadow",
+            "link": "https://modgents.com/products/the-meadow?group=true&Size=3.5",
+            "icon": "eye"
           },
           {
-            "link": "https://www.greenpan.us/products/valencia-pro-ceramic-nonstick-8-9-5-and-11-frypan-set-gray-1?utm_source=Viewed%20Valencia%20%28Last%2030%20Days%29&utm_medium=email&utm_campaign=011626_Promo_Flash_Canterbury%20%282026-01-16%29&utm_klaviyo_id=01KDZXPCAMYJ1987FZ48SHQTE0&_kx=wjKh_xXJSF_ScKiqA_1IzXY7ltU8h4Zu0O2R8blQ2rE.RA8TsL",
-            "item": "Valencia Pro Ceramic Nonstick 8\", 9.5\", and 11\" Frypan Set | Gray - Gray",
-            "timeAgo": "2026-01-16"
-          },
-          {
-            "link": "https://www.greenpan.us/products/reserve-pro-ceramic-nonstick-8-10-and-12-frypan-set-cream",
-            "item": "Reserve Pro Ceramic Nonstick 8\", 10\" and 12\" Frypan Set | Cream",
-            "timeAgo": "2026-01-09"
-          },
-          {
-            "link": "https://www.greenpan.us/products/reserve-pro-ceramic-nonstick-8-10-and-12-frypan-set-cream",
-            "item": "Reserve Pro Ceramic Nonstick 8\", 10\" and 12\" Frypan Set | Cream",
-            "timeAgo": "2026-01-09"
-          },
-          {
-            "link": "https://www.greenpan.us/products/reserve-pro-ceramic-nonstick-8-10-and-12-frypan-set-cream",
-            "item": "Reserve Pro Ceramic Nonstick 8\", 10\" and 12\" Frypan Set | Cream",
-            "timeAgo": "2026-01-09"
+            "item": "The Meadow - Gold",
+            "link": "https://modgents.com/products/the-meadow-gold",
+            "icon": "eye"
           }
-        ]
+        ],
+        "orders": []
       },
-      "companyWebsite": "https://greenpan.us",
-      "companyName": "Greenpan",
-      "notes": {
-        "send_to_cs": [
-          "For the following inbound message types use PPI shortcut:",
-          "➜ Post-purchase issues",
-          "➜ Product-specific questions & any q's about materials/heating/temperature-based q's etc.",
-          "➜ Damaged orders",
-          "➜ Any q's regarding aluminum or aluminium issues",
-          "➜ Voltage / Wattage inquiries",
-          "➜ Complaints about the quality of the products",
-          "➜ Q's about product differences/comparison",
-          "➜ Warranty issues",
-          "➜ Any q's or comments about the lawsuit"
-        ],
-        "tone": [
-          "Close the convo once the client takes over",
-          "Don't say words like \"I'm not sure, or certain\"",
-          "Add \"Happy cooking!\" when closing a convo!",
-          "Let the cx have the last word"
-        ],
-        "templates": [
-          "For product recommendations, use DHR shortcut"
-        ],
-        "drive_to_purchase": [
-          "Send links to collections if customers aren't looking for a specific product!"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: Welcome to GreenPan! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: Welcome to the GreenPan Kitchen! This is Sarah, your personal concierge! Feel free to text me with any questions.\n\nWe revolutionized home cooking in 2007 when we introduced the world to healthy ceramic nonstick, the first and best toxin-free and PFAS-free alternative to conventional coatings. With over 55,000 5-Star Reviews, we offer high quality cookware to make your whole kitchen PFAS-free.\n\nJust for you: $50 Off Your Order of $275 or more + Free Shipping with code W1MA0N9TA39X. See details here: greenpan.attn.tv/aEi8oEKTAtZo \n\nDiscover the Original. Shop Now: greenpan.attn.tv/aEXjcBLFQSrM ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: Save our contact card so you'll always see our offers, launches & rewards texts first.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: New Year, New Cookware, BIG Savings! \n \nUp to 60% off Sitewide + 100s of New Arrivals + FREE Limited Edition Cookbook with over 90+ new recipes for healthy cooking in the new year.\n \nShop Now: greenpan.attn.tv/a0eK8kNMowJv ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: Hi , this is Sarah from GreenPan. Thanks for checking out our site! 😊 greenpan.attn.tv/a1TQNc5GlQCr Is there a product we can help you find?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: What's In Your Pan? Make the Switch, Cook Toxin-Free: Free of PFAS, PFOA, Lead & Cadmium\n\nSince we invented healthy ceramic nonstick coatings in 2007, we've been proud of the things we don't put in our pans.\n\n$50 Off Your Order of $275 or more + Free Shipping with code W1MA0N9TA39X. See details: greenpan.attn.tv/aBWPK_jZxUBx \n\nMake the Switch. Shop Now: \n greenpan.attn.tv/aqpSkloa2Ntv ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: New Year, New You, New Arrivals!\n \nTODAY ONLY: Our all-new Spin & Go Portable Blender is just $99.99. From fruit smoothies to protein shakes and more, you can now enjoy healthy mixes anytime, anywhere.\n \nPick Your Color: greenpan.attn.tv/abM9SuKd5qDm ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: We Invented It. We Make It Better.\n\nThat's why we have a dedicated research and development team that analyzes every facet of our products to create never-before-seen technologies that take our collections to the next level.\n\n$50 Off Your Order of $275 or more + Free Shipping with code W1MA0N9TA39X. See details here: greenpan.attn.tv/aBMmFlrexVtE \n\nDiscover what dedication can create. Shop Now: greenpan.attn.tv/aCU6mlPiQ8bO ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: High protein frozen treats? That is so 2026!\n \nMake healthy frozen treats with our Frost 15-in-1 Ice Cream & Frozen Treat Maker - right at home in 15 minutes or less! \n \nOur must-try recipes:\n\nBerry Kefir Protein Smoothie: greenpan.attn.tv/a42B8hykgFFx \nBanana Protein Ice Cream: greenpan.attn.tv/aF0GG14byg4L \n\nShop Frost + FREE Recipe Book: greenpan.attn.tv/atS_tgnluyyh ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: Thank you for your purchase! Your order number is 709411. View more information about your order here: https://greenpan.attn.tv/ab1rrvwtT6RZ .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: Hey Gregory, I'm Sarah from GreenPan. Welcome to our exclusive VIP list!\n\nIs there a product we can help you find?\n\nhttps://greenpan.attn.tv/aQVcIbUZQ4l7 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: Hey, it's Sarah again. I have a quick tip! Make sure to save our contact card, so that you never miss an exclusive VIP offer. \n\nIs there anything else I can help you with?\n\nhttps://greenpan.attn.tv/aFL8xD0sBJ2X .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: Hey Gregory, order #709411 has been delivered! Track your order here: https://greenpan.attn.tv/aXppi7yHXoof .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GreenPan: Hi Gregory, this is Sarah from GreenPan. Thanks for checking out our site! 😊 greenpan.attn.tv/ae6BeZ_w_KeW Is there a product we can help you find?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Actually I'm having a problem with an order I received damaged. I was asked to send pictures and did yesterday to the customer service email, can you check on that?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Check spam - All brands\"; last updated: 2023-10-10 16:43:53.913",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc7cb-dd17-4bce-f000-0000f12afc6c",
-          "message_text": "GreenPan: I'm so sorry to hear your order arrived damaged. Since you've already sent the pictures to our team, please allow a little time for them to review and get back to you. Please e sure to check your spam and promo folders as well, as our emails sometimes end up there.",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "92": {
+      "id": "019bd8a6-14b7-4ffe-f000-000090e993b5",
+      "companyName": "Simply Earth",
+      "companyWebsite": "https://simplyearth.com",
       "agentName": "Sarah",
-      "id": "019bf780-f856-4c4e-f000-0000bea0f6ec",
+      "agentInitial": "S",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Cx can use both a gift card and a promo code per order!"
+        ]
+      },
+      "SystemMessage1": "Simply Earth: Limited Time Offer: Code DISCO = FREE Disco Ball Diffuser w/ your 1st Recipe Box! \nShop now: simplyearth.attn.tv/a0RrHk1StIl9",
+      "SystemMessage2": "Simply Earth: The Butters + Balms Recipe Box is here! Kickstart your New Year with a FUN new hobby! Grab yours now and create NATURAL products at home! \n\nShop now: simplyearth.attn.tv/aIbj4BH3Roqb",
+      "SystemMessage3": "Simply Earth: Today only, use code NEROLI for $30 off our Neroli Essential Oil, making it just $19.99! \n\nShop now: simplyearth.attn.tv/arywA01mVkNN",
+      "SystemMessage4": "Simply Earth: Hey, Gerow! You forgot to check out our best selling Recipe Box. It's in your cart - simplyearth.attn.tv/aNv36GgU8Rcd\n\nDo you have questions about this product? I'm ready to help!",
+      "customerMessage1": "I can't it wants me to order 100 wholesale",
+      "AgentMessage1": "Simply Earth: Thank you for reaching out. I'm sorry, but may I know what item you are trying to purchase so I can check?",
+      "customerMessage2": "The big bonus box",
+      "customerMessage3": "I think I singed up as a wholesaler a while back",
+      "AgentMessage2": "Simply Earth: Thank you for letting me know! Could you also share a screenshot of the item showing the $100? On my end, it's showing $47 for the Big Bonus Box. You can check it here: https://simplyearth.attn.tv/a2F23pLAPKgv",
+      "customerMessage4": "Yes hold on",
+      "AgentMessage3": "Simply Earth: Alright! I'm just here.",
+      "customerMessage5": "\"",
+      "customerMessage6": "I definitely have a account but it's been awhile wanted to try again",
+      "SystemMessage5": "Template used: \"Customer support\"; last updated: 2023-02-13 23:02:22.913",
+      "AgentMessage4": "Simply Earth: Thanks for sending the screenshot! It looks like your account is still flagged as a wholesale account, which is why you're seeing the $100 minimum order requirement. To purchase the Big Bonus Box at the regular $47 price, you'll need to switch back to a retail account. \n\nThe best way to handle this is to email us directly at help@simplyearth.com. Our team is happy to help! Once your account is switched, you'll be able to order without the wholesale minimum.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://brooklyncandlestudio.com",
+          "value": "https://simplyearth.com",
           "date": ""
         },
-        "browsingHistory": [
-          {
-            "link": "https://brooklyncandlestudio.com/products/build-a-bundle-classic-candle-reed-diffuser-room-mist?externalId=2h-NJ",
-            "item": "Build a Trio: Candle + Diffuser + Room Spray",
-            "timeAgo": "2026-01-13"
-          },
-          {
-            "link": "https://brooklyncandlestudio.com/products/build-a-bundle-classic-candle-reed-diffuser-room-mist?utm_campaign=message-08-09-21-1-00&utm_source=attentive&utm_medium=text&externalId=2h-NJ",
-            "item": "Build a Trio: Candle + Diffuser + Room Spray",
-            "timeAgo": "2026-01-13"
-          },
-          {
-            "link": "https://brooklyncandlestudio.com/products/love-potion-classic-candle?_pos=3&_sid=52ebe85d6&_ss=r&externalId=2h-NJ",
-            "item": "Love Potion Classic 2-Wick Candle",
-            "timeAgo": "2026-01-05"
-          },
-          {
-            "link": "https://brooklyncandlestudio.com/products/love-potion-classic-candle?_pos=3&_sid=52ebe85d6&_ss=r&externalId=2h-NJ",
-            "item": "Love Potion Classic 2-Wick Candle",
-            "timeAgo": "2026-01-04"
-          },
-          {
-            "link": "https://brooklyncandlestudio.com/products/sunday-morning-hand-wash",
-            "item": "Sunday Morning Hand + Body Wash",
-            "timeAgo": "2026-01-04"
-          }
-        ]
+        "browsingHistory": [],
+        "orders": []
       },
-      "companyWebsite": "https://brooklyncandlestudio.com",
-      "companyName": "Brooklyn Candle Studio",
-      "notes": {
-        "dos_and_donts": [
-          "Use VPN when accessing the site!"
-        ]
-      },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Great news! The Build a Trio: Candle + Diffuser + Room Spray you were looking at is now back in stock! 🔥 \n\nClick here to shop before we sell out again! brooklyncandle.attn.tv/aexB74guZ5wo ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Last chance to shop our End of Year Sale. ✨ Limited quantities, up to 40% off. Once they're gone, they're gone.\n\nShop the sale 👉 brooklyncandle.attn.tv/aL3_cwLFNxyS \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Start 2026 with January's First Friday Flame: Vanilla Haze. 🍨 Vanilla orchid meets soft musk for timeless decadence.\n \nShop Early Access: brooklyncandle.attn.tv/a_5EgKK4631K \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Great news! The Build a Trio: Candle + Diffuser + Room Spray you were looking at is now back in stock! 🔥 \n\nClick here to shop before we sell out again! brooklyncandle.attn.tv/aNKxvNMGDylj ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Hey , this is Sarah . Thanks for checking us out! 😊 https://brooklyncandle.attn.tv/a9oROS5ZD-TS \n\nAny questions I can answer for you? ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: You left a little light behind! Your cart is still waiting.. complete your order & fill your space with something beautiful.\n\nReturn to Cart: brooklyncandle.attn.tv/aGgpYg3fgepD",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Early access to our Valentine's Day Collection is here. 💗 Gift Rose Botanica & Love Potion, a floral match made in heaven.\n\nShop Now: brooklyncandle.attn.tv/adSez0QX-Fvh ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Thanks for your recent purchase! We're delighted you chose us to brighten your home. \n\nWhile your order is being crafted, take in other scents we love: https://brooklyncandle.attn.tv/awyY6kVCK_-h ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Hey Megan, we noticed you checking us out! Have you seen our best sellers yet? https://brooklyncandle.attn.tv/aY2h0tikcGv7 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Hot Tip: As you enjoy your new candle, be sure to trim the wick 1⁄4\" before lighting. And, as always, don't place a burning candle near clothing, books, curtains, or flammables. Enjoy! ✨\n\nhttps://brooklyncandle.attn.tv/apnacmLY4iBV ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Great news! The Build a Trio: Candle + Diffuser + Room Spray you were looking at is now back in stock! 🔥 \n\nClick here to shop before we sell out again! brooklyncandle.attn.tv/a2o9eGo1N3pM ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Don't forget! Get the Build a Trio: Candle + Diffuser + Room Spray while supplies last! Our small batches sell out quick.\n\nClick here to checkout: brooklyncandle.attn.tv/aITfwKyPCep4 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Hey Megan, this is Sarah . Thanks for stopping by! 😊 https://brooklyncandle.attn.tv/astqf3zDl26S \n\nAny questions I can answer for you? ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Just Dropped: The Valentine's Day Gift Guide 💘 From romantic florals to luxe sets-find the perfect match.\n\nShop the edit: brooklyncandle.attn.tv/alGz-Zkb3GBs \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Loving your new fragrance? Don't let your scent dim. Our best-sellers are ready to keep the fire burning: https://brooklyncandle.attn.tv/ah7QyGv6aRV4 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Great news! The Build a Trio: Candle + Diffuser + Room Spray you were looking at is now back in stock! 🔥 \n\nClick here to shop before we sell out again! brooklyncandle.attn.tv/a_3eJh6Xj-bH ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Don't forget! Get the Build a Trio: Candle + Diffuser + Room Spray while supplies last! Our small batches sell out quick.\n\nClick here to checkout: brooklyncandle.attn.tv/ab0cV-UqsuE0 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Slip into PJs - our Slumber Party Sale starts now. 🌙 Get 15% OFF sitewide for 24 hours w/ code: PARTY4U\n\nShop & save 15%: brooklyncandle.attn.tv/ajelWsfpUGYn ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Our Slumber Party Sale ends tonight. 🌙 Get 15% off sitewide with code: PARTY4U\n\nBefore it's lights out on savings, shop now:\nbrooklyncandle.attn.tv/a-CgY-ouoQHI ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: NEW Maui & Love Potion Hand + Body Washes are here. Give your skin a little extra TLC. 💗\n\nShop early access: brooklyncandle.attn.tv/aNnPHq0QewQU ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "(attn) Hey, I need help with something:",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bf77b-3135-4aa6-f000-0000bea0f6ec",
-          "message_text": "Brooklyn Candle Studio: Hi there! I'm here to help. Could you please provide a bit more detail about what you need assistance with? Whether it's about choosing a product or anything else, just let me know, and I'll do my best to assist you!",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "It's about my order",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bf77d-2f4e-4d0b-f000-0000bea0f6ec",
-          "message_text": "Brooklyn Candle Studio: Are you referring to Order #264872? How can I help?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Order #264872 - yes that's it",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "The Sunday Morning hand and body wash came with dents on the bottle so I can't put it out on my sink :(",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Damaged/broken/missing item - All brands\"; last updated: 2023-10-10 20:30:27.203",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bf780-f856-4c4e-f000-0000bea0f6ec",
-          "message_text": "Brooklyn Candle Studio: Sorry about that. Can you please send me a photo of the items that you received, along with your email address? I'll be happy to check on this with my team.",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "93": {
-      "agentName": "Jordan",
-      "id": "019bc713-7f16-4428-f000-0000f453a551",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://cardboardcutoutstandees.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://cardboardcutoutstandees.com",
-      "companyName": "Cardboard Cut Out Standees",
-      "notes": {
+      "id": "019be89b-653e-47f8-f000-00001c304400",
+      "companyName": "Kathy Kuo Home",
+      "companyWebsite": "https://kathykuohome.com",
+      "agentName": "Sarah",
+      "agentInitial": "K",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "escalate": [
-          "No CS for this client, ESC everything",
-          "When ESC post-purchase issues, only ask for the order number",
-          "If a customer wants to talk to customer service do not send PS, ESC instead",
-          "When ESC on weekends, use WKD shortcut before you ESC",
-          "When ESC on weekDAYS after 4pm EST, use WKE shortcut before you ESC"
-        ],
-        "tone": [
-          "Close the convo once the client takes over",
-          "Close the convo when customers misanswer the Welcome journey q's"
+          "Esc inquiries about items not on the site",
+          "ESC if the cx missed a sale & wants to take advantage of it",
+          "ESC if the customer is asking for a discount and we don't have one",
+          "If cx is looking for general recommendations use LFR shortcut and ESC"
         ],
         "templates": [
-          "If cx are trying to upload a photo on the website and it's not coming through, use PWU shortcut",
-          "If cx are inquiring about delivery dates, use GRN shortcut",
-          "If cx share image/screenshot that's not showing don't ask to send again, use IMG shortcut"
+          "If cx is building a new home, interested in refurnishing their entire home or rooms in their home, use the IDS shortcut",
+          "If cx is shopping for a client use SFC shortcut",
+          "Any convo without a positive outcome (out of stock, not on sale, not shipping in time), use DSS shortcut"
         ],
         "dos_and_donts": [
-          "Prices vary, depending on height, not width",
-          "Don't mention possible shipping delays",
-          "Don't ask for screenshots",
-          "Wet Paint T shirts Inc is a different company"
-        ],
-        "drive_to_purchase": [
-          "Don't recommend and share links for add-ons to cx"
-        ],
-        "promo_and_exclusions": [
-          "Contact us for help with fundraisers. Grad yard signs are only sold through fundraisers"
+          "For product-specific delivery time-frame inquiries always check the product page for delivery info and share that with the cx"
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Issues with Orders"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Cardboard Cutout Standees: Welcome to Cardboard Cutout Standees! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cardboard Cutout Standees: Your coupon code is WELCOME-3TD. Click here to auto-apply it and shop now: cardboard.attn.tv/aQQSKryXhmv- .\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cardboard Cutout Standees: ....and don't forget to save our contact to get exclusive updates!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cardboard Cutout Standees: Hi! This is Jordan. I'm always here to help you if you need it.\n\nI'd like to make sure you receive deals and offers that best fit you. Text me with the number that best matches what you are interested in:\n\n1 - Celebrating my kid's - birthdays, sports, graduations.\n2 - Promoting my business - marketing, products, company events.\n3 - Having fun with life's events - weddings, holidays, birthdays.\n4 - Designing with wall decals or wall murals.\n5 - The best deal - send me info on offers and sales.\n",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Alumni party .need standee ,5ft-6ft  at least need for Entrance but I want the backside red with red standee to hold it up",
-          "message_media": [
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1768555227452_2012092568191442944.jpeg",
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1768555227441_2012092568191442944.application/smil"
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc6fa-9cc0-4949-f000-0000f453a551",
-          "message_text": "Cardboard Cutout Standees: Thanks for sharing those details. I've passed everything along to my team, and I'll be back in touch with you as soon as I have an update. The maximum dimensions of our standees are 9'10\" x 4'9\". We can orient your image either portrait or landscape to fit these dimensions. If you want a standee larger than 9'10\" x 4'9\". While I wait to hear back from my team, is there anything else I can assist you with in the meantime?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I dont understand the dimensions i need to make sure the height is at least 5feet",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Weekend Escalations - All brands\"; last updated: 2024-02-12 17:46:12.047",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc713-7f16-4428-f000-0000f453a551",
-          "message_text": "Cardboard Cutout Standees: I understand. I want to make sure I give you the most accurate information, so I'm checking in with my team. I'll be in touch as soon as I get an update.",
-          "message_media": []
-        }
-      ]
-    },
-    "94": {
-      "agentName": "Quinn",
-      "id": "019be297-18f2-4e86-f000-0000ddb3f67e",
+      "SystemMessage1": "Kathy Kuo: Need the perfect last minute gift? Give the gift of home, delivered instantly with a Kathy Kuo Home gift card: kathykuohome.attn.tv/ail2SILW7TV- .",
+      "SystemMessage2": "Kathy Kuo: End of year subscriber-only savings start now! Get 20% Off + Free Shipping with code BYE2025: kathykuohome.attn.tv/apVj-oplO42a . Exclusions apply.",
+      "SystemMessage3": "Kathy Kuo: Finish the year feeling perfect at home. 20% Off + Free Shipping ends tonight with code BYE2025: kathykuohome.attn.tv/alJpwsou3gpC .",
+      "SystemMessage4": "Kathy Kuo: Explore the Florence I fell in love with, and shop our all new collection inspired by Tuscan tradition: kathykuohome.attn.tv/a0GBkbv3EGDA .",
+      "SystemMessage5": "Kathy Kuo: Your daily rituals deserve elegance, ease and beauty. Explore our all new Florentine bath refresh: kathykuohome.attn.tv/aSXJOAJommMF .",
+      "SystemMessage6": "Kathy Kuo: Winter Sale starts now! Thoughtfully designed pieces to cozy up your home, on sale for a limited time only: kathykuohome.attn.tv/aDP2-pqO6Sz_ .",
+      "SystemMessage7": "Kathy Kuo: Our most-loved pieces are back in stock. Now part of the Winter Sale! Cozy upgrades, on sale, no waiting: kathykuohome.attn.tv/aFybtXoKjAfu .",
+      "SystemMessage8": "Kathy Kuo: Cozy in and save! Our Winter Sale is on all weekend with your favorite furniture, lighting and decor: kathykuohome.attn.tv/aHeMIHP7Tea0 .",
+      "SystemMessage9": "Kathy Kuo: Our Winter Sale is officially here! 20% Off + Free Shipping on timeless pieces to refresh for the year ahead: kathykuohome.attn.tv/aKcIULi9tjdT .",
+      "SystemMessage10": "Kathy Kuo: Last day to shop the Winter Sale! Thoughtfully designed pieces, 20% Off, a beautiful way to refresh your home: kathykuohome.attn.tv/a4JWiEC_UYe4 .",
+      "SystemMessage11": "Kathy Kuo: Shopping our Winter Sale? Final hours end tonight! Don't miss special savings on timeless furniture and decor: kathykuohome.attn.tv/a9eG87MBtOgh",
+      "SystemMessage12": "Kathy Kuo: Thanks for stopping by! We hope you got the chance to check out our bestsellers, designed to elevate your home with everyday comfort and soulful style. \n\nShop Bestsellers: https://kathykuohome.attn.tv/auIqn1qSl5OL .",
+      "SystemMessage13": "Kathy Kuo: Hi, I'm Sarah, your personal shopper for Kathy Kuo Home. Do you need help finding that perfect piece? \n\nhttps://kathykuohome.attn.tv/awgYFNGRKV_a .",
+      "customerMessage1": "I need a beautiful arrangement for my entry foyer table. It sits below a large  Crystal Chandalier",
+      "AgentMessage1": "Kathy Kuo: Consider the John-Richard Classic White Glass Cylinder Faux Floral Arrangement. It's elegant and perfect for an entry foyer. More details here: https://kathykuohome.attn.tv/akpY0arut9tb",
+      "customerMessage2": "I need color and full and taller. Think hotel lobby big my ceilings are 30 feet",
+      "AgentMessage2": "Kathy Kuo: I understand. Would this one work for you? https://kathykuohome.attn.tv/aPQmPJFjLBOz",
+      "customerMessage3": "I need color in flowers like fulshia",
+      "AgentMessage3": "Kathy Kuo: For a colorful and tall arrangement, consider the John Richard Berries & Roses French Country Clear Glass Faux Floral Arrangement. Details here: https://kathykuohome.attn.tv/aNLUxEc6UpaN",
+      "customerMessage4": "No. White",
+      "AgentMessage4": "Kathy Kuo: For a colorful option with fuchsia, consider the John-Richard Luffa Peonies Modern Classic Pink Faux Floral Arrangement. Details here: https://kathykuohome.attn.tv/adG6E0pGb9m2",
+      "customerMessage5": "Too small for a big foyer",
+      "AgentMessage5": "Kathy Kuo: For a larger, colorful arrangement, consider the John-Richard Enchanted Orchids Country Green Phalaenopsis Faux Floral Arrangement. Details here: kathykuohome.com",
+      "customerMessage6": "Did not see it",
+      "AgentMessage6": "Kathy Kuo: I apologize for the inconvenience. Please check the John-Richard Enchanted Orchids here: https://kathykuohome.attn.tv/aac7C2jUdBf0",
+      "customerMessage7": "No",
+      "AgentMessage7": "Kathy Kuo: Do you mind sharing a photo of your entry foyer table? This will help me check the best options we have for you.",
+      "customerMessage8": "\"",
+      "AgentMessage8": "Kathy Kuo: Thank you for sharing this with me. What do you think about this one - https://kathykuohome.attn.tv/ar6gciWTuEhk ? The large option is 30 inches high x 7.5 inches wide x 7.5 inches deep.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://nectarsleep.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://nectarsleep.com",
-      "companyName": "Nectar Sleep",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS",
-          "Send to CS for refund inquiries"
-        ],
-        "tone": [
-          "Close the convo once the client takes over",
-          "Close the convo if the cx first message is ok, no, etc.",
-          "Don't use the word \"off\" when talking about promotions"
-        ],
-        "dos_and_donts": [
-          "Don't proactively offer to find pricing info, redirect them to the website instead"
-        ],
-        "promo_and_exclusions": [
-          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Shipping questions",
-        "Exchanges and returns",
-        "Discount code errors",
-        "Recall",
-        "BBB",
-        "fiberglass",
-        "lawyer",
-        "class action"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Nectar: Wrapping up the year? See if your HSA or expiring FSA can cover up to 90% of a mattress. Check eligibility now: nectarsleep.attn.tv/aybyxdshkcEG\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Nectar: Share the comfort! Give $100, get $100 when you refer a friend. They save $100 & you get a $100 Gift Card: nectarsleep.attn.tv/a0jahbI7hj9Q\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Nectar: Still eyeing the Nectar Classic Memory Foam Mattress? Save up to 50% & get ready to unbox sweet ZZZs:nectarsleep.attn.tv/aNlS9Dvnyy68 \n.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "No I hate the Nectar I have",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be293-e460-4889-f000-0000ddb3f67e",
-          "message_text": "Nectar: Thank you so much for taking the time to give us feedback. We want to make sure we keep our loyal customers happy with our products, and I will definitely pass this on to my team to consider in the future. Nectar provides you with a full year - 365 nights - to decide if Nectar is right for you. We encourage you to take the first 30 days to get to know your new mattress, as it can take this long for your body to adjust to the support and comfort of the Nectar. Our risk free trial is about 3 times longer than the industry standard. ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "It's been more than 60 days",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be297-18f2-4e86-f000-0000ddb3f67e",
-          "message_text": "Nectar: I understand how frustrating this can be. Could you tell me more about the issue? I'm happy to help.",
-          "message_media": []
-        }
-      ]
-    },
-    "95": {
-      "agentName": "",
-      "id": "019be374-55ed-429c-f000-0000efeaf4a9",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://shop.darcsport.com",
+          "value": "https://kathykuohome.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://shop.darcsport.com/collections/she-only-sale-2026/products/stone-code-premium-pierce-hoodie-in-cobalt-blue?_pos=14&_fid=cd599f041&_ss=c&variant=43853194166314",
-            "item": "Stone Code Premium \"Pierce\" Hoodie in Cobalt Blue - L",
-            "timeAgo": "2026-01-11"
-          },
-          {
-            "link": "https://shop.darcsport.com/collections/she-only-sale-2026/products/stone-code-l-s-baby-tee-in-black?_pos=9&_fid=cd599f041&_ss=c&variant=43853044383786",
-            "item": "Stone Code L/S \"Baby\" Tee in Black - L",
-            "timeAgo": "2026-01-11"
-          },
-          {
-            "link": "https://shop.darcsport.com/collections/she-only-sale-2026/products/stone-code-pump-cover-tee-in-black?variant=43852875989034",
-            "item": "Stone Code \"Pump Cover\" Tee in Black - M",
-            "timeAgo": "2026-01-11"
-          },
-          {
-            "link": "https://shop.darcsport.com/collections/she-only-sale-2026/products/stone-code-pump-cover-tee-in-black?_pos=2&_fid=cd599f041&_ss=c&variant=43852876021802",
-            "item": "Stone Code \"Pump Cover\" Tee in Black - L",
-            "timeAgo": "2026-01-11"
-          },
-          {
-            "link": "https://shop.darcsport.com/collections/she-only-sale-2026/products/iron-side-ava-crewneck-in-black?variant=42162870353962",
-            "item": "Iron Side Ava Crewneck in Black - M",
-            "timeAgo": "2026-01-11"
+            "item": "Otto Mid-Century Natural Brass Steel Desk Lamp",
+            "link": "https://www.kathykuohome.com/Product/Detail/87519-Otto-MidCentury-Natural-Brass-Steel-Desk-Lamp",
+            "icon": "eye"
           }
-        ]
-      },
-      "companyWebsite": "https://shop.darcsport.com",
-      "companyName": "Darc Sport",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS!"
         ],
-        "templates": [
-          "For lost, stolen, or damaged orders, use DMI shortcut"
+        "orders": []
+      },
+      "orders": []
+    },
+    "94": {
+      "id": "019bdd23-fb2b-4daf-f000-000027f55c2a",
+      "companyName": "johnnie-O",
+      "companyWebsite": "https://johnnie-o.com/",
+      "agentName": "Darby",
+      "agentInitial": "J",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "ESC restock inquiries",
+          "ESC shipping/order inquiries",
+          "ESC cxs looking for a discount code"
         ]
       },
+      "SystemMessage1": "Johnnie-O: Don't let last minute gifting ruin your holiday cheer, Johnnie-O electronic gift cards are just a click away. johnnie-o.attn.tv/a3ORG0-ubwVO",
+      "SystemMessage2": "Johnnie-O: Still deciding? Our stores have the latest styles and personalized help for your gifting needs! Find your store now. johnnie-o.attn.tv/aaa5gk4bSzt_",
+      "SystemMessage3": "Johnnie-O: The End of Season Sale is here! Save up to 50% on top styles for everyone, but act fast these styles will move fast. johnnie-o.attn.tv/axQpcL034Oyw",
+      "SystemMessage4": "Johnnie-O: Hey there! We noticed you checking out something on our site...come back and shop now: johnnie-o.attn.tv/aCYxOqdnB-SM .",
+      "SystemMessage5": "Johnnie-O: Hey Todd , this is Darby . Thanks for checking us out! 😊 johnnie-o.attn.tv/ad-eaOrE30mf \n\nAny questions I can answer for you?",
+      "SystemMessage6": "Johnnie-O: Our biggest sale of the season is live, which means you can save up to 50% on some of the best 1/4 Zips of 2025. johnnie-o.attn.tv/aNmPH0r1KGBu",
+      "SystemMessage7": "Johnnie-O: New Year, New Swag! Whether you're at the game or cheering at home, start 2026 off right with perfect Game Day gear. johnnie-o.attn.tv/aPE2ohmtsQCA",
+      "SystemMessage8": "Johnnie-O: Get the golf performance and comfort you love at prices that will blow you away. Up to 50% off select golf styles. johnnie-o.attn.tv/aUMsvTK_iHEU",
+      "SystemMessage9": "Johnnie-O: Shop up to 50% off for everyone!\n\nMen\njohnnie-o.attn.tv/a9nLIV0aoWqN \n\nWomen\njohnnie-o.attn.tv/amgGU_yVKTbh \n\nBoys\njohnnie-o.attn.tv/aZI0GLsL4wtT",
+      "SystemMessage10": "Johnnie-O: Hey Todd , this is Darby . Thanks for stopping by! 😊 johnnie-o.attn.tv/ajPGLT5BmgA4 \n\nAny questions I can answer for you?",
+      "SystemMessage11": "Johnnie-O: The perfect vest completes any look, from coffee runs to drinks with the boys we have you covered. Shop up to 50% off johnnie-o.attn.tv/aTA9sIH_bI9n",
+      "SystemMessage12": "Johnnie-O: Get up to 50% our best in class button downs, from featherweight performance to ultra soft flannels and more! johnnie-o.attn.tv/aKBpP9YsCqI3",
+      "SystemMessage13": "Johnnie-O: Hey there! We noticed you checking out something on our site...come back and shop now: johnnie-o.attn.tv/a9Vtg-rnDbBv .",
+      "SystemMessage14": "Johnnie-O: Our end of season sale ends tonight! Don't miss your last chance to refresh your wardrobe at some of our best prices. johnnie-o.attn.tv/awlb2N_ezST1",
+      "SystemMessage15": "Johnnie-O: Hey Todd , this is Darby . Thanks for checking out our site! 😊 johnnie-o.attn.tv/aePLab6HLwXE \n\nAre you looking for anything in particular today?",
+      "SystemMessage16": "Johnnie-O: Undefeated! The Hoosiers bring home their first football championship in style! Shop Indiana Championship looks now. johnnie-o.attn.tv/agK1VTjgtjEl",
+      "customerMessage1": "I appreciate the follow up. Were you able to track down the name of the other blu color that is out of stock.",
+      "AgentMessage1": "Johnnie-O: By any chance, are you referring to this Carmel Sateen 5-Pocket Pant in Navy Blue? https://johnnie-o.attn.tv/aEchGQHzxJtL",
+      "customerMessage2": "No there were 3 blues available in December. Now you only show a dark blue (navy) and a light blue. I just can't remember the name of the one I want.",
+      "customerMessage3": "It's def the Carmel sateen pants though.",
+      "SystemMessage17": "\"",
+      "AgentMessage2": "Johnnie-O: Thank you for clarifying. I'll also check this with my team to be certain. I'll be in touch shortly.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://johnnie-o.com/",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "item": "Carmel Sateen 5-Pocket Pant",
+            "link": "https://www.johnnie-o.com/products/carmel-jmpa100050-24fa-pewter?color=Pewter&utm_campaign=concierge&utm_medium=sms&utm_source=attentive&externalId=gcIqM",
+            "icon": "eye"
+          },
+          {
+            "item": "Carmel Sateen 5-Pocket Pant",
+            "link": "https://www.johnnie-o.com/products/carmel-jmpa100050-sp25-copy?color=Dark%2520Navy&srsltid=AfmBOopMINeJUdhR3RPBxQvQyt7F7IHU6pmk7ztA4b1rFB-gDa9fmrjS&utm_campaign=concierge&utm_medium=sms&utm_source=attentive&externalId=gcIqM",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "95": {
+      "id": "019bbda7-1b24-4872-f000-0000f4026f94",
+      "companyName": "Cecil and Lou",
+      "companyWebsite": "https://cecilandlou.com",
+      "agentName": "Emma",
+      "agentInitial": "C",
       "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Welcome to Darc Sport! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ]
+      },
+      "SystemMessage1": "Cecil and Lou: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage2": "Cecil and Lou: 🎀 Welcome to the Cecil and Lou family! We're so thrilled to have you with us! Here's a little gift-enjoy 15% off with your special code! E0XWVIL2\nShop now: candl.attn.tv/aTBTnZImOamk",
+      "SystemMessage3": "Cecil and Lou: Life is busy! Save this to your contacts so you don't miss any exclusive offers from Cecil & Lou.",
+      "SystemMessage4": "Cecil and Lou: Hi Gitty, it's Emma. I'm a personal concierge here to answer your questions or share recommendations. Is there anything I can help you with today?\n\nhttps://candl.attn.tv/an8zsACM0fNx .",
+      "customerMessage1": "Yes. I like some of the stuff you have, but I cannot buy anything without a return option",
+      "AgentMessage1": "Cecil and Lou: Sorry about that. I'm afraid due to the custom nature of our clothing, we do not accept returns/exchanges. All sales are final. Please be sure to double-check our size guide before you purchase. Unfortunately, monogrammed or personalized items aren't returnable.",
+      "customerMessage2": "I don't need custom sizing or monograms.",
+      "AgentMessage2": "Cecil and Lou: I understand, and just to clarify, because of the custom nature of our clothing, we do not accept returns or exchanges, all sales are final. Personalized items cannot be returned or exchanged. Please be sure to double-check our size guide before purchasing: https://candl.attn.tv/a7hos7NnQdCz Our outfits are generally true to size, but we recommend sizing up on knit PJs and bubbles.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://cecilandlou.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Thank you for signing up. Wolves Forever. NFGU https://darcsport.attn.tv/a6jQ_rHprwTX ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Don't forget to save our contact to be notified for exclusive drops, early access passwords, weekly affirmations, future events and more.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: 100 Wishlist orders will be refunded! - IN GOD'S HANDS\n\nSign in to your account:\ndarcsport.attn.tv/aFkU6MUA51Dt \n\n12/25 | 6PM PST",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: 100 Wishlist orders will be refunded. Create yours now!- IN GOD'S HANDS\n\ndarcsport.attn.tv/aeU6glCLrZCX \nReleases 12/25 6pm pt",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Early access - IN GOD'S HANDS\n\nEarly Access Code:\n\"HOHOHO\"\n\nShop SHE: darcsport.attn.tv/a1dUK8ql6BxJ \n\nShop Men's: darcsport.attn.tv/aQyMB7AlUaXf ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Now Available - IN GOD'S HANDS\n\nShop SHE: darcsport.attn.tv/a0rhV6kesgdp \n\nShop Men's: darcsport.attn.tv/a5bVJbG_YnP0 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Final stock remaining! - IN GOD'S HANDS\n\nShop SHE: darcsport.attn.tv/aP2Um6ds-7iK \n\nShop Men's: darcsport.attn.tv/a1sA3T-dp3ka ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Preview Now Live! - ONLY SALE OF THE YEAR\n\nSale Begins 1/4 | 6pm PT\n\nPreview Now: darcsport.attn.tv/aYkzFiNeXi-P \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: 200 WISHLISTS WILL BE REFUNDED!!!\n\nCreate your list now!\n\nONLY SALE OF THE YEAR\n\nPreview: darcsport.attn.tv/alC5nuqzkNvV \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: 200 WISHLISTS WILL BE REFUNDED!!!\n\nCreate your list now!\n\nONLY SALE OF THE YEAR\n1.4.26 6PM PST \n\nUSE CODE: DUTCH \nAT CHECKOUT\n\nPreview: darcsport.attn.tv/asnqkAylcm26 \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: 200 WISHLIST ORDERS WILL BE REFUNDED!!!\n\nLast chance to create your wishlist!\n\nONLY SALE OF THE YEAR\n1.4.26 6PM PST \n\nUSE CODE: DUTCH \nAT CHECKOUT\n\nPreview: darcsport.attn.tv/aCT30ZW5z90H \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: DARC SPORT ATHLETICS SITEWIDE SALE 1 HOUR OUT!\nSALE OPENS 12 PM PST\ndarcsport.attn.tv/aWepM6SWiIIc \n\nONLY SALE OF THE YEAR + WOLVES CLUB CLASSICS\n1.4.26 6 PM PST\n\nUSE CODE: DUTCH\nAT CHECKOUT\ndarcsport.attn.tv/ar3F5L6K1w6n ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: ONLY SALE OF THE YEAR + WOLVES CLUB CLASSICS\n\n15 MIN OUT! GET READY!\n\nUse Wishlist at checkout to save your items!\n\nUSE CODE: DUTCH\nAT CHECKOUT\ndarcsport.attn.tv/aYUZZm94cuFT ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: NOW AVAILABLE! - ONLY SALE OF THE YEAR + WOLVES CLUB CLASSICS\n\nUse Wishlist at checkout to save your items!\n\nUSE CODE: DUTCH\nAT CHECKOUT\n\nShop Now: darcsport.attn.tv/afwcOaUsd4jG ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: NOW AVAILABLE! - ONLY SALE OF THE YEAR + WOLVES CLUB CLASSICS\n\nBad link use this new link below:\n\nUSE CODE: DUTCH\nAT CHECKOUT\n\nShop Now: darcsport.attn.tv/a0re4WeNjcoZ ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: One More Chance to Make Things Right\n\n(40% off today at 12PM PST for 1 Hour)\n\nNO CODE NEEDED\n\nShop Now: darcsport.attn.tv/a-ej7FrxK4Lf ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: ONLY SALE OF THE YEAR (40% Off now live for 1 Hour)\n\nNO CODE NEEDED\n\nShop Now: darcsport.attn.tv/af9iupo10PKU ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: WANNA COME TO HAWAII WITH US? DETAILS ON OUR MOST RECENT IG POST\n\nENTER NOW: darcsport.attn.tv/aaDgIkmCTmrH \n\nDOWNLOAD OUR APP:\n\nAPPLE: darcsport.attn.tv/aui0kKUJnpWJ \n\nANDROID: darcsport.attn.tv/a2LUnJ2jummo ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: ONLY SALE OF THE YEAR - We heard you 🤝\nWhat's left is 30% off through Sunday\n\nNO CODE NEEDED\n\nShop Now: darcsport.attn.tv/a22RYI71Ik_v ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: ONLY SALE OF THE YEAR 30% off through Sunday!\n\nNO CODE NEEDED\n\nShop Now: darcsport.attn.tv/au8AuG4cQJp3 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Shop our newest collection! - WOLVES CLUB CLASSICS \n\nShop SHE: darcsport.attn.tv/a0pvG7IBufn0 \n\nShop Men's:darcsport.attn.tv/aWtIjnriD7VM ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: 3 days left! 30% off ONLY SALE OF THE YEAR!\n \nNO CODE NEEDED\n \nShop Now: darcsport.attn.tv/aW4cPn0l-hze ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Shop our newest collection! - WOLVES CLUB CLASSICS \n\nShop SHE: darcsport.attn.tv/a1mlDPTPpjlf \n\nShop Men's:darcsport.attn.tv/aGnyvSmb7Wf8 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Our newest collection is here! - WOLVES CLUB CLASSICS \n \nShop SHE: darcsport.attn.tv/aCBYZewuQfD4 \n\nShop Men's:darcsport.attn.tv/a_M5xvxDK7hA ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: 30% OFF ends today. Final hours - ONLY SALE \n \nSale ends at 6PM PST.\n\nShop SHE: darcsport.attn.tv/apDbf-vbTGYF \n\nShop Men's: darcsport.attn.tv/atXpdcdvyNJR ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: 1 hour left. 30%\nOFF ends at 6PM PST.\n\nFINAL HOUR!\nNo extension.\n\nShop SHE: darcsport.attn.tv/a2PQKQe7uuCb \n\nShop Men's: darcsport.attn.tv/ag7hWKYGFGY1 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Wolves Club Classics\n\nAvailable right now\n\nShop SHE: darcsport.attn.tv/ah-4uR1R7IBd \n\nShop Men's: darcsport.attn.tv/aTeyHGag_6Wm ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Free shipping on all U.S. orders through Sunday 6PM PT\nSite closes 1.18.26 6PM PT\n \nShop now: darcsport.attn.tv/ayM3gkAItIeA ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Free shipping - all US orders through Sunday!\n\nThis ends tomorrow at 1.18.26 at 6PM PST\n\nShop Now: darcsport.attn.tv/ajXtdTe6cSDh \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Final day! - Free shipping ends and site locks at 6PM PT\n\nShop Now: darcsport.attn.tv/a6eWobk9yGFT ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: FINAL HOUR - get it before it's gone! Site locks today at 6PM PT\n\nShop now: darcsport.attn.tv/au_w9mUH_nNS \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Darc Sport: Preview Now Live - HARLEY-DAVIDSON X DARC SPORT\n\nPreview the collection and create your Wishlist now: darcsport.attn.tv/aNIYIkeKShjP \n\nReleases 1/25 | 6pm pt",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I like them",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be374-55ed-429c-f000-0000efeaf4a9",
-          "message_text": "Darc Sport: Awesome! I appreciate your interest! You can shop our upcoming drops here: https://darcsport.attn.tv/aIXobTLHwnLQ ",
-          "message_media": []
-        }
-      ]
+        "browsingHistory": [
+          {
+            "item": "The Harrison Bubble - 3M",
+            "link": "https://www.cecilandlou.com/products/the-harrison-bubble",
+            "icon": "eye"
+          },
+          {
+            "item": "The Charlotte Smocked Dress - 4T",
+            "link": "https://www.cecilandlou.com/products/the-charlotte-smocked-dress?variant=51027318473002",
+            "icon": "eye"
+          },
+          {
+            "item": "The Charlotte Smocked Dress - 2T",
+            "link": "https://www.cecilandlou.com/products/the-charlotte-smocked-dress",
+            "icon": "eye"
+          },
+          {
+            "item": "The Scottie Dress - 4T",
+            "link": "https://www.cecilandlou.com/products/the-scottie-dress?variant=51027319292202",
+            "icon": "eye"
+          },
+          {
+            "item": "The Scottie Dress - 2T",
+            "link": "https://www.cecilandlou.com/products/the-scottie-dress",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
     }
   }
 }

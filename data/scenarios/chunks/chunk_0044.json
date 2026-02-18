@@ -3,607 +3,323 @@
   "chunk": "chunk_0044",
   "scenarios": {
     "216": {
-      "agentName": "Hannah",
-      "id": "019bccf9-fcfa-450a-f000-0000f470a2f1",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://olly.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.olly.com/products/sleep",
-            "item": "Sleep Blackberry Zen - 25 Servings",
-            "timeAgo": "2026-01-17"
-          },
-          {
-            "link": "https://www.olly.com/products/sleep?variant=28456493776960",
-            "item": "Sleep Blackberry Zen - 30 Serving Pouch",
-            "timeAgo": "2026-01-17"
-          },
-          {
-            "link": "https://www.olly.com/products/sleep",
-            "item": "Sleep Blackberry Zen - 25 Servings",
-            "timeAgo": "2026-01-17"
-          },
-          {
-            "link": "https://www.olly.com/products/sleep",
-            "item": "Sleep Blackberry Zen - 25 Servings",
-            "timeAgo": "2026-01-17"
-          },
-          {
-            "link": "https://get.olly.com/eeclix7v1?fermat_channel=facebook&fermat_adid=6873924914402&fbclid=IwZXh0bgNhZW0BMABhZGlkAAAGQLrmYwJzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR7774YIq5nXpvqF6FQJS72mmG3bMcopRwkCDs1dy15Vhx8ERZ2rC6wRKH0P2A_aem_jQeYpn38NWPhNUJrJ01Jdg&utm_source=facebook&utm_medium=paid&campaign_id=6872195944202&ad_id=6873924914402&audiencetype=existing_customer&utm_id=6872195944202&utm_content=6873924914402&utm_term=6872200398802&utm_campaign=6872195944202",
-            "item": "Sleep Blackberry Zen",
-            "timeAgo": "2026-01-17"
-          }
-        ]
-      },
-      "companyWebsite": "https://olly.com",
-      "companyName": "OLLY",
-      "notes": {
+      "id": "019bb9a0-a395-439e-f000-0000f40b6e8a",
+      "companyName": "Milly",
+      "companyWebsite": "https://milly.com",
+      "agentName": "Jordan",
+      "agentInitial": "M",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "escalate": [
-          "ESC order/subscription cancellation requests"
+          "ESC inquiries about sale start/end dates",
+          "ESC sizing inquiries",
+          "ESC order related inquiries",
+          "ESC fabric inquiries",
+          "ESC for orders cancelled for inventory reasons",
+          "ESC price match requests",
+          "ESC if you're not sure what item the cx is looking for"
+        ],
+        "tone": [
+          "Don't say skirt or pant, when the cx is asking if an item comes with the top or bottom, say \"matching set\"."
         ],
         "dos_and_donts": [
-          "If the customer wants to 'lose weight', don't give out product recommendations, tell them to consult with a healthcare provider",
-          "Don't recommend any products to diagnose, treat, cure, or prevent any disease"
+          "Use VPN to see the restock notification option"
         ],
         "drive_to_purchase": [
-          "Refer the customer to Amazon if the product is not available on the website but in-stock there"
-        ],
-        "promo_and_exclusions": [
-          "Codes can NOT be applied to subscription orders",
-          "welcome/rewards codes cannot be applied to seasonal at the moment"
-        ],
-        "unavailable_products": [
-          "Olly has removed the products \"Lovin Libido\" and \"Mighty Mojo\" off the site. The product are still available on Amazon and in stores."
+          "Don't recommend bestsellers, promote new arrivals instead!"
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [
-        "managment"
-      ],
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Shipping questions",
-        "Order issues",
-        "Melted products",
-        "side effects",
-        "allergic reactions",
-        "cancel order"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "OLLY PBC: Welcome to OLLY PBC! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
+      "SystemMessage1": "MILLY: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from MILLY.",
+      "SystemMessage2": "MILLY: Welcome to MILLY! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage3": "MILLY: Welcome to the world of MILLY! I'm Jordan, and you can reply back anytime with questions for me 👋\n\nSave my contact now so you never miss exclusive updates on new arrivals & secret sales!",
+      "SystemMessage4": "MILLY: Now that you're a VIP, you're getting 15% off your first order with code TXTphuIs6. For a limited time only, so get shopping! milly.attn.tv/aFKsJ421LhoN .",
+      "SystemMessage5": "MILLY: You're already subscribed! Shop our new arrivals now: milly.attn.tv/cl/zRN .",
+      "customerMessage1": "Code is not working. Trying to order",
+      "AgentMessage1": "MILLY: Thank you for letting me know, and I'm sorry for any inconvenience. Can you please send me a screenshot of what you're seeing on your end? I'll be more than happy to look into this for you!",
+      "customerMessage2": "\"",
+      "customerMessage3": "\"",
+      "AgentMessage2": "MILLY: Thanks for sending that over. I have added it to a cart for you here: https://milly.attn.tv/a5rjllq9-jW4 and applied the discount code. Let me know how it goes.",
+      "customerMessage4": "There is no discount code",
+      "SystemMessage6": "Template used: \"Site won't work - All brands\"; last updated: 2025-07-16 17:54:02.115",
+      "AgentMessage3": "MILLY: Thanks for getting back to us! I'm really sorry for the inconvenience. Upon checking, I can confirm the item is eligible for the TXTphuIs6 code. I might suggest trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://milly.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "OLLY PBC: Welcome to the OLLY family! Your 15% OFF Coupon code is: P78D29. Limit 1 per customer. Not valid for subscriptions.\n\nHave questions? Text back any time to reach our live concierge team! \n\nShop now: https://olly.attn.tv/afDwyTSri_ti .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Can I change my subscription that Ai just placed to the 30 day package instead of the 25 day package.  Order number 740724? Please respond.  Thank you \nRobert Field robacci8125@att.net \n847 380 5560",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bccf9-fcfa-450a-f000-0000f470a2f1",
-          "message_text": "OLLY PBC: I understand. Let me pass this along to my team for further checking, and I'll text you as soon as I get an update on this. I'll be in touch!",
-          "message_media": []
-        }
-      ]
+        "browsingHistory": [
+          {
+            "item": "Textured Ruched One Piece",
+            "link": "https://www.milly.com/products/textured-ruched-one-piece-white?_gl=1*1x4vfhj*_up*MQ..*_gs*MQ..&gclid=EAIaIQobChMIpa6_yMaJkgMV3nJ_AB3FCCLvEAAYASAAEgLr0fD_BwE&gbraid=0AAAAACuIT10I8sN0FlNUsRvSM3ipkrou0",
+            "icon": "eye"
+          },
+          {
+            "item": "Textured Ruched One Piece",
+            "link": "https://www.milly.com/collections/one-piece-swimsuits/products/textured-ruched-one-piece-light-blue?_gl=1*1x4vfhj*_up*MQ..*_gs*MQ..&gclid=EAIaIQobChMIpa6_yMaJkgMV3nJ_AB3FCCLvEAAYASAAEgLr0fD_BwE&gbraid=0AAAAACuIT10I8sN0FlNUsRvSM3ipkrou0",
+            "icon": "eye"
+          },
+          {
+            "item": "Textured Ruched One Piece",
+            "link": "https://www.milly.com/collections/one-piece-swimsuits/products/textured-ruched-one-piece-light-blue?_gl=1*1x4vfhj*_up*MQ..*_gs*MQ..&gclid=EAIaIQobChMIpa6_yMaJkgMV3nJ_AB3FCCLvEAAYASAAEgLr0fD_BwE&gbraid=0AAAAACuIT10I8sN0FlNUsRvSM3ipkrou0",
+            "icon": "eye"
+          },
+          {
+            "item": "Textured Ruched One Piece",
+            "link": "https://www.milly.com/products/textured-ruched-one-piece-white?_gl=1*oad30p*_up*MQ..&gclid=EAIaIQobChMIpa6_yMaJkgMV3nJ_AB3FCCLvEAAYASAAEgLr0fD_BwE&gbraid=0AAAAACuIT10I8sN0FlNUsRvSM3ipkrou0",
+            "icon": "eye"
+          },
+          {
+            "item": "Textured Ruched One Piece",
+            "link": "https://www.milly.com/products/textured-ruched-one-piece-white?_gl=1*oad30p*_up*MQ..&gclid=EAIaIQobChMIpa6_yMaJkgMV3nJ_AB3FCCLvEAAYASAAEgLr0fD_BwE&gbraid=0AAAAACuIT10I8sN0FlNUsRvSM3ipkrou0",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
     },
     "217": {
-      "agentName": "",
-      "id": "019bdd40-1ed9-4837-f000-000014656cc1",
+      "id": "019bb984-e644-4cdb-f000-0000ec26bf2e",
+      "companyName": "Sam Edelman",
+      "companyWebsite": "https://samedelman.com",
+      "agentName": "Jordan",
+      "agentInitial": "S",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "If the cx sends us their credit card information (written or screenshot) and it's an issue we can't resolve - send the customer to CS"
+        ],
+        "escalate": [
+          "When you ESC use ESC shortcut fisrt",
+          "ESC if the charge on cx account is pending"
+        ]
+      },
+      "SystemMessage1": "Sam Edelman: The loafer we love. Shop this bestseller.\n\nShop now: samedelman.attn.tv/aeoqDgyE2qJW",
+      "SystemMessage2": "Sam Edelman: The cult-favorite boot is back. Now available in wide and extra-wide calf sizing. \n\nShop now: samedelman.attn.tv/atYe1wCfDD7M",
+      "SystemMessage3": "Sam Edelman: For every last-minute gift on your holiday list, our digital gift cards are just the thing. \n\nShop now: samedelman.attn.tv/ax2rxRm1Esqb",
+      "SystemMessage4": "Sam Edelman: Your last-minute NYE edit has arrived. \n\nShop now: samedelman.attn.tv/a9lxtnzicIsF",
+      "SystemMessage5": "Sam Edelman: Final day of this year's best offer: Save $20 off $150+ with our loyalty program. Join now or log in.\n \nLog in or sign up to access: samedelman.attn.tv/axDEfqPR3gX1",
+      "SystemMessage6": "Sam Edelman: Elevated sneakers, from day to night.\n\nShop now: samedelman.attn.tv/aXLtR2UImf6M",
+      "SystemMessage7": "Sam Edelman: Bags you'll carry everywhere. Shop the latest. \n\nShop now: samedelman.attn.tv/aHLZbjh5BMAt",
+      "SystemMessage8": "Sam Edelman: This just in: boots starting under $100. Don't miss out. \n\nShop now: samedelman.attn.tv/asaXQmxYVVYE",
+      "SystemMessage9": "Sam Edelman: Hey this is Jordan . Thanks for checking out our site! 😊 https://samedelman.attn.tv/abE50ED6whhE \n\nAre you looking for anything in particular today?",
+      "customerMessage1": "No, but I did purchase slides for my daughter at Christmas time... she wore them twice & say they're killing her feet . I'm a bit disappointed!",
+      "SystemMessage10": "Template used: \"Escalation template\"; last updated: 2024-07-19 18:06:36.566",
+      "AgentMessage1": "Sam Edelman: I'm so sorry to hear this; it's not the experience I want you to have. Are you referring to the Linnie Bit Mule purchased on 12/04/25? if so, I'm afraid they're out of our return window, but let me check on this with my team. Can I have your full name, email, order number, phone number and your zip code please?",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://iliabeauty.com",
+          "value": "https://samedelman.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://iliabeauty.com/products/skin-rewind-complexion-stick-foundation-concealer",
-            "item": "Skin Rewind Complexion Stick - Hinoki 1N",
-            "timeAgo": "2026-01-20"
+            "item": "bay twist slide sandal",
+            "link": "https://www.samedelman.com/product/womens-bay-twist-slide-sandal-3033541/washed-sage-faux-raffia-ec0209898?icid=SamEdelmanRecommendationsPDPMiddle_Sam%20Edelman_3033541_99900_EC0209898",
+            "icon": "eye"
           },
           {
-            "link": "https://iliabeauty.com/products/skin-rewind-complexion-stick-foundation-concealer",
-            "item": "Skin Rewind Complexion Stick - Hinoki 1N",
-            "timeAgo": "2026-01-20"
-          },
-          {
-            "link": "https://iliabeauty.com/products/skin-rewind-complexion-stick-foundation-concealer",
-            "item": "Skin Rewind Complexion Stick - Hinoki 1N",
-            "timeAgo": "2026-01-20"
-          },
-          {
-            "link": "https://iliabeauty.com/products/skin-rewind-complexion-stick-foundation-concealer",
-            "item": "Skin Rewind Complexion Stick - Hinoki 1N",
-            "timeAgo": "2026-01-20"
-          },
-          {
-            "link": "https://iliabeauty.com/products/skin-rewind-complexion-stick-foundation-concealer?variant=40790478028880",
-            "item": "Skin Rewind Complexion Stick - Tupelo 9N",
-            "timeAgo": "2026-01-20"
+            "item": "bay multicolor slide sandal",
+            "link": "https://www.samedelman.com/product/womens-bay-multicolor-slide-sandal-3029177/twany-tan-faux-raffia-ec0209110?bc_pid=MDAxOTkwMzc3NTU5NTA%3D&om_rid=bW9la29kQGFvbC5jb20%3D&et_cid=subaction_5050552148942848&et_rid=bW9la29kQGFvbC5jb20%3D&partnerid=email_marketing_bluecore_nonpromo_sandals-highest-affinity-weekly_trigger-SAMUS&obem=6RXhwZmLDATo-YfcqxuG8g%3D%3D&bc_lcid=t5204109595893760lw5312044277817344",
+            "icon": "eye"
           }
-        ]
-      },
-      "companyWebsite": "https://iliabeauty.com",
-      "companyName": "ILIA Beauty",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
         ],
-        "tone": [
-          "Close the convo once the client takes over"
-        ]
+        "orders": []
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "ILIA Beauty: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from ILIA Beauty.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ILIA Beauty: Welcome to ILIA Beauty! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/KcB",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ILIA Beauty: Thanks for joining us.\n\nTake 15% off with code: ILIA8K775R at checkout. Discount cannot be combined with other offers.\n\nClick here to automatically apply and shop now: iliabeauty.attn.tv/aFf--g5DYQ-m .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ILIA Beauty: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love!\n\nFor now, whether you know exactly what you need or you're shopping for the first time, our collections page as it all: https://iliabeauty.attn.tv/a79aznNNydP9 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ILIA Beauty: Try the Eye Stylus Shadow Stick for smooth, blendable color that lasts\n\nUse code ILIA8K775R for 15% off\n\nStart exploring: https://iliabeauty.attn.tv/a1QfNd22VTtF . 🎨.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ILIA Beauty: 4.8K people recently purchased Eye Stylus Shadow Stick. Complete your order before it disappears!\n\nUse code ILIA8K775R for 15% off, plus free shipping on orders $50+ and free returns: https://iliabeauty.attn.tv/aVCvu8USFqlW .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ILIA Beauty: Still thinking about it? It probably means you should take another look.\n\nShop our bestsellers: iliabeauty.attn.tv/avqWFDlQVUik .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ILIA Beauty: You left something behind: iliabeauty.attn.tv/aZHd4HMtA9nf \n\nStill not sure? We offer free returns and exchanges, plus personal consultations to help you find the right product and shade. ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ILIA Beauty: ILIA x clé celebrates The Art of Overglaze. \n\nWe invite you to design in color and make space for beauty with clé's new limited edition collection, featuring a glossy thin brick tile in five shades inspired by our new Overglaze Hydrating Lip Gloss.\n\nShop the tile + the gloss: iliabeauty.attn.tv/ar6kIuHvhS1w ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ILIA Beauty: Don't forget your $15 gift\nSpend your VIP thank you gift by 1/31/26 with code MERRY15.*\n\nWhat will you choose?: iliabeauty.attn.tv/asKCLUhCKQHr \n\n*See site for details.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I tried checking out but whe I use my code I get charged shipping, without code I don't",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Military / First responder / Healthcare / Teacher discount\"; last updated: 2025-03-06 21:19:45.542",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Code brings shipping below threshold 2 - All Brands\"; last updated: 2024-01-31 21:45:37.032",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Free shipping\"; last updated: 2025-03-06 21:20:09.648",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bdd40-1ed9-4837-f000-000014656cc1",
-          "message_text": "ILIA Beauty: Sorry about that! The discount code likely lowered your subtotal below the free shipping minimum. Would you like to add something else to reach the threshold? We offer free shipping on domestic orders over $50.00.",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "218": {
-      "agentName": "Annie",
-      "id": "019bc3dd-2a4c-46c5-f000-0000f39b7ddd",
+      "id": "019bc951-e632-410f-f000-0000a4278b9d",
+      "companyName": "The GLD Shop",
+      "companyWebsite": "https://gld.com",
+      "agentName": "Nicole",
+      "agentInitial": "T",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "templates": [
+          "If cx wants to refund their order after 14 days of receiving it, send the \"Return outside of 14 day policy\" temp"
+        ]
+      },
+      "SystemMessage1": "GLD: You don't need more holiday stress. \n\nYou do need a smart gift bundle. Choose 2 pieces, now for only $99\n\nGifts done, peace restored.\n\nVIPs get free express shipping to get it b4 XMAS: gld.attn.tv/aGM3QJ-esceZ",
+      "SystemMessage2": "GLD: TGIF (thank god it's Free Sh*t Friday) - Pizza party on us. \n\nTODAY ONLY - get a free limited-edition GLD Pizza Keychain with $99+\n\n+ 50-70% Daily Holiday Bangers. \n\nUse code FXSHIP for free fast shipping & get it b4 XMAS: gld.attn.tv/aURYGBFwsd5r",
+      "SystemMessage3": "GLD: Like your fav situationship...\n\nshort, messy, gone quick 😭\n\nUp to 70% off rn. Gifts still arrive b4 Xmas.\n\nFree Express Shipping when you click:\ngld.attn.tv/aH-jdFW1CNKH",
+      "SystemMessage4": "GLD: You're invited 📩 GLD Holiday Happy Hour is LIVE. \n\nUp to 70% off holiday-ready pieces.\n\nHit the link for free express shipping & delivery b4 Xmas: gld.attn.tv/aTM41xDPS4_Y",
+      "SystemMessage5": "GLD: Last second gift? Clutch up. \n\n50% off + order by 1PM ET to get it b4 Xmas.\n\nExclusive free 2-Day Shipping ends IN 1 HR.\n\nP.S. don't forget your girl:\ngld.attn.tv/aZqzSOarFx3q",
+      "SystemMessage6": "GLD: Post office on a bender.\n\n50% off + Overnight Shipping for only $10 to get it b4 Xmas.\n\nLAST CHANCE. Order before 1pm ET. We got you. 🤝🎁\ngld.attn.tv/aApeqMtyotaq",
+      "SystemMessage7": "GLD: Technically you're not late...yet. 🎁\n\nInstant holiday W with a GLD gift card. \n\nWe got you: \ngld.attn.tv/aLEeJSQo4ro4",
+      "SystemMessage8": "GLD: New combo meal just dropped 🍔⛓️\n\n2 pieces, your choice = only $99.\n\nExtra shine, no extra fees: gld.attn.tv/aOt2espKD5Wm",
+      "SystemMessage9": "GLD: Picture yourself flexing the 2 For 1 Jewelry Set and turning heads every time you step out.\n\nUse code GETGLD50 for 50% off (exclusions apply).\n\nLevel up your jewelry game here: https://gld.attn.tv/auPBV7Tb4xcS .",
+      "SystemMessage10": "GLD: Last-minute? We got you.\n\nInstant GLD E-Gift Cards = the perfect save.\n\nNo wrapping, no waiting: gld.attn.tv/aVkcJvGUygPa",
+      "SystemMessage11": "GLD: Happy Holidays, from GLD ✨\n\nOne more gift to unwrap - a new Micro Tennis Chain, on us ($140 value) 🎁 \n\nPlus, 50% off anything else you want, too:\ngld.attn.tv/aoSUAeYM7sQs",
+      "SystemMessage12": "GLD: Grandma put money in that card for a reason...\n\nShe WANTS you to cop 2 chains + 2 pendants for only $129 ($350 value). \n\nPrice drop TODAY ONLY. Make grandma proud: \ngld.attn.tv/aw-fisEyotPS",
+      "SystemMessage13": "GLD: Post nut(cracker) clarity? 🎄🥜😬\n\nGet yourself the gifts you really wanted.\n\n50-70% off Daily Bangers. \n\n+ delivery b4 NYE with express shipping ✨ gld.attn.tv/aW4tkcjH8ccy",
+      "SystemMessage14": "GLD: Your fit got potential...\n\nyour neck? it needs some shine 😎✨\n\nChoose 2 pieces, now for only $99.\n\nOrder today, get it b4 NYE. gld.attn.tv/ar8MeDKqaydv",
+      "SystemMessage15": "GLD: Deal of the Day 📢 ‼️\n\n6 of our best-selling products, now under $70\n\nPlus, NYE deals up to 70% off. \n\nCop today & get it b4 NYE with Superfast shipping: gld.attn.tv/apNBImtKf5dj",
+      "SystemMessage16": "GLD: End of Season Sale 🚨‼️\n\nPawn off the bad gifts and drop it all on GLD.\n\nOur hottest pieces of the year, 50-70 off in our Daily Bangers collection. \n\nTap in. gld.attn.tv/addsxBN0IXZ7",
+      "SystemMessage17": "GLD: Start 2026 with a W. \n\n50% off + a free chain when you hit the link.\n\nLast chance to get it b4 NYE with Superfast shipping:\nhttps://gld.attn.tv/a2uL8939ArLC .",
+      "SystemMessage18": "GLD: ...same old drip in 2026? Not on our watch. \n\nCop something new & get a FREE CHAIN to elevate your game.\n\nOh, and 50% OFF, too. https://gld.attn.tv/aZ07HL4DORDB .",
+      "SystemMessage19": "GLD: New chains > Making resolutions.\n\nLet's keep it real: 55% off for text fam only. \n\n2026 the year you get your style right: https://gld.attn.tv/apcyR3gyJSPE",
+      "SystemMessage20": "GLD: POOF... ending faster than your Resolutions\n\nYour free Micro Tennis Chain ghosts in 3... 2... 1... \n\nhttps://gld.attn.tv/ajWkDkbfgvjk .",
+      "SystemMessage21": "GLD: New year, new relationships.\n\nWe splitting the bill like the girl you've always wanted.\n\nWeekend bangers 50-70% off. \n\nTo a great 2026. 🥂\nhttps://gld.attn.tv/a4ayQkaU9zAc .",
+      "SystemMessage22": "GLD: Clean look. Clean price.\n\nChain + pendant combo, just $99 today.\n\nMake your personalized set:gld.attn.tv/acFscEv6FF-c",
+      "SystemMessage23": "GLD: Our 2026 prediction? \n\nThis the year your fits go crazy.\n\nLast chance for 50-70% off deals. \n\nWeekend bangers end MIDNIGHT.\nhttps://gld.attn.tv/aontM2qccoYN .",
+      "SystemMessage24": "GLD: Comeback season is real. Ready to refresh the rotation?\n\nConsider this your VIP invite to 50% off + a free chain.\n\nHit the link to get your exclusive offer: \ngld.attn.tv/as3a7kbmRJwO",
+      "SystemMessage25": "GLD: This the \"don't tell nobody\" deal.\n\n50% off for subscribers only is extended until the boss catches on. 🙃\n\nClock starts now: gld.attn.tv/aOQgt96XeKMH",
+      "SystemMessage26": "GLD: Everything you need in one play.\n\nNew bundled sets up to 65% off - plus a bonus chain on us.\n\nWe got you, no code needed: gld.attn.tv/aKnbVfd_U54p",
+      "SystemMessage27": "GLD: Not a typo 🚨\n\n50% off + a free chain while everyone else gets 30. \n\nLimited active codes for subscribers only. Click to redeem: gld.attn.tv/a6Rk0qtLqfqL",
+      "SystemMessage28": "GLD: Banger Deal of the Day 🤑\n\nMicro Diamond Prong Cuban Braclet, now only $90 ($180 value!). Today only. \n\nExplore our best deals: gld.attn.tv/au1mSOZ461x-",
+      "SystemMessage29": "GLD: Yoffs on. Chains on. 🏈⛓️\n\nLock in. All NFL pendants now 50% off.\n\nSubscribers only: gld.attn.tv/ao9YvXVitT1D",
+      "SystemMessage30": "GLD: Meal prep your neck. 💎🍴\n\nChains for the whole week.\n\nYour choice of 4 pieces for only $149: gld.attn.tv/aM9x-bcxp1_H",
+      "SystemMessage31": "GLD: There's exclusive...and then there's get-50-off-GLD-subscriber exclusive. \n\nYou're on the right list.\n\nClick here for 50% off + a free chain. gld.attn.tv/abBPUDR7r_dW",
+      "SystemMessage32": "GLD: We caught that double-take! 👀 \n\nWas it the drip or the deal? \n\nEither way, don't trip - snag yours for up to 40% OFF (TODAY ONLY) with code GET40\n\ngld.attn.tv/adeZIIQ8D3zJ",
+      "SystemMessage33": "GLD: You'll love how the Diamond Tennis Necklace in White Gold catches the light—perfect for stacking or solo FLEX.\n\nUse code VIP40 to get 40% off (exclusions apply).\n\nShop now 👉: https://gld.attn.tv/aXW9CScq7JPX .",
+      "SystemMessage34": "GLD: Decision fatigue is real. 😩\n\nJust Get both, it's 2 for only $99. \n\nAny 2 for less than $50 per piece. The math maths. gld.attn.tv/a6BHSy5E-Rwd",
+      "SystemMessage35": "GLD: In this economy...\nWe a positive return on investment for you.\n\n50% off + a free chain with your purchase, while supplies last. \n\nSubscribers only - use code VIP50: gld.attn.tv/a9Bmn0HiyRpr",
+      "SystemMessage36": "GLD: Daily bangers are BACK and this one's for you only.\n\nBest-selling Tennis Chain + Bracelet bundle, now only $70 ($195 value)\n\nPlus, up to 70% off other Long Weekend Deals: gld.attn.tv/a3vGz1QhvgW3",
+      "customerMessage1": "the bundle still listed at 229 even w codes 😪",
+      "AgentMessage1": "GLD: I'm sorry to hear that! Please note that exclusions to our promotional codes will always be any solid gold or already discounted items (ie; Bundles, Make A Set, or Flash Deals), unless otherwise specifically stated. Codes are also not applicable to licensed collections (such as NBA, or NFL), Moissanite jewelry, or Solid Gold Custom Orders over $2000. Do you have any of the above items in your cart and do you mind sending a screenshot please?",
+      "customerMessage2": "well i mean you said both for 70 and im just tryn to find that bundle cause its not there",
+      "SystemMessage37": "\"",
+      "SystemMessage38": "\"",
+      "SystemMessage39": "\"",
+      "AgentMessage2": "GLD: I apologize for the confusion this has caused. Please note that the bundle offer and the up to 70% off promotion are separate deals and cannot be stacked. As for the bundle you are looking for, I am checking this with our team since I also do not see a $70 bundle offer available. I will follow up as soon as I have more information.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://beistravel.com",
+          "value": "https://gld.com",
           "date": ""
-        }
-      },
-      "companyWebsite": "https://beistravel.com",
-      "companyName": "Beis Travel",
-      "notes": {
-        "escalate": [
-          "We don't ESC for this client, use ESC shortcut",
-          "If cx ask how to get/redeem the discount for downloading the app use ESC shortcut"
+        },
+        "browsingHistory": [
+          {
+            "item": "Diamond Tennis Chain in White Gold- 5mm - 14k White Gold Plated / 20\" / White Gold",
+            "link": "https://www.gld.com/products/diamond-tennis-necklace-in-white-gold-5mm",
+            "icon": "eye"
+          },
+          {
+            "item": "Diamond Tennis Chain in White Gold- 3mm - 14k White Gold Plated / 20\" / White Gold",
+            "link": "https://www.gld.com/products/round-cut-tennis-necklace-in-white-gold-3mm",
+            "icon": "eye"
+          },
+          {
+            "item": "Diamond Tennis Necklace in White Gold- 5mm - 14k White Gold Plated / 20\" / White Gold",
+            "link": "https://www.gld.com/products/diamond-tennis-necklace-in-white-gold-5mm-6",
+            "icon": "eye"
+          },
+          {
+            "item": "Diamond Tennis Necklace in White Gold- 3mm - 14k White Gold Plated / 20\" / White Gold",
+            "link": "https://www.gld.com/products/diamond-tennis-necklace-in-white-gold-3mm-5",
+            "icon": "eye"
+          },
+          {
+            "item": "Diamond Tennis Bracelet in White Gold - 3mm - 14k White Gold Plated / 8\" / White Gold",
+            "link": "https://www.gld.com/products/3mm-round-cut-tennis-bracelet-in-white-gold-flash",
+            "icon": "eye"
+          }
         ],
-        "templates": [
-          "For Limited edition items don't use restock temps, they will not be restocked"
-        ],
-        "dos_and_donts": [
-          "Don't share the duration of the sale/sale dates with customers!"
-        ]
+        "orders": []
       },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Welcome to BÉIS Travel! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Hey there, newbie! First time shopping with us? We've handpicked some essentials to get you started: https://beistravel.attn.tv/anpssDjN7CsK . \n\nEnjoy 20% OFF with code WELCOMEUG2aHb \nbeistravel.attn.tv/aFrHD1-vZeew .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Bags designed to make your every day easier. Save our contact to make getting all of our latest updates easy.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Seeing BÉIS at every terminal? With thousands of 5-star reviews, it's your turn to join the community. \nGrab your travel essentials now: https://beistravel.attn.tv/adg6sWtA0W19 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Still thinking about The Carry-On Roller in Black? Your taste is spot on - Treat yourself with 15% off using code welcomedNT4d2: beistravel.attn.tv/arOQ1ugo9e3K .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Good news, it looks like you're already subscribed! Click here to shop now: https://beistravel.attn.tv/cl/txE.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: This friendship is forever... but your 20% OFF code isn't. Don't forget to use code WELCOMEUG2aHb to save on our bestsellers. \n\nhttps://beistravel.attn.tv/a51ovpXXFMOJ .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Introducing Pro - Ballistic nylon, elevated design, serious function. \n\nPreview now (autographs later): beistravel.attn.tv/aDVSx53R7IKO .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Last call! Only 1 day left to enjoy 20% OFF our bestselling luggage, bags + more. \n\nShop now with code WELCOMEUG2aHb\nbeistravel.attn.tv/aUQKgqd-7liY .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Can I use the code tomorrow?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc3da-2dfe-4531-f000-0000f39b7ddd",
-          "message_text": "BÉIS Travel: Yes, you can use the coupon code WELCOMEUG2aHb tomorrow for 20% off on select categories at beistravel.com.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Which are those categories",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Like the mini weekend bag and carry on suit case",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc3db-1b25-499b-f000-0000f39b7ddd",
-          "message_text": "BÉIS Travel: The Mini Weekender in Black and The Carry-On Roller in Black are available. Check them out here: \n- Mini Weekender: https://beistravel.attn.tv/aSJq9n0tbIBW\n- Carry-On Roller: https://beistravel.attn.tv/aqDzQIDC1c5s",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Can I use my 20 percent off tmmrw",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I get paid tmmrw",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"New Arrivals\"; last updated: 2025-08-19 18:28:56.923",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc3dd-2a4c-46c5-f000-0000f39b7ddd",
-          "message_text": "BÉIS Travel: Of course, you can use your 20% tomorrow. If anything else comes up, let me know! In the meantime, feel free to take a look at our new arrivals here: https://beistravel.attn.tv/ar0b7jp7INnN",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "219": {
-      "agentName": "Rebecca",
-      "id": "019bce5a-7127-4f9b-f000-0000718048dd",
+      "id": "019bc2be-94e7-4e43-f000-000091a3ea8c",
+      "companyName": "Dr.Westin Childs",
+      "companyWebsite": "https://restartmed.com",
+      "agentName": "Kat",
+      "agentInitial": "D",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ]
+      },
+      "SystemMessage1": "Dr. Westin Childs: Hey there, it's Kat. Thanks for stopping by! https://drwc.attn.tv/a5mPqryiNADq \n\nCan I answer any supplement questions for you? Reply back to chat with me!",
+      "customerMessage1": "Hi. Does Dr Child's do consultations?  There seems to be many supplements so wanted to make sure I get the right ones",
+      "SystemMessage2": "Template used: \"Ask away - All brands\"; last updated: 2023-10-10 17:56:40.203",
+      "AgentMessage1": "Dr. Westin Childs: I'm sorry for the delay! You can check out our supplement guide here: https://drwc.attn.tv/ah6QJxJMJOD6\nDr.Westin Childs isn't personally available to answer medical questions or provide you with medical advice, but we're here to help! Please ask away!",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://faithgateway.com",
+          "value": "https://restartmed.com",
           "date": ""
         },
-        "browsingHistory": [
-          {
-            "link": "https://faithgateway.com/products/the-joshua-code-52-scripture-verses-every-believer-should-know?variant=13744501686383&utm_campaign=2026-01-15_sms_joshuacode_still9.99_wbs2026_base&utm_medium=sms&utm_source=attentive&externalId=K2k5g",
-            "item": "The Joshua Code: 52 Scripture Verses Every Believer Should Know (A 52-Week Devotional - Spend Each Week of the Year Memorizing and Meditating on One Bible Passage) – Perfect Christian New Year's Gift - Hardcover",
-            "timeAgo": "2026-01-17"
-          },
-          {
-            "link": "https://faithgateway.com/products/the-joshua-code-52-scripture-verses-every-believer-should-know?variant=13744501686383&utm_campaign=2026-01-15_sms_joshuacode_still9.99_wbs2026_base&utm_medium=sms&utm_source=attentive&externalId=K2k5g",
-            "item": "The Joshua Code: 52 Scripture Verses Every Believer Should Know (A 52-Week Devotional - Spend Each Week of the Year Memorizing and Meditating on One Bible Passage) – Perfect Christian New Year's Gift - Hardcover",
-            "timeAgo": "2026-01-17"
-          },
-          {
-            "link": "https://faithgateway.com/products/the-joshua-code-52-scripture-verses-every-believer-should-know?variant=13744501686383&utm_campaign=2026-01-15_sms_joshuacode_still9.99_wbs2026_base&utm_medium=sms&utm_source=attentive&externalId=K2k5g",
-            "item": "The Joshua Code: 52 Scripture Verses Every Believer Should Know (A 52-Week Devotional - Spend Each Week of the Year Memorizing and Meditating on One Bible Passage) – Perfect Christian New Year's Gift - Hardcover",
-            "timeAgo": "2026-01-17"
-          },
-          {
-            "link": "https://faithgateway.com/products/the-joshua-code-52-scripture-verses-every-believer-should-know?variant=13744501686383&utm_campaign=2026-01-15_sms_joshuacode_still9.99_wbs2026_base&utm_medium=sms&utm_source=attentive&externalId=K2k5g",
-            "item": "The Joshua Code: 52 Scripture Verses Every Believer Should Know (A 52-Week Devotional - Spend Each Week of the Year Memorizing and Meditating on One Bible Passage) – Perfect Christian New Year's Gift - Hardcover",
-            "timeAgo": "2026-01-16"
-          },
-          {
-            "link": "https://faithgateway.com/products/the-joshua-code-52-scripture-verses-every-believer-should-know?variant=13744501686383&utm_campaign=2026-01-15_sms_joshuacode_still9.99_wbs2026_base&utm_medium=sms&utm_source=attentive&externalId=K2k5g",
-            "item": "The Joshua Code: 52 Scripture Verses Every Believer Should Know (A 52-Week Devotional - Spend Each Week of the Year Memorizing and Meditating on One Bible Passage) – Perfect Christian New Year's Gift - Hardcover",
-            "timeAgo": "2026-01-16"
-          }
-        ]
+        "browsingHistory": [],
+        "orders": []
       },
-      "companyWebsite": "https://faithgateway.com",
-      "companyName": "FaithGateway",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase inquiries, use PPI shortcut",
-          "Send to CS if the customer doesn't receive the free printables with his purchase"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Discount code errors",
-        "Shipping questions"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: NEW: Need the perfect last-minute Christmas gift? Gift Cards are here! fg.attn.tv/aEldS8p7fwYI\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Begin 2026 w/ hope & encouragement!\n\nMax Lucado's God Is With You Every Day offers daily devotions, Scripture, & prayers to guide you all year long.\n\nSave 40% + get a FREE gift to help you start the new year in the word: fg.attn.tv/a85xbfzMpHmc\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Rebecca with FaithGateway! We noticed you eyeing something on our site and we'd love to get this on it's way to you. Shop now: https://fg.attn.tv/a2lYMFYdsiRM .\n\nDid you have any questions for me?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Hey , this is Rebecca. Thanks for checking out our site! https://fg.attn.tv/a0hCQfJ_EPlR \n\nAre you looking for anything in particular today? ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: You don't need to shop in stores to get great after-Christmas prices--shop our Christmas clearance sale instead!\n\nSave up to 50% on popular titles, from timeless classics to new tales of cheer & make next Christmas even brighter!\n\nEnds in 3 days: fg.attn.tv/azcwNZo8MzqH\n\nText w/ questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Rebecca with FaithGateway! We noticed you eyeing something on our site and we'd love to get this on it's way to you. Shop now: https://fg.attn.tv/agCHlkSyS7Vu .\n\nDid you have any questions for me?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: FINAL HOURS of our Christmas clearance sale!\n\nWith up to 50% savings, you don't want to miss this chance to stock up on bestselling resources to make next Christmas even brighter!\n\nEnds tonight--shop now: fg.attn.tv/aNe5SedrJia4 \n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Learn how to change your entire day by how you start your morning.\n\nJoin us for the FREE The GREAT Morning Revolution Online Bible Study with Tara Beth Leach and go from scattered to spiritually centered. fg.attn.tv/aC1cnTJ03t22 \n\nText back w/ questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Feel stuck or intimidated about Bible study? No More Boring Bible Study shows you how to read Scripture w/ clarity, confidence, and joy.\n\nJust $12.99 (35% off) during our New Year's Sale + save an extra $10 on $50+ purchases w/ code NY26. fg.attn.tv/ah7CnVxUN3ni",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: \"Absolutely love this BEAUTIFUL book!!!\"\nThe Way of the Wildflower, an Editor's Pick of 2025, is back--but supplies are limited. Get yours now before it sells out a 3rd time. Just $18.99 (37% off)! Plus save an extra $10 on $50+ w/ code NY26.\nfg.attn.tv/aeL9-sN9EJ-A\n\nText back w/ questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Read the Bible like a novel in 2026 and experience Scripture like never before!\n\nGet The Story for just $7.99 (60% off!). The sale ends soon so grab your copy now.\n\nNIV: fg.attn.tv/a9_2TaDKzYsK\n\nNKJV: fg.attn.tv/aqb35wELKlio\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Start the New Year rooted in faith!\n\nEnjoy up to 60% off + extra $10 off $50+ w/ code NY26. But hurry!\nFinal hours to save on favorites you'll love all year: fg.attn.tv/aZzTjd0rNagj \n\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Extended 1 more day only!\n\nEnjoy up to 60% off + extra $10 off $50+ w/ code NY26.\nWhat are you waiting for?\nGrab your favorites before midnight: fg.attn.tv/aM2MPI8EjxvX \n\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: WE'VE GOT A SECRET\n\nBestselling The Joshua Code is still on sale--just $9.99, only for a little longer!\n\nGet your copy now and discover the power that Scripture memorization brings to deepening your faith. fg.attn.tv/azL8eP1KpbjZ\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Hey , this is Rebecca. Thanks for checking out our site! https://fg.attn.tv/auAP5J-jw42j \n\nAre you looking for anything in particular today? ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Rebecca with FaithGateway! We noticed you eyeing something on our site and we'd love to get this on it's way to you. Shop now: https://fg.attn.tv/a4U2TAhiD_zK .\n\nDid you have any questions for me?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Goodevening I would like to know how 🤔 can I get this Joshua Code. Thank you for your help.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bce55-37d1-4799-f000-0000718048dd",
-          "message_text": "FaithGateway: You can get \"The Joshua Code\" here: https://fg.attn.tv/agZ5N4-jHgzs. It's available in eBook and Hardcover formats.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Is it available by phone or can I have it mailed to me. Thanks",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bce5a-7127-4f9b-f000-0000718048dd",
-          "message_text": "FaithGateway: This is a hardcover, so we'll ship it to your address! It features gold foil on the cover and a ribbon marker to keep your place as you study God's Word throughout the year. ",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "220": {
+      "id": "019bc71a-5f3a-466f-f000-0000f456078a",
+      "companyName": "Jaanuu",
+      "companyWebsite": "https://jaanuu.com",
       "agentName": "Sarah",
-      "id": "019bf18b-ba94-4f9f-f000-0000f5c362f6",
+      "agentInitial": "J",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "drive_to_purchase": [
+          "The Lawren Set - all colors",
+          "Heather Gray across Men's & Women's style"
+        ]
+      },
+      "SystemMessage1": "JAANUU: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from JAANUU.",
+      "SystemMessage2": "JAANUU: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/SnU",
+      "SystemMessage3": "JAANUU: Welcome to comfort, quality, and all-around better scrubs. Use your code for 15% off your first order: WELCOMEVfDbbl\n\nShop Now: jaanuu.attn.tv/av7_Z22Er0Y3",
+      "SystemMessage4": "JAANUU: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nReady to upgrade your workwear? Shop best-sellers and discover your next go-to: https://jaanuu.attn.tv/ah7gWFAED2fP .",
+      "customerMessage1": "Do you still sell any pants that are 65% rayon, 30% nylon, 5% spandex or as close to that as possible?",
+      "customerMessage2": "My spouse loves the fabric from those pants but they are wearing out with holes from being worn so often",
+      "SystemMessage5": "Template used: \"What are your fabrics?\"; last updated: 2022-12-12 19:03:16.398",
+      "AgentMessage1": "JAANUU: I understand, Jane! Don't worry, we still have UltraSOFT™ options here: https://jaanuu.attn.tv/ae5aNyolR2yj , https://jaanuu.attn.tv/alQUfPhgpOwY. This is the amazing knit fabric made from 65% rayon, 30% nylon, and 5% spandex. What color and size do they need?",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://fragrancenet.com",
+          "value": "https://jaanuu.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.fragrancenet.com/cologne/gianni-versace/versace-eros-flame/eau-de-parfum#332213",
-            "item": "VERSACE EROS FLAME",
-            "timeAgo": "2026-01-24"
+            "item": "Silex Slim Cargo Knit-Waist Scrub Jogger - White - White / XXS / Regular",
+            "link": "https://www.jaanuu.com/products/womens-silex-slim-cargo-knit-waist-scrub-jogger-white",
+            "icon": "eye"
           },
           {
-            "link": "https://www.fragrancenet.com/cologne/gianni-versace/versace-eros-flame/eau-de-parfum#332213",
-            "item": "VERSACE EROS FLAME",
-            "timeAgo": "2026-01-24"
+            "item": "Silex Slim Cargo Knit-Waist Scrub Jogger - White - White / XXS / Regular",
+            "link": "https://www.jaanuu.com/products/womens-silex-slim-cargo-knit-waist-scrub-jogger-white?_pos=6&_fid=df1fdf00b&_ss=c",
+            "icon": "eye"
           },
           {
-            "link": "https://www.fragrancenet.com/cologne/afnan-perfumes/afnan-9-pm/eau-de-parfum#325997",
-            "item": "AFNAN 9 PM",
-            "timeAgo": "2026-01-24"
+            "item": "Jace Skinny 7-Pocket Scrub Jogger - Midnight Navy - Midnight Navy / XXS / Regular",
+            "link": "https://www.jaanuu.com/products/womens-jace-skinny-on-the-go-scrub-jogger-black?variant=50305316552993",
+            "icon": "eye"
           },
           {
-            "link": "https://www.fragrancenet.com/cologne/dolce-and-gabbana/d-and-g-light-blue-summer-vibes/edt#474716",
-            "item": "D & G LIGHT BLUE SUMMER VIBES",
-            "timeAgo": "2026-01-24"
+            "item": "Jace Skinny 7-Pocket Scrub Jogger - Midnight Navy - Midnight Navy / XXS / Petite",
+            "link": "https://www.jaanuu.com/products/womens-jace-skinny-on-the-go-scrub-jogger-midnight-navy?variant=50305316946209",
+            "icon": "eye"
           },
           {
-            "link": "https://www.fragrancenet.com/cologne/dolce-and-gabbana/d-and-g-light-blue-summer-vibes/edt?&utm_campaign=462541&utm_medium=affiliate#474716",
-            "item": "D & G LIGHT BLUE SUMMER VIBES",
-            "timeAgo": "2026-01-24"
+            "item": "Jace Skinny 7-Pocket Scrub Jogger - Midnight Navy - Midnight Navy / XXS / Regular",
+            "link": "https://www.jaanuu.com/products/womens-jace-skinny-on-the-go-scrub-jogger-midnight-navy",
+            "icon": "eye"
           }
-        ]
-      },
-      "companyWebsite": "https://fragrancenet.com",
-      "companyName": "FragranceNet",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
         ],
-        "tone": [
-          "Close the convo once the client takes over",
-          "Don't use emojis/special characters"
-        ],
-        "templates": [
-          "For issues relating to free shipping with no minimum purchase, use \"FSB\" shortcut",
-          "If a product is not available on their website, use \"PNA\" shortcut"
-        ]
+        "orders": []
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "FragranceNet: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from FragranceNet.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FragranceNet: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/dkv",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FragranceNet: Welcome to the world of elevated fragrance! Enjoy 30% OFF sitewide to start your journey: https://fragrancenet.attn.tv/a0sK_ptmRVVe ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FragranceNet: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nDiscover your new scent!\n\nShop now: https://fragrancenet.attn.tv/aRtxf63e8HBK .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FragranceNet: D & G Light Blue Summer Vibes and Afnan 9 Pm are waiting in your cart.\n\nUse code MOBILE30 for 30% off your purchase, valid at checkout.\n\nShop now: https://fragrancenet.attn.tv/apNYx8E34SA4 .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "how much is versace eros flame",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bf18b-ba94-4f9f-f000-0000f5c362f6",
-          "message_text": "FragranceNet: I appreciate your interest! I'm here to help you. Is this the exact one you like? https://fragrancenet.attn.tv/a_nXyoDDOiA9 Can I ask what size you want? The prices can also be found on this link!",
-          "message_media": []
-        }
-      ]
+      "orders": []
     }
   }
 }

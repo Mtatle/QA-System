@@ -3,563 +3,386 @@
   "chunk": "chunk_0003",
   "scenarios": {
     "11": {
-      "agentName": "Jordan",
-      "id": "019bc81c-594f-490c-f000-000023af33ac",
+      "id": "019bb434-0a34-4c94-f000-00006b66fe45",
+      "companyName": "Simply Earth",
+      "companyWebsite": "https://simplyearth.com",
+      "agentName": "Sarah",
+      "agentInitial": "S",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Cx can use both a gift card and a promo code per order!"
+        ]
+      },
+      "SystemMessage1": "Simply Earth: Our FINAL Promo of the year!! Use code GC25 to get a FREE $25 gift card, when you purchase a $100 gift card. (It's basically free money!) \n\nShop Now: simplyearth.attn.tv/aQ2cBQt7AKlB",
+      "SystemMessage2": "Simply Earth: Hey there, Earthie! You're this close to starting your next natural creation. Don't forget: You automatically get 10% off all Recipe Box add-ons!\n\nKeep shopping: https://simplyearth.attn.tv/aE84AYrEG5_V \n\nGot questions? I'll answer them!",
+      "SystemMessage3": "Simply Earth: Your DIY Lotions + Balms Recipe Box ships soon! Shop now for 10% off add-ons -- no code needed. simplyearth.attn.tv/a43KQdWoeqLh",
+      "SystemMessage4": "Simply Earth: Brand New DIY Kit Alert!! \nCreate your own GOLDEN GLOW Body Butter with this EASY kit! \n\nGrab yours now and enjoy the benefits of natural ingredients! simplyearth.attn.tv/atTQVd9ECGif",
+      "SystemMessage5": "Simply Earth: Hey, Earthie! Looks like you forgot some great products in your cart - simplyearth.attn.tv/aCs3kqTdQ5f6\n\nIs there anything I can help you with? You can reply here.",
+      "SystemMessage6": "Simply Earth: Hey Cindy! I'm Sarah, your personal shopping assistant. \n\nDo you have questions or concerns? Let me know how I can help. \n\nsimplyearth.attn.tv/a723hLqks6mQ",
+      "customerMessage1": "Hi Sarah! I tried to add on a couple of things to my box coming but I'm not sure if it actually added to the order? Can you check?",
+      "SystemMessage7": "Template used: \"Post Purchase Inquiries \"; last updated: 2024-02-12 23:33:55.844",
+      "AgentMessage1": "Simply Earth: We appreciate your continued support, and I understand. We don't handle post-purchase requests via text. Please email your request to help@simplyearth.com or feel free to call this number 866-330-8165 Monday-Friday 7am-3pm CST. Please let me know if you have any questions about our products, I'm more than happy to help you here!",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://sebastiancruzcouture.com",
+          "value": "https://simplyearth.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.sebastiancruzcouture.com/products/white-classico-tuxedo-shirt?variant=31556905140327",
-            "item": "White Classico Tuxedo Shirt - 16.5 / 36/37",
-            "timeAgo": "2026-01-16"
+            "item": "Multi-Purpose Cleaning Tablets",
+            "link": "https://simplyearth.com/products/cleaning-tabs",
+            "icon": "eye"
           },
           {
-            "link": "https://www.sebastiancruzcouture.com/products/white-classico-tuxedo-shirt?variant=31556904124519",
-            "item": "White Classico Tuxedo Shirt - 16.5 / 32/33",
-            "timeAgo": "2026-01-16"
+            "item": "Multi-Purpose Cleaning Tablets",
+            "link": "https://simplyearth.com/products/cleaning-tabs",
+            "icon": "eye"
           },
           {
-            "link": "https://www.sebastiancruzcouture.com/products/white-classico-tuxedo-shirt",
-            "item": "White Classico Tuxedo Shirt - 14.5 / 32/33",
-            "timeAgo": "2026-01-16"
+            "item": "Citrus Burst Essential Oil Blend",
+            "link": "https://simplyearth.com/products/citrus-burst-essential-oil-blend",
+            "icon": "eye"
           },
           {
-            "link": "https://www.sebastiancruzcouture.com/products/nero-satin-jumbo-pre-tied-butterfly-bow-tie",
-            "item": "Nero Satin Jumbo Pre Tied Butterfly Bow Tie",
-            "timeAgo": "2026-01-16"
+            "item": "Citrus Burst Essential Oil Blend",
+            "link": "https://simplyearth.com/products/citrus-burst-essential-oil-blend",
+            "icon": "eye"
           },
           {
-            "link": "https://www.sebastiancruzcouture.com/products/rippled-inox-trousers?pr_prod_strat=jac&pr_rec_id=80530894b&pr_rec_pid=14740487962994&pr_ref_pid=14740477870450&pr_seq=uniform&variant=52315718910322",
-            "item": "Rippled Inox Trousers - 36x34",
-            "timeAgo": "2026-01-16"
+            "item": "Multi-Purpose Cleaning Tablets",
+            "link": "https://simplyearth.com/products/cleaning-tabs",
+            "icon": "eye"
           }
-        ]
-      },
-      "companyWebsite": "https://sebastiancruzcouture.com",
-      "companyName": "Sebastian Cruz Couture",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for order status updates",
-          "Send to CS if there's a pending ESC and cx ask for an update (even if it's been less than 2 business days)"
         ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "12": {
+      "id": "019bb3e8-25af-4d9f-f000-0000f37d45da",
+      "companyName": "Backcountry",
+      "companyWebsite": "https://backcountry.com",
+      "agentName": "Sarah",
+      "agentInitial": "B",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "escalate": [
-          "ESC immediately if the customer wants an order to arrive at a specific time, or before our standard shipping time",
-          "ESC for product info that you can't find on the site"
+          "No escalations for this client, send everything to CS"
         ],
         "tone": [
           "Close the convo once the client takes over"
         ],
-        "templates": [
-          "If cx sends us their measurements or asks about making a custom sizing order use the CUS template.",
-          "If cx mentions that they're going to lose weight, use 'Lose weight' template."
-        ],
-        "dos_and_donts": [
-          "Do not recommend the customer go to a place to get measured",
-          "\"@ The Vault\" items are designated for returns/exchanges, but may also be available in other sizes on The Vault website. Always check there first",
-          "When the color is closer to white and not cream we say off white",
-          "You should never direct the customer to the sizing chart when they mention custom sizing or they send their measurements",
-          "Don't tell the customer to hold off on purchase if they are going to lose weight."
-        ],
-        "drive_to_purchase": [
-          "When recommending products, make sure they're aligned with the colors, style the cx is looking for"
-        ],
         "promo_and_exclusions": [
-          "If cx ask about pricing, tell them to add items to their cart and the best discount will apply automatically",
-          "The 40% discount applies automatically when cx add five or more items to their cart",
-          "If cx going to purchase a lot of products in one purchase, share with them what you can find on current offer page along with the link: https://www.sebastiancruzcouture.com/pages/current-offers"
+          "Welcome offer page:   https://www.backcountry.com/sc/new-customer-coupon-rules"
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [
-        "slow"
-      ],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Sebastian Cruz Couture: Hey there! We noticed you eyeing something on our site...come back and shop now: sebastiancruzcouture.attn.tv/adjgsUljBxnB .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sebastian Cruz Couture: Hey Mister, this is Jordan. Bold choice. 😏 https://sebastiancruzcouture.attn.tv/azHV4wdF4m_u \n\nAny questions I can answer for you?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sebastian Cruz Couture: Hey Mister! I'm Jordan, your personal shopping assistant.\n\nI'm here to answer any questions, share recommendations, or assist in any way. What can I help you with today?\n\nhttps://sebastiancruzcouture.attn.tv/ahBmSs61uLpc .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sebastian Cruz Couture: FREE SHOES !!️\n\nThis Offer Is Exclusively For YOU! \n\nPurchase ANY 3pcs suit of your choice and redeem a free shoe of your choice. Simply email us your eligible order number or send here. OFFER ENDS TOMORROW.\n\nsebastiancruzcouture.attn.tv/ax0xf7UxdVjk \n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sebastian Cruz Couture: Happy New Year !!️\n\nProduction Is Back Up & Running! Now's The Time To Get Your New Look! \n\nSHOP LATEST PIECES:\n👇\nsebastiancruzcouture.attn.tv/a2AxRhL8SzUl \nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sebastian Cruz Couture: Before It's Too Late 🚨\n\nThe \"Back To Normal Rush\" Is In! \n\nOrder Now To Get Your Valentines Look Ready! \n\nSHOP LATEST:\n👇\nsebastiancruzcouture.attn.tv/a6wqK1g6lifQ \nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sebastian Cruz Couture: Hey Mister, this is Jordan. Bold choice. 😏 https://sebastiancruzcouture.attn.tv/aHaCXd85-vps \n\nAny questions I can answer for you?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sebastian Cruz Couture: Hey Mister, this is Jordan . I noticed you were interested in something https://sebastiancruzcouture.attn.tv/aihJVq4gvwh0 .\n\nAnything I can help you with? Text me anytime",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I'm wondering if I can get a sample of what the fabric looks like before I order it",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc6f1-01b0-40ef-f000-000023af33ac",
-          "message_text": "Sebastian Cruz Couture: Good morning, and thank you for waiting. I understand! Let me check with the team if this is possible, and I'll get back to you once I have more information. What specific fabric and color do you want to get?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I have the suit reserved in my box vidalofkeywest@gmail.co.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc81c-594f-490c-f000-000023af33ac",
-          "message_text": "Sebastian Cruz Couture: Did you mean the cart? If so, I'm afraid I don't have direct access to it. Can you share the name so I can check with the team? ",
-          "message_media": []
-        }
-      ]
-    },
-    "12": {
-      "agentName": "",
-      "id": "019bdcd7-00eb-4055-f000-0000957d90f9",
+      "SystemMessage1": "Backcountry: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Backcountry.",
+      "SystemMessage2": "Backcountry: Welcome to Backcountry! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/iVG",
+      "SystemMessage3": "Backcountry: Welcome to the Herd! You gave us your digits, we'll give you some, too. Your code for 15% off is here: http://bctxt.co/aYdLOKYtHZVi\nExclusions apply.",
+      "SystemMessage4": "Backcountry: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nSome of our favorite gear just went on sale! Get the best deals on our top brands before they're gone: http://bctxt.co/a2vJom1lRdbW .",
+      "SystemMessage5": "Backcountry: You left Hummvee Short With Liner - Women's, Trailfarer 4.5in Shorts - Women's, and other trail-ready items in your cart.\n\nUse code BCNTFSMS25Q4HYGC8TX for 15% off full-priced items; exclusions apply.\n\nShop now: http://bctxt.co/az0vdmfiZwTQ .",
+      "SystemMessage6": "Backcountry: Grab the Axion Race MIPS Helmet in your cart—extended head protection and optimized airflow ready for your next ride.\n\nJust 5 left; act soon!\n\nShop now: http://bctxt.co/aucTR8dE5Hm5 .",
+      "SystemMessage7": "Backcountry: Grab the Nora 2.0 Shorts for summer comfort and breathable ventilation.\n\nThey're 45% off and ready for your next adventure.\n\nShop now: http://bctxt.co/avYVXAVFzb2I .",
+      "SystemMessage8": "Backcountry: Hi — see wander-ready women's pants built for trail comfort and stretch.\n\nFree shipping on orders $69+.\n\nShop now: http://bctxt.co/aizTiYjpfx2W .",
+      "customerMessage1": "You don't have my size",
+      "AgentMessage1": "Backcountry: I'm sorry about that! Can you tell me what you're referring to and the size you need so I can check?",
+      "customerMessage2": "Keri Tara pants",
+      "AgentMessage2": "Backcountry: Thanks for the info! Could you please confirm the size that you're looking to get?",
+      "customerMessage3": "Kl",
+      "customerMessage4": "Xl",
+      "AgentMessage3": "Backcountry: Thank you for letting me know! Can you please share a screenshot of the pants you are referring to?",
+      "customerMessage5": "I am sure more will be added as spring comes",
+      "AgentMessage4": "Backcountry: Yes, I recommend checking our website and social media frequently for restocks! In the meantime, what do you think about these amazing pants instead? - http://bctxt.co/aS6-tl-pwQZH It's available in XL!",
+      "customerMessage6": "I'm trying to stick to one brand and one color so I can maximize outfits with a few items",
+      "AgentMessage5": "Backcountry: I understand your concern! Could you please let me know what color you're interested in? \n\nOur team works on providing options and variety for our customers so I'll definitely pass this along to the team to consider in the future.",
+      "customerMessage7": "Lotus Kari Tara",
+      "customerMessage8": "Need pants",
+      "customerMessage9": "Prefer wicking and spf 40-50",
+      "AgentMessage6": "Backcountry: Thank you! Unfortunately, what I shared with you are the only Kari Traa pants available in XL right now. Please stay tuned on our website for possible restocks and releases. We appreciate your patience.",
+      "customerMessage10": "Is the lotus color discontinued?",
+      "AgentMessage7": "Backcountry: Good question! The best way to handle this is to chat via our website or submit the email form here: http://bctxt.co/a6-Fg_IMJK9K Our team is happy to help!",
+      "customerMessage11": "I'm looking for Kari traa Voss pro",
+      "AgentMessage8": "Backcountry: Thank you for letting me know! Sorry, the size XL is currently unavailable. I'm sorry, I currently don't have the exact date of a possible restock, but I recommend checking our website and social media frequently. In the meantime, what do you think about this instead? http://bctxt.co/aGhuIoQieHUZ",
+      "customerMessage12": "I found them on the Kari traa website",
+      "AgentMessage9": "Backcountry: I'm glad to hear that! In the meantime, are you looking for something else?",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://bl101.com",
+          "value": "https://backcountry.com",
           "date": ""
-        }
+        },
+        "browsingHistory": [
+          {
+            "item": "Eloise Pant - Women's",
+            "link": "https://www.backcountry.com/kari-traa-eloise-pant-womens?externalId=glpur",
+            "icon": "eye"
+          },
+          {
+            "item": "Nora Singlet - Women's",
+            "link": "https://www.backcountry.com/kari-traa-nora-singlet-womens",
+            "icon": "eye"
+          },
+          {
+            "item": "Nora Singlet - Women's",
+            "link": "https://www.backcountry.com/kari-traa-nora-singlet-womens",
+            "icon": "eye"
+          },
+          {
+            "item": "Nora Short - Women's",
+            "link": "https://www.backcountry.com/kari-traa-nora-short-womens",
+            "icon": "eye"
+          },
+          {
+            "item": "Intraknit Hipster Bikini - Women's",
+            "link": "https://www.backcountry.com/smartwool-intraknit-hipster-bikini-womens",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
       },
-      "companyWebsite": "https://bl101.com",
-      "companyName": "Baseball Lifestyle 101",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Baseball Lifestyle: NEW DROP: The new Realtree Collection is available now in adult and youth sizes. Shop: bl101.attn.tv/aHrHS9THRWx9 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Baseball Lifestyle: COUNTDOWN TO NEW YEAR SALE: 20% Off Sitewide - use code NEWYEAR. Some exclusions apply. Shop: bl101.attn.tv/aWvI8vNp0asf ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Baseball Lifestyle: LAST CHANCE: Use code NEWYEAR for 20% off until 1/1 9AM EST. Some exclusions apply. Shop: bl101.attn.tv/aAQiCjv7Y-vN ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Baseball Lifestyle: NEW DROP: The new Valentine's Day Collection is available now in adult and youth sizes. Shop: bl101.attn.tv/aldzpNhRJLQd ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Baseball Lifestyle: IN STORE EARLY ACCESS: Shop the new Splatter Collection in store at King of Prussia Mall. Lookbook: bl101.attn.tv/aHUN8jnuo8WW ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Baseball Lifestyle: NEW DROP: The new Breakfast Collection is available now in adult and youth sizes. Shop: bl101.attn.tv/ap4XSTjkVkxF ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Baseball Lifestyle: IN STORE: Shop the new Breakfast Collection in store at King of Prussia Mall. Lookbook: bl101.attn.tv/a2IuKV2jKnse ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Baseball Lifestyle: Hi, thanks for your text! If you need additional help please reach us at info@bl101.com. ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Baseball Lifestyle: Limited Time: Mystery Boxes Are Back! Get $100 value for $50 while supplies last. Show Now: bl101.attn.tv/aFlrEH9MDdVb ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Baseball Lifestyle: Did you see something you liked? Get it before it's gone: bl101.attn.tv/a_dSP23L7Cq2",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Please have someone from this company reach out to me ASAP. I have called with no answer multiple times, emailed with no answer multiple times. I'm just I need of a refund on an order from November that no one has cared to make right",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bdcd2-971f-4332-f000-0000957d90f9",
-          "message_text": "Baseball Lifestyle: I completely understand how frustrating this can be. Our team responds to emails in the order they're received, and sending multiple messages may unfortunately delay the response. Rest assured, one of my colleagues will be in touch with you soon. Please also be sure to check your spam and promotions folders, as our emails can sometimes land there.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I have checked everywhere and in different threads so they do not get missed. My original email was from December 15th. You're telling me they're over a month behind on answering emails?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "And no one answers the phone number provided",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bdcd7-00eb-4055-f000-0000957d90f9",
-          "message_text": "Baseball Lifestyle: We sincerely apologize, Caitlyn. I'm afraid I can't be too sure, as I do not have access to the email support team, but you can send us another email to follow up on your request. I'm so sorry again for the delay and the frustration this has caused!",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "13": {
-      "agentName": "Casey",
-      "id": "019bd99a-5b79-415f-f000-0000968de26f",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://heydude.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.heydude.com/products/wally-golf-essentials-mgy-wht",
-            "item": "Wally Golf Essentials - Monument Grey/White - 8",
-            "timeAgo": "2026-01-20"
-          },
-          {
-            "link": "https://www.heydude.com/products/wally-golf-essentials-mgy-wht",
-            "item": "Wally Golf Essentials - Monument Grey/White - 7",
-            "timeAgo": "2026-01-20"
-          },
-          {
-            "link": "https://www.heydude.com/products/wally-cozy-plaid-smoke-grey-multi",
-            "item": "Wally Cozy Plaid - Smoke Grey/Multi - 7",
-            "timeAgo": "2026-01-20"
-          },
-          {
-            "link": "https://www.heydude.com/products/wally-golf-essentials-mgy-wht",
-            "item": "Wally Golf Essentials - Monument Grey/White",
-            "timeAgo": "2026-01-20"
-          },
-          {
-            "link": "https://www.heydude.com/products/wally-golf-essentials-mgy-wht",
-            "item": "Wally Golf Essentials - Monument Grey/White",
-            "timeAgo": "2026-01-20"
-          }
-        ]
-      },
-      "companyWebsite": "https://heydude.com",
-      "companyName": "HEYDUDE US",
-      "notes": {
-        "important": [
-          "There is a scam website that customers are texting in from (https://heydudestores.com/)",
-          "If you notice this, reroute customers to the correct website!"
-        ],
-        "send_to_cs": [
-          "Don't ESC post-purchase issues, use PPI shortcut"
-        ],
-        "templates": [
-          "For wrong items received use WMP shortcut",
-          "For damaged items received use DMI shortcut",
-          "For order status requests use OSR shortcut"
-        ],
-        "promo_and_exclusions": [
-          "The welcome code is valid for first-time customers only.",
-          "➜ Applies to full-price styles",
-          "➜ Can't be combined with any other discounts or offers, including sale styles",
-          "➜  Use cww temp for code issues",
-          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
-        ]
-      },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from HEYDUDE.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Welcome to HEYDUDE! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/o76",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: We're so stoked you're here!\n\nGet 20% off your first purchase with code ATTW23K28PCX8 at checkout.\n\nShop Now:\nhttps://heydudeshoes.attn.tv/ahvBG_7zcplD .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Over the next few days we'll try to help you find something that you will love!\n\nUntil then, shop our viral best-sellers: https://heydudeshoes.attn.tv/abEEY5LDmOkv .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "The code isn't working",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd98c-371c-45ed-f000-0000968de26f",
-          "message_text": "HEYDUDE: Please try using the coupon code ATTW23K28PCX8 again at heydude.com. If it still doesn't work, could you share a screenshot of the issue?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Kena, grab the comfy Wally in easy slip-on canvas for everyday fun.\n\nUse code ATTW23K28PCX8 to get 20% off on eligible styles — act soon.\n\nShop now: https://heydudeshoes.attn.tv/aBoPbdwYbhUM .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Code won't work\"; last updated: 2025-11-12 15:43:55.752",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd99a-5b79-415f-f000-0000968de26f",
-          "message_text": "HEYDUDE: Thank you for sending that over! Please note that discount codes are valid for items available on this link: https://heydudeshoes.attn.tv/aZgYx8mdAF93 They cannot be combined with any other offer or promotion, including sale styles. Please note that additional exclusions may apply. It looks like the item in you cart is not eligible for the code. Hope this clarifies! \n ",
-          "message_media": []
-        }
-      ]
-    },
-    "14": {
-      "agentName": "Sarah",
-      "id": "019be145-a046-4c58-f000-0000cd034dff",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://jaanuu.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.jaanuu.com/products/womens-ivy-ultrasoft-yoga-scrub-pant-midnight-navy?variant=51141761106209",
-            "item": "Ivy UltraSOFTTM Yoga Scrub Pant - Midnight Navy - Midnight Navy / M / Regular",
-            "timeAgo": "2026-01-21"
-          },
-          {
-            "link": "https://www.jaanuu.com/products/womens-ivy-ultrasoft-yoga-scrub-pant-midnight-navy",
-            "item": "Ivy UltraSOFTTM Yoga Scrub Pant - Midnight Navy - Midnight Navy / XXS / Regular",
-            "timeAgo": "2026-01-21"
-          },
-          {
-            "link": "https://www.jaanuu.com/products/womens-ivy-ultrasoft-yoga-scrub-pant-midnight-navy?_pos=2&_sid=da811eeae&_ss=r",
-            "item": "Ivy UltraSOFTTM Yoga Scrub Pant - Midnight Navy - Midnight Navy / XXS / Regular",
-            "timeAgo": "2026-01-21"
-          },
-          {
-            "link": "https://www.jaanuu.com/products/womens-kass-slim-4-pocket-ultrasoft-scrub-top-midnight-navy?variant=50305367933217",
-            "item": "Kass Slim 4-Pocket UltraSOFTTM Scrub Top - Midnight Navy - Midnight Navy / L",
-            "timeAgo": "2026-01-21"
-          },
-          {
-            "link": "https://www.jaanuu.com/products/womens-kass-slim-4-pocket-ultrasoft-scrub-top-midnight-navy",
-            "item": "Kass Slim 4-Pocket UltraSOFTTM Scrub Top - Midnight Navy - Midnight Navy / XXS",
-            "timeAgo": "2026-01-21"
-          }
-        ]
-      },
-      "companyWebsite": "https://jaanuu.com",
-      "companyName": "Jaanuu",
-      "notes": {
-        "drive_to_purchase": [
-          "Push these three collections when customers reach out asking for assistance:",
-          "The Lawren Set - all colors",
-          "https://www.jaanuu.com/scrub-sets-layering/the-lawren-essential-scrub-set/black",
-          "Heather Gray across Men's & Women's style",
-          "https://www.jaanuu.com/mens/collection/mens-heather-gray-scrubs",
-          "https://www.jaanuu.com/collection/heather-gray-womens-scrubs"
-        ]
-      },
+      "id": "019bc389-89e6-4515-f000-0000f4451c7a",
+      "companyName": "Faherty",
+      "companyWebsite": "https://fahertybrand.com",
+      "agentName": "",
+      "agentInitial": "F",
       "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "JAANUU: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/SnU",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "JAANUU: Welcome to comfort, quality, and all-around better scrubs. Use your code for 15% off your first order: WELCOMEqIVab5\n\nShop Now: jaanuu.attn.tv/aWlA-2Xy1cfh \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "JAANUU: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nReady to upgrade your workwear? Shop best-sellers and discover your next go-to: https://jaanuu.attn.tv/alNXe6Qf_As3 .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Help",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be143-4819-439a-f000-0000cd034dff",
-          "message_text": "JAANUU: I'm here to help. What do you need assistance with?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "The 15% discount wasn't applied",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be145-a046-4c58-f000-0000cd034dff",
-          "message_text": "JAANUU: I'm sorry, but that code only works for first-time customers. I don't have any other codes available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our sales collection here: https://jaanuu.attn.tv/atq4ST3XKSFU",
-          "message_media": []
-        }
-      ]
-    },
-    "15": {
-      "agentName": "Sam",
-      "id": "019bd1f0-c523-428f-f000-0000f48ce6b2",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://dreamcloudsleep.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.dreamcloudsleep.com/mattresses/ultra-memory-foam-mattress",
-            "item": "DreamCloud Ultra Memory Foam Mattress",
-            "timeAgo": "2026-01-18"
-          },
-          {
-            "link": "https://www.dreamcloudsleep.com/mattresses/ultra-memory-foam-mattress",
-            "item": "DreamCloud Ultra Memory Foam Mattress",
-            "timeAgo": "2026-01-18"
-          },
-          {
-            "link": "https://www.dreamcloudsleep.com/mattresses/luxe-memory-foam-mattress",
-            "item": "DreamCloud Luxe Memory Foam Mattress",
-            "timeAgo": "2026-01-18"
-          }
-        ]
-      },
-      "companyWebsite": "https://dreamcloudsleep.com",
-      "companyName": "DreamCloud",
-      "notes": {
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "send_to_cs": [
-          "No ESC for this client, send everything to CS, use ESC shortcut",
-          "Use escalation template if customer mentions any of the following:",
-          "➜ Exchanges or returns",
-          "➜ Premuim In - Home Setup Questions",
-          "➜ Discount code errors",
-          "➜ Recalls",
-          "➜ Better Business Bureau (BBB)",
-          "➜ Fiberglass",
-          "➜ Lawyers/Lawsuits",
-          "➜ Class Action",
-          "➜ Post Purchase Issues"
+          "No ESC for this client, send everything to CS",
+          "For order status inquiries/issues send to CS immediately"
         ],
         "tone": [
-          "Let the customer have the last word"
+          "Close the convo once the client takes over!"
         ]
       },
+      "SystemMessage1": "Faherty Brand: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Faherty Brand.",
+      "SystemMessage2": "Faherty Brand: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/w08",
+      "SystemMessage3": "Faherty Brand: Welcome to the family! Enjoy 15% off your first purchase with code SMSQBXJTCSH. Discover your new favorites in our latest collection: fahertybrand.attn.tv/aYBeWX5rIH31",
+      "SystemMessage4": "Faherty Brand: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nHave you seen our new arrivals? They sell out fast, so check them out ASAP! https://fahertybrand.attn.tv/afarBQ-vS129 .",
+      "customerMessage1": "Code not working",
+      "AgentMessage1": "Faherty Brand: I'm sorry to hear that you are having issues with the code. Can I please have a screenshot of the error message you're seeing from your end and the item/s you have in your cart so I can check?",
+      "customerMessage2": "\"",
+      "customerMessage3": "I have the stretch Terri five pocket pants in onyx black size 3634 in my cart",
+      "AgentMessage2": "Faherty Brand: Thank you for letting me know! Seems like the item you have in your cart is not eligible for the discount. Items that are on sale or marked down are normally excluded from our discount codes. I appreciate your understanding!",
+      "customerMessage4": "It's a full priced item",
+      "AgentMessage3": "Faherty Brand: Thanks for getting back to us and for that information! I'm really sorry for the inconvenience. Could you send a screenshot of your cart and the error message that you're getting?",
+      "SystemMessage5": "Faherty Brand: Complete your cart: Stretch Terry Indigo 5-Pocket Pant is rugged, structured, and cozy. ACT NOW\n\nUse code SMSQBXJTCSH for 15% off: https://fahertybrand.attn.tv/axqw1MZnmss0 .",
+      "customerMessage5": "\"",
+      "customerMessage6": "When I hit enter it clears out the code, but this is shot",
+      "customerMessage7": "\"",
+      "AgentMessage4": "Faherty Brand: Thanks for sending that in! I created this checkout link for you and applied the code so you can just proceed with your purchase: https://fahertybrand.attn.tv/ach6FEycxh51 Let me know if it works!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://fahertybrand.com",
+          "date": ""
+        },
+        "browsingHistory": [],
+        "orders": []
+      },
+      "orders": []
+    },
+    "14": {
+      "id": "019bb45e-5d38-4f7b-f000-0000f0c99e37",
+      "companyName": "Backcountry",
+      "companyWebsite": "https://backcountry.com",
+      "agentName": "Sarah",
+      "agentInitial": "B",
       "messageTone": "Polished",
-      "blocklisted_words": [
-        "organic"
-      ],
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Discount code errors",
-        "Shipping questions",
-        "Recall",
-        "BBB",
-        "fiberglass",
-        "lawyer",
-        "class action"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (833) 237-3269.",
-          "message_media": []
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "No escalations for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "promo_and_exclusions": [
+          "Welcome offer page:   https://www.backcountry.com/sc/new-customer-coupon-rules"
+        ]
+      },
+      "SystemMessage1": "Backcountry: Welcome to Backcountry! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/iVG",
+      "SystemMessage2": "Backcountry: Welcome to the Herd! You gave us your digits, we'll give you some, too. Your code for 15% off is here: http://bctxt.co/aufqOYe9Pol9\nExclusions apply.",
+      "customerMessage1": "Thanks!",
+      "AgentMessage1": "Backcountry: No problem. Feel free to reach out anytime, I'm always here to help!",
+      "SystemMessage3": "Backcountry: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nSome of our favorite gear just went on sale! Get the best deals on our top brands before they're gone: http://bctxt.co/aHpe_7XfdoPC .",
+      "customerMessage2": "Im looking for  women's cold weather jacket (parka).  Need something that is lightweight  but is rated high on the warmth  scale (if there is such  a thing).  Size, possibly Mamot large area. Not locked into a particular  manufacturer,  just need one the keeps the cold out in 30 degree weather.",
+      "AgentMessage2": "Backcountry: Thanks for sharing your preferences! I'd recommend the North Face Arctic Down Parka - http://bctxt.co/a5oRyjX_0LqC It's warm yet lightweight, designed for cold, snowy, or rainy winter days, with a mid-thigh length and 600-fill down insulation to keep you cozy in 30-degree weather. The DryVent waterproof shell and Heatseeker Eco side panels protect against moisture, while the faux-fur trimmed hood adds extra warmth and comfort. It's highly rated for both performance and style, with a flattering fit that avoids bulk. Please let me know what you think! 😊",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://backcountry.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: You're in (& your deal is here)!",
-          "message_media": []
+        "browsingHistory": [
+          {
+            "item": "Montreal Coat - Women's",
+            "link": "https://www.backcountry.com/marmot-montreal-coat-womens",
+            "icon": "eye"
+          },
+          {
+            "item": "Montreaux Coat - Women's",
+            "link": "https://www.backcountry.com/marmot-montreaux-coat-womens",
+            "icon": "eye"
+          },
+          {
+            "item": "Montreaux Coat - Women's",
+            "link": "https://www.backcountry.com/marmot-montreaux-coat-womens",
+            "icon": "eye"
+          },
+          {
+            "item": "Montreaux Coat - Women's",
+            "link": "https://www.backcountry.com/marmot-montreaux-coat-womens",
+            "icon": "eye"
+          },
+          {
+            "item": "Montreal Coat - Women's",
+            "link": "https://www.backcountry.com/b/marmot-montreal-coat-womens?CMP_SKU=MARZA27&amp;MER=0406&amp;skid=MARZA27-PAP-L&amp;srsltid=AfmBOop9AgU-YesykbA3KYi9besNBitvj1almTscSuvLE-eQQLVLXeMtiw4&utm_medium=sms&utm_source=attentive&utm_campaign=BC-SMS-Lifecycle-Welcome-1-CDS&sc=f25b4eae6f21b15efc1db7f829e66a22&externalId=I-2Yd",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "15": {
+      "id": "019bd796-3377-4f9a-f000-0000d3b050d8",
+      "companyName": "Barbell Apparel",
+      "companyWebsite": "https://barbellapparel.com",
+      "agentName": "",
+      "agentInitial": "B",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {},
+      "SystemMessage1": "Barbell Apparel: Hurry! Last chance to get it in time.\n\nOrder by 12 PM CST tomorrow (Dec. 23) with Overnight Shipping selected at checkout to receive your gifts before Christmas day.\n\nShop Now: barbell.attn.tv/aJmLW9mSLG02",
+      "SystemMessage2": "Barbell Apparel: Still need a gift?\n\nOur Gift Cards are delivered instantly via email. No shipping. No waiting. Perfect for last-minute gifts or stocking stuffers.\n\nGive the gift of choice: barbell.attn.tv/aElvo9a617hK",
+      "SystemMessage3": "Barbell Apparel: If you didn't get exactly what you wanted under the tree, your time is now.\n\nUpgrade your lineup with gear built to fit better, move better, and last longer.\n\nTreat yourself: barbell.attn.tv/a9hB7qZzPHi0",
+      "SystemMessage4": "Barbell Apparel: Our Free Hoodie & Flannel Sale ends New Year's Eve at 11:59 PM PST.\n\nGet a Stealth or Foundation Hoodie FREE with any $99+ purchase or upgrade to a Free Frontier Flannel ($128 value) with any order of $198+.\n\nGet Yours Now: barbell.attn.tv/aYC0IOW7U7ep",
+      "SystemMessage5": "Barbell Apparel: LAST CHANCE: Free Hoodie & Flannel Sale ends tonight at 11:59 PM PST!\n\nOrders of $99+ = FREE Stealth or Foundation Hoodie\n\nOrders of $198+ = FREE Frontier Flannel ($128 value)\n\nOnce the clock strikes midnight, the deal is gone for good!\n\nGet Yours Now: barbell.attn.tv/a62qFrBh5GPp",
+      "SystemMessage6": "Barbell Apparel: New Year, Free Gear!\n\nFor a limited time get Free Shorts on orders of $149+ or Free Joggers on orders of $198 or more.\n\nShop Now: barbell.attn.tv/aDaUlqQrUZ27 \n\nDiscount applies automatically when item is added to cart. While supplies last.",
+      "SystemMessage7": "Barbell Apparel: The Adapt Joggers & Shorts just dropped in our all-new Pine colorway!\n\nBuilt for real training with durable stretch, secure pockets, and a locked-in fit.\n\nFor a limited time, get FREE shorts on orders of $149+ or FREE joggers on orders of $199+.\n\nShop Now: barbell.attn.tv/ahyTUmoD2AjX",
+      "SystemMessage8": "Barbell Apparel: Lunar just landed!\n\nA brand new color way in our best-selling Anything Dress Pant & Short.\n\nFor a limited time, get your pair of Lunar Anything Shorts for FREE with any order of $149 or more.\n\nShop Now: barbell.attn.tv/a4xiQWUkm5Nh",
+      "SystemMessage9": "Barbell Apparel: Still looking to upgrade for the new year? For a limited time, get any shorts free with orders of $149+ or any joggers free with orders of $199+.\n\nShop Now: barbell.attn.tv/aNg4snRjRHeH \n\nWhile supplies last.",
+      "SystemMessage10": "Barbell Apparel: You are already subscribed. Click here to shop now: barbellapparel.com .",
+      "SystemMessage11": "Barbell Apparel: Hey Troy ! Join Barbell Elite and get up to $125 in bonus credit for your first month, plus free lifetime products guarantees and size exchanges, free 2-day shipping. barbell.attn.tv/a-n5JGA18ST6",
+      "customerMessage1": "I was looking forward to doing this but Sarah and the \"team\" never followed up with one simple order matter so no i will not pay or obligate  myself to this barbell \"elite\" subscription/membership bc i cannot depend on a follow through with the terms of that agreement by Sarah or the \"team\". I only support this company solely based on the quality of the clothing AND the word of Chadd Wright and his 3 of 7 project company relationship/sponsorship by barbell.  He speaks so highly of \"them\" but i am a pee-on who can not tell him nor would he care to hear of one persons documented issues with his #1 sponsor who he speaks so highly of that i am sure he brings a lot of business to the company probably just as much value to the barbell company by the purchase of items by his viewers ( if not more so) than by the amount barbell invest in Chadd and the 3 of 7 project.",
+      "AgentMessage1": "Barbell Apparel: Thanks for sharing this, and I genuinely apologize for the inconvenience and frustration you've experienced with us. That's not the kind of experience we aim to provide. Since you've emailed the team, have you checked your spam and promo folders for the response from our team? Our emails end up there sometimes.",
+      "customerMessage2": "If you are aware of an email sent back plz send it to my inbox and or text please  because i do not filter or read my spam before deleting them. i do read all of my texts and no response in the matter was ever sent to my text. it is a simple matter and solution that should not be passed off as i didn't check my spam or promo. Barbell had no problem sending me all other correspondence especially the conversation between Sarah and i AND all the \"promos\" including the Elite membership so why woukd the most important correspondence be send and captured as a spam but non of the others?!?  Just resolve this simple matter i have proven that i am a repeat customer who should be valued as such or i do take my documented correspondence to 3of 7 somehow bc i am sure someone there as a fellow Christian would want fairness from a hard working supporter of them and their number one sponsor. Thank you in advance for your appreciation.",
+      "AgentMessage2": "Barbell Apparel: I'm truly sorry for the frustration this has caused. I completely understand how important this matter is to you, and I wish I could resolve it directly. Unfortunately, I don't have access to our emails, so I'm unable to retrieve or review the correspondence myself. The best way forward is to reach out to our team via email, as they are fully equipped to handle these concerns and can provide a proper resolution. Thank you for your patience and for being a valued supporter-we genuinely appreciate it.",
+      "customerMessage3": "The problem is that this matter is NOT important to \"you\".  I am tired of the hollow \"apologies\" if thats what \"you\" call \"them\".  Everyone knows the old saying that If \"you\" want something done \" you have to do it yourself. So all \"you\" have done is proven how much \"you\" value \" your\" customers.  Listen carefully to your commercials and it is speaking the truth.  \"Your\" company is not for everyone and it definitely is not what Chadd Wright thinks \"you\" are. If i am in the wrong then dont make excuses or lay blame just speak the truth and tell me where i went wrong in this matter.  Otherwise please tell me what to do to resolve this matter. Thank you in advance.",
+      "SystemMessage12": "\"",
+      "AgentMessage3": "Barbell Apparel: I get where you're coming from because I'm a consumer, too and I'm sorry this didn't go as expected. I've sent another notification to the team and asked them if they can prioritize your concern. I will be sure to text you as soon as they provide an update.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://barbellapparel.com",
+          "date": ""
         },
+        "browsingHistory": [
+          {
+            "item": "Ultralight Jogger - XXL / Black",
+            "link": "https://barbellapparel.com/products/mens-ultralight-jogger?variant=39450982318152",
+            "icon": "eye"
+          },
+          {
+            "item": "Ultralight Jogger - XXL / Black Multicam",
+            "link": "https://barbellapparel.com/products/mens-ultralight-jogger?variant=51657901179246",
+            "icon": "eye"
+          },
+          {
+            "item": "Ultralight Jogger - S / Black",
+            "link": "https://barbellapparel.com/products/mens-ultralight-jogger",
+            "icon": "eye"
+          },
+          {
+            "item": "Adapt Training Short - XL / Black / 5 Inch",
+            "link": "https://barbellapparel.com/products/adapt-training-short?variant=51813472665966",
+            "icon": "eye"
+          },
+          {
+            "item": "Adapt Training Short - XXL / Black / 5 Inch",
+            "link": "https://barbellapparel.com/products/adapt-training-short?variant=51813472829806",
+            "icon": "eye"
+          }
+        ],
+        "orders": [
+          {
+            "orderNumber": "11767054827886",
+            "orderDate": "",
+            "link": "https://barbellapparel.myshopify.com/products/adapt-training-short",
+            "trackingLink": "",
+            "currency": "USD",
+            "items": [
+              {
+                "name": "Adapt Training Short",
+                "price": "98",
+                "currency": "USD",
+                "productLink": "https://barbellapparel.myshopify.com/products/adapt-training-short"
+              },
+              {
+                "name": "Free Returns or Exchanges (US orders only)",
+                "price": "2.98",
+                "currency": "USD",
+                "productLink": "https://barbellapparel.myshopify.com/products/free-returns-or-exchanges-package-protection-us-orders-only"
+              },
+              {
+                "name": "Ultralight Jogger",
+                "price": "114",
+                "currency": "USD",
+                "productLink": "https://barbellapparel.myshopify.com/products/mens-ultralight-jogger"
+              }
+            ],
+            "total": "214.98"
+          }
+        ]
+      },
+      "orders": [
         {
-          "message_type": "system",
-          "message_text": "DreamCloud: Upgrade your old mattress for less. Save up to 60% + free shipping & returns.\n\nClaim your savings: dreamcloud.attn.tv/azakyisiQYgb .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Hi, this is Sam. Save up to 66% on our popular adjustable bundle. Just need a mattress? Save up to 60% on our premier hybrid. Transform your sleep for better days! Questions? Text me back!\n\nBundle:\ndreamcloud.attn.tv/at4EDJunA1Xl \n\nMattress:\ndreamcloud.attn.tv/aBjtCascE6dt ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Hello, this is Sam. Thanks for checking out DreamCloud! Why wait to sleep better? You can save up to 60% on mattresses right now.\ndreamcloud.attn.tv/atfjNIdkcc9D\n\nAny questions I can answer for you?\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Hey Sam. I'm real close to buying the Ultra memory foam mattress the price is just a little high. It appears it's cheaper on amazon and there's a couple of brands I'm considering. Anything you can do to help out on the price?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd1f0-c523-428f-f000-0000f48ce6b2",
-          "message_text": "DreamCloud: Thank you for reaching out. I'm sorry, I don't have any codes available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our bundle offers here: https://dreamcloud.attn.tv/apWcr_FSDfwq",
-          "message_media": []
+          "currency": "USD",
+          "order_number": "11767054827886",
+          "order_status_url": "https://barbellapparel.myshopify.com/products/adapt-training-short",
+          "products": [
+            {
+              "product_currency": "USD",
+              "product_link": "https://barbellapparel.myshopify.com/products/adapt-training-short",
+              "product_name": "Adapt Training Short",
+              "product_price": 98
+            },
+            {
+              "product_currency": "USD",
+              "product_link": "https://barbellapparel.myshopify.com/products/free-returns-or-exchanges-package-protection-us-orders-only",
+              "product_name": "Free Returns or Exchanges (US orders only)",
+              "product_price": 2.98
+            },
+            {
+              "product_currency": "USD",
+              "product_link": "https://barbellapparel.myshopify.com/products/mens-ultralight-jogger",
+              "product_name": "Ultralight Jogger",
+              "product_price": 114
+            }
+          ],
+          "total": 214.98
         }
       ]
     }

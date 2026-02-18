@@ -3,45 +3,16 @@
   "chunk": "chunk_0024",
   "scenarios": {
     "116": {
-      "agentName": "Samantha",
-      "id": "019bb86c-b420-4d63-f000-0000f03e2437",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://comfrt.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://comfrt.com/products/the-camo-hoodie?variant=45196572983340",
-            "item": "Camo Hoodie",
-            "timeAgo": "2026-01-13"
-          },
-          {
-            "link": "https://comfrt.com/products/the-camo-hoodie?variant=45196572983340",
-            "item": "Camo Hoodie",
-            "timeAgo": "2026-01-13"
-          },
-          {
-            "link": "https://comfrt.com/products/the-camo-hoodie?variant=44897160658988",
-            "item": "Camo Hoodie",
-            "timeAgo": "2026-01-13"
-          },
-          {
-            "link": "https://comfrt.com/products/the-camo-hoodie?variant=44897160626220",
-            "item": "Camo Hoodie",
-            "timeAgo": "2026-01-13"
-          },
-          {
-            "link": "https://comfrt.com/products/the-camo-hoodie?variant=44897160626220",
-            "item": "Camo Hoodie",
-            "timeAgo": "2026-01-13"
-          }
-        ]
-      },
-      "companyWebsite": "https://comfrt.com",
+      "id": "019bece5-a78b-44c0-f000-0000d475f63a",
       "companyName": "Comfrt",
-      "notes": {
+      "companyWebsite": "https://comfrt.com",
+      "agentName": "Samantha",
+      "agentInitial": "C",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "send_to_cs": [
           "Send to CS for post-purchase issues"
         ],
@@ -52,471 +23,414 @@
           "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Sizing questions",
-        "Discount code errors"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Comfrt.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Welcome to Comfrt! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Welcome to Comfrt! We're so excited to have you. Here's your exclusive 15% off code: WELCOME15\n\nClick here to auto-apply your discount and shop our viral best-sellers: comfrt.attn.tv/aQgP7C0e_EAE",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Let's be friends!\n\nSave our contact to make sure we land directly in your messages.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Your soon-to-be obsession is just sitting there, waiting to be yours! \n\nUse code COMEBACK15 for 15% off before it sells out: comfrt.attn.tv/aH_z8i7Tn3yU",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Welcome offer expires tonight! Our top-sellers are almost gone... \n\nDon't miss out: comfrt.attn.tv/a3m4LzWms2UQ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Upcoming trip?!\n\nBring ease to the journey with our dreamy soft sets and thoughtfully designed luggage.\n\nLet's get you packed: comfrt.attn.tv/aAkrcA6WvUrm",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Close out the year in Comfrt. Best-selling layers are almost gone. \n\nGrab yours before the new year: comfrt.attn.tv/ax4R6KW51mx4 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: You are already subscribed. Click here to shop now: comfrt.com.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Embrace the NEW\n\nWe just dropped TWO special-edition colors in our Signature Collection.\n\nPick your 2026 mood: comfrt.attn.tv/a3gHQ4K06TpX",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: First look: Petal Pink Camo Collection\n\nWe're so excited to share this NEW standout pattern in 5 styles.\n\nEnjoy first access: comfrt.attn.tv/aBLdARlQtdFQ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "The item is not available",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb863-0b8d-4c49-f000-0000f03e2437",
-          "message_text": "Comfrt: I'm sorry, I currently don't have the exact date of a possible restock. I recommend checking our website and social media frequently.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "How is it a first access link if the item isn't available! ?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb865-0e22-4ee6-f000-0000f03e2437",
-          "message_text": "Comfrt: I completely understand your concern, and I'm sorry for any inconvenience. I will have to double-check that with my team to be sure. As soon as I hear back, I will send you a message right away! ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I appreciate that. Thank you",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb866-676b-46da-f000-0000f03e2437",
-          "message_text": "Comfrt: My pleasure! Have a great day in the meantime.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "You as well. Thank you",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb867-c9b9-4f23-f000-0000f03e2437",
-          "message_text": "Comfrt: Thank you. I'll keep you posted! ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I signed up my email to be notified when the item was back in stock in my size,Received the email that it was now available just now and it's out of stock still...",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb86c-b420-4d63-f000-0000f03e2437",
-          "message_text": "Comfrt: I'm really sorry for the inconvenience. It looks like the item may have sold out again very quickly after it became available.",
-          "message_media": []
-        }
-      ]
-    },
-    "117": {
-      "agentName": "Annie",
-      "id": "019bc946-31e4-47cd-f000-0000f4675c0f",
+      "SystemMessage1": "Comfrt: Don't overthink it...\n\nStep into the new year with the styles everyone's reordering. \n\nGet yours: comfrt.attn.tv/aMcI7Mz5iwbz",
+      "SystemMessage2": "Comfrt: You've got great taste and your pick is going fast.\n\nMake it yours before it's gone: comfrt.attn.tv/aBbSUc-Uyymz",
+      "SystemMessage3": "Comfrt: Upcoming trip?!\n\nBring ease to the journey with our dreamy soft sets and thoughtfully designed luggage.\n\nLet's get you packed: comfrt.attn.tv/aOs-LEBSzWsA",
+      "SystemMessage4": "Comfrt: Close out the year in Comfrt. Best-selling layers are almost gone. \n\nGrab yours before the new year: comfrt.attn.tv/aFh1YJWWVzKy",
+      "SystemMessage5": "Comfrt: You've got great taste and your pick is going fast.\n\nMake it yours before it's gone: comfrt.attn.tv/aIm0hRAMCnHK",
+      "SystemMessage6": "Comfrt: Thanks for choosing Comfrt! We're prepping your order, which means your new cozy go-to is almost en route. \nTrack it here: comfrt.attn.tv/aC9oDdlLmr8w",
+      "SystemMessage7": "Comfrt: First look: Petal Pink Camo Collection\n\nWe're so excited to share this NEW standout pattern in 5 styles.\n\nEnjoy first access: comfrt.attn.tv/a-K6g_ae4BEZ",
+      "SystemMessage8": "Comfrt: Something sweet is in the air.\n\nOur Valentine's Day Gift Guide is live, and it's made for every kind of love.\n\nShop now:\ncomfrt.attn.tv/ak8nVYO-5txo",
+      "SystemMessage9": "Comfrt: Winter storm? We've got you covered.\n\nShop up to 70% off sitewide on the coziest essentials.\n\nShop now: comfrt.attn.tv/aGhpy_9K6lIo",
+      "customerMessage1": "Take care of my order mix up please",
+      "AgentMessage1": "Comfrt: I'm sorry about that! Can you share with me what you need help with?",
+      "customerMessage2": "I've tried repeatedly to email info@comfrt.com but keep getting a canned message back. I was so pleased at first that they were taking care of the order mixup but then I never received a tracking number and still haven't received my (s) seafoam hoodie",
+      "customerMessage3": "I had been such a fan of the brand. This has left me frustrated",
+      "AgentMessage2": "Comfrt: I apologize for the frustration and inconvenience this has caused. This is not the experience we strive to provide for our customers. Since you already received an email from my team, it would be best to reply to them using the same email thread for any further requests. Please also check your spam and promo folders as well, as our emails sometimes end up there.",
+      "customerMessage4": "I've done that repeatedly to no avail",
+      "customerMessage5": "Nothing in junk/spam. Does this mean you're not going to do anything? Check on it?",
+      "AgentMessage3": "Comfrt: I'm so sorry that I can't help with this directly, but my system isn't set up for this type of issue. Our team is doing everything to respond to each inquiry in a timely manner. They should follow up with you in no time!",
+      "customerMessage6": "I cannot tell you how frustrated I am. I've even direct message Instagram. There's no way to get ahold of anyone at your company. I want what I paid for",
+      "customerMessage7": "You should be able to forward it to the right people so it gets flagged",
+      "customerMessage8": "I email and I get this message. I've already submitted online. It gets me nowhere",
+      "customerMessage9": "I know you personally are not at fault. Sorry if it feels I'm taking it out on you. I just don't know how to get my item",
+      "AgentMessage4": "Comfrt: I understand your concern and frustration. Based on the email I see on the 14th, it was routed to our fulfillment team to ship out. I know the timing is not ideal, but I'm afraid multiple emails for the same issue that's already being resolved can sometimes cause delays. Rest assured, the request was already sent over, and we're working to get the item shipped out.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://beistravel.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://beistravel.com",
-      "companyName": "Beis Travel",
-      "notes": {
-        "escalate": [
-          "We don't ESC for this client, use ESC shortcut",
-          "If cx ask how to get/redeem the discount for downloading the app use ESC shortcut"
-        ],
-        "templates": [
-          "For Limited edition items don't use restock temps, they will not be restocked"
-        ],
-        "dos_and_donts": [
-          "Don't share the duration of the sale/sale dates with customers!"
-        ]
-      },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Welcome to BÉIS Travel! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Hey there, newbie! First time shopping with us? We've handpicked some essentials to get you started: https://beistravel.attn.tv/aHRsWsaYjfRG . \n\nEnjoy 20% OFF with code WELCOME5WlTOT \nbeistravel.attn.tv/agOVd45jES3o .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Bags designed to make your every day easier. Save our contact to make getting all of our latest updates easy.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Invalid 20% off code",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc937-0fef-44fb-f000-0000f4675c0f",
-          "message_text": "BÉIS Travel: I'm so sorry to hear that! Could you send me a screenshot of the error message you're getting along with the items in your cart? I'll be more than happy to check this for you.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Thank you! I was really hoping to do the Olive one.  I just tried on multiple items to see and it still didn't work.",
-          "message_media": [
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1768607498787_b670e594-433a-463e-94a0-d804dcbf0cdb-1.png",
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1768607498787_b670e594-433a-463e-94a0-d804dcbf0cdb-1.png"
-          ]
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc93b-6a8d-4935-f000-0000f4675c0f",
-          "message_text": "BÉIS Travel: Thank you for the screenshot! The code won't work on the olive color as it's already on sale, and we don't stack discounts. I, however, was able to apply it to the maple and you can check out using this link: https://beistravel.attn.tv/ajOC7xscT9PH",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "That's so kind of you!! Thank you.  I do think I'm going to have to do the olive, the color is what I'm drawn to... how long does the discount last?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc946-31e4-47cd-f000-0000f4675c0f",
-          "message_text": "BÉIS Travel: I appreciate your kind words! Regarding the discount, unfortunately, I don't have information as to how long it would last. I would recommend using it while it's available! \n\nPlease let me know how I can assist you further today, I'm just a text away. ",
-          "message_media": []
-        }
-      ]
-    },
-    "118": {
-      "agentName": "Grace",
-      "id": "019bc295-1ebe-4782-f000-0000dd08a19f",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://grandpagus.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://grandpagus.com",
-      "companyName": "Grandpa Gus",
-      "notes": {
-        "tone": [
-          "Let the customer have the last word"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Exchanges and returns"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Grandpa Gus: Welcome to Grandpa Gus! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grandpa Gus: Hey this is Grace, how can I help you?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Please cancel the order  that is getting ready to ship I can't afford it",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Hello",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc292-ccd2-4086-f000-0000dd08a19f",
-          "message_text": "Grandpa Gus: I'm really sorry for the inconvenience. Because we begin processing your order as soon as it's submitted, we cannot change or cancel your order once it's submitted. If you no longer need our products after receiving them, you can begin the return process by emailing us at email@grandpagus.com and provide proof of purchase. To manage your subscription, please log in or register your customer account through this page: https://grandpagus.attn.tv/aNnDs-Sg2b2Q ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Please put my money back in my accaccount",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc295-1ebe-4782-f000-0000dd08a19f",
-          "message_text": "Grandpa Gus: I sincerely apologize for any inconvenience. I don't have access to issue refunds directly, and unfortunately, we cannot change or cancel an order once it's submitted. If you no longer need the products after receiving them, you can start the return process by emailing us at email@grandpagus.com and including your proof of purchase. Our team will guide you through the steps to have your refund processed as quickly as possible. I truly appreciate your patience and understanding while this gets resolved.",
-          "message_media": []
-        }
-      ]
-    },
-    "119": {
-      "agentName": "Sarah",
-      "id": "019be214-eb39-47d2-f000-0000b611ae7a",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://alpakagear.com",
+          "value": "https://comfrt.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://alpakagear.com/products/hub-pouch-v2",
-            "item": "HUB Pouch V2 - Black | Axoflux 210D",
-            "timeAgo": "2026-01-19"
+            "item": "Airplane Mode Travel Zip Hoodie",
+            "link": "https://comfrt.com/products/airplane-mode-travel-zip-hoodie?variant=44961235206188",
+            "icon": "eye"
           },
           {
-            "link": "https://alpakagear.com/products/hub-pouch-v2",
-            "item": "HUB Pouch V2 - Black | Axoflux 210D",
-            "timeAgo": "2026-01-19"
+            "item": "Airplane Mode Travel Zip Hoodie",
+            "link": "https://comfrt.com/products/airplane-mode-travel-zip-hoodie?variant=44961235206188",
+            "icon": "eye"
           },
           {
-            "link": "https://alpakagear.com/products/hub-pouch-v2",
-            "item": "HUB Pouch V2 - Black | Axoflux 210D",
-            "timeAgo": "2026-01-18"
+            "item": "Airplane Mode Travel Zip Hoodie",
+            "link": "https://comfrt.com/products/airplane-mode-travel-zip-hoodie?variant=44961234976812",
+            "icon": "eye"
           },
           {
-            "link": "https://alpakagear.com/products/hub-pouch-v2",
-            "item": "HUB Pouch V2 - Black | Axoflux 210D",
-            "timeAgo": "2026-01-11"
+            "item": "Airplane Mode Travel Zip Hoodie",
+            "link": "https://comfrt.com/products/airplane-mode-travel-zip-hoodie?variant=44961234976812",
+            "icon": "eye"
           },
           {
-            "link": "https://alpakagear.com/products/hub-pouch-v2",
-            "item": "HUB Pouch V2 - Black | Axoflux 210D",
-            "timeAgo": "2026-01-11"
+            "item": "Pastel Hoodie",
+            "link": "https://comfrt.com/products/pastel-collection?variant=44358865158188",
+            "icon": "eye"
+          }
+        ],
+        "orders": [
+          {
+            "orderNumber": "6403507781676",
+            "orderDate": "",
+            "link": "https://comfrtclothing.myshopify.com/products/pack-parent",
+            "trackingLink": "",
+            "currency": "USD",
+            "items": [
+              {
+                "name": "Pastel Bundle",
+                "price": "83.6",
+                "currency": "USD",
+                "productLink": "https://comfrtclothing.myshopify.com/products/pack-parent"
+              },
+              {
+                "name": "Pastel Hoodie",
+                "price": "46.55",
+                "currency": "USD",
+                "productLink": "https://comfrtclothing.myshopify.com/products/pastel-collection"
+              },
+              {
+                "name": "Pastel Sweatpants",
+                "price": "37.05",
+                "currency": "USD",
+                "productLink": "https://comfrtclothing.myshopify.com/products/pastel-sweatpants"
+              }
+            ],
+            "total": "167.2"
           }
         ]
       },
-      "companyWebsite": "https://alpakagear.com",
-      "companyName": "ALPAKA",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
+      "orders": [
         {
-          "message_type": "system",
-          "message_text": "ALPAKA: See something you like? Pick it up while it's still in stock! alpaka.attn.tv/acQ33taoQ0Ss",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ALPAKA: Last-minute Christmas shopping? ALPAKA gift cards are 15% off, they choose the gear they want.\n\nEnds December 24, 2025, at 11:59PM PST.\n\nShop now: alpaka.attn.tv/afyT6lxxwWjC \n\n\n\n\n\n\n\n\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ALPAKA: Your 10% off is still waiting with code 10OFF-V6F9TB! Don't miss out on saving on some new gear and check out these best-selling customer favorites: alpaka.attn.tv/acAO1QHIATqf ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ALPAKA: New factory seconds are in.\n\nRare products we never released, plus gear with minor cosmetic imperfections, fully functional at up to 50% off. \n\nShop now: alpaka.attn.tv/adhc9A-qfbFk \n\n\n\n\n\n\n\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ALPAKA: Hey, this is Sarah. Thanks for checking out our site! alpaka.attn.tv/a2A6rl9tOlHg \n\nAny questions I can answer for you?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ALPAKA: ELEMENTS TOTE (M), NOW IN ECOPAK\n\nRecycled, water-resistant fabric built to last. Same everyday versatility, upgraded materials. Black Knight or Coyote Brown.\n\nShop now: alpaka.attn.tv/aWSfteYDWm9G \n\n\n\n\n\n\n\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ALPAKA: [KICKSTARTER] 7 days left to back Momentum\n\nRemaining rewards are limited. If you've been waiting, now's the time.\n\nBack it before it ends: alpaka.attn.tv/auJvH7jwqPto \n\n\n\n\n\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ALPAKA: See something you like? Pick it up while it's still in stock! alpaka.attn.tv/aywpCGfj4fz9",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ALPAKA: The Aero Pack 16L is now available in Green.\n\nUltralight at 700g with weather-resistant protection for your laptop, water, and essentials. \n\nShop now: alpaka.attn.tv/a5cfwszwK9P7 \n\n\n\n\n\n\n\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ALPAKA: [KICKSTARTER] Final 36 hours to back Momentum\n\nJoin 1,000+ backers getting ultralight, durable gear at Kickstarter pricing.\n\nLast chance to back: alpaka.attn.tv/akxHrwR8ViVh \n\n\n\n\n\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ALPAKA: Hey, this is Sarah. Thanks for checking out our site! alpaka.attn.tv/a3wetEhenQ3f \n\nAny questions I can answer for you?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ALPAKA: See something you like? Pick it up while it's still in stock! alpaka.attn.tv/azxiCivtHZRh",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ALPAKA: NOW IN STOCK: ECLIPSE GAMING SLING\n\nThe wait is over. Upgrade to a sleek, smart carry for your handheld device, game cards, and more.\n\nShop now: alpaka.attn.tv/apwNn5RfLKRu \n\n\n\n\n\n\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Are you going to release a pro version of the hub pouch v2?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Customer Support\"; last updated: 2024-07-02 13:59:48.402",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be214-eb39-47d2-f000-0000b611ae7a",
-          "message_text": "ALPAKA: I'm really sorry for the trouble! The best way to handle this is to contact us directly here https://alpaka.attn.tv/aghmUbuwu620 Our team is happy to help! ",
-          "message_media": []
+          "currency": "USD",
+          "order_number": "6403507781676",
+          "order_status_url": "https://comfrtclothing.myshopify.com/products/pack-parent",
+          "products": [
+            {
+              "product_currency": "USD",
+              "product_link": "https://comfrtclothing.myshopify.com/products/pack-parent",
+              "product_name": "Pastel Bundle",
+              "product_price": 83.6
+            },
+            {
+              "product_currency": "USD",
+              "product_link": "https://comfrtclothing.myshopify.com/products/pastel-collection",
+              "product_name": "Pastel Hoodie",
+              "product_price": 46.55
+            },
+            {
+              "product_currency": "USD",
+              "product_link": "https://comfrtclothing.myshopify.com/products/pastel-sweatpants",
+              "product_name": "Pastel Sweatpants",
+              "product_price": 37.05
+            }
+          ],
+          "total": 167.2
         }
       ]
     },
-    "120": {
-      "agentName": "Taylor",
-      "id": "019be743-c2e0-492f-f000-0000f577afe6",
+    "117": {
+      "id": "019bd87d-46ea-4f0c-f000-0000f4a3ae72",
+      "companyName": "Veronica Beard",
+      "companyWebsite": "https://veronicabeard.com",
+      "agentName": "",
+      "agentInitial": "V",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ]
+      },
+      "SystemMessage1": "Veronica Beard: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Veronica Beard.",
+      "SystemMessage2": "Veronica Beard: Welcome to Veronica Beard! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/IvG",
+      "SystemMessage3": "Veronica Beard: Welcome to Veronica Beard! We're so glad you're here. To get started, enjoy 15% off your next full-price order with code: TEXTVBd63kBg \n\nTap here to shop and apply your code automatically: veronicabeard.attn.tv/aZh5afNIm_2J .",
+      "SystemMessage4": "Veronica Beard: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nCheck it out- new arrivals just landed! Discover the must-haves of the season. \n\nShop Now: https://veronicabeard.attn.tv/af3hwcIDnbBF .",
+      "SystemMessage5": "Veronica Beard: You left Wyeth Ribbed Turtleneck Top and Sariyah Knit Jacket in your cart.\n\nUse code TEXTVBd63kBg for 15% off your purchase: https://veronicabeard.attn.tv/atUiKrOEI8dy .",
+      "SystemMessage6": "Veronica Beard: Make the Andrea Cotton Tweed Jacket yours—lightweight Italian cotton tweed, cropped fit, standout two-tone buttons.\n\nUse code TEXTVBd63kBg for 15% off.\n\nShop now: https://veronicabeard.attn.tv/aGkqEZNu2nFm .",
+      "customerMessage1": "It's stating that the code is invalid",
+      "AgentMessage1": "Veronica Beard: Sorry about that! Please note that the code is valid on full-priced items only. Do you mind sending me a screenshot of your cart and the error message you're getting so I can have a closer look?",
+      "customerMessage2": "\"",
+      "AgentMessage2": "Veronica Beard: Thanks for sending the screenshot! I just tested the code and it worked on my end. Here's a screenshot for reference- https://veronicabeard.attn.tv/aNiK4FwbXuUk\nI've created a cart link for you here- https://veronicabeard.attn.tv/adnqqkvyIEkC with code applied. Just enter your details, then proceed to checkout. Let me know if you need help with anything else!",
+      "customerMessage3": "Is the sale for 25%off of sale items over from last night? I wanted another item",
+      "customerMessage4": "I ordered the other jacket btw.   Thank you",
+      "SystemMessage7": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
+      "AgentMessage3": "Veronica Beard: Thank you for asking and for your purchase. I'm sorry, but there's no offer available for 25% off at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our sales collection here: https://veronicabeard.attn.tv/ak-X0z110tAJ\n\nI hope this helps. Please let me know if you need anything else. I'm happy to help!",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://luminox.com",
+          "value": "https://veronicabeard.com",
           "date": ""
-        }
-      },
-      "companyWebsite": "https://luminox.com",
-      "companyName": "Luminox",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase inquiries, use PPI shortcut",
-          "Send to CS immediately for Authorized Retailers"
+        },
+        "browsingHistory": [
+          {
+            "item": "Andrea Cotton Tweed Jacket - Navy Multi / 00",
+            "link": "https://veronicabeard.com/products/andrea-cotton-jacket-navy-multi",
+            "icon": "eye"
+          },
+          {
+            "item": "Andrea Cotton Tweed Jacket - Navy Multi / 2",
+            "link": "https://veronicabeard.com/products/andrea-cotton-jacket-navy-multi?view=variant-2&variant=45260320342187",
+            "icon": "eye"
+          },
+          {
+            "item": "Andrea Cotton Tweed Jacket - Navy Multi / 00",
+            "link": "https://veronicabeard.com/products/andrea-cotton-jacket-navy-multi?view=variant-2",
+            "icon": "eye"
+          },
+          {
+            "item": "Andrea Cotton Tweed Jacket - Navy Multi / 00",
+            "link": "https://veronicabeard.com/products/andrea-cotton-jacket-navy-multi",
+            "icon": "eye"
+          },
+          {
+            "item": "Andrea Cotton Tweed Jacket - Navy Multi / 2",
+            "link": "https://veronicabeard.com/products/andrea-cotton-jacket-navy-multi?variant=45260320342187&utm_campaign=cart-abandonment-ai&utm_medium=sms&utm_source=attentive&externalId=N9rfP&view=variant-1",
+            "icon": "eye"
+          }
         ],
-        "templates": [
-          "For wrong/damaged items use WDI shortcut",
-          "For cxs reaching out from the UK, use UKD shortcut"
+        "orders": []
+      },
+      "orders": []
+    },
+    "118": {
+      "id": "019bf7af-df9c-4390-f000-0000f57215eb",
+      "companyName": "Siena Sleep",
+      "companyWebsite": "https://sienasleep.com/",
+      "agentName": "Charlie",
+      "agentInitial": "S",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo when the client takes over"
         ]
       },
+      "SystemMessage1": "Siena: Welcome to Siena! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (844) 973-4717.",
+      "SystemMessage2": "Siena: You're in!",
+      "SystemMessage3": "Siena: First step? Claim your welcome offer: Save up to 60% + get 180 nights to try your Siena\n\nHurry, order now for fast shipping:\nsiena.attn.tv/aSHxzVKNJQc7",
+      "SystemMessage4": "Siena: Hello, this is Charlie! Everyone deserves amazing sleep at an affordable price. Save up to 60% on mattresses!\n\nGet the Essential (starting at $149)\nsiena.attn.tv/a2wZ9nUwCBzC \n\nGet the Signature (starting at $179)\nsiena.attn.tv/ao31YFHPZjdK \n\nAny questions I can answer for you?",
+      "SystemMessage5": "Siena: Better sleep for less? Yes! Mattresses start at just $179 + 180 nights to try it risk-free. Don't sleep on this deal:\nsiena.attn.tv/aIkejjCNNZBB \n.",
+      "customerMessage1": "On the king size adjustable box spring why is it a twin XL",
+      "AgentMessage1": "Siena: Thank you for reaching out. I'm sorry, but can you please share a screenshot of it so I can check?",
+      "customerMessage2": "I haven't ordered it yet it's in my cart I'm ordering a king size bed and I wanted a king size adjustable box spring but it's giving me two twin",
+      "AgentMessage2": "Siena: I'm sorry for the confusion. It looks like \"Split King\" is currently selected, which comes as two Twin XL. If you'd like a single King size, just make sure to choose \"King\" under the size options here: https://siena.attn.tv/a_68PdqQvzQE",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://sienasleep.com/",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "item": "Siena 10” Signature Memory Foam Mattress",
+            "link": "https://www.sienasleep.com/mattress-sets/adjustable-bed-memory-foam-mattress-set?utm_medium=ps&utm_content=Facebook_Mobile_Feed&utm_source=fb&utm_campaign=p_120224966338060127_120238960960550127_120238960960570127&rh_s=fb&rh_m=ps&rh_c=p_120224966338060127_120238960960550127_120238960960570127&rh_n=Facebook_Mobile_Feed&fbclid=IwZXh0bgNhZW0BMABhZGlkAasssvyxn69zcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR7Q7ApLF94jfu4jf3SFCNX8btEGCPmlEkWxy5dD8IbMYMUiU-YSAv5J-xksdA_aem_5RRgaACZQ1m2hse0jC75GA&utm_id=120224966338060127&utm_term=120238960960550127",
+            "icon": "eye"
+          },
+          {
+            "item": "Siena 10” Signature Memory Foam Mattress",
+            "link": "https://www.sienasleep.com/checkout/shipping",
+            "icon": "eye"
+          },
+          {
+            "item": "Siena 10” Signature Memory Foam Mattress",
+            "link": "https://www.sienasleep.com/mattress?utm_medium=sms&utm_source=Attentive&utm_campaign=%5BS%5D_%5BP%5D_Cmp%5BJanWeek4%5D_SMS%5B1%5D_Off%5BSaveupto60%5D_CT%5BNonpurchasers%5D_012526&externalId=Nc__7",
+            "icon": "eye"
+          },
+          {
+            "item": "The Siena Premier Hybrid Mattress",
+            "link": "https://www.sienasleep.com/hybrid-mattress/king",
+            "icon": "eye"
+          },
+          {
+            "item": "Siena 10” Signature Memory Foam Mattress",
+            "link": "https://www.sienasleep.com/mattress?utm_medium=sms&utm_source=Attentive&utm_campaign=%5BS%5D_%5BP%5D_Cmp%5BJanWeek4%5D_SMS%5B1%5D_Off%5BSaveupto60%5D_CT%5BNonpurchasers%5D_012526&externalId=Nc__7",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "119": {
+      "id": "019bbde0-32b0-47f7-f000-00002d7702c2",
+      "companyName": "Covercraft",
+      "companyWebsite": "https://covercraft.com",
+      "agentName": "Sarah",
+      "agentInitial": "C",
+      "messageTone": "Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "templates": [
+          "For custom full vehicle covers use FVC shortcut",
+          "For cx that can't see the cover pattern/images of their vehicle use CPI shortcut",
+          "If we don't have a pattern/color the cx is looking for use PRR shortcut"
+        ],
+        "dos_and_donts": [
+          "Do not tell customers that the base price is the final price! The cost changes by the fitment and depends on the vehicle",
+          "Rebates are discounts for this brand!",
+          "Custom dim pattern sheets are only available for Vehicle Covers (Car, Truck, Van,RV)"
+        ],
+        "drive_to_purchase": [
+          "Before sharing any product links, confirm the vehicle’s Year, Make, and Model"
+        ]
+      },
+      "SystemMessage1": "Covercraft: Good as new! Custom covers extend the life of your daily driver covercraft.attn.tv/ak4HMeSLrAP9",
+      "SystemMessage2": "Covercraft: Hey there, this is Sarah. Thanks for stopping by! 😊 https://covercraft.attn.tv/aROUXLwaeb3I\n\nAny questions I can answer for you?",
+      "SystemMessage3": "Covercraft: If it's custom-made, it can roll in after the holidays. Greatness takes its time.\ncovercraft.attn.tv/asmwWrdlNdfU",
+      "SystemMessage4": "Covercraft: Thanks for your order! We specialize in Protecting The Things That Move You since 1965!\n\nQuick links while we make your custom protection:\nOrder Status: https://covercraft.attn.tv/aVGS-ktcETmY \nContact Us: https://covercraft.attn.tv/ayHLx1XUV0Yw \n\n#KeepItCustom",
+      "SystemMessage5": "Covercraft: Hey there, Sarah here! Great Choice - Checkout today & get a special discount with code: FLASHDEAL https://covercraft.attn.tv/aYvFpomsteNq\n\nHave any questions I can help with before this code expires?",
+      "customerMessage1": "I already ordered a set of charcoal seat covers front and back for my 2025 GMC sierra 84. However, what I received were gray covers then all Covercraft is doing about it is giving me 10% off. Not real happy.",
+      "AgentMessage1": "Covercraft: I'm so sorry to hear this; it's not the experience I want you to have. Just to be sure, did you reach out to our customer support team regarding this directly at sales@covercraft.com?",
+      "customerMessage2": "I did and they're not willing to do anything more so now I'm stuck with these seat covers that don't match my truck. Not the way a supposedly reputable company should be treating customers.",
+      "AgentMessage2": "Covercraft: I completely understand your concern, and I'm sorry for any inconvenience. Can you please send me a photo of the items that you received, along with your order number and email address? I'll be more than happy to check this with the team.",
+      "customerMessage3": "Please find attached the photos of the seat covers I received. I went through this with your customer care team sent them photos and again all they're offering is 10% off. If you look at the website for endure precision, fit seat covers and select charcoal, you'll see that that color is different than the color I received. The whole reason I selected Covercraft is because you had the color to match my truck otherwise I would've gone with a different company and saved $250. So it appears to me that they put the wrong product tag on the seat covers when they were produced in Mexico, but who knows. Either way the ones I received are much lighter than what I see on the website. Order # is 0002270886. My email is krhodes11@comcast.net.",
+      "SystemMessage6": "\"",
+      "AgentMessage3": "Covercraft: Thank you for sending those over, and I understand. Let me check on this with my team, and I'll get back to you as soon as I have more information. I'll keep you updated!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://covercraft.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "item": "Endura PrecisionFit Custom Car Seat Covers",
+            "link": "https://www.covercraft.com/product/endura-precisionfit-custom-seat-covers/CGT-GTEN",
+            "icon": "eye"
+          },
+          {
+            "item": "Original Carpet DashMat Custom Dashboard Cover",
+            "link": "https://www.covercraft.com/product/original-carpet-dashmat-custom-dashboard-cover/DMC",
+            "icon": "eye"
+          },
+          {
+            "item": "5-Layer Softback All Climate Custom Car Cover",
+            "link": "https://www.covercraft.com/product/5-layer-softback-all-climate-custom-car-cover/C-CCAC",
+            "icon": "eye"
+          },
+          {
+            "item": "Endura PrecisionFit Custom Car Seat Covers",
+            "link": "https://www.covercraft.com/product/endura-precisionfit-custom-seat-covers/CGT-GTEN",
+            "icon": "eye"
+          },
+          {
+            "item": "Endura PrecisionFit Custom Car Seat Covers",
+            "link": "https://www.covercraft.com/product/CGT-GTEN?trk_msg=4EMBCMFMCU241CM6692LPUJOUK&trk_contact=52L52FTJTC2SSCSBB0C3P3FR9C&trk_sid=TCFLULVUI3IN28I2I52U1DC7GO&trk_link=KBEJPFVKD91KR8T4RI58S1NKG0&utm_source=Listrak&utm_medium=Email&utm_term=Covercraft%20Endura%20Custom%20Seat%20Covers%20-%20Charcoal:%201st%20Row&utm_campaign=confirmation-refer-a-friend",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "120": {
+      "id": "019bb459-70fd-4aaa-f000-00000355f6f7",
+      "companyName": "Kathy Kuo Home",
+      "companyWebsite": "https://kathykuohome.com",
+      "agentName": "Sarah",
+      "agentInitial": "K",
       "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Sizing questions"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Luminox Watches: Welcome to Luminox Watches! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "Esc inquiries about items not on the site",
+          "ESC if the cx missed a sale & wants to take advantage of it",
+          "ESC if the customer is asking for a discount and we don't have one",
+          "If cx is looking for general recommendations use LFR shortcut and ESC"
+        ],
+        "templates": [
+          "If cx is building a new home, interested in refurnishing their entire home or rooms in their home, use the IDS shortcut",
+          "If cx is shopping for a client use SFC shortcut",
+          "Any convo without a positive outcome (out of stock, not on sale, not shipping in time), use DSS shortcut"
+        ],
+        "dos_and_donts": [
+          "For product-specific delivery time-frame inquiries always check the product page for delivery info and share that with the cx"
+        ]
+      },
+      "SystemMessage1": "Kathy Kuo: The Best of 2025 is here! Shop our most-loved designs now up to 20% Off, plus free shipping over $1500: kathykuohome.attn.tv/a1OuykemFw8y .",
+      "SystemMessage2": "Kathy Kuo: Consider this your holiday treat. Best of Sale favorites, ready to ship and up to 20% off: kathykuohome.attn.tv/aJdQ0pwrXsG4 .",
+      "SystemMessage3": "Kathy Kuo: Hey there, this is Sarah. Thanks for checking out our site! https://kathykuohome.attn.tv/ac8Uta8XKto7 . Are you working on a home design project we can help you with?",
+      "SystemMessage4": "Kathy Kuo: Got your eye on this? We love it too! Shop the perfect piece for your home: kathykuohome.attn.tv/aijrFp8htCfN .",
+      "SystemMessage5": "Kathy Kuo: Hi, I'm Sarah, your personal shopper for Kathy Kuo Home. Do you need help finding that perfect piece? \n\nhttps://kathykuohome.attn.tv/aom29axnoyEw .",
+      "SystemMessage6": "Kathy Kuo: Need the perfect last minute gift? Give the gift of home, delivered instantly with a Kathy Kuo Home gift card: kathykuohome.attn.tv/aCCBNGSUNrTN .",
+      "SystemMessage7": "Kathy Kuo: You are already subscribed. Click here to shop now: https://kathykuohome.attn.tv/cl/fXp .",
+      "SystemMessage8": "Kathy Kuo: Got your eye on this? We love it too! Shop the perfect piece for your home: kathykuohome.attn.tv/aLl_Hl4vmlvj .",
+      "SystemMessage9": "Kathy Kuo: End of year subscriber-only savings start now! Get 20% Off + Free Shipping with code BYE2025: kathykuohome.attn.tv/a0XVC3-IJ4sg . Exclusions apply.",
+      "SystemMessage10": "Kathy Kuo: Finish the year feeling perfect at home. 20% Off + Free Shipping ends tonight with code BYE2025: kathykuohome.attn.tv/ahJb4dSjpNGV .",
+      "SystemMessage11": "Kathy Kuo: Hey there, this is Sarah. Thanks for checking out our site! https://kathykuohome.attn.tv/axrQriUmy7nC . Are you working on a home design project we can help you with?",
+      "SystemMessage12": "Kathy Kuo: Got your eye on this? We love it too! Shop the perfect piece for your home: kathykuohome.attn.tv/aleTy4d6ct8i .",
+      "SystemMessage13": "Kathy Kuo: Hi, I'm Sarah, your personal shopper for Kathy Kuo Home. Do you need help finding that perfect piece? \n\nhttps://kathykuohome.attn.tv/aJCUW8u7OnJK .",
+      "SystemMessage14": "Kathy Kuo: Hey there, your great picks are waiting! Use code KKHSHIP15 for 15% off + free shipping. Finish your order here: kathykuohome.attn.tv/aqh9eg2stFnX .",
+      "SystemMessage15": "Kathy Kuo: Explore the Florence I fell in love with, and shop our all new collection inspired by Tuscan tradition: kathykuohome.attn.tv/a2bosiwFVHpL .",
+      "SystemMessage16": "Kathy Kuo: Got your eye on this? We love it too! Shop the perfect piece for your home: kathykuohome.attn.tv/aJ4x--ZpHWNF .",
+      "SystemMessage17": "Kathy Kuo: Hi, I'm Sarah, your personal shopper for Kathy Kuo Home. Do you need help finding that perfect piece? \n\nhttps://kathykuohome.attn.tv/a9DGpk74CVyz .",
+      "SystemMessage18": "Kathy Kuo: Hey there, this is Sarah. Thanks for checking out our site! https://kathykuohome.attn.tv/aa9Ki88aFA4C . Are you working on a home design project we can help you with?",
+      "SystemMessage19": "Kathy Kuo: Your daily rituals deserve elegance, ease and beauty. Explore our all new Florentine bath refresh: kathykuohome.attn.tv/ah55OWYKLPIR .",
+      "SystemMessage20": "Kathy Kuo: Great news! We dropped the price on our Ancel French Country Blue Upholstered Beige Burlap Oak Wood Chair and a Half! Get the look you love before it goes: kathykuohome.attn.tv/ae5mluz5MRa9 .",
+      "customerMessage1": "What was the original price?",
+      "SystemMessage21": "\"",
+      "SystemMessage22": "Template used: \"Pre-purchase escalations - All brands\"; last updated: 2023-10-10 17:48:28.037",
+      "AgentMessage1": "Kathy Kuo: Thank you for reaching out! Good question! I will have to double-check that with my team to be sure. As soon as I hear back, I will send you a message right away!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://kathykuohome.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "Luminox Watches: I'm Taylor. I just wanted to say thanks for joining. Here's your coupon for you WELCOME10. You can auto-apply it and shop now here: luminox.attn.tv/a8OPW_-czi3Z\n\nText me any time with questions.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Luminox Watches: Don't forget to save our contact to get exclusive updates!",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Is this still Taylor?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be740-099a-4e78-f000-0000f577afe6",
-          "message_text": "Luminox Watches: I'm part of the customer service team. How can I assist you today?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Taylor, I have just watched a video showing the new Luminox Bear Grylls Survival Master Watch. I looked in your website and cannot find it. Can you assist me in finding out more please?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be743-c2e0-492f-f000-0000f577afe6",
-          "message_text": "Luminox Watches: Thanks for your interest! Are you referring to this?: https://luminox.attn.tv/asTY6PyfWm_j",
-          "message_media": []
-        }
-      ]
+        "browsingHistory": [
+          {
+            "item": "Ancel French Country Blue Upholstered Beige Burlap Oak Wood Chair and a Half",
+            "link": "https://www.kathykuohome.com/Product/Detail/109401-Ancel-French-Country-Blue-Upholstered-Beige-Burlap-Oak-Wood-Chair-and-a-Half?utm_campaign=smspricedrop&utm_medium=cpc&utm_source=attentive&utm_content=journey&externalId=jl51d",
+            "icon": "eye"
+          },
+          {
+            "item": "Isha Updated Traditional Brown Leather Recliner Arm Chair",
+            "link": "https://www.kathykuohome.com/Product/Detail/173353-Isha-Updated-Traditional-Brown-Leather-Recliner-Arm-Chair",
+            "icon": "eye"
+          },
+          {
+            "item": "Ancel French Country Blue Upholstered Beige Burlap Oak Wood Chair and a Half",
+            "link": "https://www.kathykuohome.com/Product/Detail/109401-Ancel-French-Country-Blue-Upholstered-Beige-Burlap-Oak-Wood-Chair-and-a-Half",
+            "icon": "eye"
+          },
+          {
+            "item": "Whitaker Modern Classic Brown Walnut Swirl Wide Nightstand",
+            "link": "https://www.kathykuohome.com/Product/Detail/170274",
+            "icon": "eye"
+          },
+          {
+            "item": "Felix French Country Antique White Iron Round Drink Table",
+            "link": "https://www.kathykuohome.com/Product/Detail/158400-Felix-French-Country-Antique-White-Iron-Round-Drink-Table",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
     }
   }
 }

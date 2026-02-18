@@ -3,693 +3,349 @@
   "chunk": "chunk_0030",
   "scenarios": {
     "146": {
-      "agentName": "Megan",
-      "id": "019bd881-8dbc-4319-f000-0000f4a9fef4",
+      "id": "019be747-75f0-4c72-f000-0000f577afe6",
+      "companyName": "Luminox",
+      "companyWebsite": "https://luminox.com",
+      "agentName": "Taylor",
+      "agentInitial": "L",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS for post purchase inquiries, use PPI shortcut",
+          "Send to CS immediately for Authorized Retailers"
+        ],
+        "templates": [
+          "For wrong/damaged items use WDI shortcut",
+          "For cxs reaching out from the UK, use UKD shortcut"
+        ]
+      },
+      "SystemMessage1": "Luminox Watches: Welcome to Luminox Watches! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage2": "Luminox Watches: I'm Taylor. I just wanted to say thanks for joining. Here's your coupon for you WELCOME10. You can auto-apply it and shop now here: luminox.attn.tv/a8OPW_-czi3Z\n\nText me any time with questions.",
+      "SystemMessage3": "Luminox Watches: Don't forget to save our contact to get exclusive updates!",
+      "customerMessage1": "Is this still Taylor?",
+      "AgentMessage1": "Luminox Watches: I'm part of the customer service team. How can I assist you today?",
+      "customerMessage2": "Taylor, I have just watched a video showing the new Luminox Bear Grylls Survival Master Watch. I looked in your website and cannot find it. Can you assist me in finding out more please?",
+      "AgentMessage2": "Luminox Watches: Thanks for your interest! Are you referring to this?: https://luminox.attn.tv/asTY6PyfWm_j",
+      "customerMessage3": "No",
+      "customerMessage4": "I saw that one. This is supposed to be a new one.",
+      "AgentMessage3": "Luminox Watches: I understand. Can I have a screenshot of the video?",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://venusetfleur.com",
+          "value": "https://luminox.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.venusetfleur.com/products/large-square-white-classic?variant=39770995818540&utm_campaign=Message-05-19-22-8-52&utm_source=attentive&utm_medium=text&externalId=sJPIc",
-            "item": "Large Square - White Classic / Blush",
-            "timeAgo": "2026-01-19"
-          },
-          {
-            "link": "https://www.venusetfleur.com/products/mini-round-black-classic-rose?variant=39774367088684&utm_campaign=Browse_Abandon_-Message-(new-)-past-purchaser&utm_source=attentive&utm_medium=sms&externalId=sJPIc",
-            "item": "Le Mini Round - Black Classic / Red",
-            "timeAgo": "2026-01-19"
-          },
-          {
-            "link": "https://www.venusetfleur.com/products/large-square-white-classic?variant=39770995818540",
-            "item": "Large Square - White Classic / Pink",
-            "timeAgo": "2026-01-19"
-          },
-          {
-            "link": "https://www.venusetfleur.com/products/large-square-white-classic?variant=39770995818540",
-            "item": "Large Square - White Classic / Blush",
-            "timeAgo": "2026-01-19"
-          },
-          {
-            "link": "https://www.venusetfleur.com/products/large-square-white-classic?variant=39770995818540",
-            "item": "Large Square - White Classic / Pink",
-            "timeAgo": "2026-01-19"
+            "item": "Bear Grylls Survival Land 3710 Series, 43 mm, Outdoor Watch",
+            "link": "https://luminox.com/products/bear-grylls-survival-land-3710-series-43-mm-outdoor-watch?_pos=1&_psq=Bear&_ss=e&_v=1.0",
+            "icon": "eye"
           }
-        ]
+        ],
+        "orders": []
       },
-      "companyWebsite": "https://venusetfleur.com",
-      "companyName": "Venus ET Fleur",
-      "notes": {
-        "escalate": [
-          "ESC if cx wants their account name to be changed",
-          "ESC if cx complains that their order was canceled",
-          "If cx's ask when their order will arrive/estimated delivery date",
-          "➜  Ask what shipping method they selected at checkout",
-          "➜ If it's standard shipping use STS shortcut",
-          "➜ If they insist to know exactly when ESC",
-          "Cx gets a code for free shipping for the first purchase; you can escalate any issues after troubleshooting"
-        ],
-        "tone": [
-          "Don't thank the cx for the purchase, thank them for their continuous support",
-          "Don't ask the customer to contact the courier"
-        ],
-        "drive_to_purchase": [
-          "Don't D2P when the cx already made a purchase"
-        ],
-        "promo_and_exclusions": [
-          "Free shipping code is only valid for standard shipping",
-          "Standard shipping charge is usually ~ $20, if you see a charge higher than that, it means the method selected is NOT standard (create a mock cart to double-check)"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [
-        "preserved",
-        "chemical",
-        "cant"
-      ],
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "arrangement damages",
-        "delivery issues",
-        "post-purchase questions",
-        "inventory"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Venus et Fleur: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Venus et Fleur: Welcome! I'm Katie, your personal concierge. I would love to assist you today. I've arranged for Complimentary Standard Shipping on your first order with the code T3V8NV. \n\nDiscover our garden of Real Flowers That Last A Year: \nhttps://venusetfleur.attn.tv/aFdGuR1rPLIb ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Venus et Fleur: Hi there! I noticed you recently took a stroll through our Eternity® Blooms. Enjoy Complimentary Standard Shipping on your first order: T3V8NV\nvenusetfleur.attn.tv/aAy1OoJcJ_fA .\n\nPlease don't hesitate to reach out if you need assistance or help finding the perfect selection for your occasion.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Venus et Fleur: Hello ! This is Megan from Venus et Fleur. I noticed a selection of our Eternity® florals caught your eye, and I would love to assist you. \n\nI've arranged for you to have Complimentary Standard Shipping with code: T3V8NV. Here's a link to your cart: venusetfleur.attn.tv/aKKnUdKcgnzB .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "i get charged for shipping !",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd881-8dbc-4319-f000-0000f4a9fef4",
-          "message_text": "Venus et Fleur: Sorry about that. Did you apply the code T3V8NV at checkout? Mind sending me a screenshot so I can check?",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "147": {
-      "agentName": "Jordan",
-      "id": "019bb380-804f-434d-f000-0000db79d541",
+      "id": "019bd7f5-e8b7-4604-f000-0000c9bd0a2e",
+      "companyName": "CLEARSTEM",
+      "companyWebsite": "https://clearstem.com",
+      "agentName": "Amy",
+      "agentInitial": "C",
+      "messageTone": "Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "dos_and_donts": [
+          "CS FAQ 2023: https://docs.google.com/document/d/14trCw9iSUHRl_4Yq40Wz5dg3mZzm_-c0PNFbzdePMj0/edit?usp=sharing"
+        ],
+        "promo_and_exclusions": [
+          "MINDBODYSKIN is not eligible for any discount codes!",
+          "Codes only apply to products found here: https://clearstem.com/collections/all-items-codes-allowed?srsltid=AfmBOor8cOzvFvRGC60_ZKpExyRCdNOowQ8eGgZyJyAn341uscwJDfsZ"
+        ]
+      },
+      "SystemMessage1": "CLEARSTEM: We truly cannot stop serving you insane fun things this holiday season.\n\nFor example: right now, you can get a FREE Mini SKINSPRAY ALL DAY when you subscribe to any product. \n\nSUBSCRIBE, SAVE + GET A FREE SKINSPRAY ALL DAY: clearstem.attn.tv/a9_07oJ1Xmwm .",
+      "SystemMessage2": "CLEARSTEM: Happy holidays, love! \n\nWhile you're celebrating with your loved ones this week, we wanted to send a little reminder to make sure to carve out MOMENTS FOR YOU: small pockets of time to pause, breathe, and enjoy a little self-care. Whether it's a cozy mug of cocoa, curling up with a blanket, or your favorite skincare ritual, may your days be filled with calm, joy, and GLOW. \n\nThank you for letting us be part of your journey to healthier, happier skin. Here's to a bright, beautiful holiday and a radiant New Year ahead.\n\nWith warmth and gratitude,\nDanielle + Kayleigh \n\nShop holiday favorites:\nclearstem.attn.tv/a8w1gfqZICyj .",
+      "SystemMessage3": "CLEARSTEM: She's finally back!!! BRIGHTMEUP is BACK IN STOCK... just in time to make your holidays EXTRA bright 💛🎄\n\nSHOP NOW BEFORE IT HAPPENS AGAIN: clearstem.attn.tv/aAk7HwzWUvX3 .",
+      "SystemMessage4": "CLEARSTEM: Grab everything you need for a CLEAR SKIN NEW YEAR because the final sale of 2025 starts now. \n\n26% off your entire order with code BEMERRY:\nclearstem.attn.tv/aGmA6jsqONcM .",
+      "SystemMessage5": "CLEARSTEM: Super quick message to let you know that the last sale of the year is ending at MIDNIGHT!\n\nGet 26% off with code BEMERRY:\nclearstem.attn.tv/aoJ662l_2tT3 .",
+      "SystemMessage6": "CLEARSTEM: Hours left to save with our LAST SALE OF THE YEAR.\n\n26% off with code BEMERRY:\nclearstem.attn.tv/aiZBKUgnbQY8 .",
+      "SystemMessage7": "CLEARSTEM: We just couldn't let it end yet... 😭\n\n2025's final sale will be going on for ONE MORE DAY. \n\nUse code BEMERRY for 26% off:\nclearstem.attn.tv/aiidcqcov2Im .",
+      "SystemMessage8": "CLEARSTEM: Ok it's OVER OVER. For real this time. Last sale of the year. Last reminder. \n\nYour sign to shop! \n\nUse code BEMERRY by midnight for 26% off:\nclearstem.attn.tv/asEIv1-YwO8J .",
+      "SystemMessage9": "CLEARSTEM: FINAL CALL to get a free Mini SKINSPRAY ALL DAY automatically included with your order! \n\nStart any subscription NOW to claim: \nclearstem.attn.tv/a4CgCVDL535o .",
+      "SystemMessage10": "CLEARSTEM: This is your sign to BREAK UP...with biotin for causing breakouts. We wanna see you out that door baby, BYE, BYE, BYE. 👋 Something better is coming 1.8. \n\nJoin the VIP waitlist now: clearstem.attn.tv/aaaEOMtgEEpW .",
+      "SystemMessage11": "CLEARSTEM: BIOTIN IS OFFICIALLY CANCELLED 🚫\n\nLet's dive into HOW it causes breakouts and why to avoid if when you're looking for a supplement. \n\nREAD NOW: clearstem.attn.tv/aWA7FPH6kbX5 .",
+      "SystemMessage12": "CLEARSTEM: MAKE 2026 YOUR YEAR OF CLEAR by focusing on the right routine! \n\nYou don't have to overthink it - we did the work for you by curating GO-TO routines that have THOUSANDS of 5-star reviews. \n\nShop based on your skin goals now: clearstem.attn.tv/aTgOPmv8jGm0 .",
+      "SystemMessage13": "CLEARSTEM: We're having a VIRTUAL live early access LAUNCH event today and YOU'RE INVITED! 🎀💃\n\nJoin Danielle + Kayleigh live on Zoom for a very special BREAK UP WITH BIOTIN LAUNCH PARTY celebrating our HAIR SKIN NAILS Biotin-Free Beauty supplement. \n\nJOIN ON ZOOM TODAY @ 5 PM PST: clearstem.attn.tv/aZ9dkU2rrJKa .",
+      "SystemMessage14": "CLEARSTEM: HAIR SKIN NAILS IS HERE!! She's not a regular Hair Skin Nails supplement, she's a cool one 😉\n\nMade WITHOUT biotin specifically for breakout-prone skin! \n\nShe supports: \n🎀 Strong, healthy, shiny hair + nails*\n🎀 Improved appearance of thin-looking hair*\n🎀 Visibly thicker, fuller-looking hair*\n🎀 Hydrated, bouncy skin*\n\nMade with clinically-studied ingredients including Nettle Root Extract for HAIR VOLUME, Folate for HAIR STRENGTH, and MSM Sulfur for healthier hair skin and nails overall. \n\nThis supplement does what biotin could never. \n\nGET A FREE GIFT WITH FIRST SUBSCRIPTION NOW: clearstem.attn.tv/axQC-jrthvBw .",
+      "SystemMessage15": "CLEARSTEM: BRB, packing up the last free gifts for people who start a HAIR SKIN NAILS subscription today! \n\nLast chance to get a FREE Mini HYDRABERRY + 15% off 🎀\n\nDon't miss out. Subscribe to HAIR SKIN NAILS now: clearstem.attn.tv/avzYlzUQLxAS .",
+      "SystemMessage16": "CLEARSTEM: ATTENTION: we're now on TYB, so we can REWARD you like never before!\nInside, you'll get:\n• early access to launches\n• exclusive drops + perks\n• real skin conversations\n• and more from the CLEARSTEM team\nJoin for free right NOW: clearstem.attn.tv/aAzWtI2m8s8L .",
+      "SystemMessage17": "CLEARSTEM: Lisa, thanks for stopping by! ✨\n\nShop now for healthy skin and hair picks that support your glow. Buy here: https://clearstem.attn.tv/aNwsdLHK_uRd . 🌱",
+      "SystemMessage18": "CLEARSTEM: Lisa, brighten and refine your skin with BRIGHT SIDE DUO TONER SET—see softer tone in just seven days.✨\n\nGet free shipping on orders over $75.\n\nShop now: https://clearstem.attn.tv/atf5bkStNCaC .",
+      "SystemMessage19": "CLEARSTEM: Ring ring 📞 a NEW YOU is calling! \n\nGet 25% OFF routines to Make 2026 Your Year of Clear. \n\nUse code NEWYOU at checkout to save: clearstem.attn.tv/aq67TshK8Duu .",
+      "SystemMessage20": "CLEARSTEM: 25% OFF routines is ON NOW + ending at midnight. \n\nSave big with code NEWYOU: clearstem.attn.tv/anKX1Why0xrD .",
+      "SystemMessage21": "CLEARSTEM: DOORS CLOSING for 25% off! ✌️\n\nShop routines now with code NEWYOU: clearstem.attn.tv/aNMGofpJmmIJ .",
+      "SystemMessage22": "CLEARSTEM: 💌 Today Only. VIP Only. AKA YOU ONLY!! 💌\n\nWe want to treat you to a FREE bottle of everyone's favorite non-comedogenic face oil: GOLDENHOUR. \n\nAdd the mini to your cart with $75+ of product, then use code NOURISH at checkout. \n\nACT TODAY: clearstem.attn.tv/awYS-KkqdXfd .",
+      "SystemMessage23": "CLEARSTEM: Because it's you (our favorite!!!)...we're extending this offer for ONE more day. \n\nGet the silky soft, luxurious, and NON-pore-clogging GOLDENHOUR facial oil free when you spend $75+. \n\nAdd Mini GOLDENHOUR to your cart + use code NOURISH at checkout.\n\nShop Now: clearstem.attn.tv/ajuRAvlskvt_ .",
+      "SystemMessage24": "CLEARSTEM: Lisa, treat your skin to GOLDENHOUR WATERMELON BARRIER OIL for a light, fresh boost. ✨\n\n509 people recently purchased this nourishing oil, complete your order before it disappears!\n\nShop now: https://clearstem.attn.tv/ag1V8zXri3IC .",
+      "SystemMessage25": "CLEARSTEM: Ok...we just couldn't let you pass this one up since this is a VIP only offer, and YOU'RE a VIP! 💅\n\nEXTENSION FINAL HOURS: When you shop today and spend $75+, get a FREE Mini GOLDENHOUR free!!\n\nAdd your gift to cart + use code NOURISH: clearstem.attn.tv/a05KYwjw3fY5 .",
+      "customerMessage1": "Instead of $30 off I'm only getting $18.90 off with NOURISH code. Please explain.",
+      "AgentMessage1": "CLEARSTEM: I'm sorry about that. Could you kindly share a screenshot of the items in your cart? I'll be happy to look into the issue!",
+      "customerMessage2": "\"",
+      "SystemMessage26": "VoC: Instead of $30 off I'm only getting $18.90 off with NOURISH code. Please explain.",
+      "AgentMessage2": "CLEARSTEM: Thank you for sharing the screenshot! I have passed this on to my team and I will get back as soon as I hear from them! Hang tight!",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://samedelman.com",
+          "value": "https://clearstem.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.samedelman.com/product/womens-ivey-lace-up-sneaker-3030151/french-merlot-suede-ec0208238",
-            "item": "ivey lace up sneaker",
-            "timeAgo": "2026-01-11"
+            "item": "GOLDENHOUR Watermelon Barrier Oil",
+            "link": "https://clearstem.com/products/goldenhour?_pos=1&_sid=654544305&_ss=r&variant=47240285716705",
+            "icon": "eye"
           },
           {
-            "link": "https://www.samedelman.com/product/womens-ivey-lace-up-sneaker-3030151/cafe-noir-brown-nylon-ec0202682?et_cid=4942395&et_rid=8000640356&om_rid=8000640356&partnerID=email_Marketing_SFMC_NonPromo_Brown-Color-Story_20251214-WK46-SAMUS&wk_rid=1407188947&em=YW5uZW1lY2tlQHlhaG9vLmNvbQ==",
-            "item": "ivey lace up sneaker",
-            "timeAgo": "2026-01-10"
+            "item": "GOLDENHOUR Watermelon Barrier Oil",
+            "link": "https://clearstem.com/products/goldenhour?_pos=1&_sid=654544305&_ss=r",
+            "icon": "eye"
           },
           {
-            "link": "https://www.samedelman.com/product/womens-ivey-lace-up-sneaker-3030151/cafe-noir-brown-nylon-ec0202682",
-            "item": "ivey lace up sneaker",
-            "timeAgo": "2026-01-09"
+            "item": "GENTLECLEAN - Vitamin Infused Barrier Cleanser",
+            "link": "https://clearstem.com/products/gentleclean?pr_prod_strat=jac&pr_rec_id=5642568e3&pr_rec_pid=6692651991200&pr_ref_pid=6692652089504&pr_seq=uniform",
+            "icon": "eye"
           },
           {
-            "link": "https://www.samedelman.com/product/womens-ivey-lace-up-sneaker-3030151/french-merlot-suede-ec0208238?icid=orderdetails_productdescription_99900_EC0208238",
-            "item": "ivey lace up sneaker",
-            "timeAgo": "2026-01-06"
+            "item": "GOLDENHOUR Watermelon Barrier Oil",
+            "link": "https://clearstem.com/products/goldenhour",
+            "icon": "eye"
           },
           {
-            "link": "https://www.samedelman.com/product/womens-ivey-lace-up-sneaker-3030151/cafe-noir-brown-nylon-ec0202682",
-            "item": "ivey lace up sneaker",
-            "timeAgo": "2026-01-03"
+            "item": "GOLDENHOUR Watermelon Barrier Oil",
+            "link": "https://clearstem.com/products/goldenhour",
+            "icon": "eye"
           }
-        ]
-      },
-      "companyWebsite": "https://samedelman.com",
-      "companyName": "Sam Edelman",
-      "notes": {
-        "send_to_cs": [
-          "If the cx sends us their credit card information (written or screenshot) and it's an issue we can't resolve - send the customer to CS",
-          "➜ Do NOT ESC any conversation that contains this type of information in the thread"
         ],
-        "escalate": [
-          "When you ESC use ESC shortcut fisrt",
-          "ESC if the charge on cx account is pending"
-        ]
+        "orders": []
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Savings start now: Take $20 off orders of $150+ when you join or sign into our loyalty program. Use code: BYE2025\n \nLog in or sign up to access: samedelman.attn.tv/ao7BLddbV3qJ \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Ready for the holiday party circuit? So are our favorites from ReLove.\n\nShop now: samedelman.attn.tv/aDNAN7FaUNcQ ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: The loafer we love. Shop this bestseller.\n\nShop now: samedelman.attn.tv/a5lD_JhWcHXr ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: The cult-favorite boot is back. Now available in wide and extra-wide calf sizing. \n\nShop now: samedelman.attn.tv/almHTBWnVqBX ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: For every last-minute gift on your holiday list, our digital gift cards are just the thing. \n\nShop now: samedelman.attn.tv/adrsJfTRXqZV ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Your last-minute NYE edit has arrived. \n\nShop now: samedelman.attn.tv/aE-R95SNn_z9 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Final day of this year's best offer: Save $20 off $150+ with our loyalty program. Join now or log in.\n \nLog in or sign up to access: samedelman.attn.tv/aPTyJv2qARK1 \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Explore the timeless styles every wardrobe needs and why we call them icons. Shop Edelman Icons: https://samedelman.attn.tv/a9siMIunM9wc .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Take another look before your size sells out! https://samedelman.attn.tv/a0H8PLLrTErZ\n\nYou can always text me back with questions!\n\n-Jordan",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Elevated sneakers, from day to night.\n\nShop now: samedelman.attn.tv/aXYL2e6o21Ri ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Bags you'll carry everywhere. Shop the latest. \n\nShop now: samedelman.attn.tv/aAtK22nVQzxU ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Thanks for your recent purchase! Don't forget to check out our newest arrivals: https://samedelman.attn.tv/aOlsRFvZN4LQ .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Looks like you forgot something! Don't worry I saved it for you: https://samedelman.attn.tv/aoXP6owgWGal . Snag ivey lace up sneaker before it's gone!\n\nLet me know if you have any questions!\n\n-Jordan",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Jordan, bought a pair of these but your shipper can't seem to get their act together(FedEx). I have initiated a return because your shipper is so incompetent.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "It doesn't take 4 business days to deliver a package that was 6 hours away. First their tracking said package would be delivered last Friday...then it says Saturday and now it says next Tuesday....ordered on Jan 1 and still don't have them.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019baf00-cc8c-40cf-f000-0000db79d541",
-          "message_text": "Sam Edelman: Thanks for reaching out, and I'm sorry to hear about this. Since you've already initiated the return, you're all set on that end. But if you'd prefer help placing a replacement order, I'm here to support however I can.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I initiated the return but I am no longer at the hotel address that I was at when I placed the order. I would like you to make sure that FedEx DOES NOT deliver the order to a hotel I am no longer at to accept the package.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I could no longer pay and stay at a location just to wait longer for a package.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "The address was 6848 E Camelback Rd Scottsdale AZ 85251 (this is a Motel 6)",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019baf37-910b-4997-f000-0000db79d541",
-          "message_text": "Sam Edelman: I'm really sorry for all the inconvenience. Since the package is already with the carrier, it's best to contact them directly. Have you tried giving them a call? They should have the most up-to-date information. ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I have already contacted FedEx and they said to contact the shipper....which is you and I am not taking on a new part time job doing business with your company.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "This has left a VERY bad taste in my mouth by the way and I can't be the first customer to say this. FedEx isn't going to string me along and neither are you.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "That package was in Tempe (less than 10 miles from the delivery location at 2:20am yesterday. Not only did they not deliver it yesterday, they are now saying it will be 3 business days into next week before they deliver it. Find a company that does better and don't expect your customers to put up with this. There was no way I'm hell I or anyone else is going to pay for 3 more days in a hotel while FedEx strings them along.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Correction....I meant 2 more business days..Including Sunday that would be the extra 3 days in a hotel.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019baf5b-d5dd-45db-f000-0000db79d541",
-          "message_text": "Sam Edelman: I do understand and would like to apologize for the inconvenience. Let me check with my team regarding possible options and recommendations. To help with this, can I have your full name, email, order number, phone number, and your zip code, please?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Anne Mecke; annemecke@yahoo.com;; (775) 564+3357;zip was 85251; order # (don't have wifi right now....will send in a separate text.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Will also send FedEx tracking #",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019baf97-3a8d-414e-f000-0000db79d541",
-          "message_text": "Sam Edelman: Thanks for the info. I will wait for the order number and tracking number as well. ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Yes sir. Thank you for listening to my feedback.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bafa2-5c74-47cb-f000-0000db79d541",
-          "message_text": "Sam Edelman: Don't mention it, I am willing to help you anytime. ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "We may have a big problem ...I got a text this morning that says the package is out for delivery today.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "And an email....",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb32c-a2fd-482f-f000-0000db79d541",
-          "message_text": "Sam Edelman: Sorry for the trouble! Let me check with my team on what we can do. I'll wait for the order number.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I just sent pictures of order # and tracking #",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Order # is 005028762118",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Tracking # is 61299535443121879789",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb330-3025-45d2-f000-0000db79d541",
-          "message_text": "Sam Edelman: Thanks for the info! I will pass this along to my team and get back to you as soon as possible, hang tight! \n\n",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Ok thank you.🙂",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb333-c710-4397-f000-0000db79d541",
-          "message_text": "Sam Edelman: You're welcome! Have a great day for now.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "The hotel just called me; they refused the package. I would assume it will be enroute back to Sam Edelman. Please let me know when you process my refund.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb380-804f-434d-f000-0000db79d541",
-          "message_text": "Sam Edelman: Thank you for sharing that update. I'm so sorry this happened, and I completely understand how inconvenient this must be for you. I've passed this information along to my team and will follow up as soon as I hear back from them regarding your concern. I truly appreciate your patience while we get this sorted.",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "148": {
+      "id": "019bb53e-f7fa-41a1-f000-00007790cd30",
+      "companyName": "Dorado Fashion",
+      "companyWebsite": "https://dorado.com",
       "agentName": "Kiara",
-      "id": "019bc223-3332-4b23-f000-0000f3d4c16e",
+      "agentInitial": "D",
+      "messageTone": "Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues"
+        ]
+      },
+      "SystemMessage1": "DORADO: Christmas is basically tomorrow 😭\n\nGet up to 80% OFF w/ code: LASTMIN\n\nOrder by midnight for holiday delivery.\n\nStocked Gifts for Her/Him:\nhttps://dorado.attn.tv/av30TQCNgk0T .",
+      "SystemMessage2": "DORADO: ONLY 5 HOURS LEFT. \n\nGet up to 80% OFF w/ code: LASTMIN \n\nShop Stocked Gifts for Her & Him:\nhttps://dorado.attn.tv/aefqMxYQmFAX \n\nGet it b4 Christmas!",
+      "SystemMessage3": "DORADO: We're making room for what's next.. aka: HUGE markdowns \n\nYear-End Stock Sell-Off is LIVE. \n40 styles as low as $9. \n\nLimited Stock. Zero mercy.\n\nPrices go back up 12/27 @ 11:59PM EST\n\nShop Now: \nhttps://dorado.attn.tv/agSgTvFZu2pr .",
+      "SystemMessage4": "DORADO: NEW YEAR'S SALE.\n\nUp to 85% OFF (ONE. LAST. TIME.)\n\nCode: BYE2025 \n\nStart the year looking expensive: \nhttps://dorado.attn.tv/aWpK6ew1Vl39 .",
+      "SystemMessage5": "DORADO: Hey, this is Kiara. Thanks for checking out our site! https://dorado.attn.tv/a_0rXBSrHMNk \n\nLet me know if you have any questions or if you want me to get you a discount :)",
+      "SystemMessage6": "DORADO: Hello Damita, it's Kiara! I noticed you haven't completed your order yet. \n\nClick below to recover your cart and use code D20 for an extra 20% OFF! (72 hours only):\n \nhttps://dorado.attn.tv/afxMA9jw1VDn \n\nPlease let me know if there's anything I can help with :)",
+      "customerMessage1": "When I added item to my cart it was $19 I went to check out it's now $49 is that correct?",
+      "AgentMessage1": "DORADO: I'm sorry for any confusion. Just to confirm, are you referring to the Classic Frosted Cuff Bracelet here?: https://dorado.attn.tv/arEjgi8wxy6N If so, I can see that it's currently on sale for $49.",
+      "customerMessage2": "Yes. It was $19 when I added item in my cart and with the 20% off $15.20 it was a year end markdown",
+      "SystemMessage7": "Template used: \"Customer support\"; last updated: 2022-03-21 22:15:50.868",
+      "AgentMessage2": "DORADO: Thanks for confirming! I checked, and the price is indeed $49. The best way to handle this is to email us directly at support@doradofashion.com. Our team is happy to help! \nIf there's anything else I can help with, please don't hesitate to reach out.",
       "rightPanel": {
         "source": {
           "label": "Website",
           "value": "https://dorado.com",
           "date": ""
-        }
+        },
+        "browsingHistory": [
+          {
+            "item": "Classic Frosted Cuff Bracelet",
+            "link": "https://dorado.com/products/classic-frosted-cuff-bracelet?_pos=22&_sid=5b333dc51&_ss=r",
+            "icon": "eye"
+          },
+          {
+            "item": "Classic Frosted Cuff Bracelet - 18K Gold Plated",
+            "link": "https://dorado.com/products/classic-frosted-cuff-bracelet?_pos=22&_sid=5b333dc51&_ss=r",
+            "icon": "eye"
+          },
+          {
+            "item": "Butterfly Wing Drop Earrings",
+            "link": "https://dorado.com/products/butterfly-wing-drop-earrings?_pos=12&_sid=0cdb51909&_ss=r&utm_campaign=Concierge-Site-Visitor-1-&utm_source=attentive&utm_medium=text&externalId=MbkKI",
+            "icon": "eye"
+          },
+          {
+            "item": "Butterfly Wing Drop Earrings - 18K Gold Plated / 54mm",
+            "link": "https://dorado.com/products/butterfly-wing-drop-earrings?_pos=12&_sid=0cdb51909&_ss=r&utm_campaign=Concierge-Site-Visitor-1-&utm_source=attentive&utm_medium=text&externalId=MbkKI",
+            "icon": "eye"
+          },
+          {
+            "item": "Classic Frosted Cuff Bracelet",
+            "link": "https://dorado.com/products/classic-frosted-cuff-bracelet",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
       },
-      "companyWebsite": "https://dorado.com",
-      "companyName": "Dorado Fashion",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues"
-        ]
-      },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Shipping Issues: Where's my order? Any order issues, direct to customer service"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "DORADO: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from DORADO.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DORADO: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DORADO: Hey it's Kiara, Welcome to the VIP List! If you have any questions just reply. :)\n\nClick to continue shopping: \nhttps://dorado.attn.tv/aqbkMsTKHMRu ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Yes I will like to know how long will my order take?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc223-3332-4b23-f000-0000f3d4c16e",
-          "message_text": "DORADO: Thanks for your purchase! Since your order includes personalized items, they are made to order and typically require 2-3 weeks for production. We'll send you updates via email along the way so you can stay informed.\n\nYou can also check the status of your personalized items anytime by visiting our Tracking Page here: https://dorado.attn.tv/au6fu1_LtI8f ",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "149": {
-      "agentName": "Samantha",
-      "id": "019bd916-8205-451d-f000-0000d41e474c",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://comfrt.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://comfrt.com",
-      "companyName": "Comfrt",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post-purchase issues"
-        ],
+      "id": "019be735-5f1d-405a-f000-000049c37df8",
+      "companyName": "Backcountry",
+      "companyWebsite": "https://backcountry.com",
+      "agentName": "Sarah",
+      "agentInitial": "B",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "escalate": [
-          "ESC if the discount % is not the same as indicated in the automated message"
+          "No escalations for this client, send everything to CS"
         ],
-        "templates": [
-          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "promo_and_exclusions": [
+          "Welcome offer page:   https://www.backcountry.com/sc/new-customer-coupon-rules"
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Sizing questions",
-        "Discount code errors"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Last-minute shopper?\n\nSend an E-Gift Card instantly or schedule it in advance. \n\nFor a limited-time, earn 20% back when you purchase a Comfrt E-Gift Card $50+\n\nGift now: comfrt.attn.tv/a0pQnkK_1sQL ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Don't miss out, your fave is almost gone!\n\nGet 15% OFF with code GETCOZY15 before it's too late: comfrt.attn.tv/aH6jMc2gVoww \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Upcoming trip?!\n\nBring ease to the journey with our dreamy soft sets and thoughtfully designed luggage.\n\nLet's get you packed: comfrt.attn.tv/acYMK5YaC3Yy",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Close out the year in Comfrt. Best-selling layers are almost gone. \n\nGrab yours before the new year: comfrt.attn.tv/atnFrvWRgJZi ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Embrace the NEW\n\nWe just dropped TWO special-edition colors in our Signature Collection.\n\nPick your 2026 mood: comfrt.attn.tv/af77xHYxYJCZ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: First look: Petal Pink Camo Collection\n\nWe're so excited to share this NEW standout pattern in 5 styles.\n\nEnjoy first access: comfrt.attn.tv/aisxOONi86yv",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Something sweet is in the air.\n\nOur Valentine's Day Gift Guide is live, and it's made for every kind of love.\n\nShop now:\ncomfrt.attn.tv/aNN_McWdqOj4 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Passing up Comfrt? Couldn't be you.\n\nThe cart you started belongs at your doorstep.\n\nGo on, treat yourself before it's gone: comfrt.attn.tv/as1BcepXwgfV \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Thanks for texting us! For any questions, please contact us here: https://comfrt.com/content/contact\n\nYou can also view our help desk here: https://comfrt.com/content/faqs?hcUrl=%2Fen-US\n\nTo stop receiving texts from us, reply STOP at any time.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I have a return ",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd904-484e-47b0-f000-0000d41e474c",
-          "message_text": "Comfrt: Returns must be submitted within 30 days of delivery. May I know if you already initiated the return? If so, store Credit will be issued within 1 week of your return being received by our warehouse. If there is an issue with your return upon arrival, you will be contacted by info@comfrt.com.\nFeel free to check more details here: https://comfrt.attn.tv/aY9RaNONH-_J\nLet me know if I can help you with anything else!",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I can't initiate it. It will not allow it on the app",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Return policy\"; last updated: 2024-07-01 11:58:09.975",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"How do I start a return?\"; last updated: 2024-10-10 16:30:30.595",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd916-8205-451d-f000-0000d41e474c",
-          "message_text": "Comfrt: I'm sorry to hear that! If possible, try using a different browser or device, as some may have issues with e-commerce sites. Clearing your browser's cache and cookies or using incognito mode might also help. \n\nYou can start your return here: https://comfrt.attn.tv/aMqDbsaoQuYn/#/\nYou can check out our detailed return policy here: https://comfrt.attn.tv/aKWSmP89qytF",
-          "message_media": []
-        }
-      ]
-    },
-    "150": {
-      "agentName": "Jordan",
-      "id": "019bdc8e-f9c5-49d9-f000-00002a02a706",
+      "SystemMessage1": "Backcountry: 72hr Flash Sale! Score up to 70% off select cold-weather gear, apparel & more. Stock up before it's gone: http://bctxt.co/aFkl7W7UXIqN",
+      "SystemMessage2": "Backcountry: Flash Sale ends tonight at midnight! Don't miss these finds for winter up to 70% off:http://bctxt.co/aiJ50695vt02",
+      "SystemMessage3": "Backcountry: Stay warm outdoors with the Classic Retro-X Jacket, featuring high-loft fleece, a windproof barrier, and moisture-wicking lining for cozy comfort.\n\nEnjoy free shipping on orders over $69.\n\nReady for adventure? Check it out here: http://bctxt.co/ayX0zyjkT-su .",
+      "SystemMessage4": "Backcountry: Take 20% off full-price sunglasses & goggles from Oakley, 100%, Smith + more here: http://bctxt.co/ac7DYBVRIIgW \n\nDiscount applies in cart.",
+      "SystemMessage5": "Backcountry: Winter's MVPs? Baselayers. Stay out longer with the right layers and see our selection here:http://bctxt.co/aLzalHXgeDfy",
+      "SystemMessage6": "Backcountry: New year, same passions! Score fresh layers, boots & snow kits to fuel every 2026 mission, now up to 50% off: http://bctxt.co/a0QyKI9B7evp",
+      "SystemMessage7": "Backcountry: Cozy up in the Natural Blend Retro Cardigan—warm sherpa fleece with recycled polyester, reclaimed wool, and zip pockets to keep your stuff secure.\n\nFree shipping on orders $69+.\n\nTry it on for your next trail run: http://bctxt.co/a-zIz0LNlpvr .",
+      "SystemMessage8": "Backcountry: Fresh price drops just landed! Scoop newly discounted gear, from boots to shells to packs, before your size bails: http://bctxt.co/aZGwcyoa8m8M",
+      "SystemMessage9": "Backcountry: Weekend Flash Sale starts now. Score up to 70% off select gear and apparel, while it's still here: http://bctxt.co/a-wXbGwCLEjP",
+      "SystemMessage10": "Backcountry: Flash Sale's fading. Up to 70% off select styles ends tomorrow! Lock in your deals while the getting's good: http://bctxt.co/att2VlX_CTQn",
+      "SystemMessage11": "Backcountry: FINAL HOURS. Up to 70% off Flash Sale wraps tonight! Last chance to grab adventure-changing gear for less: http://bctxt.co/aN0_DORuzUt9",
+      "SystemMessage12": "Backcountry: Hey, that was some great gear you were checking out! Go on, have another look: http://bctxt.co/aBG_u6qQUCYu",
+      "SystemMessage13": "Backcountry: 20% off full-price goggles & sunnies from top brands ends tomorrow. Lock in clearer views: http://bctxt.co/agHHXlDWGUTU \n\nDiscount applies in cart.",
+      "SystemMessage14": "Backcountry: Early access starts now! Take 20% off full-price items. Gear up before the cold weather rolls in: http://bctxt.co/aOWFrMTpo6L2 \n\nEven better? Enjoy free 2-day shipping when you spend $150+ with code: SNOW2DSHIPGHM8T3G",
+      "SystemMessage15": "Backcountry: Grab the Classic Retro-X Jacket you left in cart — cozy high-loft fleece with windproof barrier and moisture-wicking lining.\n\n7.5K people have recently viewed the jacket.\n\nShop now: http://bctxt.co/a1kD19wFDFiJ .",
+      "customerMessage1": "Does the 20% discount code work for the item?",
+      "AgentMessage1": "Backcountry: Thank you for your interest! Can you please share the item that you're referring to so that I can check? Please let me know, I'm here to assist you.",
+      "customerMessage2": "https://www.backcountry.com/patagonia-classic-retro-x-jacket-mens",
+      "AgentMessage2": "Backcountry: Thank you for the link. Please note that this code is only valid for the products listed in that link: http://bctxt.co/aukw2QlKiXAK Could you please confirm whether the item you are looking for is included in this list?",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://annabeck.com",
+          "value": "https://backcountry.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.annabeck.com/collections/winter-sample-sale-25-26/products/black-onyx-cocktail-ring-1?variant=41699968614446",
-            "item": "Black Onyx Cocktail Ring - 9",
-            "timeAgo": "2026-01-09"
+            "item": "Classic Retro-X Jacket - Men's",
+            "link": "https://www.backcountry.com/patagonia-classic-retro-x-jacket-mens",
+            "icon": "eye"
           },
           {
-            "link": "https://www.annabeck.com/collections/winter-sample-sale-25-26/products/black-onyx-cocktail-ring-1?variant=41699968548910",
-            "item": "Black Onyx Cocktail Ring - 7",
-            "timeAgo": "2026-01-09"
+            "item": "Classic Retro-X Jacket - Men's",
+            "link": "https://www.backcountry.com/patagonia-classic-retro-x-jacket-mens",
+            "icon": "eye"
           },
           {
-            "link": "https://www.annabeck.com/collections/winter-sample-sale-25-26/products/black-onyx-cocktail-ring-1?variant=41699968581678",
-            "item": "Black Onyx Cocktail Ring - 8",
-            "timeAgo": "2026-01-09"
+            "item": "Classic Retro-X Jacket - Men's",
+            "link": "https://www.backcountry.com/patagonia-classic-retro-x-jacket-mens",
+            "icon": "eye"
           },
           {
-            "link": "https://www.annabeck.com/collections/winter-sample-sale-25-26/products/black-onyx-cocktail-ring-1?variant=41699968516142",
-            "item": "Black Onyx Cocktail Ring - 6",
-            "timeAgo": "2026-01-09"
+            "item": "Classic Retro-X Jacket - Men's",
+            "link": "https://www.backcountry.com/patagonia-classic-retro-x-jacket-mens",
+            "icon": "eye"
           },
           {
-            "link": "https://www.annabeck.com/collections/winter-sample-sale-25-26/products/turquoise-medium-round-ring?variant=41518561787950",
-            "item": "Turquoise Medium Cocktail Ring - 6",
-            "timeAgo": "2026-01-09"
+            "item": "Classic Retro-X Jacket - Men's",
+            "link": "https://www.backcountry.com/patagonia-classic-retro-x-jacket-mens",
+            "icon": "eye"
           }
-        ]
+        ],
+        "orders": []
       },
-      "companyWebsite": "https://annabeck.com",
-      "companyName": "Anna Beck",
-      "notes": {
-        "templates": [
-          "If cx left a review and didn't receive the code, use RNC shortcut"
-        ]
-      },
+      "orders": []
+    },
+    "150": {
+      "id": "019bf720-5428-4b72-f000-0000f5af1bff",
+      "companyName": "Nectar Sleep",
+      "companyWebsite": "https://nectarsleep.com",
+      "agentName": "Quinn",
+      "agentInitial": "N",
       "messageTone": "Polished",
-      "blocklisted_words": [
-        "!"
-      ],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Anna Beck: ✨ SURPRISE ✨ Sample Sale Starts Now! \n\nWho said the gifts were ending - our biannual Sample Sale is officially here! This is the only time we offer archive designs, rare samples, and unique stones at unbeatable prices.\n\nShop the Sample Sale: annabeck.attn.tv/akM2NEi8nX_L ",
-          "message_media": []
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS",
+          "Send to CS for refund inquiries"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Close the convo if the cx first message is ok, no, etc.",
+          "Don't use the word \"off\" when talking about promotions"
+        ],
+        "dos_and_donts": [
+          "Don't proactively offer to find pricing info, redirect them to the website instead"
+        ],
+        "promo_and_exclusions": [
+          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
+        ]
+      },
+      "SystemMessage1": "Nectar: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (888) 863-2827.",
+      "SystemMessage2": "Nectar: You're in!",
+      "SystemMessage3": "Nectar: Save up to 66% on your complete setup: mattress + adjustable base + bedding set. Sleep upgrade? Complete.\n\nnectarsleep.attn.tv/aRxohn9pLuDy",
+      "SystemMessage4": "Nectar: Hi, this is Quinn. Thanks for signing up! Bundle your queen with an adjustable base for our BIGGEST savings (up to 66%). Just need a queen mattress? Save up to 50% on memory foam or hybrid. Questions? Text me back!\n\nBundle: nectarsleep.attn.tv/a6dT_vM-i5Y8 \n\nMattress: nectarsleep.attn.tv/aNyhiwTOkxz8",
+      "customerMessage1": "My question is?\nWill a queen size bed be too big for a garage turn into a living quarter.",
+      "SystemMessage5": "Nectar: Find your perfect angle. Save up to 66% on the adjustable bundle. Mattress, base & bedding. All included.\n\nnectarsleep.attn.tv/aTObzJgeLb7H\n.",
+      "SystemMessage6": "Nectar: Cool, comfortable sleep for less! Our Classic Foam Queen is $649 (a $1,548 total value). Savings of up to 50%: nectarsleep.attn.tv/aVWb0_OtORNJ\n.",
+      "SystemMessage7": "Nectar: You are already subscribed. Click here to shop now: https://nectarsleep.attn.tv/cl/mfp .",
+      "customerMessage2": "If I order the bed frame that adjust & the mattress protection & mattress,  will I really receive it in 2 to 3 days?",
+      "AgentMessage1": "Nectar: Thanks for your interest! We process orders within 3-5 business days. We usually ship via FedEx or UPS Ground. Standard delivery of your Nectar products takes approximately 2-5 business days for arrival once they ship.",
+      "customerMessage3": "I'm sorry, I'm leaving  this Friday and my package will not be delivered by then.\nThis is going to be a surprise gift to my landlord. \nOn top of that, I won't be home after 3:30pm\nGoing to a surprise party for me.",
+      "SystemMessage8": "Template used: \"Can I choose/schedule a delivery date? \"; last updated: 2025-03-07 15:15:36.825",
+      "AgentMessage2": "Nectar: That is so sweet of you to get this as a gift for your landlord, and the surprise party is such a nice gesture from those who are throwing it for you! If it helps, we can hold your order until a specific ship date that would be suitable to deliver the gift to your landlord. What do you think?",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://nectarsleep.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "Anna Beck: Have you seen our rarest sale yet???\n\nWe only do our Sample Sales twice a year - it's your only chance to shop exclusive samples, rare stones, and archive designs at the lowest prices of the year. \n\nDon't miss it: annabeck.attn.tv/aU53qbxOQ6qH ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Anna Beck: Hey, this is Jordan. Thanks for checking out our site! https://annabeck.attn.tv/aQvzrXIC8cE- \n\nAny questions I can answer for you?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Anna Beck: Going, Going, Gone! \n\nSample Sale is coming to an end, but there's still a few rare gems left, don't miss them! \n\nShop now: annabeck.attn.tv/af2RFW3jp19G \n\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Anna Beck: 25% Off Just For You, VIP ❤️\n\nJanuary calls for a refresh of staples - just for our text subscribers, take 25% off our bestsellers until tomorrow! \n\nUse code VIP25 at checkout: annabeck.attn.tv/aq_8aJN0ZmbG ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Thanks for all your help. Any update on my order 89663? I'm not receiving any updates on the status and haven't received my jewelry yet.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bdc52-1c79-4898-f000-00002a02a706",
-          "message_text": "Anna Beck: You're welcome, and I apologize for that. Could you let me know when you placed your order and if you received any tracking info? Sometimes our emails can end up in your spam or promo folder, so please check there as well. If it also helps, our processing time takes 1-2 business days, and we usually ship via UPS. Once shipped, it will take 5-7 business days for domestic orders. ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Order was placed on 12/26/25",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "#89662",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bdc7b-4bc9-46d7-f000-00002a02a706",
-          "message_text": "Anna Beck: Thank you for sharing that photo. As explained before, this order was part of our Sample Sale. Our artisans in Bali carefully prepare the Sample Sale items, and due to the high volume of holiday shipping, transit times have been longer than usual. I'll check it again with my team to get an update. We appreciate your patience, and I'll be in touch. ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I accidentally placed my order under a different email (languagelark@gmail.com) since I was on my phone when I made the purchase. It's under my same name and billing address. Is there a way to change it to my monicaji1@gmail.com?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Liked “Thank you for sharing that photo. As explained bef...”",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bdc81-46a6-4ea9-f000-00002a02a706",
-          "message_text": "Anna Beck: I understand your concern, and I'm truly sorry for the inconvenience. Let me resend the message I sent yesterday, just in case you missed it. \n\n\"Thanks for your patience. I just heard from the team, and we understand how important this is. We apologize for the inconvenience this has caused. Sorry, but order 89663 was placed under a different email address, and we can't change it so it won't be in your account.\"\n\nI'm truly sorry about this. ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "How unfortunate. This was purchased as a gift for my mom's birthday and I've never had a sample sale item take a month to arrive.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bdc8e-f9c5-49d9-f000-00002a02a706",
-          "message_text": "Anna Beck: My sincere apologies for all these. Rest assured, I'm reaching out to my team, and I'll be in touch the moment I get an update about the status of your order. ",
-          "message_media": []
-        }
-      ]
+        "browsingHistory": [
+          {
+            "item": "Nectar Classic Memory Foam Mattress",
+            "link": "https://www.nectarsleep.com/mattress/queen?utm_campaign=%5BN%5D_%5BP%5D_Cmp%5BJanWeek4%5D_SMS%5B4%5D_Off%5Btotalvalue%5D_CT%5BNonpurchasers%5D_T%5Bslowinc012526%5D_V%5B1%5D_01252026&utm_medium=sms&utm_source=Attentive&externalId=ZgVtM",
+            "icon": "eye"
+          },
+          {
+            "item": "Nectar Classic Memory Foam Mattress",
+            "link": "https://www.nectarsleep.com/mattress/queen?utm_campaign=%5BN%5D_%5BP%5D_Cmp%5BJanWeek4%5D_SMS%5B4%5D_Off%5Btotalvalue%5D_CT%5BNonpurchasers%5D_T%5Bslowinc012526%5D_V%5B1%5D_01252026&utm_medium=sms&utm_source=Attentive&externalId=ZgVtM",
+            "icon": "eye"
+          },
+          {
+            "item": "Nectar Classic Memory Foam Mattress",
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?utm_medium=ps&utm_content=TikTok&utm_source=tiktok&utm_campaign=p-1847149696395458-1847149696395474-1849889587266609&ttclid=E_C_P_CtgBqAKOfEqpu9VxzJaptLFNPjnESTF9hvxB31kH9YF6HzcFcFl4Uyh_AmgEpraSIpSblsFiiqZsmXwlWt-7_H0tg6dbZa5qwglClyjVrK46Ew9I1-D1WHRZMe9esBSxe7OD1KswjuthZoUfoQCW1y1x-TVIUQv2FJfmIrgoRkJ5LZ3JsVrqeJH3SIxbeVFUvpWZbplxhYgYiouGUbgy4p0-aMMJ-5EiycC9p_sWiadjoPZeWXvGvMAdue3pE4FQvlqsYHmBtEfwQpXTcKtfS0iZm_17kAhcNe3uEgR2Mi4w&utm_id=1847149696395458",
+            "icon": "eye"
+          },
+          {
+            "item": "Nectar Classic Memory Foam Mattress",
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?utm_campaign=B-(N)_TH-(BAU)_T-(flow)_ST-()_N-(welcome)_S-()_CT-(nonpurchasers)_SG-()_Nu-(1)_O-(adjbun)_TE-(welone012226)_V-(1)_D-(012226)&utm_medium=sms&utm_source=Attentive&externalId=ZgVtM",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
     }
   }
 }

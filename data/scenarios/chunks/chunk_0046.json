@@ -3,604 +3,482 @@
   "chunk": "chunk_0046",
   "scenarios": {
     "226": {
-      "agentName": "Annie",
-      "id": "019bcd89-fc49-450b-f000-00005ed18166",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://beistravel.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://beistravel.com/products/the-26-check-in-roller-in-maple",
-            "item": "The Medium Check-In Roller in Maple",
-            "timeAgo": "2026-01-17"
-          },
-          {
-            "link": "https://beistravel.com/products/the-26-check-in-roller-in-maple",
-            "item": "The Medium Check-In Roller in Maple",
-            "timeAgo": "2026-01-17"
-          },
-          {
-            "link": "https://beistravel.com/products/the-26-check-in-roller-in-maple",
-            "item": "The Medium Check-In Roller in Maple",
-            "timeAgo": "2026-01-17"
-          },
-          {
-            "link": "https://beistravel.com/products/the-26-check-in-roller-in-maple",
-            "item": "The Medium Check-In Roller in Maple",
-            "timeAgo": "2026-01-17"
-          },
-          {
-            "link": "https://beistravel.com/products/the-26-check-in-roller-in-maple",
-            "item": "The Medium Check-In Roller in Maple",
-            "timeAgo": "2026-01-17"
-          }
-        ]
-      },
-      "companyWebsite": "https://beistravel.com",
-      "companyName": "Beis Travel",
-      "notes": {
-        "escalate": [
-          "We don't ESC for this client, use ESC shortcut",
-          "If cx ask how to get/redeem the discount for downloading the app use ESC shortcut"
+      "id": "019bc327-5293-43d7-f000-000070a0fd07",
+      "companyName": "Mathis Home",
+      "companyWebsite": "https://mathishome.com/mathis-home",
+      "agentName": "Mia",
+      "agentInitial": "M",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "tone": [
+          "Don't use \"Enjoy if you decide to go for it\""
         ],
         "templates": [
-          "For Limited edition items don't use restock temps, they will not be restocked"
-        ],
-        "dos_and_donts": [
-          "Don't share the duration of the sale/sale dates with customers!"
+          "For REWARDS issues/questions, use RIQ shortcut",
+          "For order updates inquiries use OUI shortcut",
+          "For all sales inquiries use PMC shortcut"
         ]
       },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Welcome to BÉIS Travel! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Oh hey, welcome back! You're officially back on the list for early access to new drops, limited promos, and insider perks.\n\nShop what you've missed: beistravel.attn.tv/aUaMbnDaSqlh .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "BÉIS Travel: Bags designed to make your every day easier. Save our contact to make getting all of our latest updates easy.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Where is my 20% off code",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bcd89-fc49-450b-f000-00005ed18166",
-          "message_text": "BÉIS Travel: Thank you for reaching out. I'll check this with my team, and I'll get back to you as soon as I hear back from them. ",
-          "message_media": []
-        }
-      ]
-    },
-    "227": {
-      "agentName": "Jordan",
-      "id": "019bf799-e739-4c5a-f000-0000c0013237",
+      "SystemMessage1": "Mathis Home: Celebrate the season with Mathis Rewards! Enjoy exclusive pricing, earn points, & access perks. Join NOW: mathishome.attn.tv/aotX-a06Vrvc .",
+      "SystemMessage2": "Mathis Home: Snag limited time hot deals + FREE shipping to make the season bright! Shop NOW: mathishome.attn.tv/a8LSXLiscuew .",
+      "SystemMessage3": "Mathis Home: Create a welcoming holiday table with dining sets starting at just $248! Shop TODAY: mathishome.attn.tv/aOWL5J9bfypH .",
+      "SystemMessage4": "Mathis Home: Save with Hot Deals and start 2026 with a home that feels brand new! Shop limited-time savings TODAY: mathishome.attn.tv/a8aCoSnTgpb2 .",
+      "SystemMessage5": "Mathis Home: Ring in the savings! The Annual Clearance Event is here with must-have end-of-season prices. Shop NOW: mathishome.attn.tv/a9ctRFuorzqn .",
+      "SystemMessage6": "Mathis Home: Start the year with SAVINGS! Don't miss out on limited-time hot deals. Shop TODAY: mathishome.attn.tv/a89LDNzBQC7X .",
+      "SystemMessage7": "Mathis Home: Our weekly deals are here to upgrade your space! Shop limited time offers NOW: mathishome.attn.tv/a7j0vkttyGwr .",
+      "SystemMessage8": "Mathis Home: New Year's Resolution - join Mathis Rewards! Exclusive pricing, points, perks & more await. Save big & join TODAY: mathishome.attn.tv/auU1lPqwhez6 .",
+      "SystemMessage9": "Mathis Home: Thanks for texting us! Please visit https://www.mathisbrothers.com/chat-with-us.html for assistance.",
+      "customerMessage1": "I need a lazy boy recliner",
+      "AgentMessage1": "Mathis Home: You can check out our La-Z-Boy recliners here! - https://mathishome.attn.tv/auqVUM9GtTYe What material, color, and features do you want to check?",
+      "customerMessage2": "Do you have lift recliners",
+      "SystemMessage10": "\"",
+      "AgentMessage2": "Mathis Home: I understand. Let me check this with my team. I'll get back to you as soon as I hear back from them!",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://samedelman.com",
+          "value": "https://mathishome.com/mathis-home",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.samedelman.com/product/womens-ruthie-pointed-ballet-flat-3033547/modern-ivory-leather-ec0209929",
-            "item": "ruthie pointed ballet flat",
-            "timeAgo": "2026-01-25"
+            "item": "Lancer Lead Rocking Recliner",
+            "link": "https://www.mathishome.com/mathis-home/variation_products/lancer-rocking-recliner/LZB-10515-RECLINERS.html?dwvar_LZB-10515-RECLINERS_color=gray",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "227": {
+      "id": "019bd8ee-ff97-4e7d-f000-0000388f5b37",
+      "companyName": "johnnie-O",
+      "companyWebsite": "https://johnnie-o.com/",
+      "agentName": "Darby",
+      "agentInitial": "J",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "ESC restock inquiries",
+          "ESC shipping/order inquiries",
+          "ESC cxs looking for a discount code"
+        ]
+      },
+      "SystemMessage1": "Johnnie-O: There's still time for the perfect gift! Be the last minute hero with free expedited shipping on orders over $300. johnnie-o.attn.tv/aj91VwK6_ZcW",
+      "SystemMessage2": "Johnnie-O: Don't let last minute gifting ruin your holiday cheer, Johnnie-O electronic gift cards are just a click away. johnnie-o.attn.tv/aXofXXl-Jy5v",
+      "SystemMessage3": "Johnnie-O: Still deciding? Our stores have the latest styles and personalized help for your gifting needs! Find your store now. johnnie-o.attn.tv/amkLfrsIcnBv",
+      "SystemMessage4": "Johnnie-O: The End of Season Sale is here! Save up to 50% on top styles for everyone, but act fast these styles will move fast. johnnie-o.attn.tv/aBwjOgG4bQW3",
+      "SystemMessage5": "Johnnie-O: Our biggest sale of the season is live, which means you can save up to 50% on some of the best 1/4 Zips of 2025. johnnie-o.attn.tv/ary4FWOiF7QO",
+      "SystemMessage6": "Johnnie-O: New Year, New Swag! Whether you're at the game or cheering at home, start 2026 off right with perfect Game Day gear. johnnie-o.attn.tv/aErKmSsIlJuA",
+      "SystemMessage7": "Johnnie-O: Hey MICHAEL , this is Darby . Thanks for checking out our site! 😊 johnnie-o.attn.tv/aMDVjxEu6kHO \n\nAre you looking for anything in particular today?",
+      "SystemMessage8": "Johnnie-O: Hey there! We noticed you checking out something on our site...come back and shop now: johnnie-o.attn.tv/actCXHCtABYg .",
+      "SystemMessage9": "Johnnie-O: Get the golf performance and comfort you love at prices that will blow you away. Up to 50% off select golf styles. johnnie-o.attn.tv/a54rlgEYsY6j",
+      "SystemMessage10": "Johnnie-O: Shop up to 50% off for everyone!\n\nMen\njohnnie-o.attn.tv/aF71hJnMWQbY \n\nWomen\njohnnie-o.attn.tv/aisdlb9RqxJW \n\nBoys\njohnnie-o.attn.tv/a4EZCUeSygeH",
+      "SystemMessage11": "Johnnie-O: The perfect vest completes any look, from coffee runs to drinks with the boys we have you covered. Shop up to 50% off johnnie-o.attn.tv/arJQ5S-bNhdi",
+      "SystemMessage12": "Johnnie-O: Get up to 50% our best in class button downs, from featherweight performance to ultra soft flannels and more! johnnie-o.attn.tv/abf_6HBQjp4C",
+      "SystemMessage13": "Johnnie-O: Our end of season sale ends tonight! Don't miss your last chance to refresh your wardrobe at some of our best prices. johnnie-o.attn.tv/aTPfypGMwB_J",
+      "SystemMessage14": "Johnnie-O: Hey MICHAEL , this is Darby . Thanks for checking out our site! 😊 johnnie-o.attn.tv/a_bvItaL9bBd \n\nAre you looking for anything in particular today?",
+      "SystemMessage15": "Johnnie-O: Hey there! We noticed you checking out something on our site...come back and shop now: johnnie-o.attn.tv/aWpNkbnpHJKe .",
+      "SystemMessage16": "Johnnie-O: Thank you for your purchase! Your order number is 1839651. View more information about your order here: https://johnnie-o.attn.tv/az-jJa2aDBOr .",
+      "SystemMessage17": "Johnnie-O: Hi, if you need additional help please reach out to wingman@johnnie-o.com. Text STOP to opt out.",
+      "customerMessage1": "I did not want overnight shipping on my order.  I just wanted the regular free shipping.  Please change",
+      "AgentMessage1": "Johnnie-O: Thanks for reaching out! Are you referring to Order #1839651? If so, could you please share your email address? I'll be happy to look into this with my team!",
+      "customerMessage2": "Yes-email address is mstewart@chamblisslaw.com",
+      "AgentMessage2": "Johnnie-O: Thanks for sending that in. I just got word from the team that the best way to handle this is to email us directly at wingman@johnnie-o.com, or give us a call at 877-787-4703. Our customer service team is available Mon-Fri 6:30am to 5:00pm PST and will be happy to help!",
+      "customerMessage3": "I just emailed.",
+      "customerMessage4": "Are you able to tell me if I previously used a gift card.  I tried to enter the number, but it told me it was invalid when I did so.  I didn't think that I had previously used the card, but I may have.  The number is T38B-64GQ-15D7-0129.  Thanks.",
+      "SystemMessage18": "\"",
+      "AgentMessage3": "Johnnie-O: Thanks for letting me know your concern! Upon checking your orders, I can see that you have used a gift card for your most recent purchase, ending in numbers 7813, which might not match what you have sent me. \n\nRegarding shipping, I have also forwarded this to my team already. I'll get back to you as soon as I hear back, please hang tight!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://johnnie-o.com/",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "item": "Brentwoods Belt",
+            "link": "https://www.johnnie-o.com/collections/mens-signature-essentials/products/brentwood-belt?color=Dusk",
+            "icon": "eye"
           },
           {
-            "link": "https://www.samedelman.com/product/womens-michaela-mary-jane-flat-3021916/black-velvet-ec0237525",
-            "item": "michaela mary jane flat",
-            "timeAgo": "2026-01-25"
+            "item": "Everyday Performance Button Down Shirt - Brantley",
+            "link": "https://www.johnnie-o.com/collections/mens-button-up-shirts/products/jmwl101190_brantley_25fa?color=Malibu%2520Red",
+            "icon": "eye"
           },
           {
-            "link": "https://www.samedelman.com/product/womens-michaela-mary-jane-flat-3021916/black-suede-ec0207985",
-            "item": "michaela mary jane flat",
-            "timeAgo": "2026-01-25"
+            "item": "Featherweight Performance Button Down Shirt - Donovan",
+            "link": "https://www.johnnie-o.com/collections/mens-button-up-shirts/products/jmwl101270_donovan_25fa?color=Navy",
+            "icon": "eye"
           },
           {
-            "link": "https://www.samedelman.com/product/womens-michaela-mary-jane-flat-3021916/black-leather-ec0234523",
-            "item": "michaela mary jane flat",
-            "timeAgo": "2026-01-25"
+            "item": "Carmel Sateen 5-Pocket Pant",
+            "link": "https://www.johnnie-o.com/collections/mens-new-arrivals/products/carmel-jmpa100050-24fa-pewter?color=Pewter",
+            "icon": "eye"
+          },
+          {
+            "item": "Mulligan Performance Woven Shorts",
+            "link": "https://www.johnnie-o.com/products/mulligan-jmsh2260-24sp?color=Dawn#reviews",
+            "icon": "eye"
+          }
+        ],
+        "orders": [
+          {
+            "orderNumber": "6952682651823",
+            "orderDate": "",
+            "link": "https://johnnie-oadmin.myshopify.com/products/carmel-jmpa100050-24fa-khaki",
+            "trackingLink": "",
+            "currency": "USD",
+            "items": [
+              {
+                "name": "Carmel Sateen 5-Pocket Pant",
+                "price": "148",
+                "currency": "USD",
+                "productLink": "https://johnnie-oadmin.myshopify.com/products/carmel-jmpa100050-24fa-khaki"
+              },
+              {
+                "name": "Everyday Performance Button Down Shirt - Brantley",
+                "price": "82",
+                "currency": "USD",
+                "productLink": "https://johnnie-oadmin.myshopify.com/products/jmwl101190_brantley_25fa"
+              },
+              {
+                "name": "Fusionn Knit Performance Pull-On Short",
+                "price": "108",
+                "currency": "USD",
+                "productLink": "https://johnnie-oadmin.myshopify.com/products/fusion-jmsh2240-24sp"
+              }
+            ],
+            "total": "338"
           }
         ]
       },
-      "companyWebsite": "https://samedelman.com",
-      "companyName": "Sam Edelman",
-      "notes": {
-        "send_to_cs": [
-          "If the cx sends us their credit card information (written or screenshot) and it's an issue we can't resolve - send the customer to CS",
-          "➜ Do NOT ESC any conversation that contains this type of information in the thread"
-        ],
-        "escalate": [
-          "When you ESC use ESC shortcut fisrt",
-          "ESC if the charge on cx account is pending"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
+      "orders": [
         {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Sam Edelman.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Welcome to the family! Click this link to copy your 10% off coupon code: https://samedelman.attn.tv/akmTH98MrZw7 \n\nReply if you need help!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Hey! Let's make it official. Add us to your contacts to avoid missing our texts.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I need a coupon codd i cant open the link",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "*coupon code",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Site won't work - All brands\"; last updated: 2025-07-16 17:54:02.115",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bf799-e739-4c5a-f000-0000c0013237",
-          "message_text": "Sam Edelman: Thanks for reaching out! I tried the link on my end, and it's working. First, I might suggest trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes.",
-          "message_media": []
+          "currency": "USD",
+          "order_number": "6952682651823",
+          "order_status_url": "https://johnnie-oadmin.myshopify.com/products/carmel-jmpa100050-24fa-khaki",
+          "products": [
+            {
+              "product_currency": "USD",
+              "product_link": "https://johnnie-oadmin.myshopify.com/products/carmel-jmpa100050-24fa-khaki",
+              "product_name": "Carmel Sateen 5-Pocket Pant",
+              "product_price": 148
+            },
+            {
+              "product_currency": "USD",
+              "product_link": "https://johnnie-oadmin.myshopify.com/products/jmwl101190_brantley_25fa",
+              "product_name": "Everyday Performance Button Down Shirt - Brantley",
+              "product_price": 82
+            },
+            {
+              "product_currency": "USD",
+              "product_link": "https://johnnie-oadmin.myshopify.com/products/fusion-jmsh2240-24sp",
+              "product_name": "Fusionn Knit Performance Pull-On Short",
+              "product_price": 108
+            }
+          ],
+          "total": 338
         }
       ]
     },
     "228": {
-      "agentName": "Sarah",
-      "id": "019bc906-f2a9-42d5-f000-0000f3cfac70",
+      "id": "019bf0e4-b5c2-4e1b-f000-0000ebfc5663",
+      "companyName": "Birkenstock",
+      "companyWebsite": "https://birkenstock.com",
+      "agentName": "Taylor",
+      "agentInitial": "B",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "For all pre-purchase and post purchase ESC always include the customers full name in the notes",
+          "Don't ESC if they get an error with the fs code while logged in"
+        ],
+        "templates": [
+          "For free shipping retroactive code requests, use SRP shortcut",
+          "For holiday/extended returns - use the template"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over"
+        ]
+      },
+      "SystemMessage1": "Birkenstock: Hi, it's Taylor. I'm a personal concierge here to help you find the perfect pair of Birkenstocks. Is there anything I can help you with today?\n\nhttps://birkenstock.attn.tv/ab9VLOhqBtXL .",
+      "SystemMessage2": "Birkenstock: Glittery sandals that'll make it to midnight. Shop Shiny Glitter in Silver & Faded Purple: birkenstock.attn.tv/aJQxBQgejd-I .",
+      "SystemMessage3": "Birkenstock: Wear your party sandals to NYE. \nShop Shiny Glitter in Silver & Faded Purple: birkenstock.attn.tv/aVkAMQh-9_YW .",
+      "SystemMessage4": "Birkenstock: Start next year on a high note. Shop wedges with a fresh outlook on style & comfort: birkenstock.attn.tv/av-cb3Tkq0TD .",
+      "SystemMessage5": "Birkenstock: Materials that leave a lasting impression. Shop Rivets, High Shine & buckles that stand out: birkenstock.attn.tv/aVqmwxFQxoW6 .",
+      "SystemMessage6": "Birkenstock: You are unsubscribed from messaging. No more messages will be sent. Help at support@attentivemobile.com",
+      "SystemMessage7": "Birkenstock: Welcome to Birkenstock! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/8y2",
+      "SystemMessage8": "Birkenstock: CLICK ON THE LINK to reveal your FREE GROUND SHIPPING CODE, good for your next full price purchase:\n\nhttps://birkenstock.attn.tv/a8HbmW07RUgW\n\nWelcome to the family!",
+      "SystemMessage9": "Birkenstock: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nDid you know we have exclusive versions of our top sellers that you can't get in stores? Check them out now: https://birkenstock.attn.tv/af2DDzbOQIKI .",
+      "SystemMessage10": "Birkenstock: Shop Paris Chunky Leather Mary Janes with a polished leather upper, chunky platform, & adjustable strap for all-day comfort\n\nUse code ATSHIP-6CLB-G6TB-T6NS-2HRDD for free ground shipping on full-priced items: https://birkenstock.attn.tv/a_xgI5ldTme- .",
+      "customerMessage1": "When will black be restocked",
+      "SystemMessage11": "Template used: \"Restock (website & social)\"; last updated: 2025-10-09 21:41:33.472",
+      "AgentMessage1": "Birkenstock: Thank you for reaching out. Just to confirm, may I know if you are referring to this item? Paris Chunky: https://birkenstock.attn.tv/aiF8KusqMXuQ\nI'm sorry, I currently don't have the exact date of a possible restock, but I recommend checking our website and social media frequently. If you can also provide me with the size you need as well as your email address, I can sign you up for restocking notifications.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://brooklyncandlestudio.com",
+          "value": "https://birkenstock.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://brooklyncandlestudio.com/products/maui-reed-diffuser",
-            "item": "Maui Reed Diffuser",
-            "timeAgo": "2026-01-16"
+            "item": "Buy Paris Chunky Natural Leather for USD 180.00 | Birkenstock US",
+            "link": "https://www.birkenstock.com/us/paris-chunky-natural-leather/parischunky-chunkyplainleather-naturalleather-S004841-eva-w_12118.html?utm_campaign=welcome-ai&utm_medium=sms&utm_source=attentive&externalId=N4l_i",
+            "icon": "eye"
           },
           {
-            "link": "https://brooklyncandlestudio.com/products/pick-3-minimalist-candles-1",
-            "item": "Pick 3 Jar Candles",
-            "timeAgo": "2026-01-13"
+            "item": "Buy Paris Chunky Natural Leather for USD 180.00 | Birkenstock US",
+            "link": "https://www.birkenstock.com/us/paris-chunky-natural-leather/parischunky-chunkyplainleather-naturalleather-S004841-eva-w_12118.html",
+            "icon": "eye"
           },
           {
-            "link": "https://brooklyncandlestudio.com/products/bali-jar-candle?_pos=2&_sid=b7a59cac9&_ss=r",
-            "item": "Bali Jar Candle",
-            "timeAgo": "2026-01-13"
+            "item": "Buy Paris Chunky Natural Leather for USD 180.00 | Birkenstock US",
+            "link": "https://www.birkenstock.com/us/paris-chunky-natural-leather/parischunky-chunkyplainleather-naturalleather-S004841-eva-w_19.html",
+            "icon": "eye"
           },
           {
-            "link": "https://brooklyncandlestudio.com/products/pick-3-minimalist-candles-1",
-            "item": "Pick 3 Jar Candles",
-            "timeAgo": "2026-01-13"
+            "item": "Buy Paris Chunky Natural Leather for USD 180.00 | Birkenstock US",
+            "link": "https://www.birkenstock.com/us/paris-chunky-natural-leather/parischunky-chunkyplainleather-naturalleather-S004841-eva-w_12118.html",
+            "icon": "eye"
           },
           {
-            "link": "https://brooklyncandlestudio.com/products/bali-jar-candle",
-            "item": "Bali Jar Candle",
-            "timeAgo": "2026-01-13"
+            "item": "Buy Paris Chunky Suede Leather for N/A 0.0 | Birkenstock US",
+            "link": "https://www.birkenstock.com/us/paris-chunky-suede-leather/parischunky-chunkysuede-suedeleather-S005088-eva-w_11585.html",
+            "icon": "eye"
           }
-        ]
+        ],
+        "orders": []
       },
-      "companyWebsite": "https://brooklyncandlestudio.com",
-      "companyName": "Brooklyn Candle Studio",
-      "notes": {
-        "dos_and_donts": [
-          "Use VPN when accessing the site!"
-        ]
-      },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Welcome to Brooklyn Candle Studio! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Welcome in! Our botanical fragrances are inspired by nature, travel, & fond memories. \n\nReady to spark joy? Get 30% Back on your order auto-applied at checkout.\n\nSHOP NOW: https://brooklyncandle.attn.tv/a-Lwmmd6Fdug ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: We noticed you were exploring new scents ✨ Find the one that speaks to you, your next favorite is waiting.\n\nShop: brooklyncandle.attn.tv/aQa3J1_3ySYU",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Hey , this is Sarah . Thanks for stopping by! 😊 https://brooklyncandle.attn.tv/aicZYHyFZ3_4 \n\nAny questions I can answer for you? ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Our small batches tend to sell out quickly, so be sure to get your scent before it's gone!\n\nContinue shopping: https://brooklyncandle.attn.tv/a_yay_g5qKQz ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Hey there, just a reminder that feel-good scents are still in your cart. Come back now before your favorites fade away. 💛\n\nCheckout: brooklyncandle.attn.tv/aS4FA_afLYMt",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Text us back with any questions you have while shopping & don't forget to save us as a contact for exclusive updates!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brooklyn Candle Studio: Just Dropped: The Valentine's Day Gift Guide 💘 From romantic florals to luxe sets-find the perfect match.\n\nShop the edit: brooklyncandle.attn.tv/acSrxgVq9698 \n",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "(attn) Hey, I need help with something: where do I find the 30% cash back from my recent order",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc8db-e169-4eb2-f000-0000f3cfac70",
-          "message_text": "Brooklyn Candle Studio: You should have received a link to redeem your cash back after your purchase! Please check your spam and promo folders, as sometimes our emails end up there. Let me know what you see. 😊",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I don't see it in any folders. I have received several emails regarding my order and shipping status but nothing with a link",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc8e3-50c4-4692-f000-0000f3cfac70",
-          "message_text": "Brooklyn Candle Studio: Apologies, but please try to order using this link to have the cash back offer applied at checkout: https://brooklyncandle.attn.tv/aEdV-orniIZk Let me know how it goes.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Doesn't deduct the 30% at checkout in shop pay",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc8fe-7c2c-4828-f000-0000f3cfac70",
-          "message_text": "Brooklyn Candle Studio: My apologies. Could you please provide the email address you're using to look for the cashback email? I just want to confirm if it matches the one we have on file. \n\nBy the way, you can learn more about the offer here: https://brooklyncandle.attn.tv/as80H1ipthYW",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Kbs1962¡yahoo.com",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Thank you",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Ahh maybe it just hasn't gone through yet I just got my first delivery today",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc906-f2a9-42d5-f000-0000f3cfac70",
-          "message_text": "Brooklyn Candle Studio: Thank you for the details! Are you all set now? Is there anything else I can assist you with?",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "229": {
+      "id": "019bbc9f-8294-41b6-f000-00006ca2e67d",
+      "companyName": "Wooden Ships",
+      "companyWebsite": "https://wooden-ships.com",
       "agentName": "Sarah",
-      "id": "019bde63-d825-459c-f000-0000814eaf60",
+      "agentInitial": "W",
+      "messageTone": "Super Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "important": [
+          "The client wants us to sound as ONE person"
+        ],
+        "send_to_cs": [
+          "Send to CS if cx sends photos of items from the website or if photos/screenshots are not coming through"
+        ],
+        "escalate": [
+          "Go the extra mile for cx's - ESC any q's you're unsure of",
+          "When ESC on weekdays, use ESC shortcut",
+          "When ESC on weekends, use WKD shortcut",
+          "ESC if a cx doesn't want to sign the package / provide a signature when receiving their order",
+          "ESC if a cx wants to know when an item will be available/back in stock",
+          "ESC if a cx wants to know where an item is shipped from",
+          "ESC immediately if a cx has an issue applying a code that we didn't share (it's not in the UI or website)"
+        ],
+        "templates": [
+          "If a cx is asking for updates after we've escalated - use DUP shortcut. Don't tell the cx, you haven't heard back",
+          "If a cx shares an incorrect response to the Journey asking them to share their birthday month - use BRE shortcut"
+        ],
+        "tone": [
+          "Do not take responsibility and directly apologize when the issue is not caused by the brand and all systems are functioning as intended",
+          "If the client takes over, do NOT send a message before 5 PM EST on the day the client responded",
+          "If the convo is escalated, do NOT send a message before 5 PM EST on the day it was escalated"
+        ],
+        "drive_to_purchase": [
+          "Don't tell cx's we'll restock an item which is not available on the website"
+        ],
+        "dos_and_donts": [
+          "Do not say that \"my system is limited\", limited access\" or similar phrases",
+          "Do not say \"I don't have better deals\", \"I don't have any codes available\", or similar phrases",
+          "Do not say \"sales collection\", say \"sale collection\""
+        ],
+        "promo_and_exclusions": [
+          "We have a brand-specific CWW template",
+          "If a cx shows any purchase intent, always share our code.",
+          "If cx asks for a percentage code, share 10WELCOME code for 10% off",
+          "Cx's can use a code and receive free shipping as well"
+        ]
+      },
+      "SystemMessage1": "Wooden Ships: Last day!\n\nOrder by Midnight tonight for the biggest selection! Free Shipping\n\nwoodenships.attn.tv/aWQAczh2tUuF",
+      "SystemMessage2": "Wooden Ships: EXTENDED 12 HOURS\n\nOrder by 7PM EST & Enjoy Free Shipping!\n\nwoodenships.attn.tv/aFlgqpS5o1lW",
+      "SystemMessage3": "Wooden Ships: Hey Mike, I noticed you forgot TELLURIDE CREW CHUNKY in your cart...would a $15 off coupon be helpful right now?\n\nText back with any questions!",
+      "SystemMessage4": "Wooden Ships: Get it by 12/24!\n\nLimited Stock in our NJ Warehouse! Free Ground FedEx - order today!\n\nwoodenships.attn.tv/ahdiLS7hoKOV",
+      "SystemMessage5": "Wooden Ships: Get it by 12/24!\n\nOrder today! Free FedEx Ground Shipping takes 2-5 days from NJ!\n\nwoodenships.attn.tv/a7jrd9LGFnxP",
+      "SystemMessage6": "Wooden Ships: Get it by 12/24!\n\nLimited stock in our NJ warehouse. Two-day FedEx available. Ships Monday. Order now!!!\n\nwoodenships.attn.tv/aE8xz2ENBB-2",
+      "SystemMessage7": "Wooden Ships: Final weekend!\n\nRing in the New Year in comfort. Order by Sun PM. Free Shipping!\n\nwoodenships.attn.tv/amZKM-Hr5ED6",
+      "SystemMessage8": "Wooden Ships: Last call!\n\nSoft, effortless & unique. For party nights or Sofa parties. Order by Midnight!\n\nwoodenships.attn.tv/acFLzNX125MJ",
+      "SystemMessage9": "Wooden Ships: FLASH XMAS SALE!\n\nOne Day only!\n\nUse \"MERRY2025\" for $15 OFF our Xmas knits! Free Shipping!\n\nwoodenships.attn.tv/auxzO9X7lTRl",
+      "SystemMessage10": "Wooden Ships: Winter Sale is ON!\n\nBuy Any SALE Item, Get Any Other SALE Item 50% OFF!\n\nwoodenships.attn.tv/a0wrOKpxNkrI",
+      "SystemMessage11": "Wooden Ships: Winter Sale!\n\nStyles are selling out Fast! Shop before they're gone!\n\nwoodenships.attn.tv/aG9NUHoHbvqX",
+      "SystemMessage12": "Wooden Ships: MORE STYLES!\n\nSee what we just added to our Winter Sale!\n\nwoodenships.attn.tv/aWElkPMn0DwJ",
+      "SystemMessage13": "Wooden Ships: Great Deals!\n\nHuge deals on SALE styles are going fast - shop today!\n\nwoodenships.attn.tv/aFcy8pd9M500",
+      "SystemMessage14": "Wooden Ships: MORE SALE!\n\nBuy Any SALE Item, Get Any Other SALE Item 50% OFF!\n\nwoodenships.attn.tv/ac2Xh3Mc52ox",
+      "SystemMessage15": "Wooden Ships: ENDING SOON!\n\nNew Styles added daily! Limited pieces!\n\nwoodenships.attn.tv/akVWCWvFSfIB",
+      "SystemMessage16": "Wooden Ships: Winter Sale is Almost Over!\n\nMore styles each day - until it's over!\n\nwoodenships.attn.tv/a8EBi9VOghQ9",
+      "SystemMessage17": "Wooden Ships: Last Day!\n\nClock's ticking - you've got til midnight! Grab your favorites now!\n\nwoodenships.attn.tv/a3lCDBj6RLzj",
+      "SystemMessage18": "Wooden Ships: EXTENDED!\n\nSALE EXTENDED! Limited quantities, limited time!\n\nwoodenships.attn.tv/aVo3gk25hFkF",
+      "SystemMessage19": "Wooden Ships: LAST CALL! Prices Dropped!\n\nEnjoy the lowest prices for the final day of Sale! Hurry!\n\nwoodenships.attn.tv/aDVMgTTLekPP",
+      "SystemMessage20": "Wooden Ships: Woohoo! You have enough points for $10 off your next purchase! Claim your reward here: woodenships.attn.tv/aHrxC5cR8mQ0",
+      "SystemMessage21": "Wooden Ships: NEW RELEASE!\n\nSoft, breathable, chunky cotton. Perfect for cuddle weather.\n\nwoodenships.attn.tv/aXCBtv9-dQ2a",
+      "SystemMessage22": "Wooden Ships: Hey Mike, this is Sarah. Thanks for checking us out! woodenships.attn.tv/asC3dnJ7P-SS\n\nWould a $15 off discount code be helpful? Let me know if you have any questions!",
+      "SystemMessage23": "Wooden Ships: NEW! JUST DROPPED!\n\nMeet your newest WS crush! Free Shipping!\n\nwoodenships.attn.tv/aON7ddL7qeQH",
+      "SystemMessage24": "Wooden Ships: Hey Mike, this is Sarah. Thanks for checking us out! woodenships.attn.tv/aH3CA8xV0rzs\n\nWould a $15 off discount code be helpful? Let me know if you have any questions!",
+      "customerMessage1": "How do I redeem for the $15 off?",
+      "AgentMessage1": "Wooden Ships: Thank you for reaching out and I'm sorry for the slow reply! You can use code CART15. Let me know if this works! In the meantime, feel free to take a look at our top sellers here: https://woodenships.attn.tv/agAEEkob1IeQ",
+      "customerMessage2": "Ok, I've ordered a number of times from you but I now think you're baiting and switching me. I am trying to order a $155 sweater with $15 off = $140, check the math, you're overcharging me when I go to check out. I was planning on ordering a sweater a holiday (she likes them) but I now feel like you're not being honest, prove me wrong. I will not place another order until you do. Mike",
+      "SystemMessage25": "Template used: \"Code Won't Work\"; last updated: 2025-07-14 22:45:45.518",
+      "SystemMessage26": "Template used: \"Code won't work - All brands\"; last updated: 2023-10-10 16:36:42.859",
+      "AgentMessage2": "Wooden Ships: I'm sorry about this. Could you kindly share a screenshot of the item in your cart? I'll be happy to look into the issue!",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://blissy.com",
+          "value": "https://wooden-ships.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://blissy.com/products/pillowcase-champagne-king?externalId=Z7wTi",
-            "item": "Pillowcase - Champagne - King",
-            "timeAgo": "2026-01-21"
+            "item": "AVA RAGLAN CHUNKY CREW COTTON - M/L (10-12) / Apple Red/Pink Whim",
+            "link": "https://www.wooden-ships.com/products/ava-raglan-chunky-crew-cotton-apple-red-pink-whim?variant=42691193274416",
+            "icon": "eye"
           },
           {
-            "link": "https://blissy.com/products/pillowcase-champagne-king?variant=33054162255949&nb_platform=criteo&utm_source=criteo&utm_medium=acquisition&utm_id=180832&cto_pld=5npAKq3pAABOxY3NaCCNQA#tblciGiBB0ad7meIhK6U0yGAfdFmR9sETUVVj-AJPtn5tZL7AcCDwjE4o-Oriu6Tb4aYRMNuXXw",
-            "item": "Pillowcase - Champagne - King",
-            "timeAgo": "2026-01-21"
+            "item": "AVA RAGLAN CHUNKY CREW COTTON - M/L (10-12) / Apple Red/Pink Whim",
+            "link": "https://www.wooden-ships.com/products/ava-raglan-chunky-crew-cotton-apple-red-pink-whim?variant=42691193274416",
+            "icon": "eye"
           },
           {
-            "link": "https://blissy.com/products/pillowcase-champagne-king?_pos=2&_psq=cham&_ss=e&_v=1.0&externalId=Z7wTi",
-            "item": "Pillowcase - Champagne - King",
-            "timeAgo": "2026-01-21"
+            "item": "AVA RAGLAN CHUNKY CREW COTTON - M/L (10-12) / Apple Red/Pink Whim",
+            "link": "https://www.wooden-ships.com/products/ava-raglan-chunky-crew-cotton-apple-red-pink-whim?variant=42691193274416",
+            "icon": "eye"
           },
           {
-            "link": "https://blissy.com/products/pillowcase-pink-king",
-            "item": "Pillowcase - Pink - King -",
-            "timeAgo": "2026-01-21"
+            "item": "AVA RAGLAN CHUNKY CREW COTTON - M/L (10-12) / Apple Red/Pink Whim",
+            "link": "https://www.wooden-ships.com/products/ava-raglan-chunky-crew-cotton-apple-red-pink-whim?variant=42691193274416",
+            "icon": "eye"
           },
           {
-            "link": "https://blissy.com/products/pillowcase-pink-king",
-            "item": "Pillowcase - Pink - King -",
-            "timeAgo": "2026-01-21"
+            "item": "AVA RAGLAN CHUNKY CREW COTTON - M/L (10-12) / Apple Red/Pink Whim",
+            "link": "https://www.wooden-ships.com/products/ava-raglan-chunky-crew-cotton-apple-red-pink-whim?variant=42691193274416",
+            "icon": "eye"
+          }
+        ],
+        "orders": [
+          {
+            "orderNumber": "6643791003696",
+            "orderDate": "",
+            "link": "https://wooden-ships.myshopify.com/products/telluride-crew-chunky-sweater-pure-snow-white-2",
+            "trackingLink": "",
+            "currency": "USD",
+            "items": [
+              {
+                "name": "TELLURIDE CREW CHUNKY",
+                "price": "152",
+                "currency": "USD",
+                "productLink": "https://wooden-ships.myshopify.com/products/telluride-crew-chunky-sweater-pure-snow-white-2"
+              }
+            ],
+            "total": "152"
           }
         ]
       },
-      "companyWebsite": "https://blissy.com",
-      "companyName": "Blissy",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over!"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
+      "orders": [
         {
-          "message_type": "system",
-          "message_text": "Blissy: Faye SHHHH Don't tell anyone. \n\nWe're having a secret end of year sale for 24 hours\n\nHigher than what everyone else will be getting.\n\nThe link below adds an additional 35% which gives you up to 65% off!\n\nFAREWELL SALE https://blissy.attn.tv/avym7duls0Vy .\n\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Blissy: Hey Faye! Thanks for stopping by!\n\nShop now for elegant Blissy Pillowcase, Sleep Mask, and Scrunchies here: https://blissy.attn.tv/az_D-1CQns8W .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Blissy: Bye!\n\n2025!\n\nWell almost..\n\nNot before this MASSIVE Farewell sale!\n\nUp to 65% off!\n\nGo https://blissy.attn.tv/aiLYagiCEgjW .\n\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Blissy: Faye Year-End Sale is EXTENDED! Get 65% Off & Free Shipping with code \"farewell2025\".\n\nFree Gifts + BOGO Deals + Free Gift Cards & More\n\n24 Hour Flash Sale\n\nGO: https://blissy.attn.tv/aYcojnJHpTIF . ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Blissy: Someone is about to get fired..\n\nBUT THATS NOT YOUR PROBLEM\n\nThey left the Farewell Sale on for this weekend LOL\n\nGO GO GO \n\nGet 65% Off & Free Shipping with code \"farewell2025\".\n\nGO: https://blissy.attn.tv/aNYgW7oGuy8T . ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Blissy: Hey Faye! Thanks for stopping by!\n\nShop now for elegant pillowcases, sleep masks, and scrunchies here: https://blissy.attn.tv/ar0kkgw8PMLs .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Blissy: Did you know you can upgrade your sleep with our handmade, pure mulberry silk Blissy Silk Pillowcase for a truly LUXURIOUS feel? ✨\n\nYou get $27.49 off this must-have comfort.\n\nShop now: https://blissy.attn.tv/aUUig_Yy7eXg .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Blissy: YOU JUST GOT EARLY VIP ACCESS\n\nValentine's Day VIP Event!\n\nWe added so many secret deals across products!\n\nThere's no better gift than a BLISSY\n\nUp to 59% Off & SO MUCH MORE\n\nCode: blissyvday2026sms\n\nGO: https://blissy.attn.tv/aTaOqUaAEC6n ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Blissy: Wow.. you wont believe what just got unlocked hehe.\n\nCode: blissyvday2026vip\n\nGO: https://blissy.attn.tv/a6uXsQbWezkI ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Blissy: Did you see the new launch ?\n\nI bet you missed them. and they are 60% off\n\nCheck out the Latest 3: https://blissy.attn.tv/aQU4kjRNG3KP . ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Blissy: Hi, if you need additional help please reach us at support@blissy.com. Text STOP to opt out.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "No, I haven't",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Blissy: Hello,\r\n\r\nPlease view our website in the link provided to you below to see our products;\r\n\r\nhttps://blissy.com/\r\n\r\nIf there is anything we can further assist you with please let us know.\r\n\r\nThank you and have a great day!",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Your ordering process is too confusing. Too much to sift through. Keep it simple.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bde37-cde0-42e7-f000-0000814eaf60",
-          "message_text": "Blissy: I'm sorry to hear that the ordering process felt confusing. I understand how important a simple and seamless experience is, and I truly appreciate you taking the time to share this feedback.\n\nI'll be sure to pass your comments along to our team as we continue working to improve and simplify our ordering process. Thank you for letting me know. In the meantime, if you'd like, I'd be happy to assist you with placing your order, just let me know!",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "With best discount how much would 2 king Champaign& 2 pink pillowcases cost ..3+1 deal?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bde49-dca7-4732-f000-0000814eaf60",
-          "message_text": "Blissy: Yes, you can get 25% off your purchase if you purchase 4 pillowcases. It's $82.46 each and this promotion ends in 2 hours. You can check it out here: https://blissy.attn.tv/aM61f2P5h7rR\n\nPlease let me know if you need further assistance. \n",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "That is too expensive. I thought you had better discounts under the Valentine special.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bde50-1271-4c93-f000-0000814eaf60",
-          "message_text": "Blissy: Thank you for your feedback, We're always looking to provide great deals, so keep your eyes peeled by always checking our website! In the meantime, you can check other bestsellers on sale here: https://blissy.attn.tv/aRfI_656H_X2 ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Need pillowcases. Cancer treatments causing hair to come out. My old one I ordered from you is worn out. Truly miss it.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bde55-0f71-4b80-f000-0000814eaf60",
-          "message_text": "Blissy: I'm so sorry to hear about what you're going through. I completely understand how important a comfortable pillowcase can be, especially during treatment. I'd be happy to help you get a replacement-could you let me know which one you previously ordered so I can make sure we find the same one for you?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "King size pink. The zipper became detached from pillowcase but I kept using it even in the hospital.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bde63-d825-459c-f000-0000814eaf60",
-          "message_text": "Blissy: I understand and I'm sorry to hear that! You can check it out here: https://blissy.attn.tv/aAdTJcCqCsul Let me know if you have any questions, I'd be glad to help! ",
-          "message_media": []
+          "currency": "USD",
+          "order_number": "6643791003696",
+          "order_status_url": "https://wooden-ships.myshopify.com/products/telluride-crew-chunky-sweater-pure-snow-white-2",
+          "products": [
+            {
+              "product_currency": "USD",
+              "product_link": "https://wooden-ships.myshopify.com/products/telluride-crew-chunky-sweater-pure-snow-white-2",
+              "product_name": "TELLURIDE CREW CHUNKY",
+              "product_price": 152
+            }
+          ],
+          "total": 152
         }
       ]
     },
     "230": {
-      "agentName": "Emma",
-      "id": "019be709-00ac-4ff2-f000-000019e72a6c",
+      "id": "019bd70b-d26e-4f9a-f000-0000d6548515",
+      "companyName": "Lifestride",
+      "companyWebsite": "https://lifestride.com/",
+      "agentName": "",
+      "agentInitial": "L",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "When ESC include full name for all escalations",
+          "For code issues, include email address and code"
+        ]
+      },
+      "SystemMessage1": "LifeStride: TODAY ONLY! 20% OFF heels + FREE shipping on $65+. Festive heels, major steals - don't miss out! lifestride.attn.tv/aBRYj4hDAZxL",
+      "SystemMessage2": "LifeStride: TRENDING: Cozy chic styles! Get all the comfy feels in casual, everyday styles with cozy touches. Shop the trend: lifestride.attn.tv/aSA_1Ln7B4ey",
+      "SystemMessage3": "LifeStride: Need a last-minute gift? Get her the gift of shoes with an E-GIFT CARD! Click to add to cart: lifestride.attn.tv/a7ts3D4zFBA-",
+      "SystemMessage4": "LifeStride: Winter Warehouse Sale starts NOW! Get up to 60% OFF sale styles + FREE shipping on $65+. A flurry of savings! lifestride.attn.tv/aUiSAUvQSSff",
+      "SystemMessage5": "LifeStride: NEW year, NEW shoes! Refresh your closet with styles up to 60% OFF! It's a winter wonderland of savings! Shop NOW: lifestride.attn.tv/a50KiPPp5UFx",
+      "SystemMessage6": "LifeStride: LAST DAY! Up to 60% OFF sale styles! Clearance styles starting at $19.99! Don't miss your chance to save! lifestride.attn.tv/aNNjXHcFHwV_",
+      "SystemMessage7": "LifeStride: Versatile styles tested to last 1 MILLION+ STEPS for comfort & confidence all year long. Shop the 2026 capsule: lifestride.attn.tv/aEZ25SXtoLmO",
+      "SystemMessage8": "LifeStride: CUSHION, SUPPORT & FLEX with Soft System Tech. Trusted comfort in every pair, so you can be ready for anything! lifestride.attn.tv/a_hH0prGOiAc",
+      "SystemMessage9": "LifeStride: STARTS NOW! 25% OFF + FREE shipping with code \"NEWYEAR\". Refresh your closet & save on the year's must-have shoes! lifestride.attn.tv/akkiDbVtofea",
+      "SystemMessage10": "LifeStride: 25% OFF comfy styles you'll wear on repeat! Get the discount + FREE shipping with code \"NEWYEAR\" for new shoes! lifestride.attn.tv/ae-xPdIg4k2K",
+      "SystemMessage11": "LifeStride: Don't miss out on 25% OFF + FREE shipping with code \"NEWYEAR\"! Grab your favorite styles before they're gone! lifestride.attn.tv/aoe839kT2vrt",
+      "SystemMessage12": "LifeStride: Try the Beloved Mary Jane Flats for cushioned comfort and an adjustable buckle.\n\nFree returns within 45 days with Returns Bar.\n\nYour next pair is here: https://lifestride.attn.tv/a8DaWoIUnavT .",
+      "SystemMessage13": "LifeStride: Try the Beloved Mary Jane Flats for soft cushion and an adjustable buckle that keeps you comfy all day.\n\nFree returns within 45 days with Returns Bar.\n\nYour next pair is here: https://lifestride.attn.tv/a7QIuvH7DKPY .",
+      "customerMessage1": "I'm interested in Cameo Maryjane flat.I ordered 2 pairs of this Maryjane style in September 2025.The order # for that is:    005026716640Please tell me what other colors are available in that exact style besides black, brown, pewter.",
+      "AgentMessage1": "LifeStride: I'm sorry for any inconvenience! I'm afraid we don't carry that item at the moment, but I'll definitely pass this along to the team to consider again in the future. If you have any more questions, feel free to let me know. For now, you can check out our available Mary Janes and their colors here: https://lifestride.attn.tv/a6YAwpc6axUr What size do you need?",
+      "customerMessage2": "I like (love) the cameo style. Thanks for responding!",
+      "AgentMessage2": "LifeStride: I totally understand! Hopefully, it will be available soon. 😊 And no problem at all. I'm sorry I couldn't help you out more. Is there anything else you need for now?",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://cecilandlou.com",
+          "value": "https://lifestride.com/",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.cecilandlou.com/products/blue-smocked-birthday-cake-dress4",
-            "item": "Blue Smocked Birthday Cake Dress - 18M",
-            "timeAgo": "2026-01-22"
+            "item": "beloved mary jane",
+            "link": "https://www.lifestride.com/product/womens-beloved-mary-jane-5283148/dark-cherry-patent-leather-90448?bc_pid=MDAxOTkwMzc2OTE5NTE%3D&om_rid=c2FnZW9mYm9jYUBhdHQubmV0&et_cid=subaction_4870400411557888&et_rid=c2FnZW9mYm9jYUBhdHQubmV0&obem=KmDmldXKh8NLOsPAsgrN6A47droJWOkIpRzaMl4K0Vc%3D&bc_lcid=t5282002287583232lw6284160814407680&partnerid=sms_retargeting_attentive_categoryabandon_browse-abandon-ai_trigger-lifestride&utm_campaign=browse-abandonment-ai&utm_medium=sms&utm_source=attentive&externalId=c0XYu",
+            "icon": "eye"
           },
           {
-            "link": "https://www.cecilandlou.com/products/blue-smocked-birthday-cake-dress4",
-            "item": "Blue Smocked Birthday Cake Dress - 18M",
-            "timeAgo": "2026-01-22"
+            "item": "beloved mary jane",
+            "link": "https://www.lifestride.com/product/womens-beloved-mary-jane-5283148/dark-cherry-patent-leather-90448?bc_pid=MDAxOTkwMzc2OTE5NTE%3D&om_rid=c2FnZW9mYm9jYUBhdHQubmV0&et_cid=subaction_4870400411557888&et_rid=c2FnZW9mYm9jYUBhdHQubmV0&obem=KmDmldXKh8NLOsPAsgrN6A47droJWOkIpRzaMl4K0Vc%3D&bc_lcid=t5282002287583232lw6284160814407680&partnerid=sms_retargeting_attentive_categoryabandon_browse-abandon-ai_trigger-lifestride&utm_campaign=browse-abandonment-ai&utm_medium=sms&utm_source=attentive&externalId=c0XYu",
+            "icon": "eye"
           },
           {
-            "link": "https://www.cecilandlou.com/products/pink-knit-football-and-bow-dress",
-            "item": "Pink Knit Football And Bow Dress - 2T",
-            "timeAgo": "2026-01-22"
+            "item": "beloved mary jane",
+            "link": "https://www.lifestride.com/product/womens-beloved-mary-jane-5283148/dark-cherry-patent-leather-90448?bc_pid=MDAxOTkwMzc2OTE5NTE%3D&om_rid=c2FnZW9mYm9jYUBhdHQubmV0&partnerid=email_retargeting_Bluecore_productabandon_cust2-nonpromo_trigger-LIFESTRIDE&et_cid=subaction_4870400411557888&et_rid=c2FnZW9mYm9jYUBhdHQubmV0&obem=KmDmldXKh8NLOsPAsgrN6A47droJWOkIpRzaMl4K0Vc%3D&bc_lcid=t5282002287583232lw6284160814407680",
+            "icon": "eye"
           },
           {
-            "link": "https://www.cecilandlou.com/products/blue-floral-smocked-dress4",
-            "item": "Blue Floral Smocked Dress - 2T",
-            "timeAgo": "2026-01-22"
+            "item": "beloved mary jane",
+            "link": "https://www.lifestride.com/product/womens-beloved-mary-jane-5283148/black-faux-leather-90494?bc_pid=OTA0OTQ%3D&et_rid=c2FnZW9mYm9jYUBhdHQubmV0&om_rid=c2FnZW9mYm9jYUBhdHQubmV0&et_cid=subaction_5173695634071552&obem=KmDmldXKh8NLOsPAsgrN6A47droJWOkIpRzaMl4K0Vc%3D&bc_lcid=t5777026309808128lw5729531890360320&partnerid=sms_retargeting_attentive_categoryabandon_browse-abandon-ai_trigger-lifestride&utm_campaign=browse-abandonment-ai&utm_medium=sms&utm_source=attentive&externalId=c0XYu",
+            "icon": "eye"
+          },
+          {
+            "item": "beloved mary jane",
+            "link": "https://www.lifestride.com/product/womens-beloved-mary-jane-5283148/black-faux-leather-90494?bc_pid=OTA0OTQ%3D&et_rid=c2FnZW9mYm9jYUBhdHQubmV0&om_rid=c2FnZW9mYm9jYUBhdHQubmV0&partnerid=email_retargeting_Bluecore_backinstock_cust1-nonpromo_trigger-LIFESTRIDE&et_cid=subaction_5173695634071552&obem=KmDmldXKh8NLOsPAsgrN6A47droJWOkIpRzaMl4K0Vc%3D&bc_lcid=t5777026309808128lw5729531890360320",
+            "icon": "eye"
           }
-        ]
-      },
-      "companyWebsite": "https://cecilandlou.com",
-      "companyName": "Cecil and Lou",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
         ],
-        "ai_instructions": [
-          "Do not escalate anything, if the customer question cannot be handled, send template titled Customer support",
-          "If inbound question references 'pre-order' or 'preorder' send template titled Customer Support"
-        ]
+        "orders": []
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Pre Orders"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Cecil and Lou.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: 🎀 Welcome to the Cecil and Lou family! We're so thrilled to have you with us! Here's a little gift-enjoy 15% off with your special code! IADYDQKW\nShop now: candl.attn.tv/amGnr6Y2Hcp3 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: Life is busy! Save this to your contacts so you don't miss any exclusive offers from Cecil & Lou.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: 💗 Thanks for visiting Cecil and Lou! This is Emma, I'm happy to help you discover darling styles!\n\nWho are you shopping for today?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I was going to pre-order the Charlotte dress and the Charlotte bubble and I can no longer find it. Can you advise me?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be6ea-62b2-4d46-f000-000019e72a6c",
-          "message_text": "Cecil and Lou: I'm sorry about that! I'm afraid it is currently unavailable on the website, but you can find some alternatives here: https://candl.attn.tv/aSf4B4JPsbFc \nWould any of these work for you? \n\nCould you please let me know which color you're interested in and what size you need? ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "No... I have gone through your website many times. It's for a family photo session for 10 of us. And I planned all the other clothes around those two dresses.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be706-b644-413b-f000-000019e72a6c",
-          "message_text": "Cecil and Lou: I'm once again so sorry for the inconvenience. I currently don't have the exact date of a possible restock, but I recommend checking our website and social media frequently.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "So, you do expect more?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be709-00ac-4ff2-f000-000019e72a6c",
-          "message_text": "Cecil and Lou: At this time, I don't have confirmation on whether or when more will be restocked. I'm sorry about that, and I recommend checking our website and social media for any future updates.",
-          "message_media": []
-        }
-      ]
+      "orders": []
     }
   }
 }

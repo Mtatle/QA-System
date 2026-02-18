@@ -3,235 +3,288 @@
   "chunk": "chunk_0007",
   "scenarios": {
     "31": {
-      "agentName": "Elaine",
-      "id": "019bbe47-b586-4ac3-f000-0000b440b82b",
+      "id": "019bbe95-e813-4f8c-f000-00001261d0cf",
+      "companyName": "Sam Edelman",
+      "companyWebsite": "https://samedelman.com",
+      "agentName": "Jordan",
+      "agentInitial": "S",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "If the cx sends us their credit card information (written or screenshot) and it's an issue we can't resolve - send the customer to CS"
+        ],
+        "escalate": [
+          "When you ESC use ESC shortcut fisrt",
+          "ESC if the charge on cx account is pending"
+        ]
+      },
+      "SystemMessage1": "Sam Edelman: The loafer we love. Shop this bestseller.\n\nShop now: samedelman.attn.tv/ak5XjR9pkzNY",
+      "SystemMessage2": "Sam Edelman: The cult-favorite boot is back. Now available in wide and extra-wide calf sizing. \n\nShop now: samedelman.attn.tv/ayelPMEI59cO",
+      "SystemMessage3": "Sam Edelman: For every last-minute gift on your holiday list, our digital gift cards are just the thing. \n\nShop now: samedelman.attn.tv/aGg7BtnwUCVi",
+      "SystemMessage4": "Sam Edelman: Your last-minute NYE edit has arrived. \n\nShop now: samedelman.attn.tv/agoNU5LX2B0P",
+      "SystemMessage5": "Sam Edelman: Final day of this year's best offer: Save $20 off $150+ with our loyalty program. Join now or log in.\n \nLog in or sign up to access: samedelman.attn.tv/aEzC3XMB80qO",
+      "SystemMessage6": "Sam Edelman: Back in stock: Shop the Penny Riding Boot that everyone's been waiting for. samedelman.attn.tv/a2dd0XyAYtZf .",
+      "SystemMessage7": "Sam Edelman: Elevated sneakers, from day to night.\n\nShop now: samedelman.attn.tv/adCYiZKPUfWl",
+      "SystemMessage8": "Sam Edelman: Bags you'll carry everywhere. Shop the latest. \n\nShop now: samedelman.attn.tv/apzBbLNKUte6",
+      "SystemMessage9": "Sam Edelman: This just in: boots starting under $100. Don't miss out. \n\nShop now: samedelman.attn.tv/afJKuTahXXYb",
+      "SystemMessage10": "Sam Edelman: We miss you! Enjoy free shipping and free returns. Shop our latest collection now: https://samedelman.attn.tv/a5BLwkw0crjU .",
+      "SystemMessage11": "Sam Edelman: Looks like you forgot something! Don't worry I saved it for you: https://samedelman.attn.tv/aZRl13qw-ByU . Snag osha ankle strap pump before it's gone!\n\nLet me know if you have any questions!\n\n-Jordan",
+      "customerMessage1": "Hi Jordan- thanks for looking out. I intended to call the company. I went to check out and I'm not getting my loyalty discount??? It's supposed to automatically applied at checkout???",
+      "customerMessage2": "It's supposed to be 15% off",
+      "SystemMessage12": "\"",
+      "AgentMessage1": "Sam Edelman: I understand how frustrating it is when a discount you're expecting doesn't show up. Please note that Sam Edelman Loyalty members receive their discounts when logged in, and the discount needs to be manually applied at checkout. In the meantime, I'd be happy to check with my team and will keep you posted.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://lensdirect.com",
+          "value": "https://samedelman.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.lensdirect.com/biomedics-55-premier",
-            "item": "Biomedics 55 Premier",
-            "timeAgo": "2026-01-06"
+            "item": "isella sneaker",
+            "link": "https://www.samedelman.com/product/womens-isella-sneaker-3031860/midnight-blue-suede-ec0207964?icid=SamEdelmanRecommendationsPDPTop_Sam%20Edelman_3031860_99900_EC0207964",
+            "icon": "eye"
           },
           {
-            "link": "https://www.lensdirect.com/contact-lens-protection-plan",
-            "item": "Contact Lens Protection Plan",
-            "timeAgo": "2026-01-06"
+            "item": "ivey lace up sneaker",
+            "link": "https://www.samedelman.com/product/womens-ivey-lace-up-sneaker-3030151/french-merlot-suede-ec0208238",
+            "icon": "eye"
           },
           {
-            "link": "https://www.lensdirect.com/biomedics-55-premier",
-            "item": "Biomedics 55 Premier",
-            "timeAgo": "2026-01-06"
-          },
-          {
-            "link": "https://www.lensdirect.com/contact-lens-protection-plan",
-            "item": "Contact Lens Protection Plan",
-            "timeAgo": "2026-01-06"
-          },
-          {
-            "link": "https://www.lensdirect.com/contact-lens-protection-plan",
-            "item": "Contact Lens Protection Plan",
-            "timeAgo": "2026-01-06"
+            "item": "osha ankle strap pump",
+            "link": "https://www.samedelman.com/product/womens-osha-ankle-strap-pump-3032273/black-leather-ec0209245",
+            "icon": "eye"
           }
-        ]
-      },
-      "companyWebsite": "https://lensdirect.com",
-      "companyName": "LensDirect",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
         ],
-        "templates": [
-          "For medical inquiries about contacts or lens replacement use MQ shortcut"
-        ]
+        "orders": []
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Shipping questions",
-        "Sizing questions",
-        "Exchanges and returns",
-        "Discount code errors",
-        "Existing orders",
-        "Stock questions",
-        "online vision test",
-        "prescription questions"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "LensDirect: Our Holiday Sale is ON! \n 20% OFF Contacts & DIY Replacement\n 40% OFF Eyewear & Lens Replacement. \nPlus for a limited time, 20% off Ray-Ban & Oakley!\n\nUse Code: MERRY25\n\nShop here: lensdirect.attn.tv/akmvb3OF8YQp ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LensDirect: Ring in the New Year with amazing savings! \n\nEnjoy 20% off contacts and DIY replacement lenses, plus 40% off eyewear and lens replacement.\n\nStart the year off with clear vision and style!\n\nShop here: lensdirect.attn.tv/a0ii0TaxfokM ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LensDirect: Thanks for your order! Questions? Call us at 1-800-LENS-111 or email at info@lensdirect.com - Follow us @LensDirect for more offers and deals! lensdirect.attn.tv/aWGiYcfYsZ5S",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LensDirect: Still on the fence? Sign up for our newsletter for weekly exclusive deals on everything optical! lensdirect.attn.tv/agMzrDfIDxYe ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LensDirect: Hey there! We love that you stopped by! What're you in the market for? \n\nWe have contacts, eyewear, lens replacement and so much more. Come on back and if you have any questions, let us know how we can help! https://lensdirect.attn.tv/aetZaRWBAQ2S ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I never received my shipment from you.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Did I order already? - All brands\"; last updated: 2023-10-10 16:42:51.099",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bbe47-b586-4ac3-f000-0000b440b82b",
-          "message_text": "LensDirect: Thank you for letting me know, and I'm sorry for any inconvenience. Unfortunately, I can't see any recent purchases from you here on my end. It might be due to my limited system, but just to be sure, can you please also check if you received a confirmation email or a charge on your account? Be sure to check your spam and promo folders for the email as well. Please let me know how that goes, I'm here to assist you. ",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "32": {
-      "agentName": "",
-      "id": "019be36b-0073-41a4-f000-0000f552f2e7",
+      "id": "019be330-cca1-4858-f000-0000f5526a59",
+      "companyName": "Tushbaby",
+      "companyWebsite": "https://tushbaby.com",
+      "agentName": "Sarah",
+      "agentInitial": "T",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "When ESC on weekends, use WKD shortcut",
+          "Don’t send to CS for this brand, unless instructed by a template",
+          "If cx follows up after not receiving a response to an escalation after to 2 days, re-ESC the convo",
+          "ESC immediately if cx haven't received a confirmation email",
+          "ESC immediately post-purchase shipping issues",
+          "ESC immediately all order tracking-related/order delay inquiries",
+          "ESC even if cx doesn't provide an image needed for escalation",
+          "ESC if cx want to speak to a representative & need additional assistance after using the PS shortcut",
+          "ESC all snug attachment & snug safety related inquiries",
+          "ESC if cx say they've emailed & haven't heard back",
+          "ESC inquiries about their TikTok order or store",
+          "ESC if cx asks for other options or raises issues about the return policy, or if they flag anything pain-related",
+          "ESC any discount errors or codes that do not work",
+          "ESC all inquiries about wearing Tushbaby while pregnant"
+        ],
+        "tone": [
+          "Let the cx have the last word",
+          "Don't say \"The code can ONLY be added\" or similar, say \" The code applies when you buy..\"",
+          "Don't mention that your system is limited",
+          "Use a friendly tone!",
+          "Don't tell cx to stay subscribed to our newsletter or check our website for updates, let them know that as a text subscribers they'll be the first to know about upcoming deals",
+          "Use \"texts subscriber\" instead of \"SMS subscriber\"",
+          "Don't send long responses for order status inquiries, provide the order details instead if it's available"
+        ],
+        "templates": [
+          "Totebabys won't be restocked, use TBR shortcut",
+          "For inquiries about the tweed-style Tushbaby, pink Tushbaby, the snow leopard Tushbaby or new prints, use the \"Tushbaby\" temps",
+          "For inquiries if the TushBaby can be used for children with special needs OR if we provide a discount for them, use SND shortcut",
+          "Don't use the \"PRU\" shortcut",
+          "Don't use the \"NRC\" shortcut",
+          "If the cx asks for the price, use PRC shortcut",
+          "If cx says Tushbaby is out of their budget, use OMB shortcut, and don't comment on their financial situation or our prices"
+        ],
+        "dos_and_donts": [
+          "Don't ask the cx if there is anything else you can assist with, after a convo has been ESC"
+        ],
+        "drive_to_purchase": [
+          "Don't D2P when a cx just purchased",
+          "Don't D2P to upset/angry cx"
+        ],
+        "promo_and_exclusions": [
+          "All sales/promotions end at midnight PST",
+          "If a cx reaches out regarding a sale, do not refer them to the website",
+          "TikTok codes are tiktok-specific and can't be used on the website",
+          "Discount codes work on sale items, but not on bundles",
+          "Offers are not stackable at checkout"
+        ]
+      },
+      "SystemMessage1": "Tushbaby: Welcome to Tushbaby! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage2": "Tushbaby: You're on our VIP list! 🥂 Use code FIRST15 for 15% off - and keep an eye out for new launches coming soon! tushbaby.attn.tv/a3rGWpNNbXbo",
+      "customerMessage1": "I can't use the code, doesn't work",
+      "customerMessage2": "Help",
+      "customerMessage3": "HELP",
+      "AgentMessage1": "Tushbaby: Thank you so much for reaching out, and sorry to hear that you're having issues with your code. Could you send a screenshot of your cart and the error message that you're getting?",
+      "customerMessage4": "It just says not valid for these specific items.",
+      "AgentMessage2": "Tushbaby: Thanks for sending that over. Unfortunately, our codes don't work on bundles, but the 2-in-1 Combo Carrier has a discount pre-applied so you're already getting an amazing deal!",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://weesqueak.com",
+          "value": "https://tushbaby.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://weesqueak.com/collections/all/products/bow-pink-shoe?_pos=54&_fid=990636c37&_ss=c&variant=20928497582134",
-            "item": "Bow Pink Shoe - 6 / Pink",
-            "timeAgo": "2026-01-22"
+            "item": "The Tushbaby Hip Carrier - Vegan Leather Black / Tushbaby",
+            "link": "https://tushbaby.com/products/tushbaby?variant=31311822422082",
+            "icon": "eye"
           },
           {
-            "link": "https://weesqueak.com/collections/all/products/camille-butterfly-gold-shimmer-shoe?_pos=59&_fid=990636c37&_ss=c&variant=20877849985078",
-            "item": "Camille Gold Shimmer Shoe - 6 / Gold Shimmer / FINAL SALE",
-            "timeAgo": "2026-01-22"
+            "item": "The Tushbaby Hip Carrier - Grey / Tushbaby",
+            "link": "https://tushbaby.com/products/tushbaby?variant=15109665390658",
+            "icon": "eye"
+          },
+          {
+            "item": "The Tushbaby Hip Carrier - Vegan Leather Cream / Tushbaby",
+            "link": "https://tushbaby.com/products/tushbaby?variant=40288993017922",
+            "icon": "eye"
+          },
+          {
+            "item": "The Tushbaby Hip Carrier - Gingham / Tushbaby",
+            "link": "https://tushbaby.com/products/tushbaby?variant=42473331064898",
+            "icon": "eye"
+          },
+          {
+            "item": "The Tushbaby Hip Carrier - Black & Gold / Tushbaby",
+            "link": "https://tushbaby.com/products/tushbaby",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "33": {
+      "id": "019bf723-5e29-4cb8-f000-0000f5a96dd0",
+      "companyName": "Comfrt",
+      "companyWebsite": "https://comfrt.com",
+      "agentName": "Samantha",
+      "agentInitial": "C",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS for post-purchase issues"
+        ],
+        "escalate": [
+          "ESC if the discount % is not the same as indicated in the automated message"
+        ],
+        "templates": [
+          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
+        ]
+      },
+      "SystemMessage1": "Comfrt: Welcome to Comfrt! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage2": "Comfrt: Welcome to Comfrt! We're so excited to have you. Here's your exclusive 15% off code: W15p5fR8g\n\nClick here to auto-apply your discount and shop our viral best-sellers: comfrt.attn.tv/anL8VHz7lRDg",
+      "SystemMessage3": "Comfrt: Let's be friends!\n\nSave our contact to make sure we land directly in your messages.",
+      "customerMessage1": "How can do an exchange?",
+      "AgentMessage1": "Comfrt: I'm happy to help! If you want to you can swap your item for a different size or color (based on availability), and your replacement will ship once, your return has been received and processed.\n\nIn order to qualify for an even exchange all items must be approved/requested within 30 days of delivery. Unfortunately, anything after the 30 day window period can not be approved. All exchanges must be in exact condition with no signs of wear and tear, stains or other signs of usage; including in the original poly bag with SKU to return in. \n\nYou can start your return here: https://comfrt.attn.tv/aarEvLt1_iBX/#/ and you can check out our detailed return policy here: https://comfrt.attn.tv/a_dV1Sxp02YS",
+      "customerMessage2": "I have a large kids sweatshirt that I need to exchange for a small adult. How do I do that?",
+      "AgentMessage2": "Comfrt: Hi again! Have you tried following the instructions I sent above? If so, you should see an option to request an exchange, which will allow you to swap your large kids sweatshirt for a adult size based on availability.",
+      "customerMessage3": "No, I haven’t",
+      "AgentMessage3": "Comfrt: I understand, and I'm really sorry this has been such a hassle for you. When you have a moment, could you please try the steps I shared earlier and let me know how it goes so I can help you further if needed.",
+      "customerMessage4": "now he won't let me exchange my youth extra large for a small adult",
+      "customerMessage5": "starting to get very frustrated 😩",
+      "AgentMessage4": "Comfrt: I'm sorry to hear that. Have you encountered any error messages? I'll be happy to look into the issue!",
+      "customerMessage6": "yes, it's telling me that I cannot return the camel extra large youth sweater",
+      "customerMessage7": "i want to talk to a person not this texting..",
+      "AgentMessage5": "Comfrt: Can you please send me a screenshot of what you're seeing on your end? I'll be more than happy to look into this for you! \n\nI'm sorry, we don't offer phone support right now, but I'd be happy to help you over text.",
+      "customerMessage8": "\"",
+      "SystemMessage4": "Template used: \"Customer support\"; last updated: 2022-09-13 01:43:33.168",
+      "AgentMessage6": "Comfrt: Thanks for sending the screenshot, and I'm once again so sorry for the inconvenience! The best way to handle this is to email us directly at info@comfrt.com. Our team is happy to help!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://comfrt.com",
+          "date": ""
+        },
+        "browsingHistory": [],
+        "orders": [
+          {
+            "orderNumber": "6440967733292",
+            "orderDate": "",
+            "link": "https://comfrtclothing.myshopify.com/products/affirmation-hoodie",
+            "trackingLink": "",
+            "currency": "USD",
+            "items": [
+              {
+                "name": "Affirmation Hoodie",
+                "price": "49",
+                "currency": "USD",
+                "productLink": "https://comfrtclothing.myshopify.com/products/affirmation-hoodie"
+              },
+              {
+                "name": "Camo Kids Hoodie",
+                "price": "39",
+                "currency": "USD",
+                "productLink": "https://comfrtclothing.myshopify.com/products/the-camo-kids-hoodie"
+              },
+              {
+                "name": "Camo Kids Hoodie",
+                "price": "39",
+                "currency": "USD",
+                "productLink": "https://comfrtclothing.myshopify.com/products/the-camo-kids-hoodie"
+              }
+            ],
+            "total": "127"
           }
         ]
       },
-      "companyWebsite": "https://weesqueak.com",
-      "companyName": "Wee Squeak",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
+      "orders": [
         {
-          "message_type": "system",
-          "message_text": "Wee Squeak: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Wee Squeak.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wee Squeak: Welcome to Wee Squeak! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wee Squeak: Welcome! Use the offer MOBILE10 at checkout for a discount when you shop https://weesqueak.attn.tv/aCS_SX9P0hvl .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wee Squeak: Don't forget to save our contact to get exclusive updates!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wee Squeak: Hey Linda, this is Sarah. I see you left something in your cart. https://weesqueak.attn.tv/a4le8E4rAa8l \n\nGreat choice! 😊 Any questions I can answer for you? ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "It won't take my discount code?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be352-c1d5-4ccd-f000-0000f552f2e7",
-          "message_text": "Wee Squeak: I'm sorry to hear you're having trouble applying the discount. Please note that our codes do have some exclusions and may not work with certain deals or existing sales.\n\nCould you let me know which items are currently in your cart? If it's easier, you can also share a screenshot, and I'll be glad to take a closer look and assist further. ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I gave my email",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be36b-0073-41a4-f000-0000f552f2e7",
-          "message_text": "Wee Squeak: Thanks for the info. Sorry for the trouble. I tested and it worked on my end. Mind telling me what size you need? I can create a checkout link for you. ",
-          "message_media": []
+          "currency": "USD",
+          "order_number": "6440967733292",
+          "order_status_url": "https://comfrtclothing.myshopify.com/products/affirmation-hoodie",
+          "products": [
+            {
+              "product_currency": "USD",
+              "product_link": "https://comfrtclothing.myshopify.com/products/affirmation-hoodie",
+              "product_name": "Affirmation Hoodie",
+              "product_price": 49
+            },
+            {
+              "product_currency": "USD",
+              "product_link": "https://comfrtclothing.myshopify.com/products/the-camo-kids-hoodie",
+              "product_name": "Camo Kids Hoodie",
+              "product_price": 39
+            },
+            {
+              "product_currency": "USD",
+              "product_link": "https://comfrtclothing.myshopify.com/products/the-camo-kids-hoodie",
+              "product_name": "Camo Kids Hoodie",
+              "product_price": 39
+            }
+          ],
+          "total": 127
         }
       ]
     },
-    "33": {
-      "agentName": "Jordan",
-      "id": "019bf62a-fb20-4f80-f000-0000e673e05a",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://lg.com/us",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.lg.com/us/cooking-appliances/lg-lsgl5830s-gas-range",
-            "item": "5.8 Cu. Ft. Gas Slide-in Range With Easyclean®",
-            "timeAgo": "2026-01-25"
-          },
-          {
-            "link": "https://www.lg.com/us/cooking-appliances/lg-lshd3680n-wall-mount-range-hood",
-            "item": "36 Inch Lg Studio Wall Mount Range Chimney Hood - Essence White",
-            "timeAgo": "2026-01-25"
-          },
-          {
-            "link": "https://www.lg.com/us/cooking-appliances/lg-lsgl6335d-slide-in-gas-range-with-air-fryer",
-            "item": "6.3 Cu. Ft. Smart Wi-fi Enabled Probake Convection® Instaview® Gas Slide-in Range With Air Fry",
-            "timeAgo": "2026-01-25"
-          },
-          {
-            "link": "https://www.lg.com/us/cooking-appliances/lg-lsgl6335d-slide-in-gas-range-with-air-fryer",
-            "item": "6.3 Cu. Ft. Smart Wi-fi Enabled Probake Convection® Instaview® Gas Slide-in Range With Air Fry",
-            "timeAgo": "2026-01-25"
-          },
-          {
-            "link": "https://www.lg.com/us/cooking-appliances/lg-lsgl6335d-slide-in-gas-range-with-air-fryer",
-            "item": "6.3 Cu. Ft. Smart Wi-fi Enabled Probake Convection® Instaview® Gas Slide-in Range With Air Fry",
-            "timeAgo": "2026-01-25"
-          }
-        ]
-      },
-      "companyWebsite": "https://lg.com/us",
+    "34": {
+      "id": "019beb89-f412-4239-f000-0000ec68054f",
       "companyName": "LG",
-      "notes": {
+      "companyWebsite": "https://lg.com/us",
+      "agentName": "Jordan",
+      "agentInitial": "L",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "send_to_cs": [
           "No ESC for this client, send everything to CS using the \"Escalation template\""
         ],
@@ -240,331 +293,124 @@
           "For fridge recommendations use FRR shortcut",
           "For service-related issues/scheduled repair service appointments use SRI shortcut",
           "For cxs looking for replacement parts/accessories from an affiliate Parts Distributor use RPA shortcut",
-          "If a cx has an inquiry for finding the serial number/model number of an item:",
-          "➜ If it's a TV, use mnt shortcut",
-          "➜ If it's another product, use mna shortcut"
+          "If a cx has an inquiry for finding the serial number/model number of an item:"
         ],
         "dos_and_donts": [
           "If it's a new conversation and we didn't introduce ourselves in the automated message, start your message with: \"This is Jordan at LG.\""
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Welcome back 🤩 Ready to level up your LG collection? Text back here for recommendations on our top deals right now!\n\nlg.attn.tv/aoFnDyNHoXff .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: How are you liking your recent purchase? Let us know by leaving a review today: https://lg.attn.tv/aSI88dCoI4R- .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Last day! Streamline your kitchen revamp. Save on curated 4-piece appliance packages from LG - America's Most Reliable and #1 Appliance Brand.* Shop Now: lg.attn.tv/aH-oEJGmKNbQ ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Enjoying your recent LG purchase? Tell us about it! Help us continue getting better by leaving a review. \nlg.attn.tv/aN_yinNmUxdp \n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: New Year, Smarter Home. Save on Craft IceTM fridges, AI Wash & Dry laundry & more when you bundle 2 or more eligible appliances. Shop Now: lg.attn.tv/axyki4XLzxs2 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: New year's savings on tech! Kick off the year with deals on select award-winning laptops and monitors. Upgrade your setup and start the year strong. Shop Now: lg.attn.tv/aH5nHQmznH0C ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Make the smart switch and save more. Get $200 off when you bundle an eligible washer and heat pump dryer. Shop Now: lg.attn.tv/a-CONOWnDGv0 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Game day looks better on LG TVs. Enjoy vivid color, sharp clarity, and immersive picture quality for every big moment. Shop Now: lg.attn.tv/a7LJDL3PJeKo ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: ⚡ Flash Sale: Save up to 48% on select LG laundry, refrigerators & vacuum! Refresh your home today. Valid only on 1/10/26. Terms may apply. Shop Now: lg.attn.tv/aevkhBPopY2S ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Hey there, you left something great behind! Use code CAE1097BWM to take 10% OFF your cart: lg.attn.tv/armvwHKqi5qf (Terms apply, expires in 30 days)\n\nHave any questions I can help with?\n-Jordan",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Hey you 👋 It's Jordan, your go-to electronics & appliances expert.\n\nDo you have any questions or need a recommendation?\n\nhttps://lg.attn.tv/adT_h0j1PVSf .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: New Year. New Savings. Step into the New Year with savings on America’s Most Reliable & #1 Appliance Brand.* Free haul-away + free installation on select laundry & ranges. Shop Now: lg.attn.tv/aKWKxiPu27MS ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Toast to a fresh start with LG appliances. Explore New Year savings on innovative refrigerators, ranges, dishwashers, and more. Shop Now: lg.attn.tv/aKhRaG8xbp6Z ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Welcome back 🤩 Ready to level up your LG collection? Text back here for recommendations on our top deals right now!\n\nlg.attn.tv/agw6kVAu3uxj .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: ⚡1 Day Only! Save up to 45% on select appliances. Upgrade your home and save on select LG laundry, refrigerators & more. Valid only on 1/17/26. Terms may apply. Shop Now: lg.attn.tv/aIgqM6thDdZN ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Upgrade your home appliances with LG and enjoy free shipping all year long. Don't wait to pull the plug on outdated devices: https://lg.attn.tv/a1v214BuRymg \n\nNeed help finding the best upgrade for you? Text back now!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Start the year smarter at home. Enjoy exclusive savings on Craft IceTM refrigerators, AI Wash & Dry laundry, and more when you bundle 2+ eligible appliances. Shop Now: lg.attn.tv/aU6MEcYG1x9- ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Give your wardrobe expert care with savings on select LG laundry appliances. Keep your washer & dryer covered with LG Premium Care from $9.99. Shop Now: lg.attn.tv/aZFKaXswW6Da ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: ⚡Today Only! Save up to 58% on select appliances. Elevate your home essentials with savings on select laundry, cooking, & more. Valid only on 1/24/26. Terms may apply. Shop Now: lg.attn.tv/awFjT92h9_0C ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LG Electronics USA: Hi, it's Jordan here from LG. Are there any specific appliance or electronic questions I can help with today?\n\nPick back up where you left off: https://lg.attn.tv/aq2k9YWZUMlw .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "GM\nYes I need a 3 rd hanger and a shelf for my lg steam styler. I can’t get an answer on the shelf of where to order it from. Can you find me a dealer with one?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Store Locator\"; last updated: 2022-07-21 18:59:28.925",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bf62a-fb20-4f80-f000-0000e673e05a",
-          "message_text": "LG Electronics USA: Thanks for reaching out! On each of the product pages, there is a \"Find a Retailer\" option on the right next to Add to Cart. You can see the available store locations where the units you're interested in are available and whether they're in stock or not. There's even a map at the bottom to narrow your search to the closest location to you. Please let me know how that goes!",
-          "message_media": []
-        }
-      ]
-    },
-    "34": {
-      "agentName": "Lauren",
-      "id": "019bc39c-2e4e-4e5b-f000-0000ee5f1e92",
+      "SystemMessage1": "LG Electronics USA: Hey there! It looks like you haven't redeemed your coupon code - WLCMPN225. Don't miss out on your chance to save. https://lg.attn.tv/a-yMXC4UBWQB .",
+      "SystemMessage2": "LG Electronics USA: Start the New Year Fresh!✨ Upgrade and save 30-56% on select appliances with better performance and stunning design. Shop Now: lg.attn.tv/aXa1REu_ESox",
+      "SystemMessage3": "LG Electronics USA: Get $50 OFF the 7.3 cu. ft. Smart Wi-Fi Electric Dryer. Ultra-large capacity with an EasyLoad™ Door. Valid on only 12/27/25. Terms may apply. Shop Now: lg.attn.tv/aIdQG9W8czOg \n\nText back if you have any questions!",
+      "SystemMessage4": "LG Electronics USA: Last day! Streamline your kitchen revamp. Save on curated 4-piece appliance packages from LG - America's Most Reliable and #1 Appliance Brand.* Shop Now: lg.attn.tv/aGADUwVcHY-s",
+      "SystemMessage5": "LG Electronics USA: Welcome back 🤩 Ready to level up your LG collection? Text back here for recommendations on our top deals right now!\n\nlg.attn.tv/aqwJMUjzt4Iq .",
+      "SystemMessage6": "LG Electronics USA: Start the year with a kitchen refresh. Our curated 4-piece appliance packages deliver performance, style, and easy coordination. Shop Now: lg.attn.tv/ag7ZxNVZrOPg",
+      "SystemMessage7": "LG Electronics USA: ⚡24-Hour Flash Sale! Get up to 33% off select appliances. Save on an eligible Smart Wi-Fi Dryer and CordZero™ Q3 vacuum. Valid through 1/3/26. Terms may apply. Shop Now: lg.attn.tv/aM849cCwacn-",
+      "SystemMessage8": "LG Electronics USA: Hey there, I see you're in search of a new Laundry Accessory. Don't let a good thing get away. We saved that item for you here: lg.attn.tv/aOsUxl0Kqc6e now make it happen!\n\nCan I help you find the perfect one for your space?\n- Jordan",
+      "SystemMessage9": "LG Electronics USA: Hi, it's Jordan here from LG. Are there any specific appliance or electronic questions I can help with today?\n\nPick back up where you left off: https://lg.attn.tv/axhRgIIzrEVY .",
+      "SystemMessage10": "LG Electronics USA: Elevate your watch party with stunning color and perfect contrast from an LG OLED TV. Shop Now: lg.attn.tv/a4Lx_7HWvXK0",
+      "SystemMessage11": "LG Electronics USA: 🎉 Amazing news! The item you were looking at is now back in stock! Grab it now> LG SIGNATURE Large Smart Wi-Fi Enabled Front Load Washer, 5.8 cu. ft. lg.attn.tv/aDEdOGpeJFTC\n*Check online for most accurate availability based on your location.",
+      "SystemMessage12": "LG Electronics USA: Hey there, you left something great behind! Use code CAE10GIDUN to take 10% OFF your cart: lg.attn.tv/a44S1_6rtdbA (Terms apply, expires in 30 days)\n\nHave any questions I can help with?\n-Jordan",
+      "SystemMessage13": "LG Electronics USA: Make the smart switch and save more. Get $200 off when you bundle an eligible washer and heat pump dryer. Shop Now: lg.attn.tv/aIeycSzc-xEb",
+      "SystemMessage14": "LG Electronics USA: Game day looks better on LG TVs. Enjoy vivid color, sharp clarity, and immersive picture quality for every big moment. Shop Now: lg.attn.tv/aCRCJntjDRIh",
+      "SystemMessage15": "LG Electronics USA: ⚡ Flash Sale: Save up to 48% on select LG laundry, refrigerators & vacuum! Refresh your home today. Valid only on 1/10/26. Terms may apply. Shop Now: lg.attn.tv/awFYx7O-ygyW",
+      "SystemMessage16": "LG Electronics USA: 🎉 Amazing news! The item you were looking at is now back in stock! Grab it now> LG SideKick™ Pedestal Washer, TWINWash™ Compatible, 1.0 cu. ft. lg.attn.tv/aPqZkkISmk3-\n*Check online for most accurate availability based on your location.",
+      "SystemMessage17": "LG Electronics USA: 🎉 Amazing news! The item you were looking at is now back in stock! Grab it now> LG Mega Capacity Smart Front Load Dryer with Dual Inverter HeatPump™ Technology and Inverter Direct Drive Motor System, 7.8 cu. ft. lg.attn.tv/ayNj0A5fc2Nj\n*Check online for most accurate availability based on your location.",
+      "SystemMessage18": "LG Electronics USA: Hi, it's Jordan here from LG. Are there any specific appliance or electronic questions I can help with today?\n\nPick back up where you left off: https://lg.attn.tv/aO8Dmk0tyihV .",
+      "SystemMessage19": "LG Electronics USA: New Year. New Savings. Step into the New Year with savings on America’s Most Reliable & #1 Appliance Brand.* Free haul-away + free installation on select laundry & ranges. Shop Now: lg.attn.tv/aAt6D0ZT_MaS",
+      "SystemMessage20": "LG Electronics USA: Toast to a fresh start with LG appliances. Explore New Year savings on innovative refrigerators, ranges, dishwashers, and more. Shop Now: lg.attn.tv/aKj91pehTYkr",
+      "SystemMessage21": "LG Electronics USA: ⚡1 Day Only! Save up to 45% on select appliances. Upgrade your home and save on select LG laundry, refrigerators & more. Valid only on 1/17/26. Terms may apply. Shop Now: lg.attn.tv/aSAnK-xQSY2T",
+      "SystemMessage22": "LG Electronics USA: Oh no! Your coupon code - WLCMPN225 is expiring soon. This is your chance to redeem it and unlock your savings. https://lg.attn.tv/ah-xYWherLkt .",
+      "SystemMessage23": "LG Electronics USA: Game day’s calling. LG TVs make every highlight pop with vivid color and stunning clarity. Shop Now: lg.attn.tv/a9ABd0QxSDsZ",
+      "SystemMessage24": "LG Electronics USA: Start the year smarter at home. Enjoy exclusive savings on Craft Ice™ refrigerators, AI Wash & Dry laundry, and more when you bundle 2+ eligible appliances. Shop Now: lg.attn.tv/azW54s6UumWW",
+      "SystemMessage25": "LG Electronics USA: Give your wardrobe expert care with savings on select LG laundry appliances. Keep your washer & dryer covered with LG Premium Care from $9.99. Shop Now: lg.attn.tv/ax3Z5is1f8wh",
+      "customerMessage1": "can you let me know how to redeem Rinse credit",
+      "AgentMessage1": "LG Electronics USA: Thank you for your inquiry! This is Jordan at LG. After you complete checkout, you'll receive a follow-up message from Rinse with instructions on how to redeem your free credit.\n\nBe sure to check your email, including your spam or promotions folders, as the message can sometimes end up there.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://shopbeamazing.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://shopbeamazing.com",
-      "companyName": "BEAM",
-      "notes": {
-        "promo_and_exclusions": [
-          "Check the brand website for the most up to date promotions"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Be Amazing: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Be Amazing.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Be Amazing: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Be Amazing: Welcome! Here's 25% off your first order - use code BEAMAZING25\n\nShop now: shopbeamazing.attn.tv/aJsuauoQN1Vf \n\nGot questions about products or ingredients? Just reply and Lauren can help!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Be Amazing: \n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Be Amazing: No alcohol, no problem.\n\nClear Vegan Protein = juicy hydration + protein + electrolytes (yes, really!) \n\nSip smarter: shopbeamazing.attn.tv/aH0y0joq601k ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Be Amazing: Liquid who? 👀\n\nOur Clear Vegan Protein does hydration better, with the same refreshing vibes and way more benefits. \n\nShop now: shopbeamazing.attn.tv/ad6P9tK_ACuL ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I just got some pre workout that I didn't mean to order because I (medically) can't use it. Can I exchange? I think fat fingered it. I only want the protein",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Cancel / edit order\"; last updated: 2022-08-16 04:04:51.692",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc39c-2e4e-4e5b-f000-0000ee5f1e92",
-          "message_text": "Be Amazing: I completely understand how a mistake like this can happen. I can check if that's possible. Are you referring to Order #331559? What's the email address?",
-          "message_media": []
-        }
-      ]
-    },
-    "35": {
-      "agentName": "Casey",
-      "id": "019bf134-d832-4e8a-f000-0000dd50e0e0",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://heydude.com",
+          "value": "https://lg.com/us",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.heydude.com/products/wally-tri-u-of-miami-deep-green-orange",
-            "item": "Wally Tri U of Miami - Miami Deep Green/Orange",
-            "timeAgo": "2026-01-15"
+            "item": "27 Inch Lg Sidekick™ Pedestal Washer",
+            "link": "https://www.lg.com/us/washers-dryers/lg-wd300cb-pedestal-washer?LoginFlag=Y",
+            "icon": "eye"
           },
           {
-            "link": "https://www.heydude.com/products/wally-tri-u-of-miami-deep-green-orange",
-            "item": "Wally Tri U of Miami - Miami Deep Green/Orange - 7",
-            "timeAgo": "2026-01-15"
+            "item": "27 Inch Lg Sidekick™ Pedestal Washer",
+            "link": "https://www.lg.com/us/washers-dryers/lg-wd300cb-pedestal-washer",
+            "icon": "eye"
           },
           {
-            "link": "https://www.heydude.com/products/wally-tri-u-of-miami-deep-green-orange",
-            "item": "Wally Tri U of Miami - Miami Deep Green/Orange",
-            "timeAgo": "2026-01-15"
+            "item": "27 Inch Lg Sidekick™ Pedestal Washer",
+            "link": "https://www.lg.com/us/washers-dryers/lg-wd300cb-pedestal-washer",
+            "icon": "eye"
           },
           {
-            "link": "https://www.heydude.com/products/wally-tri-u-of-miami-deep-green-orange",
-            "item": "Wally Tri U of Miami - Miami Deep Green/Orange - 7",
-            "timeAgo": "2026-01-15"
+            "item": "Lg 27 Inch Pedestal Storage Drawer",
+            "link": "https://www.lg.com/us/appliances-accessories/lg-wdp6b-pedestal-storage-drawer?utm_campaign=20240701_thinq_consumables&utm_source=thinq&utm_medium=outlink&ally_chnl_id=thinq_parts",
+            "icon": "eye"
           },
           {
-            "link": "https://www.heydude.com/products/wally-tri-u-of-miami-deep-green-orange",
-            "item": "Wally Tri U of Miami - Miami Deep Green/Orange",
-            "timeAgo": "2026-01-14"
+            "item": "1.0 Cu. Ft. Lg Sidekick™ Pedestal Washer, Lg Twinwash™ Compatible",
+            "link": "https://www.lg.com/us/washers-dryers/lg-sidekick-wd200cb-pedestal-washer?utm_campaign=obs-xbu-journey-awareness-back-in-stock-sms&utm_medium=sms&utm_source=attentive&externalId=5_Ag5",
+            "icon": "eye"
           }
-        ]
-      },
-      "companyWebsite": "https://heydude.com",
-      "companyName": "HEYDUDE US",
-      "notes": {
-        "important": [
-          "There is a scam website that customers are texting in from (https://heydudestores.com/)",
-          "If you notice this, reroute customers to the correct website!"
         ],
-        "send_to_cs": [
-          "Don't ESC post-purchase issues, use PPI shortcut"
+        "orders": []
+      },
+      "orders": []
+    },
+    "35": {
+      "id": "019be70f-06c4-44d4-f000-0000c0c66ac4",
+      "companyName": "Bonafide",
+      "companyWebsite": "https://hellobonafide.com",
+      "agentName": "Sarah",
+      "agentInitial": "B",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "ESC all medical/scientific inquiries immediately",
+          "ESC return requests that are past the 30-day policy"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
         ],
         "templates": [
-          "For wrong items received use WMP shortcut",
-          "For damaged items received use DMI shortcut",
-          "For order status requests use OSR shortcut"
+          "For exact measurements of ingredients, use \"MOI\" shortcut"
         ],
-        "promo_and_exclusions": [
-          "The welcome code is valid for first-time customers only.",
-          "➜ Applies to full-price styles",
-          "➜ Can't be combined with any other discounts or offers, including sale styles",
-          "➜  Use cww temp for code issues",
-          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
+        "dos_and_donts": [
+          "When sending the quiz - always suggest a specific product if customers mention a certain symptom"
         ]
       },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Our End of Season Sale is coming to a close!\n\nSnag an extra 30% off sale styles with code SAVE\n\nShop top-sellers:\nheydudeshoes.attn.tv/aSv1UEa840Wp .\n\n",
-          "message_media": []
+      "SystemMessage1": "Bonafide: Did you know you've got bonus points? 💎 Cash them in to save on your next order: bonafide.attn.tv/azj4OztxGxD6",
+      "SystemMessage2": "Bonafide: Don't let your FSA/HSA funds expire before the end of the year. Use them towards menopause care now! bonafide.attn.tv/avPrhxcKGGzY",
+      "SystemMessage3": "Bonafide: Last chance for free Revaree! Start a new subscription before midnight to get your gift & save up to 25%: bonafide.attn.tv/anHd6PqbyAK0",
+      "SystemMessage4": "Bonafide: Congrats on finishing month 3 of your journey with Bonafide. Like all good things, our products take time to work. Thankfully, your next shipment is about to arrive, and you now have even more to look forward to. If you need anything, reply SUPPORT.",
+      "customerMessage1": "Need change my products",
+      "customerMessage2": "Support need to change my products",
+      "AgentMessage1": "Bonafide: Thanks for reaching out! I can check if that's possible, can you let me know the reason for the change of products? Also, what's the order number and email address on your order?",
+      "customerMessage3": "No need for the vitamins and hair serum .",
+      "AgentMessage2": "Bonafide: Just to clarify, is this for a subscription? Please let me know. I'm just one click away!",
+      "customerMessage4": "Yes a current subscription",
+      "AgentMessage3": "Bonafide: Thank you! To cancel your subscription, log in to your account here: https://bonafide.attn.tv/a3YMtypisEYv and find the subscription you'd like to cancel. Click the \"Cancel Subscription\" button, found underneath the product quantity on the right-hand side. In the box that pops up, select the reason you would like to cancel your subscription, and click \"Unsubscribe\". You'll receive a confirmation message that your subscription has been canceled, and the page will automatically refresh to remove the product.\n\nWe're sorry to see you go, and if you have any feedback that we can share with our internal team, please let us know as we're always working to improve our customers' experiences.",
+      "customerMessage5": "No do not wanting to cancel subscription just need to revise it",
+      "AgentMessage4": "Bonafide: I apologize for any inconvenience this may have caused. You can manage your order and subscription settings directly in your Bonafide account. You can swap your subscription to a different product by logging in to your account here: https://bonafide.attn.tv/ac_XtXCUXEw5 On the My Subscriptions tab, select the subscription you would like to modify. Click the \"Swap Product\" button to select a new product, and confirm this change in the popup. The page will automatically reload and update with your changes.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://hellobonafide.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Something catch your eye? These go-to's are selling fast. Get your size before they're gone.\n\n heydudeshoes.attn.tv/aBcZS_fGzD42\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Friday Frenzy Alert!\n\nNew end-of-season markdowns just hit under $40 with code SAVE\n\nLimited time only:\nheydudeshoes.attn.tv/akf2D1g4KMBc .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Hi! We noticed you haven't found your perfect match yet. Enjoy 20% off your first purchase with code 90ATT20E-e2tr7cm6kk2z\n\nheydudeshoes.attn.tv/azWkt24cnVjC \n*Full prices styles only. Exclusions apply.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Hey, there - you still have 20% off your order with code 90ATT20E-e2tr7cm6kk2z\n\nThe reviews on these Best Sellers don't lie:\nheydudeshoes.attn.tv/aL6pJp6gWXVy ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: You have excellent taste!\n\nWhile you wait for your order, check out our newest arrivals: heydudeshoes.attn.tv/ajOaQw9IQUV9 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: You know you need a second pair...\n\nTake $30 off your order of $100+ with code ATTPP098NW7P. \n\nShop best sellers:\nheydudeshoes.attn.tv/aYGcm0ss1RAj .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I never got my first pair i ordered. I need a refund my university of miami hurricanes shoes.i went too the post office it never came.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Please refund me",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"What should I do if my package says delivered but I don't have it?\"; last updated: 2025-10-24 16:24:01.166",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Sorry 2 - All brands\"; last updated: 2023-10-10 17:56:13.923",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bf134-d832-4e8a-f000-0000dd50e0e0",
-          "message_text": "HEYDUDE: I'm sorry to hear you haven't received your order yet! To confirm, are you referring to Order #14648049? If so, I see that this order was delivered on 1/15.\n\nIf your tracking says the package was delivered but you haven't received it, I recommend checking around your home and with nearby houses, just in case it was dropped off by mistake. Also, check with anyone you live with, like family, roommates, or a landlord, to see if they accepted it for you. Sometimes packages are also held by property managers, an apartment office, or even your local post office. Let me know if you can't find it, I'm here to help! ",
-          "message_media": []
-        }
-      ]
+        "browsingHistory": [],
+        "orders": []
+      },
+      "orders": []
     }
   }
 }

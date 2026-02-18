@@ -1,0 +1,332 @@
+{
+  "version": 1,
+  "chunk": "chunk_0052",
+  "scenarios": {
+    "256": {
+      "id": "019bc2da-40bf-40ed-f000-0000f2827328",
+      "companyName": "Snipes",
+      "companyWebsite": "https://snipesusa.com",
+      "agentName": "Avery",
+      "agentInitial": "S",
+      "messageTone": "Formal",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS immediately for post-purchase issues",
+          "Send to CS for payment processing issues"
+        ],
+        "tone": [
+          "Don't use the term restock",
+          "Don't tell customers that we'll be restocking",
+          "Don't respond to blank messages",
+          "Don't use formal language",
+          "Close the conversation when a customer responds 'no'"
+        ],
+        "templates": [
+          "If a cx reaches out regarding the Early Access event, use EAE shortcut",
+          "For cx reaching out in Spanish use SSC shortcut",
+          "For checkout issues use the \"Check out Issues\" temp",
+          "For store item availability, use SPA shortcut",
+          "If cx's email doesn't work for early access, use EEA shortcut"
+        ],
+        "dos_and_donts": [
+          "They occasionally run sign-up campaigns where cx text certain keywords (“releases,” “early access”) to join a list. If a customer sends a similar keyword:",
+          "All clothing is true to size unless otherwise stated on the product page",
+          "You can use these sizing charts for reference (for internal use only): https://docs.google.com/spreadsheets/d/1kmra_vOwCJuHoAx9D4L4Qx95rxafHcrqn-ZGutfzLgg/edit?usp=sharing",
+          "For store info q's (phone number/additional info) - use the store locator with your VPN turned on!"
+        ]
+      },
+      "SystemMessage1": "SNIPES: Welcome to SNIPES! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage2": "SNIPES: Thanks for subscribing! Get ready for exclusive updates on new releases, events, and more. Don't miss out on what's coming your way. Stay tuned!",
+      "SystemMessage3": "SNIPES: Don't forget to save our contact to get exclusive updates!",
+      "SystemMessage4": "SNIPES: Hey - you left somethin' behind! Hurry & grab it today: snipes.attn.tv/aGnySlPXEj2S .",
+      "SystemMessage5": "SNIPES: Cozy layers are marked down. Shop fleece from top brands like Nike, UGG, Polo and more for men, women & kids. Limited time: snipes.attn.tv/aJKkv7M9I7hA",
+      "SystemMessage6": "SNIPES: Thanks for texting us! If you need additional help, please contact us at customerservice@snipesusa.com. Text STOP to opt out.",
+      "SystemMessage7": "SNIPES: Time's almost up. Sign up for early access for your chance to reserve the Air Jordan 4 Retro Flight Club: snipes.attn.tv/axJiH3WoxD20",
+      "SystemMessage8": "SNIPES: Thanks for texting us! If you need additional help, please contact us at customerservice@snipesusa.com. Text STOP to opt out.",
+      "customerMessage1": "I still need assistance with my account",
+      "AgentMessage1": "SNIPES: I'm very sorry to hear this happened. I totally understand the frustration with this! Our team handles emails in the order they come in and sending additional ones will further delay the team's response. Rest assured that one of my colleagues will follow up with you in no time!",
+      "customerMessage2": "Over the past week, my account has been subject to purchase restrictions due to fraud prevention measures. These restrictions are currently only in effect on your website, as my bank has already resolved the card restriction. I kindly request that you forward my case to a representative who can assist me.\nI have consistently encountered issues with returning purchases. One instance involved a single item being canceled without being credited. I took the initiative to visit a physical store to seek assistance from your retail associates. They promptly issued me a gift card to complete my online order after undergoing the entire verification process at the store.\nTherefore, I kindly request your assistance in resolving this matter.",
+      "AgentMessage2": "SNIPES: I'm sorry to hear about that. I'm really sorry for all the inconvenience. Kindly wait for our team's response. We are dealing with an influx of support messages but this does not make your concern any less important. The team is working as hard as possible to address each issue promptly. I know my apologies won't help in this situation but rest assured, I understand how frustrating this can be and I'm very sorry I can't provide you with an immediate solution. I'm thankful for your patience and understanding.",
+      "SystemMessage9": "SNIPES: Just dropped. Nike Air Max2 CB 94, Pegasus Premium in new colorways, adidas Samba Jane, & more. Shop now: snipes.attn.tv/ayXokT3LqmiW",
+      "customerMessage3": "5619006460",
+      "SystemMessage10": "SNIPES: Air Jordan 4 Retro \"Flight Club\" early reserve is live! Use your email georgeg21990@gmail.com to join the VIP queue. Join here: snipes.attn.tv/aq9rGikZVOR4",
+      "SystemMessage11": "SNIPES: If you had trouble entering the Air Jordan 4 Retro \"Flight Club\" queue, please try again using the same email as your Reserve account. Join the VIP Queue here: snipes.attn.tv/aD0T6iCOuIeE .",
+      "customerMessage4": "My account is still restricted",
+      "AgentMessage3": "SNIPES: I sincerely apologize for the inconvenience. I want to assure you that we take each request very seriously and are doing our best to respond to everyone as promptly as possible. Your concern is very important to us, and I promise that a member of our team will get back to you as soon as possible. We hope for your continued understanding, and thank you for allowing us to assist you.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://snipesusa.com",
+          "date": ""
+        },
+        "browsingHistory": [],
+        "orders": []
+      },
+      "orders": []
+    },
+    "257": {
+      "id": "019bf03a-dc30-40c2-f000-0000f237fbf0",
+      "companyName": "Capillus",
+      "companyWebsite": "https://capillus.com",
+      "agentName": "Jamie",
+      "agentInitial": "C",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS if a subscriber mentions a medical issue or an adverse effect from using products from this brand"
+        ],
+        "escalate": [
+          "ESC immediately discount code issues"
+        ],
+        "dos_and_donts": [
+          "Do not share any medical advice or guidance to subscribers outside of recommending appropriate products or directing them to purchase the right item",
+          "Do not comment on their medical situations",
+          "Close the covo if the customer says they're receiving too many messages/we're texting them too often - don't send TMT"
+        ],
+        "drive_to_purchase": [
+          "If cx says they will be ordering soon, offer to schedule a call if they need further assistance with their purchase (shortcut OS) - do not upsell"
+        ],
+        "templates": [
+          "If cx already purchased, use specific TFP template"
+        ],
+        "promo_and_exclusions": [
+          "We do not offer any discounts for the SPECTRUM besides the Black Friday Sale discount",
+          "If cx reaches out looking for deals, you can share the Black Friday deals here: https://www.capillus.com/collections/black-friday-deals/?token=69JI4"
+        ]
+      },
+      "SystemMessage1": "Capillus: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Capillus.",
+      "SystemMessage2": "Capillus: Welcome to Capillus! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage3": "Capillus: You made it just in time 🥂 Your End of Year Sale access is LIVE! Enjoy up to 40% OFF hair regrowth + wellness must-haves. Dive in -> capillus.attn.tv/a4dkgVj48EpT \n*Discount is applied on site. No code needed.",
+      "SystemMessage4": "Capillus: Don't forget to save our contact to get exclusive updates!",
+      "SystemMessage5": "Capillus: Discover our best-selling hair regrowth solutions! Embrace a fuller, healthier head of hair with our innovative laser therapy products. Don't miss out! Shop now capillus.attn.tv/ahzesKvEJGQ9",
+      "SystemMessage6": "Capillus: Hey there, this is Jamie! You left Capillus Spectrum in your cart. \n\nBoost your confidence with Capillus Red Light Therapy. Complete your purchase now capillus.attn.tv/amhAgO9E6KE_\n\nText to speak to someone!",
+      "SystemMessage7": "Capillus: Hi there, it's Jamie. I'm a personal concierge here to answer your questions or share recommendations. Is there anything I can help you with today?\n\nhttps://capillus.attn.tv/a-RaqZ4WxI-5 .",
+      "SystemMessage8": "Capillus: Hi there - Jamie here. Not sure where to start? \n\nTake our Find My Treatment quiz to discover the best products for your hair! Get personalized results now: capillus.attn.tv/agLkB45ZOSBH \n\nText me back with questions!",
+      "SystemMessage9": "Capillus: Hey there! We saw you checking out Capillus Spectrum! Don't wait, get your confidence today: capillus.attn.tv/aR0Oxv0EOtcO .\n\nText back with questions! - Jamie",
+      "customerMessage1": "Hello I'm looking into getting the Capillus Spectrum, but I'm waiting for there to be a good discount on it",
+      "SystemMessage10": "Template used: \"Sales Page\"; last updated: 2025-08-19 18:29:23.714",
+      "AgentMessage1": "Capillus: I'm really sorry about that, and I completely understand wanting to wait for the best possible value. At the moment, we do not offer discounts on the Capillus Spectrum outside of our Black Friday sale. In the meantime, feel free to take a look at our exclusive deals here: https://capillus.attn.tv/a70mRuR3zGpc and prime deals here: https://capillus.attn.tv/aQ5-kiAa6ALZ",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://capillus.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "item": "Capillus Red Light Therapy Panel",
+            "link": "https://www.capillus.com/collections/skin-health/products/capillus-red-light-therapy-panel",
+            "icon": "eye"
+          },
+          {
+            "item": "Capillus Red Light Therapy Panel - White",
+            "link": "https://www.capillus.com/collections/skin-health/products/capillus-red-light-therapy-panel",
+            "icon": "eye"
+          },
+          {
+            "item": "Capillus Healing Pod",
+            "link": "https://www.capillus.com/products/capillus-healing-pod?variant=43177855221899",
+            "icon": "eye"
+          },
+          {
+            "item": "Capillus Healing Pod",
+            "link": "https://www.capillus.com/products/capillus-healing-pod?variant=43177855221899&_rdiscovery-handle=capillus-healing-pod&_rdiscovery-widget=231468",
+            "icon": "eye"
+          },
+          {
+            "item": "Capillus Healing Pod",
+            "link": "https://www.capillus.com/products/capillus-healing-pod?variant=43177855221899&_rdiscovery-handle=capillus-healing-pod&_rdiscovery-widget=231468",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "258": {
+      "id": "019bdcd7-00eb-4055-f000-0000957d90f9",
+      "companyName": "Baseball Lifestyle 101",
+      "companyWebsite": "https://bl101.com",
+      "agentName": "",
+      "agentInitial": "B",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ]
+      },
+      "SystemMessage1": "Baseball Lifestyle: NEW DROP: The new Realtree Collection is available now in adult and youth sizes. Shop: bl101.attn.tv/aHrHS9THRWx9",
+      "SystemMessage2": "Baseball Lifestyle: COUNTDOWN TO NEW YEAR SALE: 20% Off Sitewide - use code NEWYEAR. Some exclusions apply. Shop: bl101.attn.tv/aWvI8vNp0asf",
+      "SystemMessage3": "Baseball Lifestyle: LAST CHANCE: Use code NEWYEAR for 20% off until 1/1 9AM EST. Some exclusions apply. Shop: bl101.attn.tv/aAQiCjv7Y-vN",
+      "SystemMessage4": "Baseball Lifestyle: NEW DROP: The new Valentine's Day Collection is available now in adult and youth sizes. Shop: bl101.attn.tv/aldzpNhRJLQd",
+      "SystemMessage5": "Baseball Lifestyle: IN STORE EARLY ACCESS: Shop the new Splatter Collection in store at King of Prussia Mall. Lookbook: bl101.attn.tv/aHUN8jnuo8WW",
+      "SystemMessage6": "Baseball Lifestyle: NEW DROP: The new Breakfast Collection is available now in adult and youth sizes. Shop: bl101.attn.tv/ap4XSTjkVkxF",
+      "SystemMessage7": "Baseball Lifestyle: IN STORE: Shop the new Breakfast Collection in store at King of Prussia Mall. Lookbook: bl101.attn.tv/a2IuKV2jKnse",
+      "SystemMessage8": "Baseball Lifestyle: Hi, thanks for your text! If you need additional help please reach us at info@bl101.com.",
+      "SystemMessage9": "Baseball Lifestyle: Limited Time: Mystery Boxes Are Back! Get $100 value for $50 while supplies last. Show Now: bl101.attn.tv/aFlrEH9MDdVb",
+      "SystemMessage10": "Baseball Lifestyle: Did you see something you liked? Get it before it's gone: bl101.attn.tv/a_dSP23L7Cq2",
+      "customerMessage1": "Please have someone from this company reach out to me ASAP. I have called with no answer multiple times, emailed with no answer multiple times. I'm just I need of a refund on an order from November that no one has cared to make right",
+      "AgentMessage1": "Baseball Lifestyle: I completely understand how frustrating this can be. Our team responds to emails in the order they're received, and sending multiple messages may unfortunately delay the response. Rest assured, one of my colleagues will be in touch with you soon. Please also be sure to check your spam and promotions folders, as our emails can sometimes land there.",
+      "customerMessage2": "I have checked everywhere and in different threads so they do not get missed. My original email was from December 15th. You're telling me they're over a month behind on answering emails?",
+      "customerMessage3": "And no one answers the phone number provided",
+      "AgentMessage2": "Baseball Lifestyle: We sincerely apologize, Caitlyn. I'm afraid I can't be too sure, as I do not have access to the email support team, but you can send us another email to follow up on your request. I'm so sorry again for the delay and the frustration this has caused!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://bl101.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "item": "Mystery Box - YS",
+            "link": "https://www.bl101.com/products/mystery-box?utm_campaign=Mystery%20Boxes%20-%20SMS&utm_medium=sms&utm_source=attentive&externalId=zf5oX",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "259": {
+      "id": "019bd99a-5b79-415f-f000-0000968de26f",
+      "companyName": "HEYDUDE US",
+      "companyWebsite": "https://heydude.com",
+      "agentName": "Casey",
+      "agentInitial": "H",
+      "messageTone": "Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Don't ESC post-purchase issues, use PPI shortcut"
+        ],
+        "templates": [
+          "For wrong items received use WMP shortcut",
+          "For damaged items received use DMI shortcut",
+          "For order status requests use OSR shortcut"
+        ],
+        "promo_and_exclusions": [
+          "The welcome code is valid for first-time customers only.",
+          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
+        ]
+      },
+      "SystemMessage1": "HEYDUDE: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from HEYDUDE.",
+      "SystemMessage2": "HEYDUDE: Welcome to HEYDUDE! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/o76",
+      "SystemMessage3": "HEYDUDE: We're so stoked you're here!\n\nGet 20% off your first purchase with code ATTW23K28PCX8 at checkout.\n\nShop Now:\nhttps://heydudeshoes.attn.tv/ahvBG_7zcplD .",
+      "SystemMessage4": "HEYDUDE: Over the next few days we'll try to help you find something that you will love!\n\nUntil then, shop our viral best-sellers: https://heydudeshoes.attn.tv/abEEY5LDmOkv .",
+      "customerMessage1": "The code isn't working",
+      "AgentMessage1": "HEYDUDE: Please try using the coupon code ATTW23K28PCX8 again at heydude.com. If it still doesn't work, could you share a screenshot of the issue?",
+      "customerMessage2": "\"",
+      "SystemMessage5": "HEYDUDE: Kena, grab the comfy Wally in easy slip-on canvas for everyday fun.\n\nUse code ATTW23K28PCX8 to get 20% off on eligible styles — act soon.\n\nShop now: https://heydudeshoes.attn.tv/aBoPbdwYbhUM .",
+      "customerMessage3": "\"",
+      "SystemMessage6": "Template used: \"Code won't work\"; last updated: 2025-11-12 15:43:55.752",
+      "AgentMessage2": "HEYDUDE: Thank you for sending that over! Please note that discount codes are valid for items available on this link: https://heydudeshoes.attn.tv/aZgYx8mdAF93 They cannot be combined with any other offer or promotion, including sale styles. Please note that additional exclusions may apply. It looks like the item in you cart is not eligible for the code. Hope this clarifies!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://heydude.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "item": "Wally Golf Essentials - Monument Grey/White - 8",
+            "link": "https://www.heydude.com/products/wally-golf-essentials-mgy-wht",
+            "icon": "eye"
+          },
+          {
+            "item": "Wally Golf Essentials - Monument Grey/White - 7",
+            "link": "https://www.heydude.com/products/wally-golf-essentials-mgy-wht",
+            "icon": "eye"
+          },
+          {
+            "item": "Wally Cozy Plaid - Smoke Grey/Multi - 7",
+            "link": "https://www.heydude.com/products/wally-cozy-plaid-smoke-grey-multi",
+            "icon": "eye"
+          },
+          {
+            "item": "Wally Golf Essentials - Monument Grey/White",
+            "link": "https://www.heydude.com/products/wally-golf-essentials-mgy-wht",
+            "icon": "eye"
+          },
+          {
+            "item": "Wally Golf Essentials - Monument Grey/White",
+            "link": "https://www.heydude.com/products/wally-golf-essentials-mgy-wht",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "260": {
+      "id": "019bc2f4-f6dc-4756-f000-000083eb7171",
+      "companyName": "Milwaukee Bucks",
+      "companyWebsite": "https://shop.bucks.com/",
+      "agentName": "Olivia",
+      "agentInitial": "M",
+      "messageTone": "Formal",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut",
+          "Send to CS for Gift Card Errors, use GCI shortcut"
+        ],
+        "tone": [
+          "DON'T reply to any cx messages about:",
+          "Don't reply to insults regarding the uniforms"
+        ],
+        "templates": [
+          "For inquiries related to Adrian Griffin or anything coaching-related, use CQS shortcut",
+          "When cx shares feedback for what we should sell in the Bucks Pro Shop (Journey response), use JRC shortcut",
+          "For membership - specific inquiries, use MMQ shortcut",
+          "Before sending the SHP temp, check the delivery time on the product page as some items have longer delivery time-frames",
+          "If cx text the code to themselves, use CTC shortcut",
+          "If a cx asks for player-specific inquiries, use PCQ shortcut"
+        ],
+        "dos_and_donts": [
+          "DON'T comment on any ticketing platforms that aren't Ticketmaster or Fevo",
+          "DON'T comment on other teams",
+          "DON'T reference the team's performance",
+          "For sweepstakes, inform cxs to reply with FYF keyword to enter to win",
+          "Refer to this roster page for current players: https://www.nba.com/bucks/roster"
+        ],
+        "drive_to_purchase": [
+          "Don't send links from https://www.nbastore",
+          "Send links from https://shop.bucks.com/ for merchandise",
+          "Don't recommend bestsellers if the convo topic isn't about merchandise (e.g. cx share positive feedback about the team), instead use NW shortcut",
+          "When recommending bestsellers, send a link to all collections not specific items"
+        ],
+        "promo_and_exclusions": [
+          "The City Edition collection has been released, any new City Edition products (including Damian Lillard's) will be shared with SMS subscribers first"
+        ]
+      },
+      "SystemMessage1": "Bucks: Let's rock on, Mil-rock-ee! 2026 NBA All-Star voting is now open and you can vote daily through January 14. It's time to send your favorite Bucks to LA 🤩\n\n🤟 VOTE NOW: bucks.attn.tv/a7RnJ0fywCbf .",
+      "SystemMessage2": "Bucks: It's the FINAL day to vote *and* the final day to TRIPLE IT! Get your Bucks to All-Star 2026.\n\n🤟 VOTE NOW: bucks.attn.tv/aWaVisM5WQkb .",
+      "customerMessage1": "Is there a rep I can talk to about getting tickets for an upcoming game",
+      "SystemMessage3": "Template used: \"Phone support\"; last updated: 2023-09-20 18:23:48.950",
+      "AgentMessage1": "Bucks: Thank you so much for your interest. You can get your tickets here: https://bucks.attn.tv/amcvYgwKew8p Unfortunately, we don't offer phone support right now. Let me know if you're encountering issues.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://shop.bucks.com/",
+          "date": ""
+        },
+        "browsingHistory": [],
+        "orders": []
+      },
+      "orders": []
+    }
+  }
+}

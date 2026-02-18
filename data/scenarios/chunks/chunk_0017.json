@@ -3,581 +3,310 @@
   "chunk": "chunk_0017",
   "scenarios": {
     "81": {
-      "agentName": "Carla",
-      "id": "019bd7ad-b33d-4c68-f000-0000f4af205b",
+      "id": "019bdd31-1ceb-422a-f000-00000e06dee9",
+      "companyName": "McConnell's Fine Ice Creams",
+      "companyWebsite": "https://mcconnells.com/",
+      "agentName": "Sarah",
+      "agentInitial": "M",
+      "messageTone": "Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS if the ice cream arrived melted."
+        ],
+        "escalate": [
+          "If cx wants to delay shipping/set a deliver date, use DSD shortcut and ESC",
+          "For all ESC use ESC shortcut",
+          "ESC if cx are inquiring about in-store prices",
+          "ESC website & store inventory/availability inquiries"
+        ],
+        "templates": [
+          "If a customer says that the ice cream they purchased in store is icy/refrozen/awful, use IRA shortcut"
+        ]
+      },
+      "SystemMessage1": "McConnell's: Need a last-minute gift?\n\nNot sure what they'd like?\n\nGive the gift of choice with a gift card! >> mcconnells.attn.tv/aBQ12fWE8cjt  Stop to stop",
+      "SystemMessage2": "McConnell's: Happy holidays from all of us at McC's!\n\nWishing you cozy moments, good company & a pint (or 2!) of your favorite ice cream >> mcconnells.attn.tv/aOGKMtgLR-4g  Stop to stop",
+      "SystemMessage3": "McConnell's: Out with the family?\n\nStop by your local Scoop Shop for a sweet McC's treat!\n\nFind a Shop near you >> mcconnells.attn.tv/axkDHmziYEuI  Stop to stop",
+      "SystemMessage4": "McConnell's: The best way to start 2026?\n\nA big ol' bite of ice cream!\n\nGet one more treat in before 2025 ends >> mcconnells.attn.tv/aVf-1zadDn3c  Stop to stop",
+      "SystemMessage5": "McConnell's: The best way to add some extra joy to your weekend?\n\nA treat from your local Scoop Shop!\n\nFind a Shop: mcconnells.attn.tv/a94u4lhUujwt  Stop to stop",
+      "SystemMessage6": "McConnell's: Don't settle for \"meh\" dairy-free ice cream!\n\nStart 2026 with pints that taste just like the real thing: mcconnells.attn.tv/ayyqABic1dav  Stop to stop",
+      "SystemMessage7": "McConnell's: 100% certified organic.\n\n100% creamy, indulgent goodness.\n\nTry our organic line today! >> https://mcconnells.com/collections/organic-ice-creams Stop to stop",
+      "SystemMessage8": "McConnell's: We miss you Hugo! Have you seen our new flavors? Check them out and shop now: https://mcconnells.attn.tv/aBl9lx2DD0BO Stop to stop",
+      "SystemMessage9": "McConnell's: Time to treat your sweetie! Roses are nice, but ice cream is better. Our Valentine's Day Bundle is here, featuring 5 irresistible flavors. Spread some love > mcconnells.attn.tv/aSOWB-0whIBK  Stop to stop",
+      "SystemMessage10": "McConnell's: Hey Hugo, this is Sarah . Thanks for checking out our site! 🍦 https://mcconnells.attn.tv/aP06DdGjLUZp \n\nAre you looking for anything in particular today? Stop to stop",
+      "customerMessage1": "When does Whiskey Praline come back?",
+      "SystemMessage11": "Template used: \"Restock (website & social)\"; last updated: 2025-10-09 21:41:33.472",
+      "AgentMessage1": "McConnell's: I'm sorry, I currently don't have the exact date of a possible restock, but I recommend checking our website and social media frequently. Are there any other flavors you like?",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://churchsource.com",
+          "value": "https://mcconnells.com/",
           "date": ""
-        }
+        },
+        "browsingHistory": [
+          {
+            "item": "Valentine's Day Bundle",
+            "link": "https://mcconnells.com/collections/fine-ice-creams/products/valentines-day-bundle?utm_campaign=1%2F20+V-Day+Bundle+Launch+SMS&utm_medium=sms&utm_source=attentive&externalId=pYa83",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
       },
-      "companyWebsite": "https://churchsource.com",
-      "companyName": "ChurchSource",
-      "notes": {
-        "drive_to_purchase": [
-          "Recommend collections instead of specific products",
-          "Don't recommend bestsellers! Stick to the top categories: Top Bibles in Bulk, Small Group Studies, and Church & Pastor Resources"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Shipping questions",
-        "Discount code errors",
-        "Exchanges and returns"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "ChurchSource: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from ChurchSource.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ChurchSource: Welcome to ChurchSource! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "ChurchSource: We bring the most trusted Christian resources so you can focus on what's truly important - your ministry.\n\nTake an extra 15% off already discounted prices with code CS-FAwhWN. Plus, shop now during our Semi-Annual Sale and save even more: churchsource.attn.tv/awWqkUAcpbU_ .\n\nText back with any questions! - Carla",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Carla- I would like to place an order for 100 Bibles for my son's platoon as he is about to deploy. He is an officer with the 138 infantry out of Boonville Missouri. I need to know if you can send me 100 Bibles to the ZIP Code 64486.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "By January 27",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Guarantee delivery dates - All brands\"; last updated: 2024-11-07 14:26:32.728",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Shipping time\"; last updated: 2022-09-03 12:39:23.479",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd7ad-b33d-4c68-f000-0000f4af205b",
-          "message_text": "ChurchSource: Thank you so much for your interest, and I understand the urgency. We do ship to Sheridan, Missouri. However, I can't guarantee exact delivery dates, only an estimate in business days. Our processing time takes 2-3 business days and we usually ship via UPS or USPS. Once shipped, it will take 2-8 business days for domestic orders, and 3-4 weeks for APO/FPO. ",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "82": {
-      "agentName": "",
-      "id": "019bc926-b6c5-4ff8-f000-0000f1d8961c",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://simonpearce.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://simonpearce.com/products/woodstock-lamp-2nd?_pos=2&_psq=woodstock%20lamp&_ss=e&_v=1.0",
-            "item": "Woodstock Lamp - 2nd",
-            "timeAgo": "2026-01-16"
-          },
-          {
-            "link": "https://simonpearce.com/products/woodstock-lamp-2nd?_pos=2&_psq=woodstock%20lamp&_ss=e&_v=1.0",
-            "item": "Woodstock Lamp - 2nd",
-            "timeAgo": "2026-01-09"
-          },
-          {
-            "link": "https://simonpearce.com/products/linen-barrel-shade-natural?variant=46433963344185",
-            "item": "Linen Barrel Shade — Natural - 13 Inch",
-            "timeAgo": "2026-01-09"
-          },
-          {
-            "link": "https://simonpearce.com/products/linen-barrel-shade-natural?_psq=shades&_v=1.0&variant=46433963311417",
-            "item": "Linen Barrel Shade — Natural - 11 Inch",
-            "timeAgo": "2026-01-09"
-          },
-          {
-            "link": "https://simonpearce.com/products/linen-barrel-shade-natural?_pos=2&_psq=shades&_ss=e&_v=1.0",
-            "item": "Linen Barrel Shade — Natural - 11 Inch",
-            "timeAgo": "2026-01-09"
-          }
-        ]
-      },
-      "companyWebsite": "https://simonpearce.com",
-      "companyName": "Simon Pearce",
-      "notes": {
-        "escalate": [
-          "ESC any wholesale or bulk discount pricing inquiries",
-          "ESC if cx wants to unsubscribe from emails after sending the TME shortcut",
-          "ESC if cx requests a call"
+      "id": "019bc318-26f7-4690-f000-0000ccdeb06a",
+      "companyName": "Georg Jensen",
+      "companyWebsite": "https://georgjensen.com/en-us",
+      "agentName": "Sarah",
+      "agentInitial": "G",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "tone": [
+          "Use less smileys",
+          "Don't tell cx's they can return products bought from North American retail stores"
         ],
         "dos_and_donts": [
-          "If a cx asks about \"seconds\", they are referring to https://simonpearce.com/collections/seconds A collection of pieces that have natural and slight variations.",
-          "If cx sends “GLASS” they’re entering a giveaway",
-          "Do not share codes or promotions with subscribers"
+          "Don't share the brand's phone number with cxs"
         ],
-        "drive_to_purchase": [
-          "Don't recommend \"seconds\" to cx",
-          "Do not advertise free shipping"
+        "templates": [
+          "For order status/tracking, use OSU shortcut",
+          "They have a journey where they ask for ratings:"
+        ],
+        "promo_and_exclusions": [
+          "Welcome codes do not apply to fine silverware"
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [
-        "esteemed"
-      ],
-      "escalation_preferences": [
-        "Shipping questions",
-        "Discount code errors",
-        "Sizing questions",
-        "Exchanges and returns"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Simon Pearce.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Simon Pearce.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Welcome to Simon Pearce! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Welcome! Enjoy $20 off your first purchase. Enter PS$20-25-jwEDXa at checkout, or click here to auto-apply + shop now: https://simonpearce.attn.tv/aljj50Tq_vys .\n\n*Offer valid on orders over $250.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Don't forget to save our contact to get exclusive updates!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Shop the Woodstock Lamp Seconds in your cart, Ann — a generous jug-style lamp with handmade character and lovely surface bubbles.\n\nBuy here: https://simonpearce.attn.tv/aOBl6wQUtDOY .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Ann, these seconds highlight handcrafted glass pieces with unique bubbles and surface marks you noticed.\n\nEnjoy free returns or exchanges for 90 days.\n\nSee the generous Jug-Style Lamp: https://simonpearce.attn.tv/aa66kQsOts5D .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Hello Ann, thanks for visiting Simon Pearce.\n\nShop now: https://simonpearce.attn.tv/asTxnAhSiXMM .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Thank you for your purchase! Your order number is 849332. View more information about your order here: https://simonpearce.attn.tv/aWA_lEPig0qQ .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Thank you for your purchase. We're honored to share our handmade designs with you. \n\nhttps://simonpearce.attn.tv/a7HdAJ-BFsA9 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Still deciding? In case you missed it, use offer PS$20-25-jwEDXa at checkout. Shop now: https://simonpearce.attn.tv/asrqgnI7bMnL .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Last call! Use offer PS$20-25-jwEDXa at checkout before it's too late. Shop now: https://simonpearce.attn.tv/adxuWkHUpkLH .\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Discover the beauty of seconds. One-of-a-kind designs that celebrate the hand behind the work.\n\nExplore: simonpearce.attn.tv/aBsUNy4bE3d3 \n",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Disappointed to see there is free shipping today.  I just paid for shipping.  This is my 4th lamp.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc91e-4734-4570-f000-0000f1d8961c",
-          "message_text": "Simon Pearce: My sincere apologies for the inconvenience! I'll be more than happy to check this with my team for you. Can I have your order number and email address, please?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Shop Ann, Woodstock Lamp Seconds is a generous jug-style lamp with handmade character and unique bubbles.\n\nThis is almost gone! Only 4 left.\n\nDon't miss out: https://simonpearce.attn.tv/as7gRtwTiPxH .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Thank you.Order #849332annpfuller@comcast.netAlso, when I first looked at the Woodstock lamp there were no seconds.  I selected the option to be notified when a second was available.  Nobody notified me.  I would check every now and then and found that one was available.  I am glad I checked because I was never notified. Thank you again.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Sorry 2 - All brands\"; last updated: 2023-10-10 17:56:13.923",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc926-b6c5-4ff8-f000-0000f1d8961c",
-          "message_text": "Simon Pearce: I'm sorry about that! Let me check on this with the team and let you know as soon as I hear back. I'll also pass the notification issue to the team for future improvement. We always look for ways to improve our products and services. ",
-          "message_media": []
-        }
-      ]
-    },
-    "83": {
-      "agentName": "Sam",
-      "id": "019bdccb-b43a-40dc-f000-0000f5060c48",
+      "SystemMessage1": "Georg Jensen: Shine bright with our stunning earrings! From classic silver to bold gold and diamond styles, we've got the perfect pair for every occasion.\n\nShop Now: georgjensen.attn.tv/aPXwQDDB6dOo \n\nText back if you have any questions! \n\nText STOP to opt out.",
+      "SystemMessage2": "Georg Jensen: Hey there this is Sarah. Thanks for checking out our site! 😊 https://georgjensen.attn.tv/acXBG-rmPBny .\n\nAny questions I can answer for you?",
+      "SystemMessage3": "Georg Jensen: From our family to yours, warm wishes for happy holidays and a wonderful start to the new year!\n\nShop Now: georgjensen.attn.tv/a1jrq_c61FRh \n\nText back if you have any questions! \n\nText STOP to opt out.",
+      "SystemMessage4": "Georg Jensen: Hey, we noticed you checking us out. Have you seen our new home decor arrivals yet? https://georgjensen.attn.tv/aezfMv5vbCz8",
+      "SystemMessage5": "Georg Jensen: With the start of the new year, we wish you a wonderful beginning to 2026 and hope you'll continue to follow our journey, as we explore new ways to delve into our archives and celebrate our legacy.\n\nShop Now: georgjensen.attn.tv/afZaO0zHzBln \n\nText back if you have any questions! \n\nText STOP to opt out.",
+      "SystemMessage6": "Georg Jensen: Save up to 50% on selected home designs and bring a timeless Georg Jensen design into your home. \n\nShop Now: georgjensen.attn.tv/aUfl7iItvHhi \n\nText back if you have any questions! \n\nText STOP to opt out.",
+      "SystemMessage7": "Georg Jensen: Our latest campaign captures Daniela in Georg Jensen jewelry set against iconic Copenhagen landmarks.\n\nDiscover: georgjensen.attn.tv/aIjuTRGVZ2lF \n\nText back if you have any questions! \n\nText STOP to opt out.",
+      "SystemMessage8": "Georg Jensen: Find your favorite holiday ornaments and explore Winter Sale offers on the Christmas Collectibles and seasonal decorations. \n\nShop Now: georgjensen.attn.tv/ailHNmchrF4T \n\nText back if you have any questions! \n\nText STOP to opt out.",
+      "SystemMessage9": "Georg Jensen: Hey, we noticed you checking us out. Have you seen our new home decor arrivals yet? https://georgjensen.attn.tv/a8GsZMfEtXw7",
+      "SystemMessage10": "Georg Jensen: Hey there this is Sarah. Thanks for checking out our site! 😊 https://georgjensen.attn.tv/ammsYG1y0FGZ .\n\nAny questions I can answer for you?",
+      "SystemMessage11": "Georg Jensen: Hey there, this is Sarah. I see you left something in your cart https://georgjensen.attn.tv/a6XSOG4b91DL .\n\nGreat choice! 😊 Any questions I can answer for you?",
+      "customerMessage1": "Is there a human that could call me? Having trouble with my order?",
+      "AgentMessage1": "Georg Jensen: I'm so sorry. We don't offer phone support right now but I'd be happy to help you over text, let me know what I can do for you!",
+      "customerMessage2": "Trying to make a purchase with my Mastercard and it won't go thru",
+      "customerMessage3": "Brand new card",
+      "customerMessage4": "I have 2 gift cards as well from Christmas",
+      "customerMessage5": "It says a technical error has occurred",
+      "SystemMessage12": "Template used: \"The Site Won't take my Card - All brands\"; last updated: 2023-10-10 16:56:54.019",
+      "AgentMessage2": "Georg Jensen: I'm sorry to hear that! Please double-check that the billing ZIP code you entered matches the one linked to your credit card. I also recommend trying to open the site in an incognito or private window to rule out any browser cache or extension issues.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://dreamcloudsleep.com",
+          "value": "https://georgjensen.com/en-us",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.dreamcloudsleep.com/mattresses/premier-hybrid-mattress",
-            "item": "DreamCloud Premier Hybrid Mattress",
-            "timeAgo": "2026-01-20"
+            "item": "2024 HEART Pendant in sterling silver",
+            "link": "https://www.georgjensen.com/en-us/jewelry/necklaces-and-pendants/2024-heart-pendant/20001526.html",
+            "icon": "eye"
           },
           {
-            "link": "https://www.dreamcloudsleep.com/mattress?vdt_id=CjwKCAiA7LzLBhAgEiwAjMWzCKrX0zaC-0btPz6gXhAYjNvxWQj-6IYtp8g-iDls5RWhTRogvrrzkBoCGh4QAvD_BwE&CIDIMP=WYuQoRXmyxyPTKUTSrXAc0GvUkpSiDXFx3Bbyw0&irgwc=1&afsrc=1&utm_campaign=IMPACT&utm_content=Online%20Tracking%20Link_ONLINE_TRACKING_LINK&utm_source=mverdict&utm_medium=AFF&utm_sharedid=173393929398&utm_account=8339",
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "timeAgo": "2026-01-20"
+            "item": "2024 HEART Pendant in 18kt gold",
+            "link": "https://www.georgjensen.com/en-us/jewelry/necklaces-and-pendants/2024-heart-pendant/20001520.html",
+            "icon": "eye"
           },
           {
-            "link": "https://www.dreamcloudsleep.com/mattress?vdt_id=CjwKCAiA7LzLBhAgEiwAjMWzCKrX0zaC-0btPz6gXhAYjNvxWQj-6IYtp8g-iDls5RWhTRogvrrzkBoCGh4QAvD_BwE&CIDIMP=WYuQoRXmyxyPTKUTSrXAc0GvUkpSiEXpx3Bbyw0&irgwc=1&afsrc=1&utm_campaign=IMPACT&utm_content=Online%20Tracking%20Link_ONLINE_TRACKING_LINK&utm_source=mverdict&utm_medium=AFF&utm_sharedid=173393929398&utm_account=8339",
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "timeAgo": "2026-01-20"
+            "item": "2024 HEART Pendant in 18kt gold",
+            "link": "https://www.georgjensen.com/en-us/jewelry/necklaces-and-pendants/2024-heart-pendant/20001520.html",
+            "icon": "eye"
+          },
+          {
+            "item": "2024 HEART Pendant in sterling silver",
+            "link": "https://www.georgjensen.com/en-us/jewelry/necklaces-and-pendants/2024-heart-pendant/20001526.html",
+            "icon": "eye"
+          },
+          {
+            "item": "Heart 2026 Pendant in sterling silver",
+            "link": "https://www.georgjensen.com/en-us/jewelry/necklaces-and-pendants/heart-2026-pendant/20001873.html",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "83": {
+      "id": "019bb4d1-9591-4991-f000-0000699662a3",
+      "companyName": "Makesy",
+      "companyWebsite": "https://makesy.com",
+      "agentName": "Sarah",
+      "agentInitial": "M",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "promo_and_exclusions": [
+          "Discounts or promotional codes can't be combined with the already discounted products in the Sale category, unless differently specified on the website"
+        ]
+      },
+      "SystemMessage1": "makesy: Our spring collection is 20% OFF NOW, so play it smart this season! Save, prep & stock up for your Q1 launches today! makesy.attn.tv/ap_7UtoyyuLS",
+      "SystemMessage2": "makesy: Last call! ⏳ The spring collection is still 20% off, but not for long! Prep your stash & prep your launches for 2026! Ends Sunday at midnight.\n\nStock up now: makesy.attn.tv/aCpeCIrAm6Jy",
+      "SystemMessage3": "makesy: 🎉 Thank you for checking out makesy! Don't miss our top-selling products - they're a DIY lover's dream! Shop now: https://makesy.attn.tv/a-I_4P2buwlm",
+      "SystemMessage4": "makesy: Receive a $50 gift card to use in 2026 when you spend $150+. Plus, 20% OFF gift cards, makerpro, & digital books. \n\nDon't miss this last week: makesy.attn.tv/aDf8xj1EWypm",
+      "SystemMessage5": "makesy: $50 back if you act fast + 20% off select goodies! 💸 Ends soon! Shop here → makesy.attn.tv/am6dEecmGeB4",
+      "SystemMessage6": "makesy: New Year, NEW fragrances! Start the year fresh with 4 juicy, mouth-watering spring scents! (PSA: you can sniff, but ya can't taste 😉) → makesy.attn.tv/aq7ScUyTooSI",
+      "SystemMessage7": "makesy: Surprise perk 👀 A few orders placed now until Sunday at midnight will get a little extra love in their box. No code. Just shop: makesy.attn.tv/at2dMfWCVmYH",
+      "customerMessage1": "Yes. It was charged. Though it looks like the shop may have processed it under my personal email? Its really frustrating sometimes the log out/log in and it automatically signs you in. Does that order not come up at all? Anywhere?",
+      "AgentMessage1": "makesy: Thanks for letting me know, and I'm sorry to hear that, it's not the experience we wanted you to have with us. Unfortunately, it's not coming up on my end, so I can't check it at the moment. Could you please send me your email address? I'd like to check on this with my team for you.",
+      "customerMessage2": "How does an order number not come up in your system?",
+      "customerMessage3": "\"",
+      "customerMessage4": "It looks like a label was just created today.",
+      "AgentMessage2": "makesy: My access is limited, so I can only see orders tied to your other email. It sounds like your order was likely placed under a different email, which is why it's not showing up on my end. If you can share the email used for the purchase, I can check with the team and help get this sorted.\n\nAnd thanks for the screenshot. Looks like your order is almost ready to ship, you can track it using that tracking link.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://makesy.com",
+          "date": ""
+        },
+        "browsingHistory": [],
+        "orders": [
+          {
+            "orderNumber": "11855018590573",
+            "orderDate": "",
+            "link": "https://thewoodenwickco.myshopify.com/products/100-makesy-gift-card",
+            "trackingLink": "",
+            "currency": "USD",
+            "items": [
+              {
+                "name": "$100 makesy gift card",
+                "price": "100",
+                "currency": "USD",
+                "productLink": "https://thewoodenwickco.myshopify.com/products/100-makesy-gift-card"
+              },
+              {
+                "name": "$100 makesy gift card",
+                "price": "100",
+                "currency": "USD",
+                "productLink": "https://thewoodenwickco.myshopify.com/products/100-makesy-gift-card"
+              }
+            ],
+            "total": "100"
           }
         ]
       },
-      "companyWebsite": "https://dreamcloudsleep.com",
-      "companyName": "DreamCloud",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS, use ESC shortcut",
-          "Use escalation template if customer mentions any of the following:",
-          "➜ Exchanges or returns",
-          "➜ Premuim In - Home Setup Questions",
-          "➜ Discount code errors",
-          "➜ Recalls",
-          "➜ Better Business Bureau (BBB)",
-          "➜ Fiberglass",
-          "➜ Lawyers/Lawsuits",
-          "➜ Class Action",
-          "➜ Post Purchase Issues"
-        ],
-        "tone": [
-          "Let the customer have the last word"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [
-        "organic"
-      ],
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Discount code errors",
-        "Shipping questions",
-        "Recall",
-        "BBB",
-        "fiberglass",
-        "lawyer",
-        "class action"
-      ],
-      "conversation": [
+      "orders": [
         {
-          "message_type": "system",
-          "message_text": "DreamCloud: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (833) 237-3269.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: You're in (& your deal is here)!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Upgrade your old mattress for less. Save up to 60% + FREE bedding bundle worth $599. \n\nClaim your savings:\ndreamcloud.attn.tv/aYgrQHzZnXoT .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Hi, this is Sam. Save up to 66% on our popular adjustable bundle. Just need a mattress? Save up to 60% on our premier hybrid. Transform your sleep for better days! Questions? Text me back!\n\nBundle:\ndreamcloud.attn.tv/aws1XmJYaTfp \n\nMattress:\ndreamcloud.attn.tv/aoRELrB-fDS7 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Hello, this is Sam. Thanks for checking out DreamCloud! Why wait to sleep better? You can save up to 60% on mattresses right now.\ndreamcloud.attn.tv/ak34KFoJpZYv\n\nAny questions I can answer for you?\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Hi Sam.  I'm looking for a medium film mattress.  I have a multitude of back, shoulder, hip, and knee problems.  My current mattress sinks with me and I find it almost impossible to turn over, and when getting in bed it's difficult to get comfortable at first.  The edge of the mattress says for a few minutes before it goes back into shape.  I'm very interested in the Dream Cloud Primere Hybrid.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bdcc1-fefd-44a9-f000-0000f5060c48",
-          "message_text": "DreamCloud: The DreamCloud Premier Hybrid is a great choice for support and comfort. It offers targeted support with adaptive coils and memory foam. Learn more at https://dreamcloud.attn.tv/aB5q9Xt3ynZM.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "How does the Luxe model compare to the premiere model?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bdcc6-16df-4c20-f000-0000f5060c48",
-          "message_text": "DreamCloud: The DreamCloud Luxe Hybrid offers enhanced pressure relief and support with a plush Euro Top, while the Premier Hybrid provides targeted support with adaptive coils. Both have a breathable cashmere cover.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I live in Salmon.  I'd like to lay on them before I make a choice.   I have a dr appt on Feb 16 in Idaho Falls.  Is the sale still on and would you be able to deliver it to Salmon?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Shipping time\"; last updated: 2024-02-08 12:24:42.215",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bdccb-b43a-40dc-f000-0000f5060c48",
-          "message_text": "DreamCloud: Good question! I can't guarantee the sale price. As for the shipping, different mattresses and sizes have different ship times. Delivery typically takes 2 - 5 business days once your mattress has shipped, and could be arriving via FedEx Ground delivery.",
-          "message_media": []
+          "currency": "USD",
+          "order_number": "11855018590573",
+          "order_status_url": "https://thewoodenwickco.myshopify.com/products/100-makesy-gift-card",
+          "products": [
+            {
+              "product_currency": "USD",
+              "product_link": "https://thewoodenwickco.myshopify.com/products/100-makesy-gift-card",
+              "product_name": "$100 makesy gift card",
+              "product_price": 100
+            },
+            {
+              "product_currency": "USD",
+              "product_link": "https://thewoodenwickco.myshopify.com/products/100-makesy-gift-card",
+              "product_name": "$100 makesy gift card",
+              "product_price": 100
+            }
+          ],
+          "total": 100
         }
       ]
     },
     "84": {
-      "agentName": "Sarah",
-      "id": "019bddd5-5743-4d92-f000-0000530b6f0d",
+      "id": "019bc8db-0a2c-4379-f000-0000f465396c",
+      "companyName": "Julie Vos",
+      "companyWebsite": "https://julievos.com",
+      "agentName": "Rebecca",
+      "agentInitial": "J",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "When ESC during the weekend/late Friday use the \"Weekend escalation template\" template"
+        ],
+        "tone": [
+          "Don't use the term \"customer service team\", use \"customer care\" instead"
+        ],
+        "dos_and_donts": [
+          "Do not direct cx to contact the carrier",
+          "Do not provide customers with dates for restock before checking with our team."
+        ],
+        "promo_and_exclusions": [
+          "They have only 2 sales per year (June/November) - when those end the sale items are removed from the site"
+        ]
+      },
+      "SystemMessage1": "Julie Vos: Welcome to Julie Vos! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/N9l",
+      "SystemMessage2": "Julie Vos: Hey this is Rebecca , how can I help you?",
+      "customerMessage1": "Hello, I am trying to exchange order #EXC-669624-1. When I go through the returns process online, it only gives me the opportunity to return the item, not to exchange it for a smaller size. Can you help me with this?",
+      "customerMessage2": "Hello, I am trying to exchange order #EXC-669624-1. When I go through the returns process online, it only gives me the opportunity to return the item, not to exchange it for a smaller size. Can you help me with this?",
+      "SystemMessage3": "Julie Vos: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nIn the meantime, check out our newest arrivals > https://julievos.attn.tv/aHV48DGrHppC .",
+      "customerMessage3": "OK, are you able to help me with the exchange I'm asking about?",
+      "customerMessage4": "Hello, I am trying to exchange order #EXC-669624-1. When I go through the returns process online, it only gives me the opportunity to return the item, not to exchange it for a smaller size. Can you help me with this?",
+      "SystemMessage4": "Template used: \"Return policy\"; last updated: 2023-06-20 18:10:46.562",
+      "SystemMessage5": "Template used: \"Sorry 2 - All brands\"; last updated: 2023-10-10 17:56:13.923",
+      "AgentMessage1": "Julie Vos: I'm sorry about that! Can you share a screenshot of what you can see from your end so I can check for you? You can check out our detailed return policy here: https://julievos.attn.tv/aPKSmr-G-mIz. Please note that all jewelry purchased from the sale is a final sale. Final sale items may not be returned or exchanged.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://fragrancenet.com",
+          "value": "https://julievos.com",
           "date": ""
-        }
+        },
+        "browsingHistory": [],
+        "orders": []
       },
-      "companyWebsite": "https://fragrancenet.com",
-      "companyName": "FragranceNet",
-      "notes": {
+      "orders": []
+    },
+    "85": {
+      "id": "019bed4b-6018-422c-f000-000041e44b87",
+      "companyName": "ILIA Beauty",
+      "companyWebsite": "https://iliabeauty.com",
+      "agentName": "",
+      "agentInitial": "I",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "send_to_cs": [
           "No ESC for this client, send everything to CS"
         ],
         "tone": [
-          "Close the convo once the client takes over",
-          "Don't use emojis/special characters"
-        ],
-        "templates": [
-          "For issues relating to free shipping with no minimum purchase, use \"FSB\" shortcut",
-          "If a product is not available on their website, use \"PNA\" shortcut"
+          "Close the convo once the client takes over"
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "FragranceNet: Now it's your turn. Get what you REALLY want with $25 OFF*: https://fragrancenet.attn.tv/aq92oNaJ7uJK \n\nEnds 12/28",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FragranceNet: Last Call!\n30% OFF ends TODAY > > https://fragrancenet.attn.tv/aRA99O2SPhyH \n\nEnds 11:59pm ET",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FragranceNet: POP...FIZZ...CLICK! Ring in the New Year with a DEAL > > https://fragrancenet.attn.tv/aZUWUiregFZ- \n\nHurry! Offer ends 11:59pm ET",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FragranceNet: Clear your cal, it's time to shop CLEARANCE! Up to 80% off department store prices: https://fragrancenet.attn.tv/aiBq7QxhT6wX \n\nText STOP to end",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FragranceNet: You're already subscribed. Join Purpl Rewards to earn points & unlock perks! Get 50 Points Now: https://fragrancenet.attn.tv/cl/7je .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FragranceNet: Thanks for your order 384400317! Check your order status: https://fragrancenet.attn.tv/aJ4-0Si0OHaM\n\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FragranceNet: Your order #384400317 has shipped! Tap here to track your shipment: https://fragrancenet.attn.tv/abMPBo9Qrdm6 .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "No you only created the label",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Order status / tracking\"; last updated: 2024-05-06 17:15:10.288",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Shipping Policy\"; last updated: 2024-03-22 16:31:21.484",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Label created but there's no movement\"; last updated: 2025-11-21 18:13:51.403",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bddd5-5743-4d92-f000-0000530b6f0d",
-          "message_text": "FragranceNet: I apologize for the confusion this has caused. \"Label Created\" means that a shipping label has been generated by us, but the package has not yet been scanned or picked up by the carrier. The package might still be waiting for pickup or may have already been dropped off but not yet scanned. Please give it a few more days. \n\nPlease also note that our processing time takes 1-2 business days and we usually ship via USPS, UPS, Ontrac or FedEx. Once shipped it will take 4-7 business days domestically. \n\nYou can also use our convenient online tool to see the latest updates on your order: https://fragrancenet.attn.tv/a8azBc_gKd7F\n\n",
-          "message_media": []
-        }
-      ]
-    },
-    "85": {
-      "agentName": "",
-      "id": "019bd41a-aef1-4399-f000-0000c06dc36b",
+      "SystemMessage1": "ILIA Beauty: Meet NEW Overglaze Hydrating Lip Gloss.\n \nInspired by the lustrous finishes used in ceramics, the longwear formula glides on smoothly and delivers dimensional shine + 24-hour hydration.\n\nShop all 12 shades: iliabeauty.attn.tv/aGKaM9WrDDZ9",
+      "SystemMessage2": "ILIA Beauty: Gloss by numbers.\n\n100% of people said NEW Overglaze Hydrating Lip Gloss locks in moisture and quenches dry, chapped lips, all without feathering or bleeding.*\n\nShop the new gloss: iliabeauty.attn.tv/a-9AufIuxZ6V \n\n*Immediate results in a clinical study of 52 people.",
+      "SystemMessage3": "ILIA Beauty: ILIA x clé celebrates The Art of Overglaze. \n\nWe invite you to design in color and make space for beauty with clé's new limited edition collection, featuring a glossy thin brick tile in five shades inspired by our new Overglaze Hydrating Lip Gloss.\n\nShop the tile + the gloss: iliabeauty.attn.tv/aT8-L1xcnH4H",
+      "SystemMessage4": "ILIA Beauty: Don't forget your $15 gift\nSpend your VIP thank you gift by 1/31/26 with code MERRY15.*\n\nWhat will you choose?: iliabeauty.attn.tv/aQakQaGYRQop \n\n*See site for details.",
+      "SystemMessage5": "ILIA Beauty: A gift that's like a facial for your lips.\n\nWake up to your smoothest, softest lips with a free mini Lip Wrap Overnight Mask. Yours with any $75+ order for a limited time.*\n\nShop to Claim: iliabeauty.attn.tv/al3U3dqbYw7i \n\n*See site for details.",
+      "SystemMessage6": "ILIA Beauty: You are on the list. Click here to shop now: iliabeauty.com.",
+      "customerMessage1": "Y",
+      "customerMessage2": "Where is my 15 percent discount",
+      "customerMessage3": "Is this a scam",
+      "AgentMessage1": "ILIA Beauty: Thanks for reaching out! We are a legitimate company and not a scam. I'm not familiar with that discount, but it might have some specific requirements. Could you let me know where you got it and, if possible, share a screenshot? I'll do my best to help from there.",
+      "customerMessage4": "Sure -so happy you're real! So text stated get 15 percent off when you give email and phone number.. as many times as I've ordered the product.. never received a discount code. I get having to spend a certain amount to get gifts etc but the very first time I gave the info there was no code -so maybe I don't understand",
+      "AgentMessage2": "ILIA Beauty: Thank you for getting back to me and providing that information! I sincerely apologize for the inconvenience. This definitely isn't the experience we wanted for you! I can see that we recently sent you our VIP thank you code MERRY15. This code is valid until January 31, 2026. Hope this helps! Should you need help with anything else, I'm only a message away!",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://ryka.com",
+          "value": "https://iliabeauty.com",
           "date": ""
         },
-        "browsingHistory": [
-          {
-            "link": "https://www.ryka.com/product/womens-viv-classic-2-sneaker-5277535/deauville-purple-28231",
-            "item": "viv classic 2 sneaker",
-            "timeAgo": "2026-01-19"
-          },
-          {
-            "link": "https://www.ryka.com/product/womens-devotion-x-walking-sneaker-5271739/blue-fabric-89494?bc_pid=MDAxOTc1NDAyMjc3Mjg%3D&partnerid=email_retargeting_Bluecore_lowstock_cust1-nonpromo_trigger-RYKA&et_cid=subaction_4964816150650880&et_rid=ZHBqbXRoaWVsZW5AY2hhcnRlci5uZXQ%3D&om_rid=ZHBqbXRoaWVsZW5AY2hhcnRlci5uZXQ%3D&obem=TSTc0mwa3tUcw0AUovlzz3Hdpt7_JgMCfcAxzK-Xebo%3D&bc_lcid=t5324176641875968lw6514662018768896",
-            "item": "devotion x walking sneaker",
-            "timeAgo": "2026-01-09"
-          },
-          {
-            "link": "https://www.ryka.com/product/womens-confident-sneaker-5280995/dusty-peach-faux-fabric-86201",
-            "item": "confident sneaker",
-            "timeAgo": "2026-01-04"
-          },
-          {
-            "link": "https://www.ryka.com/product/womens-confident-sneaker-5280995/dusty-peach-faux-fabric-86201?icid=RykaRecommendationsHomepagePUWYLO_Ryk%C3%A4_5280995_20022_86201",
-            "item": "confident sneaker",
-            "timeAgo": "2026-01-02"
-          },
-          {
-            "link": "https://www.ryka.com/product/womens-confident-sneaker-5280995/dusty-peach-faux-fabric-86201",
-            "item": "confident sneaker",
-            "timeAgo": "2026-01-02"
-          }
-        ]
+        "browsingHistory": [],
+        "orders": []
       },
-      "companyWebsite": "https://ryka.com",
-      "companyName": "Ryka",
-      "notes": {
-        "escalate": [
-          "When ESC always use ESC shortcut",
-          "When ESC discount/promotion inquiries always include the exact offer/discount/promo code in your escalation notes",
-          "Include details of the cx's issue in your ESC notes & any relevant cx information"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Rykä: The Warehouse Sale is HERE! Save up to 70% off sale styles - these deals are too good to pass up: ryka.attn.tv/ab72yBQeqCMK ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Rykä: Don't miss out! Snag encore mule slip on shoe before it's too late. Click here to check out now: ryka.attn.tv/a-JDTtzXtjIu",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Rykä: Fresh year, fresh sneaks. Our Warehouse Sale is calling... don't leave these deals behind!\nShop Up to 70% off Sale styles: ryka.attn.tv/a7Joum5CQobg ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Rykä: Hey, this is Jordan. Let us help you find the perfect sneakers for you! https://ryka.attn.tv/a3Z_DfN5dnJI \n\nCan I answer any questions while you shop?\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Rykä: New styles, fun colors, new favorites loading...\n\nryka.attn.tv/a-I9_EKQSa4g ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Rykä: Your January Jumpstart is here with sneaks starting at $25.99. Consider this your sign to grab a new pair: ryka.attn.tv/aBmU380gHo6a ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Rykä: Hey, this is Jordan. Let us help you find the perfect sneakers for you! https://ryka.attn.tv/a3uf4tVlDS-E \n\nCan I answer any questions while you shop?\n",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Yes I had to send a pair of shoes back. They weren't supposed to be returnable but when I noticed they were the wrong width the lady I spoke to said I could return for a credit. The person I talked to at Ryka said I would get a credit in March. Could you check to see if that is on my record. The shoes came back to you last week asSoon as I gotThem.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd417-72f1-4c09-f000-0000c06dc36b",
-          "message_text": "Rykä: Apologies for the delay in getting this resolved. Has my team sent you an email about this? If so, we suggest replying to them for further assistance. Please check your spam and promo folders as well, as our emails sometimes end up there.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "No I haven't received anything yet. I will call your office soon.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Phone support\"; last updated: 2023-02-02 21:10:47.447",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Tracking Info - All brands\"; last updated: 2023-10-10 16:47:28.277",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd41a-aef1-4399-f000-0000c06dc36b",
-          "message_text": "Rykä: I understand. Be sure to check your spam and promo folders, sometimes our emails end up there as well. You can give us a call at 1-888-295-8864. The call center hours of operation are Monday-Friday 9am-6pm and Saturday 10am-5pm CST. ",
-          "message_media": []
-        }
-      ]
+      "orders": []
     }
   }
 }

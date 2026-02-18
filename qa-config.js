@@ -4,8 +4,4 @@ window.QA_CONFIG = Object.assign({}, window.QA_CONFIG || {}, {
     GOOGLE_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbxdYddYfnFwK4nWaaMmOgzhH6wD0i3jY_1G1XM8PB4NzfJDsmxLrF8abc142KEhagfAbw/exec',
     // Keep true while troubleshooting; set false to reduce console noise.
     DEBUG: true,
-    // Temporary client-side ignore list for bad queue rows not found in runtime chunks.
-    IGNORED_SEND_IDS: [
-        '019bdd75-be32-4577-f000-0000f5218c53'
-    ]
 });

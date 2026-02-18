@@ -3,575 +3,357 @@
   "chunk": "chunk_0028",
   "scenarios": {
     "136": {
+      "id": "019bc906-7403-4801-f000-0000c4a7a374",
+      "companyName": "Greenpan",
+      "companyWebsite": "https://greenpan.us",
       "agentName": "Sarah",
-      "id": "019bd6e8-910f-43c9-f000-0000f36e1bae",
+      "agentInitial": "G",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "For the following inbound message types use PPI shortcut:"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Don't say words like \"I'm not sure, or certain\"",
+          "Add \"Happy cooking!\" when closing a convo!",
+          "Let the cx have the last word"
+        ],
+        "templates": [
+          "For product recommendations, use DHR shortcut"
+        ],
+        "drive_to_purchase": [
+          "Send links to collections if customers aren't looking for a specific product!"
+        ]
+      },
+      "SystemMessage1": "GreenPan: Ready to upgrade your cookware for a healthier year? \nTake another peek greenpan.attn.tv/aSd6p0-vVRP6 \n\nWhat's the one kitchen tool you can't live without? Maybe I can help make a recommendation!",
+      "SystemMessage2": "GreenPan: Hi Manuel, this is Sarah from GreenPan. Thanks for checking out our site! 😊 greenpan.attn.tv/aPCftUhGdz_o Is there a product we can help you find?",
+      "SystemMessage3": "GreenPan: New Year, New Cookware, BIG Savings! \n \nUp to 60% off Sitewide + 100s of New Arrivals + FREE Limited Edition Cookbook with over 90+ new recipes for healthy cooking in the new year.\n \nShop Now: greenpan.attn.tv/aCheElrG0SQi",
+      "SystemMessage4": "GreenPan: Ready to upgrade your cookware for a healthier year? \nTake another peek greenpan.attn.tv/aGqK3QqsQd-9 \n\nWhat's the one kitchen tool you can't live without? Maybe I can help make a recommendation!",
+      "SystemMessage5": "GreenPan: Hi Manuel, this is Sarah from GreenPan. Thanks for checking out our site! 😊 greenpan.attn.tv/a_qfx8BYMXov Is there a product we can help you find?",
+      "SystemMessage6": "GreenPan: It's BACK (finally!)\n \nThe America Test Kitchen's winner for best ceramic nonstick frypan, our Valencia Pro 3-Piece Frypan Set is back in stock. \n \nJust for You: This Weekend Only - $30 OFF with code VALENCIA\n \nPick Your Color: greenpan.attn.tv/azftPWb74GAH",
+      "SystemMessage7": "GreenPan: Big games need BIG flavor 🏈\n\nFeed the whole crew with our new 14-in-1 Slow Cooker. Perfect for hearty dips, pulled BBQ, chili & more, it's an instant winner in the kitchen.\n \nShop Now: greenpan.attn.tv/ad5kS4skuXuW",
+      "SystemMessage8": "GreenPan: Sarah here, I think you have great taste! These are definitely worth another look. Are there any questions I can help answer for you? \n\nJust for you: free shipping on your order with code AT2CCS-4XVPWF at checkout greenpan.attn.tv/amfBT7cDxj7x",
+      "customerMessage1": "I sent an email on 1/7 regarding the finish chipping on one of my Tucci pans. I haven't received a response. I have also tried calling customer service but every time I call it says your call center is closed even though I'm calling during your business hours.",
+      "SystemMessage9": "Template used: \"Sorry 2 - All brands\"; last updated: 2023-10-10 17:56:13.923",
+      "SystemMessage10": "Template used: \"No response from customer support - All brands\"; last updated: 2023-10-10 17:43:52.689",
+      "AgentMessage1": "GreenPan: I'm sorry about that! I totally understand the frustration with this! Our team handles emails in the order they come. Rest assured that one of my colleagues will follow up with you in no time! Also, be sure to check your spam and promo folders for our response, as sometimes our emails end up there.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://alabasterco.com",
+          "value": "https://greenpan.us",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://alabasterco.com/products/a-beautiful-year-in-the-bible",
-            "item": "A Beautiful Year in the Bible: The 52-Week Bible Study for Women - Softcover",
-            "timeAgo": "2026-01-10"
+            "item": "GreenLife Easy Reach Silicone Spatula, 2-Piece Set | Gray - Gray",
+            "link": "https://www.greenpan.us/products/greenlife-easy-reach-silicone-spatula-2-piece-set-gray",
+            "icon": "eye"
           },
           {
-            "link": "https://alabasterco.com/products/my-moms-testimony",
-            "item": "My Mom's Testimony: A Guided Journal for Sharing Her Beautiful Story - Softcover",
-            "timeAgo": "2026-01-10"
+            "item": "Premiere Silicone Small Jar Scraper | Black - Black",
+            "link": "https://www.greenpan.us/collections/utensils/products/premiere-silicone-small-jar-scraper-black",
+            "icon": "eye"
           },
           {
-            "link": "https://alabasterco.com/products/the-complete-collection",
-            "item": "The Complete Bible Collection - New Living Translation",
-            "timeAgo": "2026-01-10"
+            "item": "Premiere Silicone Deep Sauté Spoon | Black - Black",
+            "link": "https://www.greenpan.us/collections/utensils/products/premiere-silicone-deep-saute-spoon-black#",
+            "icon": "eye"
+          },
+          {
+            "item": "Premiere Silicone Solid Spoon | Black - Black",
+            "link": "https://www.greenpan.us/collections/utensils/products/premiere-silicone-solid-spoon-black",
+            "icon": "eye"
+          },
+          {
+            "item": "Premiere Silicone Tasting Spoon | Black - Black",
+            "link": "https://www.greenpan.us/collections/utensils/products/premiere-silicone-tasting-spoon-black#",
+            "icon": "eye"
           }
-        ]
+        ],
+        "orders": []
       },
-      "companyWebsite": "https://alabasterco.com",
-      "companyName": "Alabaster Co",
-      "notes": {
-        "escalate": [
-          "ESC if you're unclear about which recommendation to make regarding bible books/study options"
-        ],
-        "send_to_cs": [
-          "Send to CS for payment related inquiries",
-          "Send to CS for post purchase issues, use PPI shortcut"
-        ],
-        "tone": [
-          "Don't send long messages, just summarise or send a link",
-          "Don't talk about financial situations or opinions about our pricing",
-          "Don't reply to journey replies or critiques about the content in the automated messages, close the convo"
-        ],
-        "drive_to_purchase": [
-          "There is a bundle for bible covers for a collection of hardcover titles"
-        ],
-        "promo_and_exclusions": [
-          "If cx receives a message about an insider promo code, and the customer responds positively, share with them code GQ8Y3N for 20% off"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [
-        "gotcha",
-        "shoot",
-        "I’mafraid",
-        "afraid"
-      ],
-      "escalation_preferences": [
-        "Q's on book recommendations",
-        "Post-Purchase conversations should be directed to\\xa0help@alabasterco.com - not escalated!"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Alabaster Co: Welcome to Alabaster Co! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Alabaster Co: Hi there, I'm Sarah. Welcome to the Alabaster Community, we're grateful to have you join us. \n\nUse code BEAUTY15 for 15% off your first order.\n\nShop Now: https://alabasterco.attn.tv/aA-SaMoPxFci .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Alabaster Co: PS - here's our contact card. Store it in your phone so you don't have to wonder who that 1-833 number is ;)",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Alabaster Co: Hey Abigail! Thanks for stopping by. alabasterco.attn.tv/aGk8sIwDucx2 Are you looking for a gift for someone special? - Sarah ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Alabaster Co: Rejoice! Your order will be arriving soon, you can track the status here: alabasterco.attn.tv/ao1K0oZGOHcf . We're so excited to join you on your new journey.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Alabaster Co: Your welcome code expires today! Deepen your experience through our Bible Studies, Bibles, Accessories & more. Use code BEAUTY15 at checkout to start your new journey. Shop Now: https://alabasterco.attn.tv/aSxw_FnuenwV ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Alabaster Co: Hey Abigail, we're so glad you stopped by. Have you seen our best sellers? https://alabasterco.com/\n\nText back if you have any questions. - Sarah ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Now it is telling me it's unavailable",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd6e8-910f-43c9-f000-0000f36e1bae",
-          "message_text": "Alabaster Co: Thank you for reaching out and I'm sorry about that! It looks like you have the wrong tracking number. Please track your order here: https://alabasterco.attn.tv/ay60HdhtDXEN Your tracking number is 9241990335949252534619 and it's expected to arrive on January 20 by 9PM. Hope this clarifies! ",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "137": {
-      "agentName": "Kim",
-      "id": "019bb8b4-8eab-4de4-f000-0000ad00f55d",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://howitzerclothing.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://howitzerclothing.com/collections/womens-t-shirts/products/life-liberty-4",
-            "item": "Life Liberty - BLACK / S",
-            "timeAgo": "2026-01-13"
-          },
-          {
-            "link": "https://howitzerclothing.com/products/life-liberty-4",
-            "item": "Life Liberty - BLACK / S",
-            "timeAgo": "2025-12-19"
-          },
-          {
-            "link": "https://howitzerclothing.com/products/support-7",
-            "item": "Support - DARK GREY / XS",
-            "timeAgo": "2025-12-19"
-          },
-          {
-            "link": "https://howitzerclothing.com/collections/mens-fleece/products/alpha-team-pullover?_pos=54&_fid=72bf3dfb9&_ss=c&variant=42293589409927",
-            "item": "Alpha Team Performance Jersey - ASSORTED / L",
-            "timeAgo": "2025-12-14"
-          },
-          {
-            "link": "https://howitzerclothing.com/collections/mens-fleece/products/alpha-team-pullover?_pos=54&_fid=72bf3dfb9&_ss=c&variant=42293589409927",
-            "item": "Alpha Team Performance Jersey - ASSORTED / L",
-            "timeAgo": "2025-12-14"
-          }
-        ]
-      },
-      "companyWebsite": "https://howitzerclothing.com",
-      "companyName": "Howitzer Clothing",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ]
-      },
+      "id": "019bc2f8-f174-44d0-f000-000051bedd3a",
+      "companyName": "Cozy Earth",
+      "companyWebsite": "https://cozyearth.com",
+      "agentName": "Sarah",
+      "agentInitial": "C",
       "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Howitzer Clothing: Hi Tavia, this is Kim. It looks like you left something in your cart! https://howitzerclothing.attn.tv/av4ZGV1Jttcv \n\nAre there any questions I can answer before they're gone?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Howitzer Clothing: Love your new Topo Logo Morale Patch purchase? Leave a review and let us know your thoughts! https://howitzerclothing.attn.tv/arPrpNrjPQ9S\n\nText back if you have any questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Howitzer Clothing: Hey there, this is Kim again. We've got new styles dropping every week. Here's an offer just for you, 20% off with code AGAINYplgx6. Shop now: https://howitzerclothing.attn.tv/a55ZlNXue1MB .\n\nText me if you need any assistance.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Howitzer Clothing: Hey Tavia, this is Sarah. Thanks for checking out our site! 😊 https://howitzerclothing.attn.tv/afYHjCza_9W_ \n\nWant me to see if I can get you a discount?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I was looking for phone numbers to contact you all. I didn't receive a t-shirt I ordered back in November and I sent an email but I hadn't heard back from anyone. Thank you for reaching out though. I always love discount codes! 😁",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Phone support\"; last updated: 2023-05-05 13:57:17.695",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb8b4-8eab-4de4-f000-0000ad00f55d",
-          "message_text": "Howitzer Clothing: I'm so sorry about that! You can give us a call at 1-855-717-3963, Monday - Friday from 9:00 am to 5:00 pm PST. The team would be happy to help you with your last order.\n\nAlso, I got you! Here’s a code for you to use: HWTZCG6716. I hope this helps, and please let me know if there's anything else I can help with.",
-          "message_media": []
-        }
-      ]
-    },
-    "138": {
-      "agentName": "Ava",
-      "id": "019bca3e-3e0a-405b-f000-0000dd143ad9",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://brilliantearth.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://brilliantearth.com",
-      "companyName": "Brilliant Earth",
-      "notes": {
-        "send_to_cs": [
-          "Inquiries regarding orders",
-          "Shipping inquiries on a current order",
-          "Post-purchase issues",
-          "For product or general inquiries you can't find the answer to, use PGI shortcut"
-        ],
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "escalate": [
-          "No escalations for this client, send everything to CS"
-        ],
-        "tone": [
-          "Don't use the word \"unfortunately\" to discuss our appointment structure",
-          "Don't use the word \"best\" to reference a product (e.g., best ring, etc.)"
-        ],
-        "templates": [
-          "If cx are looking for an engagement ring and don't provide specifics, use LER shortcut"
+          "ESC all MyFitness pall App inquiries"
         ],
         "dos_and_donts": [
-          "If the customer responds incorrectly to the journey, don't send jny temp, recommend items based on their selection instead",
-          "Cx can create their own engagement ring on the webiste by choosing a setting, stone and size",
-          "Cx can customize rings by working with designers who will use their ideas, drawings, images to create the ring they want",
-          "Don't disclose the locations of their labs/production facilities"
-        ],
-        "drive_to_purchase": [
-          "**Be MORE SALESY, if the customer is showing intent to purchase then:**",
-          "**➜ Ask open-ended general questions such as style & material**",
-          "➜ After asking open-ended questions, transition to specific questions such as center stone, etc.",
-          "➜ If the customer liked our recommendation, push for the sale by asking about payment options or when they hope to have the item"
-        ],
-        "promo_and_exclusions": [
-          "Please see here for current offer details: https://www.brilliantearth.com/promo-codes-and-offers/",
-          "Codes can be used in-store"
+          "Don't share sale end dates with customers"
         ]
       },
-      "messageTone": "Casual",
-      "blocklisted_words": [
-        "bestsellers",
-        "sale",
-        "sales",
-        "budget"
-      ],
-      "escalation_preferences": [
-        "Shipping questions",
-        "Exchanges and returns",
-        "For questions regarding order, service, shipping questions on a current order, post-purchase will go to cssupport@brilliantearth.com",
-        "For product or general inquiry questions, please contact info@brilliantearth.com"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: PERFECT TIMING! Order a ready to ship ring by 2PM PT tomorrow for Christmas delivery: brilliantearth.attn.tv/aE0tT6vKo5KV .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: You won't believe these holiday gifts are under $250... brilliantearth.attn.tv/abR35e60xLft .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: Our new birthstone jewelry is HERE and we're obsessed. Shop must-have gifts for every month: brilliantearth.attn.tv/ab1WqzIQIkuh .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: FASHIONABLY LATE? Order by 9AM PT tomorrow, 12/23, for Christmas delivery. Shop now: brilliantearth.attn.tv/at6LXzuokeM2 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: Still need a gift? We're here to help. Shop in person at a Brilliant Earth showroom today: brilliantearth.attn.tv/aK2dHyRDeTnn .\n\nOr send a digital gift card in seconds: brilliantearth.attn.tv/atnCEcMqyKgt .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: Cheers to a new kind of holiday spirit. Shop cocktail rings: brilliantearth.attn.tv/ac8gD3s6QNpf .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: Start 2026 with a \"yes\". Order a ready to ship ring by tomorrow at 2PM PT for a NYE proposal: brilliantearth.attn.tv/aaflA-Cfv9kj .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: JUST DROPPED: New medallions, new year, new you. Start it off right with our latest: brilliantearth.attn.tv/afgmRK2kHa-a .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: SPOTTED: The 2026 engagement ring trends that you won't want to miss: brilliantearth.attn.tv/aQxxHQQ2DU7B .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: Garnet red > winter blues. January's birthstone is a must-have: brilliantearth.attn.tv/a8jjGSQl3XpZ .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: MAKE IT A TRIPLE. Discover three stone engagement rings that prove more is more: brilliantearth.attn.tv/auVdAA5QwXDP .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: IT'S HERE! Shop the Valentine's Day Gift Guide: brilliantearth.attn.tv/aq0-RTNfekza .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: 2026 TOP WEDDING RING TRENDS. Consider this your exclusive first look: brilliantearth.attn.tv/aKwtudsiqmz_ .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: Their name in diamonds? Say less. Gift our best-selling personalized jewelry this Valentine's Day: brilliantearth.attn.tv/aQNBuqRsBD3x .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: Timeless has never looked this good. Shop top solitaire engagement rings for Valentine's Day: brilliantearth.attn.tv/aG9cF1i8qVWc .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Brilliant Earth: When it comes to diamonds, MORE IS MORE. Our eternity rings prove it: brilliantearth.attn.tv/aHMLQ9jAMHMy .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I sent yall a diamond but yall offered me dollars  didn't want them 2 dollars  I want me diamond back",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bca3e-3e0a-405b-f000-0000dd143ad9",
-          "message_text": "Brilliant Earth: I'm very sorry to hear that! Are you saying you sent a diamond to Brilliant Earth? Is this about a return? Please tell me more about the concern so I can have a better idea of what happened. ",
-          "message_media": []
-        }
-      ]
-    },
-    "139": {
-      "agentName": "Sarah",
-      "id": "019bed9b-6538-4936-f000-00000a76f03d",
+      "SystemMessage1": "Cozy Earth: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/S4E",
+      "SystemMessage2": "Cozy Earth: Use code GETCOZY50 at checkout - valid on orders over $100.\n\nHurry, these savings end soon...\ncozyearth.attn.tv/a1lTvV0lzA8n",
+      "SystemMessage3": "Cozy Earth: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nYour ultimate coziness awaits! Luxuriate in our best-sellers: https://cozyearth.attn.tv/azL_1pOVcx1l .",
+      "SystemMessage4": "Cozy Earth: Try the Bamboo Stretch-Knit Shorts for soft, breathable comfort with a drawstring waist and handy side pockets\n\nUse code GETCOZY50 for $50 off orders of $100 or more\n\nDiscover more: https://cozyearth.attn.tv/a_BDGGZfaPC3 .",
+      "SystemMessage5": "Cozy Earth: Hey , this is Sarah from the Cozy Earth Care Team. Thanks for checking out our site! cozyearth.attn.tv/aDYzgV4mGj58 \n\nAre you looking for anything in particular today?",
+      "SystemMessage6": "Cozy Earth: Women's Bamboo Stretch-Knit Shorts is a fan favorite! Check out the reviews, and if you're still unsure, no worries-we've got you covered with a great return policy and warranty.\n\nLove it or Return it: cozyearth.attn.tv/a33NrKLvw2Or",
+      "SystemMessage7": "Cozy Earth: 1K people recently purchased Bamboo Stretch-Knit Shorts, complete your order before it disappears! Soft and comfy for everyday wear.\n\nUse code GETCOZY50 for $50 off orders over $100, plus enjoy free shipping on orders over $100.\n\nShop now: https://cozyearth.attn.tv/agplpRIvIT3h .",
+      "SystemMessage8": "Cozy Earth: The things you use daily need to be reliable, made well, and designed with comfort in the details.\n\nShop Upgrades: cozyearth.attn.tv/azlwB2uhdmh1",
+      "SystemMessage9": "Cozy Earth: New year, new colors!\n\nOrganic cotton French terry. Oversized fit.\n\nShop Chelsea Collection: cozyearth.attn.tv/aw_jJwkucgrY",
+      "SystemMessage10": "Cozy Earth: This weekend only, enjoy:\n\n-20% off $200+\n-25% off $250+\n-30% off $300+\n\ncode: \"ELEVATEHOME\"\n\nShop Limited Time: cozyearth.attn.tv/aV4sTQaM7pBW",
+      "SystemMessage11": "Cozy Earth: Just two days remaining. Up to 30% off!\n\nCode: \"ELEVATEHOME\"\n\nDon't wait: cozyearth.attn.tv/apY0XTIJ2gkJ",
+      "SystemMessage12": "Cozy Earth: Final reminder: \n\n-20% off $200+\n-25% off $250+\n-30$ off $300+\n\nUse code \"ELEVATEHOME\" at checkout!\n\nEnds Tonight: cozyearth.attn.tv/a3aX2OELnVb7",
+      "SystemMessage13": "Cozy Earth: The Valentine's Shop is open!\n\nShop NEW Pajama Prints: cozyearth.attn.tv/aUAQ220ZTY6V",
+      "SystemMessage14": "Cozy Earth: Better sleep, better days! To make sleeping easier, here's $50 in Cozy Credit for you! Plus, shop risk-free with our 100-night trial and 10-year warranty. Code is only applicable on orders over $100. \n\nOffer Code: V52W97\ncozyearth.attn.tv/aV8Rxl9tU0-f",
+      "SystemMessage15": "Cozy Earth: Hey , this is Sarah from the Cozy Earth Care Team. Thanks for checking out our site! cozyearth.attn.tv/aF0XKZzjKa4v \n\nAre you looking for anything in particular today?",
+      "customerMessage1": "Yes. I just tried to use the discount code that was sent to me just a little while ago and your system Says it's invalid",
+      "AgentMessage1": "Cozy Earth: Please ensure the code V52W97 is entered correctly and meets the $100 minimum order requirement. If the issue persists, please share a screenshot. Visit cozyearth.com to use the coupon.",
+      "customerMessage2": "I am putting it in correctly",
+      "AgentMessage2": "Cozy Earth: I'm so sorry for the inconvenience. Let me check this with my team for you. Please hang tight!",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://mcconnells.com/",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://mcconnells.com/",
-      "companyName": "McConnell's Fine Ice Creams",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS if the ice cream arrived melted."
-        ],
-        "escalate": [
-          "If cx wants to delay shipping/set a deliver date, use DSD shortcut and ESC",
-          "For all ESC use ESC shortcut",
-          "ESC if cx are inquiring about in-store prices",
-          "ESC website & store inventory/availability inquiries"
-        ],
-        "tone": [
-          "🅿 Address the customer by name when appropriate!"
-        ],
-        "templates": [
-          "If a customer says that the ice cream they purchased in store is icy/refrozen/awful, use IRA shortcut"
-        ]
-      },
-      "messageTone": "Casual",
-      "blocklisted_words": [
-        "sugarfree"
-      ],
-      "escalation_preferences": [
-        "Shipping questions",
-        "Discount code errors",
-        "melted delivery",
-        "shipping issue",
-        "unsure how to respond",
-        "purchased bad pint at the grocery store"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "McConnell's: We miss you Stuart! Have you seen our new flavors? Check them out and shop now: https://mcconnells.attn.tv/a31Z7eJuJfCW",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "McConnell's: Out with the family?\n\nPick up some McC's for a special treat!\n\nFind us at a store near you >> mcconnells.attn.tv/a2y6r0gggdH_ ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "McConnell's: The best way to start 2026?\n\nA big ol' bite of ice cream!\n\nGet one more treat in before 2025 ends >> mcconnells.attn.tv/a5TB21Tjq_0H ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "McConnell's: Delicious dairy-free ice cream?\n\nYep, that's been a McC's reality for years.\n\nTry it for yourself >> mcconnells.attn.tv/a7QtGIhX0uVq ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "McConnell's: Don't settle for \"meh\" dairy-free ice cream!\n\nStart 2026 with pints that taste just like the real thing: mcconnells.attn.tv/aA6dK7_YxwTs ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "McConnell's: Hey Stuart! We're dropping new flavors all the time. \n\nJust for you, use code CONEBACK10 for 10% off your next order so you can try them.\n\nShop now: https://mcconnells.attn.tv/aSbUZsVHNvll ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "McConnell's: 100% certified organic.\n\n100% creamy, indulgent goodness.\n\nTry our organic line today! >> https://mcconnells.com/collections/organic-ice-creams",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "McConnell's: Time to treat your sweetie! Roses are nice, but ice cream is better. Our Valentine's Day Bundle is here, featuring 5 irresistible flavors. Spread some love > mcconnells.attn.tv/asVERHsWdIzr ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "McConnell's: Hey Stuart, this is Sarah . Thanks for stopping by! 🍦 https://mcconnells.attn.tv/a--SVWBrnd5T \n\nAny questions I can answer for you?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "McConnell's: Raise a glass:\n\nWhiskey & Pecan Pralines is BACK!\n\nGet yours before it sells out AGAIN >> mcconnells.attn.tv/alommtsiPAfQ ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "McConnell's: If you would like to unsubscribe from all future messages, reply STOP.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "What can I do with the styrofoam boxes?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Escalation template\"; last updated: 2025-07-21 16:56:39.064",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bed9b-6538-4936-f000-00000a76f03d",
-          "message_text": "McConnell's: I'm really sorry for the inconvenience. Checking with our team, and we'll be back with you shortly!",
-          "message_media": []
-        }
-      ]
-    },
-    "140": {
-      "agentName": "Kiara",
-      "id": "019bb882-292e-4689-f000-0000c9ddc98c",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://dorado.com",
+          "value": "https://cozyearth.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://dorado.com/products/double-plated-bamboo-name-hoop-earrings?ref=parcelpanel&utm_source=parcelpanel&utm_medium=tracking_page&utm_campaign=parcelpanel_tracking_page",
-            "item": "Double Plated Bamboo Name Hoop Earrings",
-            "timeAgo": "2026-01-13"
+            "item": "Women's Bamboo Stretch-Knit Short Sleeve Pajama Set",
+            "link": "https://cozyearth.com/em-cgi/btag/products/womens-bamboo-stretch-knit-short-sleeve-pajama-set?externalId=UeBgD&variant=32532884586593",
+            "icon": "eye"
           },
           {
-            "link": "https://dorado.com/products/double-plated-bamboo-name-hoop-earrings?ref=parcelpanel&utm_source=parcelpanel&utm_medium=tracking_page&utm_campaign=parcelpanel_tracking_page",
-            "item": "Double Plated Bamboo Name Hoop Earrings",
-            "timeAgo": "2026-01-13"
+            "item": "Women's Bamboo Stretch-Knit Short Sleeve Pajama Set",
+            "link": "https://cozyearth.com/products/womens-bamboo-stretch-knit-short-sleeve-pajama-set?variant=32532884586593&utm_campaign=Concierge-Site-Visitor-1&utm_medium=text&utm_source=attentive&externalId=UeBgD#dialog-cart",
+            "icon": "eye"
           },
           {
-            "link": "https://dorado.com/products/double-plated-heart-title-name-necklace-w-figaro-chain?variant=39525951733831",
-            "item": "Double Plated Heart Title Name Necklace w/ Figaro Chain",
-            "timeAgo": "2025-12-22"
+            "item": "Women's Bamboo Stretch-Knit Short Sleeve Pajama Set",
+            "link": "https://cozyearth.com/products/womens-bamboo-stretch-knit-short-sleeve-pajama-set?variant=32532884586593&utm_campaign=Concierge-Site-Visitor-1&utm_medium=text&utm_source=attentive&externalId=UeBgD",
+            "icon": "eye"
           },
           {
-            "link": "https://dorado.com/products/double-plated-heart-title-name-necklace-w-figaro-chain",
-            "item": "Double Plated Heart Title Name Necklace w/ Figaro Chain",
-            "timeAgo": "2025-12-22"
+            "item": "Women's Bamboo Stretch-Knit Short Sleeve Pajama Set",
+            "link": "https://cozyearth.com/products/womens-bamboo-stretch-knit-short-sleeve-pajama-set?variant=32532884586593&utm_campaign=Concierge-Site-Visitor-1&utm_medium=text&utm_source=attentive&externalId=UeBgD",
+            "icon": "eye"
           },
           {
-            "link": "https://dorado.com/collections/earrings/products/double-plated-bamboo-name-hoop-earrings",
-            "item": "Double Plated Bamboo Name Hoop Earrings",
-            "timeAgo": "2025-12-22"
+            "item": "Women's Bamboo Stretch-Knit Kimono Robe",
+            "link": "https://cozyearth.com/products/womens-bamboo-stretch-knit-kimono-robe?variant=43786547364020#dialog-cart",
+            "icon": "eye"
           }
-        ]
+        ],
+        "orders": []
       },
-      "companyWebsite": "https://dorado.com",
-      "companyName": "Dorado Fashion",
-      "notes": {
+      "orders": []
+    },
+    "138": {
+      "id": "019bb905-3a63-4913-f000-0000f4060d5d",
+      "companyName": "Nectar Sleep",
+      "companyWebsite": "https://nectarsleep.com",
+      "agentName": "Quinn",
+      "agentInitial": "N",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "send_to_cs": [
-          "Send to CS for post purchase issues"
+          "No ESC for this client, send everything to CS",
+          "Send to CS for refund inquiries"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Close the convo if the cx first message is ok, no, etc.",
+          "Don't use the word \"off\" when talking about promotions"
+        ],
+        "dos_and_donts": [
+          "Don't proactively offer to find pricing info, redirect them to the website instead"
+        ],
+        "promo_and_exclusions": [
+          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
         ]
       },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Shipping Issues: Where's my order? Any order issues, direct to customer service"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "DORADO: ONLY 5 HOURS LEFT. \n\nGet up to 80% OFF w/ code: LASTMIN \n\nShop Stocked Gifts for Her & Him:\nhttps://dorado.attn.tv/atRxY_WhtevR \n\nGet it b4 Christmas!",
-          "message_media": []
+      "SystemMessage1": "Nectar: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (888) 863-2827.",
+      "SystemMessage2": "Nectar: You're in! Shop now: https://nectarsleep.attn.tv/a0PaLPxcbYiO",
+      "SystemMessage3": "Nectar: You are already subscribed. Click here to shop now: https://nectarsleep.attn.tv/cl/mfp .",
+      "SystemMessage4": "Nectar: You are already subscribed. Click here to shop now: https://nectarsleep.attn.tv/cl/mfp .",
+      "SystemMessage5": "Nectar: Quinn here: You can save up to 50% on your cart.\nWondering if now's the time? It is. Need help? Just say the word: nectarsleep.attn.tv/aCzQChyPQVPV\n.",
+      "customerMessage1": "Hello",
+      "customerMessage2": "Looking for memory foam firm which one would that be",
+      "AgentMessage1": "Nectar: Our mattresses are medium-firm, rated about 6.5 on a scale from 1-10. Check them out here: https://nectarsleep.attn.tv/ayMXNFhnwoF3",
+      "customerMessage3": "What about the hybrids",
+      "AgentMessage2": "Nectar: The Nectar Hybrid offers adaptive support with individually wrapped coils and gel-infused memory foam. More details here: https://nectarsleep.attn.tv/avcydnRjT1RY",
+      "customerMessage4": "I thought memory foam were more money than the hybrids",
+      "AgentMessage3": "Nectar: For pricing details, please visit our website: https://nectarsleep.attn.tv/a1wA6-skwYMh",
+      "customerMessage5": "Isn't there a code for 50% off",
+      "customerMessage6": "I was getting but it's not giving to me",
+      "customerMessage7": "So the hybrid is the better mattress?",
+      "SystemMessage6": "Nectar: You are already subscribed. Click here to shop now: https://nectarsleep.attn.tv/cl/mfp .",
+      "SystemMessage7": "Template used: \"Tell me more about the Nectar Hybrid \"; last updated: 2024-03-29 22:20:41.644",
+      "AgentMessage4": "Nectar: The 50% off code NECTAR50 automatically applies at checkout. You can order through this link - https://nectarsleep.attn.tv/ag3pn0neExNa. Hope it helps!\n\nThe Nectar Hybrid is a great option! It is a 12-inch mattress with adaptive, breathable, individually wrapped coils for targeted support and gel-infused memory foam that contours to your body's problem areas relieving pressure as you sleep. It includes a cover made with polyethylene that provides a cool-to-the-touch sensation: https://nectarsleep.attn.tv/a3Ifl2VoZrWI",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://nectarsleep.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "DORADO: We're making room for what's next.. aka: HUGE markdowns \n\nYear-End Stock Sell-Off is LIVE. \n40 styles as low as $9. \n\nLimited Stock. Zero mercy.\n\nPrices go back up 12/27 @ 11:59PM EST\n\nShop Now: \nhttps://dorado.attn.tv/atS8PciM7rpY . ",
-          "message_media": []
+        "browsingHistory": [
+          {
+            "item": "Nectar Classic Memory Foam Mattress",
+            "link": "https://www.nectarsleep.com/mattress",
+            "icon": "eye"
+          },
+          {
+            "item": "Nectar Classic Memory Foam Mattress",
+            "link": "https://www.nectarsleep.com/mattress?utm_source=Attentive&utm_medium=sms&utm_campaign=alreadysubscribed",
+            "icon": "eye"
+          },
+          {
+            "item": "Nectar Classic Memory Foam Mattress",
+            "link": "https://www.nectarsleep.com/mattress",
+            "icon": "eye"
+          },
+          {
+            "item": "Nectar Premier Hybrid Mattress",
+            "link": "https://www.nectarsleep.com/mattresses/premier-hybrid-mattress/queen",
+            "icon": "eye"
+          },
+          {
+            "item": "Nectar Classic Memory Foam Mattress",
+            "link": "https://www.nectarsleep.com/mattress",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "139": {
+      "id": "019bb4b8-c2b0-4ba5-f000-0000f3cf63ff",
+      "companyName": "Modern Gents Trading Co",
+      "companyWebsite": "https://modgents.com",
+      "agentName": "Sarah",
+      "agentInitial": "M",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "SystemMessage1": "Modern Gents: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Modern Gents.",
+      "SystemMessage2": "Modern Gents: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/Rnh",
+      "SystemMessage3": "Modern Gents: Yay! You're in!\n\nGet 80% off a single item! \nCode: MG80\n\n*Must have 2 items in cart\n\nShop Now: modgents.attn.tv/aDq15jD9896F",
+      "SystemMessage4": "Modern Gents: One more thing... Add us to your contacts for special perks! :)",
+      "customerMessage1": "Code won't work",
+      "AgentMessage1": "Modern Gents: Hi, thanks for reaching out. I'm sorry to hear that. Have you encountered any error messages? Can you please send me a screenshot of the error message you're getting, along with the item(s) in your cart? This will help me sort it out for you.",
+      "SystemMessage5": "Modern Gents: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nExplore our latest additions! Don't miss out: https://modgents.attn.tv/aZUJKFYCEdXq .",
+      "customerMessage2": "\"",
+      "customerMessage3": "Code won't work",
+      "AgentMessage2": "Modern Gents: Thanks for sending that over! Please note that the code will only work if you have two items in your cart. Just a heads up-the ring box won't count toward this. Hope this helps clarify!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://modgents.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "DORADO: NEW YEAR'S SALE.\n\nUp to 85% OFF (ONE. LAST. TIME.)\n\nCode: BYE2025 \n\nStart the year looking expensive: \nhttps://dorado.attn.tv/aGAPKzhWrps2 . \n\n",
-          "message_media": []
+        "browsingHistory": [
+          {
+            "item": "The Eliza",
+            "link": "https://modgents.com/products/the-eliza?Size=7",
+            "icon": "eye"
+          },
+          {
+            "item": "The Eliza",
+            "link": "https://modgents.com/products/the-eliza",
+            "icon": "eye"
+          },
+          {
+            "item": "The Eliza",
+            "link": "https://modgents.com/products/the-eliza?Size=7",
+            "icon": "eye"
+          },
+          {
+            "item": "The Eliza",
+            "link": "https://modgents.com/products/the-eliza",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "140": {
+      "id": "019bc23c-2e56-486f-f000-00000269e460",
+      "companyName": "ELEMIS",
+      "companyWebsite": "https://us.elemis.com/",
+      "agentName": "Charlotte",
+      "agentInitial": "E",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "tone": [
+          "Let the customer have the last word!"
+        ],
+        "dos_and_donts": [
+          "Don't reply to messages like \"ok\", \"thanks\", etc"
+        ],
+        "promo_and_exclusions": [
+          "Welcome Code:",
+          "Check their offers page for up-to-date info on codes & offers",
+          "If cx asks about a code that isn't on this page, it's likely expired!",
+          "Offers page: https://us.elemis.com/offers"
+        ]
+      },
+      "SystemMessage1": "ELEMIS: Psst... VIPs, we upgraded your gift! 30% off + 5-piece set + a NEW travel cleanser of your choice with $220+. Grab it first! \n\nCode: RETURNVIP >>elemis.attn.tv/auLv9Pq8RLVl",
+      "SystemMessage2": "ELEMIS: Last-Minute Shopper? No Problem! Get 30% OFF sitewide + FREE 2-Day Shipping on orders $150+ - just in time! PLUS: Get a FREE Gift on orders $195+.\n\nCode: RETURN>> elemis.attn.tv/aMFK7SvAtGd6",
+      "SystemMessage3": "ELEMIS: Last call for holiday delivery! Get free 2-day shipping on $150+ and take 30% off sitewide + free gift while you're at it.\n\nCode: RETURN>> elemis.attn.tv/aLw4ar81I3jf",
+      "SystemMessage4": "ELEMIS: This is the perfect gift.\n\nAn award-winning duo worth $187, now just over $100 - plus FREE 2-day shipping (ends tonight). \n\nTap to grab yours before it's gone>> elemis.attn.tv/arUlD9TjWbrm",
+      "SystemMessage5": "ELEMIS: LAST CALL: Enjoy 30% OFF sitewide + a FREE GIFT (worth $204). Ends tonight! ⏰\n\nCode: RETURN>> elemis.attn.tv/adR1P6_PaI8q",
+      "SystemMessage6": "ELEMIS: Your year-end reward, 48 hours only. Subscribe now and get 30% off your first order, 20% off your second, plus an ELEMIS Starter Set.\n\nSubscribe now >> elemis.attn.tv/aNDf1Hdc8cGS",
+      "SystemMessage7": "ELEMIS: Finish the year strong, VIP.\n\n30% OFF when you subscribe, plus free luxe gifts with every delivery - ends tonight. Lock in the routine you love.\n\nSubscribe now >> elemis.attn.tv/amC0zXZ_ULZb",
+      "SystemMessage8": "ELEMIS: Your winter skin needs deeper hydration. Get a free 5-piece day-to-night gift (worth $166) with orders $200+.\n\nCode: HYDRATE >> elemis.attn.tv/a5v7Rxdg0Fyc",
+      "SystemMessage9": "ELEMIS: Winter skin, meet your glow. Enjoy a FREE full-size facial oil when you spend $125+. Deep nourishment starts here.\n\nCode: UNLOCK >> elemis.attn.tv/a3-e532LzKKy",
+      "SystemMessage10": "ELEMIS: Last call! Winter glow awaits-get a FREE full-size facial oil with any $125+ purchase. Nourish and shine.\nCode: UNLOCK >> elemis.attn.tv/aGdOYV8DjTum",
+      "SystemMessage11": "ELEMIS: Happy Holidays from the team at Elemis! Enjoy 30% off our holiday sets - perfect for travel-ready skincare on your next getaway. Shop now>> elemis.attn.tv/atmtNr8XvrS9",
+      "SystemMessage12": "ELEMIS: See double this Boxing Day with a FREE double cleanse gift - worth $134 - when you purchase any full-size product.\n\nCode: DOUBLE>> elemis.attn.tv/alWth1-Bafen",
+      "SystemMessage13": "ELEMIS: ATTN: FREE 5-piece gift (including a full-size favorite!) with ANY full-size purchase.\n\nCode: DOUBLE>> elemis.attn.tv/atdDezmDYbCr",
+      "SystemMessage14": "ELEMIS: Our Boxing Day gift sold out fast-but we've got you covered. Get a FREE 5-piece nighttime gift (worth $150) with any full-size purchase.\n\nUse code: NOURISH >> elemis.attn.tv/a0SVCnvjwX6U",
+      "SystemMessage15": "ELEMIS: Dry winter skin? Restore hydration day and night with award-winning and bestselling formulas. Free 5-piece ritual (worth $176) with any $200+ purchase. \n\nCode: HYDRATE >> elemis.attn.tv/awlcB_rEP2Ge",
+      "SystemMessage16": "ELEMIS: Make radiant skin your New Year's resolution! Spend $125+ & get a FREE $98 Pro-Collagen Moisturizer-your choice.\n\nUse code: PCGIFT >> elemis.attn.tv/aZQstPwPHBGe",
+      "SystemMessage17": "ELEMIS: Last chance! Spend $125+ and pick a FREE deluxe Pro-Collagen Moisturizer ($98 value). Hydrating, iconic, and almost gone.\n\nUse code: PCGIFT >> elemis.attn.tv/ae0W_RBdWB8n",
+      "SystemMessage18": "ELEMIS: Restore balance. Replenish radiance. Receive a gift. A 5-piece ritual - including full-size Dynamic Resurfacing Pads - is yours with $175+. \n\nCode: RENEWAL >>> elemis.attn.tv/aDmgjmau0hVw",
+      "SystemMessage19": "ELEMIS: Free deluxe Marine Cream? Yes please! Get a Pro-Collagen duo (worth $108) with ANY full-size purchase.\n\nUse code: DUO>> elemis.attn.tv/adr7RYsKdECu",
+      "SystemMessage20": "ELEMIS: Your exclusive gift ends tonight! Get your FREE $108 glow-boosting Pro-Collagen Duo with ANY full-size order.\n\nUse code: DUO>> elemis.attn.tv/ad8sudaoJd7o",
+      "SystemMessage21": "ELEMIS: Enjoy exclusive early access to our NEW Pro-Collagen Hydrating Cleansing Mousse - a luxe cream-to-mousse cleanser that deeply purifies without drying.\n\nShop it before anyone else >> elemis.attn.tv/avntt2aIBGEz",
+      "SystemMessage22": "ELEMIS: Live now for London Calling! Meet Pro-Collagen Hydrating Cleansing Mousse: cloud-like comfort, deep hydration, zero dryness. \n\nTune in >> elemis.attn.tv/a5TDmGTtu2BY",
+      "SystemMessage23": "ELEMIS: VIPs save more today. Early access to 30% off sitewide + free 5-piece gift ($136 value) with $160+. Public gets 25% tomorrow.\n\nUse Code: WINTERVIP>> elemis.attn.tv/ayzvnohT3GWV",
+      "customerMessage1": "Ok what products do you want?",
+      "customerMessage2": "The day and night cream?",
+      "AgentMessage1": "ELEMIS: Thanks for reaching out! You can check out our Facial Night Creams & Moisturizers here: https://elemis.attn.tv/acbMZhkC_iY9 As for day creams, these are my recommendations: 1. https://elemis.attn.tv/a22AkjWiumc6 2. https://elemis.attn.tv/aluzHlWpPC0j 3. https://elemis.attn.tv/auNB58Ll7Xkb Let me know what you think!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://us.elemis.com/",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "DORADO: Hey, this is Kiara. Thanks for checking out our site! https://dorado.attn.tv/awW6qy7XjIrD \n\nLet me know if you have any questions or if you want me to get you a discount :)",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I have a question about my replaced order",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Customer texts \"Price\" (there's no indication what they could be referring to from previous messages) \"; last updated: 2025-08-25 18:48:01.586",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Happy to help - All brands\"; last updated: 2023-10-10 17:58:01.748",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb882-292e-4689-f000-0000c9ddc98c",
-          "message_text": "DORADO: Thank you for reaching out, and I would be more than happy to help out! Can you give me more details on how I can help you?",
-          "message_media": []
-        }
-      ]
+        "browsingHistory": [],
+        "orders": []
+      },
+      "orders": []
     }
   }
 }

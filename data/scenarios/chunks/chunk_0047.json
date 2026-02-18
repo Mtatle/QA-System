@@ -3,606 +3,275 @@
   "chunk": "chunk_0047",
   "scenarios": {
     "231": {
-      "agentName": "Sarah",
-      "id": "019be8e6-cd1f-4d4d-f000-0000ca075c2c",
+      "id": "019bc361-4569-416c-f000-00009eaee6e8",
+      "companyName": "Bomber Eyewear",
+      "companyWebsite": "https://bombereyewear.com",
+      "agentName": "Jordan",
+      "agentInitial": "B",
+      "messageTone": "Super Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "Include customer's email in your ESC note",
+          "Always go the extra mile, ESC all issues"
+        ],
+        "templates": [
+          "If cx asks about applying more than one code at checkout, including the rewards use RBP shortcut"
+        ]
+      },
+      "SystemMessage1": "Bomber Eyewear: NEW DROP! \n\nMeet the THERMO - ANSI Z87+ made to look good on or off the job.\nbombereyewear.attn.tv/aX-YlY6JcCJn",
+      "SystemMessage2": "Bomber Eyewear: Hey , this is Jordan. Thanks for checking out our site! 😊 https://bombereyewear.attn.tv/ajvp3Ibgz16H \n\nAny questions I can answer for you?",
+      "customerMessage1": "I have a pair of photochromic megabombs. They aren't transitioning anymore. Can you explain why. I have 3 or 4 different type of megabombs. I enjoy the photochromic at work the most.",
+      "AgentMessage1": "Bomber Eyewear: I'm sorry to hear that! Mind sharing your email address, please? I'll be happy to check on this for you!",
+      "customerMessage2": "I was responding to an email you sent. So you should already have my email",
+      "SystemMessage3": "Template used: \"Customer support\"; last updated: 2023-04-03 20:02:45.316",
+      "AgentMessage2": "Bomber Eyewear: Sorry about that! To confirm, do you mean you already emailed us at contact@bombereyewear.com?",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://grandecosmetics.com",
+          "value": "https://bombereyewear.com",
           "date": ""
-        }
-      },
-      "companyWebsite": "https://grandecosmetics.com",
-      "companyName": "Grande Cosmetics",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut",
-          "Send to CS for Trail Offer issues"
+        },
+        "browsingHistory": [
+          {
+            "item": "MEGA Bomb Safety - Photochromic Fire Red Orange Mirror",
+            "link": "https://rr2kak81hzn8r5ep-7044543.shopifypreview.com/products/mega-bomb-safety-photochromic-fire-red-orange-mirror",
+            "icon": "eye"
+          },
+          {
+            "item": "MEGA Safety - Polarized Red Mirror Crystal",
+            "link": "https://rr2kak81hzn8r5ep-7044543.shopifypreview.com/products/copy-of-mega-polarized-red-mirror-crystal",
+            "icon": "eye"
+          },
+          {
+            "item": "MEGA Bomb Safety - Photochromic Fire Red Orange Mirror",
+            "link": "https://rr2kak81hzn8r5ep-7044543.shopifypreview.com/products/mega-bomb-safety-photochromic-fire-red-orange-mirror",
+            "icon": "eye"
+          },
+          {
+            "item": "BOOGIE Safety - Photochromic Fire Red Orange Mirror",
+            "link": "https://rr2kak81hzn8r5ep-7044543.shopifypreview.com/products/boogie-safety-photochromic-fire-red-orange",
+            "icon": "eye"
+          },
+          {
+            "item": "THERMO Bomb - Ice Blue Mirror Crystal",
+            "link": "https://rr2kak81hzn8r5ep-7044543.shopifypreview.com/products/thermo-bomb-ice-blue-mirror-crystal",
+            "icon": "eye"
+          }
         ],
-        "dos_and_donts": [
-          "For information on products consult this sheet: https://drive.google.com/drive/folders/1cvGL6XUHWFFel8YExN4qpriO2Tt7whOB"
-        ],
-        "promo_and_exclusions": [
-          "Trial Offer",
-          "➜ Link: https://grandecosmetics.com/pages/grandelash-md-intro-offer",
-          "➜ This is a trial offer we offer to certain customers. They get a free mini grandelash-md, just have to pay shipping",
-          "➜This offer sometimes doesn't work when there's an automatic coupon running",
-          "This code has expired, do not share it:",
-          "➜ 15offbc23"
-        ]
+        "orders": []
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "GRANDE: Post Season Sale: Up to 60% Off + $7 Deals!\nShop Now!\ngrandecosmetics.attn.tv/aR8mJVfPgYFI \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GRANDE: Wishing you a fabulous holiday season! Don't miss out on our exclusive GIFT and special offers. Treat yourself and enjoy the season of GIVING!\ngrandecosmetics.attn.tv/admNNjhs37qd ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GRANDE: Post Season Sale: Up to 60% off! + $7 Deals! \nShop Now!\ngrandecosmetics.attn.tv/aO4R2zwN2Qi2 \n\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GRANDE: $7 Deals + up to 60% OFF!\nShop Now!\ngrandecosmetics.attn.tv/am3HR0KrhK9r \n\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GRANDE: Happy New Year's Eve! up to 60% off our end of season sale!\n\ngrandecosmetics.attn.tv/aOwNbfQG_pW_ ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GRANDE: Happy New Year! Build your new beauty routine now with America's #1 Lash Serum. \nShop Now!\ngrandecosmetics.attn.tv/aRyW2eCkiJ5G ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GRANDE: Final Hours to shop our post season sale: up to 60% OFF +$7 Deals!\nShop Now!\ngrandecosmetics.attn.tv/ax59yH7o1UTP \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GRANDE: Final Hours to save 20% OFF site-wide!\nShop Now!\ngrandecosmetics.attn.tv/aQUrbhR03oT8 \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GRANDE: Confidence at your core! Plus 20% off sitewide!\nShop Now:\ngrandecosmetics.attn.tv/aqWLIDNg9Svp ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GRANDE: New Year New Brows! 40% Off our Brow Serum Collection. \nShop Now!\ngrandecosmetics.attn.tv/a24cZtfSH8E_ \n\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GRANDE: 40% OFF our Brow Collection.\nShop Now!\ngrandecosmetics.attn.tv/a1i91H2O1O__ \n",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Is my subscription cancelled?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be8e6-cd1f-4d4d-f000-0000ca075c2c",
-          "message_text": "GRANDE: Just to confirm, are you referring to the GrandeLASH-MD 4 mL (6 Month Supply) subscription?\n\nIf so, you can check your subscription status by creating or logging into your Grande account here: https://grandecosmetics.attn.tv/aFkNpdH0qgMX Let me know how it goes!",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "232": {
+      "id": "019bb440-8482-486a-f000-0000f3c34813",
+      "companyName": "Toynk",
+      "companyWebsite": "https://toynk.com/",
       "agentName": "Jordan",
-      "id": "019bd7e6-6883-4085-f000-0000f48daa6d",
+      "agentInitial": "T",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {},
+      "SystemMessage1": "Toynk: Welcome to Toynk! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage2": "Toynk: Hey this is Jordan, how can I help you?",
+      "customerMessage1": "Yes, I received an item that I purchased from your store and it came completely damaged. I have proof of me opening the box and you can see that damage damaged.",
+      "AgentMessage1": "Toynk: I'm sorry to hear that. Let me check on this with my team. Can you please send me a photo of the items that you received, along with your order number and email address?",
+      "customerMessage2": "\"",
+      "customerMessage3": "Kimberlylove1889¡gmail.com",
+      "customerMessage4": "Where would I find the order number at?",
+      "customerMessage5": "That's the wrong email address. I'm getting the email address right now.",
+      "AgentMessage2": "Toynk: I completely understand. Did you place the order directly through our website? If so, you can find the order number in the confirmation we sent to your email. Please also check your spam or promo folders as sometimes emails end up there.",
+      "customerMessage6": "TNK277481 that's the order number",
+      "customerMessage7": "M.a.moreno1990¡gmail.com",
+      "SystemMessage3": "\"",
+      "AgentMessage3": "Toynk: Thanks for the info! I will pass this along to my team and get back to you as soon as possible, hang tight!",
+      "customerMessage8": "Okay",
+      "AgentMessage4": "Toynk: While I wait to hear back from my team, is there anything else I can assist you with in the meantime?",
+      "customerMessage9": "No I'm just really upset about how my doll came",
+      "AgentMessage5": "Toynk: I completely understand your concern, and I'm sorry for any inconvenience. Rest assured that our team is doing everything to respond to each inquiry in a timely manner. They should follow up with your concern in no time. Thank you for your patience and understanding.",
+      "customerMessage10": "Okay thank u",
+      "SystemMessage4": "\"",
+      "AgentMessage6": "Toynk: Thanks for your patience! I just heard from the team, and we understand how important this is. We are sorry to hear the item arrived damaged. If you would like to return your item for a refund please visit our website and scroll down to the bottom of the page and select \"Return Policy\". From there you will find information about our returns process, and you can initiate your return request for a prepaid return label.\n\nhttps://toynk.attn.tv/a5S4PNpR-ZTn\n\nIf you would like to exchange the item, please email help@toynk.com\n\nIf you have any further questions or need assistance, please don't hesitate to contact me. We're here to help!",
+      "customerMessage11": "Do I get my money first or I have to send it then you guys send me the money",
+      "AgentMessage7": "Toynk: You'll have to send the item back for us to process it and issue your refund. Hope this helps!",
+      "customerMessage12": "I'm really not happy about this at all I spent a lot of money for something that came messed up",
+      "AgentMessage8": "Toynk: Sorry to hear that! Feedback from our customers is really valuable and helps us constantly improve. I'll definitely pass this along to the team to consider in the future, and thank you for the feedback. If you have any questions, feel free to text me.",
+      "customerMessage13": "I want my money back",
+      "customerMessage14": "The company is definitely not getting a good review for me and I will definitely not be buying anything else and I will not recommend anybody else buying anything from you guys",
+      "AgentMessage9": "Toynk: I'm really sorry about this, and surely, this isn't the experience I want you to have. You may choose to receive a refund to your original form of payment or opt for store credit. Customers who choose store credit will receive an additional $5 bonus added to their refund amount. You can check out our detailed return policy here: https://toynk.attn.tv/a_tC6-j_fnWH Let me know if there's anything else I can help with!",
+      "customerMessage15": "Cancel this get half of my money back or something and keep the product. I mean let's try to wear something out here. I do not want to return the product. I waited so long for this product.",
+      "SystemMessage5": "\"",
+      "AgentMessage10": "Toynk: I apologize for the inconvenience. I'm checking on this with our team and will be in touch as soon as I receive an update.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://samedelman.com",
+          "value": "https://toynk.com/",
           "date": ""
         },
-        "browsingHistory": [
-          {
-            "link": "https://www.samedelman.com/product/womens-cora-kitten-heel-sandal-3033523/black-leather-ec0209878?icid=SamEdelmanRecommendationsAddToCart_Sam%20Edelman_3033523_99900_EC0209878",
-            "item": "cora kitten heel sandal",
-            "timeAgo": "2026-01-19"
-          },
-          {
-            "link": "https://www.samedelman.com/product/womens-riana-strappy-heel-sandal-3031834/black-patent-leather-ec0207878?icid=SamEdelmanRecommendationsEmptyCart_Sam%20Edelman_3031834_99900_EC0207878",
-            "item": "riana strappy heel sandal",
-            "timeAgo": "2026-01-19"
-          },
-          {
-            "link": "https://www.samedelman.com/product/womens-riana-strappy-heel-sandal-3031834/french-merlot-patent-leather-ec0207876",
-            "item": "riana strappy heel sandal",
-            "timeAgo": "2026-01-19"
-          },
-          {
-            "link": "https://www.samedelman.com/product/womens-iman-strappy-heel-sandal-3031827/soft-gold-fabric-ec0207869?icid=SamEdelmanRecommendationsPDPTop_Sam%20Edelman_3031827_99900_EC0207869",
-            "item": "iman strappy heel sandal",
-            "timeAgo": "2026-01-19"
-          },
-          {
-            "link": "https://www.samedelman.com/product/womens-rhoda-strappy-sandal-3031954/light-olive-fabric-ec0208476",
-            "item": "rhoda strappy sandal",
-            "timeAgo": "2026-01-19"
-          }
-        ]
+        "browsingHistory": [],
+        "orders": []
       },
-      "companyWebsite": "https://samedelman.com",
-      "companyName": "Sam Edelman",
-      "notes": {
-        "send_to_cs": [
-          "If the cx sends us their credit card information (written or screenshot) and it's an issue we can't resolve - send the customer to CS",
-          "➜ Do NOT ESC any conversation that contains this type of information in the thread"
-        ],
-        "escalate": [
-          "When you ESC use ESC shortcut fisrt",
-          "ESC if the charge on cx account is pending"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/1HB",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Welcome to the family! Click this link to copy your 10% off coupon code: samedelman.attn.tv/aUDa1XY4EdQc \n\nReply if you need help!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nIn the meantime, check out what's new > https://samedelman.attn.tv/aJzPsGDVveht .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Complete your purchase of the stunning Riana Strappy Heel Sandal for CHIC evenings.\n\nUse code SAMUSBATRUPRDJCW to get 10% off your order: https://samedelman.attn.tv/aE_HgUvNyP1E .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Step out in the stunning Iman Strappy Heel Sandal—perfect for unforgettable nights and a bold CONFIDENT look. \n\nEnjoy FREE SHIPPING on orders over $99 within the continental U.S. \n\nReady for your next night out: https://samedelman.attn.tv/akOM1RiY-aX4 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Sam Edelman: Step into stunning style with the Riana Strappy Heel Sandal—perfect for your next event. \n\n51 people recently purchased this elegant pair, complete your order before it disappears! \n\nDON'T miss out: https://samedelman.attn.tv/aATdg2CYXCEZ .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I need it in a 10.5 you guys sold out",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Restock (website & social)\"; last updated: 2025-10-09 21:41:33.472",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd7e6-6883-4085-f000-0000f48daa6d",
-          "message_text": "Sam Edelman: I'm sorry, I currently don't have the exact date of a possible restock, but I recommend checking our website and social media frequently. In the meantime, what do you think about this instead? https://samedelman.attn.tv/avzOMlohBMvo",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "233": {
-      "agentName": "Sam",
-      "id": "019bedb5-cc3e-424b-f000-0000f122e172",
+      "id": "019be371-eed7-46a3-f000-0000a7b48fc9",
+      "companyName": "LG",
+      "companyWebsite": "https://lg.com/us",
+      "agentName": "Jordan",
+      "agentInitial": "L",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS using the \"Escalation template\""
+        ],
+        "templates": [
+          "For 10% off welcome code issues use temp 'Follow up 1', then 'Follow up 2' after confirming the item is excluded from promos",
+          "For fridge recommendations use FRR shortcut",
+          "For service-related issues/scheduled repair service appointments use SRI shortcut",
+          "For cxs looking for replacement parts/accessories from an affiliate Parts Distributor use RPA shortcut",
+          "If a cx has an inquiry for finding the serial number/model number of an item:"
+        ],
+        "dos_and_donts": [
+          "If it's a new conversation and we didn't introduce ourselves in the automated message, start your message with: \"This is Jordan at LG.\""
+        ]
+      },
+      "SystemMessage1": "LG Electronics USA: Reply Y to subscribe to LG recurring automated personalized marketing alerts (e.g. cart reminders, product tips, special offers) from LG Electronics USA.",
+      "SystemMessage2": "LG Electronics USA: Reply Y to subscribe to LG recurring automated personalized marketing alerts (e.g. cart reminders, product tips, special offers) from LG Electronics USA.",
+      "SystemMessage3": "LG Electronics USA: Welcome to LG Electronics USA! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage4": "LG Electronics USA: Thanks for joining our SMS program. We're so glad you're here!\n\nKeep an eye out for exclusive offers and deals. For now, check out current promotions: lg.attn.tv/aZsIleAkJTRB .",
+      "SystemMessage5": "LG Electronics USA: Texts may be retained for customer support & other purposes. For more info, see Terms (lg.com/us/legal) and Privacy (lg.com/us/privacy)",
+      "SystemMessage6": "LG Electronics USA: Hi, I'm Jordan - your go-to LG specialist. Feel free to text me any time, and save our contact so you don't miss any updates!",
+      "customerMessage1": "I do need help linking my LG account to my extended warranty on both my LG washer and dryer",
+      "customerMessage2": "Our dryer is starting to make funny noise and I wanna make sure that those are synced before I make the claim",
+      "SystemMessage7": "Template used: \"Escalation template (esc temp)\"; last updated: 2025-04-01 19:42:53.703",
+      "SystemMessage8": "Template used: \"Warranty policy\"; last updated: 2022-07-05 17:51:37.152",
+      "AgentMessage1": "LG Electronics USA: Thank you for sharing this with me, and I'm so sorry to hear that! For the best answer, you'll want to reach out to our Support team directly via email here: https://lg.attn.tv/aJGVp20JBijY or phone at 800-243-0000 where they are available 7 days/week from 8am-9pm EST. You can also chat with the team here: https://lg.attn.tv/a_TWAs_inDOF",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://dreamcloudsleep.com",
+          "value": "https://lg.com/us",
+          "date": ""
+        },
+        "browsingHistory": [],
+        "orders": []
+      },
+      "orders": []
+    },
+    "234": {
+      "id": "019bc2b2-1630-44a4-f000-00007b7d3c70",
+      "companyName": "Onnit",
+      "companyWebsite": "https://onnit.com",
+      "agentName": "Jordan",
+      "agentInitial": "O",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS for post purchase inquiries, use PPI shortcut",
+          "Send to CS for account & order declined issues",
+          "Send to CS if cx wants to provide feedback"
+        ],
+        "dos_and_donts": [
+          "If cx asks about mixing the supplement with medication, direct them to their doctor or other medical professional"
+        ],
+        "promo_and_exclusions": [
+          "The code EARLYBIRD5 is no longer active, let cx know this & apologize",
+          "If cx reaches out wanting a code/discount use \"SBS\" shortcut",
+          "After sending the \"SBS\" shortcut, if a cx replies that they're interested in a subscription:"
+        ]
+      },
+      "SystemMessage1": "ONNIT: Don't lose your 2025 FSA dollars! Spend them on any of our supplements* before 12/31: onnit.attn.tv/a2HQVLLtZR7m .\n\n*Truemed is for qualified customers. Tax savings vary. Learn more at onnit.attn.tv/aB8YS0V5XdQb .",
+      "SystemMessage2": "ONNIT: Your order #10002124952 is about to head out! More info: onnit.attn.tv/afNSAJbHPmnR\n\nText back with any questions!",
+      "SystemMessage3": "ONNIT: The shipment of your order #10002124952 has been confirmed by UPS. More info: onnit.attn.tv/a-zdym2qIith\n\nText back with any questions!",
+      "SystemMessage4": "ONNIT: Hey there! We saw you checking out our latest products. \n\nGet back to it: onnit.attn.tv/a3QYKNThB4Pf \n\nNeed help deciding? Reply SUPPORT to talk to Customer Service.",
+      "SystemMessage5": "ONNIT: Your order is in transit with UPS! More info: onnit.attn.tv/aSiKGHQrx1VI",
+      "SystemMessage6": "ONNIT: You have successfully skipped your next subscription order. Your next shipment date will be on: 2026-01-21\n\nText back if you have any questions!",
+      "SystemMessage7": "ONNIT: Your order #10002124952 is out for delivery! The estimated package delivery is:\n12/29/2025\n\nText back if you have any questions!",
+      "SystemMessage8": "ONNIT: Level up for 2026! 20% off sitewide starts NOW + 30% off all new subscription orders. No code needed. Shop now: onnit.attn.tv/aE1nPPZlJmvF .",
+      "SystemMessage9": "ONNIT: Ready to finish what you started? 20% OFF everything + 30% OFF new subs. Shop now: onnit.attn.tv/aF7tVs4fFtt7 .",
+      "SystemMessage10": "ONNIT: Heads up! Your FSA/HSA expires Dec 31 ⏰ Stack it with 20% off sitewide or 30% off new subscriptions-plus up to 30% back with Truemed. Shop smart: onnit.attn.tv/adlns2lAg7gi .",
+      "SystemMessage11": "ONNIT: LAST DAY of 2025. Make the commitment & level up now! Get 30% off new subscriptions: onnit.attn.tv/aoTpMedRMtz4 .",
+      "SystemMessage12": "ONNIT: You have successfully skipped your next subscription order. Your next shipment date will be on: 2026-02-20\n\nText back if you have any questions!",
+      "SystemMessage13": "ONNIT: Your upgrade awaits! 💪 Level Up Sale = epic deals on the supps you need. Shop here: onnit.attn.tv/acRBjwRt3WS6 .",
+      "SystemMessage14": "ONNIT: Consistency = results. Subscribe & save: 30% OFF your first order + 15% OFF recurring. No hassle, just progress. Redeem here: onnit.attn.tv/ajBTp5SA6q0O .",
+      "SystemMessage15": "ONNIT: Unlock memory, focus, and flow with Alpha BRAIN. Enjoy 20% off sitewide, plus 30% off new subscriptions. Tap to upgrade: onnit.attn.tv/aL8Al_Vb_xy6 .",
+      "SystemMessage16": "ONNIT: Your order #10002141085 is about to head out! More info: onnit.attn.tv/aM3_rsCS2XsA\n\nText back with any questions!",
+      "customerMessage1": "No I should not have an order I have canceled",
+      "customerMessage2": "What is going on",
+      "AgentMessage1": "ONNIT: Sorry for the slow reply! Once an order is placed, we're unable to make any changes or cancel it. If you have questions about your order or need support once it arrives, please reach out to help@onnit.com, and our team will be happy to assist.",
+      "customerMessage3": "I didn't place the order so I don't understand",
+      "SystemMessage17": "Template used: \"Did I order already? - All brands\"; last updated: 2023-10-10 16:42:51.099",
+      "AgentMessage2": "ONNIT: I'm sorry for the confusion! I just double-checked, and I can't see an order with the number #10002141085 on my end. To check if this order has been processed, please check if you received a confirmation email or if there's a charge on your account. Sometimes the email might arrive in your spam or promo folder, so be sure to take a look there too. Let me know how it goes.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://onnit.com",
+          "date": ""
+        },
+        "browsingHistory": [],
+        "orders": []
+      },
+      "orders": []
+    },
+    "235": {
+      "id": "019bc825-1d72-4340-f000-0000f45b0acc",
+      "companyName": "Kerotin",
+      "companyWebsite": "https://kerotin.com/",
+      "agentName": "",
+      "agentInitial": "K",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "templates": [
+          "Don't use the \"I'm sorry for your loss\" temp, close the convo instead!"
+        ],
+        "promo_and_exclusions": [
+          "If there are holiday details, please check the brand's website for the most up to date info"
+        ]
+      },
+      "SystemMessage1": "Kerotin: Welcome to Kerotin! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage2": "Kerotin: Welcome! I'm Gabriela, your dedicated concierge. Thanks for subscribing! Your 10% off coupon is KERO10. \n\nText me anytime with questions about Kerotin! Shop Now: https://kerotin.attn.tv/a0EjhToC_QiN  Stop to stop",
+      "SystemMessage3": "Kerotin: Tell us what your hair concern is and we'll recommend the right products! Reply 1, 2, 3...\n\n1 for Hair Loss & Thinning\n2 for Damaged Hair\n3 for Dry and Oily Scalp\n4 for Volume & Fullness\n5 for Curl Care\n6 for Silver/Blonde Care\n7 for Frizz Control Stop to stop",
+      "customerMessage1": "My hair about 6 or 7 months ago my hair turned skinny strands and the sides of my head above my ears I had a lot of breakage which sorta stopped but now my hair is growing extremely slow and growing thin strands. My hair is straight I don't have any processed products at the salon anymore I used to get highlights. \nWhat weird that my hair wasn't \nWhite ish grey tilk this happened.\nI would like to try a serum that promotes healing the \nRoots and growing thicker strands of hair again. \nDoes the shampoo and conditioner work to help that in a slight degree. \nI may be 76 on Jan 24 yet all my new doctors that I have now cannot believe my age they look at my medical chart because I look like late 50's early 60'\nLong gevity is in my families genes \nCan we talk live I am a little confused on what to purchase",
+      "AgentMessage1": "Kerotin: Thank you for reaching out. I'm really sorry about what happened. It is not the experience that we want to have for our customers. You can call us at 877-831-3123 Monday-Friday 10am-6pm EST, or I can help via text, it might be faster.",
+      "customerMessage2": "Ok I will text",
+      "customerMessage3": "So I presume you received my entire text? \nI know I need that to promote root and hair growth so my strands become a little fuller again.Does the Shampoo and conditioner help in anyway addressing the problem? \nWhat do you suggest? \nAs I said I am going to be? 76 yet my new doctors tell me I look 15 to 20 years younger \nNo I never had any type of surgery or Botox. Long gevity runs in my family. Oh and I don't want any fried foods I was brought up that way",
+      "customerMessage4": "Oh I apologize I do see you received my first entire text",
+      "customerMessage5": "1, 4,",
+      "customerMessage6": "Maybe number 6 too",
+      "AgentMessage2": "Kerotin: Yes, I have! Thank you so much for sharing all of that. I understand your concern about the changes you've noticed and how unsettling it can feel to notice changes in your hair.\n\nBased on what you described, I do recommend our Keratin Freshening Duo - https://kerotin.attn.tv/ahV2PJxHW6kp It is formulated to promote hair growth and help prevent hair loss. This line includes strengthening ingredients like Keratin and Biotin, along with growth supporting oils such as Rosemary Oil, which help nourish hair follicles, support the roots, and encourage stronger, fuller looking strands over time. The Dual Treatment line can help create a healthier scalp environment and support overall hair strength and growth.\n\nI hope this helps, and please let me know if there's anything else I can assist with!",
+      "customerMessage7": "Can I order through you? What would you recommend?",
+      "AgentMessage3": "Kerotin: I'm really sorry for the trouble! I'm afraid I can't place an order on your behalf. Please place your order on the website. If you're having trouble, please let me know so I can point you in the right direction. What do you think about the Keratin Freshening Duo that I have sent? https://kerotin.attn.tv/aznXyrZE72m-. That is currently on sale for $ 51.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://kerotin.com/",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.dreamcloudsleep.com/mattress?utm_campaign=B-(D)_TH-(BAU)_T-(flow)_ST-()_N-(SiteVisit)_S-()_CT-(nonpurchasers)_SG-()_Nu-(1)_O-()_CR-()_TE-(sitevis080125)_V-(control)_D-(080125)&utm_source=attentive&utm_medium=sms&externalId=oZ50q",
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "timeAgo": "2026-01-24"
-          },
-          {
-            "link": "https://www.dreamcloudsleep.com/mattresses/premier-hybrid-mattress",
-            "item": "DreamCloud Premier Hybrid Mattress",
-            "timeAgo": "2026-01-24"
-          },
-          {
-            "link": "https://www.dreamcloudsleep.com/mattresses/premier-hybrid-mattress/queen",
-            "item": "DreamCloud Premier Hybrid Mattress",
-            "timeAgo": "2026-01-24"
-          },
-          {
-            "link": "https://www.dreamcloudsleep.com/mattress?utm_campaign=%5BDC%5D_%5BP%5D_cmp%5BJanuaryWeek4%5D_SMS%5B2%5D_off%5BUpto60off%5D_ct%5BNonpurchasers%5D_t%5Bbenvsemo012326%5D_v%5B1%5D_012326&utm_medium=sms&utm_source=Attentive&externalId=oZ50q",
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "timeAgo": "2026-01-24"
-          },
-          {
-            "link": "https://www.dreamcloudsleep.com/mattress/queen?utm_source=bing&utm_medium=cpc&utm_campaign=p_590145566_1152289838465662_72018261501868&utm_content=cpc_generic&rh_s=bing&rh_m=cpc&rh_c=p_590145566_1152289838465662_72018261501868&rh_n=cpc_generic&msclkid=152db384f11c1614995adad34a9113d4&utm_term=4575617659817486",
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "timeAgo": "2026-01-07"
+            "item": "Extensive Thickening Treatment - 1 Month",
+            "link": "https://kerotin.com/products/extensive-thickening-treatment?variant=39336830959696&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gad_campaignid=21176877334&gbraid=0AAAAABVR9GLnejx5CggiD6nEo678YVM3S&gclid=EAIaIQobChMIisHvw8WQkgMV9TUIBR3gGzbaEAQYEiABEgIS_PD_BwE",
+            "icon": "eye"
           }
-        ]
-      },
-      "companyWebsite": "https://dreamcloudsleep.com",
-      "companyName": "DreamCloud",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS, use ESC shortcut",
-          "Use escalation template if customer mentions any of the following:",
-          "➜ Exchanges or returns",
-          "➜ Premuim In - Home Setup Questions",
-          "➜ Discount code errors",
-          "➜ Recalls",
-          "➜ Better Business Bureau (BBB)",
-          "➜ Fiberglass",
-          "➜ Lawyers/Lawsuits",
-          "➜ Class Action",
-          "➜ Post Purchase Issues"
         ],
-        "tone": [
-          "Let the customer have the last word"
-        ]
+        "orders": []
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [
-        "organic"
-      ],
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Discount code errors",
-        "Shipping questions",
-        "Recall",
-        "BBB",
-        "fiberglass",
-        "lawyer",
-        "class action"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from DreamCloud.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (833) 237-3269.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: You're in (& your deal is here)!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Your best sleep, for less! Save up to 60% on mattresses + free shipping & returns.\n\nClaim your savings: dreamcloud.attn.tv/aY5jtTiQ8-kR .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: You are already subscribed. Click here to shop now: https://dreamcloud.attn.tv/cl/0Ee",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Hello, this is Sam! We noticed you left the DreamCloud Luxe Hybrid Mattress in your cart! You can save up to 60%. Complete your purchase now to lock in these savings: dreamcloud.attn.tv/aObuoh8s6TND \n\nIf you have questions before you check out, text me back!\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Mattress markdowns are here!\n\nGet a Queen size for only $699 + Free shipping & 365-night trials.\n\ndreamcloud.attn.tv/a3nud1MemFsr \n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Invest in your best rest! We offer payment through Affirm + save up to 60% on ALL mattresses.\n\nShop Now: dreamcloud.attn.tv/aU6buKQEQjrG\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Hurry, save up to 66% on our Adjustable Bundle including adjustable base, mattress, pillows, sheets and more.\n\ndreamcloud.attn.tv/aN5jOGey2Tev \n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Unlock your best rest! Take $50 off $200. Code: sac5025-qxej2t. Offer expires in 2 days! \n\nApply your code:\ndreamcloud.attn.tv/asN2K0VprRc7\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Save up to 60% on premium mattresses-built for pressure relief, cooling, and long-lasting support. Shop now!\n\ndreamcloud.attn.tv/aL5I6AxOFdvG\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: 2026 goal: better sleep. Your HSA/FSA may cover up to 90% of a DreamCloud mattress. Check eligibility & rest easy.\n\ndreamcloud.attn.tv/aUIO4Scx7BfG\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: You're closer than ever to great sleep. Save up to 60% on DreamCloud mattresses made for real rest!\n\ndreamcloud.attn.tv/aeOwfFUn_GbG\n. ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Still thinking it over? Totally fair. But don't miss your $50 off $200. Use code sac5025-qxej2t-offer expires tonight!\ndreamcloud.attn.tv/aCrKOxsTRbgg\n.\n ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Save up to 60% on mattresses + bedding bundle. Cooling comfort, plush support, better nights ahead.\n\ndreamcloud.attn.tv/aO0DIThZqzvp\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: You survived the week. Now get real rest. Save up to 60% on mattresses starting at $299 plus free shipping.\n\ndreamcloud.attn.tv/aV7yuKeW6PHI\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: This weekend is for sleeping in. Save up to 66% on Adjustable Bundles made for lounging, resting, and recharging.\n\ndreamcloud.attn.tv/ardgLWYyxWut\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Save up to 60% on your Queen mattress designed to help you slow down, relax, and sleep better.\n\ndreamcloud.attn.tv/aHtT0Rj7rs07 \n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: A new week deserves better rest. Save up to 66% on Adjustable Bundles built to lift, support, and recharge you.\n\ndreamcloud.attn.tv/a3_n9jTWpS_Q\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Save up to 60% on Queen mattresses designed for plush comfort that helps you fully relax and unwind.\n\ndreamcloud.attn.tv/a-PrCcK2AlFk\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Save up to 60% on mattresses built with cooling comfort, pressure relief, and all-night support.\n\nShop Now!\ndreamcloud.attn.tv/anbX041czwvm\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Better airflow, plush support, and bedroom style all in one. Save up to 60% on mattresses, or try the Mornington bundle with mattress + frame + headboard.\n\nMattresses: \ndreamcloud.attn.tv/afQio52a4DvQ \n\nMornington Bundle:\ndreamcloud.attn.tv/aChaNCoUt0Yt \n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Looking for more than basic comfort? Save up to 60% on the Queen Premier Hybrid with extra cooling layers.\n\ndreamcloud.attn.tv/azK0VGOROw__\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: If flat sleep is not cutting it, save up to 66% on Adjustable Bundles made to lift, support, and relax you.\n\ndreamcloud.attn.tv/a5bUHkl74bAi\n. ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Slip into fresh sheets and plush pillows included with a Queen mattress for calmer, cozier sleep.\n\ndreamcloud.attn.tv/ajVMUfKIg09b\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: This weekend calls for better rest. Save up to 60% on mattresses made for calmer nights and easier mornings.\n\ndreamcloud.attn.tv/aL4bvRprMeOC\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Hello, this is Sam. Thanks for checking out DreamCloud. You can save up to 60% on mattresses, so you're shopping at a great time. dreamcloud.attn.tv/aI9Zd6rnvDpl\n\nAny questions I can answer for you?\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DreamCloud: Hello, this is Sam! We noticed you left the DreamCloud Premier Hybrid Mattress in your cart! You can save up to 60%. Complete your purchase now to lock in these savings: dreamcloud.attn.tv/aHqQeLxs64Ts \n\nIf you have questions before you check out, text me back!\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Can we schedule delivery for this Friday, Jan 30?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Shipping time\"; last updated: 2024-02-08 12:24:42.215",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Can I choose/schedule a delivery date? \"; last updated: 2025-03-07 15:15:35.050",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bedb5-cc3e-424b-f000-0000f122e172",
-          "message_text": "DreamCloud: Thank you for your interest! Different mattresses and sizes have different shipping times. Delivery typically takes 2 - 5 business days once your mattress has shipped, and could arrive via FedEx Ground delivery. While we don't have an option to schedule a delivery date, we can hold your order until a specific ship date. To place your order, please call us at (833) 237-3269 or email support@dreamcloudsleep.com, and our team will help you place an order with a scheduled ship date. \n\nIn the meantime, you can check our bundles here: https://dreamcloud.attn.tv/aXCYnEMyXhSk",
-          "message_media": []
-        }
-      ]
-    },
-    "234": {
-      "agentName": "Sarah",
-      "id": "019bf68f-45f0-4dd5-f000-0000f5311f6e",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://covercraft.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://covercraft.com",
-      "companyName": "Covercraft",
-      "notes": {
-        "templates": [
-          "For custom full vehicle covers use FVC shortcut",
-          "For cx that can't see the cover pattern/images of their vehicle use CPI shortcut",
-          "If we don't have a pattern/color the cx is looking for use PRR shortcut"
-        ],
-        "dos_and_donts": [
-          "Do not tell customers that the base price is the final price! The cost changes by the fitment and depends on the vehicle",
-          "Rebates are discounts for this brand!",
-          "Custom dim pattern sheets are only available for Vehicle Covers (Car, Truck, Van,RV)",
-          "➜https://www.covercraft.com/us/en/covercrafter"
-        ],
-        "drive_to_purchase": [
-          "Before sharing any product links, confirm the vehicle’s Year, Make, and Model"
-        ]
-      },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Discount code errors"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Welcome to Covercraft! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Welcome! Order your custom cover in the next 72hrs and save an Extra 10% off active sale price with code: EX715P\n\nSAVE NOW: https://covercraft.attn.tv/a6U_Iu_FVVHs ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Thanks for your order! We specialize in Protecting The Things That Move You since 1965!\n\nQuick links while we make your custom protection:\nOrder Status: https://covercraft.attn.tv/awQaMDsuBVZY \nContact Us: https://covercraft.attn.tv/aHFAJO0Wntmv \n\n#KeepItCustom",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Hey there! I'm Sarah and I'm here to be a personal shopping assistant for you!\n\nDo you have any questions or need a recommendation? Let me know how I can help. \n\nhttps://covercraft.attn.tv/aUsyqeyoJdst .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Tap to save us to your contacts and never miss out on exclusive offers and updates in the future! Call 1-800-274-7006 M-F 8AM-6PM EST for questions.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Hi there, it's Sarah. I'm a personal concierge here to answer your questions or share recommendations. Is there anything I can help you with today?\n\nhttps://covercraft.attn.tv/aOkj_SgLicJg .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Just waiting for it to show up",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bf68f-45f0-4dd5-f000-0000f5311f6e",
-          "message_text": "Covercraft: I understand! Is there anything else that I can help with while I have you here? ",
-          "message_media": []
-        }
-      ]
-    },
-    "235": {
-      "agentName": "Grace",
-      "id": "019be92c-b8cb-49e7-f000-0000efef03ae",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://stonewallkitchen.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://stonewallkitchen.com",
-      "companyName": "Stonewall Kitchen",
-      "notes": {
-        "dos_and_donts": [
-          "Don't send links from the UI directly!",
-          "➜ Open their website https://www.stonewallkitchen.com/ and send links from there!"
-        ],
-        "promo_and_exclusions": [
-          "Active codes and promotions are online only and can't be redeemed at retail locations."
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Stonewall Kitchen: Save up to 50% on 150+ markdowns! Hurry, shop our online Barn Sale & get your favorites before they're gone: swk.attn.tv/aCWC-e9XENyE ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Stonewall Kitchen: You are already subscribed. Click here to shop now: stonewallkitchen.com.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Stonewall Kitchen: Don't wait! Get up to 50% OFF 150+ markdowns in our online Barn Sale while supplies last: swk.attn.tv/anehe7CgaLE4 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Stonewall Kitchen: Going, going ... almost gone! Get up to 50% OFF 150+ markdowns in our online Barn Sale: swk.attn.tv/a3q6C1kBPO2e ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Stonewall Kitchen: Last call! Get up to 50% OFF 150+ markdowns in our online Barn Sale (once they're gone, they're gone!): swk.attn.tv/aI1kE0PylJqk ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Stonewall Kitchen: Don't miss out on 15% OFF! Try these customer favorites & decide for yourself: swk.attn.tv/aSrrRjFsjYCv",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Stonewall Kitchen: Start your year off right with our delicious jams, crafted with less sugar and packed with fruity flavor! Perfect for toast, yogurt, or oatmeal. Treat yourself today! swk.attn.tv/aHk_cJx1T48d ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Stonewall Kitchen: New year, new products! Say hello to our expertly crafted Spicy Fig Jam & Caesar Dressing: swk.attn.tv/aQZaR2fGwRMh",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Stonewall Kitchen: Hey, MVP! You've scored early access to our weekend sale. 1/15-1/18, get up to 35% OFF with code GAMEDAY: swk.attn.tv/aQwSfaIXq6WY",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Stonewall Kitchen: Last call! 1/18 is the final day to stock up for the big game with up to 35% OFF using code GAMEDAY: swk.attn.tv/aHZJGbbJ32wH",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "What happened? I'm out of veggie roaster blend!",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be92c-b8cb-49e7-f000-0000efef03ae",
-          "message_text": "Stonewall Kitchen: Apologies for the inconvenience, and I'm sorry for the delay! I'm still waiting on a response from my team but rest assured, I'll text you as soon as I have more info! Your understanding is greatly appreciated.",
-          "message_media": []
-        }
-      ]
+      "orders": []
     }
   }
 }

@@ -3,2841 +3,556 @@
   "chunk": "chunk_0026",
   "scenarios": {
     "126": {
-      "agentName": "Sarah",
-      "id": "019bca23-a43f-4521-f000-0000ec712849",
+      "id": "019bf164-eba3-485a-f000-0000f15ca1cf",
+      "companyName": "Bonobos",
+      "companyWebsite": "https://bonobos.com",
+      "agentName": "Miles",
+      "agentInitial": "B",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "tone": [
+          "Close journey replies asking customers to text in their birthday to receive a gift"
+        ],
+        "dos_and_donts": [
+          "Offer help if the customer replies back to the automated message with number 0"
+        ],
+        "templates": [
+          "For checkout issues use COI shortcut",
+          "If the site doesn't accept the customers payment method use PME shortcut"
+        ],
+        "promo_and_exclusions": [
+          "The welcome code can be applied to discounted items",
+          "For issues with the code GETSTARTED15 use GSE shortcut",
+          "The 20% off welcome offer will automatically be added at checkout for their first order"
+        ]
+      },
+      "SystemMessage1": "Bonobos: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Bonobos.",
+      "SystemMessage2": "Bonobos: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/eEr",
+      "SystemMessage3": "Bonobos: Congratulations! We might be biased, but we think you just signed up for the best text alerts in the game 😎 To put money where our mouth is, here's a coupon code for 20% off your first order - hello20_vrcped ! Welcome to Bonobos! \n\nGet Your 20% Off Now: bonobos.attn.tv/a1ASacd8IEqc \n\nTerms apply.",
+      "SystemMessage4": "Bonobos: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nReady for a style upgrade? Take a look at the newest arrivals and see what you discover: https://bonobos.attn.tv/afHpRPfcU1ta .",
+      "SystemMessage5": "Bonobos: Go get the Gramercy Premium Jean in your cart—made for comfort and easy style.\n\nUse code hello20_vrcped for 20% off your purchase.\n\nShop now: https://bonobos.attn.tv/ac2AESiHhu9g .",
+      "SystemMessage6": "Bonobos: Snag those Travel Jeans—they're made to MOVE and keep you comfy wherever you go!  \n\nEnjoy $50 off these.  \n\nShop now: https://bonobos.attn.tv/a7PAnMP2RR2M . 👖",
+      "SystemMessage7": "Bonobos: Looking for something versatile and easy to wear? The Jeans lineup is all about comfort that keeps up with you.\n\nCheck out your next favorite pair here: https://bonobos.attn.tv/a_vvZ88aBB2E .",
+      "SystemMessage8": "Bonobos: Check out the Gramercy Premium Jean, designed for comfort with sharp style in mind.\n\n249 people recently purchased this classic, complete your order before it disappears!\n\nFind your fit here: https://bonobos.attn.tv/a4fn6X_AQ_4f .",
+      "SystemMessage9": "Bonobos: You're already subscribed. Don't worry, your birthday's in our calendar with a big circle around it.",
+      "SystemMessage10": "Bonobos: Glad you stopped by and checked us out. \n\nShop now for sharp fits and comfort that works anywhere: https://bonobos.attn.tv/a6qBqT2tLag3 .",
+      "SystemMessage11": "Bonobos: Hey hey! If you have any questions, don't hesitate to reach out. We're always ready to help.\n\nVisit bonobos.attn.tv/a_8_9wEoYJ3I for order help, or hit us back here for some product and style tips.",
+      "SystemMessage12": "Bonobos: Hey hey! If you have any questions, don't hesitate to reach out. We're always ready to help.\n\nVisit bonobos.attn.tv/akS1TQ98dTSp for order help, or hit us back here for some product and style tips.",
+      "SystemMessage13": "Bonobos: Have you peeked at our bundles page lately? We've refreshed it with more fan favorites and you can save BIG - over 25%! Don't miss out on these awesome deals!\n\nShop Exclusive Specials: bonobos.attn.tv/arxR7WH7lk1f",
+      "SystemMessage14": "Bonobos: Grab the Travel Jeans — comfy, stretch, wrinkle-resistant, ready for anything. ACT FAST\n\n4.7K people have recently viewed Travel Jeans.\n\nShop now: https://bonobos.attn.tv/aDSE2xfKOe04 .",
+      "SystemMessage15": "Bonobos: Hey, thanks for visiting.\n\nShop now: https://bonobos.attn.tv/aItnHfcZwK2R .",
+      "SystemMessage16": "Bonobos: Grab the Travel Jeans — comfy fit, travel-ready stretch, perfect for long days.\n\n7.6K people have recently viewed Travel Jeans.\n\nShop now: https://bonobos.attn.tv/aYsd8bDwIRBd .",
+      "SystemMessage17": "Bonobos: Hey there! Starting today, you can snag an extra 50% off all sale items. That's up to 70% off original prices! Don't miss out on these deals—your wardrobe will thank you!\n\nShop 50% Off: bonobos.attn.tv/a2Pp14rO5I_2",
+      "SystemMessage18": "Bonobos: Grab the Italian Brushed 5-Pocket Pants — comfy, polished, ready for anything. BUY NOW\n\nThey're $50 off — don't miss out.\n\nShop now: https://bonobos.attn.tv/aAHG2egUIgY6 . 🎉",
+      "SystemMessage19": "Bonobos: Nice pick—those five-pocket pants blend stretch and clean lines for easy everyday wear. 😎\n\nThis look is for you: https://bonobos.attn.tv/aobD0K8RP_Yw . BUY NOW",
+      "SystemMessage20": "Bonobos: Oh hey, the Tour Harrington Golf Jacket you wanted is back in stock! Hurry and see if your size is still available: bonobos.attn.tv/agI-pQYKzDXh\n\nplus get 20% off with your exclusive welcome code hello20_vrcped",
+      "SystemMessage21": "Bonobos: Hey hey! If you have any questions, don't hesitate to reach out. We're always ready to help.\n\nVisit bonobos.attn.tv/a-bVKvzpyRFI for order help, or hit us back here for some product and style tips.",
+      "SystemMessage22": "Bonobos: Thank you for your purchase! We're getting your order ready and will be in touch via email with more details. If you have any questions, don't hesitate to reach out - we're here to help!\n \nForget something you wanted?\nbonobos.attn.tv/aAmbvLNbSmWN \n\nCheck Your Order Status: \nbonobos.attn.tv/a5EfKrD3OYWy",
+      "SystemMessage23": "Bonobos: Oh hey, the The Italian Wool Car Coat you wanted is back in stock! Hurry and see if your size is still available: bonobos.attn.tv/au6ycgjCrSfR\n\nplus get 20% off with your exclusive welcome code hello20_vrcped",
+      "SystemMessage24": "Bonobos: Hey, thanks for visiting!\n\nThis look is for you: https://bonobos.attn.tv/a4DxFcTDP-3o .",
+      "SystemMessage25": "Bonobos: Hey hey! If you have any questions, don't hesitate to reach out. We're always ready to help.\n\nVisit bonobos.attn.tv/aE2Hwi1bFDRs for order help, or hit us back here for some product and style tips.",
+      "customerMessage1": "\"",
+      "AgentMessage1": "Bonobos: Thanks for sending the screenshot! How can I help?",
+      "customerMessage2": "My package was returned to sender because the street address was wrong on my order - despite my best efforts to ensure that 1309 was the correct house (attached). I tried to intercept it at the post office but its already being returned to sender",
+      "customerMessage3": "I’m not happy. I was really looking forward to wearing my new jeans on vacation, but I’m leaving today so grrrrr",
+      "AgentMessage2": "Bonobos: I'm sorry about that. I'll be happy to check on this with my team! Could you please provide me with the order number and the email address you used for the purchase?",
+      "customerMessage4": "Jon Ekroos\n1309 Race St\nCambridge, Md\n21613\n\nOrder number 329780635",
+      "AgentMessage3": "Bonobos: Thanks for the info! Can you also confirm the email address associated with this order?",
+      "customerMessage5": "Jonekroos@gmail.com",
+      "customerMessage6": "I’ve got a second pair of pants that may ship today or tomorrow, so I corrected my profile address on your site last night",
+      "customerMessage7": "…and I’m sure I’ll be ordering plenty more in due time ✌️",
+      "SystemMessage26": "\"",
+      "AgentMessage4": "Bonobos: Thanks for the info and for your support! I will pass this along to my team and get back to you as soon as possible. Hang tight!",
+      "customerMessage8": "👌👍",
+      "customerMessage9": "The shipment number was H30285008347 and the UPS tracking number was 1ZGG8730YW01197572",
+      "AgentMessage5": "Bonobos: Thank you for letting me know. Rest assured, I'll keep you posted once I hear back from my team. If you have any more questions, feel free to shoot me a text.",
+      "customerMessage10": "Liked “Thank you for letting me know. Rest assured, I'll keep you posted once I hear back from my team. If you have any more questions, feel free to shoot me a text.”",
+      "SystemMessage27": "\"",
+      "AgentMessage6": "Bonobos: Thanks for your patience! I've just heard from the team, and we understand the importance of this. We apologize for the inconvenience this has caused. Note that we only have a one-hour window to modify an order after it is placed. However, there are shipments that cannot change the address once it's placed, and the only remaining options are to cancel the order or have it returned to the sender. Please reorder the item; we can then assist by expediting the new shipment if that option is available. We look forward to getting this resolved for you! \n\nIf you have any further questions or need assistance, please don't hesitate to contact me. We're here to help!",
+      "customerMessage11": "Wouldn’t it be easier to just send the pants back to me once they get to you? \n\nAs I previously mentioned, I’ve corrected the street number for my home address in my account profile on the Bonobos site…🤷‍♂️",
+      "SystemMessage28": "\"",
+      "AgentMessage7": "Bonobos: I understand your concern, and thanks for sharing that with me. Let me double-check this with our team. I'll be in touch!",
+      "SystemMessage29": "\"",
+      "AgentMessage8": "Bonobos: Thanks for your patience! I just heard from the team and since you mentioned that you were leaving yesterday and we unfortunately do not offer overnight shipping, we understand that a replacement would not arrive in time to be helpful for your trip.\n\nTo resolve this for you immediately, we have expedited a full refund of $41.87 for this order. You should receive an email notification with the specific refund details. Please note that the funds will typically reflect on your original payment method within 3-5 business days, depending on your bank's processing times. Let me know if you need help with anything else.",
+      "customerMessage12": "I don’t want a refund - and I do t care when they arrive. I know there’s a huge storm coming and I thought I made it clear that it was already too late, so just let it go and send it in the regular mail when it comes back to you??",
+      "SystemMessage30": "\"",
+      "AgentMessage9": "Bonobos: I'm really sorry for the inconvenience! I will pass this along to my team and get back to you as soon as possible. Hang tight!",
+      "customerMessage13": "This is my exact transcript from my original text. At no time did I say it was your fault - this entire thing was because I made an error when setting up my user profile. So I corrected the street number and that should fix it.\n\nI’m not happy. I was really looking forward to wearing my new jeans on vacation, but I’m leaving today so grrrrr",
+      "customerMessage14": "When you read it, imagine being pissed at yourself",
+      "customerMessage15": "And thank you",
+      "AgentMessage10": "Bonobos: I'm really sorry for the frustration this has caused! I have passed this to my team. I'll keep you updated.",
+      "customerMessage16": "It’s all good - I know things happen 😎✌️",
+      "AgentMessage11": "Bonobos: I appreciate your understanding. Since it's the weekend, I may not hear back until Monday, but I'll be sure to follow up with you as soon as I do!",
+      "customerMessage17": "Listen, just take your time. I ordered another pair in chocolate brown and I don’t expect to be back therefore another week or so…😇",
+      "customerMessage18": "\"",
+      "customerMessage19": "\"",
+      "AgentMessage12": "Bonobos: I appreciate your patience, and I'll make sure this is prioritized. I'll reach out to you as soon as I have any info to share. 😊",
+      "customerMessage20": "I finally found a pair of jeans that fit me like a glove, Di you have any idea how may hours of BS trying this on and that on and sending that back and yadda yadda.\n\n….So it’s not like I’m going anywhere 🤦‍♂️\n\nlol",
+      "SystemMessage31": "Template used: \"Return policy\"; last updated: 2022-10-31 21:58:56.287",
+      "AgentMessage13": "Bonobos: Sounds great! As for your question, to confirm, are you inquiring about returning an item? If so, you have 45 days to return an item for a refund to your original payment method and up to 90 days to return an item for a store credit refund. You can exchange unworn, unwashed and unaltered items during the full 90 days. \n\nYou can check out our detailed return policy here: https://bonobos.attn.tv/aR0dRDUMf9uf",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://modgents.com",
+          "value": "https://bonobos.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://modgents.com/products/the-juliet-rose-gold?utm_campaign=message-07-30-20-12-36&utm_source=attentive&utm_medium=sms&externalId=sDs8i",
-            "item": "The Juliet - Rose Gold",
-            "timeAgo": "2026-01-16"
+            "item": "Travel Jeans",
+            "link": "https://bonobos.com/products/extra-stretch-travel-jeans?color=mojave%20desert%20taupe",
+            "icon": "eye"
           },
           {
-            "link": "https://modgents.com/products/the-juliet?group=true&Title=Default+Title",
-            "item": "The Juliet",
-            "timeAgo": "2026-01-07"
+            "item": "Gramercy Premium Jean",
+            "link": "https://bonobos.com/products/gramercy-premium-jean?color=bronxville%20blue%20wash",
+            "icon": "eye"
           },
           {
-            "link": "https://modgents.com/products/the-juliet?group=true&Title=Default+Title",
-            "item": "The Juliet",
-            "timeAgo": "2026-01-07"
+            "item": "Travel Jeans",
+            "link": "https://bonobos.com/products/extra-stretch-travel-jeans?color=seattle%20java%20brown",
+            "icon": "eye"
           },
           {
-            "link": "https://modgents.com/products/the-juliet-rose-gold?group=true&Title=Default+Title",
-            "item": "The Juliet - Rose Gold",
-            "timeAgo": "2026-01-07"
+            "item": "Weekday Warrior Dress Pants - Straight Fit",
+            "link": "https://bonobos.com/products/weekday-warrior-dress-pants-straight-fit?color=friday%20grey%20yarn%20dye",
+            "icon": "eye"
           },
           {
-            "link": "https://modgents.com/products/the-juliet?group=true&Title=Default+Title",
-            "item": "The Juliet",
-            "timeAgo": "2026-01-07"
+            "item": "Travel Jeans",
+            "link": "https://bonobos.com/products/extra-stretch-travel-jeans?color=seattle%20java%20brown",
+            "icon": "eye"
+          }
+        ],
+        "orders": [
+          {
+            "orderNumber": "329780791",
+            "orderDate": "",
+            "link": "",
+            "trackingLink": "",
+            "currency": "USD",
+            "items": [
+              {
+                "name": "Travel Jeans",
+                "price": "79",
+                "currency": "USD",
+                "productLink": "https://bonobos.com/products/extra-stretch-travel-jeans"
+              }
+            ],
+            "total": "79"
+          },
+          {
+            "orderNumber": "329780635",
+            "orderDate": "",
+            "link": "",
+            "trackingLink": "",
+            "currency": "USD",
+            "items": [
+              {
+                "name": "Gramercy Premium Jean",
+                "price": "79",
+                "currency": "USD",
+                "productLink": "https://bonobos.com/products/gramercy-premium-jean"
+              }
+            ],
+            "total": "79"
+          },
+          {
+            "orderNumber": "329742134",
+            "orderDate": "",
+            "link": "",
+            "trackingLink": "",
+            "currency": "USD",
+            "items": [
+              {
+                "name": "Gramercy Premium Jean",
+                "price": "79",
+                "currency": "USD",
+                "productLink": "https://bonobos.com/products/gramercy-premium-jean"
+              },
+              {
+                "name": "Gramercy Premium Jean",
+                "price": "79",
+                "currency": "USD",
+                "productLink": "https://bonobos.com/products/gramercy-premium-jean"
+              }
+            ],
+            "total": "158"
           }
         ]
       },
-      "companyWebsite": "https://modgents.com",
-      "companyName": "Modern Gents Trading Co",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over!"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
+      "orders": [
         {
-          "message_type": "system",
-          "message_text": "Modern Gents: Thomas, complete your look with the Mini Oval Stud Earrings—classic sparkle for any moment.\n\nUse code AB35FCs for 35% off. Our Biggest Sale of The Year!\n\nSHOP NOW: https://modgents.attn.tv/aBUi_gjvZP4U .",
-          "message_media": []
+          "currency": "USD",
+          "order_number": "329780791",
+          "products": [
+            {
+              "product_currency": "USD",
+              "product_link": "https://bonobos.com/products/extra-stretch-travel-jeans",
+              "product_name": "Travel Jeans",
+              "product_price": 79
+            }
+          ],
+          "total": 79
         },
         {
-          "message_type": "system",
-          "message_text": "Modern Gents: Thomas, you will love how the Everyday Jewelry pieces mix style and simplicity for daily wear.  \n\nEnjoy free standard shipping on every order.  \n\nShop now: https://modgents.attn.tv/aF_ZshfSGL6n .",
-          "message_media": []
+          "currency": "USD",
+          "order_number": "329780635",
+          "products": [
+            {
+              "product_currency": "USD",
+              "product_link": "https://bonobos.com/products/gramercy-premium-jean",
+              "product_name": "Gramercy Premium Jean",
+              "product_price": 79
+            }
+          ],
+          "total": 79
         },
         {
-          "message_type": "system",
-          "message_text": "Modern Gents: LAST CHANCE!\n\nOrder by tomorrow @12 PM PST w/ Rush Shipping to get it b4 Christmas!\n\nSEE YOUR VIP OFFER -> modgents.attn.tv/ap-KsFhgYeHA ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: Hey Thomas! Thanks for stopping by! \n\nUse code BA30zS to get 30% off your next jewelry find. \n\nSee what catches your eye: https://modgents.attn.tv/aQ3E3w8RhkjA .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: We <3 you! Here's 75% off a single item!\n\nmodgents.attn.tv/awXlgq2nizWS\n\nOrder today to get it by Christmas w/EXPRESS SHIPPING",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: Need a last minute gift?\n\nGet it b4 Christmas with Express Shipping!\nmodgents.attn.tv/aLe6YzJ-DEjy \n\nBuy One, Get One 75% off ends soon!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: LAST CHANCE!\n\nOrder b4 TOMORROW @12pm PST w/Express Shipping for XMAS delivery!\n\nmodgents.attn.tv/a72v8atOVkct \n\n75% OFF OFFER IS EXPIRING",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: You have Xmas Store Credit!\n\nUse code SCX258 @checkout - ends soon!\nmodgents.attn.tv/aJHHtih971mR \n\nNeed a gift? Get a Modgents gift card!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: Merry Christmas! We hope your day is filled with joy\n\nDon't forget your store credit :)\nUse code: SCX258 @checkout\n\nmodgents.attn.tv/akdreikNuN46",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: Your Store Credit is Expiring!\n\nUse code SCX258 @checkout b4 it's gone!\nmodgents.attn.tv/aw7poWZHAs1a\n\nShop Now Pay later w/Shop, Klarna or Sezzle",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: YOUR STORE CREDIT EXPIRES TOMORROW!\n\nUse code SCX258 @checkout b4 it's gone!\nmodgents.attn.tv/arhaz7gKWL-C \n\nHurry! Use it or lose it :(",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: DOUBLE DISCOUNTS ARE BACK\n\nSTACK two codes @checkout to SAVE MORE!\n\nUse Codes:\nHAPPY\nNY2026\n\nmodgents.attn.tv/agI20nKPtJQv\n\nHURRY! EXPIRES SOON",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: HAPPY NEW YEAR! \n\nTime to TREAT YOURSELF :)\n\nmodgents.attn.tv/an6P6VPSDhZM \n\nStack these codes for BIG SAVINGS:\nHAPPY\nNY2026\n\nHurry, expires soon!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: We dropped something NEW!\n\nSEE IT FIRST: modgents.attn.tv/aUADU7yot88y \n\nPS: Stack these codes to save more $$ (exp soon)\n\nUse Codes:\nHAPPY\nNY2026",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: FINAL HOURS! Exclusive deal ends tomorrow\n\nUse both codes to SAVE BIG:\nHAPPY\nNY2026\n\nmodgents.attn.tv/a2HvsMrxiWoO\n\nShop now pay later @checkout",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: OMG you unlocked 70% off a single item!\n\nmodgents.attn.tv/a7MacXHop3U-\n\nShop now, pay later w/ Klarna, Sezzle or Shop Pay\n\nHurry! Offer ends soon!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: Hey Thomas! Thanks for stopping by! \n\nUnlock 30% off with code BA30zS before it's gone—ACT FAST! 🎉 \n\nShop now: https://modgents.attn.tv/a59OqKoeJYa8 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: Thomas, check out The Juliet Necklace for a smooth, lightweight shine that levels up your everyday look.\n\nUse code AB35FCs to get 35% off - our biggest sale of the year! Free standard shipping.\n\nADD this shine to your day: https://modgents.attn.tv/amoCaXymUz8z .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: Hope you're enjoying your new jewelry! Here are some tips on how to care + clean it! https://modgents.attn.tv/a1vu31IWQwfh ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: Oh no! Your 70% off a single item offer expires this weekend!\n\nUse code: MY70 @checkout\n\nmodgents.attn.tv/aJnMiWhvjbSi\n\nMust have 2 items in cart",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: FYI your VIP offer ends tomorrow!\n\n70% OFF A SINGLE ITEM!\n*must have 2 items in cart\n\nmodgents.attn.tv/ah9L-WerL3t7\n\nPay later w/ Klarna or Sezzle",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: We dropped store credit in your acct!\n\nUse code: STBN8W @checkout (exp soon) modgents.attn.tv/a4WftTHH_nXO\n\nPay later w/Shop, Klarna or Sezzle",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: Thomas, how are you loving The Juliet - Rose Gold? If you have a sec to leave us a review, we'd appreciate it! modgents.attn.tv/a8MdfKq4t45Z ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: Your Store Credit expires soon :(\n\nRedeem it at checkout with code: STBN8W\n\nmodgents.attn.tv/axeTeOfZ0yx6\n\nPS: It's use it or lose it!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: OMG. WE JUST DROPPED A NEW RING!\n\nmodgents.attn.tv/a4viNNR2tYtP\n\nPS: Your Store Credit Expires this weekend!\n\nUse Your VIP Code: STBN8W @checkout",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I am requesting a refund and return on two of my items. Please, inform me on the best way to successfully complete this.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc9cd-c989-4976-f000-0000ec712849",
-          "message_text": "Modern Gents: I understand. You can start your return here: https://modgents.attn.tv/axaA9JKYgKBD/# and you can check out our detailed return policy here: https://modgents.attn.tv/aXK5szI7Doc9",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Modern Gents: Something exciting is here, Thomas — thanks for stopping by!\n\nUse code BA30zS for 30% off your next Modern Gents purchase.\n\nFIND your ring: https://modgents.attn.tv/atBYq9-Qyhwp . 🔥",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "It never said where to mail back to.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bca09-f518-4497-f000-0000ec712849",
-          "message_text": "Modern Gents: I'm sorry to hear that! Could you please send a screenshot of what you're seeing on your end? I'd be happy to help resolve this for you.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Check spam - All brands\"; last updated: 2023-10-10 16:43:53.913",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bca23-a43f-4521-f000-0000ec712849",
-          "message_text": "Modern Gents: Thank you for sharing the screenshot. Please check your spam and promo folders for any return instructions, as our emails sometimes end up there. ",
-          "message_media": []
+          "currency": "USD",
+          "order_number": "329742134",
+          "products": [
+            {
+              "product_currency": "USD",
+              "product_link": "https://bonobos.com/products/gramercy-premium-jean",
+              "product_name": "Gramercy Premium Jean",
+              "product_price": 79
+            },
+            {
+              "product_currency": "USD",
+              "product_link": "https://bonobos.com/products/gramercy-premium-jean",
+              "product_name": "Gramercy Premium Jean",
+              "product_price": 79
+            }
+          ],
+          "total": 158
         }
       ]
     },
     "127": {
-      "agentName": "",
-      "id": "019be8e3-dc78-4661-f000-0000f4301641",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://lifestride.com/",
-          "date": ""
-        },
-        "orders": [
-          {
-            "total": 130.98,
-            "orderDate": "2026-01-23",
-            "orderNumber": "005029010869",
-            "items": [
-              {
-                "price": 29.99,
-                "productLink": "https://www.batteriesinaflash.com/5pack-exell-eb-cr2330-3v-lithium-coin-cell-battery-replaces-dl2330",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.misfitsmarket.com/shop/aisle?addToCart=14716",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://watchwarehouse.com/mido-ocean-star-36-5mm-diamond-black-strap-womens-watch-m026-207-37-056-00-m0262073705600/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.macofalltrades.com/shop/clearance-21-5-inch-imac-3-0ghz-mid-2017-32gb-ram-2tb-fusion-drive/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.everlane.com/products/womens-supima-spaghetti-strap-cami-grass-green?locale=GB",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://checkout.super.com/products/opal-with-created-garnet-gemstone-halo-stud-earrings/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.cassart.co.uk/winsor-newton-monarch-round-brush-6--c/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://eknives.com/marfione-cypher-mk-7-battleship-gray-alloy-dlc-accents-mirror-polish-m390-blade-2018/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.lifestride.com/product/womens-brooke-mary-jane-5279889/sienna-tan-faux-leather-14716",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.seriouspuzzles.com/neuschwanstein-2000pc-jigsaw-puzzle-by-clementoni-discon/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://artbeads.com/jewelry-supplies/jbb-antique-brass-8x10mm-oval-crown-bezel-charm/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.greengaskets.com/profile-169-custom-walk-in-door-gasket/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.thrivemarket.com/p/lotus-foods-buckwheat-mushroom-rice-ramen-singles",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://blessedperformance.com/bds-6-performance-elite-coil-over-lift-kit-2015-2020-ford-f150-4wd/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://armament.com/z5-3-5-18x44-p-flip-cover-amber-see-through-with-adapter-ring-vv0044-acr/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.everlane.com/products/womens-supima-spaghetti-strap-cami-grass-green?locale=US",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.everlane.com/products/womens-supima-spaghetti-strap-cami-grass-green?locale=CA",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://touchupdirect.com/shop/touch-up-paint/mazda-light-opal-gray-pearl-45/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://x-ph.com/bmw-secondary-air-injection-hose-525i-530i-vaico-11727556956/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.seriousshops.com/irresistible-italy-1000pc-jigsaw-puzzle-by-vermont-christmas-company/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://premierecollectibles.com/eagles-dallas-goedert-authentic-signed-full-size-speed-rep-helmet-fanatics/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://trendytransfers.com/proceed-to-party-cassettes-dtf-heat-transfer/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.suppliesoutlet.com/hp-remanufactured-ce413a-toner-magenta/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.gorgeousshop.com/decleor-aroma-nutrition-satin-softening-dry-oil-100ml.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.versare.com/6-x-4-fabric-slate-u/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.modainpelle.com/shoes-c1/all-heels-c207/rhina-orange-leather-p14716",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.factorydirectjewelry.com/rings/Yellow-gold-cz-sapphire-solitaire-modern-flower-ladies-ring/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://store.philamuseum.org/unisex-crochet-fedora-natural/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.cravenspeed.com/the-gemini-phone-mount-for-hyundai-santa-fe-xl-4th-gen-tm-magsafe/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.montanasilversmiths.com/cross-corners-scallop-buckle-4-x3-25",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.wrightlife.com/disc-golf/golf-discs/distance-driver/copy-of-innova-star-destroyer/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://hotrodcameras.com/venus-optics-laowa-12mm-t-2-9-zero-d-cine-lens-for-sony-e/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://macks-prairie-wings-inc-alb.mybigcommerce.com/primos-double-bull-3-panel-stakeout-blind-mossy-oak-new-bottomland/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://echoparkpaper.com/our-happy-place-gather-stems-12x12-patterned-paper/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://daytonamagic.com/shop/card-magic/bicycle-cards-green-leaf-deck/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://supplementwarehouse.com/products/opt-glutamine-powder-600g",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://bullionsharks.com/1886-s-silver-morgan-dollar-pcgs-ms62/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://americancycle.com/mavic-crossmax-slr-29er-disc-ust-wheelset/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://csd.shop/products/women/clothing/theory-brown-patent-leather-front-zip-detail-mini-skirt.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.napacabs.com/carbonadi-ultra-premium-italian-vodka-750ml.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://echoparkwholesale.com/iet300008-egg-hunt-finds/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://store.franklinplanner.com/2023-family-planner-12x12-wall-calendar/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.catwalk.com.au/wetbrush-epic-professional-quick-dry-brush",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://mcstaging.oka.com/trade_uk/luccombe-corner-unit-a11062-3",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.dormco.com/Tavira_Allure_College_Dorm_Headboard_Glacier_Gra_p/ta3202t-cdh-glg-g-w-legs.htm",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.eztestpools.com/wall-connector-kit/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://francescas.com/product/OAA002RHMLT/roni-beaded-anklet",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://gagediamonds.com/1ct-cushion-f-vs1-lab-grown-diamond-4438/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.lightopia.com/Details/FineArtHandcraftedLighting-Oxfordshire/14716",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://knifeworks.com/condor-bushlore-knife-green-micarta-handle/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://palmbeachjewelry.com/products/angel-schlesser-by-angel-schlesser-for-men-eau-de-toilette-spray-4-2-oz.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://livecarmodel.com/products/1968-plymouth-satellite-station-wagon-sea-mist-green-metallic-estate-wagons-series-6-1-64-diecast-model-car-by-greenlight.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.myotcstore.com/store/p/6791-Neutrogena-Pore-Refining-Toner-Alpha-And-Beta-Hydroxy-Formula-8-5-Oz",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.prioritytire.com/en/michelin-stabil-x-xzm-6-9-121a5-12-ply-as-a-s-all-season-tire",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://cheapfood.co.uk/lazzaroni-chiostro-di-saronno-assorted-amaretti-cookies-500g-dented-tin/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://csd.shop/products/women/clothing/theory-brown-patent-leather-front-zip-detail-mini-skirt.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.razoremporium.com/1959-e2-gillette-tto-fatboy-adjustable-double-edge-safety-razor-rhodium-revamp/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.fish307.com/minn-kota-trolling-motor-part-decal-minn-kotalwr-unit-2385629/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.boatoutfitters.com/boston-whaler-seat-base-180-dauntless",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://superjeweler.com/mens-1ct-diamond-ring-in-14k-yellow-gold-14716.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://ampeduplearning.com/talk-read-talk-write-lesson-eli-whitney-and-the-cotton-gin/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.rcsuperstore.com/viper-scale-racing-tyco-440x2-pickup-shoe-springs-5-pair/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://checkout.fascinatingdiamonds.com/loose-diamonds/1-07-carat-oval-diamond-7285414/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.judybluewholesale.com/88691pl-14w-24w-lt-16w.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.teppermans.com/whirlpool-30-contemporary-stainless-steel-wall-mount-range-hood-co-wvw53uc0fs",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://checkout.sportsshoes.com/under-armour-speed-stride-womens-vest-aw19-und5624/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.jackit.com/fue-d59520202647-b.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.tilesdirect.net/color-appeal-cloudburst-1-x-1/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.northernreflections.com/microsand-jacket-455050918/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.festive-lights.com/6m-commercial-cone-tree-with-green-professional-garland-and-connectgo-outdoor-led-fairy-lights",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.enjukuracing.com/competition-clutch-stage-2-steelback-brass-plus-toyota-mr2-spyder-1-8l-2000-2005/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.famousfootwear.com/product/lifestride-womens-brooke-mary-jane-5279889/sienna-tan-faux-leather-14716",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://discount-mugs.mybigcommerce.com/product/sutboa-boa-4-inch-wooden-perpetual-calendars/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.designsbyjuju.com/home-sweet-home-hawaii-embroidery-i2s",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://mcprod.petflow.com/blue-buffalo-freedom-grain-free-chicken-recipe-large-breed-adult-dry-dog-food/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.lafurniturestore.com/modrest-2309-modern-white-dining-table.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://lapolicegear.com/danner-mens-17307-quarry-alloy-brown-tactical-boot.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://liquorama.net/segura-viudas-reserva-heredad-brut-nv.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://lapolicegear.com/danner-mens-17307-quarry-alloy-brown-tactical-boot.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://ironhaft.com/danner-mens-17307-quarry-alloy-brown-tactical-boot.html?sku=17307_018",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.replacements.com/china-arabia-of-finland-suvi-9-oval-vegetable-bowl/p/147161",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://collectorstore.com/2022-topps-cosmic-chrome-baseball-hobby/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.vitalitymedical.com/20090314-14716.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.alamomusic.com/pre-owned-guild-f-1512-westerly-collection-12-string-acoustic-guitar-natural-gloss-2/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.seymourshome.com/joshuas-dream-manhattan-ivory-bedcover-large-throw-p14716/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.simplysockyarn.com/mal-arroyo-033-cereza/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.cecilandlou.com/samples/test/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.dayspring.com/prayer-room-wood-decor",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.highflowfuel.com/quantum-intank-efi-fuel-pump-for-arctic-cat-crossfire-700-2006-replaces-1670-851/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.oka.com/uk/luccombe-corner-unit-a11062-3",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.antiquefarmhouse.com/bottlebrush-christmas-tree-6-inch.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.studio-m.com/36870.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.filtersfast.com/p-everpure-e-20-replacement-scotsman-ssm1-a-pre-filter-system.asp",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.chairish.com/product/id/14716?utm_content=Side+Tables&utm_medium=text&utm_source=attentive&utm_term=14716",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://shop.loriwhitlock.com/small-things-with-great-love/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.thertastore.com/single-bowl-astragranite-sink-fits-24-minimum-cabinet-size-2344505.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.spicylingerie.com/ic-1720.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.staples.com/azar-2-x-0-287-dia-pegboard-locking-hooks-white-25-pack/product_83554",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://checkout.sportsshoes.com/air-zoom-alphafly-next-3-women-s-running-shoes-ho25-nik24605/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.guidedev.com/product/index/single-chicken-with-teriyaki-sauce?a=1631934",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.goggles4u.com/g4u/rimless-eyeglasses-138052.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.prioritytire.com/lanvigator-catchfors-a-t-lt-275-70r18-125-122s-e-10-ply-at-all-terrain-tire",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.lifestride.com/product/womens-celine-ballet-flat-5279175/tender-taupe-faux-leather-83554",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://store.dailysteals.com/products/trilliance-shine-conditioner-by-sebastian-for-unisex-33-8-oz-conditioner/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.misfitsmarket.com/shop/aisle?addToCart=83554",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://ansgear.com/planet-eclipse-ego-lv1-6-teahupoo-paintball-gun-bronze-graphite/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.evo.com/stomp-pads/dakine-petal-pad?image=83554/387645/dakine-petal-stomp-pad-.jpg",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://dev.goggles4u.info/g4u/rimless-eyeglasses-138052.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.prioritytire.com/en/1-wheel-17-km725-terra-17x9-5x127-metallic-blue-38et-km725lx17905038n.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://venue.com/product/home-in-wall-bluetooth-battery-powered-wireless-remote-control-multi-room-scene-keypad-white/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.everest.com/beretta-holster-pico-belt.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.evo.com/en-ca/stomp-pads/dakine-petal-pad?image=83554/387645/dakine-petal-stomp-pad-.jpg",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://greekgear.com/alpha-epsilon-phi-aztec-license-plate.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.lovesac.com/cstm-wedge-seat-cover-set-forest-recycled-micro-velvet.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://homedone.co.uk/rain-shelter-door-canopy-black-colour-100x80cm.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.viovet.co.uk/ProCush-Show-Jumping-Whip-Black/c83554/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://x-ph.com/dynamic-pro-sport-coilovers-porsche-911-2004-2013-997-ys01-po-dps001/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.vitalitymedical.com/20141212-83554.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.famousfootwear.com/product/lifestride-womens-celine-loafer-5279175/tender-taupe-faux-leather-83554",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.homeshoppingmalls.com/tier-one-designs-25-inch-clear-glass-tv-stand-audio-rack-rta-t1d-137tv",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.enjukuracing.com/products/grip-royal-x-enjuku-royal-gt-350mm-perforated-leather-steering-wheel.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://checkout.fascinatingdiamonds.com/0-51-carat-princess-diamond-i469-5a/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.charlies.co.uk/haxnicks-compostable-bamboo-6-pack-of-5-plant-pots-terracotta/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://proclubs.mybigcommerce.com/taylormade-stealth-plus-22-4-hybrid-head-only-r-h-373732/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://tgmskateboards.com/discraft-disc-golf-jawbreaker-focus-putter-2-2-1-2-pink-magenta-173-174g/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.currentcatalog.com/faith-caring-seals-614221.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.charlies.co.uk/haxnicks-compostable-bamboo-6-pack-of-5-plant-pots-terracotta/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 27,
-                "productLink": "https://ansgear.com/planet-eclipse-2-piece-14-shaft-4-boost-barrel-dust-silver/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.christianbook.com/Christian/Books/product?item_no=86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.spicylingerie.com/ms-m214bk.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://checkout.fascinatingdiamonds.com/1-01-carat-princess-diamond-i467-13a/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.homeshoppingmalls.com/baxton-studio-sorrento-mid-century-retro-modern-brown-faux-leather-upholstered-wooden-3-seater-sofa-bbt8013-brown-sofa",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://tgmskateboards.com/blemished-santa-cruz-skateboard-complete-crane-dot-8-0-x-31-6/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.enjukuracing.com/products/boost-products-silicone-elbow-90-degrees-83mm-3-1-4-id-black.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.chairish.com/product/id/86428?utm_content=Rocking+Chairs&utm_medium=text&utm_source=attentive&utm_term=86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.misfitsmarket.com/shop/aisle?addToCart=86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.maurices.com/product/lightweight-button-down-shirt-in-pink-grapefruit/86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.lovesac.com/cstm-reclining-seat-cover-set-basalt-brushed-weave.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://danasafetysupply.com/nar-85-0417-sro-crisis-response-kit/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://greekgear.com/alpha-phi-best-mom-ever-coffee-mug.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.charlies.co.uk/shires-arma-touch-close-over-reach-boots-black/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://store.dailysteals.com/products/patent-shine-10x-nail-lacquer-fancy-by-butter-london-for-women-0-4-oz-nail-lacquer/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://x-ph.com/fabspeed-bmw-x5m-e70-competition-link-pipes-fs-bmw-e70-cbdp/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.officialbandshirts.com/superman-super-shield-youth-t-shirt-navy/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.famousfootwear.com/product/lifestride-womens-elevate-pump-5281040/california-wine-microsuede-86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.rockbottomgolf.com/lefties/iron-sets/pre-owned-ping-golf-lh-g400-irons-7-iron-set-left-handed/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.vionicshoes.com/uptown-sunset-wedge-sandal.html?color=682",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.prioritytire.com/rovelo-rtl1-lf-285-75r24-5-144-141m-g-14-ply-as-a-s-all-season-tire",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://safetysourcellc.com/office-supplies/labels-stickers/labels/smead-smd67373-single-digit-end-tab-labels-number-3-dark-orange-500-roll/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.lifestride.com/product/womens-elevate-pump-5281040/california-wine-microsuede-86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.charlies.co.uk/shires-arma-touch-close-over-reach-boots-black/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.everest.com/cm-lil-smoker-concave-head-blu-wht.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.lillianvernon.com/snowman-personalized-hat-sign-13603.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.prioritytire.com/en/1-wheel-20-replica-194-20x10-5x120-chrome-35et-67-06cb-194c-211235.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.thertastore.com/trimmable-knife-block-fits-any-size-drawer-86428.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.carparts.com/lift-support/fcs/86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.evo.com/helmet-cam-parts/gopro-blackout-housing?image=86428/382690/gopro-blackout-housing-.jpg",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.theshoemart.com/alden-factory-seconds-fd-n0404-379x-last-black/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://proclubs.mybigcommerce.com/taylormade-2021-hi-toe-56-10-wedge-kbs-hi-rev-2-0-115g-wedge-376216/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://americancycle.com/elevn-aero-quick-release/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.festive-lights.com/1-2m-north-star-warm-white-leds",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://cheapfood.co.uk/starbucks-pike-place-lungo-12-pods/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://knifeworks.com/otis-shotgun-cleaning-kit-410-12-10/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://mcprod.petflow.com/blue-buffalo-basics-adult-turkey-and-potato-recipe-dry-dog-food/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://hotrodcameras.com/sachtler-flowtech-75-gs-carbon-fiber-tripod-with-ground-spreader/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.utvsource.com/maxxis-tires-rampage-rear-30x10-14/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://csd.shop/products/women/clothing/saint-laurent-khaki-knee-length-skirt.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.macofalltrades.com/shop/fair-condition-24-inch-imac-m4-late-2024-purple-16gb-ram-256gb-ssd-10-core-gpu/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.seriouspuzzles.com/dueling-dragons-200pc-jigsaw-puzzle-by-ravensburger-discon/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.northernreflections.com/floral-jacquard-cardigan-451717956/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.montanasilversmiths.com/queen-anne-s-lace-pendant-necklace",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://macks-prairie-wings-inc-alb.mybigcommerce.com/winchester-varmint-lf-17-hmr-15-5-gr-ntx-50-rd/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://shop.loriwhitlock.com/gatefold-flip-card-square/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://ampeduplearning.com/bounce-back-grades-3-7-curriculum-song-video/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://checkout.razoremporium.com/van-yulay-el-barbero-de-sevilla-after-shave-splash/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://doomsdaydiscs.com/product/area-51-in-ration-plastic/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.megamusiconline.com.au/product/orange-amp-detonator-ab-pedal/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://checkout.sportsshoes.com/sealskinz-waterproof-all-weather-ankle-length-knitted-shoe-aw20-sea87/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.rcsuperstore.com/traxxas-mini-xrt-green-body-with-integrated-cooling-vents/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.modainpelle.com/sale-c79/sale-trainers-c180/reo-grey-textile-p15492",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://eknives.com/microtech-troodon-red-d-e-3-bead-blast-plain-138-7rd/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://francescas.com/product/24167E/lorrie-speckled-snake-drop-earrings",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.cecilandlou.com/boys/mint-and-white-stripe-swim-trunk-shipping-mid-may/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.steeda.com/belltech-972sp-f150-lowering-kit",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.everlane.com/products/mens-waffle-ls-henley2-navy?locale=GB",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.dayspring.com/mini-canvas-tote-bag-be-still-know",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://store.dailysteals.com/products/nintendo-switch-pokemon-mystery-dungeon-rescue-team-dx-import-region-free/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.simplysockyarn.com/ww-artio-sock-spatterdash/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.filtersfast.com/p-rz-mask-f1-standard-activated-carbon-replacement-filters.asp",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.cassart.co.uk/liquitex-heavy-body-acrylic-473ml-432-titanium-white--c/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.discounthardware.com/villar-home-designs-prefinished-natural-wood-veneer-white-oak-victoria-wood-door-slab-with-glossy-gold-inserts-36-x-84",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.factorydirectjewelry.com/womens-collection/diamond-channel-set-white-gold-engagement-solitaire-ring-with-1-carat-white-topaz-center-stone/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.officialbandshirts.com/fear-factory-legacy-t-shirt/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://bullionsharks.com/1910-s-20-saint-gaudens-pcgs-ms62/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://replacebase1.evdpl.com/pub/default/parco-pa-10f-simul-focal-trinocular-zoom-stereo-microscope-0-7x-4-5x-zoom-range.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.everlane.com/products/mens-waffle-ls-henley2-navy?locale=CA",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.gamenerdz.com/star-wars-rpg-age-of-rebellion-commander-signature-abilities-specialization-deck",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.cravenspeed.com/high-performance-wiper-blades-for-chevrolet-malibu-maxx-6th-gen-piaa-si-tech-blade-kit-driver-and-passenger-blades/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://csd.shop/products/women/clothing/saint-laurent-khaki-knee-length-skirt.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.seymourshome.com/nkuku-cardamom-and-amber-three-wick-scented-candle-p15492/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://beautysense.ca/en/redken-blondage-high-bright-treatment.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://leadersrpmshop.com/arctic-cat-new-oem-sleeve-threaded-0603-147/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.mobilitysmart.co.uk/deluxe-splash-wheelchair-mac-with-sleeves.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://echoparkwholesale.com/new/june-2023/wizards-and-company-shipping-june-2023/wac322006-4x4-journaling-cards/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://livecarmodel.com/products/1-43-tsm-acura-arx-05-dpi-60-2021-imsa-daytona-24-hrs-resin-car-model.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.anniesattic.com/exclusively-annies-quilt-designs-rainy-evening-stars-quilt-pattern-digital-download",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.gorgeousshop.com/bathing-beauties.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.highflowfuel.com/quantum-inline-oem-replacement-dual-fuel-pumps-for-mercedes-benz-380sec-2-0l-3-0l-1982-1983/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://thecostumeshoppe.com/toddlers-baby-shark-costume/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.lafurniturestore.com/modrest-aegean-modern-black-and-walnut-coffee-table.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://premierecollectibles.com/jauan-jennings-authentic-signed-white-pro-style-framed-jersey-w-dropshadow-bas/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.misfitsmarket.com/shop/aisle?addToCart=15492",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://palmbeachjewelry.com/products/dolce-floral-drops-by-dolce-gabbana-for-women-eau-de-toilette-spray-2-5-oz.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://dailysteals.com/products/jbl-tune-760nc-wireless-over-ear-wireless-nc-headphones.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.lightopia.com/Details/ET2-Soji/15492",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.dormco.com/refurb-the-mini-shelf-supreme-suprima-adjustable-shelving-pink/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.judybluewholesale.com/88687pl-14w-24w-dk-24w.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.toolnut.com/forrest-ww09407100-9-woodworker-ii-saw-blade-40-teeth-3-4.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://supplementwarehouse.com/products/garden-of-life-vitamin-code-raw-d3-2k-60c?sku=3431",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.famousfootwear.com/product/lifestride-womens-minimalist-pump-5265348/black-15492",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.jysk.ca/essentials-120tc-fitted-sheet-double-smoked-pearl.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.prioritytire.com/en/patriot-h-t-lt-275-65r18-123-120s-e-10-ply-as-a-s-all-season-tire",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.designsbyjuju.com/sitting-fox-applique-i2s",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://discount-mugs.mybigcommerce.com/product/gl100690-satsuma-bento-lunch-box/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.coolergaskets.com/generic-shoulder-washer-10-nylon-equivalent-to-pitco-pp10667/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://blessedperformance.com/ford-turbocharger-hardware-kit-2017-to-2019-6-7l-powerstroke/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://x-ph.com/bmw-mass-air-flow-sensor-bosch-0281006147/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.jbtools.com/k-tool-19724-screwdriver-2-phillips-tip-4-long-blade-with-orange-plastic-handle/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://touchupdirect.com/shop/touch-up-paint/mercury-black-a-1970/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://shop.gasketguy.com/clean-elegance-gift-set/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.seriousshops.com/kitties-at-play-300pc-large-format-jigsaw-puzzle-by-sunsout/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://trendytransfers.com/mama-tour-set-dtf-heat-transfer/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.napacabs.com/momokawa-silver-junmai-ginjo-dry-sake-750ml.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.everlane.com/products/mens-waffle-ls-henley2-navy?locale=US",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://liquorama.net/la-chouffe-blonde-ale-belgium-750ml.html",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.beautyplussalon.com/el-patron-natural-finish-paste-4-oz",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.replacements.com/china-arklow-tea-garden-salad-plate/p/154921",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://collectorstore.com/katy-funko-pop-shang-chi-and-the-legend-of-the-ten-rings-852-target-exclusive/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://armament.com/golden-eagle-hd-15-60x52-polarizer-with-adapter-frame-ring-uac006-wpa/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://supplementwarehouse.com/products/garden-of-life-vitamin-code-raw-d3-2k-60c",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://echoparkpaper.com/baby-on-board-girl-puffy-stickers/",
-                "name": "minimalist pump"
-              },
-              {
-                "price": 49.99,
-                "productLink": "https://www.lifestride.com/product/womens-minimalist-pump-5265348/black-15492",
-                "name": "minimalist pump"
-              }
-            ]
-          },
-          {
-            "total": 80.99,
-            "orderDate": "2026-01-22",
-            "orderNumber": "005029009317",
-            "items": [
-              {
-                "price": 29.99,
-                "productLink": "https://lapolicegear.com/danner-mens-17307-quarry-alloy-brown-tactical-boot.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://discount-mugs.mybigcommerce.com/product/sutboa-boa-4-inch-wooden-perpetual-calendars/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://daytonamagic.com/shop/card-magic/bicycle-cards-green-leaf-deck/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://echoparkpaper.com/our-happy-place-gather-stems-12x12-patterned-paper/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://store.philamuseum.org/unisex-crochet-fedora-natural/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://echoparkwholesale.com/iet300008-egg-hunt-finds/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://mcstaging.oka.com/trade_uk/luccombe-corner-unit-a11062-3",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.eztestpools.com/wall-connector-kit/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.catwalk.com.au/wetbrush-epic-professional-quick-dry-brush",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.dormco.com/Tavira_Allure_College_Dorm_Headboard_Glacier_Gra_p/ta3202t-cdh-glg-g-w-legs.htm",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://supplementwarehouse.com/products/opt-glutamine-powder-600g",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://x-ph.com/bmw-secondary-air-injection-hose-525i-530i-vaico-11727556956/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.dayspring.com/prayer-room-wood-decor",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.lafurniturestore.com/modrest-2309-modern-white-dining-table.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://premierecollectibles.com/eagles-dallas-goedert-authentic-signed-full-size-speed-rep-helmet-fanatics/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.tilesdirect.net/color-appeal-cloudburst-1-x-1/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.lightopia.com/Details/FineArtHandcraftedLighting-Oxfordshire/14716",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://francescas.com/product/OAA002RHMLT/roni-beaded-anklet",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://store.franklinplanner.com/2023-family-planner-12x12-wall-calendar/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://americancycle.com/mavic-crossmax-slr-29er-disc-ust-wheelset/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://gagediamonds.com/1ct-cushion-f-vs1-lab-grown-diamond-4438/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.seriouspuzzles.com/neuschwanstein-2000pc-jigsaw-puzzle-by-clementoni-discon/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://lapolicegear.com/danner-mens-17307-quarry-alloy-brown-tactical-boot.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://trendytransfers.com/proceed-to-party-cassettes-dtf-heat-transfer/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.northernreflections.com/microsand-jacket-455050918/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://blessedperformance.com/bds-6-performance-elite-coil-over-lift-kit-2015-2020-ford-f150-4wd/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://watchwarehouse.com/mido-ocean-star-36-5mm-diamond-black-strap-womens-watch-m026-207-37-056-00-m0262073705600/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.thrivemarket.com/p/lotus-foods-buckwheat-mushroom-rice-ramen-singles",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://artbeads.com/jewelry-supplies/jbb-antique-brass-8x10mm-oval-crown-bezel-charm/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.greengaskets.com/profile-169-custom-walk-in-door-gasket/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.everlane.com/products/womens-supima-spaghetti-strap-cami-grass-green?locale=US",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://armament.com/z5-3-5-18x44-p-flip-cover-amber-see-through-with-adapter-ring-vv0044-acr/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://liquorama.net/segura-viudas-reserva-heredad-brut-nv.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.batteriesinaflash.com/5pack-exell-eb-cr2330-3v-lithium-coin-cell-battery-replaces-dl2330",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.factorydirectjewelry.com/rings/Yellow-gold-cz-sapphire-solitaire-modern-flower-ladies-ring/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.modainpelle.com/shoes-c1/all-heels-c207/rhina-orange-leather-p14716",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.designsbyjuju.com/home-sweet-home-hawaii-embroidery-i2s",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://shop.loriwhitlock.com/small-things-with-great-love/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.wrightlife.com/disc-golf/golf-discs/distance-driver/copy-of-innova-star-destroyer/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.replacements.com/china-arabia-of-finland-suvi-9-oval-vegetable-bowl/p/147161",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://ampeduplearning.com/talk-read-talk-write-lesson-eli-whitney-and-the-cotton-gin/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.razoremporium.com/1959-e2-gillette-tto-fatboy-adjustable-double-edge-safety-razor-rhodium-revamp/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://checkout.sportsshoes.com/under-armour-speed-stride-womens-vest-aw19-und5624/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.chairish.com/product/id/14716?utm_content=Side+Tables&utm_medium=text&utm_source=attentive&utm_term=14716",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://collectorstore.com/2022-topps-cosmic-chrome-baseball-hobby/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://macks-prairie-wings-inc-alb.mybigcommerce.com/primos-double-bull-3-panel-stakeout-blind-mossy-oak-new-bottomland/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.famousfootwear.com/product/lifestride-womens-brooke-mary-jane-5279889/sienna-tan-faux-leather-14716",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.filtersfast.com/p-everpure-e-20-replacement-scotsman-ssm1-a-pre-filter-system.asp",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://eknives.com/marfione-cypher-mk-7-battleship-gray-alloy-dlc-accents-mirror-polish-m390-blade-2018/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.enjukuracing.com/competition-clutch-stage-2-steelback-brass-plus-toyota-mr2-spyder-1-8l-2000-2005/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.judybluewholesale.com/88691pl-14w-24w-lt-16w.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://livecarmodel.com/products/1968-plymouth-satellite-station-wagon-sea-mist-green-metallic-estate-wagons-series-6-1-64-diecast-model-car-by-greenlight.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://palmbeachjewelry.com/products/angel-schlesser-by-angel-schlesser-for-men-eau-de-toilette-spray-4-2-oz.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://superjeweler.com/mens-1ct-diamond-ring-in-14k-yellow-gold-14716.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.prioritytire.com/en/michelin-stabil-x-xzm-6-9-121a5-12-ply-as-a-s-all-season-tire",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.studio-m.com/36870.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.cecilandlou.com/samples/test/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.everlane.com/products/womens-supima-spaghetti-strap-cami-grass-green?locale=GB",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://checkout.super.com/products/opal-with-created-garnet-gemstone-halo-stud-earrings/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.cassart.co.uk/winsor-newton-monarch-round-brush-6--c/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.gorgeousshop.com/decleor-aroma-nutrition-satin-softening-dry-oil-100ml.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.macofalltrades.com/shop/clearance-21-5-inch-imac-3-0ghz-mid-2017-32gb-ram-2tb-fusion-drive/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.cravenspeed.com/the-gemini-phone-mount-for-hyundai-santa-fe-xl-4th-gen-tm-magsafe/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.montanasilversmiths.com/cross-corners-scallop-buckle-4-x3-25",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://csd.shop/products/women/clothing/theory-brown-patent-leather-front-zip-detail-mini-skirt.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.napacabs.com/carbonadi-ultra-premium-italian-vodka-750ml.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.lifestride.com/product/womens-brooke-mary-jane-5279889/sienna-tan-faux-leather-14716",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.misfitsmarket.com/shop/aisle?addToCart=14716",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.seriousshops.com/irresistible-italy-1000pc-jigsaw-puzzle-by-vermont-christmas-company/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://mcprod.petflow.com/blue-buffalo-freedom-grain-free-chicken-recipe-large-breed-adult-dry-dog-food/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.suppliesoutlet.com/hp-remanufactured-ce413a-toner-magenta/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://hotrodcameras.com/venus-optics-laowa-12mm-t-2-9-zero-d-cine-lens-for-sony-e/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.myotcstore.com/store/p/6791-Neutrogena-Pore-Refining-Toner-Alpha-And-Beta-Hydroxy-Formula-8-5-Oz",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://ironhaft.com/danner-mens-17307-quarry-alloy-brown-tactical-boot.html?sku=17307_018",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://checkout.fascinatingdiamonds.com/loose-diamonds/1-07-carat-oval-diamond-7285414/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.rcsuperstore.com/viper-scale-racing-tyco-440x2-pickup-shoe-springs-5-pair/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.alamomusic.com/pre-owned-guild-f-1512-westerly-collection-12-string-acoustic-guitar-natural-gloss-2/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.teppermans.com/whirlpool-30-contemporary-stainless-steel-wall-mount-range-hood-co-wvw53uc0fs",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.boatoutfitters.com/boston-whaler-seat-base-180-dauntless",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.jackit.com/fue-d59520202647-b.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://knifeworks.com/condor-bushlore-knife-green-micarta-handle/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.seymourshome.com/joshuas-dream-manhattan-ivory-bedcover-large-throw-p14716/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://csd.shop/products/women/clothing/theory-brown-patent-leather-front-zip-detail-mini-skirt.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.festive-lights.com/6m-commercial-cone-tree-with-green-professional-garland-and-connectgo-outdoor-led-fairy-lights",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.versare.com/6-x-4-fabric-slate-u/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://cheapfood.co.uk/lazzaroni-chiostro-di-saronno-assorted-amaretti-cookies-500g-dented-tin/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.oka.com/uk/luccombe-corner-unit-a11062-3",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://touchupdirect.com/shop/touch-up-paint/mazda-light-opal-gray-pearl-45/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.simplysockyarn.com/mal-arroyo-033-cereza/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://bullionsharks.com/1886-s-silver-morgan-dollar-pcgs-ms62/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.everlane.com/products/womens-supima-spaghetti-strap-cami-grass-green?locale=CA",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.fish307.com/minn-kota-trolling-motor-part-decal-minn-kotalwr-unit-2385629/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.antiquefarmhouse.com/bottlebrush-christmas-tree-6-inch.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.highflowfuel.com/quantum-intank-efi-fuel-pump-for-arctic-cat-crossfire-700-2006-replaces-1670-851/",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 29.99,
-                "productLink": "https://www.vitalitymedical.com/20090314-14716.html",
-                "name": "brooke mary jane"
-              },
-              {
-                "price": 24,
-                "productLink": "https://x-ph.com/dynamic-pro-sport-coilovers-porsche-911-2004-2013-997-ys01-po-dps001/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://checkout.sportsshoes.com/air-zoom-alphafly-next-3-women-s-running-shoes-ho25-nik24605/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.charlies.co.uk/haxnicks-compostable-bamboo-6-pack-of-5-plant-pots-terracotta/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.misfitsmarket.com/shop/aisle?addToCart=83554",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.viovet.co.uk/ProCush-Show-Jumping-Whip-Black/c83554/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.homeshoppingmalls.com/tier-one-designs-25-inch-clear-glass-tv-stand-audio-rack-rta-t1d-137tv",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://proclubs.mybigcommerce.com/taylormade-stealth-plus-22-4-hybrid-head-only-r-h-373732/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.staples.com/azar-2-x-0-287-dia-pegboard-locking-hooks-white-25-pack/product_83554",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.spicylingerie.com/ic-1720.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.guidedev.com/product/index/single-chicken-with-teriyaki-sauce?a=1631934",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.evo.com/en-ca/stomp-pads/dakine-petal-pad?image=83554/387645/dakine-petal-stomp-pad-.jpg",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.charlies.co.uk/haxnicks-compostable-bamboo-6-pack-of-5-plant-pots-terracotta/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.lifestride.com/product/womens-celine-ballet-flat-5279175/tender-taupe-faux-leather-83554",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.currentcatalog.com/faith-caring-seals-614221.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://homedone.co.uk/rain-shelter-door-canopy-black-colour-100x80cm.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://store.dailysteals.com/products/trilliance-shine-conditioner-by-sebastian-for-unisex-33-8-oz-conditioner/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://greekgear.com/alpha-epsilon-phi-aztec-license-plate.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.thertastore.com/single-bowl-astragranite-sink-fits-24-minimum-cabinet-size-2344505.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://dev.goggles4u.info/g4u/rimless-eyeglasses-138052.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.famousfootwear.com/product/lifestride-womens-celine-loafer-5279175/tender-taupe-faux-leather-83554",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.vitalitymedical.com/20141212-83554.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://checkout.fascinatingdiamonds.com/0-51-carat-princess-diamond-i469-5a/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.prioritytire.com/lanvigator-catchfors-a-t-lt-275-70r18-125-122s-e-10-ply-at-all-terrain-tire",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.evo.com/stomp-pads/dakine-petal-pad?image=83554/387645/dakine-petal-stomp-pad-.jpg",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://tgmskateboards.com/discraft-disc-golf-jawbreaker-focus-putter-2-2-1-2-pink-magenta-173-174g/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.everest.com/beretta-holster-pico-belt.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.prioritytire.com/en/1-wheel-17-km725-terra-17x9-5x127-metallic-blue-38et-km725lx17905038n.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.goggles4u.com/g4u/rimless-eyeglasses-138052.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.lovesac.com/cstm-wedge-seat-cover-set-forest-recycled-micro-velvet.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://ansgear.com/planet-eclipse-ego-lv1-6-teahupoo-paintball-gun-bronze-graphite/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://www.enjukuracing.com/products/grip-royal-x-enjuku-royal-gt-350mm-perforated-leather-steering-wheel.html",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 24,
-                "productLink": "https://venue.com/product/home-in-wall-bluetooth-battery-powered-wireless-remote-control-multi-room-scene-keypad-white/",
-                "name": "celine ballet flat"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.officialbandshirts.com/superman-super-shield-youth-t-shirt-navy/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.everest.com/cm-lil-smoker-concave-head-blu-wht.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.vionicshoes.com/uptown-sunset-wedge-sandal.html?color=682",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.evo.com/helmet-cam-parts/gopro-blackout-housing?image=86428/382690/gopro-blackout-housing-.jpg",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.misfitsmarket.com/shop/aisle?addToCart=86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.chairish.com/product/id/86428?utm_content=Rocking+Chairs&utm_medium=text&utm_source=attentive&utm_term=86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.lovesac.com/cstm-reclining-seat-cover-set-basalt-brushed-weave.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://tgmskateboards.com/blemished-santa-cruz-skateboard-complete-crane-dot-8-0-x-31-6/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.charlies.co.uk/shires-arma-touch-close-over-reach-boots-black/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.spicylingerie.com/ms-m214bk.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://greekgear.com/alpha-phi-best-mom-ever-coffee-mug.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://store.dailysteals.com/products/patent-shine-10x-nail-lacquer-fancy-by-butter-london-for-women-0-4-oz-nail-lacquer/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.charlies.co.uk/shires-arma-touch-close-over-reach-boots-black/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.lillianvernon.com/snowman-personalized-hat-sign-13603.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://x-ph.com/fabspeed-bmw-x5m-e70-competition-link-pipes-fs-bmw-e70-cbdp/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://danasafetysupply.com/nar-85-0417-sro-crisis-response-kit/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.prioritytire.com/en/1-wheel-20-replica-194-20x10-5x120-chrome-35et-67-06cb-194c-211235.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.famousfootwear.com/product/lifestride-womens-elevate-pump-5281040/california-wine-microsuede-86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.rockbottomgolf.com/lefties/iron-sets/pre-owned-ping-golf-lh-g400-irons-7-iron-set-left-handed/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.christianbook.com/Christian/Books/product?item_no=86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.enjukuracing.com/products/boost-products-silicone-elbow-90-degrees-83mm-3-1-4-id-black.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://ansgear.com/planet-eclipse-2-piece-14-shaft-4-boost-barrel-dust-silver/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://proclubs.mybigcommerce.com/taylormade-2021-hi-toe-56-10-wedge-kbs-hi-rev-2-0-115g-wedge-376216/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.carparts.com/lift-support/fcs/86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.lifestride.com/product/womens-elevate-pump-5281040/california-wine-microsuede-86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.theshoemart.com/alden-factory-seconds-fd-n0404-379x-last-black/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.maurices.com/product/lightweight-button-down-shirt-in-pink-grapefruit/86428",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://safetysourcellc.com/office-supplies/labels-stickers/labels/smead-smd67373-single-digit-end-tab-labels-number-3-dark-orange-500-roll/",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.prioritytire.com/rovelo-rtl1-lf-285-75r24-5-144-141m-g-14-ply-as-a-s-all-season-tire",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.thertastore.com/trimmable-knife-block-fits-any-size-drawer-86428.html",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://www.homeshoppingmalls.com/baxton-studio-sorrento-mid-century-retro-modern-brown-faux-leather-upholstered-wooden-3-seater-sofa-bbt8013-brown-sofa",
-                "name": "elevate pump"
-              },
-              {
-                "price": 27,
-                "productLink": "https://checkout.fascinatingdiamonds.com/1-01-carat-princess-diamond-i467-13a/",
-                "name": "elevate pump"
-              }
-            ]
-          }
-        ],
-        "browsingHistory": [
-          {
-            "link": "https://www.lifestride.com/product/womens-celine-ballet-flat-5279175/tender-taupe-faux-leather-83554",
-            "item": "celine ballet flat",
-            "timeAgo": "2026-01-23"
-          },
-          {
-            "link": "https://www.lifestride.com/product/womens-annalise-slingback-pump-5277759/taupe-snake-faux-leather-25691",
-            "item": "annalise slingback pump",
-            "timeAgo": "2026-01-23"
-          },
-          {
-            "link": "https://www.lifestride.com/product/womens-suki-pump-5255436/tender-taupe-08749",
-            "item": "suki pump",
-            "timeAgo": "2026-01-23"
-          },
-          {
-            "link": "https://www.lifestride.com/product/womens-april-dress-sandal-5277815/black-smooth-faux-leather-84897",
-            "item": "april dress sandal",
-            "timeAgo": "2026-01-23"
-          },
-          {
-            "link": "https://www.lifestride.com/product/womens-brooke-mary-jane-5279889/sienna-tan-faux-leather-14716",
-            "item": "brooke mary jane",
-            "timeAgo": "2026-01-23"
-          }
-        ]
-      },
-      "companyWebsite": "https://lifestride.com/",
-      "companyName": "Lifestride",
-      "notes": {
-        "escalate": [
-          "When ESC include full name for all escalations",
-          "For code issues, include email address and code"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "LifeStride: Welcome to LifeStride! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/xeF",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LifeStride: Hey! I'm Jordan, thanks for joining us! As a special gift, enjoy $10 off $50+: lifestride.attn.tv/asbeOdYHX8kX Text me any time with questions!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LifeStride: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nNeed help finding the perfect pair? See what's trending now to find the season's hottest styles: https://lifestride.attn.tv/aMqsAP99PC-j .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LifeStride: Amaryllis Pump and Tracy Strappy Pump are waiting in your cart.\n\nUse code LSWELC10RJSGZDRT to take $10 off your purchase: https://lifestride.attn.tv/abs52oD1lTtB .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LifeStride: 25% OFF comfy styles you'll wear on repeat! Get the discount + FREE shipping with code \"NEWYEAR\" for new shoes! lifestride.attn.tv/aigRuZbzCDPw ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LifeStride: FINAL HOURS! 12 people recently purchased Tracy Strappy Block Heel Pump. Complete your order before it disappears! 👠\n\nUse code LSWELC10RJSXZJPS for $10 off and free returns within 45 days with Returns Bar: https://lifestride.attn.tv/auBdsPq5AHSt .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LifeStride: Don't miss out on 25% OFF + FREE shipping with code \"NEWYEAR\"! Grab your favorite styles before they're gone! lifestride.attn.tv/aZhLkR3JoNXX ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LifeStride: New Year, new shoes! Get 25% OFF + FREE shipping on your NEW favorite pair with code \"NEWYEAR.\" Save NOW: lifestride.attn.tv/aGGuOzK64O0a ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LifeStride: ENDS TODAY! Last chance to get 25% OFF + FREE shipping on shoes you'll love with code \"NEWYEAR\". Click to shop: lifestride.attn.tv/ayBSSIOS9k7r ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LifeStride: You are already subscribed. Click here to shop now: https://lifestride.attn.tv/cl/MQz.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LifeStride: Grab the Brooke Mary Jane Heel in your cart for cushioned, polished comfort.\n\n57 people recently purchased Brooke Mary Jane Heel; complete your order before it disappears!\n\nShop now: https://lifestride.attn.tv/aZLpy-yNMJ_p .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Why do you keep canceling my orders?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be8db-a2d2-404e-f000-0000f4301641",
-          "message_text": "LifeStride: Thank you for reaching out and I'm sorry about that! I'm afraid I don't have the exact info about it but I'd be glad to check it with the team. Can I have your full name, email address and order numbers please? ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Jaimie WhiteJaimiedaynise@gmail.comI placed two different orders and both of them got canceled using two different forms of payment005029010869005029009317If you could possibly recomplete an order, I would prefer for it to be 005029010869",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Pass to the team - All brands\"; last updated: 2023-10-10 17:46:43.559",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be8e3-dc78-4661-f000-0000f4301641",
-          "message_text": "LifeStride: I understand and thanks for the info! I will pass this along to my team and get back to you as soon as possible, hang tight! ",
-          "message_media": []
-        }
-      ]
-    },
-    "128": {
-      "agentName": "Sarah",
-      "id": "019bc38a-28e8-4105-f000-0000f44590da",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://igloocoolers.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://igloocoolers.com",
-      "companyName": "Igloo",
-      "notes": {
+      "id": "019bec27-83c1-4e78-f000-0000f316b936",
+      "companyName": "Snipes",
+      "companyWebsite": "https://snipesusa.com",
+      "agentName": "Avery",
+      "agentInitial": "S",
+      "messageTone": "Formal",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "send_to_cs": [
-          "Send to CS for legal and fraud related inquires",
-          "Send to CS for product safety inquires and threats",
-          "Send to CS for website technical issues"
+          "Send to CS immediately for post-purchase issues",
+          "Send to CS for payment processing issues"
         ],
-        "escalate": [
-          "ESC if cx claims bodily injury as result of a product",
-          "ESC if cx highlights dangers to health/safety as a result of product"
+        "tone": [
+          "Don't use the term restock",
+          "Don't tell customers that we'll be restocking",
+          "Don't respond to blank messages",
+          "Don't use formal language",
+          "Close the conversation when a customer responds 'no'"
         ],
         "templates": [
-          "For all post-purchase & warranty inquiries use \"SUPPORT\" temp (SPT)",
-          "For discount code issues use \"SUPPORT\" temp (SPT)",
-          "For product info that you can't find on the site use \"SUPPORT\" temp (SPT)",
-          "If cx reach out about 90 qt cooler recall, use shortcut RCC",
-          "For custom order cancellation and edit requests, don't use CED, use the designated templates instead"
+          "If a cx reaches out regarding the Early Access event, use EAE shortcut",
+          "For cx reaching out in Spanish use SSC shortcut",
+          "For checkout issues use the \"Check out Issues\" temp",
+          "For store item availability, use SPA shortcut",
+          "If cx's email doesn't work for early access, use EEA shortcut"
+        ],
+        "dos_and_donts": [
+          "They occasionally run sign-up campaigns where cx text certain keywords (“releases,” “early access”) to join a list. If a customer sends a similar keyword:",
+          "All clothing is true to size unless otherwise stated on the product page",
+          "You can use these sizing charts for reference (for internal use only): https://docs.google.com/spreadsheets/d/1kmra_vOwCJuHoAx9D4L4Qx95rxafHcrqn-ZGutfzLgg/edit?usp=sharing",
+          "For store info q's (phone number/additional info) - use the store locator with your VPN turned on!"
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "warranty",
-        "broken product claims",
-        "parts",
-        "missing shipment",
-        "leaks"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Igloo: Welcome to Igloo! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Igloo: Hey this is Sarah, how can I help you?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I want my first purchase code i never got it on my email",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc38a-28e8-4105-f000-0000f44590da",
-          "message_text": "Igloo: Thank you for reaching out, and sorry to hear that! Here’s a code for you to use: ATTNunXThI - Be sure to also check out our best sellers here: https://igloo.attn.tv/aVebtE4GylCR Let me know how it goes!",
-          "message_media": []
-        }
-      ]
-    },
-    "129": {
-      "agentName": "Charli",
-      "id": "019be0ea-a050-4cd2-f000-000035afb7a0",
+      "SystemMessage1": "SNIPES: Welcome to SNIPES! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage2": "SNIPES: Thanks for subscribing! Get ready for exclusive updates on new releases, events, and more. Don't miss out on what's coming your way. Stay tuned!",
+      "SystemMessage3": "SNIPES: Don't forget to save our contact to get exclusive updates!",
+      "SystemMessage4": "SNIPES: Cozy layers are marked down. Shop fleece from top brands like Nike, UGG, Polo and more for men, women & kids. Limited time: snipes.attn.tv/auwVG2nyOJe1",
+      "SystemMessage5": "SNIPES: Time's almost up. Sign up for early access for your chance to reserve the Air Jordan 4 Retro Flight Club: snipes.attn.tv/aag-sfKqPuSo",
+      "SystemMessage6": "SNIPES: Just dropped. Nike Air Max2 CB 94, Pegasus Premium in new colorways, adidas Samba Jane, & more. Shop now: snipes.attn.tv/ab8rj9FKIRQd",
+      "SystemMessage7": "SNIPES: Air Jordan 4 Retro \"Flight Club\" early reserve is live! Use your email jamaranderson30@icloud.com to join the VIP queue. Join here: snipes.attn.tv/aczs9rrqZ9ZR",
+      "SystemMessage8": "SNIPES: If you had trouble entering the Air Jordan 4 Retro \"Flight Club\" queue, please try again using the same email as your Reserve account. Join the VIP Queue here: snipes.attn.tv/acnG5MsNzvSE .",
+      "SystemMessage9": "SNIPES: The AJ4 Retro \"Flight Club\" is available now. Don't miss your chance to grab a pair before they sell out. Shop now: snipes.attn.tv/ay3MFOsmdWPt .",
+      "SystemMessage10": "SNIPES: We saw you checking out Air Jordan 4 Retro \"Flight Club\". Don't let a 🔥 style pass you by: snipes.attn.tv/algwCKGsMF1N .",
+      "SystemMessage11": "SNIPES: AJ 9 Retro \"Flint Grey\" early access is live! Use the same email as your Reserve account to join the VIP queue here: snipes.attn.tv/akrYJRBTLnQZ",
+      "SystemMessage12": "SNIPES: You're in! Download the app and join SNIPES Reserve to get $10 toward your first fit on any purchase over $75. Download here: snipes.attn.tv/cl/a9p",
+      "SystemMessage13": "SNIPES: We saw you checking out this item. Don't let a 🔥 style pass you by: snipes.attn.tv/a5ihfQgDTWft .",
+      "customerMessage1": "I purchased the Jordan 9 yesterday but never got a receipt for you !!",
+      "AgentMessage1": "SNIPES: Thank you for reaching out. I'm sorry, but I don't see any active orders under this phone number. Could you please check if you received a confirmation email or if there's a charge on your account? Sometimes the email might arrive in your spam or promo folder, so be sure to take a look there too!",
+      "customerMessage2": "\"",
+      "customerMessage3": "Never got a confirmation email",
+      "SystemMessage14": "Template used: \"Customer support\"; last updated: 2023-10-25 17:40:05.851",
+      "SystemMessage15": "Template used: \"Customer confirms they have a pending charge and no email (edit accordingly) - All brands\"; last updated: 2023-10-10 16:58:00.370",
+      "AgentMessage2": "SNIPES: I'm really sorry for the inconvenience. If you didn't receive a confirmation email, your order may not have gone through. If the charge on your account is still showing as pending, it means the payment hasn't been completed yet. It should either be refunded within 24 - 48 hours or go through successfully. If it's refunded, you can try placing the order again. If it processes, you'll receive a confirmation email shortly. If you still have not received any confirmation, please contact our customer support team through this link https://snipes.attn.tv/azveTr_lSCoH They will be happy to help you further.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://reviveskincare.com",
+          "value": "https://snipesusa.com",
           "date": ""
-        }
+        },
+        "browsingHistory": [],
+        "orders": []
       },
-      "companyWebsite": "https://reviveskincare.com",
-      "companyName": "RéVive Skincare",
-      "notes": {
+      "orders": []
+    },
+    "128": {
+      "id": "019be2d3-3f68-4978-f000-0000f52ed3bc",
+      "companyName": "Montblanc",
+      "companyWebsite": "https://montblanc.com",
+      "agentName": "Sarah",
+      "agentInitial": "M",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "If escalated do NOT send to CS"
+        ],
         "escalate": [
-          "For \"Gift with Purchase\" promos, ESC if cx ask if the free gift is in stock (don't reference the website for these imquiries)"
+          "ESC if a cx wants to purchase an out of stock item",
+          "ESC if cx want someone from the cs team to call them directly",
+          "ESC when a cx asks for a call back",
+          "ESC if uncertain about refills or product specific questions",
+          "ESC if cx has issues registering",
+          "ESC if cx asks for help putting through an order"
         ],
-        "hurricane_storm_relief": [
-          "Please do not mention supporting anyone or anything during Hurricanes including Hurricane Helene and others affecting the Southern part of the United States. Do not offer help, mention brand support, etc."
+        "tone": [
+          "Close the convo once the client takes over",
+          "Don't use too many exclamation points",
+          "Use more formal language such as \"Hello\" instead of \"Hey\"",
+          "Avoid using smiley faces/emojis",
+          "Avoid responding to anything related to politics"
         ],
-        "samples": [
-          "Brand no longer offers 2 free samples with purchases."
+        "dos_and_donts": [
+          "Always use your VPN when accessing their website & make sure you're sending US links",
+          "Don't ever release information on personnel related to the company",
+          "Don't share any authorized retailers, only boutiques",
+          "Don't ask cx to leave product reviews as they don't collect them",
+          "Don't offer holiday discounts/promos",
+          "Don't mention discounted items"
+        ],
+        "drive_to_purchase": [
+          "When D2P'ing, do not send links of the search results page, send either a related collection or product page",
+          "Do not recommend gift sets"
         ]
       },
+      "SystemMessage1": "Montblanc: Welcome to Montblanc! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage2": "Montblanc: Welcome to the inspirational world of Montblanc. Enjoy $15 off your next order above $300 using code WORLDOFMTB at checkout https://montblanc.attn.tv/agIYoVJ5UFY5 .",
+      "SystemMessage3": "Montblanc: Text us back with any questions you have while shopping and don't forget to save our contact to get exclusive updates!",
+      "SystemMessage4": "Montblanc: We noticed you were viewing one of our beautiful creations. Take another look and enjoy complimentary shipping: montblanc.attn.tv/afEQ-h4qa4pc .",
+      "SystemMessage5": "Montblanc: Hi Lei, this is Sarah. Thanks for visiting Montblanc.com. Are you looking for anything in particular today? https://montblanc.attn.tv/a54GWJkI7pUD",
+      "customerMessage1": "Hi Sarah, looks like all color of this wallet are sold out online?",
+      "customerMessage2": "https://www.montblanc.com/en-us/grain-card-holder-8cc-with-zip-MB220222VG.html",
+      "AgentMessage1": "Montblanc: Hi! Sorry about that. It's still available in the color Noisette. Which color are you interested in?",
+      "customerMessage3": "Oh could you send me a picture or link?, thanks!",
+      "AgentMessage2": "Montblanc: Of course! Here is the link to the Grain Card Holder 8cc with Zip in the Noisette color that is currently available: https://montblanc.attn.tv/a-oesKLupt5O\n\nLet me know what you think!",
+      "customerMessage4": "I'm looking for a red one",
+      "AgentMessage3": "Montblanc: I'm sorry, but we don't have any red option for it. Please check out all available card holders here: https://montblanc.attn.tv/a0cjac26miuR",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://montblanc.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "item": "Grain card holder 8cc with zip",
+            "link": "https://www.montblanc.com/en-us/grain-card-holder-8cc-with-zip-MB220222VG.html",
+            "icon": "eye"
+          },
+          {
+            "item": "Grain card holder 8cc with zip",
+            "link": "https://www.montblanc.com/en-us/grain-card-holder-8cc-with-zip-MB220222VG.html",
+            "icon": "eye"
+          },
+          {
+            "item": "Grain card holder 8cc with zip",
+            "link": "https://www.montblanc.com/en-us/grain-card-holder-8cc-with-zip-MB220222VG.html",
+            "icon": "eye"
+          },
+          {
+            "item": "Mini Wallet 2cc with Zip in Sartorial Leather",
+            "link": "https://www.montblanc.com/en-us/mini-wallet-2cc-with-zip-in-sartorial-leather-MB221340VG.html",
+            "icon": "eye"
+          },
+          {
+            "item": "Extreme 3.0 envelope card holder with zip",
+            "link": "https://www.montblanc.com/en-us/extreme-3.0-envelope-card-holder-with-zip-MB199427VG.html",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "129": {
+      "id": "019bd273-a4dd-48dd-f000-0000f0b5c39c",
+      "companyName": "Naturalizer",
+      "companyWebsite": "https://naturalizer.com",
+      "agentName": "",
+      "agentInitial": "N",
       "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "RéVive Skincare: You're invited to our VIP Shopping Event. Please join us and enjoy 30% off select items. All purchases are final sale. No returns or exchanges. Use code: VIPEVENT30. Shop Now: revive.attn.tv/aDBe-OITxCf3 \n\nText back if you have any questions! Text STOP to Unsubscribe ",
-          "message_media": []
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "Before you ESC use ESC shortcut",
+          "When ESC code issues, add the code to the escalation notes",
+          "Always add the customer's name in your esc notes"
+        ],
+        "tone": [
+          "Don't respond if the customer doesn't want to engage"
+        ],
+        "templates": [
+          "For inquiries regarding their order updates/status/tracking, use UPD shortcut"
+        ]
+      },
+      "SystemMessage1": "Naturalizer: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Naturalizer.",
+      "SystemMessage2": "Naturalizer: Welcome to Naturalizer! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/q7b",
+      "SystemMessage3": "Naturalizer: Welcome, I'm Hannah with Naturalizer! Click this link for your $10 off promo code. naturalizer.attn.tv/aDk4qsujPY83 .",
+      "SystemMessage4": "Naturalizer: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nIt's go time. Shop now: https://naturalizer.attn.tv/a4j7z33nT5xO .",
+      "SystemMessage5": "Naturalizer: Get up to 60% off the sale styles you've been eyeing all year before it's too late! \n\nUse code MOREISMORE: naturalizer.attn.tv/aO1RVcbRvXRM",
+      "SystemMessage6": "Naturalizer: Happy New Year! Start your 2026 glow up w/extra 20% off sale styles. Code MOREISMORE expires tonight.\n\nShop now: naturalizer.attn.tv/atQw4gopizY1",
+      "SystemMessage7": "Naturalizer: FINAL HOURS: up to 60% off sale when you take an extra 20% off w/code MOREISMORE.\n\nDon't miss out: naturalizer.attn.tv/ad1DIIyOlwX3",
+      "SystemMessage8": "Naturalizer: Hey, we noticed you checking us out. Have you seen our best sellers yet? https://naturalizer.attn.tv/aJrmErxmA9ZM .",
+      "SystemMessage9": "Naturalizer: WINTER CLEARANCE starts now! Extra 25% off sale styles w/code: LASTCALL.\n\nSnag your faves while you can: naturalizer.attn.tv/a1BbmadaKONH",
+      "SystemMessage10": "Naturalizer: Already ON SALE + extra 25% off w/code LASTCALL? The math is mathing.\n\nFill your cart now: naturalizer.attn.tv/a2OU578Bevgc",
+      "SystemMessage11": "Naturalizer: FLASH SALE! Boots starting at $74.99 when you take an extra 25% off w/code: LASTCALL.\n\nShop now: naturalizer.attn.tv/a-cf6BWD1qmI",
+      "SystemMessage12": "Naturalizer: Those $74.99 & up boots aren't going to last forever. Code: LASTCALL.\n\nBoot up your cart: naturalizer.attn.tv/adAULFUmfW6e",
+      "SystemMessage13": "Naturalizer: Have you shopped our $74.99+ Boot Flash yet? The steals won't last forever. Enter code: LASTCALL\n\nGo now: naturalizer.attn.tv/aYo_L9gTgMC0",
+      "SystemMessage14": "Naturalizer: Boot Flash ENDS TONIGHT! Warm up with $74.99+ boots w/code: LASTCALL.\n\nGo, go, go: naturalizer.attn.tv/aD_3htX4CjGF",
+      "SystemMessage15": "Naturalizer: Here today, gone tomorrow: the $74.99+ boots you've been eyeing.\n\nShop the flash before it's too late: naturalizer.attn.tv/aW8L97tDYQzU",
+      "SystemMessage16": "Naturalizer: Hello! Thanks for stopping by.\n\nThe Winter Clearance Event sale has an extra 25% off sale styles with code: LASTCALL.\n\nYour next pair is here: https://naturalizer.attn.tv/ab5xm8th8aFi . 😊 SALE",
+      "customerMessage1": "I can't track my last order.It was a replacement for a size six versus six and a half.Could you please look at that for me?And tell me when it will arrive.Thank you",
+      "AgentMessage1": "Naturalizer: Hi, thanks for reaching out and I'm sorry to hear that! Can I have your full name, email, order number, phone number and your zip code please? I'll be happy to check on this with my team.",
+      "customerMessage2": "\"",
+      "AgentMessage2": "Naturalizer: Thank you for the screenshot! I'm sorry for the trouble. Can I also have your full name, phone number, and email address, please? I'm happy to help.",
+      "customerMessage3": "Timothy l williamstim24williams@yahoo.com  803-410-6146",
+      "SystemMessage17": "\"",
+      "SystemMessage18": "Template used: \"Shipping time\"; last updated: 2023-02-03 16:47:34.032",
+      "SystemMessage19": "Template used: \"Order updates / status / tracking\"; last updated: 2022-08-12 17:28:02.094",
+      "SystemMessage20": "Template used: \"No processing time available\"; last updated: 2025-05-29 21:12:07.368",
+      "AgentMessage3": "Naturalizer: Thank you for the details. I have passed this on to my team, and I will get back to you as soon as I hear from them. In the meantime, you can use our convenient online tool to see the latest updates on your order: https://naturalizer.attn.tv/ainmbNApwUr3\n\nAlso, please note, after you place your order, it goes through an order processing stage (preparing, packaging, etc.), which can take up to 3 business days. Once it's handed off to the carrier, your selected shipping method will kick in from there. We usually ship via FedEx. The delivery time will depend on the shipping method you choose at checkout and you can take a look at our timeframes here: https://naturalizer.attn.tv/aZQAyR-RmTEB",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://naturalizer.com",
+          "date": ""
         },
+        "browsingHistory": [
+          {
+            "item": "flexy flat",
+            "link": "https://www.naturalizer.com/product/womens-flexy-flat-3015874/black-leather-ec0221545?partnerid=sms_lifecycle_attentive_welcome_welcome-1-AIGROW_trigger-NATUS&sc=13afcf3ee78dc46135c584b1f9e65138&externalId=dPDpy",
+            "icon": "eye"
+          }
+        ],
+        "orders": [
+          {
+            "orderNumber": "005028711810",
+            "orderDate": "",
+            "link": "",
+            "trackingLink": "",
+            "currency": "USD",
+            "items": [
+              {
+                "name": "flexy flat",
+                "price": "89",
+                "currency": "USD",
+                "productLink": "https://www.naturalizer.com/product/womens-flexy-flat-3015874/black-leather-ec0221545"
+              }
+            ],
+            "total": "89"
+          }
+        ]
+      },
+      "orders": [
         {
-          "message_type": "system",
-          "message_text": "RéVive Skincare: Time is running out, and so are our most coveted items. Don't miss this exclusive event. Shop now before our VIP Event ends. Use code: VIPEVENT30 to indulge in 30% off. Shop Now: revive.attn.tv/a1yHK5ptIkDx \n\nText back if you have any questions! Text STOP to Unsubscribe ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "RéVive Skincare: Final hours to indulge in up to 30% off select treasures. Don't let this exclusive VIP Event slip away. Use code: VIPEVENT30 before it ends. Shop Now: revive.attn.tv/a1dx07224s9y \n\nText back if you have any questions! Text STOP to Unsubscribe ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "RéVive Skincare: Hi Bohan, Are you loving your Moisturizing Renewal Cream? Discover the daytime companion to this iconic cream. Shop Here: https://revive.attn.tv/aHip77EU2jHX  Text STOP to Unsubscribe ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "RéVive Skincare: Enjoy a wondrous winter gift including 4 deluxe samples of our most nourishing formulas to protect & balance skin and replenish lost moisture. Yours with any $250 purchase ($256 value). Shop Now: revive.attn.tv/a4WJXQzRiE6o \n\nText back if you have any questions! Text STOP to Unsubscribe ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "RéVive Skincare: Stock up on your favorites or try something new. It's the perfect time with 20% off. Use code: WINTER. Shop Now: revive.attn.tv/aGmScgrx1Q4e \n\nText back if you have any questions! Text STOP to Unsubscribe ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Hi What is my return status order #144236",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be0e2-3cf7-43a1-f000-000035afb7a0",
-          "message_text": "RéVive Skincare: I'm sorry for the wait and I completely understand wanting an update. Our returns process typically takes about 2 to 15 business days, not counting weekends or holidays, so your return is still within the expected timeframe. Please be sure to check your spam and promo folders as well, as our emails sometimes end up there.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "The return package is delivered on 1/5/2026",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Pre-purchase escalations - All brands\"; last updated: 2023-10-10 17:48:28.037",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be0ea-a050-4cd2-f000-000035afb7a0",
-          "message_text": "RéVive Skincare: I understand! I'm sorry for the wait. I'll ask the team for an update about this. As soon as I hear back, I will send you a message right away!",
-          "message_media": []
+          "currency": "USD",
+          "order_number": "005028711810",
+          "products": [
+            {
+              "product_currency": "USD",
+              "product_link": "https://www.naturalizer.com/product/womens-flexy-flat-3015874/black-leather-ec0221545",
+              "product_name": "flexy flat",
+              "product_price": 89
+            }
+          ],
+          "total": 89
         }
       ]
     },
     "130": {
-      "agentName": "Taylor",
-      "id": "019be5f0-108d-41ce-f000-0000f2135e0b",
+      "id": "019be1e3-2600-403d-f000-0000b892c0d2",
+      "companyName": "TruTech Tools",
+      "companyWebsite": "https://trutechtools.com",
+      "agentName": "Steve",
+      "agentInitial": "T",
+      "messageTone": "Formal",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "escalate": [
+          "Add phone"
+        ],
+        "dos_and_donts": [
+          "Don't mention Extended Warranty for existing orders, it can't be purchased or added retroactively"
+        ],
+        "promo_and_exclusions": [
+          "Check the brand website for the most up to date holiday promotions"
+        ]
+      },
+      "SystemMessage1": "TruTech Tools: Hey, this is Holly. Thanks for visiting our site! https://trutechtools.attn.tv/a_zbOsTau_eL \n\nAre you looking for anything in particular today?",
+      "SystemMessage2": "TruTech Tools: Hey there! If you have any questions about our products or our site feel free to text us here or give us a call at 1-888-224-3437. trutechtools.attn.tv/aKhYprn4-rq1",
+      "SystemMessage3": "TruTech Tools: Hey, this is James. Thanks for checking out our store! https://trutechtools.attn.tv/aDZBzoGhUdkk \n\nAny questions I can answer for you?",
+      "customerMessage1": "Hi James\nCan u call me please ?\nI called that number and they said there is no James there..\n\n516 993 7397 \nJohn\n\nThnku",
+      "AgentMessage1": "TruTech Tools: I'm sorry for the confusion! This number is for SMS only, so I'm not able to make or receive calls. The phone support team is different, but they are always ready to assist you. Please give us another call at 1-888-224-3437.",
+      "customerMessage2": "Ok cool\nI want to buy the hikmicro m30 \nHowever I am worried it's  being discontinued?",
+      "AgentMessage2": "TruTech Tools: Thank you so much for your interest, and I understand your concern. You can check it out here: https://trutechtools.attn.tv/aaGiGdMx_SL4 Unfortunately, we have limited information regarding its production status. The best way to confirm whether the M30 is still supported or being phased out is to reach out directly to HIKMICRO. Their team can provide the most accurate details on current stock, support and warranty coverage.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://birkenstock.com",
+          "value": "https://trutechtools.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.birkenstock.com/us/boston-soft-footbed-suede-leather/bostonbs-suede-suedeleather-softfootbed-S001265-u_12233.html",
-            "item": "Buy Boston Soft Footbed Suede Leather for USD 169.95 | Birkenstock US",
-            "timeAgo": "2026-01-22"
+            "item": "HIKMICRO M30 Professional Thermal Imaging Camera with 384x288 Resolution and Full Analysis Functions",
+            "link": "https://trutechtools.com/hikmicro-m30-thermal-imager.html?sku=HM-TP23-10VF/W-M30&utm_term=&utm_campaign=22_PMax_Shopping_B&utm_source=adwords&utm_medium=ppc&hsa_acc=6167343439&hsa_cam=18142795835&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=17347849154&gclid=CjwKCAiA7LzLBhAgEiwAjMWzCMW9LogJS0I_1X09yISj4NrRFvv3MwUkBBRhEhHN2qnWGqo5-NQv5xoCfHsQAvD_BwE",
+            "icon": "eye"
           },
           {
-            "link": "https://www.birkenstock.com/us/zermatt-premium-suede-leather/zermattsuede-premiumhome-suedeleather-0-rubber-u_1.html?utm_source=facebook&utm_medium=cpc&utm_campaign=fb-us_dr_acq-rtg_advantageshopping_cbo+-+Copy&utm_content=120237572268560189&utm_id=120237572268580189_v2_s09_e7400&utm_term=120237572268580189&fbclid=IwZXh0bgNhZW0BMABhZGlkAasrs_ZdTR1zcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEeCEZ4Ajg7gJC9xaQaToJd3Nj_PARX4sZWw3k8yjUDbY7BOpucsx0HXmKDvPs_aem_3hGYsmt-RJcf7w8jiCpe_Q",
-            "item": "Buy Zermatt Premium Suede Leather for USD 148.95 | Birkenstock US",
-            "timeAgo": "2026-01-22"
+            "item": "HIKMICRO M30 Professional Thermal Imaging Camera with 384x288 Resolution and Full Analysis Functions",
+            "link": "https://trutechtools.com/hikmicro-m30-thermal-imager.html",
+            "icon": "eye"
           },
           {
-            "link": "https://www.birkenstock.com/us/zermatt-premium-suede-leather/zermattsuede-premiumhome-suedeleather-0-rubber-u_1702.html?utm_source=facebook&utm_medium=cpc&utm_campaign=fb-us_dr_acq-rtg_advantageshopping_cbo+-+Copy&utm_content=120237572268560189&utm_id=120237572268580189_v2_s09_e7400&utm_term=120237572268580189&fbclid=IwZXh0bgNhZW0BMABhZGlkAasrs_ZdTR1zcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEeCEZ4Ajg7gJC9xaQaToJd3Nj_PARX4sZWw3k8yjUDbY7BOpucsx0HXmKDvPs_aem_3hGYsmt-RJcf7w8jiCpe_Q",
-            "item": "Buy Zermatt Premium Suede Leather for USD 148.95 | Birkenstock US",
-            "timeAgo": "2026-01-22"
+            "item": "HIKMICRO M30 Professional Thermal Imaging Camera with 384x288 Resolution and Full Analysis Functions",
+            "link": "https://trutechtools.com/hikmicro-m30-thermal-imager.html?utm_campaign=concierge&utm_medium=sms&utm_source=attentive&externalId=juhFp",
+            "icon": "eye"
           },
           {
-            "link": "https://www.birkenstock.com/us/boston-bs-mixed-leather/boston-268817-mixedleather-0-eva-m_1547.html?utm_source=facebook&utm_medium=cpc&utm_campaign=fb-us_dr_acq-rtg_advantageshopping_cbo+-+Copy&utm_content=120237572268560189&utm_id=120237572268580189_v2_s09_e7400&utm_term=120237572268580189&fbclid=IwZXh0bgNhZW0BMABhZGlkAasrs_ZdTR1zcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEeCEZ4Ajg7gJC9xaQaToJd3Nj_PARX4sZWw3k8yjUDbY7BOpucsx0HXmKDvPs_aem_3hGYsmt-RJcf7w8jiCpe_Q",
-            "item": "Buy Boston BS Mixed Leather for USD 159.95 | Birkenstock US",
-            "timeAgo": "2026-01-22"
+            "item": "HIKMICRO M30 Professional Thermal Imaging Camera with 384x288 Resolution and Full Analysis Functions",
+            "link": "https://trutechtools.com/hikmicro-m30-thermal-imager.html?utm_term=&utm_campaign=19_Search_Dynamic&utm_source=adwords&utm_medium=ppc&hsa_acc=6167343439&hsa_cam=1843086906&hsa_grp=75317363014&hsa_ad=690036014398&hsa_src=g&hsa_tgt=aud-1233289093121:dsa-19959388920&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=1843086906&gclid=CjwKCAiAmePKBhAfEiwAU3Ko3K15DCsKdBoOcQwq-dvdARrNeg7eFy5lg7eC-v4baQnFsX5VS9FaNhoC5UwQAvD_BwE",
+            "icon": "eye"
           },
           {
-            "link": "https://www.birkenstock.com/us/boston-bs-mixed-leather/boston-268817-mixedleather-0-eva-m_1624.html?utm_source=facebook&utm_medium=cpc&utm_campaign=fb-us_dr_acq-rtg_advantageshopping_cbo+-+Copy&utm_content=120237572268560189&utm_id=120237572268580189_v2_s09_e7400&utm_term=120237572268580189&fbclid=IwZXh0bgNhZW0BMABhZGlkAasrs_ZdTR1zcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEeCEZ4Ajg7gJC9xaQaToJd3Nj_PARX4sZWw3k8yjUDbY7BOpucsx0HXmKDvPs_aem_3hGYsmt-RJcf7w8jiCpe_Q",
-            "item": "Buy Boston BS Mixed Leather for USD 159.95 | Birkenstock US",
-            "timeAgo": "2026-01-22"
+            "item": "Retrotec AT100 AirTracer Smoke Generator for Air Tightness Testing",
+            "link": "https://trutechtools.com/retrotec-at100-airtracer-smoke-generator-for-air-tightness-testing/?ms2",
+            "icon": "eye"
           }
-        ]
-      },
-      "companyWebsite": "https://birkenstock.com",
-      "companyName": "Birkenstock",
-      "notes": {
-        "escalate": [
-          "For all pre-purchase and post purchase ESC always include the customers full name in the notes",
-          "Don't ESC if they get an error with the fs code while logged in"
         ],
-        "templates": [
-          "For free shipping retroactive code requests, use SRP shortcut",
-          "For holiday/extended returns - use the template"
-        ],
-        "dos_and_donts": [
-          "Close the convo once the client takes over",
-          "🤖 If someone sends a product category, link them to the category and ask if they are looking for something specific"
-        ]
+        "orders": []
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Shipping codes"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Welcome to Birkenstock! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/8y2",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: CLICK ON THE LINK to reveal your FREE GROUND SHIPPING CODE, good for your next full price purchase:\n\nhttps://birkenstock.attn.tv/afvkkc2Hjd-Q\n\nWelcome to the family!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: It's time to shop Last Chance. Shop seasonal favorites and limited-time finds: https://birkenstock.attn.tv/a_uv4eBtr63a .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: ATSHIP-C45Z-ZKT9-ZHPR-C3NTZ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nDid you know we have exclusive versions of our top sellers that you can't get in stores? Check them out now: https://birkenstock.attn.tv/ax5I9i1DmxpI .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Discover the Buckley clog in fresh hues, highlighting every detail. https://birkenstock.attn.tv/a-YcfmR4toj9 .\nQuestions? Reply back. -Taylor",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Both Boston Soft Footbed Suede Leather Taupe and Mayari Birko-Flor are made for comfort and long-lasting wear. \n\nUse code ATSHIP-C45Z-ZKT9-ZHPR-C3NTZ for free ground shipping on full-priced items. \n\nStart exploring 🥿: https://birkenstock.attn.tv/aID34RuSCvxk .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Hi, it's Taylor. I'm a personal concierge here to help you find the perfect pair of Birkenstocks. Is there anything I can help you with today?\n\nhttps://birkenstock.attn.tv/aHTe7DKjSTWQ .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Over 20K people recently purchased Boston Soft Footbed Suede Clog, complete your order before it disappears!\n\nUse code ATSHIP-C45Z-ZKT9-ZHPR-C3NTZ for free ground shipping on full-priced items. Free returns for 30 days (except for Final Sale items): https://birkenstock.attn.tv/aEDoE4FJNPht .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Step into everyday ease with the Mayari Birkibuc Thong Sandal—your comfort companion for any moment. Free returns for 30 days, no worries. Slip into comfort here: https://birkenstock.attn.tv/awy83_k-a9KS . 👣",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: What to pack for warm getaways & snowy retreats. Shop water-friendly, plus warm pairs: birkenstock.attn.tv/aJTLUtmJZa7Q .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Hi there. Thanks for visiting.\n\nUse code ATSHIP-C45Z-ZKT9-ZHPR-C3NTZ for free ground shipping on full-priced items.\n\nShop now: https://birkenstock.attn.tv/arC8uQ7HLklS .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: More than stylish support, they're a comfort essential. Slip into Exquisite leather-wrapped footbeds: birkenstock.attn.tv/aX6G9rNNbiIX .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: A better way to wear brown. Shop rich Cognac on best-selling sandals & clogs: birkenstock.attn.tv/alE0J8niEJPM .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Up or down? In the Lutry clog, you style the backstrap where you want. Shop the latest colors: birkenstock.attn.tv/ak9RHDKkoqRw .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Naturally unique leather. Oiled for a heritage finish, shop it on the Naples, Arizona & more: birkenstock.attn.tv/aXxvmZbpTmbg .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Part clog, part moccasin. Totally relaxed. Shop Buckley clogs in Taupe, Black & Cognac: birkenstock.attn.tv/adIUtmITBBF6 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Tailored and sophisticated in the front, relaxed in the back. Shop the Buckley clog: birkenstock.attn.tv/a6dx6FK_eBPn .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Footbed-supported sneakers for work, travel or around the corner. Shop Bend & Honnef City: birkenstock.attn.tv/auce2OPPNMmk .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: These colors are leaving Last Chance soon. Shop Light Rose, Concrete Gray & Midnight: birkenstock.attn.tv/arJ9KFaaJSnx .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: You won't find these anywhere else. Shop Black Kyoto, London Leather & more exclusives: birkenstock.attn.tv/a3iy1n238Ry8 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Leaving soon and not restocking. Your Last Chance to shop clogs in Mauve & Stone Coin: birkenstock.attn.tv/aq5VnQXa3J_9 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Imagine slipping into the Boston Soft Footbed Suede Clog—you'll enjoy lasting comfort every step of your day.\n\nOver 20K people recently purchased the soft suede clogs, complete your order before it disappears!\n\nStep into everyday ease here: https://birkenstock.attn.tv/aa3Em_S9uAEq .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Statement piece platforms. Chunky soles transform the Paris, Boston & Arizona. Shop the look: birkenstock.attn.tv/ane0nSJYsjOJ .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Step into all-day comfort with the Naples Wrapped Oiled Leather Clog, and imagine effortless wear that fits your life.\n\n206 people recently purchased the Naples Wrapped Oiled Leather Clog; complete your order before it disappears!\n\nYour next pair is here: https://birkenstock.attn.tv/abnKnwEDHNd7 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Soft suede feel, new color story. Shop Carafe, Charcoal & more fresh shades: birkenstock.attn.tv/ayVGKc636-qf .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Hi there. Thanks for visiting.\n\nYour next pair is here: https://birkenstock.attn.tv/akJ0SzFGf22D .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I have not been able to buy these shoes",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be1e5-65d0-4fb2-f000-0000f2135e0b",
-          "message_text": "Birkenstock: I'm sorry to hear this! Can you share more about the issue you're having with buying the shoes?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I have been trying to buy the items in my cart for over two weeks now. I get this message every time",
-          "message_media": [
-            "[\"https://d3vkheyf3b92pv.cloudfront.net/hgp-mms-content/61574C7A-39FD-45F2-A8AC-DB70F170033D?Expires=1769885523&Signature=F-QYD7s4UbDbadaAmbyTHjviiAx4rqvUg68Q9~gSb1Bg-noUXbVS45DRAUafdkcShJp5brXu0pSgzrIuDGVIIwjB2Mp7co3qZYIG~2OUIbq4NejQ9gWZ3UIv3SKJnQQLkqFOCBxMEe~rZgGBwV10CmIDUFw-TUIDZIfYBSYEvsRvUy3VFHxPteFeFFkXR0yVRwI6Qnk6Va-tmuOfpJc5xu4NSDY5xvdENKNFWsMi80bBDpCOb73EiKo3J1d6c~WP-7VwwdcjhVDUrlpEopqtqX4LQP~B9xcHuend0jA~G3fjazaQlsA7tHoGNy78QPY8uVFQfyHAqTnX4dVSQavynA__&Key-Pair-Id=APKAJYKFVWTTAQLYS7LA\"]"
-          ]
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be1e7-1d62-46f8-f000-0000f2135e0b",
-          "message_text": "Birkenstock: Thanks for the screenshot, and my sincere apologies for the inconvenience! First, I might suggest trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes. ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Same issue. Anything you guys can do on your end to help out?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be1eb-2968-4c07-f000-0000f2135e0b",
-          "message_text": "Birkenstock: I'm sorry about that! Let me raise this with our team. Can you share your full name? ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Luis Garcia",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Email: luis25951.garcia@gmail.com",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be1fd-dc4c-47d9-f000-0000f2135e0b",
-          "message_text": "Birkenstock: Thanks for the info! I will pass this along to my team and get back to you as soon as possible. Hang tight!",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Pick up the Boston Soft Footbed Suede Clog you left—soft suede, cushioned footbed, adjustable strap for all-day comfort. 👟\n\n16K people recently added it to their cart.\n\nShop now: https://birkenstock.attn.tv/aGRkm76NLwtz .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Just tried again and it did not work",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be347-6abf-4944-f000-0000f2135e0b",
-          "message_text": "Birkenstock: I'm very sorry if the issue persists. I haven't received any updates from my team yet. I'll follow up and reach out to you as soon as I hear back from them. We appreciate your patience.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Hi there, Boston clogs in soft shearling and heritage oiled leather are built for comfort that improves with wear.\n\nFree returns for 30 days.\n\nYour next pair is here: https://birkenstock.attn.tv/afSzpaFwKLTf .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Slip into the Boston Suede Clog and enjoy velvety comfort that makes your day feel effortlessly better. 😊\n\n19 people recently purchased Boston Suede Clog; complete your order before it disappears!\n\nYour next pair is here: https://birkenstock.attn.tv/aVXIXBcBR3k1 .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "How come 19 people bought their stuff but I could not",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be5f0-108d-41ce-f000-0000f2135e0b",
-          "message_text": "Birkenstock: I'm so sorry about this. I assure you that I'm already checking on this with our team and will get back in touch as soon as I hear back.",
-          "message_media": []
-        }
-      ]
+      "orders": []
     }
   }
 }

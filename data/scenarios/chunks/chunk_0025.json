@@ -3,549 +3,393 @@
   "chunk": "chunk_0025",
   "scenarios": {
     "121": {
-      "agentName": "Miles",
-      "id": "019be744-a82f-4d93-f000-0000cd08eec4",
+      "id": "019bcd73-0978-4db6-f000-0000d8d45c2c",
+      "companyName": "NIRA",
+      "companyWebsite": "https://niraskin.com",
+      "agentName": "Sarah",
+      "agentInitial": "N",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "ESC post-purchase inquiries immediately",
+          "ESC shipping delay inquiries",
+          "ESC technical-specific inquiries",
+          "ESC inquiries regarding specific Influencer/Affiliates code",
+          "ESC if cx wants to return their order, don't send RP template!"
+        ],
+        "tone": [
+          "Don't use slang (ex: gotcha)",
+          "Refer to Bundles as Collections",
+          "Close the convo once the brand's customer service team takes over"
+        ]
+      },
+      "SystemMessage1": "NIRA: Our Founder's wife, Michele calls NIRA her face-to-face confidence booster: a painless, professional grade laser that turns collagen renewal into a daily ritual of self-care!\n\nJoin her GLOW revolution: niraskin.attn.tv/aHRzLz2ZKgxJ",
+      "SystemMessage2": "NIRA: Winter dries skin fast.\nCold air + indoor heat pull moisture from your skin.\n\nStart winter with smarter hydration: niraskin.attn.tv/aQjP8X_5IvFg",
+      "SystemMessage3": "NIRA: New year, new skin goals!\nUp to 30% off (up to $300 off) is LIVE. Pro-level results at home-no appointments needed.\n\nSAVE BIG: niraskin.attn.tv/a-WXvy0l6e0w",
+      "SystemMessage4": "NIRA: Holly! Stop settling for basic skincare & say hello to professional-level results at home. \n\nUp to 30% off (up to $300 off) is ending soon!\n\nYour most radiant skin awaits: niraskin.attn.tv/as7ZWP0577Ny",
+      "SystemMessage5": "NIRA: Today is the LAST DAY to save BIG! \n\nDon't miss out on up to 30% off (up to $300 off). Start your new year with radiant skin!\n\nClick to shop: niraskin.attn.tv/am9dhUouB_8V",
+      "SystemMessage6": "NIRA: Receive a FREE laser!\n\nFor a limited-time only, get a FREE Precision Laser with your Pro Laser purchase. A savings of $449, there's never been a better time to invest in radiant skin!\n\nCLAIM FREE LASER: https://niraskin.attn.tv/a86JfTdflFLr",
+      "customerMessage1": "Im not happy that I just bought my laser and now you are giving a free precision. Not very nice to existing customers.  That was a big purchase for me.",
+      "AgentMessage1": "NIRA: I'm really sorry for the inconvenience. Could you please share your email address and confirm the order number? I'll be happy to look into this with my team!",
+      "customerMessage2": "133264.  holly@ratclifflaw.com",
+      "SystemMessage7": "\"",
+      "AgentMessage2": "NIRA: Thanks for the info! I will pass this along to my team and get back to you as soon as possible.",
+      "customerMessage3": "Thank you!",
+      "AgentMessage3": "NIRA: No worries. Make sure to check your SMS for updates. I'll be in touch!",
+      "SystemMessage8": "\"",
+      "AgentMessage4": "NIRA: Thanks for your patience! I just heard from the team, and we understand how important this is. We apologize for the inconvenience this has caused. Note that the new deal is that if you purchase the Pro laser at full price, you receive a free Precision laser. Since you have a 10 percent discount on your order, we are unable to send you the free Precision laser. You can either return your current device for a full refund and repurchase the BOGO deal, or we can send you an invoice for $64.90 to cover the 10% discount you received, and send you the Precision laser.\n\nPlease let me know how would you like to proceed.",
+      "customerMessage4": "Send me the invoice.  Thanks so much!",
+      "customerMessage5": "Will it come email or text?  You can use my original form of payment.",
+      "SystemMessage9": "CX wants us to send them an invoice for $64.90 to cover the 10% discount they received, and send them the Precision laser.",
+      "AgentMessage5": "NIRA: Thanks for confirming you'd want us to send you an invoice for $64.90 to cover the 10% discount you received, and send you the Precision laser. The invoice will come via email; if you don't see it in your inbox, be sure to check your spam and promo folders, sometimes our emails end up there as well.",
+      "customerMessage6": "I haven't seen it yet\n  Will it come today?",
+      "AgentMessage6": "NIRA: I have passed this information to my team. I cannot guarantee a date and time, as our team handles inquiries in the order they come in. I would suggest checking your email frequently, as well as your spam and promo folders.\n\nLet me know how that goes. I'll be here.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://bonobos.com",
+          "value": "https://niraskin.com",
+          "date": ""
+        },
+        "browsingHistory": [],
+        "orders": []
+      },
+      "orders": []
+    },
+    "122": {
+      "id": "019bbd8c-33ff-4623-f000-00007c1d1c89",
+      "companyName": "ELEMIS",
+      "companyWebsite": "https://us.elemis.com/",
+      "agentName": "Charlotte",
+      "agentInitial": "E",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "tone": [
+          "Let the customer have the last word!"
+        ],
+        "dos_and_donts": [
+          "Don't reply to messages like \"ok\", \"thanks\", etc"
+        ],
+        "promo_and_exclusions": [
+          "Welcome Code:",
+          "Check their offers page for up-to-date info on codes & offers",
+          "If cx asks about a code that isn't on this page, it's likely expired!",
+          "Offers page: https://us.elemis.com/offers"
+        ]
+      },
+      "SystemMessage1": "ELEMIS: Psst... VIPs, we upgraded your gift! 30% off + 5-piece set + a NEW travel cleanser of your choice with $220+. Grab it first! \n\nCode: RETURNVIP >>elemis.attn.tv/avHZ-sBMhOOu",
+      "SystemMessage2": "ELEMIS: Firmer skin in ONE drop. Visible lift in 14 days. Time is running out to get 30% off Pro-Collagen Future Restore Serum + a $204 gift + free 2-day shipping on orders $150+.\n\nUse Code: RETURN >> https://elemis.attn.tv/arF1put1Y9OU",
+      "SystemMessage3": "ELEMIS: Your year-end reward, 48 hours only. Subscribe now and get 30% off your first order, 20% off your second, plus an ELEMIS Starter Set.\n\nSubscribe now >> elemis.attn.tv/ap3-8DLeVSPi",
+      "SystemMessage4": "ELEMIS: Finish the year strong, VIP.\n\n30% OFF when you subscribe, plus free luxe gifts with every delivery - ends tonight. Lock in the routine you love.\n\nSubscribe now >> elemis.attn.tv/a5OZnSzz9Ilt",
+      "SystemMessage5": "ELEMIS: Hi! Charlotte here- don't miss out on the items in your ELEMIS cart!\n\nText back with any questions you may have! \n\nComplete your purchase now >> elemis.attn.tv/aFePYtn-Ojh0 .",
+      "SystemMessage6": "ELEMIS: Experience the benefits of Pro-Collagen Rose Marine Cream—your skin will thank you.  \nShop now: https://elemis.attn.tv/a7vWm1E-DMmg .",
+      "customerMessage1": "Hello… I wanted to reach out to you because one of my items was damaged… I only noticed because I was at my North Carolina house over the holidays and wasn't able to open up my boxes until I return back to Florida.",
+      "AgentMessage1": "ELEMIS: I'm very sorry to hear this happened! Can you please send me a photo of the items that you received, along with your order number and email address?",
+      "customerMessage2": "\"",
+      "customerMessage3": "\"",
+      "customerMessage4": "I'm just not sure what order number it was because I made several orders over the holidays",
+      "customerMessage5": "Tamerapage@yahoo.com",
+      "AgentMessage2": "ELEMIS: Thank you for sending me your photos and your info. Can I please have your full name and shipping address instead so I can forward this concern to our team?",
+      "customerMessage6": "Tamera Page Ownby1604 northeast hilltop street Jensen beach Fl 34957",
+      "customerMessage7": "Thank you",
+      "SystemMessage7": "\"",
+      "AgentMessage3": "ELEMIS: Thanks for the info and you're welcome! I will pass this along to my team and get back to you as soon as possible, hang tight!",
+      "customerMessage8": "Ok",
+      "customerMessage9": "Good morning… I just was checking in to see if we heard anything back?",
+      "AgentMessage4": "ELEMIS: Good morning! I'm sorry, but I haven't heard back from the team yet. Rest assured, I'll get back to you as soon as I do. Thank you for your patience.",
+      "customerMessage10": "Thank you!!",
+      "SystemMessage8": "ELEMIS: Enjoy exclusive early access to our NEW Pro-Collagen Hydrating Cleansing Mousse - a luxe cream-to-mousse cleanser that deeply purifies without drying.\n\nShop it before anyone else >> elemis.attn.tv/aj1C5LojZe2c",
+      "SystemMessage9": "\"",
+      "AgentMessage5": "ELEMIS: Thanks for your patience! I just heard from the team, and we understand how important this is. We have found your order number, 7009634462.\n \nCould you please kindly confirm which gift the white bag is from and if the zip is broken above arrival?\n \nWe look forward to hearing from you.",
+      "customerMessage11": "Thank you for helping! I'm assuming the zipper was broken before because I've never used it.",
+      "customerMessage12": "Do you still have the white bags?",
+      "SystemMessage10": "\"",
+      "SystemMessage11": "Template used: \"You're welcome! - All brands\"; last updated: 2023-10-10 18:02:00.150",
+      "AgentMessage6": "ELEMIS: You're welcome and thanks for letting me know. Let me forward this to our team and I'll get back to you with an update!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://us.elemis.com/",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://bonobos.com/products/primo-chino?color=sand%20linen",
-            "item": "Primo Chino",
-            "timeAgo": "2026-01-18"
+            "item": "Pro-Collagen Rose Marine Cream",
+            "link": "https://us.elemis.com/pro-collagen-rose-marine-cream.html",
+            "icon": "eye"
           },
           {
-            "link": "https://bonobos.com/products/stretch-washed-chino?color=deep%20navy",
-            "item": "The Chino 2.0",
-            "timeAgo": "2026-01-18"
+            "item": "Sensitive Cleansing Wash",
+            "link": "https://us.elemis.com/sensitive-cleansing-wash-200ml.html",
+            "icon": "eye"
           },
           {
-            "link": "https://bonobos.com/products/stretch-washed-chino-1?color=the%20khakis",
-            "item": "The Original Chino",
-            "timeAgo": "2026-01-18"
-          },
-          {
-            "link": "https://bonobos.com/products/stretch-washed-chino-1?color=chestnuts",
-            "item": "The Original Chino",
-            "timeAgo": "2026-01-18"
-          },
-          {
-            "link": "https://bonobos.com/products/stretch-wool-dress-pants?color=navy",
-            "item": "Italian Stretch Wool Dress Pants",
-            "timeAgo": "2026-01-18"
+            "item": "Skin Nourishing Milk Bath",
+            "link": "https://us.elemis.com/skin-nourishing-milk-bath-400.html",
+            "icon": "eye"
           }
-        ]
-      },
-      "companyWebsite": "https://bonobos.com",
-      "companyName": "Bonobos",
-      "notes": {
-        "tone": [
-          "Close journey replies asking customers to text in their birthday to receive a gift"
         ],
-        "dos_and_donts": [
-          "Offer help if the customer replies back to the automated message with number 0"
-        ],
-        "templates": [
-          "For checkout issues use COI shortcut",
-          "If the site doesn't accept the customers payment method use PME shortcut"
-        ],
-        "promo_and_exclusions": [
-          "The welcome code can be applied to discounted items",
-          "For issues with the code GETSTARTED15 use GSE shortcut",
-          "The 20% off welcome offer will automatically be added at checkout for their first order"
-        ]
+        "orders": []
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/eEr",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Congratulations! We might be biased, but we think you just signed up for the best text alerts in the game 😎 To put money where our mouth is, here's a coupon code for 20% off your first order - hello20_nfxunh ! Welcome to Bonobos! \n\nGet Your 20% Off Now: bonobos.attn.tv/aMT0mBKbAGaM \n\nTerms apply. ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nReady for a style upgrade? Take a look at the newest arrivals and see what you discover: https://bonobos.attn.tv/a1uYI5T9qFza .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Grab The Harrington Jacket in your cart for a versatile, easy style boost.\n\nUse code hello20_nfxunh for 20% off.\n\nShop now: https://bonobos.attn.tv/aluOl6aNP3nE .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: 9.5K people have recently viewed The Harrington Jacket.\n\nUse code hello20_nfxunh for 20% OFF. \n\nSee for yourself 🧥: https://bonobos.attn.tv/aktX9p9Knd74 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: It's your last chance to snag some serious SAVINGS! Our extra 30% off sale is wrapping up tonight—don't miss out on these deals! Go get your favorites! \n\nShop Quick: bonobos.attn.tv/a206SSpt6ZDB ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Level up your look with Weekday Warrior Dress Pants—easy comfort meets sharp style. \n\n1.3K people recently added these to their cart. \n\nShop now: https://bonobos.attn.tv/aEjSLdMJI8i7 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Welcome and thanks for stopping by!  \n\nShop now for comfortable styles built for you: https://bonobos.attn.tv/aqxi7Cq0At3m .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Ready to refresh your office wardrobe for the new year? We've put together a collection that'll make you the best-dressed at the water cooler. Shop now and don't miss out!\n\nShop Now: bonobos.attn.tv/avUL3fh_lBfy ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Check out Jetsetter Knit Blazer — comfy, sharp, and easy to dress up or down.\n\n428 people added this blazer to their cart.\n\nBuy here: https://bonobos.attn.tv/a9umYm6-B9-C .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Looking for colors that match your vibe? Whether you want beachy blues for that sunny escapade or deep navy to keep things grounded, we've got you covered!\n\nShop Blue: bonobos.attn.tv/anPiLrKzZYkb ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Heads up if you use our app: We'll be retiring it this month, but we're still here 24/7 at bonobos.com, in-store at the Guideshop, or right here via text!\n\nAs a thank you for understanding, here's a code for 20% off your next purchase:\n\nsmsapp20_pewnfy\n\nShop Here: https://bonobos.attn.tv/a9WJwaxRtnmo \n\nExclusions apply. Valid thru 3/31/25.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Have you peeked at our bundles page lately? We've refreshed it with more fan favorites and you can save BIG - over 25%! Don't miss out on these awesome deals!\n\nShop Exclusive Specials: bonobos.attn.tv/aMKiRRI4Le1F \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Thanks for checking us out!\n\nShop now for comfortable, stylish picks that fit your life: https://bonobos.attn.tv/arxPSbd6CvU_ .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Hey there! Starting today, you can snag an extra 50% off all sale items. That's up to 70% off original prices! Don't miss out on these deals—your wardrobe will thank you!\n\nShop 50% Off: bonobos.attn.tv/a8KqloxdWJbJ ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Snag those Weekday Warrior Dress Pants—STYLE and comfort in every move! 🕺\n\nGet $60 OFF these right now.\n\nShop now: https://bonobos.attn.tv/a8UGumKN6pxr .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: You will find sharp details and tailored comfort in every pair of Dress Pants here. Just between you and us, the perfect fit is waiting for you: https://bonobos.attn.tv/axSsdEjOIf5t .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Bonobos: Hey hey! If you have any questions, don't hesitate to reach out. We're always ready to help.\n\nVisit bonobos.attn.tv/alizovvnp0zY for order help, or hit us back here for some product and style tips.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I bought a pair of jeans and it's missing a belt loop on the right side, causing my belt to slip up off the jeans.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be38e-b420-4433-f000-0000cd08eec4",
-          "message_text": "Bonobos: Oh no, we're so sorry about that! If you could take a photo of the damage/defect, the front and back of the inner QR code tag, and have your order number on hand - we can see what necessary steps need to be taken. Please contact us here: https://bonobos.attn.tv/aVtx_n6pWHMd or use the Live Chat feature on our website.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be744-a82f-4d93-f000-0000cd08eec4",
-          "message_text": "Bonobos: Thanks for the photos! Just to clarify, have you reached out to the link that I've sent out? Please let me know how that goes. I'm just one click away!",
-          "message_media": []
-        }
-      ]
-    },
-    "122": {
-      "agentName": "Jordan",
-      "id": "019bd2b0-6901-490c-f000-0000f1d811ca",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://drschollsshoes.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://drschollsshoes.com",
-      "companyName": "Dr. Scholl's Shoes",
-      "notes": {
-        "escalate": [
-          "For all ESC use ESC shortcut",
-          "When ESC code issues, include the promo code in the ESC notes"
-        ],
-        "promo_and_exclusions": [
-          "Coupon codes CAN be combined with sale items"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Dr. Scholl's Shoes: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Dr. Scholl's Shoes.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Dr. Scholl's Shoes: Welcome to Dr. Scholl's Shoes! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/E6K",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Dr. Scholl's Shoes: Here's your 15% off + free shipping on cool, comfy, classic looks for the whole family! \n\nShop now: drschollsshoes.attn.tv/aJ-9lhWxszdf ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Dr. Scholl's Shoes: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nNot exactly sure what you're looking for? Check out our newest arrivals for some inspiration: https://drschollsshoes.attn.tv/axKWyZmfDA7v .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Dr. Scholl's Shoes: Hey, we noticed you checking us out. Have you seen our best sellers yet? drschollsshoes.attn.tv/aVc3qBhikz7a . ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Dr. Scholl's Shoes: STARTS NOW: Snag an EXTRA 20% off select styles + FREE shipping on orders $65+\n\nCode EXTRA20: drschollsshoes.attn.tv/ay_M59mxqU-M . ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Dr. Scholl's Shoes: Extra 20% off sneaks, booties & casuals is on NOW! PLUS, free ship on orders $65+\n\nUse code EXTRA20: drschollsshoes.attn.tv/a8x3hcE2MVrH . ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Dr. Scholl's Shoes: Mary Janes start @$31.99? Say less. Use code EXTRA20 for an extra 20% off select styles! \n\nGO: drschollsshoes.attn.tv/ac5Z4LIOWrR7 . ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Dr. Scholl's Shoes: Hey, we noticed you checking us out. Have you seen our best sellers yet? drschollsshoes.attn.tv/apvszEVQbjgC . ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Dr. Scholl's Shoes: New Year, New Shoes! EXTRA 20% OFF select styles! Start your shoedrobe refresh NOW.\n\nCode EXTRA20: drschollsshoes.attn.tv/akOL6Nonjl2S .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Dr. Scholl's Shoes: EXTRA 20% off styles for you, him & the kiddos! New Year DEALS, wear NOW styles. HURRY!\n\nCode EXTRA20: drschollsshoes.attn.tv/aLhfvyqYlV_l .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Dr. Scholls, what is this",
-          "message_media": [
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1768764783820_00b6b91f-bd35-49b0-ac1a-3ce5ef90127b-1.jpeg",
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1768764783820_00b6b91f-bd35-49b0-ac1a-3ce5ef90127b-1.png"
-          ]
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd29f-de22-4f60-f000-0000f1d811ca",
-          "message_text": "Dr. Scholl's Shoes: If you're asking which shoes these are, I'm afraid we don't carry this style. I'll make sure to share this with the team so they can consider it in the future. \n\nIn the meantime, feel free to explore our new arrivals here: https://drschollsshoes.attn.tv/afvzCBFmu5UY You might find something to buy instead.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Yes I am aware. I ordered Women's nice day Loafers and recorded kitten heeled pumps",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Received",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd2a3-8af7-4ef0-f000-0000f1d811ca",
-          "message_text": "Dr. Scholl's Shoes: I'm sorry for the inconvenience. Can I have your full name, email, order number, phone number and your zip code please?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Mary Williams Crislermary@gmail.comOrder #005028812788678-531-681430011",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd2b0-6901-490c-f000-0000f1d811ca",
-          "message_text": "Dr. Scholl's Shoes: I'm sorry, to be sure, your name is Mary Williams and your email address is crislermary@gmail.com?",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "123": {
-      "agentName": "Sarah",
-      "id": "019be33f-33b4-45dc-f000-0000d8061888",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://simplyearth.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://simplyearth.com",
-      "companyName": "Simply Earth",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
-        ],
-        "promo_and_exclusions": [
-          "Cx can use both a gift card and a promo code per order!"
-        ]
-      },
+      "id": "019bbdef-7f98-4c45-f000-00002f94c9d3",
+      "companyName": "Clove",
+      "companyWebsite": "https://goclove.com",
+      "agentName": "Katie",
+      "agentInitial": "C",
       "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Simply Earth: The Butters + Balms Recipe Box is here! Kickstart your New Year with a FUN new hobby! Grab yours now and create NATURAL products at home! \n\nShop now: simplyearth.attn.tv/aKoci7diZTH1 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simply Earth: Today only, use code NEROLI for $30 off our Neroli Essential Oil, making it just $19.99! \n\nShop now: simplyearth.attn.tv/aENrZ3PvxSlX ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simply Earth: Hey, there! Thanks for stopping by. \n\nYou checked simplyearth.attn.tv/aiQdLFEpdwBZ\nMost Earthies love it because it makes every DIY project effortless.\n\nDo you have questions about it?\nLet me know so I can help you. ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simply Earth: LIMITED TIME: Get a free Succulent Diffuser w/ your 1st Recipe Box! Use code SUCCULENT at checkout + enjoy making your own nourishing balms this winter. \nShop now: simplyearth.attn.tv/azjcL0azAS9z ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simply Earth: Hey, we noticed you checking us out. \n\nHave you seen our Monthly Recipe Box, yet? You can get all-natural goodies delivered directly to your door!\n\nGrab it now: https://simplyearth.attn.tv/aGs0fSSq-AWd ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Yes. I've noticed I'm missing my bottle cap sticker sheet.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be21b-4680-4f48-f000-0000d8061888",
-          "message_text": "Simply Earth: I'm really sorry for the inconvenience. Could you please share your email address and confirm the order number?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "It will be either camonvtx09@gmail.com  or dixielhensley@gmail.com.  I'm sure which email I  used.\nWhat do you mean by  order  number?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be2ed-d12e-4910-f000-0000d8061888",
-          "message_text": "Simply Earth: The order number is indicated in the order confirmation you received when you placed the order. If you believe that something is missing from your order, please email your request to help@simplyearth.com or feel free to call this number 866-330-8165 Monday-Friday 7 am-3 pm CST. Please let me know if you have any questions about our products, I'm more than happy to help you here!",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I'm sure this is it,9400140105949000518053",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be33f-33b4-45dc-f000-0000d8061888",
-          "message_text": "Simply Earth: Thanks for the info! I truly wish I could resolve this directly for you. However, I have limited access to orders. Please reach out to our specialized team using the info I sent above. They'll be much better equipped to help you with this. ",
-          "message_media": []
-        }
-      ]
-    },
-    "124": {
-      "agentName": "Taylor",
-      "id": "019bf829-44cd-4a5c-f000-0000eaf48e75",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://us.laneige.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://us.laneige.com",
-      "companyName": "LANEIGE",
-      "notes": {
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "send_to_cs": [
-          "Send to CS for any order related inquiries"
-        ],
-        "promo_and_exclusions": [
-          "Free gift with purchase codes are entered in the cart and discount codes at checkout"
-        ]
-      },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "LANEIGE: Don't forget your 15% off offer, use code HELLO15 and claim today! https://laneige.attn.tv/agw1YsXHz2lV ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LANEIGE: NEW Donut Delight Duo: Bestselling Glaze Craze shades & an exclusive keychain in one sweet set. SHOP NOW: laneige.attn.tv/a_iykHfnA8Px .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LANEIGE: FREE New Years Gifts! Get hydration essentials with orders $60+ and $80+. Ends 12/16. SHOP NOW: laneige.attn.tv/avz05RcQ4Fjt .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LANEIGE: Loyalty Exclusive! Get a FREE Laneige headband for your skincare routine with orders $55+! Use code DEWY. Ends 1/31. Join Dewy Skin Rewards to unlock this perk! SIGN UP: laneige.attn.tv/a5aPLALgzGMn .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LANEIGE: Strawberry Shortcake lip mask & classic mini lip balms! Get the best of both worlds for AM to PM lip care.\nSHOP NOW: laneige.attn.tv/arHGfOUeHoE4 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LANEIGE: Soothing, nourishing skincare essentials, FREE on orders $60+ and $90+.\nSHOP NOW: laneige.attn.tv/alAiu49z6eF0 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LANEIGE: Almost gone! FREE Laneige headband with orders $55+ with code DEWY.\nSIGN UP TO REDEEM: laneige.attn.tv/a3oaEJ9JR4kt .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LANEIGE: Looks like you're already subscribed! Need a refresher on our current deals & offers? Discover them here: https://laneige.attn.tv/l/xOz/AAAAA .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "LANEIGE: Looks like you're already subscribed! Need a refresher on our current deals & offers? Discover them here: https://laneige.attn.tv/l/xOz/AAAAA .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "(attn) Hey, I need help with something:",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bf825-fba1-42bc-f000-0000eaf48e75",
-          "message_text": "LANEIGE: I would be more than happy to help out, ask away!",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "When looking at my cart it says \"free hydration duo\" which should be cica sleeping mask and cream skin toner and moisturizer but when the reward got added to my cart only one of the duo items showed up the cica sleeping mask",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "All of the other reward items got added the headband & the dry skin trio but only one of the hydration duo items would you happen to know why it's not adding the second item which I should have as a reward",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bf829-44cd-4a5c-f000-0000eaf48e75",
-          "message_text": "LANEIGE: Apologies for the trouble. I'm happy to check it out. Could you send me a screenshot of what's showing on your end including the item(s) in your cart? ",
-          "message_media": []
-        }
-      ]
-    },
-    "125": {
-      "agentName": "Sarah",
-      "id": "019bcdc5-9bf9-4538-f000-0000e619771e",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://bartesian.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://bartesian.com",
-      "companyName": "Bartesian CA",
-      "notes": {
-        "send_to_cs": [
-          "For hardware maintenance issues, use shortcut HMI",
-          "Send to CS for post-purchase inquiries"
+          "No ESC for this brand, send everything to CS",
+          "If customers have issues receiving referral links - send to CS"
         ],
         "tone": [
-          "Speak in first person, \"Our cocktails, Our dispensers\"",
-          "Do not use \"pod(s)\", use \"capsules\" instead"
+          "Don't say \"make this up to you\" or overdo it trying to be friendly"
         ],
-        "drive_to_purchase": [
-          "Unless cx specifies, default to recommending \"THE BARTESIAN COCKTAIL MAKER\""
+        "templates": [
+          "If a customer slipped/got injured, use the SOI temp",
+          "There is a separate return policy for their apparel"
+        ],
+        "dos_and_donts": [
+          "Always check the product page when they ask about processing times",
+          "Don't give out medical advice",
+          "Don't send the Canadian return link/policy"
         ]
       },
+      "SystemMessage1": "Clove: Have you seen our collab w/ Olipop healthy soda? Shop new fun & fruity OLISOCKS today! goclove.attn.tv/aT3llG3MXuvR .",
+      "SystemMessage2": "Clove: Buy Clove shoes with HSA/FSA funds before they expire on Dec 31st! Here's how: goclove.attn.tv/aII7D54A0cae .",
+      "SystemMessage3": "Clove: Forte 1 is 20% OFF through the end of December! Shop the original now: goclove.attn.tv/aFESc8q7gghZ .",
+      "SystemMessage4": "Clove: There's still time for 12/24 delivery! Order TODAY via 2nd Day Air to get what you need for the holidays: goclove.attn.tv/a4bjuQJ6Fr4W .",
+      "SystemMessage5": "Clove: Need it by 12/24? It's not too late! Order TODAY via Next Day Air to get your gifts in time: goclove.attn.tv/aJiyXqlAyUnt .",
+      "SystemMessage6": "Clove: Newness Alert! Brand New Forte 2 and Strada colors just dropped! Shop bold new looks here: goclove.attn.tv/a3wZ1lU6F_k8 .",
+      "SystemMessage7": "Clove: Great news: We're having a SAMPLE SALE! Huge savings, amazing selection, don't miss it: goclove.attn.tv/aypE-dW2Xcd2 .",
+      "SystemMessage8": "Clove: 2 days of Sample Sale just wasn't enough...so take 1 more! Shop amazing deals now: goclove.attn.tv/adYejDh6UvYI .",
+      "SystemMessage9": "Clove: Final hours. The Clove Sample Sale ends today with big savings on shoes built for real shifts. goclove.attn.tv/adNkzcmBJVDT .",
+      "SystemMessage10": "Clove: Students, bundle & save for next semester! Shop everything you need: goclove.attn.tv/ajc1KfHHJWQi .",
+      "SystemMessage11": "Clove: Take 20% OFF The Pitt Collection with code PITT20 & tune in with us on HBO! Shop now: goclove.attn.tv/aaq9nbr8AQVA .",
+      "SystemMessage12": "Clove: Sneakers off, recovery slides on...it's time to watch THE PITT! Tune into the new season of The Pitt, Thursdays at 9PM on HBO Max and take 20% OFF The Pitt Edit w/ code PITT20: goclove.attn.tv/aCgYN3JdWUrn .",
+      "SystemMessage13": "Clove: Hi, thanks for visiting Clove.\n\nYour next pair is here: https://goclove.attn.tv/ai240RMvkwVp .",
+      "SystemMessage14": "Clove: Act now! The Women's Strada - Antique White / Sage / Gum - Antique White / Sage / Gum / 7.5 you were looking at is almost gone. Grab it before it is too late! goclove.attn.tv/aJfqHWseBVPl .",
+      "SystemMessage15": "Clove: FYI, just a few pairs are left of the Women's Strada - Antique White / Sage / Gum - Antique White / Sage / Gum / 7.5! Shop now and lock in your size: goclove.attn.tv/ayotliGWZZyc .",
+      "customerMessage1": "I need a coupon because I would like to buy 2 pairs",
+      "AgentMessage1": "Clove: Check our website goclove.com for the latest promotions. You might find a great deal for your shoe purchase!",
+      "customerMessage2": "Not valid for items on my cart",
+      "customerMessage3": "I can't afford them sorry",
+      "SystemMessage16": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
+      "AgentMessage2": "Clove: Thank you for sending that in, and no need to apologize. Just to confirm, are you trying to use the code: PITT20? If so, please know that it only works for the Pitt collection. You can check them out here: https://goclove.attn.tv/a76BycKwgM0U I'm sorry, I don't have any other codes available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you may also want to check out our bundle here: https://goclove.attn.tv/aYUVbnwRjnw6",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://goclove.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "item": "Bundle Classic",
+            "link": "https://goclove.com/products/bundle-classic",
+            "icon": "eye"
+          },
+          {
+            "item": "Women's Strada - Antique White / Sage / Gum",
+            "link": "https://goclove.com/products/clove-strada-womens-antique-white-sage-gum?variant=40802088943674&utm_source=attentive&externalId=rNr_n",
+            "icon": "eye"
+          },
+          {
+            "item": "Bundle Classic",
+            "link": "https://goclove.com/products/bundle-classic",
+            "icon": "eye"
+          },
+          {
+            "item": "Women's Strada - Antique White / Sage / Gum",
+            "link": "https://goclove.com/products/clove-strada-womens-white-vintage-tan?variant=40841749790778",
+            "icon": "eye"
+          },
+          {
+            "item": "Women's Strada - Antique White / Sage / Gum",
+            "link": "https://goclove.com/products/clove-strada-womens-antique-white-sage-gum?variant=40802088943674",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "124": {
+      "id": "019be79c-93de-45e3-f000-00005c156274",
+      "companyName": "FragranceNet",
+      "companyWebsite": "https://fragrancenet.com",
+      "agentName": "Sarah",
+      "agentInitial": "F",
       "messageTone": "Polished",
-      "blocklisted_words": [
-        "pod"
-      ],
-      "escalation_preferences": [
-        "upset/angry customer"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Bartesian: Ready for NYE? Stock up on cocktails or upgrade to the Bartesian Duet - $100 off, delivered by NYE. Shop now: bartesian-ca.attn.tv/alrrDkOIfd58 ",
-          "message_media": []
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Don't use emojis/special characters"
+        ],
+        "templates": [
+          "For issues relating to free shipping with no minimum purchase, use \"FSB\" shortcut",
+          "If a product is not available on their website, use \"PNA\" shortcut"
+        ]
+      },
+      "SystemMessage1": "FragranceNet: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/dkv",
+      "SystemMessage2": "FragranceNet: Welcome to the world of elevated fragrance! Enjoy 30% OFF sitewide to start your journey: https://fragrancenet.attn.tv/abEFS5cyfRDv .",
+      "SystemMessage3": "FragranceNet: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nDiscover your new scent!\n\nShop now: https://fragrancenet.attn.tv/axQsNn_-e74e .",
+      "SystemMessage4": "FragranceNet: Discover Acqua Di Gioia Eau de Parfum — fresh, vibrant floral and aquatic notes you'll love. ACT FAST\n\nTake a look: https://fragrancenet.attn.tv/a4xDOWXl9TgZ .",
+      "SystemMessage5": "FragranceNet: Complete your Acqua Di Gioia Eau de Parfum — fresh, elegant, nature-inspired scent waiting in your cart.\n\nShop now: https://fragrancenet.attn.tv/aEuQdUJ6rdlP .",
+      "SystemMessage6": "FragranceNet: Acqua Di Gio scents bring crisp aquatic freshness and light citrus notes—take another whiff and decide which fits you best.\n\nFree standard shipping on orders over $59.\n\nShop now: https://fragrancenet.attn.tv/a9zmhpo37Il2 . ACT FAST",
+      "SystemMessage7": "FragranceNet: Try Acqua di Gioia Eau de Parfum for a fresh, vibrant, floral aquatic scent.\n\nFree standard shipping on orders over $59.00\n\nSink into the scent: https://fragrancenet.attn.tv/a88CQLKxcWmV .",
+      "SystemMessage8": "FragranceNet: Try Acqua di Gioia Eau de Parfum for its fresh, vibrant floral and aquatic notes!\n\nShop now: https://fragrancenet.attn.tv/aM14jOup_qox . LIMITED TIME",
+      "SystemMessage9": "FragranceNet: Hi there — discover refined scents from Giorgio Armani, known for clean, modern blends. Try one that fits your vibe.\n\nFree standard shipping on orders over $59.00.\n\nTime to find your scent: https://fragrancenet.attn.tv/aHOqjbzu6FVm .",
+      "SystemMessage10": "FragranceNet: Hi there — thanks for stopping by!\n\nFind your signature scent: https://fragrancenet.attn.tv/aU6D7Jrp_PS9 . ACT FAST",
+      "SystemMessage11": "FragranceNet: UP TO 80% OFF! Shop our winter warehouse clearance today while supplies last: https://fragrancenet.attn.tv/ayPG1tFUhSx_ .",
+      "SystemMessage12": "FragranceNet: Discover Acqua Di Gioia Eau De Parfum's fresh, vibrant floral and aquatic notes—try it while it's here.\n\nFree standard shipping on orders over $59.00\n\nSink into the scent: https://fragrancenet.attn.tv/a4zA7HhZLorq .",
+      "SystemMessage13": "FragranceNet: MLK DAY SPECIAL - Pick your deal!\n\n30% OFF: https://fragrancenet.attn.tv/aTXw_cBW3bDL \nFree Shipping: https://fragrancenet.attn.tv/a_PtozEfU5nK .",
+      "SystemMessage14": "FragranceNet: Try Oscar Body Powder for a soft, fresh feel that pampers your skin.\n\nFree standard shipping on orders over $59.00\n\nSink into silky comfort: https://fragrancenet.attn.tv/a3iVfLS5Orqu .",
+      "SystemMessage15": "FragranceNet: You've unlocked an exclusive offer!\nTap to reveal your savings: https://fragrancenet.attn.tv/a2p9nZDuhtIS \n\nEnds 1/24",
+      "SystemMessage16": "FragranceNet: Grab the Acqua di Gioia Eau de Parfum in your cart — fresh, vibrant scent waiting for you!\n\nShop now: https://fragrancenet.attn.tv/anhKG6Ixu7J9 . ACT FAST",
+      "SystemMessage17": "FragranceNet: Fresh picks from Acqua Di Gio — light marine notes you can wear daily, so you can grab the scent you tried.\n\nFree standard shipping over $59.\n\nGive it a sniff: https://fragrancenet.attn.tv/aB2iEQ-w4PKQ . ACT FAST",
+      "customerMessage1": "1 oz is only $75 at Ulta. And you’re saying it’s $85.  What’s up with that??",
+      "AgentMessage1": "FragranceNet: Thanks for reaching out, and I understand your concern. Please note that our standard price for the Acqua di Gioia 1 oz is $84.99, but the price with our coupon applied is $59.49. Hope this helps you to decide to go for it!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://fragrancenet.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "Bartesian: Still thinking it over? The Be Mine Bundle includes everything for Valentine cocktails & saves over $50. Shop now: bartesian-ca.attn.tv/awFDvrgDdrg1 ",
-          "message_media": []
+        "browsingHistory": [
+          {
+            "item": "ACQUA DI GIOIA",
+            "link": "https://www.fragrancenet.com/perfume/giorgio-armani/acqua-di-gioia/eau-de-parfum#287293",
+            "icon": "eye"
+          },
+          {
+            "item": "OSCAR",
+            "link": "https://www.fragrancenet.com/perfume/oscar-de-la-renta/oscar/body-powder#115520",
+            "icon": "eye"
+          },
+          {
+            "item": "OSCAR",
+            "link": "https://www.fragrancenet.com/perfume/oscar-de-la-renta/oscar/body-powder?gclid=CjwKCAiAybfLBhAjEiwAI0mBBmyQKKJBsfbd_sSbT%2dEfYM3XFoKXK8nZBDrbn1Rj3dxyHbhNfjG3rhoCOH4QAvD_BwE&mv_pc=gawus_pla_m_x_20379311721_115520&utm_campaign=x&utm_medium=cpc&utm_source=google_us#115520",
+            "icon": "eye"
+          },
+          {
+            "item": "PRADA CANDY",
+            "link": "https://www.fragrancenet.com/perfume/prada/prada-candy/eau-de-parfum#347656",
+            "icon": "eye"
+          },
+          {
+            "item": "ACQUA DI GIOIA",
+            "link": "https://www.fragrancenet.com/perfume/giorgio-armani/acqua-di-gioia/body-lotion#509233",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "125": {
+      "id": "019bc869-59a5-43d5-f000-000089e87eab",
+      "companyName": "Montblanc",
+      "companyWebsite": "https://montblanc.com",
+      "agentName": "Sarah",
+      "agentInitial": "M",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "If escalated do NOT send to CS"
+        ],
+        "escalate": [
+          "ESC if a cx wants to purchase an out of stock item",
+          "ESC if cx want someone from the cs team to call them directly",
+          "ESC when a cx asks for a call back",
+          "ESC if uncertain about refills or product specific questions",
+          "ESC if cx has issues registering",
+          "ESC if cx asks for help putting through an order"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Don't use too many exclamation points",
+          "Use more formal language such as \"Hello\" instead of \"Hey\"",
+          "Avoid using smiley faces/emojis",
+          "Avoid responding to anything related to politics"
+        ],
+        "dos_and_donts": [
+          "Always use your VPN when accessing their website & make sure you're sending US links",
+          "Don't ever release information on personnel related to the company",
+          "Don't share any authorized retailers, only boutiques",
+          "Don't ask cx to leave product reviews as they don't collect them",
+          "Don't offer holiday discounts/promos",
+          "Don't mention discounted items"
+        ],
+        "drive_to_purchase": [
+          "When D2P'ing, do not send links of the search results page, send either a related collection or product page",
+          "Do not recommend gift sets"
+        ]
+      },
+      "SystemMessage1": "Montblanc: When just one gift remains, choose the iconic Meisterstück. Available in a spectrum of refined colors. Discover now: montblanc.attn.tv/ajUhV7tCcPzy",
+      "SystemMessage2": "Montblanc: We noticed you were viewing one of our beautiful creations. Take another look and enjoy complimentary shipping: montblanc.attn.tv/aX25VxD4cYBg .",
+      "SystemMessage3": "Montblanc: Hey Lenor, this is Sarah. Thanks for visiting Montblanc.com. Do you have any questions that I can assist you with? https://montblanc.attn.tv/aR9PZLM_qU-v",
+      "SystemMessage4": "Montblanc: Warm wishes for the holidays. May the year ahead be filled with inspiration and creativity as pen meets paper to craft your story. Be inspired: montblanc.attn.tv/a6bZoPFPZXYY",
+      "SystemMessage5": "Montblanc: Discover the Meisterstück Romeo & Juliet Precious Resin and Doué Editions, a poetic tribute to one of the greatest love stories ever told. A new chapter for an icon. Explore here: montblanc.attn.tv/aCrmvuVJxKdg",
+      "SystemMessage6": "Montblanc: Hi Lenor, this is Sarah. Thanks for visiting Montblanc.com. Do you have any questions that I can assist you with? https://montblanc.attn.tv/aNY4TEPT5Cd5",
+      "customerMessage1": "Yes\nAny pen with a wide nib?",
+      "customerMessage2": "I love your pens and bought one for my husband but he wants a wide nib and every new one I see has only M\nOr F",
+      "AgentMessage1": "Montblanc: Thank you for reaching out and showing interest in our products! I'm afraid I can't seem to find a wide nib. I recommend checking out our Fineliners here: https://montblanc.attn.tv/aRpMsGC7IlKz \n\nYou can also check out our Calligraphy Pens here: https://montblanc.attn.tv/av0KflFoouqs If you have any other questions or need further assistance, feel free to let me know.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://montblanc.com",
+          "date": ""
         },
-        {
-          "message_type": "subscriber",
-          "message_text": "I'm waiting for my free bartesian that I won I will buy some valentine cocktails once it comes in but I haven't heard anything in a long time",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bcdc5-9bf9-4538-f000-0000e619771e",
-          "message_text": "Bartesian: I'm sorry about that! Let me check on this with the team for you. Mind sharing your email address, please? ",
-          "message_media": []
-        }
-      ]
+        "browsingHistory": [
+          {
+            "item": "Meisterstück Romeo & Juliet LeGrand Fountain Pen",
+            "link": "https://www.montblanc.com/en-us/meisterstuck-romeo-juliet-legrand-fountain-pen-MB132914.html",
+            "icon": "eye"
+          },
+          {
+            "item": "Meisterstück Romeo & Juliet LeGrand Fountain Pen",
+            "link": "https://www.montblanc.com/en-us/meisterstuck-romeo-juliet-legrand-fountain-pen-MB132914.html",
+            "icon": "eye"
+          },
+          {
+            "item": "Meisterstück Romeo & Juliet Classique Fountain Pen",
+            "link": "https://www.montblanc.com/en-us/meisterstuck-romeo-juliet-classique-fountain-pen-MB132918.html",
+            "icon": "eye"
+          },
+          {
+            "item": "Meisterstück White Classique Fountain Pen (M)",
+            "link": "https://www.montblanc.com/en-us/meisterstuck-white-classique-fountain-pen-(m)-MB137120VG.html?utm_campaign=MTBHQ-AD-OTHER-CO-4-2024-V0-NA-TRG_ATTENTIVE_BROWSEABADONMENT-SMS-DIR-JRNBR-INM-OT-CORP-EN-NA&utm_medium=SMS&utm_source=OT&externalId=sMpC1",
+            "icon": "eye"
+          },
+          {
+            "item": "Meisterstück White Classique Fountain Pen (M)",
+            "link": "https://www.montblanc.com/en-us/meisterstuck-white-classique-fountain-pen-%28m%29-MB137120VG.html",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
     }
   }
 }

@@ -3,835 +3,400 @@
   "chunk": "chunk_0005",
   "scenarios": {
     "21": {
-      "agentName": "Nicole",
-      "id": "019bb792-32d3-4c96-f000-0000ec4d391d",
+      "id": "019be188-6827-4426-f000-0000f4c064f5",
+      "companyName": "HEYDUDE US",
+      "companyWebsite": "https://heydude.com",
+      "agentName": "Casey",
+      "agentInitial": "H",
+      "messageTone": "Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Don't ESC post-purchase issues, use PPI shortcut"
+        ],
+        "templates": [
+          "For wrong items received use WMP shortcut",
+          "For damaged items received use DMI shortcut",
+          "For order status requests use OSR shortcut"
+        ],
+        "promo_and_exclusions": [
+          "The welcome code is valid for first-time customers only.",
+          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
+        ]
+      },
+      "SystemMessage1": "HEYDUDE: Welcome to HEYDUDE! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/o76",
+      "SystemMessage2": "HEYDUDE: We're so stoked you're here!\n\nGet 20% off your first purchase with code ATTW23K28PCX8 at checkout.\n\nShop Now:\nhttps://heydudeshoes.attn.tv/aCTeF6brM2RX .",
+      "SystemMessage3": "HEYDUDE: Over the next few days we'll try to help you find something that you will love!\n\nUntil then, shop our viral best-sellers: https://heydudeshoes.attn.tv/aCWJYybEg1pI .",
+      "SystemMessage4": "HEYDUDE: Grab the Wally Slipper—cozy faux-shearling warmth with an easy-on fit. ACT NOW 😊\n\nUse code ATTW23K28PCX8 for 20% off: https://heydudeshoes.attn.tv/azerfj523fV4 .",
+      "SystemMessage5": "HEYDUDE: 160 people recently purchased Wally Slipper; complete your order before it disappears!\n\nUse code ATTW23K28PCX8 for 20% off; free shipping on orders $50+.\n\nShop now: https://heydudeshoes.attn.tv/az7gY7Xtbw8k .",
+      "customerMessage1": "How",
+      "AgentMessage1": "HEYDUDE: Could you please provide more details or clarify your question? I'm here to help with any HEYDUDE-related inquiries!",
+      "customerMessage2": "Why is not letting me use the code for 20% off when I put the code it says invalid code",
+      "customerMessage3": "This is why I have not ordered my things",
+      "AgentMessage2": "HEYDUDE: I'm sorry to hear that you are having issues with the code. Can I please have a screenshot of the error message you're seeing from your end and the item/s you have in your cart so I can check? \n\nPlease note that discount codes are valid for items available on this link: https://heydudeshoes.attn.tv/a-cod_JS_eeJ They cannot be combined with any other offer or promotion, including sale styles. Please note that additional exclusions may apply.",
+      "customerMessage4": "\"",
+      "customerMessage5": "Nothing on my cart is on sale",
+      "AgentMessage3": "HEYDUDE: Thanks! Can you please share the actual item(s) in your cart too?",
+      "customerMessage6": "\"",
+      "AgentMessage4": "HEYDUDE: Thanks for sending that over! It looks like both items aren't code-eligible, which is why the code isn't working. I'm sorry for the inconvenience!",
+      "customerMessage7": "But it told me for being for signing up, they gave me 20% off if I gave my email and my phone number it did not say select items",
+      "AgentMessage5": "HEYDUDE: Please try using the code ATTW23K28PCX8 for 20% off at heydude.com. If it doesn't work, please share a screenshot of your cart.",
+      "customerMessage8": "That the code I just use",
+      "customerMessage9": "Look up",
+      "AgentMessage6": "HEYDUDE: Please try using the code ATTW23K28PCX8 at heydude.com for 20% off. If it still doesn't work, could you share a screenshot of the issue?",
+      "customerMessage10": "Same thing",
+      "customerMessage11": "\"",
+      "AgentMessage7": "HEYDUDE: Thank you for sharing that, and I understand how frustrating this must be. It appears the code isn't valid for the Wally Slipper Hearts, but it should work for the Wally Slipper. I'm truly sorry for the inconvenience.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://gld.com",
+          "value": "https://heydude.com",
           "date": ""
-        }
+        },
+        "browsingHistory": [
+          {
+            "item": "Wendy Slipper Hearts - Black/White - 11",
+            "link": "https://www.heydude.com/products/wendy-slipper-hearts-black-white",
+            "icon": "eye"
+          },
+          {
+            "item": "Wendy Slipper Hearts - Black/White",
+            "link": "https://www.heydude.com/products/wendy-slipper-hearts-black-white",
+            "icon": "eye"
+          },
+          {
+            "item": "Wendy Slipper Hearts - Black/White - 5",
+            "link": "https://www.heydude.com/products/wendy-slipper-hearts-black-white",
+            "icon": "eye"
+          },
+          {
+            "item": "Wendy Slipper Hearts - Black/White - 11",
+            "link": "https://www.heydude.com/products/wendy-slipper-hearts-black-white",
+            "icon": "eye"
+          },
+          {
+            "item": "Wendy Slipper Hearts - Black/White",
+            "link": "https://www.heydude.com/products/wendy-slipper-hearts-black-white",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
       },
-      "companyWebsite": "https://gld.com",
-      "companyName": "The GLD Shop",
-      "notes": {
-        "templates": [
-          "If cx wants to refund their order after 14 days of receiving it, send the \"Return outside of 14 day policy\" temp"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "GLD: Hey Shannon, \nYour order #4479454 is out for delivery. Track your order here: https://gld.attn.tv/akcBeplgaOFt .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Welcome to GLD! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: https://attnl.tv/p/",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: ✅ Free Chain\n✅ 50% Off Your Order\n✅ Lifetime Guarantee\n\nDon't overthink it... Cop now: gld.attn.tv/aHjC46peeRo4 \n\nUse code: EDRIP50-Fs7216\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Don't forget to save our contact card for access to exclusive drops and offers! \n\nReady for more? \n\nUse code BOGO and get every other piece FREE while supplies last: gld.attn.tv/a0QcTQ-T3aht ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Hey Shannon, your order #4479454 has been delivered! \n\nNeed to track it? We got you: https://gld.attn.tv/adnrDd9yzzCh .\n\nReady for round 2? https://gld.attn.tv/aRqMh6hZbSeP .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: You playing hard to get?\n\nBet you can't resist 55% off your entire first order AND a free chain. Use code: VIP55\n\nThis offer ends at MIDNIGHT. \n\nClick here to seal the deal: gld.attn.tv/akwrkCjAXrDT .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: That \"what do they like?\" stress?\n\nForget it. 50% off gifts everybody will love. \n\nHit the link and get free gift wrap + delivery b4 XMAS: gld.attn.tv/a1mX0RH7vIvk .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: UNLOCKED - 2 for $99\n\nPick ANY 2 from best-selling chains, pendants, bracelets and more. \n\nDon't sleep on this steal: gld.attn.tv/acuGhLsh8AEV .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Budget for gifts? 🤷‍♂️ Spend it all on the fit?\n\nWe got you with both. 50-70% Holiday Bangers. \n\n🚨 Deal of the day = $45 for our best-selling 4mm Rope chain ($140 value) 🚨\n\nGet it b4 XMAS: gld.attn.tv/aL_mut9N7Xdw \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Drip clock's at 0:01. ⏱️\n55% OFF + FREE chain ends soon. Use code: VIP55\n\nDon't let your neck down → gld.attn.tv/aq-Po37jmtgU .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Last shot at this.\n\n50% off + free chain + free 14-day returns = no excuses\n\nExclusive chain only available through this link: gld.attn.tv/aaxJ69cXy-8g .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: ❄️ DAILY DEAL ❄️ Our viral Micro Tennis Chain, now only $45 (worth $140)\n\nPlus, 50-70% off other holiday deals. \n\nClick here for free express shipping & delivery b4 XMAS: gld.attn.tv/aaD6-vJWdk43 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Hey Shannon... you have $25 GLD Cash expiring tomorrow.\n\n+ 50% off site-wide, stackable with your extra GLD Cash.\n\nOrder today with code FXSHIP to get it b4 XMAS.\n\nClick to redeem, expires in 36 hours: gld.attn.tv/aAdVyjUirvIX ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Need some new ice for your stash? Get 55% OFF on new drops & essential best-sellers. Use code: VIP55\n\nGet your favorite pieces TODAY & pay LATER w/ Affirm or Shop Pay: gld.attn.tv/aC01Y_fqYB-q .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Like your fav situationship...\n\nshort, messy, gone quick 😭\n\nUp to 70% off rn. Gifts still arrive b4 Xmas.\n\nFree Express Shipping when you click:\ngld.attn.tv/akejKZZ9zPyS \n\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: You're invited 📩 GLD Holiday Happy Hour is LIVE. \n\nUp to 70% off holiday-ready pieces.\n\nHit the link for free express shipping & delivery b4 Xmas: gld.attn.tv/aKP--KogmXX5 \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Last second gift? Clutch up. \n\n50% off + order by 1PM ET to get it b4 Xmas.\n\nExclusive free 2-Day Shipping ends IN 1 HR.\n\nP.S. don't forget your girl:\ngld.attn.tv/agesxpBSfuhE ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Hold the viagra, our pole already goin north.\n\nTwo gifts for the price of 1 - this deal's rock solid. \n\nKeep it up with code BOGO. \n\n+ You can STILL get it B4 Xmas with $10 overnight shipping: gld.attn.tv/aMru_aCX3hLi ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Post office on a bender.\n\n50% off + Overnight Shipping for only $10 to get it b4 Xmas.\n\nLAST CHANCE. Order before 1pm ET. We got you. 🤝🎁\ngld.attn.tv/aRm11KUjS9JS ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Technically you're not late...yet. 🎁\n\nInstant holiday W with a GLD gift card. \n\nWe got you: \ngld.attn.tv/av08wVvVisVO ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Be your own dmn Santa. After this year? You deserve it🎄🎁\n\n55% OFF SITE-WIDE\n\nClick to redeem. Offer ends midnight: gld.attn.tv/a5BCJvAolnUa ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Happy Holidays, from GLD ✨\n\nOne more gift to unwrap - a new Micro Tennis Chain, on us ($140 value) 🎁 \n\nPlus, 50% off anything else you want, too:\ngld.attn.tv/aGnbXDKxKFXs ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Grandma put money in that card for a reason...\n\nShe WANTS you to cop 2 chains + 2 pendants for only $129 ($350 value). \n\nPrice drop TODAY ONLY. Make grandma proud: \ngld.attn.tv/aazvMRKGKMX1 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Post nut(cracker) clarity? 🎄🥜😬\n\nGet yourself the gifts you really wanted.\n\n50-70% off Daily Bangers. \n\n+ delivery b4 NYE with express shipping ✨ gld.attn.tv/arvLhbdcyruO ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Deal of the Day 📢 !!️\n\n6 of our best-selling products, now under $70\n\nPlus, NYE deals up to 70% off. \n\nCop today & get it b4 NYE with Superfast shipping: gld.attn.tv/agTK9C64TpUM ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: End of Season Sale 🚨!!️\n\nPawn off the bad gifts and drop it all on GLD.\n\nOur hottest pieces of the year, 50-70 off in our Daily Bangers collection. \n\nTap in. gld.attn.tv/a07DvtOCatbZ ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Start 2026 with a W. \n\n50% off + a free chain when you hit the link.\n\nLast chance to get it b4 NYE with Superfast shipping:\nhttps://gld.attn.tv/aofy6YC02aB1 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: New chains > Making resolutions.\n\nLet's keep it real: 55% off for text fam only. \n\n2026 the year you get your style right: https://gld.attn.tv/a7gGyrG8DerC ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: 2025, that's a wrap. Thank you for riding with us this year.\n\n50% off + a free hand-set Micro Tennis Chain, on us ($140 value)\n\nWith love, GLD. 🥂 gld.attn.tv/a3xnTqoTLx88 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: POOF... ending faster than your Resolutions\n\nYour free Micro Tennis Chain ghosts in 3... 2... 1... \n\nhttps://gld.attn.tv/amPZB95oJRat .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: New year, new relationships.\n\nWe splitting the bill like the girl you've always wanted.\n\nWeekend bangers 50-70% off. \n\nTo a great 2026. 🥂\nhttps://gld.attn.tv/atBJiQDyPbQ8 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Your 2026 starter pack. 🗓️✨Our best pieces for your new uniform.\n\nStart the year strong with deals 50-70% off. \n\nThis weekend only:\nhttps://gld.attn.tv/ab0GUXIa3Jo0 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Our 2026 prediction? \n\nThis the year your fits go crazy.\n\nLast chance for 50-70% off deals. \n\nWeekend bangers end MIDNIGHT.\nhttps://gld.attn.tv/aK0yzJ0GlqIh .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: You ever feel chosen?\n\nCuz this the moment 😏 Everyone else gets 30% off, but you? You get an extra 10. \n\nYour exclusive offer is behind this link: gld.attn.tv/almZARtbAnrP \n\n+ use code ENERGY30",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: This the \"don't tell nobody\" deal.\n\n50% off for subscribers only is extended until the boss catches on. 🙃\n\nClock starts now: gld.attn.tv/aNqOzez7q4ot \n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: We caught that double-take! 👀 \n\nWas it the drip or the deal? \n\nEither way, don't trip - snag yours for up to 40% OFF (TODAY ONLY) with code GET40\n\ngld.attn.tv/aUMvQpoyhjAB ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Not a typo 🚨\n\n50% off for you, while everyone else gets 30. \n\nLimited active codes for subscribers only. Click to redeem: gld.attn.tv/aBlUiap9sz57 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: TGIFSF (Thank god it's FREE SH*T FRIDAY 🚨🚨)\n\nCop anything for 50% off, get a free Micro Tennis Chain ($120 value) on the house. \n\nToday only: gld.attn.tv/aY5t0ONPMOhP ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Chain farming?\n\nBOGO is LIVE. Buy one, get one, build the rotation. \n\ngld.attn.tv/aB5CSz24dHkG ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "How do I reach someone about my refund,I sent it in",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019ba8ef-809c-4828-f000-0000ec4d391d",
-          "message_text": "GLD: Thanks for reaching out and for letting me know. Please allow 3-5 business days for your refund to be deposited back into your bank account. Just to confirm, when did you initiate your refund request?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Yes, I sent the Nicholas back. I just wanted a bigger size.but haven't got it back",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019ba9e4-21c8-4a9f-f000-0000ec4d391d",
-          "message_text": "GLD: Apologies for the long wait. We ask for your patience in allowing us 5-10 business days to process your return/exchange request from the day it is received back at our facility. Once your return is received and passes inspection, you will receive an email notifying you of the approval or rejection of your exchange. Please check your spam and promo folders as well, as our emails sometimes end up there. ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Still thinking? We added a little extra. 😮‍💨\n\nSame piece. Now 55% off. \n\n5 hrs until it expires: gld.attn.tv/a7UoSHluUPQO ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "It says I owe a balance how do I pay it ?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb28b-f48e-4afb-f000-0000ec4d391d",
-          "message_text": "GLD: Thanks for sharing that! Did you check the message to see if it has a link where you can pay for it? ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Can you resend it I'm not seeing anything",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb29d-400d-44b2-f000-0000ec4d391d",
-          "message_text": "GLD: I'm sorry but I don't have any option to resend it to you. Is this for Order #4479454? If so, can I have your email address? I'll be happy to check this with the team. ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Sgannonnico1e1314@icloud.com",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Shannonnico1e1314@icloud.com",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb2bc-d080-4bcf-f000-0000ec4d391d",
-          "message_text": "GLD: Thank you for sharing this with me, and I'm sorry for the inconvenience. Before I check this with my team, can you please check your promo and spam folders, as sometimes our emails end up there? Let me know how it goes. ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "GLD: Meal prep your neck. 💎🍴\n\nChains for the whole week.\n\nYour choice of 4 pieces for only $149: gld.attn.tv/aN4WKB9dF0GU ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I checked all mail but I don't see anything",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Pass to the team - All brands\"; last updated: 2023-10-10 17:46:43.559",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bb792-32d3-4c96-f000-0000ec4d391d",
-          "message_text": "GLD: Thanks for the info! I will pass this along to my team and get back to you as soon as possible, hang tight! ",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "22": {
-      "agentName": "Quinn",
-      "id": "019beb3b-eb55-4bdd-f000-0000f59f7a1d",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://steinhafels.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.steinhafels.com/product/group/living-room/sofas-sectionals/reclining-sofas-loveseats/moonrise-reclining-sofa-in-clove/2401037/2385396",
-            "item": "Moonrise Reclining Sofa in Clove",
-            "timeAgo": "2026-01-23"
-          },
-          {
-            "link": "https://www.steinhafels.com/product/group/living-room/sofas-sectionals/reclining-sofas-loveseats/moonrise-reclining-sofa-in-clove/2401037/2385396",
-            "item": "Moonrise Reclining Sofa",
-            "timeAgo": "2026-01-23"
-          },
-          {
-            "link": "https://www.steinhafels.com/product/group/living-room/sofas-sectionals/reclining-sofas-loveseats/moonrise-reclining-sofa-in-fawn/2401037/2385389",
-            "item": "Moonrise Reclining Sofa",
-            "timeAgo": "2026-01-23"
-          },
-          {
-            "link": "https://www.steinhafels.com/product/group/living-room/sofas-sectionals/reclining-sofas-loveseats/moonrise-reclining-sofa-in-clove/2401037/2385396",
-            "item": "Moonrise Reclining Sofa",
-            "timeAgo": "2026-01-23"
-          },
-          {
-            "link": "https://www.steinhafels.com/product/group/living-room/sofas-sectionals/reclining-sofas-loveseats/moonrise-reclining-sofa-in-fawn/2401037/2385389",
-            "item": "Moonrise Reclining Sofa",
-            "timeAgo": "2026-01-23"
-          }
-        ]
-      },
-      "companyWebsite": "https://steinhafels.com",
-      "companyName": "Steinhafels",
-      "notes": {
+      "id": "019bc273-a458-46bb-f000-0000aa5b55ff",
+      "companyName": "Snipes",
+      "companyWebsite": "https://snipesusa.com",
+      "agentName": "Avery",
+      "agentInitial": "S",
+      "messageTone": "Formal",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "send_to_cs": [
-          "Send to CS for delivery related inquiries"
+          "Send to CS immediately for post-purchase issues",
+          "Send to CS for payment processing issues"
         ],
         "tone": [
-          "Don't say branches, say store locations instead"
+          "Don't use the term restock",
+          "Don't tell customers that we'll be restocking",
+          "Don't respond to blank messages",
+          "Don't use formal language",
+          "Close the conversation when a customer responds 'no'"
         ],
         "templates": [
-          "For issues regarding tracking, use EOI shortcut",
-          "For service inquiries, use SIQ shortcut"
+          "If a cx reaches out regarding the Early Access event, use EAE shortcut",
+          "For cx reaching out in Spanish use SSC shortcut",
+          "For checkout issues use the \"Check out Issues\" temp",
+          "For store item availability, use SPA shortcut",
+          "If cx's email doesn't work for early access, use EEA shortcut"
+        ],
+        "dos_and_donts": [
+          "They occasionally run sign-up campaigns where cx text certain keywords (“releases,” “early access”) to join a list. If a customer sends a similar keyword:",
+          "All clothing is true to size unless otherwise stated on the product page",
+          "You can use these sizing charts for reference (for internal use only): https://docs.google.com/spreadsheets/d/1kmra_vOwCJuHoAx9D4L4Qx95rxafHcrqn-ZGutfzLgg/edit?usp=sharing",
+          "For store info q's (phone number/additional info) - use the store locator with your VPN turned on!"
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Steinhafels: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Steinhafels.",
-          "message_media": []
+      "SystemMessage1": "SNIPES: Thanks for your order! Check your email for more details on shipping information. Track your order here with order number, email address, and zip code: https://snipes.attn.tv/aTzeIubjm7za .",
+      "SystemMessage2": "SNIPES: Extra AJ8 \"White and True Red\" Just Dropped! Your early access window is open. Use the same email as your SNIPES Reserve account to join the VIP queue now: snipes.attn.tv/apZd7pW7zcrg",
+      "SystemMessage3": "SNIPES: You've got rewards waiting in your wallet. Holiday shopping just got easier. Shop now: snipes.attn.tv/a2a7rUeSqRiF .",
+      "SystemMessage4": "SNIPES: The AJ8 retro \"White & True Red\" is available now. Grab your pair before they sell out. Shop now: snipes.attn.tv/aOE4GedOUe9y .",
+      "SystemMessage5": "SNIPES: Get 10% off when you buy online and pick up in store. Use code LASTMINUTEPICKUP. Valid 12/22-12/24. Exclusions apply. snipes.attn.tv/azQQvE99neXX",
+      "SystemMessage6": "SNIPES: Final reminder. Get 10% off BOPIS orders today with code LASTMINUTEPICKUP. Exclusions apply. snipes.attn.tv/alk5ybsQMV6h",
+      "SystemMessage7": "SNIPES: You got style! Find fits to complete your recent purchase using code A10-3VZX-FHF9-PYSU-U9SC for 10% off your next apparel purchase, exclusions apply: https://snipes.attn.tv/ab4oJbk4SX4E .",
+      "SystemMessage8": "SNIPES: Back in stock. AJ8 Retro \"White and True Red\" and Nike Foamposite Pro \"Pine Green\" just restocked. Tap in: snipes.attn.tv/aa7yQKJJ2qo6",
+      "SystemMessage9": "SNIPES: Looking for something specific? Check out our hottest new styles from your favorite brands: https://snipes.attn.tv/aQwrZ4CAC75k",
+      "SystemMessage10": "SNIPES: Cozy layers are marked down. Shop fleece from top brands like Nike, UGG, Polo and more for men, women & kids. Limited time: snipes.attn.tv/aByJs6SeApc_",
+      "SystemMessage11": "SNIPES: Time's almost up. Sign up for early access for your chance to reserve the Air Jordan 4 Retro Flight Club: snipes.attn.tv/a1Jk-W_2y7DY",
+      "SystemMessage12": "SNIPES: Just dropped. Nike Air Max2 CB 94, Pegasus Premium in new colorways, adidas Samba Jane, & more. Shop now: snipes.attn.tv/aw0nhdcl1oGg",
+      "customerMessage1": "Hello",
+      "AgentMessage1": "SNIPES: Hello! I'm Avery, your personal concierge. How can I help you today?",
+      "customerMessage2": "Im waiting to receive a text so I can purchase the retro 4 flight clubs I was giving early access",
+      "customerMessage3": "This is the second time this has happened after I received early access I was not able to make a purchase",
+      "AgentMessage2": "SNIPES: I'm sorry to hear that! There are no instrucitons for purchase yet. Please stay tuned to this thread, as I will be sending you a text. Thank you for your patience.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://snipesusa.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "Steinhafels: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steinhafels: Welcome, I'm Quinn from Steinhafels! You are entered for a chance to win a $1,000 Shopping Spree from Steinhafels: https://steinhafels.attn.tv/aPFvKeOT3MGQ \n\nHave questions while you're shopping? Reply here anytime & I'll be happy to help!",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "We like this one",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "https://www.steinhafels.com/product/group/living-room/sofas-sectionals/reclining-sofas-loveseats/moonrise-reclining-sofa-in-fawn/2401037/2385389",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "And the matching loveseat",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Are there any deals that we could get the price down?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019beb39-0b40-4f75-f000-0000f59f7a1d",
-          "message_text": "Steinhafels: I'm really sorry for the inconvenience. This is the best SMS deal we have at the moment. I hope this helps you decide to go for it, and definitely keep an eye out for upcoming offers! If it helps, we do offer financing for all purchases! You can find more information at the following link: https://steinhafels.attn.tv/aM595LIkpykO",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Ok. Is this set pretty comfortable? Available at the Appleton location to check out?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019beb3b-eb55-4bdd-f000-0000f59f7a1d",
-          "message_text": "Steinhafels: Yes, it is very comfortable. There is only an alternate version available to view at the Appleton location.",
-          "message_media": []
-        }
-      ]
+        "browsingHistory": [],
+        "orders": []
+      },
+      "orders": []
     },
     "23": {
-      "agentName": "Kiara",
-      "id": "019bc2ce-8acc-4e14-f000-000088db0215",
+      "id": "019bebc1-5c9d-4679-f000-0000ed1b2150",
+      "companyName": "Made In Cookware",
+      "companyWebsite": "https://madeincookware.com/",
+      "agentName": "Dakota",
+      "agentInitial": "M",
+      "messageTone": "Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "templates": [
+          "When cx has an inquiry about an out-of-stock item, use the OSI template"
+        ]
+      },
+      "SystemMessage1": "Made In: Starts Now! Get up to 50% OFF select year-end, last call items before they're gone.\n\nShop chef-loved tools:\nmadein.attn.tv/aPDoX63TS-SJ",
+      "SystemMessage2": "Made In: Introducing Brushed Copper. A striking new finish for your most-used tools. \n\nBeautiful on the stove, exceptional in use:\nmadein.attn.tv/aQm1T2zkEGaZ",
+      "SystemMessage3": "Made In: Final Hours! Get up to 50% OFF last call items before midnight.\n\nShop now, before they're gone:\nmadein.attn.tv/aKChM8jrCTw0",
+      "SystemMessage4": "Made In: Limited Edition Brushed Copper Frying Pans are nearly sold out.\n\nVery limited quantities remain, no restocks planned.\n\nShop now before they're gone:\nmadein.attn.tv/ajMs1H8bSD62",
+      "SystemMessage5": "Made In: Ready to meal prep like a pro? Shop our top 10 tools for easier, faster cooking, built for batch meals and everyday use:\n\nmadein.attn.tv/aDr0ClE_lm1u",
+      "SystemMessage6": "Made In: Tom Colicchio's exclusive Carbon Steel Frying Pan is back in stock.\n\nOnly 1,000 available.\n\nShop now:\nmadein.attn.tv/a1iUeuxDAxnS",
+      "SystemMessage7": "Made In: If you need additional help, https://madeincookware.com/pages/contact-us or Text STOP to opt out.",
+      "SystemMessage8": "Made In: Cooking is easier in your kitchen with our Small Spaces Stainless Clad Set—compact, versatile, and ready for any recipe. \n\n1.9K people recently added this set to their cart. \n\nShop now: https://madein.attn.tv/ayr0qXuUKXXd .",
+      "SystemMessage9": "Made In: Get $49 OFF the Carbon Steel Wok for a limited time. From smoky stir-fries to searing sauces, it does it all.\n\nShop Now:\nmadein.attn.tv/aRzmPrjum-sd",
+      "SystemMessage10": "Made In: Back in Stock: CeramiClad Small Spaces Set, in both Stainless & Antique Brass Hardware.\n\nSave $98 when you shop the set:\nmadein.attn.tv/aJXEzUmicmcR",
+      "SystemMessage11": "Made In: We're clearing space for what's next. Save over 30% on select last call items.\n\nShop now, before they're gone:\nmadein.attn.tv/aAKfXUP7g9eR",
+      "SystemMessage12": "Made In: NEW Carbon Steel Gratin is here. Naturally nonstick & oven-ready. Made for bubbling mac & cheese, roasted veggies & more:\nmadein.attn.tv/awuvrri2cJcl",
+      "SystemMessage13": "Made In: Experience the legendary feel of the 10-Piece Stainless Clad Cookware Set designed for durability and performance.\n\nShop now: https://madein.attn.tv/atWRfZI1PfVt .",
+      "SystemMessage14": "Made In: It's back. The Saucier is designed for smoother whisking, better reductions, and more control with every stir. \n\nShop: \nmadein.attn.tv/a3xpWVdnvTUe",
+      "SystemMessage15": "Made In: The Limited Edition Birds Beak Knife is back, in both Truffle Black & Olive Wood handles.\n\nShop before they're gone:\nmadein.attn.tv/avQxfk5B6m3F",
+      "SystemMessage16": "Made In: Last call sale items are going fast. Save over 30% on chef-favorites for a limited time.\n\nShop now, before they're gone:\nmadein.attn.tv/a3mNduiGDWcu",
+      "SystemMessage17": "Made In: Today only, get $20 OFF our best-selling 4-pack of Entrée Bowls.\n\nUse code: ENTREE20\n\nShop Now:\nmadein.attn.tv/aAyc6FtNNnZS \n\n*limit one per customer.",
+      "SystemMessage18": "Made In: Discover how the Stainless Clad 10-Piece Cookware Set brings 5-ply Italian construction for even heat and easy cleanup to your kitchen, making cooking simpler for you.\n\n3.2K people recently added this set to their cart.\n\nCook with confidence: https://madein.attn.tv/aC3qfo9dO6Nl .",
+      "customerMessage1": "I need Stella steel, coquair, 18/0.",
+      "AgentMessage1": "Made In: Thanks for reaching out! I'm afraid we don't have any Stella Steel products. So sorry for the inconvenience!",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://dorado.com",
+          "value": "https://madeincookware.com/",
           "date": ""
         },
-        "orders": [
+        "browsingHistory": [
           {
-            "link": "https://sk-custom-concepts.myshopify.com/products/kids-custom-name-necklace-w-cuban-chain",
-            "orderDate": "2026-01-03",
-            "total": 98,
-            "orderNumber": "6429581017159",
-            "items": [
-              {
-                "price": 49,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/kids-custom-name-necklace-w-cuban-chain",
-                "name": "Kids Custom Name Necklace w/ Cuban Chain"
-              },
-              {
-                "price": 49,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/kids-custom-name-necklace-w-cuban-chain",
-                "name": "Kids Custom Name Necklace w/ Cuban Chain"
-              }
-            ]
+            "item": "10-Piece Stainless Clad Cookware Set",
+            "link": "https://madeincookware.com/products/the-stainless-sets?audience=pros&gad_source=0&gad_campaignid=23027597185&gclid=Cj0KCQiA1czLBhDhARIsAIEc7uj21MN2mK58_PG2rnXvg9m9ptBrB7OF7BGjp1IRyTeSO4tRMygGEKUaAgawEALw_wcB&utm_campaign=browse_abandonment-ai&utm_medium=sms&utm_source=attentive&externalId=ANxAP",
+            "icon": "eye"
           },
           {
-            "link": "https://sk-custom-concepts.myshopify.com/products/iced-heart-name-necklace",
-            "orderDate": "2025-12-31",
-            "total": 334,
-            "orderNumber": "6424655462471",
-            "items": [
-              {
-                "price": 69,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/iced-heart-name-necklace",
-                "name": "Iced Heart Name Necklace"
-              },
-              {
-                "price": 69,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/iced-heart-name-necklace",
-                "name": "Iced Heart Name Necklace"
-              },
-              {
-                "price": 49,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/kids-custom-name-necklace-w-cuban-chain",
-                "name": "Kids Custom Name Necklace w/ Cuban Chain"
-              },
-              {
-                "price": 49,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/kids-custom-name-necklace-w-cuban-chain",
-                "name": "Kids Custom Name Necklace w/ Cuban Chain"
-              },
-              {
-                "price": 49,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/kids-custom-name-necklace-w-cuban-chain",
-                "name": "Kids Custom Name Necklace w/ Cuban Chain"
-              },
-              {
-                "price": 49,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/kids-custom-name-necklace-w-cuban-chain",
-                "name": "Kids Custom Name Necklace w/ Cuban Chain"
-              }
-            ]
+            "item": "10-Piece Stainless Clad Cookware Set",
+            "link": "https://madeincookware.com/products/the-stainless-sets?utm_source=google&utm_medium=demandgen&utm_campaign=23027597185-187774040796&utm_term=-&utm_content=781337524019&audience=pros&gad_source=0&gad_campaignid=23027597185&gclid=Cj0KCQiA1czLBhDhARIsAIEc7uj21MN2mK58_PG2rnXvg9m9ptBrB7OF7BGjp1IRyTeSO4tRMygGEKUaAgawEALw_wcB",
+            "icon": "eye"
           },
           {
-            "link": "https://sk-custom-concepts.myshopify.com/products/kids-iced-photo-pendant-w-rope-chain",
-            "orderDate": "2025-12-26",
-            "total": 158,
-            "orderNumber": "6412496601159",
-            "items": [
-              {
-                "price": 79,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/kids-iced-photo-pendant-w-rope-chain",
-                "name": "Kids Iced Photo Pendant w/ Rope Chain"
-              },
-              {
-                "price": 79,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/kids-iced-photo-pendant-w-rope-chain",
-                "name": "Kids Iced Photo Pendant w/ Rope Chain"
-              }
-            ]
+            "item": "10-Piece Stainless Clad Cookware Set",
+            "link": "https://madeincookware.com/products/the-stainless-sets?utm_source=google&utm_medium=demandgen&utm_campaign=23027597185-187774040796&utm_term=-&utm_content=781337524019&audience=pros&gad_source=0&gad_campaignid=23027597185&gclid=Cj0KCQiA1czLBhDhARIsAIEc7uj21MN2mK58_PG2rnXvg9m9ptBrB7OF7BGjp1IRyTeSO4tRMygGEKUaAgawEALw_wcB",
+            "icon": "eye"
+          },
+          {
+            "item": "10-Piece Stainless Clad Cookware Set",
+            "link": "https://madeincookware.com/products/the-stainless-sets?utm_source=google&utm_medium=shopping&utm_campaign=22258915434-184644517350&utm_content=43161900187727&audience=pros&gad_source=1&gad_campaignid=22258915434&gclid=CjwKCAiAmp3LBhAkEiwAJM2JUKhU6DcyZ7JGzbAl3omgjBGZy14V-o7wRU49Wa92xvpbWD0WhZRVsRoC7VcQAvD_BwE",
+            "icon": "eye"
+          },
+          {
+            "item": "Small Spaces Cookware Set",
+            "link": "https://madeincookware.com/products/small-spaces-set/5-piece-stainless",
+            "icon": "eye"
           }
         ],
-        "browsingHistory": [
-          {
-            "link": "https://dorado.com/en-eu/collections/necklaces/products/heart-locket-necklace-photo-pendant?externalId=8g2xV",
-            "item": "Heart Locket Necklace Photo Pendant - 18K Gold Plated / Standard - 18\" (45cm)",
-            "timeAgo": "2026-01-15"
-          },
-          {
-            "link": "https://dorado.com/collections/necklaces/products/heart-locket-necklace-photo-pendant?variant=42199785766983&utm_campaign=Concierge-Site-Visitor-3&utm_source=attentive&utm_medium=text&externalId=8g2xV",
-            "item": "Heart Locket Necklace Photo Pendant",
-            "timeAgo": "2026-01-15"
-          },
-          {
-            "link": "https://dorado.com/collections/necklaces/products/heart-locket-necklace-photo-pendant?variant=42199785766983&utm_campaign=Concierge-Site-Visitor-3&utm_source=attentive&utm_medium=text&externalId=8g2xV",
-            "item": "Heart Locket Necklace Photo Pendant - 18K Gold Plated / 20\" (50cm)",
-            "timeAgo": "2026-01-15"
-          },
-          {
-            "link": "https://dorado.com/collections/necklaces/products/heart-locket-necklace-photo-pendant?variant=42199785766983",
-            "item": "Heart Locket Necklace Photo Pendant",
-            "timeAgo": "2026-01-10"
-          },
-          {
-            "link": "https://dorado.com/collections/necklaces/products/heart-locket-necklace-photo-pendant?variant=42199785766983",
-            "item": "Heart Locket Necklace Photo Pendant - 18K Gold Plated / 20\" (50cm)",
-            "timeAgo": "2026-01-10"
-          }
-        ]
+        "orders": []
       },
-      "companyWebsite": "https://dorado.com",
-      "companyName": "Dorado Fashion",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues"
-        ]
-      },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Shipping Issues: Where's my order? Any order issues, direct to customer service"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "DORADO: We're making room for what's next.. aka: HUGE markdowns \n\nYear-End Stock Sell-Off is LIVE. \n40 styles as low as $9. \n\nLimited Stock. Zero mercy.\n\nPrices go back up 12/27 @ 11:59PM EST\n\nShop Now: \nhttps://dorado.attn.tv/aJPZNkp5NLFu . ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DORADO: Happy Holidays! If you needed a sign to treat yourself... THIS IS IT.\n\nUse code: XMAS for up to 80% OFF! \n\nShop:\nhttps://dorado.attn.tv/aH6My5tGYgdB . ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DORADO: Hi Ariel I personally want to thank you for shopping with us!\n\nTo show my appreciation, I'm giving you $25 OFF your next order of Custom Jewelry!\n\nJust use code: GIVE25 at checkout or click the link below! https://dorado.attn.tv/aIdQi19aN4Ch \n\nThis is simply my way of saying THANK YOU for becoming a part of the Dorado Family.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DORADO: Hello Ariel, it's Kiara! I noticed you haven't completed your order yet. \n\nClick below to recover your cart and use code D20 for an extra 20% OFF! (72 hours only):\n \nhttps://dorado.attn.tv/aUPodPUSbjrw \n\nPlease let me know if there's anything I can help with :)",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DORADO: NEW YEAR'S SALE.\n\nUp to 85% OFF (ONE. LAST. TIME.)\n\nCode: BYE2025 \n\nStart the year looking expensive: \nhttps://dorado.attn.tv/a_Ii-RB7f6tj . \n\n",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DORADO: Hey, this is Kiara. Thanks for checking out our custom jewelry! https://dorado.attn.tv/ajhgX7UtBUAl \n\nDo you have any questions or need any help?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "DORADO: Hey, this is Kiara. Thanks for checking out our custom jewelry! https://dorado.attn.tv/aZ5WmNiJCda8 \n\nDo you have any questions or need any help?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Where is my order",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc2c0-1f2a-499f-f000-000088db0215",
-          "message_text": "DORADO: Thank you for your purchase! You can use our convenient online tool to see the latest updates on your order: https://dorado.attn.tv/aNPrRPzbc5V3\n\nLet me know how that goes, I'll be here if you have any questions! ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I would like an update on #D1800497",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Customer support\"; last updated: 2022-03-21 22:15:50.868",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Tracking Info - All brands\"; last updated: 2023-10-10 16:47:28.277",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Shipping time\"; last updated: 2023-01-20 21:53:58.073",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc2ce-8acc-4e14-f000-000088db0215",
-          "message_text": "DORADO: Sure. Upon checking, it hasn't been shipped yet. I'm sorry about that! Our processing time takes 24 hours and production can take up to 2 weeks. We usually ship via USPS or FedEx, and once shipped, it will take up to 7 business days for domestic orders, and up to 14 business days for international orders. You'll get a tracking email as soon as your order ships. If you don't see it in your inbox, be sure to check your spam and promo folders, sometimes our emails end up there as well. \n\nFor further assistance, the best way to handle this is to email us directly at support@doradofashion.com. Our team is happy to help! ",
-          "message_media": []
-        }
-      ]
+      "orders": []
     },
     "24": {
-      "agentName": "Devon",
-      "id": "019bed5d-9e81-4552-f000-00009aeb1340",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://gooddyeyoung.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://gooddyeyoung.com/collections/yellow-hair-dye/products/gdy-steal-my-sunshine",
-            "item": "Steal My Sunshine",
-            "timeAgo": "2026-01-24"
-          },
-          {
-            "link": "https://gooddyeyoung.com/products/mini-salon-kit?_pos=1&_sid=8859d79e3&_ss=r",
-            "item": "Mini Salon Kit",
-            "timeAgo": "2026-01-24"
-          },
-          {
-            "link": "https://gooddyeyoung.com/products/mini-salon-kit?_pos=1&_sid=8859d79e3&_ss=r",
-            "item": "Mini Salon Kit",
-            "timeAgo": "2026-01-24"
-          },
-          {
-            "link": "https://gooddyeyoung.com/collections/lightening/products/lightening-kit-trio",
-            "item": "Streaks & Strands Lightening Kit Trio",
-            "timeAgo": "2026-01-24"
-          },
-          {
-            "link": "https://gooddyeyoung.com/collections/hair-color-kits-bundles-deals/products/mini-salon-kit",
-            "item": "Mini Salon Kit",
-            "timeAgo": "2026-01-24"
-          }
-        ]
-      },
-      "companyWebsite": "https://gooddyeyoung.com",
-      "companyName": "Good Dye Young",
-      "notes": {
-        "templates": [
-          "If cx text in GDY only, use CTG shortcut"
-        ]
-      },
+      "id": "019bf0f7-b7fb-4526-f000-0000ee41a76c",
+      "companyName": "Gardner-White",
+      "companyWebsite": "https://gardner-white.com",
+      "agentName": "Jordan",
+      "agentInitial": "G",
       "messageTone": "Casual",
-      "blocklisted_words": [
-        "bestie"
-      ],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Good Dye Young: HALF OFF SALE starts now! For 1 HOUR ONLY the ENTIRE SITE is 50% off! Hurry, offer ends at 1 pm pst sharp! Let's go -> gooddyeyoung.attn.tv/arW6do87ehaH ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Good Dye Young: You are already subscribed. Click here to shop now: gooddyeyoung.com.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Good Dye Young: Hey there, this is Devon from GDY! Thanks for checking out our site! https://gooddyeyoung.attn.tv/aILwsjZABdLs Can I help you find anything in particular today? Text me back any questions you may have 😊",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Good Dye Young: Happy Friday! Enjoy free shipping on all U.S. orders! No code needed, ends at midnight. Don't miss out -> gooddyeyoung.attn.tv/aDMh7G2lr1Rh ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Good Dye Young: Hey there, this is Devon from GDY! Thanks for checking out our site! https://gooddyeyoung.attn.tv/adXE_IFAoBDw Can I help you find anything in particular today? Text me back any questions you may have 😊",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Good Dye Young: Hey it's Devon from GDY! Love what you picked out! We saved your cart, take 15% off with code: GDY15! - Enter it at checkout & shop now: https://gooddyeyoung.attn.tv/arz98HAskn2P \nText me with any questions and I will get back to you ASAP!",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Why is your website telling me the discount code isn't valid for the items in my cart?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bed5d-9e81-4552-f000-00009aeb1340",
-          "message_text": "Good Dye Young: I'm so sorry to hear that! Could you send me a screenshot of the error message you're getting along with the items in your cart? I'll be more than happy to check this for you.",
-          "message_media": []
-        }
-      ]
-    },
-    "25": {
-      "agentName": "Sarah",
-      "id": "019bf0cb-0731-4b20-f000-000085f5dd04",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://maxaroma.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.maxaroma.com/fragrance/niche-fragrances/tom-ford-black-lacquer/pid/38741/2",
-            "item": "Tom Ford Black Lacquer",
-            "timeAgo": "2026-01-22"
-          },
-          {
-            "link": "https://www.maxaroma.com/fragrance/niche-fragrances/tom-ford-black-lacquer/pid/38741/2?utm_source=google&utm_medium=cpc&utm_campaign=product&gad_source=1&gad_campaignid=22134748524&gbraid=0AAAAADc6URLSHj6SBsoksv1yek9loazDv&gclid=CjwKCAiAybfLBhAjEiwAI0mBBqLoyy6jH0fq66AfR-27rI2ScamiwJ2onp4Mk_z6TTuP61xkQK0SVBoCsJIQAvD_BwE",
-            "item": "Tom Ford Black Lacquer",
-            "timeAgo": "2026-01-21"
-          },
-          {
-            "link": "https://www.maxaroma.com/fragrance/niche-fragrances/tom-ford-black-lacquer/pid/38741/2",
-            "item": "Tom Ford Black Lacquer",
-            "timeAgo": "2026-01-20"
-          },
-          {
-            "link": "https://www.maxaroma.com/fragrance/niche-fragrances/atelier-des-ors-rouge-saray/pid/30552/2?utm_source=google&utm_medium=cpc&utm_campaign=product&gad_source=1&gad_campaignid=22126907501&gbraid=0AAAAADc6URJAFUTQqTQy2dOMeYPvJ6eX3&gclid=Cj0KCQiAg63LBhDtARIsAJygHZ7sz37x_FjCOsmKTWYtKHHC_9xdUVqYdai1vvuAirZPyoSTiaX2A3EaAs8BEALw_wcB",
-            "item": "Atelier des Ors Rouge Saray",
-            "timeAgo": "2026-01-18"
-          },
-          {
-            "link": "https://www.maxaroma.com/fragrance/niche-fragrances/atelier-des-ors-rouge-saray/pid/30552/2?utm_source=google&utm_medium=cpc&utm_campaign=product&gad_source=1&gad_campaignid=22126907501&gbraid=0AAAAADc6URJAFUTQqTQy2dOMeYPvJ6eX3&gclid=Cj0KCQiAg63LBhDtARIsAJygHZ7sz37x_FjCOsmKTWYtKHHC_9xdUVqYdai1vvuAirZPyoSTiaX2A3EaAs8BEALw_wcB",
-            "item": "Atelier des Ors Rouge Saray",
-            "timeAgo": "2026-01-17"
-          }
-        ]
-      },
-      "companyWebsite": "https://maxaroma.com",
-      "companyName": "Maxaroma",
-      "notes": {
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "send_to_cs": [
           "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "templates": [
+          "If Cx texts in GIFT:"
+        ],
+        "dos_and_donts": [
+          "The stock in-store and online are the same; all in-stock items are here: https://www.gardner-white.com/promo/on-sale-now/in-stock",
+          "Don't push for AFFIRM; offer their white label card, then Fortiva, and then Affirm"
+        ],
+        "promo_and_exclusions": [
+          "Clearance center items do not qualify for additional discounts",
+          "Items priced with .95 do not qualify for promotions"
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Shipping questions",
-        "Discount code errors",
-        "Exchanges and returns"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "MaxAroma: Boxing Day Only! \nBuy 1, Get %30 OFF The 2nd. \nNo Code Needed, Ends TONIGHT\nSee Details Here: maxaroma.attn.tv/a-g_OMvajojL \nMix & Match to 12 Brands Niche Brands ONLY. \n Stop to stop",
-          "message_media": []
+      "SystemMessage1": "Gardner White: It's a great time to update your home! Shop the Year End Sale now and save an extra 30% off sale prices. Shop Now: gw.attn.tv/awgUL2nzhaE6 .",
+      "SystemMessage2": "Gardner White: There are literally THOUSANDS of pieces $999 or LESS on sale right now! Shop them all: https://gw.attn.tv/aDEGmdSLrFJH .",
+      "SystemMessage3": "Gardner White: You are already subscribed. Shop Our Best Deals Now: https://gw.attn.tv/cl/Nyu .",
+      "SystemMessage4": "Gardner White: Hi, Jordan here! I noticed you eyeing our Rio Grey 9-Piece Sectional with Ottoman, any questions I can help with? \n\nGet it before it's gone: https://gw.attn.tv/agEx40_h7t74 .",
+      "SystemMessage5": "Gardner White: CLEARANCE DEAL OF THE DAY! The stylish Eliza Sofa comes in 3 on-trend colors and is only $695! Shop Now: gw.attn.tv/aAzpq_BYtvyN .",
+      "SystemMessage6": "Gardner White: Shop New Year's Eve from 10a to 7p for an extra 30% off furniture, up to 60% off mattresses and 50% off clearance: gw.attn.tv/a-a9KINGR-0F .",
+      "SystemMessage7": "Gardner White: Shop New Year's Day from 10a to 7p for an extra 30% off furniture, up to 60% off mattresses and 50% off clearance: gw.attn.tv/aup88eu6zz1l .",
+      "SystemMessage8": "Gardner White: New Year, New Arrivals! Truckloads of new styles just arrived and on sale now! Shop everything new now: https://gw.attn.tv/aH6aqWg-9EKn .",
+      "SystemMessage9": "Gardner White: Last Call for 30% OFF Sale Prices! Hurry! Offer ends Wednesday at 9pm! Shop Now: gw.attn.tv/akrsD6G4JSbQ .",
+      "SystemMessage10": "Gardner White: On trend! On time! On sale! Save an extra 25% to 50% off storewide! Shop Now: gw.attn.tv/a9qm8aPtMeuG .",
+      "SystemMessage11": "Gardner White: Hi, Jordan here! I noticed you eyeing our Rio Grey 9-Piece Sectional with Ottoman, any questions I can help with? \n\nGet it before it's gone: https://gw.attn.tv/a0RCrS1pLfr8 .",
+      "SystemMessage12": "Gardner White: Thank you for being a subscriber! Shop our everything that qualifies for the sale now: gw.attn.tv/ap_Y2E7JaY4s .",
+      "SystemMessage13": "Gardner White: Hey there! I'm Jordan! I noticed you left Phoenix 7-Piece Power Reclining Sectional with Right Arm Facing Chaise in your cart.\n\nIs something holding you back that I can assist you with today?\nhttps://gw.attn.tv/aOGLcIwAWLAu",
+      "SystemMessage14": "Gardner White: Hey there! I'm Jordan and I'm here to be a personal shopping assistant for you!\n\nDo you have any questions or need a recommendation? Let me know how I can help. \n\nhttps://gw.attn.tv/aUrBoUqWB5se .",
+      "SystemMessage15": "Gardner White: Amazing style. Zero waiting.\nUp to 50% Off... and more!\nShop Now: gw.attn.tv/aDzbTCJW1H_e .",
+      "SystemMessage16": "Gardner White: ONE DAY SALE!\nShop Monday 10a-9pm.\nSave up to 50% off sale prices! Shop Now: https://gw.attn.tv/ancaiKhIKrNn .",
+      "SystemMessage17": "Gardner White: Have you seen the newest arrivals in the Clearance Center inside Gardner White? Shop Now: gw.attn.tv/a9SdEUwFMF_h .",
+      "SystemMessage18": "Gardner White: Hey, we noticed you checking us out. Have you seen in-stock & on sale items? There are 100s of options to choose from: https://gw.attn.tv/aiBa0qUUqmz_",
+      "customerMessage1": "How long before I can get the Phoenix set",
+      "customerMessage2": "Delivered in my house",
+      "SystemMessage19": "Template used: \"Shipping Time\"; last updated: 2023-02-02 23:29:47.890",
+      "AgentMessage1": "Gardner White: Thanks for reaching out! I'm afraid I don't have any info on when the set will be available, but if you have placed the order, then you'll be contacted to schedule delivery when it arrives. Let me know if you need help with anything else!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://gardner-white.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "MaxAroma: YEAR-END CLEARANCE!!\nUp To 75% OFF. Final 48 Hours\nPrices Reset on Jan 2nd. When it's Gone, It's Gone\nShop Now: maxaroma.attn.tv/aweXq1ePhc53  Stop to stop",
-          "message_media": []
+        "browsingHistory": [
+          {
+            "item": "Phoenix 6-Piece Power Reclining Sectional with Right Arm Facing Chaise + 1 Armless Slider",
+            "link": "https://www.gardner-white.com/package/193374-phoenix-6-piece-power-reclining-sectional-with-right-arm-facing-chaise-1-armless-slider",
+            "icon": "eye"
+          },
+          {
+            "item": "Phoenix 7-Piece Power Reclining Sectional with Right Arm Facing Chaise",
+            "link": "https://www.gardner-white.com/package/193379-phoenix-7-piece-power-reclining-sectional-with-right-arm-facing-chaise",
+            "icon": "eye"
+          },
+          {
+            "item": "Vixen 7-Piece Triple Power Reclining Sectional with 3 Recliners",
+            "link": "https://www.gardner-white.com/package/180832-vixen-7-piece-triple-power-reclining-sectional-with-3-recliners?utm_source=google&utm_medium=cpc&utm_campaign=17441417661&utm_content=&utm_term=&gad_source=1&gad_campaignid=17441440746&gbraid=0AAAAAobuC9e2fbYJmRMRt9QjI4pNP8gtL&gclid=CjwKCAiAmp3LBhAkEiwAJM2JUI7lW-hXIB8VwyCx_w-bxr9byRAJgLwNTFAQ9KUu-PluTC8r_oLs4xoCea8QAvD_BwE",
+            "icon": "eye"
+          },
+          {
+            "item": "Phoenix 6-Piece Power Reclining Sectional with Right Arm Facing Chaise + 2 Armless Sliders",
+            "link": "https://www.gardner-white.com/package/193376-phoenix-6-piece-power-reclining-sectional-with-right-arm-facing-chaise-2-armless-sliders?srsltid=AfmBOopD7UgwRItf6l5L47wI65-7_Pt--Yz9dvvQTIakTYiEdX1iMCNV",
+            "icon": "eye"
+          },
+          {
+            "item": "Phoenix 7-Piece Power Reclining Sectional with Right Arm Facing Chaise",
+            "link": "https://www.gardner-white.com/package/193379-phoenix-7-piece-power-reclining-sectional-with-right-arm-facing-chaise",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "25": {
+      "id": "019bb4ed-95fd-42a1-f000-000043176ce3",
+      "companyName": "Gardner-White",
+      "companyWebsite": "https://gardner-white.com",
+      "agentName": "Jordan",
+      "agentInitial": "G",
+      "messageTone": "Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "templates": [
+          "If Cx texts in GIFT:"
+        ],
+        "dos_and_donts": [
+          "The stock in-store and online are the same; all in-stock items are here: https://www.gardner-white.com/promo/on-sale-now/in-stock",
+          "Don't push for AFFIRM; offer their white label card, then Fortiva, and then Affirm"
+        ],
+        "promo_and_exclusions": [
+          "Clearance center items do not qualify for additional discounts",
+          "Items priced with .95 do not qualify for promotions"
+        ]
+      },
+      "SystemMessage1": "Gardner White: Open Box Deals! Save 50% off floor samples in the Clearance Center today! Shop Now: gw.attn.tv/amIuIiEYTD3O .",
+      "SystemMessage2": "Gardner White: Year End Mattress Sale! Save up to $800 on the BEST mattress brands + FREE same day delivery: gw.attn.tv/at_BAc-KXkXQ .",
+      "SystemMessage3": "Gardner White: Hey, we noticed you checking us out. Have you seen in-stock & on sale items? There are 100s of options to choose from: https://gw.attn.tv/a1oEeZ_zCEvX",
+      "SystemMessage4": "Gardner White: Hey, we noticed you checking us out. Have you seen in-stock & on sale items? There are 100s of options to choose from: https://gw.attn.tv/aH1Gkdz9RzQw",
+      "SystemMessage5": "Gardner White: Did you know we have delivery in time for Christmas? FINAL WEEKEND! Shop Everything In-Stock Now: https://gw.attn.tv/arvdsECR4oDR .",
+      "SystemMessage6": "Gardner White: Ready to remix your space without wrecking your wallet? Our Clearance Center is 50% off or more every day. Shop Now: gw.attn.tv/aQxXLUIgqSQe .",
+      "SystemMessage7": "Gardner White: LAST CHANCE! Order before stores close at 9pm for delivery in time for Christmas! Shop Now: https://gw.attn.tv/affsNE39sG-_ .",
+      "SystemMessage8": "Gardner White: It's a great time to update your home! Shop the Year End Sale now and save an extra 30% off sale prices. Shop Now: gw.attn.tv/aYR5cBxtluuT .",
+      "SystemMessage9": "Gardner White: There are literally THOUSANDS of pieces $999 or LESS on sale right now! Shop them all: https://gw.attn.tv/aOMPBx8gNnAa .",
+      "SystemMessage10": "Gardner White: Hi, Jordan here! I noticed you eyeing our Lawson Brown Reclining Sofa.\n\nAre you redecorating or just adding to the space? Let me know how I can help!\n\nGet it before it's gone: https://gw.attn.tv/aF7Kd2TwAE4z .",
+      "SystemMessage11": "Gardner White: Year End Mattress Sale! Save up to $800 on the BEST mattress brands + FREE same day delivery: gw.attn.tv/aakzpLHv3Fir .",
+      "SystemMessage12": "Gardner White: CLEARANCE DEAL OF THE DAY! The stylish Eliza Sofa comes in 3 on-trend colors and is only $695! Shop Now: gw.attn.tv/aDdXK2fHLnHi .",
+      "SystemMessage13": "Gardner White: Shop NYE 10a-7p and save an EXTRA 30% OFF furniture, up to 60% OFF mattresses and 50% OFF clearance! Shop Now: gw.attn.tv/aksxijbHAljY .",
+      "SystemMessage14": "Gardner White: HAPPY NEW YEAR! Shop today 10a-7p for an EXTRA 30% OFF furniture, up to 60% OFF mattresses and 50% OFF clearance: gw.attn.tv/az0y47WIc9Rl .",
+      "SystemMessage15": "Gardner White: New Year, New Arrivals! Truckloads of new styles just arrived and on sale now! Shop everything new now: https://gw.attn.tv/afx2F7KEqP-P .",
+      "SystemMessage16": "Gardner White: Last Call for 30% OFF Sale Prices! Hurry! Offer ends Wednesday at 9pm! Shop Now: gw.attn.tv/aW4rtoJFfbcc .",
+      "SystemMessage17": "Gardner White: Right style. Right price. Right now. Save an extra 25% to 50% off storewide! Shop Now: gw.attn.tv/aX2CSnyUQqx9 .",
+      "SystemMessage18": "Gardner White: Open Box Deals! Save 50% off floor samples in the Clearance Center today! Shop Now: gw.attn.tv/a65I-7BWBeGC .",
+      "customerMessage1": "I'm at your store and they are not giving me 50% off their clearance price. Off anything they said it's already marked down at 66% off and they can give us a deal but not 50% off. This advertisement is very misleading.",
+      "AgentMessage1": "Gardner White: Thank you for reaching out and I'm sorry about that! May I know which item you're trying to buy? You can check the prices here: https://gw.attn.tv/aVOvleiJbtsw",
+      "customerMessage2": "The Bryant recliner leather recliner",
+      "AgentMessage2": "Gardner White: Thanks for letting me know! I'll check on this with the team. Could you let me know which store you're at and the price of the item you're interested in?",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://gardner-white.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "MaxAroma: Hey there, thanks for checking out our site. 😊 Come back and shop anytime! https://maxaroma.attn.tv/a2bzMkwexZbf  Stop to stop",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "MaxAroma: 36 Hours Left- Sitewide Sale\nNew Year, New Scents. \nTake Extra 10% OFF $200+ \nUse Code: NEW10\nShop Now: maxaroma.attn.tv/aHZ6QeiRx6qz  Stop to stop",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "MaxAroma: New Price Cuts are LIVE.\n\nSave $49-$240 OFF Niche Brands- Plus Extra $10 OFF $180. \n\nUse Code: EXT10\n\nApplies to : Creed, PDM, INITIO, Xerjoff, Maison Crivelli, Micallef, Byredo, Nishane, Sospiro, Montale, Matiere Premiere. \nShop Now: maxaroma.attn.tv/axvSZEiY113c  Stop to stop",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "MaxAroma: Hey there, this is Sarah. Thanks for checking out our site! 😊 https://maxaroma.attn.tv/aplmX5uXwc7z \n\nAny questions I can answer for you? ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "MaxAroma: 20% OFF Select Indie Fragrances. Use Code: MAX20\n- Escentric Molecule\n- Precious Liquid\n- Navitus Parfums\n- Scents Of Wood\nExpires 01/20\nShow Now: maxaroma.attn.tv/asLAY5bhaN12 \n",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "When will my package arrive",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Check spam - All brands\"; last updated: 2023-10-10 16:43:53.913",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Shipping time\"; last updated: 2023-02-15 22:33:56.842",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Guarantee delivery dates - All brands\"; last updated: 2024-11-07 14:26:32.728",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Order status/order tracking\"; last updated: 2023-02-15 23:06:50.812",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bf0cb-0731-4b20-f000-000085f5dd04",
-          "message_text": "MaxAroma: Thank you for reaching out! I'm really sorry, but I can't guarantee exact delivery dates, only an estimate in business days. This is just in case the carrier runs into any unexpected delays along the way. I appreciate your understanding! Just to be sure, have you received any tracking information in your email? Please check your spam and promo folders as well, as our emails sometimes end up there. \n\nOur standard processing time for in-stock items is 1-2 business days. We usually ship via USPS, FedEx and UPS, and once shipped, it will take 5-8 business days domestically and 7-12 business days internationally.\n\nYou can use our convenient online tool to see the latest updates on your order: https://maxaroma.attn.tv/a0nnFM8mAtfz",
-          "message_media": []
-        }
-      ]
+        "browsingHistory": [
+          {
+            "item": "2-Door Shutter Cabinet",
+            "link": "https://www.gardner-white.com/clearance/item/c-170069-2-door-shutter-cabinet",
+            "icon": "eye"
+          },
+          {
+            "item": "Drake Steel Reclining Sofa",
+            "link": "https://www.gardner-white.com/product/193121-drake-steel-reclining-sofa",
+            "icon": "eye"
+          },
+          {
+            "item": "Drake Steel Reclining Sofa",
+            "link": "https://www.gardner-white.com/product/193121-drake-steel-reclining-sofa",
+            "icon": "eye"
+          },
+          {
+            "item": "Drake Steel Reclining Sofa",
+            "link": "https://www.gardner-white.com/product/193121-drake-steel-reclining-sofa",
+            "icon": "eye"
+          },
+          {
+            "item": "Arthur Brown Queen Storage Bed",
+            "link": "https://www.gardner-white.com/product/193591-arthur-brown-queen-storage-bed",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
     }
   }
 }

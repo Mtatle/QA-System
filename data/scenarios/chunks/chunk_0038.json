@@ -3,521 +3,301 @@
   "chunk": "chunk_0038",
   "scenarios": {
     "186": {
-      "agentName": "Olivia",
-      "id": "019be7b2-09d9-4695-f000-0000c0b27ac5",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://pinklily.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://pinklily.com/products/aurora-green-and-blue-stripe-quarter-zip-sweater",
-            "item": "Sunday Stripe Club Green And Blue Quarter Zip - XS",
-            "timeAgo": "2026-01-22"
-          },
-          {
-            "link": "https://pinklily.com/products/aurora-blue-and-orange-stripe-quarter-zip-sweater",
-            "item": "Sunday Stripe Club Blue And Orange Quarter Zip - XS",
-            "timeAgo": "2026-01-22"
-          },
-          {
-            "link": "https://pinklily.com/products/aurora-pink-and-green-stripe-quarter-zip-sweater",
-            "item": "Sunday Stripe Club Pink And Green Quarter Zip - XS",
-            "timeAgo": "2026-01-22"
-          },
-          {
-            "link": "https://pinklily.com/products/aurora-green-and-blue-stripe-quarter-zip-sweater",
-            "item": "Sunday Stripe Club Green And Blue Quarter Zip - XS",
-            "timeAgo": "2026-01-22"
-          },
-          {
-            "link": "https://pinklily.com/products/aurora-pink-and-green-stripe-quarter-zip-sweater",
-            "item": "Sunday Stripe Club Pink And Green Quarter Zip - XS",
-            "timeAgo": "2026-01-22"
-          }
-        ]
-      },
-      "companyWebsite": "https://pinklily.com",
-      "companyName": "The Pink Lily Boutique",
-      "notes": {
+      "id": "019bb45a-081a-4b36-f000-00002167c1af",
+      "companyName": "Sauder",
+      "companyWebsite": "https://sauder.com",
+      "agentName": "Ashley",
+      "agentInitial": "S",
+      "messageTone": "Polished",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
         "send_to_cs": [
-          "No ESC for this client, send everything to CS",
-          "➜ For post purchase issues use PPI shortcut"
-        ],
-        "tone": [
-          "Close the convo once the client takes over!"
+          "Send to CS for post-purchase inquiries for items purchased through a retailer"
         ],
         "templates": [
-          "if cx message \"CREATOR,\" use CR shortcut"
-        ]
-      },
-      "messageTone": "Casual",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Pink Lily: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Pink Lily: Yay, you're here! Stay tuned for all the promos :) Now, take 30% OFF w/code: FT7M9V pinklily.attn.tv/a_eKYrvYF292 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Pink Lily: Don't forget to save our contact to get exclusive updates! ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Pink Lily: Shop the Blue Ivory Striped Cardigan Tank, soft stretch & button details you loved. BUY NOW 😊\n\n19 left, don't wait.\n\nShop now: https://pinklily.attn.tv/aygnVzkmC6Wn .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Pink Lily: Hi there, cozy cardigans with soft knits and easy layering are waiting for you.\n\nThis look is for you: https://pinklily.attn.tv/a-sCD3YJgB0n .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Pink Lily: Final call! 35% OFF your purchase! \n\nNew styles to wear now, wear everywhere. Use code: STYLE35\n\npinklily.attn.tv/al1SGIDBywsw\n\nText stop to opt out",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Pink Lily: We saved your 30% OFF code, but it's about to expire! Use code: FT7M9V & save 30%!\npinklily.attn.tv/a-0bRVtZBnEV ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Pink Lily: Hey girl, it's Olivia - your new OOTD is so close! Do you have any questions I can help answer?\n\nCheckout now: pinklily.attn.tv/a2i_pqS4VcuA",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Pink Lily: NEW graphics, better prices.\n\nTake 35% off ALL graphics!\n\nGrab yours now: pinklily.attn.tv/aQX4T_01kcqk \n\nText stop to opt out",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Pink Lily: 35% OFF ALL tops! \n\nUse code TOPS35. \n\nLimited time! Don't miss your faves.\npinklily.attn.tv/aJUobDsWQoy4 \n\nText stop to opt out",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Pink Lily: Happy Hour! 40% OFF sitewide for YOU only! Ends TONIGHT\n\nUse JAN40 before it's gone \npinklily.attn.tv/aQ-wQhd561Kv \n\nText stop to opt out",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Pink Lily: Grab the Homebody Cozy Club Mocha Sweatshirt — comfy crewneck & relaxed fit, perfect for cozy days. BUY NOW 😊\n\nShop now: https://pinklily.attn.tv/aOTfdJR5K1EZ .",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Give me a deal and I'll buy it ?",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be7b2-09d9-4695-f000-0000c0b27ac5",
-          "message_text": "Pink Lily: Absolutely! Kindly use the code JAN40 for 40% off your order. I hope this helps.",
-          "message_media": []
-        }
-      ]
-    },
-    "187": {
-      "agentName": "Quinn",
-      "id": "019bbd8e-0aa8-46e9-f000-0000f41e493b",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://nectarsleep.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.nectarsleep.com/mattresses/premier-hybrid-mattress/king",
-            "item": "Nectar Premier Hybrid Mattress",
-            "timeAgo": "2026-01-14"
-          },
-          {
-            "link": "https://www.nectarsleep.com/mattresses/premier-hybrid-mattress/king",
-            "item": "Nectar Premier Hybrid Mattress",
-            "timeAgo": "2026-01-14"
-          },
-          {
-            "link": "https://www.nectarsleep.com/mattresses/premier-hybrid-mattress/king",
-            "item": "Nectar Premier Hybrid Mattress",
-            "timeAgo": "2026-01-14"
-          }
-        ]
-      },
-      "companyWebsite": "https://nectarsleep.com",
-      "companyName": "Nectar Sleep",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS",
-          "Send to CS for refund inquiries"
+          "If customers already purchased use TFP shortcut"
         ],
         "tone": [
-          "Close the convo once the client takes over",
-          "Close the convo if the cx first message is ok, no, etc.",
-          "Don't use the word \"off\" when talking about promotions"
+          "Let the customer have the last word!"
         ],
-        "dos_and_donts": [
-          "Don't proactively offer to find pricing info, redirect them to the website instead"
+        "drive_to_purchase": [
+          "Don't recommend Retailer Exclusive items"
         ],
         "promo_and_exclusions": [
-          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
+          "Discount codes CAN be applied to clearance items"
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Shipping questions",
-        "Exchanges and returns",
-        "Discount code errors",
-        "Recall",
-        "BBB",
-        "fiberglass",
-        "lawyer",
-        "class action"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Nectar: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (888) 863-2827.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Nectar: You're in! Shop now: https://nectarsleep.attn.tv/a8ElohrWyKRb ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Nectar: Hi, this is Quinn. Thanks for stopping by! Save up to 50% on mattresses plus get free delivery (usually within a week). Sleep better and wake up energized every morning.\n\nnectarsleep.attn.tv/aSR-g3cerCuR\n\nQuestions? Text us back!\n.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Hi Quinn, how does a return work if you are unsatisfied",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"What is the 365-night sleep trial?\"; last updated: 2024-03-29 22:21:52.213",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Return policy\"; last updated: 2024-03-29 22:22:00.975",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bbd8e-0aa8-46e9-f000-0000f41e493b",
-          "message_text": "Nectar: Good question! Nectar provides you with a full year - 365 nights - to decide if Nectar is right for you. We encourage you to take the first 30 days to get to know your new mattress, as it can take this long for your body to adjust to the support and comfort of the Nectar. Our risk free trial is about 3 times longer than the industry standard. You can check out our detailed return policy here: https://nectarsleep.attn.tv/aS912TOO0n8V/",
-          "message_media": []
-        }
-      ]
-    },
-    "188": {
-      "agentName": "Rebecca",
-      "id": "019bd88e-16d9-4bfb-f000-0000f4b43f47",
+      "SystemMessage1": "Sauder: Don't miss our Holiday Hoopla deals! Enjoy savings on over 600 items! Hurry, this sale ends 1/4! sauder.attn.tv/as8mVf-NZa9b",
+      "SystemMessage2": "Sauder: Ring in the New Year with incredible savings! Last chance for blowout deals on over 600 items! Hurry, this sale ends 1/4! sauder.attn.tv/acJ5Lcbaz8ta",
+      "SystemMessage3": "Sauder: Hey, this is Ashley . Thanks for checking us out! 😊 https://sauder.attn.tv/aRuFwx_7Vb-g \n\nAny questions I can answer for you?",
+      "customerMessage1": "Hi Ashley ...A coupon popped up before for a discount..now when I go on your site, it's not there....Can you text me a coupon? Thx",
+      "AgentMessage1": "Sauder: I'm sorry for the inconvenience; it may have been the welcome code. Let me check on this with my team; I'll follow up once I hear back.",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://faithgateway.com",
-          "date": ""
-        }
-      },
-      "companyWebsite": "https://faithgateway.com",
-      "companyName": "FaithGateway",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase inquiries, use PPI shortcut",
-          "Send to CS if the customer doesn't receive the free printables with his purchase"
-        ]
-      },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Discount code errors",
-        "Shipping questions"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from FaithGateway.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Hooray! Thank you for your purchase. Your order number is 2248992. Review your info here: https://fg.attn.tv/avQ_XpORY4nX",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: Welcome to FaithGateway! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: We're so glad you're here to embark on this journey of growing deeper in your faith. Click here to save on your next order with code F-hroQDv Shop now: https://fg.attn.tv/aYFOmYYtIzIo .\n\nText back with any questions! - Rebecca",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "FaithGateway: We also want to introduce you to Rebecca! Your dedicated text concierge with FaithGateway, you can reach them anytime with questions you may have!",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Link goes no where",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bd88e-16d9-4bfb-f000-0000f4b43f47",
-          "message_text": "FaithGateway: Thank you for reaching out. I'm sorry about that. Try this link instead: https://fg.attn.tv/a2OK9ldKlb3Z/\n\nAlso, make sure to use your code F-hroQDv for your next order. I hope this helps.",
-          "message_media": []
-        }
-      ]
-    },
-    "189": {
-      "agentName": "Jordan",
-      "id": "019bc93d-92a9-4a5f-f000-0000293ebe4c",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://garyswine.com",
+          "value": "https://sauder.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://garyswine.com/shop/product/the-art-of-burgundy-a-louis-jadot-dinner-with-fr-d-ric-barnier/6967b6ac035f7b2d28d67223?option-id=cf129aeca5c2e021e9c437433c8f5a1e535ea1786ede8545c7cb1bc9b5e4c3d9&utm_campaign=SMS+01162026_The+Art+of+Burgundy%3A+A+Louis+Jadot+Dinner+with+Fr%C3%A9d%C3%A9ric+Barnier_base&utm_medium=sms&utm_source=attentive&externalId=6mr4o&assigned_merchant_id=true",
-            "item": "The Art of Burgundy: A Louis Jadot Dinner with Frédéric Barnier",
-            "timeAgo": "2026-01-16"
+            "item": "Executive Desk",
+            "link": "https://www.sauder.com/furniture/419954/executive-desk",
+            "icon": "eye"
           },
           {
-            "link": "https://garyswine.com/shop/product/oak-farm-sauvignon-blanc/5b5a4efa5d767358302df519?option-id=8868de54b8e44327d670c0c513db2b89eccc3ba0f4539e7bd3768ca33e406f06",
-            "item": "Oak Farm Sauvignon Blanc",
-            "timeAgo": "2025-12-19"
+            "item": "72” x 24\" 3-File Double Ped Desk",
+            "link": "https://www.sauder.com/commercial-office/office-works/furniture/430203/72-x-24-3-file-double-ped-desk",
+            "icon": "eye"
           },
           {
-            "link": "https://garyswine.com/shop/product/carm-reserva-tinto-douro/5e8c4d4e369a853e8722f67f?option-id=3ec3d2300e44215f2f389cad5d11acc725bd25f72f3c36f5d362fccbfd561758",
-            "item": "CARM Reserva Tinto Douro",
-            "timeAgo": "2025-12-19"
+            "item": "Executive Desk",
+            "link": "https://www.sauder.com/furniture/424809/executive-desk",
+            "icon": "eye"
           },
           {
-            "link": "https://garyswine.com/shop/product/luigi-bosca-cabernet-sauvignon-mendoza/56f1f70369702d2788c40100?option-id=f054ada3fc9a0efbc621449f5df514dbe52532e040c50b2cb169032850bf4053",
-            "item": "Luigi Bosca Cabernet Sauvignon Mendoza",
-            "timeAgo": "2025-12-19"
+            "item": "Double-Pedestal Executive Desk",
+            "link": "https://www.sauder.com/furniture/416513/double-pedestal-executive-desk",
+            "icon": "eye"
           },
           {
-            "link": "https://garyswine.com/shop/product/fattoria-le-pupille-poggio-argentato-toscana-bianco-igt/6877eeb2641d604df7c8968e?option-id=d62945e34cb4f2b57f5d946e0499cdd8cc326e7563eec04653d9a95735035228",
-            "item": "Fattoria Le Pupille ‘Poggio Argentato’ Toscana Bianco IGT",
-            "timeAgo": "2025-12-19"
+            "item": "Double-Pedestal Executive Desk",
+            "link": "https://www.sauder.com/furniture/416513/double-pedestal-executive-desk",
+            "icon": "eye"
           }
-        ]
-      },
-      "companyWebsite": "https://garyswine.com",
-      "companyName": "Gary's Wine & Marketplace",
-      "notes": {
-        "escalate": [
-          "ESC post purchase local delivery inquiries immediately",
-          "ESC inventory inquiries",
-          "ESC product recommendations",
-          "ESC NAPA wines campaign responses (when the subscriber replies with the number of bottles they want)"
         ],
-        "text_to_buy_reply_to_buy_campaign": [
-          "The client sends out a campaign featuring a bottle of wine and asking customers how many they would like to order. When a subscriber replies with a number of bottles:",
-          "➜ Use CPN shortcut",
-          "➜ ESC the convo & include if the cx wants to do pickup or delivery in your ESC notes",
-          "➜ Close the convo after ESC, the client will reply"
+        "orders": []
+      },
+      "orders": []
+    },
+    "187": {
+      "id": "019bd360-594a-4fb7-f000-0000b86e6c3a",
+      "companyName": "Beis Travel",
+      "companyWebsite": "https://beistravel.com",
+      "agentName": "Annie",
+      "agentInitial": "B",
+      "messageTone": "Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "escalate": [
+          "We don't ESC for this client, use ESC shortcut",
+          "If cx ask how to get/redeem the discount for downloading the app use ESC shortcut"
+        ],
+        "templates": [
+          "For Limited edition items don't use restock temps, they will not be restocked"
         ],
         "dos_and_donts": [
-          "Shipping zones (agent use only): bit.ly/3qiYcb7",
-          "If customers want us to place a order for them, refer them to chat support on the website",
-          "If a customer asks for a driver's personal information, let them know we can't provide it for privacy reasons"
+          "Don't share the duration of the sale/sale dates with customers!"
         ]
       },
-      "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [
-        "product recommendations",
-        "inventory",
-        "login issues",
-        "delayed orders"
-      ],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Gary's Wine: 39% OFF Kings of Italy 3-Pack!\n\nBarolo, Brunello, Amarone... ULTIMATE Italian Red Trio\n\nCollect, Gift, Pair with a Sunday Feast!\n\nVery LIMITED + Only at Gary's! garyswine.attn.tv/aoclfFyRTp9P ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Gary's Wine: Hey, this is Jordan. Thanks for checking out our site! 😊 https://garyswine.attn.tv/aDJrBxbyd_-A \n\nAny questions I can answer for you? ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Gary's Wine: It looks like you forgot something in your cart - complete your checkout today: \ngaryswine.attn.tv/aXZ5F3BqzEdy ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Gary's Wine: Reply to this text with the # of bottles you would like to purchase! \n\n69% off SENSATIONAL Sonoma Coast Pinot Noir\n\nCranberry, Forest Pine, Violets\n\nComplex, Silky + VERY LIMITED\n\nUnder $20 - U.S. Best Price - ONLY at Gary's Bernardsville, Madison & National Shipping stores! garyswine.attn.tv/aGkHnQc8Yktt ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Gary's Wine: This holiday season, give a gift that keeps surprising.\nThe Gary's Discovery Wine Club delivers 6 expertly curated bottles every quarter.\nHoliday Special: $500 annually (save $100) garyswine.attn.tv/ab4Qlcn9qYx0 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Gary's Wine: Reply to this text with the # of bottles you would like to purchase! \n\nNYE READY BUBBLES!\n\n41% OFF Sparkling Rosé\n\nLush Strawberry. Racy Acidity\n\nSilky, Celebration-Ready Bubbles\n\n$12.97 - 48hrs ONLY @ Gary's! garyswine.attn.tv/aeAefe_ouiXI ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Gary's Wine: Reply to this text with the # of bottles you would like to purchase!\n\nUp to 47% OFF Juicy Sonoma Zinfandel!\nSingle Vineyard - 94 Points - VERY Limited\nBold, jammy, winter-warming flavor\n48 HRS ONLY @ Gary's!\ngaryswine.attn.tv/a2T8YLTXlEoq ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Gary's Wine: Reply to this text with the # of bottles you would like to purchase!\n\nSave $80 on BOLD + RARE Napa Cabernet Blend!\n\n Very Limited - 2018 Best Vintage Ever!\n\n Howell Mtn, Oakville, Stags Leap fruit\n\n U.S. BEST PRICE - Only @ Gary's for 48hrs! garyswine.attn.tv/aLQER4u0o_yX ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Gary's Wine: One Night Only: The Art of Burgundy\nDine with Frédéric Barnier, Head Winemaker of Louis Jadot. Premier & Grand Cru Burgundy incl. Corton-Charlemagne.\nJan 29 - 6:30pm - Fleur de Sel, Chatham NJ\n$175 all-in - Very Limited - Tickets in Bernardsville & Madison only garyswine.attn.tv/acvmrs28NDr2 ",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Gary's Wine: Hey, this is Jordan. Thanks for checking out our site! 😊 https://garyswine.attn.tv/a5MRPqpUs-aK \n\nAny questions I can answer for you? ",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Is therr an available menu?",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "There",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc93a-5e28-4d6b-f000-0000293ebe4c",
-          "message_text": "Gary's Wine: Thanks for reaching out to us! To ensure I provide the most accurate answer, I'll reach out to our team for more insights. We'll get back to you as soon as we have an update. Feel free to let me know if you need help with anything else in the meantime.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Are tickets still available thru madison's Gary's?",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Template used: \"Do I need to show a physical ticket for the Champagne Dinner event? \"; last updated: 2025-10-20 12:01:31.700",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019bc93d-92a9-4a5f-f000-0000293ebe4c",
-          "message_text": "Gary's Wine: There are no physical tickets for this event. You can show your purchase receipt at the event, and we'll cross-check it with our order sheet. ",
-          "message_media": []
-        }
-      ]
-    },
-    "190": {
-      "agentName": "",
-      "id": "019be2f5-b48e-4dc9-f000-0000f5387989",
+      "SystemMessage1": "BÉIS Travel: Welcome to BÉIS Travel! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage2": "BÉIS Travel: Oh hey, welcome back! You're officially back on the list for early access to new drops, limited promos, and insider perks.\n\nShop what you've missed: beistravel.attn.tv/acbo8NYDStAY .",
+      "SystemMessage3": "BÉIS Travel: Bags designed to make your every day easier. Save our contact to make getting all of our latest updates easy.",
+      "customerMessage1": "Coupon",
+      "AgentMessage1": "BÉIS Travel: Thanks for reaching out. Let me check this with my team. I'll get back to you as soon as possible!",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://naturalizer.com",
+          "value": "https://beistravel.com",
           "date": ""
-        }
-      },
-      "companyWebsite": "https://naturalizer.com",
-      "companyName": "Naturalizer",
-      "notes": {
-        "escalate": [
-          "Before you ESC use ESC shortcut",
-          "When ESC code issues, add the code to the escalation notes",
-          "Always add the customer's name in your esc notes"
+        },
+        "browsingHistory": [
+          {
+            "item": "The Air Backpack in Charcoal",
+            "link": "https://beistravel.com/products/the-air-backpack-in-charcoal?variant=44308459618440",
+            "icon": "eye"
+          },
+          {
+            "item": "The Small Carry-On Roller in Charcoal",
+            "link": "https://beistravel.com/products/the-small-carry-on-roller-in-charcoal",
+            "icon": "eye"
+          },
+          {
+            "item": "Resale The Carry-On Roller in Charcoal",
+            "link": "https://beistravel.com/products/resale-the-carry-on-roller-in-charcoal",
+            "icon": "eye"
+          },
+          {
+            "item": "Resale The Carry-On Roller in Beige",
+            "link": "https://beistravel.com/products/resale-the-carry-on-roller-in-beige-1?_pos=4&_fid=8b42ad408&_ss=c",
+            "icon": "eye"
+          }
         ],
-        "tone": [
-          "Don't respond if the customer doesn't want to engage"
+        "orders": []
+      },
+      "orders": []
+    },
+    "188": {
+      "id": "019bc8c6-ff58-47de-f000-0000d4ba7cec",
+      "companyName": "Big Fig Mattress",
+      "companyWebsite": "https://bigfigmattress.com",
+      "agentName": "Sarah",
+      "agentInitial": "B",
+      "messageTone": "Super Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {},
+      "SystemMessage1": "Big Fig Mattress: \"I'll do it tomorrow\" energy? Tomorrow is the deadline 😬 Don't miss the sleigh!\n20% OFF SITEWIDE!\nVIP code: COZY20\nbigfigmattress.attn.tv/aJjcQp4Lfc-o",
+      "SystemMessage2": "Big Fig Mattress: Why the hurry? You bounced faster than a bad mattress. Anything we can help you find? \n\nbigfigmattress.attn.tv/aLDjOMpyiHvc",
+      "customerMessage1": "I had a coupon for $50 off and I think I needed to wait 90 days from purchase for it to take effect. Is that correct?",
+      "AgentMessage1": "Big Fig Mattress: Thank you for reaching out! Can you please clarify more about this coupon? Where did you get it? Can you please share a screenshot of it?",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://bigfigmattress.com",
+          "date": ""
+        },
+        "browsingHistory": [],
+        "orders": []
+      },
+      "orders": []
+    },
+    "189": {
+      "id": "019bc2c9-2170-4d9d-f000-0000f43da384",
+      "companyName": "HEYDUDE US",
+      "companyWebsite": "https://heydude.com",
+      "agentName": "Casey",
+      "agentInitial": "H",
+      "messageTone": "Casual",
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "send_to_cs": [
+          "Don't ESC post-purchase issues, use PPI shortcut"
         ],
         "templates": [
-          "For inquiries regarding their order updates/status/tracking, use UPD shortcut"
+          "For wrong items received use WMP shortcut",
+          "For damaged items received use DMI shortcut",
+          "For order status requests use OSR shortcut"
+        ],
+        "promo_and_exclusions": [
+          "The welcome code is valid for first-time customers only.",
+          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
         ]
       },
+      "SystemMessage1": "HEYDUDE: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from HEYDUDE.",
+      "SystemMessage2": "HEYDUDE: Welcome to HEYDUDE! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/o76",
+      "SystemMessage3": "HEYDUDE: We're so stoked you're here!\n\nGet 20% off your first purchase with code ATTW23K28PCX8 at checkout.\n\nShop Now:\nhttps://heydudeshoes.attn.tv/attZFWRq_3VM .",
+      "SystemMessage4": "HEYDUDE: Over the next few days we'll try to help you find something that you will love!\n\nUntil then, shop our viral best-sellers: https://heydudeshoes.attn.tv/a1Iepss63s2V .",
+      "SystemMessage5": "HEYDUDE: Grab your Wendy Work Ce Leopard — lightweight, water-repellent shoes with comfy foam insoles and slip-resistant soles. ACT FAST 😊\n\nUse code ATTW23K28PCX8 for 20% off. \n\nShop now: https://heydudeshoes.attn.tv/amTrHLI7xmy_ .",
+      "customerMessage1": "It's not allowing me to use my coupon code on these",
+      "AgentMessage1": "HEYDUDE: Please try using the coupon code ATTW23K28PCX8 at heydude.com. If you're still having trouble, please share a screenshot of the issue.",
+      "customerMessage2": "\"",
+      "SystemMessage6": "Template used: \"Provide a discount (Concierge Offer)\"; last updated: 2025-12-19 19:14:56.656",
+      "AgentMessage2": "HEYDUDE: Thanks for the screenshot. Can you please try this code? CASEY-gvt6p66pmjyg - Let me know how it goes!",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://heydude.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "item": "Wendy Work CE Leopard - Black/Pink Leopard",
+            "link": "https://www.heydude.com/products/wendy-work-ce-leopard-black-pink-leopard",
+            "icon": "eye"
+          },
+          {
+            "item": "Wendy Work CE Leopard - Black/Pink Leopard - 9",
+            "link": "https://www.heydude.com/products/wendy-work-ce-leopard-black-pink-leopard",
+            "icon": "eye"
+          },
+          {
+            "item": "Wendy Work CE Leopard - Black/Pink Leopard - 9",
+            "link": "https://www.heydude.com/products/wendy-work-ce-leopard-black-pink-leopard",
+            "icon": "eye"
+          },
+          {
+            "item": "Wendy Work CE Leopard - Black/Pink Leopard",
+            "link": "https://www.heydude.com/products/wendy-work-ce-leopard-black-pink-leopard?variant=42438152945731&gad_source=1&gad_campaignid=19415206273&gbraid=0AAAAADRlbpzpJM-SG9QNtaNqwhQh-4AQt&gclid=EAIaIQobChMIpfqGj4qMkgMVvyfUAR3hnjD8EAQYASABEgJ62fD_BwE",
+            "icon": "eye"
+          },
+          {
+            "item": "Wendy Work CE Leopard - Black/Pink Leopard",
+            "link": "https://www.heydude.com/products/wendy-work-ce-leopard-black-pink-leopard?variant=42438152945731&gad_source=1&gad_campaignid=19415206273&gbraid=0AAAAADRlbpzpJM-SG9QNtaNqwhQh-4AQt&gclid=EAIaIQobChMIpfqGj4qMkgMVvyfUAR3hnjD8EAQYASABEgJ62fD_BwE",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
+    },
+    "190": {
+      "id": "019bb9b5-b8ca-4460-f000-0000f39433a1",
+      "companyName": "Braun",
+      "companyWebsite": "https://braun.com",
+      "agentName": "Jordan",
+      "agentInitial": "B",
       "messageTone": "Polished",
-      "blocklisted_words": [],
-      "escalation_preferences": [],
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Naturalizer: Welcome to Naturalizer! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_media": []
+      "customerPhone": "",
+      "customerMessage": "",
+      "responseType": "template",
+      "guidelines": {
+        "dos_and_donts": [
+          "Don't send any registration links"
+        ],
+        "templates": [
+          "For adverse events or product quality complaints use APQ shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Discount codes don't stack with sale items"
+        ]
+      },
+      "SystemMessage1": "Braun: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Braun.",
+      "SystemMessage2": "Braun: Welcome to Braun! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+      "SystemMessage3": "Braun: Welcome to the family! Use code BRA842F51Q and get up to $125 off your first purchase. Not combinable with other offers. Shop now: braun.attn.tv/a55dAs-vHeVC .",
+      "SystemMessage4": "Braun: On an Apple device? Click 'Mark as Known' below to avoid missing any future offers!",
+      "SystemMessage5": "Braun: Don't forget to save our contact for exclusive deals and updates!",
+      "SystemMessage6": "Braun: Jordan here! I snagged you an exclusive offer, take 15% off with code ENJOY15. braun.attn.tv/aybRqpZyBbBu \n\nHave any questions? Text back now!",
+      "customerMessage1": "Trying to buy a 96 series cartridge and use the $124 discount",
+      "AgentMessage1": "Braun: Thank you so much for your interest. Are you referring to this one? https://braun.attn.tv/agRz25rlPENq I see that it's on sale already. Unfortunately, the code BRA842F51Q only applies to full price items. You can use code ENJOY15 instead.",
+      "customerMessage2": "No the series 9 pro plus with the 96 series cartridge. I can only find the kit with the 95 series cartridge",
+      "AgentMessage2": "Braun: Are you referring to this?: https://braun.attn.tv/aKWMscpPFquZ\nIf so, since it's already discounted, code BRA842F51Q won't apply.",
+      "customerMessage3": "Not the 9599 head, the 2025 model with 96 series head",
+      "AgentMessage3": "Braun: Got it. I think you are referring to this: https://braun.attn.tv/aCWWI_x4swWk\n\nI'm sorry, but that item is also discounted. That's the reason why the code is not working. I hope this clarifies it.",
+      "customerMessage4": "No that one has the 94 series head",
+      "AgentMessage4": "Braun: I'm sorry, it's not available on our US website at this time. Our team works on providing options for our customers, so I'll definitely pass this along to the team to consider in the future.",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://braun.com",
+          "date": ""
         },
-        {
-          "message_type": "system",
-          "message_text": "Naturalizer: Welcome, I'm Hannah with Naturalizer! Click this link for your $10 off promo code. naturalizer.attn.tv/aoLouP1narL7 .",
-          "message_media": []
-        },
-        {
-          "message_type": "system",
-          "message_text": "Naturalizer: Don't forget! Save our contact card to stay updated on the latest SMS exclusive sales & offers.\n\nI'm here to help, text me your product questions.",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "I ordered jaylaTanzania in 9 wide. Earlier today.can u check on that order",
-          "message_media": []
-        },
-        {
-          "message_type": "subscriber",
-          "message_text": "Excuse me jayla tan fawn in size 9 wide.",
-          "message_media": []
-        },
-        {
-          "message_type": "agent",
-          "message_id": "019be2f5-b48e-4dc9-f000-0000f5387989",
-          "message_text": "Naturalizer: Thanks for reaching out! You can check the latest updates on your order using our online tracking tool here: https://naturalizer.attn.tv/agMhkRMu4lk2\n\nAlso, be sure to check your email for the order confirmation-it usually has your order details and estimated delivery date.\n\nIf you have any trouble accessing your order info, I'm happy to help guide you through it.",
-          "message_media": []
-        }
-      ]
+        "browsingHistory": [
+          {
+            "item": "Series 9 Pro Electric Shaver with PowerCase, 9477cc",
+            "link": "https://us.braun.com/en-us/male-grooming/electric-shavers/series-9-pro-power-case-9477cc?utm_campaign=attentive-concierge-reply&utm_medium=sms&utm_source=attentive&externalId=UZ679",
+            "icon": "eye"
+          },
+          {
+            "item": "Series 9 PRO+ Electric Shaver with PowerCase, 6-in-1 SmartCare Center, ProComfort Head, 9599cc",
+            "link": "https://us.braun.com/en-us/male-grooming/electric-shavers/series-9-pro-comfort-9599cc?utm_campaign=attentive-concierge-reply&utm_medium=sms&utm_source=attentive&externalId=UZ679",
+            "icon": "eye"
+          },
+          {
+            "item": "Braun Clean & Renew Refill Cartridges, 10 Pack",
+            "link": "https://us.braun.com/en-us/male-grooming/replacement-parts-and-accessories/10-pack-clean-and-renew-refill-cartridge?utm_campaign=attentive-concierge-reply&utm_medium=sms&utm_source=attentive&externalId=UZ679",
+            "icon": "eye"
+          },
+          {
+            "item": "Series 9 PRO+ Electric Shaver with PowerCase, 6-in-1 SmartCare Center, ProComfort Head, 9599cc",
+            "link": "https://us.braun.com/en-us/male-grooming/electric-shavers/series-9-pro-comfort-9599cc",
+            "icon": "eye"
+          },
+          {
+            "item": "Series 9 PRO+ Electric Shaver with PowerCase, 6-in-1 SmartCare Center, ProComfort Head, 9599cc",
+            "link": "https://us.braun.com/en-us/male-grooming/electric-shavers/series-9-pro-comfort-9599cc",
+            "icon": "eye"
+          }
+        ],
+        "orders": []
+      },
+      "orders": []
     }
   }
 }
