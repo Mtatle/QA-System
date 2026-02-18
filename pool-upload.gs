@@ -352,7 +352,7 @@ function getOrTopUpQueueForSession_(email, appBaseUrl, sessionId) {
 }
 
 function getAssignmentForSession_(assignmentId, token, sessionId) {
-  const state = loadAssignmentState_();
+  const state = loadAssignmentReadState_();
 
   const sessionIndex = findSessionIndex_(state.sessionsRows, sessionId);
   if (sessionIndex < 0) return { error: 'Session not found' };
@@ -381,6 +381,19 @@ function getAssignmentForSession_(assignmentId, token, sessionId) {
       role: role
     },
     session: sessionToPayload_(session)
+  };
+}
+
+function loadAssignmentReadState_() {
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const assignmentsSheet = getOrCreateSheet_(spreadsheet, ASSIGNMENTS_SHEET, ASSIGNMENTS_HEADERS);
+  const sessionsSheet = getOrCreateSheet_(spreadsheet, QA_SESSIONS_SHEET, SESSION_HEADERS);
+  const assignmentsRows = getSheetDataRows_(assignmentsSheet, ASSIGNMENTS_HEADERS.length);
+  const sessionsRows = getSheetDataRows_(sessionsSheet, SESSION_HEADERS.length);
+
+  return {
+    assignmentsRows: assignmentsRows,
+    sessionsRows: sessionsRows
   };
 }
 

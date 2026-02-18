@@ -2135,7 +2135,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (!sessionId) throw new Error('Missing assignment session id.');
                 const queuedItem = (Array.isArray(assignmentQueue) ? assignmentQueue : [])
                     .find(item => String((item && item.assignment_id) || '').trim() === String(currentParams.aid || '').trim());
-                if (queuedItem && !hasRuntimeScenarioForSendId(queuedItem.send_id)) {
+                if (queuedItem && runtimeScenariosIndex && !hasRuntimeScenarioForSendId(queuedItem.send_id)) {
                     const fastQueue = await skipInvalidAssignmentAndRefresh(
                         queuedItem,
                         currentParams,
@@ -4167,7 +4167,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const openedFallback = await openAssignmentInPage(fallbackParams, {
                         updateHistory: true,
                         replaceHistory: true,
-                        refreshQueue: false
+                        refreshQueue: false,
+                        maxAttempts: 3
                     });
                     if (openedFallback) {
                         setAssignmentsStatus('Opened next available assignment.', false);
@@ -4178,59 +4179,62 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
     } else {
-        templatesData = await loadTemplatesData();
-        const scenarios = await loadScenariosData();
-        allScenariosData = scenarios || {};
-        if (!scenarios) {
-            console.error('Could not load scenarios data');
-        } else {
-            let openedAssignmentFromQueue = false;
-            if (canUseAssignmentMode()) {
-                getAssignmentSessionId({ createIfMissing: true });
-                try {
-                    const queue = await refreshAssignmentQueue();
-                    if (queue.length) {
-                        setAssignmentsStatus('Queue loaded. Opening first assignment...', false);
-                        const firstParams = getNextAssignmentParamsFromQueue(queue, {
-                            prefersView: false
+        let openedAssignmentFromQueue = false;
+        if (canUseAssignmentMode()) {
+            await loadRuntimeScenariosIndex();
+            getAssignmentSessionId({ createIfMissing: true });
+            try {
+                const queue = await refreshAssignmentQueue();
+                if (queue.length) {
+                    setAssignmentsStatus('Queue loaded. Opening first assignment...', false);
+                    const firstParams = getNextAssignmentParamsFromQueue(queue, {
+                        prefersView: false
+                    });
+                    if (firstParams) {
+                        const opened = await openAssignmentInPage(firstParams, {
+                            updateHistory: true,
+                            replaceHistory: true,
+                            refreshQueue: false,
+                            maxAttempts: 3
                         });
-                        if (firstParams) {
-                            const opened = await openAssignmentInPage(firstParams, {
-                                updateHistory: true,
-                                replaceHistory: true,
-                                refreshQueue: false
-                            });
-                            if (opened) {
-                                openedAssignmentFromQueue = true;
-                            }
+                        if (opened) {
+                            openedAssignmentFromQueue = true;
                         }
-                        const firstEditUrl = (!openedAssignmentFromQueue && queue[0])
-                            ? (queue[0].edit_url || queue[0].view_url || '')
-                            : '';
-                        if (!openedAssignmentFromQueue && firstEditUrl) {
-                            const openedFallback = await openAssignmentInPageByUrl(firstEditUrl, {
-                                updateHistory: true,
-                                replaceHistory: true,
-                                refreshQueue: false
-                            });
-                            if (openedFallback) {
-                                openedAssignmentFromQueue = true;
-                            } else {
-                                setAssignmentsStatus('Queue loaded, but first assignment could not be opened.', true);
-                            }
-                        }
-                    } else {
-                        setAssignmentsStatus('No assignments available.', false);
                     }
-                } catch (assignmentError) {
-                    console.error('Assignment flow error:', assignmentError);
-                    setAssignmentsStatus(`Assignment error: ${assignmentError.message || assignmentError}`, true);
+                    const firstEditUrl = (!openedAssignmentFromQueue && queue[0])
+                        ? (queue[0].edit_url || queue[0].view_url || '')
+                        : '';
+                    if (!openedAssignmentFromQueue && firstEditUrl) {
+                        const openedFallback = await openAssignmentInPageByUrl(firstEditUrl, {
+                            updateHistory: true,
+                            replaceHistory: true,
+                            refreshQueue: false
+                        });
+                        if (openedFallback) {
+                            openedAssignmentFromQueue = true;
+                        } else {
+                            setAssignmentsStatus('Queue loaded, but first assignment could not be opened.', true);
+                        }
+                    }
+                } else {
+                    setAssignmentsStatus('No assignments available.', false);
                 }
-            } else {
-                setAssignmentsStatus('Assignment mode requires email login.', true);
+            } catch (assignmentError) {
+                console.error('Assignment flow error:', assignmentError);
+                setAssignmentsStatus(`Assignment error: ${assignmentError.message || assignmentError}`, true);
             }
+        }
 
-            if (!openedAssignmentFromQueue) {
+        if (!openedAssignmentFromQueue) {
+            templatesData = await loadTemplatesData();
+            const scenarios = await loadScenariosData();
+            allScenariosData = scenarios || {};
+            if (!scenarios) {
+                console.error('Could not load scenarios data');
+            } else {
+                if (!canUseAssignmentMode()) {
+                    setAssignmentsStatus('Assignment mode requires email login.', true);
+                }
                 const scenarioKeys = Object.keys(scenarios)
                     .map(k => parseInt(k, 10))
                     .filter(n => !isNaN(n))
