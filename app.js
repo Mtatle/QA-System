@@ -21,10 +21,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const ASSIGNMENT_GET_TIMEOUT_MS = 25000;
     const ASSIGNMENT_DONE_TIMEOUT_MS = 30000;
     const ASSIGNMENT_DRAFT_TIMEOUT_MS = 25000;
-    const ASSIGNMENT_HEARTBEAT_TIMEOUT_MS = 25000;
+    const ASSIGNMENT_HEARTBEAT_TIMEOUT_MS = 35000;
     const ASSIGNMENT_HEARTBEAT_MIN_GAP_MS = 15000;
-    const ASSIGNMENT_PREFETCH_TIMEOUT_MS = 10000;
+    const ASSIGNMENT_PREFETCH_TIMEOUT_MS = 20000;
     const ASSIGNMENT_PREFETCH_CONCURRENCY = 1;
+    const ASSIGNMENT_HEARTBEAT_WARN_AFTER_FAILURES = 2;
     const SUBMIT_ADVANCE_DELAY_MS = 1200;
     const SUBMIT_OUTBOX_STORAGE_KEY = 'qaSubmitOutbox_v1';
     const SUBMIT_RETRY_DELAYS_MS = [5000, 15000, 45000, 120000, 300000];
@@ -63,6 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let assignmentSessionState = null;
     let assignmentHeartbeatTimer = null;
     let assignmentHeartbeatWarningShown = false;
+    let assignmentHeartbeatConsecutiveFailures = 0;
     let assignmentHeartbeatInFlight = false;
     let assignmentLastHeartbeatAt = 0;
     let isExplicitLogoutInProgress = false;
@@ -76,6 +78,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let assignmentWindowPrefetchPromises = {};
     let assignmentPayloadCache = {};
     let assignmentPayloadPromises = {};
+    let assignmentPayloadPromiseTimeoutMs = {};
     let assignmentPayloadCacheSessionId = '';
     let assignmentPrefetchQueue = [];
     let assignmentPrefetchQueueSet = {};
@@ -729,6 +732,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function clearAssignmentResponseCaches() {
         assignmentPayloadCache = {};
         assignmentPayloadPromises = {};
+        assignmentPayloadPromiseTimeoutMs = {};
         assignmentPrefetchQueue = [];
         assignmentPrefetchQueueSet = {};
         assignmentPrefetchActiveCount = 0;
@@ -774,11 +778,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (useCache && assignmentPayloadCache[cacheKey]) {
             return assignmentPayloadCache[cacheKey];
         }
-        if (assignmentPayloadPromises[cacheKey]) {
-            return assignmentPayloadPromises[cacheKey];
+        const existingPromise = assignmentPayloadPromises[cacheKey];
+        const existingTimeoutMs = Number(assignmentPayloadPromiseTimeoutMs[cacheKey]) || 0;
+        if (existingPromise && (!existingTimeoutMs || existingTimeoutMs >= timeoutMs)) {
+            return existingPromise;
+        }
+        if (existingPromise && existingTimeoutMs && existingTimeoutMs < timeoutMs) {
+            debugLog('Escalating assignment fetch timeout for interactive open', {
+                aid: String(params.aid || ''),
+                fromTimeoutMs: existingTimeoutMs,
+                toTimeoutMs: timeoutMs
+            });
         }
 
-        assignmentPayloadPromises[cacheKey] = (async () => {
+        const requestPromise = (async () => {
             const response = await fetchAssignmentGet('getAssignment', {
                 assignment_id: params.aid,
                 token: params.token,
@@ -787,11 +800,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             setCachedAssignmentResponse(params, response);
             return response;
         })();
+        assignmentPayloadPromises[cacheKey] = requestPromise;
+        assignmentPayloadPromiseTimeoutMs[cacheKey] = timeoutMs;
 
         try {
-            return await assignmentPayloadPromises[cacheKey];
+            return await requestPromise;
         } finally {
-            delete assignmentPayloadPromises[cacheKey];
+            if (assignmentPayloadPromises[cacheKey] === requestPromise) {
+                delete assignmentPayloadPromises[cacheKey];
+                delete assignmentPayloadPromiseTimeoutMs[cacheKey];
+            }
         }
     }
 
@@ -1312,11 +1330,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 client_ts: new Date().toISOString()
             }, { timeoutMs: ASSIGNMENT_HEARTBEAT_TIMEOUT_MS });
             applyAssignmentSessionState(response && response.session, { silent: true });
+            assignmentHeartbeatConsecutiveFailures = 0;
             assignmentHeartbeatWarningShown = false;
             assignmentLastHeartbeatAt = Date.now();
         } catch (error) {
             console.warn('Assignment heartbeat failed:', error);
-            if (!assignmentHeartbeatWarningShown) {
+            assignmentHeartbeatConsecutiveFailures += 1;
+            if (!assignmentHeartbeatWarningShown && assignmentHeartbeatConsecutiveFailures >= ASSIGNMENT_HEARTBEAT_WARN_AFTER_FAILURES) {
                 setAssignmentsStatus('Assignment heartbeat warning. Your queue is still open; keep working.', true);
                 assignmentHeartbeatWarningShown = true;
             }
@@ -1332,6 +1352,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         const sessionId = getAssignmentSessionId();
         if (!sessionId) return;
         stopAssignmentHeartbeat();
+        assignmentHeartbeatConsecutiveFailures = 0;
+        assignmentHeartbeatWarningShown = false;
         sendAssignmentHeartbeat({ force: true });
         assignmentHeartbeatTimer = setInterval(() => {
             sendAssignmentHeartbeat();
