@@ -16,8 +16,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     const RUNTIME_SCENARIO_INDEX_PATH = 'data/scenarios/index.json';
     const RUNTIME_TEMPLATE_INDEX_PATH = 'data/templates/index.json';
     const ASSIGNMENT_HEARTBEAT_INTERVAL_MS = 60 * 1000;
+    const ASSIGNMENT_API_TIMEOUT_MS = 15000;
     const SUBMIT_OUTBOX_STORAGE_KEY = 'qaSubmitOutbox_v1';
     const SUBMIT_RETRY_DELAYS_MS = [5000, 15000, 45000, 120000, 300000];
+    const DEBUG_MODE = !!(
+        (window.QA_CONFIG && window.QA_CONFIG.DEBUG === true) ||
+        new URLSearchParams(window.location.search).has('debug')
+    );
+    const IGNORED_SEND_IDS = new Set(
+        (((window.QA_CONFIG && window.QA_CONFIG.IGNORED_SEND_IDS) || []))
+            .map(v => String(v || '').trim())
+            .filter(Boolean)
+    );
     // Current scenario data
     let currentScenario = null;
     let scenarioData = null;
@@ -51,7 +61,76 @@ document.addEventListener('DOMContentLoaded', async () => {
     let submitOutboxTimer = null;
     let submitOutboxProcessing = false;
     let pendingDoneAssignmentIds = new Set();
+    let locallySkippedAssignmentIds = new Set();
     let assignmentWindowPrefetchPromises = {};
+
+    if (snapshotShareBtn) {
+        snapshotShareBtn.addEventListener('click', async () => {
+            await createSnapshotAndCopyLink();
+        });
+    }
+
+    function debugLog(...args) {
+        if (!DEBUG_MODE) return;
+        console.log('[QA DEBUG]', ...args);
+    }
+
+    function isElementVisible(el) {
+        if (!el) return false;
+        return el.offsetParent !== null;
+    }
+
+    function showTransientTopNotice(message, isError) {
+        const text = String(message || '').trim();
+        if (!text) return;
+        const notice = document.createElement('div');
+        notice.textContent = text;
+        notice.style.cssText = [
+            'position: fixed',
+            'top: 12px',
+            'left: 50%',
+            'transform: translateX(-50%)',
+            'z-index: 9999',
+            `background: ${isError ? '#ffe6e8' : '#ebfff0'}`,
+            `color: ${isError ? '#9b111e' : '#1f6a3f'}`,
+            `border: 1px solid ${isError ? '#e59aa3' : '#90d7a9'}`,
+            'border-radius: 8px',
+            'padding: 10px 14px',
+            'font-size: 13px',
+            'max-width: 70vw',
+            'box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12)'
+        ].join(';');
+        document.body.appendChild(notice);
+        setTimeout(() => {
+            if (notice && notice.parentNode) {
+                notice.parentNode.removeChild(notice);
+            }
+        }, 3500);
+    }
+
+    function isAssignmentLocallySkipped(assignmentId) {
+        const id = String(assignmentId || '').trim();
+        return !!(id && locallySkippedAssignmentIds.has(id));
+    }
+
+    function markAssignmentLocallySkipped(assignmentId, reason) {
+        const id = String(assignmentId || '').trim();
+        if (!id) return;
+        locallySkippedAssignmentIds.add(id);
+        debugLog('Marked assignment as locally skipped', { assignmentId: id, reason: String(reason || '') });
+    }
+
+    function pruneLocallySkippedAssignments(queue) {
+        const keepIds = new Set((Array.isArray(queue) ? queue : [])
+            .map(item => String((item && item.assignment_id) || '').trim())
+            .filter(Boolean));
+        if (!keepIds.size) return;
+        Array.from(locallySkippedAssignmentIds).forEach((id) => {
+            if (!keepIds.has(id)) {
+                locallySkippedAssignmentIds.delete(id);
+            }
+        });
+    }
 
     async function refreshAssignmentQueue() {
         if (isSnapshotMode) {
@@ -70,6 +149,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
         applyAssignmentSessionState(response && response.session, { silent: true });
         const assignments = Array.isArray(response.assignments) ? response.assignments : [];
+        debugLog('Queue refreshed', {
+            email,
+            requestedSessionId: sessionId,
+            returnedSessionId: response && response.session ? String(response.session.session_id || '') : '',
+            total: assignments.length
+        });
+        pruneLocallySkippedAssignments(assignments);
         renderAssignmentQueue(assignments);
         if (assignmentContext && assignmentContext.assignment_id && assignments.length) {
             prefetchAssignmentWindowInBackground(assignmentContext.assignment_id);
@@ -94,6 +180,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         if (!allowMonolithFallback) {
+            debugLog('Scenario key not found in runtime index/cache', { sendId: target });
             return '';
         }
 
@@ -265,9 +352,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function setAssignmentsStatus(message, isError) {
-        if (!assignmentsStatus) return;
-        assignmentsStatus.textContent = message || '';
+        const text = String(message || '');
+        debugLog('Status', { text, isError: !!isError });
+        if (!assignmentsStatus) {
+            if (text) {
+                if (isError) console.error(text);
+                else console.log(text);
+            }
+            return;
+        }
+        assignmentsStatus.textContent = text;
         assignmentsStatus.style.color = isError ? '#b00020' : '#4a4a4a';
+        if (isError && text && !isElementVisible(assignmentsStatus)) {
+            showTransientTopNotice(text, true);
+        }
     }
 
     function createAssignmentSessionId() {
@@ -505,7 +603,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function getNextAssignmentParamsFromQueue(queue, options = {}) {
-        const list = Array.isArray(queue) ? queue : [];
+        const list = (Array.isArray(queue) ? queue : [])
+            .filter(item => !isAssignmentLocallySkipped(item && item.assignment_id));
         if (!list.length) return null;
         const excludeSet = new Set((Array.isArray(options.excludeAssignmentIds) ? options.excludeAssignmentIds : [])
             .map(id => String(id || '').trim())
@@ -514,7 +613,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         for (let i = 0; i < list.length; i++) {
             const item = list[i] || {};
             const assignmentId = String(item.assignment_id || '').trim();
-            if (!assignmentId || excludeSet.has(assignmentId) || isAssignmentPendingDone(assignmentId)) {
+            if (!assignmentId || excludeSet.has(assignmentId) || isAssignmentPendingDone(assignmentId) || isAssignmentLocallySkipped(assignmentId)) {
                 continue;
             }
             const url = getAssignmentUrlFromQueueItem(item, { prefersView });
@@ -849,6 +948,30 @@ document.addEventListener('DOMContentLoaded', async () => {
         return selected;
     }
 
+    async function fetchJsonWithTimeout(url, options = {}, timeoutMs = ASSIGNMENT_API_TIMEOUT_MS) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+        try {
+            const start = Date.now();
+            const response = await fetch(url, Object.assign({}, options, { signal: controller.signal }));
+            const elapsedMs = Date.now() - start;
+            debugLog('HTTP', {
+                method: String(options && options.method || 'GET'),
+                url,
+                status: response.status,
+                elapsedMs
+            });
+            return response;
+        } catch (error) {
+            if (error && error.name === 'AbortError') {
+                throw new Error(`Request timed out after ${timeoutMs}ms`);
+            }
+            throw error;
+        } finally {
+            clearTimeout(timeoutId);
+        }
+    }
+
     async function fetchAssignmentGet(action, queryParams) {
         const params = new URLSearchParams({ action });
         Object.keys(queryParams || {}).forEach((key) => {
@@ -856,7 +979,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 params.set(key, String(queryParams[key]));
             }
         });
-        const res = await fetch(`${GOOGLE_SCRIPT_URL}?${params.toString()}`, {
+        const url = `${GOOGLE_SCRIPT_URL}?${params.toString()}`;
+        const res = await fetchJsonWithTimeout(url, {
             method: 'GET',
             mode: 'cors'
         });
@@ -869,7 +993,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function fetchAssignmentPost(action, payload) {
         const params = new URLSearchParams({ action });
-        const res = await fetch(`${GOOGLE_SCRIPT_URL}?${params.toString()}`, {
+        const url = `${GOOGLE_SCRIPT_URL}?${params.toString()}`;
+        const res = await fetchJsonWithTimeout(url, {
             method: 'POST',
             mode: 'cors',
             headers: { 'Content-Type': 'text/plain' },
@@ -1038,6 +1163,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function createSnapshotAndCopyLink() {
         if (isSnapshotMode) return;
         try {
+            debugLog('Snapshot creation requested', {
+                hasAssignmentContext: !!assignmentContext,
+                isEditorAssignment: !!(assignmentContext && assignmentContext.role === 'editor'),
+                hasScenarioData: !!scenarioData
+            });
             setAssignmentsStatus('Creating snapshot link...', false);
             const payload = buildSnapshotPayloadForShare();
             const canUseAssignmentEndpoint = !!(
@@ -1073,12 +1203,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             const copied = await copyTextToClipboard(shareUrl);
             if (copied) {
-                setAssignmentsStatus(`Snapshot link copied. Expires ${formatSnapshotExpiry(response && response.expires_at)}.`, false);
+                const successMessage = `Snapshot link copied. Expires ${formatSnapshotExpiry(response && response.expires_at)}.`;
+                setAssignmentsStatus(successMessage, false);
+                if (!isElementVisible(assignmentsStatus)) {
+                    showTransientTopNotice(successMessage, false);
+                }
             } else {
-                setAssignmentsStatus(`Snapshot created but copy failed. Link: ${shareUrl}`, true);
+                const fallbackMessage = `Snapshot created but copy failed. Link: ${shareUrl}`;
+                setAssignmentsStatus(fallbackMessage, true);
+                showTransientTopNotice('Snapshot created. Copy failed, link printed in console.', true);
+                console.log('Snapshot link:', shareUrl);
             }
         } catch (error) {
-            setAssignmentsStatus(`Snapshot failed: ${error.message || error}`, true);
+            const errorMessage = `Snapshot failed: ${error.message || error}`;
+            setAssignmentsStatus(errorMessage, true);
+            showTransientTopNotice(errorMessage, true);
+            debugLog('Snapshot creation failed', String((error && error.message) || error || ''));
         }
     }
 
@@ -1155,7 +1295,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function renderAssignmentQueue(assignments) {
-        assignmentQueue = Array.isArray(assignments) ? assignments : [];
+        const rawQueue = Array.isArray(assignments) ? assignments : [];
+        assignmentQueue = rawQueue.filter((item) => {
+            const entry = item || {};
+            const assignmentId = entry.assignment_id;
+            const sendId = String(entry.send_id || '').trim();
+            if (IGNORED_SEND_IDS.has(sendId)) {
+                markAssignmentLocallySkipped(assignmentId, 'ignored_send_id');
+                return false;
+            }
+            return !isAssignmentLocallySkipped(assignmentId);
+        });
+        debugLog('Rendered assignment queue', {
+            total: rawQueue.length,
+            active: assignmentQueue.length,
+            locallySkipped: locallySkippedAssignmentIds.size
+        });
         if (!assignmentSelect) return;
 
         assignmentSelect.innerHTML = '';
@@ -1268,7 +1423,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function getScenarioKeysForAssignmentWindow(targetAssignmentId) {
         const queue = (Array.isArray(assignmentQueue) ? assignmentQueue : [])
-            .filter(item => !isAssignmentPendingDone(item && item.assignment_id));
+            .filter(item => !isAssignmentPendingDone(item && item.assignment_id))
+            .filter(item => !isAssignmentLocallySkipped(item && item.assignment_id));
         if (!queue.length) return [];
         const targetId = String(targetAssignmentId || (assignmentContext && assignmentContext.assignment_id) || '').trim();
         const currentIndex = targetId
@@ -1327,17 +1483,30 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!assignmentId || !token) {
             throw new Error('Cannot skip assignment without assignment id and token.');
         }
-        const skipRes = await fetchAssignmentPost('skipAssignment', {
-            assignment_id: assignmentId,
-            token,
-            session_id: sessionId,
-            app_base: getCurrentAppBaseUrl(),
-            reason: String(reason || 'missing_scenario')
-        });
-        applyAssignmentSessionState(skipRes && skipRes.session, { silent: true });
-        const nextQueue = Array.isArray(skipRes && skipRes.assignments) ? skipRes.assignments : [];
-        renderAssignmentQueue(nextQueue);
-        return nextQueue;
+        markAssignmentLocallySkipped(assignmentId, reason || 'missing_scenario');
+        try {
+            const skipRes = await fetchAssignmentPost('skipAssignment', {
+                assignment_id: assignmentId,
+                token,
+                session_id: sessionId,
+                app_base: getCurrentAppBaseUrl(),
+                reason: String(reason || 'missing_scenario')
+            });
+            applyAssignmentSessionState(skipRes && skipRes.session, { silent: true });
+            const nextQueue = Array.isArray(skipRes && skipRes.assignments) ? skipRes.assignments : [];
+            pruneLocallySkippedAssignments(nextQueue);
+            renderAssignmentQueue(nextQueue);
+            return nextQueue;
+        } catch (error) {
+            debugLog('skipAssignment backend call failed; using local skip fallback', {
+                assignmentId,
+                error: String((error && error.message) || error || '')
+            });
+            const fallbackQueue = (Array.isArray(assignmentQueue) ? assignmentQueue : [])
+                .filter(item => String((item && item.assignment_id) || '').trim() !== assignmentId);
+            renderAssignmentQueue(fallbackQueue);
+            return fallbackQueue;
+        }
     }
 
     async function applyAssignmentContextToUi(options = {}) {
@@ -1398,6 +1567,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             setAssignmentsStatus('Assignment mode requires email login.', true);
             return false;
         }
+        const openStartMs = Date.now();
         try {
             if (options.refreshQueue) {
                 await refreshAssignmentQueue().catch(() => []);
@@ -1420,9 +1590,32 @@ document.addEventListener('DOMContentLoaded', async () => {
                     token: currentParams.token,
                     session_id: sessionId
                 });
+                debugLog('openAssignment attempt', {
+                    attempt: attempt + 1,
+                    maxAttempts,
+                    aid: currentParams.aid,
+                    mode: currentParams.mode
+                });
                 applyAssignmentSessionState(response && response.session, { silent: true });
                 const assignment = response && response.assignment ? response.assignment : null;
                 if (!assignment) throw new Error('Assignment payload is missing.');
+                if (IGNORED_SEND_IDS.has(String(assignment.send_id || '').trim())) {
+                    const nextQueue = await skipInvalidAssignmentAndRefresh(
+                        assignment,
+                        currentParams,
+                        'ignored_send_id'
+                    );
+                    const nextParams = getNextAssignmentParamsFromQueue(nextQueue, {
+                        excludeAssignmentIds: [assignment.assignment_id],
+                        prefersView: currentParams.mode === 'view'
+                    });
+                    if (!nextParams) {
+                        setAssignmentsStatus('No valid assignment available after removing ignored send_id.', true);
+                        return false;
+                    }
+                    currentParams = nextParams;
+                    continue;
+                }
 
                 if (isAssignmentPendingDone(assignment.assignment_id)) {
                     const nextPendingParams = getNextAssignmentParamsFromQueue(assignmentQueue, {
@@ -1443,15 +1636,31 @@ document.addEventListener('DOMContentLoaded', async () => {
                     { allowMonolithFallback: false }
                 );
                 if (!scenarioKey) {
-                    if (assignment.role !== 'editor') {
-                        throw new Error(`Scenario for send_id ${assignment.send_id} was not found.`);
+                    const missingScenarioMessage = `Scenario for send_id ${assignment.send_id} was not found in runtime chunks.`;
+                    if (assignment.role === 'editor') {
+                        const nextQueue = await skipInvalidAssignmentAndRefresh(
+                            assignment,
+                            currentParams,
+                            'missing_scenario'
+                        );
+                        const nextParams = getNextAssignmentParamsFromQueue(nextQueue, {
+                            excludeAssignmentIds: [assignment.assignment_id],
+                            prefersView: currentParams.mode === 'view'
+                        });
+                        if (!nextParams) {
+                            assignmentContext = null;
+                            updateSnapshotShareButtonVisibility();
+                            setAssignmentsStatus(
+                                'Assigned items are out of sync with scenarios. Queue refreshed; no valid conversation available.',
+                                true
+                            );
+                            return false;
+                        }
+                        currentParams = nextParams;
+                        continue;
                     }
-                    const nextQueue = await skipInvalidAssignmentAndRefresh(
-                        assignment,
-                        currentParams,
-                        'missing_scenario'
-                    );
-                    const nextParams = getNextAssignmentParamsFromQueue(nextQueue, {
+                    markAssignmentLocallySkipped(assignment.assignment_id, 'missing_scenario_view_only');
+                    const nextParams = getNextAssignmentParamsFromQueue(assignmentQueue, {
                         excludeAssignmentIds: [assignment.assignment_id],
                         prefersView: currentParams.mode === 'view'
                     });
@@ -1459,7 +1668,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         assignmentContext = null;
                         updateSnapshotShareButtonVisibility();
                         setAssignmentsStatus(
-                            'Assigned items are out of sync with scenarios. Queue refreshed; no valid conversation available.',
+                            missingScenarioMessage,
                             true
                         );
                         return false;
@@ -1473,6 +1682,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                     updateHistory: !!options.updateHistory,
                     replaceHistory: !!options.replaceHistory,
                     params: currentParams
+                });
+                debugLog('openAssignment success', {
+                    aid: assignment.assignment_id,
+                    send_id: assignment.send_id,
+                    elapsedMs: Date.now() - openStartMs
                 });
                 return true;
             }
@@ -2852,7 +3066,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             queue = await refreshAssignmentQueue().catch(() => []);
         }
         if (!Array.isArray(queue) || !queue.length) return false;
-        queue = queue.filter(item => !isAssignmentPendingDone(item && item.assignment_id));
+        queue = queue
+            .filter(item => !isAssignmentPendingDone(item && item.assignment_id))
+            .filter(item => !isAssignmentLocallySkipped(item && item.assignment_id));
         if (!queue.length) {
             setAssignmentsStatus('Background sync is still finishing. Please wait.', true);
             return false;
@@ -2869,6 +3085,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             ? (currentIndex + direction + queue.length) % queue.length
             : fallbackIndex;
         const target = queue[targetIndex];
+        debugLog('navigateAssignmentQueue', {
+            direction,
+            currentId,
+            currentIndex,
+            targetIndex,
+            targetAssignmentId: target && target.assignment_id ? String(target.assignment_id) : '',
+            queueSize: queue.length
+        });
         const prefersViewUrl = !!(assignmentContext && (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view'));
         const url = getAssignmentUrlFromQueueItem(target, { prefersView: prefersViewUrl });
         if (!url) return false;
@@ -2898,7 +3122,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function getNextQueueItem(queue, currentAssignmentId, direction, excludeAssignmentIds = []) {
         const list = (Array.isArray(queue) ? queue : [])
-            .filter(item => !isAssignmentPendingDone(item && item.assignment_id));
+            .filter(item => !isAssignmentPendingDone(item && item.assignment_id))
+            .filter(item => !isAssignmentLocallySkipped(item && item.assignment_id));
         if (!list.length) return null;
 
         const excludeSet = new Set((Array.isArray(excludeAssignmentIds) ? excludeAssignmentIds : [])
@@ -2914,7 +3139,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const idx = (currentIndex + (step * direction) + list.length) % list.length;
                 const item = list[idx] || {};
                 const assignmentId = String(item.assignment_id || '').trim();
-                if (!assignmentId || excludeSet.has(assignmentId)) continue;
+                if (!assignmentId || excludeSet.has(assignmentId) || isAssignmentLocallySkipped(assignmentId)) continue;
                 return item;
             }
         }
@@ -2922,7 +3147,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         for (let i = 0; i < list.length; i++) {
             const item = list[i] || {};
             const assignmentId = String(item.assignment_id || '').trim();
-            if (!assignmentId || excludeSet.has(assignmentId)) continue;
+            if (!assignmentId || excludeSet.has(assignmentId) || isAssignmentLocallySkipped(assignmentId)) continue;
             return item;
         }
         return null;
@@ -2939,6 +3164,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             updateHistory: true,
             replaceHistory: false,
             refreshQueue: false
+        });
+        debugLog('Optimistic submit auto-advance', {
+            submittedAssignmentId: String(submittedAssignmentId || ''),
+            nextAssignmentId: String(nextItem && nextItem.assignment_id || ''),
+            opened: !!opened
         });
         return !!opened;
     }
@@ -3264,21 +3494,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         } catch (assignmentError) {
             console.error('Assignment flow error:', assignmentError);
             setAssignmentsStatus(`Assignment error: ${assignmentError.message || assignmentError}`, true);
-
-            templatesData = await loadTemplatesData();
-            const scenarios = await loadScenariosData();
-            allScenariosData = scenarios || {};
-            if (scenarios && Object.keys(scenarios).length) {
-                const scenarioKeys = Object.keys(scenarios)
-                    .map(k => parseInt(k, 10))
-                    .filter(n => !isNaN(n))
-                    .sort((a, b) => a - b)
-                    .map(n => String(n));
-                const requestedScenario = resolveRequestedScenarioKey(scenarios) || getCurrentScenarioNumber();
-                const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
-                setCurrentScenarioNumber(activeScenario);
-                await ensureTemplatesLoadedForScenarioKeys([activeScenario]).catch(() => {});
-                loadScenarioContent(activeScenario, scenarios);
+            debugLog('Assignment init failed; trying queue fallback without monolith load.', String((assignmentError && assignmentError.message) || assignmentError || ''));
+            try {
+                const queue = await refreshAssignmentQueue().catch(() => []);
+                const fallbackParams = getNextAssignmentParamsFromQueue(queue, { prefersView: false });
+                if (fallbackParams) {
+                    const openedFallback = await openAssignmentInPage(fallbackParams, {
+                        updateHistory: true,
+                        replaceHistory: true,
+                        refreshQueue: false
+                    });
+                    if (openedFallback) {
+                        setAssignmentsStatus('Opened next available assignment.', false);
+                    }
+                }
+            } catch (fallbackError) {
+                debugLog('Queue fallback after assignment init failure did not open a conversation.', String((fallbackError && fallbackError.message) || fallbackError || ''));
             }
         }
     } else {
@@ -3349,12 +3580,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Initialize new features
     initTemplateSearchKeyboardShortcut();
-
-    if (snapshotShareBtn) {
-        snapshotShareBtn.addEventListener('click', async () => {
-            await createSnapshotAndCopyLink();
-        });
-    }
 
     if (assignmentRefreshBtn) {
         assignmentRefreshBtn.addEventListener('click', async () => {
