@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const internalNotesEl = document.getElementById('internalNotes');
     const logoutBtn = document.getElementById('logoutBtn');
     const assignmentSelect = document.getElementById('assignmentSelect');
-    const assignmentRefreshBtn = document.getElementById('assignmentRefreshBtn');
     const snapshotShareBtn = document.getElementById('snapshotShareBtn');
     const assignmentsStatus = document.getElementById('assignmentsStatus');
     const previousConversationBtn = document.getElementById('previousConversationBtn');
@@ -443,7 +442,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function setAssignmentSessionUiLocked(isLocked) {
-        if (assignmentRefreshBtn) assignmentRefreshBtn.disabled = !!isLocked;
         if (assignmentSelect) assignmentSelect.disabled = !!isLocked;
     }
 
@@ -4253,28 +4251,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Initialize new features
     initTemplateSearchKeyboardShortcut();
-
-    if (assignmentRefreshBtn) {
-        assignmentRefreshBtn.addEventListener('click', async () => {
-            if (isSnapshotMode) return;
-            if (!canUseAssignmentMode()) {
-                setAssignmentsStatus('Assignment mode requires email login.', true);
-                return;
-            }
-            try {
-                setAssignmentsStatus('Refreshing assignments...', false);
-                const queue = await refreshAssignmentQueue();
-                if (!queue.length) {
-                    setAssignmentsStatus('No assignments available.', false);
-                } else {
-                    setAssignmentsStatus('Assignments refreshed.', false);
-                    selectCurrentAssignmentInQueue();
-                }
-            } catch (error) {
-                setAssignmentsStatus(`Refresh failed: ${error.message || error}`, true);
-            }
-        });
-    }
 
     if (assignmentSelect) {
         assignmentSelect.addEventListener('dblclick', () => {
