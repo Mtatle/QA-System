@@ -3457,6 +3457,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Function to send data to Google Sheets with custom timer value
     async function sendToGoogleSheetsWithTimer(agentUsername, scenario, customerMessage, agentResponse, timerValue, options = {}) {
+        let data = null;
         try {
             // Create a unique session ID per scenario that persists throughout the session
             let scenarioSessionId = options.sessionIdOverride || localStorage.getItem(`scenarioSession_${currentScenario}`);
@@ -3465,7 +3466,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 localStorage.setItem(`scenarioSession_${currentScenario}`, scenarioSessionId);
             }
             
-            const data = {
+            data = {
                 timestampEST: toESTTimestamp(),
                 agentUsername: agentUsername,
                 scenario: scenario,

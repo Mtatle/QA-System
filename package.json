@@ -1,0 +1,25 @@
+{
+  "name": "qa-system",
+  "private": true,
+  "version": "1.0.0",
+  "description": "QA-System local validation and e2e tooling",
+  "scripts": {
+    "check:syntax": "node --check app.js && node --check login.js && node --check qa-config.js",
+    "lint": "eslint .",
+    "check:data": "node scripts/validate-runtime-data.js",
+    "format:check": "prettier --check \"package.json\" \"eslint.config.js\" \"playwright.config.js\" \".prettierrc.json\" \"tests/**/*.js\" \"scripts/**/*.js\" \"DEV_CHECKS.md\"",
+    "format": "prettier --write \"package.json\" \"eslint.config.js\" \"playwright.config.js\" \".prettierrc.json\" \"tests/**/*.js\" \"scripts/**/*.js\" \"DEV_CHECKS.md\"",
+    "check": "npm run check:syntax && npm run lint && npm run check:data && npm run format:check",
+    "test:e2e": "playwright test",
+    "test:e2e:assignment": "playwright test tests/e2e/assignment-submit.spec.js",
+    "test:e2e:snapshot": "playwright test tests/e2e/snapshot-view.spec.js",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:install": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "eslint": "^9.22.0",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3"
+  }
+}
