@@ -1445,7 +1445,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function compactSnapshotPayload(payload, maxChars = 43000) {
         const source = payload && typeof payload === 'object' ? payload : {};
-        let next = JSON.parse(JSON.stringify(source));
         const sizeOf = (value) => {
             try {
                 return JSON.stringify(value).length;
@@ -1453,59 +1452,153 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return Number.MAX_SAFE_INTEGER;
             }
         };
-        if (sizeOf(next) <= maxChars) return next;
-
-        // Keep only fields needed by shared view.
-        const scenario = next.scenario && typeof next.scenario === 'object' ? next.scenario : {};
-        const keepScenario = {
-            id: scenario.id || next.send_id || '',
-            companyName: scenario.companyName || '',
-            agentName: scenario.agentName || '',
-            customerPhone: scenario.customerPhone || '',
-            conversation: Array.isArray(scenario.conversation) ? scenario.conversation : [],
-            notes: scenario.notes && typeof scenario.notes === 'object' ? scenario.notes : {},
-            rightPanel: scenario.rightPanel && typeof scenario.rightPanel === 'object'
-                ? {
-                    source: scenario.rightPanel.source || {},
-                    customer: scenario.rightPanel.customer || {},
-                    guidelines: scenario.rightPanel.guidelines || {}
-                }
-                : {}
-        };
-        next.scenario = keepScenario;
-        if (sizeOf(next) <= maxChars) return next;
-
-        // Drop templates first if still too large.
-        next.templates = [];
-        if (sizeOf(next) <= maxChars) return next;
-
-        // Last-resort trim for very large conversations.
-        const conv = Array.isArray(next.scenario && next.scenario.conversation)
-            ? next.scenario.conversation
-            : [];
-        const keepCounts = [120, 80, 50, 30, 15];
-        for (let i = 0; i < keepCounts.length; i++) {
-            const keepCount = keepCounts[i];
-            if (conv.length > keepCount) {
-                next.scenario.conversation = conv.slice(Math.max(0, conv.length - keepCount));
+        const clone = (value, fallback) => {
+            try {
+                return JSON.parse(JSON.stringify(value));
+            } catch (_) {
+                return fallback;
             }
-            if (sizeOf(next) <= maxChars) return next;
-        }
-
-        // Final fallback: truncate message text length per bubble.
-        next.scenario.conversation = (Array.isArray(next.scenario.conversation) ? next.scenario.conversation : [])
-            .map((msg) => {
+        };
+        const compactTemplateList = (list, maxItems, maxContentChars) => {
+            const sourceList = Array.isArray(list) ? list : [];
+            return sourceList.slice(0, Math.max(0, Number(maxItems) || 0)).map((template) => {
+                const t = template && typeof template === 'object' ? template : {};
+                const nextTemplate = {
+                    name: String(t.name || '').trim(),
+                    shortcut: String(t.shortcut || '').trim(),
+                    content: String(t.content || ''),
+                    companyName: String(t.companyName || '').trim()
+                };
+                const cap = Math.max(0, Number(maxContentChars) || 0);
+                if (cap > 0 && nextTemplate.content.length > cap) {
+                    nextTemplate.content = `${nextTemplate.content.slice(0, cap)}...`;
+                }
+                return nextTemplate;
+            });
+        };
+        const compactHistoryList = (list, maxItems) => {
+            const sourceList = Array.isArray(list) ? list : [];
+            return sourceList.slice(0, Math.max(0, Number(maxItems) || 0)).map((item) => {
+                const raw = item && typeof item === 'object' ? item : {};
+                const itemText = String(raw.item || raw.product_name || raw.name || '').trim();
+                const linkText = String(raw.link || raw.product_link || raw.url || '').trim();
+                const timeText = String(raw.timeAgo || raw.view_date || raw.date || '').trim();
+                return {
+                    item: itemText.slice(0, 180),
+                    link: linkText.slice(0, 260),
+                    timeAgo: timeText.slice(0, 80)
+                };
+            });
+        };
+        const compactConversationText = (conversation, maxLen) => (
+            (Array.isArray(conversation) ? conversation : []).map((msg) => {
                 const safeMsg = msg && typeof msg === 'object' ? Object.assign({}, msg) : {};
                 const text = String(safeMsg.content || safeMsg.message || '');
-                const maxLen = 600;
-                if (text.length > maxLen) {
-                    safeMsg.content = text.slice(0, maxLen) + '...';
+                const limit = Math.max(0, Number(maxLen) || 0);
+                if (limit > 0 && text.length > limit) {
+                    safeMsg.content = `${text.slice(0, limit)}...`;
                     if (Object.prototype.hasOwnProperty.call(safeMsg, 'message')) {
                         safeMsg.message = safeMsg.content;
                     }
                 }
                 return safeMsg;
+            })
+        );
+
+        let next = clone(source, {});
+        if (sizeOf(next) <= maxChars) return next;
+
+        // Keep the snapshot lean, but preserve browsing history and templates.
+        const scenario = next.scenario && typeof next.scenario === 'object' ? next.scenario : {};
+        const rightPanel = scenario.rightPanel && typeof scenario.rightPanel === 'object' ? scenario.rightPanel : {};
+        const keepRightPanel = {
+            source: rightPanel.source || {},
+            customer: rightPanel.customer || {},
+            guidelines: rightPanel.guidelines || {}
+        };
+        [
+            'browsingHistory',
+            'browsing_history',
+            'last5Products',
+            'last_5_products',
+            'orders',
+            'templates'
+        ].forEach((key) => {
+            if (Object.prototype.hasOwnProperty.call(rightPanel, key)) {
+                keepRightPanel[key] = clone(rightPanel[key], Array.isArray(rightPanel[key]) ? [] : {});
+            }
+        });
+
+        next.scenario = {
+            id: scenario.id || next.send_id || '',
+            companyName: scenario.companyName || '',
+            companyWebsite: scenario.companyWebsite || '',
+            agentName: scenario.agentName || '',
+            customerPhone: scenario.customerPhone || '',
+            conversation: Array.isArray(scenario.conversation) ? clone(scenario.conversation, []) : [],
+            notes: scenario.notes && typeof scenario.notes === 'object' ? clone(scenario.notes, {}) : {},
+            rightPanel: keepRightPanel
+        };
+        next.templates = Array.isArray(next.templates) ? clone(next.templates, []) : [];
+        if (sizeOf(next) <= maxChars) return next;
+
+        // First trim conversation count, then message length.
+        const fullConversation = Array.isArray(next.scenario.conversation) ? next.scenario.conversation : [];
+        [120, 80, 50, 30, 20, 10].forEach((keepCount) => {
+            if (sizeOf(next) <= maxChars) return;
+            if (fullConversation.length > keepCount) {
+                next.scenario.conversation = clone(fullConversation.slice(Math.max(0, fullConversation.length - keepCount)), []);
+            }
+        });
+        if (sizeOf(next) <= maxChars) return next;
+
+        [650, 450, 300, 200, 140].forEach((maxLen) => {
+            if (sizeOf(next) <= maxChars) return;
+            next.scenario.conversation = compactConversationText(next.scenario.conversation, maxLen);
+        });
+        if (sizeOf(next) <= maxChars) return next;
+
+        // Compact templates but keep them present.
+        const templateItemCaps = [80, 50, 30, 20, 10, 5];
+        const templateContentCaps = [800, 500, 300, 180, 120, 80];
+        for (let i = 0; i < templateItemCaps.length; i++) {
+            if (sizeOf(next) <= maxChars) break;
+            next.templates = compactTemplateList(next.templates, templateItemCaps[i], templateContentCaps[i]);
+            if (next.scenario && next.scenario.rightPanel && typeof next.scenario.rightPanel === 'object') {
+                next.scenario.rightPanel.templates = clone(next.templates, []);
+            }
+        }
+        if (sizeOf(next) <= maxChars) return next;
+
+        // Compact browsing history while keeping a usable trail.
+        ['browsingHistory', 'browsing_history', 'last5Products', 'last_5_products'].forEach((historyKey) => {
+            if (sizeOf(next) <= maxChars) return;
+            const historyList = next.scenario &&
+                next.scenario.rightPanel &&
+                Array.isArray(next.scenario.rightPanel[historyKey])
+                ? next.scenario.rightPanel[historyKey]
+                : [];
+            if (!historyList.length) return;
+            [20, 12, 8, 5, 3].forEach((cap) => {
+                if (sizeOf(next) <= maxChars) return;
+                next.scenario.rightPanel[historyKey] = compactHistoryList(historyList, cap);
             });
+        });
+        if (sizeOf(next) <= maxChars) return next;
+
+        // Final trim for very large snapshots.
+        if (next.scenario && next.scenario.notes && typeof next.scenario.notes === 'object') {
+            next.scenario.notes = {};
+        }
+        if (sizeOf(next) <= maxChars) return next;
+        if (
+            next.scenario &&
+            next.scenario.rightPanel &&
+            next.scenario.rightPanel.guidelines &&
+            typeof next.scenario.rightPanel.guidelines === 'object'
+        ) {
+            next.scenario.rightPanel.guidelines = {};
+        }
         return next;
     }
 
@@ -1628,13 +1721,57 @@ document.addEventListener('DOMContentLoaded', async () => {
             const payload = snapshot.payload;
             const scenarioRaw = payload.scenario && typeof payload.scenario === 'object' ? payload.scenario : {};
             const snapshotScenario = normalizeScenarioRecord(scenarioRaw, {}, 'snapshot');
-            const templates = Array.isArray(payload.templates) ? payload.templates : [];
+            const payloadTemplates = Array.isArray(payload.templates) ? payload.templates : [];
             if (!snapshotScenario.rightPanel || typeof snapshotScenario.rightPanel !== 'object') {
                 snapshotScenario.rightPanel = {};
+            }
+            const scenarioTemplates = Array.isArray(snapshotScenario.rightPanel.templates)
+                ? snapshotScenario.rightPanel.templates
+                : [];
+            let templates = payloadTemplates.length ? payloadTemplates : scenarioTemplates;
+            if (!templates.length) {
+                try {
+                    templates = await loadTemplatesData();
+                    debugLog('Snapshot templates loaded from fallback source', { count: templates.length });
+                } catch (fallbackError) {
+                    debugLog('Snapshot template fallback failed', String((fallbackError && fallbackError.message) || fallbackError || ''));
+                }
             }
             snapshotScenario.rightPanel.templates = templates;
             if (!snapshotScenario.id) {
                 snapshotScenario.id = String(payload.send_id || '');
+            }
+
+            const hasBrowsingHistory = !!(
+                (Array.isArray(snapshotScenario.rightPanel.browsingHistory) && snapshotScenario.rightPanel.browsingHistory.length) ||
+                (Array.isArray(snapshotScenario.rightPanel.browsing_history) && snapshotScenario.rightPanel.browsing_history.length) ||
+                (Array.isArray(snapshotScenario.rightPanel.last5Products) && snapshotScenario.rightPanel.last5Products.length) ||
+                (Array.isArray(snapshotScenario.rightPanel.last_5_products) && snapshotScenario.rightPanel.last_5_products.length)
+            );
+            if (!hasBrowsingHistory) {
+                const snapshotSendId = String(payload.send_id || snapshotScenario.id || '').trim();
+                if (snapshotSendId) {
+                    try {
+                        const snapshotScenarioKey = await resolveScenarioKeyForSendId(snapshotSendId, allScenariosData);
+                        if (snapshotScenarioKey) {
+                            await ensureScenariosLoaded([snapshotScenarioKey]);
+                            const fallbackScenario = allScenariosData && allScenariosData[snapshotScenarioKey];
+                            const fallbackRightPanel = fallbackScenario && fallbackScenario.rightPanel && typeof fallbackScenario.rightPanel === 'object'
+                                ? fallbackScenario.rightPanel
+                                : null;
+                            if (fallbackRightPanel) {
+                                snapshotScenario.rightPanel = Object.assign({}, fallbackRightPanel, snapshotScenario.rightPanel);
+                                snapshotScenario.rightPanel.templates = templates;
+                                debugLog('Snapshot browsing history restored from scenario source', {
+                                    sendId: snapshotSendId,
+                                    scenarioKey: snapshotScenarioKey
+                                });
+                            }
+                        }
+                    } catch (historyFallbackError) {
+                        debugLog('Snapshot browsing history fallback failed', String((historyFallbackError && historyFallbackError.message) || historyFallbackError || ''));
+                    }
+                }
             }
 
             snapshotContext = {
@@ -3150,7 +3287,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (!normalizedHistory.length) {
                 const empty = document.createElement('li');
-                empty.textContent = 'No browsing history for this scenario.';
+                empty.textContent = 'No browsing history for this customer.';
                 empty.style.color = '#8a8a8a';
                 historyContainer.appendChild(empty);
             } else {
