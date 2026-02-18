@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const assignmentsStatus = document.getElementById('assignmentsStatus');
     const previousConversationBtn = document.getElementById('previousConversationBtn');
     const nextConversationBtn = document.getElementById('nextConversationBtn');
+    const customFormEl = document.getElementById('customForm');
     // Google Sheets integration
     const GOOGLE_SCRIPT_URL = String(
         (window.QA_CONFIG && window.QA_CONFIG.GOOGLE_SCRIPT_URL) ||
@@ -17,6 +18,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const RUNTIME_TEMPLATE_INDEX_PATH = 'data/templates/index.json';
     const ASSIGNMENT_HEARTBEAT_INTERVAL_MS = 60 * 1000;
     const ASSIGNMENT_API_TIMEOUT_MS = 15000;
+    const ASSIGNMENT_GET_TIMEOUT_MS = 25000;
+    const ASSIGNMENT_PREFETCH_TIMEOUT_MS = 10000;
+    const ASSIGNMENT_PREFETCH_CONCURRENCY = 1;
+    const SUBMIT_ADVANCE_DELAY_MS = 1200;
     const SUBMIT_OUTBOX_STORAGE_KEY = 'qaSubmitOutbox_v1';
     const SUBMIT_RETRY_DELAYS_MS = [5000, 15000, 45000, 120000, 300000];
     const DEBUG_MODE = !!(
@@ -66,6 +71,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     let assignmentPayloadCache = {};
     let assignmentPayloadPromises = {};
     let assignmentPayloadCacheSessionId = '';
+    let assignmentPrefetchQueue = [];
+    let assignmentPrefetchQueueSet = {};
+    let assignmentPrefetchActiveCount = 0;
     let assignmentNavigationInProgress = false;
     let snapshotCreateInFlight = false;
 
@@ -88,6 +96,18 @@ document.addEventListener('DOMContentLoaded', async () => {
             return value;
         });
         console.log('[QA DEBUG]', ...normalized);
+    }
+
+    if (customFormEl) {
+        // Hard guard: never allow native form navigation.
+        customFormEl.setAttribute('action', 'javascript:void(0)');
+        customFormEl.setAttribute('method', 'post');
+        customFormEl.addEventListener('submit', (event) => {
+            if (event && typeof event.preventDefault === 'function') {
+                event.preventDefault();
+            }
+            debugLog('native_submit_blocked');
+        }, true);
     }
 
     function isElementVisible(el) {
@@ -578,6 +598,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     job.state = 'done';
                     job.last_error = '';
+                    debugLog('outbox_done_success', {
+                        assignmentId: String(job.assignment_id || ''),
+                        attempts: Number(job.attempts || 0)
+                    });
                 } catch (error) {
                     const errorText = String((error && error.message) || error || 'Unknown background submit error');
                     const lowerError = errorText.toLowerCase();
@@ -598,6 +622,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                         job.state = 'retrying';
                         job.last_error = errorText;
                         job.next_retry_at = Date.now() + getSubmitRetryDelayMs(job.attempts);
+                        debugLog('outbox_done_retry', {
+                            assignmentId: String(job.assignment_id || ''),
+                            attempts: Number(job.attempts || 0),
+                            nextRetryAt: Number(job.next_retry_at || 0),
+                            error: errorText
+                        });
                         nextRetryAt = nextRetryAt == null ? job.next_retry_at : Math.min(nextRetryAt, job.next_retry_at);
                     }
                 }
@@ -650,6 +680,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         jobs.unshift(nextJob);
         writeSubmitOutboxJobs(jobs);
         refreshPendingDoneAssignmentsFromOutbox(jobs);
+        debugLog('outbox_job_enqueued', {
+            assignmentId: String(nextJob.assignment_id || ''),
+            sessionId: String(nextJob.session_id || ''),
+            queueSize: jobs.length
+        });
         scheduleSubmitOutboxProcessing(0);
         return nextJob;
     }
@@ -673,6 +708,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     function clearAssignmentResponseCaches() {
         assignmentPayloadCache = {};
         assignmentPayloadPromises = {};
+        assignmentPrefetchQueue = [];
+        assignmentPrefetchQueueSet = {};
+        assignmentPrefetchActiveCount = 0;
     }
 
     function getCachedAssignmentResponse(params) {
@@ -706,6 +744,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function fetchAssignmentResponseForParams(params, sessionId, options = {}) {
         const useCache = options.useCache !== false;
+        const timeoutMs = Number(options.timeoutMs) > 0
+            ? Number(options.timeoutMs)
+            : ASSIGNMENT_GET_TIMEOUT_MS;
         const cacheKey = getAssignmentResponseCacheKey(params);
         if (!cacheKey) throw new Error('Missing assignment cache key.');
 
@@ -721,7 +762,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 assignment_id: params.aid,
                 token: params.token,
                 session_id: sessionId
-            });
+            }, { timeoutMs });
             setCachedAssignmentResponse(params, response);
             return response;
         })();
@@ -733,25 +774,79 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    function getOrderedAssignmentPrefetchItems(queue) {
+        const list = Array.isArray(queue) ? queue.filter(Boolean) : [];
+        if (!list.length) return [];
+
+        const currentId = String((assignmentContext && assignmentContext.assignment_id) || '').trim();
+        const currentIndex = currentId
+            ? list.findIndex((item) => String((item && item.assignment_id) || '').trim() === currentId)
+            : -1;
+        if (currentIndex < 0) return list;
+
+        const ordered = [];
+        const seen = {};
+        const pushItem = (item) => {
+            const id = String((item && item.assignment_id) || '').trim();
+            if (!id || seen[id]) return;
+            seen[id] = true;
+            ordered.push(item);
+        };
+
+        // Priority: next, previous, then all remaining.
+        if (list.length > 1) {
+            pushItem(list[(currentIndex + 1) % list.length]);
+            pushItem(list[(currentIndex - 1 + list.length) % list.length]);
+        }
+        for (let i = 0; i < list.length; i++) {
+            pushItem(list[i]);
+        }
+        return ordered;
+    }
+
+    function startAssignmentPrefetchWorkers() {
+        if (isSnapshotMode || !canUseAssignmentMode()) return;
+        while (assignmentPrefetchActiveCount < ASSIGNMENT_PREFETCH_CONCURRENCY && assignmentPrefetchQueue.length) {
+            const task = assignmentPrefetchQueue.shift();
+            if (!task || !task.cacheKey) continue;
+            delete assignmentPrefetchQueueSet[task.cacheKey];
+            const activeSessionId = getAssignmentSessionId();
+            if (!activeSessionId || String(task.sessionId || '') !== String(activeSessionId)) {
+                continue;
+            }
+            assignmentPrefetchActiveCount += 1;
+
+            fetchAssignmentResponseForParams(task.params, task.sessionId, {
+                useCache: true,
+                timeoutMs: ASSIGNMENT_PREFETCH_TIMEOUT_MS
+            }).catch((error) => {
+                debugLog('Assignment details prefetch failed', {
+                    aid: String((task.params && task.params.aid) || ''),
+                    error: String((error && error.message) || error || '')
+                });
+            }).finally(() => {
+                assignmentPrefetchActiveCount = Math.max(0, assignmentPrefetchActiveCount - 1);
+                startAssignmentPrefetchWorkers();
+            });
+        }
+    }
+
     function prefetchAssignmentDetailsInBackground(queue) {
         if (isSnapshotMode || !canUseAssignmentMode()) return;
         const sessionId = getAssignmentSessionId();
         if (!sessionId) return;
-        const list = Array.isArray(queue) ? queue : [];
+        const list = getOrderedAssignmentPrefetchItems(queue);
         list.forEach((item) => {
             const url = getAssignmentUrlFromQueueItem(item, { prefersView: false });
             const params = getAssignmentParamsFromHref(url || '');
             const cacheKey = getAssignmentResponseCacheKey(params || {});
-            if (!params || !cacheKey || assignmentPayloadCache[cacheKey] || assignmentPayloadPromises[cacheKey]) {
+            if (!params || !cacheKey || assignmentPayloadCache[cacheKey] || assignmentPayloadPromises[cacheKey] || assignmentPrefetchQueueSet[cacheKey]) {
                 return;
             }
-            fetchAssignmentResponseForParams(params, sessionId, { useCache: true }).catch((error) => {
-                debugLog('Assignment details prefetch failed', {
-                    aid: String((params && params.aid) || ''),
-                    error: String((error && error.message) || error || '')
-                });
-            });
+            assignmentPrefetchQueueSet[cacheKey] = true;
+            assignmentPrefetchQueue.push({ cacheKey, params, sessionId });
         });
+        startAssignmentPrefetchWorkers();
     }
 
     function getNextAssignmentParamsFromQueue(queue, options = {}) {
@@ -1128,7 +1223,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    async function fetchAssignmentGet(action, queryParams) {
+    async function fetchAssignmentGet(action, queryParams, options = {}) {
         const params = new URLSearchParams({ action });
         Object.keys(queryParams || {}).forEach((key) => {
             if (queryParams[key] != null && queryParams[key] !== '') {
@@ -1136,10 +1231,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
         const url = `${GOOGLE_SCRIPT_URL}?${params.toString()}`;
+        const timeoutMs = Number(options.timeoutMs) > 0
+            ? Number(options.timeoutMs)
+            : ASSIGNMENT_API_TIMEOUT_MS;
         const res = await fetchJsonWithTimeout(url, {
             method: 'GET',
             mode: 'cors'
-        });
+        }, timeoutMs);
         const json = await res.json().catch(() => ({}));
         if (!res.ok || (json && json.error)) {
             throw new Error((json && json.error) ? json.error : `Request failed (${res.status})`);
@@ -3535,11 +3633,30 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const nextUrl = getAssignmentUrlFromQueueItem(nextItem, { prefersView });
         if (!nextUrl) return false;
-        const opened = await openAssignmentInPageByUrl(nextUrl, {
+        debugLog('optimistic_advance_target', {
+            submittedAssignmentId: String(submittedAssignmentId || ''),
+            nextAssignmentId: String(nextItem && nextItem.assignment_id || '')
+        });
+        let opened = await openAssignmentInPageByUrl(nextUrl, {
             updateHistory: true,
             replaceHistory: false,
             refreshQueue: false
         });
+        if (!opened) {
+            await new Promise((resolve) => setTimeout(resolve, 350));
+            const refreshedQueue = await refreshAssignmentQueue().catch(() => []);
+            const retryItem = getNextQueueItem(refreshedQueue, submittedAssignmentId, 1, [submittedAssignmentId]);
+            if (retryItem) {
+                const retryUrl = getAssignmentUrlFromQueueItem(retryItem, { prefersView });
+                if (retryUrl) {
+                    opened = await openAssignmentInPageByUrl(retryUrl, {
+                        updateHistory: true,
+                        replaceHistory: false,
+                        refreshQueue: false
+                    });
+                }
+            }
+        }
         debugLog('Optimistic submit auto-advance', {
             submittedAssignmentId: String(submittedAssignmentId || ''),
             nextAssignmentId: String(nextItem && nextItem.assignment_id || ''),
@@ -3896,6 +4013,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!scenarios) {
             console.error('Could not load scenarios data');
         } else {
+            let openedAssignmentFromQueue = false;
             if (canUseAssignmentMode()) {
                 getAssignmentSessionId({ createIfMissing: true });
                 try {
@@ -3912,20 +4030,23 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 refreshQueue: false
                             });
                             if (opened) {
-                                return;
+                                openedAssignmentFromQueue = true;
                             }
                         }
-                        const firstEditUrl = queue[0].edit_url || queue[0].view_url || '';
-                        if (firstEditUrl) {
+                        const firstEditUrl = (!openedAssignmentFromQueue && queue[0])
+                            ? (queue[0].edit_url || queue[0].view_url || '')
+                            : '';
+                        if (!openedAssignmentFromQueue && firstEditUrl) {
                             const openedFallback = await openAssignmentInPageByUrl(firstEditUrl, {
                                 updateHistory: true,
                                 replaceHistory: true,
                                 refreshQueue: false
                             });
                             if (openedFallback) {
-                                return;
+                                openedAssignmentFromQueue = true;
+                            } else {
+                                setAssignmentsStatus('Queue loaded, but first assignment could not be opened.', true);
                             }
-                            setAssignmentsStatus('Queue loaded, but first assignment could not be opened.', true);
                         }
                     } else {
                         setAssignmentsStatus('No assignments available.', false);
@@ -3938,16 +4059,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                 setAssignmentsStatus('Assignment mode requires email login.', true);
             }
 
-            const scenarioKeys = Object.keys(scenarios)
-                .map(k => parseInt(k, 10))
-                .filter(n => !isNaN(n))
-                .sort((a, b) => a - b)
-                .map(n => String(n));
-            const requestedScenario = resolveRequestedScenarioKey(scenarios) || getCurrentScenarioNumber();
-            const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
-            setCurrentScenarioNumber(activeScenario);
-            await ensureTemplatesLoadedForScenarioKeys([activeScenario]).catch(() => {});
-            loadScenarioContent(activeScenario, scenarios);
+            if (!openedAssignmentFromQueue) {
+                const scenarioKeys = Object.keys(scenarios)
+                    .map(k => parseInt(k, 10))
+                    .filter(n => !isNaN(n))
+                    .sort((a, b) => a - b)
+                    .map(n => String(n));
+                const requestedScenario = resolveRequestedScenarioKey(scenarios) || getCurrentScenarioNumber();
+                const activeScenario = scenarios[requestedScenario] ? requestedScenario : (scenarioKeys[0] || '1');
+                setCurrentScenarioNumber(activeScenario);
+                await ensureTemplatesLoadedForScenarioKeys([activeScenario]).catch(() => {});
+                loadScenarioContent(activeScenario, scenarios);
+            }
         }
     }
 
@@ -4273,6 +4396,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         formStatus.style.color = '#28a745';
                     }
                     setAssignmentsStatus('Submitted. Syncing in background and opening next conversation...', false);
+                    await new Promise((resolve) => setTimeout(resolve, SUBMIT_ADVANCE_DELAY_MS));
                     const moved = await openNextAssignmentAfterOptimisticSubmit(submitContext.assignment_id);
                     if (!moved) {
                         setAssignmentsStatus('Submitted. Syncing in background; no other assigned conversation is ready yet.', false);
@@ -4303,6 +4427,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (formSubmitBtn) formSubmitBtn.disabled = false;
             }
         });
+        debugLog('submit_handler_bound');
     }
 
     // Panel resizing functionality
