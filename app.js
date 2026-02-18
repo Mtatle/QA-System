@@ -63,6 +63,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     let pendingDoneAssignmentIds = new Set();
     let locallySkippedAssignmentIds = new Set();
     let assignmentWindowPrefetchPromises = {};
+    let assignmentNavigationInProgress = false;
+    let snapshotCreateInFlight = false;
 
     if (snapshotShareBtn) {
         snapshotShareBtn.addEventListener('click', async () => {
@@ -72,7 +74,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function debugLog(...args) {
         if (!DEBUG_MODE) return;
-        console.log('[QA DEBUG]', ...args);
+        const normalized = args.map((value) => {
+            if (value && typeof value === 'object') {
+                try {
+                    return JSON.stringify(value);
+                } catch (_) {
+                    return '[unserializable object]';
+                }
+            }
+            return value;
+        });
+        console.log('[QA DEBUG]', ...normalized);
     }
 
     function isElementVisible(el) {
@@ -187,6 +199,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         const fullScenarios = await loadScenariosDataMonolith();
         const fallbackMatch = findScenarioBySendId(fullScenarios || {}, target);
         return fallbackMatch && fallbackMatch.scenarioKey ? String(fallbackMatch.scenarioKey) : '';
+    }
+
+    function hasRuntimeScenarioForSendId(sendId) {
+        const target = String(sendId || '').trim();
+        if (!target) return false;
+        const index = runtimeScenariosIndex;
+        return !!(index && index.byId && index.byId[target]);
     }
 
     function isCsvScenarioMode() {
@@ -1154,6 +1173,72 @@ document.addEventListener('DOMContentLoaded', async () => {
         };
     }
 
+    function compactSnapshotPayload(payload, maxChars = 43000) {
+        const source = payload && typeof payload === 'object' ? payload : {};
+        let next = JSON.parse(JSON.stringify(source));
+        const sizeOf = (value) => {
+            try {
+                return JSON.stringify(value).length;
+            } catch (_) {
+                return Number.MAX_SAFE_INTEGER;
+            }
+        };
+        if (sizeOf(next) <= maxChars) return next;
+
+        // Keep only fields needed by shared view.
+        const scenario = next.scenario && typeof next.scenario === 'object' ? next.scenario : {};
+        const keepScenario = {
+            id: scenario.id || next.send_id || '',
+            companyName: scenario.companyName || '',
+            agentName: scenario.agentName || '',
+            customerPhone: scenario.customerPhone || '',
+            conversation: Array.isArray(scenario.conversation) ? scenario.conversation : [],
+            notes: scenario.notes && typeof scenario.notes === 'object' ? scenario.notes : {},
+            rightPanel: scenario.rightPanel && typeof scenario.rightPanel === 'object'
+                ? {
+                    source: scenario.rightPanel.source || {},
+                    customer: scenario.rightPanel.customer || {},
+                    guidelines: scenario.rightPanel.guidelines || {}
+                }
+                : {}
+        };
+        next.scenario = keepScenario;
+        if (sizeOf(next) <= maxChars) return next;
+
+        // Drop templates first if still too large.
+        next.templates = [];
+        if (sizeOf(next) <= maxChars) return next;
+
+        // Last-resort trim for very large conversations.
+        const conv = Array.isArray(next.scenario && next.scenario.conversation)
+            ? next.scenario.conversation
+            : [];
+        const keepCounts = [120, 80, 50, 30, 15];
+        for (let i = 0; i < keepCounts.length; i++) {
+            const keepCount = keepCounts[i];
+            if (conv.length > keepCount) {
+                next.scenario.conversation = conv.slice(Math.max(0, conv.length - keepCount));
+            }
+            if (sizeOf(next) <= maxChars) return next;
+        }
+
+        // Final fallback: truncate message text length per bubble.
+        next.scenario.conversation = (Array.isArray(next.scenario.conversation) ? next.scenario.conversation : [])
+            .map((msg) => {
+                const safeMsg = msg && typeof msg === 'object' ? Object.assign({}, msg) : {};
+                const text = String(safeMsg.content || safeMsg.message || '');
+                const maxLen = 600;
+                if (text.length > maxLen) {
+                    safeMsg.content = text.slice(0, maxLen) + '...';
+                    if (Object.prototype.hasOwnProperty.call(safeMsg, 'message')) {
+                        safeMsg.message = safeMsg.content;
+                    }
+                }
+                return safeMsg;
+            });
+        return next;
+    }
+
     function formatSnapshotExpiry(expiryIso) {
         const t = Date.parse(String(expiryIso || ''));
         if (!Number.isFinite(t)) return '';
@@ -1162,6 +1247,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function createSnapshotAndCopyLink() {
         if (isSnapshotMode) return;
+        if (snapshotCreateInFlight) {
+            setAssignmentsStatus('Snapshot is already being created...', false);
+            return;
+        }
+        snapshotCreateInFlight = true;
+        if (snapshotShareBtn) snapshotShareBtn.disabled = true;
         try {
             debugLog('Snapshot creation requested', {
                 hasAssignmentContext: !!assignmentContext,
@@ -1169,7 +1260,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 hasScenarioData: !!scenarioData
             });
             setAssignmentsStatus('Creating snapshot link...', false);
-            const payload = buildSnapshotPayloadForShare();
+            const rawPayload = buildSnapshotPayloadForShare();
+            const payload = compactSnapshotPayload(rawPayload, 43000);
             const canUseAssignmentEndpoint = !!(
                 assignmentContext &&
                 assignmentContext.assignment_id &&
@@ -1219,6 +1311,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             setAssignmentsStatus(errorMessage, true);
             showTransientTopNotice(errorMessage, true);
             debugLog('Snapshot creation failed', String((error && error.message) || error || ''));
+        } finally {
+            snapshotCreateInFlight = false;
+            if (snapshotShareBtn) snapshotShareBtn.disabled = false;
         }
     }
 
@@ -1302,6 +1397,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             const sendId = String(entry.send_id || '').trim();
             if (IGNORED_SEND_IDS.has(sendId)) {
                 markAssignmentLocallySkipped(assignmentId, 'ignored_send_id');
+                return false;
+            }
+            if (runtimeScenariosIndex && sendId && !hasRuntimeScenarioForSendId(sendId)) {
+                if (!isAssignmentLocallySkipped(assignmentId)) {
+                    markAssignmentLocallySkipped(assignmentId, 'missing_scenario_queue_filter');
+                    const params = getAssignmentParamsFromHref(entry.edit_url || entry.view_url || '');
+                    if (params) {
+                        queueBackgroundSkipInvalidAssignment(entry, params, 'missing_scenario_queue_filter');
+                    }
+                }
                 return false;
             }
             return !isAssignmentLocallySkipped(assignmentId);
@@ -1475,7 +1580,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    async function skipInvalidAssignmentAndRefresh(assignment, params, reason) {
+    function queueBackgroundSkipInvalidAssignment(assignment, params, reason) {
+        const sessionId = getAssignmentSessionId({ createIfMissing: true });
+        const assignmentId = String(assignment && assignment.assignment_id || '').trim();
+        const token = String(params && params.token || '').trim();
+        if (!sessionId || !assignmentId || !token) return;
+        fetchAssignmentPost('skipAssignment', {
+            assignment_id: assignmentId,
+            token,
+            session_id: sessionId,
+            app_base: getCurrentAppBaseUrl(),
+            reason: String(reason || 'missing_scenario')
+        }).then((skipRes) => {
+            applyAssignmentSessionState(skipRes && skipRes.session, { silent: true });
+            const nextQueue = Array.isArray(skipRes && skipRes.assignments) ? skipRes.assignments : [];
+            pruneLocallySkippedAssignments(nextQueue);
+            renderAssignmentQueue(nextQueue);
+        }).catch((error) => {
+            debugLog('skipAssignment backend call failed (background mode)', {
+                assignmentId,
+                error: String((error && error.message) || error || '')
+            });
+            // Try queue refresh so user can continue even if skip endpoint had a transient failure.
+            refreshAssignmentQueue().catch(() => {});
+        });
+    }
+
+    async function skipInvalidAssignmentAndRefresh(assignment, params, reason, options = {}) {
         const sessionId = getAssignmentSessionId({ createIfMissing: true });
         if (!sessionId) throw new Error('Missing assignment session id.');
         const assignmentId = String(assignment && assignment.assignment_id || '').trim();
@@ -1484,6 +1615,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             throw new Error('Cannot skip assignment without assignment id and token.');
         }
         markAssignmentLocallySkipped(assignmentId, reason || 'missing_scenario');
+        const waitForServer = options.waitForServer === true;
+        if (!waitForServer) {
+            const fastQueue = (Array.isArray(assignmentQueue) ? assignmentQueue : [])
+                .filter(item => String((item && item.assignment_id) || '').trim() !== assignmentId);
+            renderAssignmentQueue(fastQueue);
+            queueBackgroundSkipInvalidAssignment(assignment, params, reason);
+            return fastQueue;
+        }
         try {
             const skipRes = await fetchAssignmentPost('skipAssignment', {
                 assignment_id: assignmentId,
@@ -1585,11 +1724,54 @@ document.addEventListener('DOMContentLoaded', async () => {
             for (let attempt = 0; attempt < maxAttempts; attempt++) {
                 const sessionId = getAssignmentSessionId({ createIfMissing: true });
                 if (!sessionId) throw new Error('Missing assignment session id.');
-                const response = await fetchAssignmentGet('getAssignment', {
-                    assignment_id: currentParams.aid,
-                    token: currentParams.token,
-                    session_id: sessionId
-                });
+                const queuedItem = (Array.isArray(assignmentQueue) ? assignmentQueue : [])
+                    .find(item => String((item && item.assignment_id) || '').trim() === String(currentParams.aid || '').trim());
+                if (queuedItem && !hasRuntimeScenarioForSendId(queuedItem.send_id)) {
+                    const fastQueue = await skipInvalidAssignmentAndRefresh(
+                        queuedItem,
+                        currentParams,
+                        'missing_scenario_queue_precheck'
+                    );
+                    const nextParams = getNextAssignmentParamsFromQueue(fastQueue, {
+                        excludeAssignmentIds: [queuedItem.assignment_id],
+                        prefersView: currentParams.mode === 'view'
+                    });
+                    if (!nextParams) {
+                        setAssignmentsStatus('Assigned items are out of sync with scenarios. No valid conversation found.', true);
+                        return false;
+                    }
+                    currentParams = nextParams;
+                    continue;
+                }
+                let response = null;
+                try {
+                    response = await fetchAssignmentGet('getAssignment', {
+                        assignment_id: currentParams.aid,
+                        token: currentParams.token,
+                        session_id: sessionId
+                    });
+                } catch (fetchError) {
+                    const message = String((fetchError && fetchError.message) || fetchError || '');
+                    const recoverableReservationError =
+                        message.toLowerCase().includes('not reserved for this session') ||
+                        message.toLowerCase().includes('session not found');
+                    if (recoverableReservationError) {
+                        debugLog('Assignment/session mismatch detected; refreshing queue', {
+                            aid: currentParams.aid,
+                            message
+                        });
+                        const refreshedQueue = await refreshAssignmentQueue().catch(() => []);
+                        const nextParamsFromRefreshedQueue = getNextAssignmentParamsFromQueue(refreshedQueue, {
+                            excludeAssignmentIds: [],
+                            prefersView: currentParams.mode === 'view'
+                        });
+                        if (nextParamsFromRefreshedQueue) {
+                            currentParams = nextParamsFromRefreshedQueue;
+                            continue;
+                        }
+                    }
+                    throw fetchError;
+                }
                 debugLog('openAssignment attempt', {
                     attempt: attempt + 1,
                     maxAttempts,
@@ -3061,6 +3243,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function navigateAssignmentQueue(direction) {
         if (isSnapshotMode) return false;
         if (!canUseAssignmentMode()) return false;
+        if (assignmentNavigationInProgress) {
+            debugLog('navigateAssignmentQueue skipped (already in progress)');
+            return false;
+        }
+        assignmentNavigationInProgress = true;
+        if (previousConversationBtn) previousConversationBtn.disabled = true;
+        if (nextConversationBtn) nextConversationBtn.disabled = true;
+        try {
         let queue = assignmentQueue;
         if (!Array.isArray(queue) || !queue.length) {
             queue = await refreshAssignmentQueue().catch(() => []);
@@ -3103,10 +3293,35 @@ document.addEventListener('DOMContentLoaded', async () => {
             refreshQueue: false
         });
         if (!opened) {
-            setAssignmentsStatus('Unable to open the target assignment.', true);
-            return false;
+            debugLog('Primary queue navigation target failed; retrying after queue refresh.');
+            const refreshedQueue = await refreshAssignmentQueue().catch(() => []);
+            const retryTarget = getNextQueueItem(refreshedQueue, currentId, direction, []);
+            if (!retryTarget) {
+                setAssignmentsStatus('Unable to open the target assignment.', true);
+                return false;
+            }
+            const retryUrl = getAssignmentUrlFromQueueItem(retryTarget, { prefersView: prefersViewUrl });
+            if (!retryUrl) {
+                setAssignmentsStatus('Unable to open the target assignment.', true);
+                return false;
+            }
+            const openedRetry = await openAssignmentInPageByUrl(retryUrl, {
+                updateHistory: true,
+                replaceHistory: false,
+                refreshQueue: false
+            });
+            if (!openedRetry) {
+                setAssignmentsStatus('Unable to open the target assignment.', true);
+                return false;
+            }
         }
         return true;
+        } finally {
+            assignmentNavigationInProgress = false;
+            const forceView = !!(assignmentContext && (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view'));
+            if (previousConversationBtn) previousConversationBtn.disabled = forceView;
+            if (nextConversationBtn) nextConversationBtn.disabled = forceView;
+        }
     }
 
     async function navigateConversation(direction) {
