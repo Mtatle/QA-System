@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Google Sheets integration
     const GOOGLE_SCRIPT_URL = String(
         (window.QA_CONFIG && window.QA_CONFIG.GOOGLE_SCRIPT_URL) ||
-        'https://script.google.com/macros/s/AKfycbyGbsJuilfRrAi111vKpEnlXBmhiHU3z1-YsIESqdKO0lTYRkkoV9r-Z9l07a-27ZJBdA/exec'
+        'https://script.google.com/macros/s/AKfycbxdYddYfnFwK4nWaaMmOgzhH6wD0i3jY_1G1XM8PB4NzfJDsmxLrF8abc142KEhagfAbw/exec'
     ).trim();
     const RUNTIME_SCENARIO_INDEX_PATH = 'data/scenarios/index.json';
     const RUNTIME_TEMPLATE_INDEX_PATH = 'data/templates/index.json';
