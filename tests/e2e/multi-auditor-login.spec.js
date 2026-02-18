@@ -37,11 +37,22 @@ async function runConcurrentAuditFlow(browser, api, auditors) {
   await Promise.all(pages.map((page) => page.goto('/app.html')));
   await Promise.all(pages.map((page) => expect(page.locator('#companyNameLink')).toBeVisible()));
 
-  const firstCompanies = await Promise.all(
-    pages.map(async (page) => String(await page.locator('#companyNameLink').innerText()).trim())
+  const firstAssignmentIds = await Promise.all(
+    pages.map(async (page) => {
+      await expect
+        .poll(
+          () => {
+            const url = new URL(page.url());
+            return String(url.searchParams.get('aid') || '').trim();
+          },
+          { timeout: 12000 }
+        )
+        .not.toBe('');
+      const currentUrl = new URL(page.url());
+      return String(currentUrl.searchParams.get('aid') || '').trim();
+    })
   );
-  firstCompanies.forEach((company) => expect(company).not.toBe(''));
-  expect(new Set(firstCompanies).size).toBe(auditors.length);
+  expect(new Set(firstAssignmentIds).size).toBe(auditors.length);
 
   await Promise.all(
     pages.map((page, index) => page.fill('#notes', `auditor ${index + 1} concurrent submit`))
@@ -51,17 +62,26 @@ async function runConcurrentAuditFlow(browser, api, auditors) {
   await Promise.all(
     pages.map((page, index) =>
       expect
-        .poll(async () => (await page.locator('#companyNameLink').innerText()).trim(), {
-          timeout: 12000,
-        })
-        .not.toBe(firstCompanies[index])
+        .poll(
+          () => {
+            const url = new URL(page.url());
+            return String(url.searchParams.get('aid') || '').trim();
+          },
+          {
+            timeout: 12000,
+          }
+        )
+        .not.toBe(firstAssignmentIds[index])
     )
   );
 
-  const secondCompanies = await Promise.all(
-    pages.map(async (page) => String(await page.locator('#companyNameLink').innerText()).trim())
+  const secondAssignmentIds = await Promise.all(
+    pages.map(async (page) => {
+      const url = new URL(page.url());
+      return String(url.searchParams.get('aid') || '').trim();
+    })
   );
-  expect(new Set(secondCompanies).size).toBe(auditors.length);
+  expect(new Set(secondAssignmentIds).size).toBe(auditors.length);
 
   await Promise.all(
     pages.map(async (page) => {
