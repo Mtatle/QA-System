@@ -1858,3 +1858,55 @@ mark {
 .message.center-system-note .message-content {
     background-color: transparent !important;
 }
+
+.logout-loading-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(22, 25, 33, 0.22);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 12000;
+}
+
+.logout-loading-overlay[hidden] {
+    display: none !important;
+}
+
+.logout-loading-box {
+    min-width: 220px;
+    max-width: 90vw;
+    background: #ffffff;
+    border: 1px solid #e6e8ef;
+    border-radius: 12px;
+    padding: 16px 18px;
+    box-shadow: 0 10px 30px rgba(20, 24, 31, 0.18);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logout-loading-box p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+}
+
+.logout-loading-spinner {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #d4dbeb;
+    border-top-color: #1e293b;
+    animation: qa-rotate-spinner 0.8s linear infinite;
+    flex: 0 0 auto;
+}
+
+@keyframes qa-rotate-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}

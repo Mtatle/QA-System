@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const chatMessages = document.getElementById('chatMessages');
     const internalNotesEl = document.getElementById('internalNotes');
     const logoutBtn = document.getElementById('logoutBtn');
+    const logoutLoadingOverlay = document.getElementById('logoutLoadingOverlay');
     const assignmentSelect = document.getElementById('assignmentSelect');
     const snapshotShareBtn = document.getElementById('snapshotShareBtn');
     const assignmentsStatus = document.getElementById('assignmentsStatus');
@@ -3556,6 +3557,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     // Add logout functionality
+    function setLogoutLoadingState(isActive) {
+        if (!logoutLoadingOverlay) return;
+        const active = !!isActive;
+        logoutLoadingOverlay.hidden = !active;
+        logoutLoadingOverlay.setAttribute('aria-hidden', active ? 'false' : 'true');
+    }
+
     function sendSessionLogout() {
         try {
             const sessionId = localStorage.getItem('globalSessionId');
@@ -3587,35 +3595,46 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (logoutBtn) {
         logoutBtn.addEventListener('click', async () => {
+            if (isExplicitLogoutInProgress) return;
             isExplicitLogoutInProgress = true;
+            logoutBtn.disabled = true;
+            setLogoutLoadingState(true);
             pendingLogoutReleasePayload = {
                 email: getLoggedInEmail(),
                 session_id: getAssignmentSessionId()
             };
             stopAssignmentHeartbeat();
-            await releaseAssignmentSession('logout').catch(() => ({ ok: false }));
-            sendSessionLogout();
-            clearSubmitOutboxTimer();
-            writeSubmitOutboxJobs([]);
-            refreshPendingDoneAssignmentsFromOutbox([]);
-            assignmentSessionState = null;
-            clearAssignmentSessionId();
-            localStorage.removeItem('agentName');
-            localStorage.removeItem('agentEmail');
-            localStorage.removeItem('sessionStartTime');
-            localStorage.removeItem('loginMethod');
-            localStorage.removeItem('unlockedScenario'); // Reset scenario progression
-            
-            // Clear all scenario timer and message count data
-            Object.keys(localStorage).forEach(key => {
-                if (key.startsWith('sessionStartTime_scenario_') || 
-                    key.startsWith('scenarioSession_') ||
-                    key.startsWith('messageCount_scenario_')) {
-                    localStorage.removeItem(key);
-                }
-            });
-            
-            window.location.href = 'index.html';
+            try {
+                await releaseAssignmentSession('logout').catch(() => ({ ok: false }));
+                sendSessionLogout();
+                clearSubmitOutboxTimer();
+                writeSubmitOutboxJobs([]);
+                refreshPendingDoneAssignmentsFromOutbox([]);
+                assignmentSessionState = null;
+                clearAssignmentSessionId();
+                localStorage.removeItem('agentName');
+                localStorage.removeItem('agentEmail');
+                localStorage.removeItem('sessionStartTime');
+                localStorage.removeItem('loginMethod');
+                localStorage.removeItem('unlockedScenario'); // Reset scenario progression
+
+                // Clear all scenario timer and message count data
+                Object.keys(localStorage).forEach(key => {
+                    if (key.startsWith('sessionStartTime_scenario_') ||
+                        key.startsWith('scenarioSession_') ||
+                        key.startsWith('messageCount_scenario_')) {
+                        localStorage.removeItem(key);
+                    }
+                });
+
+                window.location.href = 'index.html';
+            } catch (error) {
+                console.error('Logout failed:', error);
+                isExplicitLogoutInProgress = false;
+                logoutBtn.disabled = false;
+                setLogoutLoadingState(false);
+                showTransientTopNotice('Logout failed. Please try again.', true);
+            }
         });
     }
     
