@@ -63,6 +63,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     let pendingDoneAssignmentIds = new Set();
     let locallySkippedAssignmentIds = new Set();
     let assignmentWindowPrefetchPromises = {};
+    let assignmentPayloadCache = {};
+    let assignmentPayloadPromises = {};
+    let assignmentPayloadCacheSessionId = '';
     let assignmentNavigationInProgress = false;
     let snapshotCreateInFlight = false;
 
@@ -169,6 +172,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
         pruneLocallySkippedAssignments(assignments);
         renderAssignmentQueue(assignments);
+        pruneAssignmentResponseCacheToQueue(assignments);
+        prefetchAssignmentDetailsInBackground(assignments);
         if (assignmentContext && assignmentContext.assignment_id && assignments.length) {
             prefetchAssignmentWindowInBackground(assignmentContext.assignment_id);
         }
@@ -403,6 +408,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function clearAssignmentSessionId() {
         localStorage.removeItem('assignmentSessionId');
+        assignmentPayloadCacheSessionId = '';
+        clearAssignmentResponseCaches();
     }
 
     function canUseAssignmentMode() {
@@ -433,12 +440,19 @@ document.addEventListener('DOMContentLoaded', async () => {
                     attempts: Number(job.attempts || 0),
                     next_retry_at: Number(job.next_retry_at || 0),
                     state: String(job.state || 'pending'),
+                    evaluation_sent: !!job.evaluation_sent,
                     last_error: String(job.last_error || '')
                 }))
                 .filter(job => job.job_id && job.assignment_id && job.token && job.session_id && job.payload);
         } catch (_) {
             return [];
         }
+    }
+
+    function filterOutboxJobsForSession(jobs, sessionId) {
+        const sid = String(sessionId || '').trim();
+        if (!sid) return [];
+        return (Array.isArray(jobs) ? jobs : []).filter((job) => String(job && job.session_id || '').trim() === sid);
     }
 
     function writeSubmitOutboxJobs(jobs) {
@@ -519,7 +533,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (submitOutboxProcessing || isSnapshotMode || !canUseAssignmentMode()) return;
         submitOutboxProcessing = true;
         try {
-            let jobs = readSubmitOutboxJobs();
+            const activeSessionId = getAssignmentSessionId();
+            let jobs = filterOutboxJobsForSession(readSubmitOutboxJobs(), activeSessionId);
+            writeSubmitOutboxJobs(jobs);
             if (!jobs.length) {
                 refreshPendingDoneAssignmentsFromOutbox([]);
                 return;
@@ -528,6 +544,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const now = Date.now();
             let nextRetryAt = null;
             let hadRetryableFailure = false;
+            let hadTerminalFailure = false;
 
             for (let i = 0; i < jobs.length; i++) {
                 const job = jobs[i];
@@ -541,7 +558,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
 
                 try {
-                    await submitEvaluationFormPayload(job.payload);
+                    if (!job.evaluation_sent) {
+                        await submitEvaluationFormPayload(job.payload);
+                        job.evaluation_sent = true;
+                    }
                     const doneRes = await fetchAssignmentPost('done', {
                         assignment_id: job.assignment_id,
                         token: job.token,
@@ -559,16 +579,34 @@ document.addEventListener('DOMContentLoaded', async () => {
                     job.state = 'done';
                     job.last_error = '';
                 } catch (error) {
-                    hadRetryableFailure = true;
-                    job.attempts = Math.max(0, Number(job.attempts || 0)) + 1;
-                    job.state = 'retrying';
-                    job.last_error = String((error && error.message) || error || 'Unknown background submit error');
-                    job.next_retry_at = Date.now() + getSubmitRetryDelayMs(job.attempts);
-                    nextRetryAt = nextRetryAt == null ? job.next_retry_at : Math.min(nextRetryAt, job.next_retry_at);
+                    const errorText = String((error && error.message) || error || 'Unknown background submit error');
+                    const lowerError = errorText.toLowerCase();
+                    const isTerminal =
+                        lowerError.includes('not reserved for this session') ||
+                        lowerError.includes('assignment not found') ||
+                        lowerError.includes('session not found') ||
+                        lowerError.includes('invalid token');
+
+                    if (isTerminal) {
+                        hadTerminalFailure = true;
+                        job.state = 'failed_terminal';
+                        job.last_error = errorText;
+                        job.next_retry_at = 0;
+                    } else {
+                        hadRetryableFailure = true;
+                        job.attempts = Math.max(0, Number(job.attempts || 0)) + 1;
+                        job.state = 'retrying';
+                        job.last_error = errorText;
+                        job.next_retry_at = Date.now() + getSubmitRetryDelayMs(job.attempts);
+                        nextRetryAt = nextRetryAt == null ? job.next_retry_at : Math.min(nextRetryAt, job.next_retry_at);
+                    }
                 }
             }
 
-            jobs = jobs.filter(job => String(job.state || '').toLowerCase() !== 'done');
+            jobs = jobs.filter((job) => {
+                const state = String(job.state || '').toLowerCase();
+                return state !== 'done' && state !== 'failed_terminal';
+            });
             writeSubmitOutboxJobs(jobs);
             refreshPendingDoneAssignmentsFromOutbox(jobs);
 
@@ -580,6 +618,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     ? Math.max(250, nextRetryAt - Date.now())
                     : 250;
                 scheduleSubmitOutboxProcessing(soonest);
+            } else if (hadTerminalFailure) {
+                setAssignmentsStatus('Some background submissions were dropped because assignment ownership changed.', true);
             }
         } finally {
             submitOutboxProcessing = false;
@@ -599,14 +639,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             attempts: 0,
             next_retry_at: Date.now(),
             state: 'pending',
+            evaluation_sent: false,
             last_error: ''
         };
         if (!nextJob.assignment_id || !nextJob.token || !nextJob.session_id) {
             throw new Error('Cannot queue submit job without assignment context.');
         }
 
-        const jobs = readSubmitOutboxJobs();
-        jobs.push(nextJob);
+        const jobs = filterOutboxJobsForSession(readSubmitOutboxJobs(), nextJob.session_id);
+        jobs.unshift(nextJob);
         writeSubmitOutboxJobs(jobs);
         refreshPendingDoneAssignmentsFromOutbox(jobs);
         scheduleSubmitOutboxProcessing(0);
@@ -619,6 +660,98 @@ document.addEventListener('DOMContentLoaded', async () => {
         const editUrl = String(entry.edit_url || '').trim();
         const viewUrl = String(entry.view_url || '').trim();
         return prefersView ? (viewUrl || editUrl) : (editUrl || viewUrl);
+    }
+
+    function getAssignmentResponseCacheKey(params) {
+        if (!params || typeof params !== 'object') return '';
+        const aid = String(params.aid || '').trim();
+        const token = String(params.token || '').trim();
+        if (!aid || !token) return '';
+        return `${aid}::${token}`;
+    }
+
+    function clearAssignmentResponseCaches() {
+        assignmentPayloadCache = {};
+        assignmentPayloadPromises = {};
+    }
+
+    function getCachedAssignmentResponse(params) {
+        const cacheKey = getAssignmentResponseCacheKey(params);
+        if (!cacheKey) return null;
+        return assignmentPayloadCache[cacheKey] || null;
+    }
+
+    function setCachedAssignmentResponse(params, response) {
+        const cacheKey = getAssignmentResponseCacheKey(params);
+        if (!cacheKey || !response || typeof response !== 'object') return;
+        assignmentPayloadCache[cacheKey] = response;
+    }
+
+    function pruneAssignmentResponseCacheToQueue(queue) {
+        const keepKeys = new Set(
+            (Array.isArray(queue) ? queue : [])
+                .map((item) => getAssignmentUrlFromQueueItem(item, { prefersView: false }))
+                .concat((Array.isArray(queue) ? queue : []).map((item) => getAssignmentUrlFromQueueItem(item, { prefersView: true })))
+                .map((url) => getAssignmentParamsFromHref(url || ''))
+                .map((params) => getAssignmentResponseCacheKey(params || {}))
+                .filter(Boolean)
+        );
+
+        Object.keys(assignmentPayloadCache).forEach((cacheKey) => {
+            if (!keepKeys.has(cacheKey)) {
+                delete assignmentPayloadCache[cacheKey];
+            }
+        });
+    }
+
+    async function fetchAssignmentResponseForParams(params, sessionId, options = {}) {
+        const useCache = options.useCache !== false;
+        const cacheKey = getAssignmentResponseCacheKey(params);
+        if (!cacheKey) throw new Error('Missing assignment cache key.');
+
+        if (useCache && assignmentPayloadCache[cacheKey]) {
+            return assignmentPayloadCache[cacheKey];
+        }
+        if (assignmentPayloadPromises[cacheKey]) {
+            return assignmentPayloadPromises[cacheKey];
+        }
+
+        assignmentPayloadPromises[cacheKey] = (async () => {
+            const response = await fetchAssignmentGet('getAssignment', {
+                assignment_id: params.aid,
+                token: params.token,
+                session_id: sessionId
+            });
+            setCachedAssignmentResponse(params, response);
+            return response;
+        })();
+
+        try {
+            return await assignmentPayloadPromises[cacheKey];
+        } finally {
+            delete assignmentPayloadPromises[cacheKey];
+        }
+    }
+
+    function prefetchAssignmentDetailsInBackground(queue) {
+        if (isSnapshotMode || !canUseAssignmentMode()) return;
+        const sessionId = getAssignmentSessionId();
+        if (!sessionId) return;
+        const list = Array.isArray(queue) ? queue : [];
+        list.forEach((item) => {
+            const url = getAssignmentUrlFromQueueItem(item, { prefersView: false });
+            const params = getAssignmentParamsFromHref(url || '');
+            const cacheKey = getAssignmentResponseCacheKey(params || {});
+            if (!params || !cacheKey || assignmentPayloadCache[cacheKey] || assignmentPayloadPromises[cacheKey]) {
+                return;
+            }
+            fetchAssignmentResponseForParams(params, sessionId, { useCache: true }).catch((error) => {
+                debugLog('Assignment details prefetch failed', {
+                    aid: String((params && params.aid) || ''),
+                    error: String((error && error.message) || error || '')
+                });
+            });
+        });
     }
 
     function getNextAssignmentParamsFromQueue(queue, options = {}) {
@@ -650,6 +783,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         assignmentSessionState = sessionLike;
         const sessionId = String(sessionLike.session_id || '').trim();
         if (sessionId) {
+            if (assignmentPayloadCacheSessionId && assignmentPayloadCacheSessionId !== sessionId) {
+                clearAssignmentResponseCaches();
+            }
+            assignmentPayloadCacheSessionId = sessionId;
             localStorage.setItem('assignmentSessionId', sessionId);
         }
 
@@ -1416,6 +1553,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             active: assignmentQueue.length,
             locallySkipped: locallySkippedAssignmentIds.size
         });
+        pruneAssignmentResponseCacheToQueue(assignmentQueue);
+        prefetchAssignmentDetailsInBackground(assignmentQueue);
         if (!assignmentSelect) return;
 
         assignmentSelect.innerHTML = '';
@@ -1664,6 +1803,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const serverFormState = parseStoredFormState(assignmentContext.form_state_json);
         const localFormStateKey = assignmentFormStateStorageKey();
         const localFormState = localFormStateKey ? parseStoredFormState(localStorage.getItem(localFormStateKey)) : null;
+        applyDefaultCustomFormState(customForm);
         applyCustomFormState(customForm, serverFormState || localFormState);
 
         if (internalNotesEl) {
@@ -1683,6 +1823,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         startAssignmentHeartbeat();
         selectCurrentAssignmentInQueue();
         updateSnapshotShareButtonVisibility();
+        prefetchAssignmentDetailsInBackground(assignmentQueue);
         prefetchAssignmentWindowInBackground(assignmentContext.assignment_id);
 
         if (options.updateHistory) {
@@ -1745,11 +1886,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
                 let response = null;
                 try {
-                    response = await fetchAssignmentGet('getAssignment', {
-                        assignment_id: currentParams.aid,
-                        token: currentParams.token,
-                        session_id: sessionId
-                    });
+                    response = await fetchAssignmentResponseForParams(currentParams, sessionId, { useCache: true });
                 } catch (fetchError) {
                     const message = String((fetchError && fetchError.message) || fetchError || '');
                     const recoverableReservationError =
@@ -1921,6 +2058,25 @@ document.addEventListener('DOMContentLoaded', async () => {
             return JSON.parse(raw);
         } catch (_) {
             return null;
+        }
+    }
+
+    function applyDefaultCustomFormState(customForm) {
+        if (!customForm) return;
+        const checkboxInputs = customForm.querySelectorAll('input[type="checkbox"]');
+        checkboxInputs.forEach((cb) => {
+            cb.checked = true;
+            cb.defaultChecked = true;
+        });
+
+        const zeroToleranceSelect = customForm.querySelector('#zeroTolerance');
+        if (zeroToleranceSelect && zeroToleranceSelect.options.length) {
+            zeroToleranceSelect.selectedIndex = 0;
+        }
+
+        const notesField = customForm.querySelector('#notes');
+        if (notesField) {
+            notesField.value = '';
         }
     }
 
@@ -3370,7 +3526,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function openNextAssignmentAfterOptimisticSubmit(submittedAssignmentId) {
         const prefersView = !!(assignmentContext && (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view'));
-        const nextItem = getNextQueueItem(assignmentQueue, submittedAssignmentId, 1, [submittedAssignmentId]);
+        let nextItem = getNextQueueItem(assignmentQueue, submittedAssignmentId, 1, [submittedAssignmentId]);
+        if (!nextItem) {
+            const refreshedQueue = await refreshAssignmentQueue().catch(() => []);
+            nextItem = getNextQueueItem(refreshedQueue, submittedAssignmentId, 1, [submittedAssignmentId]);
+        }
         if (!nextItem) return false;
 
         const nextUrl = getAssignmentUrlFromQueueItem(nextItem, { prefersView });
@@ -3678,7 +3838,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initialize everything
     const snapshotParams = getSnapshotParamsFromUrl();
     const hasSnapshot = !!(snapshotParams.snapshotId && snapshotParams.snapshotToken);
-    const existingSubmitOutboxJobs = readSubmitOutboxJobs();
+    const existingSessionId = getAssignmentSessionId();
+    const existingSubmitOutboxJobs = filterOutboxJobsForSession(readSubmitOutboxJobs(), existingSessionId);
+    writeSubmitOutboxJobs(existingSubmitOutboxJobs);
     refreshPendingDoneAssignmentsFromOutbox(existingSubmitOutboxJobs);
     if (existingSubmitOutboxJobs.length && !hasSnapshot) {
         scheduleSubmitOutboxProcessing(0);
@@ -3912,11 +4074,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const clearFormBtn = document.getElementById('clearFormBtn');
         
         // Ensure all checkboxes are checked by default (and on reset)
-        const checkboxInputs = customForm.querySelectorAll('input[type="checkbox"]');
-        checkboxInputs.forEach(cb => {
-            cb.checked = true;
-            cb.defaultChecked = true;
-        });
+        applyDefaultCustomFormState(customForm);
         
         // ---- Form autosave/restore ----
         function saveCustomFormState() {
@@ -3945,9 +4103,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             clearFormBtn.addEventListener('click', () => {
                 customForm.reset();
                 // Re-apply default checked state
-                checkboxInputs.forEach(cb => {
-                    cb.checked = true;
-                });
+                applyDefaultCustomFormState(customForm);
                 try {
                     const key = assignmentContext && assignmentContext.assignment_id
                         ? assignmentFormStateStorageKey()
@@ -4106,7 +4262,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     });
 
                     customForm.reset();
-                    checkboxInputs.forEach(cb => { cb.checked = true; });
+                    applyDefaultCustomFormState(customForm);
                     try {
                         localStorage.removeItem(`customFormState_assignment_${submitContext.assignment_id}`);
                         localStorage.removeItem(`internalNotes_assignment_${submitContext.assignment_id}`);
@@ -4130,7 +4286,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     formStatus.style.color = '#28a745';
                 }
                 customForm.reset();
-                checkboxInputs.forEach(cb => { cb.checked = true; });
+                applyDefaultCustomFormState(customForm);
                 try {
                     const key = assignmentContext && assignmentContext.assignment_id
                         ? assignmentFormStateStorageKey()
@@ -4154,7 +4310,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Attempt to record logout on tab close/navigation
     window.addEventListener('online', () => {
-        const jobs = readSubmitOutboxJobs();
+        const jobs = filterOutboxJobsForSession(readSubmitOutboxJobs(), getAssignmentSessionId());
         if (jobs.length) {
             scheduleSubmitOutboxProcessing(0);
         }
