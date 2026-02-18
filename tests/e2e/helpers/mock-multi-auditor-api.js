@@ -2,18 +2,19 @@ function createMockMultiAuditorApi(options = {}) {
   const baseAppUrl = String(options.baseAppUrl || 'http://127.0.0.1:4173/app.html');
   const targetQueueSize = Math.max(1, Number(options.targetQueueSize || 3));
 
-  const poolSendIds = Array.isArray(options.poolSendIds) && options.poolSendIds.length
-    ? options.poolSendIds.map((v) => String(v || '').trim()).filter(Boolean)
-    : [
-        '019bebf7-17aa-48de-f000-0000f506a3fe', // Julie Vos
-        '019bd3ae-2a24-478d-f000-0000efb67321', // Brilliant Earth
-        '019bdd15-7512-4e9e-f000-0000d6364a39', // Bonafide
-        '019bd742-baf8-425f-f000-00003e7e7b41', // Greenpan
-        '019bb39c-c90b-4984-f000-0000533e26bd', // Cozy Earth
-        '019bd2ea-59a8-4897-f000-0000e780a047', // LANEIGE
-        '019bb5d4-a2f2-4c77-f000-0000420de96e',
-        '019be9c4-2213-4f8d-f000-000074529bc0',
-      ];
+  const poolSendIds =
+    Array.isArray(options.poolSendIds) && options.poolSendIds.length
+      ? options.poolSendIds.map((v) => String(v || '').trim()).filter(Boolean)
+      : [
+          '019bebf7-17aa-48de-f000-0000f506a3fe', // Julie Vos
+          '019bd3ae-2a24-478d-f000-0000efb67321', // Brilliant Earth
+          '019bdd15-7512-4e9e-f000-0000d6364a39', // Bonafide
+          '019bd742-baf8-425f-f000-00003e7e7b41', // Greenpan
+          '019bb39c-c90b-4984-f000-0000533e26bd', // Cozy Earth
+          '019bd2ea-59a8-4897-f000-0000e780a047', // LANEIGE
+          '019bb5d4-a2f2-4c77-f000-0000420de96e',
+          '019be9c4-2213-4f8d-f000-000074529bc0',
+        ];
 
   const activeStatuses = new Set(['ASSIGNED', 'IN_PROGRESS']);
   const sessionsById = {};
@@ -47,7 +48,9 @@ function createMockMultiAuditorApi(options = {}) {
   }
 
   function normalizeEmail(email) {
-    return String(email || '').trim().toLowerCase();
+    return String(email || '')
+      .trim()
+      .toLowerCase();
   }
 
   function buildAssignmentUrls(assignment) {
@@ -136,7 +139,9 @@ function createMockMultiAuditorApi(options = {}) {
   }
 
   function buildSessionPayload(sessionId) {
-    const session = sessionsById[String(sessionId || '').trim()] || createSession(String(sessionId || '').trim(), '');
+    const session =
+      sessionsById[String(sessionId || '').trim()] ||
+      createSession(String(sessionId || '').trim(), '');
     return {
       session_id: session.session_id,
       state: String(session.state || 'ACTIVE').toUpperCase(),
@@ -175,7 +180,10 @@ function createMockMultiAuditorApi(options = {}) {
       if (String(assignment.token || '') !== token) {
         return fulfillJson(route, { error: 'Unauthorized token' });
       }
-      if (String(assignment.session_id || '') !== sessionId && String(assignment.status || '').toUpperCase() !== 'DONE') {
+      if (
+        String(assignment.session_id || '') !== sessionId &&
+        String(assignment.status || '').toUpperCase() !== 'DONE'
+      ) {
         return fulfillJson(route, { error: 'Assignment is not reserved for this session' });
       }
       return fulfillJson(route, {

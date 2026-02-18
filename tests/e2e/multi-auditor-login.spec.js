@@ -22,7 +22,9 @@ async function runConcurrentAuditFlow(browser, api, auditors) {
   );
   const pages = await Promise.all(contexts.map((ctx) => ctx.newPage()));
 
-  await Promise.all(contexts.map((ctx) => ctx.route('**/exec**', async (route) => api.routeHandler(route))));
+  await Promise.all(
+    contexts.map((ctx) => ctx.route('**/exec**', async (route) => api.routeHandler(route)))
+  );
   await Promise.all(
     pages.map((page, index) =>
       primeAuditorSession(page, {
@@ -88,10 +90,14 @@ test.describe('Multi-auditor concurrency', () => {
       },
     ]);
     await expect.poll(() => api.state.doneCalls, { timeout: 10000 }).toBeGreaterThanOrEqual(2);
-    await expect.poll(() => api.state.evaluationCalls, { timeout: 10000 }).toBeGreaterThanOrEqual(2);
+    await expect
+      .poll(() => api.state.evaluationCalls, { timeout: 10000 })
+      .toBeGreaterThanOrEqual(2);
   });
 
-  test('three auditors can work concurrently without assignment collisions', async ({ browser }) => {
+  test('three auditors can work concurrently without assignment collisions', async ({
+    browser,
+  }) => {
     const api = createMockMultiAuditorApi({ targetQueueSize: 2 });
     await runConcurrentAuditFlow(browser, api, [
       {
@@ -111,6 +117,8 @@ test.describe('Multi-auditor concurrency', () => {
       },
     ]);
     await expect.poll(() => api.state.doneCalls, { timeout: 10000 }).toBeGreaterThanOrEqual(3);
-    await expect.poll(() => api.state.evaluationCalls, { timeout: 10000 }).toBeGreaterThanOrEqual(3);
+    await expect
+      .poll(() => api.state.evaluationCalls, { timeout: 10000 })
+      .toBeGreaterThanOrEqual(3);
   });
 });
