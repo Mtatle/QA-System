@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const RUNTIME_SCENARIO_INDEX_PATH = 'data/scenarios/index.json';
     const RUNTIME_TEMPLATE_INDEX_PATH = 'data/templates/index.json';
     const ASSIGNMENT_HEARTBEAT_INTERVAL_MS = 60 * 1000;
+    const SUBMIT_OUTBOX_STORAGE_KEY = 'qaSubmitOutbox_v1';
+    const SUBMIT_RETRY_DELAYS_MS = [5000, 15000, 45000, 120000, 300000];
     // Current scenario data
     let currentScenario = null;
     let scenarioData = null;
@@ -46,6 +48,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     let pendingLogoutReleasePayload = null;
     let isSnapshotMode = false;
     let snapshotContext = null;
+    let submitOutboxTimer = null;
+    let submitOutboxProcessing = false;
+    let pendingDoneAssignmentIds = new Set();
+    let assignmentWindowPrefetchPromises = {};
 
     async function refreshAssignmentQueue() {
         if (isSnapshotMode) {
@@ -66,16 +72,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         const assignments = Array.isArray(response.assignments) ? response.assignments : [];
         renderAssignmentQueue(assignments);
         if (assignmentContext && assignmentContext.assignment_id && assignments.length) {
-            prefetchAssignmentWindow(assignmentContext.assignment_id).catch((error) => {
-                console.warn('Assignment prefetch after queue refresh failed:', error);
-            });
+            prefetchAssignmentWindowInBackground(assignmentContext.assignment_id);
         }
         return assignments;
     }
 
-    async function resolveScenarioKeyForSendId(sendId, scenariosOverride) {
+    async function resolveScenarioKeyForSendId(sendId, scenariosOverride, options = {}) {
         const target = String(sendId || '').trim();
         if (!target) return '';
+        const allowMonolithFallback = options.allowMonolithFallback !== false;
 
         const scenarioIndex = await loadRuntimeScenariosIndex();
         if (scenarioIndex && scenarioIndex.byId && scenarioIndex.byId[target]) {
@@ -86,6 +91,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         const directMatch = findScenarioBySendId(candidateScenarios, target);
         if (directMatch && directMatch.scenarioKey) {
             return String(directMatch.scenarioKey);
+        }
+
+        if (!allowMonolithFallback) {
+            return '';
         }
 
         const fullScenarios = await loadScenariosDataMonolith();
@@ -288,6 +297,236 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (assignmentSelect) assignmentSelect.disabled = !!isLocked;
     }
 
+    function readSubmitOutboxJobs() {
+        try {
+            const raw = localStorage.getItem(SUBMIT_OUTBOX_STORAGE_KEY);
+            if (!raw) return [];
+            const parsed = JSON.parse(raw);
+            if (!Array.isArray(parsed)) return [];
+            return parsed
+                .filter(job => job && typeof job === 'object')
+                .map(job => ({
+                    job_id: String(job.job_id || ''),
+                    assignment_id: String(job.assignment_id || ''),
+                    token: String(job.token || ''),
+                    session_id: String(job.session_id || ''),
+                    app_base: String(job.app_base || ''),
+                    payload: job.payload && typeof job.payload === 'object' ? job.payload : {},
+                    created_at: String(job.created_at || ''),
+                    attempts: Number(job.attempts || 0),
+                    next_retry_at: Number(job.next_retry_at || 0),
+                    state: String(job.state || 'pending'),
+                    last_error: String(job.last_error || '')
+                }))
+                .filter(job => job.job_id && job.assignment_id && job.token && job.session_id && job.payload);
+        } catch (_) {
+            return [];
+        }
+    }
+
+    function writeSubmitOutboxJobs(jobs) {
+        const list = Array.isArray(jobs) ? jobs : [];
+        localStorage.setItem(SUBMIT_OUTBOX_STORAGE_KEY, JSON.stringify(list));
+    }
+
+    function refreshPendingDoneAssignmentsFromOutbox(jobs) {
+        const nextSet = new Set();
+        (Array.isArray(jobs) ? jobs : []).forEach((job) => {
+            const assignmentId = String(job && job.assignment_id || '').trim();
+            const state = String(job && job.state || '').toLowerCase();
+            if (!assignmentId) return;
+            if (state === 'done') return;
+            nextSet.add(assignmentId);
+        });
+        pendingDoneAssignmentIds = nextSet;
+    }
+
+    function isAssignmentPendingDone(assignmentId) {
+        const id = String(assignmentId || '').trim();
+        if (!id) return false;
+        return pendingDoneAssignmentIds.has(id);
+    }
+
+    function getSubmitRetryDelayMs(attempts) {
+        const n = Math.max(1, Number(attempts) || 1);
+        const idx = Math.min(n - 1, SUBMIT_RETRY_DELAYS_MS.length - 1);
+        return SUBMIT_RETRY_DELAYS_MS[idx];
+    }
+
+    function clearSubmitOutboxTimer() {
+        if (submitOutboxTimer) {
+            clearTimeout(submitOutboxTimer);
+            submitOutboxTimer = null;
+        }
+    }
+
+    function scheduleSubmitOutboxProcessing(delayMs) {
+        const delay = Math.max(0, Number(delayMs) || 0);
+        clearSubmitOutboxTimer();
+        submitOutboxTimer = setTimeout(() => {
+            submitOutboxTimer = null;
+            processSubmitOutboxQueue().catch((error) => {
+                console.warn('Submit outbox processing failed:', error);
+            });
+        }, delay);
+    }
+
+    async function submitEvaluationFormPayload(payload) {
+        const res = await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'cors',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify(payload || {})
+        });
+
+        let success = false;
+        let serverMsg = '';
+        try {
+            const json = await res.json();
+            success = res.ok && json && json.status === 'success';
+            serverMsg = (json && json.message) ? json.message : '';
+        } catch (parseErr) {
+            try {
+                const txt = await res.text();
+                serverMsg = txt || '';
+            } catch (_) {}
+            success = res.ok;
+        }
+
+        if (!success) {
+            throw new Error(serverMsg || `Evaluation submission failed (${res.status})`);
+        }
+    }
+
+    async function processSubmitOutboxQueue() {
+        if (submitOutboxProcessing || isSnapshotMode || !canUseAssignmentMode()) return;
+        submitOutboxProcessing = true;
+        try {
+            let jobs = readSubmitOutboxJobs();
+            if (!jobs.length) {
+                refreshPendingDoneAssignmentsFromOutbox([]);
+                return;
+            }
+
+            const now = Date.now();
+            let nextRetryAt = null;
+            let hadRetryableFailure = false;
+
+            for (let i = 0; i < jobs.length; i++) {
+                const job = jobs[i];
+                const state = String(job.state || '').toLowerCase();
+                if (state === 'done') continue;
+
+                const nextAt = Number(job.next_retry_at || 0);
+                if (nextAt > now) {
+                    nextRetryAt = nextRetryAt == null ? nextAt : Math.min(nextRetryAt, nextAt);
+                    continue;
+                }
+
+                try {
+                    await submitEvaluationFormPayload(job.payload);
+                    const doneRes = await fetchAssignmentPost('done', {
+                        assignment_id: job.assignment_id,
+                        token: job.token,
+                        session_id: job.session_id,
+                        app_base: job.app_base || getCurrentAppBaseUrl()
+                    });
+                    applyAssignmentSessionState(doneRes && doneRes.session, { silent: true });
+                    const nextQueue = Array.isArray(doneRes.assignments) ? doneRes.assignments : [];
+                    renderAssignmentQueue(nextQueue);
+                    selectCurrentAssignmentInQueue();
+                    if (assignmentContext && assignmentContext.assignment_id) {
+                        prefetchAssignmentWindowInBackground(assignmentContext.assignment_id);
+                    }
+
+                    job.state = 'done';
+                    job.last_error = '';
+                } catch (error) {
+                    hadRetryableFailure = true;
+                    job.attempts = Math.max(0, Number(job.attempts || 0)) + 1;
+                    job.state = 'retrying';
+                    job.last_error = String((error && error.message) || error || 'Unknown background submit error');
+                    job.next_retry_at = Date.now() + getSubmitRetryDelayMs(job.attempts);
+                    nextRetryAt = nextRetryAt == null ? job.next_retry_at : Math.min(nextRetryAt, job.next_retry_at);
+                }
+            }
+
+            jobs = jobs.filter(job => String(job.state || '').toLowerCase() !== 'done');
+            writeSubmitOutboxJobs(jobs);
+            refreshPendingDoneAssignmentsFromOutbox(jobs);
+
+            if (jobs.length > 0) {
+                if (hadRetryableFailure) {
+                    setAssignmentsStatus('Background sync pending. Retrying automatically.', true);
+                }
+                const soonest = nextRetryAt != null
+                    ? Math.max(250, nextRetryAt - Date.now())
+                    : 250;
+                scheduleSubmitOutboxProcessing(soonest);
+            }
+        } finally {
+            submitOutboxProcessing = false;
+        }
+    }
+
+    function queueSubmitOutboxJob(jobInput) {
+        const nowIso = new Date().toISOString();
+        const nextJob = {
+            job_id: `${Date.now()}_${Math.random().toString(36).slice(2, 10)}`,
+            assignment_id: String(jobInput && jobInput.assignment_id || '').trim(),
+            token: String(jobInput && jobInput.token || '').trim(),
+            session_id: String(jobInput && jobInput.session_id || '').trim(),
+            app_base: String(jobInput && jobInput.app_base || '').trim(),
+            payload: jobInput && typeof jobInput.payload === 'object' ? jobInput.payload : {},
+            created_at: nowIso,
+            attempts: 0,
+            next_retry_at: Date.now(),
+            state: 'pending',
+            last_error: ''
+        };
+        if (!nextJob.assignment_id || !nextJob.token || !nextJob.session_id) {
+            throw new Error('Cannot queue submit job without assignment context.');
+        }
+
+        const jobs = readSubmitOutboxJobs();
+        jobs.push(nextJob);
+        writeSubmitOutboxJobs(jobs);
+        refreshPendingDoneAssignmentsFromOutbox(jobs);
+        scheduleSubmitOutboxProcessing(0);
+        return nextJob;
+    }
+
+    function getAssignmentUrlFromQueueItem(item, options = {}) {
+        const entry = item && typeof item === 'object' ? item : {};
+        const prefersView = !!options.prefersView;
+        const editUrl = String(entry.edit_url || '').trim();
+        const viewUrl = String(entry.view_url || '').trim();
+        return prefersView ? (viewUrl || editUrl) : (editUrl || viewUrl);
+    }
+
+    function getNextAssignmentParamsFromQueue(queue, options = {}) {
+        const list = Array.isArray(queue) ? queue : [];
+        if (!list.length) return null;
+        const excludeSet = new Set((Array.isArray(options.excludeAssignmentIds) ? options.excludeAssignmentIds : [])
+            .map(id => String(id || '').trim())
+            .filter(Boolean));
+        const prefersView = !!options.prefersView;
+        for (let i = 0; i < list.length; i++) {
+            const item = list[i] || {};
+            const assignmentId = String(item.assignment_id || '').trim();
+            if (!assignmentId || excludeSet.has(assignmentId) || isAssignmentPendingDone(assignmentId)) {
+                continue;
+            }
+            const url = getAssignmentUrlFromQueueItem(item, { prefersView });
+            if (!url) continue;
+            const params = getAssignmentParamsFromHref(url);
+            if (params && params.aid && params.token) {
+                return params;
+            }
+        }
+        return null;
+    }
+
     function applyAssignmentSessionState(sessionLike, options = {}) {
         if (!sessionLike || typeof sessionLike !== 'object') return;
         assignmentSessionState = sessionLike;
@@ -427,9 +666,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    async function ensureScenariosLoaded(keys) {
+    async function ensureScenariosLoaded(keys, options = {}) {
         const requestedKeys = Array.from(new Set((Array.isArray(keys) ? keys : []).map(k => String(k || '').trim()).filter(Boolean)));
         if (!requestedKeys.length) return allScenariosData || {};
+        const allowMonolithFallback = options.allowMonolithFallback !== false;
         allScenariosData = allScenariosData || {};
 
         const missingKeys = requestedKeys.filter(k => !allScenariosData[k]);
@@ -450,8 +690,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                         .map((scenarioKey) => scenarioIndex.byKey && scenarioIndex.byKey[scenarioKey] ? normalizeRuntimePath(scenarioIndex.byKey[scenarioKey].chunkFile) : '')
                         .filter(Boolean)
                 ));
-                for (let i = 0; i < chunkFiles.length; i++) {
-                    const chunkMap = await loadRuntimeScenarioChunk(chunkFiles[i]);
+                const chunkMaps = await Promise.all(chunkFiles.map(chunkFile => loadRuntimeScenarioChunk(chunkFile)));
+                for (let i = 0; i < chunkMaps.length; i++) {
+                    const chunkMap = chunkMaps[i] || {};
                     Object.keys(chunkMap).forEach((scenarioKey) => {
                         allScenariosData[scenarioKey] = chunkMap[scenarioKey];
                     });
@@ -463,7 +704,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         const stillMissing = requestedKeys.filter(k => !allScenariosData[k]);
-        if (stillMissing.length) {
+        if (stillMissing.length && allowMonolithFallback) {
             await loadScenariosDataMonolith();
         }
         return allScenariosData || {};
@@ -585,9 +826,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             })
             .filter(Boolean)));
 
-        for (let i = 0; i < companyKeys.length; i++) {
-            const ok = await ensureRuntimeTemplateCompanyLoaded(companyKeys[i]);
-            if (!ok) break;
+        const companyLoadResults = await Promise.all(companyKeys.map(companyKey => ensureRuntimeTemplateCompanyLoaded(companyKey)));
+        if (companyLoadResults.some(result => !result)) {
+            runtimeTemplatesUnavailable = true;
         }
 
         if (runtimeTemplatesUnavailable) {
@@ -726,12 +967,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function updateSnapshotShareButtonVisibility() {
         if (!snapshotShareBtn) return;
-        const canShow = !isSnapshotMode &&
-            !!assignmentContext &&
-            !!assignmentContext.assignment_id &&
-            assignmentContext.role === 'editor';
-        snapshotShareBtn.style.display = canShow ? 'inline-flex' : 'none';
-        snapshotShareBtn.disabled = !canShow;
+        const isEditableAssignment = !!(
+            assignmentContext &&
+            assignmentContext.assignment_id &&
+            assignmentContext.role === 'editor'
+        );
+        const canCreateScenarioSnapshot = !!scenarioData;
+        const canUse = !isSnapshotMode && (isEditableAssignment || canCreateScenarioSnapshot);
+        snapshotShareBtn.style.display = isSnapshotMode ? 'none' : 'inline-flex';
+        snapshotShareBtn.disabled = !canUse;
+        snapshotShareBtn.title = isEditableAssignment
+            ? 'Create assignment snapshot link'
+            : 'Create snapshot link';
     }
 
     async function copyTextToClipboard(text) {
@@ -762,9 +1009,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function buildSnapshotPayloadForShare() {
-        if (!assignmentContext || !assignmentContext.assignment_id) {
-            throw new Error('No assignment is currently open.');
-        }
         if (!scenarioData || typeof scenarioData !== 'object') {
             throw new Error('Scenario data is not available yet.');
         }
@@ -776,7 +1020,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         return {
             version: 1,
-            assignment_id: String(assignmentContext.assignment_id || ''),
+            assignment_id: String((assignmentContext && assignmentContext.assignment_id) || ''),
             send_id: String((assignmentContext && assignmentContext.send_id) || (scenarioClone && scenarioClone.id) || ''),
             scenario: scenarioClone,
             templates: templatesClone,
@@ -793,27 +1037,37 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function createSnapshotAndCopyLink() {
         if (isSnapshotMode) return;
-        if (!assignmentContext || assignmentContext.role !== 'editor') {
-            setAssignmentsStatus('Open an editable assignment first to create a snapshot link.', true);
-            return;
-        }
-        const sessionId = getAssignmentSessionId();
-        if (!sessionId) {
-            setAssignmentsStatus('Missing assignment session id.', true);
-            return;
-        }
-
         try {
             setAssignmentsStatus('Creating snapshot link...', false);
             const payload = buildSnapshotPayloadForShare();
-            const response = await fetchAssignmentPost('createSnapshot', {
-                assignment_id: assignmentContext.assignment_id,
-                token: assignmentContext.token,
-                session_id: sessionId,
-                agent_email: getLoggedInEmail(),
-                app_base: getCurrentAppBaseUrl(),
-                snapshot_payload: payload
-            });
+            const canUseAssignmentEndpoint = !!(
+                assignmentContext &&
+                assignmentContext.assignment_id &&
+                assignmentContext.role === 'editor' &&
+                assignmentContext.token
+            );
+
+            let response = null;
+            if (canUseAssignmentEndpoint) {
+                const sessionId = getAssignmentSessionId();
+                if (!sessionId) throw new Error('Missing assignment session id.');
+                response = await fetchAssignmentPost('createSnapshot', {
+                    assignment_id: assignmentContext.assignment_id,
+                    token: assignmentContext.token,
+                    session_id: sessionId,
+                    agent_email: getLoggedInEmail(),
+                    app_base: getCurrentAppBaseUrl(),
+                    snapshot_payload: payload
+                });
+            } else {
+                response = await fetchAssignmentPost('createScenarioSnapshot', {
+                    app_base: getCurrentAppBaseUrl(),
+                    agent_email: getLoggedInEmail(),
+                    agent_name: localStorage.getItem('agentName') || '',
+                    snapshot_payload: payload
+                });
+            }
+
             const shareUrl = String((response && response.share_url) || '').trim();
             if (!shareUrl) throw new Error('Snapshot URL was not returned.');
 
@@ -938,25 +1192,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function openSelectedAssignmentFromList() {
         if (isSnapshotMode) return;
         if (!assignmentSelect || !assignmentSelect.value) return;
+        if (isAssignmentPendingDone(assignmentSelect.value)) {
+            setAssignmentsStatus('That conversation is still syncing in the background.', true);
+            return;
+        }
         const selectedOption = assignmentSelect.options[assignmentSelect.selectedIndex];
         if (!selectedOption) return;
         const prefersViewUrl = !!(assignmentContext && (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view'));
-        const editUrl = String(selectedOption.dataset.editUrl || '').trim();
-        const viewUrl = String(selectedOption.dataset.viewUrl || '').trim();
-        const url = prefersViewUrl ? (viewUrl || editUrl) : (editUrl || viewUrl);
+        const url = getAssignmentUrlFromQueueItem({
+            edit_url: selectedOption.dataset.editUrl || '',
+            view_url: selectedOption.dataset.viewUrl || ''
+        }, { prefersView: prefersViewUrl });
         if (!url) return;
-        if (assignmentContext && assignmentContext.assignment_id) {
-            const opened = await openAssignmentInPageByUrl(url, {
-                updateHistory: true,
-                replaceHistory: false,
-                refreshQueue: false
-            });
-            if (!opened) {
-                window.location.href = url;
-            }
-            return;
+        const opened = await openAssignmentInPageByUrl(url, {
+            updateHistory: true,
+            replaceHistory: false,
+            refreshQueue: false
+        });
+        if (!opened) {
+            setAssignmentsStatus('Unable to open selected assignment in-page.', true);
         }
-        window.location.href = url;
     }
 
     function findScenarioBySendId(scenarios, sendId) {
@@ -1012,7 +1267,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function getScenarioKeysForAssignmentWindow(targetAssignmentId) {
-        const queue = Array.isArray(assignmentQueue) ? assignmentQueue : [];
+        const queue = (Array.isArray(assignmentQueue) ? assignmentQueue : [])
+            .filter(item => !isAssignmentPendingDone(item && item.assignment_id));
         if (!queue.length) return [];
         const targetId = String(targetAssignmentId || (assignmentContext && assignmentContext.assignment_id) || '').trim();
         const currentIndex = targetId
@@ -1020,38 +1276,78 @@ document.addEventListener('DOMContentLoaded', async () => {
             : 0;
         const resolvedIndex = currentIndex >= 0 ? currentIndex : 0;
         const windowAssignments = getCenteredWindowItems(queue, resolvedIndex, 5);
-        const scenarioKeys = [];
+        const sendIds = windowAssignments
+            .map((assignmentItem) => {
+                const item = assignmentItem || {};
+                const assignmentId = String(item.assignment_id || '').trim();
+                let sendId = String(item.send_id || '').trim();
+                if (!sendId && assignmentContext && assignmentId && String(assignmentContext.assignment_id) === assignmentId) {
+                    sendId = String(assignmentContext.send_id || '').trim();
+                }
+                return sendId;
+            })
+            .filter(Boolean);
 
-        for (let i = 0; i < windowAssignments.length; i++) {
-            const assignmentItem = windowAssignments[i] || {};
-            const assignmentId = String(assignmentItem.assignment_id || '').trim();
-            let sendId = String(assignmentItem.send_id || '').trim();
-            if (!sendId && assignmentContext && assignmentId && String(assignmentContext.assignment_id) === assignmentId) {
-                sendId = String(assignmentContext.send_id || '').trim();
-            }
-            if (!sendId) continue;
-            const scenarioKey = await resolveScenarioKeyForSendId(sendId, allScenariosData);
-            if (scenarioKey) scenarioKeys.push(String(scenarioKey));
-        }
-
-        return Array.from(new Set(scenarioKeys));
+        const keys = await Promise.all(sendIds.map(sendId => resolveScenarioKeyForSendId(sendId, allScenariosData, {
+            allowMonolithFallback: false
+        })));
+        return Array.from(new Set(keys.map(key => String(key || '').trim()).filter(Boolean)));
     }
 
     async function prefetchAssignmentWindow(targetAssignmentId) {
-        const scenarioKeys = await getScenarioKeysForAssignmentWindow(targetAssignmentId);
-        if (!scenarioKeys.length) return;
-        await ensureScenariosLoaded(scenarioKeys);
-        await ensureTemplatesLoadedForScenarioKeys(scenarioKeys);
+        const dedupeKey = String(targetAssignmentId || '').trim() || '__default__';
+        if (assignmentWindowPrefetchPromises[dedupeKey]) {
+            return assignmentWindowPrefetchPromises[dedupeKey];
+        }
+        assignmentWindowPrefetchPromises[dedupeKey] = (async () => {
+            const scenarioKeys = await getScenarioKeysForAssignmentWindow(targetAssignmentId);
+            if (!scenarioKeys.length) return;
+            await ensureScenariosLoaded(scenarioKeys, { allowMonolithFallback: false });
+            await ensureTemplatesLoadedForScenarioKeys(scenarioKeys);
+        })();
+
+        try {
+            await assignmentWindowPrefetchPromises[dedupeKey];
+        } finally {
+            delete assignmentWindowPrefetchPromises[dedupeKey];
+        }
+    }
+
+    function prefetchAssignmentWindowInBackground(targetAssignmentId) {
+        prefetchAssignmentWindow(targetAssignmentId).catch((error) => {
+            console.warn('Assignment prefetch window failed:', error);
+        });
+    }
+
+    async function skipInvalidAssignmentAndRefresh(assignment, params, reason) {
+        const sessionId = getAssignmentSessionId({ createIfMissing: true });
+        if (!sessionId) throw new Error('Missing assignment session id.');
+        const assignmentId = String(assignment && assignment.assignment_id || '').trim();
+        const token = String(params && params.token || '').trim();
+        if (!assignmentId || !token) {
+            throw new Error('Cannot skip assignment without assignment id and token.');
+        }
+        const skipRes = await fetchAssignmentPost('skipAssignment', {
+            assignment_id: assignmentId,
+            token,
+            session_id: sessionId,
+            app_base: getCurrentAppBaseUrl(),
+            reason: String(reason || 'missing_scenario')
+        });
+        applyAssignmentSessionState(skipRes && skipRes.session, { silent: true });
+        const nextQueue = Array.isArray(skipRes && skipRes.assignments) ? skipRes.assignments : [];
+        renderAssignmentQueue(nextQueue);
+        return nextQueue;
     }
 
     async function applyAssignmentContextToUi(options = {}) {
         if (!assignmentContext || !assignmentContext.scenarioKey) return;
 
-        await ensureScenariosLoaded([assignmentContext.scenarioKey]);
+        await ensureScenariosLoaded([assignmentContext.scenarioKey], { allowMonolithFallback: false });
         await ensureTemplatesLoadedForScenarioKeys([assignmentContext.scenarioKey]);
-        await prefetchAssignmentWindow(assignmentContext.assignment_id).catch((error) => {
-            console.warn('Assignment prefetch window failed:', error);
-        });
+        if (!allScenariosData || !allScenariosData[assignmentContext.scenarioKey]) {
+            throw new Error(`Scenario ${assignmentContext.scenarioKey} is unavailable in runtime chunks.`);
+        }
 
         setCurrentScenarioNumber(assignmentContext.scenarioKey);
         loadScenarioContent(assignmentContext.scenarioKey, allScenariosData || {});
@@ -1079,6 +1375,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         startAssignmentHeartbeat();
         selectCurrentAssignmentInQueue();
         updateSnapshotShareButtonVisibility();
+        prefetchAssignmentWindowInBackground(assignmentContext.assignment_id);
 
         if (options.updateHistory) {
             const method = options.replaceHistory ? 'replaceState' : 'pushState';
@@ -1102,32 +1399,85 @@ document.addEventListener('DOMContentLoaded', async () => {
             return false;
         }
         try {
-            const sessionId = getAssignmentSessionId({ createIfMissing: true });
-            if (!sessionId) throw new Error('Missing assignment session id.');
-            const response = await fetchAssignmentGet('getAssignment', {
-                assignment_id: params.aid,
-                token: params.token,
-                session_id: sessionId
-            });
-            applyAssignmentSessionState(response && response.session, { silent: true });
-            const assignment = response && response.assignment ? response.assignment : null;
-            if (!assignment) throw new Error('Assignment payload is missing.');
-
-            const scenarioKey = await resolveScenarioKeyForSendId(assignment.send_id, allScenariosData);
-            if (!scenarioKey) throw new Error(`Scenario for send_id ${assignment.send_id} was not found.`);
-
-            assignmentContext = buildAssignmentContextRecord(assignment, params, scenarioKey);
-
             if (options.refreshQueue) {
                 await refreshAssignmentQueue().catch(() => []);
             }
+            const maxAttempts = Math.max(
+                1,
+                Number(options.maxAttempts) || (Array.isArray(assignmentQueue) && assignmentQueue.length ? assignmentQueue.length : 5)
+            );
+            let currentParams = {
+                aid: String(params.aid || ''),
+                token: String(params.token || ''),
+                mode: String(params.mode || 'edit')
+            };
 
-            await applyAssignmentContextToUi({
-                updateHistory: !!options.updateHistory,
-                replaceHistory: !!options.replaceHistory,
-                params
-            });
-            return true;
+            for (let attempt = 0; attempt < maxAttempts; attempt++) {
+                const sessionId = getAssignmentSessionId({ createIfMissing: true });
+                if (!sessionId) throw new Error('Missing assignment session id.');
+                const response = await fetchAssignmentGet('getAssignment', {
+                    assignment_id: currentParams.aid,
+                    token: currentParams.token,
+                    session_id: sessionId
+                });
+                applyAssignmentSessionState(response && response.session, { silent: true });
+                const assignment = response && response.assignment ? response.assignment : null;
+                if (!assignment) throw new Error('Assignment payload is missing.');
+
+                if (isAssignmentPendingDone(assignment.assignment_id)) {
+                    const nextPendingParams = getNextAssignmentParamsFromQueue(assignmentQueue, {
+                        excludeAssignmentIds: [assignment.assignment_id],
+                        prefersView: currentParams.mode === 'view'
+                    });
+                    if (!nextPendingParams) {
+                        setAssignmentsStatus('Submission is still syncing in background. Please wait a moment.', true);
+                        return false;
+                    }
+                    currentParams = nextPendingParams;
+                    continue;
+                }
+
+                const scenarioKey = await resolveScenarioKeyForSendId(
+                    assignment.send_id,
+                    allScenariosData,
+                    { allowMonolithFallback: false }
+                );
+                if (!scenarioKey) {
+                    if (assignment.role !== 'editor') {
+                        throw new Error(`Scenario for send_id ${assignment.send_id} was not found.`);
+                    }
+                    const nextQueue = await skipInvalidAssignmentAndRefresh(
+                        assignment,
+                        currentParams,
+                        'missing_scenario'
+                    );
+                    const nextParams = getNextAssignmentParamsFromQueue(nextQueue, {
+                        excludeAssignmentIds: [assignment.assignment_id],
+                        prefersView: currentParams.mode === 'view'
+                    });
+                    if (!nextParams) {
+                        assignmentContext = null;
+                        updateSnapshotShareButtonVisibility();
+                        setAssignmentsStatus(
+                            'Assigned items are out of sync with scenarios. Queue refreshed; no valid conversation available.',
+                            true
+                        );
+                        return false;
+                    }
+                    currentParams = nextParams;
+                    continue;
+                }
+
+                assignmentContext = buildAssignmentContextRecord(assignment, currentParams, scenarioKey);
+                await applyAssignmentContextToUi({
+                    updateHistory: !!options.updateHistory,
+                    replaceHistory: !!options.replaceHistory,
+                    params: currentParams
+                });
+                return true;
+            }
+
+            throw new Error('No valid assignment could be opened from the current queue.');
         } catch (error) {
             console.error('Assignment open failed:', error);
             setAssignmentsStatus(`Assignment error: ${error.message || error}`, true);
@@ -1962,6 +2312,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const saved = assignmentKey ? (localStorage.getItem(assignmentKey) || fallback) : fallback;
             internalNotesEl.value = saved;
         }
+        updateSnapshotShareButtonVisibility();
     }
     
     // Render dynamic Promotions/Gifts from scenarios.json if provided
@@ -2418,6 +2769,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             stopAssignmentHeartbeat();
             await releaseAssignmentSession('logout').catch(() => ({ ok: false }));
             sendSessionLogout();
+            clearSubmitOutboxTimer();
+            writeSubmitOutboxJobs([]);
+            refreshPendingDoneAssignmentsFromOutbox([]);
             assignmentSessionState = null;
             clearAssignmentSessionId();
             localStorage.removeItem('agentName');
@@ -2498,6 +2852,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             queue = await refreshAssignmentQueue().catch(() => []);
         }
         if (!Array.isArray(queue) || !queue.length) return false;
+        queue = queue.filter(item => !isAssignmentPendingDone(item && item.assignment_id));
+        if (!queue.length) {
+            setAssignmentsStatus('Background sync is still finishing. Please wait.', true);
+            return false;
+        }
 
         const currentId = assignmentContext && assignmentContext.assignment_id
             ? String(assignmentContext.assignment_id)
@@ -2511,25 +2870,18 @@ document.addEventListener('DOMContentLoaded', async () => {
             : fallbackIndex;
         const target = queue[targetIndex];
         const prefersViewUrl = !!(assignmentContext && (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view'));
-        const editUrl = target && target.edit_url ? String(target.edit_url) : '';
-        const viewUrl = target && target.view_url ? String(target.view_url) : '';
-        const url = prefersViewUrl ? (viewUrl || editUrl) : (editUrl || viewUrl);
+        const url = getAssignmentUrlFromQueueItem(target, { prefersView: prefersViewUrl });
         if (!url) return false;
 
-        if (assignmentContext && assignmentContext.assignment_id) {
-            const opened = await openAssignmentInPageByUrl(url, {
-                updateHistory: true,
-                replaceHistory: false,
-                refreshQueue: false
-            });
-            if (!opened) {
-                window.location.href = url;
-                return true;
-            }
-            return true;
+        const opened = await openAssignmentInPageByUrl(url, {
+            updateHistory: true,
+            replaceHistory: false,
+            refreshQueue: false
+        });
+        if (!opened) {
+            setAssignmentsStatus('Unable to open the target assignment.', true);
+            return false;
         }
-
-        window.location.href = url;
         return true;
     }
 
@@ -2542,6 +2894,53 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!movedByAssignment) {
             await navigateScenarioList(direction);
         }
+    }
+
+    function getNextQueueItem(queue, currentAssignmentId, direction, excludeAssignmentIds = []) {
+        const list = (Array.isArray(queue) ? queue : [])
+            .filter(item => !isAssignmentPendingDone(item && item.assignment_id));
+        if (!list.length) return null;
+
+        const excludeSet = new Set((Array.isArray(excludeAssignmentIds) ? excludeAssignmentIds : [])
+            .map(id => String(id || '').trim())
+            .filter(Boolean));
+        const currentId = String(currentAssignmentId || '').trim();
+        const currentIndex = currentId
+            ? list.findIndex(item => String((item && item.assignment_id) || '').trim() === currentId)
+            : -1;
+
+        if (currentIndex >= 0) {
+            for (let step = 1; step <= list.length; step++) {
+                const idx = (currentIndex + (step * direction) + list.length) % list.length;
+                const item = list[idx] || {};
+                const assignmentId = String(item.assignment_id || '').trim();
+                if (!assignmentId || excludeSet.has(assignmentId)) continue;
+                return item;
+            }
+        }
+
+        for (let i = 0; i < list.length; i++) {
+            const item = list[i] || {};
+            const assignmentId = String(item.assignment_id || '').trim();
+            if (!assignmentId || excludeSet.has(assignmentId)) continue;
+            return item;
+        }
+        return null;
+    }
+
+    async function openNextAssignmentAfterOptimisticSubmit(submittedAssignmentId) {
+        const prefersView = !!(assignmentContext && (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view'));
+        const nextItem = getNextQueueItem(assignmentQueue, submittedAssignmentId, 1, [submittedAssignmentId]);
+        if (!nextItem) return false;
+
+        const nextUrl = getAssignmentUrlFromQueueItem(nextItem, { prefersView });
+        if (!nextUrl) return false;
+        const opened = await openAssignmentInPageByUrl(nextUrl, {
+            updateHistory: true,
+            replaceHistory: false,
+            refreshQueue: false
+        });
+        return !!opened;
     }
 
     function isTypingTarget(target) {
@@ -2832,9 +3231,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     // Initialize everything
-    updateSnapshotShareButtonVisibility();
     const snapshotParams = getSnapshotParamsFromUrl();
     const hasSnapshot = !!(snapshotParams.snapshotId && snapshotParams.snapshotToken);
+    const existingSubmitOutboxJobs = readSubmitOutboxJobs();
+    refreshPendingDoneAssignmentsFromOutbox(existingSubmitOutboxJobs);
+    if (existingSubmitOutboxJobs.length && !hasSnapshot) {
+        scheduleSubmitOutboxProcessing(0);
+    }
+    updateSnapshotShareButtonVisibility();
     const assignmentParams = getAssignmentParamsFromUrl();
     const hasAid = !!assignmentParams.aid;
 
@@ -2890,10 +3294,30 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const queue = await refreshAssignmentQueue();
                     if (queue.length) {
                         setAssignmentsStatus('Queue loaded. Opening first assignment...', false);
+                        const firstParams = getNextAssignmentParamsFromQueue(queue, {
+                            prefersView: false
+                        });
+                        if (firstParams) {
+                            const opened = await openAssignmentInPage(firstParams, {
+                                updateHistory: true,
+                                replaceHistory: true,
+                                refreshQueue: false
+                            });
+                            if (opened) {
+                                return;
+                            }
+                        }
                         const firstEditUrl = queue[0].edit_url || queue[0].view_url || '';
                         if (firstEditUrl) {
-                            window.location.href = firstEditUrl;
-                            return;
+                            const openedFallback = await openAssignmentInPageByUrl(firstEditUrl, {
+                                updateHistory: true,
+                                replaceHistory: true,
+                                refreshQueue: false
+                            });
+                            if (openedFallback) {
+                                return;
+                            }
+                            setAssignmentsStatus('Queue loaded, but first assignment could not be opened.', true);
                         }
                     } else {
                         setAssignmentsStatus('No assignments available.', false);
@@ -3113,6 +3537,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
                 return;
             }
+            if (assignmentContext && assignmentContext.assignment_id && isAssignmentPendingDone(assignmentContext.assignment_id)) {
+                if (formStatus) {
+                    formStatus.textContent = 'This conversation is already submitted and syncing in the background.';
+                    formStatus.style.color = '#e74c3c';
+                }
+                return;
+            }
             
             // Collect all form data
             const formData = new FormData(customForm);
@@ -3212,76 +3643,60 @@ document.addEventListener('DOMContentLoaded', async () => {
                     zeroTolerance: zeroToleranceLabel || '',
                     notes: notesVal
                 };
-
-                const res = await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'cors',
-                    headers: { 'Content-Type': 'text/plain' },
-                    body: JSON.stringify(payload)
-                });
-                let success = false;
-                let serverMsg = '';
-                try {
-                    const json = await res.json();
-                    success = res.ok && json && json.status === 'success';
-                    serverMsg = (json && json.message) ? json.message : '';
-                } catch (parseErr) {
-                    // Fall back to text for debugging
-                    try {
-                        const txt = await res.text();
-                        serverMsg = txt || '';
-                    } catch (_) {}
-                    success = res.ok; // if 2xx, treat as success even if body not JSON
-                }
-
-                if (success) {
-                    if (assignmentContext && assignmentContext.role === 'editor') {
-                        const sessionId = getAssignmentSessionId();
-                        if (!sessionId) {
-                            throw new Error('Missing assignment session id.');
-                        }
-                        await saveAssignmentDraft(customForm).catch(() => {});
-                        const doneRes = await fetchAssignmentPost('done', {
-                            assignment_id: assignmentContext.assignment_id,
-                            token: assignmentContext.token,
-                            session_id: sessionId,
-                            app_base: getCurrentAppBaseUrl()
-                        });
-                        applyAssignmentSessionState(doneRes && doneRes.session, { silent: true });
-                        const nextQueue = Array.isArray(doneRes.assignments) ? doneRes.assignments : [];
-                        renderAssignmentQueue(nextQueue);
-                        const nextUrl = nextQueue.length
-                            ? String(nextQueue[0].edit_url || nextQueue[0].view_url || '').trim()
-                            : '';
-                        if (nextUrl) {
-                            const opened = await openAssignmentInPageByUrl(nextUrl, {
-                                updateHistory: true,
-                                replaceHistory: false,
-                                refreshQueue: false
-                            });
-                            if (opened) return;
-                            window.location.href = nextUrl;
-                            return;
-                        }
+                const submitContext = assignmentContext && assignmentContext.role === 'editor'
+                    ? {
+                        assignment_id: String(assignmentContext.assignment_id || ''),
+                        token: String(assignmentContext.token || ''),
+                        mode: String(assignmentContext.mode || 'edit')
                     }
-                    if (formStatus) { 
-                        formStatus.textContent = 'Submitted successfully.'; 
-                        formStatus.style.color = '#28a745'; 
+                    : null;
+
+                if (submitContext && submitContext.assignment_id && submitContext.token) {
+                    const sessionId = getAssignmentSessionId();
+                    if (!sessionId) {
+                        throw new Error('Missing assignment session id.');
                     }
+
+                    queueSubmitOutboxJob({
+                        assignment_id: submitContext.assignment_id,
+                        token: submitContext.token,
+                        session_id: sessionId,
+                        app_base: getCurrentAppBaseUrl(),
+                        payload
+                    });
+
                     customForm.reset();
                     checkboxInputs.forEach(cb => { cb.checked = true; });
                     try {
-                        const key = assignmentContext && assignmentContext.assignment_id
-                            ? assignmentFormStateStorageKey()
-                            : 'customFormState';
-                        localStorage.removeItem(key);
+                        localStorage.removeItem(`customFormState_assignment_${submitContext.assignment_id}`);
+                        localStorage.removeItem(`internalNotes_assignment_${submitContext.assignment_id}`);
                     } catch (_) {}
-                } else {
+
                     if (formStatus) {
-                        formStatus.textContent = 'Submission failed. ' + (serverMsg ? `Details: ${serverMsg}` : 'Please try again.');
-                        formStatus.style.color = '#e74c3c';
+                        formStatus.textContent = 'Submitted. Moving to next conversation...';
+                        formStatus.style.color = '#28a745';
                     }
+                    setAssignmentsStatus('Submitted. Syncing in background and opening next conversation...', false);
+                    const moved = await openNextAssignmentAfterOptimisticSubmit(submitContext.assignment_id);
+                    if (!moved) {
+                        setAssignmentsStatus('Submitted. Syncing in background; no other assigned conversation is ready yet.', false);
+                    }
+                    return;
                 }
+
+                await submitEvaluationFormPayload(payload);
+                if (formStatus) {
+                    formStatus.textContent = 'Submitted successfully.';
+                    formStatus.style.color = '#28a745';
+                }
+                customForm.reset();
+                checkboxInputs.forEach(cb => { cb.checked = true; });
+                try {
+                    const key = assignmentContext && assignmentContext.assignment_id
+                        ? assignmentFormStateStorageKey()
+                        : 'customFormState';
+                    localStorage.removeItem(key);
+                } catch (_) {}
             } catch (err) {
                 console.error('Form submission error:', err);
                 if (formStatus) { 
@@ -3298,6 +3713,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     initPanelResizing();
 
     // Attempt to record logout on tab close/navigation
+    window.addEventListener('online', () => {
+        const jobs = readSubmitOutboxJobs();
+        if (jobs.length) {
+            scheduleSubmitOutboxProcessing(0);
+        }
+    });
+
     window.addEventListener('beforeunload', () => {
         stopAssignmentHeartbeat();
         if (isExplicitLogoutInProgress) {
