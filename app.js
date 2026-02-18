@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const ASSIGNMENT_HEARTBEAT_INTERVAL_MS = 60 * 1000;
     const ASSIGNMENT_API_TIMEOUT_MS = 15000;
     const ASSIGNMENT_GET_TIMEOUT_MS = 25000;
+    const ASSIGNMENT_DONE_TIMEOUT_MS = 30000;
+    const ASSIGNMENT_DRAFT_TIMEOUT_MS = 25000;
+    const ASSIGNMENT_HEARTBEAT_TIMEOUT_MS = 25000;
+    const ASSIGNMENT_HEARTBEAT_MIN_GAP_MS = 15000;
     const ASSIGNMENT_PREFETCH_TIMEOUT_MS = 10000;
     const ASSIGNMENT_PREFETCH_CONCURRENCY = 1;
     const SUBMIT_ADVANCE_DELAY_MS = 1200;
@@ -59,6 +63,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     let assignmentSessionState = null;
     let assignmentHeartbeatTimer = null;
     let assignmentHeartbeatWarningShown = false;
+    let assignmentHeartbeatInFlight = false;
+    let assignmentLastHeartbeatAt = 0;
     let isExplicitLogoutInProgress = false;
     let pendingLogoutReleasePayload = null;
     let isSnapshotMode = false;
@@ -587,7 +593,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         token: job.token,
                         session_id: job.session_id,
                         app_base: job.app_base || getCurrentAppBaseUrl()
-                    });
+                    }, { timeoutMs: ASSIGNMENT_DONE_TIMEOUT_MS });
                     applyAssignmentSessionState(doneRes && doneRes.session, { silent: true });
                     const nextQueue = Array.isArray(doneRes.assignments) ? doneRes.assignments : [];
                     renderAssignmentQueue(nextQueue);
@@ -605,6 +611,19 @@ document.addEventListener('DOMContentLoaded', async () => {
                 } catch (error) {
                     const errorText = String((error && error.message) || error || 'Unknown background submit error');
                     const lowerError = errorText.toLowerCase();
+                    const isAlreadyDone =
+                        lowerError.includes('assignment is not in an active state') ||
+                        lowerError.includes('already done');
+                    if (isAlreadyDone) {
+                        job.state = 'done';
+                        job.last_error = '';
+                        debugLog('outbox_done_success', {
+                            assignmentId: String(job.assignment_id || ''),
+                            attempts: Number(job.attempts || 0),
+                            dedupedByState: true
+                        });
+                        continue;
+                    }
                     const isTerminal =
                         lowerError.includes('not reserved for this session') ||
                         lowerError.includes('assignment not found') ||
@@ -676,14 +695,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             throw new Error('Cannot queue submit job without assignment context.');
         }
 
-        const jobs = filterOutboxJobsForSession(readSubmitOutboxJobs(), nextJob.session_id);
+        const existingJobs = filterOutboxJobsForSession(readSubmitOutboxJobs(), nextJob.session_id);
+        const jobs = existingJobs.filter((job) => String(job && job.assignment_id || '').trim() !== nextJob.assignment_id);
+        const dedupedCount = Math.max(0, existingJobs.length - jobs.length);
         jobs.unshift(nextJob);
         writeSubmitOutboxJobs(jobs);
         refreshPendingDoneAssignmentsFromOutbox(jobs);
         debugLog('outbox_job_enqueued', {
             assignmentId: String(nextJob.assignment_id || ''),
             sessionId: String(nextJob.session_id || ''),
-            queueSize: jobs.length
+            queueSize: jobs.length,
+            dedupedCount
         });
         scheduleSubmitOutboxProcessing(0);
         return nextJob;
@@ -1245,15 +1267,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         return json;
     }
 
-    async function fetchAssignmentPost(action, payload) {
+    async function fetchAssignmentPost(action, payload, options = {}) {
         const params = new URLSearchParams({ action });
         const url = `${GOOGLE_SCRIPT_URL}?${params.toString()}`;
+        const timeoutMs = Number(options.timeoutMs) > 0
+            ? Number(options.timeoutMs)
+            : ASSIGNMENT_API_TIMEOUT_MS;
         const res = await fetchJsonWithTimeout(url, {
             method: 'POST',
             mode: 'cors',
             headers: { 'Content-Type': 'text/plain' },
             body: JSON.stringify(payload || {})
-        });
+        }, timeoutMs);
         const json = await res.json().catch(() => ({}));
         if (!res.ok || (json && json.error)) {
             throw new Error((json && json.error) ? json.error : `Request failed (${res.status})`);
@@ -1268,26 +1293,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    async function sendAssignmentHeartbeat() {
+    async function sendAssignmentHeartbeat(options = {}) {
         if (isSnapshotMode) return;
         if (!canUseAssignmentMode()) return;
         const email = getLoggedInEmail();
         const sessionId = getAssignmentSessionId();
         if (!email || !sessionId) return;
+        const force = !!(options && options.force);
+        const nowMs = Date.now();
+        if (!force && assignmentLastHeartbeatAt && (nowMs - assignmentLastHeartbeatAt) < ASSIGNMENT_HEARTBEAT_MIN_GAP_MS) {
+            return;
+        }
+        if (assignmentHeartbeatInFlight) return;
+        assignmentHeartbeatInFlight = true;
         try {
             const response = await fetchAssignmentPost('heartbeat', {
                 email,
                 session_id: sessionId,
                 client_ts: new Date().toISOString()
-            });
+            }, { timeoutMs: ASSIGNMENT_HEARTBEAT_TIMEOUT_MS });
             applyAssignmentSessionState(response && response.session, { silent: true });
             assignmentHeartbeatWarningShown = false;
+            assignmentLastHeartbeatAt = Date.now();
         } catch (error) {
             console.warn('Assignment heartbeat failed:', error);
             if (!assignmentHeartbeatWarningShown) {
                 setAssignmentsStatus('Assignment heartbeat warning. Your queue is still open; keep working.', true);
                 assignmentHeartbeatWarningShown = true;
             }
+        } finally {
+            assignmentHeartbeatInFlight = false;
         }
     }
 
@@ -1298,7 +1333,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const sessionId = getAssignmentSessionId();
         if (!sessionId) return;
         stopAssignmentHeartbeat();
-        sendAssignmentHeartbeat();
+        sendAssignmentHeartbeat({ force: true });
         assignmentHeartbeatTimer = setInterval(() => {
             sendAssignmentHeartbeat();
         }, ASSIGNMENT_HEARTBEAT_INTERVAL_MS);
@@ -2236,7 +2271,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             session_id: sessionId,
             form_state_json: formStateRaw,
             internal_note: notesValue
-        });
+        }, { timeoutMs: ASSIGNMENT_DRAFT_TIMEOUT_MS });
         applyAssignmentSessionState(response && response.session, { silent: true });
     }
 
@@ -2873,7 +2908,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (messageElement) {
             messageElement.textContent = getFirstCustomerMessageFromScenario(scenario, conversation);
         }
-        else console.error('customerMessage element not found');
+        else debugLog('customerMessage element not found');
 
         // Render conversation and always land on the latest message.
         renderConversationMessages(Array.isArray(conversation) ? conversation : [], scenario);

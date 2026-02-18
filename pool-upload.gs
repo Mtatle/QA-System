@@ -94,11 +94,9 @@ function doGet(e) {
         return jsonResponse_({ error: 'Missing required query params: assignment_id, token, session_id' });
       }
 
-      return withScriptLock_(function() {
-        const result = getAssignmentForSession_(assignmentId, token, sessionId);
-        if (result.error) return jsonResponse_({ error: result.error });
-        return jsonResponse_(result);
-      });
+      const result = getAssignmentForSession_(assignmentId, token, sessionId);
+      if (result.error) return jsonResponse_({ error: result.error });
+      return jsonResponse_(result);
     }
 
     if (action === 'getUploadedScenarios') {
@@ -355,14 +353,10 @@ function getOrTopUpQueueForSession_(email, appBaseUrl, sessionId) {
 
 function getAssignmentForSession_(assignmentId, token, sessionId) {
   const state = loadAssignmentState_();
-  const now = nowIso_();
-
-  cleanupStaleSessions_(state, now);
 
   const sessionIndex = findSessionIndex_(state.sessionsRows, sessionId);
   if (sessionIndex < 0) return { error: 'Session not found' };
   const session = rowToSessionObject_(state.sessionsRows[sessionIndex]);
-  state.sessionsRows[sessionIndex] = sessionToRow_(session);
 
   const assignmentWithIndex = findAssignmentById_(state.assignmentsRows, assignmentId);
   if (!assignmentWithIndex) return { error: 'Assignment not found' };
@@ -376,8 +370,6 @@ function getAssignmentForSession_(assignmentId, token, sessionId) {
   if (status !== 'DONE' && ownerSessionId !== sessionId) {
     return { error: 'Assignment is not reserved for this session' };
   }
-
-  persistAssignmentState_(state);
 
   return {
     assignment: {
@@ -426,8 +418,8 @@ function updateAssignmentDraftForSession_(assignmentId, token, sessionId, formSt
     session.last_heartbeat_at = now;
   }
 
-  state.assignmentsRows[found.index] = assignmentToRow_(assignment);
-  state.sessionsRows[sessionIndex] = sessionToRow_(session);
+  setAssignmentRow_(state, found.index, assignment);
+  setSessionRow_(state, sessionIndex, session);
   persistAssignmentState_(state);
 
   return { ok: true, session: sessionToPayload_(session) };
@@ -458,6 +450,31 @@ function markAssignmentDoneForSession_(assignmentId, token, sessionId, appBaseUr
   }
 
   const beforeStatus = String(assignment.status || '').toUpperCase();
+  if (beforeStatus === 'DONE') {
+    if (isSessionLive_(session)) {
+      session.last_heartbeat_at = now;
+      setSessionRow_(state, sessionIndex, session);
+      persistAssignmentState_(state);
+    }
+
+    const assignmentsAlreadyDone = getActiveAssignmentsForSession_(state.assignmentsRows, email, sessionId)
+      .slice(0, TARGET_QUEUE_SIZE)
+      .map(function(a) {
+        return {
+          assignment_id: a.assignment_id,
+          send_id: a.send_id,
+          status: a.status,
+          edit_url: buildAssignmentUrl_(baseUrl, a.assignment_id, a.editor_token, 'edit'),
+          view_url: buildAssignmentUrl_(baseUrl, a.assignment_id, a.viewer_token, 'view')
+        };
+      });
+
+    return {
+      assignments: assignmentsAlreadyDone,
+      session: sessionToPayload_(session),
+      already_done: true
+    };
+  }
   if (!ACTIVE_ASSIGNMENT_STATUSES[beforeStatus]) {
     return { error: 'Assignment is not in an active state' };
   }
@@ -468,7 +485,7 @@ function markAssignmentDoneForSession_(assignmentId, token, sessionId, appBaseUr
 
   const poolIndex = findPoolIndexBySendId_(state.poolRows, assignment.send_id);
   if (poolIndex >= 0) {
-    state.poolRows[poolIndex][1] = 'DONE';
+    setPoolStatusByIndex_(state, poolIndex, 'DONE');
   }
 
   appendHistoryRow_(state.historyRowsToAppend, {
@@ -490,8 +507,8 @@ function markAssignmentDoneForSession_(assignmentId, token, sessionId, appBaseUr
     assignFromPool_(state, email, sessionId, now, baseUrl, 1);
   }
 
-  state.assignmentsRows[found.index] = assignmentToRow_(assignment);
-  state.sessionsRows[sessionIndex] = sessionToRow_(session);
+  setAssignmentRow_(state, found.index, assignment);
+  setSessionRow_(state, sessionIndex, session);
   persistAssignmentState_(state);
 
   const assignments = getActiveAssignmentsForSession_(state.assignmentsRows, email, sessionId)
@@ -560,8 +577,8 @@ function skipAssignmentForSession_(assignmentId, token, sessionId, appBaseUrl, r
     assignFromPool_(state, email, sessionId, now, baseUrl, 1);
   }
 
-  state.assignmentsRows[found.index] = assignmentToRow_(assignment);
-  state.sessionsRows[sessionIndex] = sessionToRow_(session);
+  setAssignmentRow_(state, found.index, assignment);
+  setSessionRow_(state, sessionIndex, session);
   persistAssignmentState_(state);
 
   const assignments = getActiveAssignmentsForSession_(state.assignmentsRows, email, sessionId)
@@ -592,7 +609,7 @@ function heartbeatSession_(email, sessionId, clientTs) {
   let session;
   if (sessionIndex < 0) {
     session = createSessionObject_(email, sessionId, '', now);
-    state.sessionsRows.push(sessionToRow_(session));
+    appendSessionRow_(state, session);
     appendHistoryRow_(state.historyRowsToAppend, {
       event_type: 'session_created',
       assignment_id: '',
@@ -622,7 +639,7 @@ function heartbeatSession_(email, sessionId, clientTs) {
     session.last_heartbeat_at = now;
   }
 
-  state.sessionsRows[sessionIndex] = sessionToRow_(session);
+  setSessionRow_(state, sessionIndex, session);
   persistAssignmentState_(state);
 
   return {
@@ -667,7 +684,7 @@ function releaseSession_(email, sessionId, reason) {
     detail: `reason=${reason || 'manual'}`
   });
 
-  state.sessionsRows[sessionIndex] = sessionToRow_(session);
+  setSessionRow_(state, sessionIndex, session);
   persistAssignmentState_(state);
 
   return {
@@ -860,23 +877,29 @@ function loadAssignmentState_() {
   const poolSheet = getOrCreateSheet_(spreadsheet, POOL_SHEET, POOL_HEADERS);
   const sessionsSheet = getOrCreateSheet_(spreadsheet, QA_SESSIONS_SHEET, SESSION_HEADERS);
   const historySheet = getOrCreateSheet_(spreadsheet, QA_ASSIGNMENT_HISTORY_SHEET, HISTORY_HEADERS);
+  const assignmentsRows = getSheetDataRows_(assignmentsSheet, ASSIGNMENTS_HEADERS.length);
+  const poolRows = getSheetDataRows_(poolSheet, POOL_HEADERS.length);
+  const sessionsRows = getSheetDataRows_(sessionsSheet, SESSION_HEADERS.length);
 
   return {
     assignmentsSheet: assignmentsSheet,
     poolSheet: poolSheet,
     sessionsSheet: sessionsSheet,
     historySheet: historySheet,
-    assignmentsRows: getSheetDataRows_(assignmentsSheet, ASSIGNMENTS_HEADERS.length),
-    poolRows: getSheetDataRows_(poolSheet, POOL_HEADERS.length),
-    sessionsRows: getSheetDataRows_(sessionsSheet, SESSION_HEADERS.length),
-    historyRowsToAppend: []
+    assignmentsRows: assignmentsRows,
+    poolRows: poolRows,
+    sessionsRows: sessionsRows,
+    historyRowsToAppend: [],
+    assignmentsDirty: {},
+    poolDirty: {},
+    sessionsDirty: {}
   };
 }
 
 function persistAssignmentState_(state) {
-  writeSheetDataRows_(state.assignmentsSheet, state.assignmentsRows, ASSIGNMENTS_HEADERS.length);
-  writeSheetDataRows_(state.poolSheet, state.poolRows, POOL_HEADERS.length);
-  writeSheetDataRows_(state.sessionsSheet, state.sessionsRows, SESSION_HEADERS.length);
+  writeDirtySheetDataRows_(state.assignmentsSheet, state.assignmentsRows, ASSIGNMENTS_HEADERS.length, state.assignmentsDirty);
+  writeDirtySheetDataRows_(state.poolSheet, state.poolRows, POOL_HEADERS.length, state.poolDirty);
+  writeDirtySheetDataRows_(state.sessionsSheet, state.sessionsRows, SESSION_HEADERS.length, state.sessionsDirty);
 
   if (state.historyRowsToAppend && state.historyRowsToAppend.length > 0) {
     const startRow = state.historySheet.getLastRow() + 1;
@@ -884,19 +907,95 @@ function persistAssignmentState_(state) {
       .getRange(startRow, 1, state.historyRowsToAppend.length, HISTORY_HEADERS.length)
       .setValues(state.historyRowsToAppend);
   }
+
+  state.historyRowsToAppend = [];
+  state.assignmentsDirty = {};
+  state.poolDirty = {};
+  state.sessionsDirty = {};
 }
 
-function writeSheetDataRows_(sheet, rows, colCount) {
-  const existing = Math.max(0, sheet.getLastRow() - 1);
-  const next = Array.isArray(rows) ? rows : [];
+function writeDirtySheetDataRows_(sheet, rows, colCount, dirtyMap) {
+  const nextRows = Array.isArray(rows) ? rows : [];
+  const dirtyIndexes = getDirtyIndexes_(dirtyMap, nextRows.length);
+  if (!dirtyIndexes.length) return;
 
-  if (next.length > 0) {
-    sheet.getRange(2, 1, next.length, colCount).setValues(next);
+  const groups = groupContiguousIndexes_(dirtyIndexes);
+  for (let i = 0; i < groups.length; i++) {
+    const startIndex = groups[i].start;
+    const length = groups[i].length;
+    const values = nextRows.slice(startIndex, startIndex + length);
+    if (!values.length) continue;
+    sheet.getRange(startIndex + 2, 1, values.length, colCount).setValues(values);
   }
+}
 
-  if (existing > next.length) {
-    sheet.getRange(next.length + 2, 1, existing - next.length, colCount).clearContent();
+function getDirtyIndexes_(dirtyMap, rowCount) {
+  if (!dirtyMap) return [];
+  const indexes = [];
+  for (const key in dirtyMap) {
+    if (!Object.prototype.hasOwnProperty.call(dirtyMap, key)) continue;
+    const idx = Number(key);
+    if (!Number.isFinite(idx)) continue;
+    if (idx < 0 || idx >= rowCount) continue;
+    indexes.push(idx);
   }
+  indexes.sort(function(a, b) { return a - b; });
+  return indexes;
+}
+
+function groupContiguousIndexes_(indexes) {
+  if (!indexes || !indexes.length) return [];
+  const groups = [];
+  let start = indexes[0];
+  let prev = indexes[0];
+
+  for (let i = 1; i < indexes.length; i++) {
+    const current = indexes[i];
+    if (current === prev + 1) {
+      prev = current;
+      continue;
+    }
+    groups.push({ start: start, length: (prev - start + 1) });
+    start = current;
+    prev = current;
+  }
+  groups.push({ start: start, length: (prev - start + 1) });
+  return groups;
+}
+
+function markDirtyIndex_(dirtyMap, index) {
+  const idx = Number(index);
+  if (!dirtyMap || !Number.isFinite(idx) || idx < 0) return;
+  dirtyMap[String(idx)] = true;
+}
+
+function setAssignmentRow_(state, index, assignment) {
+  state.assignmentsRows[index] = assignmentToRow_(assignment);
+  markDirtyIndex_(state.assignmentsDirty, index);
+}
+
+function appendAssignmentRow_(state, assignment) {
+  const index = state.assignmentsRows.push(assignmentToRow_(assignment)) - 1;
+  markDirtyIndex_(state.assignmentsDirty, index);
+  return index;
+}
+
+function setSessionRow_(state, index, session) {
+  state.sessionsRows[index] = sessionToRow_(session);
+  markDirtyIndex_(state.sessionsDirty, index);
+}
+
+function appendSessionRow_(state, session) {
+  const index = state.sessionsRows.push(sessionToRow_(session)) - 1;
+  markDirtyIndex_(state.sessionsDirty, index);
+  return index;
+}
+
+function setPoolStatusByIndex_(state, index, status) {
+  const idx = Number(index);
+  if (!Number.isFinite(idx) || idx < 0 || idx >= state.poolRows.length) return;
+  state.poolRows[idx][1] = String(status || '');
+  markDirtyIndex_(state.poolDirty, idx);
 }
 
 function cleanupStaleSessions_(state, nowIso) {
@@ -922,7 +1021,7 @@ function cleanupStaleSessions_(state, nowIso) {
     session.ended_at = nowIso;
     session.end_reason = timeoutReason;
     session.last_heartbeat_at = nowIso;
-    state.sessionsRows[i] = sessionToRow_(session);
+    setSessionRow_(state, i, session);
     timedOutCount += 1;
 
     appendHistoryRow_(state.historyRowsToAppend, {
@@ -960,7 +1059,7 @@ function resolveQueueSession_(state, email, requestedSessionId, appBase, nowIso)
       existingRequested.ended_at = '';
       existingRequested.end_reason = '';
       if (appBase) existingRequested.app_base = appBase;
-      state.sessionsRows[requestedIndex] = sessionToRow_(existingRequested);
+      setSessionRow_(state, requestedIndex, existingRequested);
       appendHistoryRow_(state.historyRowsToAppend, {
         event_type: 'session_reclaimed',
         assignment_id: '',
@@ -996,7 +1095,7 @@ function resolveQueueSession_(state, email, requestedSessionId, appBase, nowIso)
     reclaimed.ended_at = '';
     reclaimed.end_reason = '';
     if (appBase) reclaimed.app_base = appBase;
-    state.sessionsRows[bestIndex] = sessionToRow_(reclaimed);
+    setSessionRow_(state, bestIndex, reclaimed);
     appendHistoryRow_(state.historyRowsToAppend, {
       event_type: 'session_reclaimed',
       assignment_id: '',
@@ -1012,7 +1111,7 @@ function resolveQueueSession_(state, email, requestedSessionId, appBase, nowIso)
 
   const newSessionId = (requested && requestedIndex < 0) ? requested : createServerSessionId_();
   const created = createSessionObject_(normalizedEmail, newSessionId, appBase, nowIso);
-  state.sessionsRows.push(sessionToRow_(created));
+  appendSessionRow_(state, created);
   appendHistoryRow_(state.historyRowsToAppend, {
     event_type: 'session_created',
     assignment_id: '',
@@ -1061,7 +1160,7 @@ function releaseOtherActiveSessionsForEmail_(state, email, keepSessionId, nowIso
     session.ended_at = nowIso;
     session.end_reason = 'superseded_by_new_session';
     session.last_heartbeat_at = nowIso;
-    state.sessionsRows[i] = sessionToRow_(session);
+    setSessionRow_(state, i, session);
 
     appendHistoryRow_(state.historyRowsToAppend, {
       event_type: 'session_superseded',
@@ -1086,7 +1185,7 @@ function releaseActiveAssignmentsForEmailOutsideSession_(state, email, keepSessi
 
     const released = releaseSingleAssignment_(state, assignment, status, nowIso, reason || 'superseded');
     if (released) {
-      state.assignmentsRows[i] = assignmentToRow_(assignment);
+      setAssignmentRow_(state, i, assignment);
     }
   }
 }
@@ -1124,8 +1223,8 @@ function assignFromPool_(state, email, sessionId, nowIso, appBase, count) {
       assigned_at: nowIso
     };
 
-    state.assignmentsRows.push(assignmentToRow_(assignment));
-    state.poolRows[i][1] = 'ASSIGNED';
+    appendAssignmentRow_(state, assignment);
+    setPoolStatusByIndex_(state, i, 'ASSIGNED');
 
     appendHistoryRow_(state.historyRowsToAppend, {
       event_type: 'assignment_assigned',
@@ -1152,7 +1251,7 @@ function releaseAssignmentsForSession_(state, sessionId, reason, nowIso) {
 
     const released = releaseSingleAssignment_(state, assignment, status, nowIso, reason || 'released');
     if (!released) continue;
-    state.assignmentsRows[i] = assignmentToRow_(assignment);
+    setAssignmentRow_(state, i, assignment);
     releasedCount++;
   }
   return releasedCount;
@@ -1165,7 +1264,7 @@ function releaseSingleAssignment_(state, assignment, fromStatus, nowIso, reason)
   if (poolIndex >= 0) {
     const poolStatus = String(state.poolRows[poolIndex][1] || '').toUpperCase();
     if (poolStatus !== 'DONE') {
-      state.poolRows[poolIndex][1] = 'AVAILABLE';
+      setPoolStatusByIndex_(state, poolIndex, 'AVAILABLE');
     }
   }
 
