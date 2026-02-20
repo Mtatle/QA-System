@@ -1,33 +1,43 @@
+const fs = require('fs');
+const path = require('path');
+
+function loadRuntimeSendIds(fallback = []) {
+  try {
+    const indexPath = path.resolve(__dirname, '../../../data/scenarios/index.json');
+    const indexPayload = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+    const fromById = indexPayload && indexPayload.byId ? Object.keys(indexPayload.byId) : [];
+    const ids = fromById.map((v) => String(v || '').trim()).filter(Boolean);
+    if (ids.length) return ids;
+  } catch (_) {
+    // Ignore file read/index parse errors and fall back to static ids.
+  }
+  return Array.isArray(fallback)
+    ? fallback.map((v) => String(v || '').trim()).filter(Boolean)
+    : [];
+}
+
 function createMockAssignmentApi(options = {}) {
   const baseAppUrl = String(options.baseAppUrl || 'http://127.0.0.1:4173/app.html');
   const sessionId = String(options.sessionId || 'pw_session_1');
 
-  const assignments = [
-    {
-      assignment_id: 'aid-1',
-      send_id: '019bebf7-17aa-48de-f000-0000f506a3fe',
-      status: 'ASSIGNED',
-      token: 'token-aid-1',
-      form_state_json: '',
-      internal_note: '',
-    },
-    {
-      assignment_id: 'aid-2',
-      send_id: '019bd3ae-2a24-478d-f000-0000efb67321',
-      status: 'ASSIGNED',
-      token: 'token-aid-2',
-      form_state_json: '',
-      internal_note: '',
-    },
-    {
-      assignment_id: 'aid-3',
-      send_id: '019bdd15-7512-4e9e-f000-0000d6364a39',
-      status: 'ASSIGNED',
-      token: 'token-aid-3',
-      form_state_json: '',
-      internal_note: '',
-    },
+  const fallbackSendIds = [
+    '019bebf7-17aa-48de-f000-0000f506a3fe',
+    '019bd3ae-2a24-478d-f000-0000efb67321',
+    '019bdd15-7512-4e9e-f000-0000d6364a39',
   ];
+  const runtimeSendIds = loadRuntimeSendIds(fallbackSendIds);
+  const selectedSendIds = runtimeSendIds.slice(0, 3);
+  while (selectedSendIds.length < 3 && fallbackSendIds[selectedSendIds.length]) {
+    selectedSendIds.push(fallbackSendIds[selectedSendIds.length]);
+  }
+  const assignments = selectedSendIds.map((sendId, index) => ({
+    assignment_id: `aid-${index + 1}`,
+    send_id: sendId,
+    status: 'ASSIGNED',
+    token: `token-aid-${index + 1}`,
+    form_state_json: '',
+    internal_note: '',
+  }));
 
   const state = {
     submitted_count: 0,

@@ -1,20 +1,40 @@
+const fs = require('fs');
+const path = require('path');
+
+function loadRuntimeSendIds(fallback = []) {
+  try {
+    const indexPath = path.resolve(__dirname, '../../../data/scenarios/index.json');
+    const indexPayload = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+    const fromById = indexPayload && indexPayload.byId ? Object.keys(indexPayload.byId) : [];
+    const ids = fromById.map((v) => String(v || '').trim()).filter(Boolean);
+    if (ids.length) return ids;
+  } catch (_) {
+    // Ignore file read/index parse errors and fall back to static ids.
+  }
+  return Array.isArray(fallback)
+    ? fallback.map((v) => String(v || '').trim()).filter(Boolean)
+    : [];
+}
+
 function createMockMultiAuditorApi(options = {}) {
   const baseAppUrl = String(options.baseAppUrl || 'http://127.0.0.1:4173/app.html');
   const targetQueueSize = Math.max(1, Number(options.targetQueueSize || 3));
+  const fallbackPoolSendIds = [
+    '019bebf7-17aa-48de-f000-0000f506a3fe',
+    '019bd3ae-2a24-478d-f000-0000efb67321',
+    '019bdd15-7512-4e9e-f000-0000d6364a39',
+    '019bd742-baf8-425f-f000-00003e7e7b41',
+    '019bb39c-c90b-4984-f000-0000533e26bd',
+    '019bd2ea-59a8-4897-f000-0000e780a047',
+    '019bb5d4-a2f2-4c77-f000-0000420de96e',
+    '019be9c4-2213-4f8d-f000-000074529bc0',
+  ];
+  const runtimePoolSendIds = loadRuntimeSendIds(fallbackPoolSendIds);
 
   const poolSendIds =
     Array.isArray(options.poolSendIds) && options.poolSendIds.length
       ? options.poolSendIds.map((v) => String(v || '').trim()).filter(Boolean)
-      : [
-          '019bebf7-17aa-48de-f000-0000f506a3fe', // Julie Vos
-          '019bd3ae-2a24-478d-f000-0000efb67321', // Brilliant Earth
-          '019bdd15-7512-4e9e-f000-0000d6364a39', // Bonafide
-          '019bd742-baf8-425f-f000-00003e7e7b41', // Greenpan
-          '019bb39c-c90b-4984-f000-0000533e26bd', // Cozy Earth
-          '019bd2ea-59a8-4897-f000-0000e780a047', // LANEIGE
-          '019bb5d4-a2f2-4c77-f000-0000420de96e',
-          '019be9c4-2213-4f8d-f000-000074529bc0',
-        ];
+      : runtimePoolSendIds;
 
   const activeStatuses = new Set(['ASSIGNED', 'IN_PROGRESS']);
   const sessionsById = {};
