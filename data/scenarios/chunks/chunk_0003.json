@@ -3,386 +3,916 @@
   "chunk": "chunk_0003",
   "scenarios": {
     "11": {
-      "id": "019bb434-0a34-4c94-f000-00006b66fe45",
-      "companyName": "Simply Earth",
-      "companyWebsite": "https://simplyearth.com",
-      "agentName": "Sarah",
-      "agentInitial": "S",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
-        ],
-        "promo_and_exclusions": [
-          "Cx can use both a gift card and a promo code per order!"
-        ]
-      },
-      "SystemMessage1": "Simply Earth: Our FINAL Promo of the year!! Use code GC25 to get a FREE $25 gift card, when you purchase a $100 gift card. (It's basically free money!) \n\nShop Now: simplyearth.attn.tv/aQ2cBQt7AKlB",
-      "SystemMessage2": "Simply Earth: Hey there, Earthie! You're this close to starting your next natural creation. Don't forget: You automatically get 10% off all Recipe Box add-ons!\n\nKeep shopping: https://simplyearth.attn.tv/aE84AYrEG5_V \n\nGot questions? I'll answer them!",
-      "SystemMessage3": "Simply Earth: Your DIY Lotions + Balms Recipe Box ships soon! Shop now for 10% off add-ons -- no code needed. simplyearth.attn.tv/a43KQdWoeqLh",
-      "SystemMessage4": "Simply Earth: Brand New DIY Kit Alert!! \nCreate your own GOLDEN GLOW Body Butter with this EASY kit! \n\nGrab yours now and enjoy the benefits of natural ingredients! simplyearth.attn.tv/atTQVd9ECGif",
-      "SystemMessage5": "Simply Earth: Hey, Earthie! Looks like you forgot some great products in your cart - simplyearth.attn.tv/aCs3kqTdQ5f6\n\nIs there anything I can help you with? You can reply here.",
-      "SystemMessage6": "Simply Earth: Hey Cindy! I'm Sarah, your personal shopping assistant. \n\nDo you have questions or concerns? Let me know how I can help. \n\nsimplyearth.attn.tv/a723hLqks6mQ",
-      "customerMessage1": "Hi Sarah! I tried to add on a couple of things to my box coming but I'm not sure if it actually added to the order? Can you check?",
-      "SystemMessage7": "Template used: \"Post Purchase Inquiries \"; last updated: 2024-02-12 23:33:55.844",
-      "AgentMessage1": "Simply Earth: We appreciate your continued support, and I understand. We don't handle post-purchase requests via text. Please email your request to help@simplyearth.com or feel free to call this number 866-330-8165 Monday-Friday 7am-3pm CST. Please let me know if you have any questions about our products, I'm more than happy to help you here!",
+      "agentName": "Jonathan",
+      "id": "019c5f28-313a-475c-f000-0000fa4aa297",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://simplyearth.com",
+          "value": "https://elevatedfaith.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Multi-Purpose Cleaning Tablets",
-            "link": "https://simplyearth.com/products/cleaning-tabs",
-            "icon": "eye"
-          },
-          {
-            "item": "Multi-Purpose Cleaning Tablets",
-            "link": "https://simplyearth.com/products/cleaning-tabs",
-            "icon": "eye"
-          },
-          {
-            "item": "Citrus Burst Essential Oil Blend",
-            "link": "https://simplyearth.com/products/citrus-burst-essential-oil-blend",
-            "icon": "eye"
-          },
-          {
-            "item": "Citrus Burst Essential Oil Blend",
-            "link": "https://simplyearth.com/products/citrus-burst-essential-oil-blend",
-            "icon": "eye"
-          },
-          {
-            "item": "Multi-Purpose Cleaning Tablets",
-            "link": "https://simplyearth.com/products/cleaning-tabs",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://elevatedfaith.com",
+      "companyName": "Elevated Faith",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Sizing questions",
+        "Discount code errors"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Elevated Faith.",
+          "date_time": "2026-02-09 14:52:37.257",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/VWD",
+          "date_time": "2026-02-09 16:13:46.219",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Welcome! Your 15% OFF coupon code is WELCOME15. Click here to automatically apply it and shop now: https://elevatedfaith.attn.tv/axJzEjwgj9MY ",
+          "date_time": "2026-02-09 16:13:50.395",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love!\n\nStart with our best sellers because top styles sell out quickly \u003e https://elevatedfaith.attn.tv/ac30hCclnILf .",
+          "date_time": "2026-02-09 16:14:50.238",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: You left NT Bible Checklist 40 Oz Tumbler, John 3:16 Bracelet Pack, Gold Cross Necklace, and more in your cart — conversation starters about faith waiting for you.\n\nUse code WELCOME15 for 15% off your order, valid on checkout today; code WELCOME15.\n\nShop now: https://elevatedfaith.attn.tv/aV_5MjrULGze . ACT FAST",
+          "date_time": "2026-02-09 16:25:03.487",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Welcome to Faith Rewards, Adriana! Tap to get started on your EF Rewards journey \u003e https://elevatedfaith.attn.tv/a5FBAPpBgWn8 ",
+          "date_time": "2026-02-09 17:19:17.839",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Use code WELCOME15 for 15% off, plus free shipping on orders $100+ and free returns for 35 days: https://elevatedfaith.attn.tv/aVrTm1cxw5ml .",
+          "date_time": "2026-02-10 16:25:15.459",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: 👀 on your cart. Checkout now https://elevatedfaith.attn.tv/a1rsKBknFMx1 . ",
+          "date_time": "2026-02-10 20:53:10.019",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Grab your Nt Bible Checklist Tumbler, Adriana — stay refreshed with faith-inspired stickers and a sturdy 40 oz design.\n\n63 people recently added this to their cart.\n\nShop now: https://elevatedfaith.attn.tv/au1O9XXdny-- .",
+          "date_time": "2026-02-10 20:56:56.708",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: hey Adriana! It\u0027s your personal EF shopping assistant here.\n\nHave a product question? Need a recommendation? I\u0027ve got you! Let me know how I can help.\n\n https://elevatedfaith.attn.tv/auGL4Tu1o4Is .",
+          "date_time": "2026-02-11 21:19:48.285",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: B2G1 FREE! All accessories + jewelry included. Tap in to save \u003e elevatedfaith.attn.tv/ajXS5boUoZUe .",
+          "date_time": "2026-02-13 11:16:19.515",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Buy 2, Get 1 FREE is still happening! Select styles won\u0027t be restocked. Make your final selections now elevatedfaith.attn.tv/ahXEmhQGesvG .",
+          "date_time": "2026-02-14 14:45:35.028",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "help",
+          "date_time": "2026-02-14 20:58:18.034",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5f05-48b9-400c-f000-0000fa4aa297",
+          "message_text": "Elevated Faith: I would be more than happy to help out!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 20:58:27.802"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "i got an email that my package was delivered but it never came and i paid for that",
+          "date_time": "2026-02-14 20:59:08.134",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Hey Adriana, thanks for stopping by!\n\nFind jewelry that sparks conversation: https://elevatedfaith.attn.tv/ab4W3IXA8-Ax .",
+          "date_time": "2026-02-14 21:14:27.850",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"What should I do if my package says delivered but I don\u0027t have it?\"; last updated: 2025-10-24 16:24:01.166",
+          "date_time": "2026-02-14 21:36:35.538",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5f28-313a-475c-f000-0000fa4aa297",
+          "message_text": "Elevated Faith: I\u0027m sorry to hear that. Checking here, your order #1626444 does indeed show that it was delivered February 14, 2026, at 09:35 AM PT. You can check further updates here: https://elevatedfaith.attn.tv/aNHt_9nGDrSJ\nIf your tracking says the package was delivered but you haven\u0027t received it, I recommend checking around your home and with nearby houses, just in case it was dropped off by mistake. Also, check with anyone you live with, like family, roommates, or a landlord, to see if they accepted it for you. Sometimes packages are also held by property managers, an apartment office, or even your local post office. Let me know if you can\u0027t find it, I\u0027m here to help!",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 21:36:35.540"
+        }
+      ]
     },
     "12": {
-      "id": "019bb3e8-25af-4d9f-f000-0000f37d45da",
-      "companyName": "Backcountry",
-      "companyWebsite": "https://backcountry.com",
       "agentName": "Sarah",
-      "agentInitial": "B",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "No escalations for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over"
-        ],
-        "promo_and_exclusions": [
-          "Welcome offer page:   https://www.backcountry.com/sc/new-customer-coupon-rules"
-        ]
-      },
-      "SystemMessage1": "Backcountry: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Backcountry.",
-      "SystemMessage2": "Backcountry: Welcome to Backcountry! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/iVG",
-      "SystemMessage3": "Backcountry: Welcome to the Herd! You gave us your digits, we'll give you some, too. Your code for 15% off is here: http://bctxt.co/aYdLOKYtHZVi\nExclusions apply.",
-      "SystemMessage4": "Backcountry: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nSome of our favorite gear just went on sale! Get the best deals on our top brands before they're gone: http://bctxt.co/a2vJom1lRdbW .",
-      "SystemMessage5": "Backcountry: You left Hummvee Short With Liner - Women's, Trailfarer 4.5in Shorts - Women's, and other trail-ready items in your cart.\n\nUse code BCNTFSMS25Q4HYGC8TX for 15% off full-priced items; exclusions apply.\n\nShop now: http://bctxt.co/az0vdmfiZwTQ .",
-      "SystemMessage6": "Backcountry: Grab the Axion Race MIPS Helmet in your cart—extended head protection and optimized airflow ready for your next ride.\n\nJust 5 left; act soon!\n\nShop now: http://bctxt.co/aucTR8dE5Hm5 .",
-      "SystemMessage7": "Backcountry: Grab the Nora 2.0 Shorts for summer comfort and breathable ventilation.\n\nThey're 45% off and ready for your next adventure.\n\nShop now: http://bctxt.co/avYVXAVFzb2I .",
-      "SystemMessage8": "Backcountry: Hi — see wander-ready women's pants built for trail comfort and stretch.\n\nFree shipping on orders $69+.\n\nShop now: http://bctxt.co/aizTiYjpfx2W .",
-      "customerMessage1": "You don't have my size",
-      "AgentMessage1": "Backcountry: I'm sorry about that! Can you tell me what you're referring to and the size you need so I can check?",
-      "customerMessage2": "Keri Tara pants",
-      "AgentMessage2": "Backcountry: Thanks for the info! Could you please confirm the size that you're looking to get?",
-      "customerMessage3": "Kl",
-      "customerMessage4": "Xl",
-      "AgentMessage3": "Backcountry: Thank you for letting me know! Can you please share a screenshot of the pants you are referring to?",
-      "customerMessage5": "I am sure more will be added as spring comes",
-      "AgentMessage4": "Backcountry: Yes, I recommend checking our website and social media frequently for restocks! In the meantime, what do you think about these amazing pants instead? - http://bctxt.co/aS6-tl-pwQZH It's available in XL!",
-      "customerMessage6": "I'm trying to stick to one brand and one color so I can maximize outfits with a few items",
-      "AgentMessage5": "Backcountry: I understand your concern! Could you please let me know what color you're interested in? \n\nOur team works on providing options and variety for our customers so I'll definitely pass this along to the team to consider in the future.",
-      "customerMessage7": "Lotus Kari Tara",
-      "customerMessage8": "Need pants",
-      "customerMessage9": "Prefer wicking and spf 40-50",
-      "AgentMessage6": "Backcountry: Thank you! Unfortunately, what I shared with you are the only Kari Traa pants available in XL right now. Please stay tuned on our website for possible restocks and releases. We appreciate your patience.",
-      "customerMessage10": "Is the lotus color discontinued?",
-      "AgentMessage7": "Backcountry: Good question! The best way to handle this is to chat via our website or submit the email form here: http://bctxt.co/a6-Fg_IMJK9K Our team is happy to help!",
-      "customerMessage11": "I'm looking for Kari traa Voss pro",
-      "AgentMessage8": "Backcountry: Thank you for letting me know! Sorry, the size XL is currently unavailable. I'm sorry, I currently don't have the exact date of a possible restock, but I recommend checking our website and social media frequently. In the meantime, what do you think about this instead? http://bctxt.co/aGhuIoQieHUZ",
-      "customerMessage12": "I found them on the Kari traa website",
-      "AgentMessage9": "Backcountry: I'm glad to hear that! In the meantime, are you looking for something else?",
+      "id": "019c5876-050c-4f64-f000-00004d7b10ab",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://backcountry.com",
+          "value": "https://thefryecompany.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Eloise Pant - Women's",
-            "link": "https://www.backcountry.com/kari-traa-eloise-pant-womens?externalId=glpur",
-            "icon": "eye"
-          },
-          {
-            "item": "Nora Singlet - Women's",
-            "link": "https://www.backcountry.com/kari-traa-nora-singlet-womens",
-            "icon": "eye"
-          },
-          {
-            "item": "Nora Singlet - Women's",
-            "link": "https://www.backcountry.com/kari-traa-nora-singlet-womens",
-            "icon": "eye"
-          },
-          {
-            "item": "Nora Short - Women's",
-            "link": "https://www.backcountry.com/kari-traa-nora-short-womens",
-            "icon": "eye"
-          },
-          {
-            "item": "Intraknit Hipster Bikini - Women's",
-            "link": "https://www.backcountry.com/smartwool-intraknit-hipster-bikini-womens",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://thefryecompany.com",
+      "companyName": "The Frye Company",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Grab the HANK CHELSEA and finish your look, Herman — handcrafted to last and feel broken in fast.\n\nFree shipping on orders $275+.\n\nShop now: https://frye.attn.tv/aeSIdFNehOR4 .",
+          "date_time": "2026-01-15 11:34:10.520",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Don\u0027t wait - new markdowns up to 60% off ends soon!\n\nShop iconic boots built for now and crafted to last for years to come: frye.attn.tv/aSFntnIr2hNF .",
+          "date_time": "2026-01-15 13:15:34.835",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Grab the CARSON 2 PIPING BOOTIE — cushioned comfort with refined piping. HURRY.\n\nSave $68.02 on this sleek twist of timeless style.\n\nYour new go-to: https://frye.attn.tv/aHNJ_rWeNB3g .",
+          "date_time": "2026-01-17 19:00:21.257",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Get ready for Spring \u002726 with a fresh perspective on timeless quality. \n\nShop the new looks: frye.attn.tv/axPVcpUBWnq3 .",
+          "date_time": "2026-01-18 13:15:19.615",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Grab the AUSTIN INSIDE ZIP WESTERN BOOT, Herman — handcrafted Goodyear-welt details for lasting wear.\n\nFree shipping on orders $275+.\n\nYour new go-to boot: https://frye.attn.tv/azXoTWWC9yca .",
+          "date_time": "2026-01-20 11:35:13.573",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Pick up the AUSTIN INSIDE ZIP WESTERN BOOT in your cart, Herman — handcrafted Goodyear-welt leather made to last.\n\nThis is almost gone! Only 4 left.\n\nShop now: https://frye.attn.tv/a9eMLn7Ywyvr .",
+          "date_time": "2026-01-20 15:56:12.424",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Herman — those timeless leather boots are built for weekend brunch to work catch-ups; feel the craftsmanship.\n\nYour next pair is here: https://frye.attn.tv/aLlcQrAJ1CuD .",
+          "date_time": "2026-01-20 16:56:17.852",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: You asked, we listened - Gold Powder is back for a limited time: frye.attn.tv/aRLTG6j1GQlO .",
+          "date_time": "2026-01-27 13:15:14.726",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Grab the CAMPUS 14L LEATHER BOOTS, Herman — handcrafted, chunky toe, and stacked heel, made to last.\n\nFree shipping on orders $275+.\n\nWear them everywhere: https://frye.attn.tv/a3Gq4UFONTSc .",
+          "date_time": "2026-01-27 14:11:55.607",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: The winter sale starts now! \n\nUse code WINTER20 to save an extra 20% off timeless boots before they\u0027re gone: frye.attn.tv/a1Nz3KfiYNVp .",
+          "date_time": "2026-01-29 13:15:30.605",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Grab the TYLER FLEX CHELSEA BOOT, Herman — crafted leather, comfy rubber sole, made for work to weekend. 😊\n\nFree shipping on orders $275+.\n\nYour next pair is here: https://frye.attn.tv/aRxqlmWLwuUL . ACT FAST",
+          "date_time": "2026-01-29 15:44:13.007",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Fine jewelry, designed with intention, crafted for lasting wear. Explore the Aurate x FRYE Valentine\u0027s collection. Shop now: frye.attn.tv/ab5TZFc0AEAt .",
+          "date_time": "2026-01-31 13:15:15.683",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Ending soon. The Winter Sale is almost over-shop before it\u0027s gone: frye.attn.tv/a6gUbFeGgr7X .",
+          "date_time": "2026-02-03 13:15:09.780",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Don\u0027t miss out! Take an EXTRA 20% OFF select sale styles with code WINTER20. Shop now: frye.attn.tv/axitkhA2qMM6 .",
+          "date_time": "2026-02-04 13:15:15.775",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Don\u0027t miss this! Take an extra 20% off the Winter Sale with code WINTER20. Ends soon! frye.attn.tv/apfI6BRNK2U2 .",
+          "date_time": "2026-02-06 13:15:17.295",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: The evolved Kate Collection.\n\nDiscover the new lineup featuring your favorite signature boots and a brand-new mule for Spring: frye.attn.tv/aoKD90hG80Wn .",
+          "date_time": "2026-02-07 13:15:16.526",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: New season, new hues. \n\nRefresh your daily rotation with effortless styles in our signature spring palette. Shop New Arrivals: frye.attn.tv/ayVjty_58qYL .",
+          "date_time": "2026-02-10 13:15:16.069",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Long weekend, big savings. \n\nSave an EXTRA 25% OFF Frye sale styles when you use code PRESIDENT25. Shop now: frye.attn.tv/amR_VO9f5s1h .",
+          "date_time": "2026-02-12 13:15:22.880",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Meet your new AUSTIN INSIDE ZIP WESTERN BOOT — timeless Western shaping with a scalloped topline and a Goodyear welt for lasting wear you\u0027ll reach for again.\n\nFree shipping on orders $275+.\n\nWear them where it counts: https://frye.attn.tv/axTDv9B63Xyh .",
+          "date_time": "2026-02-13 11:35:22.220",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "When will you be getting 7.5 size",
+          "date_time": "2026-02-13 13:47:45.419",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Restock (website \u0026 social)\"; last updated: 2025-10-09 21:41:33.472",
+          "date_time": "2026-02-13 14:24:15.520",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5876-050c-4f64-f000-00004d7b10ab",
+          "message_text": "FRYE: Thanks for your interest! If you\u0027re referring to Austin Inside Zip, I\u0027m sorry, I currently don\u0027t have the exact date of a possible restock for your preferred size, but I recommend checking our website and social media frequently. In the meantime, what do you think about this instead? - https://frye.attn.tv/agrbZ9xSNarL",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 14:24:15.521"
+        }
+      ]
     },
     "13": {
-      "id": "019bc389-89e6-4515-f000-0000f4451c7a",
-      "companyName": "Faherty",
-      "companyWebsite": "https://fahertybrand.com",
-      "agentName": "",
-      "agentInitial": "F",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS",
-          "For order status inquiries/issues send to CS immediately"
-        ],
-        "tone": [
-          "Close the convo once the client takes over!"
-        ]
-      },
-      "SystemMessage1": "Faherty Brand: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Faherty Brand.",
-      "SystemMessage2": "Faherty Brand: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/w08",
-      "SystemMessage3": "Faherty Brand: Welcome to the family! Enjoy 15% off your first purchase with code SMSQBXJTCSH. Discover your new favorites in our latest collection: fahertybrand.attn.tv/aYBeWX5rIH31",
-      "SystemMessage4": "Faherty Brand: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nHave you seen our new arrivals? They sell out fast, so check them out ASAP! https://fahertybrand.attn.tv/afarBQ-vS129 .",
-      "customerMessage1": "Code not working",
-      "AgentMessage1": "Faherty Brand: I'm sorry to hear that you are having issues with the code. Can I please have a screenshot of the error message you're seeing from your end and the item/s you have in your cart so I can check?",
-      "customerMessage2": "\"",
-      "customerMessage3": "I have the stretch Terri five pocket pants in onyx black size 3634 in my cart",
-      "AgentMessage2": "Faherty Brand: Thank you for letting me know! Seems like the item you have in your cart is not eligible for the discount. Items that are on sale or marked down are normally excluded from our discount codes. I appreciate your understanding!",
-      "customerMessage4": "It's a full priced item",
-      "AgentMessage3": "Faherty Brand: Thanks for getting back to us and for that information! I'm really sorry for the inconvenience. Could you send a screenshot of your cart and the error message that you're getting?",
-      "SystemMessage5": "Faherty Brand: Complete your cart: Stretch Terry Indigo 5-Pocket Pant is rugged, structured, and cozy. ACT NOW\n\nUse code SMSQBXJTCSH for 15% off: https://fahertybrand.attn.tv/axqw1MZnmss0 .",
-      "customerMessage5": "\"",
-      "customerMessage6": "When I hit enter it clears out the code, but this is shot",
-      "customerMessage7": "\"",
-      "AgentMessage4": "Faherty Brand: Thanks for sending that in! I created this checkout link for you and applied the code so you can just proceed with your purchase: https://fahertybrand.attn.tv/ach6FEycxh51 Let me know if it works!",
+      "agentName": "Sarah",
+      "id": "019c7227-d454-4da4-f000-0000585438f7",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://fahertybrand.com",
+          "value": "https://igloocoolers.com",
           "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://igloocoolers.com",
+      "companyName": "Igloo",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for legal and fraud related inquires",
+          "Send to CS for product safety inquires and threats",
+          "Send to CS for website technical issues"
+        ],
+        "escalate": [
+          "ESC if cx claims bodily injury as result of a product",
+          "ESC if cx highlights dangers to health/safety as a result of product"
+        ],
+        "templates": [
+          "For all post-purchase \u0026 warranty inquiries use \"SUPPORT\" temp (SPT)",
+          "For discount code issues use \"SUPPORT\" temp (SPT)",
+          "For product info that you can\u0027t find on the site use \"SUPPORT\" temp (SPT)",
+          "If cx reach out about 90 qt cooler recall, use shortcut RCC",
+          "For custom order cancellation and edit requests, don\u0027t use CED, use the designated templates instead"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "warranty",
+        "broken product claims",
+        "parts",
+        "missing shipment",
+        "leaks"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Igloo: It\u0027s customization, but cooler. Design your drinkware - not only engrave it - in the Igloo Custom studio.\n\nCustomize Now: igloo.attn.tv/amcMqIRTfkzy ",
+          "date_time": "2026-01-23 10:45:10.379",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: It\u0027s the playoffs. Do you have your NFL cooler? Tackle these NFL drinkware, coolers + more.\n\nShop Now: igloo.attn.tv/aIfUSx98STmn ",
+          "date_time": "2026-01-25 10:45:10.953",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Cooler conversation hearts for Valentine\u0027s Day. This is the perfect Sweethearts® Candies collab 4U + UR BFF.\n\nShop Now: igloo.attn.tv/anoxJL6yLUjU ",
+          "date_time": "2026-01-27 10:55:09.124",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Bulbasaur, Charmander, Squirtle, Pikachu \u0026 the Poké Ball......Click through for cooler Pokémon adventures.\n\nShop Now: igloo.attn.tv/atKdzdTOR3ai ",
+          "date_time": "2026-01-29 10:35:08.025",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Get 20% off 3+ select items for a cooler, sweeter Valentine\u0027s Day! Eligible products only. \n\nShop Now: igloo.attn.tv/ab5EnJzySo0Q ",
+          "date_time": "2026-02-02 19:35:07.193",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Black \u0026 purple with a hint of magic \u0026 a glimpse of Baku, this Kuromi Collection is as unique as she is.\n\nShop Now: igloo.attn.tv/awBUtA6FwTO3 ",
+          "date_time": "2026-02-04 09:55:17.519",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Thanks for coming by to look around. Did you get a chance to check out our cooler bestsellers? igloo.attn.tv/a2i9WZQDWH0- ",
+          "date_time": "2026-02-04 13:46:22.952",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: The coolest Sunday is here \u0026 we have the NFL Lineup for the coolest fans. Snatch these NFL coolers!\n\nShop Now: igloo.attn.tv/av5VM51fWY5C ",
+          "date_time": "2026-02-08 09:45:09.048",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: A utile Batman cooler \u0026 drinkware collection honoring the fearless, justice-seeking DC Super Hero.\n\nShop Now: igloo.attn.tv/a0dsw4YfutjT ",
+          "date_time": "2026-02-12 09:15:19.966",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Adventure across America with Trailmate. Shop the SPECIAL-EDITION red, white \u0026 blue collection now. \n\nShop Now: igloo.attn.tv/aqYgiV-hurS7 ",
+          "date_time": "2026-02-13 09:25:12.968",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Thanks for coming by to look around. Did you get a chance to check out our cooler bestsellers? igloo.attn.tv/aruGp16UuhQF ",
+          "date_time": "2026-02-13 12:43:56.581",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Your personality on a Playmate. Add your own text, photos, original graphics...it\u0027s all up to you with Igloo Custom. \n\nCustomize Now: igloo.attn.tv/avEX7nu_63nt ",
+          "date_time": "2026-02-17 12:24:01.232",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Thanks for coming by to look around. Did you get a chance to check out our cooler bestsellers? igloo.attn.tv/aVrmEfLH_jzR ",
+          "date_time": "2026-02-17 12:40:01.772",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Hi , it\u0027s Sarah. I\u0027m a personal concierge here to answer questions or share recommendations. Is there anything I can help you with today?\n\nhttps://igloo.attn.tv/apZLmca0jRJX .",
+          "date_time": "2026-02-18 13:27:03.750",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hey Sarah. Does Igloo still have the trays for the Lunchmate",
+          "date_time": "2026-02-18 14:01:35.260",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"SUPPORT\"; last updated: 2025-07-18 13:30:38.321",
+          "date_time": "2026-02-18 14:08:58.863",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7227-d454-4da4-f000-0000585438f7",
+          "message_text": "Igloo: Thank you for being so interested. The best way to continue help with this request is to text \"SUPPORT\" and you will be directed to another team member. Please do not send images via text as we cannot view them. In these cases, you may email us directly using customerservice@shop.igloocoolers.com or give us a call at 1-800-273-7024. \n\nPlease note that our team is available Monday - Friday 8:00am - 5:00pm PST.",
+          "message_type": "agent",
+          "agent": "109968",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 14:08:58.865"
+        }
+      ]
     },
     "14": {
-      "id": "019bb45e-5d38-4f7b-f000-0000f0c99e37",
-      "companyName": "Backcountry",
-      "companyWebsite": "https://backcountry.com",
-      "agentName": "Sarah",
-      "agentInitial": "B",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "agentName": "Sam",
+      "id": "019c5280-8e38-4656-f000-000013ed6fc7",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://shadyrays.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://shadyrays.com",
+      "companyName": "Shady Rays",
+      "notes": {
         "escalate": [
-          "No escalations for this client, send everything to CS"
+          "ESC restock inquiries, but use STOF shortcut first"
         ],
         "tone": [
-          "Close the convo once the client takes over"
+          "Close the convo if the cx first message doesn\u0027t warrant a response (e.g. Them thanking us, saying they\u0027re browsing, etc.)"
         ],
-        "promo_and_exclusions": [
-          "Welcome offer page:   https://www.backcountry.com/sc/new-customer-coupon-rules"
+        "templates": [
+          "For product prescription inquiries use RPP shortcut",
+          "For prescription orders questions use RPO shortcut"
+        ],
+        "dos_and_donts": [
+          "If customers want to return an item - clarify if they’re trying to return a recently purchased pair or if they need a replacement"
         ]
       },
-      "SystemMessage1": "Backcountry: Welcome to Backcountry! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/iVG",
-      "SystemMessage2": "Backcountry: Welcome to the Herd! You gave us your digits, we'll give you some, too. Your code for 15% off is here: http://bctxt.co/aufqOYe9Pol9\nExclusions apply.",
-      "customerMessage1": "Thanks!",
-      "AgentMessage1": "Backcountry: No problem. Feel free to reach out anytime, I'm always here to help!",
-      "SystemMessage3": "Backcountry: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nSome of our favorite gear just went on sale! Get the best deals on our top brands before they're gone: http://bctxt.co/aHpe_7XfdoPC .",
-      "customerMessage2": "Im looking for  women's cold weather jacket (parka).  Need something that is lightweight  but is rated high on the warmth  scale (if there is such  a thing).  Size, possibly Mamot large area. Not locked into a particular  manufacturer,  just need one the keeps the cold out in 30 degree weather.",
-      "AgentMessage2": "Backcountry: Thanks for sharing your preferences! I'd recommend the North Face Arctic Down Parka - http://bctxt.co/a5oRyjX_0LqC It's warm yet lightweight, designed for cold, snowy, or rainy winter days, with a mid-thigh length and 600-fill down insulation to keep you cozy in 30-degree weather. The DryVent waterproof shell and Heatseeker Eco side panels protect against moisture, while the faux-fur trimmed hood adds extra warmth and comfort. It's highly rated for both performance and style, with a flattering fit that avoids bulk. Please let me know what you think! 😊",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://backcountry.com",
-          "date": ""
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: The weekend is here, so is our BOGO sale. Double up on shades with code BOGOJAN through 1/28. Exc. apply.\n\nShop Now: shadyrays.attn.tv/aMIpVUD1Gh_O ",
+          "date_time": "2026-01-16 19:15:22.819",
+          "message_media": [
+            
+          ]
         },
-        "browsingHistory": [
-          {
-            "item": "Montreal Coat - Women's",
-            "link": "https://www.backcountry.com/marmot-montreal-coat-womens",
-            "icon": "eye"
-          },
-          {
-            "item": "Montreaux Coat - Women's",
-            "link": "https://www.backcountry.com/marmot-montreaux-coat-womens",
-            "icon": "eye"
-          },
-          {
-            "item": "Montreaux Coat - Women's",
-            "link": "https://www.backcountry.com/marmot-montreaux-coat-womens",
-            "icon": "eye"
-          },
-          {
-            "item": "Montreaux Coat - Women's",
-            "link": "https://www.backcountry.com/marmot-montreaux-coat-womens",
-            "icon": "eye"
-          },
-          {
-            "item": "Montreal Coat - Women's",
-            "link": "https://www.backcountry.com/b/marmot-montreal-coat-womens?CMP_SKU=MARZA27&amp;MER=0406&amp;skid=MARZA27-PAP-L&amp;srsltid=AfmBOop9AgU-YesykbA3KYi9besNBitvj1almTscSuvLE-eQQLVLXeMtiw4&utm_medium=sms&utm_source=attentive&utm_campaign=BC-SMS-Lifecycle-Welcome-1-CDS&sc=f25b4eae6f21b15efc1db7f829e66a22&externalId=I-2Yd",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: For a limited time, enjoy 30% OFF Sunglasses with a Snow purchase! Get your gear for the sun and the slopes: shadyrays.attn.tv/apY50QfR3UMK ",
+          "date_time": "2026-01-18 20:01:13.400",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Hey, it\u0027s been a while! Let\u0027s get you back in your next favorite style! Check out our new arrivals here: shadyrays.attn.tv/atcHVexS7nrT \n\nAnything we can help with today? Text back with any questions!",
+          "date_time": "2026-01-21 10:31:29.491",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Last Chance! Our Valentine\u0027s Day sale ends tonight. Save 40% on 2+ pairs while you can. \n\nShop Now: shadyrays.attn.tv/a5yUaVriLb1i ",
+          "date_time": "2026-01-25 14:00:31.628",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Beat winter glare! 35% off sunglasses w/ code 35OFF and 55% off new outlet styles. Grab yours before they\u0027re gone:\n\nshadyrays.attn.tv/aYOCEsm20qCJ ",
+          "date_time": "2026-01-30 14:15:17.637",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Hey, it\u0027s been a while! Let\u0027s get you back in your next favorite style! Check out our new arrivals here: shadyrays.attn.tv/a_OmvviL5_Fl \n\nAnything we can help with today? Text back with any questions!",
+          "date_time": "2026-02-01 13:28:02.759",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: FLASH SALE! Save 35% on limited Green Wolf frames for the course. Use code GREEN35: shadyrays.attn.tv/a9yvMUCsf697 \n\nEnds 2/5 at 11:59pm PST.",
+          "date_time": "2026-02-04 14:00:18.583",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Back by popular demand: Azalea \u0026 Calico. The retired shades you loved are back! \n\nShop the launch: shadyrays.attn.tv/aQCNAvKhDi1v ",
+          "date_time": "2026-02-05 16:00:50.937",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Valid through Halftime only! 50% OFF your next pair of shades with code: BG60 shadyrays.attn.tv/aUtBslqfHxy8 \n\nLimit one pair. Exclusions apply.",
+          "date_time": "2026-02-08 20:01:26.816",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Hey, it\u0027s been a while! Let\u0027s get you back in your next favorite style! Check out our new arrivals here: shadyrays.attn.tv/aU-fv1goOeIv \n\nAnything we can help with today? Text back with any questions!",
+          "date_time": "2026-02-12 10:16:52.785",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I just lost a screw to the ear piece of one of my pair of Shady Rays. Is there a way to get a replacement screw?",
+          "date_time": "2026-02-12 10:18:54.742",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c526f-af56-4456-f000-000013ed6fc7",
+          "message_text": "Shady Rays: If you\u0027d like to replace your item that was purchased within the last 30 days you can do so at https://shadyrays.attn.tv/azeukvMEPCmh/ Our team is happy to help.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 10:19:37.079"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "They were not purchased in the last 30 days.",
+          "date_time": "2026-02-12 10:20:24.411",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Is there not a way to get a replacement screw?",
+          "date_time": "2026-02-12 10:21:04.517",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "?",
+          "date_time": "2026-02-12 10:34:04.608",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5280-8e38-4656-f000-000013ed6fc7",
+          "message_text": "Shady Rays: I understand how inconvenient that is. At this time, we don\u0027t provide individual replacement screws for frames. If your sunglasses are outside the 30-day return window, you may still qualify for our Lifetime Craftsmanship Warranty. That means we can replace your pair for a small fee if it\u0027s damaged or missing parts. You can start that process here: https://shadyrays.attn.tv/aqsAdD2t6q10 Let me know if there\u0027s anything else I can help you with. ",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 10:38:02.707"
+        }
+      ]
     },
     "15": {
-      "id": "019bd796-3377-4f9a-f000-0000d3b050d8",
-      "companyName": "Barbell Apparel",
-      "companyWebsite": "https://barbellapparel.com",
-      "agentName": "",
-      "agentInitial": "B",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {},
-      "SystemMessage1": "Barbell Apparel: Hurry! Last chance to get it in time.\n\nOrder by 12 PM CST tomorrow (Dec. 23) with Overnight Shipping selected at checkout to receive your gifts before Christmas day.\n\nShop Now: barbell.attn.tv/aJmLW9mSLG02",
-      "SystemMessage2": "Barbell Apparel: Still need a gift?\n\nOur Gift Cards are delivered instantly via email. No shipping. No waiting. Perfect for last-minute gifts or stocking stuffers.\n\nGive the gift of choice: barbell.attn.tv/aElvo9a617hK",
-      "SystemMessage3": "Barbell Apparel: If you didn't get exactly what you wanted under the tree, your time is now.\n\nUpgrade your lineup with gear built to fit better, move better, and last longer.\n\nTreat yourself: barbell.attn.tv/a9hB7qZzPHi0",
-      "SystemMessage4": "Barbell Apparel: Our Free Hoodie & Flannel Sale ends New Year's Eve at 11:59 PM PST.\n\nGet a Stealth or Foundation Hoodie FREE with any $99+ purchase or upgrade to a Free Frontier Flannel ($128 value) with any order of $198+.\n\nGet Yours Now: barbell.attn.tv/aYC0IOW7U7ep",
-      "SystemMessage5": "Barbell Apparel: LAST CHANCE: Free Hoodie & Flannel Sale ends tonight at 11:59 PM PST!\n\nOrders of $99+ = FREE Stealth or Foundation Hoodie\n\nOrders of $198+ = FREE Frontier Flannel ($128 value)\n\nOnce the clock strikes midnight, the deal is gone for good!\n\nGet Yours Now: barbell.attn.tv/a62qFrBh5GPp",
-      "SystemMessage6": "Barbell Apparel: New Year, Free Gear!\n\nFor a limited time get Free Shorts on orders of $149+ or Free Joggers on orders of $198 or more.\n\nShop Now: barbell.attn.tv/aDaUlqQrUZ27 \n\nDiscount applies automatically when item is added to cart. While supplies last.",
-      "SystemMessage7": "Barbell Apparel: The Adapt Joggers & Shorts just dropped in our all-new Pine colorway!\n\nBuilt for real training with durable stretch, secure pockets, and a locked-in fit.\n\nFor a limited time, get FREE shorts on orders of $149+ or FREE joggers on orders of $199+.\n\nShop Now: barbell.attn.tv/ahyTUmoD2AjX",
-      "SystemMessage8": "Barbell Apparel: Lunar just landed!\n\nA brand new color way in our best-selling Anything Dress Pant & Short.\n\nFor a limited time, get your pair of Lunar Anything Shorts for FREE with any order of $149 or more.\n\nShop Now: barbell.attn.tv/a4xiQWUkm5Nh",
-      "SystemMessage9": "Barbell Apparel: Still looking to upgrade for the new year? For a limited time, get any shorts free with orders of $149+ or any joggers free with orders of $199+.\n\nShop Now: barbell.attn.tv/aNg4snRjRHeH \n\nWhile supplies last.",
-      "SystemMessage10": "Barbell Apparel: You are already subscribed. Click here to shop now: barbellapparel.com .",
-      "SystemMessage11": "Barbell Apparel: Hey Troy ! Join Barbell Elite and get up to $125 in bonus credit for your first month, plus free lifetime products guarantees and size exchanges, free 2-day shipping. barbell.attn.tv/a-n5JGA18ST6",
-      "customerMessage1": "I was looking forward to doing this but Sarah and the \"team\" never followed up with one simple order matter so no i will not pay or obligate  myself to this barbell \"elite\" subscription/membership bc i cannot depend on a follow through with the terms of that agreement by Sarah or the \"team\". I only support this company solely based on the quality of the clothing AND the word of Chadd Wright and his 3 of 7 project company relationship/sponsorship by barbell.  He speaks so highly of \"them\" but i am a pee-on who can not tell him nor would he care to hear of one persons documented issues with his #1 sponsor who he speaks so highly of that i am sure he brings a lot of business to the company probably just as much value to the barbell company by the purchase of items by his viewers ( if not more so) than by the amount barbell invest in Chadd and the 3 of 7 project.",
-      "AgentMessage1": "Barbell Apparel: Thanks for sharing this, and I genuinely apologize for the inconvenience and frustration you've experienced with us. That's not the kind of experience we aim to provide. Since you've emailed the team, have you checked your spam and promo folders for the response from our team? Our emails end up there sometimes.",
-      "customerMessage2": "If you are aware of an email sent back plz send it to my inbox and or text please  because i do not filter or read my spam before deleting them. i do read all of my texts and no response in the matter was ever sent to my text. it is a simple matter and solution that should not be passed off as i didn't check my spam or promo. Barbell had no problem sending me all other correspondence especially the conversation between Sarah and i AND all the \"promos\" including the Elite membership so why woukd the most important correspondence be send and captured as a spam but non of the others?!?  Just resolve this simple matter i have proven that i am a repeat customer who should be valued as such or i do take my documented correspondence to 3of 7 somehow bc i am sure someone there as a fellow Christian would want fairness from a hard working supporter of them and their number one sponsor. Thank you in advance for your appreciation.",
-      "AgentMessage2": "Barbell Apparel: I'm truly sorry for the frustration this has caused. I completely understand how important this matter is to you, and I wish I could resolve it directly. Unfortunately, I don't have access to our emails, so I'm unable to retrieve or review the correspondence myself. The best way forward is to reach out to our team via email, as they are fully equipped to handle these concerns and can provide a proper resolution. Thank you for your patience and for being a valued supporter-we genuinely appreciate it.",
-      "customerMessage3": "The problem is that this matter is NOT important to \"you\".  I am tired of the hollow \"apologies\" if thats what \"you\" call \"them\".  Everyone knows the old saying that If \"you\" want something done \" you have to do it yourself. So all \"you\" have done is proven how much \"you\" value \" your\" customers.  Listen carefully to your commercials and it is speaking the truth.  \"Your\" company is not for everyone and it definitely is not what Chadd Wright thinks \"you\" are. If i am in the wrong then dont make excuses or lay blame just speak the truth and tell me where i went wrong in this matter.  Otherwise please tell me what to do to resolve this matter. Thank you in advance.",
-      "SystemMessage12": "\"",
-      "AgentMessage3": "Barbell Apparel: I get where you're coming from because I'm a consumer, too and I'm sorry this didn't go as expected. I've sent another notification to the team and asked them if they can prioritize your concern. I will be sure to text you as soon as they provide an update.",
+      "agentName": "Kim",
+      "id": "019c76f8-5cf1-4915-f000-0000f4ac4809",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://barbellapparel.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "Ultralight Jogger - XXL / Black",
-            "link": "https://barbellapparel.com/products/mens-ultralight-jogger?variant=39450982318152",
-            "icon": "eye"
+            "link": "https://howitzerclothing.com/collections/born-to-hunt/products/battle-ram-1",
+            "item": "Battle Ram - ANTIQUE WHITE / S",
+            "timeAgo": "2026-01-19"
           },
           {
-            "item": "Ultralight Jogger - XXL / Black Multicam",
-            "link": "https://barbellapparel.com/products/mens-ultralight-jogger?variant=51657901179246",
-            "icon": "eye"
+            "link": "https://howitzerclothing.com/collections/born-to-hunt/products/hunting-stand-po-hood",
+            "item": "Hunting Stand Hood - OATMEAL / S",
+            "timeAgo": "2026-01-19"
           },
           {
-            "item": "Ultralight Jogger - S / Black",
-            "link": "https://barbellapparel.com/products/mens-ultralight-jogger",
-            "icon": "eye"
+            "link": "https://howitzerclothing.com/collections/born-to-hunt/products/outdoor-ops-po-hood",
+            "item": "Outdoor Ops Hood - ARMY HEATHER / S",
+            "timeAgo": "2026-01-19"
           },
           {
-            "item": "Adapt Training Short - XL / Black / 5 Inch",
-            "link": "https://barbellapparel.com/products/adapt-training-short?variant=51813472665966",
-            "icon": "eye"
+            "link": "https://howitzerclothing.com/collections/mens-shorts/products/miami-tiger-boardshort",
+            "item": "Miami Tiger Boardshort - ASSORTED / S",
+            "timeAgo": "2026-01-19"
           },
           {
-            "item": "Adapt Training Short - XXL / Black / 5 Inch",
-            "link": "https://barbellapparel.com/products/adapt-training-short?variant=51813472829806",
-            "icon": "eye"
+            "link": "https://howitzerclothing.com/collections/mens-shorts/products/miami-tiger-boardshort",
+            "item": "Miami Tiger Boardshort - ASSORTED / S",
+            "timeAgo": "2026-01-19"
           }
         ],
-        "orders": [
-          {
-            "orderNumber": "11767054827886",
-            "orderDate": "",
-            "link": "https://barbellapparel.myshopify.com/products/adapt-training-short",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "Adapt Training Short",
-                "price": "98",
-                "currency": "USD",
-                "productLink": "https://barbellapparel.myshopify.com/products/adapt-training-short"
-              },
-              {
-                "name": "Free Returns or Exchanges (US orders only)",
-                "price": "2.98",
-                "currency": "USD",
-                "productLink": "https://barbellapparel.myshopify.com/products/free-returns-or-exchanges-package-protection-us-orders-only"
-              },
-              {
-                "name": "Ultralight Jogger",
-                "price": "114",
-                "currency": "USD",
-                "productLink": "https://barbellapparel.myshopify.com/products/mens-ultralight-jogger"
-              }
-            ],
-            "total": "214.98"
-          }
+        "source": {
+          "label": "Website",
+          "value": "https://howitzerclothing.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://howitzerclothing.com",
+      "companyName": "Howitzer Clothing",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
         ]
       },
-      "orders": [
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "11767054827886",
-          "order_status_url": "https://barbellapparel.myshopify.com/products/adapt-training-short",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://barbellapparel.myshopify.com/products/adapt-training-short",
-              "product_name": "Adapt Training Short",
-              "product_price": 98
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://barbellapparel.myshopify.com/products/free-returns-or-exchanges-package-protection-us-orders-only",
-              "product_name": "Free Returns or Exchanges (US orders only)",
-              "product_price": 2.98
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://barbellapparel.myshopify.com/products/mens-ultralight-jogger",
-              "product_name": "Ultralight Jogger",
-              "product_price": 114
-            }
+          "message_type": "system",
+          "message_text": "Howitzer Clothing: Hey Kaleb, we noticed you checking us out. Have you seen our best sellers yet? https://howitzerclothing.attn.tv/adH7dxzhIMrj \n\nText back with any questions!",
+          "date_time": "2026-02-19 11:12:03.228",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Order was placed and I need to cancel",
+          "date_time": "2026-02-19 11:12:38.583",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c76b0-1327-47a0-f000-0000f4ac4809",
+          "message_text": "Howitzer Clothing: I understand! The best way to check if you can cancel or edit your order is to email our support team directly at customerservice@howitzerclothing.com ",
+          "message_type": "agent",
+          "agent": "50271",
+          "message_media": [
+            
           ],
-          "total": 214.98
+          "date_time": "2026-02-19 11:16:16.714"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Already did no answer",
+          "date_time": "2026-02-19 11:16:58.824",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c76b4-5521-4b8d-f000-0000f4ac4809",
+          "message_text": "Howitzer Clothing: Sorry to hear that! Rest assured, our team is doing everything to respond to each inquiry in a timely manner. They should follow up with you in no time! If you don\u0027t see the team\u0027s response in your inbox, be sure to check your spam and promo folders, sometimes our emails end up there as well. ",
+          "message_type": "agent",
+          "agent": "50271",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 11:20:55.741"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Can you get me in contact with someone to call me please?",
+          "date_time": "2026-02-19 11:29:38.550",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I need to talk to a customer support agent",
+          "date_time": "2026-02-19 11:51:38.484",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c76d1-71b8-40d6-f000-0000f4ac4809",
+          "message_text": "Howitzer Clothing: I\u0027m sorry about that! This number is for SMS only, so I\u0027m not able to make or receive calls. You can give us a call at 1-855-717-3963, Monday - Friday from 9:00 am - 5:00 pm PST. ",
+          "message_type": "agent",
+          "agent": "50269",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 11:52:43.608"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I am but nobody is answering my calls or my emails",
+          "date_time": "2026-02-19 11:53:28.794",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c76d4-226a-493b-f000-0000f4ac4809",
+          "message_text": "Howitzer Clothing: We sincerely apologize for the wait! As much as I would love to help out directly, I\u0027m afraid my access is limited, and the team is better equipped to assist you. They are experiencing a high volume of emails, but they\u0027ll respond to you as soon as possible. Please check your spam and promo folders, as sometimes our emails end up there. We appreciate your patience on this!",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 11:55:39.910"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Still no answer from phone call or email please connect me with someone",
+          "date_time": "2026-02-19 12:20:50.580",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c76ee-86d9-44eb-f000-0000f4ac4809",
+          "message_text": "Howitzer Clothing: As mentioned earlier, I truly apologize that I\u0027m unable to assist with this directly, as my system isn\u0027t equipped to handle this type of issue. Our team is working hard to respond to all inquiries as quickly as possible, and you should hear back from them very soon.",
+          "message_type": "agent",
+          "agent": "82427",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 12:24:29.555"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I just want to return it and get my money back in my account ASAP",
+          "date_time": "2026-02-19 12:32:11.197",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c76f8-5cf1-4915-f000-0000f4ac4809",
+          "message_text": "Howitzer Clothing: I truly apologize that I\u0027m not able to resolve this directly. Our team is actively working through inquiries and will get back to you as soon as possible.",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 12:35:14.187"
         }
       ]
     }

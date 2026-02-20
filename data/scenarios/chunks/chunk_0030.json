@@ -3,349 +3,1057 @@
   "chunk": "chunk_0030",
   "scenarios": {
     "146": {
-      "id": "019be747-75f0-4c72-f000-0000f577afe6",
-      "companyName": "Luminox",
-      "companyWebsite": "https://luminox.com",
-      "agentName": "Taylor",
-      "agentInitial": "L",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post purchase inquiries, use PPI shortcut",
-          "Send to CS immediately for Authorized Retailers"
-        ],
-        "templates": [
-          "For wrong/damaged items use WDI shortcut",
-          "For cxs reaching out from the UK, use UKD shortcut"
-        ]
-      },
-      "SystemMessage1": "Luminox Watches: Welcome to Luminox Watches! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Luminox Watches: I'm Taylor. I just wanted to say thanks for joining. Here's your coupon for you WELCOME10. You can auto-apply it and shop now here: luminox.attn.tv/a8OPW_-czi3Z\n\nText me any time with questions.",
-      "SystemMessage3": "Luminox Watches: Don't forget to save our contact to get exclusive updates!",
-      "customerMessage1": "Is this still Taylor?",
-      "AgentMessage1": "Luminox Watches: I'm part of the customer service team. How can I assist you today?",
-      "customerMessage2": "Taylor, I have just watched a video showing the new Luminox Bear Grylls Survival Master Watch. I looked in your website and cannot find it. Can you assist me in finding out more please?",
-      "AgentMessage2": "Luminox Watches: Thanks for your interest! Are you referring to this?: https://luminox.attn.tv/asTY6PyfWm_j",
-      "customerMessage3": "No",
-      "customerMessage4": "I saw that one. This is supposed to be a new one.",
-      "AgentMessage3": "Luminox Watches: I understand. Can I have a screenshot of the video?",
+      "agentName": "Jordan",
+      "id": "019c730d-de9f-4cbb-f000-0000f4bf0801",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://luminox.com",
+          "value": "https://statelymen.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Bear Grylls Survival Land 3710 Series, 43 mm, Outdoor Watch",
-            "link": "https://luminox.com/products/bear-grylls-survival-land-3710-series-43-mm-outdoor-watch?_pos=1&_psq=Bear&_ss=e&_v=1.0",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://statelymen.com",
+      "companyName": "Stately",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "dos_and_donts": [
+          "When sharing links to their plans, always direct the cx to the homepage (https://statelymen.com/) rather than specific plan pages"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Stately: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-18 18:08:25.984",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Stately: Hi, I\u0027m Jenny - Lead Stylist at Stately. \n\nReady to elevate your wardrobe and get a bonus 2-piece outfit in your first 5 boxes? Use code 5BONUSFITS at checkout - statelymen.attn.tv/ao2rFfMnbRqH \n\nNeed help? I\u0027d love to find the perfect plan for your style needs. Text me back with any questions!",
+          "date_time": "2026-02-18 18:08:29.675",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Stately: Don\u0027t forget to save our contact info for exclusive updates! ",
+          "date_time": "2026-02-18 18:08:33.171",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I checked out and wanted to make sure I received the bonus 2 piece items with the code 5BONUSFITS. Thank you!!!",
+          "date_time": "2026-02-18 18:18:01.444",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Post Purchase Inquiries \"; last updated: 2024-02-12 23:00:33.323",
+          "date_time": "2026-02-18 18:20:14.777",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c730d-de9f-4cbb-f000-0000f4bf0801",
+          "message_text": "Stately: Hi, thanks for reaching out. We don\u0027t handle post-purchase requests via text. Please submit your request at concierge@statelymen.com or feel free to call this number 323-948-8852, Monday - Thursday 9:00am - 3:30pm PST. Please let me know if you have any questions about our products, I\u0027m more than happy to help out! \n",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 18:20:14.779"
+        }
+      ]
     },
     "147": {
-      "id": "019bd7f5-e8b7-4604-f000-0000c9bd0a2e",
-      "companyName": "CLEARSTEM",
-      "companyWebsite": "https://clearstem.com",
-      "agentName": "Amy",
-      "agentInitial": "C",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "dos_and_donts": [
-          "CS FAQ 2023: https://docs.google.com/document/d/14trCw9iSUHRl_4Yq40Wz5dg3mZzm_-c0PNFbzdePMj0/edit?usp=sharing"
-        ],
-        "promo_and_exclusions": [
-          "MINDBODYSKIN is not eligible for any discount codes!",
-          "Codes only apply to products found here: https://clearstem.com/collections/all-items-codes-allowed?srsltid=AfmBOor8cOzvFvRGC60_ZKpExyRCdNOowQ8eGgZyJyAn341uscwJDfsZ"
-        ]
-      },
-      "SystemMessage1": "CLEARSTEM: We truly cannot stop serving you insane fun things this holiday season.\n\nFor example: right now, you can get a FREE Mini SKINSPRAY ALL DAY when you subscribe to any product. \n\nSUBSCRIBE, SAVE + GET A FREE SKINSPRAY ALL DAY: clearstem.attn.tv/a9_07oJ1Xmwm .",
-      "SystemMessage2": "CLEARSTEM: Happy holidays, love! \n\nWhile you're celebrating with your loved ones this week, we wanted to send a little reminder to make sure to carve out MOMENTS FOR YOU: small pockets of time to pause, breathe, and enjoy a little self-care. Whether it's a cozy mug of cocoa, curling up with a blanket, or your favorite skincare ritual, may your days be filled with calm, joy, and GLOW. \n\nThank you for letting us be part of your journey to healthier, happier skin. Here's to a bright, beautiful holiday and a radiant New Year ahead.\n\nWith warmth and gratitude,\nDanielle + Kayleigh \n\nShop holiday favorites:\nclearstem.attn.tv/a8w1gfqZICyj .",
-      "SystemMessage3": "CLEARSTEM: She's finally back!!! BRIGHTMEUP is BACK IN STOCK... just in time to make your holidays EXTRA bright 💛🎄\n\nSHOP NOW BEFORE IT HAPPENS AGAIN: clearstem.attn.tv/aAk7HwzWUvX3 .",
-      "SystemMessage4": "CLEARSTEM: Grab everything you need for a CLEAR SKIN NEW YEAR because the final sale of 2025 starts now. \n\n26% off your entire order with code BEMERRY:\nclearstem.attn.tv/aGmA6jsqONcM .",
-      "SystemMessage5": "CLEARSTEM: Super quick message to let you know that the last sale of the year is ending at MIDNIGHT!\n\nGet 26% off with code BEMERRY:\nclearstem.attn.tv/aoJ662l_2tT3 .",
-      "SystemMessage6": "CLEARSTEM: Hours left to save with our LAST SALE OF THE YEAR.\n\n26% off with code BEMERRY:\nclearstem.attn.tv/aiZBKUgnbQY8 .",
-      "SystemMessage7": "CLEARSTEM: We just couldn't let it end yet... 😭\n\n2025's final sale will be going on for ONE MORE DAY. \n\nUse code BEMERRY for 26% off:\nclearstem.attn.tv/aiidcqcov2Im .",
-      "SystemMessage8": "CLEARSTEM: Ok it's OVER OVER. For real this time. Last sale of the year. Last reminder. \n\nYour sign to shop! \n\nUse code BEMERRY by midnight for 26% off:\nclearstem.attn.tv/asEIv1-YwO8J .",
-      "SystemMessage9": "CLEARSTEM: FINAL CALL to get a free Mini SKINSPRAY ALL DAY automatically included with your order! \n\nStart any subscription NOW to claim: \nclearstem.attn.tv/a4CgCVDL535o .",
-      "SystemMessage10": "CLEARSTEM: This is your sign to BREAK UP...with biotin for causing breakouts. We wanna see you out that door baby, BYE, BYE, BYE. 👋 Something better is coming 1.8. \n\nJoin the VIP waitlist now: clearstem.attn.tv/aaaEOMtgEEpW .",
-      "SystemMessage11": "CLEARSTEM: BIOTIN IS OFFICIALLY CANCELLED 🚫\n\nLet's dive into HOW it causes breakouts and why to avoid if when you're looking for a supplement. \n\nREAD NOW: clearstem.attn.tv/aWA7FPH6kbX5 .",
-      "SystemMessage12": "CLEARSTEM: MAKE 2026 YOUR YEAR OF CLEAR by focusing on the right routine! \n\nYou don't have to overthink it - we did the work for you by curating GO-TO routines that have THOUSANDS of 5-star reviews. \n\nShop based on your skin goals now: clearstem.attn.tv/aTgOPmv8jGm0 .",
-      "SystemMessage13": "CLEARSTEM: We're having a VIRTUAL live early access LAUNCH event today and YOU'RE INVITED! 🎀💃\n\nJoin Danielle + Kayleigh live on Zoom for a very special BREAK UP WITH BIOTIN LAUNCH PARTY celebrating our HAIR SKIN NAILS Biotin-Free Beauty supplement. \n\nJOIN ON ZOOM TODAY @ 5 PM PST: clearstem.attn.tv/aZ9dkU2rrJKa .",
-      "SystemMessage14": "CLEARSTEM: HAIR SKIN NAILS IS HERE!! She's not a regular Hair Skin Nails supplement, she's a cool one 😉\n\nMade WITHOUT biotin specifically for breakout-prone skin! \n\nShe supports: \n🎀 Strong, healthy, shiny hair + nails*\n🎀 Improved appearance of thin-looking hair*\n🎀 Visibly thicker, fuller-looking hair*\n🎀 Hydrated, bouncy skin*\n\nMade with clinically-studied ingredients including Nettle Root Extract for HAIR VOLUME, Folate for HAIR STRENGTH, and MSM Sulfur for healthier hair skin and nails overall. \n\nThis supplement does what biotin could never. \n\nGET A FREE GIFT WITH FIRST SUBSCRIPTION NOW: clearstem.attn.tv/axQC-jrthvBw .",
-      "SystemMessage15": "CLEARSTEM: BRB, packing up the last free gifts for people who start a HAIR SKIN NAILS subscription today! \n\nLast chance to get a FREE Mini HYDRABERRY + 15% off 🎀\n\nDon't miss out. Subscribe to HAIR SKIN NAILS now: clearstem.attn.tv/avzYlzUQLxAS .",
-      "SystemMessage16": "CLEARSTEM: ATTENTION: we're now on TYB, so we can REWARD you like never before!\nInside, you'll get:\n• early access to launches\n• exclusive drops + perks\n• real skin conversations\n• and more from the CLEARSTEM team\nJoin for free right NOW: clearstem.attn.tv/aAzWtI2m8s8L .",
-      "SystemMessage17": "CLEARSTEM: Lisa, thanks for stopping by! ✨\n\nShop now for healthy skin and hair picks that support your glow. Buy here: https://clearstem.attn.tv/aNwsdLHK_uRd . 🌱",
-      "SystemMessage18": "CLEARSTEM: Lisa, brighten and refine your skin with BRIGHT SIDE DUO TONER SET—see softer tone in just seven days.✨\n\nGet free shipping on orders over $75.\n\nShop now: https://clearstem.attn.tv/atf5bkStNCaC .",
-      "SystemMessage19": "CLEARSTEM: Ring ring 📞 a NEW YOU is calling! \n\nGet 25% OFF routines to Make 2026 Your Year of Clear. \n\nUse code NEWYOU at checkout to save: clearstem.attn.tv/aq67TshK8Duu .",
-      "SystemMessage20": "CLEARSTEM: 25% OFF routines is ON NOW + ending at midnight. \n\nSave big with code NEWYOU: clearstem.attn.tv/anKX1Why0xrD .",
-      "SystemMessage21": "CLEARSTEM: DOORS CLOSING for 25% off! ✌️\n\nShop routines now with code NEWYOU: clearstem.attn.tv/aNMGofpJmmIJ .",
-      "SystemMessage22": "CLEARSTEM: 💌 Today Only. VIP Only. AKA YOU ONLY!! 💌\n\nWe want to treat you to a FREE bottle of everyone's favorite non-comedogenic face oil: GOLDENHOUR. \n\nAdd the mini to your cart with $75+ of product, then use code NOURISH at checkout. \n\nACT TODAY: clearstem.attn.tv/awYS-KkqdXfd .",
-      "SystemMessage23": "CLEARSTEM: Because it's you (our favorite!!!)...we're extending this offer for ONE more day. \n\nGet the silky soft, luxurious, and NON-pore-clogging GOLDENHOUR facial oil free when you spend $75+. \n\nAdd Mini GOLDENHOUR to your cart + use code NOURISH at checkout.\n\nShop Now: clearstem.attn.tv/ajuRAvlskvt_ .",
-      "SystemMessage24": "CLEARSTEM: Lisa, treat your skin to GOLDENHOUR WATERMELON BARRIER OIL for a light, fresh boost. ✨\n\n509 people recently purchased this nourishing oil, complete your order before it disappears!\n\nShop now: https://clearstem.attn.tv/ag1V8zXri3IC .",
-      "SystemMessage25": "CLEARSTEM: Ok...we just couldn't let you pass this one up since this is a VIP only offer, and YOU'RE a VIP! 💅\n\nEXTENSION FINAL HOURS: When you shop today and spend $75+, get a FREE Mini GOLDENHOUR free!!\n\nAdd your gift to cart + use code NOURISH: clearstem.attn.tv/a05KYwjw3fY5 .",
-      "customerMessage1": "Instead of $30 off I'm only getting $18.90 off with NOURISH code. Please explain.",
-      "AgentMessage1": "CLEARSTEM: I'm sorry about that. Could you kindly share a screenshot of the items in your cart? I'll be happy to look into the issue!",
-      "customerMessage2": "\"",
-      "SystemMessage26": "VoC: Instead of $30 off I'm only getting $18.90 off with NOURISH code. Please explain.",
-      "AgentMessage2": "CLEARSTEM: Thank you for sharing the screenshot! I have passed this on to my team and I will get back as soon as I hear from them! Hang tight!",
+      "agentName": "",
+      "id": "019c62b2-f6a2-41df-f000-0000860952bd",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://clearstem.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "GOLDENHOUR Watermelon Barrier Oil",
-            "link": "https://clearstem.com/products/goldenhour?_pos=1&_sid=654544305&_ss=r&variant=47240285716705",
-            "icon": "eye"
+            "link": "https://www.ryka.com/product/womens-devotion-x-max-rs-5277540/windsor-red-mesh-fabric-63330",
+            "item": "devotion x max rs",
+            "timeAgo": "2026-02-14"
           },
           {
-            "item": "GOLDENHOUR Watermelon Barrier Oil",
-            "link": "https://clearstem.com/products/goldenhour?_pos=1&_sid=654544305&_ss=r",
-            "icon": "eye"
+            "link": "https://www.ryka.com/product/womens-devotion-x-walking-sneaker-5271739/white-pink-mesh-fabric-90397",
+            "item": "devotion x walking sneaker",
+            "timeAgo": "2026-02-14"
           },
           {
-            "item": "GENTLECLEAN - Vitamin Infused Barrier Cleanser",
-            "link": "https://clearstem.com/products/gentleclean?pr_prod_strat=jac&pr_rec_id=5642568e3&pr_rec_pid=6692651991200&pr_ref_pid=6692652089504&pr_seq=uniform",
-            "icon": "eye"
+            "link": "https://www.ryka.com/product/womens-jetsetter-sneaker-5280999/terra-taupe-suede-mesh-91764?icid=Ryka_wk2_ShoeFinder-CasualW_PDP-jetsetter_Answer-A_Feb",
+            "item": "jetsetter sneaker",
+            "timeAgo": "2026-02-14"
           },
           {
-            "item": "GOLDENHOUR Watermelon Barrier Oil",
-            "link": "https://clearstem.com/products/goldenhour",
-            "icon": "eye"
+            "link": "https://www.ryka.com/product/womens-devotion-max-mary-jane-walking-sneaker-5279660/black-fabric-90684",
+            "item": "devotion max mary jane walking sneaker",
+            "timeAgo": "2026-02-14"
           },
           {
-            "item": "GOLDENHOUR Watermelon Barrier Oil",
-            "link": "https://clearstem.com/products/goldenhour",
-            "icon": "eye"
+            "link": "https://www.ryka.com/product/womens-stellar-cozy-mule-5282054/quiet-grey-sherpa-20153",
+            "item": "stellar cozy mule",
+            "timeAgo": "2026-02-14"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://ryka.com",
+          "date": ""
+        }
       },
-      "orders": []
+      "companyWebsite": "https://ryka.com",
+      "companyName": "Ryka",
+      "notes": {
+        "escalate": [
+          "When ESC always use ESC shortcut",
+          "When ESC discount/promotion inquiries always include the exact offer/discount/promo code in your escalation notes",
+          "Include details of the cx\u0027s issue in your ESC notes \u0026 any relevant cx information"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Rykä: Your January Jumpstart is here with sneaks starting at $25.99. Consider this your sign to grab a new pair: ryka.attn.tv/agqAZdKA5vNg ",
+          "date_time": "2026-01-17 16:05:20.254",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: Slide into comfort with Devotion X Max RS Walking Sneaker and enjoy podiatrist-approved support.\n\nHurry! 32 people added this to their cart.\n\nShop now: https://ryka.attn.tv/ay7FKGnAdPj1 .",
+          "date_time": "2026-01-17 17:02:41.121",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: Step into comfort with Devotion shoes, designed for all-day support and ease. \n\nFind your fit here: https://ryka.attn.tv/aHpUUkzCTLd6 .",
+          "date_time": "2026-01-17 18:02:48.792",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: ON SALE NOW: Sneaks to jumpstart 2026!\nryka.attn.tv/aSzgrbPckOFB ",
+          "date_time": "2026-01-19 19:05:14.635",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: You didn\u0027t know you needed a Mary Jane sneaker...now you need them all!\n\nryka.attn.tv/ayjTVHx_qy3L ",
+          "date_time": "2026-01-24 16:45:05.250",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: Slide into the Activfoam Mary Jane Walking Sneaker and feel confident and comfy on every stroll, making daily walks more enjoyable for you.\n\nFree shipping on orders over $65 and free returns with Happy Returns Bar.\n\nYour next pair is here: https://ryka.attn.tv/aDC2w8GPhPm_ .",
+          "date_time": "2026-01-24 17:53:51.624",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: We\u0027ve got a little treat...15% OFF + FREE SHIPPING - go grab your faves! \nUse code: RYKAJAN15\nryka.attn.tv/arw4-1R29HOG ",
+          "date_time": "2026-01-27 21:08:08.119",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: Top-rated for a reason - Shop the NEW colors and styles just added to the best-selling Devotion Series: ryka.attn.tv/aJSjUH1YRc04 ",
+          "date_time": "2026-02-03 21:09:14.751",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: Shoes designed to move the way your body does. One Brand. Every Move.\nShop new Made for Women sneakers: ryka.attn.tv/aMklKOzNh46Q ",
+          "date_time": "2026-02-07 15:07:07.726",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: Slide into Devotion Max Mary Jane Sneaker for cushioned RE-ZORB® support!\n\n55 people added this to their cart.\n\nShop now: https://ryka.attn.tv/aZR85UWyNGrs . LAST CHANCE",
+          "date_time": "2026-02-08 19:11:21.065",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: Hi there — Mary Janes with cushioned, podiatrist-approved support are ready for everyday wear.\n\nFree shipping on orders over $65 and free returns with Happy Returns Bar.\n\nSlide into comfort: https://ryka.attn.tv/aQUxd--YYUNx .",
+          "date_time": "2026-02-08 20:11:31.676",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: \"These are the most comfortable shoes I have ever worn!\" -Cbird17\nFind the comfort in the Echo Knit: ryka.attn.tv/aE2Pg5XFX2pg ",
+          "date_time": "2026-02-10 22:05:08.677",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: Love at first step \u003c3 Crush-worthy kicks on SALE! \nryka.attn.tv/a5v6z8YWS7m1 ",
+          "date_time": "2026-02-14 16:05:08.415",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I don\u0027t need expedited shipping! Your ad says free shipping and handling!",
+          "date_time": "2026-02-14 16:29:40.391",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "You\u0027re wanting to charge me $30 for shipping and handling! Be better humans!",
+          "date_time": "2026-02-14 16:30:20.463",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: Slide into Devotion Max Mary Jane Walking Sneaker — podiatrist-approved comfort with full cushioning and breathable mesh.\n\n127 people added this to their cart.\n\nShop now: https://ryka.attn.tv/awdgWknuhXGO .",
+          "date_time": "2026-02-14 16:47:35.200",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5e54-8b03-4b0e-f000-0000860952bd",
+          "message_text": "Rykä: I\u0027m sorry about that, and I understand your concern. We offer free shipping on all orders over $65. Maybe you can add something else to reach the minimum? \n\nI recommend browsing our sale collections here: https://ryka.attn.tv/aVlRBY5aUaFy\nPerhaps you will find something to include in your order to reach the required amount. ",
+          "message_type": "agent",
+          "agent": "46498",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 17:45:24.903"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "My order is over $101 😑🤦🏻‍♀️",
+          "date_time": "2026-02-14 17:47:28.670",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rykä: Hi there — the Devotion styles pair cushioned support with breathable uppers for easy daily wear.\n\nGet free shipping on orders over $65 and free returns with Happy Returns Bar.\n\nSlide into comfort: https://ryka.attn.tv/aj0pn2FiHO-u .",
+          "date_time": "2026-02-14 17:47:42.824",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5e8c-b92e-48f0-f000-0000860952bd",
+          "message_text": "Rykä: I\u0027m really sorry about that. I apologize for the confusion. I noticed that your cart already has a discount applied. Unfortunately, you won\u0027t be able to use multiple deals at checkout, but feel free to use the one that gives you the best value! ",
+          "message_type": "agent",
+          "agent": "39001",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 18:46:46.731"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It\u0027s not a multiple deals issue! Honor your free s \u0026 h!! Smh",
+          "date_time": "2026-02-14 20:30:08.125",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5f0d-a154-4725-f000-0000860952bd",
+          "message_text": "Rykä: I\u0027m sorry for any inconvenience caused and for the late reply. I understand your concern. You\u0027re right, free shipping requirements is for your total to be $65 or more. First, I might suggest trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes. ",
+          "message_type": "agent",
+          "agent": "87359",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 21:07:34.795"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It\u0027s not a browser issue! Omg",
+          "date_time": "2026-02-14 21:12:17.868",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I shouldn\u0027t have to $30 for s \u0026 h! I\u0027ll gladly pay the $7.95! I don\u0027t need it expedited.   Smdh!",
+          "date_time": "2026-02-14 21:13:08.011",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5f35-47d8-4284-f000-0000860952bd",
+          "message_text": "Rykä: Apologies for all the trouble. Can you please send another screenshot showing the shipping charge at checkout? Also, what are the only shipping options you\u0027re seeing on your end? ",
+          "message_type": "agent",
+          "agent": "31385",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 21:50:53.325"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "29.99 for s \u0026 h 🙄",
+          "date_time": "2026-02-14 22:00:27.557",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5f70-2fdf-4347-f000-0000860952bd",
+          "message_text": "Rykä: Sorry to hear that. Could you send me a screenshot of what\u0027s showing on your end? I\u0027m happy to check it. ",
+          "message_type": "agent",
+          "agent": "82343",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 22:55:13.801"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes,  gotta log back in",
+          "date_time": "2026-02-14 22:59:37.486",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5fa5-0d77-4bda-f000-0000860952bd",
+          "message_text": "Rykä: Thanks for sending the screenshot! Could you also please provide a screenshot of the available shipping options on your end? It\u0027s possible that the expedited shipping option may be selected by default, and you might be able to uncheck it to adjust your shipping preference. This will help us guide you more accurately on the next steps.",
+          "message_type": "agent",
+          "agent": "109837",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 23:52:58.402"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "😑🤦🏻‍♀️",
+          "date_time": "2026-02-15 00:16:27.530",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "There was no option! Omg, if there was one,  I would\u0027ve picked the free s \u0026 h like you advertised! Smh",
+          "date_time": "2026-02-15 09:21:45.884",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It\u0027s 2026, do better,  honor you\u0027re ad!",
+          "date_time": "2026-02-15 09:22:05.924",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c61ca-14b0-4c66-f000-0000860952bd",
+          "message_text": "Rykä: I\u0027m really sorry for the inconvenience. I\u0027m afraid the offer is only for standard shipping and you selected expedited shipping that\u0027s why you\u0027re being charged for shipping. Can you please share a screenshot of the shipping options that you see on your end? ",
+          "message_type": "agent",
+          "agent": "38972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-15 09:52:39.509"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I did select expedited.. geezez,  we still have snow on the ground here!",
+          "date_time": "2026-02-15 11:06:09.303",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Did not",
+          "date_time": "2026-02-15 11:06:19.323",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "This is all it shows! It won\u0027t let me get back to the s \u0026 h .  But it did not give me an option.  You even advertised free s \u0026 h on my screenshots! Ugh",
+          "date_time": "2026-02-15 11:11:19.272",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6212-f36f-495a-f000-0000860952bd",
+          "message_text": "Rykä: Thank you for letting me know, and I\u0027m truly sorry about this. Let me check this with my team for you. Can I have your full name, email address, and zip code, please? ",
+          "message_type": "agent",
+          "agent": "109955",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-15 11:12:15.117"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "83ba7289cda65",
+          "date_time": "2026-02-15 11:13:39.195",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "That\u0027s a cart number I just saw.. ugh",
+          "date_time": "2026-02-15 11:13:59.256",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "For a women\u0027s company,  you sure are difficult,  you won\u0027t even honor your own advertisement.. 😑🤦🏻‍♀️",
+          "date_time": "2026-02-15 11:14:59.438",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6228-ad1d-435e-f000-0000860952bd",
+          "message_text": "Rykä: My sincere apologies for the confusion! Free shipping will automatically apply as long as free standard shipping is selected. You\u0027ll be able to choose your shipping speed under \"1. Shipping\" at checkout. Could you please confirm whether you\u0027re already at checkout or still in your cart? Could you also share your full name, email address, and ZIP code?",
+          "message_type": "agent",
+          "agent": "82447",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-15 11:35:58.916"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I don\u0027t need expedited shipping and handling! We still have snow on the ground!!",
+          "date_time": "2026-02-15 13:42:43.620",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c62a3-e352-4b4b-f000-0000860952bd",
+          "message_text": "Rykä: Thanks for sending the screenshot and I\u0027m once again sorry for the inconvenience! May I have your zip code so I can check on my end?",
+          "message_type": "agent",
+          "agent": "87474",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-15 13:50:33.716"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Omfg",
+          "date_time": "2026-02-15 13:51:03.697",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "99708",
+          "date_time": "2026-02-15 13:51:10.651",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c62a8-48ea-45b6-f000-0000860952bd",
+          "message_text": "Rykä: Thank you. Expedited shipping (2nd Day Air) or Rush Shipping (next day) is required for all orders shipped to Alaska and Hawaii, in addition to a fee of $5.50 per item ordered. ",
+          "message_type": "agent",
+          "agent": "82447",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-15 13:55:21.862"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Way to lose a customer! It\u0027s 2026, stop being greedy and be better humans!",
+          "date_time": "2026-02-15 13:56:43.765",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Canceling my order! Just because it\u0027s Alaska,  you\u0027re ripping off your customers! At least vionic honors their free s \u0026 h to Alaska!!",
+          "date_time": "2026-02-15 13:57:53.977",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "For a women owned company,  YOU\u0027RE GREEDY AND A RIP OFF!",
+          "date_time": "2026-02-15 13:58:33.606",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Angry customer - All brands\"; last updated: 2023-10-10 18:19:02.447",
+          "date_time": "2026-02-15 14:07:01.693",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c62b2-f6a2-41df-f000-0000860952bd",
+          "message_text": "Rykä: I totally understand where you\u0027re coming from, and what you\u0027re feeling right now is absolutely valid. I\u0027m really sorry about this. Please note that shipping to Alaska is excluded from the standard, low-cost \"ground\" shipping promotions. You may check more information here: https://ryka.attn.tv/ad1Bw6CoYRtF",
+          "message_type": "agent",
+          "agent": "109964",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-15 14:07:01.695"
+        }
+      ]
     },
     "148": {
-      "id": "019bb53e-f7fa-41a1-f000-00007790cd30",
-      "companyName": "Dorado Fashion",
-      "companyWebsite": "https://dorado.com",
-      "agentName": "Kiara",
-      "agentInitial": "D",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues"
-        ]
-      },
-      "SystemMessage1": "DORADO: Christmas is basically tomorrow 😭\n\nGet up to 80% OFF w/ code: LASTMIN\n\nOrder by midnight for holiday delivery.\n\nStocked Gifts for Her/Him:\nhttps://dorado.attn.tv/av30TQCNgk0T .",
-      "SystemMessage2": "DORADO: ONLY 5 HOURS LEFT. \n\nGet up to 80% OFF w/ code: LASTMIN \n\nShop Stocked Gifts for Her & Him:\nhttps://dorado.attn.tv/aefqMxYQmFAX \n\nGet it b4 Christmas!",
-      "SystemMessage3": "DORADO: We're making room for what's next.. aka: HUGE markdowns \n\nYear-End Stock Sell-Off is LIVE. \n40 styles as low as $9. \n\nLimited Stock. Zero mercy.\n\nPrices go back up 12/27 @ 11:59PM EST\n\nShop Now: \nhttps://dorado.attn.tv/agSgTvFZu2pr .",
-      "SystemMessage4": "DORADO: NEW YEAR'S SALE.\n\nUp to 85% OFF (ONE. LAST. TIME.)\n\nCode: BYE2025 \n\nStart the year looking expensive: \nhttps://dorado.attn.tv/aWpK6ew1Vl39 .",
-      "SystemMessage5": "DORADO: Hey, this is Kiara. Thanks for checking out our site! https://dorado.attn.tv/a_0rXBSrHMNk \n\nLet me know if you have any questions or if you want me to get you a discount :)",
-      "SystemMessage6": "DORADO: Hello Damita, it's Kiara! I noticed you haven't completed your order yet. \n\nClick below to recover your cart and use code D20 for an extra 20% OFF! (72 hours only):\n \nhttps://dorado.attn.tv/afxMA9jw1VDn \n\nPlease let me know if there's anything I can help with :)",
-      "customerMessage1": "When I added item to my cart it was $19 I went to check out it's now $49 is that correct?",
-      "AgentMessage1": "DORADO: I'm sorry for any confusion. Just to confirm, are you referring to the Classic Frosted Cuff Bracelet here?: https://dorado.attn.tv/arEjgi8wxy6N If so, I can see that it's currently on sale for $49.",
-      "customerMessage2": "Yes. It was $19 when I added item in my cart and with the 20% off $15.20 it was a year end markdown",
-      "SystemMessage7": "Template used: \"Customer support\"; last updated: 2022-03-21 22:15:50.868",
-      "AgentMessage2": "DORADO: Thanks for confirming! I checked, and the price is indeed $49. The best way to handle this is to email us directly at support@doradofashion.com. Our team is happy to help! \nIf there's anything else I can help with, please don't hesitate to reach out.",
+      "agentName": "Rebecca",
+      "id": "019c6cfc-b795-4e0f-f000-0000f75a6bb4",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://dorado.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "Classic Frosted Cuff Bracelet",
-            "link": "https://dorado.com/products/classic-frosted-cuff-bracelet?_pos=22&_sid=5b333dc51&_ss=r",
-            "icon": "eye"
+            "link": "https://faithgateway.com/products/the-power-and-promise-of-easter-study-guide-devotional-bible-premium-bundle",
+            "item": "The Promise and Power of Easter Study Guide + Devotional + Bible (Premium Bundle)",
+            "timeAgo": "2026-02-17"
           },
           {
-            "item": "Classic Frosted Cuff Bracelet - 18K Gold Plated",
-            "link": "https://dorado.com/products/classic-frosted-cuff-bracelet?_pos=22&_sid=5b333dc51&_ss=r",
-            "icon": "eye"
+            "link": "https://faithgateway.com/products/the-way-of-the-wildflower-gospel-meditations-to-unburden-your-anxious-soul?variant=43481389072520\u0026utm_campaign=20260213_sms_loveyourshelfsale_wayofwildflowerBIS_base\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=dn0r6",
+            "item": "The Way of the Wildflower: Gospel Meditations to Unburden Your Anxious Soul - Hardcover",
+            "timeAgo": "2026-02-17"
           },
           {
-            "item": "Butterfly Wing Drop Earrings",
-            "link": "https://dorado.com/products/butterfly-wing-drop-earrings?_pos=12&_sid=0cdb51909&_ss=r&utm_campaign=Concierge-Site-Visitor-1-&utm_source=attentive&utm_medium=text&externalId=MbkKI",
-            "icon": "eye"
-          },
-          {
-            "item": "Butterfly Wing Drop Earrings - 18K Gold Plated / 54mm",
-            "link": "https://dorado.com/products/butterfly-wing-drop-earrings?_pos=12&_sid=0cdb51909&_ss=r&utm_campaign=Concierge-Site-Visitor-1-&utm_source=attentive&utm_medium=text&externalId=MbkKI",
-            "icon": "eye"
-          },
-          {
-            "item": "Classic Frosted Cuff Bracelet",
-            "link": "https://dorado.com/products/classic-frosted-cuff-bracelet",
-            "icon": "eye"
+            "link": "https://faithgateway.com/products/the-way-of-the-wildflower-gospel-meditations-to-unburden-your-anxious-soul?variant=43481389072520\u0026utm_campaign=20260213_sms_loveyourshelfsale_wayofwildflowerBIS_base\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=dn0r6",
+            "item": "The Way of the Wildflower: Gospel Meditations to Unburden Your Anxious Soul - Hardcover",
+            "timeAgo": "2026-02-17"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://faithgateway.com",
+          "date": ""
+        }
       },
-      "orders": []
+      "companyWebsite": "https://faithgateway.com",
+      "companyName": "FaithGateway",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase inquiries, use PPI shortcut",
+          "Send to CS if the customer doesn\u0027t receive the free printables with his purchase"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Discount code errors",
+        "Shipping questions"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from FaithGateway.",
+          "date_time": "2026-02-03 07:25:32.609",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: Welcome to FaithGateway! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-03 16:48:09.716",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: Thanks for signing up for our Online Bible Study!",
+          "date_time": "2026-02-03 16:48:13.782",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: Are you ready? Order your study materials before the A Jesus-Shaped Life OBS begins August 11th - Shop Now: https://fg.attn.tv/aNSkq3kIMt6Y",
+          "date_time": "2026-02-04 07:25:06.131",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: Getting ready for The Promise and Power of Easter Online Bible Study? Don\u0027t forget your study materials! \n\nOrder today and take $5 off $30+ with code SHELF \nShop here: fg.attn.tv/aSDoMaIhQAh8 \n\nText back if you have questions!",
+          "date_time": "2026-02-10 11:00:44.162",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: Just restocked! The Way of the Wildflower is here to help us release our burdens, overcome anxiety, and embrace a life rooted in God\u0027s care: fg.attn.tv/aRDCulSG13SU \n\nTake $5 off $30+ during our Love Your Shelf Sale using code SHELF",
+          "date_time": "2026-02-13 13:06:58.481",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: Hey , this is Rebecca. Thanks for checking out our site! https://fg.attn.tv/a_LCX_C-X29h \n\nAre you looking for anything in particular today? ",
+          "date_time": "2026-02-17 13:46:11.242",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The study material . I had signed up for the Jesus shaped life Bible study",
+          "date_time": "2026-02-17 13:47:06.642",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Customer support\"; last updated: 2022-09-03 12:34:31.821",
+          "date_time": "2026-02-17 14:03:47.377",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6cfc-b795-4e0f-f000-0000f75a6bb4",
+          "message_text": "FaithGateway: Thank you for sharing that. Just to be sure, are you referring to this A Jesus-Shaped Life Bible Study Guide? https://fg.attn.tv/avyPHiuZEt0d \n\nIf so, kindly note that you need to place an order to get access to the materials included.\n\nFor more clarification, please feel free to email us directly at customercare@harpercollins.com Our team is happy to help!\n",
+          "message_type": "agent",
+          "agent": "109968",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 14:03:47.379"
+        }
+      ]
     },
     "149": {
-      "id": "019be735-5f1d-405a-f000-000049c37df8",
-      "companyName": "Backcountry",
-      "companyWebsite": "https://backcountry.com",
-      "agentName": "Sarah",
-      "agentInitial": "B",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "No escalations for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over"
-        ],
-        "promo_and_exclusions": [
-          "Welcome offer page:   https://www.backcountry.com/sc/new-customer-coupon-rules"
-        ]
-      },
-      "SystemMessage1": "Backcountry: 72hr Flash Sale! Score up to 70% off select cold-weather gear, apparel & more. Stock up before it's gone: http://bctxt.co/aFkl7W7UXIqN",
-      "SystemMessage2": "Backcountry: Flash Sale ends tonight at midnight! Don't miss these finds for winter up to 70% off:http://bctxt.co/aiJ50695vt02",
-      "SystemMessage3": "Backcountry: Stay warm outdoors with the Classic Retro-X Jacket, featuring high-loft fleece, a windproof barrier, and moisture-wicking lining for cozy comfort.\n\nEnjoy free shipping on orders over $69.\n\nReady for adventure? Check it out here: http://bctxt.co/ayX0zyjkT-su .",
-      "SystemMessage4": "Backcountry: Take 20% off full-price sunglasses & goggles from Oakley, 100%, Smith + more here: http://bctxt.co/ac7DYBVRIIgW \n\nDiscount applies in cart.",
-      "SystemMessage5": "Backcountry: Winter's MVPs? Baselayers. Stay out longer with the right layers and see our selection here:http://bctxt.co/aLzalHXgeDfy",
-      "SystemMessage6": "Backcountry: New year, same passions! Score fresh layers, boots & snow kits to fuel every 2026 mission, now up to 50% off: http://bctxt.co/a0QyKI9B7evp",
-      "SystemMessage7": "Backcountry: Cozy up in the Natural Blend Retro Cardigan—warm sherpa fleece with recycled polyester, reclaimed wool, and zip pockets to keep your stuff secure.\n\nFree shipping on orders $69+.\n\nTry it on for your next trail run: http://bctxt.co/a-zIz0LNlpvr .",
-      "SystemMessage8": "Backcountry: Fresh price drops just landed! Scoop newly discounted gear, from boots to shells to packs, before your size bails: http://bctxt.co/aZGwcyoa8m8M",
-      "SystemMessage9": "Backcountry: Weekend Flash Sale starts now. Score up to 70% off select gear and apparel, while it's still here: http://bctxt.co/a-wXbGwCLEjP",
-      "SystemMessage10": "Backcountry: Flash Sale's fading. Up to 70% off select styles ends tomorrow! Lock in your deals while the getting's good: http://bctxt.co/att2VlX_CTQn",
-      "SystemMessage11": "Backcountry: FINAL HOURS. Up to 70% off Flash Sale wraps tonight! Last chance to grab adventure-changing gear for less: http://bctxt.co/aN0_DORuzUt9",
-      "SystemMessage12": "Backcountry: Hey, that was some great gear you were checking out! Go on, have another look: http://bctxt.co/aBG_u6qQUCYu",
-      "SystemMessage13": "Backcountry: 20% off full-price goggles & sunnies from top brands ends tomorrow. Lock in clearer views: http://bctxt.co/agHHXlDWGUTU \n\nDiscount applies in cart.",
-      "SystemMessage14": "Backcountry: Early access starts now! Take 20% off full-price items. Gear up before the cold weather rolls in: http://bctxt.co/aOWFrMTpo6L2 \n\nEven better? Enjoy free 2-day shipping when you spend $150+ with code: SNOW2DSHIPGHM8T3G",
-      "SystemMessage15": "Backcountry: Grab the Classic Retro-X Jacket you left in cart — cozy high-loft fleece with windproof barrier and moisture-wicking lining.\n\n7.5K people have recently viewed the jacket.\n\nShop now: http://bctxt.co/a1kD19wFDFiJ .",
-      "customerMessage1": "Does the 20% discount code work for the item?",
-      "AgentMessage1": "Backcountry: Thank you for your interest! Can you please share the item that you're referring to so that I can check? Please let me know, I'm here to assist you.",
-      "customerMessage2": "https://www.backcountry.com/patagonia-classic-retro-x-jacket-mens",
-      "AgentMessage2": "Backcountry: Thank you for the link. Please note that this code is only valid for the products listed in that link: http://bctxt.co/aukw2QlKiXAK Could you please confirm whether the item you are looking for is included in this list?",
+      "agentName": "Darby",
+      "id": "019c62da-a8fc-41f7-f000-0000d25db437",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://backcountry.com",
+          "value": "https://johnnie-o.com/",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Classic Retro-X Jacket - Men's",
-            "link": "https://www.backcountry.com/patagonia-classic-retro-x-jacket-mens",
-            "icon": "eye"
-          },
-          {
-            "item": "Classic Retro-X Jacket - Men's",
-            "link": "https://www.backcountry.com/patagonia-classic-retro-x-jacket-mens",
-            "icon": "eye"
-          },
-          {
-            "item": "Classic Retro-X Jacket - Men's",
-            "link": "https://www.backcountry.com/patagonia-classic-retro-x-jacket-mens",
-            "icon": "eye"
-          },
-          {
-            "item": "Classic Retro-X Jacket - Men's",
-            "link": "https://www.backcountry.com/patagonia-classic-retro-x-jacket-mens",
-            "icon": "eye"
-          },
-          {
-            "item": "Classic Retro-X Jacket - Men's",
-            "link": "https://www.backcountry.com/patagonia-classic-retro-x-jacket-mens",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://johnnie-o.com/",
+      "companyName": "johnnie-O",
+      "notes": {
+        "escalate": [
+          "ESC restock inquiries",
+          "ESC shipping/order inquiries",
+          "ESC cxs looking for a discount code"
+        ]
+      },
+      "blocklisted_words": [
+        "Untuck-it"
+      ],
+      "escalation_preferences": [
+        "Restock questions",
+        "shipping",
+        "site issues",
+        "out of stock issues"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Welcome to johnnie-O! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: https://johnnie-o.attn.tv/a1oPbFoM6l7P .",
+          "date_time": "2026-02-14 11:01:51.279",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Welcome to the Family! Your 10% off coupon code is SMS10h5NwzR . Click here to shop now: https://johnnie-o.attn.tv/aTwUJyGeuD3d .",
+          "date_time": "2026-02-14 11:01:55.371",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Don\u0027t forget to save our contact!",
+          "date_time": "2026-02-14 11:01:56.570",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Hey Richard , this is Darby . Thanks for checking out our site! 😊 johnnie-o.attn.tv/aRUIaDnPVAC_ \n\nAre you looking for anything in particular today? ",
+          "date_time": "2026-02-14 11:04:22.555",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Still deciding? In case you missed it, enter SMS10h5NwzR at checkout for 10% off your purchase! https://johnnie-o.attn.tv/atxeDwqAoYI1 .",
+          "date_time": "2026-02-14 13:04:30.695",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: The Coastal Wash Original Polo is garment dyed for a vintage feel with the same perfect fit of our most loved polo. johnnie-o.attn.tv/avp4gJKzhnP2 ",
+          "date_time": "2026-02-15 10:00:34.437",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Our customers say \"We love johnnie-O! The clothes are the most comfortable to wear and we love all the styles \u0026 designs.\" \n\nWhat have you got to lose?\njohnnie-o.attn.tv/adWQBNCleQkN \n",
+          "date_time": "2026-02-15 13:04:53.098",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Hi there! Don\u0027t forget to take advantage of your welcome coupon. Explore our newest arrivals and enjoy 10% OFF your purchase with code: SMS10h5NwzR. \n\nhttps://johnnie-o.attn.tv/ab1GZ6N_TQbB .",
+          "date_time": "2026-02-15 13:05:02.610",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Thank you for your purchase! Your order number is 1856442. View more information about your order here: https://johnnie-o.attn.tv/a6UQBMKqH778 .",
+          "date_time": "2026-02-15 13:35:14.841",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Thank you for shopping at johnnie-O! We hope you love your purchase. Any questions, don\u0027t hesitate to contact us, we are always here to help wingman@johnnie-o.com \njohnnie-o.attn.tv/aaSOTzbcPuhz \n\n",
+          "date_time": "2026-02-15 14:05:44.560",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Hi, if you need additional help please reach out to wingman@johnnie-o.com. Text STOP to opt out.",
+          "date_time": "2026-02-15 14:45:27.380",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Forgot to put the 10% discount code in",
+          "date_time": "2026-02-15 14:45:35.567",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c62d7-4fcb-4c1f-f000-0000d25db437",
+          "message_text": "Johnnie-O: I\u0027m sorry to hear that. I can check with my team to see if we can apply the code to your order. Can I please have the email address you used on the order?",
+          "message_type": "agent",
+          "agent": "35256",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-15 14:46:43.811"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Rgreene9858@gmail.com",
+          "date_time": "2026-02-15 14:47:55.447",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Pass to the team - All brands\"; last updated: 2023-10-10 17:46:43.559",
+          "date_time": "2026-02-15 14:50:23.254",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c62da-a8fc-41f7-f000-0000d25db437",
+          "message_text": "Johnnie-O: Thanks for the info! I will pass this along to my team and get back to you as soon as possible.",
+          "message_type": "agent",
+          "agent": "109964",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-15 14:50:23.255"
+        }
+      ]
     },
     "150": {
-      "id": "019bf720-5428-4b72-f000-0000f5af1bff",
-      "companyName": "Nectar Sleep",
-      "companyWebsite": "https://nectarsleep.com",
-      "agentName": "Quinn",
-      "agentInitial": "N",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS",
-          "Send to CS for refund inquiries"
-        ],
-        "tone": [
-          "Close the convo once the client takes over",
-          "Close the convo if the cx first message is ok, no, etc.",
-          "Don't use the word \"off\" when talking about promotions"
-        ],
-        "dos_and_donts": [
-          "Don't proactively offer to find pricing info, redirect them to the website instead"
-        ],
-        "promo_and_exclusions": [
-          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
-        ]
-      },
-      "SystemMessage1": "Nectar: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (888) 863-2827.",
-      "SystemMessage2": "Nectar: You're in!",
-      "SystemMessage3": "Nectar: Save up to 66% on your complete setup: mattress + adjustable base + bedding set. Sleep upgrade? Complete.\n\nnectarsleep.attn.tv/aRxohn9pLuDy",
-      "SystemMessage4": "Nectar: Hi, this is Quinn. Thanks for signing up! Bundle your queen with an adjustable base for our BIGGEST savings (up to 66%). Just need a queen mattress? Save up to 50% on memory foam or hybrid. Questions? Text me back!\n\nBundle: nectarsleep.attn.tv/a6dT_vM-i5Y8 \n\nMattress: nectarsleep.attn.tv/aNyhiwTOkxz8",
-      "customerMessage1": "My question is?\nWill a queen size bed be too big for a garage turn into a living quarter.",
-      "SystemMessage5": "Nectar: Find your perfect angle. Save up to 66% on the adjustable bundle. Mattress, base & bedding. All included.\n\nnectarsleep.attn.tv/aTObzJgeLb7H\n.",
-      "SystemMessage6": "Nectar: Cool, comfortable sleep for less! Our Classic Foam Queen is $649 (a $1,548 total value). Savings of up to 50%: nectarsleep.attn.tv/aVWb0_OtORNJ\n.",
-      "SystemMessage7": "Nectar: You are already subscribed. Click here to shop now: https://nectarsleep.attn.tv/cl/mfp .",
-      "customerMessage2": "If I order the bed frame that adjust & the mattress protection & mattress,  will I really receive it in 2 to 3 days?",
-      "AgentMessage1": "Nectar: Thanks for your interest! We process orders within 3-5 business days. We usually ship via FedEx or UPS Ground. Standard delivery of your Nectar products takes approximately 2-5 business days for arrival once they ship.",
-      "customerMessage3": "I'm sorry, I'm leaving  this Friday and my package will not be delivered by then.\nThis is going to be a surprise gift to my landlord. \nOn top of that, I won't be home after 3:30pm\nGoing to a surprise party for me.",
-      "SystemMessage8": "Template used: \"Can I choose/schedule a delivery date? \"; last updated: 2025-03-07 15:15:36.825",
-      "AgentMessage2": "Nectar: That is so sweet of you to get this as a gift for your landlord, and the surprise party is such a nice gesture from those who are throwing it for you! If it helps, we can hold your order until a specific ship date that would be suitable to deliver the gift to your landlord. What do you think?",
+      "agentName": "Casey",
+      "id": "019c6ddc-c528-4d36-f000-0000353f6e04",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://nectarsleep.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "Nectar Classic Memory Foam Mattress",
-            "link": "https://www.nectarsleep.com/mattress/queen?utm_campaign=%5BN%5D_%5BP%5D_Cmp%5BJanWeek4%5D_SMS%5B4%5D_Off%5Btotalvalue%5D_CT%5BNonpurchasers%5D_T%5Bslowinc012526%5D_V%5B1%5D_01252026&utm_medium=sms&utm_source=Attentive&externalId=ZgVtM",
-            "icon": "eye"
+            "link": "https://www.heydude.com/products/bradley-blipper-nylon-bbo",
+            "item": "Bradley Blipper Nylon - Black/Black Oyster - 14",
+            "timeAgo": "2026-02-17"
           },
           {
-            "item": "Nectar Classic Memory Foam Mattress",
-            "link": "https://www.nectarsleep.com/mattress/queen?utm_campaign=%5BN%5D_%5BP%5D_Cmp%5BJanWeek4%5D_SMS%5B4%5D_Off%5Btotalvalue%5D_CT%5BNonpurchasers%5D_T%5Bslowinc012526%5D_V%5B1%5D_01252026&utm_medium=sms&utm_source=Attentive&externalId=ZgVtM",
-            "icon": "eye"
+            "link": "https://www.heydude.com/products/bradley-blipper-nylon-bbo",
+            "item": "Bradley Blipper Nylon - Deep Green/Multi - 7",
+            "timeAgo": "2026-02-17"
           },
           {
-            "item": "Nectar Classic Memory Foam Mattress",
-            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?utm_medium=ps&utm_content=TikTok&utm_source=tiktok&utm_campaign=p-1847149696395458-1847149696395474-1849889587266609&ttclid=E_C_P_CtgBqAKOfEqpu9VxzJaptLFNPjnESTF9hvxB31kH9YF6HzcFcFl4Uyh_AmgEpraSIpSblsFiiqZsmXwlWt-7_H0tg6dbZa5qwglClyjVrK46Ew9I1-D1WHRZMe9esBSxe7OD1KswjuthZoUfoQCW1y1x-TVIUQv2FJfmIrgoRkJ5LZ3JsVrqeJH3SIxbeVFUvpWZbplxhYgYiouGUbgy4p0-aMMJ-5EiycC9p_sWiadjoPZeWXvGvMAdue3pE4FQvlqsYHmBtEfwQpXTcKtfS0iZm_17kAhcNe3uEgR2Mi4w&utm_id=1847149696395458",
-            "icon": "eye"
+            "link": "https://www.heydude.com/products/bradley-blipper-nylon-bbo",
+            "item": "Bradley Blipper Nylon - Black/Black Oyster - 7",
+            "timeAgo": "2026-02-17"
           },
           {
-            "item": "Nectar Classic Memory Foam Mattress",
-            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?utm_campaign=B-(N)_TH-(BAU)_T-(flow)_ST-()_N-(welcome)_S-()_CT-(nonpurchasers)_SG-()_Nu-(1)_O-(adjbun)_TE-(welone012226)_V-(1)_D-(012226)&utm_medium=sms&utm_source=Attentive&externalId=ZgVtM",
-            "icon": "eye"
+            "link": "https://www.heydude.com/products/bradley-blipper-nylon-bbo",
+            "item": "Bradley Blipper Nylon - Black/Black Oyster - 7",
+            "timeAgo": "2026-02-17"
+          },
+          {
+            "link": "https://www.heydude.com/products/bradley-blipper-nylon-deep-green-multi",
+            "item": "Bradley Blipper Nylon - Black/Black Oyster - 7",
+            "timeAgo": "2026-02-17"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://heydude.com",
+          "date": ""
+        }
       },
-      "orders": []
+      "companyWebsite": "https://heydude.com",
+      "companyName": "HEYDUDE US",
+      "notes": {
+        "important": [
+          "There is a scam website that customers are texting in from (https://heydudestores.com/)",
+          "If you notice this, reroute customers to the correct website!"
+        ],
+        "send_to_cs": [
+          "Don\u0027t ESC post-purchase issues, use PPI shortcut"
+        ],
+        "templates": [
+          "For wrong items received use WMP shortcut",
+          "For damaged items received use DMI shortcut",
+          "For order status requests use OSR shortcut"
+        ],
+        "promo_and_exclusions": [
+          "The welcome code is valid for first-time customers only.",
+          "➜ Applies to full-price styles",
+          "➜ Can\u0027t be combined with any other discounts or offers, including sale styles",
+          "➜  Use cww temp for code issues",
+          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Wear to work, or wear to play.\n \nOur best-selling men\u0027s dress sneaker is now in half sizes.\n\nPaul Pro. A finer fit:\nheydudeshoes.attn.tv/aiNopqoZfzaX .",
+          "date_time": "2026-01-21 12:05:45.612",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Sunday Steal mystery offer?\n\nIt involves:\n- Sale styles...\n- A nice surprise....\n- Treating yourself w/ code EXTRA\nheydudeshoes.attn.tv/afqfFNBLh89Q .",
+          "date_time": "2026-01-25 12:06:23.253",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Valentine\u0027s Day is coming in HOT with exclusive prints!\n\nWhether for you or your boo, comfort is the love language:\nheydudeshoes.attn.tv/aCTzbWjiqHFr .",
+          "date_time": "2026-01-26 19:45:34.274",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Buy more, save more is back!\n\n2 for $69 = $35/pair\n3 for $99\n4 for $125\n5 for $150 = $30/pair\n\nCode STEAL\nheydudeshoes.attn.tv/a3eGItJajoY4 .",
+          "date_time": "2026-01-29 19:46:04.404",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Mix n\u0027 match 2 pairs for $69:\n\nWomen heydudeshoes.attn.tv/alz7njqToEya\n\nMen heydudeshoes.attn.tv/aj77BpeYPikg\n\nKids heydudeshoes.attn.tv/aW1UESihd9Hf .",
+          "date_time": "2026-01-30 12:06:50.112",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: This is it - the 3 for $99 Sunday Steal you\u0027ve always wanted.\n\nCode STEAL expires at midnight:\nheydudeshoes.attn.tv/awQl_lDKiEaU .",
+          "date_time": "2026-02-01 19:55:14.280",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Buy More, Save More is back with fresh styles \u0026 extra savings!\n\n$15 off $75\n$30 Off $100\n\nUse code MORE to unlock:\nheydudeshoes.attn.tv/avEu5b5jFUM6 .\n\n",
+          "date_time": "2026-02-06 12:11:06.884",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Fish on!\n\nNew fish prints just landed. Easy, everyday comfort now with fly, ocean \u0026 freshwater flair.\n\nReel \u0027em in:\nheydudeshoes.attn.tv/a14G0PSFOffJ .",
+          "date_time": "2026-02-07 12:05:43.201",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: You\u0027re hurtin\u0027 today.\n\nRecover like a pro in our comfy AF Stretch Jersey \u0026 Stretch Sox.\n\nWe won\u0027t tell your boss:\nheydudeshoes.attn.tv/aGWuDNM9b48x .",
+          "date_time": "2026-02-09 12:05:33.098",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Sunday Steal + long weekend energy = Everything under $40 (that\u0027s up to 50% off).\n\nUse code: BONUS\nheydudeshoes.attn.tv/ax3JE417M_gQ .",
+          "date_time": "2026-02-15 12:07:49.664",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: St. Patrick\u0027s Day is one month away!\n\nWe\u0027ve got a new print for all your shenanigans.\n\nLuck of the stylish:\nheydudeshoes.attn.tv/aqx3KBchJeJ7 .\n\n",
+          "date_time": "2026-02-17 12:06:16.799",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Grab your Bradley Blipper Nylon Slip-On — light, flexible slip-ons with a crushable heel for travel-ready comfort.  \nShop now: https://heydudeshoes.attn.tv/aGKII1iF4IKz .",
+          "date_time": "2026-02-17 17:44:41.303",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I would if I could return for size but I can\u0027t. So decided not to get them",
+          "date_time": "2026-02-17 18:06:07.115",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Return policy\"; last updated: 2023-04-01 12:43:42.780",
+          "date_time": "2026-02-17 18:08:30.923",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6ddc-c528-4d36-f000-0000353f6e04",
+          "message_text": "HEYDUDE: Thanks for getting in touch! I\u0027m really sorry to hear about that. Be advised that item(s) are available for return once they have shipped for online purchases. A full refund, excluding shipping charges, will be issued on unworn and unwashed merchandise with original tags within 30 days to the original form of payment. Items that are beyond 30 days from that date will no longer be eligible for return.\n\nItems marked \"Custom Items\", \"Clearance\", or \"Final Sale\" are not eligible for return. \"Custom Items\" and items marked \"Final Sale\" cannot be returned and are not subject to price adjustment. \"Custom Items\" shall mean and include without limitation footwear with patches adhered or affixed to the footwear, footwear with replacement laces and insoles, and used patches.\n\nProducts created for collaborations or special events cannot be returned unless they\u0027re defective or flawed. You can check out our detailed return policy here: https://heydudeshoes.attn.tv/auqt8_HryKpY May I know what item you are interested in?",
+          "message_type": "agent",
+          "agent": "109840",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 18:08:30.925"
+        }
+      ]
     }
   }
 }

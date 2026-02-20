@@ -2464,18 +2464,54 @@ document.addEventListener('DOMContentLoaded', async () => {
         const type = String(messageType || '').trim().toLowerCase();
         if (type === 'subscriber' || type === 'customer' || type === 'user') return 'customer';
         if (type === 'agent') return 'agent';
+        if (type === 'assistant' || type === 'support' || type === 'csr' || type === 'rep') return 'agent';
+        if (type === 'template' || type === 'escalation') return 'system';
         if (type === 'system') return 'system';
         return '';
     }
 
     function normalizeMessageMedia(media) {
+        const cleanMediaUrl = (value) => {
+            let url = String(value || '').trim();
+            url = url.replace(/\\"/g, '"').replace(/\\'/g, "'");
+            if (
+                url.length >= 2 &&
+                ((url.startsWith('"') && url.endsWith('"')) || (url.startsWith("'") && url.endsWith("'")))
+            ) {
+                url = url.slice(1, -1).trim();
+            }
+            url = url.replace(/;(name|filename|type)\s*=\s*%22([^%]*)%22/gi, ';$1="$2"');
+            if (!url) return '';
+            if (/(smil(\.xml)?|application\/smil)/i.test(url)) return '';
+            if (/;(?:name|filename|type)\s*=\s*"[^"]*$/i.test(url)) {
+                url = `${url}"`;
+            }
+            return url;
+        };
+        const extractMediaUrls = (value) => {
+            const text = String(value || '').trim();
+            if (!text) return [];
+            try {
+                const parsed = JSON.parse(text);
+                if (Array.isArray(parsed)) {
+                    return parsed.map(cleanMediaUrl).filter(Boolean);
+                }
+            } catch (_) {
+                // Fall through to URL extraction
+            }
+            const searchText = text.replace(/\\"/g, '"').replace(/\\'/g, "'");
+            const matches = searchText.match(/https?:\/\/[^\s;"'<>]+(?:\s*;\s*[a-z0-9_-]+\s*=\s*(?:"[^"]*"|'[^']*'|[^;\s"'<>]+))*/gi);
+            if (!matches || !matches.length) return [];
+            return matches.map(cleanMediaUrl).filter(Boolean);
+        };
         if (!Array.isArray(media)) return [];
         return media
             .map(item => {
-                if (typeof item === 'string') return item.trim();
-                if (item && typeof item === 'object' && typeof item.url === 'string') return item.url.trim();
-                return '';
+                if (typeof item === 'string') return extractMediaUrls(item);
+                if (item && typeof item === 'object' && typeof item.url === 'string') return extractMediaUrls(item.url);
+                return [];
             })
+            .flat()
             .filter(Boolean);
     }
 
@@ -2483,15 +2519,28 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!message || typeof message !== 'object') return null;
 
         const explicitRole = String(message.role || '').trim().toLowerCase();
-        const mappedRole = mapMessageTypeToRole(message.message_type);
-        const role = explicitRole || mappedRole;
+        const messageType = String(message.message_type || '').trim().toLowerCase();
+        const mappedRole = mapMessageTypeToRole(messageType);
+        const agentIdentifier = String(
+            message.agent != null
+                ? message.agent
+                : (message.agent_id != null ? message.agent_id : (message.agentId != null ? message.agentId : ''))
+        ).trim();
+        const role = explicitRole || mappedRole || (agentIdentifier ? 'agent' : '');
         if (!role) return null;
 
         const contentRaw = message.content != null ? message.content : message.message_text;
-        const content = typeof contentRaw === 'string' ? contentRaw : (contentRaw == null ? '' : String(contentRaw));
+        let content = typeof contentRaw === 'string' ? contentRaw : (contentRaw == null ? '' : String(contentRaw));
+        const contentTrimmed = content.trim();
+        if (messageType === 'template' && contentTrimmed && !/^template used:/i.test(contentTrimmed)) {
+            content = `Template Used: ${contentTrimmed}`;
+        } else if (messageType === 'escalation' && contentTrimmed && !/^conversation escalated:/i.test(contentTrimmed)) {
+            content = `Conversation escalated: ${contentTrimmed}`;
+        }
         if (!content.trim()) return null;
 
         const normalized = { role, content };
+        if (agentIdentifier) normalized.agent = agentIdentifier;
         const media = normalizeMessageMedia(message.media || message.message_media);
         if (media.length) normalized.media = media;
 
@@ -2827,6 +2876,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function renderConversationMessages(conversation, scenario) {
         if (!chatMessages) return;
         chatMessages.innerHTML = '';
+        const specialAgentIds = new Set(['62551', '38773']);
 
         const lastAgentConversationIndex = (() => {
             for (let i = conversation.length - 1; i >= 0; i--) {
@@ -2873,12 +2923,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!Array.isArray(mediaList) || mediaList.length === 0) return;
             const mediaWrap = document.createElement('div');
             mediaWrap.className = 'message-media-list';
+            let remainingMessagePhotoSlots = 1;
             mediaList.forEach(mediaUrl => {
                 const url = String(mediaUrl || '').trim();
                 if (!url) return;
                 const lower = url.toLowerCase();
-                const isImage = /\.(png|jpe?g|gif|webp|bmp|svg)(\?|#|$)/.test(lower);
+                const isLikelyNonImage = /\.(mp4|mov|avi|webm|m3u8|mp3|wav|pdf|docx?|xlsx?|zip|rar)(\?|#|$)/.test(lower) ||
+                    /(smil(\.xml)?|application\/smil)/.test(lower);
+                const isImage = !isLikelyNonImage;
                 if (isImage) {
+                    if (remainingMessagePhotoSlots <= 0) return;
                     const img = document.createElement('img');
                     img.src = url;
                     img.alt = 'Message media';
@@ -2887,7 +2941,22 @@ document.addEventListener('DOMContentLoaded', async () => {
                     img.style.borderRadius = '8px';
                     img.style.display = 'block';
                     img.style.marginTop = '6px';
+                    img.style.cursor = 'pointer';
+                    img.addEventListener('click', () => {
+                        window.open(url, '_blank', 'noopener');
+                    });
+                    img.onerror = () => {
+                        const link = document.createElement('a');
+                        link.href = url;
+                        link.target = '_blank';
+                        link.rel = 'noopener';
+                        link.textContent = url;
+                        link.style.display = 'block';
+                        link.style.marginTop = '6px';
+                        if (img.parentNode) img.parentNode.replaceChild(link, img);
+                    };
                     mediaWrap.appendChild(img);
+                    remainingMessagePhotoSlots -= 1;
                     return;
                 }
                 const link = document.createElement('a');
@@ -2920,7 +2989,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!message || !message.content) return;
             if (message.role === 'system') {
                 const systemText = String(message.content || '').trim();
-                const isCenteredSystemNote = /^(template used:|escalation notes?:)/i.test(systemText);
+                const isCenteredSystemNote = /^(template used:|conversation escalated:|escalation notes?:)/i.test(systemText);
                 const systemMessage = document.createElement('div');
                 systemMessage.className = `message sent system-message${isCenteredSystemNote ? ' center-system-note' : ''}`;
                 systemMessage.innerHTML = `
@@ -2934,8 +3003,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             const isAgent = message.role === 'agent';
+            const agentIdentifier = String((message && (message.agent || message.agent_id || message.agentId)) || '').trim();
+            const isSpecialAgent = isAgent && specialAgentIds.has(agentIdentifier);
             const wrapper = document.createElement('div');
             wrapper.className = `message ${isAgent ? 'sent' : 'received'}`;
+            if (isSpecialAgent) {
+                wrapper.classList.add('special-agent-message');
+            }
 
             const content = document.createElement('div');
             content.className = 'message-content';
@@ -2944,7 +3018,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             content.appendChild(p);
             appendMedia(content, message.media);
 
-            if (isAgent && index !== lastAgentConversationIndex) {
+            if (isAgent && !isSpecialAgent && index !== lastAgentConversationIndex) {
                 wrapper.classList.add('has-agent-selector');
                 const selectorWrap = document.createElement('label');
                 selectorWrap.className = 'agent-message-selector';
@@ -3364,10 +3438,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const summaryLeft = document.createElement('span');
                     summaryLeft.className = 'order-summary-left';
 
-                    const orderLabel = document.createElement(order && order.link ? 'a' : 'span');
+                    const resolvedOrderLink = order && (order.link || order.order_status_url || order.statusUrl)
+                        ? String(order.link || order.order_status_url || order.statusUrl).trim()
+                        : '';
+                    const orderLabel = document.createElement(resolvedOrderLink ? 'a' : 'span');
                     orderLabel.textContent = (order && order.orderNumber) ? `#${order.orderNumber}` : 'Order';
-                    if (order && order.link && orderLabel.tagName.toLowerCase() === 'a') {
-                        orderLabel.href = order.link;
+                    if (resolvedOrderLink && orderLabel.tagName.toLowerCase() === 'a') {
+                        orderLabel.href = resolvedOrderLink;
                         orderLabel.target = '_blank';
                         orderLabel.rel = 'noopener';
                     }
@@ -4296,9 +4373,31 @@ document.addEventListener('DOMContentLoaded', async () => {
         const formStatus = document.getElementById('formStatus');
         const formSubmitBtn = document.getElementById('formSubmitBtn');
         const clearFormBtn = document.getElementById('clearFormBtn');
+        const notesField = customForm.querySelector('#notes');
+        const zeroToleranceSelect = customForm.querySelector('#zeroTolerance');
+        const notesRequiredIndicator = customForm.querySelector('h4 .required');
+
+        function shouldRequireNotes() {
+            const anyUnchecked = Array.from(customForm.querySelectorAll('input[type="checkbox"]'))
+                .some(cb => !cb.checked);
+            const zeroTolerancePicked = !!(zeroToleranceSelect && String(zeroToleranceSelect.value || '').trim());
+            return anyUnchecked || zeroTolerancePicked;
+        }
+
+        function updateNotesRequirementUI() {
+            const required = shouldRequireNotes();
+            if (notesField) {
+                notesField.required = required;
+            }
+            if (notesRequiredIndicator) {
+                notesRequiredIndicator.style.visibility = required ? 'visible' : 'hidden';
+            }
+            return required;
+        }
         
         // Ensure all checkboxes are checked by default (and on reset)
         applyDefaultCustomFormState(customForm);
+        updateNotesRequirementUI();
         
         // ---- Form autosave/restore ----
         function saveCustomFormState() {
@@ -4319,8 +4418,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             applyCustomFormState(customForm, parsed);
         }
         customForm.addEventListener('input', saveCustomFormState);
-        customForm.addEventListener('change', saveCustomFormState);
+        customForm.addEventListener('change', () => {
+            updateNotesRequirementUI();
+            saveCustomFormState();
+        });
         restoreCustomFormState();
+        updateNotesRequirementUI();
 
         // Clear form functionality
         if (clearFormBtn) {
@@ -4328,6 +4431,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 customForm.reset();
                 // Re-apply default checked state
                 applyDefaultCustomFormState(customForm);
+                updateNotesRequirementUI();
                 try {
                     const key = assignmentContext && assignmentContext.assignment_id
                         ? assignmentFormStateStorageKey()
@@ -4424,7 +4528,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             const notesVal = formData.get('notes') || '';
             
             // Validate required fields
-            if (!notesVal.trim()) {
+            const notesRequiredNow = updateNotesRequirementUI();
+            if (notesRequiredNow && !notesVal.trim()) {
                 if (formStatus) { 
                     formStatus.textContent = 'Notes field is required.'; 
                     formStatus.style.color = '#e74c3c'; 

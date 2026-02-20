@@ -3,379 +3,772 @@
   "chunk": "chunk_0020",
   "scenarios": {
     "96": {
-      "id": "019bb3c9-e80a-46bb-f000-00004cc9a5b0",
-      "companyName": "Organifi",
-      "companyWebsite": "https://organifishop.com",
-      "agentName": "Vivian",
-      "agentInitial": "O",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {},
-      "SystemMessage1": "Organifi: 🎄 Get a free 30 day supply of Organifi Happy Drops and free shipping w/ any 3 orders organifi.attn.tv/ari9ZT1_Tkvc",
-      "SystemMessage2": "Organifi: 🎅🏾 Last day to ship before Christmas! Get a free 30 day supply of Organifi Happy Drops and free shipping w/ any 3 orders organifi.attn.tv/aCwQgLZCR0Zq",
-      "SystemMessage3": "Organifi: Save 30% on any Organifi subscription, and get free shipping for life on any product (when you subscribe today): organifi.attn.tv/asEfGfkm673T",
-      "SystemMessage4": "Organifi: Christmas gift coupon code: Use code CHRISTMAS20 for 20% off every order (expires tomorrow) organifi.attn.tv/a_dRmGlyPpcS",
-      "SystemMessage5": "Organifi: Get a free 10 serving supply of Organifi Sleep with every order! No coupon code necessary! organifi.attn.tv/a0MIhv9TNF1V",
-      "SystemMessage6": "Organifi: Get a FREE 30 day supply of Organifi Harmony, a hormone balancing chocolate blend for women, with any 3 items! organifi.attn.tv/aRncAUHMD8BE",
-      "SystemMessage7": "Organifi: Thank you for your purchase! Your order number is 1780816. View more information about your order here: https://organifi.attn.tv/a3LN0eqtm7Q2 .",
-      "SystemMessage8": "Organifi: Thank you for your purchase! Still looking and want to add more to your order? Use code SMS17 for 17% off today! https://organifi.attn.tv/aHz7O6DYskep",
-      "SystemMessage9": "Organifi: Start your journey now! Opt-in to accountability texts for the next 3 weeks as a reminder to drink your adaptogens. Respond FLOURISH to participate!",
-      "SystemMessage10": "Organifi: Win $500 and a year's supply of your favorite product in our 2026 transformation contest! Just order the New Year's bundle for 36% off, get 3 free products, free shipping, and follow along with the meal plan to enter to win! organifi.attn.tv/acxoKt0mIXwn",
-      "SystemMessage11": "Organifi: Hey, we noticed you checking us out. Have you seen our best sellers yet? https://organifi.attn.tv/aeJ-xafs39hP .",
-      "SystemMessage12": "Organifi: Get a FREE 30-day supply of Organifi Shilajit Gummies w/ any 3 items organifi.attn.tv/aF3LK3_rSXX3",
-      "customerMessage1": "I need help with determining when the package will be delivered",
-      "SystemMessage13": "Template used: \"Guarantee delivery dates - All brands\"; last updated: 2024-11-07 14:26:32.728",
-      "SystemMessage14": "Template used: \"Order number and email - All brands\"; last updated: 2023-10-10 18:06:34.663",
-      "AgentMessage1": "Organifi: I'm really sorry for the inconvenience. Could you please share your email address and confirm the order number? I'll be happy to look into this with my team! I appreciate your patience.",
+      "agentName": "Sarah",
+      "id": "019c4ee0-19cf-4937-f000-000044cd6d21",
       "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.georgjensen.com/en-us/dining-and-bar/pitchers-carafes/koppel-pitcher-midnight-black-075l/10020468.html",
+            "item": "KOPPEL Pitcher, Midnight Black, in stainless steel",
+            "timeAgo": "2026-02-11"
+          },
+          {
+            "link": "https://www.georgjensen.com/en-us/sale/cutlery/new-york-5-pcs.-set-(012-017-021-022-031)/3320555.html?cgid=Sale_904\u0026utm_campaign=4857617_2026_week2_winter_sale_2_cutlery_US\u0026utm_medium=email\u0026utm_source=Georg%20Jensen%20-%20USA\u0026dm_i=752N,2W45T,2LS44Z,823UA,1",
+            "item": "New York stainless steel 5 piece cutlery set | Georg Jensen",
+            "timeAgo": "2026-01-13"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://organifishop.com",
+          "value": "https://georgjensen.com/en-us",
           "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
+        }
       },
-      "orders": []
-    },
-    "97": {
-      "id": "019bb834-c09a-4676-f000-0000f39b3b96",
-      "companyName": "Brilliant Earth",
-      "companyWebsite": "https://brilliantearth.com",
-      "agentName": "Ava",
-      "agentInitial": "B",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Inquiries regarding orders",
-          "Shipping inquiries on a current order",
-          "Post-purchase issues",
-          "For product or general inquiries you can't find the answer to, use PGI shortcut"
-        ],
-        "escalate": [
-          "No escalations for this client, send everything to CS"
-        ],
+      "companyWebsite": "https://georgjensen.com/en-us",
+      "companyName": "Georg Jensen",
+      "notes": {
         "tone": [
-          "Don't use the word \"unfortunately\" to discuss our appointment structure",
-          "Don't use the word \"best\" to reference a product (e.g., best ring, etc.)"
+          "Use less smileys",
+          "Don\u0027t tell cx\u0027s they can return products bought from North American retail stores"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t share the brand\u0027s phone number with cxs"
         ],
         "templates": [
-          "If cx are looking for an engagement ring and don't provide specifics, use LER shortcut"
-        ],
-        "dos_and_donts": [
-          "If the customer responds incorrectly to the journey, don't send jny temp, recommend items based on their selection instead",
-          "Cx can create their own engagement ring on the webiste by choosing a setting, stone and size",
-          "Cx can customize rings by working with designers who will use their ideas, drawings, images to create the ring they want",
-          "Don't disclose the locations of their labs/production facilities"
-        ],
-        "drive_to_purchase": [
-          "Be MORE SALESY, if the customer is showing 𝐢𝐧𝐭𝐞𝐧𝐭 𝐭𝐨 𝐩𝐮𝐫𝐜𝐡𝐚𝐬𝐞 then:"
+          "For order status/tracking, use OSU shortcut",
+          "They have a journey where they ask for ratings:",
+          "➜ For 1, 2 \u0026 3 use CJR shortcut",
+          "➜ For 4 \u0026 5 close the convo"
         ],
         "promo_and_exclusions": [
-          "Please see here for current offer details: https://www.brilliantearth.com/promo-codes-and-offers/",
-          "Codes can be used in-store"
+          "Welcome codes do not apply to fine silverware"
         ]
       },
-      "SystemMessage1": "Brilliant Earth: Welcome to Brilliant Earth! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Brilliant Earth: Hi! I'm Ava, your personal jewelry concierge. Do you have any questions I can help answer? brilliantearth.attn.tv/aTcwSDKMxTxM .",
-      "SystemMessage3": "Brilliant Earth: It's Ava, your jewelry expert! Still thinking about that piece? Continue where you left off: brilliantearth.attn.tv/aTbVpJtyj4K7 .\n\nText me back with any questions!",
-      "SystemMessage4": "Brilliant Earth: What jewelry are you shopping for next? \n\nReply with a number to let us know:\n\n1 - Engagement Rings\n2 - Wedding Rings\n3 - Fine Jewelry\n4 - Everything!",
-      "customerMessage1": "Real cube Necklace White gold 21kt\n23inch",
-      "AgentMessage1": "Brilliant Earth: Thank you for your interest. I'm afraid we do not have the exact specifications you highlighted, but here are the closest:\n- Riley 18 in. Box Chain Necklace (0.75mm) in 14K White Gold - https://brilliantearth.attn.tv/aaQ4MLoyQDT6/\n- Riley 22 in. Rounded Box Chain Necklace (3.95mm) in Silver - https://brilliantearth.attn.tv/amSpeiWYnOto/\nLet me know what you think.",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://brilliantearth.com",
-          "date": ""
+      "blocklisted_words": [
+        "North"
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Georg Jensen: Hey there this is Sarah. Thanks for checking out our site! 😊 https://georgjensen.attn.tv/asC2NQjB-gGX .\n\nAny questions I can answer for you? ",
+          "date_time": "2026-01-12 21:39:36.571",
+          "message_media": [
+            
+          ]
         },
+        {
+          "message_type": "system",
+          "message_text": "Georg Jensen: Find your favorite holiday ornaments and explore Winter Sale offers on the Christmas Collectibles and seasonal decorations. \n\nShop Now: georgjensen.attn.tv/a32R6lPMUSlo \n\nText back if you have any questions! \n\nText STOP to opt out.",
+          "date_time": "2026-01-13 15:00:30.497",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Georg Jensen: A selection of timeless and well-crafted jewelry that can be styled into different expressions. \n\nShop Now: georgjensen.attn.tv/a_B6Bq7ZpMdB \n\nText back if you have any questions! \n\nText STOP to opt out. ",
+          "date_time": "2026-01-15 15:00:28.530",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Georg Jensen: Hey there, this is Sarah. I see you left something in your cart https://georgjensen.attn.tv/aAqNdlQcW_Y3 .\n\nGreat choice! 😊 Any questions I can answer for you? ",
+          "date_time": "2026-01-15 15:59:30.090",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Georg Jensen: Hey, we noticed you checking us out. Have you seen our new home decor arrivals yet? https://georgjensen.attn.tv/a0kAxiV7i1Ma ",
+          "date_time": "2026-01-19 17:19:17.778",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Georg Jensen: The Bernadotte collection, a house classic, is defined by its elegant grooved surface - a design Sigvard Bernadotte became known for after joining Georg Jensen in the 1930s.\n\nShop Now: georgjensen.attn.tv/amZuoVo9hq1Z \n\nText back if you have any questions! \n",
+          "date_time": "2026-01-22 15:00:22.666",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Georg Jensen: Daniela wears two Fusion combinations in interlocking yellow and white 18kt gold, paired with a matching Fusion earring inspired by the collection\u0027s signature pattern.\n\nDiscover Fusion: georgjensen.attn.tv/aOQorMtdpAbl \n\nText back if you have any questions! \n\nText STOP to opt out.",
+          "date_time": "2026-01-27 15:00:26.747",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Georg Jensen: Final days - enjoy up to 50% off selected home designs. Shop your favorites while supplies last. All offers are valid until February 2nd, 2026.\n\nShop Now: georgjensen.attn.tv/acaQi8BBDUth \n\nText back if you have any questions! \n\nText STOP to opt out.",
+          "date_time": "2026-01-29 15:00:23.471",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Georg Jensen: Our Winter Sale ends tonight! Save up to 50% on a range of timeless Georg Jensen designs before it\u0027s too late. \n\nShop Now: georgjensen.attn.tv/a4Pdo6c_PGz2 \n\nText back if you have any questions! \n\nText STOP to opt out.",
+          "date_time": "2026-02-02 15:00:23.635",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Georg Jensen: Receive a Heart keyring for Valentine\u0027s Day with any home purchase of $400 or more. Offer valid on home, bar, and dining designs only, until February 14th or while supplies last. Fine silverware excluded.\n\nShop Now: georgjensen.attn.tv/as5USMkIoWwW \n\nText back if you have any questions! ",
+          "date_time": "2026-02-05 15:00:38.373",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Georg Jensen: From the 2026 Heart pendant to elegant accessories in stainless steel, our Valentine\u0027s edit features thoughtful gifts crafted to last and be loved.\n\nShop Now: georgjensen.attn.tv/aos9-xku9aQN \n\nText back if you have any questions! \n",
+          "date_time": "2026-02-10 15:00:28.396",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Georg Jensen: Hey there this is Sarah. Thanks for checking out our site! 😊 https://georgjensen.attn.tv/abNFjA-Wlb5r .\n\nAny questions I can answer for you? ",
+          "date_time": "2026-02-11 17:18:43.599",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes I am looking for my refund when 2 of these arrived too late. Used your pkg drop off on 20 Jan at the UPS Store where I had to pick it up. Now almost a month ago. Need this refund to potentially buy again.",
+          "date_time": "2026-02-11 17:21:16.545",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Receipt says was picked up to come back to you Jan 20",
+          "date_time": "2026-02-11 17:21:56.613",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi are you there?!?",
+          "date_time": "2026-02-11 17:23:46.884",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4ece-0157-4af4-f000-000044cd6d21",
+          "message_text": "Georg Jensen: Sorry for the wait, and I understand. Let me check on this with my team. Can I have your order number and email?",
+          "message_type": "agent",
+          "agent": "46059",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 17:24:09.591"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Sb12@sbcglobal.net",
+          "date_time": "2026-02-11 17:25:36.662",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4ed0-b460-4989-f000-000044cd6d21",
+          "message_text": "Georg Jensen: Thanks for your email address! Can I also have the order number?",
+          "message_type": "agent",
+          "agent": "45474",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 17:27:06.490"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Was case #01044766",
+          "date_time": "2026-02-11 17:27:36.494",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "There were two orders , got one returned other. So either US11110210263 or same ending 264",
+          "date_time": "2026-02-11 17:29:16.753",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The more expensive one with two pitchers",
+          "date_time": "2026-02-11 17:29:46.832",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Turned out orders never got transmitted from sales to warehouse.",
+          "date_time": "2026-02-11 17:31:00.076",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "When finally shipped (ground) my gift recipients had long before left for their homes and countries.",
+          "date_time": "2026-02-11 17:33:46.983",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "escalation",
+          "message_text": "VOC: Yes I am looking for my refund when 2 of these arrived too late. Used your pkg drop off on 20 Jan at the UPS Store where I had to pick it up. Now almost a month ago. Need this refund to potentially buy again.",
+          "date_time": "2026-02-11 17:43:53.339",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4ee0-19cf-4937-f000-000044cd6d21",
+          "message_text": "Georg Jensen: Thanks for letting me know the order number, and I\u0027m sorry to hear that! Let me bring this forward to my team now; I\u0027ll get back to you as soon as I hear back. \n\nPlease hang tight!",
+          "message_type": "agent",
+          "agent": "109617",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 17:43:55.496"
+        }
+      ]
+    },
+    "97": {
+      "agentName": "Taylor",
+      "id": "019c53c7-8b31-4507-f000-0000fa8d62ca",
+      "rightPanel": {
         "browsingHistory": [
           {
-            "item": "14K White Gold Single Diamond Stud Earring",
-            "link": "https://www.brilliantearth.com/Single-Diamond-Stud-Earring-14K-White-Gold-BE3D4136/?utm_source=google&utm_medium=cpc&utm_campaign=SEM_PLA_US_FJ_Mobile_Conversion&utm_content=669019946085&gad_source=1&gad_campaignid=20433289887",
-            "icon": "eye"
+            "link": "https://www.birkenstock.com/us/zermatt-shearling-felt/zermatt-cozyhomeshearling-woolfelt-0-latex-u_3732.html",
+            "item": "Buy Zermatt Shearling Felt for USD 99.95 | Birkenstock US",
+            "timeAgo": "2026-02-11"
           },
           {
-            "item": "14K White Gold Lab Diamond Stud Earrings (1/6 ct. tw.)",
-            "link": "https://www.brilliantearth.com/Lab-Diamond-Stud-Earrings-(1/6-ct.-tw.)-14K-White-Gold-BE3D16GHLC/?utm_source=google&utm_medium=cpc&utm_campaign=SEM_PLA_US_FJ_Mobile_Conversion&utm_content=669019946085&gad_source=1&gad_campaignid=20433289887",
-            "icon": "eye"
+            "link": "https://www.birkenstock.com/us/zermatt-shearling-felt/zermatt-cozyhomeshearling-woolfelt-0-latex-u_523.html",
+            "item": "Buy Zermatt Shearling Felt for USD 99.95 | Birkenstock US",
+            "timeAgo": "2026-02-11"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/zermatt-shearling-felt/zermatt-cozyhomeshearling-woolfelt-0-latex-u_11951.html",
+            "item": "Buy Zermatt Shearling Felt for USD 99.95 | Birkenstock US",
+            "timeAgo": "2026-02-11"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/zermatt-shearling-felt/zermatt-cozyhomeshearling-woolfelt-0-latex-u_4369.html",
+            "item": "Buy Zermatt Shearling Felt for USD 99.95 | Birkenstock US",
+            "timeAgo": "2026-02-11"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/zermatt-shearling-felt/zermatt-cozyhomeshearling-woolfelt-0-latex-u_3732.html",
+            "item": "Buy Zermatt Shearling Felt for USD 99.95 | Birkenstock US",
+            "timeAgo": "2026-02-11"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://birkenstock.com",
+          "date": ""
+        }
       },
-      "orders": []
-    },
-    "98": {
-      "id": "019bd24e-3633-4666-f000-0000f4030fbb",
-      "companyName": "Cozy Earth",
-      "companyWebsite": "https://cozyearth.com",
-      "agentName": "Sarah",
-      "agentInitial": "C",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "companyWebsite": "https://birkenstock.com",
+      "companyName": "Birkenstock",
+      "notes": {
         "escalate": [
-          "ESC all MyFitness pall App inquiries"
+          "For all pre-purchase and post purchase ESC always include the customers full name in the notes",
+          "Don\u0027t ESC if they get an error with the fs code while logged in"
+        ],
+        "templates": [
+          "For free shipping retroactive code requests, use SRP shortcut",
+          "For holiday/extended returns - use the template"
         ],
         "dos_and_donts": [
-          "Don't share sale end dates with customers"
+          "Close the convo once the client takes over",
+          "🤖 If someone sends a product category, link them to the category and ask if they are looking for something specific"
         ]
       },
-      "SystemMessage1": "Cozy Earth: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/S4E",
-      "SystemMessage2": "Cozy Earth: Congrats on $50 Off! Use code GETCOZY50 at checkout.\n*only on orders over $100.\n\nHurry...offer expires in 48 hours!\ncozyearth.attn.tv/aL8QaBulUquU",
-      "SystemMessage3": "Cozy Earth: \"My own little piece of paradise! I literally cannot wait to get back to my bed at the end of the day!\" -Kim M.\n\nExperience your own paradise with our award winning sheet set. Reply w/ any questions & SHOP NOW:\ncozyearth.attn.tv/aHzol_dO-4Dw",
-      "SystemMessage4": "Cozy Earth: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nYour ultimate coziness awaits! Luxuriate in our best-sellers: https://cozyearth.attn.tv/attziOby601X .",
-      "SystemMessage5": "Cozy Earth: Luxe Bath Towel Set feels plush and ready for your bathroom refresh.\n\nUse code GETCOZY50 to take $50 off orders $100+: https://cozyearth.attn.tv/a_V_rbYqJWMX .",
-      "SystemMessage6": "Cozy Earth: You’re in! Stay tuned for more updates coming your way soon.",
-      "SystemMessage7": "Cozy Earth: Thank you for your purchase! Your order number is #3301629. View more information about your order here: cozyearth.attn.tv/alRdQxXO0foU",
-      "SystemMessage8": "Cozy Earth: Thanks for your first purchase with us! We know you'll love Luxe Bath Towel Set - Harbor Mist and can't wait for you to enjoy it. If you have any questions about your order, reply to this text, and we'll be happy to help!",
-      "SystemMessage9": "Cozy Earth: Your order #3301629 is out for delivery! \nTrack your order here: cozyearth.attn.tv/afHtxT781KU7",
-      "customerMessage1": "Whoever delivered package did not bother to put package at front door‼️😞😞",
-      "customerMessage2": "\"",
-      "SystemMessage10": "Template used: \"Damaged/broken/missing item - All brands\"; last updated: 2023-10-10 20:30:27.203",
-      "AgentMessage1": "Cozy Earth: I'm really sorry for the inconvenience! I suppose this is your order #3301629; it was delivered by Amazon shipping. Is there any damage to the package itself? If so, can you please send me a photo of the items that you received and confirm the order number and email address? I'd be happy to pass this over to my team and see what we can do for you. Happy to help!",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://cozyearth.com",
-          "date": ""
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping codes"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Reply “Y” to confirm your opt in to our SMS program and receive messages from Birkenstock. . Msg \u0026 Data rates apply. Msg Freq may vary. Terms: birkenstock.attn.tv/cl/aH8",
+          "date_time": "2026-02-11 14:27:53.533",
+          "message_media": [
+            
+          ]
         },
-        "browsingHistory": [
-          {
-            "item": "Luxe Bath Towel Set",
-            "link": "https://cozyearth.com/products/luxe-bath-towel-set?variant=42864718119092#dialog-cart",
-            "icon": "eye"
-          },
-          {
-            "item": "Luxe Bath Towel Set",
-            "link": "https://cozyearth.com/products/luxe-bath-towel-set?variant=42864718119092",
-            "icon": "eye"
-          },
-          {
-            "item": "Luxe Bath Towel Set",
-            "link": "https://cozyearth.com/products/luxe-bath-towel-set?variant=42864718020788",
-            "icon": "eye"
-          },
-          {
-            "item": "Luxe Bath Towel Set",
-            "link": "https://cozyearth.com/products/luxe-bath-towel-set?variant=42864718119092",
-            "icon": "eye"
-          },
-          {
-            "item": "Luxe Bath Towel Set",
-            "link": "https://cozyearth.com/products/luxe-bath-towel-set?variant=42864718020788",
-            "icon": "eye"
-          }
-        ],
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Welcome to Birkenstock! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/8y2",
+          "date_time": "2026-02-11 14:28:08.549",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: CLICK ON THE LINK to reveal your FREE GROUND SHIPPING CODE, good for your next full price purchase:\n\nhttps://birkenstock.attn.tv/a6lZTywvD8lE\n\nWelcome to the family!",
+          "date_time": "2026-02-11 14:28:14.087",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nDid you know we have exclusive versions of our top sellers that you can\u0027t get in stores? Check them out now: https://birkenstock.attn.tv/a92F26-r_pOZ .",
+          "date_time": "2026-02-11 14:29:17.592",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Shearling season is here. \nDiscover our newest lined clogs, boots, slippers \u0026 more: https://birkenstock.attn.tv/aQHTFTX4o2UQ .\n",
+          "date_time": "2026-02-11 16:24:28.579",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Hey, I\u0027m Taylor - your personal Birkenstock expert.\n\nHave you seen our latest arrivals? We have so many new colors in your favorite classic styles.\n\nhttps://birkenstock.attn.tv/aH_rwxnPesps .\n\nReply back anytime if you need help!",
+          "date_time": "2026-02-12 16:24:36.011",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "How do I get information about when my shoes will ship I just purchased them a couple days ago",
+          "date_time": "2026-02-12 16:27:32.573",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Shipping time\"; last updated: 2023-10-27 20:11:17.329",
+          "date_time": "2026-02-12 16:35:12.201",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Order status/order tracking\"; last updated: 2023-10-27 20:40:45.884",
+          "date_time": "2026-02-12 16:35:12.201",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c53c7-8b31-4507-f000-0000fa8d62ca",
+          "message_text": "Birkenstock: Thanks for reaching out! Are you referring to the order that was placed yesterday, 02/11? If so, please note that our processing time takes 1-2 business days and we usually ship via UPS. Once shipped it will take 2-5 business days for domestic orders. \n\nAdditionally, you can use our convenient online tool to see the latest updates on your order: https://birkenstock.attn.tv/aVaRsyjRpgLk\n\nPlease let me know how I can assist you further today, I\u0027m just a text away!",
+          "message_type": "agent",
+          "agent": "109617",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 16:35:12.205"
+        }
+      ]
+    },
+    "98": {
+      "agentName": "",
+      "id": "019c52e4-9f71-4863-f000-0000f6f5aefd",
+      "rightPanel": {
         "orders": [
           {
-            "orderNumber": "6732733317300",
-            "orderDate": "",
-            "link": "https://cozyearth2.myshopify.com/products/luxe-bath-towel-set",
-            "trackingLink": "",
-            "currency": "USD",
+            "total": 99,
+            "orderDate": "2026-02-12",
+            "orderNumber": "11793699078510",
             "items": [
               {
-                "name": "Luxe Bath Towel Set",
-                "price": "198",
-                "currency": "USD",
-                "productLink": "https://cozyearth2.myshopify.com/products/luxe-bath-towel-set"
-              },
-              {
-                "name": "Luxe Bath Towel Set",
-                "price": "198",
-                "currency": "USD",
-                "productLink": "https://cozyearth2.myshopify.com/products/luxe-bath-towel-set"
-              },
-              {
-                "name": "Luxe Bath Towel Set",
-                "price": "198",
-                "currency": "USD",
-                "productLink": "https://cozyearth2.myshopify.com/products/luxe-bath-towel-set"
+                "price": [
+                  99
+                ],
+                "productLink": "https://barbellapparel.myshopify.com/products/barbell-elite-membership-pro",
+                "name": "Barbell Elite Membership - Pro"
               }
-            ],
-            "total": "198"
+            ]
+          },
+          {
+            "total": 125.16,
+            "orderDate": "2026-02-01",
+            "orderNumber": "11781779456366",
+            "items": [
+              {
+                "price": [
+                  2.98
+                ],
+                "productLink": "https://barbellapparel.myshopify.com/products/free-returns-or-exchanges-package-protection-us-orders-only",
+                "name": "Free Returns or Exchanges (US orders only)"
+              },
+              {
+                "price": [
+                  204
+                ],
+                "productLink": "https://barbellapparel.myshopify.com/products/fitted-drop-hem",
+                "name": "Fitted Drop Hem"
+              },
+              {
+                "price": [
+                  99
+                ],
+                "productLink": "https://barbellapparel.myshopify.com/products/adapt-jogger",
+                "name": "Adapt Jogger"
+              }
+            ]
           }
-        ]
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://barbellapparel.com",
+          "date": ""
+        }
       },
-      "orders": [
+      "companyWebsite": "https://barbellapparel.com",
+      "companyName": "Barbell Apparel",
+      "notes": {
+        
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "6732733317300",
-          "order_status_url": "https://cozyearth2.myshopify.com/products/luxe-bath-towel-set",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://cozyearth2.myshopify.com/products/luxe-bath-towel-set",
-              "product_name": "Luxe Bath Towel Set",
-              "product_price": 198
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://cozyearth2.myshopify.com/products/luxe-bath-towel-set",
-              "product_name": "Luxe Bath Towel Set",
-              "product_price": 198
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://cozyearth2.myshopify.com/products/luxe-bath-towel-set",
-              "product_name": "Luxe Bath Towel Set",
-              "product_price": 198
-            }
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Reply Y to subscribe to recurring automated personalized marketing texts (e.g. cart reminders).",
+          "date_time": "2026-02-01 17:31:28.738",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-01 21:05:28.422",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Hey there! We saw you checking out our athletic inspired apparel. If Need help? We\u0027re happy to chat here: https://barbell.attn.tv/a3n-UhlthRs2 ",
+          "date_time": "2026-02-02 12:43:29.837",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Hey John, this is Sarah. I see you left something in your cart. https://barbell.attn.tv/ag01LHmkr4tC \n\nI like Adapt Jogger too! Any questions I can answer for you?",
+          "date_time": "2026-02-04 19:08:01.483",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Hey John, this is Sarah. I see you left something in your cart. https://barbell.attn.tv/aE5tJ1GIENF9 \n\nI like Ultralight Jogger too! Any questions I can answer for you?",
+          "date_time": "2026-02-07 15:40:17.800",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Hey John, this is Sarah. I see you left something in your cart. https://barbell.attn.tv/acmBuqxbB_va \n\nI like Ultralight Jogger too! Any questions I can answer for you?",
+          "date_time": "2026-02-09 23:08:33.689",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Hey John, this is Sarah. I see you left something in your cart. https://barbell.attn.tv/aRYtbQ3R4tIa \n\nI like Phantom Short too! Any questions I can answer for you?",
+          "date_time": "2026-02-10 18:38:20.030",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: New seasonal colors just landed. The Havok Polo is now available in kiln and forest. Same flextek performance, same athletic fit that everyone loves.\n\nGrab yours before they\u0027re gone.\n\nShop now: barbell.attn.tv/a3L8Dec7SnCR ",
+          "date_time": "2026-02-11 18:00:37.792",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Hey John ! Join Barbell Elite and get up to $125 in bonus credit for your first month, plus free lifetime products guarantees and size exchanges, free 2-day shipping. barbell.attn.tv/a9xnWyWMLXQL ",
+          "date_time": "2026-02-12 12:18:19.451",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I just joined last night and only got 100 bonus credit?!",
+          "date_time": "2026-02-12 12:20:56.634",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c52e4-9f71-4863-f000-0000f6f5aefd",
+          "message_text": "Barbell Apparel: Thank you for reaching out, and I\u0027m sorry to hear that! May I have your email address?",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
           ],
-          "total": 198
+          "date_time": "2026-02-12 12:27:20.726"
         }
       ]
     },
     "99": {
-      "id": "019bba2b-b106-49c6-f000-00004b58d5bc",
-      "companyName": "ILIA Beauty",
-      "companyWebsite": "https://iliabeauty.com",
       "agentName": "",
-      "agentInitial": "I",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over"
-        ]
-      },
-      "SystemMessage1": "ILIA Beauty: Free shipping + free color. \n\nGet free 2-day shipping on orders over $50, plus a full-size Color Haze on orders $75+. \n\nShop now: iliabeauty.attn.tv/aoD1iZx72fgk \n\n*See site for details.",
-      "SystemMessage2": "ILIA Beauty: Stuck on the fence about Skin Rewind?\n\nHere's what Real Simple has to say about our complexion stick: \"I Replaced All My Liquid Foundations and Tints With One Product.\"\n\nDownsize your makeup bag: iliabeauty.attn.tv/aE59ell5EoOX .",
-      "SystemMessage3": "ILIA Beauty: Imagine how easy your routine will feel with the Skin Rewind Complexion Stick giving your skin a fresh, smooth look every day.  \nUse code ILIA8S86D6 for 15% off, plus free shipping on orders over $50 and free returns.  \nShop now: https://iliabeauty.attn.tv/aKK-i5Q3TQAv . ✨",
-      "SystemMessage4": "ILIA Beauty: The best time to buy a set.\n\nFor a very limited time, take 25% off all customizable clean beauty edits.*\n\nThe more, the merrier: iliabeauty.attn.tv/amGZ0fPY8K3n \n\n*See site for details.",
-      "SystemMessage5": "ILIA Beauty: Reset your skin.\n\nStart 2026 with a regimen refresh built to protect + revive your skin, and get 20% off and free shipping on all skincare subscriptions.*\n\nSavings on repeat: iliabeauty.attn.tv/aFbwxiwYBH3b \n\n*See site for details.",
-      "SystemMessage6": "ILIA Beauty: Meet NEW Overglaze Hydrating Lip Gloss.\n \nInspired by the lustrous finishes used in ceramics, the longwear formula glides on smoothly and delivers dimensional shine + 24-hour hydration.\n\nShop all 12 shades: iliabeauty.attn.tv/ajO-cCHKj6IY",
-      "SystemMessage7": "ILIA Beauty: Gloss by numbers.\n\n100% of people said NEW Overglaze Hydrating Lip Gloss locks in moisture and quenches dry, chapped lips, all without feathering or bleeding.*\n\nShop the new gloss: iliabeauty.attn.tv/adgzsSAyEZky \n\n*Immediate results in a clinical study of 52 people.",
-      "SystemMessage8": "ILIA Beauty: Still thinking about it? It probably means you should take another look.\n\nShop our bestsellers: iliabeauty.attn.tv/aQvPqwU6HtI2 .",
-      "SystemMessage9": "ILIA Beauty: Complete your pick: The Necessary Eyeshadow Palette is buttery, talc-free, and blends like a dream.\n\nShop now: https://iliabeauty.attn.tv/aAA1bmGciuhP .",
-      "SystemMessage10": "ILIA Beauty: Hi — spotted some rich, balm-like lip shades from the lip range that blend color and skincare for a smooth finish.\n\nFree shipping on orders $50+ and free returns.\n\nTry the buttery palette: https://iliabeauty.attn.tv/azOyGGGK4eCj . 💄",
-      "SystemMessage11": "ILIA Beauty: You are on the list. Click here to shop now: iliabeauty.com.",
-      "customerMessage1": "Y",
-      "customerMessage2": "I never got my discount",
-      "AgentMessage1": "ILIA Beauty: I'm sorry to hear that! May I know what discount you're referring to and where you saw it? I'm here to help!",
-      "customerMessage3": "The 15 % When you subscribe",
-      "customerMessage4": "I did it a week ago but no code was send",
-      "customerMessage5": "I'm gettingA 15% subscribe discount?",
-      "AgentMessage2": "ILIA Beauty: Got it. It might have some specific requirements. Could you let me know where you got it and, if possible, share a screenshot? I'll do my best to help from there.",
-      "customerMessage6": "I did it last week and I never got a code",
-      "customerMessage7": "And I just tried again and doesn't work",
-      "customerMessage8": "I been using ilia for more than 2 years but always from Sephora But I want to take advantage of the subscribe to text discount",
-      "customerMessage9": "\"",
-      "customerMessage10": "\"",
-      "customerMessage11": "I'm a customer that just want to use a fist time code that didn't work",
-      "AgentMessage3": "ILIA Beauty: I'm sorry to hear that. You can use the code ILIA8S86D6 for 15% off on orders over $50 and get free shipping and return. Hope this helps! \n\nIf you're having trouble with the code, can you please share a screenshot of the items in your cart and the error message that you're receiving? I'd be happy to check this for you.\n\nIn the meantime, you can check out our products here: https://iliabeauty.attn.tv/ar040lmZVxix",
+      "id": "019c625a-0cac-43ff-f000-0000fb93a56c",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://iliabeauty.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "The Necessary Eyeshadow Palette - Cool Nude",
-            "link": "https://iliabeauty.com/products/the-necessary-eyeshadow-palette?variant=40821110702160",
-            "icon": "eye"
+            "link": "https://www.lifestride.com/product/womens-chelsea-loafer-5281046/lux-navy-patent-leather-86554",
+            "item": "chelsea loafer",
+            "timeAgo": "2026-02-15"
           },
           {
-            "item": "Skin Rewind Complexion Stick - Sycamore 12N",
-            "link": "https://iliabeauty.com/products/skin-rewind-complexion-stick-foundation-concealer?variant=40790478094416",
-            "icon": "eye"
-          },
-          {
-            "item": "Skin Rewind Complexion Stick - Willow 11W",
-            "link": "https://iliabeauty.com/products/skin-rewind-complexion-stick-foundation-concealer?variant=40790477766736",
-            "icon": "eye"
-          },
-          {
-            "item": "Skin Rewind Complexion Stick - Hawthorn 18N",
-            "link": "https://iliabeauty.com/products/skin-rewind-complexion-stick-foundation-concealer?variant=40790477766736",
-            "icon": "eye"
-          },
-          {
-            "item": "Skin Rewind Complexion Stick - Hinoki 1N",
-            "link": "https://iliabeauty.com/products/skin-rewind-complexion-stick-foundation-concealer?variant=40790477766736",
-            "icon": "eye"
+            "link": "https://www.lifestride.com/product/womens-london-mule-loafer-5281059/cali-wine-croc-faux-leather-86565?icid=CircusRecommendationsPDPBottom_LifeStride_5281059_20004_86565",
+            "item": "london mule loafer",
+            "timeAgo": "2026-02-15"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://lifestride.com/",
+          "date": ""
+        }
       },
-      "orders": []
+      "companyWebsite": "https://lifestride.com/",
+      "companyName": "Lifestride",
+      "notes": {
+        "escalate": [
+          "When ESC include full name for all escalations",
+          "For code issues, include email address and code"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "LifeStride: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from LifeStride.",
+          "date_time": "2026-02-15 07:46:02.096",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LifeStride: Welcome to LifeStride! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/xeF",
+          "date_time": "2026-02-15 07:46:23.163",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LifeStride: Hey! I\u0027m Jordan, thanks for joining us! As a special gift, enjoy $10 off $50+: lifestride.attn.tv/aKmHGXtJsabI Text me any time with questions!",
+          "date_time": "2026-02-15 07:46:26.140",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LifeStride: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nNeed help finding the perfect pair? See what\u0027s trending now to find the season\u0027s hottest styles: https://lifestride.attn.tv/auCz9I_RA2Jy .",
+          "date_time": "2026-02-15 07:47:28.581",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LifeStride: FINAL HOURS! Your cart still has London Mule Loafer and Margot Loafer.\n\nUse code LSWELC10RJSHZQYH to take $10 off your purchase: https://lifestride.attn.tv/aS3lP3NB8r3t .",
+          "date_time": "2026-02-15 08:07:08.751",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LifeStride: Grab your London Mule Loafer — easy slip-on comfort with a lug sole and recycled linings you\u0027ll love.\n\nShop now: https://lifestride.attn.tv/aRBeyyQ8MlZH .",
+          "date_time": "2026-02-15 12:20:54.025",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The code doesn\u0027t work",
+          "date_time": "2026-02-15 12:27:10.460",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Code won\u0027t work - All brands\"; last updated: 2023-10-10 16:36:42.859",
+          "date_time": "2026-02-15 12:29:54.639",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c625a-0cac-43ff-f000-0000fb93a56c",
+          "message_text": "LifeStride: I\u0027m sorry to hear that. I have tried on my end, and the code: LSWELC10RJSHZQYH works!\nHave you encountered any error messages? Also, could you kindly share a screenshot of the items in your cart? I\u0027ll be happy to look into the issue!",
+          "message_type": "agent",
+          "agent": "109964",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-15 12:29:54.641"
+        }
+      ]
     },
     "100": {
-      "id": "019bd767-756c-4aa6-f000-0000f3b28800",
-      "companyName": "LensDirect",
-      "companyWebsite": "https://lensdirect.com",
-      "agentName": "Elaine",
-      "agentInitial": "L",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
-        ],
-        "templates": [
-          "For medical inquiries about contacts or lens replacement use MQ shortcut"
-        ]
-      },
-      "SystemMessage1": "LensDirect: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from LensDirect.",
-      "SystemMessage2": "LensDirect: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage3": "LensDirect: Welcome! Enjoy 20% off all contacts + 25% off eyewear, & lens replacement with CA7E7931EF \n\nShop here! lensdirect.attn.tv/aAtAUGod6x6S",
-      "SystemMessage4": "LensDirect: Save our contact for exclusive offers!",
-      "SystemMessage5": "LensDirect: Still deciding? Use CA7E7931EF 20% off contacts and 25% off all eyewear, lens replacement, and sunglasses: \n\nShop here:https://lensdirect.attn.tv/azx3nVhrO0JB",
-      "SystemMessage6": "LensDirect: Hey there! We love that you stopped by! What're you in the market for? \n\nWe have contacts, eyewear, lens replacement and so much more. Come on back and if you have any questions, let us know how we can help! https://lensdirect.attn.tv/a9q7pb9msqSE",
-      "SystemMessage7": "LensDirect: Hi, Elaine here! It looks like you left some items in your cart - use AC19D4A0E to save 20% on contacts and 30% on eyewear and lens replacement!\n\nText back if you have any questions!",
-      "customerMessage1": "On my first order I was not charged over $11 for handling. Why is that charge on my order now?  That's why I didn't complete my order.",
-      "AgentMessage1": "LensDirect: Sorry about that. The 6% handling & insurance fee on each order offsets a portion of the cost increases related to verification of prescriptions with your eye care provider, fuel surcharges on shipping, and return processing.",
+      "agentName": "John",
+      "id": "019c5990-b15b-4dd9-f000-00001735f315",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://lensdirect.com",
+          "value": "https://theartofshaving.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Acuvue Oasys Hydraluxe 90 Pack",
-            "link": "https://www.lensdirect.com/acuvue-oasys-hydraluxe-90-pack",
-            "icon": "eye"
-          },
-          {
-            "item": "Contact Lens Protection Plan",
-            "link": "https://www.lensdirect.com/contact-lens-protection-plan",
-            "icon": "eye"
-          },
-          {
-            "item": "Acuvue Oasys Hydraluxe 90 Pack",
-            "link": "https://www.lensdirect.com/acuvue-oasys-hydraluxe-90-pack",
-            "icon": "eye"
-          },
-          {
-            "item": "Acuvue Oasys Hydraluxe 90 Pack",
-            "link": "https://www.lensdirect.com/acuvue-oasys-hydraluxe-90-pack",
-            "icon": "eye"
-          },
-          {
-            "item": "Acuvue Oasys Hydraluxe 90 Pack",
-            "link": "https://www.lensdirect.com/acuvue-oasys-hydraluxe-90-pack",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://theartofshaving.com",
+      "companyName": "The Art of Shaving",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS if cx wants us to place order for them, use CS shortcut"
+        ],
+        "templates": [
+          "For adverse events or product quality complaints, use PS shortcut"
+        ],
+        "tone": [
+          "Ensure the word \"staging\" isn\u0027t in any link you send"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Adverse Events,",
+        "Product Quality Complaints"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "The Art of Shaving: Up to 30% Off for our Valentine\u0027s Sale!\n10% off $50\n20% off $100\n30% off $150. \nNo code required\naos.attn.tv/aqRsZG56j4qE ",
+          "date_time": "2026-02-02 19:00:28.688",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "The Art of Shaving: You are already subscribed. Click here to shop now: theartofshaving.com.",
+          "date_time": "2026-02-13 18:55:53.148",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "The Art of Shaving: Hey, this is John. Thanks for checking us out! https://aos.attn.tv/aMypGqMjncZ- \n\nAny specific shaving questions I can help with?",
+          "date_time": "2026-02-13 19:07:04.817",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "John I\u0027m trying to log into my old account but not having any luck.  I like to look at razor s, can you help?",
+          "date_time": "2026-02-13 19:18:17.561",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Is the site secure? - All brands\"; last updated: 2023-10-10 17:49:13.114",
+          "date_time": "2026-02-13 19:33:00.801",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Site won\u0027t work - All brands\"; last updated: 2025-07-16 17:54:02.115",
+          "date_time": "2026-02-13 19:33:00.801",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5990-b15b-4dd9-f000-00001735f315",
+          "message_text": "The Art of Shaving: Hi, thanks for reaching out. I\u0027m so sorry to hear that. First, I might suggest trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes.",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 19:33:00.805"
+        }
+      ]
     }
   }
 }

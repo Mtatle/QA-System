@@ -3,1542 +3,727 @@
   "chunk": "chunk_0013",
   "scenarios": {
     "61": {
-      "id": "019bebbc-de7a-4fe9-f000-0000c53fde35",
-      "companyName": "LANEIGE",
-      "companyWebsite": "https://us.laneige.com",
-      "agentName": "Taylor",
-      "agentInitial": "L",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for any order related inquiries"
-        ],
-        "promo_and_exclusions": [
-          "Free gift with purchase codes are entered in the cart and discount codes at checkout"
-        ]
-      },
-      "SystemMessage1": "LANEIGE: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "LANEIGE: Hey this is Taylor, how can I help you?",
-      "customerMessage1": "Hello, I got a coupon from you guys when I tried to check out with my purchase. It was 15% off my order. However when I would go to checkout, it kept adjusting my total to not actually being 15% off, it was less than that. As a result I didn't buy anything because I was really frustrated by that experience. Not sure if it was a site glitch why that happened, but it was a really bad user experience.",
-      "customerMessage2": "\"",
-      "customerMessage3": "This was the coupon",
-      "AgentMessage1": "LANEIGE: Sorry for the slow reply and thanks for reaching out. I'm really sorry about this, and surely, this isn't the experience I want you to have. I just double-checked and the code gave 15% off my order. Can you please send me a screenshot of the items in your cart and the discount you received on your order? Happy to help.",
-      "customerMessage4": "So before when I tried to redeem my points and use the 15% off it wasn't fully applying the discount.Now when I try to checkout the 15% off works, but it's not letting me redeem my points at all and use the discount which doesn't make any sense :/",
-      "customerMessage5": "\"",
-      "AgentMessage2": "LANEIGE: Thanks for sharing that with me, and I'm sorry for the confusion with your points and the 15% off discount. To redeem your points, make sure you click the blue \"Apply $8.65 Off\" option. The code LAN-925A-15 has already been applied, but please note that additional discount codes, like FPL3VN9P , cannot be combined since we don't allow stacking. Give this a try and let me know if it works!",
+      "agentName": "Kai",
+      "id": "019c68b1-9930-4c08-f000-0000fa795c22",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://us.laneige.com",
+          "value": "https://blenderseyewear.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Water Sleeping Mask",
-            "link": "https://us.laneige.com/products/water-sleeping-mask",
-            "icon": "eye"
-          },
-          {
-            "item": "Water Sleeping Mask",
-            "link": "https://us.laneige.com/products/water-sleeping-mask",
-            "icon": "eye"
-          },
-          {
-            "item": "Water Sleeping Mask",
-            "link": "https://us.laneige.com/products/water-sleeping-mask",
-            "icon": "eye"
-          },
-          {
-            "item": "Perfect Renew 3X Signature Serum - 40mL",
-            "link": "https://us.laneige.com/products/perfect-renew-3x-signature-serum",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://blenderseyewear.com",
+      "companyName": "Blenders Eyewear",
+      "notes": {
+        "templates": [
+          "When closing the conversation use CC shortcut",
+          "For all inqiuries about refunds/replacement orders use RRO shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Discount codes or rewards points can be used with a gift card",
+          "Discount codes and rewards points can not be used together",
+          "Discount codes can not be used on sale items"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Refund"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Blenders: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Blenders Eyewear",
+          "date_time": "2026-02-16 17:27:18.560",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Blenders: Welcome to Blenders! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-16 17:27:33.432",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Blenders: Get Blended! Your welcome code is WELCOME-n4hdtB. Shop now and automatically apply 15% off your order: https://blenderseyewear.attn.tv/afM6_kfRDWlT .\n\nReply back anytime for help! ",
+          "date_time": "2026-02-16 17:27:36.935",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Blenders: Plus save our contact to receive exclusive updates!",
+          "date_time": "2026-02-16 17:27:38.781",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Help",
+          "date_time": "2026-02-16 17:37:45.282",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c689a-755b-411b-f000-0000fa795c22",
+          "message_text": "Blenders: I would be more than happy to help out, ask away!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 17:37:59.025"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "!",
+          "date_time": "2026-02-16 17:38:05.323",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m buying a pair of glasses I have a gift card and I have the 15% off you gave me but the price is not correct on the initial price of the glasses they were on sale for 2990 they\u0027re marked at 2999 and then I\u0027m trying to be charged 59+ my $30 discount makes it down to not much at all I got a $30 gift card from Nift and IFT and your 15% off and they\u0027re trying to charge me $31 that\u0027s not even right the initial price was less than that they\u0027re charging me $30 more than the initial price from the beginning",
+          "date_time": "2026-02-16 17:39:05.471",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c68a6-8bcb-4c67-f000-0000fa795c22",
+          "message_text": "Blenders: I\u0027m sorry to hear that. Could you kindly share a screenshot of the items in your cart? I\u0027ll be happy to look into the issue! ",
+          "message_type": "agent",
+          "agent": "39001",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 17:51:11.202"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hrllog",
+          "date_time": "2026-02-16 17:55:45.462",
+          "message_media": [
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1771282533201_fb3e42d0-b306-4a43-9046-a72c642c2cbe-1.png",
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1771282533201_fb3e42d0-b306-4a43-9046-a72c642c2cbe-1.png"
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "You can see it\u0027s 2999 and it doesn\u0027t state that on the first photo the price is that\u0027s not even it\u0027s not right it\u0027s there\u0027s they\u0027re not even taking the $30 off for my Nift gift which I was given $30 and then you guys gave me 15 so it should be free and chipping free",
+          "date_time": "2026-02-16 17:56:55.177",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c68ae-3a1c-41aa-f000-0000fa795c22",
+          "message_text": "Blenders: Thank you for sending that over! Could you also provide a screenshot of the item(s) in your cart so I can take a closer look and assist you further?",
+          "message_type": "agent",
+          "agent": "37648",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 17:59:34.575"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The second photo is from my cart",
+          "date_time": "2026-02-16 18:00:05.266",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Can I use two discounts? - All brands\"; last updated: 2023-10-10 16:38:40.074",
+          "date_time": "2026-02-16 18:03:15.525",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Free shipping\"; last updated: 2023-05-12 22:33:17.665",
+          "date_time": "2026-02-16 18:03:15.525",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c68b1-9930-4c08-f000-0000fa795c22",
+          "message_text": "Blenders: Thank you for getting back to me and providing that information! Unfortunately, you won\u0027t be able to use multiple deals at checkout, but feel free to use the one that gives you the best value! We offer free shipping on domestic orders over $50. Maybe you can add something else to reach the minimum?",
+          "message_type": "agent",
+          "agent": "109840",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 18:03:15.527"
+        }
+      ]
     },
     "62": {
-      "id": "019bc36e-3c68-4e58-f000-000011e3c950",
-      "companyName": "Mac of All Trades",
-      "companyWebsite": "https://macofalltrades.com",
-      "agentName": "Jordan",
-      "agentInitial": "M",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post-purchase/specific warranty inquiries",
-          "Send to CS for discount code issues immediatley",
-          "Send to CS for Affirm or financing issues (don't ask for screenshots)",
-          "Send to CS if cx card is declined",
-          "Send to CS if a customer accuses us of being misleading, illegal activity etc.",
-          "Send to CS If a customer insults us/is angry",
-          "Send to CS if cx has additional q's about tax exemption not included in our template",
-          "For software support direct customers to contact Apple Support directly"
-        ],
-        "tone": [
-          "Let the cx have the last word",
-          "Don't respond when the cx says they purchased elsewhere"
-        ],
-        "drive_to_purchase": [
-          "Don't recommend vintage products at all unless cx are specifically looking for a model"
-        ],
-        "promo_and_exclusions": [
-          "WELCOME CODE:"
-        ]
-      },
-      "SystemMessage1": "mac of all trades: Hey there! We noticed you eyeing something on our site...come back and shop now: https://macofalltrades.attn.tv/abhJQ0KCdqvI .",
-      "SystemMessage2": "mac of all trades: It looks like you forgot Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019) in your cart...complete your checkout today: https://macofalltrades.attn.tv/a9C17WVSkxxS",
-      "SystemMessage3": "mac of all trades: Act now! That Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019) you were looking at is almost gone. Click here to grab it before it is too late! https://macofalltrades.attn.tv/aQleuJJMd4bs .",
-      "SystemMessage4": "mac of all trades: Hey there! We noticed you eyeing something on our site...come back and shop now: https://macofalltrades.attn.tv/a_OiS-WKTruS .",
-      "SystemMessage5": "mac of all trades: Hey there! We noticed you eyeing something on our site...come back and shop now: https://macofalltrades.attn.tv/a3cr2ASaTU-Y .",
-      "customerMessage1": "Could I speak to a live person please",
-      "AgentMessage1": "mac of all trades: Thanks for reaching out to us. This is Jordan. How can I assist you today?",
-      "customerMessage2": "I made a purchase today, actually my 7th purchase with mack of all trades, an I would like updates of tracking texted to me please!",
-      "SystemMessage6": "Template used: \"Feedback - All brands\"; last updated: 2023-10-10 18:02:56.723",
-      "SystemMessage7": "Template used: \"Customer Support\"; last updated: 2025-07-31 21:45:45.890",
-      "SystemMessage8": "Template used: \"Tracking Info - All brands\"; last updated: 2023-10-10 16:47:28.277",
-      "SystemMessage9": "Template used: \"Check spam - All brands\"; last updated: 2023-10-10 16:43:53.913",
-      "AgentMessage2": "mac of all trades: Oh, thank you so much for your support! As for your request, I can't guarantee anything, as the tracking updates are usually sent via email, but I'll definitely pass it along to my team for it to be considered in the future! \n\nRest assured, you'll get a tracking email as soon as your order ships. If you don't see it in your inbox, be sure to check your spam and promo folders, sometimes our emails end up there as well. We appreciate your understanding!",
+      "agentName": "Sarah",
+      "id": "019c68d7-c2a2-47ae-f000-0000fa4d87cd",
       "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://mcconnells.com/collections/fine-ice-creams/products/sweet-cream-caramel-brownie?utm_medium=sms\u0026utm_source=attentive\u0026utm_campaign=attentive-journey-60-caramel-brownie\u0026externalId=e5sJM",
+            "item": "Sweet Cream Caramel Brownie",
+            "timeAgo": "2026-02-16"
+          },
+          {
+            "link": "https://mcconnells.com/collections/fine-ice-creams/products/sweet-cream-caramel-brownie?utm_medium=sms\u0026utm_source=attentive\u0026utm_campaign=attentive-journey-60-caramel-brownie\u0026externalId=e5sJM",
+            "item": "Sweet Cream Caramel Brownie",
+            "timeAgo": "2026-02-16"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://macofalltrades.com",
+          "value": "https://mcconnells.com/",
           "date": ""
-        },
-        "browsingHistory": [],
-        "orders": [
-          {
-            "orderNumber": "746620",
-            "orderDate": "",
-            "link": "",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.theshoemart.com/olukai-womens-paniolo-20129-dede-trench-blue-trench-blue/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://ampeduplearning.com/verbs-start-i-m-p-end-ar-spanish-board-game/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.vitalitymedical.com/20090314-11543.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.beautyplussalon.com/vincent-china-collar-vest-black-xs-s-vt2350"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://macks-prairie-wings-inc-alb.mybigcommerce.com/yeti-loadout-5-gallon-bucket-gearbelt/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.gorgeousshop.com/lubatti-deliciously-rich-body-lotion-bergamot-grapefruit-200ml.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.claires.com/us/silver-10mm-purple-bubble-tea-huggie-hoop-earrings-122743.html?cgid=2"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.mindgames.ca/ty-sami-goldfish-plush-orange-regular/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://dev-cart.avery.com/blank-roll-ij-matte-white-paper-3-5-w-x-3-core-x-6-od.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://francescas.com/product/PW2003172/harper-heritage-front-tie-shorts"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://mcstaging.pierrefabreconnect.com/p0007012-rf-sublime-curl-leave-in-100ml-2022?___store=pierrefabreconnect"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.cantoni.com/product/ocean-master-m1-razor-1"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.famousfootwear.com/product/impo-womens-rodlyn-stretch-dress-sandal-5270720/classic-red-11543"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.festive-lights.com/13cm-boy-dark-grey-fur-standing-gonk"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.versare.com/wall-mounted-room-divider-360-folding-portable-partition-86-x-4-urban-oak-wood-grain/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://trutechtools.com/cps-btcx4-replacement-chrome-plated-cutting-wheel/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.thrivemarket.com/p/sky-valley-mole-sauce-disco"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.macofalltrades.com/apple-imac-retina-5k-27-inch-3-7ghz-six-core-i5-early-2019/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://checkout.fascinatingdiamonds.com/loose-diamonds/0-75-carat-round-cut-diamond-1109318/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://watchwarehouse.com/tag-heuer-link-32mm-ss-brown-dial-diamond-womens-watch-wbc131e-ba0649/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.dayspring.com/mr-mrs-carved-wooden-block"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.filtersfast.com/P-Viskon-Aire-550-932-VA-550N-Pad.asp"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.northernreflections.com/printed-jersey-nightshirt---grey-456211828/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://tst-cart.avery.com/blank-roll-ij-matte-white-paper-3-5-w-x-3-core-x-6-od.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://shop.naturallycurly.com/nefertitis-secrets-ultimate-rejuvenating-treatment-8-oz/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.seriouspuzzles.com/country-bluebirds-discon-1000pc-jigsaw-puzzle-by-cobble-hill-discon/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://thecostumeshoppe.com/katana-suicide-squad-costume-kit/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.evo.com/outlet/alpine-ski-boots/salomon-impact-7-2008?image=11543/169914/salomon-impact-7-ski-boots-2008-.jpg"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://echoparkpaper.com/farmhouse-kitchen-hungry-hens/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://bullionsharks.com/1879-s-20-gold-liberty-pcgs-au50-750302052/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://carewell.com/product/green-sprouts-sprout-ware-sip-n-straw-cup/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://superjeweler.com/4-1-2ct-oval-created-emerald-and-diamond-mens-ring-crafted-in-solid-yellow-gold-11543.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://strathfieldcarradios.com.au/aerpro-fp8561-double-din-facia-kit-for-ford-transit-matte-black/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.jbtools.com/crushproof-adf40-aluminum-4-hose/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://edeninlove.com/1176"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.bwear.com/bunny-easter-eggs-pullover-crew-neck-sweatshirt-sage/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://csd.shop/products/women/clothing/3-1-phillip-lim-black-belted-loose-fit-shorts.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.judybluewholesale.com/82363reg-dk-11-30.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://checkout.sportsshoes.com/saucony-scoot-cropped-womens-running-tights-sau3531/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.utvsource.com/bell-helmets-moto-9-mips-xxl-prophecy-matte-gray-black-white/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.factorydirectjewelry.com/womens-collection/white-gold-art-deco-cz-engagement-proposal-ring/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.modainpelle.com/sandals-c29/heeled-sandals-c41/melinia-multi-metallic-p11543"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.greengaskets.com/cold-tech-gasket-27-1-4-x-28-1-4/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://lapolicegear.com/elite-first-aid-4011-surgical-tape.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.cassart.co.uk/blundell-harling-challenge-unit-drawing-board-a1--c/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.batteriesinaflash.com/2x-se-9612rb-lever-lock-rubber-head-3-clamp-for-holding-down-tarps"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://shop.loriwhitlock.com/heart-purse/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://csd.shop/products/women/clothing/3-1-phillip-lim-black-belted-loose-fit-shorts.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.modainpelle.com/sandals-c29/heeled-sandals-c41/melinia-multi-metallic-p11543"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://shopstarbeauty.com/outre-synthetic-melted-hairlinehd-lace-front-wig-mh-112/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.theproteinworks.com/100-protein-3-month-supply-bundle"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.heritagebooks.org/products/how-christianity-transformed-the-world-james.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.alamomusic.com/eastman-albert-nebel-vl601-4-4-advanced-violin-w-case-and-bow/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://cheapfood.co.uk/boro-plus-healthy-skin-care-cream-regular-50ml/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://knifeworks.com/eze-lap-diamond-knife-sharp/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://livecarmodel.com/products/cat-caterpillar-pm822-cold-planer-with-operator-high-line-series-1-50-diecast-model-by-diecast-masters.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.cravenspeed.com/the-stubby-antenna-for-ford-fusion-2nd-gen-junior/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://decoratorswarehouse.com/2-5-x-10-yards-blue-sunflower-ribbon/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://mallmusic.com.au/jazz-incorporated-flute-vol-2-bk-cd/kb02051"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://gage-diamond-new-opp.mybigcommerce.com/0-7ct-oval-i-si2-diamond-6490/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.dormco.com/2_Tier_Shower_Shelf_Square_College_Supplies_p/ind-c-27975.htm"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.toolnut.com/powermatic-1791213-15hh-planer-3hp-1ph-230v-no-dro.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://replacebase1.evdpl.com/pub/default/for-samsung-galaxy-m10-m105-replacement-dual-sim-and-micro-sd-card-tray-black.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.catwalk.com.au/schwarzkopf-fibre-clinix-vibrance-booster-30ml"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://collectorstore.com/gambit-x-men-funko-pop-904/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.misfitsmarket.com/shop/aisle?addToCart=11543"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://trendytransfers.com/lets-fiesta-dtf-heat-transfer/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.highflowfuel.com/quantum-intank-fuel-pump-w-tank-seal-for-harley-davidson-fxdl-low-rider-2004-2009-replaces-61016-04b/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.pierrefabreconnect.com/p0007012-rf-sublime-curl-leave-in-100ml-2022"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://x-ph.com/bmw-a-c-compressor-genuine-bmw-64509192317/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.prioritytire.com/en/bridgestone-dueler-h-p-sport-as-245-60r18-105h-a-s-all-season-tire-dc"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://pascoe.ca/products/lymphdiaral-drops"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.superbselection.com/family-guy-stewie-bite-me-adult-t-shirt/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.evo.com/en-ca/outlet/alpine-ski-boots/salomon-impact-7-2008?image=11543/169914/salomon-impact-7-ski-boots-2008-.jpg"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.seriousshops.com/monin-classic-flavored-syrups-750-ml-glass-bottle-orange/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://palmbeachjewelry.com/products/round-cubic-zirconia-2-piece-bridal-ring-set-6-44-tcw-platinum-over-sterling-silver.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.pierrefabreconnect.com/p0007012-rf-sublime-curl-leave-in-100ml-2022"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.rfsalon.com/p0007012-rf-sublime-curl-leave-in-100ml-2022?___store=pfconnectrf"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://offroadarmor.com/product/skid-plate-full-set-plastic-polaris-sportsman-xp-1000-2017-850-2018/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.lightopia.com/Details/MadeGoods/11543"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.tilesdirect.net/sparkle-majesty-12-x-12/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.steeda.com/mishimoto-mmint-f150-11kbsl-f-150-intercooler-kit"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.fish307.com/minn-kota-trolling-motor-part-drive-housing-rt42apc-sw-2301836/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://jellycat-us-sandbox-1.mybigcommerce.com/amuseables-carrot-cake/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://echoparkwholesale.com/cbza128012-elephants/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://store.franklinplanner.com/wild-asparagus-planner-love-ring-bound-pagefinder/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.seymourshome.com/studio-g-stockholm-multi-cushion-p11543/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://dailysteals.com/products/personalized-just-for-him-bbq-garage-and-workshop-metal-signs.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.rcsuperstore.com/pro-line-1978-chevrolet-malibu-clear-body-losi-22s-drag-slash-ae-dr10/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://sagaconcepts.com/upi-38269/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://lapolicegear.com/elite-first-aid-4011-surgical-tape.html"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://touchupdirect.com/shop/touch-up-paint/hyundai-jasper-green-metallic-jf/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.beercartel.com.au/hpa-aussie-explorer-mixed-12-pack/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://apelectric.com/winco-35ptoc4-18-36kw-3-phase-277-480v-540-rpm-pto-generator/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://discount-mugs.mybigcommerce.com/product/x10184-promotional-silicone-holder-hand-sanitizers/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://thereelshot.com/proking-spoons-magnum-stephs-spoon-4-3-4/"
-              },
-              {
-                "name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-                "price": "593.99",
-                "currency": "USD",
-                "productLink": "https://www.plumbersstock.com/wwemeg03ips-3in-cl200-megalug-grip-joint-wpack.html"
-              }
-            ],
-            "total": "593.99"
-          }
+        }
+      },
+      "companyWebsite": "https://mcconnells.com/",
+      "companyName": "McConnell\u0027s Fine Ice Creams",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS if the ice cream arrived melted."
+        ],
+        "escalate": [
+          "If cx wants to delay shipping/set a deliver date, use DSD shortcut and ESC",
+          "For all ESC use ESC shortcut",
+          "ESC if cx are inquiring about in-store prices",
+          "ESC website \u0026 store inventory/availability inquiries"
+        ],
+        "tone": [
+          "🅿 Address the customer by name when appropriate!"
+        ],
+        "templates": [
+          "If a customer says that the ice cream they purchased in store is icy/refrozen/awful, use IRA shortcut"
         ]
       },
-      "orders": [
+      "blocklisted_words": [
+        "sugarfree"
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Discount code errors",
+        "melted delivery",
+        "shipping issue",
+        "unsure how to respond",
+        "purchased bad pint at the grocery store"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "746620",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.theshoemart.com/olukai-womens-paniolo-20129-dede-trench-blue-trench-blue/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://ampeduplearning.com/verbs-start-i-m-p-end-ar-spanish-board-game/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.vitalitymedical.com/20090314-11543.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.beautyplussalon.com/vincent-china-collar-vest-black-xs-s-vt2350",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://macks-prairie-wings-inc-alb.mybigcommerce.com/yeti-loadout-5-gallon-bucket-gearbelt/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.gorgeousshop.com/lubatti-deliciously-rich-body-lotion-bergamot-grapefruit-200ml.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.claires.com/us/silver-10mm-purple-bubble-tea-huggie-hoop-earrings-122743.html?cgid=2",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.mindgames.ca/ty-sami-goldfish-plush-orange-regular/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://dev-cart.avery.com/blank-roll-ij-matte-white-paper-3-5-w-x-3-core-x-6-od.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://francescas.com/product/PW2003172/harper-heritage-front-tie-shorts",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://mcstaging.pierrefabreconnect.com/p0007012-rf-sublime-curl-leave-in-100ml-2022?___store=pierrefabreconnect",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.cantoni.com/product/ocean-master-m1-razor-1",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.famousfootwear.com/product/impo-womens-rodlyn-stretch-dress-sandal-5270720/classic-red-11543",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.festive-lights.com/13cm-boy-dark-grey-fur-standing-gonk",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.versare.com/wall-mounted-room-divider-360-folding-portable-partition-86-x-4-urban-oak-wood-grain/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://trutechtools.com/cps-btcx4-replacement-chrome-plated-cutting-wheel/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.thrivemarket.com/p/sky-valley-mole-sauce-disco",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.macofalltrades.com/apple-imac-retina-5k-27-inch-3-7ghz-six-core-i5-early-2019/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://checkout.fascinatingdiamonds.com/loose-diamonds/0-75-carat-round-cut-diamond-1109318/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://watchwarehouse.com/tag-heuer-link-32mm-ss-brown-dial-diamond-womens-watch-wbc131e-ba0649/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.dayspring.com/mr-mrs-carved-wooden-block",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.filtersfast.com/P-Viskon-Aire-550-932-VA-550N-Pad.asp",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.northernreflections.com/printed-jersey-nightshirt---grey-456211828/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://tst-cart.avery.com/blank-roll-ij-matte-white-paper-3-5-w-x-3-core-x-6-od.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://shop.naturallycurly.com/nefertitis-secrets-ultimate-rejuvenating-treatment-8-oz/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.seriouspuzzles.com/country-bluebirds-discon-1000pc-jigsaw-puzzle-by-cobble-hill-discon/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://thecostumeshoppe.com/katana-suicide-squad-costume-kit/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.evo.com/outlet/alpine-ski-boots/salomon-impact-7-2008?image=11543/169914/salomon-impact-7-ski-boots-2008-.jpg",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://echoparkpaper.com/farmhouse-kitchen-hungry-hens/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://bullionsharks.com/1879-s-20-gold-liberty-pcgs-au50-750302052/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://carewell.com/product/green-sprouts-sprout-ware-sip-n-straw-cup/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://superjeweler.com/4-1-2ct-oval-created-emerald-and-diamond-mens-ring-crafted-in-solid-yellow-gold-11543.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://strathfieldcarradios.com.au/aerpro-fp8561-double-din-facia-kit-for-ford-transit-matte-black/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.jbtools.com/crushproof-adf40-aluminum-4-hose/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://edeninlove.com/1176",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.bwear.com/bunny-easter-eggs-pullover-crew-neck-sweatshirt-sage/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://csd.shop/products/women/clothing/3-1-phillip-lim-black-belted-loose-fit-shorts.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.judybluewholesale.com/82363reg-dk-11-30.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://checkout.sportsshoes.com/saucony-scoot-cropped-womens-running-tights-sau3531/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.utvsource.com/bell-helmets-moto-9-mips-xxl-prophecy-matte-gray-black-white/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.factorydirectjewelry.com/womens-collection/white-gold-art-deco-cz-engagement-proposal-ring/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.modainpelle.com/sandals-c29/heeled-sandals-c41/melinia-multi-metallic-p11543",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.greengaskets.com/cold-tech-gasket-27-1-4-x-28-1-4/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://lapolicegear.com/elite-first-aid-4011-surgical-tape.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.cassart.co.uk/blundell-harling-challenge-unit-drawing-board-a1--c/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.batteriesinaflash.com/2x-se-9612rb-lever-lock-rubber-head-3-clamp-for-holding-down-tarps",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://shop.loriwhitlock.com/heart-purse/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://csd.shop/products/women/clothing/3-1-phillip-lim-black-belted-loose-fit-shorts.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.modainpelle.com/sandals-c29/heeled-sandals-c41/melinia-multi-metallic-p11543",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://shopstarbeauty.com/outre-synthetic-melted-hairlinehd-lace-front-wig-mh-112/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.theproteinworks.com/100-protein-3-month-supply-bundle",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.heritagebooks.org/products/how-christianity-transformed-the-world-james.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.alamomusic.com/eastman-albert-nebel-vl601-4-4-advanced-violin-w-case-and-bow/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://cheapfood.co.uk/boro-plus-healthy-skin-care-cream-regular-50ml/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://knifeworks.com/eze-lap-diamond-knife-sharp/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://livecarmodel.com/products/cat-caterpillar-pm822-cold-planer-with-operator-high-line-series-1-50-diecast-model-by-diecast-masters.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.cravenspeed.com/the-stubby-antenna-for-ford-fusion-2nd-gen-junior/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://decoratorswarehouse.com/2-5-x-10-yards-blue-sunflower-ribbon/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://mallmusic.com.au/jazz-incorporated-flute-vol-2-bk-cd/kb02051",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://gage-diamond-new-opp.mybigcommerce.com/0-7ct-oval-i-si2-diamond-6490/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.dormco.com/2_Tier_Shower_Shelf_Square_College_Supplies_p/ind-c-27975.htm",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.toolnut.com/powermatic-1791213-15hh-planer-3hp-1ph-230v-no-dro.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://replacebase1.evdpl.com/pub/default/for-samsung-galaxy-m10-m105-replacement-dual-sim-and-micro-sd-card-tray-black.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.catwalk.com.au/schwarzkopf-fibre-clinix-vibrance-booster-30ml",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://collectorstore.com/gambit-x-men-funko-pop-904/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.misfitsmarket.com/shop/aisle?addToCart=11543",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://trendytransfers.com/lets-fiesta-dtf-heat-transfer/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.highflowfuel.com/quantum-intank-fuel-pump-w-tank-seal-for-harley-davidson-fxdl-low-rider-2004-2009-replaces-61016-04b/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.pierrefabreconnect.com/p0007012-rf-sublime-curl-leave-in-100ml-2022",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://x-ph.com/bmw-a-c-compressor-genuine-bmw-64509192317/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.prioritytire.com/en/bridgestone-dueler-h-p-sport-as-245-60r18-105h-a-s-all-season-tire-dc",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://pascoe.ca/products/lymphdiaral-drops",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.superbselection.com/family-guy-stewie-bite-me-adult-t-shirt/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.evo.com/en-ca/outlet/alpine-ski-boots/salomon-impact-7-2008?image=11543/169914/salomon-impact-7-ski-boots-2008-.jpg",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.seriousshops.com/monin-classic-flavored-syrups-750-ml-glass-bottle-orange/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://palmbeachjewelry.com/products/round-cubic-zirconia-2-piece-bridal-ring-set-6-44-tcw-platinum-over-sterling-silver.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.pierrefabreconnect.com/p0007012-rf-sublime-curl-leave-in-100ml-2022",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.rfsalon.com/p0007012-rf-sublime-curl-leave-in-100ml-2022?___store=pfconnectrf",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://offroadarmor.com/product/skid-plate-full-set-plastic-polaris-sportsman-xp-1000-2017-850-2018/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.lightopia.com/Details/MadeGoods/11543",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.tilesdirect.net/sparkle-majesty-12-x-12/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.steeda.com/mishimoto-mmint-f150-11kbsl-f-150-intercooler-kit",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.fish307.com/minn-kota-trolling-motor-part-drive-housing-rt42apc-sw-2301836/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://jellycat-us-sandbox-1.mybigcommerce.com/amuseables-carrot-cake/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://echoparkwholesale.com/cbza128012-elephants/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://store.franklinplanner.com/wild-asparagus-planner-love-ring-bound-pagefinder/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.seymourshome.com/studio-g-stockholm-multi-cushion-p11543/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://dailysteals.com/products/personalized-just-for-him-bbq-garage-and-workshop-metal-signs.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.rcsuperstore.com/pro-line-1978-chevrolet-malibu-clear-body-losi-22s-drag-slash-ae-dr10/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://sagaconcepts.com/upi-38269/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://lapolicegear.com/elite-first-aid-4011-surgical-tape.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://touchupdirect.com/shop/touch-up-paint/hyundai-jasper-green-metallic-jf/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.beercartel.com.au/hpa-aussie-explorer-mixed-12-pack/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://apelectric.com/winco-35ptoc4-18-36kw-3-phase-277-480v-540-rpm-pto-generator/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://discount-mugs.mybigcommerce.com/product/x10184-promotional-silicone-holder-hand-sanitizers/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://thereelshot.com/proking-spoons-magnum-stephs-spoon-4-3-4/",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.plumbersstock.com/wwemeg03ips-3in-cl200-megalug-grip-joint-wpack.html",
-              "product_name": "Apple iMac Retina 5K 27-inch 3.7GHz Six-Core i5 (Early 2019)",
-              "product_price": 593.99
-            }
+          "message_type": "system",
+          "message_text": "McConnell\u0027s: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-09 17:00:32.293",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "McConnell\u0027s: Welcome! Your $5 OFF code is SMS5. Click here to automatically apply it and shop now: \nhttps://mcconnells.attn.tv/avlYfWEa2Hfx  Stop to stop",
+          "date_time": "2026-02-09 17:00:36.781",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "McConnell\u0027s: Text us back with any questions you have while shopping \u0026 don\u0027t forget to save our contact card to stay up to date with all of our flavor launches and seasonal promos! Stop to stop",
+          "date_time": "2026-02-09 17:15:41.728",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "McConnell\u0027s: Still deciding? In case you missed it, enter the code SMS5 at checkout for $5 off your next order! https://mcconnells.attn.tv/aRO_fqfdC3Qk Stop to stop",
+          "date_time": "2026-02-10 17:15:52.251",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "McConnell\u0027s: Let us help pick out your next favorite flavor! What are you looking for?\n\nA for Chocolate\nB for Fruity\nC for Rich\nD for Dairy-Free Stop to stop",
+          "date_time": "2026-02-16 18:29:45.424",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "McConnell\u0027s: Awesome! We think you will LOVE this https://mcconnells.attn.tv/as1i2d-Y9E4d  Stop to stop",
+          "date_time": "2026-02-16 18:30:29.671",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "McConnell\u0027s: Hey , this is Sarah . Thanks for checking out our site! 🍦 https://mcconnells.attn.tv/aUAaWh4ELpWU \n\nAre you looking for anything in particular today? Stop to stop",
+          "date_time": "2026-02-16 18:31:56.994",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No I loved the sees collab with brittle",
+          "date_time": "2026-02-16 18:32:59.426",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Customer wants an item we don\u0027t offer\"; last updated: 2025-08-19 18:29:49.178",
+          "date_time": "2026-02-16 18:44:56.508",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c68d7-c2a2-47ae-f000-0000fa4d87cd",
+          "message_text": "McConnell\u0027s: Thanks for getting in touch! I\u0027m really sorry for the inconvenience. I\u0027ll definitely pass this along to the team to consider again in the future, thank you for the suggestion! If you have any more questions, feel free to let me know!",
+          "message_type": "agent",
+          "agent": "109840",
+          "message_media": [
+            
           ],
-          "total": 593.99
+          "date_time": "2026-02-16 18:44:56.510"
         }
       ]
     },
     "63": {
-      "id": "019bc2ca-2a74-4912-f000-00007a6e041a",
-      "companyName": "Cozy Earth",
-      "companyWebsite": "https://cozyearth.com",
-      "agentName": "Sarah",
-      "agentInitial": "C",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "ESC all MyFitness pall App inquiries"
-        ],
-        "dos_and_donts": [
-          "Don't share sale end dates with customers"
-        ]
-      },
-      "SystemMessage1": "Cozy Earth: THREE HOURS ONLY - 40% OFF BEST-SELLING BLANKETS STARTS NOW\n \nHurry and shop our BEST blankets offer: https://cozyearth.attn.tv/acNyeQ3iG3Cr",
-      "SystemMessage2": "Cozy Earth: HURRY! The blankets flash sale ends in TWO HOURS...\n \nInventory is going fast!\n\nShop 40% Off ALL Blankets: cozyearth.attn.tv/aZBJw6bScsOb",
-      "SystemMessage3": "Cozy Earth: TWO DAYS LEFT! Don't miss:\n\n- FREE EXPRESS SHIPPING on orders $300+...\n- 40% off all pajamas\n- 30-35% off the site\n\nGet On-Time Holiday Delivery: https://cozyearth.attn.tv/aOfrc596OStO",
-      "SystemMessage4": "Cozy Earth: You’re in! Stay tuned for more updates coming your way soon.",
-      "SystemMessage5": "Cozy Earth: Thanks for your first purchase with us! We know you'll love Waffle Bath Robe - White / L and can't wait for you to enjoy it. If you have any questions about your order, reply to this text, and we'll be happy to help!",
-      "SystemMessage6": "Cozy Earth: Your order #3275486 is out for delivery! \nTrack your order here: cozyearth.attn.tv/aTMx0um9_HJ4",
-      "SystemMessage7": "Cozy Earth: Your order #3275486 has been delivered! \nCheck in on your order: cozyearth.attn.tv/aIf8fQW8hI0M",
-      "SystemMessage8": "Cozy Earth: This weekend only, enjoy:\n\n-20% off $200+\n-25% off $250+\n-30% off $300+\n\ncode: \"ELEVATEHOME\"\n\nShop Limited Time: cozyearth.attn.tv/aEuhqizJ-vko",
-      "SystemMessage9": "Cozy Earth: Just two days remaining. Up to 30% off!\n\nCode: \"ELEVATEHOME\"\n\nDon't wait: cozyearth.attn.tv/alQMVQttKdbT",
-      "SystemMessage10": "Cozy Earth: Final reminder: \n\n-20% off $200+\n-25% off $250+\n-30$ off $300+\n\nUse code \"ELEVATEHOME\" at checkout!\n\nEnds Tonight: cozyearth.attn.tv/aC5ycYt_Xk7-",
-      "SystemMessage11": "Cozy Earth: The Valentine's Shop is open!\n\nShop NEW Pajama Prints: cozyearth.attn.tv/ahmO6Jzhr05m",
-      "customerMessage1": "I filed a warranty claim over a week ago and it's still pending. Please help",
-      "SystemMessage12": "\"",
-      "SystemMessage13": "Template used: \"Pass to the team - All brands\"; last updated: 2023-10-10 17:46:43.559",
-      "AgentMessage1": "Cozy Earth: I'm sorry to hear that! I will pass this along to my team and get back to you as soon as possible, hang tight!",
+      "agentName": "Julie",
+      "id": "019c3df5-fd20-4b08-f000-0000f9ea24fb",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://cozyearth.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "Waffle Bath Robe",
-            "link": "https://cozyearth.com/products/waffle-bath-robe?variant=42556577841332#dialog-cart",
-            "icon": "eye"
+            "link": "https://zesttorganics.com/products/the-dreamsoft-organic-cotton-travel-scarf?variant=41700673749055",
+            "item": "The Dreamsoft Organic Cotton Travel Scarf - Blackberry",
+            "timeAgo": "2026-02-08"
           },
           {
-            "item": "Waffle Bath Robe",
-            "link": "https://cozyearth.com/products/waffle-bath-robe?variant=42556577841332",
-            "icon": "eye"
+            "link": "https://zesttorganics.com/products/the-dreamsoft-organic-cotton-travel-scarf?utm_campaign=2%2F08%2F2026%20-%20Touchdown%20Flash%20Sale%20(rest%20of%20list)\u0026utm_medium=sms\u0026tw_source=attentive\u0026tw_campaign=10149503\u0026utm_source=attentive\u0026externalId=uYJ7m",
+            "item": "The Dreamsoft Organic Cotton Travel Scarf - Birch",
+            "timeAgo": "2026-02-08"
           },
           {
-            "item": "Waffle Bath Robe",
-            "link": "https://cozyearth.com/products/waffle-bath-robe?variant=42556577841332&currency=USD&nbt=nb%3Aadwords%3Ag%3A21251719120%3A161928389259%3A764148692117&nb_adtype=pla&nb_kwd=&nb_ti=pla-296303633664&nb_mi=112987971&nb_pc=online&nb_pi=shopify_US_7280548806836_42556577841332&nb_ppi=296303633664&nb_placement=&nb_li_ms=&nb_lp_ms=&nb_fii=&nb_ap=&nb_mt=&gad_source=1&gad_campaignid=21251719120&gclid=Cj0KCQiAsNPKBhCqARIsACm01fSBE-4GfHZ1dSPxpU9V9g3syli0U5wP4Nx1Jbxi8CX6jQxmaz64NbUaAu6gEALw_wcB",
-            "icon": "eye"
+            "link": "https://zesttorganics.com/products/the-dreamsoft-organic-cotton-travel-scarf?variant=41700673749055",
+            "item": "The Dreamsoft Organic Cotton Travel Scarf - Blackberry",
+            "timeAgo": "2026-02-08"
           },
           {
-            "item": "Waffle Bath Robe",
-            "link": "https://cozyearth.com/products/waffle-bath-robe?variant=42556577841332&currency=USD&nbt=nb%3Aadwords%3Ag%3A21251719120%3A161928389259%3A764148692117&nb_adtype=pla&nb_kwd=&nb_ti=pla-296303633664&nb_mi=112987971&nb_pc=online&nb_pi=shopify_US_7280548806836_42556577841332&nb_ppi=296303633664&nb_placement=&nb_li_ms=&nb_lp_ms=&nb_fii=&nb_ap=&nb_mt=&gad_source=1&gad_campaignid=21251719120&gclid=Cj0KCQiAsNPKBhCqARIsACm01fTe_wUlB61MmFqyDXtXy14471TA_riH2vyJ1Hgx5mSCTa4evSUj-FsaAr7SEALw_wcB",
-            "icon": "eye"
-          },
-          {
-            "item": "Waffle Bath Robe",
-            "link": "https://cozyearth.com/products/waffle-bath-robe?variant=42556577841332&currency=USD&nbt=nb%3Aadwords%3Ag%3A21251719120%3A161928389259%3A764148692117&nb_adtype=pla&nb_kwd=&nb_ti=pla-296303633664&nb_mi=112987971&nb_pc=online&nb_pi=shopify_US_7280548806836_42556577841332&nb_ppi=296303633664&nb_placement=&nb_li_ms=&nb_lp_ms=&nb_fii=&nb_ap=&nb_mt=&gad_source=1&gad_campaignid=21251719120&gclid=Cj0KCQiAsNPKBhCqARIsACm01fTe_wUlB61MmFqyDXtXy14471TA_riH2vyJ1Hgx5mSCTa4evSUj-FsaAr7SEALw_wcB#dialog-cart",
-            "icon": "eye"
+            "link": "https://zesttorganics.com/products/the-dreamsoft-organic-cotton-travel-scarf?variant=41700673749055",
+            "item": "The Dreamsoft Organic Cotton Travel Scarf - Blackberry",
+            "timeAgo": "2026-02-08"
           }
         ],
-        "orders": [
-          {
-            "orderNumber": "6715232125108",
-            "orderDate": "",
-            "link": "https://cozyearth2.myshopify.com/products/waffle-bath-robe",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "Waffle Bath Robe",
-                "price": "138",
-                "currency": "USD",
-                "productLink": "https://cozyearth2.myshopify.com/products/waffle-bath-robe"
-              },
-              {
-                "name": "Waffle Bath Robe",
-                "price": "138",
-                "currency": "USD",
-                "productLink": "https://cozyearth2.myshopify.com/products/waffle-bath-robe"
-              },
-              {
-                "name": "Waffle Bath Robe",
-                "price": "138",
-                "currency": "USD",
-                "productLink": "https://cozyearth2.myshopify.com/products/waffle-bath-robe"
-              }
-            ],
-            "total": "138"
-          }
-        ]
+        "source": {
+          "label": "Website",
+          "value": "https://zesttorganics.com",
+          "date": ""
+        }
       },
-      "orders": [
+      "companyWebsite": "https://zesttorganics.com",
+      "companyName": "zestt",
+      "notes": {
+        
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "6715232125108",
-          "order_status_url": "https://cozyearth2.myshopify.com/products/waffle-bath-robe",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://cozyearth2.myshopify.com/products/waffle-bath-robe",
-              "product_name": "Waffle Bath Robe",
-              "product_price": 138
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://cozyearth2.myshopify.com/products/waffle-bath-robe",
-              "product_name": "Waffle Bath Robe",
-              "product_price": 138
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://cozyearth2.myshopify.com/products/waffle-bath-robe",
-              "product_name": "Waffle Bath Robe",
-              "product_price": 138
-            }
+          "message_type": "system",
+          "message_text": "zestt: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from zestt.",
+          "date_time": "2026-02-07 17:16:59.690",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "zestt: Welcome to zestt! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-07 17:17:21.775",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "zestt: You\u0027re in! Your 15% off offer is ORGANIC15. Click here to auto-apply it and shop now: zestt.attn.tv/aNIHoInx-Peq .",
+          "date_time": "2026-02-07 17:17:25.770",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "zestt: Don\u0027t forget to save our contact to get exclusive updates!",
+          "date_time": "2026-02-07 17:17:27.835",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "zestt: Your cart is expiring...Don\u0027t miss out on these cozy favorites - complete your order now zestt.attn.tv/aIL1dOiBJL3b",
+          "date_time": "2026-02-07 18:18:57.511",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "zestt: Hi, Insider! We\u0027re so confident that you\u0027re going to love our Dreamsoft Travel Scarf that we\u0027re giving you a $20 gift card towards the purchase of one. Join over 200,000 happy customers and shop now with code YOURGIFT zestt.attn.tv/au1kL2qMydkA ",
+          "date_time": "2026-02-07 19:19:17.836",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Code did not work",
+          "date_time": "2026-02-07 19:56:34.363",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c3adc-ce89-47c5-f000-0000f9ea24fb",
+          "message_text": "zestt: I\u0027m sorry to hear that. Checking here, the discount code ORGANIC15 is actually applicable to full-priced items and can\u0027t be stacked with items that are already on sale. Could you please send me a screenshot of the items in your cart along with the error? I\u0027ll be glad to check on this further. ",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
           ],
-          "total": 138
+          "date_time": "2026-02-07 20:27:55.309"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It\u0027s not full price. The $20 gift discount did not work either",
+          "date_time": "2026-02-07 20:32:24.430",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c3b01-6d6f-4767-f000-0000f9ea24fb",
+          "message_text": "zestt: That\u0027s why the code didn\u0027t apply. Apologies for this. The $20 gift card should apply to the Dreamsoft Travel Scarf. Could you send me a screenshot of the item(s) in your cart? I\u0027ll test it on my end. ",
+          "message_type": "agent",
+          "agent": "82343",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-07 21:07:55.274"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I deleted the gift card. If you resend the code, I\u0027ll try it again",
+          "date_time": "2026-02-08 08:06:42.756",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c3d5e-da6c-4b99-f000-0000f9ea24fb",
+          "message_text": "zestt: I\u0027m sorry to hear that! You can use the code YOURGIFT for the $20 gift card. Let me know how that goes! \n\nPlease note that this code applies to orders $50+. ",
+          "message_type": "agent",
+          "agent": "109955",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-08 08:09:12.458"
+        },
+        {
+          "message_type": "system",
+          "message_text": "zestt: TOUCHDOWN FLASH SALE! Score $50 Dreamsoft Travel Scarves! Hurry, this offer is only available until midnight. Shop now! zestt.attn.tv/aVxXlcYt_Iy6 ",
+          "date_time": "2026-02-08 09:15:41.352",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Does not work",
+          "date_time": "2026-02-08 10:00:52.509",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c3df5-fd20-4b08-f000-0000f9ea24fb",
+          "message_text": "zestt: I\u0027m sorry to hear that. Could you please send me a screenshot of the items in your cart along with the error? I\u0027ll be glad to check on this further. ",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-08 10:54:17.274"
         }
       ]
     },
     "64": {
-      "id": "019bc868-eafd-412d-f000-0000f4604ffd",
-      "companyName": "Toynk",
-      "companyWebsite": "https://toynk.com/",
-      "agentName": "Jordan",
-      "agentInitial": "T",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {},
-      "SystemMessage1": "Toynk: Welcome to Toynk! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Toynk: Hey this is Jordan, how can I help you?",
-      "customerMessage1": "Im looking for info on a purchase please.",
-      "customerMessage2": "Order # 25860605",
-      "customerMessage3": "Was looking to see who paid for this order , credit card used I mean.",
-      "customerMessage4": "Are you there ?",
-      "AgentMessage1": "Toynk: Thanks for reaching out! I'm afraid I'm not seeing the order on my end, so I don't have any info on it, but I can check with my team. May I have your email address, please?",
-      "customerMessage5": "My email is wrmflooring¡gmail.com",
-      "customerMessage6": "It was a disney snow globe. Nightmare before christmas.   But it says Bill to elizabeth mongillo and send to jennifer mongillo.  Im just making sure somebody didnt take out a credit card in my daughters name.",
-      "customerMessage7": "Original Order# 20261007816892",
-      "SystemMessage3": "\"",
-      "customerMessage8": "059rl3lyv5ngq3g¡marketplace.amazom.com",
-      "SystemMessage4": "\"",
-      "SystemMessage5": "\"",
-      "AgentMessage2": "Toynk: I understand the importance of this. Thank you for sharing the details. I've forwarded this to my team and will get back to you as soon as I hear from them.\n\nWhile we wait, is there anything else I can assist you with?",
+      "agentName": "Charlotte",
+      "id": "019c5803-9be8-44f2-f000-0000fb284c5d",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://toynk.com/",
+          "value": "https://us.elemis.com/",
           "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
+        }
       },
-      "orders": []
-    },
-    "65": {
-      "id": "019be391-3f26-42be-f000-00007d50a8b0",
-      "companyName": "Lacoste",
-      "companyWebsite": "https://lacoste.com",
-      "agentName": "Sarah",
-      "agentInitial": "L",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
+      "companyWebsite": "https://us.elemis.com/",
+      "companyName": "ELEMIS",
+      "notes": {
+        "tone": [
+          "Let the customer have the last word!"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t reply to messages like \"ok\", \"thanks\", etc"
+        ],
+        "promo_and_exclusions": [
+          "Welcome Code:",
+          "➜ Cannot be used for new products!",
+          "➜ Recommend to cx to take advantage of the Gift With Purchase (found on the Offers page) with new products so they can get a deal",
+          "Check their offers page for up-to-date info on codes \u0026 offers",
+          "If cx asks about a code that isn\u0027t on this page, it\u0027s likely expired!",
+          "Offers page: https://us.elemis.com/offers"
         ]
       },
-      "SystemMessage1": "Lacoste: We know you're going to love this. \n\nShop now: lacoste.attn.tv/aTsrPInaDTsY .",
-      "SystemMessage2": "Lacoste: The Winter Sale has arrived. Save up to 50% off on seasonal essentials.\n\nShop Now: lacoste.attn.tv/audAcMnP6cww .\n\n*exclusions apply",
-      "SystemMessage3": "Lacoste: We saw you looking.. have you had a chance to check out our best sellers on sale? \n\nShop it here: lacoste.attn.tv/aiJdxMU-8pf6 .",
-      "SystemMessage4": "Lacoste: Don't miss The Winter Sale! Up to 50% off. \n\nShop Now: lacoste.attn.tv/a7r7F6y_HT-n .\n\n*exclusions apply",
-      "SystemMessage5": "Lacoste: We saw you looking.. have you had a chance to check out our best sellers on sale? \n\nShop it here: lacoste.attn.tv/aubJm-swjbd9 .",
-      "SystemMessage6": "Lacoste: Save up to 50% off. The Winter Sale is still on!\n\nAct Fast: lacoste.attn.tv/aFclKshw9CHI .\n\n*exlcusions apply",
-      "SystemMessage7": "Lacoste: We saw you looking.. have you had a chance to check out our best sellers on sale? \n\nShop it here: lacoste.attn.tv/aN4mitsKy0H6 .",
-      "SystemMessage8": "Lacoste: We saw you looking.. have you had a chance to check out our best sellers on sale? \n\nShop it here: lacoste.attn.tv/aZtTQ1pu0iZe .",
-      "SystemMessage9": "Lacoste: We saw you looking.. have you had a chance to check out our best sellers on sale? \n\nShop it here: lacoste.attn.tv/aFTsx0jzAjHL .",
-      "SystemMessage10": "Lacoste: We saw you looking.. have you had a chance to check out our best sellers on sale? \n\nShop it here: lacoste.attn.tv/arNSR8roKJUU .",
-      "SystemMessage11": "Lacoste: We saw you looking.. have you had a chance to check out our best sellers on sale? \n\nShop it here: lacoste.attn.tv/aYPi74pkv-vn .",
-      "SystemMessage12": "Lacoste: We know you're going to love this. \n\nShop now: lacoste.attn.tv/avrYkE_tAatu .",
-      "SystemMessage13": "Lacoste: Up to 50% off + extra 20% off select styles. \n\nShop the Long Weekend Sale HERE: lacoste.attn.tv/alCVQ9ezKF0X .\n\n*discount in cart, online only",
-      "SystemMessage14": "Lacoste: We know you're going to love this. \n\nShop now: lacoste.attn.tv/a0nwwvMe-xPk .",
-      "SystemMessage15": "Lacoste: Don't miss out on up to 50% off + extra 20% off select styles. \n\nShop Sale: lacoste.attn.tv/aRT1BMAwpbUr .\n\n*discount in cart, online only",
-      "customerMessage1": "Can you help with pants size?",
-      "AgentMessage1": "Lacoste: Happy to help! Our clothes generally run true to size. Would you mind sharing your usual size?",
-      "customerMessage2": "I have a question. Chino pants for men size 10. Can you tell me what that means? I usually wear 36/36",
-      "AgentMessage2": "Lacoste: Our clothes generally run true to size. Can you send me a link to the item you're looking at? I'll be happy to check!",
-      "customerMessage3": "This is actually on the amazon Lacoste store",
-      "customerMessage4": "https://a.co/d/6oGG3C1",
-      "customerMessage5": "On the app the sizes are s-xxxl and here it's 1-11 or the regular 28-42. Not sure why it's 3 different size systems",
-      "customerMessage6": "Ai says: Lacoste men's chino pants sizes 1-12 correspond to US sizes as follows:- Size 1-2: XS (28-30 US)- Size 3-4: S (30-32 US)- Size 5-6: M (32-34 US)- Size 7-8: L (34-36 US)- Size 9-10: XL (36-38 US)- Size 11-12: 2XL (38-40",
-      "customerMessage7": "Does that sound right to you?",
-      "AgentMessage3": "Lacoste: Sizing can definitely be confusing with the different systems. I recommend checking the size guide on the product page for the most accurate fit. To help you further, could you share your body measurements (waist and inseam)? That way, I can guide you to the best size for your chinos.",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://lacoste.com",
-          "date": ""
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "ELEMIS: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-13 00:34:54.264",
+          "message_media": [
+            
+          ]
         },
+        {
+          "message_type": "system",
+          "message_text": "ELEMIS: Fancy seeing you here, enjoy 15% off your first purchase! \n\nAnd now that we text, you\u0027ll get exclusive perks, early access to new launches \u0026 more sent straight to your phone.\n\nShop now using code: HELLOMW2P625LK \u003e\u003e https://elemis.attn.tv/aAVXpEWI6Yvx .",
+          "date_time": "2026-02-13 00:34:58.220",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "ELEMIS: Welcome new beginnings this Lunar New Year with a radiant ritual for every inch of skin. Exclusive trio (worth $129) includes two full sizes. Free with any full-size purchase. \n\nCode LUNAR \u003e\u003e elemis.attn.tv/aFMCmqbUq2UF ",
+          "date_time": "2026-02-13 12:03:47.613",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Help",
+          "date_time": "2026-02-13 12:08:21.024",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c57f9-fa0a-4084-f000-0000fb284c5d",
+          "message_text": "ELEMIS: Hey there! How can I help you today? I\u0027ll be happy to assist. ",
+          "message_type": "agent",
+          "agent": "50271",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 12:08:46.251"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "My 15% first time promo is not being accepted",
+          "date_time": "2026-02-13 12:09:19.244",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c57fd-db00-4c16-f000-0000fb284c5d",
+          "message_text": "ELEMIS: I\u0027m sorry for the inconvenience. Please note that your code cannot be used for new products. I recommend taking advantage of the Gift With Purchase on our offers page here: https://elemis.attn.tv/a7dWSKFQ7Q9b with new products, so that you can get a deal.\n\nIn the meantime, I would recommend checking the terms and conditions for eligibility of the products and ensuring you are only using one code. If this continues to still not apply, please let me know which items you are trying to purchase for me to assist further.",
+          "message_type": "agent",
+          "agent": "110072",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 12:13:00.454"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I don\u0027t think I have selected any new products, just gift sets",
+          "date_time": "2026-02-13 12:17:08.298",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5803-9be8-44f2-f000-0000fb284c5d",
+          "message_text": "ELEMIS: Thanks for letting me know! Could you share a screenshot of the specific gift sets that you\u0027re trying to purchase?",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 12:19:17.511"
+        }
+      ]
+    },
+    "65": {
+      "agentName": "Quinn",
+      "id": "019c4fbf-c711-483d-f000-0000ebe361ed",
+      "rightPanel": {
         "browsingHistory": [
           {
-            "item": "Men's Regular Fit Cotton Chino Pants",
-            "link": "https://www.lacoste.com/us/lacoste/men/clothing/pants-sweatpants/XH0062-51.html?color=E9F",
-            "icon": "eye"
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?fbclid=IwZXh0bgNhZW0BMQBzcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEecElbREuaE82jyHEes-ZHYw1c2H1jtOzOciyouZkbnLNZzhCwlkj0aiazJj4_aem_zNuxDTdLKz9gkvDFbxMJkg",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-24"
           },
           {
-            "item": "Men's Regular Fit Cotton Chino Pants",
-            "link": "https://www.lacoste.com/us/lacoste/men/clothing/pants-sweatpants/XH0062-51.html?color=CB8",
-            "icon": "eye"
+            "link": "https://www.nectarsleep.com/mattress-bundles/frame-headboard-mattress-set?utm_medium=ps\u0026utm_content=Facebook_Stories\u0026utm_source=fb\u0026utm_campaign=p_120215608870040205_120236201330800205_120236201397580205\u0026fbclid=IwZXh0bgNhZW0BMABhZGlkAasqMWYK1U1zcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEec-EP5CkmbUWyqcHt5hkNgdz9QfZb-WOZZnPgMa3Z3bwLGs-4W4zZ2ndeB4k_aem_zNuxDTdLKz9gkvDFbxMJkg\u0026utm_id=120215608870040205\u0026utm_term=120236201330800205",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-15"
           },
           {
-            "item": "Men's Regular Fit Cotton Chino Pants",
-            "link": "https://www.lacoste.com/us/lacoste/men/clothing/pants-sweatpants/197789851760.html?color=E9F&gad_source=1&gad_campaignid=19660181506&gbraid=0AAAAAD8x9Sg1xkbGmb4aG1u3Rvq7n3IlY&gclid=CjwKCAiAj8LLBhAkEiwAJjbY77XJHfGnMfvTFfpbeN5GZyq1s25Jk7STp3JIwKmrUqpF-lm4fMi-XBoC8LQQAvD_BwE",
-            "icon": "eye"
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?utm_medium=ps\u0026utm_content=Facebook_Stories\u0026utm_source=fb\u0026utm_campaign=p_120215608870040205_120236201330800205_120236201397590205\u0026fbclid=IwZXh0bgNhZW0BMABhZGlkAasqMWPRhx1zcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEepZWn6_tI3fZ83kxObIIW4gV679pTTx3rXLR8OLLStIKNQM-92BqJ8QLWkPw_aem_4Fx2bpP6bc__O50jb2BrQA\u0026utm_id=120215608870040205\u0026utm_term=120236201330800205",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-14"
           },
           {
-            "item": "Men's Carnaby Set Leather Sneakers",
-            "link": "https://www.lacoste.com/us/lacoste/men/shoes/sneakers/196224490564.html",
-            "icon": "eye"
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?utm_medium=ps\u0026utm_content=Others\u0026utm_source=fb\u0026utm_campaign=p_120217195288900205_120235518751980205_120236442809380205\u0026fbclid=IwZXh0bgNhZW0BMABhZGlkAasqaGX16L1zcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEeBSahUSQWpy6Is7sRZpkuZZGDid9c1URVZrQQ90PrD2q5hQMqkykRBN0JBRU_aem_28VeAG6fLpi5WYn09t-Ycw\u0026utm_id=120217195288900205\u0026utm_term=120235518751980205",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-12"
           },
           {
-            "item": "Men's Wool Zip-Up Sweater",
-            "link": "https://www.lacoste.com/us/lacoste/men/clothing/sweaters-sweatshirts/AH5181-51.html?color=050",
-            "icon": "eye"
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?utm_medium=ps\u0026utm_content=Facebook_Instream_Video\u0026utm_source=fb\u0026utm_campaign=p_120217195288900205_120233469641890205_120233469662820205\u0026fbclid=IwZXh0bgNhZW0BMABhZGlkAasntCOOEw1zcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEeQGQHb72zqCzakxvGBa6h2UoRo0Z65XOPaLhMJY5AWy4yAJ9FBfv5v-8yM0Y_aem_c3qmKdw4jhggBQ13ucCFWg\u0026utm_id=120217195288900205\u0026utm_term=120233469641890205",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-11"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://nectarsleep.com",
+          "date": ""
+        }
       },
-      "orders": []
+      "companyWebsite": "https://nectarsleep.com",
+      "companyName": "Nectar Sleep",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS",
+          "Send to CS for refund inquiries"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Close the convo if the cx first message is ok, no, etc.",
+          "Don\u0027t use the word \"off\" when talking about promotions"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t proactively offer to find pricing info, redirect them to the website instead"
+        ],
+        "promo_and_exclusions": [
+          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns",
+        "Discount code errors",
+        "Recall",
+        "BBB",
+        "fiberglass",
+        "lawyer",
+        "class action"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (888) 863-2827.",
+          "date_time": "2026-02-11 20:59:44.735",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: You\u0027re in!",
+          "date_time": "2026-02-11 20:59:48.745",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: You\u0027ve unlocked savings up to 66% on a mattress + base + bedding set. Better sleep starts here. \n\nClaim your savings:\nnectarsleep.attn.tv/a1Bjy7dig8pr ",
+          "date_time": "2026-02-11 20:59:49.757",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Hi, this is Quinn. Thanks for signing up! Bundle your king with an adjustable base for our BIGGEST savings (up to 66%). Just need a king mattress? Save up to 50% on memory foam or hybrid. Questions? Text me back!\n\nBundle: nectarsleep.attn.tv/aNuMwnHxSdq6 \n\nMattress: nectarsleep.attn.tv/aOOcVzo1Akre ",
+          "date_time": "2026-02-11 21:05:03.703",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The bed will not work. Need the mattress to adjust differently on each side. Not both sides adjust together",
+          "date_time": "2026-02-11 21:07:14.940",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4fbf-c711-483d-f000-0000ebe361ed",
+          "message_text": "Nectar: Hi, thanks for letting me know. It sounds like you\u0027re looking for a split king adjustable base, where each side can adjust independently. The standard king adjustable base adjusts both sides together, so that wouldn\u0027t work for your needs. Let me know if you want me to help you find the right one!",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 21:48:14.387"
+        }
+      ]
     }
   }
 }

@@ -3,347 +3,932 @@
   "chunk": "chunk_0015",
   "scenarios": {
     "71": {
-      "id": "019bc84c-2882-4d0e-f000-0000eb00eb9e",
-      "companyName": "Backcountry",
-      "companyWebsite": "https://backcountry.com",
-      "agentName": "Sarah",
-      "agentInitial": "B",
+      "agentName": "",
+      "id": "019c733a-6590-490a-f000-0000fc568aee",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://weesqueak.com/products/hunter-boot-imperfect?externalId=e8pzS",
+            "item": "Hunter Boot (IMPERFECT) - 3",
+            "timeAgo": "2026-02-19"
+          },
+          {
+            "link": "https://weesqueak.com/products/hunter-boot-imperfect?pr_prod_strat=jac\u0026pr_rec_id=908b54cfe\u0026pr_rec_pid=4429731561526\u0026pr_ref_pid=4431977709622\u0026pr_seq=uniform",
+            "item": "Hunter Boot (IMPERFECT) - 3",
+            "timeAgo": "2026-02-18"
+          },
+          {
+            "link": "https://weesqueak.com/products/western-boot-imperfect?variant=31572890353718",
+            "item": "Western Brown Boot (IMPERFECT) - 3",
+            "timeAgo": "2026-02-18"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://weesqueak.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://weesqueak.com",
+      "companyName": "Wee Squeak",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
       "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Wee Squeak: Welcome to Wee Squeak! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-18 18:27:23.485",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Wee Squeak: Welcome! Use the offer MOBILE10 at checkout for a discount when you shop https://weesqueak.attn.tv/aJMQ6evT94GO .",
+          "date_time": "2026-02-18 18:27:28.481",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Wee Squeak: Don\u0027t forget to save our contact to get exclusive updates!",
+          "date_time": "2026-02-18 18:27:28.639",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Wee Squeak: Hey , this is Sarah. I see you left something in your cart. https://weesqueak.attn.tv/auWI5_EJGybL \n\nGreat choice! 😊 Any questions I can answer for you? ",
+          "date_time": "2026-02-18 18:48:28.250",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I tried to buy 2 different f the imperfect boots but couldn\u0027t add them.",
+          "date_time": "2026-02-18 18:51:45.252",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7334-cdba-4712-f000-0000fc568aee",
+          "message_text": "Wee Squeak: Thank you for reaching out. I\u0027m sorry about that. Are you referring to this? - https://weesqueak.attn.tv/a5zJ9Qjkoha-\n\nIf yes, then what size are you referring to so I can create a cart for you?",
+          "message_type": "agent",
+          "agent": "48804",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 19:02:46.356"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No, rferring to the imperfect western boot brown.",
+          "date_time": "2026-02-18 19:05:41.231",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c733a-6590-490a-f000-0000fc568aee",
+          "message_text": "Wee Squeak: Got it. Is it this one? - https://weesqueak.attn.tv/aOLPsfr_FfGb - If so, just send me your size, and I\u0027d be happy to help you.",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 19:08:52.911"
+        }
+      ]
+    },
+    "72": {
+      "agentName": "Jordan",
+      "id": "019c4d91-60ab-438d-f000-0000a5a5fcc9",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://bostonscally.com/",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://bostonscally.com/",
+      "companyName": "Boston Scally",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: Grateful Dead x Boston Scally Dancing Bears Cap is here to bring the vibes 🎸 but won\u0027t last long ⚡️\n\nSHOP NOW: bostonscally.attn.tv/aPRg1DqEK8nZ ",
+          "date_time": "2026-01-12 12:05:14.691",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: These Roses never wilt - they earn their place in your rotation. Get 10% off the iconic Rose Collection scally caps with code ROSE.\n\nGrab yours before they\u0027re gone.\n \n SHOP NOW: bostonscally.attn.tv/as02XHEDIrwJ ",
+          "date_time": "2026-01-14 12:03:44.380",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: NEW! The \u0027Box of Chocolates\u0027 is NOW AVAILABLE! Plus, The \u0027Valentine Rose\u0027, \u0027All Heart\u0027, and \u0027Cupid\u0027 are BACK! \n\nSHOP NOW: bostonscally.attn.tv/aj_zbr5I4cs9 ",
+          "date_time": "2026-01-16 14:03:40.186",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: Match made in heaven. The \u0027Box of Chocolates\u0027 and \u0027Valentine Rose\u0027 🌹 Plus, shop the Valentine\u0027s Collection now: bostonscally.attn.tv/a-7KjILHMvoE ",
+          "date_time": "2026-01-19 12:05:10.976",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: The \u0027Scot\u0027 is HERE! 10% OFF with code: SCOT. Grab yours quick before it\u0027s gone!\n\nSHOP NOW: bostonscally.attn.tv/aa7OSGIzE3sh ",
+          "date_time": "2026-01-23 14:12:17.126",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: NEW! In case you missed it, the \u0027Scot\u0027 has arrived! \n\nGrab yours today and get 10% OFF with code SCOT: bostonscally.attn.tv/aj4MrQiF1AO3 ",
+          "date_time": "2026-01-26 12:04:00.474",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: NEW: The \u0027Cloverland\u0027 is here! Plus, The \u0027Bareknuckle Irish Edition\u0027 is back in stock! Don\u0027t miss this!\n\nSHOP NOW: bostonscally.attn.tv/ajVsiUabEDfR ",
+          "date_time": "2026-01-30 14:06:41.354",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: Take 10% off the NEW \u0027Cloverland\u0027 and this season\u0027s best selling scally caps with code: CLOVERLAND\n\nSHOP NOW: bostonscally.attn.tv/amg416v2ELRz ",
+          "date_time": "2026-02-02 18:07:25.409",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: The \u0027Kilkenny\u0027 is HERE! Plus, our favorite \u0027Irish Baker Boy\u0027 is back! Limited quantities available, don\u0027t let these get away! \n\nSHOP NOW: bostonscally.attn.tv/aCkFDg4nw_L6 ",
+          "date_time": "2026-02-06 14:07:00.933",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: Did you see? The \u0027Kilkenny\u0027 and \u0027Irish Baker Boy\u0027 dropped and they\u0027re going FAST! Grab these St. Pat\u0027s favorites before they\u0027re gone!\n\nSHOP NOW: bostonscally.attn.tv/a-5KTkEqtt3y ",
+          "date_time": "2026-02-07 15:01:14.294",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: The highly anticipated St. Patrick\u0027s Day Collection is BACK! Here\u0027s your chance to grab the season\u0027s best sellers before they sell out again! \n\nSHOP NOW: bostonscally.attn.tv/aoP8a6pLm7ep ",
+          "date_time": "2026-02-09 12:02:40.946",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: Don\u0027t leave Boston Scally The Guinness Cap Pin Set behind! Finish your order now before it\u0027s gone for good: bostonscally.attn.tv/aYtMC1-1u-AI",
+          "date_time": "2026-02-11 11:18:39.923",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m waiting for the Guinness hat",
+          "date_time": "2026-02-11 11:25:30.253",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Restock (website \u0026 social)\"; last updated: 2025-10-09 21:41:33.472",
+          "date_time": "2026-02-11 11:38:19.113",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4d91-60ab-438d-f000-0000a5a5fcc9",
+          "message_text": "Boston Scally: Glad to see yoou\u0027ve taken an interest in our offering. I\u0027m afraid I currently don\u0027t have the exact date of a possible restock, but I recommend checking our website and social media frequently. In the meantime, you can check our newest arrivals here: https://bostonscally.attn.tv/aqjdXbsPWSuv",
+          "message_type": "agent",
+          "agent": "109968",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 11:38:19.116"
+        }
+      ]
+    },
+    "73": {
+      "agentName": "Sarah",
+      "id": "019c6df6-d25a-4597-f000-00004e76a04b",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://missionmercantile.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://missionmercantile.com",
+      "companyName": "Mission Mercantile",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for repair/customization requests"
+        ],
         "escalate": [
-          "No escalations for this client, send everything to CS"
+          "If a cx had issues after a sale is over, ESC to see if they can honor the deal",
+          "ESC immediately, if the customer asks when an order will ship",
+          "If a cx has a request for urgent delivery ESC and they\u0027ll prioritize it",
+          "ESC if a cx is having trouble placing an order",
+          "If a cx asks for an update regarding an email they sent, ask for their email address, then ESC",
+          "ESC immediately if a cx is very upset",
+          "ESC if cx\u0027s have issues applying both loyalty codes"
         ],
         "tone": [
           "Close the convo once the client takes over"
         ],
-        "promo_and_exclusions": [
-          "Welcome offer page:   https://www.backcountry.com/sc/new-customer-coupon-rules"
-        ]
-      },
-      "SystemMessage1": "Backcountry: Stay warm and dry with the Optical Down Jacket in your cart, designed for ultimate winter protection.\n\nHurry! 71 people added this to their cart.\n\nShop now: http://bctxt.co/a7f5CRAKKYtD .",
-      "SystemMessage2": "Backcountry: Stay ready for winter, these insulated jackets combine warmth and weather protection for your outdoor adventures.  \n\nYour next layer is waiting: http://bctxt.co/azIbDYIVR6M5 .",
-      "SystemMessage3": "Backcountry: You will love how the Optical Down Jacket keeps you warm and dry with 700-fill down and Pertex Shield fabric for winter adventures.\n\nEnjoy free shipping on orders over $69.\n\nShop now: http://bctxt.co/ajj8YEnEJRi5 .",
-      "SystemMessage4": "Backcountry: Free 2-Day shipping on orders +$150*. Offer ends 12/22 at Noon MST. Get it now to guarantee Xmas delivery: http://bctxt.co/azkWR1qFkxQL",
-      "SystemMessage5": "Backcountry: You will stay warm and dry all winter with our Optical Down Jacket featuring 700-fill down and Pertex Shield fabric for protection. \n\nEnjoy free shipping on orders over $69. \n\nShop now: http://bctxt.co/aChwCT7RR3Qr .",
-      "SystemMessage6": "Backcountry: 3-day Flash Sale is on! Get up to 70% off gifts, gear & more. Orders $150+ get free 2-day shipping* until 12/22: http://bctxt.co/aUyb2dEvSyk2",
-      "SystemMessage7": "Backcountry: You can count on the Optical Down Jacket to keep you warm and dry in winter with 700-fill down and Pertex Shield fabric.\n\nEnjoy free shipping when you order over $69.\n\nShop now: http://bctxt.co/atY1i-g2BO2a .",
-      "SystemMessage8": "Backcountry: Stay warm and protected with the Optical Down Jacket still waiting in your cart. \n\nHurry! 58 people added this to their cart. \n\nShop now: http://bctxt.co/auar20DKFGgi .",
-      "SystemMessage9": "Backcountry: Ready for more time outdoors? The Men's Insulated Jackets keep you warm and protected with 700-fill down and Pertex Shield fabric.\n\nSee which one matches your adventure: http://bctxt.co/aryLp8WVVwLd .",
-      "SystemMessage10": "Backcountry: Last chance! Get free next-day air on orders $150+. Flash Sale ends tonight, shop the sale and ship it on us: http://bctxt.co/aE22LwkYLmdV",
-      "SystemMessage11": "Backcountry: You will love how the Optical Down Jacket keeps you warm and dry with 700-fill down and Pertex Shield fabric for winter adventures.\n\nEnjoy free shipping on orders over $69.\n\nShop now: http://bctxt.co/ahjbkIw2q8cA .",
-      "SystemMessage12": "Backcountry: Still need last-minute gifts? Give 'em the gift of choices. Shop gift cards here: http://bctxt.co/aq04Uhgfjujz",
-      "SystemMessage13": "Backcountry: Stay cozy and dry with our Optical Down Jacket featuring 700-fill down and Pertex Shield fabric for reliable winter comfort. \n\nEnjoy free shipping when you spend $69 or more. \n\nShop now: http://bctxt.co/aas8xJ8ojTF9 .",
-      "SystemMessage14": "Backcountry: Imagine feeling confident and cozy on your next winter adventure with the Optical Down Jacket by your side. \n\nYou get free shipping when your order is $69 or more. \n\nSee what the Optical Down Jacket can do for you: http://bctxt.co/aNQ0lmZnloFC .",
-      "SystemMessage15": "Backcountry: Imagine heading out this winter feeling comfortable and confident in the Optical Down Jacket, ready for anything your day brings. \n\nEnjoy free shipping on orders over $69. \n\nReady for your next adventure? Buy here: http://bctxt.co/a5oLQyu2g-tn .",
-      "SystemMessage16": "Backcountry: Winter's calling! Hats, gloves, balaclavas & more to keep you toasty. Stock up before the next cold snap hits: http://bctxt.co/aPsU7RotzXps",
-      "SystemMessage17": "Backcountry: Imagine how comfortable your adventures will feel in the Cedars RWS Merino Lightweight Baselayer Crew next to your skin. \n\nEnjoy free shipping when your order totals $69 or more. \n\nFind your new favorite layer here: http://bctxt.co/aOLrjdoQBt6Q .",
-      "SystemMessage18": "Backcountry: Imagine your winter adventures feeling extra cozy and confident with the Optical Down Jacket keeping you warm wherever you roam.\n\nYou get free shipping when your order is $69 or more.\n\nReady for your next journey? Explore here: http://bctxt.co/aA2Y-c_TPxwA .",
-      "SystemMessage19": "Backcountry: Discover comfort and protection with the Optical Down Jacket, designed to keep you warm and dry all winter.  \n\nEnjoy free shipping when you order over $69.  \n\nSee what makes it special: http://bctxt.co/aWI8nW_6nTl3 .",
-      "SystemMessage20": "Backcountry: 72hr Flash Sale! Score up to 70% off select cold-weather gear, apparel & more. Stock up before it's gone: http://bctxt.co/a4o1KU2OMQwr",
-      "SystemMessage21": "Backcountry: Bundle up with the Optical Down Jacket for warmth and dry comfort all winter. \n\nEnjoy free shipping on orders over $69. \n\nFind your new favorite here: http://bctxt.co/aRZIR2c-s38A .",
-      "SystemMessage22": "Backcountry: Flash Sale ends tonight at midnight! Don't miss these finds for winter up to 70% off:http://bctxt.co/a34zdmFR7_NE",
-      "SystemMessage23": "Backcountry: Experience ultimate winter comfort with the Optical Down Jacket—stay warm and dry thanks to 700-fill down and Pertex Shield fabric.\n\nEnjoy free shipping on orders over $69.\n\nCheck out your new favorite layer here: http://bctxt.co/auA1WWlxncUB .",
-      "SystemMessage24": "Backcountry: Take 20% off full-price sunglasses & goggles from Oakley, 100%, Smith + more here: http://bctxt.co/axXCLZGRGTaI \n\nDiscount applies in cart.",
-      "SystemMessage25": "Backcountry: Winter's MVPs? Baselayers. Stay out longer with the right layers and see our selection here:http://bctxt.co/asXPERtlBK1V",
-      "SystemMessage26": "Backcountry: New year, same passions! Score fresh layers, boots & snow kits to fuel every 2026 mission, now up to 50% off: http://bctxt.co/aZBWOslMrkUB",
-      "SystemMessage27": "Backcountry: Gear up with the Optical Down Jacket—700-fill down and Pertex Shield keep you warm and dry.\n\nTry it on here: http://bctxt.co/aum-uao1gddC .",
-      "SystemMessage28": "Backcountry: Fresh price drops just landed! Scoop newly discounted gear, from boots to shells to packs, before your size bails: http://bctxt.co/aQbnh9H5q4iJ",
-      "SystemMessage29": "Backcountry: Feel the warmth and weather protection of the Optical Down Jacket — grab it before it's gone.\n\nThis look is for you: http://bctxt.co/arqBOXblwDuO .",
-      "SystemMessage30": "Backcountry: Grab the Optical Down Jacket in your cart — 700-fill down and Pertex Shield keep you warm and dry.\n\nFive people recently purchased Optical Down Jacket; complete your order before it disappears!\n\nShop now: http://bctxt.co/ah8ux6U_G8SX .",
-      "customerMessage1": "Give me a discount",
-      "AgentMessage1": "Backcountry: Thank you for reaching out! I'm sorry, I don't have any codes available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our sales collection here: http://bctxt.co/aQdlYNsvg9VX",
-      "customerMessage2": "I ordered one before but it was too big, it was discounted and then you didn't have it in stock for awhile. Look up my order history and see it. I'll buy it right now if you match it. I'll pay 375 like before.",
-      "AgentMessage2": "Backcountry: Thanks for letting me know, and I'm sorry to hear it was too big. I looked up your order history, and I see an order for the Optical Down Jacket - Men's. Unfortunately, I don't have any codes available at the moment to bring the price down to $375. In the meantime, what do you think about this instead? - http://bctxt.co/a_maScf-sr67",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://backcountry.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Optical Down Jacket - Men's",
-            "link": "https://www.backcountry.com/rab-optical-down-jacket-mens",
-            "icon": "eye"
-          },
-          {
-            "item": "Optical Down Jacket - Men's",
-            "link": "https://www.backcountry.com/rab-optical-down-jacket-mens",
-            "icon": "eye"
-          },
-          {
-            "item": "Optical Down Jacket - Men's",
-            "link": "https://www.backcountry.com/rab-optical-down-jacket-mens",
-            "icon": "eye"
-          },
-          {
-            "item": "Optical Down Jacket - Men's",
-            "link": "https://www.backcountry.com/rab-optical-down-jacket-mens",
-            "icon": "eye"
-          },
-          {
-            "item": "Optical Down Jacket - Men's",
-            "link": "https://www.backcountry.com/rab-optical-down-jacket-mens",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "72": {
-      "id": "019bddf5-b11f-472a-f000-0000ecabaacd",
-      "companyName": "Steve Madden",
-      "companyWebsite": "https://stevemadden.com",
-      "agentName": "Allie",
-      "agentInitial": "S",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over!"
-        ]
-      },
-      "SystemMessage1": "Steve Madden: Turn on the shine, UP TO 50% OFF. It's go time: http://stevemadden.io/aF5oaI4ewpZN .",
-      "SystemMessage2": "Steve Madden: Hate your presents? Now get what you really want. Shop our end-of-year sale. Get up to 50% off NOW! http://stevemadden.io/aK2NzVuV9c06 .",
-      "SystemMessage3": "Steve Madden: Start the new year in style. Save up to 50% off with our end-of-year sale! Heels, boots & beyond. http://stevemadden.io/arq2t13QLJrz",
-      "SystemMessage4": "Steve Madden: Up to 50% Off is here. Start 2026 off on the right *foot*. http://stevemadden.io/a9eNj3hPhv2T .",
-      "SystemMessage5": "Steve Madden: Day one energy = shopping 50% off. Sale ends tonight. Save before it's over. http://stevemadden.io/aD7TosfNK4Rd .",
-      "SystemMessage6": "Steve Madden: Keep this resolution (it's easy): This year I will save...on shoes. Shop UP TO 70% OFF now!\nUse code: WINTER\nhttp://stevemadden.io/aMML-bGXJdJr .",
-      "SystemMessage7": "Steve Madden: Step it up this year. Out with the old, in with all the looks you've been dreaming of. Shop new arrivals: http://stevemadden.io/a4waiF8DEeVs .",
-      "SystemMessage8": "Steve Madden: ON SALE: Winter's best styles. up to 70% OFF. Cold never looked this good. http://stevemadden.io/a-zB1qjtWSpU .",
-      "SystemMessage9": "Steve Madden: The biggest moves of 2026. Calling it now: these looks are about to blow up. Check out our style predictions: http://stevemadden.io/aVR9vMuNYmTl .",
-      "SystemMessage10": "Steve Madden: Slope Mode = On. Bring the cozy après ski energy anywhere you go: http://stevemadden.io/aKIXbRTuoiR1 .",
-      "SystemMessage11": "Steve Madden: Drum roll please... WEBBER HAT BOX GIFT SET VANILLA is back in stock! \nGrab yours before it sells out again: \nhttp://stevemadden.io/a7NUyz4rD0t2",
-      "SystemMessage12": "Steve Madden: Winter's hottest boots. Boot up, we've got fire styles for the frostiest days.\n http://stevemadden.io/aFWniioW8aAm .",
-      "SystemMessage13": "Steve Madden: Meet MAVIS, this season's most-wanted sneaker. Wedge lift & textured edge, this is not your average pair. http://stevemadden.io/aNuS5YRHCLU8 .",
-      "SystemMessage14": "Steve Madden: Stay warm. Look cool. Simple. Shop your go-to winter wins: http://stevemadden.io/akwk1JTfUF6s .",
-      "SystemMessage15": "Steve Madden: Have You SEEN This Sale? up to 70% OFF. This is your moment. http://stevemadden.io/aGOOGZ6hff_C .",
-      "SystemMessage16": "Steve Madden: Heads up: Sandals are on clearance! Perfect timing for your next warm-weather getaway http://stevemadden.io/aIE4J-5_zzQ4 .",
-      "SystemMessage17": "Steve Madden: Almost Gone: Up To 70% Off! Hurry, before it's too late: http://stevemadden.io/aa5tYiJp42UL .",
-      "customerMessage1": "Its hard to find because I havent had time to go through all my cash app purchases bc I have 7k worth for month of December and November but I will start to do that. Thank u",
-      "customerMessage2": "What will my cash app say pd to and would it be on any other website affiliate?",
-      "AgentMessage1": "Steve Madden: Thank you for sharing that, and I completely understand how overwhelming it must feel. If the order was placed directly with Steve Madden, your Cash App statement should show the payment as going to Steve Madden (not an affiliate site). If you don't see that name, the purchase may not have been processed through our official website. Once you locate the charge, please send us a screenshot so we can investigate further.",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://stevemadden.com",
-          "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
-      },
-      "orders": []
-    },
-    "73": {
-      "id": "019bb9fd-786c-40bf-f000-0000b3a322ff",
-      "companyName": "DreamCloud",
-      "companyWebsite": "https://dreamcloudsleep.com",
-      "agentName": "Sam",
-      "agentInitial": "D",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS, use ESC shortcut",
-          "Use escalation template if customer mentions any of the following:"
-        ],
-        "tone": [
-          "Let the customer have the last word"
-        ]
-      },
-      "SystemMessage1": "DreamCloud: That DreamCloud Luxe Hybrid Mattress catch your eye?\n\nCome back and take a second look: \ndreamcloud.attn.tv/a01zoPScqo2c\n\nSave up to 60% on mattresses! Act now!\n.",
-      "SystemMessage2": "DreamCloud: Hello, this is Sam. Thanks for checking out DreamCloud! Why wait to sleep better? You can save up to 60% on mattresses right now.\ndreamcloud.attn.tv/ahPLO0OMS5Lw\n\nAny questions I can answer for you?\n.",
-      "SystemMessage3": "DreamCloud: Sleep on an award-winning bed tonight. Save up to 60% on mattresses crafted for cooling + support.\n\nClaim your savings:\ndreamcloud.attn.tv/aJr1mSBXp20R\n.",
-      "SystemMessage4": "DreamCloud: Our hybrid model combines foam & coils for enhanced support. Or chose all-foam for more contouring comfort.\n\ndreamcloud.attn.tv/aC6EuPeCHZcK \n.",
-      "SystemMessage5": "DreamCloud: Bundle a mattress & frame to save up to 66%! Choose bamboo, adjustable or upholstered. Sleep better = live better\n\ndreamcloud.attn.tv/a2m7Fyg4zJ2L\n.",
-      "SystemMessage6": "DreamCloud: That hybrid mattress catch your eye? Better mornings start here. Save up to 60%! Act now!\n\ndreamcloud.attn.tv/aWu7L_FH9xgB \n.",
-      "SystemMessage7": "DreamCloud: Hello, this is Sam. Thanks for checking out DreamCloud! Why wait to sleep better? You can save up to 60% on mattresses right now.\ndreamcloud.attn.tv/a21h18fjpP25\n\nAny questions I can answer for you?\n.",
-      "customerMessage1": "Yes, I have a dreamcloud that I'm unhappy with and would like to learn how to return it",
-      "SystemMessage8": "Template used: \"Escalation\"; last updated: 2024-07-16 21:37:12.264",
-      "AgentMessage1": "DreamCloud: Thanks for reaching out, and I'm sorry to hear about this! This question is best handled by contacting my team at shop@dreamcloudsleep.com or calling us directly at 1 (833) 237-3269.",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://dreamcloudsleep.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "link": "https://www.dreamcloudsleep.com/mattress",
-            "icon": "eye"
-          },
-          {
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "link": "https://www.dreamcloudsleep.com/mattress",
-            "icon": "eye"
-          },
-          {
-            "item": "DreamCloud Ultra Hybrid Mattress",
-            "link": "https://www.dreamcloudsleep.com/mattresses/ultra-hybrid-mattress",
-            "icon": "eye"
-          },
-          {
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "link": "https://www.dreamcloudsleep.com/mattress/queen",
-            "icon": "eye"
-          },
-          {
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "link": "https://www.dreamcloudsleep.com/mattress/queen",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "74": {
-      "id": "019be356-9ecc-4841-f000-0000f552a8e0",
-      "companyName": "James Perse",
-      "companyWebsite": "https://jamesperse.com",
-      "agentName": "Sarah",
-      "agentInitial": "J",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for personal shopper services"
-        ],
-        "escalate": [
-          "ESC if a cx reaches out with a negative experience",
-          "ESC discount code issues"
-        ],
-        "tone": [
-          "Don't say \"I hope you'll love it\"",
-          "Use plural pronouns (us and we)",
-          "Don't use smileys or emojis",
-          "Let the cx have the last word, close the convo"
-        ],
         "templates": [
-          "For inquiries about FURNITURE, use QAF shortcut",
-          "For inquiries about TRAVEL, use QAT shortcut"
+          "For Ellington repair:",
+          "➜ Ask which item the customer has",
+          "➜ If it\u0027s an Ellington item from before 2016, use ECR shortcut"
         ],
         "dos_and_donts": [
-          "All sale merchandise is FINAL SALE and Sale items are ineligible for price adjustments"
+          "For stock questions, check the product page to look for possible back-in-stock dates",
+          "If cx calls after hours, advise them to leave a voicemail and the team will be sure to call back"
         ],
         "drive_to_purchase": [
-          "Don't recommend sale items"
+          "When recommending a pre-order item - set proper expectations and mention the date it\u0027ll be back in stock"
         ],
         "promo_and_exclusions": [
-          "They don't offer a discount code for signing up anymore",
-          "The free shipping code can not be applied to sale items"
+          "They have a loyalty program where cx\u0027s can use code MMLEGACY20 \u0026 FAITHFULSHIPPING at the same time to receive 20% off plus free shipping. The MMLEGACY20 code only applies to cxs who have spent $2000+",
+          "➜ These are the only 2 codes that can be stacked, and they can only be stacked with each other and no other code",
+          "Welcome code works on discounted/sale items",
+          "DO NOT share the WELCOME15 code with cx\u0027s, it\u0027s no longer valid"
         ]
       },
-      "SystemMessage1": "James Perse Los Angeles: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from James Perse Los Angeles.",
-      "SystemMessage2": "James Perse Los Angeles: Welcome to James Perse Los Angeles! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage3": "James Perse Los Angeles: Thank you for joining. Subscribers receive exclusive content on events, new collections, and more exciting updates from the world of James Perse. \n\nShop now to unlock free shipping on your first order with code WELCOME-jE3JEh:\njamesperse.attn.tv/aGXYKFDBIFlM .\n\nTo access your personal James Perse Concierge, reply here at any time.",
-      "customerMessage1": "When i put in free shipping code in box discount code or gift card, it says invalid.  \nThere is no other place to put the free shipping code.\nThey want me to pay $14.34 shipping! \nHow do i use my free shipping code pls",
-      "AgentMessage1": "James Perse Los Angeles: I'm sorry to hear that! Can I have your email address? I'll be happy to check this with the team.",
-      "customerMessage2": "devodeb@yahoo.com\nI didn't order anything cause of it not accepting the shipping code",
-      "customerMessage3": "Thank u",
-      "AgentMessage2": "James Perse Los Angeles: Thank you for sending your email. Before we forward it to our team, we'd like to test it on our end. Would you mind sharing a screenshot of your cart items along with your shipping address?",
-      "customerMessage4": "3170 S. Ocean Blvd, Apt S204, Palm Beach FL 33480 \nShipping not billing address",
-      "customerMessage5": "\"",
-      "customerMessage6": "I didn't realize ordering from you would be such a time consuming ordeal , with texts and screen shots, addresses, emails.\nTakes the fun out of shopping and i sure don't feel like i got a welcoming thank u for free shipping. I got tasks and more tasks.\nWhat i got was a half hour of my time taken up that I shouldn't even had to send even one text. I should have been able to order this in a few minutes time",
-      "AgentMessage3": "James Perse Los Angeles: Thank you for sending that in! I tested the code on my end and it worked successfully-here's a screenshot for reference: https://jamesperse.attn.tv/a21iZLWKW3Jj\n. I recommend trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Please let me know how that goes.",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://jamesperse.com",
-          "date": ""
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Mission Mercantile: Welcome to Mission Mercantile! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-17 17:33:55.476",
+          "message_media": [
+            
+          ]
         },
+        {
+          "message_type": "system",
+          "message_text": "Mission Mercantile: Hey this is Sarah, how can I help you? Stop to stop",
+          "date_time": "2026-02-17 17:33:57.973",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hey, I need help. I need a contact number for Haley. I just received a repair item and there are multiple issues. Thank you.",
+          "date_time": "2026-02-17 17:34:27.064",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I would like to speak to someone.",
+          "date_time": "2026-02-17 17:34:57.107",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6dbe-d7ac-4c69-f000-00004e76a04b",
+          "message_text": "Mission Mercantile: I\u0027m sorry to hear that! Email us directly at shopkeeper@missionmercantile.com or give us a call at 210-504-6698 and we\u0027ll take great care of you. Our team is happy to help! ",
+          "message_type": "agent",
+          "agent": "50271",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 17:35:49.584"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thanks Sarah!\nI think Haley would be best to address this issue but if she is unavailable I would be happy to speak to anyone.",
+          "date_time": "2026-02-17 17:36:36.902",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6dc1-0ca3-45e5-f000-00004e76a04b",
+          "message_text": "Mission Mercantile: I\u0027m sorry, but I don\u0027t have Haley\u0027s direct contact information. You can try reaching out to the team, and they should be able to point you in the right direction.",
+          "message_type": "agent",
+          "agent": "37648",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 17:38:14.212"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The phone number is saying after hours and leave a message. I would like to address this issue ASAP as I have waited for months for repair of this item and it was returned  without having the promised work completed and  in very poor condition. Thank you.",
+          "date_time": "2026-02-17 17:42:36.979",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Are you able to help Sarah?",
+          "date_time": "2026-02-17 17:43:37.162",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "escalation",
+          "message_text": "Hey, I need help. I need a contact number for Haley. I just received a repair item and there are multiple issues. Thank you. The phone number is saying after hours and leave a message. I would like to address this issue ASAP as I have waited for months for repair of this item and it was returned without having the promised work completed and in very poor condition. Thank you.\n\n\n\n\n",
+          "date_time": "2026-02-17 17:47:04.445",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6dc9-4552-4125-f000-00004e76a04b",
+          "message_text": "Mission Mercantile: I\u0027m so sorry to hear that, and I completely understand your frustration. Please know that I have limited access on my end. \n\nI\u0027ll check on this with our team. As soon as I hear back, I will send you a message right away.",
+          "message_type": "agent",
+          "agent": "87592",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 17:47:13.013"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ok. I understand and truly appreciate your concern and assistance. \nI am very frustrated at this point but hope that all will work out!\nBest regards,\nBrian",
+          "date_time": "2026-02-17 17:49:37.221",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6dcc-17f0-4c92-f000-00004e76a04b",
+          "message_text": "Mission Mercantile: I apologize for this experience. I\u0027ll be sure to keep you posted. ",
+          "message_type": "agent",
+          "agent": "87595",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 17:50:17.993"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Great. I appreciate that. Hope you have a nice evening!",
+          "date_time": "2026-02-17 17:52:07.155",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6dce-94fb-44d2-f000-00004e76a04b",
+          "message_text": "Mission Mercantile: You\u0027re welcome! While I wait to hear back from my team, is there anything else I can assist you with in the meantime? ",
+          "message_type": "agent",
+          "agent": "87592",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 17:53:01.090"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "That\u0027s all for now. Thank you so much!",
+          "date_time": "2026-02-17 17:53:56.959",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Is there a site to upload photos?  Or is it best to wait until I connect with a representative tomorrow?",
+          "date_time": "2026-02-17 18:30:16.821",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6df3-8cbd-40fe-f000-00004e76a04b",
+          "message_text": "Mission Mercantile: Sorry, there isn\u0027t a site to upload photos, but you can send them to shopkeeper@missionmercantile.com Since I\u0027ve already forwarded this to our team, it\u0027s best to wait for their guidance to avoid any mix-ups. If they need the photo, we\u0027ll let you know. I\u0027ll make sure this is prioritized and will monitor it closely. ",
+          "message_type": "agent",
+          "agent": "87595",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 18:33:23.801"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Perfect. Many thanks Sarah!",
+          "date_time": "2026-02-17 18:35:27.227",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6df6-d25a-4597-f000-00004e76a04b",
+          "message_text": "Mission Mercantile: Thanks for getting back to me, and you\u0027re most welcome! Rest assured, we\u0027ll get back to you as soon as possible. Feel free to let me know if you need help with anything else in the meantime.",
+          "message_type": "agent",
+          "agent": "109840",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 18:36:58.247"
+        }
+      ]
+    },
+    "74": {
+      "agentName": "Jordan",
+      "id": "019c53f1-ea17-4e3f-f000-000092b3bf14",
+      "rightPanel": {
         "browsingHistory": [
           {
-            "item": "Sheer Slub Long Sleeve Crew - Deep",
-            "link": "https://www.jamesperse.com/products/sheer-slub-long-sleeve-crew-army-green-wua3361?_ab=0&_fd=0&_sc=1&collection=womens&variant=40068999348388",
-            "icon": "eye"
+            "link": "https://www.fluevog.com/shop/8280-waldorf-black-rhinestone?utm_campaign=Question\u0026utm_source=attentive\u0026utm_medium=sms\u0026externalId=Uc9vC",
+            "item": "Dollyvogs Waldorf: Black/Rhinestone",
+            "timeAgo": "2026-02-04"
           },
           {
-            "item": "Sheer Slub Long Sleeve Crew - Deep",
-            "link": "https://www.jamesperse.com/products/sheer-slub-long-sleeve-crew-deep?_ab=0&_fd=0&_sc=1&collection=womens&variant=37726365909156",
-            "icon": "eye"
+            "link": "https://www.fluevog.com/shop/8280-waldorf-black-rhinestone",
+            "item": "Dollyvogs Waldorf: Black/Rhinestone",
+            "timeAgo": "2026-02-04"
           },
           {
-            "item": "Vintage Boxy Tee - Stone Pigment",
-            "link": "https://www.jamesperse.com/products/vintage-boxy-tee-stone-pigment-wlj3113?variant=53485707264372",
-            "icon": "eye"
+            "link": "https://www.fluevog.com/shop/8261-hula-hoop-blue-paisley",
+            "item": "Play Grounders Hula Hoop: Blue Paisley",
+            "timeAgo": "2026-02-02"
           },
           {
-            "item": "Vintage Boxy Tee - Stone Pigment",
-            "link": "https://www.jamesperse.com/products/vintage-boxy-tee-porcupine-wlj3113?variant=53738279043444",
-            "icon": "eye"
+            "link": "https://www.fluevog.com/shop/8010-revelation-black-mesh",
+            "item": "Miracles Revelation: Black Mesh",
+            "timeAgo": "2026-02-02"
           },
           {
-            "item": "Vintage Boxy Tee - Stone Pigment",
-            "link": "https://www.jamesperse.com/products/vintage-boxy-tee-white?variant=37726297522340",
-            "icon": "eye"
+            "link": "https://www.fluevog.com/shop/4049-murillo-grey-paisley",
+            "item": "Baroque Murillo: Grey Paisley",
+            "timeAgo": "2026-02-02"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://fluevog.com",
+          "date": ""
+        }
       },
-      "orders": []
-    },
-    "75": {
-      "id": "019bf1df-9dc0-4f36-f000-000079622ba3",
-      "companyName": "Sauder",
-      "companyWebsite": "https://sauder.com",
-      "agentName": "Ashley",
-      "agentInitial": "S",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post-purchase inquiries for items purchased through a retailer"
+      "companyWebsite": "https://fluevog.com",
+      "companyName": "John Fluevog Shoes",
+      "notes": {
+        "escalate": [
+          "Add the cx\u0027s full name \u0026 which region they\u0027re shopping from (US, CA, or AU) in the ESC notes",
+          "Add the product links cx are inquiring about to your ESC notes"
         ],
         "templates": [
-          "If customers already purchased use TFP shortcut"
+          "For post purchase issues, use OIS shortcut",
+          "For gift exchange inquiries, use GEX shortcut",
+          "If the cx didn\u0027t receive the gift from the gift exchange program!, use GGE shortcut",
+          "If cx\u0027s say the item they want isn\u0027t on sale, don\u0027t use ncode, use SGS temp"
         ],
-        "tone": [
-          "Let the customer have the last word!"
-        ],
-        "drive_to_purchase": [
-          "Don't recommend Retailer Exclusive items"
-        ],
-        "promo_and_exclusions": [
-          "Discount codes CAN be applied to clearance items"
+        "dos_and_donts": [
+          "Send links only from the US site",
+          "Use NordLayer when accessing their website"
         ]
       },
-      "SystemMessage1": "Sauder: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Sauder: Welcome! Click this link for your 20% OFF coupon code: https://sauder.attn.tv/aZ7JzqbgJniJ",
-      "SystemMessage3": "Sauder: Still deciding? In case you missed it, your 20% off coupon is EY8HJBKU. Click to shop: https://sauder.attn.tv/adWYeTzkb4m0",
-      "SystemMessage4": "Sauder: Hey, this is Ashley . Thanks for checking us out! 😊 https://sauder.attn.tv/aaPeIpfwwBZl \n\nAny questions I can answer for you?",
-      "SystemMessage5": "Sauder: Hey there! We noticed you eyeing something on our site... \n\nDid you have any questions I could help with?\n\n-Ashley\n https://sauder.attn.tv/aFHW10GvtD_S",
-      "SystemMessage6": "Sauder: Hey, this is Ashley . Thanks for checking us out! 😊 https://sauder.attn.tv/aHEAcO1cFxeT \n\nAny questions I can answer for you?",
-      "SystemMessage7": "Sauder: Hey there! We noticed you eyeing something on our site... \n\nDid you have any questions I could help with?\n\n-Ashley\n https://sauder.attn.tv/ahKffQKXQg2w",
-      "SystemMessage8": "Sauder: Hey there! We noticed you left something in your cart!\nhttps://sauder.attn.tv/aZ1lcNjLz-1- \n\nWas there anything I could help you with? \n- Ashley",
-      "customerMessage1": "Yes I would like the desk and storage cabinet in mystic oak 435236",
-      "AgentMessage1": "Sauder: Can you please confirm if you're referring to this? - https://sauder.attn.tv/aodZsZ12j8Oh If so, I'm afraid it only comes in Cinnamon Cherry Finish. What do you think about this instead? - https://sauder.attn.tv/altL1mG4eBhk",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Sizing questions",
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Fluevog: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Fluevog.",
+          "date_time": "2026-02-03 18:05:55.503",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fluevog: Welcome to Fluevog! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-03 18:06:13.078",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fluevog: You\u0027ve officially doubled your chances to snag a $200 GC! It\u0027s like winning the shoe lottery, but without the confetti clean-up. Start shopping: usvog.attn.tv/a5Q2Pb8LDj9- \nQuestions? Just give us a shout!\n",
+          "date_time": "2026-02-03 18:06:17.051",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fluevog: Did you mean to leave Dollyvogs Waldorf: Black/Rhinestone behind? It\u0027s still waiting for your return. Take another look: usvog.attn.tv/aFMxm8Xl6maG",
+          "date_time": "2026-02-04 17:41:58.866",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fluevog: Hey there, sole-searcher! We noticed you eyeing our fabulous kicks. Have you checked out our best sellers yet? They\u0027re so popular, even the floor is jealous! Take another look: usvog.attn.tv/aFHwx-fq5Iyz ",
+          "date_time": "2026-02-10 16:30:24.832",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No. I\u0027m still waiting on an order. I do not believe I will be doing business with you anymore once my order comes.",
+          "date_time": "2026-02-10 16:31:20.697",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c497a-c13d-4e44-f000-000092b3bf14",
+          "message_text": "Fluevog: I\u0027m sorry to hear that, and I understand the frustration! Are you referring to the order placed on 2/3? If so, please note that after you place your order, it goes through an order processing stage (preparing, packaging, etc.), which can take up to 3 business days. Just to be sure, did you receive any tracking info? Please check your spam and promo folders as well, as our emails sometimes end up there. ",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 16:35:07.614"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes. I did. the zip code was wrong so they were shipped back to New Orleans and there has not been an update since the 6th.",
+          "date_time": "2026-02-10 16:36:10.543",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "They made it to Oakcreek which is 30-45 minutes away and would not update the zip and shipped them back for them to be shipped back to me again. if that makes a sense whatsoever. Where are my shoes?",
+          "date_time": "2026-02-10 16:38:20.907",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c497e-672f-48f2-f000-000092b3bf14",
+          "message_text": "Fluevog: I\u0027m really sorry for all the inconvenience. Since the package is already with the carrier, it\u0027s best to contact them directly. Have you tried giving them a call? They should have the most up-to-date information.",
+          "message_type": "agent",
+          "agent": "82222",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 16:39:06.700"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No, I haven\u0027t called. I have horrible Social phobia. I am unable to use the phone. I used UPS\u0027s website and cannot get any answers. So more or less I have to eat the cost of the shoes.",
+          "date_time": "2026-02-10 16:40:50.866",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4982-d3a9-4777-f000-000092b3bf14",
+          "message_text": "Fluevog: I\u0027m so sorry about that. Let me double-check this with my team. Can I please have your order number, full name, email, and the region you are shopping from? ",
+          "message_type": "agent",
+          "agent": "43099",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 16:43:56.604"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "20260203-00593198 Shannon R Bishop bisho022@uwalumni.com Kenosha, WI 53144",
+          "date_time": "2026-02-10 16:51:10.717",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "escalation",
+          "message_text": "voc: I\u0027m still waiting on an order. I do not believe I will be doing business with you anymore once my order comes. 20260203-00593198 Shannon R Bishop bisho022@uwalumni.com Kenosha, WI 53144",
+          "date_time": "2026-02-10 16:54:13.342",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c498c-530a-4ec9-f000-000092b3bf14",
+          "message_text": "Fluevog: Thanks! Let me pass this on to my team. I\u0027ll be in touch as soon as I get an update. ",
+          "message_type": "agent",
+          "agent": "82427",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 16:54:19.047"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you.",
+          "date_time": "2026-02-10 16:56:50.766",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c498e-ef9a-4e41-f000-000092b3bf14",
+          "message_text": "Fluevog: You\u0027re welcome! We appreciate your patience.",
+          "message_type": "agent",
+          "agent": "46059",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 16:57:10.199"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Any word on my shoes? This is getting ridiculous .",
+          "date_time": "2026-02-11 16:11:54.330",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4e92-409f-4cb4-f000-000092b3bf14",
+          "message_text": "Fluevog: My sincere apologies. I\u0027m still waiting to hear back from my team regarding this, but rest assured, I\u0027m keeping an eye out. As soon as I get an update, I\u0027ll let you know right away. ",
+          "message_type": "agent",
+          "agent": "43099",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 16:18:53.630"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It\u0027s been two days and you still don\u0027t know where my shoes are? It\u0027s almost been a week since they were sent back to New Orleans. Where are my shoes? I have been nice and patient.",
+          "date_time": "2026-02-12 16:49:55.237",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c53d7-c2fd-4dcb-f000-000092b3bf14",
+          "message_text": "Fluevog: I completely understand your frustration, and I\u0027m so sorry again for the inconvenience. Our team might currently be experiencing a high volume of inquiries, which is causing some delays.\n\nPlease be assured that I\u0027m actively following this up, and I will update you as soon as I receive a response. Thank you so much for your patience and understanding.",
+          "message_type": "agent",
+          "agent": "43099",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 16:52:55.065"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "6 days ago a label was created. Where are they? I\u0027ve not been offered my money back, partial refund. No answers. Never again.",
+          "date_time": "2026-02-12 17:06:44.937",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c53ed-ad53-46fb-f000-000092b3bf14",
+          "message_text": "Fluevog: I\u0027m truly sorry for the frustration and the lack of updates, I completely understand how upsetting it is to wait this long without a clear resolution. Our team is still looking into this, and I really appreciate your patience. This is not the experience we want for our customers, and I sincerely apologize for the inconvenience. Alternatively, you can email us directly at service@fluevog.com. Our team is happy to help!",
+          "message_type": "agent",
+          "agent": "87589",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 17:16:51.311"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I have emailed your team. I sent an email a week ago and no one answered it.",
+          "date_time": "2026-02-12 17:17:55.088",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c53f1-ea17-4e3f-f000-000092b3bf14",
+          "message_text": "Fluevog: We sincerely apologize for the delay! The team is experiencing a high volume of emails, but they\u0027ll respond to you as soon as possible. We really appreciate your patience on this and hope you can give us more time to reply. Please check your spam and promotions folders, as our emails sometimes end up there. Our team is happy to help!",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 17:21:29.011"
+        }
+      ]
+    },
+    "75": {
+      "agentName": "Sam",
+      "id": "019c5964-179c-4db5-f000-0000d48d6b35",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://sauder.com",
+          "value": "https://shadyrays.com",
           "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://shadyrays.com",
+      "companyName": "Shady Rays",
+      "notes": {
+        "escalate": [
+          "ESC restock inquiries, but use STOF shortcut first"
+        ],
+        "tone": [
+          "Close the convo if the cx first message doesn\u0027t warrant a response (e.g. Them thanking us, saying they\u0027re browsing, etc.)"
+        ],
+        "templates": [
+          "For product prescription inquiries use RPP shortcut",
+          "For prescription orders questions use RPO shortcut"
+        ],
+        "dos_and_donts": [
+          "If customers want to return an item - clarify if they’re trying to return a recently purchased pair or if they need a replacement"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: The weekend is here, so is our BOGO sale. Double up on shades with code BOGOJAN through 1/28. Exc. apply.\n\nShop Now: shadyrays.attn.tv/aNUvv1WCw6KR ",
+          "date_time": "2026-01-16 20:15:17.265",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Hey, it\u0027s been a while! Let\u0027s get you back in your next favorite style! Check out our new arrivals here: shadyrays.attn.tv/aZ7GdjLUev7o \n\nAnything we can help with today? Text back with any questions!",
+          "date_time": "2026-01-17 15:26:03.756",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: For a limited time, enjoy 30% OFF Sunglasses with a Snow purchase! Get your gear for the sun and the slopes: shadyrays.attn.tv/aSszTnYZk--Q ",
+          "date_time": "2026-01-18 18:01:14.869",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Our Valentine\u0027s Day Sale is live! Get 40% off when you buy 2 or more pairs.\n\nSave now \u0026 spread the love: shadyrays.attn.tv/aMaXT5T2eJhO ",
+          "date_time": "2026-01-22 15:00:39.750",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Last Chance! Our Valentine\u0027s Day sale ends tonight. Save 40% on 2+ pairs while you can. \n\nShop Now: shadyrays.attn.tv/aQeH5aiu_uP7 ",
+          "date_time": "2026-01-25 16:00:16.688",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Hey, it\u0027s been a while! Let\u0027s get you back in your next favorite style! Check out our new arrivals here: shadyrays.attn.tv/ar66PbkHvQ4r \n\nAnything we can help with today? Text back with any questions!",
+          "date_time": "2026-01-29 15:33:27.949",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Beat winter glare! 35% off sunglasses w/ code 35OFF and 55% off new outlet styles. Grab yours before they\u0027re gone:\n\nshadyrays.attn.tv/amioyj_vOAfn ",
+          "date_time": "2026-01-30 17:15:13.027",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: FLASH SALE! Save 35% on limited Green Wolf frames for the course. Use code GREEN35: shadyrays.attn.tv/anJ9YRL1C97N \n\nEnds 2/5 at 11:59pm PST.",
+          "date_time": "2026-02-04 16:00:23.330",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Back by popular demand: Azalea \u0026 Calico. The retired shades you loved are back! \n\nShop the launch: shadyrays.attn.tv/asVtIVpGvpMz ",
+          "date_time": "2026-02-05 18:00:22.857",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Valid through Halftime only! 50% OFF your next pair of shades with code: BG60 shadyrays.attn.tv/anxqXP-SFlqQ \n\nLimit one pair. Exclusions apply.",
+          "date_time": "2026-02-08 20:01:28.419",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Hey, it\u0027s been a while! Let\u0027s get you back in your next favorite style! Check out our new arrivals here: shadyrays.attn.tv/aHUdQBPZuFyK \n\nAnything we can help with today? Text back with any questions!",
+          "date_time": "2026-02-09 15:20:53.913",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: The long weekend is here! Take $20 OFF shades for Presidents Day using code PD26 at checkout. Excl. apply.\n\nShop: shadyrays.attn.tv/aTh9bIaHZt2j ",
+          "date_time": "2026-02-13 18:10:08.635",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m OK I never received my second pair and when I asked you guys about it, I never gotten an explanation. Why?",
+          "date_time": "2026-02-13 18:12:58.639",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5964-179c-4db5-f000-0000d48d6b35",
+          "message_text": "Shady Rays: Thank you for reaching out, and I\u0027m truly sorry to hear about this. Could you share a few more details so I can better understand the situation and assist you right away?",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 18:44:17.849"
+        }
+      ]
     }
   }
 }

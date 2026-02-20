@@ -3,377 +3,430 @@
   "chunk": "chunk_0007",
   "scenarios": {
     "31": {
-      "id": "019bbe95-e813-4f8c-f000-00001261d0cf",
-      "companyName": "Sam Edelman",
-      "companyWebsite": "https://samedelman.com",
-      "agentName": "Jordan",
-      "agentInitial": "S",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "If the cx sends us their credit card information (written or screenshot) and it's an issue we can't resolve - send the customer to CS"
-        ],
-        "escalate": [
-          "When you ESC use ESC shortcut fisrt",
-          "ESC if the charge on cx account is pending"
-        ]
-      },
-      "SystemMessage1": "Sam Edelman: The loafer we love. Shop this bestseller.\n\nShop now: samedelman.attn.tv/ak5XjR9pkzNY",
-      "SystemMessage2": "Sam Edelman: The cult-favorite boot is back. Now available in wide and extra-wide calf sizing. \n\nShop now: samedelman.attn.tv/ayelPMEI59cO",
-      "SystemMessage3": "Sam Edelman: For every last-minute gift on your holiday list, our digital gift cards are just the thing. \n\nShop now: samedelman.attn.tv/aGg7BtnwUCVi",
-      "SystemMessage4": "Sam Edelman: Your last-minute NYE edit has arrived. \n\nShop now: samedelman.attn.tv/agoNU5LX2B0P",
-      "SystemMessage5": "Sam Edelman: Final day of this year's best offer: Save $20 off $150+ with our loyalty program. Join now or log in.\n \nLog in or sign up to access: samedelman.attn.tv/aEzC3XMB80qO",
-      "SystemMessage6": "Sam Edelman: Back in stock: Shop the Penny Riding Boot that everyone's been waiting for. samedelman.attn.tv/a2dd0XyAYtZf .",
-      "SystemMessage7": "Sam Edelman: Elevated sneakers, from day to night.\n\nShop now: samedelman.attn.tv/adCYiZKPUfWl",
-      "SystemMessage8": "Sam Edelman: Bags you'll carry everywhere. Shop the latest. \n\nShop now: samedelman.attn.tv/apzBbLNKUte6",
-      "SystemMessage9": "Sam Edelman: This just in: boots starting under $100. Don't miss out. \n\nShop now: samedelman.attn.tv/afJKuTahXXYb",
-      "SystemMessage10": "Sam Edelman: We miss you! Enjoy free shipping and free returns. Shop our latest collection now: https://samedelman.attn.tv/a5BLwkw0crjU .",
-      "SystemMessage11": "Sam Edelman: Looks like you forgot something! Don't worry I saved it for you: https://samedelman.attn.tv/aZRl13qw-ByU . Snag osha ankle strap pump before it's gone!\n\nLet me know if you have any questions!\n\n-Jordan",
-      "customerMessage1": "Hi Jordan- thanks for looking out. I intended to call the company. I went to check out and I'm not getting my loyalty discount??? It's supposed to automatically applied at checkout???",
-      "customerMessage2": "It's supposed to be 15% off",
-      "SystemMessage12": "\"",
-      "AgentMessage1": "Sam Edelman: I understand how frustrating it is when a discount you're expecting doesn't show up. Please note that Sam Edelman Loyalty members receive their discounts when logged in, and the discount needs to be manually applied at checkout. In the meantime, I'd be happy to check with my team and will keep you posted.",
+      "agentName": "Sam",
+      "id": "019c49aa-cd14-4468-f000-0000f0a6d3f9",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://samedelman.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "isella sneaker",
-            "link": "https://www.samedelman.com/product/womens-isella-sneaker-3031860/midnight-blue-suede-ec0207964?icid=SamEdelmanRecommendationsPDPTop_Sam%20Edelman_3031860_99900_EC0207964",
-            "icon": "eye"
+            "link": "https://oralb.com/en-us/products/electric-toothbrushes/io-series-10-rechargeable-electric-toothbrush-cosmic-black/",
+            "item": "iO Series 10 Rechargeable Electric Toothbrush, Cosmic Black",
+            "timeAgo": "2026-02-05"
           },
           {
-            "item": "ivey lace up sneaker",
-            "link": "https://www.samedelman.com/product/womens-ivey-lace-up-sneaker-3030151/french-merlot-suede-ec0208238",
-            "icon": "eye"
-          },
-          {
-            "item": "osha ankle strap pump",
-            "link": "https://www.samedelman.com/product/womens-osha-ankle-strap-pump-3032273/black-leather-ec0209245",
-            "icon": "eye"
+            "link": "https://oralb.com/en-us/products/oral-b-genius-x-rechargeable-electric-toothbrush-twin-pack-black-and-white/?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=prospecting\u0026utm_content=oralb-resolution-check-012426\u0026utm_term=sms-geniusxtwinpacksms-geniusxtwinpack\u0026ai_audience=null_base\u0026externalId=4o-9o",
+            "item": "Oral-B Genius X Rechargeable Electric Toothbrush Twin Pack, Black and White",
+            "timeAgo": "2026-01-24"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://oralb.com",
+          "date": ""
+        }
       },
-      "orders": []
-    },
-    "32": {
-      "id": "019be330-cca1-4858-f000-0000f5526a59",
-      "companyName": "Tushbaby",
-      "companyWebsite": "https://tushbaby.com",
-      "agentName": "Sarah",
-      "agentInitial": "T",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "companyWebsite": "https://oralb.com",
+      "companyName": "Oral-B and Crest",
+      "notes": {
+        "important": [
+          "When sending a link, if you see a \"/\" at the end of the URL, remove it"
+        ],
+        "send_to_cs": [
+          "Send to CS for damaged items that aren\u0027t available on the website"
+        ],
         "escalate": [
-          "When ESC on weekends, use WKD shortcut",
-          "Don’t send to CS for this brand, unless instructed by a template",
-          "If cx follows up after not receiving a response to an escalation after to 2 days, re-ESC the convo",
-          "ESC immediately if cx haven't received a confirmation email",
-          "ESC immediately post-purchase shipping issues",
-          "ESC immediately all order tracking-related/order delay inquiries",
-          "ESC even if cx doesn't provide an image needed for escalation",
-          "ESC if cx want to speak to a representative & need additional assistance after using the PS shortcut",
-          "ESC all snug attachment & snug safety related inquiries",
-          "ESC if cx say they've emailed & haven't heard back",
-          "ESC inquiries about their TikTok order or store",
-          "ESC if cx asks for other options or raises issues about the return policy, or if they flag anything pain-related",
-          "ESC any discount errors or codes that do not work",
-          "ESC all inquiries about wearing Tushbaby while pregnant"
+          "ESC immediately if the order is delivered, but cx did not receive it",
+          "ESC if cx wants to use an expired code",
+          "ESC sales end date questions",
+          "ESC invalid codes / expired code issues",
+          "Before ESC for retroactive discount requests, check if the item is on sale or if they met the minimum",
+          "Don\u0027t make suggestions of replacements - if unsure, ESC",
+          "ESC false advertising complaints",
+          "ESC if cx state they regret placing the order after the CANCEL/ORDER temp has been sent",
+          "Before ESC products not functioning properly",
+          "→ Inquire what exact brush/product they have",
+          "→ Provide any user guides available",
+          "Don\u0027t ask for the cx\u0027s shipping address as secondary info, include their phone number instead"
         ],
         "tone": [
-          "Let the cx have the last word",
-          "Don't say \"The code can ONLY be added\" or similar, say \" The code applies when you buy..\"",
-          "Don't mention that your system is limited",
-          "Use a friendly tone!",
-          "Don't tell cx to stay subscribed to our newsletter or check our website for updates, let them know that as a text subscribers they'll be the first to know about upcoming deals",
-          "Use \"texts subscriber\" instead of \"SMS subscriber\"",
-          "Don't send long responses for order status inquiries, provide the order details instead if it's available"
+          "Keep messages shorter and more direct",
+          "Don\u0027t use the term \"cart tracking\", or let cxs know we can see what they have in their cart"
         ],
         "templates": [
-          "Totebabys won't be restocked, use TBR shortcut",
-          "For inquiries about the tweed-style Tushbaby, pink Tushbaby, the snow leopard Tushbaby or new prints, use the \"Tushbaby\" temps",
-          "For inquiries if the TushBaby can be used for children with special needs OR if we provide a discount for them, use SND shortcut",
-          "Don't use the \"PRU\" shortcut",
-          "Don't use the \"NRC\" shortcut",
-          "If the cx asks for the price, use PRC shortcut",
-          "If cx says Tushbaby is out of their budget, use OMB shortcut, and don't comment on their financial situation or our prices"
+          "If the cx asks where there order is, and it\u0027s a confirmed order within the standard processing and shipping time, only share the \"Order status/order tracking\" temp",
+          "If the cx reaches out saying they\u0027re having issue with their code, first use CWW temp",
+          "If cx needs assistance with brush function/operations use FOQ shortcut",
+          "For product complaints/bad experiences use PBE shortcut",
+          "If cx says they\u0027re dentists/hygienists \u0026 want to shop use RDH shortcut",
+          "If cx is a short amount away from reaching the $100 threshold for the welcome discount to apply use SRT shortcut",
+          "If cx ask why their order was canceled, use MOC shortcut",
+          "If cx purchased from their dentist and looking for rebate ($30, $20, $10 back) use RBT shortcut",
+          "For post-purchase issues with Amazon orders, use PS shortcut",
+          "For post-purchase issues where cxs are dental professionals, dentists, hygienists, use DPS shortcut"
         ],
         "dos_and_donts": [
-          "Don't ask the cx if there is anything else you can assist with, after a convo has been ESC"
+          "If customers are looking for brush heads always confirm what type of brush they have, iO or non iO",
+          "If you can\u0027t find the products on the website, refer to this one https://crest.com/en-us",
+          "Hold to policy and do not offer to check if deviation from policy is acceptable",
+          "If customers ask about the warranty registration code OR say it\u0027s not accepting theirs (they might refer to it as a promo code for registration)- send them this one OB59185 (it\u0027s always the same)"
         ],
         "drive_to_purchase": [
-          "Don't D2P when a cx just purchased",
-          "Don't D2P to upset/angry cx"
+          "For general recommendations use CFR shortcut",
+          "Always refer cxs to iO series products, when possible"
         ],
         "promo_and_exclusions": [
-          "All sales/promotions end at midnight PST",
-          "If a cx reaches out regarding a sale, do not refer them to the website",
-          "TikTok codes are tiktok-specific and can't be used on the website",
-          "Discount codes work on sale items, but not on bundles",
-          "Offers are not stackable at checkout"
+          "The $85 welcome promo code isn\u0027t for % off, once applied a free item is added to the cart",
+          "Please check the last letters of a code to determine when they were sent",
+          "→ I.e. WCOBDC means it is a December code (DC) and will likely expire in Jan",
+          "Discount codes do not work on Amazon",
+          "If cx is looking for a discount on replacement brush heads, encourage to subscribe for savings on the product page"
         ]
       },
-      "SystemMessage1": "Tushbaby: Welcome to Tushbaby! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Tushbaby: You're on our VIP list! 🥂 Use code FIRST15 for 15% off - and keep an eye out for new launches coming soon! tushbaby.attn.tv/a3rGWpNNbXbo",
-      "customerMessage1": "I can't use the code, doesn't work",
-      "customerMessage2": "Help",
-      "customerMessage3": "HELP",
-      "AgentMessage1": "Tushbaby: Thank you so much for reaching out, and sorry to hear that you're having issues with your code. Could you send a screenshot of your cart and the error message that you're getting?",
-      "customerMessage4": "It just says not valid for these specific items.",
-      "AgentMessage2": "Tushbaby: Thanks for sending that over. Unfortunately, our codes don't work on bundles, but the 2-in-1 Combo Carrier has a discount pre-applied so you're already getting an amazing deal!",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://tushbaby.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "The Tushbaby Hip Carrier - Vegan Leather Black / Tushbaby",
-            "link": "https://tushbaby.com/products/tushbaby?variant=31311822422082",
-            "icon": "eye"
-          },
-          {
-            "item": "The Tushbaby Hip Carrier - Grey / Tushbaby",
-            "link": "https://tushbaby.com/products/tushbaby?variant=15109665390658",
-            "icon": "eye"
-          },
-          {
-            "item": "The Tushbaby Hip Carrier - Vegan Leather Cream / Tushbaby",
-            "link": "https://tushbaby.com/products/tushbaby?variant=40288993017922",
-            "icon": "eye"
-          },
-          {
-            "item": "The Tushbaby Hip Carrier - Gingham / Tushbaby",
-            "link": "https://tushbaby.com/products/tushbaby?variant=42473331064898",
-            "icon": "eye"
-          },
-          {
-            "item": "The Tushbaby Hip Carrier - Black & Gold / Tushbaby",
-            "link": "https://tushbaby.com/products/tushbaby",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "33": {
-      "id": "019bf723-5e29-4cb8-f000-0000f5a96dd0",
-      "companyName": "Comfrt",
-      "companyWebsite": "https://comfrt.com",
-      "agentName": "Samantha",
-      "agentInitial": "C",
+      "blocklisted_words": [
+        "seems",
+        "shoot",
+        "worries"
+      ],
+      "escalation_preferences": [
+        "All product complaints or bad experiences with a product"
+      ],
       "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post-purchase issues"
-        ],
-        "escalate": [
-          "ESC if the discount % is not the same as indicated in the automated message"
-        ],
-        "templates": [
-          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
-        ]
-      },
-      "SystemMessage1": "Comfrt: Welcome to Comfrt! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Comfrt: Welcome to Comfrt! We're so excited to have you. Here's your exclusive 15% off code: W15p5fR8g\n\nClick here to auto-apply your discount and shop our viral best-sellers: comfrt.attn.tv/anL8VHz7lRDg",
-      "SystemMessage3": "Comfrt: Let's be friends!\n\nSave our contact to make sure we land directly in your messages.",
-      "customerMessage1": "How can do an exchange?",
-      "AgentMessage1": "Comfrt: I'm happy to help! If you want to you can swap your item for a different size or color (based on availability), and your replacement will ship once, your return has been received and processed.\n\nIn order to qualify for an even exchange all items must be approved/requested within 30 days of delivery. Unfortunately, anything after the 30 day window period can not be approved. All exchanges must be in exact condition with no signs of wear and tear, stains or other signs of usage; including in the original poly bag with SKU to return in. \n\nYou can start your return here: https://comfrt.attn.tv/aarEvLt1_iBX/#/ and you can check out our detailed return policy here: https://comfrt.attn.tv/a_dV1Sxp02YS",
-      "customerMessage2": "I have a large kids sweatshirt that I need to exchange for a small adult. How do I do that?",
-      "AgentMessage2": "Comfrt: Hi again! Have you tried following the instructions I sent above? If so, you should see an option to request an exchange, which will allow you to swap your large kids sweatshirt for a adult size based on availability.",
-      "customerMessage3": "No, I haven’t",
-      "AgentMessage3": "Comfrt: I understand, and I'm really sorry this has been such a hassle for you. When you have a moment, could you please try the steps I shared earlier and let me know how it goes so I can help you further if needed.",
-      "customerMessage4": "now he won't let me exchange my youth extra large for a small adult",
-      "customerMessage5": "starting to get very frustrated 😩",
-      "AgentMessage4": "Comfrt: I'm sorry to hear that. Have you encountered any error messages? I'll be happy to look into the issue!",
-      "customerMessage6": "yes, it's telling me that I cannot return the camel extra large youth sweater",
-      "customerMessage7": "i want to talk to a person not this texting..",
-      "AgentMessage5": "Comfrt: Can you please send me a screenshot of what you're seeing on your end? I'll be more than happy to look into this for you! \n\nI'm sorry, we don't offer phone support right now, but I'd be happy to help you over text.",
-      "customerMessage8": "\"",
-      "SystemMessage4": "Template used: \"Customer support\"; last updated: 2022-09-13 01:43:33.168",
-      "AgentMessage6": "Comfrt: Thanks for sending the screenshot, and I'm once again so sorry for the inconvenience! The best way to handle this is to email us directly at info@comfrt.com. Our team is happy to help!",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://comfrt.com",
-          "date": ""
-        },
-        "browsingHistory": [],
-        "orders": [
-          {
-            "orderNumber": "6440967733292",
-            "orderDate": "",
-            "link": "https://comfrtclothing.myshopify.com/products/affirmation-hoodie",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "Affirmation Hoodie",
-                "price": "49",
-                "currency": "USD",
-                "productLink": "https://comfrtclothing.myshopify.com/products/affirmation-hoodie"
-              },
-              {
-                "name": "Camo Kids Hoodie",
-                "price": "39",
-                "currency": "USD",
-                "productLink": "https://comfrtclothing.myshopify.com/products/the-camo-kids-hoodie"
-              },
-              {
-                "name": "Camo Kids Hoodie",
-                "price": "39",
-                "currency": "USD",
-                "productLink": "https://comfrtclothing.myshopify.com/products/the-camo-kids-hoodie"
-              }
-            ],
-            "total": "127"
-          }
-        ]
-      },
-      "orders": [
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "6440967733292",
-          "order_status_url": "https://comfrtclothing.myshopify.com/products/affirmation-hoodie",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://comfrtclothing.myshopify.com/products/affirmation-hoodie",
-              "product_name": "Affirmation Hoodie",
-              "product_price": 49
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://comfrtclothing.myshopify.com/products/the-camo-kids-hoodie",
-              "product_name": "Camo Kids Hoodie",
-              "product_price": 39
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://comfrtclothing.myshopify.com/products/the-camo-kids-hoodie",
-              "product_name": "Camo Kids Hoodie",
-              "product_price": 39
-            }
+          "message_type": "system",
+          "message_text": "Oral-B: Resolution Check-In! Keep up with your smile goals with a partner and save $50 on the Genius X Twin Pack! oral-b.attn.tv/aq5pXztqV2WD ",
+          "date_time": "2026-01-24 18:04:12.725",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Oral-B: Valentine\u0027s Day is Closer Than You Think - You Ready? Make the first move with $50 Off the Oral-B + Crest iO Whitening Bundle: oral-b.attn.tv/aOJ1hnYPEFhn ",
+          "date_time": "2026-01-26 17:09:09.910",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Oral-B: Save on 2X the Clean and Share! Get the Smart Clean 360 Twin Pack for $20 off while supplies last: oral-b.attn.tv/as104pixiPAq ",
+          "date_time": "2026-01-28 21:04:04.941",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Oral-B: Brighten Up No Matter When Spring Starts! Get the Oral-B + Crest iO Whitening Bundle for $50 off now: oral-b.attn.tv/a65V6cCD0gjr ",
+          "date_time": "2026-02-02 17:07:06.053",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Oral-B: WCOBDC20206052313551056462CU48",
+          "date_time": "2026-02-05 15:07:22.553",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Oral-B: You are already subscribed. Click here to shop now: https://oral-b.attn.tv/cl/XJO.",
+          "date_time": "2026-02-05 15:13:00.684",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Oral-B: Save $10 on the Oral-B Family Pack during Kids Dental Health Month. Get your iO2 and kids electric toothbrush bundle today! oral-b.attn.tv/a8k-7LnEv1V2",
+          "date_time": "2026-02-05 21:11:07.409",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Oral-B: 🏈 Become an Oral-B Champion with the iO4 Gum Care Bundle \u0026 Score $25 Savings: oral-b.attn.tv/aELR1dDvQull ",
+          "date_time": "2026-02-08 15:30:52.689",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Oral-B: Discover your perfect match! Explore our range of brushes to find the one that suits you best: https://oral-b.attn.tv/a42QeoxM8TPp \n\nText us if you need assistance!",
+          "date_time": "2026-02-10 17:21:17.231",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I am waiting for a call back.",
+          "date_time": "2026-02-10 17:22:14.167",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "A supervisor is working on my cancelled order. I need a new 20% coupon code.",
+          "date_time": "2026-02-10 17:22:44.191",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c49a7-9cb7-4d3d-f000-0000f0a6d3f9",
+          "message_text": "Oral-B: I\u0027m sorry about that! Our team is doing everything to follow up with you soon. You can also give us a call at 1-800-566-7252, Monday-Friday 9am-6pm EST, or share your canceled order number and email address so I can follow up on this. ",
+          "message_type": "agent",
+          "agent": "50269",
+          "message_media": [
+            
           ],
-          "total": 127
+          "date_time": "2026-02-10 17:24:07.388"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I have called three times today and spoke to three different people.",
+          "date_time": "2026-02-10 17:24:54.032",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Here\u0027s my order number: 1282840",
+          "date_time": "2026-02-10 17:25:14.089",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Please have someone call me.",
+          "date_time": "2026-02-10 17:25:43.665",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Can\u0027t take calls - All brands\"; last updated: 2023-10-10 18:11:21.727",
+          "date_time": "2026-02-10 17:27:36.371",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
+          "date_time": "2026-02-10 17:27:36.371",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c49aa-cd14-4468-f000-0000f0a6d3f9",
+          "message_text": "Oral-B: I understand. This number is for SMS only, so I\u0027m not able to make or receive calls. Is it okay if we continue chatting by text?",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 17:27:36.376"
         }
       ]
     },
-    "34": {
-      "id": "019beb89-f412-4239-f000-0000ec68054f",
-      "companyName": "LG",
-      "companyWebsite": "https://lg.com/us",
-      "agentName": "Jordan",
-      "agentInitial": "L",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS using the \"Escalation template\""
-        ],
-        "templates": [
-          "For 10% off welcome code issues use temp 'Follow up 1', then 'Follow up 2' after confirming the item is excluded from promos",
-          "For fridge recommendations use FRR shortcut",
-          "For service-related issues/scheduled repair service appointments use SRI shortcut",
-          "For cxs looking for replacement parts/accessories from an affiliate Parts Distributor use RPA shortcut",
-          "If a cx has an inquiry for finding the serial number/model number of an item:"
-        ],
-        "dos_and_donts": [
-          "If it's a new conversation and we didn't introduce ourselves in the automated message, start your message with: \"This is Jordan at LG.\""
-        ]
-      },
-      "SystemMessage1": "LG Electronics USA: Hey there! It looks like you haven't redeemed your coupon code - WLCMPN225. Don't miss out on your chance to save. https://lg.attn.tv/a-yMXC4UBWQB .",
-      "SystemMessage2": "LG Electronics USA: Start the New Year Fresh!✨ Upgrade and save 30-56% on select appliances with better performance and stunning design. Shop Now: lg.attn.tv/aXa1REu_ESox",
-      "SystemMessage3": "LG Electronics USA: Get $50 OFF the 7.3 cu. ft. Smart Wi-Fi Electric Dryer. Ultra-large capacity with an EasyLoad™ Door. Valid on only 12/27/25. Terms may apply. Shop Now: lg.attn.tv/aIdQG9W8czOg \n\nText back if you have any questions!",
-      "SystemMessage4": "LG Electronics USA: Last day! Streamline your kitchen revamp. Save on curated 4-piece appliance packages from LG - America's Most Reliable and #1 Appliance Brand.* Shop Now: lg.attn.tv/aGADUwVcHY-s",
-      "SystemMessage5": "LG Electronics USA: Welcome back 🤩 Ready to level up your LG collection? Text back here for recommendations on our top deals right now!\n\nlg.attn.tv/aqwJMUjzt4Iq .",
-      "SystemMessage6": "LG Electronics USA: Start the year with a kitchen refresh. Our curated 4-piece appliance packages deliver performance, style, and easy coordination. Shop Now: lg.attn.tv/ag7ZxNVZrOPg",
-      "SystemMessage7": "LG Electronics USA: ⚡24-Hour Flash Sale! Get up to 33% off select appliances. Save on an eligible Smart Wi-Fi Dryer and CordZero™ Q3 vacuum. Valid through 1/3/26. Terms may apply. Shop Now: lg.attn.tv/aM849cCwacn-",
-      "SystemMessage8": "LG Electronics USA: Hey there, I see you're in search of a new Laundry Accessory. Don't let a good thing get away. We saved that item for you here: lg.attn.tv/aOsUxl0Kqc6e now make it happen!\n\nCan I help you find the perfect one for your space?\n- Jordan",
-      "SystemMessage9": "LG Electronics USA: Hi, it's Jordan here from LG. Are there any specific appliance or electronic questions I can help with today?\n\nPick back up where you left off: https://lg.attn.tv/axhRgIIzrEVY .",
-      "SystemMessage10": "LG Electronics USA: Elevate your watch party with stunning color and perfect contrast from an LG OLED TV. Shop Now: lg.attn.tv/a4Lx_7HWvXK0",
-      "SystemMessage11": "LG Electronics USA: 🎉 Amazing news! The item you were looking at is now back in stock! Grab it now> LG SIGNATURE Large Smart Wi-Fi Enabled Front Load Washer, 5.8 cu. ft. lg.attn.tv/aDEdOGpeJFTC\n*Check online for most accurate availability based on your location.",
-      "SystemMessage12": "LG Electronics USA: Hey there, you left something great behind! Use code CAE10GIDUN to take 10% OFF your cart: lg.attn.tv/a44S1_6rtdbA (Terms apply, expires in 30 days)\n\nHave any questions I can help with?\n-Jordan",
-      "SystemMessage13": "LG Electronics USA: Make the smart switch and save more. Get $200 off when you bundle an eligible washer and heat pump dryer. Shop Now: lg.attn.tv/aIeycSzc-xEb",
-      "SystemMessage14": "LG Electronics USA: Game day looks better on LG TVs. Enjoy vivid color, sharp clarity, and immersive picture quality for every big moment. Shop Now: lg.attn.tv/aCRCJntjDRIh",
-      "SystemMessage15": "LG Electronics USA: ⚡ Flash Sale: Save up to 48% on select LG laundry, refrigerators & vacuum! Refresh your home today. Valid only on 1/10/26. Terms may apply. Shop Now: lg.attn.tv/awFYx7O-ygyW",
-      "SystemMessage16": "LG Electronics USA: 🎉 Amazing news! The item you were looking at is now back in stock! Grab it now> LG SideKick™ Pedestal Washer, TWINWash™ Compatible, 1.0 cu. ft. lg.attn.tv/aPqZkkISmk3-\n*Check online for most accurate availability based on your location.",
-      "SystemMessage17": "LG Electronics USA: 🎉 Amazing news! The item you were looking at is now back in stock! Grab it now> LG Mega Capacity Smart Front Load Dryer with Dual Inverter HeatPump™ Technology and Inverter Direct Drive Motor System, 7.8 cu. ft. lg.attn.tv/ayNj0A5fc2Nj\n*Check online for most accurate availability based on your location.",
-      "SystemMessage18": "LG Electronics USA: Hi, it's Jordan here from LG. Are there any specific appliance or electronic questions I can help with today?\n\nPick back up where you left off: https://lg.attn.tv/aO8Dmk0tyihV .",
-      "SystemMessage19": "LG Electronics USA: New Year. New Savings. Step into the New Year with savings on America’s Most Reliable & #1 Appliance Brand.* Free haul-away + free installation on select laundry & ranges. Shop Now: lg.attn.tv/aAt6D0ZT_MaS",
-      "SystemMessage20": "LG Electronics USA: Toast to a fresh start with LG appliances. Explore New Year savings on innovative refrigerators, ranges, dishwashers, and more. Shop Now: lg.attn.tv/aKj91pehTYkr",
-      "SystemMessage21": "LG Electronics USA: ⚡1 Day Only! Save up to 45% on select appliances. Upgrade your home and save on select LG laundry, refrigerators & more. Valid only on 1/17/26. Terms may apply. Shop Now: lg.attn.tv/aSAnK-xQSY2T",
-      "SystemMessage22": "LG Electronics USA: Oh no! Your coupon code - WLCMPN225 is expiring soon. This is your chance to redeem it and unlock your savings. https://lg.attn.tv/ah-xYWherLkt .",
-      "SystemMessage23": "LG Electronics USA: Game day’s calling. LG TVs make every highlight pop with vivid color and stunning clarity. Shop Now: lg.attn.tv/a9ABd0QxSDsZ",
-      "SystemMessage24": "LG Electronics USA: Start the year smarter at home. Enjoy exclusive savings on Craft Ice™ refrigerators, AI Wash & Dry laundry, and more when you bundle 2+ eligible appliances. Shop Now: lg.attn.tv/azW54s6UumWW",
-      "SystemMessage25": "LG Electronics USA: Give your wardrobe expert care with savings on select LG laundry appliances. Keep your washer & dryer covered with LG Premium Care from $9.99. Shop Now: lg.attn.tv/ax3Z5is1f8wh",
-      "customerMessage1": "can you let me know how to redeem Rinse credit",
-      "AgentMessage1": "LG Electronics USA: Thank you for your inquiry! This is Jordan at LG. After you complete checkout, you'll receive a follow-up message from Rinse with instructions on how to redeem your free credit.\n\nBe sure to check your email, including your spam or promotions folders, as the message can sometimes end up there.",
+    "32": {
+      "agentName": "Sam",
+      "id": "019c6e26-fd32-48c5-f000-0000fbf12996",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://lg.com/us",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "27 Inch Lg Sidekick™ Pedestal Washer",
-            "link": "https://www.lg.com/us/washers-dryers/lg-wd300cb-pedestal-washer?LoginFlag=Y",
-            "icon": "eye"
+            "link": "https://www.dreamcloudsleep.com/mattresses/luxe-hybrid-mattress/queen",
+            "item": "DreamCloud Luxe Hybrid Mattress",
+            "timeAgo": "2026-02-17"
           },
           {
-            "item": "27 Inch Lg Sidekick™ Pedestal Washer",
-            "link": "https://www.lg.com/us/washers-dryers/lg-wd300cb-pedestal-washer",
-            "icon": "eye"
-          },
-          {
-            "item": "27 Inch Lg Sidekick™ Pedestal Washer",
-            "link": "https://www.lg.com/us/washers-dryers/lg-wd300cb-pedestal-washer",
-            "icon": "eye"
-          },
-          {
-            "item": "Lg 27 Inch Pedestal Storage Drawer",
-            "link": "https://www.lg.com/us/appliances-accessories/lg-wdp6b-pedestal-storage-drawer?utm_campaign=20240701_thinq_consumables&utm_source=thinq&utm_medium=outlink&ally_chnl_id=thinq_parts",
-            "icon": "eye"
-          },
-          {
-            "item": "1.0 Cu. Ft. Lg Sidekick™ Pedestal Washer, Lg Twinwash™ Compatible",
-            "link": "https://www.lg.com/us/washers-dryers/lg-sidekick-wd200cb-pedestal-washer?utm_campaign=obs-xbu-journey-awareness-back-in-stock-sms&utm_medium=sms&utm_source=attentive&externalId=5_Ag5",
-            "icon": "eye"
+            "link": "https://www.dreamcloudsleep.com/mattress?utm_campaign=B-(D)_TH-(BAU)_T-(flow)_ST-()_N-(welcome)_S-()_CT-(nonpurchasers)_SG-()_Nu-(1)_O-(percentoff)_CR-()_TE-()_V-()_D-(021326)\u0026utm_medium=sms\u0026utm_source=Attentive\u0026externalId=s1SsZ",
+            "item": "DreamCloud Classic Hybrid Mattress",
+            "timeAgo": "2026-02-17"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://dreamcloudsleep.com",
+          "date": ""
+        }
       },
-      "orders": []
-    },
-    "35": {
-      "id": "019be70f-06c4-44d4-f000-0000c0c66ac4",
-      "companyName": "Bonafide",
-      "companyWebsite": "https://hellobonafide.com",
-      "agentName": "Sarah",
-      "agentInitial": "B",
+      "companyWebsite": "https://dreamcloudsleep.com",
+      "companyName": "DreamCloud",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS, use ESC shortcut",
+          "Use escalation template if customer mentions any of the following:",
+          "➜ Exchanges or returns",
+          "➜ Premuim In - Home Setup Questions",
+          "➜ Discount code errors",
+          "➜ Recalls",
+          "➜ Better Business Bureau (BBB)",
+          "➜ Fiberglass",
+          "➜ Lawyers/Lawsuits",
+          "➜ Class Action",
+          "➜ Post Purchase Issues"
+        ],
+        "tone": [
+          "Let the customer have the last word"
+        ]
+      },
+      "blocklisted_words": [
+        "organic"
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Discount code errors",
+        "Shipping questions",
+        "Recall",
+        "BBB",
+        "fiberglass",
+        "lawyer",
+        "class action"
+      ],
       "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "DreamCloud: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from DreamCloud.",
+          "date_time": "2026-02-17 17:40:44.310",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DreamCloud: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (833) 237-3269.",
+          "date_time": "2026-02-17 17:41:11.828",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DreamCloud: You\u0027re in (\u0026 your deal is here)!",
+          "date_time": "2026-02-17 17:41:15.827",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DreamCloud: Upgrade your old mattress for less. Save up to 60% + free shipping \u0026 returns.\n\nClaim your savings: dreamcloud.attn.tv/aq498rA4O9Ug .",
+          "date_time": "2026-02-17 17:41:16.334",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DreamCloud: Hello, this is Sam. Thanks for checking out DreamCloud! Why wait to sleep better? You can save up to 60% on mattresses right now.\ndreamcloud.attn.tv/aA7jPXVjybRf\n\nAny questions I can answer for you?\n.",
+          "date_time": "2026-02-17 17:42:59.790",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DreamCloud: Hello, this is Sam! We noticed you left the DreamCloud Luxe Hybrid Mattress in your cart! You can save up to 60%. Complete your purchase now to lock in these savings: dreamcloud.attn.tv/asht6J5SoXIq \n\nIf you have questions before you check out, text me back!\n.",
+          "date_time": "2026-02-17 17:58:46.539",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "we ordered it ORDER #D-17546510",
+          "date_time": "2026-02-17 19:25:38.299",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6e24-a3a0-434a-f000-0000fbf12996",
+          "message_text": "DreamCloud: Hi, thanks for reaching out and for your purchase. Do you have any questions or concerns that I can help with?",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 19:27:00.924"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "not yet.  except for when do you think it will arrive?",
+          "date_time": "2026-02-17 19:27:48.143",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Shipping time\"; last updated: 2024-02-08 12:24:42.215",
+          "date_time": "2026-02-17 19:29:34.922",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6e26-fd32-48c5-f000-0000fbf12996",
+          "message_text": "DreamCloud: Thanks for clarifying! While I can\u0027t guarantee a specific delivery date, please note that different mattresses and sizes have different ship times. Delivery typically takes 2 - 5 business days once your mattress has shipped, and could be arriving via FedEx Ground delivery. ",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 19:29:34.924"
+        }
+      ]
+    },
+    "33": {
+      "agentName": "Sarah",
+      "id": "019c544f-1d03-4e71-f000-0000d1185797",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://hellobonafide.com/products/thermella",
+            "item": "Thermella",
+            "timeAgo": "2026-02-04"
+          },
+          {
+            "link": "https://hellobonafide.com/products/thermella",
+            "item": "Thermella",
+            "timeAgo": "2026-02-04"
+          },
+          {
+            "link": "https://hellobonafide.com/products/thermella?g_adtype=search\u0026gclsrc=aw.ds\u0026\u0026g_acctid=381-037-9272\u0026g_campaign=Bonafide_Google_Search_Semibrand_Thermella\u0026g_campaignid=21734815579\u0026g_adgroupid=167960167579\u0026g_adid=714377176285\u0026g_keyword=thermella\u0026g_keywordid=kwd-2270349537052\u0026g_network=g\u0026utm_source=google_adwords\u0026utm_medium=paid_search\u0026utm_campaign=Bonafide_Google_Search_Semibrand_Thermella\u0026utm_term=thermella\u0026gad_source=1\u0026gad_campaignid=21734815579\u0026gbraid=0AAAAADSETrOojbKBFxUMGvGfKFJZ3H_u6\u0026gclid=Cj0KCQiA-YvMBhDtARIsAHZuUzK_SNL0LfYkb3rfEhV8LHdexBREqCrxgw-seH7JfumBxtZ7B5JrAZ8aAktfEALw_wcB",
+            "item": "Thermella",
+            "timeAgo": "2026-02-04"
+          },
+          {
+            "link": "https://hellobonafide.com/products/thermella?g_adtype=search\u0026gclsrc=aw.ds\u0026\u0026g_acctid=381-037-9272\u0026g_campaign=Bonafide_Google_Search_Semibrand_Thermella\u0026g_campaignid=21734815579\u0026g_adgroupid=167960167579\u0026g_adid=714377176285\u0026g_keyword=thermella\u0026g_keywordid=kwd-2270349537052\u0026g_network=g\u0026utm_source=google_adwords\u0026utm_medium=paid_search\u0026utm_campaign=Bonafide_Google_Search_Semibrand_Thermella\u0026utm_term=thermella\u0026gad_source=1\u0026gad_campaignid=21734815579\u0026gbraid=0AAAAADSETrOojbKBFxUMGvGfKFJZ3H_u6\u0026gclid=Cj0KCQiA-YvMBhDtARIsAHZuUzK_SNL0LfYkb3rfEhV8LHdexBREqCrxgw-seH7JfumBxtZ7B5JrAZ8aAktfEALw_wcB",
+            "item": "Thermella",
+            "timeAgo": "2026-02-04"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://hellobonafide.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://hellobonafide.com",
+      "companyName": "Bonafide",
+      "notes": {
         "escalate": [
           "ESC all medical/scientific inquiries immediately",
           "ESC return requests that are past the 30-day policy"
@@ -388,29 +441,384 @@
           "When sending the quiz - always suggest a specific product if customers mention a certain symptom"
         ]
       },
-      "SystemMessage1": "Bonafide: Did you know you've got bonus points? 💎 Cash them in to save on your next order: bonafide.attn.tv/azj4OztxGxD6",
-      "SystemMessage2": "Bonafide: Don't let your FSA/HSA funds expire before the end of the year. Use them towards menopause care now! bonafide.attn.tv/avPrhxcKGGzY",
-      "SystemMessage3": "Bonafide: Last chance for free Revaree! Start a new subscription before midnight to get your gift & save up to 25%: bonafide.attn.tv/anHd6PqbyAK0",
-      "SystemMessage4": "Bonafide: Congrats on finishing month 3 of your journey with Bonafide. Like all good things, our products take time to work. Thankfully, your next shipment is about to arrive, and you now have even more to look forward to. If you need anything, reply SUPPORT.",
-      "customerMessage1": "Need change my products",
-      "customerMessage2": "Support need to change my products",
-      "AgentMessage1": "Bonafide: Thanks for reaching out! I can check if that's possible, can you let me know the reason for the change of products? Also, what's the order number and email address on your order?",
-      "customerMessage3": "No need for the vitamins and hair serum .",
-      "AgentMessage2": "Bonafide: Just to clarify, is this for a subscription? Please let me know. I'm just one click away!",
-      "customerMessage4": "Yes a current subscription",
-      "AgentMessage3": "Bonafide: Thank you! To cancel your subscription, log in to your account here: https://bonafide.attn.tv/a3YMtypisEYv and find the subscription you'd like to cancel. Click the \"Cancel Subscription\" button, found underneath the product quantity on the right-hand side. In the box that pops up, select the reason you would like to cancel your subscription, and click \"Unsubscribe\". You'll receive a confirmation message that your subscription has been canceled, and the page will automatically refresh to remove the product.\n\nWe're sorry to see you go, and if you have any feedback that we can share with our internal team, please let us know as we're always working to improve our customers' experiences.",
-      "customerMessage5": "No do not wanting to cancel subscription just need to revise it",
-      "AgentMessage4": "Bonafide: I apologize for any inconvenience this may have caused. You can manage your order and subscription settings directly in your Bonafide account. You can swap your subscription to a different product by logging in to your account here: https://bonafide.attn.tv/ac_XtXCUXEw5 On the My Subscriptions tab, select the subscription you would like to modify. Click the \"Swap Product\" button to select a new product, and confirm this change in the popup. The page will automatically reload and update with your changes.",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Vaginal itching during menopause is common - get 6 expert-backed tips for real relief and comfort. bonafide.attn.tv/aBxCIyE1_2lP \n",
+          "date_time": "2026-01-19 14:01:06.848",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Perimenopause makeover? Load up on good fats \u0026 protein, skip the sugar slump, and feel fabulous from the inside out bonafide.attn.tv/aWtR_1OvzwNW \n",
+          "date_time": "2026-01-26 14:02:05.712",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Spice things up with playful moves, fresh routines, and a sexy mindset-your spark just got an upgrade. \nbonafide.attn.tv/aKpe7bG4HaP_ ",
+          "date_time": "2026-02-02 14:00:54.922",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Hi, this is Heather from Bonafide! Let me know if you have any questions about Thermella! https://bonafide.attn.tv/aWola6eVK_as ",
+          "date_time": "2026-02-04 11:29:27.825",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Stay intimate, stay vibrant - sex after menopause supports health and happiness. bonafide.attn.tv/akdJZFjfoXmp \n",
+          "date_time": "2026-02-09 14:01:01.695",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: More restful nights, coming soon 🌙\nIn the meantime, here\u0027s what impacts sleep → bonafide.attn.tv/amKxDD097E1Z ",
+          "date_time": "2026-02-12 14:01:32.463",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I need thermella for hot flashes",
+          "date_time": "2026-02-12 19:01:42.041",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c544f-1d03-4e71-f000-0000d1185797",
+          "message_text": "Bonafide: Hi, thanks for reaching out. You can go ahead and place an order for Thermella to help with your hot flashes. Let me know if you need any help with the ordering process!",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 19:03:16.900"
+        }
+      ]
+    },
+    "34": {
+      "agentName": "",
+      "id": "019c67d8-333d-4177-f000-0000f6b0f733",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.lovesac.com/sacs/pillowsac-accent-chair/build?cover=swiss-diamond-phur\u0026frame=brown\u0026straps=black\u0026hardware=gunmetal",
+            "item": "PillowSac",
+            "timeAgo": "2026-02-08"
+          },
+          {
+            "link": "https://www.lovesac.com/sacs/pillowsac-accent-chair/build?cover=indigo-brushstroke-jacquard\u0026frame=brown\u0026straps=black\u0026hardware=gunmetal",
+            "item": "PillowSac",
+            "timeAgo": "2026-02-08"
+          },
+          {
+            "link": "https://www.lovesac.com/sacs/pillowsac-accent-chair/build?cover=indigo-brushstroke-jacquard\u0026frame=brown\u0026straps=black\u0026hardware=gunmetal",
+            "item": "PillowSac",
+            "timeAgo": "2026-02-08"
+          },
+          {
+            "link": "https://www.lovesac.com/sacs/pillowsac-accent-chair/build?cover=geometric-jacquard-mist\u0026frame=brown\u0026straps=black\u0026hardware=gunmetal",
+            "item": "PillowSac",
+            "timeAgo": "2026-02-08"
+          },
+          {
+            "link": "https://www.lovesac.com/sacs/pillowsac-accent-chair/build?cover=geometric-jacquard-mist\u0026frame=brown\u0026straps=black\u0026hardware=gunmetal",
+            "item": "PillowSac",
+            "timeAgo": "2026-02-08"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://lovesac.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://lovesac.com",
+      "companyName": "Lovesac",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-01-30 15:15:38.679",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: You\u0027re on the list! Shop now to save 40% during this sale.\n\nClick to save: lovesac.attn.tv/a8VUIgyk27f8 .",
+          "date_time": "2026-01-30 15:15:43.198",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Be sure to save our contact card so you don\u0027t miss out on any exclusive offers.",
+          "date_time": "2026-01-30 15:15:43.864",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Hey there! We noticed you eyeing something on our site...come back and save 40%: lovesac.attn.tv/aO0C3h3cEkTj .",
+          "date_time": "2026-01-30 15:27:21.769",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Last chance for a little love and LOTS of comfort. Our Friends \u0026 Family get 40% off for one last day.\n\nDon\u0027t miss it: lovesac.attn.tv/aqpcTuHjdK2T .",
+          "date_time": "2026-01-31 12:05:25.278",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Total Comfort starts with swatches. Get 5 free samples, see them in your space \u0026 find your favorite.\n\nStart here: lovesac.attn.tv/aPxK73CKxVL5 .",
+          "date_time": "2026-02-02 15:15:51.106",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Hey there! We noticed you eyeing something on our site...come back and get 40% off: lovesac.attn.tv/ag0DmsTbjkxG .",
+          "date_time": "2026-02-08 13:46:16.962",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Hey there! We noticed you stopped by. Need some help? Just let us know which products you\u0027re interested in below. \n\nA. Sactionals\nB. Sacs\nC. StealthTech\nD. Snugg\n\nReply back \"A\", \"B\", \"C\", or \"D\"\n\nOr shop them all at 40% off: lovesac.attn.tv/aUU37ExNaDbh .",
+          "date_time": "2026-02-15 13:21:47.733",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Presidents\u0027 Day Sale ends tonight - take 40% off before it\u0027s gone.\n\nLast call to save on the styles you\u0027ve been eyeing: lovesac.attn.tv/ax24bCG60PNg .",
+          "date_time": "2026-02-16 13:15:13.973",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Hi, if you need assistance, please call us at (888) 636-1223 or text us at (650) 414-5475. Text STOP to opt out.",
+          "date_time": "2026-02-16 13:20:20.892",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I was eyeing when the rest of my order is going to arrive. Tired of looking at boxes that I can\u0027t do anything with",
+          "date_time": "2026-02-16 13:20:24.599",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Not doing that!",
+          "date_time": "2026-02-16 13:20:54.644",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Just send my order",
+          "date_time": "2026-02-16 13:21:14.706",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c67ba-37ff-4f50-f000-0000f6b0f733",
+          "message_text": "Lovesac: Thank you for reaching out! I\u0027m afraid I don\u0027t see any recent orders from you on my end. Could you please check if you received a confirmation email or if there\u0027s a charge on your account? Sometimes the email might arrive in your spam or promo folder, so be sure to take a look there too! ",
+          "message_type": "agent",
+          "agent": "109968",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 13:33:03.254"
+        },
+        {
+          "message_id": "019c67c6-350f-4ad1-f000-0000f6b0f733",
+          "message_text": "Lovesac: Thanks for sharing that with me. For this particular concern, our email support team is more equipped to assist since they have full access to your order details, which I\u0027m not able to view on my end. I\u0027m really sorry for the inconvenience. \n\nPlease reach out through this link: https://lovesac.attn.tv/azvXkvxizNZm Once your message is submitted, our team will review your order information and provide you with the most accurate update and next steps. They\u0027re truly happy to help and will make sure your concern is properly addressed.",
+          "message_type": "agent",
+          "agent": "82221",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 13:46:08.944"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027ll just call my sales rep at the store",
+          "date_time": "2026-02-16 13:53:35.464",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c67d8-333d-4177-f000-0000f6b0f733",
+          "message_text": "Lovesac: That sounds like a plan, and apologies for the trouble. Is there anything else that I can help with? ",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 14:05:48.115"
+        }
+      ]
+    },
+    "35": {
+      "agentName": "Sarah",
+      "id": "019c68c3-3854-49d8-f000-00009068b123",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://hellobonafide.com",
+          "value": "https://blissy.com",
           "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://blissy.com",
+      "companyName": "Blissy",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Blissy: Wow.. you wont believe what just got unlocked hehe.\n\nCode: blissyvday2026vip\n\nGO: https://blissy.attn.tv/aTxIwcTIjFBS ",
+          "date_time": "2026-01-18 19:40:37.154",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Blissy: Did you see the new launch ?\n\nI bet you missed them. and they are 60% off\n\nCheck out the Latest 3: https://blissy.attn.tv/aiB599dVzWgN . ",
+          "date_time": "2026-01-20 19:20:27.041",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Blissy: Oooo yeah.. Turned it on for another 24 Hours!\n\n60% off - You don\u0027t wanna miss this one\n\nHere we GO: https://blissy.attn.tv/azUPQr_zHJLN . ",
+          "date_time": "2026-02-04 20:40:32.302",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Blissy: It\u0027s never to late for VDAY\n\nOoyeah.. Turned it on for another 24 Hours!\n\n60% off - don\u0027t wanna miss this!\n\nGO: https://blissy.attn.tv/aP1-nSUhaKDU . ",
+          "date_time": "2026-02-11 13:25:26.481",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Blissy: It\u0027s President\u0027s day and i\u0027m doin something extra special...\n\nI turned on the VDAY MASSIVE sale again.. because the president\u0027s day one wasnt as big. \n\nYou\u0027re welcome =)\n\n60% off - don\u0027t wanna miss this!\n\nGO: https://blissy.attn.tv/aAjL50ojBHrg . ",
+          "date_time": "2026-02-16 17:55:23.605",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Blissy: Hey Sandi, thanks for stopping by!\n\nCozy picks for Personal Care await: https://blissy.attn.tv/aElXWLDKbjdI .",
+          "date_time": "2026-02-16 18:13:45.636",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I bought a standard pillowcase and am sad to say it is falling apart on the zipper end. Could you please replace it with a new one?",
+          "date_time": "2026-02-16 18:15:50.650",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Return policy\"; last updated: 2024-03-15 00:30:15.599",
+          "date_time": "2026-02-16 18:22:30.377",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c68c3-3854-49d8-f000-00009068b123",
+          "message_text": "Blissy: Thanks for reaching out, and I\u0027m sorry to hear that! Could you please let me know when you purchased the pillowcase? That way, I would be able to assist you further with this.\n\nLet me know how that goes.",
+          "message_type": "agent",
+          "agent": "109617",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 18:22:30.380"
+        }
+      ]
     }
   }
 }

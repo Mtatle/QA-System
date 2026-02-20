@@ -3,602 +3,653 @@
   "chunk": "chunk_0035",
   "scenarios": {
     "171": {
-      "id": "019bd7b3-2a59-4f5b-f000-0000f4aa134b",
-      "companyName": "Simply Earth",
-      "companyWebsite": "https://simplyearth.com",
       "agentName": "Sarah",
-      "agentInitial": "S",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "id": "019c5d77-dfff-44c9-f000-00003688e7b8",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.tailactivewear.com/products/eleanor-noir-black-jogger?variant=40177989976111",
+            "item": "Eleanor Noir Black Jogger - S",
+            "timeAgo": "2026-02-14"
+          },
+          {
+            "link": "https://www.tailactivewear.com/products/eleanor-noir-black-jogger",
+            "item": "Eleanor Noir Black Jogger - XS",
+            "timeAgo": "2026-02-14"
+          },
+          {
+            "link": "https://www.tailactivewear.com/products/eleanor-jogger-chalk-white?variant=40177605705775",
+            "item": "Eleanor Chalk White Jogger - S",
+            "timeAgo": "2026-02-14"
+          },
+          {
+            "link": "https://www.tailactivewear.com/products/eleanor-jogger-chalk-white",
+            "item": "Eleanor Chalk White Jogger - XS",
+            "timeAgo": "2026-02-14"
+          },
+          {
+            "link": "https://www.tailactivewear.com/products/eleanor-cherry-rose-jogger",
+            "item": "Eleanor Cherry Rose Jogger - XS",
+            "timeAgo": "2026-02-14"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://tailactivewear.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://tailactivewear.com",
+      "companyName": "Tail Activewear",
+      "notes": {
         "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
+          "Send to CS for shipping inquiries/orders delevered but not received"
+        ],
+        "dos_and_donts": [
+          "Gift cards count as a payment method and will not drop an order total below the shipping threshold!"
         ],
         "promo_and_exclusions": [
-          "Cx can use both a gift card and a promo code per order!"
+          "🅿 Check the brand website for the most up to date holiday promotions"
         ]
       },
-      "SystemMessage1": "Simply Earth: Welcome to Simply Earth! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Simply Earth: Hi Earthie! This is Sarah. Thanks for signing up via text! Use code SUCCULENT to get a free succulent diffuser with your 1st Recipe Box! https://simplyearth.attn.tv/ayG9KitWxRiO \n\nHave any questions? Reply here!",
-      "customerMessage1": "I need help from customer service on my order. Please call me asap",
-      "AgentMessage1": "Simply Earth: Thank you for reaching out. I'm sorry, this number is for SMS only, so I'm not able to make or receive calls. How can I help you with your order?",
-      "customerMessage2": "Please provide a number where I can actually talk to someone. So far having an undesirable customer experience and I hope it will change",
-      "AgentMessage2": "Simply Earth: Sorry for the experience! You can give us a call at 866-330-8165 (M-F 7am-3pm CST). Our team is happy to help!",
-      "customerMessage3": "So now I have called 2 different numbers for your company. Both will ring and then hang up on me.  How about you find someone to call me so I don't have to waste anymore time please",
-      "customerMessage4": "Are you going to have someone call me?",
-      "SystemMessage3": "Template used: \"Cancel / edit order\"; last updated: 2024-02-12 23:33:25.642",
-      "AgentMessage3": "Simply Earth: I'm really sorry about the continued trouble and the frustration this has caused. I completely understand how upsetting that is. At the moment, our phone lines are experiencing a high call volume, which may be causing the disconnects. Unfortunately, we're not able to place outbound calls/ You may also email your concern to help@simplyearth.com",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://simplyearth.com",
-          "date": ""
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Tail Activewear: Enjoy an EXTRA 40% off when you buy 2+ sale styles. Elevated quality, exceptional value. No code needed. tailactivewear.attn.tv/aYoiNFduTuAi ",
+          "date_time": "2026-01-16 15:00:44.808",
+          "message_media": [
+            
+          ]
         },
-        "browsingHistory": [],
-        "orders": []
-      },
-      "orders": []
+        {
+          "message_type": "system",
+          "message_text": "Tail Activewear: More to love, more to save! Enjoy an EXTRA 40% off when you buy 2+ sale styles. No coded needed. tailactivewear.attn.tv/arWZz3D3_fwY ",
+          "date_time": "2026-01-19 15:01:06.461",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Tail Activewear: Stack your savings! Save an EXTRA 40% when you buy 2 or more sale styles. No code needed, shop now! tailactivewear.attn.tv/aQJh_Zf7XDDx ",
+          "date_time": "2026-01-23 15:01:00.566",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Tail Activewear: Don\u0027t miss out! The style you were looking at is almost gone. Grab it before it\u0027s too late! https://tailactivewear.attn.tv/a8kV-YWEdDk8",
+          "date_time": "2026-01-24 12:20:58.938",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Tail Activewear: There are only a few of our Eleanor Noir Black Jogger - S left! Click here to shop before it\u0027s gone! https://tailactivewear.attn.tv/auFvJlmrjJzv .",
+          "date_time": "2026-01-25 12:51:01.120",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Tail Activewear: Last day to stack your savings! Enjoy an EXTRA 40% off when you buy 2 or more sale styles, no code needed.\ntailactivewear.attn.tv/aSmrnf9Pgf7- ",
+          "date_time": "2026-01-31 15:01:09.929",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Tail Activewear: 20% off full price styles for American Heart Month. Style you\u0027ll love, made to last. No code needed. tailactivewear.attn.tv/ao5lMAwbM9DI ",
+          "date_time": "2026-02-03 15:00:38.342",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Tail Activewear: Fall in love with your wardrobe! 20% off full-price styles for American Heart Month. No code needed. tailactivewear.attn.tv/a6JUeb0jwVM_ ",
+          "date_time": "2026-02-06 15:00:50.738",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Tail Activewear: Last chance: 20% off full-price styles you\u0027ll love for years. No code needed, shop now! tailactivewear.attn.tv/a8IigoJtIER- \n ",
+          "date_time": "2026-02-08 15:01:06.974",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Tail Activewear: We miss you! Have you seen our new arrivals? Shop today and save 20% off with code HELLO20. Shop now: https://tailactivewear.attn.tv/amGX87OEltS_",
+          "date_time": "2026-02-14 12:38:53.577",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m trying to make a purchase and my cart initially shows the discount but when I go to check out it takes the discount away. Can you please help?",
+          "date_time": "2026-02-14 13:15:07.247",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5d5f-d15e-409c-f000-00003688e7b8",
+          "message_text": "Tail Activewear: Thank you for reaching out. I\u0027m sorry to hear that your code is not working. Can you please send me a screenshot of the items in your cart? This will help me troubleshoot the possible problem of why the code didn\u0027t work.\n\nAlso, please note that discount codes do not work on items that are on sale. I hope this helps.",
+          "message_type": "agent",
+          "agent": "48804",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 13:18:06.587"
+        },
+        {
+          "message_id": "019c5d77-dfff-44c9-f000-00003688e7b8",
+          "message_text": "Tail Activewear: Thank you so much for the screenshot and I\u0027m so sorry for the delay in responding back.\nI have tried on my end, and it worked! Can you please try accessing it through this checkout link - https://tailactivewear.attn.tv/ap3rHuiPSwvY\nLet me know how it goes!",
+          "message_type": "agent",
+          "agent": "109964",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 13:44:23.193"
+        }
+      ]
     },
     "172": {
-      "id": "019bec21-e591-4935-f000-00001468aa0f",
-      "companyName": "Saranghae",
-      "companyWebsite": "https://lovesaranghae.com",
-      "agentName": "Jordan",
-      "agentInitial": "S",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for discount code issues",
-          "Send to CS for payment method updates",
-          "Send to CS for shipping address changes/edits"
-        ]
-      },
-      "SystemMessage1": "Saranghae: If your skin is sensitive AND breakout-prone, we did not forget you. Azalume 10 is unscented and made without added fragrance. Use code HOT15 for 15% Off!\nShop here: 👉 lovesaranghae.attn.tv/aJehSOsAKLvQ",
-      "SystemMessage2": "Saranghae: Not all acne care needs to be aggressive. We focused on calming bacteria, reducing redness, and supporting skin healing over time. Use code HOT15 for 15% Off!\nShop here: 👉 lovesaranghae.attn.tv/an6y7avleTZi",
-      "SystemMessage3": "Saranghae: If you deal with lingering acne marks or uneven tone, we formulated Azalume 10 with that in mind. Gentle enough for daily use. Use code HOT15 for 15% Off!\nShop here: 👉 lovesaranghae.attn.tv/a8r_kvuOyT5s",
-      "SystemMessage4": "Saranghae: Dark spots, uneven tone, surprise blemishes? This two step system addresses all three. Use code HOT15 for 15% off. Shop here: lovesaranghae.attn.tv/a4GEVdCSPNO-",
-      "SystemMessage5": "Saranghae: Brightening, calming, correcting. Without irritation. Without shortcuts. Use code HOT15 for 15% off!\nSee it here: ➡️ lovesaranghae.attn.tv/aED5hBpnJ53l",
-      "SystemMessage6": "Saranghae: A routine designed for skin that's doing a lot right now.\nTake a look: lovesaranghae.attn.tv/arg5qqR7SPXX",
-      "SystemMessage7": "Saranghae: Hormonal breakouts don't need harsh solutions. Azalume 10 was made for this. Use code HOT15 for 15% Off!\nShop here: 👉 lovesaranghae.attn.tv/aWamP5q_5JkY",
-      "SystemMessage8": "Saranghae: Hey Saranghae VIPS! It's time for a refresh. Don't miss out on our Members Sale with 20% off. Use code: JANVIP20 and save!\nlovesaranghae.attn.tv/a5iDkyHJvFuG",
-      "SystemMessage9": "Saranghae: Hey Maria Cherr, this is Jordan. Thanks for checking out our site! 😊 https://lovesaranghae.attn.tv/au2hG9VmjEyZ \n\nAny questions I can answer for you?",
-      "customerMessage1": "I was just wondering why There's nothing on my order history.",
-      "AgentMessage1": "Saranghae: I'm sorry about that! Did you make sure to log in with the email address associated with your orders? If so, can you share that email address?",
-      "customerMessage2": "prettycherr@yahoo.com or cherrkp@gmail.com",
-      "customerMessage3": "I am sorry for constantly changing or rescheduling my next order.",
-      "AgentMessage2": "Saranghae: Thanks for the info! Before checking this further, could you let me know when you placed your order? Could you also check if you received a confirmation email or if there's a charge on your account? Sometimes the email might arrive in your spam or promo folder, so be sure to take a look there too!",
-      "customerMessage4": "I saw on your website that there should be at least 2 orders per year.  I only had 1 order last year though.",
-      "customerMessage5": "Let me check",
-      "AgentMessage3": "Saranghae: Sure! I'll be here.",
-      "customerMessage6": "It was on 5/17/2025",
-      "customerMessage7": "\"",
-      "SystemMessage10": "Template used: \"Site won't work - All brands\"; last updated: 2025-07-16 17:54:02.115",
-      "AgentMessage4": "Saranghae: Thanks for the image, and I'm sorry for the inconvenience. When you click on the \"View Order Details\" in the email, you should be redirected to your order details page. Did you try that already? Also, I might suggest trying to open the site in an incognito or private window to rule out any browser cache or extension issues.",
+      "agentName": "Alex",
+      "id": "019c53b5-b9d2-4f86-f000-0000fae50ccc",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://lovesaranghae.com",
+          "value": "https://ekster.com/",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "The Complete 5-Step Skincare Routine With Triple Mushroom Complex: Reishi + Chaga + Sang Hwang",
-            "link": "https://lovesaranghae.com/products/complete-5-step",
-            "icon": "eye"
-          },
-          {
-            "item": "Saranghae Myeong Jo Trio",
-            "link": "https://lovesaranghae.com/products/saranghae-myeong-jo-trio",
-            "icon": "eye"
-          },
-          {
-            "item": "Saranghae Azalume 10 Serum with 10% Glycinated Azelaic Acid + 2% Niacinamide + 1% Alpha Arbutin - Single",
-            "link": "https://lovesaranghae.com/products/saranghae-azalume-10-serum-with-10-glycinated-azelaic-acid-2-niacinamide?externalId=R6ID1",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://ekster.com/",
+      "companyName": "Ekster",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues"
+        ],
+        "dos_and_donts": [
+          "18K Gold Cardholder is no longer to be continued nor restocked"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Ekster: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Ekster.",
+          "date_time": "2026-02-12 15:53:12.075",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ekster: Welcome to Ekster! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: ekster.attn.tv/cl/qEH",
+          "date_time": "2026-02-12 15:53:29.161",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ekster: Click here for up to 45% off Valentine\u0027s Day Sale and get a free gift with orders over $110!\n\nekster.attn.tv/aawSD5Hr4iP7 ",
+          "date_time": "2026-02-12 15:53:33.181",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ekster: Hey , this is Alex . Thanks for checking us out! 😊 ekster.attn.tv/aXpt4wZwNJsh \n\nAny questions I can answer for you? \n",
+          "date_time": "2026-02-12 15:56:26.925",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Is the cardholder pro MagSafe on the 45% sale",
+          "date_time": "2026-02-12 15:57:16.319",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c53a5-4a0a-4d8a-f000-0000fae50ccc",
+          "message_text": "Ekster: Yes, the Cardholder Pro for MagSafe is included in the sale. You can check it out here: https://ekster.attn.tv/a_U84pEcpxft",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 15:57:47.329"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It shows it\u0027s still at the normal $129 price point",
+          "date_time": "2026-02-12 16:07:35.250",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c53b5-b9d2-4f86-f000-0000fae50ccc",
+          "message_text": "Ekster: Sorry, the Cardholder Pro for MagSafe is excluded from the offer. I hope this helps! If you have any questions, feel free to text me.",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 16:15:44.493"
+        }
+      ]
     },
     "173": {
-      "id": "019be62b-3fc9-4171-f000-0000d5895477",
-      "companyName": "Modern Gents Trading Co",
-      "companyWebsite": "https://modgents.com",
-      "agentName": "Sarah",
-      "agentInitial": "M",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over!"
-        ]
-      },
-      "SystemMessage1": "Modern Gents: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Modern Gents.",
-      "SystemMessage2": "Modern Gents: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/Rnh",
-      "SystemMessage3": "Modern Gents: Yay! You're in!\n\nGet 80% off a single item! \nCode: MG80\n\n*Must have 2 items in cart\n\nShop Now: modgents.attn.tv/aler_lk4RqKE",
-      "SystemMessage4": "Modern Gents: One more thing... Add us to your contacts for special perks! :)",
-      "SystemMessage5": "Modern Gents: Cindy, You're a VIP now! Here's $10 credit on your next order >$50. Code: 2pUs1o Expires in 72 hrs! https://modgents.attn.tv/a6wq9J6bMzR6 .",
-      "SystemMessage6": "Modern Gents: OMG you unlocked 70% off a single item!\n\nmodgents.attn.tv/ahi9pgYSr20E\n\nShop now, pay later w/ Klarna, Sezzle or Shop Pay\n\nHurry! Offer ends soon!",
-      "SystemMessage7": "Modern Gents: Hey Cindy! I picked a few pieces I think you'd love such as:The Adele. \n\nHere is a personalized link with some bonus credit just for you: modgents.attn.tv/aJqNVEWYhc4B\n\n- Sam",
-      "SystemMessage8": "Modern Gents: Oh no! Your 70% off a single item offer expires this weekend!\n\nUse code: MY70 @checkout\n\nmodgents.attn.tv/aVZwYo0qFYhK\n\nMust have 2 items in cart",
-      "SystemMessage9": "Modern Gents: FYI your VIP offer ends tomorrow!\n\n70% OFF A SINGLE ITEM!\n*must have 2 items in cart\n\nmodgents.attn.tv/awe6TTHsXtrq\n\nPay later w/ Klarna or Sezzle",
-      "SystemMessage10": "Modern Gents: We dropped store credit in your acct!\n\nUse code: STBN8W @checkout (exp soon) modgents.attn.tv/a7He2nkCmX2J\n\nPay later w/Shop, Klarna or Sezzle",
-      "SystemMessage11": "Modern Gents: Your Store Credit expires soon :(\n\nRedeem it at checkout with code: STBN8W\n\nmodgents.attn.tv/axlfU83Zp-z_\n\nPS: It's use it or lose it!",
-      "SystemMessage12": "Modern Gents: OMG. WE JUST DROPPED A NEW RING!\n\nmodgents.attn.tv/a8A25n2yOaIa\n\nPS: Your Store Credit Expires this weekend!\n\nUse Your VIP Code: STBN8W @checkout",
-      "SystemMessage13": "Modern Gents: Hey Cindy! Don't forget your discount on your curated shopping cart here:\n modgents.attn.tv/aquXR0ZIueiE\n If you're deciding, The Adele is a great match.\nDON'T WAIT - this offer disappears in 24 hours. \n- Sam",
-      "SystemMessage14": "Modern Gents: LAST CHANCE\nYour store credit expires tomorrow\n\nUse code: STBN8W @checkout b4 it's gone!\nmodgents.attn.tv/aulS6AEoiJ9E\n\nPay Later w/Shop or Klarna",
-      "SystemMessage15": "Modern Gents: Looks like you're already on our list :)\n\nGet 70% off a single item! \nCode: MG70\n\n*Must have 2 items in cart\n\nShop Now: modgents.attn.tv/cl/wfg\n\nHURRY, THIS OUR BEST DEAL OF THE YEAR!",
-      "SystemMessage16": "Modern Gents: Something exciting is here! The Tanzanite Halo Engagement Ring shows off a cushion halo and simulated tanzanite center for a refined, wearable look you'll love.\n\nUse code BA2A5s for 25% off; free standard shipping applies, so use your code at checkout.\n\nTAKE a closer look: https://modgents.attn.tv/aD-hWcdNcJFW . Act fast.",
-      "SystemMessage17": "Modern Gents: Something exciting is here! The Pink Sapphire Halo Ring is handcrafted with a pink sapphire and sparkling simulated diamonds in sterling silver to elevate your everyday look and feel special.\n\nUse code BA2A5s for 25% off; free standard shipping applies.\n\nTry it on here: https://modgents.attn.tv/aONylbTR5qur . LIMITED TIME",
-      "customerMessage1": "I just ordered this without the discount 😡",
-      "SystemMessage18": "Template used: \"Customer support\"; last updated: 2023-01-11 21:08:45.644",
-      "AgentMessage1": "Modern Gents: Sprry about that. The best way to handle this is to email us directly at hello@modgents.com or give us a call at 800-619-7078. Our team is happy to help!",
+      "agentName": "Taylor",
+      "id": "019c5d96-df41-4c87-f000-0000f5aaf08c",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://modgents.com",
+          "value": "https://lamsonproducts.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "The Halo - Pink Sapphire",
-            "link": "https://modgents.com/products/the-halo-pink-sapphire",
-            "icon": "eye"
-          },
-          {
-            "item": "The Halo - Tanzanite",
-            "link": "https://modgents.com/products/the-halo-tanzanite?Size=7.5",
-            "icon": "eye"
-          },
-          {
-            "item": "The Halo - Tanzanite",
-            "link": "https://modgents.com/products/the-halo-tanzanite?Size=7.5",
-            "icon": "eye"
-          },
-          {
-            "item": "The Halo - Emerald",
-            "link": "https://modgents.com/products/the-halo-emerald",
-            "icon": "eye"
-          },
-          {
-            "item": "The Evermore",
-            "link": "https://modgents.com/products/the-evermore",
-            "icon": "eye"
-          }
+        }
+      },
+      "companyWebsite": "https://lamsonproducts.com",
+      "companyName": "Lamson Products",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for loyalty points inquiries, we don\u0027t have the answer to",
+          "Send to CS for loyalty points issues",
+          "Send to CS immediately for anything time sensitive:",
+          "→ Order corrections,",
+          "→ Damaged, missing items",
+          "→ Discount code is not working after troubleshooting"
         ],
-        "orders": [
-          {
-            "orderNumber": "6404541677763",
-            "orderDate": "",
-            "link": "https://modern-bro.myshopify.com/products/the-halo-pink-sapphire",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "The Halo - Pink Sapphire",
-                "price": "130",
-                "currency": "USD",
-                "productLink": "https://modern-bro.myshopify.com/products/the-halo-pink-sapphire"
-              },
-              {
-                "name": "The Halo - Pink Sapphire",
-                "price": "130",
-                "currency": "USD",
-                "productLink": "https://modern-bro.myshopify.com/products/the-halo-pink-sapphire"
-              },
-              {
-                "name": "The Halo - Tanzanite",
-                "price": "130",
-                "currency": "USD",
-                "productLink": "https://modern-bro.myshopify.com/products/the-halo-tanzanite"
-              },
-              {
-                "name": "The Halo - Tanzanite",
-                "price": "130",
-                "currency": "USD",
-                "productLink": "https://modern-bro.myshopify.com/products/the-halo-tanzanite"
-              }
-            ],
-            "total": "260"
-          },
-          {
-            "orderNumber": "6384324051139",
-            "orderDate": "",
-            "link": "https://modern-bro.myshopify.com/products/the-halo-emerald",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "The Halo - Emerald",
-                "price": "114.95",
-                "currency": "USD",
-                "productLink": "https://modern-bro.myshopify.com/products/the-halo-emerald"
-              },
-              {
-                "name": "The Halo - Emerald",
-                "price": "114.95",
-                "currency": "USD",
-                "productLink": "https://modern-bro.myshopify.com/products/the-halo-emerald"
-              },
-              {
-                "name": "The Monroe",
-                "price": "124.95",
-                "currency": "USD",
-                "productLink": "https://modern-bro.myshopify.com/products/the-monroe"
-              },
-              {
-                "name": "The Monroe",
-                "price": "124.95",
-                "currency": "USD",
-                "productLink": "https://modern-bro.myshopify.com/products/the-monroe"
-              }
-            ],
-            "total": "239.9"
-          }
+        "tone": [
+          "Don\u0027t say \"No problem\", say \"You\u0027re welcome\" instead"
         ]
       },
-      "orders": [
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "messageTone": "Formal",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "6404541677763",
-          "order_status_url": "https://modern-bro.myshopify.com/products/the-halo-pink-sapphire",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://modern-bro.myshopify.com/products/the-halo-pink-sapphire",
-              "product_name": "The Halo - Pink Sapphire",
-              "product_price": 130
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://modern-bro.myshopify.com/products/the-halo-pink-sapphire",
-              "product_name": "The Halo - Pink Sapphire",
-              "product_price": 130
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://modern-bro.myshopify.com/products/the-halo-tanzanite",
-              "product_name": "The Halo - Tanzanite",
-              "product_price": 130
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://modern-bro.myshopify.com/products/the-halo-tanzanite",
-              "product_name": "The Halo - Tanzanite",
-              "product_price": 130
-            }
-          ],
-          "total": 260
+          "message_type": "system",
+          "message_text": "Lamson Products: Welcome to Lamson Products! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-01-23 13:57:11.277",
+          "message_media": [
+            
+          ]
         },
         {
-          "currency": "USD",
-          "order_number": "6384324051139",
-          "order_status_url": "https://modern-bro.myshopify.com/products/the-halo-emerald",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://modern-bro.myshopify.com/products/the-halo-emerald",
-              "product_name": "The Halo - Emerald",
-              "product_price": 114.95
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://modern-bro.myshopify.com/products/the-halo-emerald",
-              "product_name": "The Halo - Emerald",
-              "product_price": 114.95
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://modern-bro.myshopify.com/products/the-monroe",
-              "product_name": "The Monroe",
-              "product_price": 124.95
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://modern-bro.myshopify.com/products/the-monroe",
-              "product_name": "The Monroe",
-              "product_price": 124.95
-            }
+          "message_type": "system",
+          "message_text": "Lamson Products: Welcome! Receive 20% off your next order. Use code LAMSON20. *Cannot be combined with any other offers. Shop now: https://lamsonproducts.attn.tv/aBNNNKof6erO ",
+          "date_time": "2026-01-23 13:57:15.242",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lamson Products: Don\u0027t forget to save our contact to get exclusive updates!",
+          "date_time": "2026-01-23 13:58:22.877",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lamson Products: Still deciding? Don\u0027t forget about your 20% off your next order. Use code LAMSON20. *Cannot be combined with any other offers. Shop now: https://lamsonproducts.attn.tv/aMOew4zbs5Xe ",
+          "date_time": "2026-01-26 13:58:26.847",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lamson Products: Two styles. One timeless tool. Buy a Vintage or Forged Nakiri \u0026 receive a free handcrafted leather sheath. lamsonproducts.attn.tv/acb8lLNxEuYP ",
+          "date_time": "2026-01-29 16:25:11.203",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lamson Products: Care is what turns a great tool into a legacy. Our simple care essentials help protect your Lamson kitchen tools for generations. Explore them here: lamsonproducts.attn.tv/a5G5fO9p5eIp ",
+          "date_time": "2026-02-05 17:00:33.633",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lamson Products: Hey, this is Taylor. Thanks for checking out Lamson Products! lamsonproducts.attn.tv/aur5r0E0anuD \n\nAre there any questions I can answer for you?",
+          "date_time": "2026-02-06 16:44:57.584",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lamson Products: Super Bowl Deal: On-the-Go Tail-gater BBQ Sets are 50% OFF today only. Walnut handles. Travel bag included. Get yours: lamsonproducts.attn.tv/aKUXTngjsPQN ",
+          "date_time": "2026-02-08 11:30:16.377",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lamson Products: Cut. Store. Repeat. Celebrate National Pizza Day! Pizza Rockers \u0026 Leather Sheaths - 50% Off Each Today Only (2/19). lamsonproducts.attn.tv/a3BgjtuZc6Zy ",
+          "date_time": "2026-02-09 11:55:13.153",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lamson Products: Hosting begins long before guests arrive. For Valentine\u0027s Week, enjoy 20% off thoughtfully crafted hosting essentials-designed for prep, presentation, and effortless entertaining. Shop now: lamsonproducts.attn.tv/aBq5sQgM9vQs ",
+          "date_time": "2026-02-12 12:30:32.754",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lamson Products: The perfect gift, right on time. For Valentine\u0027s Day, enjoy 20% off digital gift cards-delivered instantly and designed to let them choose pieces they\u0027ll reach for again and again. Shop now: lamsonproducts.attn.tv/ajZL-TF_z-ax ",
+          "date_time": "2026-02-13 16:25:13.511",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lamson Products: Hey there , this is Taylor. I see you left something in your cart. lamsonproducts.attn.tv/aqCk7I0B-Lm5 \n\nAny questions I can answer for you? ",
+          "date_time": "2026-02-14 13:06:16.035",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Whats the difference between the brad Leone santoku and the 8\" santoku that doesn\u0027t say his name",
+          "date_time": "2026-02-14 13:17:52.827",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5d76-fed9-49f7-f000-0000f5aaf08c",
+          "message_text": "Lamson Products: Good question! The difference is that the Premier Forged 8′′ Chinese Santoku Cleaver Knife is a single, fully forged knife from our Premier line, while the Brad Leone Signature Set - Large and Small Chinese Santoku Knife Cleavers includes two knives (large and small) designed in collaboration with Brad Leone and offered with either Walnut or Midnight G-10 handles. I hope this helps!",
+          "message_type": "agent",
+          "agent": "35256",
+          "message_media": [
+            
           ],
-          "total": 239.9
+          "date_time": "2026-02-14 13:43:25.552"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "There is a third that looks identical to the Brad Leone one but doesn\u0027t say his name",
+          "date_time": "2026-02-14 13:44:40.043",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5d96-df41-4c87-f000-0000f5aaf08c",
+          "message_text": "Lamson Products: Thanks for sending that in! While it may appear similar, the Brad Leone Signature set is a distinct product. It features unique design elements, materials, and branding that set it apart from the unbranded version. You can also find the Brad Leone Signature collection here: https://lamsonproducts.attn.tv/aqKRQWVusK1s/ ",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 14:18:14.622"
         }
       ]
     },
     "174": {
-      "id": "019bb3b2-c6c6-4c2e-f000-0000a3b4e471",
-      "companyName": "Lake Pajamas",
-      "companyWebsite": "https://lakepajamas.com",
-      "agentName": "Lucy",
-      "agentInitial": "L",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "For any inquiries about the price changes, use the temp \"Why has the price changed?\"",
-          "For any inquiries about the wildfires in LA affecting shipping rerouthing, send to CS"
-        ],
-        "escalate": [
-          "ESC if cx is upset!",
-          "ESC post-purchase inquiries immediately!",
-          "ESC bridal product/order questions!"
-        ],
-        "tone": [
-          "Be clear about the sales schedules and policies",
-          "Avoid conveying that we have a lot of sales or promotions"
-        ],
-        "templates": [
-          "If cx's ask when/how often do we have sales, use DHS shortcut",
-          "For price adjustment inquiries, use PAE shortcut"
-        ],
-        "drive_to_purchase": [
-          "Always suggest another option if what they want is out",
-          "Do not DTP before the start of a sale!"
-        ]
-      },
-      "SystemMessage1": "LAKE: Psst... your cart is lonely. Pick up where you left off: lakepajamas.attn.tv/ajAVRMN95cMP .",
-      "SystemMessage2": "LAKE: You are already subscribed. Click here to shop now: https://lakepajamas.attn.tv/l/VIu/AAAAA .",
-      "SystemMessage3": "LAKE: Ground shipping ends tonight. Place your order now for Christmas delivery with standard shipping. Get your gifts in time: lakepajamas.attn.tv/aoI3xJk5oP9i .",
-      "SystemMessage4": "LAKE: A holiday treat: Complimentary expedited shipping on orders over $200. Order by 12/21 and shop now: lakepajamas.attn.tv/a2iOYl2bTni0 .",
-      "SystemMessage5": "LAKE: The Valentine's Day Shop just opened, full of new styles to celebrate. Sleep is your love language: lakepajamas.attn.tv/a2SpFnNz1STq .",
-      "SystemMessage6": "LAKE: You are already subscribed. Click here to shop now: https://lakepajamas.attn.tv/l/VIu/AAAAA .",
-      "SystemMessage7": "LAKE: We noticed something caught your eye. It's worth a second look: lakepajamas.attn.tv/a5iPOHzZCMg_ \nReply back with any questions!",
-      "SystemMessage8": "LAKE: The holidays are over, and now you can relax - best achieved in The Comfort Edit. Shop now: lakepajamas.attn.tv/a9N5zwseVcn0 .",
-      "SystemMessage9": "LAKE: We noticed something caught your eye. It's worth a second look: lakepajamas.attn.tv/a-5lUcfC-Yv3 \nReply back with any questions!",
-      "customerMessage1": "When will you be restocking your kimono set in xxs, any color",
-      "SystemMessage10": "Template used: \"Restock \"; last updated: 2024-01-04 00:53:26.240",
-      "AgentMessage1": "LAKE: Thank you so much for your interest. For an estimated restock date, please email us directly at info@lakepajamas.com. Our team is happy to help out! \n\nIn the meantime, what do you think about this instead? https://lakepajamas.attn.tv/alI3UnvRw8c6",
+      "agentName": "Samantha",
+      "id": "019c732d-14fd-4949-f000-0000eb100060",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://lakepajamas.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "DreamModal™ Kimono Pajama Set in Boxwood Vertical Stripe",
-            "link": "https://lakepajamas.com/products/boxwood-vertical-stripe-dreammodal-kimono-pajama-set?variant=42191844311130&utm_campaign=Browse-Abandonment-Message---Oct-2022&utm_source=attentive&utm_medium=text&externalId=forxI",
-            "icon": "eye"
+            "link": "https://comfrt.com/products/anywhere-bag?variant=45247206424620\u0026utm_source=Klaviyo\u0026utm_medium=email\u0026utm_campaign=Email_US_Anywhere_Bag_2.13.25_Friday%20%2801KH7B4G1C32Q7SS65X3RZ8YSX%29\u0026nb_klid=01KB96H9HQ6CXBDCEQVGN1M6S6\u0026_kx=EUvffCQlUnirV1xpKC0CINBkBBGm2USVMsI8gL8AHOKiSnLuKC5o8ETpQa4hYFKq.RJji5T",
+            "item": "Anywhere Bag",
+            "timeAgo": "2026-02-17"
           },
           {
-            "item": "DreamModal™ Kimono Pajama Set in Boxwood Vertical Stripe - M",
-            "link": "https://lakepajamas.com/products/boxwood-vertical-stripe-dreammodal-kimono-pajama-set?variant=42191844311130&utm_campaign=Browse-Abandonment-Message---Oct-2022&utm_source=attentive&utm_medium=text&externalId=forxI",
-            "icon": "eye"
-          },
-          {
-            "item": "DreamModal™ Kimono Pajama Set in Boxwood Vertical Stripe",
-            "link": "https://lakepajamas.com/products/boxwood-vertical-stripe-dreammodal-kimono-pajama-set?variant=42191844311130&utm_campaign=Browse-Abandonment-Message---Oct-2022&utm_source=attentive&utm_medium=text&externalId=forxI",
-            "icon": "eye"
-          },
-          {
-            "item": "DreamModal™ Kimono Pajama Set in Boxwood Vertical Stripe - M",
-            "link": "https://lakepajamas.com/products/boxwood-vertical-stripe-dreammodal-kimono-pajama-set?variant=42191844311130&utm_campaign=Browse-Abandonment-Message---Oct-2022&utm_source=attentive&utm_medium=text&externalId=forxI",
-            "icon": "eye"
-          },
-          {
-            "item": "DreamModal™ Kimono Pajama Set in Boxwood Vertical Stripe - XXS",
-            "link": "https://lakepajamas.com/products/black-pencil-stripe-dreammodal-kimono-pajama-set?variant=42173367976026",
-            "icon": "eye"
+            "link": "https://comfrt.com/products/anywhere-bag?variant=45247206424620\u0026utm_source=Klaviyo\u0026utm_medium=email\u0026utm_campaign=Email_US_Anywhere_Bag_2.13.25_Friday%20%2801KH7B4G1C32Q7SS65X3RZ8YSX%29\u0026nb_klid=01KB96H9HQ6CXBDCEQVGN1M6S6\u0026_kx=EUvffCQlUnirV1xpKC0CINBkBBGm2USVMsI8gL8AHOKiSnLuKC5o8ETpQa4hYFKq.RJji5T",
+            "item": "Anywhere Bag",
+            "timeAgo": "2026-02-13"
           }
         ],
-        "orders": [
-          {
-            "orderNumber": "7190544121946",
-            "orderDate": "",
-            "link": "https://lake-weekend-wear.myshopify.com/products/gift-boxes",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "Gift Box",
-                "price": "10",
-                "currency": "USD",
-                "productLink": "https://lake-weekend-wear.myshopify.com/products/gift-boxes"
-              },
-              {
-                "name": "Pima Short-Long Set in Hydrangea",
-                "price": "124",
-                "currency": "USD",
-                "productLink": "https://lake-weekend-wear.myshopify.com/products/hydrangea-short-long-set"
-              }
-            ],
-            "total": "134"
-          },
-          {
-            "orderNumber": "7189848916058",
-            "orderDate": "",
-            "link": "https://lake-weekend-wear.myshopify.com/products/gift-boxes",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "Gift Box",
-                "price": "10",
-                "currency": "USD",
-                "productLink": "https://lake-weekend-wear.myshopify.com/products/gift-boxes"
-              },
-              {
-                "name": "Pima Short-Long Set in Hydrangea",
-                "price": "124",
-                "currency": "USD",
-                "productLink": "https://lake-weekend-wear.myshopify.com/products/hydrangea-short-long-set"
-              }
-            ],
-            "total": "134"
-          }
+        "source": {
+          "label": "Website",
+          "value": "https://comfrt.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://comfrt.com",
+      "companyName": "Comfrt",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post-purchase issues"
+        ],
+        "escalate": [
+          "ESC if the discount % is not the same as indicated in the automated message"
+        ],
+        "templates": [
+          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
         ]
       },
-      "orders": [
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Sizing questions",
+        "Discount code errors"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "7190544121946",
-          "order_status_url": "https://lake-weekend-wear.myshopify.com/products/gift-boxes",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://lake-weekend-wear.myshopify.com/products/gift-boxes",
-              "product_name": "Gift Box",
-              "product_price": 10
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://lake-weekend-wear.myshopify.com/products/hydrangea-short-long-set",
-              "product_name": "Pima Short-Long Set in Hydrangea",
-              "product_price": 124
-            }
-          ],
-          "total": 134
+          "message_type": "system",
+          "message_text": "Comfrt: Welcome to Comfrt! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-08 18:06:19.597",
+          "message_media": [
+            
+          ]
         },
         {
-          "currency": "USD",
-          "order_number": "7189848916058",
-          "order_status_url": "https://lake-weekend-wear.myshopify.com/products/gift-boxes",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://lake-weekend-wear.myshopify.com/products/gift-boxes",
-              "product_name": "Gift Box",
-              "product_price": 10
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://lake-weekend-wear.myshopify.com/products/hydrangea-short-long-set",
-              "product_name": "Pima Short-Long Set in Hydrangea",
-              "product_price": 124
-            }
+          "message_type": "system",
+          "message_text": "Comfrt: Welcome to Comfrt! We\u0027re so excited to have you. Here\u0027s your exclusive 15% off code: W15SmMvH5\n\nClick here to auto-apply your discount and shop our viral best-sellers: comfrt.attn.tv/aXmoOayzuDK2",
+          "date_time": "2026-02-08 18:06:22.614",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Let\u0027s be friends!\n\nSave our contact to make sure we land directly in your messages.",
+          "date_time": "2026-02-08 18:06:27.649",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Your winter remedy is here.\n\nMeet the Ember Heated Blanket. Perfectly warm, irresistibly soft, and made to feel like a dream you never want to wake up from.\n\nGet cozy: comfrt.attn.tv/aR-GWsSnIj9U",
+          "date_time": "2026-02-11 14:15:35.339",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Upgrade to first class.\n\nThe VIP Airplane Mode Hoodie with a satin-lined hood and eye mask has officially landed! \n\nAlso, four new limited shades just got added to our original collection.\n\nGet it while you can: comfrt.attn.tv/amq74oNqmKTl \n",
+          "date_time": "2026-02-13 15:33:19.149",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Forgot Valentine\u0027s Day is today? Your secret is safe with us.\n\nSend a Comfrt E-Gift Card and let them pick their new favorite set. Delivered instantly.\n\nNo shipping, no stress: comfrt.attn.tv/a0N32k6lHetI \n",
+          "date_time": "2026-02-14 11:17:43.892",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Five brand-new shades. One signature feel.\n\nPair the new Airplane Mode collection with the Anywhere Bag for seamless comfort from takeoff to landing.\n\nUpgrade your travel: comfrt.attn.tv/aj_SXOciGCCb \n",
+          "date_time": "2026-02-18 18:42:14.386",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I am still waiting on my pre-order from November.",
+          "date_time": "2026-02-18 18:49:02.082",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Tracking Info - All brands\"; last updated: 2023-10-10 16:47:28.277",
+          "date_time": "2026-02-18 18:54:20.309",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Pre-order shipping, when will my pre-order arrive?\"; last updated: 2025-05-07 18:45:20.495",
+          "date_time": "2026-02-18 18:54:20.309",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c732d-14fd-4949-f000-0000eb100060",
+          "message_text": "Comfrt: Hi, thanks for reaching out. I completely understand how important it is to receive your order. You\u0027ll get a tracking email as soon as your order ships. If you don\u0027t see it in your inbox, be sure to check your spam and promo folders, sometimes our emails end up there as well. In the meantime, details on your pre-order should be in the order confirmation email sent to you. Please note that this date is an estimate and is not a guaranteed date of delivery or receipt. The estimated delivery date that you receive in your confirmation email is subject to change based on production, supplier availability, or other unforeseen circumstances. Hope this helps.",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
           ],
-          "total": 134
+          "date_time": "2026-02-18 18:54:20.312"
         }
       ]
     },
     "175": {
-      "id": "019bd78b-05a9-4642-f000-0000d3b050d8",
-      "companyName": "Barbell Apparel",
-      "companyWebsite": "https://barbellapparel.com",
-      "agentName": "",
-      "agentInitial": "B",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {},
-      "SystemMessage1": "Barbell Apparel: Hurry! Last chance to get it in time.\n\nOrder by 12 PM CST tomorrow (Dec. 23) with Overnight Shipping selected at checkout to receive your gifts before Christmas day.\n\nShop Now: barbell.attn.tv/aJmLW9mSLG02",
-      "SystemMessage2": "Barbell Apparel: Still need a gift?\n\nOur Gift Cards are delivered instantly via email. No shipping. No waiting. Perfect for last-minute gifts or stocking stuffers.\n\nGive the gift of choice: barbell.attn.tv/aElvo9a617hK",
-      "SystemMessage3": "Barbell Apparel: If you didn't get exactly what you wanted under the tree, your time is now.\n\nUpgrade your lineup with gear built to fit better, move better, and last longer.\n\nTreat yourself: barbell.attn.tv/a9hB7qZzPHi0",
-      "SystemMessage4": "Barbell Apparel: Our Free Hoodie & Flannel Sale ends New Year's Eve at 11:59 PM PST.\n\nGet a Stealth or Foundation Hoodie FREE with any $99+ purchase or upgrade to a Free Frontier Flannel ($128 value) with any order of $198+.\n\nGet Yours Now: barbell.attn.tv/aYC0IOW7U7ep",
-      "SystemMessage5": "Barbell Apparel: LAST CHANCE: Free Hoodie & Flannel Sale ends tonight at 11:59 PM PST!\n\nOrders of $99+ = FREE Stealth or Foundation Hoodie\n\nOrders of $198+ = FREE Frontier Flannel ($128 value)\n\nOnce the clock strikes midnight, the deal is gone for good!\n\nGet Yours Now: barbell.attn.tv/a62qFrBh5GPp",
-      "SystemMessage6": "Barbell Apparel: New Year, Free Gear!\n\nFor a limited time get Free Shorts on orders of $149+ or Free Joggers on orders of $198 or more.\n\nShop Now: barbell.attn.tv/aDaUlqQrUZ27 \n\nDiscount applies automatically when item is added to cart. While supplies last.",
-      "SystemMessage7": "Barbell Apparel: The Adapt Joggers & Shorts just dropped in our all-new Pine colorway!\n\nBuilt for real training with durable stretch, secure pockets, and a locked-in fit.\n\nFor a limited time, get FREE shorts on orders of $149+ or FREE joggers on orders of $199+.\n\nShop Now: barbell.attn.tv/ahyTUmoD2AjX",
-      "SystemMessage8": "Barbell Apparel: Lunar just landed!\n\nA brand new color way in our best-selling Anything Dress Pant & Short.\n\nFor a limited time, get your pair of Lunar Anything Shorts for FREE with any order of $149 or more.\n\nShop Now: barbell.attn.tv/a4xiQWUkm5Nh",
-      "SystemMessage9": "Barbell Apparel: Still looking to upgrade for the new year? For a limited time, get any shorts free with orders of $149+ or any joggers free with orders of $199+.\n\nShop Now: barbell.attn.tv/aNg4snRjRHeH \n\nWhile supplies last.",
-      "SystemMessage10": "Barbell Apparel: You are already subscribed. Click here to shop now: barbellapparel.com .",
-      "SystemMessage11": "Barbell Apparel: Hey Troy ! Join Barbell Elite and get up to $125 in bonus credit for your first month, plus free lifetime products guarantees and size exchanges, free 2-day shipping. barbell.attn.tv/a-n5JGA18ST6",
-      "customerMessage1": "I was looking forward to doing this but Sarah and the \"team\" never followed up with one simple order matter so no i will not pay or obligate  myself to this barbell \"elite\" subscription/membership bc i cannot depend on a follow through with the terms of that agreement by Sarah or the \"team\". I only support this company solely based on the quality of the clothing AND the word of Chadd Wright and his 3 of 7 project company relationship/sponsorship by barbell.  He speaks so highly of \"them\" but i am a pee-on who can not tell him nor would he care to hear of one persons documented issues with his #1 sponsor who he speaks so highly of that i am sure he brings a lot of business to the company probably just as much value to the barbell company by the purchase of items by his viewers ( if not more so) than by the amount barbell invest in Chadd and the 3 of 7 project.",
-      "AgentMessage1": "Barbell Apparel: Thanks for sharing this, and I genuinely apologize for the inconvenience and frustration you've experienced with us. That's not the kind of experience we aim to provide. Since you've emailed the team, have you checked your spam and promo folders for the response from our team? Our emails end up there sometimes.",
-      "customerMessage2": "If you are aware of an email sent back plz send it to my inbox and or text please  because i do not filter or read my spam before deleting them. i do read all of my texts and no response in the matter was ever sent to my text. it is a simple matter and solution that should not be passed off as i didn't check my spam or promo. Barbell had no problem sending me all other correspondence especially the conversation between Sarah and i AND all the \"promos\" including the Elite membership so why woukd the most important correspondence be send and captured as a spam but non of the others?!?  Just resolve this simple matter i have proven that i am a repeat customer who should be valued as such or i do take my documented correspondence to 3of 7 somehow bc i am sure someone there as a fellow Christian would want fairness from a hard working supporter of them and their number one sponsor. Thank you in advance for your appreciation.",
-      "AgentMessage2": "Barbell Apparel: I'm truly sorry for the frustration this has caused. I completely understand how important this matter is to you, and I wish I could resolve it directly. Unfortunately, I don't have access to our emails, so I'm unable to retrieve or review the correspondence myself. The best way forward is to reach out to our team via email, as they are fully equipped to handle these concerns and can provide a proper resolution. Thank you for your patience and for being a valued supporter-we genuinely appreciate it.",
+      "agentName": "Sarah",
+      "id": "019c3e83-a368-4179-f000-0000fa104d95",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://barbellapparel.com",
+          "value": "https://lacoste.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Ultralight Jogger - XXL / Black",
-            "link": "https://barbellapparel.com/products/mens-ultralight-jogger?variant=39450982318152",
-            "icon": "eye"
-          },
-          {
-            "item": "Ultralight Jogger - XXL / Black Multicam",
-            "link": "https://barbellapparel.com/products/mens-ultralight-jogger?variant=51657901179246",
-            "icon": "eye"
-          },
-          {
-            "item": "Ultralight Jogger - S / Black",
-            "link": "https://barbellapparel.com/products/mens-ultralight-jogger",
-            "icon": "eye"
-          },
-          {
-            "item": "Adapt Training Short - XL / Black / 5 Inch",
-            "link": "https://barbellapparel.com/products/adapt-training-short?variant=51813472665966",
-            "icon": "eye"
-          },
-          {
-            "item": "Adapt Training Short - XXL / Black / 5 Inch",
-            "link": "https://barbellapparel.com/products/adapt-training-short?variant=51813472829806",
-            "icon": "eye"
-          }
+        }
+      },
+      "companyWebsite": "https://lacoste.com",
+      "companyName": "Lacoste",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
         ],
-        "orders": [
-          {
-            "orderNumber": "11767054827886",
-            "orderDate": "",
-            "link": "https://barbellapparel.myshopify.com/products/adapt-training-short",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "Adapt Training Short",
-                "price": "98",
-                "currency": "USD",
-                "productLink": "https://barbellapparel.myshopify.com/products/adapt-training-short"
-              },
-              {
-                "name": "Free Returns or Exchanges (US orders only)",
-                "price": "2.98",
-                "currency": "USD",
-                "productLink": "https://barbellapparel.myshopify.com/products/free-returns-or-exchanges-package-protection-us-orders-only"
-              },
-              {
-                "name": "Ultralight Jogger",
-                "price": "114",
-                "currency": "USD",
-                "productLink": "https://barbellapparel.myshopify.com/products/mens-ultralight-jogger"
-              }
-            ],
-            "total": "214.98"
-          }
+        "dos_and_donts": [
+          "Close the convo once the client takes over",
+          "Do use the Holiday Discounts template if you are unsure of the promotion"
         ]
       },
-      "orders": [
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "11767054827886",
-          "order_status_url": "https://barbellapparel.myshopify.com/products/adapt-training-short",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://barbellapparel.myshopify.com/products/adapt-training-short",
-              "product_name": "Adapt Training Short",
-              "product_price": 98
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://barbellapparel.myshopify.com/products/free-returns-or-exchanges-package-protection-us-orders-only",
-              "product_name": "Free Returns or Exchanges (US orders only)",
-              "product_price": 2.98
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://barbellapparel.myshopify.com/products/mens-ultralight-jogger",
-              "product_name": "Ultralight Jogger",
-              "product_price": 114
-            }
+          "message_type": "system",
+          "message_text": "Lacoste: Welcome to Lacoste! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/VyG",
+          "date_time": "2026-02-08 13:00:05.932",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lacoste: Welcome! We\u0027ll text you about new arrivals \u0026 special offers as they happen. Shop now! https://lacoste.attn.tv/a6JarkNxOFBR .",
+          "date_time": "2026-02-08 13:00:08.610",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lacoste: Classic styles, perfect for every season!\n\nDiscover the latest here: https://lacoste.attn.tv/aMCM4lnRq4Wb  .",
+          "date_time": "2026-02-08 13:01:10.272",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Where is my coupon",
+          "date_time": "2026-02-08 13:01:41.809",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lacoste: Men\u0027s Made in France Stripe Neck T-Shirt, Men\u0027s L001 Set Leather Sneakers, Men\u0027s Classic Fit Original L.12.12 Polo, and more wait in your cart.\n\nUse code LAC-GDX-7LS-VFP-4ZW for 15% off, exclusions apply: https://lacoste.attn.tv/aGvxAJ3IOSJk .",
+          "date_time": "2026-02-08 13:15:07.137",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c3e83-a368-4179-f000-0000fa104d95",
+          "message_text": "Lacoste: I apologize for the delay, and for the inconvenience. Kindly find your 15% off code in the message above. Please don\u0027t hesitate to reach out if you have any questions. I\u0027m happy to help.",
+          "message_type": "agent",
+          "agent": "109968",
+          "message_media": [
+            
           ],
-          "total": 214.98
+          "date_time": "2026-02-08 13:29:00.415"
         }
       ]
     }

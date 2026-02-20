@@ -3,347 +3,906 @@
   "chunk": "chunk_0023",
   "scenarios": {
     "111": {
-      "id": "019be684-01d4-4770-f000-0000f42b8d5e",
-      "companyName": "OLLY",
-      "companyWebsite": "https://olly.com",
-      "agentName": "Hannah",
-      "agentInitial": "O",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "ESC order/subscription cancellation requests"
-        ],
-        "dos_and_donts": [
-          "If the customer wants to 'lose weight', don't give out product recommendations, tell them to consult with a healthcare provider",
-          "Don't recommend any products to diagnose, treat, cure, or prevent any disease"
-        ],
-        "drive_to_purchase": [
-          "Refer the customer to Amazon if the product is not available on the website but in-stock there"
-        ],
-        "promo_and_exclusions": [
-          "Codes can NOT be applied to subscription orders",
-          "welcome/rewards codes cannot be applied to seasonal at the moment"
-        ]
-      },
-      "SystemMessage1": "OLLY PBC: Welcome to OLLY PBC! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "OLLY PBC: Welcome to the OLLY family! Your 15% OFF Coupon code is: VN47J7. Limit 1 per customer. Not valid for subscriptions.\n\nHave questions? Text back any time to reach our live concierge team! \n\nShop now: https://olly.attn.tv/aM7mi_L3Fd2Z .",
-      "SystemMessage3": "OLLY PBC: Woohoo! A new OLLY subscription has been created. Click here to review your subscription details: olly.attn.tv/a2Q69OK3gs2_",
-      "SystemMessage4": "OLLY PBC: Congrats on joining our loyalty program! 🎉 Here's 25 points. Login to your account to see more ways to earn: https://olly.attn.tv/aejpsyjZ5wAU .",
-      "SystemMessage5": "OLLY PBC: Thank you for your purchase! Your current rewards balance is 96.68! Log in to see if you can redeem them: https://olly.attn.tv/adghFbEc7dw- .",
-      "SystemMessage6": "OLLY PBC: Let's make it official! Add our contact card to be the first to know about our latest deals, sales, and new launches.",
-      "SystemMessage7": "OLLY PBC: Hi, hello! Hannah here! Is there anything I can help you find? In case you missed it, enter the coupon VN47J7 at checkout for a discount off your next purchase: https://olly.attn.tv/atOlv4B8B1Uu .",
-      "SystemMessage8": "OLLY PBC: Saving 30% off OLLY Body during a long weekend? Yes, please! $6.99 for a limited time only. olly.attn.tv/aTQd3qFtdXoT",
-      "SystemMessage9": "OLLY PBC: Let's rise above the \"blah\" this year, shall we? Your comeback starts with a little extra Vitamin D. Grab your bottle of Hello Happy: olly.attn.tv/a1LXw7jqJdHk",
-      "SystemMessage10": "OLLY PBC: Hey friend!\n\nYou have 96.68 points outstanding!\n\nDon't miss out - shop now https://olly.attn.tv/aH_Eq1D97S6V .",
-      "customerMessage1": "I haven't Received my Olly Sleepy gummy's",
-      "AgentMessage1": "OLLY PBC: I'm really sorry for the trouble! Upon checking, your order is still en route. The estimated delivery date is today. Since your package is currently with the carrier, it's best to contact them directly here: https://olly.attn.tv/agJegG6eQzCn. They are the ones most capable of helping you on this matter!",
+      "agentName": "Sarah",
+      "id": "019c44d3-a344-495a-f000-0000d5e3a4b9",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://olly.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "Sleep Blackberry Zen - 30 Serving Pouch",
-            "link": "https://www.olly.com/products/sleep?variant=28456493776960",
-            "icon": "eye"
+            "link": "https://www.greenpan.us/products/greenlife-ceramic-nonstick-muffin-pan-navy-1",
+            "item": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze - Blue Haze",
+            "timeAgo": "2026-02-09"
+          },
+          {
+            "link": "https://www.greenpan.us/products/greenlife-ceramic-nonstick-muffin-pan-black",
+            "item": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze - Blue Haze",
+            "timeAgo": "2026-02-09"
+          },
+          {
+            "link": "https://www.greenpan.us/products/greenlife-ceramic-nonstick-muffin-pan-pink",
+            "item": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze - Blue Haze",
+            "timeAgo": "2026-02-09"
+          },
+          {
+            "link": "https://www.greenpan.us/products/greenlife-ceramic-nonstick-muffin-pan-blue-haze",
+            "item": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze - Blue Haze",
+            "timeAgo": "2026-02-09"
+          },
+          {
+            "link": "https://www.greenpan.us/products/greenlife-ceramic-nonstick-muffin-pan-navy-1",
+            "item": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze - Blue Haze",
+            "timeAgo": "2026-02-09"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://greenpan.us",
+          "date": ""
+        },
+        "orders": [
+          {
+            "link": "https://www.greenpan.us/53112176808/orders/417f2a9010b8799febc4186c089acceb/authenticate?key=bd6fea1a946c850a021dbaa1c1195a92",
+            "orderDate": "2026-02-02",
+            "total": 99.91,
+            "orderNumber": "723063",
+            "items": [
+              {
+                "price": [
+                  29.99
+                ],
+                "productLink": "https://greenpan-us.myshopify.com/products/greenlife-ceramic-nonstick-muffin-pan-blue-haze",
+                "name": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze"
+              },
+              {
+                "price": [
+                  19.99
+                ],
+                "productLink": "https://greenpan-us.myshopify.com/products/premiere-silicone-flat-whisk-oxford-blue",
+                "name": "Premiere Silicone Flat Whisk | Oxford Blue"
+              },
+              {
+                "price": [
+                  29.99
+                ],
+                "productLink": "https://greenpan-us.myshopify.com/products/greenlife-ceramic-nonstick-muffin-pan-navy-1",
+                "name": "GreenLife Ceramic Nonstick Muffin Pan | Navy"
+              },
+              {
+                "price": [
+                  4.95
+                ],
+                "productLink": "https://greenpan-us.myshopify.com/products/routeins",
+                "name": "GreenPan\u0027s Shipping Protection"
+              },
+              {
+                "price": [
+                  14.99
+                ],
+                "productLink": "https://greenpan-us.myshopify.com/products/greenlife-easy-reach-silicone-spatula-2-piece-set-turquoise",
+                "name": "GreenLife Easy Reach Silicone Spatula, 2-Piece Set | Turquoise"
+              }
+            ]
+          },
+          {
+            "link": "https://www.greenpan.us/53112176808/orders/417f2a9010b8799febc4186c089acceb/authenticate?key=bd6fea1a946c850a021dbaa1c1195a92",
+            "orderDate": "2026-02-02",
+            "total": 105.9,
+            "orderNumber": "723063",
+            "items": [
+              {
+                "price": [
+                  14.99
+                ],
+                "productLink": "https://greenpan-us.myshopify.com/products/greenlife-easy-reach-silicone-spatula-2-piece-set-turquoise",
+                "name": "GreenLife Easy Reach Silicone Spatula, 2-Piece Set | Turquoise"
+              },
+              {
+                "price": [
+                  29.99
+                ],
+                "productLink": "https://greenpan-us.myshopify.com/products/greenlife-ceramic-nonstick-muffin-pan-navy-1",
+                "name": "GreenLife Ceramic Nonstick Muffin Pan | Navy"
+              },
+              {
+                "price": [
+                  19.99
+                ],
+                "productLink": "https://greenpan-us.myshopify.com/products/premiere-silicone-flat-whisk-oxford-blue",
+                "name": "Premiere Silicone Flat Whisk | Oxford Blue"
+              },
+              {
+                "price": [
+                  29.99
+                ],
+                "productLink": "https://greenpan-us.myshopify.com/products/greenlife-ceramic-nonstick-muffin-pan-blue-haze",
+                "name": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze"
+              },
+              {
+                "price": [
+                  4.95
+                ],
+                "productLink": "https://greenpan-us.myshopify.com/products/routeins",
+                "name": "GreenPan\u0027s Shipping Protection"
+              }
+            ]
+          }
+        ]
       },
-      "orders": []
+      "companyWebsite": "https://greenpan.us",
+      "companyName": "Greenpan",
+      "notes": {
+        "send_to_cs": [
+          "For the following inbound message types use PPI shortcut:",
+          "➜ Post-purchase issues",
+          "➜ Product-specific questions \u0026 any q\u0027s about materials/heating/temperature-based q\u0027s etc.",
+          "➜ Damaged orders",
+          "➜ Any q\u0027s regarding aluminum or aluminium issues",
+          "➜ Voltage / Wattage inquiries",
+          "➜ Complaints about the quality of the products",
+          "➜ Q\u0027s about product differences/comparison",
+          "➜ Warranty issues",
+          "➜ Any q\u0027s or comments about the lawsuit"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Don\u0027t say words like \"I\u0027m not sure, or certain\"",
+          "Add \"Happy cooking!\" when closing a convo!",
+          "Let the cx have the last word"
+        ],
+        "templates": [
+          "For product recommendations, use DHR shortcut"
+        ],
+        "drive_to_purchase": [
+          "Send links to collections if customers aren\u0027t looking for a specific product!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: FINAL WEEKEND TO SAVE!\n\nUp to 60% Off Sitewide + FREE Cookbook. New year glow-up starts in the kitchen. \n\nShop Now: greenpan.attn.tv/axSi4jxUulbL ",
+          "date_time": "2026-01-18 17:40:12.491",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: This is it! FINAL HOURS!\n\nNew Year New You Sale: Up to 60% Off Sitewide + FREE Gift.\n \nDon\u0027t miss your chance to reset: greenpan.attn.tv/aJ1voGico42y ",
+          "date_time": "2026-01-22 18:20:05.703",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Lowest Prices of the Season Start... NOW!\n \nOur Premiere Air Fryer Oven is just $319.99 (reg $399.99) + Free Shipping + Free Cookbook.\n \nAir fry wings, toast sliders, bake dips and so much more - perfect for game day and every gathering. \n \nShop Now: greenpan.attn.tv/a9mFcHYUd7RS ",
+          "date_time": "2026-01-24 13:30:11.867",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Game Day Made Easy! \n \nOur large capacity Locking Lid Slow Cooker ensures your favorite chilis, pulled pork, queso \u0026 more can go from kitchen to party without spills. Set it, forget it, and keep everything warm through every quarter. (Plus, clean-up is a breeze with our PFAS-free nonstick!)\n \nOrder TODAY to get your slow cooker for Game Day + FREE Shipping: greenpan.attn.tv/aVF9snImuEgZ ",
+          "date_time": "2026-01-26 17:20:05.961",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Hi Jenna, this is Sarah from GreenPan. Thanks for checking out our site! 😊 greenpan.attn.tv/ae0fAaUfNO6d Is there a product we can help you find?",
+          "date_time": "2026-01-26 18:39:21.741",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Hey Jenna! Holding off on that new recipe because of missing essentials? \n\nLet\u0027s change that, what product can I make a recommendation for today?\n\ngreenpan.attn.tv/aIuiWb8JdRYU .",
+          "date_time": "2026-01-27 18:39:36.777",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: LOWEST Price of the Season!\n \nOur 5-Star Rated Spectra Hybrid 10-Piece Set is $120 OFF + Free Shipping + Free Utensil Set.\n \nPowered by our advanced Thermobond technology this is the world\u0027s best hybrid cookware.\n \nChoose from stainless or gold handles: greenpan.attn.tv/am5g15lGDinf ",
+          "date_time": "2026-01-28 15:25:05.782",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Love is in the Oven: 48 HOURS ONLY Valentine\u0027s Day Sweetheart Deal\n \n$50 OFF our top-rated Reserve 7-Piece Bakeware Set + FREE Baking Cookbook. \n \nShop bakeware you\u0027ll use long after the chocolate\u0027s gone: greenpan.attn.tv/ain3AckapH9V ",
+          "date_time": "2026-01-31 15:30:10.271",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Thank you for your purchase! Your order number is 723063. View more information about your order here: https://greenpan.attn.tv/anCv6M5sIxrj .",
+          "date_time": "2026-02-02 12:43:48.071",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Hey Jenna, I\u0027m Sarah from GreenPan. Welcome to our exclusive VIP list!\n\nIs there a product we can help you find?\n\nhttps://greenpan.attn.tv/aJKKhfCR5FZw .",
+          "date_time": "2026-02-03 16:50:35.059",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Green by design, our cookware is forever free of forever chemicals. Have you seen our best sellers yet? Shop now: https://greenpan.attn.tv/ak5Q0COCVlRM ",
+          "date_time": "2026-02-04 16:40:34.603",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Hey, it\u0027s Sarah again. I have a quick tip! Make sure to save our contact card, so that you never miss an exclusive VIP offer. \n\nIs there anything else I can help you with?\n\nhttps://greenpan.attn.tv/aDFuOH1GzYYR .",
+          "date_time": "2026-02-05 16:50:40.153",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Hear ye, hear ye: Presidents\u0027 Day Sale Early Access is LIVE!\n \nUp to 50% OFF deals + FREE Cookbook.\n \nShop first: greenpan.attn.tv/al-EInKTY5iX ",
+          "date_time": "2026-02-05 18:35:06.232",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: $100 OFF = Love at First Blend 💘\n\nOur 15-in-1 Frost Ice Cream \u0026 Frozen Drink Maker in Cotton Candy Pink is the sweetest Valentine\u0027s deal... but only for a limited time! \n \nFree Frozen Treat Recipe Book + Free Shipping: greenpan.attn.tv/atMYtQeQistM ",
+          "date_time": "2026-02-06 16:10:07.647",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Great news! Your order (723063) has shipped and will be to you soon. Click here to track your order: https://greenpan.attn.tv/asDLv7WIRhaX .",
+          "date_time": "2026-02-06 16:13:02.226",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Hey Jenna! Holding off on that new recipe because of missing essentials? \n\nLet\u0027s change that, what product can I make a recommendation for today?\n\ngreenpan.attn.tv/aj8HgSr5GKgP .",
+          "date_time": "2026-02-07 17:24:00.760",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Hey Jenna, order #723063 is out for delivery. Track your order here: https://greenpan.attn.tv/a_C2yeRWbOR8 .",
+          "date_time": "2026-02-08 16:12:56.779",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Hey Jenna, order #723063 has been delivered! Track your order here: https://greenpan.attn.tv/aYj45J5Vwc3V .",
+          "date_time": "2026-02-08 16:19:09.014",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GreenPan: Hi Jenna, this is Sarah from GreenPan. Thanks for checking out our site! 😊 greenpan.attn.tv/aL0xCuu9kIu0 Is there a product we can help you find?",
+          "date_time": "2026-02-09 18:46:46.085",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi Sarah I was wondering what the difference was between the blue haze and the navy muffin pan was?",
+          "date_time": "2026-02-09 18:47:50.011",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c44d3-a344-495a-f000-0000d5e3a4b9",
+          "message_text": "GreenPan: Thank you for reaching out! Just to be sure, are you referring to GreenLife Ceramic Nonstick Muffin Pan? If so, the Blue Haze and Navy muffin pans share the same features, including a heavy-duty steel construction for quick and even heating, and a healthy ceramic nonstick coating for effortless release. Let me know if you need more help!",
+          "message_type": "agent",
+          "agent": "109964",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-09 18:54:06.566"
+        }
+      ]
     },
     "112": {
-      "id": "019be1b5-7300-4e9a-f000-0000eb6524ec",
-      "companyName": "DreamCloud",
-      "companyWebsite": "https://dreamcloudsleep.com",
-      "agentName": "Sam",
-      "agentInitial": "D",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS, use ESC shortcut",
-          "Use escalation template if customer mentions any of the following:"
-        ],
-        "tone": [
-          "Let the customer have the last word"
-        ]
-      },
-      "SystemMessage1": "DreamCloud: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from DreamCloud.",
-      "SystemMessage2": "DreamCloud: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (833) 237-3269.",
-      "SystemMessage3": "DreamCloud: You're in (& your deal is here)!",
-      "SystemMessage4": "DreamCloud: Upgrade your old mattress for less. Save up to 60% + FREE bedding bundle worth $599. \n\nClaim your savings:\ndreamcloud.attn.tv/an8_X94kE0RZ .",
-      "SystemMessage5": "DreamCloud: Hello, this is Sam. Thanks for checking out DreamCloud! Why wait to sleep better? You can save up to 60% on mattresses right now.\ndreamcloud.attn.tv/a8LXDIHmhG6s\n\nAny questions I can answer for you?\n.",
-      "SystemMessage6": "DreamCloud: Hi, this is Sam. Want even bigger savings on a twin? Save up to 66% when you bundle a mattress + adjustable base (over $1,000 savings!). Just need a mattress? Save up to 60%. If you have questions, text me back!\n\nBundle:\ndreamcloud.attn.tv/aal2biak3Xac \n\nMattress:\ndreamcloud.attn.tv/aQoSrXeptmL2",
-      "customerMessage1": "What is the price on a twin adjustable bed",
-      "AgentMessage1": "DreamCloud: Thank you for your interest! Please know that the Twin XL option of the Premier Adjustable Bed Frame is priced at $699. You can check it out here: https://dreamcloud.attn.tv/aP4E5sfdF-w_ I hope this helps, and please let me know if you have further questions.",
+      "agentName": "Ava",
+      "id": "019c7c2a-4737-4ffb-f000-0000fc4f9a65",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://dreamcloudsleep.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "link": "https://www.dreamcloudsleep.com/mattress?utm_campaign=B-(D)_TH-(BAU)_T-(flow)_ST-()_N-(welcome)_S-()_CT-(nonpurchasers)_SG-(twin)_Nu-(10)_O-(percentoff)_CR-()_TE-(welten010526)_V-(1)_D-(010526)&utm_medium=sms&utm_source=Attentive&externalId=nshr9",
-            "icon": "eye"
+            "link": "https://www.brilliantearth.com/rings/cyorings/purchase_review/?sid=49219836\u0026did=63573304",
+            "item": "3.02 Carat Radiant Lab Diamond",
+            "timeAgo": "2026-02-20"
           },
           {
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "link": "https://www.dreamcloudsleep.com/mattress-bundles/adjustable-frame-bundle?utm_campaign=B-(D)_TH-(BAU)_T-(flow)_ST-()_N-(welcome)_S-()_CT-(nonpurchasers)_SG-(twin)_Nu-(10)_O-(percentoff)_CR-()_TE-(welten010526)_V-(1)_D-(010526)&utm_medium=sms&utm_source=Attentive&externalId=nshr9",
-            "icon": "eye"
+            "link": "https://www.brilliantearth.com/rings/cyorings/purchase_review/?sid=49219836\u0026did=63573304",
+            "item": "18K Yellow Gold Secret Halo 2mm Diamond Ring",
+            "timeAgo": "2026-02-20"
           },
           {
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "link": "https://www.dreamcloudsleep.com/mattress-bundles/adjustable-frame-bundle?utm_campaign=B-(D)_TH-(BAU)_T-(flow)_ST-()_N-(welcome)_S-()_CT-(nonpurchasers)_SG-(twin)_Nu-(10)_O-(percentoff)_CR-()_TE-(welten010526)_V-(1)_D-(010526)&utm_medium=sms&utm_source=Attentive&externalId=nshr9",
-            "icon": "eye"
+            "link": "https://www.brilliantearth.com/rings/cyorings/purchase_review/?sid=49219836\u0026did=63573304",
+            "item": "18K Yellow Gold Secret Halo 2mm Lab Diamond Ring",
+            "timeAgo": "2026-02-20"
           },
           {
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "link": "https://www.dreamcloudsleep.com/mattress-bundles/adjustable-frame-bundle?utm_campaign=B-(D)_TH-(BAU)_T-(flow)_ST-()_N-(welcome)_S-()_CT-(nonpurchasers)_SG-(twin)_Nu-(10)_O-(percentoff)_CR-()_TE-(welten010526)_V-(1)_D-(010526)&utm_medium=sms&utm_source=Attentive&externalId=nshr9",
-            "icon": "eye"
+            "link": "https://www.brilliantearth.com/rings/cyorings/purchase_review/?sid=49219836\u0026did=63573304",
+            "item": "18K Yellow Gold Secret Halo 2mm Lab Diamond Ring",
+            "timeAgo": "2026-02-18"
           },
           {
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "link": "https://www.dreamcloudsleep.com/mattress-bundles/adjustable-frame-bundle?utm_campaign=B-(D)_TH-(BAU)_T-(flow)_ST-()_N-(welcome)_S-()_CT-(nonpurchasers)_SG-(twin)_Nu-(10)_O-(percentoff)_CR-()_TE-(welten010526)_V-(1)_D-(010526)&utm_medium=sms&utm_source=Attentive&externalId=nshr9",
-            "icon": "eye"
+            "link": "https://www.brilliantearth.com/rings/cyorings/purchase_review/?sid=49219836\u0026did=63573304",
+            "item": "18K Yellow Gold Secret Halo 2mm Diamond Ring",
+            "timeAgo": "2026-02-18"
           }
         ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "113": {
-      "id": "019be62f-5988-426b-f000-0000d9fdaeb4",
-      "companyName": "Sauder",
-      "companyWebsite": "https://sauder.com",
-      "agentName": "Ashley",
-      "agentInitial": "S",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post-purchase inquiries for items purchased through a retailer"
-        ],
-        "templates": [
-          "If customers already purchased use TFP shortcut"
-        ],
-        "tone": [
-          "Let the customer have the last word!"
-        ],
-        "drive_to_purchase": [
-          "Don't recommend Retailer Exclusive items"
-        ],
-        "promo_and_exclusions": [
-          "Discount codes CAN be applied to clearance items"
-        ]
-      },
-      "SystemMessage1": "Sauder: Ring in the New Year with incredible savings! Last chance for blowout deals on over 600 items! Hurry, this sale ends 1/4! sauder.attn.tv/aKddaQWCGmIl",
-      "SystemMessage2": "Sauder: Hey there! We noticed you eyeing something on our site... \n\nDid you have any questions I could help with?\n\n-Ashley\n https://sauder.attn.tv/aYZRuiqo5rTS",
-      "SystemMessage3": "Sauder: Hey, this is Ashley . Thanks for checking out our site! 😊 https://sauder.attn.tv/aUkmvH3UcRrp \n\nAre you looking for anything in particular today?",
-      "SystemMessage4": "Sauder: It looks like you forgot something in your cart...complete your checkout today: \nhttps://sauder.attn.tv/apmo9Fv_j39p",
-      "SystemMessage5": "Sauder: Hey, this is Ashley . Thanks for stopping by! 😊 https://sauder.attn.tv/a98eNs6gKYUb \n\nWhich room are you shopping for today?",
-      "SystemMessage6": "Sauder: Get ready for the BIG GAME! Score 20% OFF select TV stands, credenzas and more! Hurry, deal valid only thru 2.1! sauder.attn.tv/airWrBOmHuKy",
-      "SystemMessage7": "Sauder: Hey, this is Ashley . Thanks for checking out our site! 😊 https://sauder.attn.tv/aHMvGdWkDzLH \n\nAre you looking for anything in particular today?",
-      "customerMessage1": "Hi Ashley, I have an order ready to go in the Score20 promotion. I also have 2 20% discount cards good thru 6/2026 which were issued to me for prior purchases with some damaged parts. Can I use these on my Score20 purchase & if so, how do I include these on my order? Thank you.Ellen Amato",
-      "SystemMessage8": "Template used: \"Can I use two discounts? - All brands\"; last updated: 2023-10-10 16:38:40.074",
-      "AgentMessage1": "Sauder: Thanks for reaching out. We'll definitely appreciate your order. Discount codes can be applied on discounted items but unfortunately, you won't be able to use multiple codes at checkout. Feel free to use the one that gives you the best value! I apologize for the inconvenience. Let me know if there's anything else I can help with! Do check out our clearance page here: https://sauder.attn.tv/aQ4_wzAI2qHK",
-      "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://sauder.com",
+          "value": "https://brilliantearth.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "8-Cube Organizer Storage Bookshelf Mystic Oak",
-            "link": "https://www.sauder.com/furniture/431286/8-cube-organizer-storage-bookshelf-mystic-oak",
-            "icon": "eye"
-          },
-          {
-            "item": "1-Drawer Lateral File Cabinet in Glacier Oak",
-            "link": "https://www.sauder.com/furniture/433625/1-drawer-lateral-file-cabinet-in-glacier-oak",
-            "icon": "eye"
-          },
-          {
-            "item": "1-Drawer Lateral File Cabinet in Glacier Oak",
-            "link": "https://www.sauder.com/furniture/433625/1-drawer-lateral-file-cabinet-in-glacier-oak#content-accordion-anchor",
-            "icon": "eye"
-          },
-          {
-            "item": "1-Drawer Lateral File Cabinet in Glacier Oak",
-            "link": "https://www.sauder.com/furniture/433625/1-drawer-lateral-file-cabinet-in-glacier-oak",
-            "icon": "eye"
-          },
-          {
-            "item": "Utility Stand",
-            "link": "https://www.sauder.com/furniture/418794/utility-stand",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
-    },
-    "114": {
-      "id": "019bc3db-9bf2-41fa-f000-0000495ad9bf",
-      "companyName": "UNTUCKit",
-      "companyWebsite": "https://untuckit.com",
-      "agentName": "Jordan",
-      "agentInitial": "U",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "companyWebsite": "https://brilliantearth.com",
+      "companyName": "Brilliant Earth",
+      "notes": {
         "send_to_cs": [
-          "Send to CS If product recommendation convos are taking too long"
+          "Inquiries regarding orders",
+          "Shipping inquiries on a current order",
+          "Post-purchase issues",
+          "For product or general inquiries you can\u0027t find the answer to, use PGI shortcut"
         ],
         "escalate": [
-          "ESC immediately payment processing issues",
-          "ESC if cx ask to speak to a rep/sales associate from Newstore SMS (this is their clienteling service)",
-          "When a customer asks to be unsubscribed of emails too, use UFE shortcut and ESC after",
-          "For any inquiries about local stores/ in-store shopping, use SI shortcut and ESC with this escalation note:"
+          "No escalations for this client, send everything to CS"
         ],
         "tone": [
-          "Don't reply and close the convo if the customer replies \"no, okay, no thank you or similar \".",
-          "Let the customer have the last word"
+          "Don\u0027t use the word \"unfortunately\" to discuss our appointment structure",
+          "Don\u0027t use the word \"best\" to reference a product (e.g., best ring, etc.)"
         ],
         "templates": [
-          "For cx's who haven't made a purchase before and are looking for free shipping, use NFS shortcut"
+          "If cx are looking for an engagement ring and don\u0027t provide specifics, use LER shortcut"
         ],
         "dos_and_donts": [
-          "There is a scam website using UNTUCKit products, educate cx if they encounter one and redirect to our website"
+          "If the customer responds incorrectly to the journey, don\u0027t send jny temp, recommend items based on their selection instead",
+          "Cx can create their own engagement ring on the webiste by choosing a setting, stone and size",
+          "Cx can customize rings by working with designers who will use their ideas, drawings, images to create the ring they want",
+          "Don\u0027t disclose the locations of their labs/production facilities"
         ],
         "drive_to_purchase": [
-          "Send the customer who's looking to get a fit to our virtual fitter \"Find your fit\"",
-          "If a cx is looking to get something, send a catalogue of offers first, unless they're looking to get something specific",
-          "When sending the SZ template educate the cx about styles that are appropriate for them"
-        ]
-      },
-      "SystemMessage1": "UNTUCKit: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "UNTUCKit: You're officially on the VIP list!\nDiscover your new favorite styles while you can get 40% off full-priced styles!\n\nShop Now: untuckit.attn.tv/a383cdfGLKOm",
-      "SystemMessage3": "UNTUCKit: Thank you for your purchase from UNTUCKit! Your order number is 5968606. To track the status of your order click here: https://untuckit.attn.tv/a3EnobpV7gJN .",
-      "customerMessage1": "Didn't get the discount",
-      "AgentMessage1": "UNTUCKit: I can check with my team to see if we can apply the code to your order. Could you please send me your email address and the code you wish to apply?",
-      "customerMessage2": "Douglaspwilson@yahoo.com",
-      "SystemMessage4": "\"",
-      "SystemMessage5": "Template used: \"While I wait for the team - All brands\"; last updated: 2023-10-10 17:48:53.656",
-      "AgentMessage2": "UNTUCKit: Thank you so much for sharing those details. I've passed everything along to my team, and I'll be back in touch with you as soon as I have an update. While I wait to hear back from my team, is there anything else I can assist you with in the meantime?",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://untuckit.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Performance Shirt With Pocket",
-            "link": "https://www.untuckit.com/collections/shirts/products/starling-perf-2?size=xx-large#",
-            "icon": "eye"
-          },
-          {
-            "item": "Performance Shirt With Pocket",
-            "link": "https://www.untuckit.com/collections/shirts/products/starling-perf-2?size=xx-large",
-            "icon": "eye"
-          },
-          {
-            "item": "Performance Shirt with Pocket",
-            "link": "https://www.untuckit.com/collections/shirts/products/lafior-green?",
-            "icon": "eye"
-          },
-          {
-            "item": "Performance Shirt With Pocket",
-            "link": "https://www.untuckit.com/collections/shirts/products/starling-perf-2",
-            "icon": "eye"
-          },
-          {
-            "item": "Wrinkle-Free Lawrence Shirt",
-            "link": "https://www.untuckit.com/collections/shirts/products/lawrence-wf-7",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "115": {
-      "id": "019bf0f0-366d-430d-f000-0000f379cb77",
-      "companyName": "LANEIGE",
-      "companyWebsite": "https://us.laneige.com",
-      "agentName": "Taylor",
-      "agentInitial": "L",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for any order related inquiries"
+          "Be MORE SALESY, if the customer is showing intent to purchase then:",
+          "➜ Ask open-ended general questions such as style \u0026 material",
+          "➜ After asking open-ended questions, transition to specific questions such as center stone, etc.",
+          "➜ If the customer liked our recommendation, push for the sale by asking about payment options or when they hope to have the item"
         ],
         "promo_and_exclusions": [
-          "Free gift with purchase codes are entered in the cart and discount codes at checkout"
+          "Please see here for current offer details: https://www.brilliantearth.com/promo-codes-and-offers/",
+          "Codes can be used in-store"
         ]
       },
-      "SystemMessage1": "LANEIGE: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "LANEIGE: Welcome to LANEIGE! Your 15% off code is HELLO15. Click this link to automatically apply and shop now: https://laneige.attn.tv/ao2zo1RyFXTJ .",
-      "SystemMessage3": "LANEIGE: Be first to know about exclusive offers & new launches! Save our number and stay updated. SHOP NOW https://laneige.attn.tv/asR0d1ogHytW",
-      "SystemMessage4": "LANEIGE: Hey , this is Taylor. Thanks for checking out our site! https://laneige.attn.tv/aj6R0-7tng9N .\n\nDid you have questions about this fan fave product? Let me know and I can help answer.",
-      "SystemMessage5": "LANEIGE: Get a cute blue Laneige tumbler FREE when you buy Water Bank Aqua Facial. Ends 1/21. SHOP NOW: laneige.attn.tv/aZdKbkEbqULJ .",
-      "SystemMessage6": "LANEIGE: Strawberry Shortcake lip mask & classic mini lip balms! Get the best of both worlds for AM to PM lip care.\nSHOP NOW: laneige.attn.tv/aGwBn5EkXXZf .",
-      "SystemMessage7": "LANEIGE: Our Tropical Lip Glowy Balm Vault is here! Get 30% OFF all your fave fruity scents in one set.\nSHOP NOW: laneige.attn.tv/af0Gax6wnwG3.",
-      "SystemMessage8": "LANEIGE: Soothing, nourishing skincare essentials, FREE on orders $60+ and $90+.\nSHOP NOW: laneige.attn.tv/aEPctjlafr9n .",
-      "SystemMessage9": "LANEIGE: Almost gone! FREE Laneige headband with orders $55+ with code DEWY.\nSIGN UP TO REDEEM: laneige.attn.tv/a1NjBHAu5iAY .",
-      "SystemMessage10": "LANEIGE: Hey , this is Taylor. Thanks for checking out our site! https://laneige.attn.tv/acnhrCzAOehG .\n\nDid you have questions about this fan fave product? Let me know and I can help answer.",
-      "customerMessage1": "(attn) Hey, I need help with something:",
-      "customerMessage2": "https://www.laneigeofficials.com/product/dreamy-lip-kit/Is this authentic page?",
-      "AgentMessage1": "LANEIGE: Thanks for sending the link! I'm afraid I wasn't able to open it, but here's our official website, us.laneige.com\nAre you looking for anything in particular?",
+      "blocklisted_words": [
+        "bestsellers",
+        "sale",
+        "sales",
+        "budget"
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns",
+        "For questions regarding order, service, shipping questions on a current order, post-purchase will go to cssupport@brilliantearth.com",
+        "For product or general inquiry questions, please contact info@brilliantearth.com"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: Welcome to Brilliant Earth! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-18 15:47:37.597",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: Hi! I\u0027m Ava, your personal jewelry concierge. Do you have any questions I can help answer? brilliantearth.attn.tv/aKP0HT5Q_x2B .",
+          "date_time": "2026-02-18 15:47:41.645",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I want to be entered into $1000 gift card engagement ring",
+          "date_time": "2026-02-18 15:48:06.112",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7284-f875-41f5-f000-0000fc4f9a65",
+          "message_text": "Brilliant Earth: Thanks for your interest! You will receive one (1) entry for subscribing to email marketing messages and one (1) entry for subscribing to SMS marketing messages. You can read more details here: https://brilliantearth.attn.tv/aAOZMT1Va-Ro/ \n\nIn the meantime, are you looking for anything in particular? Do you have any specific style, or material in mind? I\u0027d recommend checking out this page to select your ideal engagement ring setting and pair it with a Beyond Conflict Free Diamond: https://brilliantearth.attn.tv/akXUZM2-aaUV\n",
+          "message_type": "agent",
+          "agent": "46498",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 15:50:42.961"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "https://share.google/SX5UVwV4pBpq9Jks6",
+          "date_time": "2026-02-20 12:42:08.781",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thai would be my dream ring, trying to figure out how to bring the price down",
+          "date_time": "2026-02-20 12:42:18.813",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"No promotions available\"; last updated: 2025-07-21 16:54:43.544",
+          "date_time": "2026-02-20 12:47:51.505",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Do you offer financing or layaway?\"; last updated: 2025-07-21 16:52:58.141",
+          "date_time": "2026-02-20 12:47:51.505",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7c2a-4737-4ffb-f000-0000fc4f9a65",
+          "message_text": "Brilliant Earth: Great choice! We price fairly from the start rather than marking up our items to mark them down. We opt to run promotions that feature diamond earrings or other fine jewelry that act as sparkling additions to the lifelong, heirloom-in-the-making investment in a Brilliant Earth design. Our current promo can always be found on our website: https://brilliantearth.attn.tv/agTzIBvWws1-\n\nFor our US customers, we offer Affirm financing with interest rates from as low as 0% APR with approved credit, as well as Wells Fargo special 12-month financing with approved credit. We also offer a layaway option that allows customers to pay for their purchase with 20% down and monthly installments. You can learn more about our flexible payment options here: https://brilliantearth.attn.tv/aiaTYJkWKhnE",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-20 12:47:51.508"
+        }
+      ]
+    },
+    "113": {
+      "agentName": "Morgan",
+      "id": "019c4f1a-5b33-40ea-f000-000035aebd1a",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://us.laneige.com",
+          "value": "https://bestbullysticks.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Tropical Lip Glowy Balm Vault",
-            "link": "https://us.laneige.com/products/tropical-lip-glowy-balm-vault?externalId=g3vNP",
-            "icon": "eye"
-          },
-          {
-            "item": "Tropical Lip Glowy Balm Vault",
-            "link": "https://us.laneige.com/products/tropical-lip-glowy-balm-vault?utm_campaign=1%2F15%2F26%20-%20Tropical%20Vault%20MMS_base&utm_medium=sms&utm_source=attentive&externalId=g3vNP",
-            "icon": "eye"
-          },
-          {
-            "item": "Midnight Minis",
-            "link": "https://us.laneige.com/products/midnight-minis",
-            "icon": "eye"
-          },
-          {
-            "item": "Midnight Minis",
-            "link": "https://us.laneige.com/products/midnight-minis?variant=47049681797172&vslyvid=b0092d11-1537-48b7-b26d-94a5b73cc3ac&vslywgid=4120b0aef951499c8b1d3bd0fbd75912&vslysid=_loomi_addon_1742301520236",
-            "icon": "eye"
-          },
-          {
-            "item": "Lip Glowy Balm - Taro Bubble Tea",
-            "link": "https://us.laneige.com/products/lip-glowy-balm?variant=46491530854452&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&tw_source=google&tw_adid=&tw_campaign=20969446940&tw_kwdid=&gad_source=1&gad_campaignid=20972798551&gbraid=0AAAAADge0LVr-JEmSXDRrJP6xAq3lGIJd&gclid=Cj0KCQiA-NHLBhDSARIsAIhe9X297Pjpwdo_RANP6cNFPLzpnkATlAot3pvLVNUaU9OeWCNI1RPSt3YaAntBEALw_wcB",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://bestbullysticks.com",
+      "companyName": "Best Bully Sticks",
+      "notes": {
+        "send_to_cs": [
+          "For side effects/dogs being sick from the Bully Sticks, use SDS shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Discount code errors",
+        "Exchanges and returns",
+        "Medical questions",
+        "mis-shipped items, incorrect items received",
+        "saying a dog died"
+      ],
+      "messageTone": "Super Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Best Bully Sticks: Can\u0027t decide what your pup needs? Try our Buzzfeed-style \"Plan Your Ideal Day\" quiz to help you find the perfect chew. bestbullysticks.attn.tv/agLWIEBofLQY ",
+          "date_time": "2026-01-18 11:45:25.890",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Best Bully Sticks: Thank you for your purchase! Your order number is 1573150. View more information about your order here: bestbullysticks.attn.tv/a0XoAktwfpuh .",
+          "date_time": "2026-01-29 10:44:21.529",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Best Bully Sticks: Great news! Your order (1573150) has shipped and will be to you soon. Click here to view your order details: https://bestbullysticks.attn.tv/aSuLArHvF71z",
+          "date_time": "2026-02-07 14:31:50.913",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Best Bully Sticks: Want to win $20 off your next order? Add a dog to our subscriber-only photo contest! You can win more than once, 3 winners selected monthly. bestbullysticks.attn.tv/amNjeIfgOg5u ",
+          "date_time": "2026-02-10 10:23:00.039",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Best Bully Sticks: Looking for a chew deal? Shop chews \u0026 treats on sale! Just reply to this message and we\u0027ll assist you!\n\nhttps://bestbullysticks.attn.tv/ati92C23TCa3",
+          "date_time": "2026-02-11 16:14:58.593",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Not sure how to sign up for the contest but here is my pic the link didn\u0027t have anything to add pics",
+          "date_time": "2026-02-11 18:38:12.288",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4f12-0058-4a4a-f000-000035aebd1a",
+          "message_text": "Best Bully Sticks: Please check our website, bestbullysticks.com, for the most up-to-date promotions and contests. You\u0027ll be the first to hear about new opportunities and how to participate.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 18:38:25.771"
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Site won\u0027t work - All brands\"; last updated: 2025-07-16 17:54:02.115",
+          "date_time": "2026-02-11 18:47:33.322",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4f1a-5b33-40ea-f000-000035aebd1a",
+          "message_text": "Best Bully Sticks: In the meantime, I might suggest trying to open the link in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes.",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 18:47:33.324"
+        }
+      ]
+    },
+    "114": {
+      "agentName": "Rachel",
+      "id": "019c5812-9792-4fb0-f000-00008877f3f2",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://loveamika.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://loveamika.com",
+      "companyName": "amika",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for damaged/wrong/missing orders"
+        ],
+        "escalate": [
+          "If a cx order was canceled/marked as fraudulent ask if they entered a PO address:",
+          "➜ If they did use PAC shortcut",
+          "➜ If not ESC"
+        ],
+        "templates": [
+          "Use CED shortcut only during weekdays"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t share details about upcoming promotions with customers"
+        ],
+        "promo_and_exclusions": [
+          "NEWFRIEND, DESKTOP15, MOBILE15 are 1st-time purchase codes",
+          "Cx can select one free sample at checkout. Orders with more than one sample may be rejected",
+          "➜ Occasionally during high volume sales we may disable the sample selector, and will message on the site that one sample will automatically be included with each order"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "amika: just dropped exclusive bundles: save 15% on signature faves + NEW soulstruck dry hair mask. shop now! amika.attn.tv/aa6_vV6un1ko",
+          "date_time": "2026-01-22 12:03:24.908",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "amika: save 30% on signature faves with our exclusive supersized superfruit set! shop now and treat your strands. amika.attn.tv/abSTaz1ha1C0 ",
+          "date_time": "2026-01-28 14:17:38.393",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "amika: keep cold temp dryness at bay with NEW soulstruck dry hair mask-the perfect no-wash solution for all winter hair woes. amika.attn.tv/aH3Pe6QZWyMg ",
+          "date_time": "2026-02-06 12:01:43.785",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "amika: 30% off ALL shampoos + conditioners (yes, even liters!) starts now. use code: WASH30 amika.attn.tv/aNxDJZtZlAg7 ",
+          "date_time": "2026-02-13 12:05:46.940",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Any discounts for the hair mask?",
+          "date_time": "2026-02-13 12:16:45.394",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5801-aeeb-4bc2-f000-00008877f3f2",
+          "message_text": "amika: You can use the code HAIR30 for 30% off sitewide at loveamika.com. Enjoy shopping!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 12:17:11.297"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you",
+          "date_time": "2026-02-13 12:18:14.631",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "HAIR30 Its not working?",
+          "date_time": "2026-02-13 12:20:53.150",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5805-8f4d-4442-f000-00008877f3f2",
+          "message_text": "amika: The HAIR30 code should work for a 30% sitewide discount. Please try again on loveamika.com. If it still doesn\u0027t work, share a screenshot of the issue.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 12:21:25.390"
+        },
+        {
+          "message_id": "019c580a-f444-44c9-f000-00008877f3f2",
+          "message_text": "amika: Thanks for the screenshot! Could you also share a screenshot of the items in your cart? I\u0027ll be happy to look into the issue! ",
+          "message_type": "agent",
+          "agent": "46498",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 12:27:18.897"
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Screenshot - All brands\"; last updated: 2023-10-10 18:09:41.020",
+          "date_time": "2026-02-13 12:35:39.435",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Provide a discount (Concierge Offer)\"; last updated: 2025-12-19 19:14:56.656",
+          "date_time": "2026-02-13 12:35:39.435",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5812-9792-4fb0-f000-00008877f3f2",
+          "message_text": "amika: Thanks for the screenshot! I\u0027m afraid that the code HAIR30 is no longer valid. Apologies for the oversight. For reference, our current offer is 30% off on shampoos + conditioners if you apply the code WASH30. \n\nIn the meantime, here\u0027s a 15% code for you to use: RACHEL15 - Please keep in mind that it can\u0027t be combined with other codes. Be sure to also check out our best sellers here: https://amika.attn.tv/a3s7NCCrltQE Hope this helps!",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 12:35:39.438"
+        }
+      ]
+    },
+    "115": {
+      "agentName": "Sarah",
+      "id": "019c681d-d2f5-4f7e-f000-00006673545a",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://niraskin.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://niraskin.com",
+      "companyName": "NIRA",
+      "notes": {
+        "escalate": [
+          "ESC post-purchase inquiries immediately",
+          "ESC shipping delay inquiries",
+          "ESC technical-specific inquiries",
+          "ESC inquiries regarding specific Influencer/Affiliates code",
+          "ESC if cx wants to return their order, don\u0027t send RP template!"
+        ],
+        "tone": [
+          "Don\u0027t use slang (ex: gotcha)",
+          "Refer to Bundles as Collections",
+          "Close the convo once the brand\u0027s customer service team takes over"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Discount code errors",
+        "Exchanges and returns",
+        "ESC post purchase questions right away",
+        "technical-specific questions",
+        "NIRA Pro Laser questions",
+        "questions comparing NIRA against other skincare device technologies",
+        "troubleshooting the device questions"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "NIRA: And the winner is... Pro Laser, taking home multiple 2025 beauty awards. 🏆 See why Who What Wear crowned it \"Best At-Home Laser.\"\n\nCheck out all awards: niraskin.attn.tv/ajvMbpmKclWO ",
+          "date_time": "2026-02-03 16:00:57.770",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "NIRA: Valentine\u0027s Day Sale is live! ❤️ Save $150 on the NIRA Pro Laser now. Show your skin some love with a clinically proven, pro-grade tool.\n\nShop \u0026 save: niraskin.attn.tv/amYEBvAJ1127 ",
+          "date_time": "2026-02-05 13:30:37.288",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "NIRA: Hi Virginia, this is Sarah. Discover radiance with your top pick niraskin.attn.tv/aqg7OaMFmNGz \n\nDo you have any questions that I can answer?",
+          "date_time": "2026-02-05 13:50:25.475",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "NIRA: This Valentine\u0027s Day, gift yourself a self-care treat. 🫶 Save $150 on the Pro Laser \u0026 start seeing smoother-looking skin within 90 days.\n\nShop \u0026 save: niraskin.attn.tv/a0SB3ugzp-Wy ",
+          "date_time": "2026-02-06 14:25:22.625",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "NIRA: Your V-Day treat is waiting! 💘 Only a few days left to save $150 on the Pro Laser, an award-winning tool for visibly smoother skin.\n\nDon\u0027t miss it: niraskin.attn.tv/a9a_D0T2LtVo ",
+          "date_time": "2026-02-09 13:31:11.418",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "NIRA: Hey Virginia, we\u0027re giving you 10% OFF the NIRA Pro Laser (2nd Gen) in your cart. Claim your exclusive savings now: niraskin.attn.tv/aLoF1PaDWd3S\n\nText back if you have any questions!",
+          "date_time": "2026-02-09 14:27:15.750",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "NIRA: Dealing with crow\u0027s feet? Smile lines? Under-eye wrinkles? NIRA Precision targets and smooths delicate spots easily.\n\nShop now: niraskin.attn.tv/af4hHtIGmZAF ",
+          "date_time": "2026-02-16 14:00:54.739",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "NIRA: Hi Virginia, this is Sarah. Discover radiance with your top pick niraskin.attn.tv/aiS_WYy4equl \n\nDo you have any questions that I can answer?",
+          "date_time": "2026-02-16 14:03:17.245",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Dislike my smile lines but even the precision laser does not seem to help. Any other suggestions?",
+          "date_time": "2026-02-16 15:01:57.175",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Guarantee delivery dates - All brands\"; last updated: 2024-11-07 14:26:32.728",
+          "date_time": "2026-02-16 15:21:50.997",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Weekend Escalations - All brands\"; last updated: 2024-02-12 17:46:12.047",
+          "date_time": "2026-02-16 15:21:50.997",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c681d-d2f5-4f7e-f000-00006673545a",
+          "message_text": "NIRA: Thanks for reaching out, and sorry to hear that! I want to make sure I give you the most accurate information, so I\u0027ll check in with my team. I\u0027ll be sure to follow up with you as soon as I have an update. ",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 15:21:50.999"
+        }
+      ]
     }
   }
 }

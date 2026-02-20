@@ -3,326 +3,677 @@
   "chunk": "chunk_0029",
   "scenarios": {
     "141": {
-      "id": "019bccf0-15bf-4312-f000-0000eb84fd35",
-      "companyName": "FragranceNet",
-      "companyWebsite": "https://fragrancenet.com",
-      "agentName": "Sarah",
-      "agentInitial": "F",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "agentName": "Jordan",
+      "id": "019c5860-9165-4455-f000-0000b502d96c",
+      "rightPanel": {
+        "orders": [
+          {
+            "total": 62.32,
+            "orderDate": "2026-02-13",
+            "orderNumber": "7750465323095",
+            "items": [
+              {
+                "price": [
+                  55
+                ],
+                "productLink": "https://boston-scally-co.myshopify.com/products/the-guinness-gilroy-boston-scally-cap",
+                "name": "The Guinness Gilroy Boston Scally Cap - Patchwork"
+              }
+            ]
+          },
+          {
+            "total": 76.27,
+            "orderDate": "2026-02-06",
+            "orderNumber": "7733993111639",
+            "items": [
+              {
+                "price": [
+                  52
+                ],
+                "productLink": "https://boston-scally-co.myshopify.com/products/the-irish-boston-scally-cap-white-herringbone",
+                "name": "The Irish Boston Scally Cap - White Herringbone"
+              }
+            ]
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://bostonscally.com/",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://bostonscally.com/",
+      "companyName": "Boston Scally",
+      "notes": {
         "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over",
-          "Don't use emojis/special characters"
-        ],
-        "templates": [
-          "For issues relating to free shipping with no minimum purchase, use \"FSB\" shortcut",
-          "If a product is not available on their website, use \"PNA\" shortcut"
+          "Send to CS for post purchase issues, use PPI shortcut"
         ]
       },
-      "SystemMessage1": "FragranceNet: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from FragranceNet.",
-      "SystemMessage2": "FragranceNet: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/dkv",
-      "SystemMessage3": "FragranceNet: Welcome to the world of elevated fragrance! Enjoy 30% OFF sitewide to start your journey: https://fragrancenet.attn.tv/ax5WD_Nfjjk-",
-      "SystemMessage4": "FragranceNet: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nDiscover your new scent!\n\nShop now: https://fragrancenet.attn.tv/aCAaiR_ZM5Vi .",
-      "customerMessage1": "I Have Order Jimmy Choo and dolce gabanna haven't never got it",
-      "AgentMessage1": "FragranceNet: Thanks for reaching out and I'm sorry to hear that. Just to be sure, are you referring to the order placed on 12/01/25? If so, have you received any updates via email? Please check your spam and promo folders as well, as our emails sometimes end up there. We also offer a convenient online 'Order Status' feature which you can access here: https://fragrancenet.attn.tv/ay5NAMFMDRpg \n\nIf in case you haven't received any updates and you're not able to view the order status then the best way to handle this is to contact us via this link: https://fragrancenet.attn.tv/amjB1Ez6D1J8 or give us a call at 1-800-727-3867. Our team is happy to help!",
-      "customerMessage2": "Yess",
-      "AgentMessage2": "FragranceNet: Thank you! What do you see when you track your order on the link I shared?",
-      "SystemMessage5": "FragranceNet: Sometimes the best place to start is with our fan favorites! Don't miss out on our customers most desired scents. \n\nExplore now: https://fragrancenet.attn.tv/a9XM-fBeAiz3 .",
-      "SystemMessage6": "FragranceNet: Who said smelling great has to break the bank? We got you!\n\nOur best scents for less > https://fragrancenet.attn.tv/aVdLvDcye183 .",
-      "customerMessage3": "I Want My Perfume, I'll never Order nothing else from you guys",
-      "AgentMessage3": "FragranceNet: Thank you for reaching out an I understand. Have you already reached out to our team at the link or phone number I gave you?",
-      "customerMessage4": "Yess",
-      "AgentMessage4": "FragranceNet: Thanks for confirming. Did you check your spam and promo folders as well? Sometimes our emails end up there.",
-      "customerMessage5": "Yes, I did",
-      "AgentMessage5": "FragranceNet: Thank you for letting me know. I'm sorry for the delay! We are dealing with an influx of support messages, but this does not make your concern any less important. The team is working as hard as possible to address each issue promptly. Rest assured, someone will reach out to you soon.\n\nPlease keep an eye out in your spam and promo folders for a response, sometimes our emails end up there. Let me know if you need anything else. I'm happy to help!",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-13 11:07:04.704",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: You\u0027re in! Welcome to the family. Your coupon code is SMS10. Tap here to automatically apply it and shop now: bostonscally.attn.tv/a17KxiCd_jw8",
+          "date_time": "2026-02-13 11:07:09.107",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: Don\u0027t forget to save our contact for exclusive updates and offers! ",
+          "date_time": "2026-02-13 11:07:10.268",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: Lovely day for a Guinness! NEW: The \u0027Guinness Gilroy\u0027 Patchwork cap is NOW AVAILABLE! \n\nSHOP NOW: bostonscally.attn.tv/aZTBwdPxy5bw ",
+          "date_time": "2026-02-13 13:55:17.309",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Boston Scally: Hi! If you need additional help please reach us at info@bostonscally.com. Text STOP to opt out.",
+          "date_time": "2026-02-13 13:56:01.096",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I ordered it and accidentally put wrong address what can I do ",
+          "date_time": "2026-02-13 13:56:05.871",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c585d-8a4c-4965-f000-0000b502d96c",
+          "message_text": "Boston Scally: Thank you for reaching out. I\u0027m sorry to hear that. The best way to check if you can cancel or edit your order is to email our support team directly at info@bostonscally.com. ",
+          "message_type": "agent",
+          "agent": "48804",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 13:57:31.248"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027ve done that haven\u0027t gotten a reply",
+          "date_time": "2026-02-13 13:58:25.724",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5860-9165-4455-f000-0000b502d96c",
+          "message_text": "Boston Scally: Thanks for letting me know, and sorry about that. Our team is dealing with a high volume of emails, which can sometimes slow response times. Rest assured, our team is reviewing your message and will get back to you as soon as possible. We appreciate your continued patience!",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 14:00:49.663"
+        }
+      ]
+    },
+    "142": {
+      "agentName": "Amanda, Kyle, Carl, Emily, Kayla, Dylan",
+      "id": "019c4de3-f9ef-4476-f000-0000fa74f446",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://fragrancenet.com",
+          "value": "https://drinkloverboy.com",
           "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://drinkloverboy.com",
+      "companyName": "Loverboy",
+      "notes": {
+        "escalate": [
+          "ESC if the customer is asking for the App code"
+        ],
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use CS shortcut"
+        ],
+        "tone": [
+          "If customers reply negatively to the pride merchandise, close the convo"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Discount code errors",
+        "Sizing questions",
+        "Exchanges and returns"
+      ],
+      "messageTone": "Super Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Loverboy: Welcome to Loverboy! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-10 21:01:32.872",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Loverboy: Hey it\u0027s Loverboy! We\u0027ll text you about fresh flavors, new arrivals \u0026 special offers. Take 10% OFF your first order with code CRUSH10. Shop our latest and greatest: loverboy.attn.tv/asUYgnBd78Ru \n\n💖",
+          "date_time": "2026-02-10 21:01:37.786",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Loverboy: Don\u0027t forget to save our contact to get exclusive updates!",
+          "date_time": "2026-02-10 21:01:39.158",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Loverboy: Hey, we noticed you checking us out. Have you seen our latest merch drop yet? https://loverboy.attn.tv/a-34iTu2-_vt ",
+          "date_time": "2026-02-11 12:29:41.875",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Loverboy: Hey , this is Jordan. Thanks for checking out our site! 😊 https://loverboy.attn.tv/aa0N1F0ABm-D \n\nAny questions I can answer for you? ",
+          "date_time": "2026-02-11 12:35:08.570",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I have not been ableTo find loverboy in any locations near me.  Can it only be ordered online and shipped?   Any restrictions delivering to Pennsylvania?",
+          "date_time": "2026-02-11 13:01:50.199",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4de3-f9ef-4476-f000-0000fa74f446",
+          "message_text": "Loverboy: Thank you for reaching out, and I\u0027m sorry to hear that! I\u0027ll pass your feedback to our team for future improvement.\n\nYes, Loverboy drinks can be ordered online and shipped directly to you. Delivery requires a signature from someone 21 or older at a residential address, we cannot ship to pickup locations, P.O. boxes, or business addresses. We do not have specific shipping restrictions for Pennsylvania. Hope this helps! If you have any questions, feel free to text me.",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 13:08:32.270"
+        }
+      ]
     },
-    "142": {
-      "id": "019bc46e-31f5-4c55-f000-0000f447ba9a",
-      "companyName": "The Pink Lily Boutique",
-      "companyWebsite": "https://pinklily.com",
-      "agentName": "Olivia",
-      "agentInitial": "T",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+    "143": {
+      "agentName": "Sarah",
+      "id": "019c7737-1feb-468c-f000-0000fb34b991",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://modgents.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://modgents.com",
+      "companyName": "Modern Gents Trading Co",
+      "notes": {
         "send_to_cs": [
           "No ESC for this client, send everything to CS"
         ],
         "tone": [
           "Close the convo once the client takes over!"
-        ],
-        "templates": [
-          "if cx message \"CREATOR,\" use CR shortcut"
         ]
       },
-      "SystemMessage1": "Pink Lily: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Pink Lily: Yay, you're here! Stay tuned for all the promos :) Now, take 30% OFF w/code: T42VRT pinklily.attn.tv/aCnlyp7AphgQ .",
-      "SystemMessage3": "Pink Lily: Hey! You've got your eye on something super cute: pinklily.attn.tv/aL7s-8AQDedK\n\nCan I help with any style or size questions today?\n- Olivia",
-      "customerMessage1": "Is the size 31 going to fit 12-14 ? Or is the size  31 a size 10-12?",
-      "AgentMessage1": "Pink Lily: Based on our size chart, a size 31 waist aligns with a size L (10-12), not a 12-14. If you're typically between 12 and 14 or prefer a more relaxed fit, we'd recommend sizing up to an XL, which fits waists 33-34. You can take a look at our size chart here: https://pinklily.attn.tv/aFYL-dXEG2NG Feel free to reach out if you have any further questions!",
-      "customerMessage2": "So the Melody Leopard cropped flare Jeans don't come in a 33-34 ( XL) ?",
-      "AgentMessage2": "Pink Lily: Apologies, but that one is not available in any sizes right now. Keep an eye out by always checking our website and social media frequently. As an SMS subscriber, you'll also be among the first to know of our awesome updates! In the meantime, check out other animal print pants here: https://pinklily.attn.tv/a4zR4SJw9qZB",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Modern Gents.",
+          "date_time": "2026-02-13 11:10:03.660",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/Rnh",
+          "date_time": "2026-02-13 11:12:52.021",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Yay! You\u0027re in!\n\nGet 60% off a single item! \nCode: MG60\n\n*Must have 2 items in cart\n\nShop Now: modgents.attn.tv/a6HKIMQidiPy ",
+          "date_time": "2026-02-13 11:12:54.946",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nExplore our latest additions! Don\u0027t miss out: https://modgents.attn.tv/aAJ-DkCrUMLR .",
+          "date_time": "2026-02-13 11:23:02.104",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Steve, You\u0027re a VIP now! Here\u0027s $10 credit on your next order \u003e$50. Code: 2pUs1o Expires in 72 hrs! https://modgents.attn.tv/aQ43R-Puu3_c .",
+          "date_time": "2026-02-13 15:43:22.925",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Just a heads up. Your $10 credit expires in 24 hours! If you wanted something, now\u0027s the time! code: 2pUs1o https://modgents.attn.tv/as5-KqEAOu46 ",
+          "date_time": "2026-02-15 15:43:29.583",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: OMG our new ring is STUNNING!\n\nmodgents.attn.tv/ayYGj0U0oqJ6\n\nPS: You unlocked Store Credit!\n\nUse Your VIP Code: NR21767 @checkout (EXPIRES SOON!)",
+          "date_time": "2026-02-17 18:35:19.833",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Modern Gents: Something exciting is here, Steve — thanks for stopping by!\n\nUse code SA2A5s for 25% off your order.\n\nFind your next ring: https://modgents.attn.tv/aHcob8vzKLhV .",
+          "date_time": "2026-02-19 13:34:20.517",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Never received one of the rings",
+          "date_time": "2026-02-19 13:35:07.715",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7730-e772-4caf-f000-0000fb34b991",
+          "message_text": "Modern Gents: I\u0027m sorry to hear that! Can you please send me a photo of the items that you received, along with your email address? This is for Order #1787578, is that right?",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 13:36:59.659"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Missing the Chelsea, I put it on original order but the now shows I ordered 2 of the heathers",
+          "date_time": "2026-02-19 13:38:36.318",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7737-1feb-468c-f000-0000fb34b991",
+          "message_text": "Modern Gents: That appears to be the case. You may need to place a new order. I apologize for the inconvenience.",
+          "message_type": "agent",
+          "agent": "109968",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 13:43:47.332"
+        }
+      ]
+    },
+    "144": {
+      "agentName": "",
+      "id": "019c7366-9858-482d-f000-0000c90f3b28",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://pinklily.com",
+          "value": "https://lovesac.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Melody Leopard Print Cropped Flare Jeans - 24",
-            "link": "https://pinklily.com/products/melody-leopard-print-cropped-flare-jeans?irclickid=SsywlmSRtxycWc30-i16YTNuUkpX9-X93U4fR00&irgwc=1&afsrc=1&utm_campaign=browse-abandon&utm_source=attentive&utm_medium=sms&externalId=qZpY9",
-            "icon": "eye"
-          },
-          {
-            "item": "Melody Leopard Print Cropped Flare Jeans - 24",
-            "link": "https://pinklily.com/products/melody-leopard-print-cropped-flare-jeans?irclickid=SsywlmSRtxycWc30-i16YTNuUkpX9-X93U4fR00&irgwc=1&afsrc=1&utm_campaign=browse-abandon&utm_source=attentive&utm_medium=sms&externalId=qZpY9",
-            "icon": "eye"
-          },
-          {
-            "item": "Melody Leopard Print Cropped Flare Jeans - 24",
-            "link": "https://pinklily.com/products/melody-leopard-print-cropped-flare-jeans?irclickid=SsywlmSRtxycWc30-i16YTNuUkpX9-X93U4fR00&irgwc=1&afsrc=1&utm_source=impact&utm_medium=%22Influencers%22&utm_campaign=LTK",
-            "icon": "eye"
-          },
-          {
-            "item": "Reign Pink Cheetahs Pullover SALE - XS",
-            "link": "https://pinklily.com/products/reign-pink-cheetahs-pullover",
-            "icon": "eye"
-          },
-          {
-            "item": "Love Block Leopard Light Grey Graphic Sweatshirt SALE - XL",
-            "link": "https://pinklily.com/products/love-block-leopard-light-grey-graphic-sweatshirt",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
-    },
-    "143": {
-      "id": "019be6b8-05d5-4fe3-f000-0000f5705ee0",
-      "companyName": "Glamnetic",
-      "companyWebsite": "https://glamnetic.com",
-      "agentName": "Connie",
-      "agentInitial": "G",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "companyWebsite": "https://lovesac.com",
+      "companyName": "Lovesac",
+      "notes": {
         "send_to_cs": [
           "No ESC for this client, send everything to CS"
         ],
         "tone": [
-          "Close the convo once the client takes over"
+          "Close the convo once the client takes over!"
         ]
       },
-      "SystemMessage1": "Glamnetic: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/eIn",
-      "SystemMessage2": "Glamnetic: Welcome! We're so happy you're here! Get 20% off w/ code: WEL20PA1D Shop Now: glamnetic.attn.tv/aH-cv715wzan .",
-      "SystemMessage3": "Glamnetic: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nNeed help picking your first lash? Our Pre-Set Lash Kits have our bestselling lashes and liners all in one.\n\nClick Here: https://glamnetic.attn.tv/aOR1HW5FB9Bl .",
-      "customerMessage1": "That 20% discount code does not work",
-      "AgentMessage1": "Glamnetic: I'm sorry to hear that. Please note that discounts can not be used on new products and bundles. Have you encountered any error messages? Also, could you kindly share a screenshot of the items in your cart? I'll be happy to look into the issue!",
-      "customerMessage2": "Are any of these new products?",
-      "customerMessage3": "\"",
-      "SystemMessage4": "Glamnetic: You left Brush-On Nail Glue, Think Pink, Regal Blue, White Swan, Berry Maroon, and La Perle in your cart\n\nUse code WEL20PA1D to get 20% off eligible items at checkout\n\nDiscover more: https://glamnetic.attn.tv/aiaiNpdSB02W .",
-      "SystemMessage5": "Template used: \"What are the discount code exclusions?\"; last updated: 2024-08-08 23:19:28.461",
-      "SystemMessage6": "Template used: \"Screenshot - All brands\"; last updated: 2023-10-10 18:09:41.020",
-      "AgentMessage2": "Glamnetic: Thanks for the screenshot! I checked, and it looks like the Brush-On Nail Glue in your cart is a new product which is why the code didn't work. I hope this clarifies!",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: This Is That Sale. 40% Off Ends Tonight! Don\u0027t miss your chance to get what you\u0027ve always wanted.\n\nShop now: lovesac.attn.tv/ajtmU7KSTpox .",
+          "date_time": "2026-01-25 15:05:19.044",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Sending a little love made for your home - 40% off everything for 4 days during our Friends \u0026 Family Event.\n\nShop now: lovesac.attn.tv/aREg511rrVAA .",
+          "date_time": "2026-01-28 13:05:28.844",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Last chance for a little love and LOTS of comfort. Our Friends \u0026 Family get 40% off for one last day.\n\nDon\u0027t miss it: lovesac.attn.tv/ahcEZPwShplG .",
+          "date_time": "2026-01-31 13:05:36.184",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Hey there! We noticed you stopped by. Need some help? Just let us know which products you\u0027re interested in below. \n\nA. Sactionals\nB. Sacs\nC. StealthTech\nD. Snugg\n\nReply back \"A\", \"B\", \"C\", or \"D\"\n\nOr shop them all with 40% off: lovesac.attn.tv/av27Nw8gucCj .",
+          "date_time": "2026-01-31 16:45:24.913",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Deep discounts on Total Comfort - Shop Clearance for up to 70% off: lovesac.attn.tv/aVBlnZyDmmDh .",
+          "date_time": "2026-02-02 16:45:30.739",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: It\u0027s time to end your uncomfortable SIT-uationship - Get 40% off with Presidents\u0027 Day savings.\n\nShop now: lovesac.attn.tv/a14AIj-3YkGX .",
+          "date_time": "2026-02-06 13:06:00.706",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: If sitting down feels like settling, choose better comfort with a PillowSac Chair. \n\nBig comfort in two sizes: lovesac.attn.tv/axLr4DP4gKxY .",
+          "date_time": "2026-02-07 15:00:25.446",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: 40% off everything continues. Shop our Presidents\u0027 Day Sale for furniture that adapts to you.\n\nShop now: lovesac.attn.tv/abalMP21e7mv .",
+          "date_time": "2026-02-11 15:15:09.307",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Just two days left to shop the Presidents\u0027 Day Sale and save 40% on everything.\n\nShop now: lovesac.attn.tv/adXvt_jr6S1f .",
+          "date_time": "2026-02-15 15:05:52.920",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Presidents\u0027 Day Sale ends tonight - take 40% off before it\u0027s gone.\n\nLast call to save on the styles you\u0027ve been eyeing: lovesac.attn.tv/aykB75GC5ta9 .",
+          "date_time": "2026-02-16 13:15:32.979",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lovesac: Hey there! We noticed you eyeing something on our site...come back and get 40% off: lovesac.attn.tv/aQWBCVzRh6BH .",
+          "date_time": "2026-02-18 13:28:16.228",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Need help",
+          "date_time": "2026-02-18 19:42:05.176",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7359-3399-40e6-f000-0000c90f3b28",
+          "message_text": "Lovesac: Hi, how can I help you today?",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 19:42:31.735"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Need help ordering",
+          "date_time": "2026-02-18 19:43:05.283",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c735c-0cd8-4cf6-f000-0000c90f3b28",
+          "message_text": "Lovesac: I\u0027m here to help. Could you please send me the items you would like?\n",
+          "message_type": "agent",
+          "agent": "39001",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 19:45:38.422"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m looking at sectional, the soft, with speakers",
+          "date_time": "2026-02-18 19:53:55.262",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7366-9858-482d-f000-0000c90f3b28",
+          "message_text": "Lovesac: Thank you for getting back to me and providing that information! We have a wide selection available for you to choose from: https://lovesac.attn.tv/aDVR59RXCkPB How many seats are you interested in?",
+          "message_type": "agent",
+          "agent": "109840",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 19:57:09.499"
+        }
+      ]
+    },
+    "145": {
+      "agentName": "Jordan",
+      "id": "019c3f86-19a6-470a-f000-0000cfc3ff8e",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://glamnetic.com",
+          "value": "https://gardner-white.com",
           "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
+        }
       },
-      "orders": []
-    },
-    "144": {
-      "id": "019bb8e4-d265-42a7-f000-0000f1154fbd",
-      "companyName": "LensDirect",
-      "companyWebsite": "https://lensdirect.com",
-      "agentName": "Elaine",
-      "agentInitial": "L",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "companyWebsite": "https://gardner-white.com",
+      "companyName": "Gardner-White",
+      "notes": {
         "send_to_cs": [
           "Send to CS for post purchase issues, use PPI shortcut"
         ],
         "templates": [
-          "For medical inquiries about contacts or lens replacement use MQ shortcut"
-        ]
-      },
-      "SystemMessage1": "LensDirect: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from LensDirect.",
-      "SystemMessage2": "LensDirect: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage3": "LensDirect: Welcome! Enjoy 20% off all contacts + 25% off eyewear, & lens replacement with DFD2BA5A7F \n\nShop here! lensdirect.attn.tv/aEU5I8J8hH3z",
-      "SystemMessage4": "LensDirect: Save our contact for exclusive offers!",
-      "SystemMessage5": "LensDirect: Come back and save big with 73C981D004: for 20% off contacts, 30% off eyewear and lens replacement!\n\nShop here: lensdirect.attn.tv/a0FuGfBMntUI",
-      "SystemMessage6": "LensDirect: Hi, Elaine here! It looks like you left some items in your cart - use AC178FE61 to save 20% on contacts and 30% on eyewear and lens replacement!\n\nText back if you have any questions!",
-      "SystemMessage7": "LensDirect: Still on the fence? Sign up for our newsletter for weekly exclusive deals on everything optical! lensdirect.attn.tv/aRYX9hKe7W03",
-      "SystemMessage8": "LensDirect: Come back and save big with 73C981D004: for 20% off contacts, 30% off eyewear and lens replacement!\n\nShop here: lensdirect.attn.tv/a_pGRS6w1rkH",
-      "SystemMessage9": "LensDirect: Hi, Elaine here! It looks like you left some items in your cart - use AC178FE61 to save 20% on contacts and 30% on eyewear and lens replacement!\n\nText back if you have any questions!",
-      "customerMessage1": "I can't get 30% off to work on my rx sunglasses. Only EYE20, but if I got 30% off I'd order.",
-      "AgentMessage1": "LensDirect: I'm sorry to hear that. Have you encountered any error messages? Also, could you kindly share a screenshot of the items in your cart? I'll be happy to look into the issue!",
-      "customerMessage2": "No error messages, but the prices are higher than with EYE20, which makes no sense.",
-      "AgentMessage2": "LensDirect: I'm really sorry for the trouble! Can you send me a screenshot of the items in your cart so I can check on this?",
-      "customerMessage3": "\"",
-      "customerMessage4": "I will just order one pair, but saved options in the cart.",
-      "AgentMessage3": "LensDirect: Thanks for sending that over. I'm sorry for any inconvenience. I just checked, and it looks like the item you're trying to buy already has a discount applied. That's likely why the code isn't working, as our system can't stack multiple promos at checkout. Feel free to use the code on a full-priced purchase.",
-      "customerMessage5": "If I remove the EYE20 and try the new code the price is higher.  I thought the new code was for 30% off, not 20%. That's why I'm confused.",
-      "AgentMessage4": "LensDirect: The AC178FE61 coupon offers 30% off RX sunglasses. If you're having issues, please share a screenshot. You can use this coupon at lensdirect.com.",
-      "customerMessage6": "\"",
-      "customerMessage7": "See how the prices went up from prior screenshot",
-      "SystemMessage10": "\"",
-      "AgentMessage5": "LensDirect: Thank you! Let me check with the team, and I'll get back to you once I have more information. I'm sorry for the confusion.",
-      "customerMessage8": "Thanks so much for your help.",
-      "AgentMessage6": "LensDirect: You're welcome! Have a great weekend, and if you have any questions, feel free to send me a text. I'll be in touch!",
-      "customerMessage9": "Any progress on the 30% off?  Thanks",
-      "AgentMessage7": "LensDirect: I'm so sorry for the delay. I will follow up with my team. Since it's the weekend, I may not hear back until Monday, but I'll be sure to follow up with you as soon as I do!",
-      "customerMessage10": "No problem, though I want to order soon once it works as I know it takes a few weeks to get the glasses. Thanks",
-      "AgentMessage8": "LensDirect: I understand. As soon as I hear back, I will send you a message right away! We appreciate your patience.",
-      "SystemMessage11": "\"",
-      "AgentMessage9": "LensDirect: Thanks for your patience! I just heard from the team, and we understand how important this is. Feel free to use the code below for a discount on this order instead:\n\nBE60E8485A\n\nIf you have any further questions or need assistance, please don't hesitate to contact me. We're here to help!",
-      "customerMessage11": "That one says it doesn't apply to any of the items in my cart. The cart has Rx sunglasses.",
-      "SystemMessage12": "\"",
-      "AgentMessage10": "LensDirect: I'm sorry about that. I have already sent your reply to our team. Make sure to check your SMS for updates. I'll be in touch!",
-      "SystemMessage13": "\"",
-      "AgentMessage11": "LensDirect: Hi there, me again. Just got word from my team, and we apologize for that. Feel free to use \"SAVE30\" for 30% off eyewear or \"FAMILY20\" for 20% off contacts.\n\nIf you have any further questions, please don't hesitate to contact me. We're here to help!",
-      "customerMessage12": "SAVE30 raises the price from EYE20 -- the same issue I identified previously in the screenshot.  I appreciate your help on this, but we seem to be going in circles.  Maybe a manual application of a discount or credit post-order would be best?",
-      "SystemMessage14": "\"",
-      "SystemMessage15": "Template used: \"Waiting for the team - All brands\"; last updated: 2023-10-10 17:45:52.463",
-      "AgentMessage12": "LensDirect: I'm sorry for all the inconvenience. I'll make sure to pass this with my team. Rest assured, I'll send you a text as soon as I have an update!",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://lensdirect.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Ojector OO9018 55mm - Matte Brown Tortoise",
-            "link": "https://www.lensdirect.com/ojector-oo9018-55mm-matte-brown-tortoise",
-            "icon": "eye"
-          },
-          {
-            "item": "Ojector OO9018 55mm - Matte Brown Tortoise",
-            "link": "https://www.lensdirect.com/ojector-oo9018-55mm-matte-brown-tortoise",
-            "icon": "eye"
-          },
-          {
-            "item": "Ojector OO9018 55mm - Matte Brown Tortoise",
-            "link": "https://www.lensdirect.com/ojector-oo9018-55mm-matte-brown-tortoise",
-            "icon": "eye"
-          },
-          {
-            "item": "Ojector OO9018 55mm - Matte Brown Tortoise",
-            "link": "https://www.lensdirect.com/ojector-oo9018-55mm-matte-brown-tortoise",
-            "icon": "eye"
-          },
-          {
-            "item": "Ojector OO9018 55mm - Matte Brown Tortoise",
-            "link": "https://www.lensdirect.com/ojector-oo9018-55mm-matte-brown-tortoise",
-            "icon": "eye"
-          }
+          "If Cx texts in GIFT:",
+          "➜ Use CTO shortcut",
+          "➜ When they answer \"yes\", use CTT shortcut"
         ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "145": {
-      "id": "019bf25d-9e48-4cff-f000-0000acac6564",
-      "companyName": "HEYDUDE US",
-      "companyWebsite": "https://heydude.com",
-      "agentName": "Casey",
-      "agentInitial": "H",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Don't ESC post-purchase issues, use PPI shortcut"
-        ],
-        "templates": [
-          "For wrong items received use WMP shortcut",
-          "For damaged items received use DMI shortcut",
-          "For order status requests use OSR shortcut"
+        "dos_and_donts": [
+          "The stock in-store and online are the same; all in-stock items are here: https://www.gardner-white.com/promo/on-sale-now/in-stock",
+          "Don\u0027t push for AFFIRM; offer their white label card, then Fortiva, and then Affirm"
         ],
         "promo_and_exclusions": [
-          "The welcome code is valid for first-time customers only.",
-          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
+          "Clearance center items do not qualify for additional discounts",
+          "Items priced with .95 do not qualify for promotions"
         ]
       },
-      "SystemMessage1": "HEYDUDE: Welcome to HEYDUDE! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/o76",
-      "SystemMessage2": "HEYDUDE: We're so stoked you're here!\n\nGet 20% off your first purchase with code ATTW23K28PCX8 at checkout.\n\nShop Now:\nhttps://heydudeshoes.attn.tv/a6xrCQdWFEzm .",
-      "SystemMessage3": "HEYDUDE: Over the next few days we'll try to help you find something that you will love!\n\nUntil then, shop our viral best-sellers: https://heydudeshoes.attn.tv/agzdCFqxOawl .",
-      "SystemMessage4": "HEYDUDE: Grab Wally Funk Stretch Speckle in your cart — soft stretch-knit upper and lightweight sole for all-day comfort.\n\nUse code ATTW23K28PCX8 for 20% off at checkout: https://heydudeshoes.attn.tv/anfwm4j0fCLv .",
-      "customerMessage1": "Code does not work for this shoe",
-      "AgentMessage1": "HEYDUDE: Please check the company website at heydude.com for the most up-to-date promotions and sales. If you're having trouble with a coupon, please share a screenshot for further assistance.",
-      "customerMessage2": "\"",
-      "AgentMessage2": "HEYDUDE: I'm sorry to hear that. Can you please send me a screenshot of the item/s in your cart? \n\nPlease note that discount codes are valid for items available on this link: https://heydudeshoes.attn.tv/a_aBB17LE-RW. They cannot be combined with any other offer or promotion, including sale styles. Please note that additional exclusions may apply.",
-      "customerMessage3": "\"",
-      "customerMessage4": "I was just sent this text. It's misleading if this particular shoe does not qualify for the code.",
-      "SystemMessage5": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
-      "AgentMessage3": "HEYDUDE: Thanks for sending that over. I just checked, and I can also see that you've previously purchased with us. My apologies, the discount code: ATTW23K28PCX8 can only be applied to a first-time purchase. \n\nI'm sorry, I don't have any other codes available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our sales collection here: https://heydudeshoes.attn.tv/apM3y8jqfdzI",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://heydude.com",
-          "date": ""
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Discount code errors",
+        "Shipping questions"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Gardner White: ONE DAY SALE!\nShop Monday 10a-9pm.\nSave up to 50% off sale prices! Shop Now: https://gw.attn.tv/a-sisreU8zBK .",
+          "date_time": "2026-01-19 10:47:03.142",
+          "message_media": [
+            
+          ]
         },
-        "browsingHistory": [
-          {
-            "item": "Wally Funk Stretch Speckle - Flannel Grey/Multi",
-            "link": "https://www.heydude.com/products/wally-funk-stretch-speckle-flannel-grey-multi?utm_source=9M%20Active%20-%20Clicked%20Email&utm_medium=email&utm_campaign=01%2F24%2F26%20January%20Must-Haves%20%2801KFKKPWQPM0A4PT1BVBQZ4M35%29&utm_klaviyo_id=01JHY5MEEYPBFG2WB1BNGEYWD2&_kx=HxgtRAWWXOyTKQw_9W7PfzWuVmxZnSNRmZwMQ3M_GYI.L4mrhR",
-            "icon": "eye"
-          },
-          {
-            "item": "Wally Funk Stretch Speckle - Flannel Grey/Multi",
-            "link": "https://www.heydude.com/products/wally-funk-stretch-speckle-flannel-grey-multi?utm_source=9M%20Active%20-%20Clicked%20Email&utm_medium=email&utm_campaign=01%2F24%2F26%20January%20Must-Haves%20%2801KFKKPWQPM0A4PT1BVBQZ4M35%29&utm_klaviyo_id=01JHY5MEEYPBFG2WB1BNGEYWD2&_kx=HxgtRAWWXOyTKQw_9W7PfzWuVmxZnSNRmZwMQ3M_GYI.L4mrhR",
-            "icon": "eye"
-          },
-          {
-            "item": "Wally Funk Stretch Speckle - Flannel Grey/Multi - 12",
-            "link": "https://www.heydude.com/products/wally-funk-stretch-speckle-flannel-grey-multi?utm_source=9M%20Active%20-%20Clicked%20Email&utm_medium=email&utm_campaign=01%2F24%2F26%20January%20Must-Haves%20%2801KFKKPWQPM0A4PT1BVBQZ4M35%29&utm_klaviyo_id=01JHY5MEEYPBFG2WB1BNGEYWD2&_kx=HxgtRAWWXOyTKQw_9W7PfzWuVmxZnSNRmZwMQ3M_GYI.L4mrhR",
-            "icon": "eye"
-          },
-          {
-            "item": "Wally Stretch Canvas - Light Grey",
-            "link": "https://www.heydude.com/products/wally-stretch-canvas-black-black",
-            "icon": "eye"
-          },
-          {
-            "item": "Wally Stretch Canvas - Light Grey",
-            "link": "https://www.heydude.com/products/wally-stretch-canvas-light-grey",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
+        {
+          "message_type": "system",
+          "message_text": "Gardner White: Have you seen the newest arrivals in the Clearance Center inside Gardner White? Shop Now: gw.attn.tv/av07uHAEHiM3 .",
+          "date_time": "2026-01-21 16:50:47.432",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Gardner White: Presidents Day savings are here! Enjoy an extra 30% off sale prices storewide. Don\u0027t wait, shop now: gw.attn.tv/aX4erRN9q9OZ .",
+          "date_time": "2026-01-29 09:55:23.158",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Gardner White: CLEARANCE DEAL OF THE DAY! The comfy Sparta Sofa with 2 Built-In Recliners is now only $595! Shop Now: gw.attn.tv/aADPoKwNbsi5 .",
+          "date_time": "2026-02-04 14:07:07.160",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Gardner White: Hey, this is Jordan. Thanks for checking out our site! https://gw.attn.tv/a_qZcDEkfEUD \n\nAny questions I can answer for you? ",
+          "date_time": "2026-02-08 17:18:23.437",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Looking at a couch but I am curious if the cushions are removable or not",
+          "date_time": "2026-02-08 17:25:25.109",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c3f5c-4c04-4801-f000-0000cfc3ff8e",
+          "message_text": "Gardner White: Could you please provide the name or model of the couch you\u0027re interested in? I\u0027ll be happy to check the details for you!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-08 17:25:39.353"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you",
+          "date_time": "2026-02-08 17:26:25.204",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Haven-dove-4p-skt",
+          "date_time": "2026-02-08 17:41:55.142",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c3f71-3d02-4458-f000-0000cfc3ff8e",
+          "message_text": "Gardner White: Great question! I want to make sure I give you the most accurate information, so I\u0027ll check in with my team. Since it\u0027s the weekend, I may not hear back until Monday, but I\u0027ll be sure to follow up with you as soon as I do!",
+          "message_type": "agent",
+          "agent": "82222",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-08 17:48:31.781"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Okay sounds good",
+          "date_time": "2026-02-08 17:49:34.833",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c3f86-19a6-470a-f000-0000cfc3ff8e",
+          "message_text": "Gardner White: Thank you for your time. Should you have any further concerns, please don\u0027t hesitate to reach out. ",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-08 18:11:18.985"
+        }
+      ]
     }
   }
 }

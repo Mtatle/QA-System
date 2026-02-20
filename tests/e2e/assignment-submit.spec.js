@@ -15,13 +15,24 @@ test.describe('Assignment submit flow', () => {
     await page.route('**/exec**', async (route) => api.routeHandler(route));
     await page.goto('/app.html');
 
-    await expect(page.locator('#companyNameLink')).toHaveText(/Julie Vos/i);
+    await expect
+      .poll(() => {
+        const currentUrl = new URL(page.url());
+        return String(currentUrl.searchParams.get('aid') || '').trim();
+      })
+      .toBe('aid-1');
     await page.fill('#notes', 'Playwright submit smoke note');
     await page.click('#formSubmitBtn');
 
-    await expect(page.locator('#companyNameLink')).toHaveText(/Brilliant Earth/i, {
-      timeout: 10000,
-    });
+    await expect
+      .poll(
+        () => {
+          const currentUrl = new URL(page.url());
+          return String(currentUrl.searchParams.get('aid') || '').trim();
+        },
+        { timeout: 10000 }
+      )
+      .toBe('aid-2');
 
     await expect.poll(() => api.state.doneCalls, { timeout: 10000 }).toBeGreaterThan(0);
     await expect.poll(() => api.state.evaluationCalls, { timeout: 10000 }).toBeGreaterThan(0);

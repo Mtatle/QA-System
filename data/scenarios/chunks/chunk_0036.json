@@ -3,671 +3,131 @@
   "chunk": "chunk_0036",
   "scenarios": {
     "176": {
-      "id": "019be5d5-8734-445e-f000-00000d723886",
-      "companyName": "Fashion Nova",
-      "companyWebsite": "https://fashionnova.com",
-      "agentName": "Alexa",
-      "agentInitial": "F",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "agentName": "Casey",
+      "id": "019c4e43-4417-4b5b-f000-0000fa8d263d",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://heydude.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://heydude.com",
+      "companyName": "HEYDUDE US",
+      "notes": {
+        "important": [
+          "There is a scam website that customers are texting in from (https://heydudestores.com/)",
+          "If you notice this, reroute customers to the correct website!"
+        ],
         "send_to_cs": [
-          "No escalations for this client, send to CS using the Support templates",
-          "For post-purchase inquiries send to CS using the Support template (shortcut: ESC)",
-          "For pre-purchase inquiries send to CS using the Support 2 template (shortcut: TESC)"
+          "Don\u0027t ESC post-purchase issues, use PPI shortcut"
         ],
         "templates": [
-          "For expired discounts use EXP shortcut",
-          "For login issues use LGI shortcut"
+          "For wrong items received use WMP shortcut",
+          "For damaged items received use DMI shortcut",
+          "For order status requests use OSR shortcut"
         ],
         "promo_and_exclusions": [
-          "If cx are looking for their 30% welcome code, ask to check their email (spam & promo)",
-          "Gift cards can be used on discounted items"
+          "The welcome code is valid for first-time customers only.",
+          "➜ Applies to full-price styles",
+          "➜ Can\u0027t be combined with any other discounts or offers, including sale styles",
+          "➜  Use cww temp for code issues",
+          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
         ]
       },
-      "SystemMessage1": "Fashion Nova: LAST CALL 4 XMAS! FREE 1-Day SHIPPING + 40% OFF EVERYTHING!\n\nOrder NOW, Get It TMRW! T&Cs Apply ->\nhttp://sms.fashionnova.com/aMv81KeS5qNs .",
-      "SystemMessage2": "Fashion Nova: Your order #175379827 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/aeaaEuvg5DYf .",
-      "SystemMessage3": "Fashion Nova: It's here! Order #175379827 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/aGD0pr4we-4_ .",
-      "SystemMessage4": "Fashion Nova: HURRY! The price dropped! Get the Office Elegance Satin Midi Dress - Black/White - 3X NOW before it sells out! -> http://sms.fashionnova.com/aWIWURxOfreE .",
-      "SystemMessage5": "Fashion Nova: Sharon, what happened? You may have missed something! Check out our New Arrivals before they sell out... you won't regret it: http://sms.fashionnova.com/afXF4AqoWiaG .",
-      "SystemMessage6": "Fashion Nova: Last Chance!! Heidi Wide Leg Trouser Pant - Black is almost sold out. Grab it before someone else does! -> http://sms.fashionnova.com/adHHQH7bq1mS .",
-      "SystemMessage7": "Fashion Nova: Ur NYE 'Fit W/FREE 1-Day Shipping!! Order NOW, Get It By Tuesday!\n\n+30-90% OFF EVERYTHING! Shop NOW! ->\nhttp://sms.fashionnova.com/agb1Jkr9xSF1 .",
-      "SystemMessage8": "Fashion Nova: LAST CHANCE For NYE! Get Ur 'Fit W/ FREE 1-Day Shipping!\n\n+ EXTENDED 30-90% OFF! Shop NOW! T&C's Apply->\nhttp://sms.fashionnova.com/aDi8ucHTDopL .",
-      "SystemMessage9": "Fashion Nova: Want a $1K gift card? Leave a review for Order #172913021 & include #FNSweepstakes for chance to win! See T&Cs -> http://sms.fashionnova.com/a4ODcW5X1R7i .",
-      "SystemMessage10": "Fashion Nova: You've Missed Out On So Much! 6,458+ New Arrivals Just Added. Come Back & Shop NOW To Receive 10% OFF Your Entire Order! Use Code: TAKE10 ASAP! Code Expires Soon! http://sms.fashionnova.com/axfhT7-D32Vo .",
-      "SystemMessage11": "Fashion Nova: FREE 1-DAY SHIPPING + BOGO FREE Dresses, Sets, Jumpsuits!\n\nNew Year, New Wardrobe! Use Code: FREE ->\nhttp://sms.fashionnova.com/ayB4MFe9eD-F .",
-      "SystemMessage12": "Fashion Nova: Don't forget this dress! Use Code: TAKE10 for 10% off your ENTIRE order! -> http://sms.fashionnova.com/aL2WuxtbKiuk .",
-      "SystemMessage13": "Fashion Nova: Don't forget this dress! Use Code: TAKE10 for 10% off your ENTIRE order! -> http://sms.fashionnova.com/aZIkmuIE20PP .",
-      "SystemMessage14": "Fashion Nova: HURRY! The price dropped! Get the Meet On The Dancefloor Sequin Maxi Dress - White - 3X NOW before it sells out! -> http://sms.fashionnova.com/aeO43_GoNcr8 .",
-      "SystemMessage15": "Fashion Nova: FREE 1-DAY SHIPPING! + Up To 70% OFF\n\nOver 4,162 New Arrivals Just Added! Order Now, Get It TMRW! ->\nhttp://sms.fashionnova.com/a6JHYaa2slgC .",
-      "SystemMessage16": "Fashion Nova: Sharon, what happened? You may have missed something! Check out our New Arrivals before they sell out... you won't regret it: http://sms.fashionnova.com/a8W7urqDAOFv .",
-      "SystemMessage17": "Fashion Nova: Don't forget this dress! Use Code: TAKE10 for 10% off your ENTIRE order! -> http://sms.fashionnova.com/a-G8mjejAlbM .",
-      "SystemMessage18": "Fashion Nova: Hi Sharon! Curious about a product or want to make a purchase? We're happy to provide more details or make recommendations!\n\nReply with any questions you have!",
-      "SystemMessage19": "Fashion Nova: FREE 1-Day Shipping + Up to 70% OFF Sitewide!!\n\nThis One's Too Good To Miss! Shop NOW, Get It TMRW! ->\nhttp://sms.fashionnova.com/aNnC1-cFe7mj .",
-      "SystemMessage20": "Fashion Nova: Hi Sharon! Curious about a product or want to make a purchase? We're happy to provide more details or make recommendations!\n\nReply with any questions you have!",
-      "customerMessage1": "Well, I didn't get my black dress what I wanted from the beginning and I do not wear jumpers and so I just wanted my black dress",
-      "AgentMessage1": "Fashion Nova: I'm so sorry we didn't meet your expectations. Could you share a bit more about what went wrong? I'd love to understand better and see how we can make things right.",
-      "customerMessage2": "Look at the many orders I have made I love your merchandise very good quality of clothes. If I can get a gift certificate to purchase something else would be great. It will make me feel better.",
-      "customerMessage3": "I was sent the wrong item and because it was black. They said that order was completed. It was a black jumpsuit. It wasn't the dress.",
-      "AgentMessage2": "Fashion Nova: I'm really sorry for the inconvenience. Could you please let me know which dress you were expecting and the order number so I can look into this for you?",
-      "customerMessage4": "Elise Button Up Midi Dress - Black I never received",
-      "customerMessage5": "3x",
-      "SystemMessage21": "Template used: \"Support\"; last updated: 2024-09-27 12:46:41.956",
-      "AgentMessage3": "Fashion Nova: Thank you for sending this over. If you're referring to Order #173475067. I saw that you ordered this dress. Unfortunately, this situation can only be handled by visiting http://sms.fashionnova.com/aKfNjnHMLWMH and beginning an inquiry with our team. To confirm, you've already done so? If yes, did you send a photo of all the items you received when you did?",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://fashionnova.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Elise Button Up Midi Dress - Black",
-            "link": "https://www.fashionnova.com/products/elise-button-up-midi-dress-black",
-            "icon": "eye"
-          },
-          {
-            "item": "Raylin Bandage Midi Dress - White",
-            "link": "https://www.fashionnova.com/products/raylin-bandage-midi-dress-white",
-            "icon": "eye"
-          },
-          {
-            "item": "Perfectly Polished Ruched Midi Dress - White",
-            "link": "https://www.fashionnova.com/products/perfectly-polished-ruched-midi-dress-white",
-            "icon": "eye"
-          },
-          {
-            "item": "Perfectly Polished Ruched Midi Dress - White",
-            "link": "https://www.fashionnova.com/products/perfectly-polished-ruched-midi-dress-white",
-            "icon": "eye"
-          },
-          {
-            "item": "Oakley Pleated Midi Dress - Rust",
-            "link": "https://www.fashionnova.com/products/oakley-pleated-midi-dress-rust",
-            "icon": "eye"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "7148248039548",
-            "orderDate": "",
-            "link": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "Dramatic Much Faux Fur Scarf - Ivory",
-                "price": "29.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory"
-              },
-              {
-                "name": "Dramatic Much Faux Fur Scarf - Ivory",
-                "price": "29.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory"
-              },
-              {
-                "name": "Dramatic Much Faux Fur Scarf - Ivory",
-                "price": "29.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory"
-              },
-              {
-                "name": "Dramatic Much Faux Fur Scarf - Ivory",
-                "price": "29.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory"
-              },
-              {
-                "name": "Dramatic Much Faux Fur Scarf - Ivory",
-                "price": "29.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory"
-              },
-              {
-                "name": "Dramatic Much Faux Fur Scarf - Ivory",
-                "price": "29.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory"
-              },
-              {
-                "name": "Dramatic Much Faux Fur Scarf - Ivory",
-                "price": "29.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory"
-              },
-              {
-                "name": "Dramatic Much Faux Fur Scarf - Ivory",
-                "price": "29.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory"
-              },
-              {
-                "name": "Luxe Feeling Sequin Gown - White",
-                "price": "99.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white"
-              },
-              {
-                "name": "Luxe Feeling Sequin Gown - White",
-                "price": "99.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white"
-              },
-              {
-                "name": "Luxe Feeling Sequin Gown - White",
-                "price": "99.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white"
-              },
-              {
-                "name": "Luxe Feeling Sequin Gown - White",
-                "price": "99.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white"
-              },
-              {
-                "name": "Luxe Feeling Sequin Gown - White",
-                "price": "99.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white"
-              },
-              {
-                "name": "Luxe Feeling Sequin Gown - White",
-                "price": "99.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white"
-              },
-              {
-                "name": "Luxe Feeling Sequin Gown - White",
-                "price": "99.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white"
-              },
-              {
-                "name": "Luxe Feeling Sequin Gown - White",
-                "price": "99.99",
-                "currency": "USD",
-                "productLink": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white"
-              }
-            ],
-            "total": "129.98"
-          }
-        ]
-      },
-      "orders": [
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "7148248039548",
-          "order_status_url": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory",
-              "product_name": "Dramatic Much Faux Fur Scarf - Ivory",
-              "product_price": 29.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory",
-              "product_name": "Dramatic Much Faux Fur Scarf - Ivory",
-              "product_price": 29.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory",
-              "product_name": "Dramatic Much Faux Fur Scarf - Ivory",
-              "product_price": 29.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory",
-              "product_name": "Dramatic Much Faux Fur Scarf - Ivory",
-              "product_price": 29.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory",
-              "product_name": "Dramatic Much Faux Fur Scarf - Ivory",
-              "product_price": 29.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory",
-              "product_name": "Dramatic Much Faux Fur Scarf - Ivory",
-              "product_price": 29.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory",
-              "product_name": "Dramatic Much Faux Fur Scarf - Ivory",
-              "product_price": 29.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/dramatic-much-faux-fur-scarf-ivory",
-              "product_name": "Dramatic Much Faux Fur Scarf - Ivory",
-              "product_price": 29.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white",
-              "product_name": "Luxe Feeling Sequin Gown - White",
-              "product_price": 99.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white",
-              "product_name": "Luxe Feeling Sequin Gown - White",
-              "product_price": 99.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white",
-              "product_name": "Luxe Feeling Sequin Gown - White",
-              "product_price": 99.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white",
-              "product_name": "Luxe Feeling Sequin Gown - White",
-              "product_price": 99.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white",
-              "product_name": "Luxe Feeling Sequin Gown - White",
-              "product_price": 99.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white",
-              "product_name": "Luxe Feeling Sequin Gown - White",
-              "product_price": 99.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white",
-              "product_name": "Luxe Feeling Sequin Gown - White",
-              "product_price": 99.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://fnova.myshopify.com/products/luxe-feeling-sequin-gown-white",
-              "product_name": "Luxe Feeling Sequin Gown - White",
-              "product_price": 99.99
-            }
+          "message_type": "system",
+          "message_text": "HEYDUDE: Welcome to HEYDUDE! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/o76",
+          "date_time": "2026-02-11 14:17:26.009",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: We\u0027re so stoked you\u0027re here!\n\nGet 20% off your first purchase with code ATTWDAR4DEX2 at checkout.\n\nShop Now:\nhttps://heydudeshoes.attn.tv/auN6FhwVISP0 .",
+          "date_time": "2026-02-11 14:17:28.170",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Over the next few days we\u0027ll try to help you find something that you will love!\n\nUntil then, shop our viral best-sellers: https://heydudeshoes.attn.tv/acqt4VE2w9Uw .",
+          "date_time": "2026-02-11 14:18:35.178",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: We\u0027re so pumped for you to get your new shoes!\n\nWhile you wait, check out our newest arrivals:\nheydudeshoes.attn.tv/abGg-fRyZvqC .",
+          "date_time": "2026-02-11 14:19:50.633",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I didn\u0027t get a receipt. Can you send one?",
+          "date_time": "2026-02-11 14:40:47.774",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4e39-a4cc-476b-f000-0000fa8d263d",
+          "message_text": "HEYDUDE: I\u0027m sorry to hear that! We sent you a confirmation email. Just to be sure, did you check your spam/promo folders already? Our emails can end up there sometimes.",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
           ],
-          "total": 129.98
+          "date_time": "2026-02-11 14:42:06.566"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Please Send another email to Ginnie.Harwood@gmail.com",
+          "date_time": "2026-02-11 14:47:38.005",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I still haven\u0027t gotten it and not in spam",
+          "date_time": "2026-02-11 14:47:48.029",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Post Purchase Inquiries\"; last updated: 2024-02-12 22:33:07.578",
+          "date_time": "2026-02-11 14:52:37.161",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4e43-4417-4b5b-f000-0000fa8d263d",
+          "message_text": "HEYDUDE: Sorry, I can\u0027t change the email address associated with your order or send the confirmation email to your new email on my end. We don\u0027t handle post-purchase requests via text and the fastest way to get help with your order is to email us at customerservice@heydude.com. Please let me know if you have any questions about our products, I\u0027m more than happy to help you here!",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 14:52:37.164"
         }
       ]
-    },
-    "177": {
-      "id": "019bb47c-e889-4e8c-f000-00008cc6d767",
-      "companyName": "Lacoste",
-      "companyWebsite": "https://lacoste.com",
-      "agentName": "Sarah",
-      "agentInitial": "L",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ]
-      },
-      "SystemMessage1": "Lacoste: Get your gifts on time! \n\nTo guarantee holiday delivery, order with ground shipping by today, 12/16 at noon EST!\n\nShop Gifts: lacoste.attn.tv/a_JlciriGehW .",
-      "SystemMessage2": "Lacoste: Shop the Semi-Annual Sale NOW. Up to 50% off is waiting... with new styles added.\n\nShop Now: lacoste.attn.tv/a1xNatYpKpSd .\n\n*exclusions apply",
-      "SystemMessage3": "Lacoste: Get your gifts on time! \n\nTo guarantee holiday delivery, order with next day shipping by 12/22 at noon EST!\n\nAct Fast: lacoste.attn.tv/aLqnrM_FMe-Y .",
-      "SystemMessage4": "Lacoste: The Winter Sale has arrived. Save up to 50% off on seasonal essentials.\n\nShop Now: lacoste.attn.tv/a5Geue9pyIQz .\n\n*exclusions apply",
-      "SystemMessage5": "Lacoste: Save up to 50% off. The Winter Sale is still on!\n\nAct Fast: lacoste.attn.tv/aKEMTWXNQh9x .\n\n*exlcusions apply",
-      "SystemMessage6": "Lacoste: Semi-Annual Sale is Back! Up to 50% off.\n\nShop here: lacoste.attn.tv/a5Eyf4z84Tza .\n\n*exclusions apply",
-      "SystemMessage7": "Lacoste: You are already subscribed. Click here to shop now: lacoste.com.",
-      "SystemMessage8": "Lacoste: We saw you looking.. have you had a chance to check out our best sellers on sale? \n\nShop it here: lacoste.attn.tv/ai23ihxQtZWR .",
-      "customerMessage1": "Price?",
-      "AgentMessage1": "Lacoste: Thanks for reaching out! Could you please let me know which item you were referring to? I'd be happy to check it for you.",
-      "customerMessage2": "Unisex high neck zip up sweatshirt",
-      "AgentMessage2": "Lacoste: Got it. Are you referring to this one? - https://lacoste.attn.tv/aCsIxVMlfuMP If so, the price depends on the color. Which color would you prefer?",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://lacoste.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Men's Zip-Up Fleece Sweatshirt",
-            "link": "https://www.lacoste.com/us/lacoste/men/clothing/197789571101.html?color=BMY&gad_source=1&gad_campaignid=21708107955&gclid=Cj0KCQiAsNPKBhCqARIsACm01fRs4gX0rVbc0DLszlAVLe1JFLzNv-jmpmklD47IB-kLyHph-Z9c7WkaAmhnEALw_wcB",
-            "icon": "eye"
-          },
-          {
-            "item": "Unisex High-Neck Zip-Up Sweatshirt",
-            "link": "https://www.lacoste.com/us/lacoste/sale/men-s-sale/sweaters-sweatshirts-2/?_gl=1*lrttlu*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiA6sjKBhCSARIsAJvYcpMeh0wRRXRS-NUt4ph_2cxhitirHv3jAFaTaAmNjM9RleHRgUEa9-kaAsl-EALw_wcB&page=4",
-            "icon": "eye"
-          },
-          {
-            "item": "Unisex High-Neck Zip-Up Sweatshirt",
-            "link": "https://www.lacoste.com/us/lacoste/men/clothing/sweaters-sweatshirts/SH2735-51.html?color=T03",
-            "icon": "eye"
-          },
-          {
-            "item": "Unisex High-Neck Zip-Up Sweatshirt",
-            "link": "https://www.lacoste.com/us/lacoste/men/clothing/sweaters-sweatshirts/SH2735-51.html?color=T01",
-            "icon": "eye"
-          },
-          {
-            "item": "Unisex High-Neck Zip-Up Sweatshirt",
-            "link": "https://www.lacoste.com/us/lacoste/men/clothing/sweaters-sweatshirts/SH2735-51.html?color=HBP",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "178": {
-      "id": "019bd2bb-f5b6-48c8-f000-0000eb7212d4",
-      "companyName": "COS",
-      "companyWebsite": "https://cos.com/en_usd",
-      "agentName": "COS AI Customer Service",
-      "agentInitial": "C",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "tone": [
-          "Always respond to cx's in English even if they reach out in another language"
-        ],
-        "templates": [
-          "For checkout issues with the error RM1 - use the template"
-        ]
-      },
-      "SystemMessage1": "COS: Elements of loungewear and athleisure lend knitwear a versatile update. \n\nPlus up to 50% off sale continues.\n\nShop now: cosstores.attn.tv/awHwOLU-c9Fl .",
-      "SystemMessage2": "COS: Happy holidays with warmest wishes to you and yours this holiday season. \n\nDiscover the latest arrivals: cosstores.attn.tv/ate7NDzAAYXm .",
-      "SystemMessage3": "COS: Up to 50% off sale: New styles added online & in stores including party season favorites.\n\nEnjoy free express shipping on orders $150+ until 1PM EST today, to receive your order by New Year's Eve.\n\nShop now: cosstores.attn.tv/aY3zrSCLrRG1 .",
-      "SystemMessage4": "COS: Up to 50% off sale: New styles added online & in stores including party season favorites.\n\nEnjoy free express shipping on orders $150+ until 1PM EST today, to receive your order by New Year's Eve.\n\nShop now: cosstores.attn.tv/a7PmPL8P8Vzz .",
-      "SystemMessage5": "COS: Selling fast: the most coveted new to sale styles at up to 50% off. \n\nShop now: cosstores.attn.tv/agAAq2TBVD_s.",
-      "SystemMessage6": "COS: Don't miss the best sellers added to sale online & instore. Including up to 50% off cold-weather must haves.\n\nShop now: cosstores.attn.tv/aEpfrjH-C1Cx.",
-      "SystemMessage7": "COS: Unlock an exclusive 20% off the new-season collection online, for a limited time only. \n\nUse code: REFRESH20\n\nShop now: cosstores.attn.tv/au1Xl1aBtG5j.",
-      "SystemMessage8": "COS: Update your wardrobe with the latest pieces from the menswear collection this new year.\n\nShop now: cosstores.attn.tv/aAnZZ_Lh-7hE .",
-      "SystemMessage9": "COS: Further reductions on sale with 200+ styles now up to 60% off. Explore the latest markdowns before they're gone.\n\nShop now: cosstores.attn.tv/aRcH21F7wp-B.",
-      "SystemMessage10": "COS: Hello, thanks for visiting us.\n\nDiscover exceptional craftsmanship for your wardrobe. Shop now: https://cosstores.attn.tv/aU6FJyqQciWt .",
-      "SystemMessage11": "COS: Refresh your wardrobe for the New Year ahead with an exclusive 20% off the collection online.\n\nCode: REFRESH20\n\nShop now: cosstores.attn.tv/aPlP4aNjruLr.",
-      "SystemMessage12": "COS: Discover a seasonal edit of further reductions now up to 60% off. Don't miss the most-coveted sale styles.\n\nShop now: cosstores.attn.tv/ap6K9p4xE4GC .",
-      "SystemMessage13": "COS: Discover a seasonal edit of further reductions now up to 60% off. Don't miss the most-coveted sale styles.\n\nShop now: cosstores.attn.tv/aG4PcbjFVJ9e .",
-      "SystemMessage14": "COS: Your exclusive 20% off new season continues, for a limited time. \n\nCode: REFRESH20 \n\nDiscover the latest collection now: cosstores.attn.tv/aMSazAcEaYy2 .",
-      "SystemMessage15": "COS: Selling fast: sale styles at up to 60% off, including seasonal knitwear & outdoor pieces.\n\nShop now: cosstores.attn.tv/ayJ_A6gggvQf.",
-      "SystemMessage16": "COS: Final day to take 20% off the latest collection with your exclusive New Year offer. \n\nCode: REFRESH20 \n\nShop now: cosstores.attn.tv/a0Xdj6J30Jmj.",
-      "SystemMessage17": "COS: New additions to sale.\n\nDiscover the new styles added in the sale, at up to 60% off. See what's just arrived.\n\nShop now: cosstores.attn.tv/aWmRBG5AIC7b .",
-      "SystemMessage18": "COS: The reset: an authentic new collection, led by casual day-to-day dressing that brings fresh energy. \n\nShop now: cosstores.attn.tv/aBSNu99HJKSU .",
-      "SystemMessage19": "COS: An edit of overshirts equips the menswear wardrobe for warm winter layering. \n\nShop overshirts: cosstores.attn.tv/aQhhsGxiR_Qu .",
-      "SystemMessage20": "COS: Discover the sale with up to 60% off, including current new styles, selling fast.\n\nShop the sale now: cosstores.attn.tv/aBm9WypViyvz .",
-      "SystemMessage21": "COS: Further reductions are here.\n\nDiscover up to 60% off on more sale styles in stores and online now.\n\nShop now: cosstores.attn.tv/apggzvKLvmK1 .",
-      "SystemMessage22": "COS: New season refresh: enjoy an exclusive 20% off online for a limited time.\n\nCode NEWSEASON20\n\nShop now: cosstores.attn.tv/ak8KQVJDJfsx .",
-      "SystemMessage23": "COS: The Merino Line - an elevated curation featuring 100% merino wool base layers in honed cuts.\n\nShop the capsule: cosstores.attn.tv/ajdM-YoyZZx7 .",
-      "SystemMessage24": "COS: Even further reductions in our sale at up to 60% off. Discover the best of sale online ending soon.\n\nShop now: cosstores.attn.tv/a5Ap81K8kmY5 .",
-      "SystemMessage25": "COS: Step into your day with confidence in the Nubuck and Suede Sneakers, designed for refined ease in every step.\n\nEnjoy free economy shipping when you spend $150 or more.\n\nYour next pair is here: https://cosstores.attn.tv/axqPGLE9CreE .",
-      "SystemMessage26": "COS: Hello, thanks for stopping by.\n\nDiscover elegant essentials crafted for your everyday. Explore more here: https://cosstores.attn.tv/atPu6Gh1_dUP .",
-      "SystemMessage27": "COS: 20% off new-season pieces continues online. Refresh your wardrobe with the latest arrivals.\n\nCode: NEWSEASON20 \n\nShop now: cosstores.attn.tv/aNms1edtDEqX .",
-      "SystemMessage28": "COS: Take another look at the Nubuck and Suede Sneakers in your cart. Elevated design meets premium comfort.\n\nOnly 15 left; these are running out.\n\nShop now: https://cosstores.attn.tv/ag75VTMO_s4r .",
-      "customerMessage1": "Any discount code?",
-      "AgentMessage1": "COS: Thank you for reaching out! You can use code NEWSEASON20 at checkout to get 20% off our new-season pieces. Please check them out here: https://cosstores.attn.tv/aTClmI4gupj5 . We appreciate the purchase and the support!",
-      "customerMessage2": "It says conditions not met",
-      "customerMessage3": "I want to buy the nubuck and suede sneakers",
-      "AgentMessage2": "COS: Thank you for letting me know. I'm sorry about that. I just tried it on my end, and it works. You can have a look here: https://cosstores.attn.tv/awFsXJ16Vm1n You can use this link for eligible items: cosstores.attn.tv/aNms1edtDEqX\n\nPlease note that the NUBUCK AND SUEDE SNEAKERS is excluded from the offer. I hope this helps. Please let me know if you need further assistance. I'm happy to help.",
-      "customerMessage4": "Oh so there's no discount code for the sneakers then?",
-      "AgentMessage3": "COS: I'm sorry for the inconvenience. Unfortunately, the Nubuck and Suede Sneakers are excluded from the offer. You can find eligible items via the link in my previous message.",
-      "customerMessage5": "Ok thank you",
-      "customerMessage6": "If they're ever in sale or",
-      "customerMessage7": "Any discount code works, could you let me know?",
-      "SystemMessage29": "Template used: \"You're welcome! - All brands\"; last updated: 2023-10-10 18:02:00.150",
-      "AgentMessage4": "COS: No worries. Rest assured that we'll definitely keep you in the loop on our latest offers. Meanwhile, you can check the other eligible items through the link I shared earlier. If you need any help or have questions, just let me know.",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://cos.com/en_usd",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "relaxed lightweight cotton t-shirt",
-            "link": "https://www.cos.com/en-us/men/menswear/tshirts/relaxed-fit/product/relaxed-lightweight-cotton-t-shirt-light-green-1294695014",
-            "icon": "eye"
-          },
-          {
-            "item": "nubuck and suede trainers",
-            "link": "https://www.cos.com/en-us/men/accessories/shoes/sneakers/product/nubuck-and-suede-trainers-grey-1311875001",
-            "icon": "eye"
-          },
-          {
-            "item": "nubuck and suede trainers",
-            "link": "https://www.cos.com/en-us/men/accessories/shoes/sneakers/product/nubuck-and-suede-trainers-grey-1311875001",
-            "icon": "eye"
-          },
-          {
-            "item": "nubuck and suede trainers",
-            "link": "https://www.cos.com/en-us/men/accessories/shoes/sneakers/product/nubuck-and-suede-trainers-grey-1311875001",
-            "icon": "eye"
-          },
-          {
-            "item": "nubuck and suede trainers",
-            "link": "https://www.cos.com/en-us/men/accessories/shoes/sneakers/product/nubuck-and-suede-trainers-grey-1311875001",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "179": {
-      "id": "019bdd44-ece3-4081-f000-0000f31739a1",
-      "companyName": "Cecil and Lou",
-      "companyWebsite": "https://cecilandlou.com",
-      "agentName": "Emma",
-      "agentInitial": "C",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ]
-      },
-      "SystemMessage1": "Cecil and Lou: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Cecil and Lou: 🎀 Welcome to the Cecil and Lou family! We're so thrilled to have you with us! Here's a little gift-enjoy 15% off with your special code! EMFX1JVV\nShop now: candl.attn.tv/asiXqtRXrP0y",
-      "SystemMessage3": "Cecil and Lou: 🎉 See something that caught your eye? Grab it before it's gone! candl.attn.tv/a1ANBTxoKWwB\n\nIs there anything I can help you with?\n- Emma",
-      "SystemMessage4": "Cecil and Lou: 🎉 Flash Sale! Swim Styles Just $21.99 with FREE monogram - Shop NOW! candl.attn.tv/aaDPsCnjgPLb",
-      "SystemMessage5": "Cecil and Lou: 🚨 Last Chance! Grab darling styles for just $21.99 with FREE monograms! candl.attn.tv/aujpHpigbEbN",
-      "SystemMessage6": "Cecil and Lou: 🎉 Sale EXTENDED! $21.99 and FREE monograms! Ends TONIGHT! candl.attn.tv/aTNzGRReMr1x",
-      "SystemMessage7": "Cecil and Lou: 🎉 Thanks so much for your recent purchase! Did you hear about our new arrivals? https://candl.attn.tv/aD1sjL2sqC7Q .",
-      "SystemMessage8": "Cecil and Lou: 💗 Thanks for visiting Cecil and Lou! This is Emma, I'm happy to help you discover darling styles!\n\nWho are you shopping for today?",
-      "customerMessage1": "I need something for my sons 9 month photos",
-      "customerMessage2": "He wears 18m",
-      "customerMessage3": "I want a bubble for sure and probably long sleeve since it's in two weeks.",
-      "AgentMessage1": "Cecil and Lou: Thank you for reaching out! Sure, what do you think of this collection? https://candl.attn.tv/aP6DfXrc1ZN6",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://cecilandlou.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Navy Seersucker Square Collar Bubble - 18M",
-            "link": "https://www.cecilandlou.com/products/navy-seersucker-square-collar-bubble1?variant=51053878083882&utm_source=shop_app&list_generator=link_to_storefront&context=product&user_id=560839182",
-            "icon": "eye"
-          },
-          {
-            "item": "Blue Windowpane Rashguard - 2T/3T",
-            "link": "https://www.cecilandlou.com/products/blue-windowpane-rashguard3?variant=51036567077162",
-            "icon": "eye"
-          },
-          {
-            "item": "Blue Windowpane Swim Trunks - 2T",
-            "link": "https://www.cecilandlou.com/products/blue-windowpane-swim-trunks3?variant=51036567929130",
-            "icon": "eye"
-          },
-          {
-            "item": "Blue Windowpane Rashguard - 2T/3T",
-            "link": "https://www.cecilandlou.com/products/blue-windowpane-rashguard3?variant=51036567077162",
-            "icon": "eye"
-          },
-          {
-            "item": "Blue Windowpane Rashguard - 0/3M",
-            "link": "https://www.cecilandlou.com/products/blue-windowpane-rashguard3",
-            "icon": "eye"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "7179137646890",
-            "orderDate": "",
-            "link": "https://cecil-and-lou.myshopify.com/products/blue-windowpane-rashguard3",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "Blue Windowpane Rashguard",
-                "price": "21.99",
-                "currency": "USD",
-                "productLink": "https://cecil-and-lou.myshopify.com/products/blue-windowpane-rashguard3"
-              },
-              {
-                "name": "Blue Windowpane Rashguard",
-                "price": "21.99",
-                "currency": "USD",
-                "productLink": "https://www.cecilandlou.com/products/blue-windowpane-rashguard3?variant=51036567175466"
-              },
-              {
-                "name": "Blue Windowpane Swim Trunks",
-                "price": "21.99",
-                "currency": "USD",
-                "productLink": "https://cecil-and-lou.myshopify.com/products/blue-windowpane-swim-trunks3"
-              },
-              {
-                "name": "Blue Windowpane Swim Trunks",
-                "price": "21.99",
-                "currency": "USD",
-                "productLink": "https://www.cecilandlou.com/products/blue-windowpane-swim-trunks3?variant=51036568158506"
-              },
-              {
-                "name": "Navidium Shipping Protection",
-                "price": "2",
-                "currency": "USD",
-                "productLink": "https://www.cecilandlou.com/products/navidium-shipping-protection?variant=49703478919466"
-              },
-              {
-                "name": "Navidium Shipping Protection",
-                "price": "2",
-                "currency": "USD",
-                "productLink": "https://cecil-and-lou.myshopify.com/products/navidium-shipping-protection"
-              }
-            ],
-            "total": "45.98"
-          }
-        ]
-      },
-      "orders": [
-        {
-          "currency": "USD",
-          "order_number": "7179137646890",
-          "order_status_url": "https://cecil-and-lou.myshopify.com/products/blue-windowpane-rashguard3",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://cecil-and-lou.myshopify.com/products/blue-windowpane-rashguard3",
-              "product_name": "Blue Windowpane Rashguard",
-              "product_price": 21.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.cecilandlou.com/products/blue-windowpane-rashguard3?variant=51036567175466",
-              "product_name": "Blue Windowpane Rashguard",
-              "product_price": 21.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://cecil-and-lou.myshopify.com/products/blue-windowpane-swim-trunks3",
-              "product_name": "Blue Windowpane Swim Trunks",
-              "product_price": 21.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.cecilandlou.com/products/blue-windowpane-swim-trunks3?variant=51036568158506",
-              "product_name": "Blue Windowpane Swim Trunks",
-              "product_price": 21.99
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://www.cecilandlou.com/products/navidium-shipping-protection?variant=49703478919466",
-              "product_name": "Navidium Shipping Protection",
-              "product_price": 2
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://cecil-and-lou.myshopify.com/products/navidium-shipping-protection",
-              "product_name": "Navidium Shipping Protection",
-              "product_price": 2
-            }
-          ],
-          "total": 45.98
-        }
-      ]
-    },
-    "180": {
-      "id": "019bc2d3-96e5-44c4-f000-0000f43d8f1d",
-      "companyName": "Julie Vos",
-      "companyWebsite": "https://julievos.com",
-      "agentName": "Rebecca",
-      "agentInitial": "J",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "When ESC during the weekend/late Friday use the \"Weekend escalation template\" template"
-        ],
-        "tone": [
-          "Don't use the term \"customer service team\", use \"customer care\" instead"
-        ],
-        "dos_and_donts": [
-          "Do not direct cx to contact the carrier",
-          "Do not provide customers with dates for restock before checking with our team."
-        ],
-        "promo_and_exclusions": [
-          "They have only 2 sales per year (June/November) - when those end the sale items are removed from the site"
-        ]
-      },
-      "SystemMessage1": "Julie Vos: Welcome to Julie Vos! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/N9l",
-      "SystemMessage2": "Julie Vos: Hey this is Rebecca , how can I help you?",
-      "SystemMessage3": "Julie Vos: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nIn the meantime, check out our newest arrivals > https://julievos.attn.tv/aqlHzBMWmUsZ .",
-      "customerMessage1": "yes / I bought a bangle bracelet with pearls - only word it ; times and then noticed one of the pearls was missing.  How do I get it repaired?",
-      "customerMessage2": "wore it 3 times",
-      "SystemMessage4": "Julie Vos: Discover simple gold necklaces, all with classic details and easy everyday style ✨\n\nTake 10% off when you use code WELCOMEK8V2.\n\nSTART exploring: https://julievos.attn.tv/ajDQ3M8rA0Fz .",
-      "AgentMessage1": "Julie Vos: Thank you for sharing this with me, and I'm truly sorry to hear that one of the pearls was missing. I'm afraid we do not offer repairs. However, for 12 months from the date of purchase, we are happy to take care of your product if damage to the material occurs. For more information, please take a look at our warranty policy here: https://julievos.attn.tv/aeqQBc7H7aI7",
-      "customerMessage3": "it has been over 12 months / can I send to you to be repaired?",
-      "SystemMessage5": "Template used: \"Cancel / edit order \"; last updated: 2024-06-04 20:12:20.529",
-      "SystemMessage6": "Template used: \"Order number and email - All brands\"; last updated: 2023-10-10 18:06:34.663",
-      "SystemMessage7": "Template used: \"Order number and email - All brands\"; last updated: 2023-10-10 18:06:34.663",
-      "SystemMessage8": "Template used: \"Do you offer repairs?\"; last updated: 2024-01-12 19:06:13.865",
-      "AgentMessage2": "Julie Vos: Thank you for the information. We do not offer repairs. Could you please share your email address and confirm the order number? I'll be happy to look into this with my team!",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://julievos.com",
-          "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
-      },
-      "orders": []
     }
   }
 }

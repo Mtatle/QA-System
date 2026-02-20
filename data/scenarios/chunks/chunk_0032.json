@@ -3,357 +3,874 @@
   "chunk": "chunk_0032",
   "scenarios": {
     "156": {
-      "id": "019bd26a-14ec-4323-f000-0000f49437ce",
-      "companyName": "Braun",
-      "companyWebsite": "https://braun.com",
-      "agentName": "Jordan",
-      "agentInitial": "B",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "dos_and_donts": [
-          "Don't send any registration links"
-        ],
-        "templates": [
-          "For adverse events or product quality complaints use APQ shortcut"
-        ],
-        "promo_and_exclusions": [
-          "Discount codes don't stack with sale items"
-        ]
-      },
-      "SystemMessage1": "Braun: Welcome to Braun! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Braun: Welcome to the family! Use code BRA652M68S and get up to $125 off your first purchase. Not combinable with other offers. Shop now: braun.attn.tv/alyVo7kjtGJj .",
-      "SystemMessage3": "Braun: Don't forget to save our contact for exclusive deals and updates!",
-      "customerMessage1": "Where can I get my shaver repaired in Omaha me",
-      "SystemMessage4": "Template used: \"Purchase at your convenient time - All brands\"; last updated: 2023-10-10 17:59:55.286",
-      "SystemMessage5": "Template used: \"Warranty policy\"; last updated: 2022-06-30 22:06:51.499",
-      "AgentMessage1": "Braun: Thanks for reaching out! I couldn't find an official CS Center in Omaha, ME. I apologize for the inconvenience.\n\nTo get service within the warranty period, hand in or send the complete appliance with your sales receipt to an authorized Braun CS center, you can find the info here: https://braun.attn.tv/aGXjtGYEUMS8\n\nPlease note that we cover any defects resulting from faulty materials or workmanship free of charge by either repairing or replacing the appliance at our discretion. \n\nLet me know if there's anything else I can assist you with today, happy to help!",
+      "agentName": "Emma",
+      "id": "019c77e5-e5f3-4d5a-f000-0000a679a0be",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://braun.com",
+          "value": "https://cecilandlou.com",
           "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://cecilandlou.com",
+      "companyName": "Cecil and Lou",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "ai_instructions": [
+          "Do not escalate anything, if the customer question cannot be handled, send template titled Customer support",
+          "If inbound question references \u0027pre-order\u0027 or \u0027preorder\u0027 send template titled Customer Support"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Pre Orders"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: ♥️It\u0027s time for a sweet treat! 30% off Valentine\u0027s Styles - TODAY only. Shop NOW! candl.attn.tv/a239-VurW-b5",
+          "date_time": "2026-02-03 11:45:19.790",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🚨 Flash Sale Alert! $21.99 swim \u0026 spring styles-limited quantities, limited time. Don\u0027t miss out! candl.attn.tv/apXeFFZKXZD2 ",
+          "date_time": "2026-02-06 09:10:24.911",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: Flash Sale-Last Day! 🥳\n$21.99 swim \u0026 spring styles ending tonight. Don\u0027t miss it! candl.attn.tv/alHIHNq--pHv ",
+          "date_time": "2026-02-08 14:30:32.914",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🎉 SALE EXTENDED! $21.99 spring \u0026 swim styles. Ends TONIGHT! candl.attn.tv/aMN6h-h9ATqC ",
+          "date_time": "2026-02-09 16:30:23.098",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🎉FREE MONOGRAMS! All in-stock items - for a limited time! Shop now! candl.attn.tv/arok0V2BnBxa ",
+          "date_time": "2026-02-13 09:30:29.301",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🎉 FREE Monograms end soon - save $12 per monogram! candl.attn.tv/ayB0uDntMd23 ",
+          "date_time": "2026-02-15 14:30:26.185",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: ⏰ By popular demand - Sale EXTENDED! FREE Monograms ending soon. Save $12 each! candl.attn.tv/a5DwSnyewwzA ",
+          "date_time": "2026-02-16 10:00:55.547",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: You are already subscribed. Click here to shop now: https://candl.attn.tv/cl/2UV .",
+          "date_time": "2026-02-19 16:43:59.227",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 💗 Thanks for visiting Cecil and Lou! This is Emma, I\u0027m happy to help you discover darling styles!\n\nWho are you shopping for today?",
+          "date_time": "2026-02-19 16:47:08.335",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "My son!",
+          "date_time": "2026-02-19 16:47:38.879",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Color and size - All brands\"; last updated: 2023-10-10 18:15:26.639",
+          "date_time": "2026-02-19 16:54:41.290",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c77e5-e5f3-4d5a-f000-0000a679a0be",
+          "message_text": "Cecil and Lou: That\u0027s lovely! Could you please let me know which color or style you\u0027re interested in and what size you need? I\u0027ll be happy to send you recommendations!\nIn the meantime, feel free to browse our available collection for boys here: https://candl.attn.tv/aKV59mEu0_M1",
+          "message_type": "agent",
+          "agent": "109964",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 16:54:41.291"
+        }
+      ]
     },
     "157": {
-      "id": "019bc7e6-6fc7-4cdc-f000-0000f0d017ea",
-      "companyName": "Barbell Apparel",
-      "companyWebsite": "https://barbellapparel.com",
-      "agentName": "",
-      "agentInitial": "B",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {},
-      "SystemMessage1": "Barbell Apparel: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Barbell Apparel: Welcome! This is Sarah with Barbell Apparel. \n\nClick the link to get a FREE HOODIE on any orders over $99. \nhttps://barbell.attn.tv/a40QaC5ALcgK\n\nAdd hoodie to cart to apply discount\n\nWe're here to help you Break Boundaries.\n\nText me any time!",
-      "SystemMessage3": "Barbell Apparel: Don't forget to save our number. We give our best deals and exclusive drops over test message first.",
-      "SystemMessage4": "Barbell Apparel: Hey there! This is Sarah again. \n\nIn case you missed it, get a FREE HOODIE with any order over $99. \n\nChoose from our amazing selection of Hoodies.\nShop Now: https://barbell.attn.tv/aKmsWyzeIdLf \n\nWe're here to empower your workouts - text me if you need me!",
-      "SystemMessage5": "Barbell Apparel: We don't discount often, but we want to partner with you on the next step of your fitness journey.\n\nMake a change today, and click the link to get a free hoodie with any order over $99 while supplies last: https://barbell.attn.tv/ar-JVpNvqn2s .",
-      "SystemMessage6": "Barbell Apparel: New Year, Free Gear!\n\nFor a limited time get Free Shorts on orders of $149+ or Free Joggers on orders of $198 or more.\n\nShop Now: barbell.attn.tv/a7wjvxsHaQQx \n\nDiscount applies automatically when item is added to cart. While supplies last.",
-      "SystemMessage7": "Barbell Apparel: The Adapt Joggers & Shorts just dropped in our all-new Pine colorway!\n\nBuilt for real training with durable stretch, secure pockets, and a locked-in fit.\n\nFor a limited time, get FREE shorts on orders of $149+ or FREE joggers on orders of $199+.\n\nShop Now: barbell.attn.tv/avAqI9hyX6CH",
-      "SystemMessage8": "Barbell Apparel: Lunar just landed!\n\nA brand new color way in our best-selling Anything Dress Pant & Short.\n\nFor a limited time, get your pair of Lunar Anything Shorts for FREE with any order of $149 or more.\n\nShop Now: barbell.attn.tv/a_ng88fkc0ma",
-      "SystemMessage9": "Barbell Apparel: Still looking to upgrade for the new year? For a limited time, get any shorts free with orders of $149+ or any joggers free with orders of $199+.\n\nShop Now: barbell.attn.tv/a_Bgqrk5PW4L \n\nWhile supplies last.",
-      "SystemMessage10": "Barbell Apparel: Liking your Straight Athletic Fit Jeans? You’ll love our new arrivals. Shop our new best sellers: https://barbell.attn.tv/as2QKhY5J9gJ .",
-      "customerMessage1": "Hey, you received a return package on Monday, but still no refund to my card",
-      "SystemMessage11": "\"",
-      "SystemMessage12": "Template used: \"Pre-purchase escalations - All brands\"; last updated: 2023-10-10 17:48:28.037",
-      "AgentMessage1": "Barbell Apparel: Thank you for following up, and I'm sorry for any inconvenience. I will have to double-check that with my team to be sure. As soon as I hear back, I will send you a message right away!",
+      "agentName": "Kelly",
+      "id": "019c783d-36b5-4cfb-f000-0000fa601e89",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://barbellapparel.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "Stealth Hoodie - S / Black",
-            "link": "https://barbellapparel.com/products/stealth-hoodie",
-            "icon": "eye"
+            "link": "https://www.bearmattress.com/products/elite-hybrid-mattress?irclickid=SjQypHQ8bxycUL0XlrwLoVJ6Ukux10Sjk3q8UM0\u0026utm_source=Impact\u0026utm_content=1851601\u0026utm_medium=Wired\u0026ir_partnerid=1305164\u0026ir_adid=1851601\u0026ir_campaignid=13476\u0026irgwc=1\u0026afsrc=1",
+            "item": "Elite Hybrid",
+            "timeAgo": "2026-02-10"
           },
           {
-            "item": "Recon Jogger - M / Charcoal",
-            "link": "https://barbellapparel.com/products/recon-jogger?variant=39450940571720",
-            "icon": "eye"
+            "link": "https://www.bearmattress.com/products/elite-hybrid-mattress?irclickid=SjQypHQ8bxycUL0XlrwLoVJ6Ukux10Sjk3q8UM0\u0026utm_source=Impact\u0026utm_content=1851601\u0026utm_medium=Wired\u0026ir_partnerid=1305164\u0026ir_adid=1851601\u0026ir_campaignid=13476\u0026irgwc=1\u0026afsrc=1",
+            "item": "Elite Hybrid - Queen / Medium / Yes",
+            "timeAgo": "2026-02-10"
           },
           {
-            "item": "Recon Jogger - M / Sage",
-            "link": "https://barbellapparel.com/products/recon-jogger?variant=40362998431816",
-            "icon": "eye"
+            "link": "https://www.bearmattress.com/products/elite-hybrid-mattress?irclickid=SjQypHQ8bxycUL0XlrwLoVJ6Ukux10Sjk3q8UM0\u0026utm_source=Impact\u0026utm_content=1851601\u0026utm_medium=Wired\u0026ir_partnerid=1305164\u0026ir_adid=1851601\u0026ir_campaignid=13476\u0026irgwc=1\u0026afsrc=1",
+            "item": "Elite Hybrid - King / Firm / Yes",
+            "timeAgo": "2026-02-10"
           },
           {
-            "item": "Recon Jogger - M / Pacific Blue",
-            "link": "https://barbellapparel.com/products/recon-jogger?variant=52079562686830",
-            "icon": "eye"
-          },
-          {
-            "item": "Recon Jogger - M / Cedar",
-            "link": "https://barbellapparel.com/products/recon-jogger?variant=52079562654062",
-            "icon": "eye"
+            "link": "https://www.bearmattress.com/products/elite-hybrid-mattress?irclickid=SjQypHQ8bxycUL0XlrwLoVJ6Ukux10Sjk3q8UM0\u0026utm_source=Impact\u0026utm_content=1851601\u0026utm_medium=Wired\u0026ir_partnerid=1305164\u0026ir_adid=1851601\u0026ir_campaignid=13476\u0026irgwc=1\u0026afsrc=1",
+            "item": "Elite Hybrid - King / Medium / Yes",
+            "timeAgo": "2026-02-10"
           }
         ],
-        "orders": [
-          {
-            "orderNumber": "11743527567726",
-            "orderDate": "",
-            "link": "https://barbellapparel.myshopify.com/products/free-returns-or-exchanges-package-protection-us-orders-only",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "Free Returns or Exchanges (US orders only)",
-                "price": "7.98",
-                "currency": "USD",
-                "productLink": "https://barbellapparel.myshopify.com/products/free-returns-or-exchanges-package-protection-us-orders-only"
-              },
-              {
-                "name": "Recon Jogger",
-                "price": "108",
-                "currency": "USD",
-                "productLink": "https://barbellapparel.myshopify.com/products/recon-jogger"
-              },
-              {
-                "name": "Slim Athletic Fit Jeans",
-                "price": "138",
-                "currency": "USD",
-                "productLink": "https://barbellapparel.myshopify.com/products/slim-athletic-fit-jeans"
-              },
-              {
-                "name": "Straight Athletic Fit Jeans",
-                "price": "138",
-                "currency": "USD",
-                "productLink": "https://barbellapparel.myshopify.com/products/straight-athletic-fit-jeans"
-              }
-            ],
-            "total": "391.98"
-          }
+        "source": {
+          "label": "Website",
+          "value": "https://bearmattress.com/",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://bearmattress.com/",
+      "companyName": "Bear Mattress",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "dos_and_donts": [
+          "The cub and trundle mattresses do not include any of the free promotional products (no pillows, protector, sheets)",
+          "All mattresses ship seperately, inform the cx if they inquire about different shipping times"
+        ],
+        "drive_to_purchase": [
+          "When recommending bestsellers via the NCODE temp suggest Bear Original, Star Hybrid, Bear Pillow, \u0026 GlacioTex Mattress Protector"
+        ],
+        "promo_and_exclusions": [
+          "We no longer offer free pillows with a mattress purchase"
         ]
       },
-      "orders": [
+      "blocklisted_words": [
+        "organic",
+        "all-natural"
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Shipping questions"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "11743527567726",
-          "order_status_url": "https://barbellapparel.myshopify.com/products/free-returns-or-exchanges-package-protection-us-orders-only",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://barbellapparel.myshopify.com/products/free-returns-or-exchanges-package-protection-us-orders-only",
-              "product_name": "Free Returns or Exchanges (US orders only)",
-              "product_price": 7.98
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://barbellapparel.myshopify.com/products/recon-jogger",
-              "product_name": "Recon Jogger",
-              "product_price": 108
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://barbellapparel.myshopify.com/products/slim-athletic-fit-jeans",
-              "product_name": "Slim Athletic Fit Jeans",
-              "product_price": 138
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://barbellapparel.myshopify.com/products/straight-athletic-fit-jeans",
-              "product_name": "Straight Athletic Fit Jeans",
-              "product_price": 138
-            }
+          "message_type": "system",
+          "message_text": "Bear Mattress: Welcome to Bear Mattress! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-10 08:35:13.509",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bear Mattress: You\u0027ve unlocked our Presidents Day Sale! Save 35% on your entire order AND receive FREE $275 Sleep Accessories on us! (Two Pillows + Mattress Protector)\n\nUse Code: \"PRESDAY\" at checkout!\n\nHave any questions? Send us a text back!\n\nShop the Sale: bearmattress.attn.tv/aDlVtVxagQNF ",
+          "date_time": "2026-02-10 08:35:17.460",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bear Mattress: Thank you for your purchase! Your order number is 265520. View more information about your order here: https://bearmattress.attn.tv/aXCSk6VNUtG7 .",
+          "date_time": "2026-02-10 08:38:24.261",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bear Mattress: Hey Elizabeth, this is Kelly . I noticed you were interested in something bearmattress.attn.tv/aF5I-BQujiQK .\n\nAnything I can help you with? Text me anytime.",
+          "date_time": "2026-02-10 12:14:18.913",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bear Mattress: Hi, Elizabeth, congrats on your new mattress from Bear!\n\nDid you know your bed base is key to the longevity of your mattress? Without the proper support, your mattress could be damaged.\n \nLearn more about what bed base is best for your mattress: https://bearmattress.attn.tv/aJ9d1PbL9AiG",
+          "date_time": "2026-02-11 12:28:40.089",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bear Mattress: Hi, Elizabeth, it\u0027s Bear again! \n\nWe wanted to send over a discount code just for you to use toward any of Bear\u0027s bed bases. \n\nUse Code: \"BB40\" at checkout for 40% off your bed base!\n\nhttps://bearmattress.attn.tv/aanKCHaSZYm1 ",
+          "date_time": "2026-02-11 13:28:46.399",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bear Mattress: Great news! Your order (265520) has shipped. Click here to track your order: https://bearmattress.attn.tv/akPP4xYlUiH3 .",
+          "date_time": "2026-02-17 16:00:00.094",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bear Mattress: Hi, Elizabeth, it\u0027s Bear!\n\nSpills, stains, and everything in between; keep your mattress safe with a mattress protector! Here\u0027s 40% off on us!\n\n+ Why not treat yourself to a new pillow!\n\nUse Code: \"ACC40\" at checkout and save!\n\nhttps://bearmattress.attn.tv/arIhJhHy-o0u",
+          "date_time": "2026-02-18 13:28:50.983",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "When is my mattress being shipped?",
+          "date_time": "2026-02-19 18:26:17.386",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It\u0027s been 9 days",
+          "date_time": "2026-02-19 18:26:47.410",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Tracking Info - All brands\"; last updated: 2023-10-10 16:47:28.277",
+          "date_time": "2026-02-19 18:30:03.644",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c783d-36b5-4cfb-f000-0000fa601e89",
+          "message_text": "Bear Mattress: Hi, thanks for reaching out. I completely understand how important it is to receive your order. I checked, and the bed is still in processing. You\u0027ll get a tracking email as soon as your order ships. If you don\u0027t see it in your inbox, be sure to check your spam and promo folders, sometimes our emails end up there as well. ",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
           ],
-          "total": 391.98
+          "date_time": "2026-02-19 18:30:03.647"
         }
       ]
     },
     "158": {
-      "id": "019bddc9-f3b7-4e44-f000-0000f524ab8f",
-      "companyName": "State Line Tack",
-      "companyWebsite": "https://statelinetack.com",
-      "agentName": "Sarah",
-      "agentInitial": "S",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "agentName": "Ava",
+      "id": "019c7838-565f-4e94-f000-0000f3c38533",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://brilliantearth.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://brilliantearth.com",
+      "companyName": "Brilliant Earth",
+      "notes": {
         "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
+          "Inquiries regarding orders",
+          "Shipping inquiries on a current order",
+          "Post-purchase issues",
+          "For product or general inquiries you can\u0027t find the answer to, use PGI shortcut"
         ],
-        "promo_and_exclusions": [
-          "Some items aren’t eligible for discounts due to manufacturers’ policy, add to cart to double-check!"
-        ]
-      },
-      "SystemMessage1": "State Line Tack: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "State Line Tack: Hey, this is Sarah! Thanks for signing up! Click here to activate your offer: slt.attn.tv/awilyU5I-EZS",
-      "SystemMessage3": "State Line Tack: You have been entered to win thousands in prizes each month! Click here for official Terms & Conditions. https://slt.attn.tv/atrxhjhy_tB2 .",
-      "SystemMessage4": "State Line Tack: Don't forget to save our contact to get exclusive updates!",
-      "SystemMessage5": "State Line Tack: Hey, this is Sarah. Thanks for checking out our site! https://slt.attn.tv/aXjgEditnYmo\n\nAre you looking for anything in particular today?",
-      "customerMessage1": "I am looking at the one K mips ccs helmet",
-      "AgentMessage1": "State Line Tack: Check out the One K Avance MIPS CCS Helmet here: https://slt.attn.tv/aIWhzqHli33d. It's available in various sizes.",
-      "customerMessage2": "Why does it say it comes with 2 bonuses but then in checkout it says it doesn't include bonuses",
-      "AgentMessage2": "State Line Tack: I'm sorry for the confusion. To clarify, are the \"2 bonuses\" you're seeing on the product page referring to the 2,500 and 500 points? If so, these are not discounts that can be applied at checkout. Once your purchase is confirmed, the points will be added to your account and can be used toward future orders. \n\nIf you don't have an account yet, you can create one for free here: https://slt.attn.tv/aDKMcdPdA3f9 You can also learn more about the rewards program here: https://slt.attn.tv/aKEmzTxAbtoL\n\nIn the meantime, is there anything else I can assist you with?",
-      "customerMessage3": "With my next purchase what would those 2 bonuses be worth in actual money so I know when I go to order something next time",
-      "AgentMessage3": "State Line Tack: For the value of your points, please check the rewards section on our website for the most accurate conversion. For your next purchase, you can use the coupon code MPTXSL2A at statelinetack.com.",
-      "customerMessage4": "Okay awesome and one more question",
-      "AgentMessage4": "State Line Tack: Great question! However, the shipping option you select will determine the estimated time. Please confirm the exact shipping method you selected during checkout.\n\nIn the meantime, you can check out our shipping policy here: https://slt.attn.tv/aFO2r0dTLnLp",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://statelinetack.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "One K Avance MIPS CCS Helmet - Black Gloss / Large",
-            "link": "https://www.statelinetack.com/products/one-k-avance-mips-ccs-helmet-2?utm_campaign=Concierge&utm_medium=sms&utm_source=attentive&externalId=0czyz",
-            "icon": "eye"
-          },
-          {
-            "item": "One K MIPS CCS Helmet - CS Black Matte / Large",
-            "link": "https://www.statelinetack.com/products/one-k-mips-ccs-helmet?variant=43797953314953",
-            "icon": "eye"
-          },
-          {
-            "item": "One K MIPS CCS Helmet - Black Matte / Large",
-            "link": "https://www.statelinetack.com/products/one-k-mips-ccs-helmet?variant=43797954003081",
-            "icon": "eye"
-          },
-          {
-            "item": "One K MIPS CCS Helmet - Black Matte / X-Small Long Oval",
-            "link": "https://www.statelinetack.com/products/one-k-mips-ccs-helmet?variant=43797953314953",
-            "icon": "eye"
-          },
-          {
-            "item": "One K MIPS CCS Helmet - Black Matte / X-Small Long Oval",
-            "link": "https://www.statelinetack.com/products/one-k-mips-ccs-helmet?_pos=2&_psq=one+k&_ss=e&_v=1.0",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "159": {
-      "id": "019bede7-5008-4125-f000-00007828227d",
-      "companyName": "RV Mattress",
-      "companyWebsite": "https://rvmattress.com",
-      "agentName": "",
-      "agentInitial": "R",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {},
-      "SystemMessage1": "RV Mattress: Welcome to RV Mattress! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "RV Mattress: Congrats! Your offer has been activated and can be redeemed here: https://rvmattress.attn.tv/aVu-HfYZGIIu \n\nText back any time for assistance. Sarah is our text concierge here to help!",
-      "SystemMessage3": "RV Mattress: PS: Don't forget to save our contact to get exclusive updates!",
-      "SystemMessage4": "RV Mattress: Hey Sue , this is Sarah . Thanks for checking out our site! https://rvmattress.attn.tv/azePMOa4d-1D \n\nAre you looking for anything in particular today?",
-      "customerMessage1": "Well, we have a dilemma. We purchased the Aurora Luxe 2 years ago but the weight is killing the slide on our Class C motorhome. We love the mattress but we can't continue to use it. We need something that isn't so heavy. Your Chat bot said it's 100 lbs but I think it's a lot heavier than that.",
-      "AgentMessage1": "RV Mattress: Sorry about that. What do you think of our Dreamfoam Essential? https://rvmattress.attn.tv/aLf_wmR9N99_ It's conveniently lightweight!",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://rvmattress.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Dreamfoam® Essential",
-            "link": "https://rvmattress.com/products/brooklyn-wanderlust-memory-foam/short-queen-60x74-8-inch",
-            "icon": "eye"
-          },
-          {
-            "item": "Dreamfoam® Essential",
-            "link": "https://rvmattress.com/products/brooklyn-wanderlust-memory-foam",
-            "icon": "eye"
-          },
-          {
-            "item": "Aurora Luxe",
-            "link": "https://rvmattress.com/products/brooklyn-aurora/short-queen-60x74-medium",
-            "icon": "eye"
-          },
-          {
-            "item": "Aurora Luxe",
-            "link": "https://rvmattress.com/products/brooklyn-aurora/ca-king-72x84-medium",
-            "icon": "eye"
-          },
-          {
-            "item": "Aurora Luxe",
-            "link": "https://rvmattress.com/products/brooklyn-aurora/short-queen-60x74-medium",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "160": {
-      "id": "019bd342-ee0f-4b77-f000-0000f49a4adb",
-      "companyName": "Kathy Kuo Home",
-      "companyWebsite": "https://kathykuohome.com",
-      "agentName": "Sarah",
-      "agentInitial": "K",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
         "escalate": [
-          "Esc inquiries about items not on the site",
-          "ESC if the cx missed a sale & wants to take advantage of it",
-          "ESC if the customer is asking for a discount and we don't have one",
-          "If cx is looking for general recommendations use LFR shortcut and ESC"
+          "No escalations for this client, send everything to CS"
+        ],
+        "tone": [
+          "Don\u0027t use the word \"unfortunately\" to discuss our appointment structure",
+          "Don\u0027t use the word \"best\" to reference a product (e.g., best ring, etc.)"
         ],
         "templates": [
-          "If cx is building a new home, interested in refurnishing their entire home or rooms in their home, use the IDS shortcut",
-          "If cx is shopping for a client use SFC shortcut",
-          "Any convo without a positive outcome (out of stock, not on sale, not shipping in time), use DSS shortcut"
+          "If cx are looking for an engagement ring and don\u0027t provide specifics, use LER shortcut"
         ],
         "dos_and_donts": [
-          "For product-specific delivery time-frame inquiries always check the product page for delivery info and share that with the cx"
+          "If the customer responds incorrectly to the journey, don\u0027t send jny temp, recommend items based on their selection instead",
+          "Cx can create their own engagement ring on the webiste by choosing a setting, stone and size",
+          "Cx can customize rings by working with designers who will use their ideas, drawings, images to create the ring they want",
+          "Don\u0027t disclose the locations of their labs/production facilities"
+        ],
+        "drive_to_purchase": [
+          "Be MORE SALESY, if the customer is showing intent to purchase then:",
+          "➜ Ask open-ended general questions such as style \u0026 material",
+          "➜ After asking open-ended questions, transition to specific questions such as center stone, etc.",
+          "➜ If the customer liked our recommendation, push for the sale by asking about payment options or when they hope to have the item"
+        ],
+        "promo_and_exclusions": [
+          "Please see here for current offer details: https://www.brilliantearth.com/promo-codes-and-offers/",
+          "Codes can be used in-store"
         ]
       },
-      "SystemMessage1": "Kathy Kuo: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Kathy Kuo: Welcome in! We're so excited to be your trusted destination for furnishing and interior design, no matter where you are in your home journey.\n\nEnjoy 10% Off your first order with code YOUR10 to get started: kathykuohome.attn.tv/aHvKl_i7tR3z .",
-      "SystemMessage3": "Kathy Kuo: Save our info so you know it's us when we reach out with new finds, thoughtful offers, and design inspiration just for you.",
-      "SystemMessage4": "Kathy Kuo: Hey there, this is Sarah. Thanks for checking out our site! https://kathykuohome.attn.tv/aL6FSTMMKPC3 . Are you working on a home design project we can help you with?",
-      "SystemMessage5": "Kathy Kuo: Need help getting started? Tell us a little about yourself and we'll take it from there. Text back with a number!\n\n1 - I'm shopping for my home\n2 - I need design help\n3 - I'm a Trade professional",
-      "SystemMessage6": "Kathy Kuo: Hey there, your great picks are waiting! Use code KKHSHIP15 for 15% off + free shipping. Finish your order here: kathykuohome.attn.tv/avVhnF5UeZtF .",
-      "customerMessage1": "When I put an item in my cart it shows a total price but when I click checkout the cart shows 0 items.",
-      "customerMessage2": "Never mind. It won't ship until April, too late.",
-      "AgentMessage1": "Kathy Kuo: Hi, thanks for reaching out and I'm sorry to hear that! Can you please share the item you're looking to get so I can check some alternatives for you that are ready to ship?",
+      "blocklisted_words": [
+        "bestsellers",
+        "sale",
+        "sales",
+        "budget"
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns",
+        "For questions regarding order, service, shipping questions on a current order, post-purchase will go to cssupport@brilliantearth.com",
+        "For product or general inquiry questions, please contact info@brilliantearth.com"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: We\u0027re calling it: Nature rings are THE move for V-Day engagements. See for yourself: brilliantearth.attn.tv/apJV24iaAWdl .",
+          "date_time": "2026-01-20 21:14:12.004",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: IT\u0027S HERE: Our limited edition Lunar New Year medallion. Shop the drop: brilliantearth.attn.tv/aILbYWxyP9Iw .",
+          "date_time": "2026-01-22 21:04:07.549",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: The Valentine\u0027s gifts everyone\u0027s obsessed with? They\u0027re all under $500: brilliantearth.attn.tv/aSQ4G8wD-HHC .",
+          "date_time": "2026-01-23 17:07:07.377",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: Our fastest-selling collab EVER just restocked. Styles this sweet won\u0027t stick around long: brilliantearth.attn.tv/a4lXSUg8E4Es .",
+          "date_time": "2026-01-27 18:10:18.525",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: CATCH FEELINGS. Our heart-shaped jewelry gifts make it easy: brilliantearth.attn.tv/afjzwjiq6bPv .",
+          "date_time": "2026-01-28 21:01:08.097",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: TIMING IS EVERYTHING! Order a wedding ring by 2PM PT tomorrow, 1/30, to get it by Valentine\u0027s Day. brilliantearth.attn.tv/aGS2FCoe7036 .",
+          "date_time": "2026-01-29 17:15:41.480",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: Use code GIVEAWAY to unlock your Valentine\u0027s surprise. See what it is: brilliantearth.attn.tv/aRR_Zq3mA4Ko .",
+          "date_time": "2026-02-01 16:01:07.938",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: This February, treat yourself to purple perfection. Shop this month\u0027s must-have birthstone: brilliantearth.attn.tv/az_KhRb2CK23 .",
+          "date_time": "2026-02-02 16:09:10.070",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: PERFECT TMING. Order an engagement ring by 2PM PT tomorrow to get it by Valentine\u0027s Day: brilliantearth.attn.tv/ap8snjE8WihY .",
+          "date_time": "2026-02-03 16:03:06.964",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: Her love language? Jewelry. Shop top Valentine\u0027s Day gifts: brilliantearth.attn.tv/aDcDg16ZaCuE .",
+          "date_time": "2026-02-06 22:07:05.562",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: You are unsubscribed from messaging. No more messages will be sent. Help at support@attentivemobile.com",
+          "date_time": "2026-02-06 22:14:35.412",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: Welcome to Brilliant Earth! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-19 18:14:03.616",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brilliant Earth: Hi! I\u0027m Ava, your personal jewelry concierge. Do you have any questions I can help answer? brilliantearth.attn.tv/a-0scSXnScuc .",
+          "date_time": "2026-02-19 18:14:07.607",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I want a 1.5 carat oval engagement ring under $1,000",
+          "date_time": "2026-02-19 18:14:32.058",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7832-c939-459a-f000-0000f3c38533",
+          "message_text": "Brilliant Earth: Thank you for reaching out and showing interest in our products! I\u0027d be happy to help you find the perfect engagement ring. Could you confirm if you\u0027re looking for Natural Diamonds or Lab Grown Diamonds?\n\nYou can also create your own engagement ring on our website by choosing a setting, stone, and size here: https://brilliantearth.attn.tv/a84oC9eMI-Ex If you have any other questions or need further assistance, feel free to let me know.",
+          "message_type": "agent",
+          "agent": "82223",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 18:18:40.212"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Lab grown",
+          "date_time": "2026-02-19 18:19:31.901",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7838-565f-4e94-f000-0000f3c38533",
+          "message_text": "Brilliant Earth: Thanks for letting me know! I took another look through our site and while I wasn\u0027t able to find many options at your exact price point, I did find this one that I think could be a great fit:\n\nhttps://brilliantearth.attn.tv/a5VuSOsyv0v4\n\nLet me know what you think, and I\u0027m happy to keep looking or adjust options if needed.",
+          "message_type": "agent",
+          "agent": "109617",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 18:24:44.034"
+        }
+      ]
+    },
+    "159": {
+      "agentName": "Darby",
+      "id": "019c4f37-0c53-4709-f000-000087274a7d",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.johnnie-o.com/collections/mens-bottoms-1/products/hoffman-trouser-jmpa100120-sp25?color=Navy\u0026externalId=fi8Wi",
+            "item": "Hoffman Top Shelf Performance Stretch Knit Trouser",
+            "timeAgo": "2026-02-12"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/mens-bottoms-1/products/atlas-jmpa1830-25sp-lake?color=Lake\u0026externalId=fi8Wi",
+            "item": "Atlas Lightweight Stretch 5-Pocket Pant",
+            "timeAgo": "2026-02-12"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/mens-bottoms-1/products/burbank-jmpa1800-23fa?color=Charcoal\u0026externalId=fi8Wi",
+            "item": "Burbank Stretch Knit 5-Pocket Pant",
+            "timeAgo": "2026-02-12"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/dress-casual-pants/products/atlas-jmpa1830-25sp-lake?color=Lake",
+            "item": "Atlas Lightweight Stretch 5-Pocket Pant",
+            "timeAgo": "2026-02-11"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://johnnie-o.com/",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://johnnie-o.com/",
+      "companyName": "johnnie-O",
+      "notes": {
+        "escalate": [
+          "ESC restock inquiries",
+          "ESC shipping/order inquiries",
+          "ESC cxs looking for a discount code"
+        ]
+      },
+      "blocklisted_words": [
+        "Untuck-it"
+      ],
+      "escalation_preferences": [
+        "Restock questions",
+        "shipping",
+        "site issues",
+        "out of stock issues"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Get up to 50% our best in class button downs, from featherweight performance to ultra soft flannels and more! johnnie-o.attn.tv/akKsEJKHBesw ",
+          "date_time": "2026-01-14 10:00:39.078",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Our end of season sale ends tonight! Don\u0027t miss your last chance to refresh your wardrobe at some of our best prices. johnnie-o.attn.tv/a5_usO3g2d1E ",
+          "date_time": "2026-01-16 10:01:09.623",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Undefeated! The Hoosiers bring home their first football championship in style! Shop Indiana Championship looks now. johnnie-o.attn.tv/a9JVc-KyyYpY ",
+          "date_time": "2026-01-20 10:00:42.794",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Whether it\u0027s a resolution or a lifestyle, our performance shorts are designed to keep you moving in comfort and style johnnie-o.attn.tv/apvyW970BnKg ",
+          "date_time": "2026-01-22 10:00:28.801",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: This is the upgrade your hoodie needs. A cashmere blend and premium tailored details make the Drayton an instant hit. johnnie-o.attn.tv/aTvS6tM80sGu ",
+          "date_time": "2026-01-24 10:00:55.093",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: The Desmond 1/4 Zip is the go-to layering piece for everything from crisp morning strolls to happy hour and beyond. johnnie-o.attn.tv/azHDiPUfcrTl ",
+          "date_time": "2026-01-27 10:00:41.683",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Our Coffee Run Collection is built for those on the move. Experience comfort and performance without compromise. johnnie-o.attn.tv/agwyVlCmL8AK ",
+          "date_time": "2026-01-29 10:00:42.193",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Meet your new favorite long sleeve: moisture-wicking and so soft you will have to find an excuse to take it off. johnnie-o.attn.tv/a0QY9u2E9V9a ",
+          "date_time": "2026-01-31 10:00:34.807",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Going undefeated deserves to be celebrated! Check out the new Indiana Undefeated Season Logo, fit for a champ! johnnie-o.attn.tv/af5bNpfKY4_S ",
+          "date_time": "2026-02-02 10:00:32.737",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Our newest Sneaker features Argentine leather uppers and calfskin lining for effortless luxury and timeless style. johnnie-o.attn.tv/awLVqW9b9i5A ",
+          "date_time": "2026-02-04 10:00:48.010",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Meet your new weather wingman: the Bauer Vest! It\u0027s lightweight, stylish, and keeps you the perfect temp every time. johnnie-o.attn.tv/acOLLecdLaYA ",
+          "date_time": "2026-02-06 10:00:39.955",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Take the stress out of Valentine\u0027s Day, or just treat yourself!\n\nMens\njohnnie-o.attn.tv/aVuQU5WW3rnv \nWomens\njohnnie-o.attn.tv/aY1VSiVw4vnq ",
+          "date_time": "2026-02-07 10:00:48.418",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: The Bixler Hoodie needs no introduction. The performance and function speaks for itself. If you know, you know. johnnie-o.attn.tv/aw_YBS4qddbV ",
+          "date_time": "2026-02-09 10:00:45.613",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: We built our brand refining style and function, so we built a backpack that carries everything and goes with anything johnnie-o.attn.tv/aoEFdE3k__07 ",
+          "date_time": "2026-02-11 10:00:54.888",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Hey Roger , this is Darby . Thanks for checking us out! 😊 johnnie-o.attn.tv/aYla0SCW6J6H \n\nAny questions I can answer for you? ",
+          "date_time": "2026-02-11 17:38:01.235",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The jean selection appears to be very limited. In fact, I couldn\u0027t look st selection on the website.  Also the color selection for some of the other casual pants was very limited. What\u0027s going on? Out of inventory ?",
+          "date_time": "2026-02-11 18:29:42.257",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4f0e-cd83-447e-f000-000087274a7d",
+          "message_text": "Johnnie-O: I\u0027m so sorry for the frustration this has caused, and thank you for sharing your feedback. We\u0027re always looking to expand our options, and I\u0027ll be sure to pass your comments along to our team. \n\nAt the moment, these are the styles currently available, and you can see the colors offered for each on the product pages:\nhttps://johnnie-o.attn.tv/aWJpAuhjhh_i \nhttps://johnnie-o.attn.tv/aEYIwg_-YBok\nhttps://johnnie-o.attn.tv/adXmL82GnT_G\n\nCould you let me know the specific color and size you\u0027re looking for? I\u0027d be happy to help find the best match for you. ",
+          "message_type": "agent",
+          "agent": "31385",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 18:34:56.161"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Im looking for a Black and Grey jean similar to the johnnie-O Barlow style blue jean I purchased a year or so ago. I love the fit and material and I\u0027m looking to replace my black and gray Levi\u0027s brand jeans. I want something almost identical to the Barlow.  I normally wear a 36X 34 but but im able to wear a 35X34 in the Barlow jean. If you have something close to what im looking for, please let me know.  Thanks! Roger",
+          "date_time": "2026-02-11 19:01:42.015",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4f37-0c53-4709-f000-000087274a7d",
+          "message_text": "Johnnie-O: Thank you for getting back to me and providing that information! To ensure I provide the most accurate answer, I\u0027ll reach out to our team for more insights. We\u0027ll get back to you as soon as we have an update. Feel free to let me know if you need help with anything else in the meantime.",
+          "message_type": "agent",
+          "agent": "109840",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 19:18:53.680"
+        }
+      ]
+    },
+    "160": {
+      "agentName": "Jordan",
+      "id": "019c48eb-1827-470a-f000-0000ac913529",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://kathykuohome.com",
+          "value": "https://samedelman.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Arianna Mid Century Modern Brown Mango Wood Round End Table",
-            "link": "https://www.kathykuohome.com/Product/Detail/158409-Arianna-Mid-Century-Modern-Brown-Mango-Wood-Round-End-Table?gad_source=1&gad_campaignid=21921477743&gbraid=0AAAAADwTMm_syRj-6jZmz7a-SnUIkWmki&gclid=Cj0KCQiAprLLBhCMARIsAEDhdPfYkCmSDToXbVycm17WC7qogb3EK5PQL-EV2BUqc54LzHqgROa3mMQaAgTCEALw_wcB&utm_campaign=smscartabandon_textandimage&utm_source=attentive&utm_medium=cpc&utm_content=journey&externalId=TeJvU",
-            "icon": "eye"
-          },
-          {
-            "item": "Arianna Mid Century Modern Brown Mango Wood Round End Table",
-            "link": "https://www.kathykuohome.com/Product/Detail/158409-Arianna-Mid-Century-Modern-Brown-Mango-Wood-Round-End-Table?gad_source=1&gad_campaignid=21921477743&gbraid=0AAAAADwTMm_syRj-6jZmz7a-SnUIkWmki&gclid=Cj0KCQiAprLLBhCMARIsAEDhdPfYkCmSDToXbVycm17WC7qogb3EK5PQL-EV2BUqc54LzHqgROa3mMQaAgTCEALw_wcB",
-            "icon": "eye"
-          },
-          {
-            "item": "Arianna Mid Century Modern Brown Mango Wood Round End Table",
-            "link": "https://www.kathykuohome.com/Product/Detail/158409-Arianna-Mid-Century-Modern-Brown-Mango-Wood-Round-End-Table",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://samedelman.com",
+      "companyName": "Sam Edelman",
+      "notes": {
+        "send_to_cs": [
+          "If the cx sends us their credit card information (written or screenshot) and it\u0027s an issue we can\u0027t resolve - send the customer to CS",
+          "➜ Do NOT ESC any conversation that contains this type of information in the thread"
+        ],
+        "escalate": [
+          "When you ESC use ESC shortcut fisrt",
+          "ESC if the charge on cx account is pending"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: This just in: boots starting under $100. Don\u0027t miss out. \n\nShop now: samedelman.attn.tv/aSyT_8NwiTfg ",
+          "date_time": "2026-01-11 14:06:32.552",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Members get more! Take an extra 25% off sale styles with WINTER25. Not a member yet? Enjoy an extra 20% off with WINTER20.\n\nLog in or sign up to access: samedelman.attn.tv/afioH6sKebKP ",
+          "date_time": "2026-01-16 14:16:06.540",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Sale just got better! Members save an extra 25% with WINTER25 or take 20% off with WINTER20. \n\nShop now: samedelman.attn.tv/aBNA5idS7WoW ",
+          "date_time": "2026-01-19 13:16:05.572",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Last call for extra savings: 25% off sale styles for loyalty members, 20% off sale styles for non-members. \n\nShop now: samedelman.attn.tv/aL19aO6AVh15 ",
+          "date_time": "2026-01-19 18:30:54.534",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Turn your closet into 120% brand credit when you sell on ReLove. Now-Feb 15 only. \n\nList an item: samedelman.attn.tv/a-TiOSIsyoGr ",
+          "date_time": "2026-01-21 14:45:59.096",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Snow is coming! Our coziest boots are waiting. Get yours on sale today.\n\nShop now: samedelman.attn.tv/apGsDpL_Z34L ",
+          "date_time": "2026-01-23 15:30:50.642",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Hey this is Jordan . Thanks for checking out our site! 😊 https://samedelman.attn.tv/aZX9QXrBChbH \n\nAre you looking for anything in particular today? ",
+          "date_time": "2026-01-24 14:19:18.921",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Styles to love, now on sale. Shop the latest markdowns. \n\nShop now: samedelman.attn.tv/aUpvkImZDeWX ",
+          "date_time": "2026-01-25 15:08:11.176",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: SALE alert! Unbeatable deals on new styles. Grab em\u0027 while you still can samedelman.attn.tv/azhxmOo5KXfM .",
+          "date_time": "2026-01-27 06:50:40.129",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Thanks for your recent purchase! Don\u0027t forget to check out our newest arrivals: https://samedelman.attn.tv/a4_MFnbFsCiw .",
+          "date_time": "2026-02-01 06:26:10.914",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: The Felicity flat: exceptional comfort, now available in luxe woven leather.\n\nShop now: samedelman.attn.tv/a02nf0JloE9J ",
+          "date_time": "2026-02-04 12:11:08.948",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Polish off your Valentine\u0027s Day look with heels that double your dose of romance. \n\nShop now: samedelman.attn.tv/aHdRmfsoG0l3 ",
+          "date_time": "2026-02-08 12:01:22.054",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Hey this is Jordan . Thanks for checking out our site! 😊 https://samedelman.attn.tv/amSyQycSE6i5 \n\nAre you looking for anything in particular today? ",
+          "date_time": "2026-02-10 08:25:52.794",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Im very disappointed and dissatisfied,  2 weeks ago i order a pair of boots and was waiting to get delivered i could use on my trip to CO.Didn\u0027t arrived u guys canceled saying that was sold out after i had  paid and received a order confirmation",
+          "date_time": "2026-02-10 13:56:37.208",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I don\u0027t feel confident on buying anything from ur site anymore",
+          "date_time": "2026-02-10 13:57:07.255",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Feedback 1 - All brands\"; last updated: 2023-10-10 18:03:27.339",
+          "date_time": "2026-02-10 13:58:12.671",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c48eb-1827-470a-f000-0000ac913529",
+          "message_text": "Sam Edelman: Thank you for reaching out, and I\u0027m sorry to hear that! I understand how frustrating this situation must be. Customer feedback means a lot to us and helps us keep improving. I truly appreciate you sharing this, and I\u0027ll be sure to pass it along to our team for future consideration. Thank you so much!",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 13:58:12.676"
+        }
+      ]
     }
   }
 }
