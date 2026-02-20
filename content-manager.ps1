@@ -688,6 +688,61 @@ function Normalize-ScenarioRecordForStorage {
 function Normalize-MessageMedia {
     param($Media)
 
+    function Clean-MediaUrl {
+        param([string]$UrlText)
+
+        $url = (Get-StringValue $UrlText).Trim()
+        if (-not $url) { return "" }
+        $url = $url -replace '\\\"', '"'
+        $url = $url -replace "\\\\'", "'"
+        if (
+            ($url.Length -ge 2) -and
+            (
+                ($url.StartsWith('"') -and $url.EndsWith('"')) -or
+                ($url.StartsWith("'") -and $url.EndsWith("'"))
+            )
+        ) {
+            $url = $url.Substring(1, $url.Length - 2).Trim()
+        }
+        $url = [regex]::Replace($url, '(?i);(name|filename|type)\s*=\s*%22([^%]*)%22', ';$1="$2"')
+        if ($url -match "(?i)(smil(\.xml)?|application/smil)") { return "" }
+        if ($url -match ';(?:name|filename|type)\s*=\s*"[^"]*$') {
+            $url = "$url`""
+        }
+        if ($url -match "(?i)(smil(\.xml)?|application/smil)") { return "" }
+        return $url.Trim()
+    }
+
+    function Extract-MediaUrls {
+        param([string]$Text)
+
+        $inputText = (Get-StringValue $Text).Trim()
+        if (-not $inputText) { return @() }
+
+        $urls = @()
+        $jsonParsed = Parse-JsonText -Text $inputText
+        if ($jsonParsed -is [System.Array]) {
+            foreach ($item in $jsonParsed) {
+                $clean = Clean-MediaUrl -UrlText $item
+                if ($clean) { $urls += $clean }
+            }
+            if ($urls.Count -gt 0) { return $urls }
+        }
+
+        $searchText = $inputText -replace '\\\"', '"'
+        $searchText = $searchText -replace "\\\\'", "'"
+        $matches = [regex]::Matches(
+            $searchText,
+            "https?://[^\s;`"`'<>]+(?:\s*;\s*[a-z0-9_-]+\s*=\s*(?:""[^""]*""|'[^']*'|[^;\s`"`'<>]+))*",
+            [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
+        )
+        foreach ($m in $matches) {
+            $clean = Clean-MediaUrl -UrlText $m.Value
+            if ($clean) { $urls += $clean }
+        }
+        return $urls
+    }
+
     $result = @()
     if ($null -eq $Media) { return ,$result }
 
@@ -701,18 +756,13 @@ function Normalize-MessageMedia {
     foreach ($item in $mediaItems) {
         $text = (Get-StringValue $item).Trim()
         if (-not $text) { continue }
-
-        if ($text.StartsWith('[') -and $text.EndsWith(']')) {
-            $nested = Parse-JsonText -Text $text
-            if ($nested -is [System.Array]) {
-                foreach ($nestedItem in $nested) {
-                    $nestedText = (Get-StringValue $nestedItem).Trim()
-                    if ($nestedText) { $result += $nestedText }
-                }
-                continue
-            }
+        $extracted = Extract-MediaUrls -Text $text
+        if ($extracted.Count -gt 0) {
+            $result += $extracted
+            continue
         }
-        $result += $text
+        $cleaned = Clean-MediaUrl -UrlText $text
+        if ($cleaned) { $result += $cleaned }
     }
     return ,$result
 }
@@ -779,35 +829,127 @@ function Parse-CompanyNotesToCategories {
     return [pscustomobject]$clean
 }
 
+function Normalize-ColumnKey {
+    param([string]$Name)
+
+    $text = (Get-StringValue $Name).Trim().ToLowerInvariant()
+    if (-not $text) { return "" }
+    return [regex]::Replace($text, "[^a-z0-9]", "")
+}
+
+function Get-RowValue {
+    param(
+        [Parameter(Mandatory = $true)]$Row,
+        [Parameter(Mandatory = $true)][string[]]$Candidates
+    )
+
+    if ($null -eq $Row) { return "" }
+    $properties = @($Row.PSObject.Properties)
+    if ($properties.Count -eq 0) { return "" }
+
+    foreach ($candidate in $Candidates) {
+        if ([string]::IsNullOrWhiteSpace($candidate)) { continue }
+        $direct = $properties | Where-Object { $_.Name -eq $candidate } | Select-Object -First 1
+        if ($direct) {
+            $directValue = Get-StringValue $direct.Value
+            if (-not [string]::IsNullOrWhiteSpace($directValue)) { return $directValue }
+        }
+    }
+
+    foreach ($candidate in $Candidates) {
+        $candidateKey = Normalize-ColumnKey -Name $candidate
+        if (-not $candidateKey) { continue }
+        foreach ($prop in $properties) {
+            if ((Normalize-ColumnKey -Name $prop.Name) -eq $candidateKey) {
+                $value = Get-StringValue $prop.Value
+                if (-not [string]::IsNullOrWhiteSpace($value)) { return $value }
+            }
+        }
+    }
+
+    return ""
+}
+
+function Convert-JsonParsedToArray {
+    param($Value)
+
+    if ($null -eq $Value) { return @() }
+    if ($Value -is [System.Array]) { return @($Value) }
+    if ($Value -is [System.Collections.IDictionary]) { return @($Value) }
+    if ($Value.PSObject -and $Value.PSObject.Properties.Count -gt 0) { return @($Value) }
+    return @()
+}
+
+function Normalize-ConversationMessageType {
+    param([string]$TypeRaw)
+
+    $value = (Get-StringValue $TypeRaw).Trim().ToLowerInvariant()
+    if (-not $value) { return "customer" }
+    if ($value -in @("agent", "assistant", "support", "csr", "rep")) { return "agent" }
+    if ($value -in @("system", "automation", "bot")) { return "system" }
+    if ($value -in @("inbound", "incoming", "customer", "user", "client")) { return "customer" }
+    if ($value -in @("outbound", "outgoing")) { return "agent" }
+    return $value
+}
+
 function Convert-CsvRowToScenario {
     param([Parameter(Mandatory = $true)]$Row)
 
     $conversation = @()
-    $conversationRaw = Get-StringValue $Row.CONVERSATION_JSON
+    $conversationRaw = Get-RowValue -Row $Row -Candidates @("CONVERSATION_JSON", "CONVERSATION", "MESSAGES_JSON", "MESSAGES")
     $conversationParsed = Parse-JsonText -Text $conversationRaw
-    if ($conversationParsed -is [System.Array]) {
-        foreach ($msg in $conversationParsed) {
+    $conversationItems = Convert-JsonParsedToArray -Value $conversationParsed
+    if ($conversationItems.Count -gt 0) {
+        foreach ($msg in $conversationItems) {
             if ($null -eq $msg) { continue }
-            $entry = @{
-                message_media = Normalize-MessageMedia -Media $msg.message_media
-                message_text  = Get-StringValue $msg.message_text
-                message_type  = (Get-StringValue $msg.message_type).ToLower()
+            $typeRaw = Get-StringValue (@(
+                $msg.message_type,
+                $msg.type,
+                $msg.role,
+                $msg.direction,
+                $msg.sender,
+                $msg.speaker |
+                Where-Object { $null -ne $_ } |
+                Select-Object -First 1
+            ))
+            $agentId = (Get-StringValue (@(
+                $msg.agent,
+                $msg.agent_id,
+                $msg.agentId,
+                $msg.agentID |
+                Where-Object { $null -ne $_ } |
+                Select-Object -First 1
+            ))).Trim()
+            $normalizedType = Normalize-ConversationMessageType -TypeRaw $typeRaw
+            if (-not (Get-StringValue $typeRaw).Trim() -and $agentId) {
+                $normalizedType = "agent"
             }
-            $messageId = (Get-StringValue $msg.message_id).Trim()
+            $entry = @{
+                message_media = Normalize-MessageMedia -Media @($msg.message_media, $msg.media, $msg.attachments | Where-Object { $null -ne $_ } | Select-Object -First 1)
+                message_text  = Get-StringValue (@($msg.message_text, $msg.text, $msg.content, $msg.body | Where-Object { $null -ne $_ } | Select-Object -First 1))
+                message_type  = $normalizedType
+            }
+            if ($agentId) { $entry.agent = $agentId }
+            $messageId = (Get-StringValue (@($msg.message_id, $msg.id | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
             if ($messageId) { $entry.message_id = $messageId }
-            $conversation += $entry
+            $dateTime = (Get-StringValue (@($msg.date_time, $msg.created_at, $msg.timestamp | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
+            if ($dateTime) { $entry.date_time = $dateTime }
+            if (-not [string]::IsNullOrWhiteSpace((Get-StringValue $entry.message_text))) {
+                $conversation += $entry
+            }
         }
     }
 
     $browsingHistory = @()
-    $productsRaw = Get-StringValue $Row.LAST_5_PRODUCTS
+    $productsRaw = Get-RowValue -Row $Row -Candidates @("LAST_5_PRODUCTS", "LAST5_PRODUCTS", "BROWSING_HISTORY", "RECENT_PRODUCTS")
     $productsParsed = Parse-JsonText -Text $productsRaw
-    if ($productsParsed -is [System.Array]) {
-        foreach ($p in $productsParsed) {
+    $productItems = Convert-JsonParsedToArray -Value $productsParsed
+    if ($productItems.Count -gt 0) {
+        foreach ($p in $productItems) {
             if ($null -eq $p) { continue }
-            $name = (Get-StringValue $p.product_name).Trim()
-            $link = (Get-StringValue $p.product_link).Trim()
-            $viewDate = (Get-StringValue $p.view_date).Trim()
+            $name = (Get-StringValue (@($p.product_name, $p.name, $p.product, $p.title | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
+            $link = (Get-StringValue (@($p.product_link, $p.link, $p.url | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
+            $viewDate = (Get-StringValue (@($p.view_date, $p.last_viewed, $p.time_ago, $p.viewed_at | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
             if (-not $name -and -not $link) { continue }
             $historyItem = @{ item = if ($name) { $name } else { $link } }
             if ($link) { $historyItem.link = $link }
@@ -817,69 +959,81 @@ function Convert-CsvRowToScenario {
     }
 
     $ordersOut = @()
-    $ordersRaw = Get-StringValue $Row.ORDERS
+    $ordersRaw = Get-RowValue -Row $Row -Candidates @("ORDERS", "ORDER_HISTORY", "PAST_ORDERS")
     $ordersParsed = Parse-JsonText -Text $ordersRaw
-    if ($ordersParsed -is [System.Array]) {
-        foreach ($order in $ordersParsed) {
+    $orderItems = Convert-JsonParsedToArray -Value $ordersParsed
+    if ($orderItems.Count -gt 0) {
+        foreach ($order in $orderItems) {
             if ($null -eq $order) { continue }
             $itemsOut = @()
-            if ($order.products -is [System.Array]) {
-                foreach ($prod in $order.products) {
+            $productsForOrder = Convert-JsonParsedToArray -Value (@($order.products, $order.items, $order.line_items | Where-Object { $null -ne $_ } | Select-Object -First 1))
+            if ($productsForOrder.Count -gt 0) {
+                foreach ($prod in $productsForOrder) {
                     if ($null -eq $prod) { continue }
                     $itemOut = @{
-                        name = (Get-StringValue $prod.product_name).Trim()
+                        name = (Get-StringValue (@($prod.product_name, $prod.name, $prod.product, $prod.title | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
                     }
-                    $priceValue = $prod.product_price
+                    $priceValue = @($prod.product_price, $prod.price, $prod.unit_price | Where-Object { $null -ne $_ } | Select-Object -First 1)
                     if ($null -eq $priceValue) { $priceValue = $prod.price }
                     if ($null -ne $priceValue -and -not [string]::IsNullOrWhiteSpace((Get-StringValue $priceValue))) {
                         $itemOut.price = $priceValue
                     }
-                    $prodLink = (Get-StringValue $prod.product_link).Trim()
+                    $prodLink = (Get-StringValue (@($prod.product_link, $prod.link, $prod.url | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
                     if ($prodLink) { $itemOut.productLink = $prodLink }
-                    $itemsOut += $itemOut
+                    if (-not [string]::IsNullOrWhiteSpace((Get-StringValue $itemOut.name)) -or $itemOut.ContainsKey("price") -or $itemOut.ContainsKey("productLink")) {
+                        $itemsOut += $itemOut
+                    }
                 }
             }
 
             $orderOut = @{
-                orderNumber = (Get-StringValue $order.order_number).Trim()
-                orderDate   = (Get-StringValue $order.order_date).Trim()
+                orderNumber = (Get-StringValue (@($order.order_number, $order.order_id, $order.number | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
+                orderDate   = (Get-StringValue (@($order.order_date, $order.date, $order.created_at | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
                 items       = $itemsOut
             }
-            $orderLink = (Get-StringValue $order.order_status_url).Trim()
+            $orderLink = (Get-StringValue (@($order.order_status_url, $order.order_status_link, $order.link, $order.status_url, $order.status_link | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
             if ($orderLink) { $orderOut.link = $orderLink }
+            $trackingLink = (Get-StringValue (@($order.order_tracking_link, $order.tracking_link, $order.tracking_url, $order.order_tracking_url | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
+            if ($trackingLink) {
+                $orderOut.trackingLink = $trackingLink
+                $orderOut.order_tracking_link = $trackingLink
+            }
             if ($null -ne $order.total -and -not [string]::IsNullOrWhiteSpace((Get-StringValue $order.total))) {
                 $orderOut.total = $order.total
             }
-            $ordersOut += $orderOut
+            if ($orderOut.orderNumber -or $orderOut.orderDate -or $orderOut.items.Count -gt 0 -or $orderOut.link -or $orderOut.total -or $orderOut.trackingLink) {
+                $ordersOut += $orderOut
+            }
         }
     }
 
+    $companyWebsite = (Get-RowValue -Row $Row -Candidates @("COMPANY_WEBSITE", "WEBSITE", "SITE_URL")).Trim()
     $rightPanel = @{
         source = @{
             label = "Website"
-            value = (Get-StringValue $Row.COMPANY_WEBSITE).Trim()
+            value = $companyWebsite
             date  = ""
         }
     }
     if ($browsingHistory.Count -gt 0) { $rightPanel.browsingHistory = $browsingHistory }
     if ($ordersOut.Count -gt 0) { $rightPanel.orders = $ordersOut }
 
-    $notesText = [string]$Row.COMPANY_NOTES
+    $notesText = [string](Get-RowValue -Row $Row -Candidates @("COMPANY_NOTES", "NOTES", "GUIDELINES", "INTERNAL_NOTES"))
     if ($null -eq $notesText) { $notesText = "" }
     $notesText = $notesText.Trim()
     $notes = Parse-CompanyNotesToCategories -NotesText $notesText
 
     return @{
-        id                     = (Get-StringValue $Row.SEND_ID).Trim()
-        companyName            = (Get-StringValue $Row.COMPANY_NAME).Trim()
-        companyWebsite         = (Get-StringValue $Row.COMPANY_WEBSITE).Trim()
-        agentName              = (Get-StringValue $Row.PERSONA).Trim()
-        messageTone            = (Get-StringValue $Row.MESSAGE_TONE).Trim()
+        id                     = (Get-RowValue -Row $Row -Candidates @("SEND_ID", "SCENARIO_ID", "ID")).Trim()
+        companyName            = (Get-RowValue -Row $Row -Candidates @("COMPANY_NAME", "BRAND", "COMPANY")).Trim()
+        companyWebsite         = $companyWebsite
+        agentName              = (Get-RowValue -Row $Row -Candidates @("PERSONA", "AGENT_NAME", "AGENT")).Trim()
+        messageTone            = (Get-RowValue -Row $Row -Candidates @("MESSAGE_TONE", "TONE")).Trim()
         conversation           = $conversation
         notes                  = $notes
         rightPanel             = $rightPanel
-        escalation_preferences = Convert-ToStringArray -Value (Parse-ListLikeText -Text (Get-StringValue $Row.ESCALATION_TOPICS))
-        blocklisted_words      = Convert-ToStringArray -Value (Parse-ListLikeText -Text (Get-StringValue $Row.BLOCKLISTED_WORDS))
+        escalation_preferences = Convert-ToStringArray -Value (Parse-ListLikeText -Text (Get-RowValue -Row $Row -Candidates @("ESCALATION_TOPICS", "ESCALATION_PREFERENCES", "ESCALATIONS")))
+        blocklisted_words      = Convert-ToStringArray -Value (Parse-ListLikeText -Text (Get-RowValue -Row $Row -Candidates @("BLOCKLISTED_WORDS", "BLOCKLIST_WORDS", "BLOCKLIST", "BLOCKED_WORDS")))
     }
 }
 
@@ -1210,7 +1364,7 @@ function Build-RuntimeArtifacts {
         $scenarioRecord = Normalize-ScenarioRecordForStorage -Scenario $scenarioList[$i]
         $scenarioOrder += $scenarioKey
 
-        $chunkNumber = [math]::Floor($i / $chunkSize) + 1
+        $chunkNumber = [int]([math]::Floor($i / $chunkSize) + 1)
         $chunkBase = ("chunk_{0:D4}" -f $chunkNumber)
         $chunkFileName = "$chunkBase.json"
         if (-not $scenarioChunkBuckets.ContainsKey($chunkFileName)) {
@@ -1225,7 +1379,7 @@ function Build-RuntimeArtifacts {
             companyName = $companyName
             chunkFile = "data/scenarios/chunks/$chunkFileName"
         }
-        if ($scenarioId -and -not $scenarioById.ContainsKey($scenarioId)) {
+        if ($scenarioId -and -not $scenarioById.Contains($scenarioId)) {
             $scenarioById[$scenarioId] = $scenarioKey
         }
     }
@@ -1428,6 +1582,8 @@ function Import-ScenariosFromFile {
     )
 
     $dialog = New-Object System.Windows.Forms.OpenFileDialog
+    $dialog.InitialDirectory = $script:CurrentFolder
+    $dialog.RestoreDirectory = $true
     $dialog.Filter = "Scenario sources (*.json;*.csv)|*.json;*.csv|JSON files (*.json)|*.json|CSV files (*.csv)|*.csv|All files (*.*)|*.*"
     $dialog.Multiselect = $false
     if ($dialog.ShowDialog() -ne [System.Windows.Forms.DialogResult]::OK) {
@@ -1442,15 +1598,33 @@ function Import-ScenariosFromFile {
         if ($ext -eq ".csv") {
             $rows = Import-Csv -LiteralPath $dialog.FileName
             $incomingScenarios = @()
+            $invalidRows = 0
+            $parseErrorRows = 0
+            $rowIndex = 0
             foreach ($row in $rows) {
-                $incomingScenarios += Convert-CsvRowToScenario -Row $row
+                $rowIndex++
+                try {
+                    $scenario = Convert-CsvRowToScenario -Row $row
+                    $scenarioId = (Get-StringValue $scenario.id).Trim()
+                    $companyName = (Get-StringValue $scenario.companyName).Trim()
+                    if (-not $scenarioId -or -not $companyName) {
+                        $invalidRows++
+                        continue
+                    }
+                    $incomingScenarios += $scenario
+                } catch {
+                    $parseErrorRows++
+                }
             }
             if ($null -eq $incomingScenarios) { $incomingScenarios = @() }
+            if ($incomingScenarios.Count -eq 0) {
+                throw "No valid scenarios found in CSV. Ensure SEND_ID and COMPANY_NAME columns are populated."
+            }
             $merge = Merge-ScenariosById -Existing $existingList -Incoming $incomingScenarios
             Write-JsonObject -Path $TargetPath -Value @{ scenarios = $merge.scenarios }
             $artifactSummary = Build-RuntimeArtifacts -Quiet
             Refresh-Meta
-            Set-Status -Message "scenarios.json updated from CSV. Added: $($merge.added), Updated: $($merge.updated). Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) chunks)."
+            Set-Status -Message "scenarios.json updated from CSV. Added: $($merge.added), Updated: $($merge.updated), Skipped: $invalidRows, Parse errors: $parseErrorRows. Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) chunks)."
             return
         }
 

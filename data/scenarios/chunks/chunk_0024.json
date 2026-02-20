@@ -3,434 +3,938 @@
   "chunk": "chunk_0024",
   "scenarios": {
     "116": {
-      "id": "019bece5-a78b-44c0-f000-0000d475f63a",
-      "companyName": "Comfrt",
-      "companyWebsite": "https://comfrt.com",
-      "agentName": "Samantha",
-      "agentInitial": "C",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post-purchase issues"
-        ],
-        "escalate": [
-          "ESC if the discount % is not the same as indicated in the automated message"
-        ],
-        "templates": [
-          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
-        ]
-      },
-      "SystemMessage1": "Comfrt: Don't overthink it...\n\nStep into the new year with the styles everyone's reordering. \n\nGet yours: comfrt.attn.tv/aMcI7Mz5iwbz",
-      "SystemMessage2": "Comfrt: You've got great taste and your pick is going fast.\n\nMake it yours before it's gone: comfrt.attn.tv/aBbSUc-Uyymz",
-      "SystemMessage3": "Comfrt: Upcoming trip?!\n\nBring ease to the journey with our dreamy soft sets and thoughtfully designed luggage.\n\nLet's get you packed: comfrt.attn.tv/aOs-LEBSzWsA",
-      "SystemMessage4": "Comfrt: Close out the year in Comfrt. Best-selling layers are almost gone. \n\nGrab yours before the new year: comfrt.attn.tv/aFh1YJWWVzKy",
-      "SystemMessage5": "Comfrt: You've got great taste and your pick is going fast.\n\nMake it yours before it's gone: comfrt.attn.tv/aIm0hRAMCnHK",
-      "SystemMessage6": "Comfrt: Thanks for choosing Comfrt! We're prepping your order, which means your new cozy go-to is almost en route. \nTrack it here: comfrt.attn.tv/aC9oDdlLmr8w",
-      "SystemMessage7": "Comfrt: First look: Petal Pink Camo Collection\n\nWe're so excited to share this NEW standout pattern in 5 styles.\n\nEnjoy first access: comfrt.attn.tv/a-K6g_ae4BEZ",
-      "SystemMessage8": "Comfrt: Something sweet is in the air.\n\nOur Valentine's Day Gift Guide is live, and it's made for every kind of love.\n\nShop now:\ncomfrt.attn.tv/ak8nVYO-5txo",
-      "SystemMessage9": "Comfrt: Winter storm? We've got you covered.\n\nShop up to 70% off sitewide on the coziest essentials.\n\nShop now: comfrt.attn.tv/aGhpy_9K6lIo",
-      "customerMessage1": "Take care of my order mix up please",
-      "AgentMessage1": "Comfrt: I'm sorry about that! Can you share with me what you need help with?",
-      "customerMessage2": "I've tried repeatedly to email info@comfrt.com but keep getting a canned message back. I was so pleased at first that they were taking care of the order mixup but then I never received a tracking number and still haven't received my (s) seafoam hoodie",
-      "customerMessage3": "I had been such a fan of the brand. This has left me frustrated",
-      "AgentMessage2": "Comfrt: I apologize for the frustration and inconvenience this has caused. This is not the experience we strive to provide for our customers. Since you already received an email from my team, it would be best to reply to them using the same email thread for any further requests. Please also check your spam and promo folders as well, as our emails sometimes end up there.",
-      "customerMessage4": "I've done that repeatedly to no avail",
-      "customerMessage5": "Nothing in junk/spam. Does this mean you're not going to do anything? Check on it?",
-      "AgentMessage3": "Comfrt: I'm so sorry that I can't help with this directly, but my system isn't set up for this type of issue. Our team is doing everything to respond to each inquiry in a timely manner. They should follow up with you in no time!",
-      "customerMessage6": "I cannot tell you how frustrated I am. I've even direct message Instagram. There's no way to get ahold of anyone at your company. I want what I paid for",
-      "customerMessage7": "You should be able to forward it to the right people so it gets flagged",
-      "customerMessage8": "I email and I get this message. I've already submitted online. It gets me nowhere",
-      "customerMessage9": "I know you personally are not at fault. Sorry if it feels I'm taking it out on you. I just don't know how to get my item",
-      "AgentMessage4": "Comfrt: I understand your concern and frustration. Based on the email I see on the 14th, it was routed to our fulfillment team to ship out. I know the timing is not ideal, but I'm afraid multiple emails for the same issue that's already being resolved can sometimes cause delays. Rest assured, the request was already sent over, and we're working to get the item shipped out.",
+      "agentName": "",
+      "id": "019c3f88-8de3-439d-f000-0000fa16bd4a",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://comfrt.com",
+          "value": "https://barbellapparel.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Airplane Mode Travel Zip Hoodie",
-            "link": "https://comfrt.com/products/airplane-mode-travel-zip-hoodie?variant=44961235206188",
-            "icon": "eye"
-          },
-          {
-            "item": "Airplane Mode Travel Zip Hoodie",
-            "link": "https://comfrt.com/products/airplane-mode-travel-zip-hoodie?variant=44961235206188",
-            "icon": "eye"
-          },
-          {
-            "item": "Airplane Mode Travel Zip Hoodie",
-            "link": "https://comfrt.com/products/airplane-mode-travel-zip-hoodie?variant=44961234976812",
-            "icon": "eye"
-          },
-          {
-            "item": "Airplane Mode Travel Zip Hoodie",
-            "link": "https://comfrt.com/products/airplane-mode-travel-zip-hoodie?variant=44961234976812",
-            "icon": "eye"
-          },
-          {
-            "item": "Pastel Hoodie",
-            "link": "https://comfrt.com/products/pastel-collection?variant=44358865158188",
-            "icon": "eye"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "6403507781676",
-            "orderDate": "",
-            "link": "https://comfrtclothing.myshopify.com/products/pack-parent",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "Pastel Bundle",
-                "price": "83.6",
-                "currency": "USD",
-                "productLink": "https://comfrtclothing.myshopify.com/products/pack-parent"
-              },
-              {
-                "name": "Pastel Hoodie",
-                "price": "46.55",
-                "currency": "USD",
-                "productLink": "https://comfrtclothing.myshopify.com/products/pastel-collection"
-              },
-              {
-                "name": "Pastel Sweatpants",
-                "price": "37.05",
-                "currency": "USD",
-                "productLink": "https://comfrtclothing.myshopify.com/products/pastel-sweatpants"
-              }
-            ],
-            "total": "167.2"
-          }
-        ]
+        }
       },
-      "orders": [
+      "companyWebsite": "https://barbellapparel.com",
+      "companyName": "Barbell Apparel",
+      "notes": {
+        
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "6403507781676",
-          "order_status_url": "https://comfrtclothing.myshopify.com/products/pack-parent",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://comfrtclothing.myshopify.com/products/pack-parent",
-              "product_name": "Pastel Bundle",
-              "product_price": 83.6
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://comfrtclothing.myshopify.com/products/pastel-collection",
-              "product_name": "Pastel Hoodie",
-              "product_price": 46.55
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://comfrtclothing.myshopify.com/products/pastel-sweatpants",
-              "product_name": "Pastel Sweatpants",
-              "product_price": 37.05
-            }
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-08 17:08:26.129",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Welcome! This is Sarah with Barbell Apparel. \n\nGet a FREE SHIRT w/ the code FSAKJNPnI on any orders over $99. \n\nClick here to auto-apply it instead: https://barbell.attn.tv/acA_hTXkQnOc .\n\nWe\u0027re here to help you Break Boundaries and empower your fitness.\n\nText me any time!",
+          "date_time": "2026-02-08 17:08:29.744",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Don\u0027t forget to save our number. We give our best deals and exclusive drops over text message first. ",
+          "date_time": "2026-02-08 17:08:31.391",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Hey , this is Sarah. Thanks for checking us out! https://barbell.attn.tv/a9fO8Gw9uZgP \n\nAny questions I can answer for you?",
+          "date_time": "2026-02-08 17:10:22.719",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "There was no free tshirt...the cider was invalid",
+          "date_time": "2026-02-08 17:22:05.094",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "*code",
+          "date_time": "2026-02-08 17:29:35.214",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c3f71-ed46-4caa-f000-0000fa16bd4a",
+          "message_text": "Barbell Apparel: To use your Free Shirt code, please make sure you\u0027ve added a tee from our Free Tee Collection to your cart: https://barbell.attn.tv/aTGEC9K8X0fC Once the eligible tee is in your cart, enter your code at checkout and ensure your order total is over $99. ",
+          "message_type": "agent",
+          "agent": "82441",
+          "message_media": [
+            
           ],
-          "total": 167.2
+          "date_time": "2026-02-08 17:49:16.902"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027ve already checked out",
+          "date_time": "2026-02-08 17:50:14.932",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Retroactive discount request - All brands\"; last updated: 2023-10-10 16:41:51.799",
+          "date_time": "2026-02-08 18:13:59.802",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c3f88-8de3-439d-f000-0000fa16bd4a",
+          "message_text": "Barbell Apparel: Thank you for letting us know. I can check with my team to see if we can apply the code to your order. Could you please send me your order number and email address?",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-08 18:13:59.804"
         }
       ]
     },
     "117": {
-      "id": "019bd87d-46ea-4f0c-f000-0000f4a3ae72",
-      "companyName": "Veronica Beard",
-      "companyWebsite": "https://veronicabeard.com",
-      "agentName": "",
-      "agentInitial": "V",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over"
-        ]
-      },
-      "SystemMessage1": "Veronica Beard: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Veronica Beard.",
-      "SystemMessage2": "Veronica Beard: Welcome to Veronica Beard! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/IvG",
-      "SystemMessage3": "Veronica Beard: Welcome to Veronica Beard! We're so glad you're here. To get started, enjoy 15% off your next full-price order with code: TEXTVBd63kBg \n\nTap here to shop and apply your code automatically: veronicabeard.attn.tv/aZh5afNIm_2J .",
-      "SystemMessage4": "Veronica Beard: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nCheck it out- new arrivals just landed! Discover the must-haves of the season. \n\nShop Now: https://veronicabeard.attn.tv/af3hwcIDnbBF .",
-      "SystemMessage5": "Veronica Beard: You left Wyeth Ribbed Turtleneck Top and Sariyah Knit Jacket in your cart.\n\nUse code TEXTVBd63kBg for 15% off your purchase: https://veronicabeard.attn.tv/atUiKrOEI8dy .",
-      "SystemMessage6": "Veronica Beard: Make the Andrea Cotton Tweed Jacket yours—lightweight Italian cotton tweed, cropped fit, standout two-tone buttons.\n\nUse code TEXTVBd63kBg for 15% off.\n\nShop now: https://veronicabeard.attn.tv/aGkqEZNu2nFm .",
-      "customerMessage1": "It's stating that the code is invalid",
-      "AgentMessage1": "Veronica Beard: Sorry about that! Please note that the code is valid on full-priced items only. Do you mind sending me a screenshot of your cart and the error message you're getting so I can have a closer look?",
-      "customerMessage2": "\"",
-      "AgentMessage2": "Veronica Beard: Thanks for sending the screenshot! I just tested the code and it worked on my end. Here's a screenshot for reference- https://veronicabeard.attn.tv/aNiK4FwbXuUk\nI've created a cart link for you here- https://veronicabeard.attn.tv/adnqqkvyIEkC with code applied. Just enter your details, then proceed to checkout. Let me know if you need help with anything else!",
-      "customerMessage3": "Is the sale for 25%off of sale items over from last night? I wanted another item",
-      "customerMessage4": "I ordered the other jacket btw.   Thank you",
-      "SystemMessage7": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
-      "AgentMessage3": "Veronica Beard: Thank you for asking and for your purchase. I'm sorry, but there's no offer available for 25% off at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our sales collection here: https://veronicabeard.attn.tv/ak-X0z110tAJ\n\nI hope this helps. Please let me know if you need anything else. I'm happy to help!",
+      "agentName": "Kiara",
+      "id": "019c53dd-6513-4609-f000-0000f477bfb7",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://veronicabeard.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "Andrea Cotton Tweed Jacket - Navy Multi / 00",
-            "link": "https://veronicabeard.com/products/andrea-cotton-jacket-navy-multi",
-            "icon": "eye"
+            "link": "https://dorado.com/collections/mens-watches/products/36mm-dorado-gold-timeless-watch-black-dial",
+            "item": "DORADO Gold Timeless Watch - Black",
+            "timeAgo": "2026-02-12"
           },
           {
-            "item": "Andrea Cotton Tweed Jacket - Navy Multi / 2",
-            "link": "https://veronicabeard.com/products/andrea-cotton-jacket-navy-multi?view=variant-2&variant=45260320342187",
-            "icon": "eye"
+            "link": "https://dorado.com/collections/mens-watches/products/36mm-dorado-gold-timeless-watch-black-dial",
+            "item": "DORADO Gold Timeless Watch - Black - Black / 36mm",
+            "timeAgo": "2026-02-12"
           },
           {
-            "item": "Andrea Cotton Tweed Jacket - Navy Multi / 00",
-            "link": "https://veronicabeard.com/products/andrea-cotton-jacket-navy-multi?view=variant-2",
-            "icon": "eye"
+            "link": "https://dorado.com/collections/personalized-rings/products/iced-initial-ring",
+            "item": "Iced Initial Ring",
+            "timeAgo": "2026-02-12"
           },
           {
-            "item": "Andrea Cotton Tweed Jacket - Navy Multi / 00",
-            "link": "https://veronicabeard.com/products/andrea-cotton-jacket-navy-multi",
-            "icon": "eye"
+            "link": "https://dorado.com/collections/personalized-rings/products/iced-initial-ring",
+            "item": "Iced Initial Ring - 18K Gold over Sterling Silver / 5",
+            "timeAgo": "2026-02-12"
           },
           {
-            "item": "Andrea Cotton Tweed Jacket - Navy Multi / 2",
-            "link": "https://veronicabeard.com/products/andrea-cotton-jacket-navy-multi?variant=45260320342187&utm_campaign=cart-abandonment-ai&utm_medium=sms&utm_source=attentive&externalId=N9rfP&view=variant-1",
-            "icon": "eye"
+            "link": "https://dorado.com/collections/personalized-rings/products/engraved-birthstone-ring",
+            "item": "Engraved Birthstone Ring",
+            "timeAgo": "2026-02-12"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://dorado.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "orderDate": "2026-02-01",
+            "items": [
+              {
+                "price": [
+                  69
+                ],
+                "productLink": "https://sk-custom-concepts.myshopify.com/products/iced-heart-name-necklace",
+                "name": "Iced Heart Name Necklace"
+              },
+              {
+                "price": [
+                  99
+                ],
+                "productLink": "https://sk-custom-concepts.myshopify.com/products/round-cut-moissanite-stud-earrings",
+                "name": "Round Cut Moissanite Stud Earrings"
+              }
+            ],
+            "trackingLink": "https://t.17track.net/#nums=9214490358940004463081",
+            "link": "https://dorado.com/23078837/orders/fc7233cd88061121a1b9eac52006c17e/authenticate?key=682ffa8119360cff99e47e8639dd921a",
+            "orderNumber": "830704",
+            "order_tracking_link": "https://t.17track.net/#nums=9214490358940004463081",
+            "total": 168
+          },
+          {
+            "orderDate": "2026-02-01",
+            "items": [
+              {
+                "price": [
+                  69
+                ],
+                "productLink": "https://sk-custom-concepts.myshopify.com/products/iced-heart-name-necklace",
+                "name": "Iced Heart Name Necklace"
+              },
+              {
+                "price": [
+                  99
+                ],
+                "productLink": "https://sk-custom-concepts.myshopify.com/products/round-cut-moissanite-stud-earrings",
+                "name": "Round Cut Moissanite Stud Earrings"
+              }
+            ],
+            "trackingLink": "https://t.17track.net/#nums=9214490358940004463081",
+            "link": "https://dorado.com/23078837/orders/fc7233cd88061121a1b9eac52006c17e/authenticate?key=682ffa8119360cff99e47e8639dd921a",
+            "orderNumber": "830704",
+            "order_tracking_link": "https://t.17track.net/#nums=9214490358940004463081",
+            "total": 120.39
+          }
+        ]
       },
-      "orders": []
+      "companyWebsite": "https://dorado.com",
+      "companyName": "Dorado Fashion",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping Issues: Where\u0027s my order? Any order issues, direct to customer service"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-01-17 11:51:51.588",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Hey it\u0027s Kiara, welcome to the VIP List! \n\nYou just unlocked an Extra 20% OFF your order with code: HER\n\nValentine\u0027s is about you too.\n\nContinue shopping: \ndorado.attn.tv/aZCs3seiL8K0 \n\nValid this week only.",
+          "date_time": "2026-01-17 11:51:55.658",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Be sure to save our number and contact card so you\u0027re always first to know about the latest drops \u0026 deals ✨",
+          "date_time": "2026-01-17 13:12:11.770",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Hello Chassity, it\u0027s Kiara! I noticed you haven\u0027t completed your order yet. \n\nClick below to recover your cart and use code D20 for an extra 20% OFF! (72 hours only):\n \nhttps://dorado.attn.tv/axyXZH0Ug3zU \n\nPlease let me know if there\u0027s anything I can help with :)",
+          "date_time": "2026-01-17 14:23:36.671",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Jewelry that feels intentional \u003e random gifts.\n\nYour code: \"HER\" still works for 20% off. \n\nPSA: Valentine\u0027s doesn\u0027t have to be about anyone else. \n\nShop for you or for the girls who always show up: dorado.attn.tv/apZtRa6BsnvK .",
+          "date_time": "2026-01-18 13:12:12.934",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Roses are red.\nJewelry is better.\n\nGet up to 75% OFF with code: LOVELY\n\nGifts for her, the girls, \nor yourself (obviously).\n \nShop Now: \nhttps://dorado.attn.tv/aTcymkRCyFfn . \n\nValentine\u0027s Delivery Cutoff:\nOrder by 01/30 @ 11:59 PM EST",
+          "date_time": "2026-01-23 13:33:09.147",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Group chat-approved gifts only.\n\nUse code: LOVELY for up to 75% OFF!\n \nShop Now: \nhttps://dorado.attn.tv/a7SFZKkV1Uzk \n\nGalentine\u0027s secured if you order by 01/30",
+          "date_time": "2026-01-25 18:16:13.677",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: last chance\n\npersonalized Valentine\u0027s gifts\n\nget up to 75% off with code: LOVELY \n \nonly 12 hours left: \nhttps://dorado.attn.tv/a-Oon09LcbYw .",
+          "date_time": "2026-01-30 12:04:51.810",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: You\u0027re already subscribed! \n\nUse code: HER at checkout for 20% OFF \n\nShop Now: \ndorado.attn.tv/aR2pMYhyHZ1w .",
+          "date_time": "2026-02-01 13:32:19.933",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Hi Chassity I personally want to thank you for shopping with us!\n\nTo show my appreciation, I\u0027m giving you $25 OFF your next order of Custom Jewelry!\n\nJust use code: GIVE25 at checkout or click the link below! https://dorado.attn.tv/aMq__5UFDBhZ \n\nThis is simply my way of saying THANK YOU for becoming a part of the Dorado Family.",
+          "date_time": "2026-02-01 14:02:16.716",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Hey, this is Kiara. Thanks for checking out our custom jewelry! https://dorado.attn.tv/a7cRGziLzIT6 \n\nDo you have any questions or need any help?",
+          "date_time": "2026-02-12 16:50:09.173",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Help on a previous order",
+          "date_time": "2026-02-12 16:50:53.589",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c53dc-281f-4db5-f000-0000f477bfb7",
+          "message_text": "DORADO: I would be more than happy to help out, ask away! ",
+          "message_type": "agent",
+          "agent": "82427",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 16:57:43.096"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It\u0027s says delivered but haven\u0027t received anything",
+          "date_time": "2026-02-12 16:58:13.698",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c53dd-6513-4609-f000-0000f477bfb7",
+          "message_text": "DORADO: I\u0027m sorry to hear that! Please check surrounding houses, doorsteps etc.. in case another home received it by mistake. Speak with any other tenants such as family, roommates or landlords etc. in the event they received it on your behalf. The package may also have been left with property managers, an apartment office or your local postal provider. Let me know if you find it, I\u0027m here to help!",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 16:59:04.242"
+        }
+      ]
     },
     "118": {
-      "id": "019bf7af-df9c-4390-f000-0000f57215eb",
-      "companyName": "Siena Sleep",
-      "companyWebsite": "https://sienasleep.com/",
-      "agentName": "Charlie",
-      "agentInitial": "S",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo when the client takes over"
-        ]
-      },
-      "SystemMessage1": "Siena: Welcome to Siena! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (844) 973-4717.",
-      "SystemMessage2": "Siena: You're in!",
-      "SystemMessage3": "Siena: First step? Claim your welcome offer: Save up to 60% + get 180 nights to try your Siena\n\nHurry, order now for fast shipping:\nsiena.attn.tv/aSHxzVKNJQc7",
-      "SystemMessage4": "Siena: Hello, this is Charlie! Everyone deserves amazing sleep at an affordable price. Save up to 60% on mattresses!\n\nGet the Essential (starting at $149)\nsiena.attn.tv/a2wZ9nUwCBzC \n\nGet the Signature (starting at $179)\nsiena.attn.tv/ao31YFHPZjdK \n\nAny questions I can answer for you?",
-      "SystemMessage5": "Siena: Better sleep for less? Yes! Mattresses start at just $179 + 180 nights to try it risk-free. Don't sleep on this deal:\nsiena.attn.tv/aIkejjCNNZBB \n.",
-      "customerMessage1": "On the king size adjustable box spring why is it a twin XL",
-      "AgentMessage1": "Siena: Thank you for reaching out. I'm sorry, but can you please share a screenshot of it so I can check?",
-      "customerMessage2": "I haven't ordered it yet it's in my cart I'm ordering a king size bed and I wanted a king size adjustable box spring but it's giving me two twin",
-      "AgentMessage2": "Siena: I'm sorry for the confusion. It looks like \"Split King\" is currently selected, which comes as two Twin XL. If you'd like a single King size, just make sure to choose \"King\" under the size options here: https://siena.attn.tv/a_68PdqQvzQE",
+      "agentName": "Lesley",
+      "id": "019c5d6a-9162-4655-f000-000057593d0e",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://sienasleep.com/",
+          "value": "https://randco.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Siena 10” Signature Memory Foam Mattress",
-            "link": "https://www.sienasleep.com/mattress-sets/adjustable-bed-memory-foam-mattress-set?utm_medium=ps&utm_content=Facebook_Mobile_Feed&utm_source=fb&utm_campaign=p_120224966338060127_120238960960550127_120238960960570127&rh_s=fb&rh_m=ps&rh_c=p_120224966338060127_120238960960550127_120238960960570127&rh_n=Facebook_Mobile_Feed&fbclid=IwZXh0bgNhZW0BMABhZGlkAasssvyxn69zcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR7Q7ApLF94jfu4jf3SFCNX8btEGCPmlEkWxy5dD8IbMYMUiU-YSAv5J-xksdA_aem_5RRgaACZQ1m2hse0jC75GA&utm_id=120224966338060127&utm_term=120238960960550127",
-            "icon": "eye"
-          },
-          {
-            "item": "Siena 10” Signature Memory Foam Mattress",
-            "link": "https://www.sienasleep.com/checkout/shipping",
-            "icon": "eye"
-          },
-          {
-            "item": "Siena 10” Signature Memory Foam Mattress",
-            "link": "https://www.sienasleep.com/mattress?utm_medium=sms&utm_source=Attentive&utm_campaign=%5BS%5D_%5BP%5D_Cmp%5BJanWeek4%5D_SMS%5B1%5D_Off%5BSaveupto60%5D_CT%5BNonpurchasers%5D_012526&externalId=Nc__7",
-            "icon": "eye"
-          },
-          {
-            "item": "The Siena Premier Hybrid Mattress",
-            "link": "https://www.sienasleep.com/hybrid-mattress/king",
-            "icon": "eye"
-          },
-          {
-            "item": "Siena 10” Signature Memory Foam Mattress",
-            "link": "https://www.sienasleep.com/mattress?utm_medium=sms&utm_source=Attentive&utm_campaign=%5BS%5D_%5BP%5D_Cmp%5BJanWeek4%5D_SMS%5B1%5D_Off%5BSaveupto60%5D_CT%5BNonpurchasers%5D_012526&externalId=Nc__7",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
-    },
-    "119": {
-      "id": "019bbde0-32b0-47f7-f000-00002d7702c2",
-      "companyName": "Covercraft",
-      "companyWebsite": "https://covercraft.com",
-      "agentName": "Sarah",
-      "agentInitial": "C",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "templates": [
-          "For custom full vehicle covers use FVC shortcut",
-          "For cx that can't see the cover pattern/images of their vehicle use CPI shortcut",
-          "If we don't have a pattern/color the cx is looking for use PRR shortcut"
+      "companyWebsite": "https://randco.com",
+      "companyName": "R + Co",
+      "notes": {
+        "escalate": [
+          "ESC retroactive discount/price adjustment inquiries immediately",
+          "ESC discount code issues",
+          "ESC if stylists/salons want to carry the products"
         ],
-        "dos_and_donts": [
-          "Do not tell customers that the base price is the final price! The cost changes by the fitment and depends on the vehicle",
-          "Rebates are discounts for this brand!",
-          "Custom dim pattern sheets are only available for Vehicle Covers (Car, Truck, Van,RV)"
+        "templates": [
+          "For any q\u0027s about affiliate links, commissions, or salon referral links, use AFQ shortcut",
+          "All of the products are unisex, use USX shortcut"
         ],
         "drive_to_purchase": [
-          "Before sharing any product links, confirm the vehicle’s Year, Make, and Model"
+          "Ask the cx what their hair concerns are before making a recommendation!",
+          "Make recommendations when cx has specific inquiry, don\u0027t send the quiz!",
+          "For full haircare regimen inquiries, recommend shampoo, conditioner, and at least one or two other products recommended that align with their need"
+        ],
+        "promo_and_exclusions": [
+          "When sending a code provide more detail about what the code is valid for!",
+          "When sending the promo/code end date, include the time the offer expires as well!"
         ]
       },
-      "SystemMessage1": "Covercraft: Good as new! Custom covers extend the life of your daily driver covercraft.attn.tv/ak4HMeSLrAP9",
-      "SystemMessage2": "Covercraft: Hey there, this is Sarah. Thanks for stopping by! 😊 https://covercraft.attn.tv/aROUXLwaeb3I\n\nAny questions I can answer for you?",
-      "SystemMessage3": "Covercraft: If it's custom-made, it can roll in after the holidays. Greatness takes its time.\ncovercraft.attn.tv/asmwWrdlNdfU",
-      "SystemMessage4": "Covercraft: Thanks for your order! We specialize in Protecting The Things That Move You since 1965!\n\nQuick links while we make your custom protection:\nOrder Status: https://covercraft.attn.tv/aVGS-ktcETmY \nContact Us: https://covercraft.attn.tv/ayHLx1XUV0Yw \n\n#KeepItCustom",
-      "SystemMessage5": "Covercraft: Hey there, Sarah here! Great Choice - Checkout today & get a special discount with code: FLASHDEAL https://covercraft.attn.tv/aYvFpomsteNq\n\nHave any questions I can help with before this code expires?",
-      "customerMessage1": "I already ordered a set of charcoal seat covers front and back for my 2025 GMC sierra 84. However, what I received were gray covers then all Covercraft is doing about it is giving me 10% off. Not real happy.",
-      "AgentMessage1": "Covercraft: I'm so sorry to hear this; it's not the experience I want you to have. Just to be sure, did you reach out to our customer support team regarding this directly at sales@covercraft.com?",
-      "customerMessage2": "I did and they're not willing to do anything more so now I'm stuck with these seat covers that don't match my truck. Not the way a supposedly reputable company should be treating customers.",
-      "AgentMessage2": "Covercraft: I completely understand your concern, and I'm sorry for any inconvenience. Can you please send me a photo of the items that you received, along with your order number and email address? I'll be more than happy to check this with the team.",
-      "customerMessage3": "Please find attached the photos of the seat covers I received. I went through this with your customer care team sent them photos and again all they're offering is 10% off. If you look at the website for endure precision, fit seat covers and select charcoal, you'll see that that color is different than the color I received. The whole reason I selected Covercraft is because you had the color to match my truck otherwise I would've gone with a different company and saved $250. So it appears to me that they put the wrong product tag on the seat covers when they were produced in Mexico, but who knows. Either way the ones I received are much lighter than what I see on the website. Order # is 0002270886. My email is krhodes11@comcast.net.",
-      "SystemMessage6": "\"",
-      "AgentMessage3": "Covercraft: Thank you for sending those over, and I understand. Let me check on this with my team, and I'll get back to you as soon as I have more information. I'll keep you updated!",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "R+Co: Hey Darla, I sent over a few items I thought you would like a few days ago. Check them out here!\n\nrco.attn.tv/aKnR7evSRxLb",
+          "date_time": "2026-01-17 13:34:48.272",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: You\u0027ve got points to spend. Redeem them for discounts, free product, and merch: rco.attn.tv/arImcFpXg1gq .",
+          "date_time": "2026-01-18 12:55:21.236",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: When in doubt, go mini. Customize a 3-piece R+Co BLEU mini bundle and receive a FREE travel bag \u0026 sample set with your order.\n\nBuild your bundle: rco.attn.tv/agWg7bvtmeUE T\u0026Cs apply.",
+          "date_time": "2026-01-19 14:13:13.057",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: Hi again, Darla! Easily reorder with just a few clicks from your personalized cart!\n\nrco.attn.tv/asp2cp5N-gmt",
+          "date_time": "2026-01-20 13:21:01.152",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: New routine, on us. Customize a 3-piece R+Co BLEU mini bundle and receive a FREE travel bag \u0026 sample set with your order.\n\nBuild your bundle: rco.attn.tv/aNS9yyesomw5 T\u0026Cs apply.",
+          "date_time": "2026-01-21 15:15:19.007",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: Hey Darla, running low? Reorder your favorite products from your personalized cart!\n\nrco.attn.tv/aYCdNV0jbVFR",
+          "date_time": "2026-01-24 13:21:23.505",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: Ends soon: Receive a free travel bag \u0026 sample set when you customize a 3-piece R+Co BLEU mini bundle.\n\nGet yours: rco.attn.tv/ah2fVEpid45Z T\u0026Cs apply.",
+          "date_time": "2026-01-26 16:06:06.364",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: Final hours: Customize a 3-piece R+Co BLEU mini bundle and receive a FREE travel bag \u0026 sample set with your order.\n\nBuild your bundle: rco.attn.tv/aXawfDuRpCNo T\u0026Cs apply.",
+          "date_time": "2026-01-29 19:00:35.068",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: Hi again, Darla! Easily reorder with just a few clicks from your personalized cart!\n\nrco.attn.tv/ax8n8dFFhpih",
+          "date_time": "2026-02-02 13:21:46.802",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: Hey Darla, running low? Reorder your favorite products from your personalized cart!\n\nrco.attn.tv/afShCB4bS4xN",
+          "date_time": "2026-02-05 13:17:30.758",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: 🏈 Big game, bigger hair. Take 20% OFF styling until midnight.\n\nUse code SCORE: rco.attn.tv/aqhUvepIbWyU T\u0026Cs apply.",
+          "date_time": "2026-02-08 17:15:43.399",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: Not too late to score... 20% OFF styling ends at midnight.\n\nUse code SCORE: rco.attn.tv/akCBCwlyxVNM T\u0026Cs apply.",
+          "date_time": "2026-02-08 20:00:35.477",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: 💕 Better together: 15% off wash sets starts now.\n\nStart shopping: rco.attn.tv/aRD2oCfz54pi T\u0026Cs apply.",
+          "date_time": "2026-02-09 12:06:03.217",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: Looking for something good? Our bestsellers always deliver: rco.attn.tv/aJ7u6mAp4C9n .",
+          "date_time": "2026-02-11 12:22:03.029",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: 15% off all shampoo + conditioner sets. Find a shower routine so good, it\u0027ll be love at first wash. 💘\n\nShop now: rco.attn.tv/aPymewIUVqC6 T\u0026Cs apply.",
+          "date_time": "2026-02-13 17:03:06.155",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "R+Co: Don\u0027t forget to complete your purchase of COOL WIND pH Perfect Air Dry Creme Deluxe Sample before it\u0027s gone! rco.attn.tv/aGwRN2T7Erw5",
+          "date_time": "2026-02-14 12:07:05.729",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I have called and emailed. No one is returning my messages. I need help with my rewards account.",
+          "date_time": "2026-02-14 12:52:56.964",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5d49-991e-40d8-f000-000057593d0e",
+          "message_text": "R+Co: My sincere apologies for the inconvenience! Can you please check your spam and promo folders? Sometimes our emails end up there.",
+          "message_type": "agent",
+          "agent": "82447",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 12:53:50.393"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I have been checking. I\u0027m still getting no response. 😢",
+          "date_time": "2026-02-14 13:05:32.148",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I want to place an order and am out of some products. Will you please ask someone to call me back? Thank you for the text.",
+          "date_time": "2026-02-14 13:10:09.698",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Order number and email - All brands\"; last updated: 2023-10-10 18:06:34.663",
+          "date_time": "2026-02-14 13:29:51.096",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5d6a-9162-4655-f000-000057593d0e",
+          "message_text": "R+Co: I\u0027m really sorry for the inconvenience. Could you please share your email address? I\u0027ll be happy to look into this with my team!",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 13:29:51.100"
+        }
+      ]
+    },
+    "119": {
+      "agentName": "Olivia",
+      "id": "019c3f85-0e83-409b-f000-0000019e6658",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://covercraft.com",
+          "value": "https://pinklily.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Endura PrecisionFit Custom Car Seat Covers",
-            "link": "https://www.covercraft.com/product/endura-precisionfit-custom-seat-covers/CGT-GTEN",
-            "icon": "eye"
-          },
-          {
-            "item": "Original Carpet DashMat Custom Dashboard Cover",
-            "link": "https://www.covercraft.com/product/original-carpet-dashmat-custom-dashboard-cover/DMC",
-            "icon": "eye"
-          },
-          {
-            "item": "5-Layer Softback All Climate Custom Car Cover",
-            "link": "https://www.covercraft.com/product/5-layer-softback-all-climate-custom-car-cover/C-CCAC",
-            "icon": "eye"
-          },
-          {
-            "item": "Endura PrecisionFit Custom Car Seat Covers",
-            "link": "https://www.covercraft.com/product/endura-precisionfit-custom-seat-covers/CGT-GTEN",
-            "icon": "eye"
-          },
-          {
-            "item": "Endura PrecisionFit Custom Car Seat Covers",
-            "link": "https://www.covercraft.com/product/CGT-GTEN?trk_msg=4EMBCMFMCU241CM6692LPUJOUK&trk_contact=52L52FTJTC2SSCSBB0C3P3FR9C&trk_sid=TCFLULVUI3IN28I2I52U1DC7GO&trk_link=KBEJPFVKD91KR8T4RI58S1NKG0&utm_source=Listrak&utm_medium=Email&utm_term=Covercraft%20Endura%20Custom%20Seat%20Covers%20-%20Charcoal:%201st%20Row&utm_campaign=confirmation-refer-a-friend",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
-    },
-    "120": {
-      "id": "019bb459-70fd-4aaa-f000-00000355f6f7",
-      "companyName": "Kathy Kuo Home",
-      "companyWebsite": "https://kathykuohome.com",
-      "agentName": "Sarah",
-      "agentInitial": "K",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "Esc inquiries about items not on the site",
-          "ESC if the cx missed a sale & wants to take advantage of it",
-          "ESC if the customer is asking for a discount and we don't have one",
-          "If cx is looking for general recommendations use LFR shortcut and ESC"
+      "companyWebsite": "https://pinklily.com",
+      "companyName": "The Pink Lily Boutique",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS",
+          "➜ For post purchase issues use PPI shortcut"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!"
         ],
         "templates": [
-          "If cx is building a new home, interested in refurnishing their entire home or rooms in their home, use the IDS shortcut",
-          "If cx is shopping for a client use SFC shortcut",
-          "Any convo without a positive outcome (out of stock, not on sale, not shipping in time), use DSS shortcut"
-        ],
-        "dos_and_donts": [
-          "For product-specific delivery time-frame inquiries always check the product page for delivery info and share that with the cx"
+          "if cx message \"CREATOR,\" use CR shortcut"
         ]
       },
-      "SystemMessage1": "Kathy Kuo: The Best of 2025 is here! Shop our most-loved designs now up to 20% Off, plus free shipping over $1500: kathykuohome.attn.tv/a1OuykemFw8y .",
-      "SystemMessage2": "Kathy Kuo: Consider this your holiday treat. Best of Sale favorites, ready to ship and up to 20% off: kathykuohome.attn.tv/aJdQ0pwrXsG4 .",
-      "SystemMessage3": "Kathy Kuo: Hey there, this is Sarah. Thanks for checking out our site! https://kathykuohome.attn.tv/ac8Uta8XKto7 . Are you working on a home design project we can help you with?",
-      "SystemMessage4": "Kathy Kuo: Got your eye on this? We love it too! Shop the perfect piece for your home: kathykuohome.attn.tv/aijrFp8htCfN .",
-      "SystemMessage5": "Kathy Kuo: Hi, I'm Sarah, your personal shopper for Kathy Kuo Home. Do you need help finding that perfect piece? \n\nhttps://kathykuohome.attn.tv/aom29axnoyEw .",
-      "SystemMessage6": "Kathy Kuo: Need the perfect last minute gift? Give the gift of home, delivered instantly with a Kathy Kuo Home gift card: kathykuohome.attn.tv/aCCBNGSUNrTN .",
-      "SystemMessage7": "Kathy Kuo: You are already subscribed. Click here to shop now: https://kathykuohome.attn.tv/cl/fXp .",
-      "SystemMessage8": "Kathy Kuo: Got your eye on this? We love it too! Shop the perfect piece for your home: kathykuohome.attn.tv/aLl_Hl4vmlvj .",
-      "SystemMessage9": "Kathy Kuo: End of year subscriber-only savings start now! Get 20% Off + Free Shipping with code BYE2025: kathykuohome.attn.tv/a0XVC3-IJ4sg . Exclusions apply.",
-      "SystemMessage10": "Kathy Kuo: Finish the year feeling perfect at home. 20% Off + Free Shipping ends tonight with code BYE2025: kathykuohome.attn.tv/ahJb4dSjpNGV .",
-      "SystemMessage11": "Kathy Kuo: Hey there, this is Sarah. Thanks for checking out our site! https://kathykuohome.attn.tv/axrQriUmy7nC . Are you working on a home design project we can help you with?",
-      "SystemMessage12": "Kathy Kuo: Got your eye on this? We love it too! Shop the perfect piece for your home: kathykuohome.attn.tv/aleTy4d6ct8i .",
-      "SystemMessage13": "Kathy Kuo: Hi, I'm Sarah, your personal shopper for Kathy Kuo Home. Do you need help finding that perfect piece? \n\nhttps://kathykuohome.attn.tv/aJCUW8u7OnJK .",
-      "SystemMessage14": "Kathy Kuo: Hey there, your great picks are waiting! Use code KKHSHIP15 for 15% off + free shipping. Finish your order here: kathykuohome.attn.tv/aqh9eg2stFnX .",
-      "SystemMessage15": "Kathy Kuo: Explore the Florence I fell in love with, and shop our all new collection inspired by Tuscan tradition: kathykuohome.attn.tv/a2bosiwFVHpL .",
-      "SystemMessage16": "Kathy Kuo: Got your eye on this? We love it too! Shop the perfect piece for your home: kathykuohome.attn.tv/aJ4x--ZpHWNF .",
-      "SystemMessage17": "Kathy Kuo: Hi, I'm Sarah, your personal shopper for Kathy Kuo Home. Do you need help finding that perfect piece? \n\nhttps://kathykuohome.attn.tv/a9DGpk74CVyz .",
-      "SystemMessage18": "Kathy Kuo: Hey there, this is Sarah. Thanks for checking out our site! https://kathykuohome.attn.tv/aa9Ki88aFA4C . Are you working on a home design project we can help you with?",
-      "SystemMessage19": "Kathy Kuo: Your daily rituals deserve elegance, ease and beauty. Explore our all new Florentine bath refresh: kathykuohome.attn.tv/ah55OWYKLPIR .",
-      "SystemMessage20": "Kathy Kuo: Great news! We dropped the price on our Ancel French Country Blue Upholstered Beige Burlap Oak Wood Chair and a Half! Get the look you love before it goes: kathykuohome.attn.tv/ae5mluz5MRa9 .",
-      "customerMessage1": "What was the original price?",
-      "SystemMessage21": "\"",
-      "SystemMessage22": "Template used: \"Pre-purchase escalations - All brands\"; last updated: 2023-10-10 17:48:28.037",
-      "AgentMessage1": "Kathy Kuo: Thank you for reaching out! Good question! I will have to double-check that with my team to be sure. As soon as I hear back, I will send you a message right away!",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: The wait is over. Our Semi-Annual Sale just dropped! \n\nUp to 70% OFF 500+ styles!\n\npinklily.attn.tv/a5lLBuep45rM \n\nText stop to opt out",
+          "date_time": "2026-01-11 19:01:05.914",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Semi-annual sale: NEW STYLES ADDED!\n\nOver 600 styles up to 70% OFF!\n\nSHOP NOW:\npinklily.attn.tv/a6OmIombZ61T \n\nText stop to opt out",
+          "date_time": "2026-01-13 10:15:55.508",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: 24 HRS LEFT!\n\n30% OFF tops + 40% OFF denim.\n\nGo get it: pinklily.attn.tv/a33tWAMxz4Zk \n\nText stop to opt out\n\n",
+          "date_time": "2026-01-14 19:00:22.564",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Wait...35% OFF! New arrivals + Blue Horizon Collection. \n\nDon\u0027t miss this-use code STYLE35\n\npinklily.attn.tv/a3ZOdQgBoIre\n\nText stop to opt out",
+          "date_time": "2026-01-16 11:16:07.911",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Final call! 35% OFF your purchase! \n\nNew styles to wear now, wear everywhere. Use code: STYLE35\n\npinklily.attn.tv/afrxP5k5w7RG\n\nText stop to opt out",
+          "date_time": "2026-01-18 10:00:52.103",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: NEW graphics, better prices.\n\nTake 35% off ALL graphics!\n\nGrab yours now: pinklily.attn.tv/aNRqrH2Xf7m1 \n\nText stop to opt out",
+          "date_time": "2026-01-20 11:32:28.067",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: 35% OFF ALL tops! \n\nUse code TOPS35. \n\nLimited time! Don\u0027t miss your faves.\npinklily.attn.tv/acbtFXNe3uYt \n\nText stop to opt out",
+          "date_time": "2026-01-21 10:01:06.051",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Happy Hour! 40% OFF sitewide for YOU only! Ends TONIGHT\n\nUse JAN40 before it\u0027s gone \npinklily.attn.tv/aabWjoc8_C0T \n\nText stop to opt out",
+          "date_time": "2026-01-22 14:03:30.663",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: More in your cart = more savings!\n\nGet 40% off orders $80+ or 35% off everything else\n\nShop now:\npinklily.attn.tv/aL4n9otdoAig\n\nText stop to opt out",
+          "date_time": "2026-01-23 10:00:15.819",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Final call! Bigger carts = bigger savings\n\n40% off $80+ or 35% off the rest\n\npinklily.attn.tv/aE0wmziXDqt8 \n\nText stop to opt out",
+          "date_time": "2026-01-25 10:30:49.742",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: FIRST EVER Pink Lily Outlet Sale!\n\nUp to 70% OFF + extra 20% OFF with code EXTRA20\n\npinklily.attn.tv/apB7bkw5Jwnq \n\nText stop to opt out",
+          "date_time": "2026-01-26 10:01:09.718",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Not shared publicly.. Take 40% OFF your Pink Lily order with code 40OFF. \n\nJust for you.\n\npinklily.attn.tv/anws8Y8retSp \n\nText stop to opt out",
+          "date_time": "2026-01-30 10:00:40.865",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Final hours!\n\nThe Outlet Sale=our biggest discounts yet w/ prices you won\u0027t see again. Ends soon!\n\npinklily.attn.tv/awmtHgCOsCbr\nText stop to opt out",
+          "date_time": "2026-02-01 10:01:14.643",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Just dropped:all-new tops you\u0027ll live in! Plus-Buy one, get one 50% off.\n\nMeet your new favorites\npinklily.attn.tv/aGjX4Qv-QNG1\n\nText stop to opt out",
+          "date_time": "2026-02-03 10:01:36.597",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Winter Must Go! Up to 60% OFF 800+ styles. Layers, knits \u0026 cold-weather faves.\n\nShop now.\npinklily.attn.tv/a5vn2rdeNE0_\n\nText stop to opt out",
+          "date_time": "2026-02-04 10:01:12.051",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Your Soft Reset starts now! New spring styles just dropped + 30% off w/ code: reset30\n\npinklily.attn.tv/a0WKg-xjnDJQ\n\nText stop to opt out",
+          "date_time": "2026-02-06 10:00:49.832",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: LAST CHANCE! 30% OFF w/ code: reset30 ends TONIGHT! \n\nShop our newest spring arrivals: \npinklily.attn.tv/afZLrn51nNjn\n\nText stop to opt out",
+          "date_time": "2026-02-08 17:03:11.165",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Size of living life photo",
+          "date_time": "2026-02-08 17:44:35.106",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c3f85-0e83-409b-f000-0000019e6658",
+          "message_text": "Pink Lily: Thank you for reaching out. Just to confirm, may I please know which item you are currently referring to? I would love to check on this further for you.",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-08 18:10:10.587"
+        }
+      ]
+    },
+    "120": {
+      "agentName": "Jordan",
+      "id": "019c48d2-876d-467a-f000-0000f64fffb9",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://kathykuohome.com",
+          "value": "https://customgoldgrillz.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Ancel French Country Blue Upholstered Beige Burlap Oak Wood Chair and a Half",
-            "link": "https://www.kathykuohome.com/Product/Detail/109401-Ancel-French-Country-Blue-Upholstered-Beige-Burlap-Oak-Wood-Chair-and-a-Half?utm_campaign=smspricedrop&utm_medium=cpc&utm_source=attentive&utm_content=journey&externalId=jl51d",
-            "icon": "eye"
-          },
-          {
-            "item": "Isha Updated Traditional Brown Leather Recliner Arm Chair",
-            "link": "https://www.kathykuohome.com/Product/Detail/173353-Isha-Updated-Traditional-Brown-Leather-Recliner-Arm-Chair",
-            "icon": "eye"
-          },
-          {
-            "item": "Ancel French Country Blue Upholstered Beige Burlap Oak Wood Chair and a Half",
-            "link": "https://www.kathykuohome.com/Product/Detail/109401-Ancel-French-Country-Blue-Upholstered-Beige-Burlap-Oak-Wood-Chair-and-a-Half",
-            "icon": "eye"
-          },
-          {
-            "item": "Whitaker Modern Classic Brown Walnut Swirl Wide Nightstand",
-            "link": "https://www.kathykuohome.com/Product/Detail/170274",
-            "icon": "eye"
-          },
-          {
-            "item": "Felix French Country Antique White Iron Round Drink Table",
-            "link": "https://www.kathykuohome.com/Product/Detail/158400-Felix-French-Country-Antique-White-Iron-Round-Drink-Table",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://customgoldgrillz.com",
+      "companyName": "Custom Gold Grillz",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS immediately if cx did not receive their order",
+          "Send to CS immediately for post purchase inquiries about the status of the mold, or issues with the molds",
+          "Send to CS for pricing inquiries",
+          "Send to CS if cx is looking for a more specific piece not available on the website",
+          "Send to CS if cx is asking for a code and we don\u0027t have one"
+        ],
+        "escalate": [
+          "No escalations for this client, send everything to CS"
+        ],
+        "tone": [
+          "Use Teeth instead of Pieces (e.g 8 teeth at the top)"
+        ],
+        "templates": [
+          "If the image is not coming through a second time, send Broken Image temp",
+          "For CUSTOM GRILLZ \u0026 ACCESSORIES INQUIRIES for models not available on the website use PS shortcut",
+          "For urgent concerns/delayed escalation response use PS shortcut",
+          "For delayed orders and the customer is frustrated use PS shortcut",
+          "For customer service use shortcut CS which has both the direct email/number"
+        ],
+        "dos_and_donts": [
+          "Do not use the order history as a reference to order status",
+          "If customers want to cancel their order always ask for the reason for cancellation"
+        ],
+        "drive_to_purchase": [
+          "Don\u0027t recommend pre-made grillz! Upsell to fitted and custom grillz",
+          "When recommending an item, let the cx know they can customize their order on the product page",
+          "When recommending an item, ask the cx if they are working with a budget",
+          "Use LFG shortcut to gather information and provide recommendations when cx ask about:",
+          "➜ Grillz/Chain recommendation",
+          "➜ Grillz/Chain in general",
+          "➜ Grillz/Chains pricing"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Formal",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Welcome to Custom Gold Grillz! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-01-27 19:48:16.524",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Welcome! Your 20% BACK offer is below!\n\nClick here to auto-apply it when you shop: https://customgoldgrillz.attn.tv/a9_D_tXK_3P6 \n\nText back with any questions!\n- Jordan \n",
+          "date_time": "2026-01-27 19:48:20.482",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Don\u0027t miss out: Add us as a contact to your phone to access exclusive content first!",
+          "date_time": "2026-01-27 19:48:23.673",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hey , this is Jordan. Appreciate you stopping by! customgoldgrillz.attn.tv/a-esmZNQdURS \n\nAnything you got your eye on? ",
+          "date_time": "2026-01-27 19:50:39.083",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Need pointing in the right direction?\n\nHere\u0027s what\u0027s trending this month: https://customgoldgrillz.attn.tv/a8P6UfkJrFTQ ",
+          "date_time": "2026-01-28 10:17:55.009",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hi there! Are you still shopping for one of our signature Grillz? If so check out our best sellers below and don\u0027t hesitate to reach out with any questions. https://customgoldgrillz.attn.tv/afO51_-a6TiX \n-Jordan",
+          "date_time": "2026-01-28 10:36:36.403",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hey we noticed you checking us out. Have you seen our best sellers yet? https://customgoldgrillz.attn.tv/aPbBjc5xUGQz ",
+          "date_time": "2026-02-01 10:30:27.892",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Need pointing in the right direction?\n\nHere\u0027s what\u0027s trending this month: https://customgoldgrillz.attn.tv/aP3WzetyrqNk ",
+          "date_time": "2026-02-07 10:26:00.138",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Don\u0027t forget to complete your checkout of Solid Gold Deep Cut Grillztoday before it\u0027s gone! https://customgoldgrillz.attn.tv/al11-0FUuDu3 .\n\nAny last-minute questions?\n-Jordan ",
+          "date_time": "2026-02-07 10:53:26.200",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hey Ford, this is Jordan . I noticed you were interested in something customgoldgrillz.attn.tv/ajRe6jYeoEJC .\n\nAnything I can help you with? Text me anytime",
+          "date_time": "2026-02-07 10:59:34.777",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: \nSkip basic gifts. Moissanite grillz hit harder than diamonds.\n\nSHOP MOISSANITE\ncustomgoldgrillz.attn.tv/at2v0tNrr7p- \n\n",
+          "date_time": "2026-02-07 18:02:06.543",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: \nOur Vday sale just dropped. Get 15% off sitewide with code VDAY15.\n\nSHOP NOW\ncustomgoldgrillz.attn.tv/aCgBPZlSJVhd \n\n",
+          "date_time": "2026-02-10 13:01:10.614",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hi, if you need additional help please reach us at support@customgoldgrillz.com. Text STOP to opt out.",
+          "date_time": "2026-02-10 13:27:27.841",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Do you make this in white gold for the outside part of it. And if you do can you send me a picture.   ",
+          "date_time": "2026-02-10 13:27:33.337",
+          "message_media": [
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1770748045456_2021289912259018752.png"
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Customer support\"; last updated: 2024-03-11 16:27:15.398",
+          "date_time": "2026-02-10 13:31:22.756",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c48d2-876d-467a-f000-0000f64fffb9",
+          "message_text": "Custom Gold Grillz: Thank you for reaching out! Good question! The best way to handle this is to email us directly at support@customgoldgrillz.com or give us a call at (415) 413-4915, Monday - Friday 9 am - 5 pm PST. Our team is happy to help!",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 13:31:22.758"
+        }
+      ]
     }
   }
 }

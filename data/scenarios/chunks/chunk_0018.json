@@ -3,427 +3,683 @@
   "chunk": "chunk_0018",
   "scenarios": {
     "86": {
-      "id": "019bdda6-69d9-4ff6-f000-0000f52145f9",
-      "companyName": "WHITE & WARREN",
-      "companyWebsite": "https://whiteandwarren.com/",
-      "agentName": "Sarah",
-      "agentInitial": "W",
-      "messageTone": "Formal",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "Before you ESC use ESC shortcut"
-        ],
-        "promo_and_exclusions": [
-          "Promotion codes cannot be combined with other codes or discounts",
-          "Gift Cards cannot be purchased using a promotion code"
-        ]
-      },
-      "SystemMessage1": "White & Warren: Welcome to White & Warren! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "White & Warren: You are now signed up for texts! Your 15% discount code is WELCOMEAH4D7ZC. Click here to auto-apply it when you shop: whiteandwarren.attn.tv/am0nuPryDUfr . Valid on full price merchandise only. Ready, Set, Shop! 🛍️",
-      "SystemMessage3": "White & Warren: Don't forget to save our contact to get exclusive updates!",
-      "SystemMessage4": "White & Warren: Hey , this is Sarah. Thanks for checking out our site! 😊 https://whiteandwarren.attn.tv/a6segNCPg0h9 \n\nAre you looking for anything in particular today?",
-      "customerMessage1": "Yes, I'm looking for the merino wool blend cream button down jacket with a ribbed mock turtleneck and cuff sleeves.",
-      "AgentMessage1": "White & Warren: I'm sorry for any inconvenience! We don't carry that item at the moment. I'll pass this along to the team for future consideration. Meanwhile, check out our current collection: https://whiteandwarren.attn.tv/auv_7E6s6R-q/",
-      "customerMessage2": "Is it out of stock",
-      "customerMessage3": "Or you don't carry it",
-      "AgentMessage2": "White & Warren: I apologize for the confusion this has caused. I've checked, and based on the description you provided, these are the closest styles we have: \nhttps://whiteandwarren.attn.tv/amPqDKqqB_uH \nhttps://whiteandwarren.attn.tv/ar8L3wrwgMAB \nhttps://whiteandwarren.attn.tv/aKl045qKwBVD \n \nIf none of the options above are a match, do you happen to have a photo or screenshot you can share so I can take a closer look?",
+      "agentName": "Jordan",
+      "id": "019c6cf1-5631-4146-f000-00003e5ebc5f",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://whiteandwarren.com/",
+          "value": "https://calpaktravel.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Merino Fisherman Jacket | Macadamia - Macadamia / M",
-            "link": "https://www.whiteandwarren.com/products/merino-fisherman-jacket-macadamia?variant=43681287536733&tw_source=google&tw_adid=&tw_campaign=17624200558&tw_kwdid=&gad_source=1&gad_campaignid=17190382484&gbraid=0AAAAAD_Sf9ctePp74kM6vSTGi9wpnYAGq&gclid=EAIaIQobChMIgo-UlJubkgMVIqNaBR1XHjowEAQYASABEgKo8PD_BwE&utm_campaign=Concierge-Site-Visitor&utm_medium=sms&utm_source=attentive&externalId=RqkPv",
-            "icon": "eye"
-          },
-          {
-            "item": "Merino Fisherman Jacket | Macadamia - Macadamia / M",
-            "link": "https://www.whiteandwarren.com/products/merino-fisherman-jacket-macadamia?variant=43681287536733&tw_source=google&tw_adid=&tw_campaign=17624200558&tw_kwdid=&gad_source=1&gad_campaignid=17190382484&gbraid=0AAAAAD_Sf9ctePp74kM6vSTGi9wpnYAGq&gclid=EAIaIQobChMIgo-UlJubkgMVIqNaBR1XHjowEAQYASABEgKo8PD_BwE",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://calpaktravel.com",
+      "companyName": "CALPAK",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase inquiries, use PPI shortcut",
+          "If cx needs help returning/exchanging a gift send to CS",
+          "Send to CS for discount code issues"
+        ],
+        "escalate": [
+          "When ESC add email to notes for all escalations"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "change of address"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-17 13:01:48.690",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Thanks for traveling with CALPAK. Enjoy 10% off your first order with code AT1NT1V26GcEXlO.\n\nShop best sellers: calpak.attn.tv/aXyN2l1oI98Q \n*Offer expires in 7 days and excludes sale items. ",
+          "date_time": "2026-02-17 13:01:53.837",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Save our number so you never miss an update!",
+          "date_time": "2026-02-17 13:07:04.656",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "This code did not work",
+          "date_time": "2026-02-17 13:24:49.967",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Hey Wende, thanks for stopping by\n\nFind your go-to luggage picks: https://calpak.attn.tv/a6e4zC3EBoVl .",
+          "date_time": "2026-02-17 13:40:47.568",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Code won\u0027t work - brand specific\"; last updated: 2024-12-17 01:20:50.475",
+          "date_time": "2026-02-17 13:51:21.543",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6cf1-5631-4146-f000-00003e5ebc5f",
+          "message_text": "CALPAK: I\u0027m sorry to hear that your code isn\u0027t working. Do you mind sharing a screenshot of your cart? I\u0027m happy to take a closer look for you. Kindly note that our promo codes are only eligible for full-priced items. They don\u0027t work on already discounted products, including bundled sets. I\u0027m sorry for the inconvenience.",
+          "message_type": "agent",
+          "agent": "109968",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 13:51:21.544"
+        }
+      ]
     },
     "87": {
-      "id": "019bc36b-6213-42b0-f000-000077dbbd1c",
-      "companyName": "Boston Scally",
-      "companyWebsite": "https://bostonscally.com/",
       "agentName": "Jordan",
-      "agentInitial": "B",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
-        ]
-      },
-      "SystemMessage1": "Boston Scally: Last minute shopping? Grab a Boston Scally gift card and let them pick out their new favorite scally! Plus, don't miss 15% OFF all caps, apparel and accessories!\n\nSHOP NOW: bostonscally.attn.tv/a9T9KtrvdoSM",
-      "SystemMessage2": "Boston Scally: Get the gift you really want! 15% off all scally caps, apparel and accessories with code: SCALLY15\n\nSHOP NOW: bostonscally.attn.tv/a5pwZygfbXSX",
-      "SystemMessage3": "Boston Scally: Happy New Year! Take 20% OFF all orders today with code: NEWYEAR\n\nSHOP NOW: bostonscally.attn.tv/aaXnR_gCZuXx",
-      "SystemMessage4": "Boston Scally: The 'Winter Rose' & 'Jack of Clubs️' are HERE! Shop The 'Rose' & The 'Gambler' collections now: bostonscally.attn.tv/aCl0OKA4EHsV",
-      "SystemMessage5": "Boston Scally: NEW! The 'Winter Rose' and The 'Jack of Clubs' are HERE! Grab yours before they're gone. \n\nSHOP NOW: bostonscally.attn.tv/aK6j0BATjiLD",
-      "SystemMessage6": "Boston Scally: Shop our best-selling winter caps. Tried. True. Ready for the cold.  Find your Scally now: bostonscally.attn.tv/a-WT4trXod0z",
-      "SystemMessage7": "Boston Scally: Grateful Dead x Boston Scally Dancing Bears Cap is HERE! Plus, FREE Limited Edition Dust Bag + Sticker Sheet while supplies last.  \nSHOP NOW: bostonscally.attn.tv/affqgFfy3E82",
-      "SystemMessage8": "Boston Scally: Grateful Dead x Boston Scally Dancing Bears Cap is here to bring the vibes 🎸 but won't last long ⚡️\n\nSHOP NOW: bostonscally.attn.tv/ap2YKdMAsxHR",
-      "SystemMessage9": "Boston Scally: These Roses never wilt - they earn their place in your rotation. Get 10% off the iconic Rose Collection scally caps with code ROSE.\n\nGrab yours before they're gone.\n \n SHOP NOW: bostonscally.attn.tv/a-x3o-Tk-6_B",
-      "SystemMessage10": "Boston Scally: That cap you liked went fast! Good news? We've got other best-sellers ready for you: bostonscally.attn.tv/a0nXWBvMEvAH",
-      "customerMessage1": "I need one with ear flaps though. I usually wear an XL to 2XL but with fold in flaps a 2XL is likely the best fit.",
-      "AgentMessage1": "Boston Scally: We currently don't have scally caps with ear flaps. For sizing, you can check our sizing guide here: https://bostonscally.attn.tv/aTEjD5J7mJUN",
-      "customerMessage2": "The Flap Cap in Grey Herringbone does infact have ear flaps. Problem is you only have it available in XL and I'm in between an XL & XXL. By folding the flaps in the hat I'm afraid it might be too tight!😎",
-      "AgentMessage2": "Boston Scally: Sorry about that, and thank you for letting me know! Yes, we do have the Flap Cap with ear flaps, but I'm sorry to hear that your size isn't currently available. I don't have the exact restock date at the moment, but I recommend signing up on the product page so you'll be notified as soon as it's back in stock!",
-      "customerMessage3": "Interestingly enough your site allowed me to purchase a XXL Flap Cap just yesterday and charged my PayPal account accordingly.I don't have a ship date yet for it or the Grateful Dead Scully I ordered on Monday.😎",
-      "SystemMessage11": "Template used: \"Shipping Time\"; last updated: 2024-03-11 16:41:57.938",
-      "AgentMessage3": "Boston Scally: Sorry about that. Our processing time takes 1-2 business days, so you should receive a tracking link soon. If you don't see it in your inbox, be sure to check your spam and promo folders as our emails sometimes end up there as well.",
+      "id": "019c77ee-ecb4-462b-f000-0000fb8ab5dc",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://bostonscally.com/",
-          "date": ""
-        },
-        "browsingHistory": [],
-        "orders": [
+        "browsingHistory": [
           {
-            "orderNumber": "7666146279511",
-            "orderDate": "",
-            "link": "https://boston-scally-co.myshopify.com/products/herringbone-ear-flap-boston-scally-cap",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "The Flap Cap Boston Scally Cap - Grey Herringbone",
-                "price": "56",
-                "currency": "USD",
-                "productLink": "https://boston-scally-co.myshopify.com/products/herringbone-ear-flap-boston-scally-cap"
-              }
-            ],
-            "total": "56"
+            "link": "https://www.samedelman.com/product/womens-bay-jelly-slide-sandal-3022622/clear-green-limon-jelly-ec0209960",
+            "item": "bay jelly slide sandal",
+            "timeAgo": "2026-02-19"
           },
           {
-            "orderNumber": "7660195414103",
-            "orderDate": "",
-            "link": "https://boston-scally-co.myshopify.com/products/the-grateful-dead-2-boston-scally-cap",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "The Grateful Dead Dancing Bears Boston Scally Cap - Truckin' Patchwork",
-                "price": "55",
-                "currency": "USD",
-                "productLink": "https://boston-scally-co.myshopify.com/products/the-grateful-dead-2-boston-scally-cap"
-              }
-            ],
-            "total": "55"
+            "link": "https://www.samedelman.com/product/womens-bay-multicolor-slide-sandal-3029177/brick-se-faux-raffia-ec0209850",
+            "item": "bay multicolor slide sandal",
+            "timeAgo": "2026-02-15"
           }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://samedelman.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://samedelman.com",
+      "companyName": "Sam Edelman",
+      "notes": {
+        "send_to_cs": [
+          "If the cx sends us their credit card information (written or screenshot) and it\u0027s an issue we can\u0027t resolve - send the customer to CS",
+          "➜ Do NOT ESC any conversation that contains this type of information in the thread"
+        ],
+        "escalate": [
+          "When you ESC use ESC shortcut fisrt",
+          "ESC if the charge on cx account is pending"
         ]
       },
-      "orders": [
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "7666146279511",
-          "order_status_url": "https://boston-scally-co.myshopify.com/products/herringbone-ear-flap-boston-scally-cap",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://boston-scally-co.myshopify.com/products/herringbone-ear-flap-boston-scally-cap",
-              "product_name": "The Flap Cap Boston Scally Cap - Grey Herringbone",
-              "product_price": 56
-            }
-          ],
-          "total": 56
+          "message_type": "system",
+          "message_text": "Sam Edelman: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Sam Edelman.",
+          "date_time": "2026-02-14 19:52:06.092",
+          "message_media": [
+            
+          ]
         },
         {
-          "currency": "USD",
-          "order_number": "7660195414103",
-          "order_status_url": "https://boston-scally-co.myshopify.com/products/the-grateful-dead-2-boston-scally-cap",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://boston-scally-co.myshopify.com/products/the-grateful-dead-2-boston-scally-cap",
-              "product_name": "The Grateful Dead Dancing Bears Boston Scally Cap - Truckin' Patchwork",
-              "product_price": 55
-            }
+          "message_type": "system",
+          "message_text": "Sam Edelman: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/1HB",
+          "date_time": "2026-02-14 19:52:48.452",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Welcome to the family! Click this link to copy your 10% off coupon code: https://samedelman.attn.tv/aSDjpzqn2sbW \n\nReply if you need help!",
+          "date_time": "2026-02-14 19:52:53.054",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nIn the meantime, check out what\u0027s new \u003e https://samedelman.attn.tv/avXxJ0gblw30 .",
+          "date_time": "2026-02-14 19:54:00.477",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Slide into the sandal and enjoy lightweight straps and a cushioned footbed for easy, all-day wear\n\nUse code SAMUSBATRUPGFVMU for 10% off valid on select styles: https://samedelman.attn.tv/aYVgWvCmFPeQ .",
+          "date_time": "2026-02-14 20:08:16.271",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: It\u0027s your last day to save: join our loyalty program for $30 off $140+ with code FEB30, or enjoy $25 off $140+ with code FEB25. Ends tonight. \n\nShop now: samedelman.attn.tv/a3Q8BN5m97Fb .",
+          "date_time": "2026-02-16 13:16:30.399",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: SALE alert! Unbeatable deals on new styles. Grab em\u0027 while you still can samedelman.attn.tv/a928ZfATdUdl .",
+          "date_time": "2026-02-17 13:21:25.910",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Spring \u002726: gorgeous strappy sandals and modern, sleek wedges are all new in the Sam Edelman world. \n\nShop now: samedelman.attn.tv/asLvNM7w2wEd ",
+          "date_time": "2026-02-18 19:07:15.852",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: You are already subscribed. Click here to shop now: https://samedelman.attn.tv/cl/2kU.",
+          "date_time": "2026-02-18 20:36:20.436",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Looks like you forgot something! Don\u0027t worry I saved it for you: https://samedelman.attn.tv/aehTZH_5ggGt . Snag bay slide sandal before it\u0027s gone!\n\nLet me know if you have any questions!\n\n-Jordan",
+          "date_time": "2026-02-19 14:49:37.659",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I need more discount pls.",
+          "date_time": "2026-02-19 17:00:18.716",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
+          "date_time": "2026-02-19 17:04:32.852",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c77ee-ecb4-462b-f000-0000fb8ab5dc",
+          "message_text": "Sam Edelman: I understand wanting to take advantage of a better deal. I\u0027m sorry, but I don\u0027t have any codes available at the moment. Our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our sales collection here: https://samedelman.attn.tv/akSaECQxzUBH",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
           ],
-          "total": 55
+          "date_time": "2026-02-19 17:04:32.856"
         }
       ]
     },
     "88": {
-      "id": "019bc241-3f37-41c3-f000-0000d8a0d0c1",
-      "companyName": "Snipes",
-      "companyWebsite": "https://snipesusa.com",
-      "agentName": "Avery",
-      "agentInitial": "S",
-      "messageTone": "Formal",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS immediately for post-purchase issues",
-          "Send to CS for payment processing issues"
+      "agentName": "Ashley",
+      "id": "019c77fa-7754-4b59-f000-0000d41dee0d",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.sauder.com/furniture/442180/tv-credenza-with-sliding-doors-in-deco-cherry#",
+            "item": "TV Credenza with Sliding Doors in Deco Cherry",
+            "timeAgo": "2026-02-19"
+          },
+          {
+            "link": "https://www.sauder.com/furniture/442180/tv-credenza-with-sliding-doors-in-deco-cherry",
+            "item": "TV Credenza with Sliding Doors in Deco Cherry",
+            "timeAgo": "2026-02-19"
+          },
+          {
+            "link": "https://www.sauder.com/furniture/422426/storage-cabinet",
+            "item": "Storage Cabinet",
+            "timeAgo": "2026-02-08"
+          },
+          {
+            "link": "https://www.sauder.com/furniture/422426/storage-cabinet",
+            "item": "Storage Cabinet",
+            "timeAgo": "2026-02-08"
+          },
+          {
+            "link": "https://www.sauder.com/furniture/411802/wardrobestorage-cabinet",
+            "item": "Wardrobe/Storage Cabinet",
+            "timeAgo": "2026-02-06"
+          }
         ],
-        "tone": [
-          "Don't use the term restock",
-          "Don't tell customers that we'll be restocking",
-          "Don't respond to blank messages",
-          "Don't use formal language",
-          "Close the conversation when a customer responds 'no'"
+        "source": {
+          "label": "Website",
+          "value": "https://sauder.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://sauder.com",
+      "companyName": "Sauder",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post-purchase inquiries for items purchased through a retailer"
         ],
         "templates": [
-          "If a cx reaches out regarding the Early Access event, use EAE shortcut",
-          "For cx reaching out in Spanish use SSC shortcut",
-          "For checkout issues use the \"Check out Issues\" temp",
-          "For store item availability, use SPA shortcut",
-          "If cx's email doesn't work for early access, use EEA shortcut"
-        ],
-        "dos_and_donts": [
-          "They occasionally run sign-up campaigns where cx text certain keywords (“releases,” “early access”) to join a list. If a customer sends a similar keyword:",
-          "All clothing is true to size unless otherwise stated on the product page",
-          "You can use these sizing charts for reference (for internal use only): https://docs.google.com/spreadsheets/d/1kmra_vOwCJuHoAx9D4L4Qx95rxafHcrqn-ZGutfzLgg/edit?usp=sharing",
-          "For store info q's (phone number/additional info) - use the store locator with your VPN turned on!"
-        ]
-      },
-      "SystemMessage1": "SNIPES: FREE SHIPPING UNTIL 12/18! Use code SNIPESFREESHIP at checkout. Exclusions apply. Shop Now: snipes.attn.tv/alIvOeRIdhFa",
-      "SystemMessage2": "SNIPES: Nike Foamposite Pro \"Pine Green\" early reserve is live! Use your email 0neiopen007@gmail.com to join the VIP queue. Join here: snipes.attn.tv/a--fJW8kujqZ",
-      "SystemMessage3": "SNIPES: Nike Foamposite Pro \"Pine Green\" early reserve is still live! Use your email 0neiopen007@gmail.com to join the VIP queue. Don't miss out: snipes.attn.tv/awGjxBvoQIvQ .",
-      "SystemMessage4": "SNIPES: Don't miss your chance to grab the Nike Foamposite Pro \"Pine Green\" early! Use your email 0neiopen007@gmail.com to join the VIP queue now: snipes.attn.tv/aXjzGojsAA4M .",
-      "SystemMessage5": "SNIPES: Extra AJ8 \"White and True Red\" Just Dropped! Your early access window is open. Use the same email as your SNIPES Reserve account to join the VIP queue now: snipes.attn.tv/aKf1L63DDqv3",
-      "SystemMessage6": "SNIPES: You've got rewards waiting in your wallet. Holiday shopping just got easier. Shop now: snipes.attn.tv/aCAcmAeb2VCr .",
-      "SystemMessage7": "SNIPES: The AJ8 retro \"White & True Red\" is available now. Grab your pair before they sell out. Shop now: snipes.attn.tv/aX1Gs73Qv4sa .",
-      "SystemMessage8": "SNIPES: Get 10% off when you buy online and pick up in store. Use code LASTMINUTEPICKUP. Valid 12/22-12/24. Exclusions apply. snipes.attn.tv/a4pG-_nf95Cr",
-      "SystemMessage9": "SNIPES: Final reminder. Get 10% off BOPIS orders today with code LASTMINUTEPICKUP. Exclusions apply. snipes.attn.tv/aTRqG8QJmkza",
-      "SystemMessage10": "SNIPES: We like your taste, great minds think alike! Keep shopping our freshest styles today: https://snipes.attn.tv/aDGz3t4XDsyR .",
-      "SystemMessage11": "SNIPES: Your favorite styles are trending! Check out more of our fast selling kicks and clothes from your favorite brands: https://snipes.attn.tv/alk3Cob13RxR .",
-      "SystemMessage12": "SNIPES: Don't wait! Every day more styles are selling out, cop some heat now with this code A10-HSDS-C72M-4IUA-NFPB for 10% off: https://snipes.attn.tv/a3nqih9JZEDA .",
-      "SystemMessage13": "SNIPES: Back in stock. AJ8 Retro \"White and True Red\" and Nike Foamposite Pro \"Pine Green\" just restocked. Tap in: snipes.attn.tv/aUqpmBLzCrOh",
-      "SystemMessage14": "SNIPES: The Nike Flightposite Pro \"Midnight Navy\" just dropped. Available now. Shop: snipes.attn.tv/aKr121nG-VeU",
-      "SystemMessage15": "SNIPES: Footwear starting at $49.99 on select styles. Shop UGG, Nike, adidas, New Balance and more. Shop now: snipes.attn.tv/aNQy7fgECDBJ",
-      "SystemMessage16": "SNIPES: Select Jordan Retros are on sale now at SNIPES. Limited pairs, limited sizes. Shop before they're gone: snipes.attn.tv/aTBif6vYx9If",
-      "SystemMessage17": "SNIPES: Thanks for your order! Check your email for more details on shipping information. Track your order here with order number, email address, and zip code: https://snipes.attn.tv/aW0x5ueAvX0F .",
-      "SystemMessage18": "SNIPES: Cozy layers are marked down. Shop fleece from top brands like Nike, UGG, Polo and more for men, women & kids. Limited time: snipes.attn.tv/a9uQwll9DmgK",
-      "SystemMessage19": "SNIPES: You got style! Find fits to complete your recent purchase using code AFS-XYQ7-R3VE-IKXP-9LSG for FREE shipping on your next apparel purchase of $50 https://snipes.attn.tv/a2zBmUuLFhG1 .",
-      "SystemMessage20": "SNIPES: Thanks for your order! Check your email for more details on shipping information. Track your order here with order number, email address, and zip code: https://snipes.attn.tv/adqmpm8yul16 .",
-      "SystemMessage21": "SNIPES: Just dropped. Nike Air Max2 CB 94, Pegasus Premium in new colorways, adidas Samba Jane, & more. Shop now: snipes.attn.tv/a-8omS7HAnRE",
-      "customerMessage1": "Early access for flight club when will I get a message",
-      "customerMessage2": "My results came back",
-      "customerMessage3": "Says I made it",
-      "customerMessage4": "\"",
-      "customerMessage5": "\"",
-      "SystemMessage22": "Template used: \"Customer support\"; last updated: 2023-10-25 17:40:05.851",
-      "SystemMessage23": "Template used: \"I'm feeling suicidal / I want to end my life - All brands\"; last updated: 2023-10-10 18:17:21.612",
-      "AgentMessage1": "SNIPES: Thanks for sharing this with me! You can learn more about our Air Jordan\nRetro 4 \"Flight Club\" here: https://snipes.attn.tv/aorPYXHcytx2 Since you successfully signed up, you'll get early access to this amazing pair of shoes along with the purchase instructions! Hopt this clarifies. \n\nLet me know if you need anything else. I'll be here!",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://snipesusa.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Air Jordan 3 Retro",
-            "link": "https://www.snipesusa.com/air-jordan-3-retro-jordan-black---chile-red---neutral-grey-ib8967-004-15698200031.html?utm_source=FB&utm_medium=Paid-social&utm_campaign=NE-Meta-Sales-PRO-DPA-Conversion+Test-ASC&utm_content=NE-Carousel-DPA-Evergreen-Sale-NULL-Sale+LP-Don%27t+Miss+Out+Standard+Labels&utm_term=NE-Meta-Broad-PRO-All+Products-Max+Number+Conversions&utm_id=6710842946098_v2_s09_e7360&fbclid=IwZXh0bgNhZW0BMABhZGlkAAAGOikDI_pzcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEeg0k_XzIqUmh7oG8YzR3GW5tTxqZEngIlpxWMzkuy7syNHWFJjk7Fyrl1sto_aem_s37l4N8haJl__-HHQPSNlA",
-            "icon": "eye"
-          },
-          {
-            "item": "Spizike Low",
-            "link": "https://www.snipesusa.com/spizike-low-jordan-black---anthracite--fq1759-001-1000118144.html",
-            "icon": "eye"
-          },
-          {
-            "item": "Air Jordan 1 Low SE",
-            "link": "https://www.snipesusa.com/air-jordan-1-low-se-jordan-medium-olive---light-orewood-brown---sail--hv4089-201-1000128079.html",
-            "icon": "eye"
-          },
-          {
-            "item": "Air Jordan 1 Mid",
-            "link": "https://www.snipesusa.com/air-jordan-1-mid-jordan-sail---midnight-green---pure-platinum-dq8426-105-1000128076.html",
-            "icon": "eye"
-          },
-          {
-            "item": "Air Jordan 1 Mid",
-            "link": "https://www.snipesusa.com/air-jordan-1-mid-jordan-blue-void---pure-platinum---summit-white---hot-lava---photo-blue-dq8426-403-1000128075.html",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "89": {
-      "id": "019bcce4-9609-4b36-f000-0000f476fc37",
-      "companyName": "Leesa Sleep",
-      "companyWebsite": "https://leesa.com",
-      "agentName": "Sarah",
-      "agentInitial": "L",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
+          "If customers already purchased use TFP shortcut"
         ],
         "tone": [
-          "Close the convo when the client takes over"
+          "Let the customer have the last word!"
+        ],
+        "drive_to_purchase": [
+          "Don\u0027t recommend Retailer Exclusive items"
+        ],
+        "promo_and_exclusions": [
+          "Discount codes CAN be applied to clearance items"
         ]
       },
-      "SystemMessage1": "Leesa Sleep: Welcome to Leesa Sleep! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Leesa Sleep: Welcome to Leesa! You've unlocked $25 off a new mattress. Just use code VIPTEXT25 at checkout. \n\nStart sleeping better now: leesa.attn.tv/ahesPt1nX84b",
-      "customerMessage1": "When trying to check out I don't see my 25% discount promised when I responded to this   I have the 25$",
-      "AgentMessage1": "Leesa Sleep: I'm so sorry to hear that! Could you send me a screenshot of the error message you're getting along with the items in your cart? I'll be more than happy to check this for you.",
-      "customerMessage2": "Aurora is helping on the site but when I check out again if it's still there I'll come back",
-      "customerMessage3": "Seems to be an error here",
-      "customerMessage4": "\"",
-      "AgentMessage2": "Leesa Sleep: Thanks for the screenshot! Your welcome code is VIPTEXT25 for $25 off. Unfortunately, promo codes can't be stacked at checkout, but feel free to use the one that offers the best value for you.",
-      "customerMessage5": "Ok   Weekend25 is more value, it's supposed to be 25% off  so 455.  But it's only pulling 109",
-      "customerMessage6": "Are you still there?",
-      "AgentMessage3": "Leesa Sleep: Yes, I'm still here; apologies for the delay in response. The item is already discounted by $440 from the original price of $2,199 to $1,759, and after the addition of the code, the item is further discounted by $109.75 to $1,649.25 there by bringing your total discount to $549.75, which is 25% off the original price of $2,199. I hope this clarifies things. Thanks for your understanding.",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://leesa.com",
-          "date": ""
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Sauder: FINAL DAYS to get ready for the BIG GAME! Score 20% OFF select TV stands, credenzas and more! Deal ends 2/1! sauder.attn.tv/ap1LoLpcwgDO ",
+          "date_time": "2026-01-29 14:16:45.897",
+          "message_media": [
+            
+          ]
         },
+        {
+          "message_type": "system",
+          "message_text": "Sauder: It looks like you forgot something in your cart...complete your checkout today: \nhttps://sauder.attn.tv/ap9useiZvnh2\n\nUse code W48ZGH4S for 20% off your first order! ",
+          "date_time": "2026-02-04 12:45:09.503",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sauder: Hey there! We noticed you eyeing something on our site... did you have any questions I could help with?\n\nUse code W48ZGH4S for 20% off your first order!\n\n-Ashley\n https://sauder.attn.tv/a-mbv03HsEwq",
+          "date_time": "2026-02-06 12:44:14.875",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sauder: Hey there! We noticed you eyeing something on our site... did you have any questions I could help with?\n\nUse code W48ZGH4S for 20% off your first order!\n\n-Ashley\n https://sauder.attn.tv/alryWYyY0K5C",
+          "date_time": "2026-02-08 14:27:59.244",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sauder: Don\u0027t miss our President\u0027s Day deals: 20% OFF hundreds of home office and storage best sellers. Hurry, this sale ends 3/1! sauder.attn.tv/ahkXtU3ZEmIH ",
+          "date_time": "2026-02-16 12:29:10.942",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sauder: Hey, this is Ashley . Thanks for checking us out! 😊 https://sauder.attn.tv/al7jEkBFl58a \n\nAny questions I can answer for you? ",
+          "date_time": "2026-02-19 15:48:15.234",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sauder: It looks like you forgot something in your cart...complete your checkout today: \nhttps://sauder.attn.tv/aUd5UPgOhs4a\n\nUse code W48ZGH4S for 20% off your first order! ",
+          "date_time": "2026-02-19 16:09:48.286",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes wanted to see if you could provide with a replacement for 60\" TV Credenza #420472",
+          "date_time": "2026-02-19 17:06:28.724",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"My item arrived damaged/defective\"; last updated: 2023-10-18 16:17:08.519",
+          "date_time": "2026-02-19 17:17:09.230",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"My item arrived damaged/defective\"; last updated: 2023-10-18 16:17:08.519",
+          "date_time": "2026-02-19 17:17:09.230",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c77fa-7754-4b59-f000-0000d41dee0d",
+          "message_text": "Sauder: Thank you for reaching out, and I\u0027m sorry for the inconvenience. Just to be sure, did you recently place an order, and it was damaged upon delivery? If so, we offer replacement parts at no charge! Simply call our customer service team at 800-523-3987 for help with assembly or replacement parts. One of my colleagues will be more than happy to assist you! \n\nIf you were looking for an alternartive to Harbor View Curado Cherry Entertainment Credenza, what do you think about these options? - https://sauder.attn.tv/aR5RKSqAeRoO\nhttps://sauder.attn.tv/aKnaOnK2bwPV",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 17:17:09.236"
+        }
+      ]
+    },
+    "89": {
+      "agentName": "Kat",
+      "id": "019c7872-7748-4982-f000-0000f47613e2",
+      "rightPanel": {
         "browsingHistory": [
           {
-            "item": "Sapira Hybrid Mattress",
-            "link": "https://www.leesa.com/products/leesa-hybrid-mattress",
-            "icon": "eye"
+            "link": "https://www.restartmed.com/product/thyroid-glandular-plus/?utm_source=google\u0026utm_medium=paid\u0026utm_campaign=16930217942\u0026utm_content=\u0026utm_term=\u0026gadid=\u0026gad_source=1\u0026gad_campaignid=16916687895\u0026gbraid=0AAAAADoARgWAFq7H8NxgnFUn19L7jaoVK\u0026gclid=Cj0KCQiAhtvMBhDBARIsAL26pjHuvwl5g0-HJxA7sBst_wITFeVDUU0jvkovHOgRI8u7ccdyb1bLOswaAitlEALw_wcB",
+            "item": "https://www.restartmed.com/product/thyroid-glandular-plus/?utm_source=google\u0026utm_medium=paid\u0026utm_campaign=16930217942\u0026utm_content=\u0026utm_term=\u0026gadid=\u0026gad_source=1\u0026gad_campaignid=16916687895\u0026gbraid=0AAAAADoARgWAFq7H8NxgnFUn19L7jaoVK\u0026gclid=Cj0KCQiAhtvMBhDBARIsAL26pjHuvwl5g0-HJxA7sBst_wITFeVDUU0jvkovHOgRI8u7ccdyb1bLOswaAitlEALw_wcB",
+            "timeAgo": "2026-02-19"
           },
           {
-            "item": "Sapira Hybrid Mattress",
-            "link": "https://www.leesa.com/products/leesa-hybrid-mattress",
-            "icon": "eye"
+            "link": "https://www.restartmed.com/product/thyroid-glandular-plus/?utm_source=google\u0026utm_medium=paid\u0026utm_campaign=16930217942\u0026utm_content=\u0026utm_term=\u0026gadid=\u0026gad_source=1\u0026gad_campaignid=16916687895\u0026gbraid=0AAAAADoARgWAFq7H8NxgnFUn19L7jaoVK\u0026gclid=Cj0KCQiAhtvMBhDBARIsAL26pjEQqz1LBged1VpqhOVA6UuQerHM_qeIzygRYWBkx0-M79KnrrxLlW0aAkrbEALw_wcB",
+            "item": "https://www.restartmed.com/product/thyroid-glandular-plus/?utm_source=google\u0026utm_medium=paid\u0026utm_campaign=16930217942\u0026utm_content=\u0026utm_term=\u0026gadid=\u0026gad_source=1\u0026gad_campaignid=16916687895\u0026gbraid=0AAAAADoARgWAFq7H8NxgnFUn19L7jaoVK\u0026gclid=Cj0KCQiAhtvMBhDBARIsAL26pjEQqz1LBged1VpqhOVA6UuQerHM_qeIzygRYWBkx0-M79KnrrxLlW0aAkrbEALw_wcB",
+            "timeAgo": "2026-02-19"
           },
           {
-            "item": "Sapira Hybrid Mattress",
-            "link": "https://www.leesa.com/products/leesa-hybrid-mattress",
-            "icon": "eye"
+            "link": "https://www.restartmed.com/product/thyroid-glandular-plus/",
+            "item": "https://www.restartmed.com/product/thyroid-glandular-plus/",
+            "timeAgo": "2026-02-19"
           },
           {
-            "item": "Sapira Hybrid Mattress",
-            "link": "https://www.leesa.com/products/leesa-hybrid-mattress",
-            "icon": "eye"
+            "link": "https://www.restartmed.com/product/thyroid-glandular-plus/",
+            "item": "https://www.restartmed.com/product/thyroid-glandular-plus/",
+            "timeAgo": "2026-02-19"
+          },
+          {
+            "link": "https://www.restartmed.com/product/thyroid-glandular-plus/",
+            "item": "https://www.restartmed.com/product/thyroid-glandular-plus/",
+            "timeAgo": "2026-02-18"
           }
         ],
-        "orders": [
-          {
-            "orderNumber": "16586806493554",
-            "orderDate": "",
-            "link": "https://leesa-us-store.myshopify.com/products/leesa-hybrid-mattress",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "Sapira Hybrid Mattress",
-                "price": "1759",
-                "currency": "USD",
-                "productLink": "https://leesa-us-store.myshopify.com/products/leesa-hybrid-mattress"
-              }
-            ],
-            "total": "1759"
-          }
+        "source": {
+          "label": "Website",
+          "value": "https://restartmed.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://restartmed.com",
+      "companyName": "Dr.Westin Childs",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
         ]
       },
-      "orders": [
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "16586806493554",
-          "order_status_url": "https://leesa-us-store.myshopify.com/products/leesa-hybrid-mattress",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://leesa-us-store.myshopify.com/products/leesa-hybrid-mattress",
-              "product_name": "Sapira Hybrid Mattress",
-              "product_price": 1759
-            }
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Dr. Westin Childs.",
+          "date_time": "2026-02-19 18:37:53.452",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: Welcome to Dr. Westin Childs! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-19 18:39:01.724",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: Welcome! Click here to for your 20% off coupon: https://drwc.attn.tv/aeKdEzeboins ",
+          "date_time": "2026-02-19 18:39:05.711",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "You did not apply my 20% discount to   the order, and there was no space to enter the code at checkout.  I do not understand.",
+          "date_time": "2026-02-19 19:10:36.433",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7864-8e9f-4881-f000-0000f47613e2",
+          "message_text": "Dr. Westin Childs: I apologize for the confusion this has caused. The promo code field is available at checkout-you\u0027ll just need to click on \"Have a coupon? Click here to enter your code,\" and the box will appear.\n\nI don\u0027t see any orders placed on my end yet. To confirm, have you already completed the order, or are you still in the process of checking out? Let me know so I can guide you further. ",
+          "message_type": "agent",
+          "agent": "87595",
+          "message_media": [
+            
           ],
-          "total": 1759
+          "date_time": "2026-02-19 19:13:02.019"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I finished my order and got a confirmation thank you for your order with no discount.",
+          "date_time": "2026-02-19 19:17:06.545",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7869-dc48-496e-f000-0000f47613e2",
+          "message_text": "Dr. Westin Childs: I\u0027m sorry to hear that. We don\u0027t handle post-purchase requests via text. Please email your request to hello@restartmed.com or feel free to call this number (480) 331-9431. Please let me know if you have any questions about our products, I\u0027m more than happy to help you here!\n ",
+          "message_type": "agent",
+          "agent": "46059",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 19:18:49.575"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "My receipt # is 370030 at 3:47 PM for $46.75 and there should be $9.35 discount.",
+          "date_time": "2026-02-19 19:22:36.504",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7872-7748-4982-f000-0000f47613e2",
+          "message_text": "Dr. Westin Childs: Thanks for letting me know. However, we don\u0027t handle post-purchase requests via text. I truly wish I could fix this directly for you, but my system can only handle product-related concerns. Thank you for your utmost patience and understanding.",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 19:28:13.534"
         }
       ]
     },
     "90": {
-      "id": "019bd769-324e-44c2-f000-0000f1821629",
-      "companyName": "Banded",
-      "companyWebsite": "https://banded.com",
-      "agentName": "Pete",
-      "agentInitial": "B",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
-        ],
-        "tone": [
-          "Close the convo once the client takes over!"
-        ],
-        "promo_and_exclusions": [
-          "IF cx asks for code share SAVE15, it will work on all non-sale items"
-        ]
-      },
-      "SystemMessage1": "Banded: Welcome to Banded! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Banded: Welcome! Your code for 15% is SAVE15 . Click here to shop now: https://banded.attn.tv/aO-_5TZ-J9-R .",
-      "SystemMessage3": "Banded: Don't miss out: Add us as a contact to your phone to access exclusive content first!",
-      "SystemMessage4": "Banded: Hey ! I'm Pete and I'm here to be a personal shopping assistant for you!\n\nDo you have any questions or need a recommendation? Let me know how I can help. \n\nhttps://banded.attn.tv/akgXz7rakkW_ .",
-      "SystemMessage5": "Banded: Last call! Use offer SAVE15 at checkout before it's too late. Shop now: https://banded.attn.tv/aYDKnmeB3Rwr .",
-      "SystemMessage6": "Banded: If you're hunting in the cold, you need the right layer. Fanatech Softshell Masked Hoodie = softshell protection, fleece warmth, and a built-in face mask for those windy mornings. Grab one in Realtree Legacy or MAX7\n\nTap & Shop → banded.attn.tv/aJsbcYvud1Iq",
-      "SystemMessage7": "Banded: We noticed you were checking out some gear...time to lock it down. Get back in and grab what you need: https://banded.attn.tv/aNZd9C4ec_g8 .",
-      "customerMessage1": "You're website is too difficult for me",
-      "AgentMessage1": "Banded: Try opening the site in an incognito or private window to see if that helps. Let me know if you need further assistance!",
-      "customerMessage2": "Gonna try buying the banded waist waders on Amazon as it's easier. I waited 20 minutes on the phone for customer support",
-      "AgentMessage2": "Banded: Sorry for the wait. You can call us at 1-800-333-5119, Monday-Friday, 8 am to 5 pm CST, or email info@banded.com for assistance.",
-      "customerMessage3": "Tried both of those",
-      "SystemMessage8": "Banded: Complete your purchase, John — pay now to unlock free returns promises comfort and reliable performance.\n\n78 people have recently viewed this item.\n\nShop now: https://banded.attn.tv/akG7jI5K8lV1 .",
-      "SystemMessage9": "Template used: \"Can't take calls - All brands\"; last updated: 2023-10-10 18:11:21.727",
-      "AgentMessage3": "Banded: I'm truly sorry for the inconvenience. It certainly isn't the experience I want you to have. Did you need any help ordering the items on our website? If so, may I ask which specific items you're interested in? I'm happy to prepare a cart for you on my end.",
+      "agentName": "Jamie",
+      "id": "019c68e5-9224-46e7-f000-0000fbc292ee",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://banded.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "RZX-WC Breathable Insulated Waist Wader - Legacy / 10",
-            "link": "https://banded.com/products/rzx-wc-breathable-insulated-waist-wader?variant=44292877680811",
-            "icon": "eye"
+            "link": "https://www.capillus.com/products/capillus-pro-s2?contact_posted=true#ContactForm-template--18577459249291__faq",
+            "item": "Capillus PRO S2",
+            "timeAgo": "2026-02-16"
           },
           {
-            "item": "RZX-WC Breathable Insulated Waist Wader - Legacy / 10",
-            "link": "https://banded.com/products/rzx-wc-breathable-insulated-waist-wader?variant=44292877680811",
-            "icon": "eye"
+            "link": "https://www.capillus.com/products/capillus-pro-s2?contact_posted=true#ContactForm-template--18577459249291__faq",
+            "item": "Capillus PRO S2",
+            "timeAgo": "2026-02-16"
           },
           {
-            "item": "RZX-WC Breathable Insulated Waist Wader - MAX7 / 10",
-            "link": "https://banded.com/products/rzx-wc-breathable-insulated-waist-wader?variant=42361838370987",
-            "icon": "eye"
-          },
-          {
-            "item": "RZX-WC Breathable Insulated Waist Wader - MAX7 / 09",
-            "link": "https://banded.com/products/rzx-wc-breathable-insulated-waist-wader",
-            "icon": "eye"
-          },
-          {
-            "item": "RZX-WC Breathable Uninsulated Waist Wader - Legacy / 8",
-            "link": "https://banded.com/products/rzx-wc-breathable-uninsulated-waist-wader",
-            "icon": "eye"
+            "link": "https://www.capillus.com/products/capillus-pro-s2",
+            "item": "Capillus PRO S2",
+            "timeAgo": "2026-02-16"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://capillus.com",
+          "date": ""
+        }
       },
-      "orders": []
+      "companyWebsite": "https://capillus.com",
+      "companyName": "Capillus",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS if a subscriber mentions a medical issue or an adverse effect from using products from this brand"
+        ],
+        "escalate": [
+          "ESC immediately discount code issues"
+        ],
+        "dos_and_donts": [
+          "Do not share any medical advice or guidance to subscribers outside of recommending appropriate products or directing them to purchase the right item",
+          "Do not comment on their medical situations",
+          "Close the covo if the customer says they\u0027re receiving too many messages/we\u0027re texting them too often - don\u0027t send TMT"
+        ],
+        "drive_to_purchase": [
+          "If cx says they will be ordering soon, offer to schedule a call if they need further assistance with their purchase (shortcut OS) - do not upsell"
+        ],
+        "tone": [
+          "Don\u0027t use the term \"hang tight\", just say that you\u0027ve passed the information to the team",
+          "Close the conversation once the client takes over"
+        ],
+        "templates": [
+          "If cx already purchased, use specific TFP template"
+        ],
+        "promo_and_exclusions": [
+          "We do not offer any discounts for the SPECTRUM"
+        ]
+      },
+      "blocklisted_words": [
+        "Curallux",
+        "hang"
+      ],
+      "escalation_preferences": [
+        "Discount code errors",
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Capillus.",
+          "date_time": "2026-02-16 18:20:07.838",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Welcome to Capillus! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-16 18:20:27.699",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Welcome to Capillus 👋\nYou\u0027re officially in. Discover science-backed red light therapy designed for hair regrowth, recovery, and everyday wellness. Explore here: capillus.attn.tv/aPokiV_lAWXn \n*Up to 30% OFF. Discount is applied on site. No code needed. \n",
+          "date_time": "2026-02-16 18:20:31.680",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Don\u0027t forget to save our contact to get exclusive updates!",
+          "date_time": "2026-02-16 18:20:32.781",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hey there, this is Jamie! You left Capillus PRO S2 in your cart. \n\nBoost your confidence with Capillus Red Light Therapy. Complete your purchase now capillus.attn.tv/a_7h5P-ZLd0U\n\nText back if you need help!",
+          "date_time": "2026-02-16 18:42:44.691",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hey there, this is Jamie! We saw you checking out Capillus PRO S2! \n\nDon\u0027t wait, transform your confidence back today: capillus.attn.tv/af4yz3EW1Uk7 .\n\nText back if you need assistance.",
+          "date_time": "2026-02-16 18:43:08.287",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "i need the larger size how do i order",
+          "date_time": "2026-02-16 18:43:54.379",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c68e2-5d87-488c-f000-0000fbc292ee",
+          "message_text": "Capillus: Thank you for reaching out. Sure, let me help you. Regular caps fit most heads, up to 23\" in circumference (comparable to a size 7 hat). Extra-large caps, comparable to a size 8 hat, are available upon request by scheduling a call with our customer service at: https://capillus.attn.tv/ahGFRr4ekxjg. ",
+          "message_type": "agent",
+          "agent": "48804",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 18:56:31.536"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "great i need xl and have a call set up",
+          "date_time": "2026-02-16 18:57:34.271",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c68e5-9224-46e7-f000-0000fbc292ee",
+          "message_text": "Capillus: Great, glad you have a call scheduled! Please let me know if there\u0027s anything else that I could assist you with while I have you, I\u0027m just a text away. ",
+          "message_type": "agent",
+          "agent": "109617",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 19:00:01.609"
+        }
+      ]
     }
   }
 }

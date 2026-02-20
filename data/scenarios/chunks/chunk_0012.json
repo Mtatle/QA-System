@@ -3,404 +3,780 @@
   "chunk": "chunk_0012",
   "scenarios": {
     "56": {
-      "id": "019bbf66-dfa2-4b25-f000-0000db9add8e",
-      "companyName": "Sauder",
-      "companyWebsite": "https://sauder.com",
-      "agentName": "Ashley",
-      "agentInitial": "S",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post-purchase inquiries for items purchased through a retailer"
-        ],
-        "templates": [
-          "If customers already purchased use TFP shortcut"
-        ],
-        "tone": [
-          "Let the customer have the last word!"
-        ],
-        "drive_to_purchase": [
-          "Don't recommend Retailer Exclusive items"
-        ],
-        "promo_and_exclusions": [
-          "Discount codes CAN be applied to clearance items"
-        ]
-      },
-      "SystemMessage1": "Sauder: Don't miss our Holiday Hoopla deals! Enjoy savings on over 600 items! Hurry, this sale ends 1/4! sauder.attn.tv/aAAXZwo8a7-v",
-      "SystemMessage2": "Sauder: Ring in the New Year with incredible savings! Last chance for blowout deals on over 600 items! Hurry, this sale ends 1/4! sauder.attn.tv/aIP6zKTROA6b",
-      "SystemMessage3": "Sauder: Hey, this is Ashley . Thanks for checking out our site! 😊 https://sauder.attn.tv/aJH3i9zP4KuN \n\nAre you looking for anything in particular today?",
-      "SystemMessage4": "Sauder: Hey, this is Ashley . Thanks for checking out our site! 😊 https://sauder.attn.tv/ajG9YFYAmUdx \n\nAre you looking for anything in particular today?",
-      "customerMessage1": "Glacier Oak bed frame with shelved headboard and desk",
-      "AgentMessage1": "Sauder: I totally understand, finding the exact pieces you want can be really important for making your space feel complete.\n\nUnfortunately, at the moment, we do not have a Glacier Oak bed frame with both a shelved headboard and desk together as one piece. However I do have a few very close options that might work depending on what you're trying to set up:\n\nHere is a shelved headboard in Glacier Oak (full/queen):\nhttps://sauder.attn.tv/arzAslmkISMA\n\nAnd here's a desk in Glacier Oak that would pair nicely:\nhttps://sauder.attn.tv/aagFQ_XDEbWP\n\nFor a bed frame option (Raven Oak finish):\nhttps://sauder.attn.tv/a_uiivBuVaXs\n\nI know it's not exactly the Glacier Oak bed + headboard + desk combo you described, and I can see why that's disappointing. Let me know what you think!",
+      "agentName": "Darby",
+      "id": "019c49b2-c863-44f7-f000-0000fa3fc7ed",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://sauder.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "Full/Queen Bookcase Headboard in Glacier Oak",
-            "link": "https://www.sauder.com/furniture/442986/fullqueen-bookcase-headboard-in-glacier-oak?utm_campaign=Concierge-Site-Visitor-3&utm_source=attentive&utm_medium=text&externalId=sgWFz",
-            "icon": "eye"
+            "link": "https://www.johnnie-o.com/collections/womens-new-arrivals/products/jwld100130_juliett_25fa?color=Ash%2520Rose",
+            "item": "Juliett Floral Cinch Waist Dress",
+            "timeAgo": "2026-02-10"
           },
           {
-            "item": "Single Pedestal Desk in Rich Walnut",
-            "link": "https://www.sauder.com/furniture/431215/single-pedestal-desk-in-rich-walnut",
-            "icon": "eye"
-          },
-          {
-            "item": "Single Pedestal Desk in Haze Acacia",
-            "link": "https://www.sauder.com/furniture/431235/single-pedestal-desk-in-haze-acacia",
-            "icon": "eye"
-          },
-          {
-            "item": "Single Pedestal Desk in Haze Acacia",
-            "link": "https://www.sauder.com/furniture/431235/single-pedestal-desk-in-haze-acacia",
-            "icon": "eye"
-          },
-          {
-            "item": "Desk with File Drawer in Ashen Oak",
-            "link": "https://www.sauder.com/furniture/434183/desk-with-file-drawer-in-ashen-oak",
-            "icon": "eye"
+            "link": "https://www.johnnie-o.com/collections/womens-new-arrivals/products/jwld100130_juliett_25fa?color=Ash%2520Rose",
+            "item": "Juliett Floral Cinch Waist Dress",
+            "timeAgo": "2026-02-10"
           }
         ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "57": {
-      "id": "019bdce1-8f88-476b-f000-0000f31a9fa7",
-      "companyName": "Cardboard Cut Out Standees",
-      "companyWebsite": "https://cardboardcutoutstandees.com",
-      "agentName": "Jordan",
-      "agentInitial": "C",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "No CS for this client, ESC everything",
-          "When ESC post-purchase issues, only ask for the order number",
-          "If a customer wants to talk to customer service do not send PS, ESC instead",
-          "When ESC on weekends, use WKD shortcut before you ESC",
-          "When ESC on weekDAYS after 4pm EST, use WKE shortcut before you ESC"
-        ],
-        "tone": [
-          "Close the convo once the client takes over",
-          "Close the convo when customers misanswer the Welcome journey q's"
-        ],
-        "templates": [
-          "If cx are trying to upload a photo on the website and it's not coming through, use PWU shortcut",
-          "If cx are inquiring about delivery dates, use GRN shortcut",
-          "If cx share image/screenshot that's not showing don't ask to send again, use IMG shortcut"
-        ],
-        "dos_and_donts": [
-          "Prices vary, depending on height, not width",
-          "Don't mention possible shipping delays",
-          "Don't ask for screenshots",
-          "Wet Paint T shirts Inc is a different company"
-        ],
-        "drive_to_purchase": [
-          "Don't recommend and share links for add-ons to cx"
-        ],
-        "promo_and_exclusions": [
-          "Contact us for help with fundraisers. Grad yard signs are only sold through fundraisers"
-        ]
-      },
-      "SystemMessage1": "Cardboard Cutout Standees: Welcome to Cardboard Cutout Standees! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Cardboard Cutout Standees: Your coupon code is WELCOME-3TD. Click here to auto-apply it and shop now: cardboard.attn.tv/anIKqiDrxGhq .\n Stop to stop",
-      "SystemMessage3": "Cardboard Cutout Standees: ....and don't forget to save our contact to get exclusive updates! Stop to stop",
-      "SystemMessage4": "Cardboard Cutout Standees: Hi! This is Jordan. I'm always here to help you if you need it.\n\nI'd like to make sure you receive deals and offers that best fit you. Text me with the number that best matches what you are interested in:\n\n1 - Celebrating my kid's - birthdays, sports, graduations.\n2 - Promoting my business - marketing, products, company events.\n3 - Having fun with life's events - weddings, holidays, birthdays.\n4 - Designing with wall decals or wall murals.\n5 - The best deal - send me info on offers and sales.\n Stop to stop",
-      "SystemMessage5": "Cardboard Cutout Standees: Don't wait for your custom prints! Orders placed by 10AM central on a business day will ship from our facility the following business day and include FREE SHIPPING!\n\ncardboard.attn.tv/aOR2iarr9rHR \n\nShoot me a text if you need any assistance ordering. Thanks! \n\n- Jordan Stop to stop",
-      "SystemMessage6": "Cardboard Cutout Standees: Hi it's Jordan. I just wanted to let you know your coupon code WELCOME-3TD is about to expire. Shop now before it's too late! cardboard.attn.tv/a8ebqru2hJdk \n\nLet me know if you need any assistance. I am here to help! Stop to stop",
-      "SystemMessage7": "Cardboard Cutout Standees: We've reached over 20,000 5-star BigHead and Standee reviews! Our fast turnaround, free shipping, and unrivaled customer service make creating your custom products a breeze. Upload your photos now! cardboard.attn.tv/a9TT6Q3g83zM \n\nText us back if you have any questions! Stop to stop",
-      "SystemMessage8": "Cardboard Cutout Standees: Hi this is Jordan. Thanks for checking out the site! cardboard.attn.tv/asVIXLDXjt9U\n\nText back if you need anything. I am here to help!  Stop to stop",
-      "customerMessage1": "My order was placed, correct?",
-      "AgentMessage1": "Cardboard Cutout Standees: Hello! Thanks for reaching out. I'm afraid I'm not seeing any recent orders placed. Can you please check your email if you received a confirmation of the order? Kindly check your spam and promo folders as well. Sometimes, our emails end up there.",
-      "customerMessage2": "\"",
-      "customerMessage3": "Should I be concerned?!?",
-      "SystemMessage9": "\"",
-      "SystemMessage10": "Template used: \"Screenshot - All brands\"; last updated: 2023-10-10 18:09:41.020",
-      "AgentMessage2": "Cardboard Cutout Standees: Thank you for the screenshot! I'm sorry for the trouble. I might not be seeing any orders on my side due to system limitations, so I'll happily have the team look into this for you. I've forwarded this to the team. I'll let you know as soon as I have an update. In the meantime, if you have any more questions or concerns, please let me know. I'm happy to help.",
-      "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://cardboardcutoutstandees.com",
+          "value": "https://johnnie-o.com/",
           "date": ""
         },
-        "browsingHistory": [
-          {
-            "item": "Create Your Standee",
-            "link": "https://www.cardboardcutoutstandees.com/standee-product.html",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "58": {
-      "id": "019bf182-96b8-4f1d-f000-0000f5436f8e",
-      "companyName": "R + Co",
-      "companyWebsite": "https://randco.com",
-      "agentName": "Lesley",
-      "agentInitial": "R",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "ESC retroactive discount/price adjustment inquiries immediately",
-          "ESC discount code issues",
-          "ESC if stylists/salons want to carry the products"
-        ],
-        "templates": [
-          "For any q's about affiliate links, commissions, or salon referral links, use AFQ shortcut",
-          "All of the products are unisex, use USX shortcut"
-        ],
-        "drive_to_purchase": [
-          "Ask the cx what their hair concerns are before making a recommendation!",
-          "Make recommendations when cx has specific inquiry, don't send the quiz!",
-          "For full haircare regimen inquiries, recommend shampoo, conditioner, and at least one or two other products recommended that align with their need"
-        ],
-        "promo_and_exclusions": [
-          "When sending a code provide more detail about what the code is valid for!",
-          "When sending the promo/code end date, include the time the offer expires as well!"
-        ]
-      },
-      "SystemMessage1": "R+Co: Welcome to R+Co! Msg & data rates may apply. Msg frequency varies. Reply STOP to cancel.",
-      "SystemMessage2": "R+Co: Thanks for joining! Your code for 15% OFF is HELLO15. Shop now: rco.attn.tv/aJ5Vj76JAZw2 \n\nYou also now have access to our text concierge, Lesley! You can message them here anytime with questions while you shop.",
-      "SystemMessage3": "R+Co: Add us to your contacts and never miss out on our latest news, offers and style tips.",
-      "SystemMessage4": "R+Co: Great news! The Travel Bag & R+Co BLEU Sample Set you were looking at is now back in stock! Don't wait, grab it now:rco.attn.tv/aoLE3q7dDJdN .",
-      "SystemMessage5": "R+Co: Reminder! Get the Travel Bag & R+Co BLEU Sample Set and elevate your hair routine. Click here to check out: rco.attn.tv/aQqXSXZhaYmN .",
-      "SystemMessage6": "R+Co: Hey there! Forget something? Don't leave your upgraded haircare routine behind! Checkout now: rco.attn.tv/akHg4E_zGx1C\n\n\nI'm here if you have any questions!\n- Lesley",
-      "customerMessage1": "Hi",
-      "customerMessage2": "I have a ton of products that I added to my cart and need to narrow it down",
-      "AgentMessage1": "R+Co: What are your main hair concerns or goals? I can help recommend the best products for your needs!",
-      "customerMessage3": "I have dry scalp and medium hair that is prone to breakage",
-      "customerMessage4": "Not color treated",
-      "AgentMessage2": "R+Co: For dry scalp and breakage, try the Scalp Therapy Pre-Shampoo Exfoliating Scrub and ON A CLOUD Bond Building + Repair Leave-In Oil Conditioner. Check them out here: https://rco.attn.tv/aHgXLYOf5YDf and https://rco.attn.tv/aNrZq8loRs3B.",
-      "customerMessage5": "I noticed I added several different leave in conditioners and oils",
-      "AgentMessage3": "R+Co: For your needs, consider the ON A CLOUD Bond Building + Repair Leave-In Oil Conditioner and SUN CATCHER Power C Boosting Leave-In Conditioner. Both are great for hydration and strengthening.",
-      "customerMessage6": "Thank you",
-      "customerMessage7": "Hi, I am getting an error when I attempt to add the free sample to my cart",
-      "AgentMessage4": "R+Co: Sorry about that! Can you please send me a screenshot of what you see on your end?",
-      "customerMessage8": "\"",
-      "AgentMessage5": "R+Co: Thank you for the screenshot! I'm sorry for the trouble. When viewing your cart on randco.com, you may select a complimentary sample to add to your order, if available. First, I might suggest trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes.",
-      "customerMessage9": "I am still getting the same error",
-      "AgentMessage6": "R+Co: Thank you for letting me know, and I'm sorry for any inconvenience. May I please have a screenshot of the items in your cart? I'm more than happy to look into this for you!",
-      "customerMessage10": "\"",
-      "SystemMessage7": "\"",
-      "SystemMessage8": "Template used: \"Too many emails - All brands\"; last updated: 2023-10-10 17:50:00.779",
-      "SystemMessage9": "Template used: \"Weekend Escalations - All brands\"; last updated: 2024-02-12 17:46:12.047",
-      "AgentMessage7": "R+Co: Thanks for sharing the screenshot. I just checked and it's not work on my end as well. Let me check in on this with my team. Since it's the weekend, I may not hear back until Monday, but I'll be sure to follow up with you as soon as I do! In the meantime, is there anything else I can help you with?",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://randco.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "ATLANTIS Moisturizing B5 Conditioner - 8.5 OZ",
-            "link": "https://www.randco.com/products/atlantis-moisturizing-b5-conditioner?_pos=1&_psq=Atlantis&_ss=e&_v=1.0",
-            "icon": "eye"
-          },
-          {
-            "item": "ATLANTIS Moisturizing B5 Conditioner - 8.5 OZ",
-            "link": "https://www.randco.com/products/atlantis-moisturizing-b5-conditioner?_pos=1&_psq=Atlantis&_ss=e&_v=1.0",
-            "icon": "eye"
-          },
-          {
-            "item": "HYDRATE + RESTORE",
-            "link": "https://www.randco.com/products/hydrate-restore-1?_pos=10&_psq=Atlantis&_ss=e&_v=1.0",
-            "icon": "eye"
-          },
-          {
-            "item": "ON A CLOUD Bond Building Repair + Styling Masque - 5 OZ",
-            "link": "https://www.randco.com/products/on-a-cloud-baobab-oil-repair-masque?_pos=2&_psq=Masque&_ss=e&_v=1.0",
-            "icon": "eye"
-          },
-          {
-            "item": "Scalp Therapy Pre-Shampoo Exfoliating Scrub",
-            "link": "https://www.randco.com/products/scalp-therapy-pre-shampoo-exfoliating-scrub",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "59": {
-      "id": "019bb87d-c2db-45cd-f000-0000f3ee6175",
-      "companyName": "Bartesian",
-      "companyWebsite": "https://bartesian.com",
-      "agentName": "Sarah",
-      "agentInitial": "B",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "For Hardware Damage/Troubleshooting:"
-        ],
-        "tone": [
-          "Do not use \"pod(s)\" - language is \"capsules\""
-        ],
-        "drive_to_purchase": [
-          "Unless cx specifies, default to recommending \"The Bartesian Cocktail Maker\""
-        ]
-      },
-      "SystemMessage1": "Bartesian: Welcome to Bartesian! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage2": "Bartesian: Thanks for signing up for Bartesian and entering the sweepstakes! Good luck! \nCheck out our latest products: bartesian.attn.tv/aLuetF6N6XUt",
-      "SystemMessage3": "Bartesian: Your Bartesian is waiting... Shop now: https://bartesian.attn.tv/aO2AD9QH0Aem & Sign up for our cocktail subscription to save up to 35% now.",
-      "customerMessage1": "I am extremely interested in purchasing this product and all that goes with it however after speaking with my daughter ( financial advisor) she told me that I could only purchase it by utilizing time payments....if that is possible please let me know.",
-      "AgentMessage1": "Bartesian: Thank you for your interest, and I love that you have a financial advisor! For payment plans, we accept ShopPay. You can select that as a payment option at checkout.",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://bartesian.com",
-          "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
-      },
-      "orders": []
-    },
-    "60": {
-      "id": "019bd429-e3ca-42c9-f000-0000eabd7285",
-      "companyName": "CLEARSTEM",
-      "companyWebsite": "https://clearstem.com",
-      "agentName": "Amy",
-      "agentInitial": "C",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "dos_and_donts": [
-          "CS FAQ 2023: https://docs.google.com/document/d/14trCw9iSUHRl_4Yq40Wz5dg3mZzm_-c0PNFbzdePMj0/edit?usp=sharing"
-        ],
-        "promo_and_exclusions": [
-          "MINDBODYSKIN is not eligible for any discount codes!",
-          "Codes only apply to products found here: https://clearstem.com/collections/all-items-codes-allowed?srsltid=AfmBOor8cOzvFvRGC60_ZKpExyRCdNOowQ8eGgZyJyAn341uscwJDfsZ"
-        ]
-      },
-      "SystemMessage1": "CLEARSTEM: This bag is EVERYTHING. \n\nWe can barely believe we're GIVING something this luxe away!! (While supplies last). \n\nSpend $75+ and use code LILAC to claim: clearstem.attn.tv/aq990L4FiuCb .",
-      "SystemMessage2": "CLEARSTEM: We truly cannot stop serving you insane fun things this holiday season.\n\nFor example: right now, you can get a FREE Mini SKINSPRAY ALL DAY when you subscribe to any product. \n\nSUBSCRIBE, SAVE + GET A FREE SKINSPRAY ALL DAY: clearstem.attn.tv/amb1xtbjowcC .",
-      "SystemMessage3": "CLEARSTEM: Happy holidays, love! \n\nWhile you're celebrating with your loved ones this week, we wanted to send a little reminder to make sure to carve out MOMENTS FOR YOU: small pockets of time to pause, breathe, and enjoy a little self-care. Whether it's a cozy mug of cocoa, curling up with a blanket, or your favorite skincare ritual, may your days be filled with calm, joy, and GLOW. \n\nThank you for letting us be part of your journey to healthier, happier skin. Here's to a bright, beautiful holiday and a radiant New Year ahead.\n\nWith warmth and gratitude,\nDanielle + Kayleigh \n\nShop holiday favorites:\nclearstem.attn.tv/akTDCUO3C9CG .",
-      "SystemMessage4": "CLEARSTEM: She's finally back!!! BRIGHTMEUP is BACK IN STOCK... just in time to make your holidays EXTRA bright 💛🎄\n\nSHOP NOW BEFORE IT HAPPENS AGAIN: clearstem.attn.tv/aFqBWpiPnqjq .",
-      "SystemMessage5": "CLEARSTEM: Grab everything you need for a CLEAR SKIN NEW YEAR because the final sale of 2025 starts now. \n\n26% off your entire order with code BEMERRY:\nclearstem.attn.tv/a1qyICbsRH-C .",
-      "SystemMessage6": "CLEARSTEM: Super quick message to let you know that the last sale of the year is ending at MIDNIGHT!\n\nGet 26% off with code BEMERRY:\nclearstem.attn.tv/ah9SE1DGW-n2 .",
-      "SystemMessage7": "CLEARSTEM: Hours left to save with our LAST SALE OF THE YEAR.\n\n26% off with code BEMERRY:\nclearstem.attn.tv/aqP_iGOrc2m3 .",
-      "SystemMessage8": "CLEARSTEM: We just couldn't let it end yet... 😭\n\n2025's final sale will be going on for ONE MORE DAY. \n\nUse code BEMERRY for 26% off:\nclearstem.attn.tv/alaFzSodtD5E .",
-      "SystemMessage9": "CLEARSTEM: Ok it's OVER OVER. For real this time. Last sale of the year. Last reminder. \n\nYour sign to shop! \n\nUse code BEMERRY by midnight for 26% off:\nclearstem.attn.tv/a7fu4o-VJLJW .",
-      "SystemMessage10": "CLEARSTEM: FINAL CALL to get a free Mini SKINSPRAY ALL DAY automatically included with your order! \n\nStart any subscription NOW to claim: \nclearstem.attn.tv/audYxm16nw8p .",
-      "SystemMessage11": "CLEARSTEM: This is your sign to BREAK UP...with biotin for causing breakouts. We wanna see you out that door baby, BYE, BYE, BYE. 👋 Something better is coming 1.8. \n\nJoin the VIP waitlist now: clearstem.attn.tv/a0_Ws3C8z4pY .",
-      "SystemMessage12": "CLEARSTEM: BIOTIN IS OFFICIALLY CANCELLED 🚫\n\nLet's dive into HOW it causes breakouts and why to avoid if when you're looking for a supplement. \n\nREAD NOW: clearstem.attn.tv/aHtfPLDD_GJ0 .",
-      "SystemMessage13": "CLEARSTEM: MAKE 2026 YOUR YEAR OF CLEAR by focusing on the right routine! \n\nYou don't have to overthink it - we did the work for you by curating GO-TO routines that have THOUSANDS of 5-star reviews. \n\nShop based on your skin goals now: clearstem.attn.tv/aKYmBMRibHfr .",
-      "SystemMessage14": "CLEARSTEM: We're having a VIRTUAL live early access LAUNCH event today and YOU'RE INVITED! 🎀💃\n\nJoin Danielle + Kayleigh live on Zoom for a very special BREAK UP WITH BIOTIN LAUNCH PARTY celebrating our HAIR SKIN NAILS Biotin-Free Beauty supplement. \n\nJOIN ON ZOOM TODAY @ 5 PM PST: clearstem.attn.tv/a1NaiWoafSqb .",
-      "SystemMessage15": "CLEARSTEM: HAIR SKIN NAILS IS HERE!! She's not a regular Hair Skin Nails supplement, she's a cool one 😉\n\nMade WITHOUT biotin specifically for breakout-prone skin! \n\nShe supports: \n🎀 Strong, healthy, shiny hair + nails*\n🎀 Improved appearance of thin-looking hair*\n🎀 Visibly thicker, fuller-looking hair*\n🎀 Hydrated, bouncy skin*\n\nMade with clinically-studied ingredients including Nettle Root Extract for HAIR VOLUME, Folate for HAIR STRENGTH, and MSM Sulfur for healthier hair skin and nails overall. \n\nThis supplement does what biotin could never. \n\nGET A FREE GIFT WITH FIRST SUBSCRIPTION NOW: clearstem.attn.tv/aNYRu08xR0km .",
-      "SystemMessage16": "CLEARSTEM: BRB, packing up the last free gifts for people who start a HAIR SKIN NAILS subscription today! \n\nLast chance to get a FREE Mini HYDRABERRY + 15% off 🎀\n\nDon't miss out. Subscribe to HAIR SKIN NAILS now: clearstem.attn.tv/aq5C0eZ1WZrD .",
-      "SystemMessage17": "CLEARSTEM: ATTENTION: we're now on TYB, so we can REWARD you like never before!\nInside, you'll get:\n• early access to launches\n• exclusive drops + perks\n• real skin conversations\n• and more from the CLEARSTEM team\nJoin for free right NOW: clearstem.attn.tv/aVRQDyIQXC8q .",
-      "SystemMessage18": "CLEARSTEM: Ring ring 📞 a NEW YOU is calling! \n\nGet 25% OFF routines to Make 2026 Your Year of Clear. \n\nUse code NEWYOU at checkout to save: clearstem.attn.tv/aqvTfZlb6yY5 .",
-      "SystemMessage19": "CLEARSTEM: 25% OFF routines is ON NOW + ending at midnight. \n\nSave big with code NEWYOU: clearstem.attn.tv/aTkvVr10_Fgh .",
-      "SystemMessage20": "CLEARSTEM: DOORS CLOSING for 25% off! ✌️\n\nShop routines now with code NEWYOU: clearstem.attn.tv/a_caNdPPr_cQ .",
-      "SystemMessage21": "CLEARSTEM: 💌 Today Only. VIP Only. AKA YOU ONLY!! 💌\n\nWe want to treat you to a FREE bottle of everyone's favorite non-comedogenic face oil: GOLDENHOUR. \n\nAdd the mini to your cart with $75+ of product, then use code NOURISH at checkout. \n\nACT TODAY: clearstem.attn.tv/aSJm_mgptbAY .",
-      "customerMessage1": "This code is only taking $4.50 off my order, not the $30",
-      "customerMessage2": "\"",
-      "customerMessage3": "I just checked out without the product in my cart",
-      "customerMessage4": "Are you able to add the oil to my order since the code wouldn't work?",
-      "SystemMessage22": "\"",
-      "SystemMessage23": "Template used: \"Weekend Escalations - All brands\"; last updated: 2024-02-12 17:46:12.047",
-      "SystemMessage24": "Template used: \"Code won't work - All brands\"; last updated: 2023-10-10 16:36:42.859",
-      "SystemMessage25": "Template used: \"Automatic discount - All brands\"; last updated: 2023-10-10 16:40:19.306",
-      "AgentMessage1": "CLEARSTEM: I'm so sorry to hear that, Sarah! Please note that discount codes don't work with subscription items, as our system can't stack multiple promotions at checkout.\n\nI did try applying the code on my end with one-time purchase items; however, it still didn't apply the full discount for the free mini bottle.\n\nI want to make sure I give you the most accurate information, so I'll check in with my team. Since it's the weekend, I may not hear back until Monday, but I'll be sure to follow up with you as soon as I do!",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://clearstem.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "HAIR SKIN NAILS",
-            "link": "https://clearstem.com/products/hair-skin-nails?irclickid=SkqRO6X6wxycU9QU-12lL3h-UkpSXM0R3y5hUw0&irpid=101044&sharedid=&utm_source=impact&utm_medium=affiliate&utm_campaign=101044&irgwc=1&afsrc=1",
-            "icon": "eye"
-          },
-          {
-            "item": "HAIR SKIN NAILS",
-            "link": "https://clearstem.com/products/hair-skin-nails",
-            "icon": "eye"
-          },
-          {
-            "item": "HAIR SKIN NAILS",
-            "link": "https://clearstem.com/products/hair-skin-nails",
-            "icon": "eye"
-          },
-          {
-            "item": "GOLDENHOUR Watermelon Barrier Oil",
-            "link": "https://clearstem.com/products/goldenhour?variant=47240285716705",
-            "icon": "eye"
-          },
-          {
-            "item": "MINDBODYSKIN® Hormonal Acne Supplement",
-            "link": "https://clearstem.com/products/mindbodyskin-csb",
-            "icon": "eye"
-          }
-        ],
         "orders": [
           {
-            "orderNumber": "6896566403297",
-            "orderDate": "",
-            "link": "https://clearstem-skincare.myshopify.com/products/hair-skin-nails",
-            "trackingLink": "",
-            "currency": "USD",
+            "orderDate": "2026-02-10",
             "items": [
               {
-                "name": "HAIR SKIN NAILS",
-                "price": "57.8",
-                "currency": "USD",
-                "productLink": "https://clearstem-skincare.myshopify.com/products/hair-skin-nails"
-              },
-              {
-                "name": "MINDBODYSKIN® Hormonal Acne Supplement",
-                "price": "52.2",
-                "currency": "USD",
-                "productLink": "https://clearstem-skincare.myshopify.com/products/mindbodyskin-csb"
+                "price": [
+                  228
+                ],
+                "productLink": "https://johnnie-oadmin.myshopify.com/products/jwld100130_juliett_25fa",
+                "name": "Juliett Floral Cinch Waist Dress"
               }
             ],
-            "total": "110"
+            "trackingLink": "https://www.fedex.com/fedextrack/?trknbr=496863882705",
+            "link": "https://checkout.johnnie-o.com/22750137/orders/2f9b7c62ea2691474b85f587a945e5d0/authenticate?key=200c7fc152e3c785aec54fcfaa523a14",
+            "orderNumber": "1853267",
+            "order_tracking_link": "https://www.fedex.com/fedextrack/?trknbr=496863882705",
+            "total": 237.97
+          },
+          {
+            "orderDate": "2026-02-09",
+            "items": [
+              {
+                "price": [
+                  188
+                ],
+                "productLink": "https://johnnie-oadmin.myshopify.com/products/jmhd100071pd_hoppin_pepperdine_ncaa",
+                "name": "Pepperdine Hoppin Performance Hoodie"
+              }
+            ],
+            "trackingLink": "https://www.fedex.com/fedextrack/?trknbr=496863883572",
+            "link": "https://checkout.johnnie-o.com/22750137/orders/91c0aa6913e5398256de02578171935e/authenticate?key=d926ea5f620950ada89765da517844c9",
+            "orderNumber": "1852565",
+            "order_tracking_link": "https://www.fedex.com/fedextrack/?trknbr=496863883572",
+            "total": 353.06
           }
         ]
       },
-      "orders": [
+      "companyWebsite": "https://johnnie-o.com/",
+      "companyName": "johnnie-O",
+      "notes": {
+        "escalate": [
+          "ESC restock inquiries",
+          "ESC shipping/order inquiries",
+          "ESC cxs looking for a discount code"
+        ]
+      },
+      "blocklisted_words": [
+        "Untuck-it"
+      ],
+      "escalation_preferences": [
+        "Restock questions",
+        "shipping",
+        "site issues",
+        "out of stock issues"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "6896566403297",
-          "order_status_url": "https://clearstem-skincare.myshopify.com/products/hair-skin-nails",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://clearstem-skincare.myshopify.com/products/hair-skin-nails",
-              "product_name": "HAIR SKIN NAILS",
-              "product_price": 57.8
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://clearstem-skincare.myshopify.com/products/mindbodyskin-csb",
-              "product_name": "MINDBODYSKIN® Hormonal Acne Supplement",
-              "product_price": 52.2
-            }
+          "message_type": "system",
+          "message_text": "Johnnie-O: Welcome to johnnie-O! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: https://johnnie-o.attn.tv/a1oPbFoM6l7P .",
+          "date_time": "2026-02-09 13:25:41.039",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Welcome to the Family! Your 10% off coupon code is SMS10Jdv898 . Click here to shop now: https://johnnie-o.attn.tv/aKrUXulmnKOf .",
+          "date_time": "2026-02-09 13:25:45.035",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Don\u0027t forget to save our contact!",
+          "date_time": "2026-02-09 13:25:46.290",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Thank you for your purchase! Your order number is 1852565. View more information about your order here: https://johnnie-o.attn.tv/aQu8ThnHr--g .",
+          "date_time": "2026-02-09 13:27:30.475",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Thank you for shopping at johnnie-O! We hope you love your purchase. Any questions, don\u0027t hesitate to contact us, we are always here to help wingman@johnnie-o.com \njohnnie-o.attn.tv/aQAE8Du2TqIv \n\n",
+          "date_time": "2026-02-09 13:57:48.855",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Hey Nick , this is Darby . Thanks for stopping by! 😊 johnnie-o.attn.tv/aWPicNWY1wpp \n\nAny questions I can answer for you? ",
+          "date_time": "2026-02-10 13:46:22.657",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Thank you for your purchase! Your order number is 1853267. View more information about your order here: https://johnnie-o.attn.tv/ae1vE5TxNc4H .",
+          "date_time": "2026-02-10 14:02:37.325",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Hi, if you need additional help please reach out to wingman@johnnie-o.com. Text STOP to opt out.",
+          "date_time": "2026-02-10 17:35:22.034",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi Darby, is there any chance I could pay for overnight shipping or 2-3 day? Didn\u0027t see the option on the website",
+          "date_time": "2026-02-10 17:35:31.066",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c49b2-c863-44f7-f000-0000fa3fc7ed",
+          "message_text": "Johnnie-O: Thanks for getting in touch and for your interest! To ensure I provide the most accurate answer, I\u0027ll reach out to our team for more insights. We\u0027ll get back to you as soon as we have an update. Feel free to let me know if you need help with anything else in the meantime.",
+          "message_type": "agent",
+          "agent": "109840",
+          "message_media": [
+            
           ],
-          "total": 110
+          "date_time": "2026-02-10 17:36:19.448"
+        }
+      ]
+    },
+    "57": {
+      "agentName": "Kiara",
+      "id": "019c533a-e2f7-45c4-f000-0000ef3c25f9",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://dorado.com/collections/name-necklaces/products/double-plated-pop-out-heart-name-necklace-w-figaro-chain?externalId=7HGkG",
+            "item": "Double Plated Pop Out Heart Name Necklace w/ Figaro Chain - 18K Gold Plated / Standard - 18\" (45cm)",
+            "timeAgo": "2026-02-12"
+          },
+          {
+            "link": "https://dorado.com/collections/name-necklaces/products/double-plated-pop-out-heart-name-necklace-w-figaro-chain?variant=39715429449799",
+            "item": "Double Plated Pop Out Heart Name Necklace w/ Figaro Chain",
+            "timeAgo": "2026-02-12"
+          },
+          {
+            "link": "https://dorado.com/collections/name-necklaces/products/double-plated-pop-out-heart-name-necklace-w-figaro-chain?variant=39715429449799",
+            "item": "Double Plated Pop Out Heart Name Necklace w/ Figaro Chain - 18K Gold Plated / 20\" (50cm)",
+            "timeAgo": "2026-02-12"
+          },
+          {
+            "link": "https://dorado.com/collections/name-necklaces/products/double-plated-pop-out-heart-name-necklace-w-figaro-chain?variant=39715429417031",
+            "item": "Double Plated Pop Out Heart Name Necklace w/ Figaro Chain",
+            "timeAgo": "2026-02-12"
+          },
+          {
+            "link": "https://dorado.com/collections/name-necklaces/products/double-plated-pop-out-heart-name-necklace-w-figaro-chain?variant=39715429417031",
+            "item": "Double Plated Pop Out Heart Name Necklace w/ Figaro Chain - 18K Gold Plated / 16\" (40cm)",
+            "timeAgo": "2026-02-12"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://dorado.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "total": 207,
+            "orderDate": "2026-02-03",
+            "orderNumber": "6479620571207",
+            "items": [
+              {
+                "price": [
+                  79
+                ],
+                "productLink": "https://sk-custom-concepts.myshopify.com/products/xo-bamboo-name-hoop-earrings",
+                "name": "XOXO Name Hoop Earrings"
+              },
+              {
+                "price": [
+                  49
+                ],
+                "productLink": "https://sk-custom-concepts.myshopify.com/products/infinity-name-necklace-1",
+                "name": "Infinity Name Necklace"
+              },
+              {
+                "price": [
+                  79
+                ],
+                "productLink": "https://sk-custom-concepts.myshopify.com/products/letter-choker-w-xl-cuban-chain",
+                "name": "Letter Choker w/ XL Cuban Chain"
+              }
+            ]
+          },
+          {
+            "total": 143.46,
+            "orderDate": "2026-02-03",
+            "orderNumber": "6479620571207",
+            "items": [
+              {
+                "price": [
+                  79
+                ],
+                "productLink": "https://sk-custom-concepts.myshopify.com/products/letter-choker-w-xl-cuban-chain",
+                "name": "Letter Choker w/ XL Cuban Chain"
+              },
+              {
+                "price": [
+                  49
+                ],
+                "productLink": "https://sk-custom-concepts.myshopify.com/products/infinity-name-necklace-1",
+                "name": "Infinity Name Necklace"
+              },
+              {
+                "price": [
+                  79
+                ],
+                "productLink": "https://sk-custom-concepts.myshopify.com/products/xo-bamboo-name-hoop-earrings",
+                "name": "XOXO Name Hoop Earrings"
+              }
+            ]
+          }
+        ]
+      },
+      "companyWebsite": "https://dorado.com",
+      "companyName": "Dorado Fashion",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping Issues: Where\u0027s my order? Any order issues, direct to customer service"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Roses are red.\nJewelry is better.\n\nGet up to 75% OFF with code: LOVELY\n\nGifts for her, the girls, \nor yourself (obviously).\n \nShop Now: \nhttps://dorado.attn.tv/avgNcK5-mlQ8 . \n\nValentine\u0027s Delivery Cutoff:\nOrder by 01/30 @ 11:59 PM EST",
+          "date_time": "2026-01-23 13:33:37.037",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Hello Melissa, it\u0027s Kiara! I noticed you haven\u0027t completed your order yet. \n\nClick below to recover your cart and use code D20 for an extra 20% OFF! (72 hours only):\n \nhttps://dorado.attn.tv/al909uWp_oJm \n\nPlease let me know if there\u0027s anything I can help with :)",
+          "date_time": "2026-01-23 19:49:53.247",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Group chat-approved gifts only.\n\nUse code: LOVELY for up to 75% OFF!\n \nShop Now: \nhttps://dorado.attn.tv/av4K9OzkI9ac \n\nGalentine\u0027s secured if you order by 01/30",
+          "date_time": "2026-01-25 18:15:58.131",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: last chance\n\npersonalized Valentine\u0027s gifts\n\nget up to 75% off with code: LOVELY \n \nonly 12 hours left: \nhttps://dorado.attn.tv/aKvQnELEdR8R .",
+          "date_time": "2026-01-30 12:07:05.833",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Hey, this is Kiara. Thanks for checking out our site! https://dorado.attn.tv/ahCRuMZ_IWXY \n\nLet me know if you have any questions or if you want me to get you a discount :)",
+          "date_time": "2026-02-01 12:53:55.213",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: In-stock. Ships fast. Valentine\u0027s Day ready. \n\nUp to 75% OFF | Code: LOVELY \n \nDon\u0027t overthink it:\nhttps://dorado.attn.tv/arHSMPktuhle .",
+          "date_time": "2026-02-03 12:04:33.711",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Hi Melissa I personally want to thank you for shopping with us!\n\nTo show my appreciation, I\u0027m giving you $25 OFF your next order of Custom Jewelry!\n\nJust use code: GIVE25 at checkout or click the link below! https://dorado.attn.tv/a_riq9XlR8fa \n\nThis is simply my way of saying THANK YOU for becoming a part of the Dorado Family.",
+          "date_time": "2026-02-03 12:14:12.020",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Hey, this is Kiara. Thanks for checking out our custom jewelry! https://dorado.attn.tv/aaXGwAQw0FTn \n\nDo you have any questions or need any help?",
+          "date_time": "2026-02-12 12:58:18.710",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "When will my order arrive?",
+          "date_time": "2026-02-12 13:51:51.838",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c533a-e2f7-45c4-f000-0000ef3c25f9",
+          "message_text": "DORADO: Thank you for reaching out! I can see that your order includes personalized items. These items are made to order and require 2 to 3 weeks for production. We will send you updates via email throughout the process.\n\nYour items are currently in production. You can also check the status of your personalized items at any time by visiting our tracking page here: https://dorado.attn.tv/ao_znUvxchWu\n\nThe estimated delivery date is February 24 to March 8.\n\nI hope this helps! If you have any questions, feel free to text me.",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 14:01:34.099"
+        }
+      ]
+    },
+    "58": {
+      "agentName": "Annie",
+      "id": "019c71df-8f0e-4fa5-f000-0000fa93619e",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://beistravel.com/products/the-29-large-check-in-roller-in-maple",
+            "item": "The Large Check-In Roller in Maple",
+            "timeAgo": "2026-02-15"
+          },
+          {
+            "link": "https://beistravel.com/products/the-29-large-check-in-roller-in-atlas-pink",
+            "item": "The Large Check-In Roller in Atlas Pink",
+            "timeAgo": "2026-02-15"
+          },
+          {
+            "link": "https://beistravel.com/products/the-26-check-in-roller-in-atlas-pink?variant=40703321964680\u0026utm_source=2024%20US%20-%20Abandoned%20Cart\u0026utm_medium=email\u0026utm_campaign=Email%20%233%20US%20-%20Abandon%20Cart%20-%20Never%20Purchased%20%28V6pCUW%29\u0026utm_id=WzJfa2\u0026utm_term=Klaviyo\u0026utm_klaviyo_id=01KB6H4KY6MSD44Y926HB73103\u0026tw_source=klaviyo\u0026tw_profile_id=01KB6H4KY6MSD44Y926HB73103\u0026tw_medium=flow\u0026_kx=9aek3M7QerGnhstIMfaEWVhBfDSZZFhWYvvQaLfhn-E.LZSJR7",
+            "item": "The Medium Check-In Roller in Atlas Pink",
+            "timeAgo": "2026-02-15"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://beistravel.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://beistravel.com",
+      "companyName": "Beis Travel",
+      "notes": {
+        "escalate": [
+          "We don\u0027t ESC for this client, use ESC shortcut",
+          "If cx ask how to get/redeem the discount for downloading the app use ESC shortcut"
+        ],
+        "templates": [
+          "For Limited edition items don\u0027t use restock temps, they will not be restocked"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t share the duration of the sale/sale dates with customers!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from BÉIS Travel.",
+          "date_time": "2026-02-11 18:20:46.339",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Welcome to BÉIS Travel! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-11 18:21:26.739",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Hey there, newbie! First time shopping with us? We\u0027ve handpicked some essentials to get you started: https://beistravel.attn.tv/arKwd4bgWZOb . \n\nEnjoy 20% OFF with code WELCOMEp4YMe9 \nbeistravel.attn.tv/aqqtsLVONWRO .",
+          "date_time": "2026-02-11 18:21:30.697",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Bags designed to make your every day easier. Save our contact to make getting all of our latest updates easy.",
+          "date_time": "2026-02-11 18:21:31.953",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: This friendship is forever... but your 20% OFF code isn\u0027t. Don\u0027t forget to use code WELCOMEp4YMe9 to save on our bestsellers. \n\nhttps://beistravel.attn.tv/a88qo_sJjXYH .",
+          "date_time": "2026-02-12 18:21:40.865",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Save up to 50% off select styles! Limited time only: beistravel.attn.tv/apfZ7RUpqTVC .",
+          "date_time": "2026-02-14 09:35:52.036",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Still thinking about The Medium Check-In Roller in Atlas Pink? Great taste - Take another look before it\u0027s gone!\nbeistravel.attn.tv/a-ehtpNVX99y .",
+          "date_time": "2026-02-15 12:17:31.585",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Hi there. If you need additional help please reach us at hello@beistravel.com. Text STOP to opt out.",
+          "date_time": "2026-02-15 13:38:45.954",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Can I call you? I did a return on line, where is my label for ups? Also I want to order the medium check in roller in Atlas Pink",
+          "date_time": "2026-02-18 12:43:18.841",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Can\u0027t take calls - All brands\"; last updated: 2023-10-10 18:11:21.727",
+          "date_time": "2026-02-18 12:50:02.550",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c71df-8f0e-4fa5-f000-0000fa93619e",
+          "message_text": "BÉIS Travel: Thanks for reaching out! This number is for SMS only, so I\u0027m not able to make or receive calls. Is it okay if we continue chatting by text? \n\nWhen you complete a return request online, your UPS return label is generated through our returns portal and sent to you via email. If you haven\u0027t received it, please check your spam or promotions folder.\n\nYou may check our The Medium Check-in Roller in Atlas Pink here: https://beistravel.attn.tv/agoruswDo7qF",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 12:50:02.552"
+        }
+      ]
+    },
+    "59": {
+      "agentName": "Sarah",
+      "id": "019c5cb9-6704-48ac-f000-00004ae2b0b3",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://thefryecompany.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://thefryecompany.com",
+      "companyName": "The Frye Company",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/ePe",
+          "date_time": "2026-02-14 08:20:43.729",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Welcome! Your code to save $30 off your next $275+ order is WF30XF25 . Click here to auto-apply it and shop now: frye.attn.tv/axbwEL6vJ5d4 .",
+          "date_time": "2026-02-14 08:20:45.997",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nCheck out our newest arrivals and get ready for the season: https://frye.attn.tv/awgd1qO2POV3 .",
+          "date_time": "2026-02-14 08:21:52.360",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FRYE: Your cart: OLIVIA BUCKLE TALL, CARSON 2 PIPING TALL, MELISSA BELTED RIDING\n\nUse code WF30XF25 to take $30 off with a minimum purchase of $275: https://frye.attn.tv/awSkaF4DgJfD .",
+          "date_time": "2026-02-14 08:32:26.619",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Why is the code not working",
+          "date_time": "2026-02-14 08:46:32.724",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5c91-3a92-49d1-f000-00004ae2b0b3",
+          "message_text": "FRYE: Thank you for reaching out. I\u0027m sorry to hear that your code is not working. Can you please send me a screenshot of the items in your cart? This will help me troubleshoot the possible problem of why the code didn\u0027t work.\n\nAlso, please note that discount codes do not work on items that are on sale and your cart should be at least $275. I hope this helps.",
+          "message_type": "agent",
+          "agent": "48804",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 09:32:27.572"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "My cart",
+          "date_time": "2026-02-14 09:37:12.338",
+          "message_media": [
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1771079820554_7a5b4077-edd3-4313-b608-dc472d4c2317-1.png"
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m a long time customer. Why can\u0027t they make a one time exception even though the boots are on sale.",
+          "date_time": "2026-02-14 09:37:32.385",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Can I use two discounts? - All brands\"; last updated: 2023-10-10 16:38:40.074",
+          "date_time": "2026-02-14 10:16:20.385",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Automatic discount - All brands\"; last updated: 2023-10-10 16:40:19.306",
+          "date_time": "2026-02-14 10:16:20.385",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5cb9-6704-48ac-f000-00004ae2b0b3",
+          "message_text": "FRYE: Thank you for sharing that. I apologize for the delayed response. I also understand how frustrating this must be, especially as a long-time customer. Unfortunately, our system can\u0027t stack multiple promos at checkout. Even so, please feel free to use the one that gives you the best value! I\u0027m truly sorry for the inconvenience.",
+          "message_type": "agent",
+          "agent": "109968",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 10:16:20.389"
+        }
+      ]
+    },
+    "60": {
+      "agentName": "Sarah",
+      "id": "019c5f39-ad64-4d02-f000-0000fb817cd8",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.covercraft.com/product/original-carpet-dashmat-custom-dashboard-cover/DMC",
+            "item": "Original Carpet DashMat Custom Dashboard Cover",
+            "timeAgo": "2026-02-14"
+          },
+          {
+            "link": "https://www.covercraft.com/product/original-carpet-dashmat-custom-dashboard-cover/DMC",
+            "item": "Original Carpet DashMat Custom Dashboard Cover",
+            "timeAgo": "2026-02-14"
+          },
+          {
+            "link": "https://www.covercraft.com/product/original-carpet-dashmat-custom-dashboard-cover/DMC",
+            "item": "Original Carpet DashMat Custom Dashboard Cover",
+            "timeAgo": "2026-02-14"
+          },
+          {
+            "link": "https://www.covercraft.com/product/original-carpet-dashmat-custom-dashboard-cover/DMC",
+            "item": "Original Carpet DashMat Custom Dashboard Cover",
+            "timeAgo": "2026-02-14"
+          },
+          {
+            "link": "https://www.covercraft.com/product/original-carpet-dashmat-custom-dashboard-cover/DMC",
+            "item": "Original Carpet DashMat Custom Dashboard Cover",
+            "timeAgo": "2026-02-14"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://covercraft.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://covercraft.com",
+      "companyName": "Covercraft",
+      "notes": {
+        "templates": [
+          "For custom full vehicle covers use FVC shortcut",
+          "For cx that can\u0027t see the cover pattern/images of their vehicle use CPI shortcut",
+          "If we don\u0027t have a pattern/color the cx is looking for use PRR shortcut"
+        ],
+        "dos_and_donts": [
+          "Do not tell customers that the base price is the final price! The cost changes by the fitment and depends on the vehicle",
+          "Rebates are discounts for this brand!",
+          "Custom dim pattern sheets are only available for Vehicle Covers (Car, Truck, Van,RV)",
+          "➜https://www.covercraft.com/us/en/covercrafter"
+        ],
+        "drive_to_purchase": [
+          "Before sharing any product links, confirm the vehicle’s Year, Make, and Model"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Discount code errors"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Covercraft.",
+          "date_time": "2026-02-14 14:49:12.100",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Welcome to Covercraft! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-14 14:49:37.227",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Enjoy $10 Off with code SAVE10. Find Your Custom Cover Today!\n\nView Active Deals: https://covercraft.attn.tv/aiYENz_laFDH ",
+          "date_time": "2026-02-14 14:49:41.251",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Hi there! Need any help? Send us a text, or give us a call at 1-800-274-7006\nMon - Fri 9AM - 9PM EST. https://covercraft.attn.tv/akJ8iTQmkFLR - Sarah ",
+          "date_time": "2026-02-14 17:09:11.388",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Don\u0027t want to pay that ridiculous shipping cost",
+          "date_time": "2026-02-14 17:10:33.524",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5e6a-a4fe-470f-f000-0000fb817cd8",
+          "message_text": "Covercraft: We offer free ground shipping on domestic orders over $75 and all Boat Covers and Bimini Tops ship free with no minimum required. ",
+          "message_type": "agent",
+          "agent": "110072",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 18:09:33.340"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Well it was 70 something dollars but you guys had a discount because it\u0027s Valentine\u0027s Day so now I\u0027m stuck with the shipping which is almost as much as the item itself why can\u0027t I get a break on the shipping",
+          "date_time": "2026-02-14 19:58:23.208",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5eeb-1092-4da7-f000-0000fb817cd8",
+          "message_text": "Covercraft: I understand! Since your order is just below the $75 free shipping threshold, one option is to add a small item to reach the minimum. For example, a floor mat or sunshade could help you get free shipping while also adding value to your order. You can shop our special offers here: https://covercraft.attn.tv/aMmuCj3FrT6-",
+          "message_type": "agent",
+          "agent": "42041",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 20:29:49.483"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I already ordered that from you",
+          "date_time": "2026-02-14 21:21:52.946",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I was looking for anything else but you don\u0027t have any only big items",
+          "date_time": "2026-02-14 21:22:32.539",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5f39-ad64-4d02-f000-0000fb817cd8",
+          "message_text": "Covercraft: I understand. I\u0027ll make sure to send that as feedback to the team as well for consideration. Should you need any further assistance, please don\u0027t hesitate to reach out. ",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 21:55:41.450"
         }
       ]
     }

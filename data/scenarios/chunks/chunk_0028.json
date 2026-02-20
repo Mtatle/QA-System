@@ -3,357 +3,1378 @@
   "chunk": "chunk_0028",
   "scenarios": {
     "136": {
-      "id": "019bc906-7403-4801-f000-0000c4a7a374",
-      "companyName": "Greenpan",
-      "companyWebsite": "https://greenpan.us",
-      "agentName": "Sarah",
-      "agentInitial": "G",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "For the following inbound message types use PPI shortcut:"
+      "agentName": "",
+      "id": "019c49d2-b1fc-4322-f000-0000f15ca0ce",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://naturalizer.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://naturalizer.com",
+      "companyName": "Naturalizer",
+      "notes": {
+        "escalate": [
+          "Before you ESC use ESC shortcut",
+          "When ESC code issues, add the code to the escalation notes",
+          "Always add the customer\u0027s name in your esc notes"
         ],
         "tone": [
-          "Close the convo once the client takes over",
-          "Don't say words like \"I'm not sure, or certain\"",
-          "Add \"Happy cooking!\" when closing a convo!",
-          "Let the cx have the last word"
+          "Don\u0027t respond if the customer doesn\u0027t want to engage"
         ],
         "templates": [
-          "For product recommendations, use DHR shortcut"
-        ],
-        "drive_to_purchase": [
-          "Send links to collections if customers aren't looking for a specific product!"
+          "For inquiries regarding their order updates/status/tracking, use UPD shortcut"
         ]
       },
-      "SystemMessage1": "GreenPan: Ready to upgrade your cookware for a healthier year? \nTake another peek greenpan.attn.tv/aSd6p0-vVRP6 \n\nWhat's the one kitchen tool you can't live without? Maybe I can help make a recommendation!",
-      "SystemMessage2": "GreenPan: Hi Manuel, this is Sarah from GreenPan. Thanks for checking out our site! 😊 greenpan.attn.tv/aPCftUhGdz_o Is there a product we can help you find?",
-      "SystemMessage3": "GreenPan: New Year, New Cookware, BIG Savings! \n \nUp to 60% off Sitewide + 100s of New Arrivals + FREE Limited Edition Cookbook with over 90+ new recipes for healthy cooking in the new year.\n \nShop Now: greenpan.attn.tv/aCheElrG0SQi",
-      "SystemMessage4": "GreenPan: Ready to upgrade your cookware for a healthier year? \nTake another peek greenpan.attn.tv/aGqK3QqsQd-9 \n\nWhat's the one kitchen tool you can't live without? Maybe I can help make a recommendation!",
-      "SystemMessage5": "GreenPan: Hi Manuel, this is Sarah from GreenPan. Thanks for checking out our site! 😊 greenpan.attn.tv/a_qfx8BYMXov Is there a product we can help you find?",
-      "SystemMessage6": "GreenPan: It's BACK (finally!)\n \nThe America Test Kitchen's winner for best ceramic nonstick frypan, our Valencia Pro 3-Piece Frypan Set is back in stock. \n \nJust for You: This Weekend Only - $30 OFF with code VALENCIA\n \nPick Your Color: greenpan.attn.tv/azftPWb74GAH",
-      "SystemMessage7": "GreenPan: Big games need BIG flavor 🏈\n\nFeed the whole crew with our new 14-in-1 Slow Cooker. Perfect for hearty dips, pulled BBQ, chili & more, it's an instant winner in the kitchen.\n \nShop Now: greenpan.attn.tv/ad5kS4skuXuW",
-      "SystemMessage8": "GreenPan: Sarah here, I think you have great taste! These are definitely worth another look. Are there any questions I can help answer for you? \n\nJust for you: free shipping on your order with code AT2CCS-4XVPWF at checkout greenpan.attn.tv/amfBT7cDxj7x",
-      "customerMessage1": "I sent an email on 1/7 regarding the finish chipping on one of my Tucci pans. I haven't received a response. I have also tried calling customer service but every time I call it says your call center is closed even though I'm calling during your business hours.",
-      "SystemMessage9": "Template used: \"Sorry 2 - All brands\"; last updated: 2023-10-10 17:56:13.923",
-      "SystemMessage10": "Template used: \"No response from customer support - All brands\"; last updated: 2023-10-10 17:43:52.689",
-      "AgentMessage1": "GreenPan: I'm sorry about that! I totally understand the frustration with this! Our team handles emails in the order they come. Rest assured that one of my colleagues will follow up with you in no time! Also, be sure to check your spam and promo folders for our response, as sometimes our emails end up there.",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://greenpan.us",
-          "date": ""
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Already ON SALE + extra 25% off w/code LASTCALL? The math is mathing.\n\nFill your cart now: naturalizer.attn.tv/akecsNsBfYU4 ",
+          "date_time": "2026-01-11 18:55:48.087",
+          "message_media": [
+            
+          ]
         },
-        "browsingHistory": [
-          {
-            "item": "GreenLife Easy Reach Silicone Spatula, 2-Piece Set | Gray - Gray",
-            "link": "https://www.greenpan.us/products/greenlife-easy-reach-silicone-spatula-2-piece-set-gray",
-            "icon": "eye"
-          },
-          {
-            "item": "Premiere Silicone Small Jar Scraper | Black - Black",
-            "link": "https://www.greenpan.us/collections/utensils/products/premiere-silicone-small-jar-scraper-black",
-            "icon": "eye"
-          },
-          {
-            "item": "Premiere Silicone Deep Sauté Spoon | Black - Black",
-            "link": "https://www.greenpan.us/collections/utensils/products/premiere-silicone-deep-saute-spoon-black#",
-            "icon": "eye"
-          },
-          {
-            "item": "Premiere Silicone Solid Spoon | Black - Black",
-            "link": "https://www.greenpan.us/collections/utensils/products/premiere-silicone-solid-spoon-black",
-            "icon": "eye"
-          },
-          {
-            "item": "Premiere Silicone Tasting Spoon | Black - Black",
-            "link": "https://www.greenpan.us/collections/utensils/products/premiere-silicone-tasting-spoon-black#",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: FLASH SALE! Boots starting at $74.99 when you take an extra 25% off w/code: LASTCALL.\n\nShop now: naturalizer.attn.tv/apQVx_RK5A-7 ",
+          "date_time": "2026-01-14 13:55:15.231",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Hey! Thanks for checking us out! ❄️ Our Winter Clearance Event has an extra 25% off sale styles with code: LASTCALL. SHOP NOW: https://naturalizer.attn.tv/aJ3la9WirJ5i .",
+          "date_time": "2026-01-14 14:11:13.705",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Those $74.99 \u0026 up boots aren\u0027t going to last forever. Code: LASTCALL.\n\nBoot up your cart: naturalizer.attn.tv/a1B9WRUgFKyv ",
+          "date_time": "2026-01-14 19:10:08.832",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Have you shopped our $74.99+ Boot Flash yet? The steals won\u0027t last forever. Enter code: LASTCALL\n\nGo now: naturalizer.attn.tv/atc3hFlXlOKR ",
+          "date_time": "2026-01-16 20:05:24.619",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Boot Flash ENDS TONIGHT! Warm up with $74.99+ boots w/code: LASTCALL.\n\nGo, go, go: naturalizer.attn.tv/aIiqvrfJCZLO ",
+          "date_time": "2026-01-17 13:50:15.136",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Here today, gone tomorrow: the $74.99+ boots you\u0027ve been eyeing.\n\nShop the flash before it\u0027s too late: naturalizer.attn.tv/aOUhTkSlpS0j ",
+          "date_time": "2026-01-17 20:35:14.359",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Extra 25% off sale styles ends TONIGHT! Code: LASTCALL. Don\u0027t miss out.\n\nShop all clearance: naturalizer.attn.tv/a7ENvrebvDOG ",
+          "date_time": "2026-01-20 12:45:16.559",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: LAST CALL for code LASTCALL! Extra 25% off sale code expires soon.\n\nShop NOW: naturalizer.attn.tv/anKwxGGB-Lxj ",
+          "date_time": "2026-01-20 20:25:11.012",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Snowstorm coming your way? Here\u0027s $30 off $150 to snag boots engineered for the elements.\n\nUse code: INBOX: naturalizer.attn.tv/a_0-Rw48_xwl ",
+          "date_time": "2026-01-24 13:35:11.475",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Use your super-secret INBOX code before word gets out \u0026 your faves are gone!\n\nGet $30 off $150 now: naturalizer.attn.tv/axn12E0izyaU ",
+          "date_time": "2026-01-24 20:25:07.439",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: ICYMI: $30 off $150 with code: INBOX. Hurry, this exclusive deal ends soon!\n\nClaim your VIP savings: naturalizer.attn.tv/aQJU-ME8WtUy ",
+          "date_time": "2026-01-26 16:00:13.216",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: How will you use your $30 off $150? It\u0027s decision time. Those shoes won\u0027t cart themselves.\n\nUse code: INBOX: naturalizer.attn.tv/a0TpcjD4oySc ",
+          "date_time": "2026-01-27 19:10:08.639",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Your $30 off $150 code: INBOX expires tonight! Use it on newness \u0026 need now styles.\n\nSHOP NOW: naturalizer.attn.tv/agiyvitEIoqK ",
+          "date_time": "2026-01-28 13:45:11.453",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Tonight: $30 off $150. Tomorrow: $0 off $150. Our advice? Use code: INBOX now.\n\nLike, shop RIGHT NOW: naturalizer.attn.tv/ahpJoGD2IowI ",
+          "date_time": "2026-01-28 20:10:07.654",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Spring just landed // New styles. Fab colors. \n\nShop now: naturalizer.attn.tv/aPes8v6utoN1 ",
+          "date_time": "2026-01-31 13:35:36.540",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: The sale you\u0027ve been waiting for: styles up to 70% OFF! Boots, sneaks, flats, heels.\n\nShop now: naturalizer.attn.tv/a5WC8qh9AKZn ",
+          "date_time": "2026-02-01 14:10:15.442",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: At up to 70% off, our Last Call styles won\u0027t last. Don\u0027t let your faves disappear.\n\nFill your cart: naturalizer.attn.tv/a0aAW5Z3OOZs ",
+          "date_time": "2026-02-02 19:30:05.826",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: THIS. IS. IT. Up to 70% off styles for every upcoming vacay, event, and celebration.\n\nShop your size NOW: naturalizer.attn.tv/a-Z5bMm_kefK ",
+          "date_time": "2026-02-03 13:25:07.043",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Going fast: the deepest price drops of the season. Styles up to 70% off.\n\nGet it or regret it: naturalizer.attn.tv/a6hQh-E1tJbs ",
+          "date_time": "2026-02-03 20:05:19.690",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: JUST DROPPED // Style-Letics by June Ambrose. The exclusive capsule for Naturalizer. Don\u0027t miss this!\n\nShop Now: naturalizer.attn.tv/a8lbjMNFy4OH ",
+          "date_time": "2026-02-04 13:15:17.277",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Prediction: THIS WILL SELL OUT. Style-Letics by June Ambrose. Shop the exclusive collab. \n\nOnly at Naturalizer: naturalizer.attn.tv/aZvavraPxd_h ",
+          "date_time": "2026-02-04 20:05:15.740",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: HERE NOW // SS26. New season. New scroll stoppers. Expect compliments.\n\nShop the spring drop: naturalizer.attn.tv/aTULI3j7KoNo ",
+          "date_time": "2026-02-08 15:15:12.752",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Hey, we noticed you checking us out. Have you seen our best sellers yet? https://naturalizer.attn.tv/a3N3C0oTQtTW . ",
+          "date_time": "2026-02-09 11:53:40.761",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naturalizer: Hey, this is Hannah. Thanks for checking out our site! 😊 https://naturalizer.attn.tv/aOdaBkpqPMpn \n\nAny questions I can answer for you?",
+          "date_time": "2026-02-10 16:40:38.281",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Wondering what is happening with the order I placed on February 3rd???",
+          "date_time": "2026-02-10 17:55:30.675",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c49c6-b9b3-4860-f000-0000f15ca0ce",
+          "message_text": "Naturalizer: Thanks for reaching out! Could you let me know if you received any tracking info? Sometimes our emails can end up in your spam or promo folder, so please check there as well. \n\nYou can also use our convenient online tool to see the latest updates on your order: https://naturalizer.attn.tv/aBLOhMJh5-tw",
+          "message_type": "agent",
+          "agent": "45474",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 17:58:06.439"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No tracking info and FYI absolutely NO information on your tool, so not at all convenient.",
+          "date_time": "2026-02-10 18:04:50.298",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Escalation Template\"; last updated: 2024-07-22 20:24:34.907",
+          "date_time": "2026-02-10 18:11:10.878",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c49d2-b1fc-4322-f000-0000f15ca0ce",
+          "message_text": "Naturalizer: Thank you for getting back to me and providing that information! I sincerely apologize for the inconvenience. This definitely isn\u0027t the experience we wanted for you! I\u0027d love to have our team look into this. Can I have your full name, email, order number, phone number, and zip code, please?",
+          "message_type": "agent",
+          "agent": "109840",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 18:11:10.881"
+        }
+      ]
     },
     "137": {
-      "id": "019bc2f8-f174-44d0-f000-000051bedd3a",
-      "companyName": "Cozy Earth",
-      "companyWebsite": "https://cozyearth.com",
-      "agentName": "Sarah",
-      "agentInitial": "C",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "ESC all MyFitness pall App inquiries"
-        ],
-        "dos_and_donts": [
-          "Don't share sale end dates with customers"
-        ]
-      },
-      "SystemMessage1": "Cozy Earth: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/S4E",
-      "SystemMessage2": "Cozy Earth: Use code GETCOZY50 at checkout - valid on orders over $100.\n\nHurry, these savings end soon...\ncozyearth.attn.tv/a1lTvV0lzA8n",
-      "SystemMessage3": "Cozy Earth: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nYour ultimate coziness awaits! Luxuriate in our best-sellers: https://cozyearth.attn.tv/azL_1pOVcx1l .",
-      "SystemMessage4": "Cozy Earth: Try the Bamboo Stretch-Knit Shorts for soft, breathable comfort with a drawstring waist and handy side pockets\n\nUse code GETCOZY50 for $50 off orders of $100 or more\n\nDiscover more: https://cozyearth.attn.tv/a_BDGGZfaPC3 .",
-      "SystemMessage5": "Cozy Earth: Hey , this is Sarah from the Cozy Earth Care Team. Thanks for checking out our site! cozyearth.attn.tv/aDYzgV4mGj58 \n\nAre you looking for anything in particular today?",
-      "SystemMessage6": "Cozy Earth: Women's Bamboo Stretch-Knit Shorts is a fan favorite! Check out the reviews, and if you're still unsure, no worries-we've got you covered with a great return policy and warranty.\n\nLove it or Return it: cozyearth.attn.tv/a33NrKLvw2Or",
-      "SystemMessage7": "Cozy Earth: 1K people recently purchased Bamboo Stretch-Knit Shorts, complete your order before it disappears! Soft and comfy for everyday wear.\n\nUse code GETCOZY50 for $50 off orders over $100, plus enjoy free shipping on orders over $100.\n\nShop now: https://cozyearth.attn.tv/agplpRIvIT3h .",
-      "SystemMessage8": "Cozy Earth: The things you use daily need to be reliable, made well, and designed with comfort in the details.\n\nShop Upgrades: cozyearth.attn.tv/azlwB2uhdmh1",
-      "SystemMessage9": "Cozy Earth: New year, new colors!\n\nOrganic cotton French terry. Oversized fit.\n\nShop Chelsea Collection: cozyearth.attn.tv/aw_jJwkucgrY",
-      "SystemMessage10": "Cozy Earth: This weekend only, enjoy:\n\n-20% off $200+\n-25% off $250+\n-30% off $300+\n\ncode: \"ELEVATEHOME\"\n\nShop Limited Time: cozyearth.attn.tv/aV4sTQaM7pBW",
-      "SystemMessage11": "Cozy Earth: Just two days remaining. Up to 30% off!\n\nCode: \"ELEVATEHOME\"\n\nDon't wait: cozyearth.attn.tv/apY0XTIJ2gkJ",
-      "SystemMessage12": "Cozy Earth: Final reminder: \n\n-20% off $200+\n-25% off $250+\n-30$ off $300+\n\nUse code \"ELEVATEHOME\" at checkout!\n\nEnds Tonight: cozyearth.attn.tv/a3aX2OELnVb7",
-      "SystemMessage13": "Cozy Earth: The Valentine's Shop is open!\n\nShop NEW Pajama Prints: cozyearth.attn.tv/aUAQ220ZTY6V",
-      "SystemMessage14": "Cozy Earth: Better sleep, better days! To make sleeping easier, here's $50 in Cozy Credit for you! Plus, shop risk-free with our 100-night trial and 10-year warranty. Code is only applicable on orders over $100. \n\nOffer Code: V52W97\ncozyearth.attn.tv/aV8Rxl9tU0-f",
-      "SystemMessage15": "Cozy Earth: Hey , this is Sarah from the Cozy Earth Care Team. Thanks for checking out our site! cozyearth.attn.tv/aF0XKZzjKa4v \n\nAre you looking for anything in particular today?",
-      "customerMessage1": "Yes. I just tried to use the discount code that was sent to me just a little while ago and your system Says it's invalid",
-      "AgentMessage1": "Cozy Earth: Please ensure the code V52W97 is entered correctly and meets the $100 minimum order requirement. If the issue persists, please share a screenshot. Visit cozyearth.com to use the coupon.",
-      "customerMessage2": "I am putting it in correctly",
-      "AgentMessage2": "Cozy Earth: I'm so sorry for the inconvenience. Let me check this with my team for you. Please hang tight!",
+      "agentName": "",
+      "id": "019c6cbb-8191-4e41-f000-0000f4760fb0",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://cozyearth.com",
-          "date": ""
-        },
-        "browsingHistory": [
+        "orders": [
           {
-            "item": "Women's Bamboo Stretch-Knit Short Sleeve Pajama Set",
-            "link": "https://cozyearth.com/em-cgi/btag/products/womens-bamboo-stretch-knit-short-sleeve-pajama-set?externalId=UeBgD&variant=32532884586593",
-            "icon": "eye"
+            "total": 206.62,
+            "orderDate": "2026-02-12",
+            "orderNumber": "6432438026309",
+            "items": [
+              {
+                "price": [
+                  89
+                ],
+                "productLink": "https://faherty.myshopify.com/products/inlet-knit-cpo-hendricks-indigo-wash",
+                "name": "Inlet Knit CPO - Hendricks Indigo Wash"
+              },
+              {
+                "price": [
+                  99
+                ],
+                "productLink": "https://faherty.myshopify.com/products/sunwashed-canvas-cpo-washed-charcoal",
+                "name": "Sunwashed Canvas CPO - Washed Charcoal"
+              },
+              {
+                "price": [
+                  39
+                ],
+                "productLink": "https://faherty.myshopify.com/products/ss-sunwashed-henley-sage-creek",
+                "name": "Short-Sleeve Sunwashed Henley - Sage Creek"
+              }
+            ]
           },
           {
-            "item": "Women's Bamboo Stretch-Knit Short Sleeve Pajama Set",
-            "link": "https://cozyearth.com/products/womens-bamboo-stretch-knit-short-sleeve-pajama-set?variant=32532884586593&utm_campaign=Concierge-Site-Visitor-1&utm_medium=text&utm_source=attentive&externalId=UeBgD#dialog-cart",
-            "icon": "eye"
-          },
-          {
-            "item": "Women's Bamboo Stretch-Knit Short Sleeve Pajama Set",
-            "link": "https://cozyearth.com/products/womens-bamboo-stretch-knit-short-sleeve-pajama-set?variant=32532884586593&utm_campaign=Concierge-Site-Visitor-1&utm_medium=text&utm_source=attentive&externalId=UeBgD",
-            "icon": "eye"
-          },
-          {
-            "item": "Women's Bamboo Stretch-Knit Short Sleeve Pajama Set",
-            "link": "https://cozyearth.com/products/womens-bamboo-stretch-knit-short-sleeve-pajama-set?variant=32532884586593&utm_campaign=Concierge-Site-Visitor-1&utm_medium=text&utm_source=attentive&externalId=UeBgD",
-            "icon": "eye"
-          },
-          {
-            "item": "Women's Bamboo Stretch-Knit Kimono Robe",
-            "link": "https://cozyearth.com/products/womens-bamboo-stretch-knit-kimono-robe?variant=43786547364020#dialog-cart",
-            "icon": "eye"
+            "total": 171.88,
+            "orderDate": "2026-02-10",
+            "orderNumber": "6430390353989",
+            "items": [
+              {
+                "price": [
+                  99
+                ],
+                "productLink": "https://faherty.myshopify.com/products/stretch-terry-5pocket-elk-brown",
+                "name": "Stretch Terry 5-Pocket Pant - Elk Brown"
+              },
+              {
+                "price": [
+                  84
+                ],
+                "productLink": "https://faherty.myshopify.com/products/coastline-chino-alpine-brown",
+                "name": "Coastline Stretch Chino - Alpine Brown"
+              }
+            ]
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://fahertybrand.com",
+          "date": ""
+        }
       },
-      "orders": []
-    },
-    "138": {
-      "id": "019bb905-3a63-4913-f000-0000f4060d5d",
-      "companyName": "Nectar Sleep",
-      "companyWebsite": "https://nectarsleep.com",
-      "agentName": "Quinn",
-      "agentInitial": "N",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "companyWebsite": "https://fahertybrand.com",
+      "companyName": "Faherty",
+      "notes": {
         "send_to_cs": [
           "No ESC for this client, send everything to CS",
-          "Send to CS for refund inquiries"
-        ],
-        "tone": [
-          "Close the convo once the client takes over",
-          "Close the convo if the cx first message is ok, no, etc.",
-          "Don't use the word \"off\" when talking about promotions"
-        ],
-        "dos_and_donts": [
-          "Don't proactively offer to find pricing info, redirect them to the website instead"
-        ],
-        "promo_and_exclusions": [
-          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
-        ]
-      },
-      "SystemMessage1": "Nectar: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (888) 863-2827.",
-      "SystemMessage2": "Nectar: You're in! Shop now: https://nectarsleep.attn.tv/a0PaLPxcbYiO",
-      "SystemMessage3": "Nectar: You are already subscribed. Click here to shop now: https://nectarsleep.attn.tv/cl/mfp .",
-      "SystemMessage4": "Nectar: You are already subscribed. Click here to shop now: https://nectarsleep.attn.tv/cl/mfp .",
-      "SystemMessage5": "Nectar: Quinn here: You can save up to 50% on your cart.\nWondering if now's the time? It is. Need help? Just say the word: nectarsleep.attn.tv/aCzQChyPQVPV\n.",
-      "customerMessage1": "Hello",
-      "customerMessage2": "Looking for memory foam firm which one would that be",
-      "AgentMessage1": "Nectar: Our mattresses are medium-firm, rated about 6.5 on a scale from 1-10. Check them out here: https://nectarsleep.attn.tv/ayMXNFhnwoF3",
-      "customerMessage3": "What about the hybrids",
-      "AgentMessage2": "Nectar: The Nectar Hybrid offers adaptive support with individually wrapped coils and gel-infused memory foam. More details here: https://nectarsleep.attn.tv/avcydnRjT1RY",
-      "customerMessage4": "I thought memory foam were more money than the hybrids",
-      "AgentMessage3": "Nectar: For pricing details, please visit our website: https://nectarsleep.attn.tv/a1wA6-skwYMh",
-      "customerMessage5": "Isn't there a code for 50% off",
-      "customerMessage6": "I was getting but it's not giving to me",
-      "customerMessage7": "So the hybrid is the better mattress?",
-      "SystemMessage6": "Nectar: You are already subscribed. Click here to shop now: https://nectarsleep.attn.tv/cl/mfp .",
-      "SystemMessage7": "Template used: \"Tell me more about the Nectar Hybrid \"; last updated: 2024-03-29 22:20:41.644",
-      "AgentMessage4": "Nectar: The 50% off code NECTAR50 automatically applies at checkout. You can order through this link - https://nectarsleep.attn.tv/ag3pn0neExNa. Hope it helps!\n\nThe Nectar Hybrid is a great option! It is a 12-inch mattress with adaptive, breathable, individually wrapped coils for targeted support and gel-infused memory foam that contours to your body's problem areas relieving pressure as you sleep. It includes a cover made with polyethylene that provides a cool-to-the-touch sensation: https://nectarsleep.attn.tv/a3Ifl2VoZrWI",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://nectarsleep.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Nectar Classic Memory Foam Mattress",
-            "link": "https://www.nectarsleep.com/mattress",
-            "icon": "eye"
-          },
-          {
-            "item": "Nectar Classic Memory Foam Mattress",
-            "link": "https://www.nectarsleep.com/mattress?utm_source=Attentive&utm_medium=sms&utm_campaign=alreadysubscribed",
-            "icon": "eye"
-          },
-          {
-            "item": "Nectar Classic Memory Foam Mattress",
-            "link": "https://www.nectarsleep.com/mattress",
-            "icon": "eye"
-          },
-          {
-            "item": "Nectar Premier Hybrid Mattress",
-            "link": "https://www.nectarsleep.com/mattresses/premier-hybrid-mattress/queen",
-            "icon": "eye"
-          },
-          {
-            "item": "Nectar Classic Memory Foam Mattress",
-            "link": "https://www.nectarsleep.com/mattress",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "139": {
-      "id": "019bb4b8-c2b0-4ba5-f000-0000f3cf63ff",
-      "companyName": "Modern Gents Trading Co",
-      "companyWebsite": "https://modgents.com",
-      "agentName": "Sarah",
-      "agentInitial": "M",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
+          "For order status inquiries/issues send to CS immediately"
         ],
         "tone": [
           "Close the convo once the client takes over!"
         ]
       },
-      "SystemMessage1": "Modern Gents: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Modern Gents.",
-      "SystemMessage2": "Modern Gents: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/Rnh",
-      "SystemMessage3": "Modern Gents: Yay! You're in!\n\nGet 80% off a single item! \nCode: MG80\n\n*Must have 2 items in cart\n\nShop Now: modgents.attn.tv/aDq15jD9896F",
-      "SystemMessage4": "Modern Gents: One more thing... Add us to your contacts for special perks! :)",
-      "customerMessage1": "Code won't work",
-      "AgentMessage1": "Modern Gents: Hi, thanks for reaching out. I'm sorry to hear that. Have you encountered any error messages? Can you please send me a screenshot of the error message you're getting, along with the item(s) in your cart? This will help me sort it out for you.",
-      "SystemMessage5": "Modern Gents: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nExplore our latest additions! Don't miss out: https://modgents.attn.tv/aZUJKFYCEdXq .",
-      "customerMessage2": "\"",
-      "customerMessage3": "Code won't work",
-      "AgentMessage2": "Modern Gents: Thanks for sending that over! Please note that the code will only work if you have two items in your cart. Just a heads up-the ring box won't count toward this. Hope this helps clarify!",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Grab the Short-Sleeve Breeze Shirt, Dennis, for effortless, vacation-ready comfort.\n\nThere are 12 left; don\u0027t wait.\n\nShop now: https://fahertybrand.attn.tv/apdxTqiyK4ox .",
+          "date_time": "2026-01-18 13:04:49.133",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Dennis, these cozy, timeless pants blend stretch terry comfort with a slim-straight, five-pocket finish for easy, cool-weather wear.\n\nFree shipping on orders $150+ and free returns for 60 days.\n\nBuy here: https://fahertybrand.attn.tv/aesImDsDqXFX . ACT FAST",
+          "date_time": "2026-01-18 14:11:30.311",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Our Stretch Terry 5-Pocket Pant blends rugged stretch terry with an authentic denim look, so you stay comfy and ready for everyday wear.\n\nUse code SMS3JBWVW9W for 15% off; free shipping over $150 and free returns for 60 days.\n\nShop now: https://fahertybrand.attn.tv/aJy8y1U9vHN0 . LIMITED",
+          "date_time": "2026-01-19 12:03:55.548",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Complete your LegendTM Sweater Shirt in your cart, Dennis — cozy knit, classic fit, button details.\n\n12K people have recently viewed it.\n\nDon\u0027t miss out: https://fahertybrand.attn.tv/ao6oW3KqQ0Dx .",
+          "date_time": "2026-01-20 03:37:23.284",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Dennis: outerwear and cozy sweaters made for cool, rainy days and timeless comfort.\n\nFree shipping on orders $150+ and free returns for 60 days.\n\nThis fit is waiting: https://fahertybrand.attn.tv/asXH1junRS1X .",
+          "date_time": "2026-01-20 12:02:47.416",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Hey, Dennis. Thanks for stopping by.\n\nUse code SMS3JBWVW9W for 15% off.\n\nShop now: https://fahertybrand.attn.tv/adSd5btdl9ep .",
+          "date_time": "2026-01-21 12:03:55.729",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Buy the Coastline Stretch Chino, Dennis — durable stretch chino with a slim-straight fit, cozy feel.\n\n8 left, act fast!\n\nShop now: https://fahertybrand.attn.tv/aPCLPDnbOTux .",
+          "date_time": "2026-01-21 16:32:27.392",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Dennis, versatile pants built for cool weather and cozy comfort—made to layer and last.\n\nFree shipping on orders $150+ and free returns for 60 days.\n\nBuy here: https://fahertybrand.attn.tv/aNB3wZUv3z7N .",
+          "date_time": "2026-01-21 17:32:35.115",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Soft knit Legend Sweater Shirt feels cozy and timeless, with a classic fit, spread collar, and buttoned patch pockets that work for your everyday cool-weather layer.\n\nUse code SMS3JBWVW9W to take 15% off eligible items; free shipping on orders $150+, free returns for 60 days.\n\nShop now: https://fahertybrand.attn.tv/aKo9R4eoY9k1 .",
+          "date_time": "2026-01-21 19:32:00.045",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: We rounded up our best shirts we can\u0027t keep in stock. Shop styles that are ready for anything: fahertybrand.attn.tv/aOZ0gmwMBKGv ",
+          "date_time": "2026-01-22 12:01:47.075",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Hey Dennis, the \"Coastline Stretch Chino - Faded Black\" you\u0027ve been eyeing is almost gone. Shop now! fahertybrand.attn.tv/apzD6dWSlgKx",
+          "date_time": "2026-01-23 15:32:11.450",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: This is how a blazer should feel. Easy, comfortable, and designed to move with you. Shop the Inlet Knit Blazer: fahertybrand.attn.tv/a_uhcXWQWkiH ",
+          "date_time": "2026-01-24 12:01:40.404",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: One pant. All day. From active mornings to refined evenings, this is the pair designed to move with you-no outfit change required. Shop Stretch Terry: fahertybrand.attn.tv/aL4dVSq1PAy6",
+          "date_time": "2026-01-26 12:03:14.808",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Our Stretch Terry 5-Pocket Pant feels rugged yet soft and keeps you comfortable for everyday wear with a classic fit and denim look.\n\nFree shipping on orders $150 or more and free returns for 60 days.\n\nTry them on: https://fahertybrand.attn.tv/aExV8a9qqStD .",
+          "date_time": "2026-01-26 16:01:49.608",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Hey Dennis, the \"LegendTM Sweater Shirt - Alaskan Blue Twill\" you\u0027ve been eyeing is almost gone. Shop now! fahertybrand.attn.tv/aRKsTqAGV6gy",
+          "date_time": "2026-01-27 15:07:29.739",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Spring starts in Charleston.\n\nOur latest collection is here...come get inspired:\nfahertybrand.attn.tv/attcUtFiuTeV ",
+          "date_time": "2026-01-28 12:03:47.786",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Going fast! Snag the LegendTM Sweater Shirt - Alaskan Blue Twill before it\u0027s gone. Add to cart now to elevate your wardrobe. fahertybrand.attn.tv/a7_brrq2DugG",
+          "date_time": "2026-01-29 15:41:16.624",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Going fast! Snag the LegendTM Sweater Shirt - Alaskan Blue Twill before it\u0027s gone. Add to cart now to elevate your wardrobe. fahertybrand.attn.tv/awqY27gdrlPw",
+          "date_time": "2026-01-30 15:17:21.661",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Hey Dennis. Thanks for visiting.\n\nUse code SMS3JBWVW9W for 15% off your order.\n\nShop now: https://fahertybrand.attn.tv/ayXWlJxQUjx7 . URGENT",
+          "date_time": "2026-01-30 19:07:06.256",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Dreaming of warmer days? Our newest dresses are here. Shop easy, packable styles made for long weekends and spring escapes: fahertybrand.attn.tv/aRBTBzHc0hQ4 ",
+          "date_time": "2026-01-31 12:01:43.510",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: The Stretch Terry Indigo 5-Pocket Pant is a rugged, structured mid-rise pant with a slim leg that keeps you comfortable and ready for everyday wear.\n\nFree shipping on orders $150+ and free returns for 60 days.\n\nThis fit awaits: https://fahertybrand.attn.tv/a2Ew7_tC_KRj . ACT FAST",
+          "date_time": "2026-01-31 12:42:25.529",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Fresh arrivals are in, inspired by Charleston\u0027s oak-lined streets and a slower kind of style. Take a moment to check it out, you might find something special: fahertybrand.attn.tv/atIoda3MgVfm ",
+          "date_time": "2026-02-01 12:03:52.752",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Grab the Stretch Terry 5-Pocket Pant, Dennis — cozy, rugged, mid-rise comfort with an authentic denim look.\n\n16K people have recently viewed them.\n\nShop now: https://fahertybrand.attn.tv/aE7YRckXyJ3n . NOW",
+          "date_time": "2026-02-01 14:42:14.127",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Dennis, cozy, timeless pants built for cool, damp days — the Mens Stretch Terry Slim Straight 5-Pocket Pant is soft and weather-ready.\n\nThis look is for you: https://fahertybrand.attn.tv/aSSEZoDUc5lG . ACT FAST",
+          "date_time": "2026-02-01 15:42:22.818",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: The Stretch Terry 5-Pocket Pant feels like worn-in denim, with cozy stretch so you can move comfortably all day.\n\nFree shipping on orders $150+ and free returns for 60 days.\n\nExplore the fit: https://fahertybrand.attn.tv/a98RKc6wfYxK .",
+          "date_time": "2026-02-02 14:44:33.379",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Grab the Coastline Stretch Chino you left in cart, Dennis — cozy, timeless fit.\n\nThis is almost gone! Only 4 left.\n\nShop now: https://fahertybrand.attn.tv/aUOKZ0XHqi57 .",
+          "date_time": "2026-02-02 17:53:27.306",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Dennis, these pants blend all-weather warmth with timeless comfort — perfect for cozy, everyday wear.\n\nThis look is for you: https://fahertybrand.attn.tv/ahAXOBUfH0Hb . ACT FAST",
+          "date_time": "2026-02-02 18:53:41.801",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Grab the Reversible Quilted Jacket — lightweight organic cotton with recycled insulation and an oversized, cozy fit, perfect for cool days.\n\nFree shipping on orders $150+ and free returns for 60 days.\n\nThis look is for you: https://fahertybrand.attn.tv/awSDyf3DVqSo .",
+          "date_time": "2026-02-06 12:02:49.395",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Going fast! Snag the LegendTM Sweater Shirt - Alpine Grey Herringbone before it\u0027s gone. Add to cart now to elevate your wardrobe. fahertybrand.attn.tv/aN5f3fnj-TTo",
+          "date_time": "2026-02-08 19:03:42.108",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Grab the LegendTM Sweater Shirt — cozy, timeless knit with classic fit and button details, perfect for cooler days, Dennis.\n\nFree shipping on orders $150+. Free returns for 60 days.\n\nThis look is for you: https://fahertybrand.attn.tv/a1qJkhwg0Og3 .",
+          "date_time": "2026-02-08 22:18:22.249",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Headed somewhere warm? We pulled together the shirts, shorts, and layers that make packing simple: fahertybrand.attn.tv/a2L-8vXyUh0R ",
+          "date_time": "2026-02-09 12:01:52.796",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Finish checking out the Stretch Terry 5-Pocket Pant, Dennis — rugged, cozy, classic fit.\n\nStock is running low; just 3 left!\n\nShop now: https://fahertybrand.attn.tv/aVyaKjJ3adBK .",
+          "date_time": "2026-02-09 22:30:11.705",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Dennis, these slim, straight 5 Pocket Pant pieces feel cozy and timeless, ready for cool-weather wear.\n\nFree shipping on orders $150+. Free returns for 60 days.\n\nThis fit is waiting: https://fahertybrand.attn.tv/aRNaYe-ZPFof . ACT FAST",
+          "date_time": "2026-02-10 12:02:46.695",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Your favorite Topanga Pant is back. Easy drape, airy feel, and a lived-in look that only gets better: fahertybrand.attn.tv/arNIy-k-Vylb",
+          "date_time": "2026-02-11 12:02:06.479",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Buy the Sunwashed Canvas CPO Shirt Jacket, Dennis — relaxed fit with rugged texture and lived-in look.\n\n204 people have recently viewed that jacket.\n\nDon\u0027t miss out. Shop now: https://fahertybrand.attn.tv/aCGzZ2-DK7Uz .",
+          "date_time": "2026-02-11 15:08:33.301",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Hey Dennis — thanks for visiting Faherty.\n\nUse code SMS86MSCWZJ for 15% off your purchase.\n\nShop now: https://fahertybrand.attn.tv/a9ECPBHY0Ak- .",
+          "date_time": "2026-02-12 12:02:55.645",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Grab the Sunwashed Regenerative Cotton Tee in your cart, Dennis — cozy, timeless comfort with a lived-in feel.\n\nUse code SMS86MSCWZJ for 15% off at checkout.\n\nShop now: https://fahertybrand.attn.tv/aKPP2525od-z .",
+          "date_time": "2026-02-12 18:01:20.943",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Dennis — versatile tees built for cool-weather comfort and easy layering.\n\nFree shipping on orders $150+ and free returns for 60 days.\n\nThis one\u0027s waiting: https://fahertybrand.attn.tv/alCvVuVCmdpf .",
+          "date_time": "2026-02-12 19:01:30.988",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Big news: The Winter Event just started. Save up to 40% on our favorite sale styles before they\u0027re gone: fahertybrand.attn.tv/aQZ4VNi5HQfq ",
+          "date_time": "2026-02-13 12:07:49.769",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Grab the Stretch Terry 5-Pocket Pant—rugged stretch with an authentic denim look, soft and comfy for cool weather, Dennis.\n\nUse code SMS86MSCWZJ for 15% off; free shipping on orders $150+, free returns for 60 days.\n\nShop now: https://fahertybrand.attn.tv/aw-feUzOiJiv .",
+          "date_time": "2026-02-13 17:29:32.219",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Grab the Coastline Knit Shirt in your cart, Dennis — relaxed fit, soft stretch, perfect for cool days.\n\nUse code SMS86MSCWZJ for 15% off at checkout.\n\nShop now: https://fahertybrand.attn.tv/a9TSOJFzFqlW .",
+          "date_time": "2026-02-13 18:52:42.940",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Dennis, versatile shirts built for cool, cozy weather and timeless comfort, await in the men\u0027s shirt guide.\n\nThis look is for you: https://fahertybrand.attn.tv/a0eFWQWI-zKS .",
+          "date_time": "2026-02-13 19:52:49.247",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: \"I wear these more than anything else I own.\" The Stretch Terry Patch Pocket Pant is back in a new spring shade: fahertybrand.attn.tv/abgGKktbehwF ",
+          "date_time": "2026-02-14 12:02:15.637",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Not ready to pack away your layers? Good. These jackets are made for this exact stretch of weather: fahertybrand.attn.tv/anJuMiLS4zoN ",
+          "date_time": "2026-02-15 12:02:13.806",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Grab the Coastline Stretch Chino — slim straight chino with organic cotton and stretch for all-day comfort, cozy and timeless, Dennis.\n\nUse code SMS86MSCWZJ for 15% off. Free shipping on orders $150+. Free returns for 60 days.\n\nShop now: https://fahertybrand.attn.tv/aB_A9qShO2vU .",
+          "date_time": "2026-02-15 21:57:44.074",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Grab the Coastline Stretch Chino in your cart, Dennis — soft stretch fabric and a slim, comfortable fit.\n\nUse code SMS86MSCWZJ for 15% off at checkout.\n\nShop now: https://fahertybrand.attn.tv/aUd38zWUFx62 .",
+          "date_time": "2026-02-16 13:42:24.745",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Dennis, these stretch terry pants pair casual comfort with clean, timeless lines, ready for cool-weather wear.\n\nFree shipping on orders $150+. Free returns for 60 days.\n\nBuy here: https://fahertybrand.attn.tv/aBkNTXZcw-oi .",
+          "date_time": "2026-02-16 14:42:35.131",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Grab the Coastline Knit Shirt — soft, stretchy Supima Cotton and TENCEL Lyocell in a relaxed fit for cozy, timeless wear, Dennis.\n\nUse code SMS86MSCWZJ for 15% off; free shipping on orders $150+ and free returns for 60 days.\n\nShop now: https://fahertybrand.attn.tv/akrDwZOqJCnn .",
+          "date_time": "2026-02-17 12:03:47.763",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "This code cannot be used anymore",
+          "date_time": "2026-02-17 12:41:47.158",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Code won\u0027t work - All brands\"; last updated: 2023-10-10 16:36:42.859",
+          "date_time": "2026-02-17 12:52:33.702",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6cbb-8191-4e41-f000-0000f4760fb0",
+          "message_text": "Faherty Brand: Thanks for reaching out, and I\u0027m sorry to hear that. Have you encountered any error messages? Also, could you kindly share a screenshot of the items in your cart? I\u0027ll be happy to look into the issue!",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 12:52:33.703"
+        }
+      ]
+    },
+    "138": {
+      "agentName": "Sarah",
+      "id": "019c4f4c-53d0-476c-f000-0000e5a63c31",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://modgents.com",
+          "value": "https://kathykuohome.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "The Eliza",
-            "link": "https://modgents.com/products/the-eliza?Size=7",
-            "icon": "eye"
-          },
-          {
-            "item": "The Eliza",
-            "link": "https://modgents.com/products/the-eliza",
-            "icon": "eye"
-          },
-          {
-            "item": "The Eliza",
-            "link": "https://modgents.com/products/the-eliza?Size=7",
-            "icon": "eye"
-          },
-          {
-            "item": "The Eliza",
-            "link": "https://modgents.com/products/the-eliza",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
-    },
-    "140": {
-      "id": "019bc23c-2e56-486f-f000-00000269e460",
-      "companyName": "ELEMIS",
-      "companyWebsite": "https://us.elemis.com/",
-      "agentName": "Charlotte",
-      "agentInitial": "E",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "tone": [
-          "Let the customer have the last word!"
+      "companyWebsite": "https://kathykuohome.com",
+      "companyName": "Kathy Kuo Home",
+      "notes": {
+        "escalate": [
+          "Esc inquiries about items not on the site",
+          "ESC if the cx missed a sale \u0026 wants to take advantage of it",
+          "ESC if the customer is asking for a discount and we don\u0027t have one",
+          "If cx is looking for general recommendations use LFR shortcut and ESC"
+        ],
+        "templates": [
+          "If cx is building a new home, interested in refurnishing their entire home or rooms in their home, use the IDS shortcut",
+          "If cx is shopping for a client use SFC shortcut",
+          "Any convo without a positive outcome (out of stock, not on sale, not shipping in time), use DSS shortcut"
         ],
         "dos_and_donts": [
-          "Don't reply to messages like \"ok\", \"thanks\", etc"
-        ],
-        "promo_and_exclusions": [
-          "Welcome Code:",
-          "Check their offers page for up-to-date info on codes & offers",
-          "If cx asks about a code that isn't on this page, it's likely expired!",
-          "Offers page: https://us.elemis.com/offers"
+          "For product-specific delivery time-frame inquiries always check the product page for delivery info and share that with the cx"
         ]
       },
-      "SystemMessage1": "ELEMIS: Psst... VIPs, we upgraded your gift! 30% off + 5-piece set + a NEW travel cleanser of your choice with $220+. Grab it first! \n\nCode: RETURNVIP >>elemis.attn.tv/auLv9Pq8RLVl",
-      "SystemMessage2": "ELEMIS: Last-Minute Shopper? No Problem! Get 30% OFF sitewide + FREE 2-Day Shipping on orders $150+ - just in time! PLUS: Get a FREE Gift on orders $195+.\n\nCode: RETURN>> elemis.attn.tv/aMFK7SvAtGd6",
-      "SystemMessage3": "ELEMIS: Last call for holiday delivery! Get free 2-day shipping on $150+ and take 30% off sitewide + free gift while you're at it.\n\nCode: RETURN>> elemis.attn.tv/aLw4ar81I3jf",
-      "SystemMessage4": "ELEMIS: This is the perfect gift.\n\nAn award-winning duo worth $187, now just over $100 - plus FREE 2-day shipping (ends tonight). \n\nTap to grab yours before it's gone>> elemis.attn.tv/arUlD9TjWbrm",
-      "SystemMessage5": "ELEMIS: LAST CALL: Enjoy 30% OFF sitewide + a FREE GIFT (worth $204). Ends tonight! ⏰\n\nCode: RETURN>> elemis.attn.tv/adR1P6_PaI8q",
-      "SystemMessage6": "ELEMIS: Your year-end reward, 48 hours only. Subscribe now and get 30% off your first order, 20% off your second, plus an ELEMIS Starter Set.\n\nSubscribe now >> elemis.attn.tv/aNDf1Hdc8cGS",
-      "SystemMessage7": "ELEMIS: Finish the year strong, VIP.\n\n30% OFF when you subscribe, plus free luxe gifts with every delivery - ends tonight. Lock in the routine you love.\n\nSubscribe now >> elemis.attn.tv/amC0zXZ_ULZb",
-      "SystemMessage8": "ELEMIS: Your winter skin needs deeper hydration. Get a free 5-piece day-to-night gift (worth $166) with orders $200+.\n\nCode: HYDRATE >> elemis.attn.tv/a5v7Rxdg0Fyc",
-      "SystemMessage9": "ELEMIS: Winter skin, meet your glow. Enjoy a FREE full-size facial oil when you spend $125+. Deep nourishment starts here.\n\nCode: UNLOCK >> elemis.attn.tv/a3-e532LzKKy",
-      "SystemMessage10": "ELEMIS: Last call! Winter glow awaits-get a FREE full-size facial oil with any $125+ purchase. Nourish and shine.\nCode: UNLOCK >> elemis.attn.tv/aGdOYV8DjTum",
-      "SystemMessage11": "ELEMIS: Happy Holidays from the team at Elemis! Enjoy 30% off our holiday sets - perfect for travel-ready skincare on your next getaway. Shop now>> elemis.attn.tv/atmtNr8XvrS9",
-      "SystemMessage12": "ELEMIS: See double this Boxing Day with a FREE double cleanse gift - worth $134 - when you purchase any full-size product.\n\nCode: DOUBLE>> elemis.attn.tv/alWth1-Bafen",
-      "SystemMessage13": "ELEMIS: ATTN: FREE 5-piece gift (including a full-size favorite!) with ANY full-size purchase.\n\nCode: DOUBLE>> elemis.attn.tv/atdDezmDYbCr",
-      "SystemMessage14": "ELEMIS: Our Boxing Day gift sold out fast-but we've got you covered. Get a FREE 5-piece nighttime gift (worth $150) with any full-size purchase.\n\nUse code: NOURISH >> elemis.attn.tv/a0SVCnvjwX6U",
-      "SystemMessage15": "ELEMIS: Dry winter skin? Restore hydration day and night with award-winning and bestselling formulas. Free 5-piece ritual (worth $176) with any $200+ purchase. \n\nCode: HYDRATE >> elemis.attn.tv/awlcB_rEP2Ge",
-      "SystemMessage16": "ELEMIS: Make radiant skin your New Year's resolution! Spend $125+ & get a FREE $98 Pro-Collagen Moisturizer-your choice.\n\nUse code: PCGIFT >> elemis.attn.tv/aZQstPwPHBGe",
-      "SystemMessage17": "ELEMIS: Last chance! Spend $125+ and pick a FREE deluxe Pro-Collagen Moisturizer ($98 value). Hydrating, iconic, and almost gone.\n\nUse code: PCGIFT >> elemis.attn.tv/ae0W_RBdWB8n",
-      "SystemMessage18": "ELEMIS: Restore balance. Replenish radiance. Receive a gift. A 5-piece ritual - including full-size Dynamic Resurfacing Pads - is yours with $175+. \n\nCode: RENEWAL >>> elemis.attn.tv/aDmgjmau0hVw",
-      "SystemMessage19": "ELEMIS: Free deluxe Marine Cream? Yes please! Get a Pro-Collagen duo (worth $108) with ANY full-size purchase.\n\nUse code: DUO>> elemis.attn.tv/adr7RYsKdECu",
-      "SystemMessage20": "ELEMIS: Your exclusive gift ends tonight! Get your FREE $108 glow-boosting Pro-Collagen Duo with ANY full-size order.\n\nUse code: DUO>> elemis.attn.tv/ad8sudaoJd7o",
-      "SystemMessage21": "ELEMIS: Enjoy exclusive early access to our NEW Pro-Collagen Hydrating Cleansing Mousse - a luxe cream-to-mousse cleanser that deeply purifies without drying.\n\nShop it before anyone else >> elemis.attn.tv/avntt2aIBGEz",
-      "SystemMessage22": "ELEMIS: Live now for London Calling! Meet Pro-Collagen Hydrating Cleansing Mousse: cloud-like comfort, deep hydration, zero dryness. \n\nTune in >> elemis.attn.tv/a5TDmGTtu2BY",
-      "SystemMessage23": "ELEMIS: VIPs save more today. Early access to 30% off sitewide + free 5-piece gift ($136 value) with $160+. Public gets 25% tomorrow.\n\nUse Code: WINTERVIP>> elemis.attn.tv/ayzvnohT3GWV",
-      "customerMessage1": "Ok what products do you want?",
-      "customerMessage2": "The day and night cream?",
-      "AgentMessage1": "ELEMIS: Thanks for reaching out! You can check out our Facial Night Creams & Moisturizers here: https://elemis.attn.tv/acbMZhkC_iY9 As for day creams, these are my recommendations: 1. https://elemis.attn.tv/a22AkjWiumc6 2. https://elemis.attn.tv/aluzHlWpPC0j 3. https://elemis.attn.tv/auNB58Ll7Xkb Let me know what you think!",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Discount code errors",
+        "Exchanges and returns",
+        "Lead time questions",
+        "Stock questions",
+        "Price matching",
+        "Angry or dissatisfied customer"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Winter Sale starts now! Thoughtfully designed pieces to cozy up your home, on sale for a limited time only: kathykuohome.attn.tv/aX33eUHcUldh . ",
+          "date_time": "2026-01-13 12:06:42.493",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Hi, I\u0027m Sarah, your personal shopper for Kathy Kuo Home. Do you need help finding that perfect piece? \n\nhttps://kathykuohome.attn.tv/anZ2uAg79hCK .",
+          "date_time": "2026-01-14 12:15:52.838",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Great news! We dropped the price on our Riona Coastal Beach Blue Striped Performance White Wood Bed - Queen! Get the look you love before it goes: kathykuohome.attn.tv/a-ilKs0QyEYq .",
+          "date_time": "2026-01-14 12:54:18.337",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Our most-loved pieces are back in stock. Now part of the Winter Sale! Cozy upgrades, on sale, no waiting: kathykuohome.attn.tv/aH1efIf-LGhd . ",
+          "date_time": "2026-01-15 12:30:54.399",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Don\u0027t forget our Riona Coastal Beach Blue Striped Performance White Wood Bed - Queen was lowered in price for a limited time only! Shop the savings: kathykuohome.attn.tv/atG79-yq5sGX",
+          "date_time": "2026-01-15 18:54:31.428",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Great news! We dropped the price on our Joy Rustic Lodge Natural Brown Ash Wood Rectangular Shelving Coffee Table! Get the look you love before it goes: kathykuohome.attn.tv/auniLY84POYB .",
+          "date_time": "2026-01-17 12:30:17.839",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Amazing news! The Inari Updated Traditional Blue Wool Oriental Patterned Hand Knotted Rug - 2\u0027x3\u0027 you were looking at is back in stock! \n\nShop now before this designer favorite sells out again: https://kathykuohome.attn.tv/anMELbuKhSRJ .",
+          "date_time": "2026-01-17 12:42:29.097",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Thanks for stopping by! We hope you got the chance to check out our bestsellers, designed to elevate your home with everyday comfort and soulful style. \n\nShop Bestsellers: https://kathykuohome.attn.tv/abuEOYttTUtC . ",
+          "date_time": "2026-01-17 17:12:03.394",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Don\u0027t forget our Joy Rustic Lodge Natural Brown Ash Wood Rectangular Shelving Coffee Table was lowered in price for a limited time only! Shop the savings: kathykuohome.attn.tv/aTuCz_jx61bi",
+          "date_time": "2026-01-18 18:30:38.357",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Our Winter Sale is officially here! 20% Off + Free Shipping on timeless pieces to refresh for the year ahead: kathykuohome.attn.tv/a4du14Vb-jVT . ",
+          "date_time": "2026-01-19 12:07:59.711",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Hey there, this is Sarah. Thanks for checking out our site! https://kathykuohome.attn.tv/akMhzLXHflaF . Are you working on a home design project we can help you with?",
+          "date_time": "2026-01-20 14:13:00.735",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Got your eye on this? We love it too! Shop the perfect piece for your home: kathykuohome.attn.tv/aOuxGioqvjfR .",
+          "date_time": "2026-01-20 14:32:15.220",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Hey there, your great picks are waiting! Use code KKHSHIP15 for 15% off + free shipping. Finish your order here: kathykuohome.attn.tv/aGhYHsqTi5jS . ",
+          "date_time": "2026-01-20 19:01:37.065",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Last day to shop the Winter Sale! Thoughtfully designed pieces, 20% Off, a beautiful way to refresh your home: kathykuohome.attn.tv/axPgwEo_BWeX . ",
+          "date_time": "2026-01-21 12:05:50.705",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Hi, I\u0027m Sarah, your personal shopper for Kathy Kuo Home. Do you need help finding that perfect piece? \n\nhttps://kathykuohome.attn.tv/aWqX2ukcWBs8 .",
+          "date_time": "2026-01-22 12:19:05.693",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Amazing news! The Inari Updated Traditional Blue Wool Oriental Patterned Hand Knotted Rug - 2\u0027x3\u0027 you were looking at is back in stock! \n\nShop now before this designer favorite sells out again: https://kathykuohome.attn.tv/a4dOdK9h08p6 .",
+          "date_time": "2026-01-22 12:27:59.171",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: A room starts with walls. Our all-new wallpaper collection brings depth, history, and intention to every space: kathykuohome.attn.tv/aIrO3kdw4Ztg . ",
+          "date_time": "2026-01-23 15:35:39.318",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Thanks for stopping by! We hope you got the chance to check out our bestsellers, designed to elevate your home with everyday comfort and soulful style. \n\nShop Bestsellers: https://kathykuohome.attn.tv/afI1omO2P_ul . ",
+          "date_time": "2026-01-25 12:37:30.533",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Insiders only! Enjoy 20% Off + Free Standard Shipping on styles you love with code JAN26: kathykuohome.attn.tv/aHRFkTzxMQkT \n\nExclusions apply. ",
+          "date_time": "2026-01-26 12:30:45.021",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Amazing news! The Inari Updated Traditional Blue Wool Oriental Patterned Hand Knotted Rug - 2\u0027x3\u0027 you were looking at is back in stock! \n\nShop now before this designer favorite sells out again: https://kathykuohome.attn.tv/afw2YjnEs947 .",
+          "date_time": "2026-01-27 12:27:30.957",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Reminder that today\u0027s the last day to take 20% off + enjoy FREE shipping with code JAN26. Shop the sale: kathykuohome.attn.tv/aYQbCRwyKQwG . ",
+          "date_time": "2026-01-28 12:30:37.781",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Hey there, your great picks are waiting! Use code KKHSHIP15 for 15% off + free shipping. Finish your order here: kathykuohome.attn.tv/a6MsAfFRUQK3 . ",
+          "date_time": "2026-01-28 16:16:51.699",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Amazing news! The Inari Updated Traditional Blue Wool Oriental Patterned Hand Knotted Rug - 2\u0027x3\u0027 you were looking at is back in stock! \n\nShop now before this designer favorite sells out again: https://kathykuohome.attn.tv/aK1LEIutHV22 .",
+          "date_time": "2026-01-30 12:32:25.900",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Reminder! Get our Inari Updated Traditional Blue Wool Oriental Patterned Hand Knotted Rug - 2\u0027x3\u0027 while it\u0027s in stock! \n\nMake the design magic happen: https://kathykuohome.attn.tv/aO2vG_kxaOr2 .",
+          "date_time": "2026-01-31 12:32:32.934",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Got your eye on this? We love it too! Shop the perfect piece for your home: kathykuohome.attn.tv/a4676UT1CoiW .",
+          "date_time": "2026-02-03 12:51:48.859",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Great news! We dropped the price on our Sullie Updated Traditional Navy Velvet Scallop Throw Pillow - 20x20! Get the look you love before it goes: kathykuohome.attn.tv/a2guYB9awcr2 .",
+          "date_time": "2026-02-04 12:11:56.837",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Amazing news! The Sullie Updated Traditional Light Beige Velvet Scallop Throw Pillow - 20x20 you were looking at is back in stock! \n\nShop now before this designer favorite sells out again: https://kathykuohome.attn.tv/atJj3rmeY569 .",
+          "date_time": "2026-02-04 12:13:11.510",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Reminder! Get our Sullie Updated Traditional Light Beige Velvet Scallop Throw Pillow - 20x20 while it\u0027s in stock! \n\nMake the design magic happen: https://kathykuohome.attn.tv/aYQodbtnJ9KH .",
+          "date_time": "2026-02-05 12:13:22.830",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Don\u0027t forget our Sullie Updated Traditional Navy Velvet Scallop Throw Pillow - 20x20 was lowered in price for a limited time only! Shop the savings: kathykuohome.attn.tv/avefErWtOPrt",
+          "date_time": "2026-02-05 18:12:18.461",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Amazing news! The Lupe Industrial Loft Brass Aluminum Matchstick Pedestal Round Side End Table you were looking at is back in stock! \n\nShop now before this designer favorite sells out again: https://kathykuohome.attn.tv/atEE7ck-K_U4 .",
+          "date_time": "2026-02-06 12:48:24.730",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Reminder! Get our Lupe Industrial Loft Brass Aluminum Matchstick Pedestal Round Side End Table while it\u0027s in stock! \n\nMake the design magic happen: https://kathykuohome.attn.tv/aCoobd2Ez_g7 .",
+          "date_time": "2026-02-07 12:48:33.755",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Great news! We dropped the price on our Rex Modern Classic Natural Oak Rectangular Storage Coffee Table! Get the look you love before it goes: kathykuohome.attn.tv/aGp6bVW5mF7t .",
+          "date_time": "2026-02-07 12:50:51.187",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Amazing news! The Stella French Country Dark Blue Cotton Scallop Throw Pillow - 18x18 you were looking at is back in stock! \n\nShop now before this designer favorite sells out again: https://kathykuohome.attn.tv/aRVXcfNIoqqm .",
+          "date_time": "2026-02-08 12:54:26.378",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Don\u0027t forget our Rex Modern Classic Natural Oak Rectangular Storage Coffee Table was lowered in price for a limited time only! Shop the savings: kathykuohome.attn.tv/aH-3xRsDavu6",
+          "date_time": "2026-02-08 18:51:05.600",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: President\u0027s Day deals are here early! Up to 25% Off + Free Shipping on statement styles for a spring refresh: kathykuohome.attn.tv/ayxT36gSxiGc . ",
+          "date_time": "2026-02-09 12:15:34.183",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Hey there, this is Sarah. Thanks for checking out our site! https://kathykuohome.attn.tv/aq-vr3j6v3lw . Are you working on a home design project we can help you with?",
+          "date_time": "2026-02-09 16:25:06.392",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Got your eye on this? We love it too! Shop the perfect piece for your home: kathykuohome.attn.tv/aUJrQHFJ5Krj .",
+          "date_time": "2026-02-09 18:24:06.822",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Great news! We dropped the price on our Laura Modern Classic Charcoal Oak Wood Round Edge Oval Coffee Table! Get the look you love before it goes: kathykuohome.attn.tv/a-RSrywO7fzA .",
+          "date_time": "2026-02-10 14:15:47.203",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Help. My furniture delivery is going to the wrong address.   I live in charlotte it\u0027s going to Connecticut. It\u0027s in Dallas today. Any way to stop and change. Ugh",
+          "date_time": "2026-02-11 19:38:25.570",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4f4c-53d0-476c-f000-0000e5a63c31",
+          "message_text": "Kathy Kuo: Thanks for getting in touch! I\u0027m really sorry for the inconvenience. I would be happy to have our team look into this. Could you provide the order number and the email address you used when you placed the order?",
+          "message_type": "agent",
+          "agent": "109840",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 19:42:08.231"
+        }
+      ]
+    },
+    "139": {
+      "agentName": "Sarah",
+      "id": "019c4d9f-df0e-447e-f000-00006bf49f38",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://us.elemis.com/",
+          "value": "https://hellobonafide.com",
           "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://hellobonafide.com",
+      "companyName": "Bonafide",
+      "notes": {
+        "escalate": [
+          "ESC all medical/scientific inquiries immediately",
+          "ESC return requests that are past the 30-day policy"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "templates": [
+          "For exact measurements of ingredients, use \"MOI\" shortcut"
+        ],
+        "dos_and_donts": [
+          "When sending the quiz - always suggest a specific product if customers mention a certain symptom"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Vaginal itching during menopause is common - get 6 expert-backed tips for real relief and comfort. bonafide.attn.tv/a7ym3ARw99D7 \n",
+          "date_time": "2026-01-19 14:01:17.983",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Perimenopause makeover? Load up on good fats \u0026 protein, skip the sugar slump, and feel fabulous from the inside out bonafide.attn.tv/acSV15uSHd_Q \n",
+          "date_time": "2026-01-26 14:02:11.085",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Spice things up with playful moves, fresh routines, and a sexy mindset-your spark just got an upgrade. \nbonafide.attn.tv/aGTYK6mQq7Q6 ",
+          "date_time": "2026-02-02 14:01:07.838",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Get menopause relief that works with your body, not against it. Trusted by 600,000+ women. bonafide.attn.tv/aIaLB9vWZg0h",
+          "date_time": "2026-02-05 11:19:27.977",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Great news! Your order (6329968) has shipped and will be to you soon. Click here to track your order: https://bonafide.attn.tv/aCXsHOndROjM \n\nVisit our website: https://bonafide.attn.tv/az4l0Md_rqjx ",
+          "date_time": "2026-02-07 11:34:21.344",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Stay intimate, stay vibrant - sex after menopause supports health and happiness. bonafide.attn.tv/ahqZkfqBAg0t \n",
+          "date_time": "2026-02-09 14:01:13.731",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Hi, this is Heather from Bonafide! Any questions about our products? bonafide.attn.tv/adrWOHHFfj-X .\n\n",
+          "date_time": "2026-02-11 11:31:11.227",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "What is different between thermella and relizen?",
+          "date_time": "2026-02-11 11:32:10.488",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"What is the difference between Thermella and Relizen?  \"; last updated: 2024-09-11 21:13:19.145",
+          "date_time": "2026-02-11 11:54:08.938",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4d9f-df0e-447e-f000-00006bf49f38",
+          "message_text": "Bonafide: Thank you for reaching out! I apologize for the late response. \n\nThermella and Relizen were both shown in separate clinical studies to relieve hot flashes and night sweats. However, Thermella relieves hot flashes as early as just two weeks. It relieves hot flashes at the source by blocking NKB, a peptide in the body\u0027s thermoregulatory center that triggers hot flashes and night sweats. \n\nOn the other hand, Relizen works as early as two months by inhibiting the reuptake of serotonin in the body. Both treatments are effective, but Thermella has been shown to provide more hot flash and night sweat relief, faster. \n\nPlease note that these results for Thermella and Relizen are based on separate clinical studies for each product.\n",
+          "message_type": "agent",
+          "agent": "109968",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 11:54:08.940"
+        }
+      ]
+    },
+    "140": {
+      "agentName": "Maria",
+      "id": "019c7830-3bf9-4ea2-f000-0000b46ed3a0",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://order.fazolis.com/menu/westerville-oh/products/101956104?source=vendor-menu",
+            "item": "Baked Fettuccine Alfredo",
+            "timeAgo": "2026-02-19"
+          },
+          {
+            "link": "https://order.fazolis.com/menu/westerville-oh/products/16235061?source=local-favorite-product",
+            "item": "Baked Lasagna",
+            "timeAgo": "2026-02-19"
+          },
+          {
+            "link": "https://order.fazolis.com/menu/westerville-oh/products/16234857?source=vendor-menu",
+            "item": "Baked Spaghetti with Meatballs",
+            "timeAgo": "2026-02-03"
+          },
+          {
+            "link": "https://order.fazolis.com/menu/westerville-oh/products/16234857?source=vendor-menu",
+            "item": "Baked Spaghetti with Meatballs",
+            "timeAgo": "2026-02-03"
+          },
+          {
+            "link": "https://order.fazolis.com/menu/westerville-oh/products/16238121?source=vendor-menu",
+            "item": "Oven-Baked Classic Sampler",
+            "timeAgo": "2026-02-03"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://fazolis.com/",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://fazolis.com/",
+      "companyName": "Fazoli\u0027s",
+      "notes": {
+        "escalate": [
+          "If cx\u0027s want to change their order, direct them to contact the location, use CED shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Coupon codes can be used at stores",
+          "If cx\u0027s ask for a discount code:",
+          "➜ First send the \u0027dhd\u0027 shortcut",
+          "➜ If cx says they ALREADY HAVE the rewards app, then you can share our Concierge discount"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Fazoli\u0027s: Craving Breadsticks? We got you covered with $5 off $20 when you order now at fazolis.attn.tv/aKcoUcQQLedE Use code QA3455 valid until 1/26.",
+          "date_time": "2026-01-21 11:02:07.541",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fazoli\u0027s: Kick off February with an Italian feast! Enjoy $3 off $15 when you order online at fazolis.attn.tv/aBeXXOfv9L2S and use code: BK4492. Valid until 2/8.",
+          "date_time": "2026-02-02 11:02:55.564",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fazoli\u0027s: Hey, this is Jordan from Fazoli\u0027s. Thanks for checking out our online ordering site! https://fazolis.attn.tv/ahzI3Q2kCefv \n\nIs there anything I can help you with today?",
+          "date_time": "2026-02-02 13:47:25.755",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fazoli\u0027s: Alfredo Fest is here! Enjoy $8.99 Loaded Fettuccine Alfredo. Order now at fazolis.attn.tv/aOmZnbPt2W6R use code: FA6798. Valid until 2/22.",
+          "date_time": "2026-02-16 11:02:43.918",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fazoli\u0027s: It looks like you forgot Baked Lasagna in your cart...complete your checkout today: Take $3 off when you spend $10 add B29KC3B at checkout visit: fazolis.attn.tv/a8Y1NcYJgxYs ",
+          "date_time": "2026-02-19 18:03:20.181",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hey thank you got that code 🙏",
+          "date_time": "2026-02-19 18:15:12.203",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7830-3bf9-4ea2-f000-0000b46ed3a0",
+          "message_text": "Fazoli\u0027s: No worries. I got you! Is there anything else I can help with?",
+          "message_type": "agent",
+          "agent": "109630",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 18:15:53.008"
+        }
+      ]
     }
   }
 }

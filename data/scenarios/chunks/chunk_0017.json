@@ -3,310 +3,709 @@
   "chunk": "chunk_0017",
   "scenarios": {
     "81": {
-      "id": "019bdd31-1ceb-422a-f000-00000e06dee9",
-      "companyName": "McConnell's Fine Ice Creams",
-      "companyWebsite": "https://mcconnells.com/",
-      "agentName": "Sarah",
-      "agentInitial": "M",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS if the ice cream arrived melted."
-        ],
-        "escalate": [
-          "If cx wants to delay shipping/set a deliver date, use DSD shortcut and ESC",
-          "For all ESC use ESC shortcut",
-          "ESC if cx are inquiring about in-store prices",
-          "ESC website & store inventory/availability inquiries"
-        ],
-        "templates": [
-          "If a customer says that the ice cream they purchased in store is icy/refrozen/awful, use IRA shortcut"
-        ]
-      },
-      "SystemMessage1": "McConnell's: Need a last-minute gift?\n\nNot sure what they'd like?\n\nGive the gift of choice with a gift card! >> mcconnells.attn.tv/aBQ12fWE8cjt  Stop to stop",
-      "SystemMessage2": "McConnell's: Happy holidays from all of us at McC's!\n\nWishing you cozy moments, good company & a pint (or 2!) of your favorite ice cream >> mcconnells.attn.tv/aOGKMtgLR-4g  Stop to stop",
-      "SystemMessage3": "McConnell's: Out with the family?\n\nStop by your local Scoop Shop for a sweet McC's treat!\n\nFind a Shop near you >> mcconnells.attn.tv/axkDHmziYEuI  Stop to stop",
-      "SystemMessage4": "McConnell's: The best way to start 2026?\n\nA big ol' bite of ice cream!\n\nGet one more treat in before 2025 ends >> mcconnells.attn.tv/aVf-1zadDn3c  Stop to stop",
-      "SystemMessage5": "McConnell's: The best way to add some extra joy to your weekend?\n\nA treat from your local Scoop Shop!\n\nFind a Shop: mcconnells.attn.tv/a94u4lhUujwt  Stop to stop",
-      "SystemMessage6": "McConnell's: Don't settle for \"meh\" dairy-free ice cream!\n\nStart 2026 with pints that taste just like the real thing: mcconnells.attn.tv/ayyqABic1dav  Stop to stop",
-      "SystemMessage7": "McConnell's: 100% certified organic.\n\n100% creamy, indulgent goodness.\n\nTry our organic line today! >> https://mcconnells.com/collections/organic-ice-creams Stop to stop",
-      "SystemMessage8": "McConnell's: We miss you Hugo! Have you seen our new flavors? Check them out and shop now: https://mcconnells.attn.tv/aBl9lx2DD0BO Stop to stop",
-      "SystemMessage9": "McConnell's: Time to treat your sweetie! Roses are nice, but ice cream is better. Our Valentine's Day Bundle is here, featuring 5 irresistible flavors. Spread some love > mcconnells.attn.tv/aSOWB-0whIBK  Stop to stop",
-      "SystemMessage10": "McConnell's: Hey Hugo, this is Sarah . Thanks for checking out our site! 🍦 https://mcconnells.attn.tv/aP06DdGjLUZp \n\nAre you looking for anything in particular today? Stop to stop",
-      "customerMessage1": "When does Whiskey Praline come back?",
-      "SystemMessage11": "Template used: \"Restock (website & social)\"; last updated: 2025-10-09 21:41:33.472",
-      "AgentMessage1": "McConnell's: I'm sorry, I currently don't have the exact date of a possible restock, but I recommend checking our website and social media frequently. Are there any other flavors you like?",
+      "agentName": "Jordan",
+      "id": "019c6369-e603-4ffb-f000-0000fba196b8",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://mcconnells.com/",
+          "value": "https://ccvideo.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Valentine's Day Bundle",
-            "link": "https://mcconnells.com/collections/fine-ice-creams/products/valentines-day-bundle?utm_campaign=1%2F20+V-Day+Bundle+Launch+SMS&utm_medium=sms&utm_source=attentive&externalId=pYa83",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://ccvideo.com",
+      "companyName": "Critic\u0027s Choice Video",
+      "notes": {
+        "promo_and_exclusions": [
+          "🅿 Refer to brand\u0027s site for the most up to date promotional information where applicable."
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Critics\u0027 Choice Video: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-15 16:44:01.893",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Critics\u0027 Choice Video: Welcome! This is Jordan, your personal Concierge. \n\nYour code is CCV10. Use it at checkout for 10% off your order! Shop now: https://criticschoice.attn.tv/an4aQaNrQ03v \n\nAnything I can help you with? Stop to stop",
+          "date_time": "2026-02-15 16:44:06.849",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Critics\u0027 Choice Video: It looks like you forgot The Beekeeper in your cart...complete your checkout today: criticschoice.attn.tv/aAPRt4fZYlVW  Stop to stop",
+          "date_time": "2026-02-15 17:08:40.853",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Is this still Jordan?",
+          "date_time": "2026-02-15 17:10:25.523",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c635d-0034-4968-f000-0000fba196b8",
+          "message_text": "Critics\u0027 Choice Video: Yes, it is! How may I help you today?",
+          "message_type": "agent",
+          "agent": "37648",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-15 17:12:45.265"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I got 3 movies in my cart can they sit there til next week when I get paid so I can make my purchase? If not do I need to make a purchase soon? How long does my 10% off last?",
+          "date_time": "2026-02-15 17:17:24.783",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6369-e603-4ffb-f000-0000fba196b8",
+          "message_text": "Critics\u0027 Choice Video: Thanks for checking in! Items in your cart aren\u0027t reserved, so availability can change if they sell out. The code CCV10 is valid for your first order on our site. Let me know if there\u0027s anything else I can help you with.",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-15 17:26:50.534"
+        }
+      ]
     },
     "82": {
-      "id": "019bc318-26f7-4690-f000-0000ccdeb06a",
-      "companyName": "Georg Jensen",
-      "companyWebsite": "https://georgjensen.com/en-us",
-      "agentName": "Sarah",
-      "agentInitial": "G",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "tone": [
-          "Use less smileys",
-          "Don't tell cx's they can return products bought from North American retail stores"
-        ],
-        "dos_and_donts": [
-          "Don't share the brand's phone number with cxs"
+      "agentName": "Ashley",
+      "id": "019c43bb-a24c-40cd-f000-0000fa1a7bc3",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://sauder.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://sauder.com",
+      "companyName": "Sauder",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post-purchase inquiries for items purchased through a retailer"
         ],
         "templates": [
-          "For order status/tracking, use OSU shortcut",
-          "They have a journey where they ask for ratings:"
+          "If customers already purchased use TFP shortcut"
+        ],
+        "tone": [
+          "Let the customer have the last word!"
+        ],
+        "drive_to_purchase": [
+          "Don\u0027t recommend Retailer Exclusive items"
         ],
         "promo_and_exclusions": [
-          "Welcome codes do not apply to fine silverware"
+          "Discount codes CAN be applied to clearance items"
         ]
       },
-      "SystemMessage1": "Georg Jensen: Shine bright with our stunning earrings! From classic silver to bold gold and diamond styles, we've got the perfect pair for every occasion.\n\nShop Now: georgjensen.attn.tv/aPXwQDDB6dOo \n\nText back if you have any questions! \n\nText STOP to opt out.",
-      "SystemMessage2": "Georg Jensen: Hey there this is Sarah. Thanks for checking out our site! 😊 https://georgjensen.attn.tv/acXBG-rmPBny .\n\nAny questions I can answer for you?",
-      "SystemMessage3": "Georg Jensen: From our family to yours, warm wishes for happy holidays and a wonderful start to the new year!\n\nShop Now: georgjensen.attn.tv/a1jrq_c61FRh \n\nText back if you have any questions! \n\nText STOP to opt out.",
-      "SystemMessage4": "Georg Jensen: Hey, we noticed you checking us out. Have you seen our new home decor arrivals yet? https://georgjensen.attn.tv/aezfMv5vbCz8",
-      "SystemMessage5": "Georg Jensen: With the start of the new year, we wish you a wonderful beginning to 2026 and hope you'll continue to follow our journey, as we explore new ways to delve into our archives and celebrate our legacy.\n\nShop Now: georgjensen.attn.tv/afZaO0zHzBln \n\nText back if you have any questions! \n\nText STOP to opt out.",
-      "SystemMessage6": "Georg Jensen: Save up to 50% on selected home designs and bring a timeless Georg Jensen design into your home. \n\nShop Now: georgjensen.attn.tv/aUfl7iItvHhi \n\nText back if you have any questions! \n\nText STOP to opt out.",
-      "SystemMessage7": "Georg Jensen: Our latest campaign captures Daniela in Georg Jensen jewelry set against iconic Copenhagen landmarks.\n\nDiscover: georgjensen.attn.tv/aIjuTRGVZ2lF \n\nText back if you have any questions! \n\nText STOP to opt out.",
-      "SystemMessage8": "Georg Jensen: Find your favorite holiday ornaments and explore Winter Sale offers on the Christmas Collectibles and seasonal decorations. \n\nShop Now: georgjensen.attn.tv/ailHNmchrF4T \n\nText back if you have any questions! \n\nText STOP to opt out.",
-      "SystemMessage9": "Georg Jensen: Hey, we noticed you checking us out. Have you seen our new home decor arrivals yet? https://georgjensen.attn.tv/a8GsZMfEtXw7",
-      "SystemMessage10": "Georg Jensen: Hey there this is Sarah. Thanks for checking out our site! 😊 https://georgjensen.attn.tv/ammsYG1y0FGZ .\n\nAny questions I can answer for you?",
-      "SystemMessage11": "Georg Jensen: Hey there, this is Sarah. I see you left something in your cart https://georgjensen.attn.tv/a6XSOG4b91DL .\n\nGreat choice! 😊 Any questions I can answer for you?",
-      "customerMessage1": "Is there a human that could call me? Having trouble with my order?",
-      "AgentMessage1": "Georg Jensen: I'm so sorry. We don't offer phone support right now but I'd be happy to help you over text, let me know what I can do for you!",
-      "customerMessage2": "Trying to make a purchase with my Mastercard and it won't go thru",
-      "customerMessage3": "Brand new card",
-      "customerMessage4": "I have 2 gift cards as well from Christmas",
-      "customerMessage5": "It says a technical error has occurred",
-      "SystemMessage12": "Template used: \"The Site Won't take my Card - All brands\"; last updated: 2023-10-10 16:56:54.019",
-      "AgentMessage2": "Georg Jensen: I'm sorry to hear that! Please double-check that the billing ZIP code you entered matches the one linked to your credit card. I also recommend trying to open the site in an incognito or private window to rule out any browser cache or extension issues.",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://georgjensen.com/en-us",
-          "date": ""
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Sauder: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-08 20:07:43.254",
+          "message_media": [
+            
+          ]
         },
-        "browsingHistory": [
-          {
-            "item": "2024 HEART Pendant in sterling silver",
-            "link": "https://www.georgjensen.com/en-us/jewelry/necklaces-and-pendants/2024-heart-pendant/20001526.html",
-            "icon": "eye"
-          },
-          {
-            "item": "2024 HEART Pendant in 18kt gold",
-            "link": "https://www.georgjensen.com/en-us/jewelry/necklaces-and-pendants/2024-heart-pendant/20001520.html",
-            "icon": "eye"
-          },
-          {
-            "item": "2024 HEART Pendant in 18kt gold",
-            "link": "https://www.georgjensen.com/en-us/jewelry/necklaces-and-pendants/2024-heart-pendant/20001520.html",
-            "icon": "eye"
-          },
-          {
-            "item": "2024 HEART Pendant in sterling silver",
-            "link": "https://www.georgjensen.com/en-us/jewelry/necklaces-and-pendants/2024-heart-pendant/20001526.html",
-            "icon": "eye"
-          },
-          {
-            "item": "Heart 2026 Pendant in sterling silver",
-            "link": "https://www.georgjensen.com/en-us/jewelry/necklaces-and-pendants/heart-2026-pendant/20001873.html",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
-      },
-      "orders": []
+        {
+          "message_type": "system",
+          "message_text": "Sauder: Welcome! Click this link for your 20% OFF coupon code: https://sauder.attn.tv/ajhHjlk1opQY",
+          "date_time": "2026-02-08 20:07:47.340",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sauder: Hey there! We noticed you left something in your cart!\nhttps://sauder.attn.tv/audO-dcYZRce \n\nUse code XPBZB2E2 for 20% off your first order!\n\nWas there anything I could help you with? \n- Ashley ",
+          "date_time": "2026-02-09 13:16:19.029",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you! I am seeing the same nightstands listed on Walmart for $167.00. Is there a way to price match?",
+          "date_time": "2026-02-09 13:17:32.267",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c43a3-e4ec-4b59-f000-0000fa1a7bc3",
+          "message_text": "Sauder: Happy to help, and thank you so much for sharing those details. We strive to offer the best possible options available to our consumers when it comes to purchasing our products. Our intention is not to compete with our retailers on price and service but to simply offer online shopping as a convenience.",
+          "message_type": "agent",
+          "agent": "87589",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-09 13:22:20.424"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Where else is the dresser sold outside of your website directly?",
+          "date_time": "2026-02-09 13:38:42.162",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c43b6-9495-4757-f000-0000fa1a7bc3",
+          "message_text": "Sauder: I\u0027ll be happy to check this for you. Can you please share the specific item you\u0027re eyeing and your zip code?\n\nAlternatively, you can find us at a store near you here: https://sauder.attn.tv/a5RuS2dRZrbx",
+          "message_type": "agent",
+          "agent": "109955",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-09 13:42:45.043"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "6 Drawer Bedroom Dresser in Pacific Maple - thank you!Zip code: 55414",
+          "date_time": "2026-02-09 13:44:12.053",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c43bb-a24c-40cd-f000-0000fa1a7bc3",
+          "message_text": "Sauder: Thanks for sharing the details! The Sauder 6-Drawer Bedroom Dresser in Pacific Maple is also sold at Walmart and Target near zip code 55414, in addition to our website. Both retailers ship directly to your area. Let me know if there\u0027s anything else I can help you with.",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-09 13:48:16.229"
+        }
+      ]
     },
     "83": {
-      "id": "019bb4d1-9591-4991-f000-0000699662a3",
-      "companyName": "Makesy",
-      "companyWebsite": "https://makesy.com",
-      "agentName": "Sarah",
-      "agentInitial": "M",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "promo_and_exclusions": [
-          "Discounts or promotional codes can't be combined with the already discounted products in the Sale category, unless differently specified on the website"
-        ]
-      },
-      "SystemMessage1": "makesy: Our spring collection is 20% OFF NOW, so play it smart this season! Save, prep & stock up for your Q1 launches today! makesy.attn.tv/ap_7UtoyyuLS",
-      "SystemMessage2": "makesy: Last call! ⏳ The spring collection is still 20% off, but not for long! Prep your stash & prep your launches for 2026! Ends Sunday at midnight.\n\nStock up now: makesy.attn.tv/aCpeCIrAm6Jy",
-      "SystemMessage3": "makesy: 🎉 Thank you for checking out makesy! Don't miss our top-selling products - they're a DIY lover's dream! Shop now: https://makesy.attn.tv/a-I_4P2buwlm",
-      "SystemMessage4": "makesy: Receive a $50 gift card to use in 2026 when you spend $150+. Plus, 20% OFF gift cards, makerpro, & digital books. \n\nDon't miss this last week: makesy.attn.tv/aDf8xj1EWypm",
-      "SystemMessage5": "makesy: $50 back if you act fast + 20% off select goodies! 💸 Ends soon! Shop here → makesy.attn.tv/am6dEecmGeB4",
-      "SystemMessage6": "makesy: New Year, NEW fragrances! Start the year fresh with 4 juicy, mouth-watering spring scents! (PSA: you can sniff, but ya can't taste 😉) → makesy.attn.tv/aq7ScUyTooSI",
-      "SystemMessage7": "makesy: Surprise perk 👀 A few orders placed now until Sunday at midnight will get a little extra love in their box. No code. Just shop: makesy.attn.tv/at2dMfWCVmYH",
-      "customerMessage1": "Yes. It was charged. Though it looks like the shop may have processed it under my personal email? Its really frustrating sometimes the log out/log in and it automatically signs you in. Does that order not come up at all? Anywhere?",
-      "AgentMessage1": "makesy: Thanks for letting me know, and I'm sorry to hear that, it's not the experience we wanted you to have with us. Unfortunately, it's not coming up on my end, so I can't check it at the moment. Could you please send me your email address? I'd like to check on this with my team for you.",
-      "customerMessage2": "How does an order number not come up in your system?",
-      "customerMessage3": "\"",
-      "customerMessage4": "It looks like a label was just created today.",
-      "AgentMessage2": "makesy: My access is limited, so I can only see orders tied to your other email. It sounds like your order was likely placed under a different email, which is why it's not showing up on my end. If you can share the email used for the purchase, I can check with the team and help get this sorted.\n\nAnd thanks for the screenshot. Looks like your order is almost ready to ship, you can track it using that tracking link.",
+      "agentName": "Olivia",
+      "id": "019c4e8f-77fd-41b6-f000-0000f653c908",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://makesy.com",
+          "value": "https://shoppe.amberinteriordesign.com",
           "date": ""
-        },
-        "browsingHistory": [],
-        "orders": [
-          {
-            "orderNumber": "11855018590573",
-            "orderDate": "",
-            "link": "https://thewoodenwickco.myshopify.com/products/100-makesy-gift-card",
-            "trackingLink": "",
-            "currency": "USD",
-            "items": [
-              {
-                "name": "$100 makesy gift card",
-                "price": "100",
-                "currency": "USD",
-                "productLink": "https://thewoodenwickco.myshopify.com/products/100-makesy-gift-card"
-              },
-              {
-                "name": "$100 makesy gift card",
-                "price": "100",
-                "currency": "USD",
-                "productLink": "https://thewoodenwickco.myshopify.com/products/100-makesy-gift-card"
-              }
-            ],
-            "total": "100"
-          }
+        }
+      },
+      "companyWebsite": "https://shoppe.amberinteriordesign.com",
+      "companyName": "Shoppe Amber Interiors",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for order update requests",
+          "Send to CS for damaged products/quality complaints"
+        ],
+        "templates": [
+          "DOn\u0027t use STE temp, their shipping prices depend on the order total"
+        ],
+        "promo_and_exclusions": [
+          "Codes can\u0027t be used on sale, gift boxes, as well as some lighting and furniture pieces"
         ]
       },
-      "orders": [
+      "blocklisted_words": [
+        "couch",
+        "vendor",
+        "goodies"
+      ],
+      "escalation_preferences": [
+        "Product quality questions"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
         {
-          "currency": "USD",
-          "order_number": "11855018590573",
-          "order_status_url": "https://thewoodenwickco.myshopify.com/products/100-makesy-gift-card",
-          "products": [
-            {
-              "product_currency": "USD",
-              "product_link": "https://thewoodenwickco.myshopify.com/products/100-makesy-gift-card",
-              "product_name": "$100 makesy gift card",
-              "product_price": 100
-            },
-            {
-              "product_currency": "USD",
-              "product_link": "https://thewoodenwickco.myshopify.com/products/100-makesy-gift-card",
-              "product_name": "$100 makesy gift card",
-              "product_price": 100
-            }
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Welcome to Shoppe Amber Interiors! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-01-27 22:59:25.654",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Hey, this is Olivia, your personal concierge! Feel free to text me with any questions. Enjoy 10% off with code WL-7VU909X3457 . https://shoppeamberinteriors.attn.tv/ayZ6VgAWmB52 ",
+          "date_time": "2026-01-27 22:59:29.549",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Let\u0027s make it official. Save us in your contacts to stay in the know about all things Shoppe!",
+          "date_time": "2026-01-27 22:59:30.869",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Hey, Olivia here! We noticed you eyeing Harding Cabinet... anything I can help with? Shoppe the collection: shoppeamberinteriors.attn.tv/apIXZPC1MCSK .",
+          "date_time": "2026-01-28 15:07:04.942",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Hey , this is Olivia. Thank you so much for shopping our site! \n\nAre you looking for anything in particular today? shoppeamberinteriors.attn.tv/aufxtSby4c11 ",
+          "date_time": "2026-01-28 15:34:11.162",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Hey, Olivia here! We noticed you eyeing Bari Desk... anything I can help with? Don\u0027t forget to use code WL-7VU909X3457 for 10% off your next purchase shoppeamberinteriors.attn.tv/aMct-HAB7DfR .",
+          "date_time": "2026-01-29 16:07:59.674",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Ready to elevate your space? Shop our best sellers below: shoppeamberinteriors.attn.tv/aE27kHDaqpiL ",
+          "date_time": "2026-01-31 16:24:40.993",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Final Reminder: Don\u0027t forget to use WL-7VU909X3457 for 10% off your first purchase: https://shoppeamberinteriors.attn.tv/aqcpvxitFKAZ .",
+          "date_time": "2026-02-01 15:47:14.330",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Thank you for your purchase! Your order number is 288863. View more information about your order here: https://shoppeamberinteriors.attn.tv/aiplTypLz8L7 .",
+          "date_time": "2026-02-03 19:01:41.382",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: New lighting styles are here! From table lamps to sconces and more, this new collection is designed to complement every corner of your space.\n\nShop new lighting: shoppeamberinteriors.attn.tv/a9UDgoa-PWce ",
+          "date_time": "2026-02-04 18:06:05.331",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Hey Natalene, this is Olivia. Thank you so much for shopping our site! \n\nWhat room are you shopping for today? shoppeamberinteriors.attn.tv/ad1J3NYCgZu7 ",
+          "date_time": "2026-02-05 16:57:58.027",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Hey, Olivia here! We noticed you eyeing Bari Desk... anything I can help with? Shoppe the collection: shoppeamberinteriors.attn.tv/aXXK-iVHmqM8 .",
+          "date_time": "2026-02-08 15:58:40.051",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Hey, Olivia here! We noticed you eyeing Elbert Chandelier... anything I can help with? Shoppe the collection: shoppeamberinteriors.attn.tv/astBPUA7vHx6 .",
+          "date_time": "2026-02-09 14:10:21.234",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Hey, Olivia here! We noticed you eyeing Olga Pendant - Small... anything I can help with? Shoppe the collection: shoppeamberinteriors.attn.tv/adIi7Ik8XS49 .",
+          "date_time": "2026-02-10 16:59:00.530",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shoppe Amber Interiors: Hey, Olivia here! We saw you left Emilia Pendant in your cart, anything I can help with today? Come on back and complete your order today: shoppeamberinteriors.attn.tv/aB4gq6DtxTq8 ",
+          "date_time": "2026-02-11 16:05:35.436",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I was looking at the Fayth bar stools but it says there\u0027s only 1 left but I need 4",
+          "date_time": "2026-02-11 16:06:25.510",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Restock (website \u0026 social)\"; last updated: 2025-10-09 21:41:33.472",
+          "date_time": "2026-02-11 16:15:51.198",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4e8f-77fd-41b6-f000-0000f653c908",
+          "message_text": "Shoppe Amber Interiors: Thanks for reaching out! Upon checking the Fayth Bar \u0026 Counter Stool, I can see that there is only 1 stock left. I understand that you need 4 of it, but unfortunately, I currently don\u0027t have the exact date of a possible restock, but I recommend checking our website and social media frequently. \n\nPlease let me know how I can assist you further today, I\u0027m just a text away!",
+          "message_type": "agent",
+          "agent": "109617",
+          "message_media": [
+            
           ],
-          "total": 100
+          "date_time": "2026-02-11 16:15:51.201"
         }
       ]
     },
     "84": {
-      "id": "019bc8db-0a2c-4379-f000-0000f465396c",
-      "companyName": "Julie Vos",
-      "companyWebsite": "https://julievos.com",
-      "agentName": "Rebecca",
-      "agentInitial": "J",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "When ESC during the weekend/late Friday use the \"Weekend escalation template\" template"
+      "agentName": "Taylor",
+      "id": "019c49c1-2cea-404d-f000-00009d28ec08",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://safishing.com/products/united-by-hat",
+            "item": "Fintech United By Outdoors Hat - Dune",
+            "timeAgo": "2026-02-06"
+          },
+          {
+            "link": "https://safishing.com/products/5-for-20-fleece-neck-gaiters?utm_campaign=1%2F9%2F26%20(Legacy)%205%20Fleece%20$20\u0026utm_medium=sms\u0026tw_source=attentive\u0026tw_campaign=1%2F9%2F26%20(Legacy)%205%20Fleece%20$20\u0026utm_source=attentive\u0026externalId=zCB7C",
+            "item": "5 for $20 Fleece Neck Gaiters",
+            "timeAgo": "2026-01-09"
+          },
+          {
+            "link": "https://safishing.com/products/5-for-20-fleece-neck-gaiters?utm_campaign=1%2F9%2F26%20(Legacy)%205%20Fleece%20$20\u0026utm_medium=sms\u0026tw_source=attentive\u0026tw_campaign=1%2F9%2F26%20(Legacy)%205%20Fleece%20$20\u0026utm_source=attentive\u0026externalId=zCB7C",
+            "item": "5 for $20 Fleece Neck Gaiters",
+            "timeAgo": "2026-01-09"
+          }
         ],
-        "tone": [
-          "Don't use the term \"customer service team\", use \"customer care\" instead"
-        ],
-        "dos_and_donts": [
-          "Do not direct cx to contact the carrier",
-          "Do not provide customers with dates for restock before checking with our team."
+        "source": {
+          "label": "Website",
+          "value": "https://safishing.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://safishing.com",
+      "companyName": "SA Company",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
         ],
         "promo_and_exclusions": [
-          "They have only 2 sales per year (June/November) - when those end the sale items are removed from the site"
+          "Do not share the Concierge 15% off offer, the code is currently not valid"
         ]
       },
-      "SystemMessage1": "Julie Vos: Welcome to Julie Vos! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/N9l",
-      "SystemMessage2": "Julie Vos: Hey this is Rebecca , how can I help you?",
-      "customerMessage1": "Hello, I am trying to exchange order #EXC-669624-1. When I go through the returns process online, it only gives me the opportunity to return the item, not to exchange it for a smaller size. Can you help me with this?",
-      "customerMessage2": "Hello, I am trying to exchange order #EXC-669624-1. When I go through the returns process online, it only gives me the opportunity to return the item, not to exchange it for a smaller size. Can you help me with this?",
-      "SystemMessage3": "Julie Vos: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nIn the meantime, check out our newest arrivals > https://julievos.attn.tv/aHV48DGrHppC .",
-      "customerMessage3": "OK, are you able to help me with the exchange I'm asking about?",
-      "customerMessage4": "Hello, I am trying to exchange order #EXC-669624-1. When I go through the returns process online, it only gives me the opportunity to return the item, not to exchange it for a smaller size. Can you help me with this?",
-      "SystemMessage4": "Template used: \"Return policy\"; last updated: 2023-06-20 18:10:46.562",
-      "SystemMessage5": "Template used: \"Sorry 2 - All brands\"; last updated: 2023-10-10 17:56:13.923",
-      "AgentMessage1": "Julie Vos: I'm sorry about that! Can you share a screenshot of what you can see from your end so I can check for you? You can check out our detailed return policy here: https://julievos.attn.tv/aPKSmr-G-mIz. Please note that all jewelry purchased from the sale is a final sale. Final sale items may not be returned or exchanged.",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://julievos.com",
-          "date": ""
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: Discover our Silicone Rings - Buy 1 and get 4 Free. With over 30+ designs, perfect fit any adventure!\n\nsafishing.attn.tv/ax3DCqE_W_8c ",
+          "date_time": "2026-01-14 11:00:56.636",
+          "message_media": [
+            
+          ]
         },
-        "browsingHistory": [],
-        "orders": []
-      },
-      "orders": []
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: FLASH SALE! 8 Neck Gaiters for just $12. This deal vanishes in 60 minutes.\n\nShop Now:\n safishing.attn.tv/aqv4zHD3GaT- \n",
+          "date_time": "2026-01-16 12:00:54.985",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: Gear up with exclusive new arrivals! Check them out here 👉 https://safishing.attn.tv/a_zqzGw7KQaV \n\nReply for a special discount!",
+          "date_time": "2026-01-18 12:19:50.034",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: LIGHTING DEAL! Get 8 Neck Gaiters for just $12! This deal vanishes in 60 minutes, so act fast!\n\nShop Now:\n safishing.attn.tv/ajwsjBHlK6bY \n",
+          "date_time": "2026-01-23 12:02:32.760",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: Last chance! Time\u0027s running out on our 8 Neck Gaiters for just $12. Grab yours before it\u0027s gone! \n\nShop Now: safishing.attn.tv/aj1xaZKelnP5",
+          "date_time": "2026-01-24 12:01:13.081",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: CLAIM YOUR DEAL: Buy 1 arm sleeve, get 3 FREE! \n\nHurry:\nsafishing.attn.tv/aQkDwO8wUmUe ",
+          "date_time": "2026-01-25 14:01:56.044",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: Lock in 8 Neck Gaiters at $12 before this flash deal ends (60 min left).\n\nShop Now:\nsafishing.attn.tv/ao-pInqwhWiX \n",
+          "date_time": "2026-01-30 13:01:19.298",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: Lock in 8 Neck Gaiters at $12 before this flash deal ends (60 min left).\n\nShop Now:\nsafishing.attn.tv/a6Y6_Ygceiop ",
+          "date_time": "2026-01-31 13:05:39.438",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: BUY 1, GET 3 FREE! Stock up on arm sleeves today and save big. Simple as that. \n\nShop the deal here:\nsafishing.attn.tv/a3x-y4N_asPM ",
+          "date_time": "2026-02-01 16:01:03.400",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: Lighting deal: Fintech Trucker Hat Only $9.99!\n\nHurry Limited Time Offer: \nsafishing.attn.tv/ak73ORr6db0K ",
+          "date_time": "2026-02-06 15:02:13.137",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: Hi Randall, it\u0027s Taylor. I\u0027m a personal concierge here to answer your questions or share recommendations. Would you like to see if I can get you a discount code?\n\nhttps://safishing.attn.tv/aWKivFhNwCL- .",
+          "date_time": "2026-02-07 16:26:27.113",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: FLASH SALE: Buy 1 Arm Sleeve, Get 3 FREE! (Limited Time Only)\n\nHurry Show Now: \nsafishing.attn.tv/abBc4Qr_VVhl ",
+          "date_time": "2026-02-08 13:01:58.657",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I have not received this order yet ?",
+          "date_time": "2026-02-10 17:47:53.728",
+          "message_media": [
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1770763666142_50ae815d-42a9-410c-a393-4ff51f6f53f6-1.png"
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Check spam - All brands\"; last updated: 2023-10-10 16:43:53.913",
+          "date_time": "2026-02-10 17:52:02.710",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Order Lookup/Tracking\"; last updated: 2024-03-18 14:45:28.316",
+          "date_time": "2026-02-10 17:52:02.710",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c49c1-2cea-404d-f000-00009d28ec08",
+          "message_text": "Soul of Adventure: Thanks for reaching out, and sorry to hear that! Just to be sure, are you referring to order #288981? If so, it appears that the order is already on its way. Did you receive a tracking info? Please check your spam and promo folders as well, as our emails sometimes end up there. \n\nIn the meantime, you can also use our convenient online tool to see the latest updates on your order: \n\nhttps://safishing.attn.tv/aC2rw5gzu0r5\n\nLet me know if you have any questions!",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 17:52:02.713"
+        }
+      ]
     },
     "85": {
-      "id": "019bed4b-6018-422c-f000-000041e44b87",
-      "companyName": "ILIA Beauty",
-      "companyWebsite": "https://iliabeauty.com",
-      "agentName": "",
-      "agentInitial": "I",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over"
-        ]
-      },
-      "SystemMessage1": "ILIA Beauty: Meet NEW Overglaze Hydrating Lip Gloss.\n \nInspired by the lustrous finishes used in ceramics, the longwear formula glides on smoothly and delivers dimensional shine + 24-hour hydration.\n\nShop all 12 shades: iliabeauty.attn.tv/aGKaM9WrDDZ9",
-      "SystemMessage2": "ILIA Beauty: Gloss by numbers.\n\n100% of people said NEW Overglaze Hydrating Lip Gloss locks in moisture and quenches dry, chapped lips, all without feathering or bleeding.*\n\nShop the new gloss: iliabeauty.attn.tv/a-9AufIuxZ6V \n\n*Immediate results in a clinical study of 52 people.",
-      "SystemMessage3": "ILIA Beauty: ILIA x clé celebrates The Art of Overglaze. \n\nWe invite you to design in color and make space for beauty with clé's new limited edition collection, featuring a glossy thin brick tile in five shades inspired by our new Overglaze Hydrating Lip Gloss.\n\nShop the tile + the gloss: iliabeauty.attn.tv/aT8-L1xcnH4H",
-      "SystemMessage4": "ILIA Beauty: Don't forget your $15 gift\nSpend your VIP thank you gift by 1/31/26 with code MERRY15.*\n\nWhat will you choose?: iliabeauty.attn.tv/aQakQaGYRQop \n\n*See site for details.",
-      "SystemMessage5": "ILIA Beauty: A gift that's like a facial for your lips.\n\nWake up to your smoothest, softest lips with a free mini Lip Wrap Overnight Mask. Yours with any $75+ order for a limited time.*\n\nShop to Claim: iliabeauty.attn.tv/al3U3dqbYw7i \n\n*See site for details.",
-      "SystemMessage6": "ILIA Beauty: You are on the list. Click here to shop now: iliabeauty.com.",
-      "customerMessage1": "Y",
-      "customerMessage2": "Where is my 15 percent discount",
-      "customerMessage3": "Is this a scam",
-      "AgentMessage1": "ILIA Beauty: Thanks for reaching out! We are a legitimate company and not a scam. I'm not familiar with that discount, but it might have some specific requirements. Could you let me know where you got it and, if possible, share a screenshot? I'll do my best to help from there.",
-      "customerMessage4": "Sure -so happy you're real! So text stated get 15 percent off when you give email and phone number.. as many times as I've ordered the product.. never received a discount code. I get having to spend a certain amount to get gifts etc but the very first time I gave the info there was no code -so maybe I don't understand",
-      "AgentMessage2": "ILIA Beauty: Thank you for getting back to me and providing that information! I sincerely apologize for the inconvenience. This definitely isn't the experience we wanted for you! I can see that we recently sent you our VIP thank you code MERRY15. This code is valid until January 31, 2026. Hope this helps! Should you need help with anything else, I'm only a message away!",
+      "agentName": "Sarah",
+      "id": "019c71bd-d6a6-45b1-f000-00004e26c979",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://iliabeauty.com",
+          "value": "https://incommonbeauty.com",
           "date": ""
-        },
-        "browsingHistory": [],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://incommonbeauty.com",
+      "companyName": "In Common Beauty",
+      "notes": {
+        "templates": [
+          "If a customer asks for a recommendation, use HRQ shortcut"
+        ],
+        "promo_and_exclusions": [
+          "🅿 Refer to brand\u0027s site for the most up to date promotional information!"
+        ]
+      },
+      "blocklisted_words": [
+        "guarantee"
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns",
+        "Formula Related"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "IN COMMON: Welcome to IN COMMON! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-18 11:32:44.949",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "IN COMMON: Hey this is Sarah, how can I help you?",
+          "date_time": "2026-02-18 11:32:48.997",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Help with order",
+          "date_time": "2026-02-18 11:33:10.077",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Order number 98070",
+          "date_time": "2026-02-18 11:33:59.636",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Helloooo",
+          "date_time": "2026-02-18 11:38:29.923",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "(attn) Hey, I need help with something:",
+          "date_time": "2026-02-18 11:38:43.001",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Order number 306035",
+          "date_time": "2026-02-18 11:39:20.057",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c719f-cdf4-4683-f000-00004e26c979",
+          "message_text": "IN COMMON: Thank you for reaching out! I\u0027m happy to help with your order. Can you please let me know a bit more about the issue or question regarding Order #306035? That way, I can provide the most accurate assistance for you. ",
+          "message_type": "agent",
+          "agent": "87578",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 11:40:24.339"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I ordered February 3 and still haven\u0027t received and no updates on shipping since February 4",
+          "date_time": "2026-02-18 11:43:29.777",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c71b1-2591-4109-f000-00004e26c979",
+          "message_text": "IN COMMON: Thank you for letting me know, and I\u0027m sorry for the inconvenience! Can you please share your email address so I can check this with my team? ",
+          "message_type": "agent",
+          "agent": "109955",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 11:59:20.877"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Kbliebing@gmail.com",
+          "date_time": "2026-02-18 12:03:50.909",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Tracking Info - All brands\"; last updated: 2023-10-10 16:47:28.277",
+          "date_time": "2026-02-18 12:13:12.652",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c71bd-d6a6-45b1-f000-00004e26c979",
+          "message_text": "IN COMMON: Just to clarify, did you receive a confirmation email after placing your order? You\u0027ll get a tracking email as soon as your order ships. If you don\u0027t see it in your inbox, be sure to check your spam and promo folders; sometimes our emails end up there as well.",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 12:13:12.654"
+        }
+      ]
     }
   }
 }

@@ -3,383 +3,679 @@
   "chunk": "chunk_0021",
   "scenarios": {
     "101": {
-      "id": "019bd901-b41c-40bc-f000-0000f36d8cf9",
-      "companyName": "Steinhafels",
-      "companyWebsite": "https://steinhafels.com",
-      "agentName": "Quinn",
-      "agentInitial": "S",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for delivery related inquiries"
-        ],
-        "tone": [
-          "Don't say branches, say store locations instead"
-        ],
-        "templates": [
-          "For issues regarding tracking, use EOI shortcut",
-          "For service inquiries, use SIQ shortcut"
-        ]
-      },
-      "SystemMessage1": "Steinhafels: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Steinhafels.",
-      "SystemMessage2": "Steinhafels: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-      "SystemMessage3": "Steinhafels: Welcome, I'm Quinn from Steinhafels! You are entered for a chance to win a $1,000 Shopping Spree from Steinhafels: https://steinhafels.attn.tv/aaUeH299cL3h \n\nHave questions while you're shopping? Reply here anytime & I'll be happy to help!",
-      "SystemMessage4": "Steinhafels: Thanks for checking us out! We think you've got great taste 🛋️️🪑 Come back anytime and continue browsing here: steinhafels.attn.tv/afYCxRrotKM5",
-      "SystemMessage5": "Steinhafels: Hi there - this is Quinn, your online shopping assistant. Thanks for checking out our furniture! https://steinhafels.attn.tv/aWx-7VRh4dP3 . \n\nCan I help answer any questions for you today?",
-      "SystemMessage6": "Steinhafels: It's our Buy More, Save More Sale 🎉\n\n⭐ $100 OFF $999\n⭐ $200 OFF $1999\n⭐ $300 OFF $2999\n\nPLUS get a $200 Mastercard when you finance $1999+.\n\nShop now & stack the savings! steinhafels.attn.tv/aheYyYgg2Li8 \n\nReply STOP to end msgs.",
-      "SystemMessage7": "Steinhafels: Thanks for checking us out! We think you've got great taste 🛋️️🪑 Come back anytime and continue browsing here: steinhafels.attn.tv/aLGigY_oFW7G",
-      "SystemMessage8": "Steinhafels: Hey there, this is Quinn. Thanks for stopping by! \n\nAny questions I can answer for you today while this is still available? https://steinhafels.attn.tv/aUqG3-IILxnV .",
-      "customerMessage1": "I'm looking for the matching Ortman",
-      "customerMessage2": "Ottoman",
-      "AgentMessage1": "Steinhafels: Thank you for reaching out and showing interest in our products! I'd be happy to help you find the perfect matching Ottoman. Could you let me know the color, type or shape, and material you prefer so I can check? In the meantime, you can also browse our Ottomans here: https://steinhafels.attn.tv/a5aw8jRBtZer If you have any other questions or need further assistance, feel free to let me know.",
-      "customerMessage3": "Matching the Evelyn set",
-      "AgentMessage2": "Steinhafels: Thanks! Let me know what you think about the Bria Ottoman here: https://steinhafels.attn.tv/a-uGAqIRhPC5",
+      "agentName": "Sarah",
+      "id": "019c5eda-3134-49d1-f000-0000fb7c9a80",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://steinhafels.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "The Evelyn Collection",
-            "link": "https://www.steinhafels.com/product/collection/evelyn-collection/2850066?utm_campaign=Concierge-Site-Visitor-2&utm_source=attentive&utm_medium=sms&externalId=bNskE",
-            "icon": "eye"
+            "link": "https://www.halloweencostumes.com/women-s-plus-size-military-general-costume.html",
+            "item": "Plus Size Military General Women\u0027s Costume",
+            "timeAgo": "2026-02-15"
           },
           {
-            "item": "Evelyn 4-Pc. Sectional | Steinhafels",
-            "link": "https://www.steinhafels.com/product/item/living-room/sofas-sectionals/sectionals/evelyn-4-pc-sectional-in-dove-grey-in-left-facing/2850066/2721789",
-            "icon": "eye"
-          },
-          {
-            "item": "Evelyn 5-Pc. Sectional | Steinhafels",
-            "link": "https://www.steinhafels.com/product/item/living-room/sofas-sectionals/sectionals/evelyn-5-pc-sectional-in-dove-grey-in-left-facing/2850066/2721777",
-            "icon": "eye"
-          },
-          {
-            "item": "Evelyn 4-Pc. Sectional | Steinhafels",
-            "link": "https://www.steinhafels.com/product/item/living-room/sofas-sectionals/sectionals/evelyn-4-pc-sectional-in-dove-grey-in-left-facing/2850066/2721789",
-            "icon": "eye"
-          },
-          {
-            "item": "The Evelyn Collection",
-            "link": "https://www.steinhafels.com/product/collection/evelyn-collection/2850066",
-            "icon": "eye"
+            "link": "https://www.halloweencostumes.com/womens-vintage-combat-cutie.html",
+            "item": "Women\u0027s Vintage Combat Cutie Costume",
+            "timeAgo": "2026-02-15"
           }
         ],
-        "orders": []
+        "source": {
+          "label": "Website",
+          "value": "https://halloweencostumes.com",
+          "date": ""
+        }
       },
-      "orders": []
+      "companyWebsite": "https://halloweencostumes.com",
+      "companyName": "HalloweenCostumes.com",
+      "notes": {
+        "escalate": [
+          "ESC expired codes/discount code issues, ask for cart ID and add it in esc notes",
+          "Don\u0027t send to CS for this client, ESC if needed",
+          "For retroactive discount requests add discount % in ESC note",
+          "ESC if a customer requests a different resolution, after their escalation was resolved"
+        ],
+        "dos_and_donts": [
+          "Fun Bucks AREN\u0027T rewards points, those are given during exchanges"
+        ],
+        "promo_and_exclusions": [
+          "This brand does not use coupon codes or promotions. All of their discounts are exclusively link-based and are applied automatically to the shopping cart upon checkout when the appropriate conditions are met",
+          "Please do not advise customers to use promotional codes, do not provide them with any codes, and do not direct them to look on the website for additional codes",
+          "They do not have any promotional code text fields on site to facilitate use"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: Welcome to Halloween Costumes! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-14 19:17:42.941",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nThanks for subscribing! Shop this link to claim your 15% off. halloweencostumes.attn.tv/asKqTqWyvnJh",
+          "date_time": "2026-02-14 19:17:46.503",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nHi there! Need help finding something? Let me know how I can make your shopping easier. halloweencostumes.attn.tv/amR8MI-RXqql",
+          "date_time": "2026-02-14 19:19:03.915",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Trying to find a military custom for a historical play",
+          "date_time": "2026-02-14 19:36:58.434",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5ed6-ad54-47cd-f000-0000fb7c9a80",
+          "message_text": "Halloween Costumes: Thanks for your interest! Let me know what size you\u0027d like and if you\u0027re shopping for men, women, or kids. In the meantime, have a look at these: https://halloweencostumes.attn.tv/aISJd1CV_0hU",
+          "message_type": "agent",
+          "agent": "87359",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 20:07:33.367"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Size L for a woman",
+          "date_time": "2026-02-14 20:08:17.857",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5eda-3134-49d1-f000-0000fb7c9a80",
+          "message_text": "Halloween Costumes: Thank you for sharing your preferences. You may check our current collection here: https://halloweencostumes.attn.tv/aWEsbchsKFqB\nMay I know if you are looking for a specific style or color? I would be happy to check your options further. ",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-14 20:11:23.720"
+        }
+      ]
     },
     "102": {
-      "id": "019bc969-03e9-4860-f000-0000388879d4",
-      "companyName": "R + Co",
-      "companyWebsite": "https://randco.com",
-      "agentName": "Lesley",
-      "agentInitial": "R",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "ESC retroactive discount/price adjustment inquiries immediately",
-          "ESC discount code issues",
-          "ESC if stylists/salons want to carry the products"
-        ],
-        "templates": [
-          "For any q's about affiliate links, commissions, or salon referral links, use AFQ shortcut",
-          "All of the products are unisex, use USX shortcut"
-        ],
-        "drive_to_purchase": [
-          "Ask the cx what their hair concerns are before making a recommendation!",
-          "Make recommendations when cx has specific inquiry, don't send the quiz!",
-          "For full haircare regimen inquiries, recommend shampoo, conditioner, and at least one or two other products recommended that align with their need"
-        ],
-        "promo_and_exclusions": [
-          "When sending a code provide more detail about what the code is valid for!",
-          "When sending the promo/code end date, include the time the offer expires as well!"
-        ]
-      },
-      "SystemMessage1": "R+Co: Hey Terri, I sent over a few items I thought you would like a few days ago. Check them out here!\n\nhttps://rco.attn.tv/aAUPA2rK1ejv",
-      "SystemMessage2": "R+Co: Psst... your favorites are 20% OFF. ❤️\n\nTreat yourself: rco.attn.tv/alAuoffQ-TIP T&Cs apply.",
-      "SystemMessage3": "R+Co: Final hours: 20% OFF ends at midnight. \n\nShop before it's gone: rco.attn.tv/awkKx-3PEPAY T&Cs apply.",
-      "SystemMessage4": "R+Co: Some things are coming with us into the new year. Good hair is one of them. 🥂\n\nShop the favorites: rco.attn.tv/arFRM4KYxkGb .",
-      "SystemMessage5": "R+Co: Your FREE full-size gift just dropped. Receive a complimentary Sleep Masque ($120 value) with any full-size R+Co BLEU purchase.\n\nShop now: rco.attn.tv/aR5OA-YFewcV T&Cs apply.",
-      "SystemMessage6": "R+Co: Going fast: FREE Sleep Masque ($120 Value) with any full-size R+Co BLEU purchase.\n\nShop before it's gone: rco.attn.tv/aUMXTU9L-UD5 T&Cs apply.",
-      "SystemMessage7": "R+Co: Almost gone: FREE Sleep Masque ($120 Value) with any full-size R+Co BLEU purchase.\n\nGet yours: rco.attn.tv/a0NsbIIvKTFw T&Cs apply.",
-      "SystemMessage8": "R+Co: Your FREE full-size gift is gone at midnight. Receive a complimentary Sleep Masque with any full-size R+Co BLEU purchase.\n\nShop now: rco.attn.tv/agDT8SGkTbPd T&Cs apply.",
-      "SystemMessage9": "R+Co: Good hair days don't stop at day one. Make them last with the right dry shampoo: rco.attn.tv/aa6S8TJF8xaO .",
-      "SystemMessage10": "R+Co: Ready for a new routine? Customize a 3-piece R+Co BLEU mini bundle and receive a FREE travel bag & sample set with your order.\n\nBuild your bundle: rco.attn.tv/aUSfz2fMd6ep T&Cs apply.",
-      "SystemMessage11": "R+Co: Hey Terri! Forget something? Don't leave your upgraded haircare routine behind! Checkout now: rco.attn.tv/a0WSvQpr6cIp\n\n\nI'm here if you have any questions!\n- Lesley",
-      "customerMessage1": "Saw on today show if you use code TODAY YOU GET 40% off.",
-      "SystemMessage12": "Template used: \"Already have discount but not working - All brands\"; last updated: 2023-10-13 21:49:08.054",
-      "AgentMessage1": "R+Co: Apologies, I'm not familiar with that offer, but it might have some specific requirements. Did you manage to get the code for this offer?",
+      "agentName": "Kat",
+      "id": "019c4e8b-ae00-4d44-f000-000020d62645",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://randco.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "TELEVISION Perfect Hair Masque - 5 OZ",
-            "link": "https://www.randco.com/products/television-perfect-hair-masque?_pos=4&_psq=Tel&_ss=e&_v=1.0",
-            "icon": "eye"
+            "link": "https://www.restartmed.com/product/leptin-resistance-rx/",
+            "item": "https://www.restartmed.com/product/leptin-resistance-rx/",
+            "timeAgo": "2026-02-10"
           },
           {
-            "item": "TELEVISION Perfect Hair Shampoo + Conditioner Set - SH + CO Set",
-            "link": "https://www.randco.com/products/television-perfect-hair-shampoo-conditioner-set",
-            "icon": "eye"
+            "link": "https://www.restartmed.com/product/hashimotos-ab-rx/",
+            "item": "https://www.restartmed.com/product/hashimotos-ab-rx/",
+            "timeAgo": "2026-02-10"
           },
           {
-            "item": "TELEVISION Perfect Hair Shampoo + Conditioner Set - SH + CO Set",
-            "link": "https://www.randco.com/search?q=Television%2520masque",
-            "icon": "eye"
+            "link": "https://www.restartmed.com/product/thyro-adk/",
+            "item": "https://www.restartmed.com/product/thyro-adk/",
+            "timeAgo": "2026-02-10"
           },
           {
-            "item": "TELEVISION Perfect Hair Shampoo + Conditioner Set - SH + CO Set",
-            "link": "https://www.randco.com/search?q=Telvision%2520mas",
-            "icon": "eye"
+            "link": "https://www.restartmed.com/product/thyro-mag/?utm_source=Restart+Medical+Newsletter\u0026utm_campaign=33abf22b1e-EMAIL_CAMPAIGN_2025_09_10_05_35\u0026utm_medium=email\u0026utm_term=0_-33abf22b1e-329216848\u0026goal=0_5171b97996-33abf22b1e-329216848\u0026mc_cid=33abf22b1e\u0026mc_eid=a39a1cb3da",
+            "item": "https://www.restartmed.com/product/thyro-mag/?utm_source=Restart+Medical+Newsletter\u0026utm_campaign=33abf22b1e-EMAIL_CAMPAIGN_2025_09_10_05_35\u0026utm_medium=email\u0026utm_term=0_-33abf22b1e-329216848\u0026goal=0_5171b97996-33abf22b1e-329216848\u0026mc_cid=33abf22b1e\u0026mc_eid=a39a1cb3da",
+            "timeAgo": "2026-01-21"
           },
           {
-            "item": "TELEVISION Perfect Hair Shampoo + Conditioner Set - SH + CO Set",
-            "link": "https://www.randco.com/search?q=Telvision",
-            "icon": "eye"
+            "link": "https://www.restartmed.com/product/thyro-mag/?utm_source=Restart+Medical+Newsletter\u0026utm_campaign=33abf22b1e-EMAIL_CAMPAIGN_2025_09_10_05_35\u0026utm_medium=email\u0026utm_term=0_-33abf22b1e-329216848\u0026goal=0_5171b97996-33abf22b1e-329216848\u0026mc_cid=33abf22b1e\u0026mc_eid=a39a1cb3da",
+            "item": "https://www.restartmed.com/product/thyro-mag/?utm_source=Restart+Medical+Newsletter\u0026utm_campaign=33abf22b1e-EMAIL_CAMPAIGN_2025_09_10_05_35\u0026utm_medium=email\u0026utm_term=0_-33abf22b1e-329216848\u0026goal=0_5171b97996-33abf22b1e-329216848\u0026mc_cid=33abf22b1e\u0026mc_eid=a39a1cb3da",
+            "timeAgo": "2026-01-21"
           }
         ],
-        "orders": []
-      },
-      "orders": []
-    },
-    "103": {
-      "id": "019bd250-63a6-48dd-f000-0000ec261709",
-      "companyName": "Ekster",
-      "companyWebsite": "https://ekster.com/",
-      "agentName": "Alex",
-      "agentInitial": "E",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues"
-        ],
-        "dos_and_donts": [
-          "18K Gold Cardholder is no longer to be continued nor restocked"
-        ]
-      },
-      "SystemMessage1": "Ekster: Christmas is coming. Grab your Ekster gift at Nordstrom before it's too late:\nekster.attn.tv/acN0onrhBfPI",
-      "SystemMessage2": "Ekster: BEST DEALS END SOON: Up to 54% off our most-wanted gear. Once it's gone, it's gone. Shop now: ekster.attn.tv/aIoMfD1FD1CJ",
-      "SystemMessage3": "Ekster: ABOUT TO SELL OUT: Perforated Black Wallet Pro\n\nChristmas exclusive. 30% off. Final units left.\nOnce it's gone, it's gone: ekster.attn.tv/a2ZGQnrYzR52",
-      "SystemMessage4": "Ekster: No pressure, but that Ekster Wallet Pro - Christmas Exclusive | Perforated Black you liked? It's in high demand. Grab yours before it's gone: ekster.attn.tv/a8HPgvuea7uh",
-      "SystemMessage5": "Ekster: Final warning. Up to 54% off is almost gone.\n\nThis is the upgrade you wanted. Last chance to claim it: ekster.attn.tv/aUO9Hnb74an8",
-      "SystemMessage6": "Ekster: Thanks for an epic 2025. Start 2026 right with smarter carry, more adventure, and up to 48% off in our New Year Sale: ekster.attn.tv/apVvgrq3Th-D",
-      "SystemMessage7": "Ekster: Not sure which wallet is your wallet?\n\nWe've got a quick quiz to help you find the perfect match: ekster.attn.tv/aYlhO6yqhgAx \n\nQuestions? Reply below.",
-      "SystemMessage8": "Ekster: New Year's Sale just dropped.\n\nUp to 48% off plus a free gift at $110, just add to your cart. \n\nDo not miss this: ekster.attn.tv/aHoMf7UmIVX3",
-      "SystemMessage9": "Ekster: Forbes calls it #1. Travelers call it a game-changer. Grab the TravelPack Vacuum Kit now and upgrade your packing: ekster.attn.tv/a0Pku3W6_noD",
-      "SystemMessage10": "Ekster: Still carrying a bulky wallet? Wallet Pro changes that instantly. One click. Instant access. No bulk. Take 30% off today: ekster.attn.tv/alX6Gs7OmwVR",
-      "SystemMessage11": "Ekster: Hey LuAnn , this is Alex. Thanks for stopping by! 😊 ekster.attn.tv/aUWjKRzkW178 \n\nAny questions I can answer for you?",
-      "SystemMessage12": "Ekster: NEW: Cosmic Orange MagSafe & Nano Cardholder\n\nVIP 20% off: WINTERSUN\n\nA bold upgrade to your MagSafe carry: ekster.attn.tv/aO8eeCPA5t7p",
-      "SystemMessage13": "Ekster: Hey LuAnn , this is Alex. Thanks for stopping by! 😊 ekster.attn.tv/a6RAJO9XJr5v \n\nAny questions I can answer for you?",
-      "customerMessage1": "Yes, I just got the back plate cash holder. Do I take out the original back plate and replace it with the back plate cash holder?",
-      "AgentMessage1": "Ekster: Yes, you can replace the original backplate with the backplate cash holder for added functionality.",
-      "customerMessage2": "Are the credit cards supposed to fall out of the wallet without pushing the button?",
-      "customerMessage3": "I can literally shake the wallet, easily upside down one time in the credit card( your fake ones that came in it originally )slide out",
-      "customerMessage4": "Hello",
-      "AgentMessage2": "Ekster: I'm so sorry to hear the cards slide out with just a shake. They are built for fast card access at the push of a button.",
-      "customerMessage5": "Don't want to lose cards if I happen to hold it upside down.",
-      "AgentMessage3": "Ekster: The Ekster Cardholder Pro is designed to keep your cards secure, so they won't fall out even if the wallet is turned upside down. The card mechanism only ejects your cards when you intentionally activate it, giving you peace of mind that they'll stay in place during everyday use.",
-      "customerMessage6": "And that is why we got it. I will try it with real cards in just a moment.",
-      "customerMessage7": "Is Cardholder 2 the same model as Pro?",
-      "AgentMessage4": "Ekster: The Cardholder 2 and Cardholder Pro are different models. The Pro offers additional features and enhancements.",
-      "customerMessage8": "I need someone to call me. A real person.",
-      "customerMessage9": "Like now. Been dealing with mistakes since Christmas.",
-      "AgentMessage5": "Ekster: I totally understand your concern, and we truly apologize for the inconvenience. I'm a real person, and I'm part of our pre-sales department. Also, we don't offer phone support right now, but let me know if you have any other questions or concerns, and I'd be happy to help!",
-      "customerMessage10": "This is what was ordered.",
-      "customerMessage11": "This is what was received",
-      "customerMessage12": "\"",
-      "customerMessage13": "\"",
-      "customerMessage14": "Then I ordered a cash back plate. I was sent a flimsy little cash holder, then they set up an order for something else, and finally after multiple tries I got the cash back plate. So we're excited to put the cards in the wallet, but with one gentle shake, they fall out Supposedly you can just use one one card, but even with multiple cards, they fall out with a gentle shake and I mean very gentle",
-      "SystemMessage14": "Template used: \"Customer support\"; last updated: 2022-07-01 12:30:06.069",
-      "AgentMessage6": "Ekster: Thank you for sharing these with me, and we truly apologize for the inconvenience this has caused. It's certainly not the experience we aim to provide to our customers. In this case, the best way to continue is to email us directly at nest@ekster.com. Our team is more equipped to handle these concerns as they have further access to your order, and are happy to help!",
-      "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://ekster.com/",
+          "value": "https://restartmed.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Ekster Cardholder - Oil Slick",
-            "link": "https://www.ekster.com/products/ekster-cardholder?gclid=Cj0KCQiAgbnKBhDgARIsAGCDdlcIBV-5LuOfZ6oIWF14oDqmTfleGxRt-R8JWkxC9cvXoaSo8_KeNwEaAkAXEALw_wcB",
-            "icon": "eye"
-          },
-          {
-            "item": "Ekster Cardholder - Oil Slick",
-            "link": "https://www.ekster.com/products/ekster-cardholder?gclid=Cj0KCQiAgbnKBhDgARIsAGCDdlcIBV-5LuOfZ6oIWF14oDqmTfleGxRt-R8JWkxC9cvXoaSo8_KeNwEaAkAXEALw_wcB",
-            "icon": "eye"
-          },
-          {
-            "item": "Ekster Cardholder Pro - Jet Black",
-            "link": "https://www.ekster.com/products/ekster-cardholder-pro?gclid=Cj0KCQiAgbnKBhDgARIsAGCDdlcIBV-5LuOfZ6oIWF14oDqmTfleGxRt-R8JWkxC9cvXoaSo8_KeNwEaAkAXEALw_wcB&variant=41066485809215",
-            "icon": "eye"
-          },
-          {
-            "item": "Ekster Cardholder Pro - Midnight Blue",
-            "link": "https://www.ekster.com/products/ekster-cardholder-pro?gclid=Cj0KCQiAgbnKBhDgARIsAGCDdlcIBV-5LuOfZ6oIWF14oDqmTfleGxRt-R8JWkxC9cvXoaSo8_KeNwEaAkAXEALw_wcB",
-            "icon": "eye"
-          },
-          {
-            "item": "Ekster Cardholder Pro",
-            "link": "https://www.ekster.com/products/ekster-cardholder-pro?gclid=Cj0KCQiAgbnKBhDgARIsAGCDdlcIBV-5LuOfZ6oIWF14oDqmTfleGxRt-R8JWkxC9cvXoaSo8_KeNwEaAkAXEALw_wcB&variant=41066485809215&utm_campaign=Message-07-05-22-9%3A19&utm_source=attentive&utm_medium=flow_sms&externalId=3VzOD",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
-    },
-    "104": {
-      "id": "019be7c8-6403-42ab-f000-0000df04d600",
-      "companyName": "Gardner-White",
-      "companyWebsite": "https://gardner-white.com",
-      "agentName": "Jordan",
-      "agentInitial": "G",
-      "messageTone": "Casual",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
+      "companyWebsite": "https://restartmed.com",
+      "companyName": "Dr.Westin Childs",
+      "notes": {
         "send_to_cs": [
           "Send to CS for post purchase issues, use PPI shortcut"
-        ],
-        "templates": [
-          "If Cx texts in GIFT:"
-        ],
-        "dos_and_donts": [
-          "The stock in-store and online are the same; all in-stock items are here: https://www.gardner-white.com/promo/on-sale-now/in-stock",
-          "Don't push for AFFIRM; offer their white label card, then Fortiva, and then Affirm"
-        ],
-        "promo_and_exclusions": [
-          "Clearance center items do not qualify for additional discounts",
-          "Items priced with .95 do not qualify for promotions"
         ]
       },
-      "SystemMessage1": "Gardner White: It's a great time to update your home! Shop the Year End Sale now and save an extra 30% off sale prices. Shop Now: gw.attn.tv/aVImlXaTepi9 .",
-      "SystemMessage2": "Gardner White: CLEARANCE DEAL OF THE DAY! The stylish Eliza Sofa comes in 3 on-trend colors and is only $695! Shop Now: gw.attn.tv/a5GT1ZH3fIrD .",
-      "SystemMessage3": "Gardner White: HAPPY NEW YEAR! Shop today 10a-7p for an EXTRA 30% OFF furniture, up to 60% OFF mattresses and 50% OFF clearance: gw.attn.tv/arCHWHKIPmNn .",
-      "SystemMessage4": "Gardner White: ONE DAY SALE!\nShop Monday 10a-9pm.\nSave up to 50% off sale prices! Shop Now: https://gw.attn.tv/aQCa4IM_02Rw .",
-      "SystemMessage5": "Gardner White: Have you seen the newest arrivals in the Clearance Center inside Gardner White? Shop Now: gw.attn.tv/a5FTcJQc9L36 .",
-      "SystemMessage6": "Gardner White: Hi, Jordan here! I noticed you eyeing our Bambi Natural Swivel Pod Chair.\n\nAre you redecorating or just adding to the space? Let me know how I can help!\n\nGet it before it's gone: https://gw.attn.tv/a6dBH3FxoJWG .",
-      "customerMessage1": "Hi Jordan.  Ordered from Value city and never getting my order looking for a chair to match my couch",
-      "AgentMessage1": "Gardner White: I can help with that! Could you share more details about your couch, like its color or style? This will help me suggest a matching chair from our collection.",
-      "customerMessage2": "It is a dylan chaise sectional.  Let me get a photo of chair I ordered i am not getting that matched my couchm",
-      "customerMessage3": "\"",
-      "AgentMessage2": "Gardner White: Thanks for the picture! What do you think about the Cameron Swivel Chair? https://gw.attn.tv/aZd0srgpHLvN. This is currently on sale for $749.99.",
-      "customerMessage4": "I would like to get the same one since I have the couch.  Or something that matches",
-      "AgentMessage3": "Gardner White: I understand your concern. How about this one instead? https://gw.attn.tv/apnPhwdHdS3A",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: You are already subscribed. Click here to shop now: restartmed.com.",
+          "date_time": "2026-01-17 07:45:20.148",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: Hello! This is Kat. Thanks for checking out our store! https://drwc.attn.tv/a67xZ4wP4eNe \n\nDo you have any questions about Childs\u0027 supplements? Let me know! Stop to stop",
+          "date_time": "2026-01-21 18:26:02.023",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: Hey there, it\u0027s Kat. Thanks for stopping by! https://drwc.attn.tv/aForQf6agmBm \n\nCan I answer any supplement questions for you? Reply back to chat with me! Stop to stop",
+          "date_time": "2026-02-10 18:40:17.359",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Looking into the Leptin resistance supplement.  Don\u0027t know what my Leptin value is... how do I know if I\u0027m Leptin resistant? I need to lose 50lbs",
+          "date_time": "2026-02-10 19:03:23.605",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "escalation",
+          "message_text": "VoC: Looking into the Leptin resistance supplement. Don\u0027t know what my Leptin value is... how do I know if I\u0027m Leptin resistant? I need to lose 50lbs",
+          "date_time": "2026-02-10 19:09:32.119",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4a08-3888-457f-f000-000020d62645",
+          "message_text": "Dr. Westin Childs: Good question! I will have to double-check that with my team to be sure. As soon as I hear back, I will send you a message right away!",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 19:09:38.730"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "My Leptin level was done two years ago and it was \"15\"",
+          "date_time": "2026-02-11 15:50:00.167",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4e7e-07e2-4594-f000-000020d62645",
+          "message_text": "Dr. Westin Childs: I understand! Thank you for letting me know. Is there anything else that I can help with while I wait for a response from the team? ",
+          "message_type": "agent",
+          "agent": "50271",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 15:56:48.380"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Does Dr Child\u0027s do virtual appointments? So impressed with his knowledge and stories of his patients successes!",
+          "date_time": "2026-02-11 16:01:40.348",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c4e8b-ae00-4d44-f000-000020d62645",
+          "message_text": "Dr. Westin Childs: Thank you for your interest in Dr. Childs, he indeed has helped many patients! Regarding virtual appointments, I would have to bring that forward as well to my team. I will get back to you with updates. Please hang tight!",
+          "message_type": "agent",
+          "agent": "109617",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-11 16:11:42.878"
+        }
+      ]
+    },
+    "103": {
+      "agentName": "Kim",
+      "id": "019c53e9-3750-4dcd-f000-00001f9971f9",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://howitzerclothing.com/products/patriot-hood?variant=42060332630151",
+            "item": "Patriot Hood - TEAK / L",
+            "timeAgo": "2026-01-28"
+          },
+          {
+            "link": "https://howitzerclothing.com/collections/mens-jeans-pants/products/scout-pant-v1",
+            "item": "Scout Pant - OLIVE / 30",
+            "timeAgo": "2026-01-28"
+          },
+          {
+            "link": "https://howitzerclothing.com/collections/mens-jeans-pants/products/tiger-camo-scout-pants",
+            "item": "Tiger Camo Scout Pants - DARK BROWN TIGER CAMO / 30",
+            "timeAgo": "2026-01-27"
+          },
+          {
+            "link": "https://howitzerclothing.com/products/god-and-country-hood-1?variant=42060329877639",
+            "item": "God And Country Hood - SILVER SAGE / L",
+            "timeAgo": "2026-01-23"
+          },
+          {
+            "link": "https://howitzerclothing.com/products/scout-pant-3?tw_source=google\u0026tw_adid=770472057813\u0026tw_campaign=22916009700\u0026tw_kwdid=pla-295133209182\u0026gad_source=1\u0026gad_campaignid=22916009700\u0026gbraid=0AAAAACwjFMQGO5oH4AJBpzPpYLOfz4kKH\u0026gclid=EAIaIQobChMIxNa5uveekgMVBJjuAR2euQMSEAQYCCABEgJlTfD_BwE",
+            "item": "Scout Pant - ASSORTED / 30",
+            "timeAgo": "2026-01-22"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://howitzerclothing.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://howitzerclothing.com",
+      "companyName": "Howitzer Clothing",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Howitzer Clothing: Hi Mr. Santa, this is Kim. It looks like you left something in your cart! https://howitzerclothing.attn.tv/aZVpyZzAXsvM \n\nAre there any questions I can answer before they\u0027re gone?",
+          "date_time": "2026-01-21 10:22:52.749",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Howitzer Clothing: Hey Mr. Santa, we noticed you checking us out. Have you seen our best sellers yet? https://howitzerclothing.attn.tv/aF9peRTllq5h \n\nText back with any questions!",
+          "date_time": "2026-01-25 18:54:25.344",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Howitzer Clothing: Hey Mr. Santa, we noticed you checking us out. Have you seen our best sellers yet? https://howitzerclothing.attn.tv/aJNIRakGlqSN \n\nText back with any questions!",
+          "date_time": "2026-01-26 21:08:52.002",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Howitzer Clothing: Hey Mr. Santa, this is Kim. Thanks for checking out our site! 😊 https://howitzerclothing.attn.tv/awUV41a2hsKf \n\nAny questions I can answer for you?",
+          "date_time": "2026-01-28 10:56:28.567",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Howitzer Clothing: Hey Jeefrey, we noticed you checking us out. Have you seen our best sellers yet? https://howitzerclothing.attn.tv/a5PEx_yIn29n \n\nText back with any questions!",
+          "date_time": "2026-01-29 21:07:14.958",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Howitzer Clothing: Hey Jeefrey, we noticed you checking us out. Have you seen our best sellers yet? https://howitzerclothing.attn.tv/aOuQiHOT7_Xv \n\nText back with any questions!",
+          "date_time": "2026-01-31 10:33:08.978",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Howitzer Clothing: Hey Jeefrey, this is Kim. Thanks for checking out our site! 😊 https://howitzerclothing.attn.tv/a3mzvp6813CZ \n\nAny questions I can answer for you?",
+          "date_time": "2026-02-05 13:58:09.351",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Howitzer Clothing: Hi Jeefrey, this is Kim. It looks like you left something in your cart! https://howitzerclothing.attn.tv/axicoclE40mi \n\nAre there any questions I can answer before they\u0027re gone?",
+          "date_time": "2026-02-07 14:58:08.666",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I tried emailing them and no response",
+          "date_time": "2026-02-12 17:07:05.061",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c53e9-3750-4dcd-f000-00001f9971f9",
+          "message_text": "Howitzer Clothing: We sincerely apologize for the delay! The team is experiencing a high volume of emails, but they\u0027ll respond to you as soon as possible. We really appreciate your patience on this and hope you can give us more time to reply. Please check your spam and promotions folders, as our emails sometimes end up there. Our team is happy to help!",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 17:11:58.970"
+        }
+      ]
+    },
+    "104": {
+      "agentName": "Olivia",
+      "id": "019c49cd-c9ac-4bee-f000-000024fce95e",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://gardner-white.com",
+          "value": "https://pinklily.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Cameron Swivel Chair",
-            "link": "https://www.gardner-white.com/product/193855-cameron-swivel-chair?utm_campaign=concierge&utm_medium=sms&utm_source=attentive&externalId=PWrPc",
-            "icon": "eye"
-          },
-          {
-            "item": "Salvator Street 7-Piece Dual Power Reclining Sectional with Left Arm Facing Chaise",
-            "link": "https://www.gardner-white.com/package/194251-salvator-street-7-piece-dual-power-reclining-sectional-with-left-arm-facing-chaise",
-            "icon": "eye"
-          },
-          {
-            "item": "Cameron Swivel Chair",
-            "link": "https://www.gardner-white.com/product/193855-cameron-swivel-chair?utm_campaign=concierge&utm_medium=sms&utm_source=attentive&externalId=PWrPc",
-            "icon": "eye"
-          },
-          {
-            "item": "Cameron Swivel Chair",
-            "link": "https://www.gardner-white.com/product/193855-cameron-swivel-chair?externalId=PWrPc",
-            "icon": "eye"
-          },
-          {
-            "item": "Cameron Swivel Chair",
-            "link": "https://www.gardner-white.com/product/193855-cameron-swivel-chair?utm_campaign=concierge&utm_medium=sms&utm_source=attentive&externalId=PWrPc",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
-    },
-    "105": {
-      "id": "019be6fc-48b2-4347-f000-00009c91c5fc",
-      "companyName": "Naturalizer",
-      "companyWebsite": "https://naturalizer.com",
-      "agentName": "",
-      "agentInitial": "N",
-      "messageTone": "Polished",
-      "customerPhone": "",
-      "customerMessage": "",
-      "responseType": "template",
-      "guidelines": {
-        "escalate": [
-          "Before you ESC use ESC shortcut",
-          "When ESC code issues, add the code to the escalation notes",
-          "Always add the customer's name in your esc notes"
+      "companyWebsite": "https://pinklily.com",
+      "companyName": "The Pink Lily Boutique",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS",
+          "➜ For post purchase issues use PPI shortcut"
         ],
         "tone": [
-          "Don't respond if the customer doesn't want to engage"
+          "Close the convo once the client takes over!"
         ],
         "templates": [
-          "For inquiries regarding their order updates/status/tracking, use UPD shortcut"
+          "if cx message \"CREATOR,\" use CR shortcut"
         ]
       },
-      "SystemMessage1": "Naturalizer: Post-holiday perk: up to 60% OFF sale styles when you take an extra 20% off w/code: MOREISMORE.\n\nShop sale now: naturalizer.attn.tv/aUfPvsFn4Grz",
-      "SystemMessage2": "Naturalizer: Gifting your crew: done. Gifting yourself: starts NOW! Extra 20% off sale w/code: MOREISMORE.\n\nTreat yourself: naturalizer.attn.tv/aNbRaZvRhbo8",
-      "SystemMessage3": "Naturalizer: Up to 60% off sale with an extra 20% off is still on! Code: MOREISMORE. Don't miss this.\n\nShop sale on sale: naturalizer.attn.tv/atgbg4xdkfCF",
-      "SystemMessage4": "Naturalizer: Get up to 60% off the sale styles you've been eyeing all year before it's too late! \n\nUse code MOREISMORE: naturalizer.attn.tv/assXiFDjCv7O",
-      "SystemMessage5": "Naturalizer: Happy New Year! Start your 2026 glow up w/extra 20% off sale styles. Code MOREISMORE expires tonight.\n\nShop now: naturalizer.attn.tv/a1Z85rybXhjo",
-      "SystemMessage6": "Naturalizer: FINAL HOURS: up to 60% off sale when you take an extra 20% off w/code MOREISMORE.\n\nDon't miss out: naturalizer.attn.tv/awJNYBkHCeLg",
-      "SystemMessage7": "Naturalizer: WINTER CLEARANCE starts now! Extra 25% off sale styles w/code: LASTCALL.\n\nSnag your faves while you can: naturalizer.attn.tv/aeL5g7YijHp1",
-      "SystemMessage8": "Naturalizer: FLASH SALE! Boots starting at $74.99 when you take an extra 25% off w/code: LASTCALL.\n\nShop now: naturalizer.attn.tv/akmqeFMkdiOY",
-      "SystemMessage9": "Naturalizer: Have you shopped our $74.99+ Boot Flash yet? The steals won't last forever. Enter code: LASTCALL\n\nGo now: naturalizer.attn.tv/aDBfEQKb7TEV",
-      "SystemMessage10": "Naturalizer: Boot Flash ENDS TONIGHT! Warm up with $74.99+ boots w/code: LASTCALL.\n\nGo, go, go: naturalizer.attn.tv/apD-LdE-TMya",
-      "SystemMessage11": "Naturalizer: Here today, gone tomorrow: the $74.99+ boots you've been eyeing.\n\nShop the flash before it's too late: naturalizer.attn.tv/aRLrdXiix8TH",
-      "SystemMessage12": "Naturalizer: Your Maxwell Ballet Flat is back in stock and they WILL sell out again. Shop to it: https://naturalizer.attn.tv/aNpJSSQbXpdX .",
-      "SystemMessage13": "Naturalizer: Extra 25% off sale styles ends TONIGHT! Code: LASTCALL. Don't miss out.\n\nShop all clearance: naturalizer.attn.tv/aro3jOmBwpaB",
-      "SystemMessage14": "Naturalizer: Hey, this is Hannah. Thanks for checking out our site! 😊 https://naturalizer.attn.tv/a2hc0la_cov_ \n\nAny questions I can answer for you?",
-      "customerMessage1": "Yeah, why are your shoes $25 cheaper at Macys and Amazon?  Specifically, Soul Kacy",
-      "AgentMessage1": "Naturalizer: I'm really sorry for any confusion around the pricing. Could you share the exact price you're seeing at Macy's or Amazon for the Soul Kacy shoes? Please note that our pricing reflects that you're getting the authentic product directly from us, personally handled with care, and guaranteed to be legitimate, so you can be confident you'll receive the correct item.",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: The wait is over. Our Semi-Annual Sale just dropped! \n\nUp to 70% OFF 500+ styles!\n\npinklily.attn.tv/auQHw3bkm7vN \n\nText stop to opt out",
+          "date_time": "2026-01-11 18:32:38.147",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Semi-annual sale: NEW STYLES ADDED!\n\nOver 600 styles up to 70% OFF!\n\nSHOP NOW:\npinklily.attn.tv/aB9AahXhT8J9 \n\nText stop to opt out",
+          "date_time": "2026-01-13 10:07:13.502",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Wait...35% OFF! New arrivals + Blue Horizon Collection. \n\nDon\u0027t miss this-use code STYLE35\n\npinklily.attn.tv/aE1B74Efm6D3\n\nText stop to opt out",
+          "date_time": "2026-01-16 11:16:29.208",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Final call! 35% OFF your purchase! \n\nNew styles to wear now, wear everywhere. Use code: STYLE35\n\npinklily.attn.tv/adFSWmuwY2Gk\n\nText stop to opt out",
+          "date_time": "2026-01-18 09:02:20.952",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: NEW graphics, better prices.\n\nTake 35% off ALL graphics!\n\nGrab yours now: pinklily.attn.tv/aggKrR9UzsL0 \n\nText stop to opt out",
+          "date_time": "2026-01-20 11:32:19.192",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: 35% OFF ALL tops! \n\nUse code TOPS35. \n\nLimited time! Don\u0027t miss your faves.\npinklily.attn.tv/a4ElyNB9UKzc \n\nText stop to opt out",
+          "date_time": "2026-01-21 09:02:43.757",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Happy Hour! 40% OFF sitewide for YOU only! Ends TONIGHT\n\nUse JAN40 before it\u0027s gone \npinklily.attn.tv/aFl8caBJ-Rt0 \n\nText stop to opt out",
+          "date_time": "2026-01-22 14:03:20.470",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Final call! Bigger carts = bigger savings\n\n40% off $80+ or 35% off the rest\n\npinklily.attn.tv/aqXFLeXt6sgk \n\nText stop to opt out",
+          "date_time": "2026-01-25 09:32:19.856",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: FIRST EVER Pink Lily Outlet Sale!\n\nUp to 70% OFF + extra 20% OFF with code EXTRA20\n\npinklily.attn.tv/a7IaceXlNCsN \n\nText stop to opt out",
+          "date_time": "2026-01-26 09:03:04.162",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Final hours!\n\nThe Outlet Sale=our biggest discounts yet w/ prices you won\u0027t see again. Ends soon!\n\npinklily.attn.tv/aElQZDQR8UKG\nText stop to opt out",
+          "date_time": "2026-02-01 09:02:44.507",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Just dropped:all-new tops you\u0027ll live in! Plus-Buy one, get one 50% off.\n\nMeet your new favorites\npinklily.attn.tv/aJ6wM58_KuDo\n\nText stop to opt out",
+          "date_time": "2026-02-03 09:02:56.491",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Winter Must Go! Up to 60% OFF 800+ styles. Layers, knits \u0026 cold-weather faves.\n\nShop now.\npinklily.attn.tv/akmu3YyroHk5\n\nText stop to opt out",
+          "date_time": "2026-02-04 09:02:40.574",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Your Soft Reset starts now! New spring styles just dropped + 30% off w/ code: reset30\n\npinklily.attn.tv/ay4zJmbz6np6\n\nText stop to opt out",
+          "date_time": "2026-02-06 09:02:56.409",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: LAST CHANCE! 30% OFF w/ code: reset30 ends TONIGHT! \n\nShop our newest spring arrivals: \npinklily.attn.tv/aapM36rf236x\n\nText stop to opt out",
+          "date_time": "2026-02-08 14:03:26.999",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: FREE shipping on EVERY order!\n\nAdd to cart, we\u0027ll handle the rest.\n\nLimited time only: \npinklily.attn.tv/a8M25e7uJAc1 \n\nText stop to opt out",
+          "date_time": "2026-02-10 18:01:39.636",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Extra may be taxes?",
+          "date_time": "2026-02-10 18:02:00.338",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c49cd-c9ac-4bee-f000-000024fce95e",
+          "message_text": "Pink Lily: Thanks for getting in touch! I\u0027d be happy to help! Could you give me more context of your concern so I can assist you? Are you trying to purchase an item and are being charged for taxes?",
+          "message_type": "agent",
+          "agent": "109840",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-10 18:05:49.264"
+        }
+      ]
+    },
+    "105": {
+      "agentName": "",
+      "id": "019c6cc5-ed50-4b45-f000-0000fb90af02",
       "rightPanel": {
         "source": {
           "label": "Website",
-          "value": "https://naturalizer.com",
+          "value": "https://plankmattress.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "soul kacy flat",
-            "link": "https://www.naturalizer.com/product/womens-soul-kacy-flat-3018100/navy-leather-ec0230998?icid=NaturalizerRecommendationsPDPTop_Soul_3018100_90051_EC0230998",
-            "icon": "eye"
-          },
-          {
-            "item": "soul yippee slip on shoe",
-            "link": "https://www.naturalizer.com/product/womens-soul-yippee-slip-on-shoe-3030515/wine-red-ec0207588",
-            "icon": "eye"
-          }
-        ],
-        "orders": []
+        }
       },
-      "orders": []
+      "companyWebsite": "https://plankmattress.com",
+      "companyName": "Plank Mattress",
+      "notes": {
+        
+      },
+      "blocklisted_words": [
+        "AI"
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Plank Mattress: Welcome to Plank Mattress! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-15 01:23:31.637",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Plank Mattress: Congrats! Your offer has been activated and can be redeemed here: https://plankmattress.attn.tv/a4Xpl7kWH8He \n\nI\u0027m Sarah. I\u0027m here to answer any and all questions, just text back for personal shopping assistance! \nLet me know if you need any help!\n",
+          "date_time": "2026-02-15 01:23:35.596",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Plank Mattress: PS Don\u0027t forget to add us to your phonebook!",
+          "date_time": "2026-02-15 01:23:36.691",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Plank Mattress: Your Plank Firm Luxe is waiting patiently to give you your best night\u0027s sleep. Come back to complete your purchase! https://plankmattress.attn.tv/amwdS46M3ykZ ",
+          "date_time": "2026-02-15 12:19:45.794",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Plank Mattress: Final chance to save 30% 🚨 Presidents Day deals are coming to an end. Shop now: plankmattress.attn.tv/av_-sIgOn7T7 ",
+          "date_time": "2026-02-16 12:10:12.762",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Plank Mattress: Just HOURS left to get 30% OFF Plank! It\u0027s time to get the sleep you deserve. Shop now for a limited time: plankmattress.attn.tv/aYKUNFH_HzQ1 ",
+          "date_time": "2026-02-16 18:35:06.943",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Plank Mattress: Hey there! Your Plank Firm Luxe is waiting patiently to give you your best night\u0027s sleep.\n\nDid you have any questions I could help with?\n-Sarah\n https://plankmattress.attn.tv/afgr49Czq47G \n",
+          "date_time": "2026-02-17 12:39:05.670",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes, I\u0027m requesting the delivery be between March. Second, and march fifth, as I will not be available before then.Is that okay",
+          "date_time": "2026-02-17 12:40:01.899",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6cb6-a1ce-46e7-f000-0000fb90af02",
+          "message_text": "Plank Mattress: I understand your concern! All products shipped from our manufacturing facility are delivered via national carrier, typically FedEx. Once a shipping label is created and products leave our facility, the final delivery date is at the discretion of the carrier. While we cannot guarantee that a product shipment will arrive on a customer\u0027s preferred date, we can delay a shipment to ensure it arrives after a specified date. Please feel free to reach out to our customer service team at 1-888-210-8751 so that we can best accommodate any special requests.",
+          "message_type": "agent",
+          "agent": "46498",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 12:47:14.287"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "So could you please do that?Delay the shipment",
+          "date_time": "2026-02-17 12:48:42.010",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6cc5-ed50-4b45-f000-0000fb90af02",
+          "message_text": "Plank Mattress: Absolutely! We can help with that. While we can\u0027t guarantee delivery on a specific preferred date, we can delay your shipment to ensure it arrives after the date you specify. Please reach out to our customer service team at 1-888-210-8751 with the details, and we\u0027ll make sure your request is accommodated. Let me know if there\u0027s anything else I can help you with.",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 13:03:56.654"
+        }
+      ]
     }
   }
 }
