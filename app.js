@@ -2919,6 +2919,70 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         };
 
+        const trimTrailingLinkPunctuation = (value) => {
+            let text = String(value || '');
+            if (!text) return { link: '', trailing: '' };
+            let trailing = '';
+            while (/[.,!?;:]+$/.test(text)) {
+                trailing = text.slice(-1) + trailing;
+                text = text.slice(0, -1);
+            }
+            while (/[)\]]$/.test(text)) {
+                const closer = text.slice(-1);
+                const opener = closer === ')' ? '(' : '[';
+                const openCount = (text.match(new RegExp(`\\${opener}`, 'g')) || []).length;
+                const closeCount = (text.match(new RegExp(`\\${closer}`, 'g')) || []).length;
+                if (closeCount > openCount) {
+                    trailing = closer + trailing;
+                    text = text.slice(0, -1);
+                    continue;
+                }
+                break;
+            }
+            return { link: text, trailing };
+        };
+
+        const appendLinkifiedText = (element, textValue) => {
+            if (!element) return;
+            const text = String(textValue || '');
+            const linkPattern = /(?:https?:\/\/[^\s<>"']+|(?:[a-z0-9][a-z0-9.-]*\.attn\.tv(?:\/[^\s<>"']*)?))/gi;
+            let cursor = 0;
+            let match = null;
+
+            while ((match = linkPattern.exec(text)) !== null) {
+                const start = match.index;
+                const rawMatch = String(match[0] || '');
+                if (start > cursor) {
+                    element.appendChild(document.createTextNode(text.slice(cursor, start)));
+                }
+
+                const parts = trimTrailingLinkPunctuation(rawMatch);
+                const linkText = String(parts.link || '').trim();
+                const trailingText = String(parts.trailing || '');
+
+                if (linkText) {
+                    const anchor = document.createElement('a');
+                    anchor.className = 'message-inline-link';
+                    anchor.href = /^https?:\/\//i.test(linkText) ? linkText : `https://${linkText}`;
+                    anchor.target = '_blank';
+                    anchor.rel = 'noopener';
+                    anchor.textContent = linkText;
+                    element.appendChild(anchor);
+                } else {
+                    element.appendChild(document.createTextNode(rawMatch));
+                }
+
+                if (trailingText) {
+                    element.appendChild(document.createTextNode(trailingText));
+                }
+                cursor = start + rawMatch.length;
+            }
+
+            if (cursor < text.length) {
+                element.appendChild(document.createTextNode(text.slice(cursor)));
+            }
+        };
+
         const appendMedia = (container, mediaList) => {
             if (!Array.isArray(mediaList) || mediaList.length === 0) return;
             const mediaWrap = document.createElement('div');
@@ -2976,11 +3040,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!Array.isArray(conversation) || conversation.length === 0) {
             const fallbackMessage = document.createElement('div');
             fallbackMessage.className = 'message received';
-            fallbackMessage.innerHTML = `
-                <div class="message-content">
-                    <p>${scenario.customerMessage || ''}</p>
-                </div>
-            `;
+            const fallbackContent = document.createElement('div');
+            fallbackContent.className = 'message-content';
+            const fallbackParagraph = document.createElement('p');
+            appendLinkifiedText(fallbackParagraph, scenario.customerMessage || '');
+            fallbackContent.appendChild(fallbackParagraph);
+            fallbackMessage.appendChild(fallbackContent);
             chatMessages.appendChild(fallbackMessage);
             return;
         }
@@ -2992,12 +3057,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const isCenteredSystemNote = /^(template used:|conversation escalated:|escalation notes?:)/i.test(systemText);
                 const systemMessage = document.createElement('div');
                 systemMessage.className = `message sent system-message${isCenteredSystemNote ? ' center-system-note' : ''}`;
-                systemMessage.innerHTML = `
-                    <div class="message-content">
-                        <p>${message.content}</p>
-                    </div>
-                `;
-                appendMedia(systemMessage.querySelector('.message-content'), message.media);
+                const systemContent = document.createElement('div');
+                systemContent.className = 'message-content';
+                const systemParagraph = document.createElement('p');
+                appendLinkifiedText(systemParagraph, message.content);
+                systemContent.appendChild(systemParagraph);
+                systemMessage.appendChild(systemContent);
+                appendMedia(systemContent, message.media);
                 chatMessages.appendChild(systemMessage);
                 return;
             }
@@ -3014,7 +3080,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const content = document.createElement('div');
             content.className = 'message-content';
             const p = document.createElement('p');
-            p.textContent = message.content;
+            appendLinkifiedText(p, message.content);
             content.appendChild(p);
             appendMedia(content, message.media);
 

@@ -872,6 +872,15 @@ input:checked + .slider:before {
 .message-content p:last-child {
     margin-bottom: 0;
 }
+.message-content .message-inline-link {
+    color: #0a66d9;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    word-break: break-all;
+}
+.message-content .message-inline-link:hover {
+    color: #084fa8;
+}
 .message .timestamp {
     font-size: 0.75em;
     color: #999;
