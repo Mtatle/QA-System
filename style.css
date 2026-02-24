@@ -22,26 +22,73 @@ body {
    ============================= */
 
 .login-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(135deg, #FFF382 0%, #FFF382 100%);
+    overflow: hidden;
+    isolation: isolate;
+    background: #FFF382;
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
+.login-container::before,
+.login-container::after {
+    content: '';
+    position: absolute;
+    inset: -10%;
+    pointer-events: none;
+}
+
+.login-container::before {
+    z-index: 0;
+    opacity: 0.58;
+    background:
+        radial-gradient(circle at 14% 20%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 46%),
+        radial-gradient(circle at 82% 18%, rgba(244, 218, 90, 0.18) 0%, rgba(244, 218, 90, 0) 44%),
+        radial-gradient(circle at 52% 82%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 52%),
+        linear-gradient(125deg, rgba(255, 243, 130, 0.96) 0%, rgba(255, 242, 126, 0.98) 48%, rgba(250, 229, 110, 0.97) 100%);
+    background-size: 150% 150%;
+    background-position: 0% 50%;
+    animation: loginGradientDrift 4.5s linear infinite alternate;
+}
+
+.login-container::after {
+    z-index: 0;
+    opacity: 0.032;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+    animation: loginNoiseDrift 18s linear infinite;
+}
+
 .login-box {
-    background-color: rgba(255, 255, 255, 0.95);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.93) 100%);
     width: 100%;
     max-width: 420px;
-    border-radius: 16px;
+    border-radius: 18px;
     padding: 40px 35px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 22px 42px rgba(0, 0, 0, 0.18), 0 10px 22px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
     animation: fadeInUp 0.6s ease-out;
+}
+
+.login-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .login-header {
@@ -76,45 +123,53 @@ body {
 .login-form-group input {
     width: 100%;
     padding: 16px 20px;
-    border: 2px solid #e8e8e8;
-    border-radius: 10px;
+    border: 1.5px solid #e9e4c0;
+    border-radius: 12px;
     font-size: 16px;
     transition: all 0.3s ease;
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #2f2f2f;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
     box-sizing: border-box;
+}
+
+.login-form-group input::placeholder {
+    color: #8f8f8f;
 }
 
 .login-form-group input:focus {
     outline: none;
-    border-color: #FFF382;
+    border-color: #e2c84f;
     background-color: white;
-    box-shadow: 0 0 0 3px rgba(30, 60, 114, 0.1);
-    transform: translateY(-2px);
+    box-shadow: 0 0 0 4px rgba(255, 243, 130, 0.35), 0 8px 18px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
 }
 
 .login-btn {
     width: 100%;
     padding: 16px;
-    background: linear-gradient(135deg, #FFF382 0%, #FFF382 100%);
+    background: linear-gradient(180deg, #fff48c 0%, #ffe96e 100%);
     color: black;
-    border: none;
-    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.4);
+    box-shadow: 0 8px 20px rgba(189, 156, 30, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .login-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(30, 60, 114, 0.6);
+    box-shadow: 0 12px 26px rgba(189, 156, 30, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    filter: saturate(1.02);
 }
 
 .login-btn:active {
     transform: translateY(0);
+    box-shadow: 0 5px 12px rgba(189, 156, 30, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .google-signin-container {
@@ -127,25 +182,26 @@ body {
 .google-signin-btn {
     width: 100%;
     padding: 16px;
-    background: white;
-    color: #757575;
-    border: 2px solid #e8e8e8;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #595959;
+    border: 1.5px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease, border-color 0.22s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
 .google-signin-btn:hover {
-    border-color: #555;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transform: translateY(-1px);
+    background: white;
+    border-color: rgba(0, 0, 0, 0.16);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
+    transform: translateY(-2px);
 }
 
 .google-logo {
@@ -157,8 +213,9 @@ body {
     display: flex;
     align-items: center;
     margin: 25px 0;
-    color: #999;
-    font-size: 14px;
+    color: #8f8f8f;
+    font-size: 12px;
+    letter-spacing: 0.16em;
 }
 
 .divider::before,
@@ -166,12 +223,12 @@ body {
     content: '';
     flex: 1;
     height: 1px;
-    background: #e8e8e8;
+    background: rgba(0, 0, 0, 0.08);
 }
 
 .divider span {
     padding: 0 15px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.85);
 }
 
 .company-logo {
@@ -186,21 +243,21 @@ body {
     bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 250px;
-    height: 3px;
-    background: linear-gradient(135deg, #FFF382 0%, #FFF382 100%);
+    width: 220px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 243, 130, 0) 0%, rgba(255, 243, 130, 0.95) 50%, rgba(255, 243, 130, 0) 100%);
     border-radius: 10px;
 }
 
 .company-logo h1 {
-    background: linear-gradient(135deg, #555 0%, #555 100%);
+    background: linear-gradient(180deg, #3f3f3f 0%, #5a5a5a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-size: 2.5em;
     font-weight: 600;
     margin: 0;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
 .company-logo img {
@@ -231,6 +288,44 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes loginGradientDrift {
+    0% {
+        transform: translate3d(-6%, -4%, 0) scale(1.06) rotate(-0.35deg);
+        background-position: 0% 50%;
+    }
+    50% {
+        transform: translate3d(4.8%, 3.2%, 0) scale(1.08) rotate(0.25deg);
+        background-position: 55% 45%;
+    }
+    100% {
+        transform: translate3d(2.6%, -3.4%, 0) scale(1.07) rotate(-0.2deg);
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes loginNoiseDrift {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-42px, -30px, 0);
+    }
+}
+
+@media (hover: hover) {
+    .login-box:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 26px 48px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.65);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .login-container::before,
+    .login-container::after {
+        animation: none;
     }
 }
 
