@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const SUBMIT_ADVANCE_DELAY_MS = 1200;
     const SUBMIT_OUTBOX_STORAGE_KEY = 'qaSubmitOutbox_v1';
     const SUBMIT_RETRY_DELAYS_MS = [5000, 15000, 45000, 120000, 300000];
+    const SUBMIT_DUPLICATE_GUARD_MS = 5 * 60 * 1000;
     const DEBUG_MODE = !!(
         (window.QA_CONFIG && window.QA_CONFIG.DEBUG === true) ||
         new URLSearchParams(window.location.search).has('debug')
@@ -74,6 +75,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let submitOutboxTimer = null;
     let submitOutboxProcessing = false;
     let pendingDoneAssignmentIds = new Set();
+    let recentSubmitGuardsByAssignmentId = {};
     let locallySkippedAssignmentIds = new Set();
     let assignmentWindowPrefetchPromises = {};
     let assignmentPayloadCache = {};
@@ -487,9 +489,56 @@ document.addEventListener('DOMContentLoaded', async () => {
         return (Array.isArray(jobs) ? jobs : []).filter((job) => String(job && job.session_id || '').trim() === sid);
     }
 
-    function writeSubmitOutboxJobs(jobs) {
+    function writeSubmitOutboxJobs(jobs, options = {}) {
         const list = Array.isArray(jobs) ? jobs : [];
-        localStorage.setItem(SUBMIT_OUTBOX_STORAGE_KEY, JSON.stringify(list));
+        const sessionId = String(options.sessionId || '').trim();
+        if (!sessionId) {
+            localStorage.setItem(SUBMIT_OUTBOX_STORAGE_KEY, JSON.stringify(list));
+            return;
+        }
+        const latestAllJobs = readSubmitOutboxJobs();
+        const otherSessionJobs = latestAllJobs.filter((job) => String(job && job.session_id || '').trim() !== sessionId);
+        const sessionJobs = list.filter((job) => String(job && job.session_id || '').trim() === sessionId);
+        localStorage.setItem(SUBMIT_OUTBOX_STORAGE_KEY, JSON.stringify(otherSessionJobs.concat(sessionJobs)));
+    }
+
+    function mergeProcessedSubmitOutboxJobsForSession(processedJobs, sessionId) {
+        const sid = String(sessionId || '').trim();
+        const processedList = Array.isArray(processedJobs) ? processedJobs : [];
+        if (!sid) return processedList.slice();
+
+        const latestJobs = filterOutboxJobsForSession(readSubmitOutboxJobs(), sid);
+        const processedByJobId = {};
+        const latestHasAssignmentId = {};
+
+        processedList.forEach((job) => {
+            const jobId = String(job && job.job_id || '').trim();
+            if (!jobId) return;
+            processedByJobId[jobId] = job;
+        });
+        latestJobs.forEach((job) => {
+            const assignmentId = String(job && job.assignment_id || '').trim();
+            if (assignmentId) latestHasAssignmentId[assignmentId] = true;
+        });
+
+        const merged = latestJobs.map((job) => {
+            const jobId = String(job && job.job_id || '').trim();
+            if (!jobId || !processedByJobId[jobId]) return job;
+            const nextJob = processedByJobId[jobId];
+            delete processedByJobId[jobId];
+            return nextJob;
+        });
+
+        Object.keys(processedByJobId).forEach((jobId) => {
+            const job = processedByJobId[jobId];
+            const state = String(job && job.state || '').toLowerCase();
+            const assignmentId = String(job && job.assignment_id || '').trim();
+            if (state === 'done' || state === 'failed_terminal') return;
+            if (assignmentId && latestHasAssignmentId[assignmentId]) return;
+            merged.push(job);
+        });
+
+        return merged;
     }
 
     function refreshPendingDoneAssignmentsFromOutbox(jobs) {
@@ -508,6 +557,39 @@ document.addEventListener('DOMContentLoaded', async () => {
         const id = String(assignmentId || '').trim();
         if (!id) return false;
         return pendingDoneAssignmentIds.has(id);
+    }
+
+    function pruneRecentSubmitGuards(nowMs = Date.now()) {
+        const now = Number(nowMs) || Date.now();
+        Object.keys(recentSubmitGuardsByAssignmentId || {}).forEach((assignmentId) => {
+            const expiresAt = Number(recentSubmitGuardsByAssignmentId[assignmentId] || 0);
+            if (!expiresAt || expiresAt <= now) {
+                delete recentSubmitGuardsByAssignmentId[assignmentId];
+            }
+        });
+    }
+
+    function markRecentSubmitGuard(assignmentId, ttlMs = SUBMIT_DUPLICATE_GUARD_MS) {
+        const id = String(assignmentId || '').trim();
+        if (!id) return;
+        pruneRecentSubmitGuards();
+        recentSubmitGuardsByAssignmentId[id] = Date.now() + Math.max(1000, Number(ttlMs) || SUBMIT_DUPLICATE_GUARD_MS);
+    }
+
+    function clearRecentSubmitGuard(assignmentId) {
+        const id = String(assignmentId || '').trim();
+        if (!id) return;
+        if (recentSubmitGuardsByAssignmentId && Object.prototype.hasOwnProperty.call(recentSubmitGuardsByAssignmentId, id)) {
+            delete recentSubmitGuardsByAssignmentId[id];
+        }
+    }
+
+    function hasRecentSubmitGuard(assignmentId) {
+        const id = String(assignmentId || '').trim();
+        if (!id) return false;
+        pruneRecentSubmitGuards();
+        const expiresAt = Number(recentSubmitGuardsByAssignmentId[id] || 0);
+        return expiresAt > Date.now();
     }
 
     function getSubmitRetryDelayMs(attempts) {
@@ -567,7 +649,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             const activeSessionId = getAssignmentSessionId();
             let jobs = filterOutboxJobsForSession(readSubmitOutboxJobs(), activeSessionId);
-            writeSubmitOutboxJobs(jobs);
+            writeSubmitOutboxJobs(jobs, { sessionId: activeSessionId });
             if (!jobs.length) {
                 refreshPendingDoneAssignmentsFromOutbox([]);
                 return;
@@ -610,6 +692,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     job.state = 'done';
                     job.last_error = '';
+                    clearRecentSubmitGuard(job.assignment_id);
                     debugLog('outbox_done_success', {
                         assignmentId: String(job.assignment_id || ''),
                         attempts: Number(job.attempts || 0)
@@ -623,6 +706,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (isAlreadyDone) {
                         job.state = 'done';
                         job.last_error = '';
+                        clearRecentSubmitGuard(job.assignment_id);
                         debugLog('outbox_done_success', {
                             assignmentId: String(job.assignment_id || ''),
                             attempts: Number(job.attempts || 0),
@@ -641,6 +725,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         job.state = 'failed_terminal';
                         job.last_error = errorText;
                         job.next_retry_at = 0;
+                        clearRecentSubmitGuard(job.assignment_id);
                     } else {
                         hadRetryableFailure = true;
                         job.attempts = Math.max(0, Number(job.attempts || 0)) + 1;
@@ -658,11 +743,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             }
 
-            jobs = jobs.filter((job) => {
+            jobs = mergeProcessedSubmitOutboxJobsForSession(jobs, activeSessionId).filter((job) => {
                 const state = String(job.state || '').toLowerCase();
                 return state !== 'done' && state !== 'failed_terminal';
             });
-            writeSubmitOutboxJobs(jobs);
+            writeSubmitOutboxJobs(jobs, { sessionId: activeSessionId });
             refreshPendingDoneAssignmentsFromOutbox(jobs);
 
             if (jobs.length > 0) {
@@ -705,8 +790,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const jobs = existingJobs.filter((job) => String(job && job.assignment_id || '').trim() !== nextJob.assignment_id);
         const dedupedCount = Math.max(0, existingJobs.length - jobs.length);
         jobs.unshift(nextJob);
-        writeSubmitOutboxJobs(jobs);
+        writeSubmitOutboxJobs(jobs, { sessionId: nextJob.session_id });
         refreshPendingDoneAssignmentsFromOutbox(jobs);
+        markRecentSubmitGuard(nextJob.assignment_id);
         debugLog('outbox_job_enqueued', {
             assignmentId: String(nextJob.assignment_id || ''),
             sessionId: String(nextJob.session_id || ''),
@@ -4024,7 +4110,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 await releaseAssignmentSession('logout').catch(() => ({ ok: false }));
                 sendSessionLogout();
                 clearSubmitOutboxTimer();
-                writeSubmitOutboxJobs([]);
+                writeSubmitOutboxJobs([], { sessionId: getAssignmentSessionId() });
                 refreshPendingDoneAssignmentsFromOutbox([]);
                 assignmentSessionState = null;
                 clearAssignmentSessionId();
@@ -4523,7 +4609,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const hasSnapshot = !!(snapshotParams.snapshotId && snapshotParams.snapshotToken);
     const existingSessionId = getAssignmentSessionId();
     const existingSubmitOutboxJobs = filterOutboxJobsForSession(readSubmitOutboxJobs(), existingSessionId);
-    writeSubmitOutboxJobs(existingSubmitOutboxJobs);
+    writeSubmitOutboxJobs(existingSubmitOutboxJobs, { sessionId: existingSessionId });
     refreshPendingDoneAssignmentsFromOutbox(existingSubmitOutboxJobs);
     if (existingSubmitOutboxJobs.length && !hasSnapshot) {
         scheduleSubmitOutboxProcessing(0);
@@ -4835,6 +4921,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
                 return;
             }
+            if (assignmentContext && assignmentContext.assignment_id && hasRecentSubmitGuard(assignmentContext.assignment_id)) {
+                if (formStatus) {
+                    formStatus.textContent = 'This conversation was just queued for submission. Please wait a moment.';
+                    formStatus.style.color = '#e74c3c';
+                }
+                return;
+            }
             
             // Collect all form data
             const formData = new FormData(customForm);
@@ -4944,6 +5037,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     : null;
 
                 if (submitContext && submitContext.assignment_id && submitContext.token) {
+                    payload.assignmentId = submitContext.assignment_id;
                     const sessionId = getAssignmentSessionId();
                     if (!sessionId) {
                         throw new Error('Missing assignment session id.');
