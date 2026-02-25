@@ -87,6 +87,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     let assignmentPrefetchActiveCount = 0;
     let assignmentNavigationInProgress = false;
     let pendingAssignmentNavigationDirection = 0;
+    let assignmentNavigationBaseDisabled = false;
+    let submitNavigationLockInProgress = false;
     let snapshotCreateInFlight = false;
     let uploadedScenariosCache = [];
     let uploadedScenariosLoaded = false;
@@ -2411,6 +2413,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         return openAssignmentInPage(params, options);
     }
 
+    function syncConversationNavigationDisabledState() {
+        const disabled = !!(
+            assignmentNavigationBaseDisabled ||
+            assignmentNavigationInProgress ||
+            submitNavigationLockInProgress
+        );
+        if (previousConversationBtn) previousConversationBtn.disabled = disabled;
+        if (nextConversationBtn) nextConversationBtn.disabled = disabled;
+    }
+
+    function setSubmitNavigationLockInProgress(isLocked) {
+        submitNavigationLockInProgress = !!isLocked;
+        syncConversationNavigationDisabledState();
+    }
+
     function setAssignmentReadOnlyState(isReadOnly) {
         if (isSnapshotMode) return;
         const effectiveReadOnly = !!isReadOnly;
@@ -2435,8 +2452,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (formSubmitBtn) formSubmitBtn.disabled = effectiveReadOnly;
         if (clearFormBtn) clearFormBtn.disabled = effectiveReadOnly;
         if (internalNotesEl) internalNotesEl.disabled = effectiveReadOnly;
-        if (previousConversationBtn) previousConversationBtn.disabled = effectiveReadOnly;
-        if (nextConversationBtn) nextConversationBtn.disabled = effectiveReadOnly;
+        assignmentNavigationBaseDisabled = effectiveReadOnly;
+        syncConversationNavigationDisabledState();
     }
 
     function parseStoredFormState(raw) {
@@ -4235,8 +4252,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return true;
         }
         assignmentNavigationInProgress = true;
-        if (previousConversationBtn) previousConversationBtn.disabled = true;
-        if (nextConversationBtn) nextConversationBtn.disabled = true;
+        syncConversationNavigationDisabledState();
         try {
         let queue = assignmentQueue;
         if (!Array.isArray(queue) || !queue.length) {
@@ -4316,9 +4332,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         return true;
         } finally {
             assignmentNavigationInProgress = false;
-            const forceView = !!(assignmentContext && (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view'));
-            if (previousConversationBtn) previousConversationBtn.disabled = forceView;
-            if (nextConversationBtn) nextConversationBtn.disabled = forceView;
+            syncConversationNavigationDisabledState();
             const queuedDirection = pendingAssignmentNavigationDirection;
             pendingAssignmentNavigationDirection = 0;
             if (queuedDirection === 1 || queuedDirection === -1) {
@@ -4331,6 +4345,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function navigateConversation(direction) {
         if (isSnapshotMode) return;
+        if (submitNavigationLockInProgress) {
+            debugLog('navigateConversation blocked during submit transition', { direction });
+            return;
+        }
         const movedByAssignment = await navigateAssignmentQueue(direction);
         if (assignmentContext && assignmentContext.assignment_id) {
             return;
@@ -4446,6 +4464,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (event.repeat) return;
         if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
         if (isTypingTarget(event.target)) return;
+        if (submitNavigationLockInProgress) return;
 
         if (event.key === 'ArrowLeft') {
             if (previousConversationBtn && previousConversationBtn.disabled) return;
@@ -5041,6 +5060,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             try {
                 if (formSubmitBtn) formSubmitBtn.disabled = true;
+                setSubmitNavigationLockInProgress(true);
                 if (formStatus) { 
                     formStatus.textContent = 'Submitting...'; 
                     formStatus.style.color = '#555'; 
@@ -5128,6 +5148,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     formStatus.style.color = '#e74c3c'; 
                 }
             } finally {
+                setSubmitNavigationLockInProgress(false);
                 if (formSubmitBtn) formSubmitBtn.disabled = false;
             }
         });
