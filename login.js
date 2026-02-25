@@ -125,10 +125,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     client_id: GOOGLE_CLIENT_ID,
                     callback: handleGoogleSignIn,
                     auto_select: false,
+                    ux_mode: 'popup',
                     cancel_on_tap_outside: false,
                     itp_support: true,
                     use_fedcm_for_prompt: true,
-                    use_fedcm_for_button: true
+                    use_fedcm_for_button: false
                 });
                 
                 console.log('Google Sign-In initialized successfully');
@@ -148,6 +149,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle Google Sign-In response
     function handleGoogleSignIn(response) {
         try {
+            console.log('Google Sign-In callback received', {
+                hasCredential: !!(response && response.credential),
+                select_by: response && response.select_by ? response.select_by : 'unknown'
+            });
+            if (!response || !response.credential) {
+                showError('Google Sign-In did not return a credential. Please try again or use username login.');
+                return;
+            }
             // Decode the JWT token to get user info
             const payload = parseJwt(response.credential);
             const email = payload.email.toLowerCase();
