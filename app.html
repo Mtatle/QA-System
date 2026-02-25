@@ -19,9 +19,6 @@
             <div class="agent-status">
                 <span class="agent-name">Loading...</span>
                 <button id="logoutBtn" class="logout-btn"><i data-feather="log-out" class="icon-small"></i> LOG OUT</button>
-                <button type="button" id="snapshotShareBtn" class="snapshot-share-icon-btn" title="Create snapshot link" aria-label="Create snapshot link">
-                    <i data-feather="link" class="icon-small"></i>
-                </button>
             </div>
             <!-- Centered session timer -->
             <div class="timer-display" id="sessionTimer">00:00</div>
@@ -32,8 +29,15 @@
                     </select>
                     <p id="assignmentsStatus" class="assignments-status" aria-live="polite"></p>
                 </div>
-                <button id="previousConversationBtn" class="next-conversation-btn">PREVIOUS</button>
-                <button id="nextConversationBtn" class="next-conversation-btn">NEXT</button>
+                <button type="button" id="snapshotShareBtn" class="snapshot-share-icon-btn" title="Create snapshot link" aria-label="Create snapshot link">
+                    <i data-feather="link" class="icon-small"></i>
+                </button>
+                <button type="button" id="previousConversationBtn" class="next-conversation-btn nav-arrow-btn" title="Previous conversation" aria-label="Previous conversation">
+                    <i data-feather="arrow-left" class="icon-small"></i>
+                </button>
+                <button type="button" id="nextConversationBtn" class="next-conversation-btn nav-arrow-btn" title="Next conversation" aria-label="Next conversation">
+                    <i data-feather="arrow-right" class="icon-small"></i>
+                </button>
             </div>
         </div>
 
@@ -42,7 +46,7 @@
             <aside class="form-panel">
                 <div class="info-block">
                     <div class="info-block-header">
-                        <span><i data-feather="edit-3" class="icon-small"></i> Submission Form</span>
+                        <span><i data-feather="edit-3" class="icon-small section-header-icon"></i> Submission Form</span>
                     </div>
                     <div class="info-block-content">
                         <form id="customForm">
@@ -334,13 +338,13 @@
                 <div class="chat-messages" id="chatMessages">
                     <div class="message received">
                         <div class="message-content">
-                            <p id="customerMessage">Loading customer message...</p>
+                            <p id="customerMessage">Loading messages...</p>
                         </div>
                     </div>
                 </div>
                 <div class="internal-notes-container" id="internalNotesContainer">
                     <div class="resize-handle-horizontal" data-resize="internal-notes"></div>
-                    <label for="internalNotes"><i data-feather="file-text" class="icon-small"></i> Internal Notes</label>
+                    <label for="internalNotes"><i data-feather="file-text" class="icon-small section-header-icon"></i> Internal Notes</label>
                     <textarea id="internalNotes" rows="4" placeholder="Write internal notes here..."></textarea>
                 </div>
             </main>
@@ -368,7 +372,7 @@
 
                     <div class="info-block">
                         <div class="info-block-header">
-                            <span>Browsing History</span>
+                            <span><i data-feather="shopping-cart" class="icon-small section-header-icon"></i> Browsing History</span>
                         </div>
                         <ul class="info-list browsing-history" id="browsingHistory">
                             <!-- Dynamic content will be loaded here -->
@@ -378,7 +382,7 @@
                     <!-- Orders Section (hidden if empty) -->
                     <div class="info-block" id="ordersSection" style="display:none;">
                         <div class="info-block-header">
-                            <span><i data-feather="shopping-bag" class="icon-small"></i> Orders</span>
+                            <span><i data-feather="shopping-bag" class="icon-small section-header-icon"></i> Orders</span>
                         </div>
                         <ul class="info-list" id="ordersList"></ul>
                     </div>
@@ -387,11 +391,10 @@
                 <div class="right-panel-templates">
                     <div class="info-block templates-block">
                         <div class="info-block-header">
-                            <span>TEMPLATES</span>
+                            <span><i data-feather="layers" class="icon-small section-header-icon"></i> Templates</span>
                         </div>
                         <div class="search-templates">
-                            <i data-feather="search" class="icon-small"></i>
-                            <input type="text" placeholder="Search templates (ctrl + /)" id="templateSearch">
+                            <input type="text" placeholder="Search Templates (ctrl + /)" id="templateSearch">
                         </div>
                         <div class="templates-scroll">
                             <div id="templateItems">

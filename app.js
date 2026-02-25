@@ -3168,6 +3168,37 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         };
 
+        const appendAgentTextWithCompanyPrefix = (element, textValue) => {
+            if (!element) return;
+            const text = String(textValue || '');
+            const companyName = String((scenario && scenario.companyName) || '').trim();
+            if (!text || !companyName) {
+                appendLinkifiedText(element, text);
+                return;
+            }
+
+            const prefixCandidate = text.slice(0, companyName.length);
+            const nextChar = text.charAt(companyName.length);
+            const startsWithCompany =
+                prefixCandidate.length === companyName.length &&
+                prefixCandidate.toLowerCase() === companyName.toLowerCase() &&
+                (nextChar === ':' || nextChar === ',');
+
+            if (!startsWithCompany) {
+                appendLinkifiedText(element, text);
+                return;
+            }
+
+            const prefixEl = document.createElement('span');
+            prefixEl.className = 'message-company-prefix';
+            prefixEl.textContent = prefixCandidate;
+            element.appendChild(prefixEl);
+
+            if (text.length > companyName.length) {
+                appendLinkifiedText(element, text.slice(companyName.length));
+            }
+        };
+
         const appendMedia = (container, mediaList) => {
             if (!Array.isArray(mediaList) || mediaList.length === 0) return;
             const mediaWrap = document.createElement('div');
@@ -3300,7 +3331,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const systemContent = document.createElement('div');
                 systemContent.className = 'message-content';
                 const systemParagraph = document.createElement('p');
-                appendLinkifiedText(systemParagraph, message.content);
+                appendAgentTextWithCompanyPrefix(systemParagraph, message.content);
                 systemContent.appendChild(systemParagraph);
                 systemMessage.appendChild(systemContent);
                 appendMessageDateTime(systemMessage, message);
@@ -3321,7 +3352,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             const content = document.createElement('div');
             content.className = 'message-content';
             const p = document.createElement('p');
-            appendLinkifiedText(p, message.content);
+            if (isAgent) {
+                appendAgentTextWithCompanyPrefix(p, message.content);
+            } else {
+                appendLinkifiedText(p, message.content);
+            }
             content.appendChild(p);
             appendMedia(content, message.media);
 
