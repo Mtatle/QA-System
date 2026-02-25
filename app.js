@@ -628,17 +628,41 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         let success = false;
         let serverMsg = '';
+        let parsedJson = null;
+        let rawText = '';
         try {
-            const json = await res.json();
-            success = res.ok && json && json.status === 'success';
-            serverMsg = (json && json.message) ? json.message : '';
-        } catch (parseErr) {
-            try {
-                const txt = await res.text();
-                serverMsg = txt || '';
-            } catch (_) {}
-            success = res.ok;
+            rawText = await res.text();
+        } catch (_) {
+            rawText = '';
         }
+
+        if (rawText) {
+            try {
+                parsedJson = JSON.parse(rawText);
+            } catch (_) {
+                parsedJson = null;
+            }
+        }
+
+        if (parsedJson) {
+            success = res.ok && parsedJson.status === 'success';
+            serverMsg = parsedJson.message ? String(parsedJson.message) : '';
+        } else {
+            success = false;
+            const preview = String(rawText || '').replace(/\s+/g, ' ').trim().slice(0, 180);
+            serverMsg = preview
+                ? `Non-JSON response from evaluation endpoint (status ${res.status}): ${preview}`
+                : `Non-JSON response from evaluation endpoint (status ${res.status}).`;
+        }
+
+        debugLog('evaluation_submit_response', {
+            httpStatus: Number(res.status || 0),
+            ok: !!res.ok,
+            success: !!success,
+            hasJson: !!parsedJson,
+            serverMsg: String(serverMsg || ''),
+            rawPreview: String(rawText || '').replace(/\s+/g, ' ').trim().slice(0, 180)
+        });
 
         if (!success) {
             throw new Error(serverMsg || `Evaluation submission failed (${res.status})`);
