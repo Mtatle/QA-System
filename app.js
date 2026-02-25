@@ -655,15 +655,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 : `Non-JSON response from evaluation endpoint (status ${res.status}).`;
         }
 
-        debugLog('evaluation_submit_response', {
-            httpStatus: Number(res.status || 0),
-            ok: !!res.ok,
-            success: !!success,
-            hasJson: !!parsedJson,
-            serverMsg: String(serverMsg || ''),
-            rawPreview: String(rawText || '').replace(/\s+/g, ' ').trim().slice(0, 180)
-        });
-
         if (!success) {
             throw new Error(serverMsg || `Evaluation submission failed (${res.status})`);
         }
