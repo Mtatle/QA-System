@@ -418,8 +418,31 @@ body {
 .google-signin-container {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 10px;
     margin-bottom: 20px;
+}
+
+.google-signin-rendered {
+    width: 100%;
+    display: none;
+    justify-content: center;
+}
+
+.google-signin-rendered.show {
+    display: flex;
+}
+
+.google-signin-rendered > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.google-signin-btn.hidden {
+    display: none;
 }
 
 .google-signin-btn {
