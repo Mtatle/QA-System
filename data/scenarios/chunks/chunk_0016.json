@@ -3,1070 +3,1108 @@
   "chunk": "chunk_0016",
   "scenarios": {
     "76": {
-      "id": "019c5964-179c-4db5-f000-0000d48d6b35",
-      "companyName": "Shady Rays",
-      "companyWebsite": "https://shadyrays.com",
-      "agentName": "Sam",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: The weekend is here, so is our BOGO sale. Double up on shades with code BOGOJAN through 1/28. Exc. apply.\n\nShop Now: shadyrays.attn.tv/aNUvv1WCw6KR ",
-          "message_type": "system",
-          "date_time": "2026-01-16 20:15:17.265"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Hey, it's been a while! Let's get you back in your next favorite style! Check out our new arrivals here: shadyrays.attn.tv/aZ7GdjLUev7o \n\nAnything we can help with today? Text back with any questions!",
-          "message_type": "system",
-          "date_time": "2026-01-17 15:26:03.756"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: For a limited time, enjoy 30% OFF Sunglasses with a Snow purchase! Get your gear for the sun and the slopes: shadyrays.attn.tv/aSszTnYZk--Q ",
-          "message_type": "system",
-          "date_time": "2026-01-18 18:01:14.869"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Our Valentine's Day Sale is live! Get 40% off when you buy 2 or more pairs.\n\nSave now & spread the love: shadyrays.attn.tv/aMaXT5T2eJhO ",
-          "message_type": "system",
-          "date_time": "2026-01-22 15:00:39.750"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Last Chance! Our Valentine's Day sale ends tonight. Save 40% on 2+ pairs while you can. \n\nShop Now: shadyrays.attn.tv/aQeH5aiu_uP7 ",
-          "message_type": "system",
-          "date_time": "2026-01-25 16:00:16.688"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Hey, it's been a while! Let's get you back in your next favorite style! Check out our new arrivals here: shadyrays.attn.tv/ar66PbkHvQ4r \n\nAnything we can help with today? Text back with any questions!",
-          "message_type": "system",
-          "date_time": "2026-01-29 15:33:27.949"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Beat winter glare! 35% off sunglasses w/ code 35OFF and 55% off new outlet styles. Grab yours before they're gone:\n\nshadyrays.attn.tv/amioyj_vOAfn ",
-          "message_type": "system",
-          "date_time": "2026-01-30 17:15:13.027"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: FLASH SALE! Save 35% on limited Green Wolf frames for the course. Use code GREEN35: shadyrays.attn.tv/anJ9YRL1C97N \n\nEnds 2/5 at 11:59pm PST.",
-          "message_type": "system",
-          "date_time": "2026-02-04 16:00:23.330"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Back by popular demand: Azalea & Calico. The retired shades you loved are back! \n\nShop the launch: shadyrays.attn.tv/asVtIVpGvpMz ",
-          "message_type": "system",
-          "date_time": "2026-02-05 18:00:22.857"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Valid through Halftime only! 50% OFF your next pair of shades with code: BG60 shadyrays.attn.tv/anxqXP-SFlqQ \n\nLimit one pair. Exclusions apply.",
-          "message_type": "system",
-          "date_time": "2026-02-08 20:01:28.419"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Hey, it's been a while! Let's get you back in your next favorite style! Check out our new arrivals here: shadyrays.attn.tv/aHUdQBPZuFyK \n\nAnything we can help with today? Text back with any questions!",
-          "message_type": "system",
-          "date_time": "2026-02-09 15:20:53.913"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: The long weekend is here! Take $20 OFF shades for Presidents Day using code PD26 at checkout. Excl. apply.\n\nShop: shadyrays.attn.tv/aTh9bIaHZt2j ",
-          "message_type": "system",
-          "date_time": "2026-02-13 18:10:08.635"
-        },
-        {
-          "message_media": [],
-          "message_text": "I'm OK I never received my second pair and when I asked you guys about it, I never gotten an explanation. Why?",
-          "message_type": "customer",
-          "date_time": "2026-02-13 18:12:58.639"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Thank you for reaching out, and I'm truly sorry to hear about this. Could you share a few more details so I can better understand the situation and assist you right away?",
-          "message_type": "agent",
-          "agent": "109972",
-          "message_id": "019c5964-179c-4db5-f000-0000d48d6b35",
-          "date_time": "2026-02-13 18:44:17.849"
-        }
-      ],
-      "notes": {
-        "escalate": [
-          "ESC restock inquiries, but use STOF shortcut first"
-        ],
-        "tone": [
-          "Close the convo if the cx first message doesn't warrant a response (e.g. Them thanking us, saying they're browsing, etc.)"
-        ],
-        "templates": [
-          "For product prescription inquiries use RPP shortcut",
-          "For prescription orders questions use RPO shortcut"
-        ],
-        "dos_and_don_ts": [
-          "If customers want to return an item - clarify if they’re trying to return a recently purchased pair or if they need a replacement"
-        ]
-      },
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "019c81fa-3ee7-48e4-f000-00008816ada5",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://shadyrays.com",
-          "date": ""
-        },
-        "browsingHistory": [
+        "promotions": [
           {
-            "item": "Classic Timber - Black Ocean Polarized - ORIGINAL / Standard",
-            "link": "https://shadyrays.com/products/classic-black-emerald-timber-polarized",
-            "timeAgo": "2025-08-28"
-          },
-          {
-            "item": "Classic Timber - Black Ocean Polarized - Colorush / Standard",
-            "link": "https://shadyrays.com/products/classic-black-ocean-timber-polarized?_pos=1&_sid=1a2090e30&_ss=r&variant=41682097897519",
-            "timeAgo": "2025-08-28"
+            "title": "ATTJH3PTY8",
+            "content": [
+              "WELCOME CODE for 10% off"
+            ]
           }
         ],
+        "coupons": [
+          {
+            "subscriber_id": 2283187621,
+            "company_id": 8148,
+            "coupon_url": "https://igloocoolers.myshopify.com/discount/ATTN8bZN5P?utm_source=attentive\u0026utm_medium=sms\u0026utm_content=10-off\u0026utm_campaign=welcome",
+            "name": "Welcome-Attn",
+            "coupon": "ATTN8bZN5P",
+            "redemption_status": "USED"
+          },
+          {
+            "subscriber_id": 2283187621,
+            "description": "For Concierge use as appropriate",
+            "company_id": 8148,
+            "coupon_url": "https://igloocoolers.myshopify.com/discount/ATTJH3PTY8?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "ATTJH3PTY8",
+            "name": "Concierge 10% off",
+            "coupon": "ATTJH3PTY8",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://igloocoolers.com",
+          "date": ""
+        },
         "orders": [
           {
-            "orderNumber": "6833984",
-            "orderDate": "2025-08-28",
+            "currency": "USD",
+            "orderDate": "2024-05-05",
+            "coupon": "ATTN8bZN5P",
             "items": [
               {
-                "name": "Priority Order Processing",
-                "price": 3.99,
-                "productLink": "https://shady-rays.myshopify.com/products/priority-vip-processing"
-              },
-              {
-                "name": "Signature Live Hard Case EXCLUSIVE – Large",
-                "price": 10,
-                "productLink": "https://shady-rays.myshopify.com/products/signature-live-hard-case-exclusive-test"
+                "price": [
+                  34.99
+                ],
+                "productLink": "https://igloocoolers.myshopify.com/products/minnie-mouse-24-can-backpack",
+                "name": "Minnie Mouse 24-Can Backpack"
               }
             ],
-            "link": "https://shadyrays.com/3505401/orders/43a35f64c05302832a731eb5f0c711e9/authenticate?key=5a8d1bc2de4572b4dfd4eb98fb234db0",
-            "total": 64.37,
-            "coupon": "AT20",
-            "date_time": "2025-08-28 04:30:43.746"
-          },
-          {
-            "orderNumber": "6833984",
-            "orderDate": "2025-08-28",
-            "items": [
-              {
-                "name": "Classic Timber - Black Emerald Polarized",
-                "price": 59,
-                "productLink": "https://shady-rays.myshopify.com/products/classic-black-emerald-timber-polarized"
-              }
-            ],
-            "link": "https://shadyrays.com/3505401/orders/43a35f64c05302832a731eb5f0c711e9/authenticate?key=5a8d1bc2de4572b4dfd4eb98fb234db0",
-            "total": 64.37,
-            "coupon": "AT20",
-            "date_time": "2025-08-28 04:30:43.744"
+            "trackingLink": "https://www.fedex.com/fedextrack/?trknbr=274321040902",
+            "link": "https://www.igloocoolers.com/19201289/orders/a5f91166a8dd6a5f7302696011bf9233/authenticate?key=2903a370716ba3396625a1efe4b9cfb7\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-05 02:24:44.800",
+            "discount_amount": 3.49,
+            "orderNumber": "1312119",
+            "order_tracking_link": "https://www.fedex.com/fedextrack/?trknbr=274321040902",
+            "total": 39.56
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "77": {
-      "id": "019c5f1d-2293-4f7e-f000-0000fae60cf4",
-      "companyName": "Julie Vos",
-      "companyWebsite": "https://julievos.com",
-      "agentName": "Rebecca",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Welcome to Julie Vos! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/N9l",
-          "message_type": "system",
-          "date_time": "2026-02-12 16:33:58.293"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Hey, this is Rebecca, your personal concierge ✨ Feel free to text me with any questions! Use code WELCOMEK8V2 for 10% off your order to shop now: julievos.attn.tv/aSDqD3uWHjTa .",
-          "message_type": "system",
-          "date_time": "2026-02-12 16:34:01.501"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nIn the meantime, check out our newest arrivals > https://julievos.attn.tv/ap0H4B1X5iUj .",
-          "message_type": "system",
-          "date_time": "2026-02-12 16:35:09.048"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Fall in love with the Beaded Station Bracelet—elegant, wearable style you'll reach for daily.\n\nUse code WELCOMEK8V2 for 10% off at checkout: https://julievos.attn.tv/aE3d5loDFyoo .",
-          "message_type": "system",
-          "date_time": "2026-02-12 16:45:15.982"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: You are already subscribed. Click here to shop what's trending now: https://julievos.attn.tv/cl/9Oj",
-          "message_type": "system",
-          "date_time": "2026-02-13 16:21:10.952"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Use code WELCOMEK8V2 for 10% off and free shipping on your order.\n\nShop now: https://julievos.attn.tv/aM_QpU_33Eze .",
-          "message_type": "system",
-          "date_time": "2026-02-13 16:54:24.014"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Fall for the Cannes Hinge Cuff — a 24K gold‐plated cuff with sparkling rose‐cut endcaps and pear‐shaped gemstones that elevate your look.\n\nEnjoy free shipping.\n\nMake it yours: https://julievos.attn.tv/ahAnPM1R5Iud .",
-          "message_type": "system",
-          "date_time": "2026-02-14 13:37:31.038"
-        },
-        {
-          "message_media": [],
-          "message_text": "Can I wear my Catalina hinge bangle with clear crystal wear in water pool or shower? I wear it every day ? And what I can stack with this ? How I can find out the size ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 13:43:08.785"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Avoid wearing the Catalina Hinge Bangle in water or while showering to maintain its quality. For stacking, consider the Marbella or Milano bangles. Find sizing info here: https://julievos.attn.tv/ahRRCDme432j",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5d77-00de-4fa4-f000-0000fae60cf4",
-          "date_time": "2026-02-14 13:43:26.071"
-        },
-        {
-          "message_media": [],
-          "message_text": "One of each or two of one kind ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 13:50:38.639"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Pair the Catalina Hinge Bangle with one Marbella and one Milano bangle for a balanced stack.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5d7d-dab1-4013-f000-0000fae60cf4",
-          "date_time": "2026-02-14 13:50:55.043"
-        },
-        {
-          "message_media": [],
-          "message_text": "Can u send me picture of showing them to-gather please ? What color of Milano will go with clear crystals Catalina ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 13:52:28.499"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: I recommend the Milano Bangle in Clear Crystal to complement your Catalina Hinge Bangle. You can view the Milano Bangle here: https://julievos.attn.tv/as2FmgoFTVBw",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5d7f-8585-4963-f000-0000fae60cf4",
-          "date_time": "2026-02-14 13:52:44.311"
-        },
-        {
-          "message_media": [],
-          "message_text": "Small Marbella u don't have ? My Catalina is Cz not crystal. Milano cz and then what else u recomend ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:12:23.432"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: The Marbella Bangle is available in small. Pair your CZ Catalina with a CZ Milano and a Marbella for a chic look. Check availability here: https://julievos.attn.tv/agx_LIVHue7u",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5d91-c833-4880-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:12:41.033"
-        },
-        {
-          "message_media": [],
-          "message_text": "Are these both bangles are hinge ? \nI want in gold ? \nI also have one of your cuff with black and in gold.",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:15:03.429"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: The Milano Bangle is not hinged, but the Marbella is. Both are available in gold. Pair them with your gold cuff for a stylish stack.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5d94-31dd-40da-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:15:19.161"
-        },
-        {
-          "message_media": [],
-          "message_text": "I think if it is not hinge then I might need bigger size then it will not fit well ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:17:00.321"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: For a non-hinged bangle, consider sizing up for comfort. Check our size guide for accurate measurements: https://julievos.attn.tv/aTVwQcKyU4N8",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5d95-fb13-4c00-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:17:16.197"
-        },
-        {
-          "message_media": [],
-          "message_text": "In your webside is showing maribella gold in small is sold out ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:21:37.214"
-        },
-        {
-          "message_media": [],
-          "message_text": "U said u have Maribella gold in small i can find on your webside ? Can u help me to\nFind it ? I want to order right now ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:29:57.288"
-        },
-        {
-          "message_media": [],
-          "message_text": "Do u have any retailer in Cincinnati ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:30:17.350"
-        },
-        {
-          "message_media": [],
-          "message_text": "Or Ohio ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:30:46.949"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Sorry for the confusion! I rechecked, and it looks like the Marbella Bangle in small is already sold out. I don't have the exact date of a possible restock, but I recommend checking our website and social media frequently. In the meantime, what do you think about this instead? https://julievos.attn.tv/amdt8BxEa9MG \n\nWe are carried in fine boutiques and in jewelry stores throughout the U.S.A. To find a store near you, please email us at customercare@julievos.com or give us a call at (646)448-4345. One of my colleagues will be more than happy to help out! ",
-          "message_type": "agent",
-          "agent": "46498",
-          "message_id": "019c5daa-55af-4803-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:39:30.126"
-        },
-        {
-          "message_media": [],
-          "message_text": "I tried u guys are closed today. \nWhat else I replace Maribella with ? I liked that combination. But 😞!! \nAny other suggestions? I like to finish my order please ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:45:22.205"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Consider the Avalon Hinge Bangle in Iridescent Coral or Chalcedony Blue as an alternative. It pairs beautifully with your existing pieces. Check it out here: https://julievos.attn.tv/afoqe23xKbJH",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5daf-ed26-41bf-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:45:36.580"
-        },
-        {
-          "message_media": [],
-          "message_text": "Is it versatile?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:46:40.969"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Yes, the Avalon Hinge Bangle is versatile and complements various styles, making it a great addition to your collection.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5db1-1660-4be4-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:46:52.660"
-        },
-        {
-          "message_media": [],
-          "message_text": "As I like statement and different pieces.",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:47:40.707"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: For a statement piece, consider the Cannes Statement Hinge Bangle. It's bold and unique. View it here: https://julievos.attn.tv/aUGF374vw1LO",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5db2-0757-480d-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:47:54.345"
-        },
-        {
-          "message_media": [],
-          "message_text": "I can't find Avalon hinge bangle ? Can u send me picture ? Cannes bangle looks to wide for stacking ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:53:20.728"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: The Avalon Hinge Bangle is available in Iridescent Chalcedony Blue and Coral. View it here: https://julievos.attn.tv/aN2X4lOqyJmw",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5db7-3dd7-457c-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:53:35.980"
-        },
-        {
-          "message_media": [],
-          "message_text": "I don't see it or search it ? Can u send me screen shot ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:55:50.690"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: I'm so sorry for the confusion! It looks like we no longer have the Avalon Hinge Bangle on the website.\nFor a stone bangle, what do you think of our 'Carnaby Stone Bangle' - https://julievos.attn.tv/amiudB5LSWlK\nYou may also check our 'Colette Bangle' that looks great on stacking! - https://julievos.attn.tv/adW0iepavUoW",
-          "message_type": "agent",
-          "agent": "109964",
-          "message_id": "019c5dbe-5614-4db2-f000-0000fae60cf4",
-          "date_time": "2026-02-14 15:01:20.954"
-        },
-        {
-          "message_media": [],
-          "message_text": "What kind of material is this ? It looks white ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 15:06:21.780"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Our jewelry is hand set in 24k gold plate over nickel-free brass. The white appearance may be due to the stone or enamel used in the design.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5dc3-30c7-4436-f000-0000fae60cf4",
-          "date_time": "2026-02-14 15:06:39.072"
-        },
-        {
-          "message_media": [],
-          "message_text": "What kind of plating is those? It is not gold ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 15:07:38.535"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Our jewelry is hand set in 24k gold plate over nickel-free brass.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5dc4-5cdd-4576-f000-0000fae60cf4",
-          "date_time": "2026-02-14 15:07:55.893"
-        },
-        {
-          "message_media": [],
-          "message_text": "I spend so much time today and I think I deserve better deal or discount ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 15:08:58.335"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Thank you for shopping with us! Use code WELCOMEK8V2 for 10% off your first purchase at julievos.com. Keep an eye on our website for more deals!",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5dc5-8ddb-424c-f000-0000fae60cf4",
-          "date_time": "2026-02-14 15:09:13.973"
-        },
-        {
-          "message_media": [],
-          "message_text": "I wish u had retail here ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 15:09:28.430"
-        },
-        {
-          "message_media": [],
-          "message_text": "I already have this discount but I am hoping u can do better than this ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 15:10:28.122"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Complete your Milano Bangle — lightly hammered 24K gold-plated bangle with six circular gemstones for elegant layering.\n\nUse code WELCOMEK8V2 for 10% off.\n\nShop now: https://julievos.attn.tv/aFcMu25ihaSo .",
-          "message_type": "system",
-          "date_time": "2026-02-14 15:15:45.033"
-        },
-        {
-          "message_media": [],
-          "message_text": "But that only make one piece but I need two ? That's what we are struggling from this morning ? Unless u want to discount more on 2nd piece since all the pieces we struggling on are out of stock u recomended. I already have the code u send me.",
-          "message_type": "customer",
-          "date_time": "2026-02-14 15:51:36.315"
-        },
-        {
-          "message_media": [],
-          "message_text": "I ordered that !!",
-          "message_type": "customer",
-          "date_time": "2026-02-14 16:01:56.227"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Thanks for your order. I added 2 Milano Bangle Cubic Zirconia / Medium in my cart and it worked with the code. I'm afraid we are unable to make any changes to an order once it has been placed. I can check if it's possible to cancel. If you'd like to proceed, please confirm your email address. ",
-          "message_type": "agent",
-          "agent": "31385",
-          "message_id": "019c5e26-92cf-4078-f000-0000fae60cf4",
-          "date_time": "2026-02-14 16:55:12.248"
-        },
-        {
-          "message_media": [],
-          "message_text": "I did not get it ? I mean understand !",
-          "message_type": "customer",
-          "date_time": "2026-02-14 20:36:22.198"
-        },
-        {
-          "message_media": [],
-          "message_text": "This is how I am wearing today.",
-          "message_type": "customer",
-          "date_time": "2026-02-14 21:22:42.191"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: I do apologize for the confusion. Just to confirm, you are currently looking for an additional discount code so you could add another piece, correct? Please let me know so I can check further on this for you. ",
-          "message_type": "agent",
-          "agent": "82260",
-          "message_id": "019c5f1d-2293-4f7e-f000-0000fae60cf4",
-          "date_time": "2026-02-14 21:24:30.895"
-        }
-      ],
-      "notes": {
-        "escalate": [
-          "When ESC during the weekend/late Friday use the \"Weekend escalation template\" template"
-        ],
-        "tone": [
-          "Don't use the term \"customer service team\", use \"customer care\" instead"
-        ],
-        "dos_and_don_ts": [
-          "Do not direct cx to contact the carrier",
-          "Do not provide customers with dates for restock before checking with our team."
-        ],
-        "promo_and_promo_exclusions": [
-          "They have only 2 sales per year (June/November) - when those end the sale items are removed from the site"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://julievos.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Colette Bangle - Alabaster / S",
-            "link": "https://www.julievos.com/products/colette-bangle?variant=42406799376482&_pos=1&_psq=colette+ban&_ss=e&_v=1.0",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "item": "Colette Bangle - Alabaster / S",
-            "link": "https://www.julievos.com/products/colette-bangle?variant=42406799376482",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "item": "Tribeca Bangle - Pearl / Small",
-            "link": "https://www.julievos.com/products/tribeca-bangle?variant=42074211582050&vslyvid=2b273345-7f0b-442c-a71c-a6730bad1e88&vslywgid=4120b0aef951499c8b1d3bd0fbd75912&vslysid=_loomi_addon_1687780495364_dup1688068203_dup1688656408",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "item": "Catalina Hinge Bangle - Gold",
-            "link": "https://www.julievos.com/products/catalina-hinge-bangle?externalId=F5nHd",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "item": "Solara Nova Hinge Bangle - Gold",
-            "link": "https://www.julievos.com/products/solara-nova-hinge-bangle?srsltid=AfmBOooaK8-hQTBi3vbiDWE0iU159S9QLREacrLu_Q9PdgAF_3zCQxx9",
-            "timeAgo": "2026-02-14"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "691201",
-            "orderDate": "2026-02-14",
-            "items": [
-              {
-                "name": "Milano Bangle",
-                "price": 95,
-                "productLink": "https://juliecollection.myshopify.com/products/milano-bangle"
-              }
-            ],
-            "link": "https://www.julievos.com/57472/orders/09a21d880ba4c29db57e837c3e731ee6/authenticate?key=4ff99b05347ec8575021201854b6737a",
-            "trackingLink": "https://www.ups.com/WebTracking?loc=en_US&requester=ST&trackNums=1ZH4Y248YN39584887",
-            "order_tracking_link": "https://www.ups.com/WebTracking?loc=en_US&requester=ST&trackNums=1ZH4Y248YN39584887",
-            "total": 91.06,
-            "coupon": "WELCOMEK8V2",
-            "date_time": "2026-02-14 20:53:35.531"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "78": {
-      "id": "019c538d-82a8-4187-f000-0000fae3a890",
-      "companyName": "HEYDUDE US",
-      "companyWebsite": "https://heydude.com",
-      "agentName": "Casey",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from HEYDUDE.",
-          "message_type": "system",
-          "date_time": "2026-02-12 14:52:07.971"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: Welcome to HEYDUDE! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/o76",
-          "message_type": "system",
-          "date_time": "2026-02-12 14:52:23.074"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: We're so stoked you made it in time for the Winter Savings Event!\n\nUse code FEB25 to take 25% off almost everything.\n\nShop Now:\nhttps://heydudeshoes.attn.tv/aNUtyb_gVIEt .",
-          "message_type": "system",
-          "date_time": "2026-02-12 14:52:23.721"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: Over the next few days we'll try to help you find something that you will love!\n\nUntil then, shop our viral best-sellers: https://heydudeshoes.attn.tv/a4JP6mwTalDa .",
-          "message_type": "system",
-          "date_time": "2026-02-12 14:53:30.251"
-        },
-        {
-          "message_media": [],
-          "message_text": "Code didn't work",
-          "message_type": "customer",
-          "date_time": "2026-02-12 15:22:09.764"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: Please check our website, heydude.com, for the latest promotions and sales. If you're having trouble with a coupon, please share a screenshot for assistance.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5384-f9d5-470d-f000-0000fae3a890",
-          "date_time": "2026-02-12 15:22:29.612"
-        },
-        {
-          "message_media": [],
-          "message_text": "FEB25 does not work",
-          "message_type": "customer",
-          "date_time": "2026-02-12 15:23:09.897"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: Please check our website, heydude.com, for the most up-to-date promotions and sales. If you're having trouble with a coupon, please share a screenshot for further assistance.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5385-ce61-46ca-f000-0000fae3a890",
-          "date_time": "2026-02-12 15:23:24.018"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: Grab the Wally Vintage Classic — effortless vintage style with elastic laces and a cushioned outsole, perfect for all-day comfort.\n\nOver 20K people have recently viewed it: https://heydudeshoes.attn.tv/aVhWYUwcz0Uc .",
-          "message_type": "system",
-          "date_time": "2026-02-12 15:27:16.405"
-        },
-        {
-          "message_media": [],
-          "message_text": "Not available online",
-          "message_type": "customer",
-          "date_time": "2026-02-12 15:27:59.669"
-        },
-        {
-          "message_media": [],
-          "message_text": "Just tried to purchase them",
-          "message_type": "customer",
-          "date_time": "2026-02-12 15:28:29.764"
-        },
-        {
-          "message_media": [],
-          "message_text": "False advertising",
-          "message_type": "customer",
-          "date_time": "2026-02-12 15:29:39.545"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Code won't work - All brands\"; last updated: 2023-10-10 16:36:42.859",
-          "message_type": "template",
-          "date_time": "2026-02-12 15:31:48.932"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Code won't work\"; last updated: 2025-11-12 15:43:55.752",
-          "message_type": "template",
-          "date_time": "2026-02-12 15:31:48.932"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: I'm so sorry that you are having trouble using the code. Have you encountered any error messages? Also, could you kindly share a screenshot of the items in your cart? I'll be happy to look into the issue!\n\nPlease note that discount codes are valid for items available on this link: https://heydudeshoes.attn.tv/aILUIU3eYvlR They cannot be combined with any other offer or promotion, including sale styles. Please note that additional exclusions may apply. \n\nFor the item, are you referring to Wally Vintage Classic? If so, it is currently available and you may purchase it here: https://heydudeshoes.attn.tv/alqhy48-5lVy",
-          "message_type": "agent",
-          "agent": "109964",
-          "message_id": "019c538d-82a8-4187-f000-0000fae3a890",
-          "date_time": "2026-02-12 15:31:48.935"
-        }
-      ],
-      "notes": {
-        "important": [
-          "There is a scam website that customers are texting in from (https://heydudestores.com/)",
-          "If you notice this, reroute customers to the correct website!"
-        ],
-        "send_to_cs": [
-          "Don't ESC post-purchase issues, use PPI shortcut"
-        ],
-        "templates": [
-          "For wrong items received use WMP shortcut",
-          "For damaged items received use DMI shortcut",
-          "For order status requests use OSR shortcut"
-        ],
-        "promo_and_promo_exclusions": [
-          "The welcome code is valid for first-time customers only.",
-          "➜ Applies to full-price styles",
-          "➜ Can't be combined with any other discounts or offers, including sale styles",
-          "➜  Use cww temp for code issues",
-          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://heydude.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Wally Stretch Canvas - Black/Black - 7",
-            "link": "https://www.heydude.com/products/wally-stretch-canvas-dgn",
-            "timeAgo": "2026-02-12"
-          },
-          {
-            "item": "Wally Stretch Canvas - Black/Black",
-            "link": "https://www.heydude.com/products/wally-stretch-canvas-black-black",
-            "timeAgo": "2026-02-12"
-          },
-          {
-            "item": "Wally Stretch Canvas - Black/Black - 7",
-            "link": "https://www.heydude.com/products/wally-stretch-canvas-black-black",
-            "timeAgo": "2026-02-12"
-          },
-          {
-            "item": "Wally Washed Quilt - Black/Grey",
-            "link": "https://www.heydude.com/products/wally-washed-quilt-blk-grey",
-            "timeAgo": "2026-02-12"
-          },
-          {
-            "item": "Wally Washed Quilt - Black/Grey",
-            "link": "https://www.heydude.com/products/wally-washed-quilt-stormy-blue-multi",
-            "timeAgo": "2026-02-12"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "79": {
-      "id": "019c5ce1-d980-4bee-f000-0000fa94e362",
-      "companyName": "Comfrt",
-      "companyWebsite": "https://comfrt.com",
-      "agentName": "Samantha",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Comfrt: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Comfrt.",
-          "message_type": "system",
-          "date_time": "2026-02-11 19:30:08.935"
-        },
-        {
-          "message_media": [],
-          "message_text": "Comfrt: Welcome to Comfrt! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-11 19:30:52.537"
-        },
-        {
-          "message_media": [],
-          "message_text": "Comfrt: Welcome to Comfrt! We're so excited to have you. Here's your exclusive 15% off code: W15NwowLz\n\nClick here to auto-apply your discount and shop our viral best-sellers: comfrt.attn.tv/a-2kNb-tcXHB",
-          "message_type": "system",
-          "date_time": "2026-02-11 19:30:57.057"
-        },
-        {
-          "message_media": [],
-          "message_text": "Comfrt: Let's be friends!\n\nSave our contact to make sure we land directly in your messages.",
-          "message_type": "system",
-          "date_time": "2026-02-11 19:31:00.531"
-        },
-        {
-          "message_media": [],
-          "message_text": "Hi",
-          "message_type": "customer",
-          "date_time": "2026-02-12 12:50:12.898"
-        },
-        {
-          "message_media": [],
-          "message_text": "Did my item ship yet?",
-          "message_type": "customer",
-          "date_time": "2026-02-12 12:50:22.879"
-        },
-        {
-          "message_media": [],
-          "message_text": "Comfrt: You can check your order status here: https://comfrt.attn.tv/aJpp4GFqtgex",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c52fa-12a3-41fc-f000-0000fa94e362",
-          "date_time": "2026-02-12 12:50:46.449"
-        },
-        {
-          "message_media": [],
-          "message_text": "Comfrt: Upgrade to first class.\n\nThe VIP Airplane Mode Hoodie with a satin-lined hood and eye mask has officially landed! \n\nAlso, four new limited shades just got added to our original collection.\n\nGet it while you can: comfrt.attn.tv/aOqp8shetQdl \n",
-          "message_type": "system",
-          "date_time": "2026-02-13 18:30:58.753"
-        },
-        {
-          "message_media": [],
-          "message_text": "Where is my order",
-          "message_type": "customer",
-          "date_time": "2026-02-14 10:52:56.604"
-        },
-        {
-          "message_media": [],
-          "message_text": "I paid express shipping",
-          "message_type": "customer",
-          "date_time": "2026-02-14 10:53:02.072"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Customer support\"; last updated: 2022-09-13 01:43:33.168",
-          "message_type": "template",
-          "date_time": "2026-02-14 11:00:31.139"
-        },
-        {
-          "message_media": [],
-          "message_text": "Comfrt: Thank you for reaching out! I'm sorry to hear that you haven't received your order yet, especially since you paid for express shipping. It certainly isn't the experience I want you to have. The best way to handle this is to email us directly at info@comfrt.com. Our team is happy to help!",
-          "message_type": "agent",
-          "agent": "109968",
-          "message_id": "019c5ce1-d980-4bee-f000-0000fa94e362",
-          "date_time": "2026-02-14 11:00:31.141"
-        }
-      ],
+      "companyWebsite": "https://igloocoolers.com",
+      "companyName": "Igloo",
       "notes": {
         "send_to_cs": [
-          "Send to CS for post-purchase issues"
+          "Send to CS for legal and fraud related inquires",
+          "Send to CS for product safety inquires and threats",
+          "Send to CS for website technical issues"
         ],
         "escalate": [
-          "ESC if the discount % is not the same as indicated in the automated message"
+          "ESC if cx claims bodily injury as result of a product",
+          "ESC if cx highlights dangers to health/safety as a result of product"
         ],
         "templates": [
-          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
+          "For all post-purchase \u0026 warranty inquiries use \"SUPPORT\" temp (SPT)",
+          "For discount code issues use \"SUPPORT\" temp (SPT)",
+          "For product info that you can\u0027t find on the site use \"SUPPORT\" temp (SPT)",
+          "If cx reach out about 90 qt cooler recall, use shortcut RCC",
+          "For custom order cancellation and edit requests, don\u0027t use CED, use the designated templates instead"
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://comfrt.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "VIP Airplane Mode Travel Hoodie",
-            "link": "https://comfrt.com/products/vip-airplane-mode-travel-hoodie?variant=45241147293740",
-            "timeAgo": "2026-02-13"
-          },
-          {
-            "item": "VIP Airplane Mode Travel Hoodie",
-            "link": "https://comfrt.com/products/vip-airplane-mode-travel-hoodie?variant=45241147293740",
-            "timeAgo": "2026-02-13"
-          },
-          {
-            "item": "Ember Heated Blanket",
-            "link": "https://comfrt.com/products/ember-heated-blanket?variant=45246089068588",
-            "timeAgo": "2026-02-13"
-          },
-          {
-            "item": "Ember Heated Blanket",
-            "link": "https://comfrt.com/products/ember-heated-blanket?variant=45246089068588",
-            "timeAgo": "2026-02-13"
-          },
-          {
-            "item": "Signature Sweatpants",
-            "link": "https://comfrt.com/products/signature-fit-sweatpants?variant=40692760641580",
-            "timeAgo": "2026-02-12"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "10040276",
-            "orderDate": "2026-02-12",
-            "items": [
-              {
-                "name": "Ember Heated Blanket",
-                "price": 85,
-                "productLink": "https://comfrtclothing.myshopify.com/products/ember-heated-blanket"
-              }
-            ],
-            "link": "https://comfrt.com/56940298284/orders/c45ec4aca7b32fe08f3081fec0e26b6b/authenticate?key=1315ad896917d1dd3e3fae2105030d10",
-            "trackingLink": "https://track.flexport.com/UUS62C6610073499193",
-            "order_tracking_link": "https://track.flexport.com/UUS62C6610073499193",
-            "total": 85,
-            "date_time": "2026-02-12 02:12:13.547"
-          },
-          {
-            "orderNumber": "10040276",
-            "orderDate": "2026-02-12",
-            "items": [
-              {
-                "name": "Ember Heated Blanket",
-                "price": 85,
-                "productLink": "https://comfrtclothing.myshopify.com/products/ember-heated-blanket"
-              }
-            ],
-            "link": "https://comfrt.com/56940298284/orders/c45ec4aca7b32fe08f3081fec0e26b6b/authenticate?key=1315ad896917d1dd3e3fae2105030d10",
-            "trackingLink": "https://track.flexport.com/UUS62C6610073499193",
-            "order_tracking_link": "https://track.flexport.com/UUS62C6610073499193",
-            "total": 92.24,
-            "coupon": "W15NwowLz",
-            "date_time": "2026-02-12 02:08:11.619"
-          }
-        ]
-      },
+      "blocklisted_words": [
+        
+      ],
       "escalation_preferences": [
         "Exchanges and returns",
-        "Sizing questions",
-        "Discount code errors"
+        "warranty",
+        "broken product claims",
+        "parts",
+        "missing shipment",
+        "leaks"
       ],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "80": {
-      "id": "019c4e78-7e42-4367-f000-0000f96d5426",
-      "companyName": "Beis Travel",
-      "companyWebsite": "https://beistravel.com",
-      "agentName": "Annie",
-      "messageTone": "Casual",
+      "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Welcome to BÉIS Travel! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
           "message_type": "system",
-          "date_time": "2026-02-06 16:22:51.415"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Hey there, newbie! First time shopping with us? We've handpicked some essentials to get you started: https://beistravel.attn.tv/aX3hRG1o0ZLq . \n\nEnjoy 20% OFF with code WELCOMEDYA961 \nbeistravel.attn.tv/aZhlklTgKgvQ .",
-          "message_type": "system",
-          "date_time": "2026-02-06 16:22:55.429"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Bags designed to make your every day easier. Save our contact to make getting all of our latest updates easy.",
-          "message_type": "system",
-          "date_time": "2026-02-06 16:22:56.639"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: This friendship is forever... but your 20% OFF code isn't. Don't forget to use code WELCOMEDYA961 to save on our bestsellers. \n\nhttps://beistravel.attn.tv/aU3kLC1hvkaV .",
-          "message_type": "system",
-          "date_time": "2026-02-07 16:23:05.128"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Psst! Your items are in someone else's cart... Get 15% OFF using code welcomenWzXa9 when you check out now before they're gone. beistravel.attn.tv/aILlYmdvE8un .",
-          "message_type": "system",
-          "date_time": "2026-02-07 16:46:57.628"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Not late, but definitely cutting it close. \n\nOrder today for Valentine's Day delivery: beistravel.attn.tv/aWRJQahRDsjc .",
-          "message_type": "system",
-          "date_time": "2026-02-07 19:02:11.662"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: PSA- The Weekender in Maple is almost sold out. Don't wait-order yours now! beistravel.attn.tv/a9Ld2ooPEpvZ .",
-          "message_type": "system",
-          "date_time": "2026-02-08 08:09:27.639"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Last chance to get yourself what you *actually* want by Valentine's Day. \n\nCall it self love: beistravel.attn.tv/aZ9vDpiP1z9S .",
-          "message_type": "system",
-          "date_time": "2026-02-09 12:10:09.916"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: NEW! Style and function for every phase of life. \n\nMeet The Ultimate Family Collection: beistravel.attn.tv/a5zkdMeZQNFk .",
-          "message_type": "system",
-          "date_time": "2026-02-10 16:02:12.493"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Roses are red. Love's overdue.\n\nOrder today. 2-day shipping comes thru: beistravel.attn.tv/aolgMEk7tRXF .",
-          "message_type": "system",
-          "date_time": "2026-02-11 15:08:14.763"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Hi there. If you need additional help please reach us at hello@beistravel.com. Text STOP to opt out.",
-          "message_type": "system",
-          "date_time": "2026-02-11 15:26:33.247"
-        },
-        {
-          "message_media": [],
-          "message_text": "My discount code isn't working ",
-          "message_type": "customer",
-          "date_time": "2026-02-11 15:26:40.242"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: I'm sorry to hear that. Have you encountered any error messages? Also, could you kindly share a screenshot of the items in your cart? I'll be happy to look into the issue! ",
-          "message_type": "agent",
-          "agent": "82427",
-          "message_id": "019c4e63-6d78-448c-f000-0000f96d5426",
-          "date_time": "2026-02-11 15:27:44.915"
-        },
-        {
-          "message_media": [],
-          "message_text": "It applies it but when I go to complete checkout it goes away",
-          "message_type": "customer",
-          "date_time": "2026-02-11 15:30:30.421"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Thank you for sending that over, and I'm sorry for any inconvenience. Can you please try this cart link instead?- https://beistravel.attn.tv/aFuOl-AzcVBv Please let me k now how that goes, I'm here to assist you. ",
-          "message_type": "agent",
-          "agent": "87300",
-          "message_id": "019c4e71-9373-4269-f000-0000f96d5426",
-          "date_time": "2026-02-11 15:43:12.141"
-        },
-        {
+          "message_text": "Igloo: Welcome to Igloo! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-21 15:18:25.915",
           "message_media": [
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1770842934228_d09c839d-0f2e-4fda-b1c7-d74d2c303f4e-2.png",
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1770842934228_d09c839d-0f2e-4fda-b1c7-d74d2c303f4e-2.png"
-          ],
-          "message_text": "Still does not work.",
-          "message_type": "customer",
-          "date_time": "2026-02-11 15:49:00.462"
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Thank you for the screenshot. I can see that the discount code is applied to your cart, so could you please let me know what the issue is?",
+          "message_type": "system",
+          "message_text": "Igloo: Hey this is Sarah, how can I help you?",
+          "date_time": "2026-02-21 15:18:28.927",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I bought one of these and it faded.",
+          "date_time": "2026-02-21 15:18:47.464",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Minnie Mouse 24-Can Backpack",
+          "date_time": "2026-02-21 15:18:53.722",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Is there any type of warranty?",
+          "date_time": "2026-02-21 15:18:59.314",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c81e0-b827-4c2e-f000-00008816ada5",
+          "message_text": "Igloo: I\u0027m sorry to hear that! The best way to continue help with this request is to text \"SUPPORT\" and you will be directed to another team member. Please do not send images via text as we cannot view them. In these cases, you may email us directly using customerservice@shop.igloocoolers.com or give us a call at 1-800-273-7024. \n\nPlease note that our team is available Monday - Friday 8:00am - 5:00pm PST.",
           "message_type": "agent",
           "agent": "87295",
-          "message_id": "019c4e78-7e42-4367-f000-0000f96d5426",
-          "date_time": "2026-02-11 15:50:45.461"
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-21 15:25:14.046"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hello?",
+          "date_time": "2026-02-21 15:42:07.108",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Warranty Policy\"; last updated: 2023-03-01 19:41:23.912",
+          "date_time": "2026-02-21 15:53:06.949",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c81fa-3ee7-48e4-f000-00008816ada5",
+          "message_text": "Igloo: Thank you for reaching out! If your Igloo product fails due to defects in material or workmanship and falls within the guidelines of the Warranty policy, you may submit a claim here: https://igloo.attn.tv/a8l7NLDDwhv1 \nYou can also check out our warranty policy here: https://igloo.attn.tv/aOkSz3Ju14Ga\n\nIs there anything else that I can do for you today?",
+          "message_type": "agent",
+          "agent": "82441",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-21 15:53:06.951"
         }
-      ],
-      "notes": {
-        "escalate": [
-          "We don't ESC for this client, use ESC shortcut",
-          "If cx ask how to get/redeem the discount for downloading the app use ESC shortcut"
-        ],
-        "templates": [
-          "For Limited edition items don't use restock temps, they will not be restocked"
-        ],
-        "dos_and_don_ts": [
-          "Don't share the duration of the sale/sale dates with customers!"
-        ]
-      },
+      ]
+    },
+    "77": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "019c8805-b244-430d-f000-00001ea53322",
       "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 514143010,
+            "company_id": 9864,
+            "coupon_url": "https://custom-gold-grillz.myshopify.com/discount/CGG5OFF?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "CGG5OFF",
+            "name": "5% off",
+            "coupon": "CGG5OFF",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 514143010,
+            "company_id": 9864,
+            "coupon_url": "https://custom-gold-grillz.myshopify.com/discount/DQJ3CW1?utm_source=attentive\u0026utm_medium=text",
+            "static_code": "DQJ3CW1",
+            "name": "BROWSE ABANDONMENT 10% OFF",
+            "coupon": "DQJ3CW1",
+            "redemption_status": "UNUSED"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://beistravel.com",
+          "value": "https://customgoldgrillz.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "item": "The Weekender in Black",
-            "link": "https://beistravel.com/products/the-weekender-in-black",
-            "timeAgo": "2026-02-11"
+            "link": "https://www.customgoldgrillz.com/products/diamond-baguette-cuban-chain-in-white-gold?variant=31289845153856",
+            "item": "19mm Diamond Baguette Cuban Chain in White Gold - 18K White Gold Plated + CZs / 18 Inches",
+            "timeAgo": "2026-02-22"
           },
           {
-            "item": "The East To West Tote in Maple",
-            "link": "https://beistravel.com/products/the-east-to-west-tote-in-maple",
-            "timeAgo": "2026-02-06"
+            "link": "https://www.customgoldgrillz.com/products/diamond-mariner-cuban-chain-in-yellow-gold?variant=37547163320491",
+            "item": "15mm/19mm Diamond Mariner Cuban Chain in Yellow Gold - 18K Yellow Gold Plated + CZs / 19mm / 22 inches",
+            "timeAgo": "2026-02-22"
+          },
+          {
+            "link": "https://www.customgoldgrillz.com/products/diamond-mariner-cuban-chain-in-two-tone-rose-gold-and-white-gold?variant=31452643622976",
+            "item": "15mm/19mm Diamond Mariner Cuban Chain in Two Tone Rose Gold and White Gold - 18K White/Rose Gold Plating + CZs / 15mm / 22 Inches",
+            "timeAgo": "2026-02-22"
+          },
+          {
+            "link": "https://www.customgoldgrillz.com/products/diamond-prong-set-cuban-chain-in-white-gold?variant=37677785350315",
+            "item": "13mm Diamond Prong Set Cuban Chain in White Gold - Solid .925 Sterling Silver + CZs / 18 inches",
+            "timeAgo": "2026-02-22"
+          },
+          {
+            "link": "https://www.customgoldgrillz.com/products/custom-fit-solid-925-sterling-silver-deep-cut-grillz?variant=12790557048855\u0026country=US\u0026currency=USD\u0026utm_medium=product_sync\u0026utm_source=google\u0026utm_content=sag_organic\u0026utm_campaign=sag_organic\u0026pt_source=googleads\u0026pt_medium=cpc\u0026pt_campaign=\u0026pt_adgroup=\u0026gad_source=5\u0026gad_campaignid=22846776171\u0026gclid=Cj0KCQiA7-rMBhCFARIsAKnLKtD6FYRX_uEiGFp5kdzJ8wREusVawrWUeAGCvH7P7HKEK_0zS7bXxtoaAnfdEALw_wcB",
+            "item": "Solid .925 Sterling Silver Deep Cut Grillz - 14K Yellow Gold / No Top / 6 Bottom",
+            "timeAgo": "2026-02-22"
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
+      "companyWebsite": "https://customgoldgrillz.com",
+      "companyName": "Custom Gold Grillz",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS immediately if cx did not receive their order",
+          "Send to CS immediately for post purchase inquiries about the status of the mold, or issues with the molds",
+          "Send to CS for pricing inquiries",
+          "Send to CS if cx is looking for a more specific piece not available on the website",
+          "Send to CS if cx is asking for a code and we don\u0027t have one"
+        ],
+        "escalate": [
+          "No escalations for this client, send everything to CS"
+        ],
+        "tone": [
+          "Use Teeth instead of Pieces (e.g 8 teeth at the top)"
+        ],
+        "templates": [
+          "If the image is not coming through a second time, send Broken Image temp",
+          "For CUSTOM GRILLZ \u0026 ACCESSORIES INQUIRIES for models not available on the website use PS shortcut",
+          "For urgent concerns/delayed escalation response use PS shortcut",
+          "For delayed orders and the customer is frustrated use PS shortcut",
+          "For customer service use shortcut CS which has both the direct email/number"
+        ],
+        "dos_and_donts": [
+          "Do not use the order history as a reference to order status",
+          "If customers want to cancel their order always ask for the reason for cancellation"
+        ],
+        "drive_to_purchase": [
+          "Don\u0027t recommend pre-made grillz! Upsell to fitted and custom grillz",
+          "When recommending an item, let the cx know they can customize their order on the product page",
+          "When recommending an item, ask the cx if they are working with a budget",
+          "Use LFG shortcut to gather information and provide recommendations when cx ask about:",
+          "➜ Grillz/Chain recommendation",
+          "➜ Grillz/Chain in general",
+          "➜ Grillz/Chains pricing"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Formal",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hey Kevin welcome back! Don\u0027t forget to complete your checkout of Solid Gold Grillz today before it\u0027s gone! customgoldgrillz.attn.tv/aU9OSvm8ybec .\n\nAny last-minute questions?\n Jordan .",
+          "date_time": "2026-01-24 18:28:28.142",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Need pointing in the right direction?\n\nHere\u0027s what\u0027s trending this month: https://customgoldgrillz.attn.tv/aE2g6iSAXoDm ",
+          "date_time": "2026-01-25 10:54:52.576",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: \nWant something they can\u0027t copy? You have to start with opal.\n\nSHOP CUSTOM OPAL\ncustomgoldgrillz.attn.tv/acmEl_AO4vFa \n\n",
+          "date_time": "2026-01-27 13:30:09.294",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: \nMissing teeth? Smile still hits with the right grillz.\n\nFILL THE GAP\ncustomgoldgrillz.attn.tv/aIgyD_bfTlEk \n\n",
+          "date_time": "2026-01-31 17:00:25.271",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Need pointing in the right direction?\n\nHere\u0027s what\u0027s trending this month: https://customgoldgrillz.attn.tv/a4NumPgQHDyn ",
+          "date_time": "2026-02-02 10:15:42.376",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hey Kevin welcome back! Don\u0027t forget to complete your checkout of Solid Gold Deep Cut Grillz today before it\u0027s gone! customgoldgrillz.attn.tv/aYcnxLnHdksa .\n\nAny last-minute questions?\n Jordan .",
+          "date_time": "2026-02-02 10:33:52.073",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: You are already subscribed. Click here to shop now: customgoldgrillz.com.",
+          "date_time": "2026-02-02 22:02:41.270",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Need pointing in the right direction?\n\nHere\u0027s what\u0027s trending this month: https://customgoldgrillz.attn.tv/abJyvylHh_e5 ",
+          "date_time": "2026-02-03 10:07:01.360",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: \nNo need to break the bank. Split the payment with ShopPay.\n\nSHOP NOW\ncustomgoldgrillz.attn.tv/aMz43ruQGdAJ \n\n",
+          "date_time": "2026-02-03 11:00:22.296",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Need pointing in the right direction?\n\nHere\u0027s what\u0027s trending this month: https://customgoldgrillz.attn.tv/aXm9hokYyKwh ",
+          "date_time": "2026-02-03 19:40:47.387",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hey Kevin we noticed you checking us out. Have you seen our best sellers yet? https://customgoldgrillz.attn.tv/ak51Z1DSn9xH ",
+          "date_time": "2026-02-06 10:16:42.494",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: \nSkip basic gifts. Moissanite grillz hit harder than diamonds.\n\nSHOP MOISSANITE\ncustomgoldgrillz.attn.tv/a0FX5sWn1T1K \n\n",
+          "date_time": "2026-02-07 10:02:06.213",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hey Kevin we noticed you checking us out. Have you seen our best sellers yet? https://customgoldgrillz.attn.tv/apshHdGZvNBj ",
+          "date_time": "2026-02-09 10:24:41.098",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hey Kevin welcome back!\nThis is Jordan. Appreciate you stopping by! customgoldgrillz.attn.tv/aatC6krnXcbX \n\nAnything you got your eye on? ",
+          "date_time": "2026-02-10 10:31:39.203",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Need pointing in the right direction?\n\nHere\u0027s what\u0027s trending this month: https://customgoldgrillz.attn.tv/aETlwDTeW6nW ",
+          "date_time": "2026-02-10 10:48:16.139",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: \nOur Vday sale just dropped. Get 15% off sitewide with code VDAY15.\n\nSHOP NOW\ncustomgoldgrillz.attn.tv/ab_7zFEz0SPO \n\n",
+          "date_time": "2026-02-10 13:01:35.649",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hey Kevin we noticed you checking us out. Have you seen our best sellers yet? https://customgoldgrillz.attn.tv/ahkuvy_cDRfb ",
+          "date_time": "2026-02-12 11:00:35.931",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hi Kevin welcome back! Still interested in our best-selling jewelry? Check out our most popular options below: https://customgoldgrillz.attn.tv/alGufzQ1JaLE ",
+          "date_time": "2026-02-12 11:25:14.627",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: \nGet 15% off sitewide with our Vday sale. Use code: VDAY15.\n\nSHOP NOW\ncustomgoldgrillz.attn.tv/aDkbTAm3VF8Y \n\n",
+          "date_time": "2026-02-13 14:00:50.560",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: \nNot a gold digger, just a gold lover. Get gold grillz.\n\nSHOP NOW\ncustomgoldgrillz.attn.tv/aaqgHqbpu4mz \n\n",
+          "date_time": "2026-02-17 11:09:04.761",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: \nNew to grillz? Start with premade. Easy fit and fast shipping.\n\nSHOP NOW\ncustomgoldgrillz.attn.tv/a6o21sldjoGl \n\n",
+          "date_time": "2026-02-19 11:00:36.739",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hey Kevin welcome back! Don\u0027t forget to complete your checkout of Solid Gold Grillz today before it\u0027s gone! customgoldgrillz.attn.tv/aa3vL8Acm5qN .\n\nAny last-minute questions?\n Jordan .",
+          "date_time": "2026-02-22 10:08:23.625",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Need pointing in the right direction?\n\nHere\u0027s what\u0027s trending this month: https://customgoldgrillz.attn.tv/atVPeVzXL2DJ ",
+          "date_time": "2026-02-22 11:47:09.743",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Custom Gold Grillz: Hey Kevin, this is Jordan . I noticed you were interested in something customgoldgrillz.attn.tv/aOvvbkc7xWQV .\n\nAnything I can help you with? Text me anytime",
+          "date_time": "2026-02-22 12:27:39.082",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes",
+          "date_time": "2026-02-22 16:26:41.590",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c873f-81ca-42bb-f000-00001ea53322",
+          "message_text": "Custom Gold Grillz: I would be more than happy to help out, ask away!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-22 16:26:52.131"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I was wondering why I can not use the bogo50 on grillz. I was personally sent that promotion",
+          "date_time": "2026-02-22 16:27:59.218",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Can you answer that",
+          "date_time": "2026-02-22 16:52:39.908",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c876f-2c26-46ad-f000-00001ea53322",
+          "message_text": "Custom Gold Grillz: I\u0027m sorry for any frustration caused, and for the late response. I\u0027m afraid I don\u0027t have any information on that code, but there could be some requirement. Please share a screenshot of the offer, and I\u0027ll be happy to take a look. I\u0027m happy to help.",
+          "message_type": "agent",
+          "agent": "87359",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-22 17:18:55.944"
+        },
+        {
+          "message_id": "019c8796-7a1f-4a7b-f000-00001ea53322",
+          "message_text": "Custom Gold Grillz: Thank you for the screenshot. Could you let me know when you received that email? That offer concluded a few weeks ago. Active promotions are displayed on our homepage: https://customgoldgrillz.attn.tv/ag3n-IqaEPua I\u0027m afriad this promotion is no longer available. ",
+          "message_type": "agent",
+          "agent": "87595",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-22 18:01:51.808"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I received it this morning",
+          "date_time": "2026-02-22 19:28:08.077",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c8805-b244-430d-f000-00001ea53322",
+          "message_text": "Custom Gold Grillz: Thanks for the info. I tested, and the code BOGO50 worked on my end. Did you make sure to add two grillz to your cart? Then, go to checkout and enter the code there.",
+          "message_type": "agent",
+          "agent": "31385",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-22 20:03:20.677"
+        }
+      ]
+    },
+    "78": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "019c71d7-7c56-4f45-f000-00000a91b317",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://grandecosmetics.com/products/grandelash-md?utm_campaign=Concierge-Site-Visitor-3\u0026utm_source=attentive\u0026utm_medium=text\u0026externalId=7ZRPA",
+            "item": "GrandeLASH-MD - 2 mL (3 Month Supply)",
+            "timeAgo": "2026-02-18"
+          },
+          {
+            "link": "https://grandecosmetics.com/products/grandehair-full-boost-shampoo-mini-size?_rdiscovery-handle=grandehair-full-boost-shampoo-mini-size\u0026_rdiscovery-widget=44241\u0026variant=41843832422537",
+            "item": "GrandeHAIR Full Boost Shampoo Mini Size",
+            "timeAgo": "2025-04-19"
+          },
+          {
+            "link": "https://grandecosmetics.com/products/grandemascara",
+            "item": "GrandeMASCARA Conditioning Peptide Mascara - Black",
+            "timeAgo": "2023-11-10"
+          },
+          {
+            "link": "https://grandecosmetics.com/products/grandemascara",
+            "item": "GrandeMASCARA Conditioning Peptide Mascara - Black",
+            "timeAgo": "2023-11-10"
+          },
+          {
+            "link": "https://grandecosmetics.com/products/grandelash-md?irclickid=wyu3oZRvkxyITDr3NbUh-RdpUkFVh9R%3APX%3ApU00\u0026irgwc=1\u0026utm_source=Affiliates\u0026utm_medium=Impact\u0026utm_campaign=Upsellit.com",
+            "item": "GrandeLASH-MD Lash Enhancing Serum - 2 mL (3 Month Supply)",
+            "timeAgo": "2023-11-10"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 177320727,
+            "company_id": 3924,
+            "coupon_url": "https://grandecosmetics.com/discount/TEXT10?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=welcome",
+            "static_code": "TEXT10",
+            "name": "10% Off",
+            "coupon": "TEXT10",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 177320727,
+            "company_id": 3924,
+            "coupon_url": "https://grande-cosmetics.myshopify.com/discount/KM77SZ?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Winback (Unique) 25% off",
+            "coupon": "KM77SZ",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://grandecosmetics.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-10-21",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      68,
+                      25,
+                      24
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2025-10-21 22:33:48.905",
+            "discount_amount": 0,
+            "orderNumber": "7040738558089",
+            "total": 110.08
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-08-30",
+            "items": [
+              {
+                "price": [
+                  19.99
+                ],
+                "productLink": "https://grande-cosmetics.myshopify.com/products/grandemascara",
+                "name": "GrandeMASCARA"
+              }
+            ],
+            "date_time": "2025-08-30 17:57:05.333",
+            "discount_amount": 0,
+            "orderNumber": "6941674471561",
+            "total": 65.82
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-08-30",
+            "items": [
+              {
+                "price": [
+                  19.99
+                ],
+                "productLink": "https://grande-cosmetics.myshopify.com/products/grandemascara",
+                "name": "GrandeMASCARA"
+              }
+            ],
+            "date_time": "2025-08-30 17:57:05.217",
+            "discount_amount": 0,
+            "orderNumber": "6941674471561",
+            "total": 65.82
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-04-19",
+            "items": [
+              {
+                "price": [
+                  8
+                ],
+                "productLink": "https://grande-cosmetics.myshopify.com/products/grandehair-full-boost-shampoo-mini-size",
+                "name": "GrandeHAIR Full Boost Shampoo Mini Size"
+              }
+            ],
+            "trackingLink": "https://webtrack.dhlglobalmail.com/?trackingnumber=6102130409141815",
+            "link": "https://grandecosmetics.com/9890234434/orders/e77719a49bbc86ccb978915304507d8b/authenticate?key=d8261b04e9de7736cfbf89eeeea8c874",
+            "date_time": "2025-04-19 18:52:37.898",
+            "discount_amount": 15,
+            "orderNumber": "755172",
+            "order_tracking_link": "https://webtrack.dhlglobalmail.com/?trackingnumber=6102130409141815",
+            "total": 65.85
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-04-19",
+            "items": [
+              {
+                "price": [
+                  25
+                ],
+                "productLink": "https://grande-cosmetics.myshopify.com/products/grandemascara",
+                "name": "GrandeMASCARA"
+              }
+            ],
+            "trackingLink": "https://webtrack.dhlglobalmail.com/?trackingnumber=6102130409141815",
+            "link": "https://grandecosmetics.com/9890234434/orders/e77719a49bbc86ccb978915304507d8b/authenticate?key=d8261b04e9de7736cfbf89eeeea8c874",
+            "date_time": "2025-04-19 18:52:37.892",
+            "discount_amount": 15,
+            "orderNumber": "755172",
+            "order_tracking_link": "https://webtrack.dhlglobalmail.com/?trackingnumber=6102130409141815",
+            "total": 65.85
+          }
+        ]
+      },
+      "companyWebsite": "https://grandecosmetics.com",
+      "companyName": "Grande Cosmetics",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut",
+          "Send to CS for Trail Offer issues"
+        ],
+        "dos_and_donts": [
+          "For information on products consult this sheet: https://drive.google.com/drive/folders/1cvGL6XUHWFFel8YExN4qpriO2Tt7whOB"
+        ],
+        "promo_and_exclusions": [
+          "Trial Offer",
+          "➜ Link: https://grandecosmetics.com/pages/grandelash-md-intro-offer",
+          "➜ This is a trial offer we offer to certain customers. They get a free mini grandelash-md, just have to pay shipping",
+          "➜This offer sometimes doesn\u0027t work when there\u0027s an automatic coupon running",
+          "This code has expired, do not share it:",
+          "➜ 15offbc23"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "GRANDE: 40% OFF our Brow Collection.\nShop Now!\ngrandecosmetics.attn.tv/aA9DOtZxweFO \n",
+          "date_time": "2026-01-22 12:49:27.905",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GRANDE: Final Hours to shop our 40% OFF Brow promotion. \nShop Now!\ngrandecosmetics.attn.tv/annjIrBoW0tw ",
+          "date_time": "2026-01-25 19:11:07.322",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GRANDE: Today\u0027s Happy Hour: Additional $10 off Sets!\ngrandecosmetics.attn.tv/aMOJ1QPHtC7- \n",
+          "date_time": "2026-01-30 14:11:06.143",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GRANDE: Shop now and choose from 3 free gifts with your purchase of $65 or more. Don\u0027t miss out! \nShop Now!\ngrandecosmetics.attn.tv/aWK_MZF1zI4i ",
+          "date_time": "2026-02-02 19:02:05.638",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GRANDE: Celebrate Valentine\u0027s Day with our special collection! Shop now at grandecosmetics.attn.tv/afLx7VybIt3u. ",
+          "date_time": "2026-02-05 19:03:07.858",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GRANDE: Feel CONFIDENT at your CORE! You deserve to look amazing. Shop now and elevate your beauty routine! grandecosmetics.attn.tv/axPWTrCUnaky",
+          "date_time": "2026-02-07 14:13:07.886",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GRANDE: Choose your FREE GIFT on orders over $65! Don\u0027t miss out—SHOP NOW! grandecosmetics.attn.tv/afYu75LIlGg0 ",
+          "date_time": "2026-02-10 17:04:08.610",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GRANDE: You\u0027re on the VIP list. \n\nTake 30% off serums with code LASHDAYVIP + choose your free gift at $50. \n\nGet Shopping: grandecosmetics.attn.tv/a3j1lf4j6_is \n\n",
+          "date_time": "2026-02-13 17:30:28.585",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GRANDE: Don\u0027t lose your head start. Take 30% off serums with code LASHDAYVIP + choose your free gift at $50. \n\nShop before it opens to all: grandecosmetics.attn.tv/a_QBwTlUx97Q ",
+          "date_time": "2026-02-14 19:25:23.687",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GRANDE: Our National Lash Day event is here. 30% off serums, 50% off mascaras + a free gift at $50. \n\nTreat your lashes: grandecosmetics.attn.tv/aP3DPG_wEJRb ",
+          "date_time": "2026-02-15 16:05:26.257",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GRANDE: \"Game. Changer... the results speak for themselves.\" - Nichole W. \n\nGrandeLASH-MD is now 30% off. \n\nShop now: grandecosmetics.attn.tv/aFRYnItd7TJx ",
+          "date_time": "2026-02-17 18:10:12.583",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GRANDE: Hey Teresa , this is Sarah. Thanks for checking out our site! 😊 https://grandecosmetics.attn.tv/a7myK9gB5Urn \n\nAny questions I can assist with today? Reply back to chat with me!",
+          "date_time": "2026-02-18 12:09:57.748",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi Sarah! My order history should show that I have been a long time customer of Grande mascara. However, the last 2 I have opened have been terrible (dry/thick) like it is old. So disappointing.",
+          "date_time": "2026-02-18 12:39:09.081",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Post Purchase Inquiries \"; last updated: 2024-02-12 23:17:52.363",
+          "date_time": "2026-02-18 12:41:13.457",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c71d7-7c56-4f45-f000-00000a91b317",
+          "message_text": "GRANDE: I am very sorry to hear that! Unfortunately, we don\u0027t handle post-purchase requests via text. Please email your request to customerservice@grandecosmetics.com or feel free to call this number 877-835-3010. Our team would be happy to look into this. \n \nIs there anything else that I can do for you today?",
+          "message_type": "agent",
+          "agent": "82441",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 12:41:13.462"
+        }
+      ]
+    },
+    "79": {
+      "agentName": "Kiara",
+      "has_shopify": true,
+      "id": "019c8dcc-3d7e-4c01-f000-0000a4e387b3",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Sitewide Sale",
+            "content": [
+              "• Buy 2, get 30% OFF everything!\n→ No code required"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2977,
+            "name": "VDAY40",
+            "static_code": "VDAY40"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://dorado.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://dorado.com",
+      "companyName": "Dorado Fashion",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping Issues: Where\u0027s my order? Any order issues, direct to customer service"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "DORADO: last chance\n\npersonalized Valentine\u0027s gifts\n\nget up to 75% off with code: LOVELY \n \nonly 12 hours left: \nhttps://dorado.attn.tv/ae05KQqzEc9P .",
+          "date_time": "2026-01-30 12:03:40.795",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "DORADO: Valentine\u0027s? \nCute.\n\nBut this one\u0027s for you.\n\nUp to 80% OFF with code: HEART\n12 hours only. \n\nTreat yourself:\ndorado.attn.tv/a7OFXo-oLd93 .\n",
+          "date_time": "2026-02-14 12:04:06.762",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Send%20this%20text%20to%20subscribe%20to%20recurring%20automated%20personalized%20marketing%20alerts%20%28e.g.%20cart%20reminders%29%20from%20DORADO%20(ref:%20zgr9n)",
+          "date_time": "2026-02-23 22:51:03.324",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Too many emails - All brands\"; last updated: 2023-10-10 17:50:00.779",
+          "date_time": "2026-02-23 22:58:18.525",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c8dcc-3d7e-4c01-f000-0000a4e387b3",
+          "message_text": "DORADO: Thanks for the screenshot. Can you tell me which specific item from our bestsellers are you most interested in? Also, let me know if you have any questions about our products! ",
+          "message_type": "agent",
+          "agent": "31385",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-23 22:58:18.527"
+        }
+      ]
+    },
+    "80": {
+      "agentName": "Mike",
+      "has_shopify": true,
+      "id": "019c81fc-82ba-4999-f000-0000e489adbc",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "APP10",
+            "content": [
+              "• Offer this code if customers didn\u0027t get the $10 after installing the app"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 3834228156,
+            "company_id": 10313,
+            "coupon_url": "https://relentlessbetrayal.com/discount/WELCOME10?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "static_code": "WELCOME10",
+            "name": "10% off",
+            "coupon": "WELCOME10",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://relentlessbetrayal.com/",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://relentlessbetrayal.com/collections/hold-steady-drop/products/hold-steady-snapback?utm_source=Facehead_fb\u0026utm_medium=Facebook_Mobile_Feed\u0026utm_campaign=FH+-+USA+-+Retargeting+-+Conversions+-+Hats+-+September+2025+Drop\u0026utm_content=Heat+%3A%29+-+Shop_Hold+Steady+-+Hats+-+V3+-+Copy\u0026fbclid=IwZXh0bgNhZW0BMABhZGlkAasmLm9YK-cBHguLgpRz2tstYfk6pFijzeLDC07VTMZskGtrqA9FHsZY-jc6y6-KHVPorQwY_aem_i9uvS93AGPgPrKlNE5Y-bA\u0026campaign_id=120231795364770599\u0026ad_id=120231795715380599\u0026utm_id=120231795364770599\u0026utm_term=120231795364780599",
+            "item": "Hold Steady Snapback",
+            "timeAgo": "2025-10-29"
+          }
+        ]
+      },
+      "companyWebsite": "https://relentlessbetrayal.com/",
+      "companyName": "Relentless Betrayal",
+      "notes": {
+        
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Super Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Relentless Betrayal: Welcome to Relentless Betrayal! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-15 19:22:14.253",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Relentless Betrayal: Hey! I\u0027m Mike with Relentless Betrayal! Just wanted to say thanks for joining!\nHere\u0027s your coupon for you WELCOME10. You can auto-apply it and shop now here: relentlessbetrayal.attn.tv/aS0n34ZaraAr \n\nText me any time with questions!\n",
+          "date_time": "2026-02-15 19:22:18.315",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Relentless Betrayal: Don\u0027t forget to save our contact to get exclusive updates!",
+          "date_time": "2026-02-15 19:22:19.051",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Relentless Betrayal: Thank you for your purchase! Your order number is 283060. View more information about your order here: https://relentlessbetrayal.attn.tv/a2aXfDZPHJlD .",
+          "date_time": "2026-02-15 20:51:35.985",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Relentless Betrayal: Mike again! Just want to make sure you didn\u0027t miss your coupon WELCOME10. Grabbed this link for you relentlessbetrayal.attn.tv/aJMNlt9cVc-A Reach out if you have any questions!",
+          "date_time": "2026-02-16 19:22:27.775",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Relentless Betrayal: You are already subscribed. Click here to shop now: relentlessbetrayal.com/.",
+          "date_time": "2026-02-16 21:28:26.488",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Relentless Betrayal: Oh man! It looks like you left the Pirate\u0027s Life White T-Shirt in your cart! Is there anything I can help with?\n\nI saved your cart for you here to finish your checkout: https://relentlessbetrayal.attn.tv/awg1dih0FtG- .",
+          "date_time": "2026-02-17 12:38:02.176",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Relentless Betrayal: Hey LUKE, it\u0027s Mike. Didn\u0027t want you to forget Premium Mesh Shorts | 5\"- Beauty in Darkness in your cart! We sell out often! \n\nWant me to see if I can hook you up with a discount?\nhttps://relentlessbetrayal.attn.tv/aa9Bycv73qUo\n",
+          "date_time": "2026-02-18 12:11:54.976",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Relentless Betrayal: Oh man! It looks like you left the Dead Reckoning White T-Shirt in your cart! Is there anything I can help with?\n\nI saved your cart for you here to finish your checkout: https://relentlessbetrayal.attn.tv/aNQU0P7YUS3O .",
+          "date_time": "2026-02-20 15:34:36.234",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Relentless Betrayal: Hey LUKE, it\u0027s Mike. Didn\u0027t want you to forget Dead Reckoning White T-Shirt in your cart! We sell out often! \n\nWant me to see if I can hook you up with a discount?\nhttps://relentlessbetrayal.attn.tv/arQwgyfEU_N_\n",
+          "date_time": "2026-02-21 15:21:19.764",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Discount my cart maybe ill buy",
+          "date_time": "2026-02-21 15:36:41.996",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c81eb-7f57-4d55-f000-0000e489adbc",
+          "message_text": "Relentless Betrayal: Hey LUKE, I can offer you a discount code APP10 for $10 off if you install our app. Check it out at https://relentlessbetrayal.attn.tv/apZBM6bMnCk2/.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-21 15:37:00.403"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I think you can do better im a 4x repeat customer",
+          "date_time": "2026-02-21 15:44:42.364",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c81fc-82ba-4999-f000-0000e489adbc",
+          "message_text": "Relentless Betrayal: Unfortunately, I don\u0027t have any other discounts to offer you today. All our future deals will be shared with our SMS subscribers and on our website, so be sure to keep an eye out! You can also check out our clearance items here: https://relentlessbetrayal.attn.tv/aQZSmLsThUc0\nIs there anything else that I can do for you today?",
+          "message_type": "agent",
+          "agent": "82441",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-21 15:55:35.386"
+        }
+      ]
     }
   }
 }

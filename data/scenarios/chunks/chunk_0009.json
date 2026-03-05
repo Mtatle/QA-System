@@ -3,2940 +3,1125 @@
   "chunk": "chunk_0009",
   "scenarios": {
     "41": {
-      "id": "019c77af-dcb8-4dc4-f000-0000f12ff0eb",
-      "companyName": "Oral-B and Crest",
-      "companyWebsite": "https://oralb.com",
-      "agentName": "Sam",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Oral-B: Resolution Check-In! Keep up with your smile goals with a partner and save $50 on the Genius X Twin Pack! oral-b.attn.tv/aNyA19knGGut ",
-          "message_type": "system",
-          "date_time": "2026-01-24 17:04:10.167"
-        },
-        {
-          "message_media": [],
-          "message_text": "Oral-B: Valentine's Day is Closer Than You Think - You Ready? Make the first move with $50 Off the Oral-B + Crest iO Whitening Bundle: oral-b.attn.tv/aKt063bWu6qe ",
-          "message_type": "system",
-          "date_time": "2026-01-26 17:09:09.350"
-        },
-        {
-          "message_media": [],
-          "message_text": "Oral-B: Save on 2X the Clean and Share! Get the Smart Clean 360 Twin Pack for $20 off while supplies last: oral-b.attn.tv/aF79LX6ZLjy2 ",
-          "message_type": "system",
-          "date_time": "2026-01-28 18:04:07.072"
-        },
-        {
-          "message_media": [],
-          "message_text": "Oral-B: Brighten Up No Matter When Spring Starts! Get the Oral-B + Crest iO Whitening Bundle for $50 off now: oral-b.attn.tv/a7gzyI1-CzFZ ",
-          "message_type": "system",
-          "date_time": "2026-02-02 16:07:04.281"
-        },
-        {
-          "message_media": [],
-          "message_text": "Oral-B: Save $10 on the Oral-B Family Pack during Kids Dental Health Month. Get your iO2 and kids electric toothbrush bundle today! oral-b.attn.tv/aZenjLkwe8Wy",
-          "message_type": "system",
-          "date_time": "2026-02-05 15:11:07.168"
-        },
-        {
-          "message_media": [],
-          "message_text": "Oral-B: 🏈 Become an Oral-B Champion with the iO4 Gum Care Bundle & Score $25 Savings: oral-b.attn.tv/aRvYaZGVoptB ",
-          "message_type": "system",
-          "date_time": "2026-02-08 15:30:58.673"
-        },
-        {
-          "message_media": [],
-          "message_text": "Oral-B: Show 'em How It's Done! The NEW Family Pack has everything you need to keep a healthy smile on you and your little one: oral-b.attn.tv/aqJO3f5kXrlY ",
-          "message_type": "system",
-          "date_time": "2026-02-12 16:02:11.428"
-        },
-        {
-          "message_media": [],
-          "message_text": "Oral-B: Valentine's Day Sale: Love your gums with the iO4 Gum Care Bundle - Now $25 off: oral-b.attn.tv/aDKU2zL731fz ",
-          "message_type": "system",
-          "date_time": "2026-02-14 20:15:06.109"
-        },
-        {
-          "message_media": [],
-          "message_text": "Oral-B: A White House Worthy Upgrade to Your Routine! Save $15 on the iO Series 2 and Get a Free Gift! oral-b.attn.tv/aYU68JTsDD8s ",
-          "message_type": "system",
-          "date_time": "2026-02-16 14:04:06.947"
-        },
-        {
-          "message_media": [],
-          "message_text": "Oral-B: A Brushing Favorite - On Sale Now: Save $30 on the Genius 7500 while supplies last. oral-b.attn.tv/aRuVIRxTjaR9 ",
-          "message_type": "system",
-          "date_time": "2026-02-19 15:20:27.095"
-        },
-        {
-          "message_media": [],
-          "message_text": "Ok",
-          "message_type": "customer",
-          "date_time": "2026-02-19 15:42:59.341"
-        },
-        {
-          "message_media": [],
-          "message_text": "Oral-B: Great! Please don't hesitate to reach out if you have any questions. I'm happy to help.",
-          "message_type": "agent",
-          "agent": "109968",
-          "message_id": "019c77af-dcb8-4dc4-f000-0000f12ff0eb",
-          "date_time": "2026-02-19 15:55:39.988"
-        }
-      ],
-      "notes": {
-        "important": [
-          "When sending a link, if you see a \"/\" at the end of the URL, remove it"
-        ],
-        "send_to_cs": [
-          "Send to CS for damaged items that aren't available on the website"
-        ],
-        "escalate": [
-          "ESC immediately if the order is delivered, but cx did not receive it",
-          "ESC if cx wants to use an expired code",
-          "ESC sales end date questions",
-          "ESC invalid codes / expired code issues",
-          "Before ESC for retroactive discount requests, check if the item is on sale or if they met the minimum",
-          "Don't make suggestions of replacements - if unsure, ESC",
-          "ESC false advertising complaints",
-          "ESC if cx state they regret placing the order after the CANCEL/ORDER temp has been sent",
-          "Before ESC products not functioning properly",
-          "→ Inquire what exact brush/product they have",
-          "→ Provide any user guides available",
-          "Don't ask for the cx's shipping address as secondary info, include their phone number instead"
-        ],
-        "tone": [
-          "Keep messages shorter and more direct",
-          "Don't use the term \"cart tracking\", or let cxs know we can see what they have in their cart"
-        ],
-        "templates": [
-          "If the cx asks where there order is, and it's a confirmed order within the standard processing and shipping time, only share the \"Order status/order tracking\" temp",
-          "If the cx reaches out saying they're having issue with their code, first use CWW temp",
-          "If cx needs assistance with brush function/operations use FOQ shortcut",
-          "For product complaints/bad experiences use PBE shortcut",
-          "If cx says they're dentists/hygienists & want to shop use RDH shortcut",
-          "If cx is a short amount away from reaching the $100 threshold for the welcome discount to apply use SRT shortcut",
-          "If cx ask why their order was canceled, use MOC shortcut",
-          "If cx purchased from their dentist and looking for rebate ($30, $20, $10 back) use RBT shortcut",
-          "For post-purchase issues with Amazon orders, use PS shortcut",
-          "For post-purchase issues where cxs are dental professionals, dentists, hygienists, use DPS shortcut"
-        ],
-        "dos_and_don_ts": [
-          "If customers are looking for brush heads always confirm what type of brush they have, iO or non iO",
-          "If you can't find the products on the website, refer to this one https://crest.com/en-us",
-          "Hold to policy and do not offer to check if deviation from policy is acceptable",
-          "If customers ask about the warranty registration code OR say it's not accepting theirs (they might refer to it as a promo code for registration)- send them this one OB59185 (it's always the same)"
-        ],
-        "drive_to_purchase": [
-          "For general recommendations use CFR shortcut",
-          "Always refer cxs to iO series products, when possible"
-        ],
-        "promo_and_promo_exclusions": [
-          "The $85 welcome promo code isn't for % off, once applied a free item is added to the cart",
-          "Please check the last letters of a code to determine when they were sent",
-          "→ I.e. WCOBDC means it is a December code (DC) and will likely expire in Jan",
-          "Discount codes do not work on Amazon",
-          "If cx is looking for a discount on replacement brush heads, encourage to subscribe for savings on the product page"
-        ]
-      },
+      "agentName": "Amy",
+      "has_shopify": true,
+      "id": "019c9291-c092-4fff-f000-0000d2161b8a",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://oralb.com",
-          "date": ""
-        }
-      },
-      "escalation_preferences": [
-        "All product complaints or bad experiences with a product"
-      ],
-      "blocklisted_words": [
-        "seems",
-        "shoot",
-        "worries"
-      ],
-      "has_shopify": false
-    },
-    "42": {
-      "id": "019c495e-62b1-4a30-f000-0000eef8ab51",
-      "companyName": "LANEIGE",
-      "companyWebsite": "https://us.laneige.com",
-      "agentName": "Taylor",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Get a cute blue Laneige tumbler FREE when you buy Water Bank Aqua Facial. Ends 1/21. SHOP NOW: laneige.attn.tv/aL1dzBtlG1k2 .",
-          "message_type": "system",
-          "date_time": "2026-01-12 12:31:10.292"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: See something you like? Get your Water Bank Aqua Facialbefore you forget!\n laneige.attn.tv/aVZt27vI9yu9 .",
-          "message_type": "system",
-          "date_time": "2026-01-13 12:42:22.909"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: It looks like you forgot Water Bank Blue Hyaluronic Cream Moisturizer in your cart...complete your checkout today: laneige.attn.tv/aC1xj9nF8JRZ",
-          "message_type": "system",
-          "date_time": "2026-01-15 12:30:36.716"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Amazing news! That Retinol Firming Cream Treatment you were looking at is now back in stock! Click here before it's too late! laneige.attn.tv/aS6qVFtKmqtg .",
-          "message_type": "system",
-          "date_time": "2026-01-16 12:32:40.471"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Reminder! Get that Retinol Firming Cream Treatment while supplies last! Click here to checkout: laneige.attn.tv/abGBSKcFLxeK .",
-          "message_type": "system",
-          "date_time": "2026-01-17 12:32:56.452"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Hey Ashley, this is Taylor. Thanks for checking out our site! https://laneige.attn.tv/ad9OaJmYPxgA .\n\nDid you have questions about this fan fave product? Let me know and I can help answer.",
-          "message_type": "system",
-          "date_time": "2026-01-17 18:43:31.627"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Soothing, nourishing skincare essentials, FREE on orders $60+ and $90+.\nSHOP NOW: laneige.attn.tv/a-0ENPV8-8-I .",
-          "message_type": "system",
-          "date_time": "2026-01-18 15:00:25.104"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: It looks like you forgot some goodies in your cart...complete your checkout today: laneige.attn.tv/a8pUmndm7YzX\n\nText back if you have any questions!",
-          "message_type": "system",
-          "date_time": "2026-01-20 17:38:00.129"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Almost gone! FREE Laneige headband with orders $55+ with code DEWY.\nSIGN IN TO REDEEM: laneige.attn.tv/aTAWJfyndE22 .",
-          "message_type": "system",
-          "date_time": "2026-01-23 12:30:40.787"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Hey Ashley, this is Taylor. Thanks for checking out our site! https://laneige.attn.tv/as7trFcytYWw .\n\nDid you have questions about this fan fave product? Let me know and I can help answer.",
-          "message_type": "system",
-          "date_time": "2026-01-25 12:31:50.066"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Lasting color. Moisture on repeat. 8 buildable, music-inspired shades. \nSHOP NOW: laneige.attn.tv/aU5UhYaDYUTK .\n",
-          "message_type": "system",
-          "date_time": "2026-01-27 11:05:34.704"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: It looks like you forgot some goodies in your cart...complete your checkout today: laneige.attn.tv/a2vQRlLWajv3\n\nText back if you have any questions!",
-          "message_type": "system",
-          "date_time": "2026-01-28 12:30:42.186"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Turn up the tint with Katseye! JuicePop Box Lip Tint x Katseye - our most eyekonic collab yet.\nSHOP NOW: laneige.attn.tv/aA7LWgy-Czvr .",
-          "message_type": "system",
-          "date_time": "2026-01-30 12:10:42.654"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: It looks like you forgot JuicePop Box Lip Tint in your cart...complete your checkout today: laneige.attn.tv/aUU-3RJRfe_I",
-          "message_type": "system",
-          "date_time": "2026-02-03 12:37:13.795"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Hey Ashley, your cart's waiting! Last chance to complete your purchase. Shop now: laneige.attn.tv/aQK2_-RVvDrd . Text back with any questions!",
-          "message_type": "system",
-          "date_time": "2026-02-04 13:45:18.589"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Your perfect 2-step routine for hydrated glass skin!\nSHOP NOW: laneige.attn.tv/auOwN1pNEErL .",
-          "message_type": "system",
-          "date_time": "2026-02-05 12:01:41.508"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Build your custom lip duo! Pick 2 products, save 20% and score a bonus pink pouch.\nSHOP NOW: laneige.attn.tv/asMmyWHyowZD ",
-          "message_type": "system",
-          "date_time": "2026-02-07 14:01:10.983"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: It looks like you forgot Cream Skin Toner & Moisturizer in your cart...complete your checkout today: laneige.attn.tv/afARfovL_rZG",
-          "message_type": "system",
-          "date_time": "2026-02-09 12:05:29.285"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Hey Ashley, this is Taylor. Thanks for checking out our site! https://laneige.attn.tv/asSeBgBkJ9Yc .\n\nDid you have questions about this fan fave product? Let me know and I can help answer.",
-          "message_type": "system",
-          "date_time": "2026-02-10 12:36:16.409"
-        },
-        {
-          "message_media": [],
-          "message_text": "(attn) Hey, I need help with something: I noticed on my recent order that there is the the berry lip mask but it offer said it would be the bouncy and firm lip mask.",
-          "message_type": "customer",
-          "date_time": "2026-02-10 15:59:53.940"
-        },
-        {
-          "message_media": [],
-          "message_text": "Order 301147821A",
-          "message_type": "customer",
-          "date_time": "2026-02-10 16:00:44.026"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Customer support\"; last updated: 2023-12-04 22:29:44.433",
-          "message_type": "template",
-          "date_time": "2026-02-10 16:04:08.402"
-        },
-        {
-          "message_media": [],
-          "message_text": "LANEIGE: Thanks for getting in touch! I'm really sorry for the inconvenience. We're happy to help answer any questions about our products! For any questions about your order, please contact our customer service team at: laneige@apus.amorepacific.com. Due to a high volume of inquiries, our team will get back to you within 72 hours. ",
-          "message_type": "agent",
-          "agent": "109840",
-          "message_id": "019c495e-62b1-4a30-f000-0000eef8ab51",
-          "date_time": "2026-02-10 16:04:08.404"
-        }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for any order related inquiries"
+        "promotions": [
+          {
+            "title": "BECLEAR15",
+            "content": [
+              "Code for Spin to Win $15 off share ONLY if a cx is asking for the code."
+            ]
+          }
         ],
-        "promo_and_promo_exclusions": [
-          "Free gift with purchase codes are entered in the cart and discount codes at checkout"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://us.laneige.com",
-          "date": ""
-        },
+        "coupons": [
+          {
+            "subscriber_id": 3524664202,
+            "description": "your first order",
+            "value": "15",
+            "company_id": 6086,
+            "coupon_url": "https://clearstem-skincare.myshopify.com/discount/BECLEAR15?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "BECLEAR15",
+            "name": "STW $15 Off",
+            "coupon": "BECLEAR15",
+            "redemption_status": "UNUSED",
+            "value_type": "FLAT_FIXED_CURRENCY"
+          }
+        ],
         "browsingHistory": [
           {
-            "item": "Bouncy & Firm Sleeping Mask",
-            "link": "https://us.laneige.com/products/bouncy-firm-sleeping-mask",
-            "timeAgo": "2026-02-10"
+            "link": "https://clearstem.com/products/mindbodyskin-csb",
+            "item": "MINDBODYSKIN® Hormonal Acne Supplement",
+            "timeAgo": "2025-10-21"
           },
           {
-            "item": "Lip Glowy Balm Stardust - Pink Supernova",
-            "link": "https://us.laneige.com/collections/lip-products/products/lip-glowy-balm-stardust?variant=47061104328756",
-            "timeAgo": "2026-02-10"
+            "link": "https://clearstem.com/products/clearity",
+            "item": "CLEARITY® - \"The Blackhead Dissolver\"",
+            "timeAgo": "2025-10-21"
           },
           {
-            "item": "Lip Glowy Balm Stardust - Pink Supernova",
-            "link": "https://us.laneige.com/collections/lip-products/products/lip-glowy-balm-stardust?variant=47061104328756",
-            "timeAgo": "2026-02-10"
+            "link": "https://clearstem.com/products/brightmeup?variant=46635307729121",
+            "item": "BRIGHTMEUP",
+            "timeAgo": "2025-10-21"
           },
           {
-            "item": "Water Bank Power Pair",
-            "link": "https://us.laneige.com/collections/all-products/products/water-bank-power-pair",
-            "timeAgo": "2026-02-10"
+            "link": "https://clearstem.com/products/mindbodyskin-hormonal-acne-supplement-no-5-htp",
+            "item": "MINDBODYSKIN® 2 Supplement (No 5-HTP)",
+            "timeAgo": "2025-10-21"
           },
           {
-            "item": "Cream Skin Mist Duo",
-            "link": "https://us.laneige.com/collections/cream-skin/products/cream-skin-mist-duo",
-            "timeAgo": "2026-02-09"
+            "link": "https://clearstem.com/products/youare-sunny",
+            "item": "YOUARESUNSHINETM Sheer Broad-Spectrum SPF 50+",
+            "timeAgo": "2025-10-19"
           }
         ],
+        "source": {
+          "label": "Website",
+          "value": "https://clearstem.com",
+          "date": ""
+        },
         "orders": [
           {
-            "orderNumber": "5972680998964",
-            "orderDate": "2026-02-04",
+            "currency": "USD",
+            "orderDate": "2025-09-25",
+            "coupon": "CLEAR15",
             "items": [
               {
-                "name": "Laneige Carryall Bag",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/laneige-carryall-bag"
-              },
-              {
-                "name": "Glaze Craze Tinted Lip Serum",
-                "price": 22,
-                "productLink": "https://apus-laneige.myshopify.com/products/glaze-craze-tinted-lip-serum"
-              },
-              {
-                "name": "Laneige Teddy Bag",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/laneige-teddy-bag"
-              },
-              {
-                "name": "JuicePop Box Tint Mirror Keychain",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/juice-pop-box-tint-mirror-keychain"
-              },
-              {
-                "name": "Cream Skin Toner & Moisturizer AD (15mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/cream-skin-toner-moisturizer-15ml-270288889"
-              },
-              {
-                "name": "Lip Glowy Balm",
-                "price": 19,
-                "productLink": "https://apus-laneige.myshopify.com/products/lip-glowy-balm"
-              },
-              {
-                "name": "JuicePop Box Lip Tint",
-                "price": 23,
-                "productLink": "https://apus-laneige.myshopify.com/products/juicepop-box-lip-tint"
-              },
-              {
-                "name": "Bouncy & Firm Sleeping Mask (10mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/bouncy-firm-sleeping-mask-10ml"
-              },
-              {
-                "name": "Lip Glowy Balm Stardust",
-                "price": 19,
-                "productLink": "https://apus-laneige.myshopify.com/products/lip-glowy-balm-stardust"
-              },
-              {
-                "name": "Water Bank Gentle Gel Cleanser (2mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/bouncy-firm-sleeping-mask-2ml-copy"
-              },
-              {
-                "name": "Lip Sleeping Mask (3g)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/lip-sleeping-mask-3g"
-              },
-              {
-                "name": "Bouncy & Firm Serum (5mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/bouncy-firm-serum-5ml"
-              },
-              {
-                "name": "Cream Skin Toner & Moisturizer Cerapeptide (2mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/cream-skin-toner-moisturizer-cerapeptide-2m"
-              },
-              {
-                "name": "Water Sleeping Mask (2mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-sleeping-mask-4ml-1"
-              },
-              {
-                "name": "Water Bank Blue HA Moisturizer Cream (2mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-blue-ha-moisturizer-cream-24ad-2ml"
-              },
-              {
-                "name": "Build Your Lip Duo",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/build-your-lip-set"
-              },
-              {
-                "name": "Bouncy & Firm Eye Sleeping Mask (3mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/bouncy-firm-eye-sleeping-mask-3ml"
+                "price": [
+                  58
+                ],
+                "productLink": "https://clearstem-skincare.myshopify.com/products/mindbodyskin-csb",
+                "name": "MINDBODYSKIN® Hormonal Acne Supplement"
               }
             ],
-            "total": 96.41,
-            "coupon": "LAN-925A-15",
-            "date_time": "2026-02-04 18:06:42.750"
+            "date_time": "2025-09-25 14:01:23.326",
+            "discount_amount": 0,
+            "orderNumber": "6532213539041",
+            "total": 51.43
           },
           {
-            "orderNumber": "5946515357748",
-            "orderDate": "2026-01-21",
+            "currency": "USD",
+            "orderDate": "2025-09-25",
             "items": [
               {
-                "name": "Cica Sleeping Mask (8mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/cica-sleeping-mask-10ml-22ad"
-              },
-              {
-                "name": "Water Bank Blue Hyaluronic Cream Moisturizer",
-                "price": 38,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-blue-hyaluronic-cream-moisturizer"
-              },
-              {
-                "name": "Water Bank HA Intensive Moisturizer (10mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-ha-intensive-moisturizer-ad-10ml"
-              },
-              {
-                "name": "Bouncy & Firm Mini Skin Treats",
-                "price": 28,
-                "productLink": "https://apus-laneige.myshopify.com/products/bouncy-firm-mini-skin-treats"
-              },
-              {
-                "name": "Water Bank Blue Hyaluronic Cream Moisturizer",
-                "price": 32,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-blue-hyaluronic-cream-moisturizer"
-              },
-              {
-                "name": "Glaze Craze Tinted Lip Serum Blister",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/glaze-craze-tinted-lip-serum-blister"
-              },
-              {
-                "name": "Lip Sleeping Mask (3g)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/lip-sleeping-mask-3g"
-              },
-              {
-                "name": "Water Bank Aqua Facial (2mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-aqua-facial-2ml"
-              },
-              {
-                "name": "Water Bank Aqua Facial (5mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-aqua-facial-5ml"
-              },
-              {
-                "name": "Water Bank Blue Hyaluronic Cream + Refill Duo",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-blue-hyaluronic-cream-refill-duo"
-              },
-              {
-                "name": "Perfect Renew 3x Signature Serum Advanced (1.5mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/perfect-renew-3x-signature-serum-advanced-1-5ml"
-              },
-              {
-                "name": "Laneige Blue Headband",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/laneige-blue-headband"
-              },
-              {
-                "name": "Cream Skin Toner & Moisturizer (15mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/cream-skin-ad-15ml"
-              },
-              {
-                "name": "Bouncy & Firm Sleeping Mask (2mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/bouncy-firm-sleeping-mask-2ml"
+                "price": [
+                  58
+                ],
+                "productLink": "https://clearstem-skincare.myshopify.com/products/mindbodyskin-csb",
+                "name": "MINDBODYSKIN® Hormonal Acne Supplement"
               }
             ],
-            "total": 99.3,
-            "date_time": "2026-01-21 15:17:32.807"
+            "date_time": "2025-09-25 14:01:23.157",
+            "discount_amount": 0,
+            "orderNumber": "6532213539041",
+            "total": 51.43
           },
           {
-            "orderNumber": "5924917575732",
-            "orderDate": "2026-01-06",
+            "currency": "USD",
+            "orderDate": "2025-08-14",
+            "coupon": "CLEAR15",
             "items": [
               {
-                "name": "Lip Sleeping Mask (3g)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/lip-sleeping-mask-3g"
-              },
-              {
-                "name": "Water Bank Gentle Gel Cleanser (10mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-gentle-gel-cleanser-10ml"
-              },
-              {
-                "name": "Water Bank Blue HA Eye Cream (5mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-blue-ha-eye-cream-5ml"
-              },
-              {
-                "name": "Water Sleeping Mask (10mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-sleeping-mask-10ml-new"
-              },
-              {
-                "name": "Glaze Craze Tinted Lip Serum Blister",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/glaze-craze-tinted-lip-serum-blister"
-              },
-              {
-                "name": "Water Bank Gentle Gel Cleanser",
-                "price": 29,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-gentle-gel-cleanser"
-              },
-              {
-                "name": "Perfect Renew 3x Signature Serum Advanced (1.5mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/perfect-renew-3x-signature-serum-advanced-1-5ml"
-              },
-              {
-                "name": "Cream Skin Toner & Moisturizer (15mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/cream-skin-ad-15ml"
-              },
-              {
-                "name": "Water Bank Aqua Facial (2mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-aqua-facial-2ml"
-              },
-              {
-                "name": "Neo Blurring Powder",
-                "price": 25,
-                "productLink": "https://apus-laneige.myshopify.com/products/neo-blurring-powder"
-              },
-              {
-                "name": "Radian-C Cream",
-                "price": 35,
-                "productLink": "https://apus-laneige.myshopify.com/products/radian-c-cream"
-              },
-              {
-                "name": "Laneige Blue Quilted Pouch",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/laneige-blue-quilted-pouch"
+                "price": [
+                  58
+                ],
+                "productLink": "https://clearstem-skincare.myshopify.com/products/mindbodyskin-csb",
+                "name": "MINDBODYSKIN® Hormonal Acne Supplement"
               }
             ],
-            "total": 74.1,
-            "coupon": "I39X78WN",
-            "date_time": "2026-01-06 23:19:56.992"
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction!input.action?tRef=qt\u0026tLc=0\u0026tLabels=92001902445414300073958433",
+            "link": "https://clearstem.com/56349720736/orders/01ff1c0934727cdde834d8e85ac5913f/authenticate?key=5e89c910d264c9ff76f63bb23c349884",
+            "date_time": "2025-08-14 16:53:03.536",
+            "discount_amount": 0,
+            "orderNumber": "975456",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction!input.action?tRef=qt\u0026tLc=0\u0026tLabels=92001902445414300073958433",
+            "total": 51.43
           },
           {
-            "orderNumber": "5866138828852",
-            "orderDate": "2025-12-18",
+            "currency": "USD",
+            "orderDate": "2025-08-14",
             "items": [
               {
-                "name": "Bouncy & Firm Mini Skin Treats",
-                "price": 28,
-                "productLink": "https://apus-laneige.myshopify.com/products/bouncy-firm-mini-skin-treats"
-              },
-              {
-                "name": "Lip Sleeping Mask (3g)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/lip-sleeping-mask-3g"
-              },
-              {
-                "name": "Free Bouncy & Firm Lip Treatment",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/free-bouncy-firm-lip-treatment"
-              },
-              {
-                "name": "Water Sleeping Mask (10mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-sleeping-mask-10ml-new"
-              },
-              {
-                "name": "Dream Skin Trio",
-                "price": 35,
-                "productLink": "https://apus-laneige.myshopify.com/products/dream-skin-trio"
-              },
-              {
-                "name": "Laneige Teddy Bag",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/laneige-teddy-bag"
-              },
-              {
-                "name": "Cream Skin Toner & Moisturizer Cerapeptide (2mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/cream-skin-toner-moisturizer-cerapeptide-2m"
-              },
-              {
-                "name": "Water Bank Blue HA Intensive Moisturizer (2mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-blue-ha-intensive-moisturizer-2ml"
-              },
-              {
-                "name": "Water Bank Blue Hyaluronic Cream Moisturizer",
-                "price": 38,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-blue-hyaluronic-cream-moisturizer"
-              },
-              {
-                "name": "Laneige Metallic Travel Bag",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/laneige-metallic-travel-bag"
-              },
-              {
-                "name": "Water Bank Blue HA Gel Moisturizer (2mL)",
-                "price": 0,
-                "productLink": "https://apus-laneige.myshopify.com/products/water-bank-blue-ha-gel-moisturizer-24ad-2ml"
-              },
-              {
-                "name": "Midnight Minis",
-                "price": 21,
-                "productLink": "https://apus-laneige.myshopify.com/products/midnight-minis"
+                "price": [
+                  58
+                ],
+                "productLink": "https://clearstem-skincare.myshopify.com/products/mindbodyskin-csb",
+                "name": "MINDBODYSKIN® Hormonal Acne Supplement"
               }
             ],
-            "total": 110.96,
-            "coupon": "HELLO15",
-            "date_time": "2025-12-18 13:29:42.135"
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction!input.action?tRef=qt\u0026tLc=0\u0026tLabels=92001902445414300073958433",
+            "link": "https://clearstem.com/56349720736/orders/01ff1c0934727cdde834d8e85ac5913f/authenticate?key=5e89c910d264c9ff76f63bb23c349884",
+            "date_time": "2025-08-14 16:53:03.360",
+            "discount_amount": 0,
+            "orderNumber": "975456",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction!input.action?tRef=qt\u0026tLc=0\u0026tLabels=92001902445414300073958433",
+            "total": 51.43
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "43": {
-      "id": "019c4fca-c498-4137-f000-0000fa95e86c",
-      "companyName": "Covercraft",
-      "companyWebsite": "https://covercraft.com",
-      "agentName": "Sarah",
+      "companyWebsite": "https://clearstem.com",
+      "companyName": "CLEARSTEM",
+      "notes": {
+        "promo_and_exclusions": [
+          "MINDBODYSKIN is not eligible for any discount codes!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "nutrition, diet, unhappy with product, personalized questions"
+      ],
       "messageTone": "Casual",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Covercraft: Welcome to Covercraft! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
           "message_type": "system",
-          "date_time": "2026-02-11 20:09:00.381"
+          "message_text": "CLEARSTEM: Welcome to CLEARSTEM! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/T4W",
+          "date_time": "2026-01-26 12:01:35.450",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Covercraft: Enjoy $10 Off with code SAVE10. Find Your Custom Cover Today!\n\nView Active Deals: https://covercraft.attn.tv/ait7aeIg7ttI ",
           "message_type": "system",
-          "date_time": "2026-02-11 20:09:03.411"
+          "message_text": "CLEARSTEM: Welcome! Click here for your offer: https://clearstem.attn.tv/aFxn-TWhUKy3 .",
+          "date_time": "2026-01-26 12:01:38.822",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Covercraft: Hi there! Need any help? Send us a text, or give us a call at 1-800-274-7006\nMon - Fri 9AM - 9PM EST. https://covercraft.attn.tv/a3B_ygNJU1Cy - Sarah ",
           "message_type": "system",
-          "date_time": "2026-02-11 21:09:10.620"
+          "message_text": "CLEARSTEM: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nTo start, take our 60-second quiz to help us create the perfect skincare routine for you \u003e https://clearstem.attn.tv/aXoNHsfayQpD .",
+          "date_time": "2026-01-26 12:02:50.393",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "I need a bra for a 2016 gmc acadia slt",
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Our clean products target both acne and aging without any pore-clogging ingredients. \n\nCheck out our best selling items today: https://clearstem.attn.tv/aKISptfx5XWf",
+          "date_time": "2026-01-26 12:13:00.046",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Thank you for your purchase! Your order number is 1182358. View more information about your order here: https://clearstem.attn.tv/aufUREiMMyDQ .",
+          "date_time": "2026-01-27 10:12:38.872",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Attn!! 🪩 20% off your entire order starts NOW! 🪩\n\nFrom favorites like CELLRENEW to hot new arrivals like HAIR SKIN NAILS... they\u0027re all on sale right now. \n\nUse code JAN26 to save: \n\nShop Now: clearstem.attn.tv/asXZG2NjkZpB .",
+          "date_time": "2026-01-27 12:03:00.620",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Sometimes the best place to start is with our New Arrivals. \n\nTake a look, it\u0027s the perfect time to use your offer before it\u0027s too late: https://clearstem.attn.tv/alAJj91GrNoX",
+          "date_time": "2026-01-27 12:13:07.000",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Consistency matters 💗 restock your CLEARSTEM supplements and save 20% for a limited time w/ code JAN26: clearstem.attn.tv/aawkKCb7dbTv .",
+          "date_time": "2026-01-29 12:00:48.555",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Are you just gonna let this 20% off code walk away? 😭\n\nSkin renewing serums...superstar supplements...clear skin skincare ALL 20% off!\n\nShop before midnight! \n\nUse code: JAN26\n\nShop Now: clearstem.attn.tv/anmmO_LbBGmW .",
+          "date_time": "2026-01-31 12:01:20.690",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: STOP ✋ shop the sale and GLISTEN ✨\n\n20% OFF IS ENDING AT MIDNIGHT.\n\nUse code JAN26: \n\nShop Now: clearstem.attn.tv/aOmmHgBJLWo7 .",
+          "date_time": "2026-01-31 15:02:48.572",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Terrified to use oil on your skin because of acne? We get it.\n\nThat\u0027s why we created GOLDENHOUR. A facial oil that won\u0027t clog your pores.\n\nBeneficial for acne-prone skin with Vitamin C and Hyaluronic Acid.\n\nSHOP NOW: clearstem.attn.tv/a8ij1JpqDcFP .",
+          "date_time": "2026-02-02 18:04:30.618",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: If you liked MATCHA EYE PATCHES, you\u0027re going to 💟 LOVE 💟 what\u0027s coming next. \n\nSee what it is and sign up for the waitlist NOW: clearstem.attn.tv/amH2larKsAIl .",
+          "date_time": "2026-02-04 12:03:15.547",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Acne is never just \"one thing\". Hormones, digestive inflammation, dietary triggers, and pore-clogging ingredients are the 4 big ones.\n\nHere are critical tips to get the clear skin you deserve:\n\n1️⃣ Introduce MINDBODYSKIN\n2️⃣ Eliminate dairy \u0026 whey\n3️⃣ Exfoliate gently but frequently\n4️⃣ Remove all pore-cloggers in products ⤵️ clearstem.attn.tv/aaPh3nIm2a4B .\n\n5️⃣ Stay hopeful \u0026 reach out if you need help. Our team is here and we\u0027re in this with you💗\n\nsupport@clearstem.com\nIG: @clearstemskincare\n\nLove, Danielle \u0026 Kayleigh",
+          "date_time": "2026-02-05 13:42:58.155",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: GIFT WITH PURCHASE - LIMITED STOCK!\n\nWe are ONLY giving these as a limited-edition gift...so I guess you\u0027ll have to use that as your excuse to shop right now.\n\nThese Microfiber Cleansing Pads are super soft, making them perfect for sensitive skin, and incredibly effective at removing stubborn makeup and oil. Plus, they come with a laundry bag for easy re-washing and re-use!\n\nTo get yours, spend $50+, add the Microfiber Pads to cart, and use code CANDY: clearstem.attn.tv/azwaGi2lnuwl .",
+          "date_time": "2026-02-06 12:03:20.483",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Obsessed with this podcast feature! Tune in to hear Danielle + Kayleigh chat with the Gloss Angeles girls about acne root causes + why we made BOUNCEBACK for anti-aging. \n\nListen Now: clearstem.attn.tv/aOdHc1Qv0gSO .",
+          "date_time": "2026-02-08 12:01:58.333",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: She\u0027s HERE! Meet EYE CANDY Caffeinated + Depuffing Eye Patches:\n\n- Non-slip design \n- Designed for acne-prone + sensitive skin\n- Immediately boost hydration\n- Visibly brighten \n- Visibly smooth + plump \n\nShop the new drop NOW: clearstem.attn.tv/aekEHMMoiz9d .",
+          "date_time": "2026-02-10 12:03:31.624",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: In need of a skin routine refresh? ✨ Check out what\u0027s new! Shop now: clearstem.attn.tv/aSxMecttDdiX .\n\nNeed advice or have questions? We\u0027re here for you-just text us!",
+          "date_time": "2026-02-11 13:11:42.990",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Roses are red, violets are blue, we\u0027re giving away a free Mini HYDRAGLOW just for YOU. \n\nTo claim your Galentine\u0027s gift, spend $75, add your mini to cart, and use code LOVE: clearstem.attn.tv/aRxnpd2Hjx4G .",
+          "date_time": "2026-02-12 12:03:23.742",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Cupid here! With a gift for you that ends at MIDNIGHT tonight! \n\nGet a mini HYDRAGLOW FREE on $75+. \n\nUse code LOVE: clearstem.attn.tv/aeYPAFRb1peY .",
+          "date_time": "2026-02-14 12:02:56.840",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Hi Angels, your 222 sale starts today! Get 22% off your entire basket of favorites with code 22LOVE.\n\nShop now: clearstem.attn.tv/aD5EzCQ3rUaE .",
+          "date_time": "2026-02-21 12:02:09.710",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Happy 2.22!!! You know what that means: 22% OFF your entire order.\n\nUSE CODE 22LOVE: clearstem.attn.tv/aYH_ZGrwdHRs .",
+          "date_time": "2026-02-22 12:02:16.094",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Shop BY MIDNIGHT to get 22% off EVERYTHING! \n\nUse Code 22LOVE: clearstem.attn.tv/apY07wN7eyN6 .",
+          "date_time": "2026-02-24 12:30:49.668",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Hi Diana M, Your final sign! 222 sale ENDS NOW. \n\nGet 22% off with code 22LOVE: clearstem.attn.tv/aYcOPLTfyH3l .",
+          "date_time": "2026-02-24 18:00:42.946",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Thank you for your purchase! Your order number is 1214685. View more information about your order here: https://clearstem.attn.tv/afkVSSfgNLP6 .",
+          "date_time": "2026-02-24 21:04:45.502",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-11 21:10:35.097"
+          "message_text": "I need to change my shipping address or cancel my order",
+          "date_time": "2026-02-24 21:06:52.449",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Covercraft: Hi, thanks for reaching out. Are you referring to front-end covers? If so, you can browse options for your vehicle here: https://covercraft.attn.tv/a140F4CfTkTs",
+          "message_id": "019c928d-4e7f-47bd-f000-0000d2161b8a",
+          "message_text": "CLEARSTEM: I understand. I can check if that\u0027s possible. What\u0027s the order number, email address and the change you\u0027d like to make? ",
+          "message_type": "agent",
+          "agent": "46498",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-24 21:07:40.183"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "ORDER #CS1214685\nDancerusa9156@aol.com",
+          "date_time": "2026-02-24 21:08:52.242",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It\u0027s the same as the billing address 9741 Lochfield Dr",
+          "date_time": "2026-02-24 21:10:01.937",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "escalation",
+          "message_text": "voc: I need to change my shipping address or cancel my order | ORDER #CS1214685, Dancerusa9156@aol.com",
+          "date_time": "2026-02-24 21:10:59.401",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c9290-91bc-45da-f000-0000d2161b8a",
+          "message_text": "CLEARSTEM: Thanks for the info! Let me check on this for you. It\u0027s a little late, so it\u0027s likely I won\u0027t hear back by today, though rest assured, I\u0027ll reach out once business hours resume. ",
           "message_type": "agent",
           "agent": "109630",
-          "message_id": "019c4fca-c498-4137-f000-0000fa95e86c",
-          "date_time": "2026-02-11 22:00:14.650"
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-24 21:11:14.005"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Well my email won\u0027t let me edit it - I need it fixed now before it\u0027s too late",
+          "date_time": "2026-02-24 21:12:02.284",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c9291-c092-4fff-f000-0000d2161b8a",
+          "message_text": "CLEARSTEM: I understand the urgency. I will be sure to provide you with an update once I hear back. ",
+          "message_type": "agent",
+          "agent": "31385",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-24 21:12:31.534"
         }
-      ],
-      "notes": {
-        "templates": [
-          "For custom full vehicle covers use FVC shortcut",
-          "For cx that can't see the cover pattern/images of their vehicle use CPI shortcut",
-          "If we don't have a pattern/color the cx is looking for use PRR shortcut"
-        ],
-        "dos_and_don_ts": [
-          "Do not tell customers that the base price is the final price! The cost changes by the fitment and depends on the vehicle",
-          "Rebates are discounts for this brand!",
-          "Custom dim pattern sheets are only available for Vehicle Covers (Car, Truck, Van,RV)",
-          "➜https://www.covercraft.com/us/en/covercrafter"
-        ],
-        "drive_to_purchase": [
-          "Before sharing any product links, confirm the vehicle’s Year, Make, and Model"
-        ]
-      },
+      ]
+    },
+    "42": {
+      "agentName": "Sofia",
+      "has_shopify": false,
+      "id": "019c6c7e-a6d9-45e7-f000-0000f64124a7",
       "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 4131464359,
+            "company_id": 1132,
+            "static_code": "GALLERY10",
+            "name": "GALLERY10 - 10% Off Welcome Code (Original Art)",
+            "coupon": "GALLERY10",
+            "redemption_status": "UNUSED"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://covercraft.com",
+          "value": "https://saatchiart.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "LeBra Custom Front End Cover",
-            "link": "https://www.covercraft.com/product/lebra-custom-front-end-cover/20L1",
-            "timeAgo": "2026-02-12"
-          }
+        }
+      },
+      "companyWebsite": "https://saatchiart.com",
+      "companyName": "Saatchi Art",
+      "notes": {
+        "escalate": [
+          "Customer Details that need to be gathered for esc:",
+          "➜ Buyer Name: First \u0026 Last Name",
+          "➜ Email Address used for purchase",
+          "➜ Order Number",
+          "➜ Artwork Title/Artist",
+          "ESC any questions or concerns that need specific details about an order that cannot be answered with general information"
+        ],
+        "templates": [
+          "For art/painting/print-related questions that only the artist can answer, use ARQ shortcut"
         ]
       },
-      "escalation_preferences": [
-        "Discount code errors"
+      "blocklisted_words": [
+        
       ],
-      "blocklisted_words": [],
-      "has_shopify": false
-    },
-    "44": {
-      "id": "019c7361-1642-45b0-f000-0000dd517e2a",
-      "companyName": "Cardboard Cut Out Standees",
-      "companyWebsite": "https://cardboardcutoutstandees.com",
-      "agentName": "Jordan",
+      "escalation_preferences": [
+        
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Cardboard Cutout Standees: Hi this is Jordan. I noticed your checking out the site. Use the code STAN15-XR4 to take 15% off your order. cardboard.attn.tv/azLtlEVQU9vB \n\nLet me know if you need any assistance. I am here to help!",
           "message_type": "system",
-          "date_time": "2026-02-09 14:37:04.699"
+          "message_text": "Saatchi Art: Welcome! Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-16 11:20:33.285",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Cardboard Cutout Standees: Celebrate birthdays in BIG ways all through 2026! Custom BigHeads and Standees turn any birthday celebration into an unforgettable event. Don't forget to use code BHM10 to save 10% and we'll donate 10% to the Page Education Foundation for Black History Month! cardboard.attn.tv/a1xw6D0CybrN \n\nText back if you have any questions!",
           "message_type": "system",
-          "date_time": "2026-02-13 12:07:09.111"
+          "message_text": "Saatchi Art: Great timing-refresh your space with 10% off sitewide through Feb 17. saatchiart.attn.tv/aI6cz9fNba-L \n\nEnter code FLASH10 at checkout. STOP to cancel",
+          "date_time": "2026-02-16 11:20:37.260",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Cardboard Cutout Standees: Hi this is Jordan. I am happy to see you coming back to the site! Let me know if there is anything I can assist with. cardboard.attn.tv/a_pdLi_Licby \n\nI am always here to help! Just shoot me a text.",
           "message_type": "system",
-          "date_time": "2026-02-18 19:46:25.898"
+          "message_text": "Saatchi Art: Our advice on shopping the sale: buy art that you love.\n\nNeed inspiration? saatchiart.attn.tv/a2IBLz4xJSPV \n\nSave 10% on all art with FLASH10. STOP to cancel",
+          "date_time": "2026-02-17 11:20:47.982",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Is there any chance if I place an order right now for 2 heads on a stick I would be able to get them tomorrow?",
           "message_type": "customer",
-          "date_time": "2026-02-18 19:48:59.973"
+          "message_text": "I can\u0027t afford the world",
+          "date_time": "2026-02-17 11:42:08.417",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "I thought I added them to the order I placed but I must not have",
           "message_type": "customer",
-          "date_time": "2026-02-18 19:49:59.588"
+          "message_text": "I will be hung in Saatchi- I will adorn one wall or another",
+          "date_time": "2026-02-17 11:43:28.590",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Template used: \"Shipping time\"; last updated: 2026-02-19 14:52:44.514",
-          "message_type": "template",
-          "date_time": "2026-02-18 19:51:08.508"
-        },
-        {
-          "message_media": [],
-          "message_text": "Cardboard Cutout Standees: Thank you for getting back to me and providing that information! We usually ship via UPS and orders placed by 10am on a business day will leave our facility the following business day. We have multiple shipping options available at checkout that can deliver orders in as quickly as 1 business day, check them out here: https://cardboard.attn.tv/aByRlGc5fNN2",
+          "message_id": "019c6c7e-a6d9-45e7-f000-0000f64124a7",
+          "message_text": "Saatchi Art: No worries, I completely understand. We do have different options available at varying prices. Is there a particular art style that you are looking to get and the budget that you have in mind? I\u0027d be happy to check out some options for you! ",
           "message_type": "agent",
-          "agent": "109840",
-          "message_id": "019c7361-1642-45b0-f000-0000dd517e2a",
-          "date_time": "2026-02-18 19:51:08.511"
+          "agent": "126033",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 11:46:05.560"
         }
-      ],
-      "notes": {
-        "escalate": [
-          "No CS for this client, ESC everything",
-          "When ESC post-purchase issues, only ask for the order number",
-          "If a customer wants to talk to customer service do not send PS, ESC instead",
-          "When ESC on weekends, use WKD shortcut before you ESC",
-          "When ESC on weekDAYS after 4pm EST, use WKE shortcut before you ESC"
-        ],
-        "tone": [
-          "Close the convo once the client takes over",
-          "Close the convo when customers misanswer the Welcome journey q's"
-        ],
-        "templates": [
-          "If cx are trying to upload a photo on the website and it's not coming through, use PWU shortcut",
-          "If cx are inquiring about delivery dates, use GRN shortcut",
-          "If cx share image/screenshot that's not showing don't ask to send again, use IMG shortcut"
-        ],
-        "dos_and_don_ts": [
-          "Prices vary, depending on height, not width",
-          "Don't mention possible shipping delays",
-          "Don't ask for screenshots",
-          "Wet Paint T shirts Inc is a different company"
-        ],
-        "drive_to_purchase": [
-          "Don't recommend and share links for add-ons to cx"
-        ],
-        "promo_and_promo_exclusions": [
-          "Contact us for help with fundraisers. Grad yard signs are only sold through fundraisers"
-        ]
-      },
+      ]
+    },
+    "43": {
+      "agentName": "",
+      "has_shopify": true,
+      "id": "019c81ec-f5c7-41a9-f000-0000fb8e8888",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://cardboardcutoutstandees.com",
-          "date": ""
-        },
+        "promotions": [
+          {
+            "title": "Black Friday Sale",
+            "content": [
+              "• November 1st - December 1st, all Pants and Joggers are $99\n\n• November 24th - Dec 1st, all Pants and Joggers are $99 + 20% off everything else sitewide"
+            ]
+          },
+          {
+            "title": "Free T-Shirt",
+            "content": [
+              "• Customer must add eligible T-Shirt to the cart\n\n• Order total must be over $99\n\n• Use the template \"Why is my Free Shirt code not working?\" for any issues applying this promotion"
+            ]
+          },
+          {
+            "title": "Free Hoodie and Flannel Sale",
+            "content": [
+              "Get a free hoodie on orders of $99+ or a free Frontier flannel on orders of $198+.  Discount applies automatically when the item is added to cart."
+            ]
+          },
+          {
+            "title": "Pants Delay",
+            "content": [
+              "• Orders that contain Athletic Fit Jeans or Chinos will ship by the 18th of November.  \n\n→ This information is provided on the product pages"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 4220422280,
+            "company_id": 21,
+            "coupon_url": "https://barbellapparel.myshopify.com/discount/FSAg2ovex?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=free-shirt",
+            "name": "FSATTENTIVE",
+            "coupon": "FSAg2ovex",
+            "redemption_status": "UNUSED"
+          }
+        ],
         "browsingHistory": [
           {
-            "item": "Create your Big Head",
-            "link": "https://www.cardboardcutoutstandees.com/big-head-product.html?utm_campaign=browse-abandoner-email3&utm_medium=email&utm_source=attentive&externalId=KYxNZ&attn_macro=dHJpZ2dlckV2ZW50LnByb2R1Y3QubGluaw%3D%3D&attn_pos=1",
-            "timeAgo": "2026-02-19"
-          },
-          {
-            "item": "Create your Big Head",
-            "link": "https://www.cardboardcutoutstandees.com/big-head-product.html",
-            "timeAgo": "2026-02-19"
-          },
-          {
-            "item": "Create your Big Head",
-            "link": "https://www.cardboardcutoutstandees.com/big-head-product.html",
-            "timeAgo": "2026-02-19"
-          },
-          {
-            "item": "Create your Team&#039;s Big Heads",
-            "link": "https://www.cardboardcutoutstandees.com/create-your-big-head-multi-.html",
+            "link": "https://barbellapparel.com/products/mens-mystery-top",
+            "item": "Mens Mystery Top - XS",
             "timeAgo": "2026-02-15"
           },
           {
-            "item": "Create your Big Head",
-            "link": "https://www.cardboardcutoutstandees.com/big-head-product.html",
+            "link": "https://barbellapparel.com/products/mens-athletic-fit-chino-pant?variant=52024402674030",
+            "item": "Straight Athletic Fit Chino Pant - 34 / Ash / 30",
+            "timeAgo": "2026-02-15"
+          },
+          {
+            "link": "https://barbellapparel.com/products/straight-athletic-fit-jeans?variant=51669777940846",
+            "item": "Straight Athletic Fit Jeans - Dark Rinse / 34 / 30",
+            "timeAgo": "2026-02-15"
+          },
+          {
+            "link": "https://barbellapparel.com/products/slim-athletic-fit-jeans?variant=51669793145198",
+            "item": "Slim Athletic Fit Jeans - Medium Distressed / 34 / 30",
+            "timeAgo": "2026-02-15"
+          },
+          {
+            "link": "https://barbellapparel.com/products/boot-cut-athletic-fit-jeans",
+            "item": "Boot Cut Athletic Fit Jeans - 28 / Medium Wash / 34",
             "timeAgo": "2026-02-15"
           }
         ],
+        "source": {
+          "label": "Website",
+          "value": "https://barbellapparel.com",
+          "date": ""
+        },
         "orders": [
           {
-            "orderNumber": "170578",
+            "currency": "USD",
             "orderDate": "2026-02-15",
             "items": [
               {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://api-m2-na.coravin.com/screw-cap-2pk-variety.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.cuttingboards.net/bakers-pride-cbbq-60s-cutting-board/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.brondell.com/brondell-swash-bl97-essential-bidet-seat/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://simply-nutrients.mybigcommerce.com/Glyco-Plus-p1491.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://shop.loriwhitlock.com/pumpkin-window-box/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://buildmyharvest.com/Smooth-Almond-Butter/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.theproteinworks.com/whey-protein-90-isolate-apple-1kg"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://mcstaging.charlesbentley.com/bontempi-electronic-grand-piano.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://northern-reflections-store-2.mybigcommerce.com/long-sleeve-blouse-with-floral-embroidery-print-4000010863/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://store.candlewarmers.com/jasmine-medium-ultra-sonic-diffuser/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://store.human-i-t.org/shop-all/dell-latitude-14-gen-7-i5-8gb-ram-256gb-ssd/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.bcwsupplies.com/pro-mold-mini-snap-120pt-thick-card-holder"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://new.serioussips.com/sale-block-standard-flag-by-toland/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://getbitoutdoors.com/batson-fw7-375ca-340-865"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://museumreplicas.com/leonardo-da-vinci-bust/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://ampeduplearning.com/61-american-colonies-and-american-revolution-bell-ringers-or-warm-ups/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://vandamwarehouse.com/as-eth-nmea2k-nmea-networking-box-by-humminbird/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://chefs.spiceology.com/products/miso-teriyaki-sriracha-blend"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://checkout.nordicware.com/kettle-smoker/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.misfitsmarket.com/shop/aisle?addToCart=400"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.wrightlife.com/disc-golf/golf-discs/brand-model/innova/innova-valkyrie/innova-star-valkyrie/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://sagaconcepts.com/70-81/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.flooret.com/anza-11-sample/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://crowdershop.com/biological-males-should-not-compete-in-womens-sports-hoodie/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.teppermans.com/samsung-2-6-cu-ft-24-front-load-washer-with-super-speed-co-ww22k6800aw-a2"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.mysupplementstore.com/products/enzymatic-therapy-garlinase-blister-pack-100-tabs-1"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.plumbersstock.com/viega-mpd39-50739-36-port-max-manabloc-access-panel-14inx39.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.dormco.com/Canvas_Kudos_Signable_Wall_Canvas_Houndstooth_p/dormco-kudos-hndbrwn.htm"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://hyva.odindev.com/10820-tuff-country.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://monumentmetals.com/1840-1907-random-date-2-5-liberty-pcgs-ms-62.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.thermoworks.com/raytemp-blue/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://mechanicsuperstore.com/corghi-am50-leverless-tire-changer/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://shop.lacrawfish.com/Party-Supplies/Wooden-Crab-Mallet"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://bodyjewelry.com/3083-pair.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://store.goodandbeautiful.com/race-for-the-prairie-by-aileen-fisher/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://makospearguns.com/mono-shooting-line-with-crimp-pack/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.jackit.com/aro-209008-2.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.krakendice.com/trapped-innocence-14pc-dnd-dice-set-with-kraken-logo/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.purityproducts.com/certified-organic-juice-cleanse-ojc-peach-matcha-greens-special-offer"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://crest.com/en-us/oral-care-products/3d-whitestrips-glamorous-white/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://bixpy.com/motor-kare-kit/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://korbanth.com/empty-dark-queen-2-bladed-folding-staff-hilt"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://store.soundsolutionsaudio.com/i-series-10-500rms-dual-4-ohm-subwoofer-open-box/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://knifeworks.com/helle-steinbit-sandvik-12c27-stainless-steel-curly-birch-handle/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://blessedperformance.com/injen-evolution-air-induction-system-2006-2007-duramax/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://store.philamuseum.org/faber-castell-pitt-artist-pens/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://bestpricenutrition.com/products/now-foods-l-carnitine-500mg-60-caps-1?sku=6264"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.skullcandy.com/desiree-hesh-anc-wireless-headphones"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://ruby-rd-store-2.mybigcommerce.com/womens-animal-sublimation-top/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://checkout.burrow.com/accessories/applique-adobe-salt-pillow-cover"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://store.spiceology.com/white-vinegar-powder/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.theivdoc.com/make-an-appointment/view/Second-Additional-NAD-250mg/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://francescas.com/product/QE29169A-4E/claire-epoxy-dented-drop-earrings"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.customconnectorkits.com/0462-203-12141/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://livecarmodel.com/products/1-18-toyota-reiz-red.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://avamayaromas.com/?post_type=product&p=400"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.macofalltrades.com/vintage-wi-fi-cellular-verizon-5-good-condition/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://outdoorschoolshop.com/home-grown-adventures-in-parenting-off-the-beaten-path-unschooling-and-reconnecting-with-the-natural-world/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.filtersfast.com/Pentek-PD-5-20-sediment-filter.asp"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://genright.com/shop-by-vehicle/jeep-tj-97-06/hood-louver-set-3pc-short-black/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://papmd.com/products/pap-md-mouth-tape-1"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://testing.eastwood.com/eastwood-buff-kit-for-stainless-steel-8-in.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.griotsgarage.com/water-resistant-trunk-bag/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.replacements.com/china-aberdeen-selma-scalloped-fruit-dessert-sauce-bowl/p/4001"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.lafurniturestore.com/7025-outdoor-dining-rattan.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.thrivemarket.com/p/clif-bar-builders-bars-chocolate-mint"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://echoparkpaper.com/cbhmc45030-striped-ornament-die-set/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://beautysense.ca/en/eminence-neroli-age-corrective-hydrating-mist.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://au.swann.com/r-swifi-camw/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://mcstaging.pierrefabreconnect.com/p0000367-av-sample-cicalfate-post-procedure-5ml?___store=pierrefabreconnect"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.discountwatersofteners.com/parts/genesis-upflow-premier-motor/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://healthypets.com/newts-chews/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://orthodoxchristianebooks.com/food-faith-and-fasting"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.swissgear.com/swissgear-ticino-bifold-wallet-black"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.masterpiecesinc.com/nfl-cleveland-browns-checkers-board-game/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.mmogolf.com/masters-travel-dopp-kit/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.homeshoppingmalls.com/vincent-computer-desk-in-pewter-acme-furniture-00118"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.rpgshow.com/long-natural-curly-lace-front-wig-beyou020.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://alfreddunner.com/womens-stripe-allure-clamdigger/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://mcstaging.pierrefabreconnect.com/p0000367-av-sample-cicalfate-post-procedure-5ml"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://jovialfoods.com/organic-extra-virgins-olive-oil/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.bestpricenutrition.com/products/now-foods-l-carnitine-500mg-60-caps-1"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.sollenaturals.com/product/400"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.pierrefabreconnect.com/p0000367-av-sample-cicalfate-post-procedure-5ml"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://christmasfromgermany.com/gathering-around-the-manger/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.oka.com/uk/antoine-mirror-a10016-1-25-1056-29"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://utahairguns.com/donnyfl-tanto-moderator/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://orders.lunagrill.com/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://otbdiscs.com/product/sorcerer/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://mcstaging-eu.elemis.com/travel-jasmine-and-rose-hand-and-nail-cream-20ml.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.designsbyjuju.com/zdbjj302-9-simply-sunbonnets-redwork-4x4-hoop-single"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://checkout.solostove.com/bonfire-cast-iron-griddle-cooking-bundle/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://alleyooptrampolines.com/trampoline-accessories-game-book/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.carpro-us.com/pro-detailing-swabs/large-paddle-swabs/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://csd.shop/products/women/multicolor-off-the-shoulder-striped-top.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://store.propridehitch.com/stainless-steel-steel-cig-char-t-lighter/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://superjeweler.com/2ct-fine-quality-princess-diamond-stud-earrings-in-14k-yellow-gold-400.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://eggcartonstore.com/standard-trap-nest-front/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://checkout.springbok-puzzles.com/Spirit-of-Coca-Cola-p/33-10705A.htm"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://ultimatedirection.com/mens-ultra-jacket/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.utvsource.com/assault-industries-yamaha-yxz1000r-billet-pro-shifter/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://wilton-industries-inc.mybigcommerce.com/wilton-red-ready-to-use-icing-tube-4-25-oz/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.fabspeed.com/fabspeed-porsche-964-turbo-965-c2-turbo-deluxe-oval-style-tips-1990-1994/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.nutrisystem.com/diet-plans"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://underwoodammo.com/41-remington-magnum-230gr-keith-type-semi-wadcutter-black-cherry-coated-gas-check-hard-cast-hunting-ammo/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://artbeads.com/jewelry-supplies/czechmates-glass-3-x-6mm-2-hole-jonquil-bar-bead-2-5-inch-tube-beads6681/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://lemproducts.com/products/8-575-watt-countertop-grinder.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://bullionsharks.com/2005-w-american-silver-eagle-proof-pcgs-pr70-dcam/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://skintruth.com/skincare/revision/revision-skincare-firming-night-treatment/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.pkgrills.com/pkgo-grill-smoker-imperfect/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.cardboardcutoutstandees.com/big-head.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.blissworld.com/clear-genius-spot-treatment/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://monstrumtactical.com/g2-6-24x50-first-focal-plane-ffp-rifle-scope-rangefinder/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://burstoralcare.com/product/waterflosser/tip"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://area13ebikes.com/products/falcon"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.batteriesinaflash.com/janpak-heavy-duty-cotton-canvas-camouflage-square-tote-bag"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://murad-uat.mybigcommerce.com/product/free-clarifying-cleanser/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.carnivalsavers.com/catalog/item/1877124/6343610.htm"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://twinklingtree.com/products/luminous-serenity-set/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://checkout.gillfishing.com/ombre-knit-beanie/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.coolergaskets.com/delfield-gasket-26-13-16-x-29-1-2/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://hue-dev6.mybigcommerce.com/textured-microsuede-leggings/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://shopstarbeauty.com/ampro-pro-styl-protein-styling-gel-regular-hold/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.clearbags.com/4-7-8-x-4-11-16-no-flap-crystal-clear-124x120.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.ams-samplers.com/compact-slide-hammer-signature-series-thread/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.firstaidbeauty.com/pure-skin-body-wash-first-snow-limited-edition/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.skinstation.co.uk/augustinus-bader-the-eyebrow-and-lash-enhancing-serum-8ml"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.seriouspuzzles.com/eilean-donan-castle-scotland-750pc-jigsaw-puzzle-by-buffalo-games/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.curlscurls.com/18-kinky-blownout-seamless-clip-in.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.desantisholster.com/pegasus-kydex/just-cause-holster/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.deckexpressions.com/square-aluminum-balusters-by-dekpro/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.t3micro.com/product/t3-tame-your-mane-gift-set-2"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://us.elemis.com/travel-jasmine-and-rose-hand-and-nail-cream-20ml.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://comainducer.com/coma-inducer-sham-the-original-charcoal/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://rootsandharvest.com/products/control-circuit-board-for-sureseal-vacuum-sealer-1692.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.perfectsupplements.com/Perfect-Bovine-Gelatin-p/ps-gelatin.htm"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.judybluewholesale.com/8228reg-md-15-32.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://global-medical-solutions.com/2-Ft-Gray-Durable-CPAP-Tubing-Sunset-Healthcare-Solutions_p_690.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://secure.selkent.com/m16-x-65-ht-hexagon-bolts-8-8-galvanised-din-931"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://us.swann.com/sodvk-856808d/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://checkout.livesuper.com/products/wings-0-125-oz-edt-mini-for-women/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.lifeaidbevco.eu/default/fitaid-3d-snap-back-hat-black-camo.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://susiecakes.com/mini-cookie-bar-platter/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://chrischristensen.com/chris-christensen-signature-scents-grooming-colognes-16oz/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.murad.com/product/2-piece-gift/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://us.jellycat.com/if-i-were-a-monkey-board-book/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://getglowingnowskincare.com/beauty-monster-white-fractional-thermal-tips/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://shop.catholic.com/mass-appeal-the-abcs-of-worship/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://ca.eccotemp.com/l7-gas-water-valve-assembly/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.tipperarycrystal.ie/sparkle-christmas-tree-frame-decoration/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://dailysteals.com/products/womens-thermal-moisture-wicking-tube-socks-8-pairs.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.bltdirect.com/150-watt-halogen-linear-78mm-240-volt"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://shop.cordovaoutdoors.com/customizable18-oz-water-bottle/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.cariloha.com/resort-bamboo-bedding-suite-split-king/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://uk.swann.com/swnvk-8ex412mpd/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://smithsproducts.com/6-inch-folding-bone-saw/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.rcsuperstore.com/hpi-mounted-phaltline-street-tires-w-8-spoke-chrome-wheels-2-17mm-hex-fits-savage-x-others/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://stage.empirecovers.com/400-titan-5-layer-series-truck-cover"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.keylessentryremotefob.com/04589053-ad-oem-key-fob-circuit-board-with-new-remote-case-uncut-metal-key/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.brilliantdiamonds.com/round-cut-wedding-set-with-2-matching-wedding-bands-and-baguette-accents-2"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://lazyone.com/bear-plaid-infant-bib/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.lightopia.com/Details/ModernForms-Tandem/400"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.luckyduck.com/lucky-goose-flapper-gear-bag/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://creole.net/boscoli-creole-pickled-onions-16oz/"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://mocoqueen.com/products/green-werewolf-eyes-contact-lenses.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://www.lacrosseunlimited.com/nike-huarache-4-lacrosse-cleats-white-navy.html"
-              },
-              {
-                "name": "Create your Team&#039;s Big Heads",
-                "price": 439.75,
-                "productLink": "https://macks-prairie-wings-inc-alb.mybigcommerce.com/winchester-sxp-defender-12-ga-18-3-truetimber-viper-urban/"
+                "price": [
+                  {
+                    "value": [
+                      99,
+                      3
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "total": 439.75,
-            "coupon": "STAN15-GX8 (15%)",
-            "date_time": "2026-02-15 19:29:38.740"
-          },
-          {
-            "orderNumber": "163541",
-            "orderDate": "2025-10-11",
-            "items": [
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://chefs.spiceology.com/products/basil-leaves-c-s"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://thexstance.com/product/xstance-urbanglide-25/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.cardboardcutoutstandees.com/big-head.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://us.jellycat.com/amuseables-present/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.glydeamerica.com/sexpot-no-12-aphrodisiac-blend-for-both-men-women/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://renntech-store.com/performance-parts/hht-63ti-m177/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.misfitsmarket.com/shop/aisle?addToCart=200"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://new.serioussips.com/davinci-sipping-chocolate-gourmet-cocoa-mix-2-lb-bulk-bag/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://defenage.com/og-test.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.clearbags.com/6-7-16-x-12-1-4-flap-crystal-clear-163x311.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://francescas.com/product/26V851JHHI/mindey-ditsy-floral-mini-dress"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://supplementwarehouse.com/products/restore-liver-aid"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.macofalltrades.com/apple-imac-27-inch-3-4ghz-quad-core-i5-late-2013-me089ll-a-new-factory-sealed/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.sollenaturals.com/product/200"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.myotcstore.com/store/p/58561-Aquaphor-Baby-Diaper-Rash-Healing-Paste-Relieves-Fast-3-5-oz"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.cacklehatchery.com/product/electric-water-fountain-base-heater/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.flashrouters.com/1-remote-session-addon"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://store.human-i-t.org/shop-all/dell-latitude-14---6th-gen-i7---8gb-ram---250gb-hdd/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://store.philamuseum.org/drawn-with-spirit-pennsylvania-german-fraktur/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://essentialelementsnutrition.com/product/Apple-Cider-Gummy"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://lucidmattress.com/collegiate-bundle/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://trendytransfers.com/products/100-days-sweeter-pink-sublimation-transfer/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://shophockeytown.com/detroit-red-wings-oht-white-ice-poly-hood/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://store.ezydog.com/click-isofix/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://barberco.com.au/marvy-barber-pole-model-824-twin-light/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://checkout.getbevel.com/products/beard-conditioner"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.masterpiecesinc.com/googly-eyes-right-fit-woodland-animals-48-piece-kids-puzzle/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://eggcartonstore.com/best-of-show-shampoo-16-oz.-refill/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.newpowa.com/100-ft-10-awg-extension-cable-m/f-/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://us.livelarq.com/accessories/nomatic-navigator-sling"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://hyva.odindev.com/0x104-chevy-3500hd-bed-caps.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://lensdirect.com/1-day-acuvue"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.hawaiicoffeecompany.com/p/french-roast-coffee---24oz-bag"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.gorgeousshop.com/bareminerals-exfoliating-treatment-cleanser-70g.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://blessedperformance.com/pusher-3-cross-air-2003-to-2007-5-9l-cummins/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://cheapfood.co.uk/nestle-kitkat-4-finger-41-5g/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://global-medical-solutions.com/Ventilator-Circuit-for-the-Autovent-4000-L599-130-case-of-10_p_201.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://area13ebikes.com/products/fat-bike-tube-26-x-4-0-4-9"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://store.spiceology.com/sage-ground/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.keylessentryremotefob.com/04602260-aa-oem-key-fob-circuit-board-with-new-remote-case/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://bullionsharks.com/1897-p-morgan-silver-dollar-brilliant-uncirculated-bu/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://x-ph.com/active-autowerke-e46-330-supercharger-kit-level-1/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://manna.com/products/undefined?affid=1102"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://blueforcegear.com/izlid-suppressor-pouch"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.shearcomfort.com/Silverguard-Sun-Protection-Car-Covers.asp"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://knifeworks.com/viper-golia-d2-steel-green-micarta-handle-w-kydex-sheath/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www3.tacticaltraps.com/products/1791-supermax.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://jhealth.mybigcommerce.com/j-minoxidil-4-biotin-0-1/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.lacrosseunlimited.com/cascade-back-panel-lacrosse-helmet-panel-set-athletic-gold.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://checkout.livesuper.com/products/tom-ford-costa-azzurra-acqua-1-7-oz-edt-spray/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://romencegardens.com/begonia-hybrid-dragon-wing-red/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://mocoqueen.com/products/mystery-aqua-blue-halloween-costume-contacts.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.curlscurls.com/th-34.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://lifeaidbevco.com.au/lock"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://stampington.com/french-flea-market-undergarment/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.vitalitymedical.com/rubbermaid-wall-grab-bar-dup-page-disabled.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://katieloxton.com/shine-reed-diffuser-sweet-lychee-and-mango-flower?___store=KL_B2C_GBP_GB"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://store.goodandbeautiful.com/chemistry-printed-unit-pdf-download/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.jackit.com/aro-200112.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.filtersfast.com/american-plumber-dw-200-r-water-filters.asp"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://beautysense.ca/en/jan-marini-skin-zyme-papaya-mask.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://sagaconcepts.com/46-60/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://fieldcraftsurvival.com/vehicle-trauma-response-kit-v-trk"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.fabspeed.com/fabspeed-porsche-996-gt3-muffler-bypass-pipes-1999-2005/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.lifeaidbevco.com/lock"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://shop.swampfoxoptics.com/freedom-rings/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://digilent.com/shop/pmod-pmon1-power-monitor/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://stripcurtaindepot.com/8-inch-wide-strip-curtain-kit/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://korbanth.com/c-bounty-hunter-12-piece-armor-set-with-vest"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://titancornholebags.com/cornhole-trophy-plaques/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://ampeduplearning.com/texas-history-civil-war-book/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.skinstation.co.uk/lumity-anti-ageing-supplements-1-month-supply"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://store.propridehitch.com/3p-600-spring-bar-set-with-600-spring-bar-bushings/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://the-art-of-shaving-staging.mybigcommerce.com/shaving-products/pre-shave-oil-unscented/PG_00670535719144.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://shop.loriwhitlock.com/flourish-flowers/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://outdoorschoolshop.com/Moss-Rain-Pants-Junior/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://lahainahoneyco.com/honey-bee-mesh-produce-bags-set-of-2/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://us.swann.com/sonvk-1686816fb/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://crest.com/en-us/oral-care-products/mouthwash/pro-health-sensi-care-rinse"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://shopmoshn.com/leap-white-kelly/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.tikkurila.co.uk/tikkurila-optiva-white-colour-card"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://lem-products-direct-llc-store-2.mybigcommerce.com/whats-for-dinner-meal-planner/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://burjushoes.com/womens/fashion-shoes/open-toe/lace-up/vaneno-metallic-heels-4-inch/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://smithsproducts.com/4-dual-grit-sharpening-stone-with-pouch/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://aimpoint.us/aimpoint-battery-cap-for-pro-aco-9000-series/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.griotsgarage.com/car-cover-cable-lock/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://secure.selkent.com/m10-hexagon-bolt-part-thread-bright-zinc-plateds"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.lightopia.com/Details/GenerationLighting/200"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://store.ancientfaith.com/mother-of-god-lovingkindness-large-icon/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://macks-prairie-wings-inc-alb.mybigcommerce.com/benelli-super-nova-12-ga-26-black/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://healthypets.com/jmliquidcatdog/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://rootsandharvest.com/products/whats-for-dinner-meal-planner.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.bbqguys.com/i/200/solaire/in-ground-post-for-30-inch-gas-grills-sol-igp-30"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://getglowingnowskincare.com/hydra-stamp/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://bixpy.com/hobie-pro-angler-rudder-cover/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://hue-dev6.mybigcommerce.com/button-fly-denim-high-rise-leggings/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.sparklers.us/shop-by-celebration/champagne-flutes-stemless-toasting-cups/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://gardencup.com/kale/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://z-gallerie-home-llc-store-1.mybigcommerce.com/p-oslo-floor-vase-121851766"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://makospearguns.com/wetsuit-hanger/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.allaboutlearningpress.com/all-about-spelling-level-1-materials/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://au.swann.com/sodvk-856804rl/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.thrivemarket.com/p/artisana-organic-raw-vegan-cashew-butter-0-200"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://underwoodammo.com/338-lapua-300gr.-custom-competition-hollowpoint-boat-tail-match-hunting-ammo/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://monumentmetals.com/tube-of-90-silver-walking-liberty-half-dollars-10-face-value.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://clip-strip.mybigcommerce.com/clam-shell-adapter-hang-tab-csat-1750/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://supplementwarehouse.com/products/restore-liver-aid?sku=2746"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://oceanmosaics.com/products/extant-blue-1x2-pool-mosaic-glass-tile/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://csd.shop/products/women/shoes/brown-leather-embellished-rosie-riding-boots.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://ca.solostove.com/pi-starter-bundle/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.azfauxbeams.com/old-medford-brick-wall-panel/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://checkout.gillfishing.com/mens-uv-tec-polo/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://mcstaging.charlesbentley.com/charles-bentley-foldable-textilene-sun-lounger-grey.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://creole.net/louisiana-fish-fry-shrimp-fry-50lb/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://checkout.springbok-puzzles.com/Summer-Celebration-p/33-01473A.htm"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://merrystockings.com/bucilla-christmas-tree-skirt-candy-express.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://shop.lacrawfish.com/King-Cakes-Bakery/Gambinos-King-Cake-Cream-Cheese"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.theivdoc.com/make-an-appointment/view/COVID19-Antibody-Testing/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.wilsonamplifiers.com/wilson-electronics-6v-5v-dc-car-power-adapter-859913/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.mysupplementstore.com/products/solaray-fenugreek-seeds-620mg-100-caps-1"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.thermoworks.com/tctemp1000/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://nextbase.co.uk/exclusive-offers/622gw-with-64gb-sd-card/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.bedfords.com/29144099541"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://barndoorag.com/ams-samplers-one-piece-4-regular-soil-auger-400-46/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.kingofsparklers.com/products/c2-premium-electric-hookah-pod"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://aspen-company.com/rust-and-pink-rainbow-womens-fitted-tee-color-option-4/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://zgallerie.com/p-oslo-floor-vase-121851766"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://nononsense-dev.mybigcommerce.com/base-brand-reg-rt-pantyhose/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://itsskinny.com/recipes/low-carb-vegetable-pad-thai"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://versatables.com/keyboard-drawer/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.tipperarycrystal.ie/tote-bag-sicily-black/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.rcsuperstore.com/traxxas-trx-12-15-engine-one-way-starter-bearing/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.luckyduck.com/rapid-flyer-dove/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.golfswingsystems.co.uk/?post_type=product&p=200"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://dormhaul.com/ultra-thick-tufted-floor-pillow-gray/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.designsbyjuju.com/sweet-easter"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://mechanicsuperstore.com/bendpak-hd-7p-7-000-lb-4-post-lift/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.teammotorcycle.com/small-pvc-velcro-closure-tool-bag"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.bestpricenutrition.com/products/wakunaga-kyolic-formula-106-healthy-heart-formula-w-vitamin-e-cayenne-and-hawthorne-100-caps-1"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.beautyplussalon.com/redken-blonde-glam-perfect-platinum-8-5-oz"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://buildmyharvest.com/Cucumber-Lime-Superfrau"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.customconnectorkits.com/dt-enhanced-8-wire-kit/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://northern-reflections-store-2.mybigcommerce.com/silver-ring-and-teardrop-stone-earrings-4000011374/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.replacements.com/china-ambiance-interlude-footed-cup-saucer-set/p/2001"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.discountwatersofteners.com/resin-and-media/corosex-66-cubic-foot/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://wilton-industries-inc.mybigcommerce.com/wilton-ghost-with-candy-corn-icing-decorations-12-count/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://shopfashiontakeout.com/f-n-f-camo-cargo-flare-pants/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://artbeads.com/jewelry-supplies/antique-silver-plated-ethnic-triangle-pendant-5-loops-pend-1273/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://dermelect.com/makeover/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://checkout.burrow.com/nomad-fabric/loveseat-chaise"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.purityproducts.com/bladder-support-super-formulatm"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://renegadegamestudios.com/outbreak-undead-2nd-ed-weapons-deck/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.theshoemart.com/alden-mens-fd-45912h/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://livecarmodel.com/products/1-18-dealer-edition-chevrolet-chevy-malibu-red-diecast-car-model.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://bodyjewelry.com/127050.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://uk.livelarq.com/shop/larq-bottle-SHG050A-BS"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://uk.swann.com/swnhd-1200be/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://susiecakes.com/copy-of-mini-cupcakes/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.seriouspuzzles.com/las-vegas-930pc-4d-cityscape-educational-jigsaw-puzzle/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.cuttingboards.net/true-820634-cutting-board/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://checkout.solostove.com/yukon-plus-stand/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://teams.us.capellisport.com/ayses-team-match-shorts-black-white-3/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.modani.com/nabu-extendable-dining-table.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://ruby-rd-store-2.mybigcommerce.com/womens-luxe-hatchi-paisley-top/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.desantisholster.com/e-adjuster-cell-phone-case/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://checkout.nordicware.com/4-piece-kitchen-utensil-set-sea-glass/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://christmasfromgermany.com/tree-with-santa/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.naturalpigments.com/instacoll-clear-100ml.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.perfectsupplements.com/RositaExtraVirginCodLiverOil-p/ro-evclo-5.htm"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.ams-samplers.com/7-qc-regular-auger/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.judybluewholesale.com/8235pl-ssdk-1xl.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://museumreplicas.com/leather-jerkin/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://simplynutrients.com/Fem-Prenatal-30-packets-p1041.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://store.candlewarmers.com/lavender-vanilla-classic-wax-melts/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://www.rpgshow.com/anthony-cuts-side-part-wavy-ash-blonde-lace-front-wigs-anthonycuts045.html"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://test-store54962-z6.mybigcommerce.com/waterproof-endoscope-camera-android/"
-              },
-              {
-                "name": "Create your Big Head",
-                "price": 26.99,
-                "productLink": "https://milky-mama.com/milky-mama-mug/"
-              }
-            ],
-            "total": 26.99,
-            "coupon": "WELCOME-3TD (10%)",
-            "date_time": "2025-10-11 23:00:12.151"
+            "date_time": "2026-02-15 03:34:59.892",
+            "discount_amount": 0,
+            "orderNumber": "11797068874094",
+            "total": 112.18
           }
         ]
       },
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Issues with Orders"
+      "companyWebsite": "https://barbellapparel.com",
+      "companyName": "Barbell Apparel",
+      "notes": {
+        
+      },
+      "blocklisted_words": [
+        
       ],
-      "blocklisted_words": [],
-      "has_shopify": false
-    },
-    "45": {
-      "id": "019c496d-f8f1-4f9b-f000-0000f5237a71",
-      "companyName": "Wolford",
-      "companyWebsite": "https://wolford.com/",
-      "agentName": "Annie",
+      "escalation_preferences": [
+        
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Wolford: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Wolford.",
           "message_type": "system",
-          "date_time": "2026-01-20 17:26:14.165"
+          "message_text": "Barbell Apparel: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-14 22:32:08.956",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Wolford: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Wolford.",
           "message_type": "system",
-          "date_time": "2026-01-27 17:49:18.124"
+          "message_text": "Barbell Apparel: Welcome! This is Sarah with Barbell Apparel. \n\nGet a FREE SHIRT w/ the code FSAg2ovex on any orders over $99. \n\nClick here to auto-apply it instead: https://barbell.attn.tv/aaqaVveoRm78 .\n\nWe\u0027re here to help you Break Boundaries and empower your fitness.\n\nText me any time!",
+          "date_time": "2026-02-14 22:32:13.029",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Wolford: Welcome to Wolford! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
           "message_type": "system",
-          "date_time": "2026-01-27 17:49:32.688"
+          "message_text": "Barbell Apparel: Don\u0027t forget to save our number. We give our best deals and exclusive drops over text message first. ",
+          "date_time": "2026-02-14 22:32:14.233",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Wolford: Welcome! Use the code WOLFORD10 at checkout to save 10% on your next purchase. https://wolford.attn.tv/aI22sHvkWwFQ .",
           "message_type": "system",
-          "date_time": "2026-01-27 17:49:36.711"
+          "message_text": "Barbell Apparel: Hey there! This is Sarah again. \n\nIn case you missed it, use code FSAg2ovex to get a FREE SHIRT with any order over $99. \n\nYou can choose from any t-shirt, graphic tee, or workout tee. \n\nWe\u0027re here to empower your workouts - text me if you need me!",
+          "date_time": "2026-02-16 12:08:20.024",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Wolford: Don't forget to save our contact to get exclusive updates!",
           "message_type": "system",
-          "date_time": "2026-01-27 17:49:37.714"
+          "message_text": "Barbell Apparel: We don\u0027t discount often, but we want to partner with you on the next step of your fitness journey.\n\nMake a change today, and use the code FSAg2ovex to get a free shirt with any order over $99 while supplies last: https://barbell.attn.tv/a4RGH95XsPEo .",
+          "date_time": "2026-02-19 12:07:58.868",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Wolford: Hey, this is Annie. Thanks for checking out our site! \nhttps://wolford.attn.tv/aT-GPY-aIk98 \n\nAre you looking for anything in particular today? ",
           "message_type": "system",
-          "date_time": "2026-01-27 17:52:58.743"
+          "message_text": "Barbell Apparel: Hey Connor, this is Sarah. I see you left something in your cart. https://barbell.attn.tv/agr0vsG1KjI5 \n\nI like Arsenal Tee too! Any questions I can answer for you?",
+          "date_time": "2026-02-21 15:34:42.976",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Wolford: You're still thinking about it, aren't you? Complete your order now & enjoy this exclusive offer of 10% off your order with code CART10 at checkout. https://wolford.attn.tv/a3WmUmLYl83k \n\nWas there anything else we can help with before you place your order?",
-          "message_type": "system",
-          "date_time": "2026-01-29 18:14:02.926"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Slip into confidence this Valentine's Day with our timelessly crafted lingerie styles that celebrate passion. wolford.attn.tv/a3gU7y1wqPs6 ",
-          "message_type": "system",
-          "date_time": "2026-01-30 18:30:23.356"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: For 48 hours only enjoy 4 for 3 promo in our Outlet: get the lowest-priced item for free and free standard shipping wolford.attn.tv/alQE0I2YqTLB",
-          "message_type": "system",
-          "date_time": "2026-01-31 11:30:28.348"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Celebrate the Lunar New Year in style with our luxurious tights, designed to make your legs the star of every celebration. wolford.attn.tv/avJzdifBbGVL",
-          "message_type": "system",
-          "date_time": "2026-02-02 18:30:22.653"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Explore our latest eye-catching tights, where bold and intricate patterns redefine your look and enhance any outfit: wolford.attn.tv/aXSGn0Fw6jhB",
-          "message_type": "system",
-          "date_time": "2026-02-03 12:30:25.453"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Meet our best-selling Winter Icons: breathable base layers & luxurious merino wool sweaters to keep you irresistibly warm. wolford.attn.tv/aEbjQ4x9cY4e",
-          "message_type": "system",
-          "date_time": "2026-02-06 11:30:23.616"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Romance is in the air this Valentine's Day: from Feb 7 to 14 receive a complimentary Wolford foulard on orders above $400. wolford.attn.tv/aIJCncmeaafA",
-          "message_type": "system",
-          "date_time": "2026-02-07 11:30:18.865"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Hey, this is Annie. Thanks for checking out our site! \nhttps://wolford.attn.tv/aHOdkjHe7y4z \n\nAre you looking for anything in particular today? ",
-          "message_type": "system",
-          "date_time": "2026-02-08 15:02:57.407"
-        },
-        {
-          "message_media": [],
-          "message_text": "What if an item doesn't fit",
           "message_type": "customer",
-          "date_time": "2026-02-08 15:23:39.771"
+          "message_text": "I was wondering when the shirt I got as part of my previous order will be delivered",
+          "date_time": "2026-02-21 15:35:32.285",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Tights in particular?",
           "message_type": "customer",
-          "date_time": "2026-02-08 15:23:49.720"
+          "message_text": "Or if I still need to select the shirt",
+          "date_time": "2026-02-21 15:35:42.247",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Wolford: I appreciate your inquiry! You may return undamaged/unworn items purchased online. Such items must be in salable condition, in the original packaging. No items may be returned if they are missing original tags, labels or hygiene stickers. No returned merchandise will be accepted without the original sales receipt. You can check out our detailed return policy here: https://wolford.attn.tv/aUMw9KwkQQU2 ",
+          "message_id": "019c81ec-f5c7-41a9-f000-0000fb8e8888",
+          "message_text": "Barbell Apparel: You do need to add the shirt to your cart at the time of placing the order; did you not do that? If not, can you let me know your order number, email address, and what shirt you would like? https://barbell.attn.tv/aCHSRdif0BGu\n\nI can ask our team if they can help.",
           "message_type": "agent",
-          "agent": "31385",
-          "message_id": "019c3f01-f616-4144-f000-0000f5237a71",
-          "date_time": "2026-02-08 15:46:59.122"
-        },
-        {
-          "message_media": [],
-          "message_text": "I wanted to enter my welcome code for my first order but was not given the chance . How can I get that 10 percent code applied? There was no prompt. I find your site super hard to navigate and finicky",
-          "message_type": "customer",
-          "date_time": "2026-02-08 16:39:28.373"
-        },
-        {
-          "message_media": [],
-          "message_text": "It's really a pain",
-          "message_type": "customer",
-          "date_time": "2026-02-08 16:39:38.365"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Sorry for the long wait and for any inconvenience! Please apply the code to a full-priced item in your cart. The code is entered in the \"Redeem a voucher\" box. Here's a screenshot for reference- https://wolford.attn.tv/aNyJDxWtmApn_\n",
-          "message_type": "agent",
-          "agent": "87474",
-          "message_id": "019c3f56-a1b5-4ad8-f000-0000f5237a71",
-          "date_time": "2026-02-08 17:19:28.087"
-        },
-        {
-          "message_media": [],
-          "message_text": "It's too late. I just want customer service to apply it. And refund the cash. Last time I waited if was a disaster. Your guys site is really unstable",
-          "message_type": "customer",
-          "date_time": "2026-02-08 18:18:44.852"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: I understand, and sorry for the inconvenience. Have you already placed your order? If so, I can check with my team to see if we can apply the code to your order. Could you please send me your order number, email address, and the code you wish to apply?",
-          "message_type": "agent",
-          "agent": "30890",
-          "message_id": "019c3f9f-dd2d-4f9d-f000-0000f5237a71",
-          "date_time": "2026-02-08 18:39:27.430"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Step into Lunar New Year with our stunning tights featuring gold threads and crystal details for your statement look: wolford.attn.tv/aa4Lmq3Pw_PM",
-          "message_type": "system",
-          "date_time": "2026-02-09 18:30:20.603"
-        },
-        {
-          "message_media": [],
-          "message_text": "Yes! I have placed the order and would love the discount code to apply",
-          "message_type": "customer",
-          "date_time": "2026-02-09 19:04:56.880"
-        },
-        {
-          "message_media": [],
-          "message_text": "My email is kittygreenwald@gmail.com",
-          "message_type": "customer",
-          "date_time": "2026-02-09 19:05:06.902"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Thank you for the support, and I understand. Can I have your order number as well?",
-          "message_type": "agent",
-          "agent": "46059",
-          "message_id": "019c44df-7cac-49a0-f000-0000f5237a71",
-          "date_time": "2026-02-09 19:07:03.116"
-        },
-        {
-          "message_media": [],
-          "message_text": "Sure",
-          "message_type": "customer",
-          "date_time": "2026-02-09 19:07:36.811"
-        },
-        {
-          "message_media": [],
-          "message_text": "Let me check",
-          "message_type": "customer",
-          "date_time": "2026-02-09 19:07:42.798"
-        },
-        {
-          "message_media": [],
-          "message_text": "One sec",
-          "message_type": "customer",
-          "date_time": "2026-02-09 19:07:49.730"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Take your time! I'll wait for your update. 😊",
-          "message_type": "agent",
-          "agent": "87595",
-          "message_id": "019c44e0-d081-4f1a-f000-0000f5237a71",
-          "date_time": "2026-02-09 19:08:30.101"
-        },
-        {
-          "message_media": [],
-          "message_text": "Order number US0001106358",
-          "message_type": "customer",
-          "date_time": "2026-02-09 19:25:46.709"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Thank you for the information. I have already sent your concern to our team. Make sure to check your SMS for updates. I'll be in touch!",
-          "message_type": "agent",
-          "agent": "48804",
-          "message_id": "019c44f3-fd4e-4e3b-f000-0000f5237a71",
-          "date_time": "2026-02-09 19:29:26.774"
-        },
-        {
-          "message_media": [],
-          "message_text": "Thank you. I appreciate it",
-          "message_type": "customer",
-          "date_time": "2026-02-09 19:30:07.249"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Thanks for your patience! I just heard from the team, and one of my colleagues will reach out to you and will be assisting you directly from here on out. Make sure to check your spam and promo folders, as sometimes our emails end up there. Rest assured, you're in excellent hands. ",
-          "message_type": "agent",
-          "agent": "32937",
-          "message_id": "019c4857-6dce-4b2d-f000-0000f5237a71",
-          "date_time": "2026-02-10 11:16:55.284"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: It's time for tights! Experience the unmatched craftsmanship of our legwear, designed to elevate your winter wardrobe wolford.attn.tv/aIWvF6-Wm7W9 ",
-          "message_type": "system",
-          "date_time": "2026-02-10 11:30:22.516"
-        },
-        {
-          "message_media": [],
-          "message_text": "No one has reached out to me",
-          "message_type": "customer",
-          "date_time": "2026-02-10 16:15:10.752"
-        },
-        {
-          "message_media": [],
-          "message_text": "And it's absurd",
-          "message_type": "customer",
-          "date_time": "2026-02-10 16:15:20.756"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: I'm so sorry about that. Just to be sure, have you checked your spam and promo folders? If so, please know our team will follow up with you in no time. We appreciate your patience.",
-          "message_type": "agent",
-          "agent": "87592",
-          "message_id": "019c496a-c824-4b2e-f000-0000f5237a71",
-          "date_time": "2026-02-10 16:17:40.797"
-        },
-        {
-          "message_media": [],
-          "message_text": "All I've gotten are promotional emails",
-          "message_type": "customer",
-          "date_time": "2026-02-10 16:18:40.852"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"How soon will I get a response from customer support - All brands\"; last updated: 2023-10-10 17:43:03.641",
-          "message_type": "template",
-          "date_time": "2026-02-10 16:21:09.891"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wolford: Thank you for getting back to me and providing that information! I'm really sorry for the inconvenience. Our team is doing everything to respond to each inquiry in a timely manner. They should follow up with you as soon as they have an update!",
-          "message_type": "agent",
-          "agent": "109840",
-          "message_id": "019c496d-f8f1-4f9b-f000-0000f5237a71",
-          "date_time": "2026-02-10 16:21:09.892"
+          "agent": "82441",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-21 15:38:36.262"
         }
-      ],
-      "notes": {
-        "tone": [
-          "Avoid slang"
-        ],
-        "drive_to_purchase": [
-          "When suggesting something, add the name of the product next to the link"
-        ],
-        "promo_and_promo_exclusions": [
-          "Don't share the code SMS20"
-        ]
-      },
+      ]
+    },
+    "44": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "019c71ce-3b9c-44cf-f000-0000fc4144f7",
       "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 4232135927,
+            "company_id": 4584,
+            "coupon_url": "https://www.toynk.com/discount/SMS4Wffaa?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "name": "Autogen10%",
+            "coupon": "SMS4Wffaa",
+            "redemption_status": "UNUSED"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://wolford.com/",
+          "value": "https://toynk.com/",
           "date": ""
+        }
+      },
+      "companyWebsite": "https://toynk.com/",
+      "companyName": "Toynk",
+      "notes": {
+        
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Toynk: Thank you for your purchase! Your order number is 280437. View more information about your order here: https://toynk.attn.tv/aODSerwz4-Ti .",
+          "date_time": "2026-02-18 10:46:15.643",
+          "message_media": [
+            
+          ]
         },
-        "browsingHistory": [
+        {
+          "message_type": "system",
+          "message_text": "Toynk: Welcome to Toynk! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-18 11:13:16.409",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Toynk: Hey this is Jordan, how can I help you?",
+          "date_time": "2026-02-18 11:13:20.405",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I need to change the shipping address on my order",
+          "date_time": "2026-02-18 11:13:50.246",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I no longer live there",
+          "date_time": "2026-02-18 11:14:09.730",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hello?",
+          "date_time": "2026-02-18 11:15:40.530",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c718a-3fa9-45a7-f000-0000fc4144f7",
+          "message_text": "Toynk: I\u0027m sorry to hear that! I can check if that\u0027s possible. Can I please have your order number, email address, and correct shipping address?",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 11:16:51.652"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I cannot access the order number for some reason",
+          "date_time": "2026-02-18 11:18:30.537",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "My email is xreinstein¡gmail.com",
+          "date_time": "2026-02-18 11:18:50.605",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Shipping address would be- 1910 evergreen park drive SW, Olympia wa 98502",
+          "date_time": "2026-02-18 11:19:50.290",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "280437",
+          "date_time": "2026-02-18 11:21:10.513",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "That\u0027s the order number",
+          "date_time": "2026-02-18 11:21:20.543",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Sorry",
+          "date_time": "2026-02-18 11:21:27.477",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hello?",
+          "date_time": "2026-02-18 11:40:10.367",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c71a0-a0e5-437d-f000-0000fc4144f7",
+          "message_text": "Toynk: Thanks for the info! I will pass this along to my team and get back to you as soon as possible.",
+          "message_type": "agent",
+          "agent": "109964",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 11:41:18.340"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Dude, I can\u0027t have it sent to that address",
+          "date_time": "2026-02-18 11:42:10.196",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I saved to buy these for my boyfriend",
+          "date_time": "2026-02-18 11:43:10.377",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c71a2-caa5-4cb5-f000-0000fc4144f7",
+          "message_text": "Toynk: Sorry for the delay. I\u0027m still waiting for an answer from my team regarding this issue. Please allow us a bit more time to sort this out for you. I will reach out to you as soon as I hear back from them. Thanks a ton for your patience!",
+          "message_type": "agent",
+          "agent": "87578",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 11:43:40.093"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you",
+          "date_time": "2026-02-18 11:45:39.790",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c71a6-4c74-4656-f000-0000fc4144f7",
+          "message_text": "Toynk: No problem. Feel free to reach out anytime, I\u0027m always here to help!",
+          "message_type": "agent",
+          "agent": "82427",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 11:47:29.946"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I just need this to be resolved.",
+          "date_time": "2026-02-18 11:48:40.305",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c71b2-e80a-440d-f000-0000fc4144f7",
+          "message_text": "Toynk: I get where you\u0027re coming from because I\u0027m a consumer, too. I will be sure to text you as soon as they provide an update. \n\nFeel free to reach out if anything comes up while we wait for the team\u0027s response.",
+          "message_type": "agent",
+          "agent": "35256",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 12:01:16.237"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027ll just be waiting for your response. Do I need to cancel the order and order again or what? I would need the money put back into my bank account as it is all I have. This is for my boyfriend and I had to sell some of my books to have enough to pay for this.",
+          "date_time": "2026-02-18 12:15:22.395",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c71ce-3b9c-44cf-f000-0000fc4144f7",
+          "message_text": "Toynk: I completely understand your concern. I don\u0027t currently know how our team will handle this, but as soon as I have more info I will let you know. Is there anything else that I can do for you today?",
+          "message_type": "agent",
+          "agent": "82441",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 12:31:07.058"
+        }
+      ]
+    },
+    "45": {
+      "agentName": "Darby",
+      "has_shopify": true,
+      "id": "019cab73-29e4-4524-f000-000018359889",
+      "rightPanel": {
+        "promotions": [
           {
-            "item": "Tulle Control Panty High Waist",
-            "link": "https://www.wolford.com/en-us/tulle-control-panty-high-waist-69955.7005.html",
-            "timeAgo": "2026-02-10"
+            "title": "Cyber Monday",
+            "content": [
+              "• Spend $200 → 25% off\n\n• Spend $300 → 35% off\n\n• Discount applied automatically at checkout.\n\n• Exclusions: Gift cards. Cannot combine with other offers, codes, coupons, or promotions. Non-transferable and not valid on previous purchases.\n\n• Gift with Purchase: Available on orders $300+ (before taxes). Select at checkout. Limit one gift per order. Valid 12/1/25 or while supplies last. Not eligible for return or exchange.\n\n• Valid: 12/1/25 – 12/3/25."
+            ]
           },
           {
-            "item": "3W Control Panty High Waist",
-            "link": "https://www.wolford.com/en-us/3w-control-panty-high-waist-69832.4752.38.html",
-            "timeAgo": "2026-02-10"
+            "title": "VIP Black Friday",
+            "content": [
+              "Tiered Discount \u0026 Gift Promotion\n\n• Spend $200 → 25% off\n\n• Spend $300 → 35% off\n\n• Discount applied automatically at checkout.\n\n• Excludes: Gift cards. Cannot combine with other offers. Non-transferable. Not valid on previous purchases.\n\nGift with Purchase\n\n• Use code VIP2025 for a free gift with orders $300+ (before taxes).\n\n• Valid 11/24/25 – 11/30/25, 11:59 PM EST, or while supplies last.\n\n• Limit one gift per order. Not eligible for return or exchange.\n\nExclusions \u0026 Rules\n\n• Cannot combine with other offers, codes, coupons, or promotions."
+            ]
           },
           {
-            "item": "Mosaic Net Tights",
-            "link": "https://www.wolford.com/en-us/mosaic-net-tights-19460.1300.M.html",
-            "timeAgo": "2026-02-08"
-          },
-          {
-            "item": "Merino Blend Tights",
-            "link": "https://www.wolford.com/en-us/merino-blend-tights-11335.7005.M.html",
-            "timeAgo": "2026-02-08"
-          },
-          {
-            "item": "Snake Net Tights",
-            "link": "https://www.wolford.com/en-us/snake-net-tights-19456.4850.M.html",
-            "timeAgo": "2026-02-08"
+            "title": "Black Friday",
+            "content": [
+              "• Spend $200 → 25% off\n\n• Spend $300 → 35% off\n\n• Discount applied automatically at checkout.\n\n• Exclusions: Gift cards. Cannot combine with other offers, codes, coupons, or promotions.\n\n• Non-transferable and not valid on previous purchases.\n\n• Valid: 11/28/25 – 11/30/25."
+            ]
           }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 406165641,
+            "company_id": 7473,
+            "coupon_url": "https://www.johnnie-o.com/discount/SMS10KkQ2H4?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=welcome",
+            "name": "SMS10",
+            "coupon": "SMS10KkQ2H4",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 406165641,
+            "company_id": 7473,
+            "name": "SMS10",
+            "coupon": "SMS10fW8OfV"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://johnnie-o.com/",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://johnnie-o.com/",
+      "companyName": "johnnie-O",
+      "notes": {
+        "escalate": [
+          "ESC restock inquiries",
+          "ESC shipping/order inquiries",
+          "ESC cxs looking for a discount code"
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": false
+      "blocklisted_words": [
+        "Untuck-it"
+      ],
+      "escalation_preferences": [
+        "Restock questions",
+        "shipping",
+        "site issues",
+        "out of stock issues"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Welcome to johnnie-O! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: https://johnnie-o.attn.tv/a1oPbFoM6l7P .",
+          "date_time": "2026-02-28 18:31:13.211",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Welcome to the Family! Your 10% off coupon code is SMS10fW8OfV . Click here to shop now: https://johnnie-o.attn.tv/abGAZPvsRemb .",
+          "date_time": "2026-02-28 18:31:18.224",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Don\u0027t forget to save our contact!",
+          "date_time": "2026-02-28 18:31:19.495",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Thank you for your purchase! Your order number is 1865409. View more information about your order here: https://johnnie-o.attn.tv/aTaIEuDunKEP .",
+          "date_time": "2026-02-28 18:33:05.806",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Hi, if you need additional help please reach out to wingman@johnnie-o.com. Text STOP to opt out.",
+          "date_time": "2026-02-28 18:33:51.347",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I need to change the address for my order ",
+          "date_time": "2026-02-28 18:34:02.730",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019ca69a-decf-46a5-f000-000018359889",
+          "message_text": "Johnnie-O: Thanks for your order. The best way to handle this is to email us directly at wingman@johnnie-o.com or give us a call at 877-787-4703 Monday-Friday 6:30am to 5pm PST. Our team will be happy to help!",
+          "message_type": "agent",
+          "agent": "31385",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-28 18:34:53.424"
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Hey David , this is Darby . Thanks for checking us out! 😊 johnnie-o.attn.tv/a04EV1dhGvL1 \n\nAny questions I can answer for you? ",
+          "date_time": "2026-03-01 16:43:03.411",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I placed an order yesterday. I need to change the address where the shirt is being delivered. Can you look for my email? My name is David Monninger Monninger david@gmail.com I sent it to the wingman John O email address.",
+          "date_time": "2026-03-01 16:43:48.847",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019cab65-f94e-4bda-f000-000018359889",
+          "message_text": "Johnnie-O: I\u0027m sorry to hear that! Let me just check with the team regarding this! ",
+          "message_type": "agent",
+          "agent": "109964",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-01 16:55:12.874"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ok , thanks",
+          "date_time": "2026-03-01 17:09:16.632",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"You\u0027re welcome! - All brands\"; last updated: 2023-10-10 18:02:00.150",
+          "date_time": "2026-03-01 17:09:37.278",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019cab73-29e4-4524-f000-000018359889",
+          "message_text": "Johnnie-O: You\u0027re welcome! ",
+          "message_type": "agent",
+          "agent": "31385",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-01 17:09:37.281"
+        }
+      ]
     }
   }
 }

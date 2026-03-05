@@ -3,806 +3,1613 @@
   "chunk": "chunk_0012",
   "scenarios": {
     "56": {
-      "id": "019c49b2-c863-44f7-f000-0000fa3fc7ed",
-      "companyName": "johnnie-O",
-      "companyWebsite": "https://johnnie-o.com/",
-      "agentName": "Darby",
+      "agentName": "Charli",
+      "has_shopify": true,
+      "id": "019c8cde-5706-47db-f000-0000df4ef215",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "RVWELCOME25",
+            "content": [
+              "$25 off $100"
+            ]
+          },
+          {
+            "title": "WEMISSYOU15",
+            "content": [
+              "This is the insider promo code for the Winback Journey"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 3746492949,
+            "company_id": 8941,
+            "coupon_url": "https://reviveskincare.myshopify.com/discount/RVWELCOME50?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "RVWELCOME50",
+            "name": "$50 Off $150",
+            "coupon": "RVWELCOME50",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://reviveskincare.com/collections/serums/products/defensif-environmental-antioxidant-booster",
+            "item": "Defensif / Environmental Antioxidant Booster",
+            "timeAgo": "2026-02-22"
+          },
+          {
+            "link": "https://reviveskincare.com/collections/firming-and-lifting/products/intensite-creme-lustre-day-moisturizer",
+            "item": "Intensité Crème Lustre Day / Firming Moisture Cream Broad Spectrum SPF 30 Sunscreen",
+            "timeAgo": "2026-02-20"
+          },
+          {
+            "link": "https://reviveskincare.com/collections/masks-and-exfoliators/products/masque-des-yeux",
+            "item": "Masque Des Yeux / Revitalizing Eye Mask",
+            "timeAgo": "2026-02-16"
+          },
+          {
+            "link": "https://reviveskincare.com/collections/serums/products/rescue-elixir",
+            "item": "Rescue Elixir / Anti-Aging Oil",
+            "timeAgo": "2026-02-16"
+          },
+          {
+            "link": "https://reviveskincare.com/collections/serums/products/enzyme-essence-daily-resurfacing-treatment",
+            "item": "Enzyme Essence / Daily Resurfacing Treatment",
+            "timeAgo": "2026-02-16"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://reviveskincare.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2026-02-20",
+            "coupon": "NEW30",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      127,
+                      400,
+                      150,
+                      175
+                    ],
+                    "Count": 4
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://www.fedex.com/fedextrack/?trknbr=512028279591",
+            "link": "https://reviveskincare.com/29939438/orders/64c9a32fb292bf59cee327b1be70c811/authenticate?key=1a74f800b444950262c1e5c56c5e65ac",
+            "date_time": "2026-02-20 20:24:31.200",
+            "discount_amount": 0,
+            "orderNumber": "152118",
+            "order_tracking_link": "https://www.fedex.com/fedextrack/?trknbr=512028279591",
+            "total": 433.7
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2026-02-10",
+            "coupon": "VDAY20,ReFerm-9d28a02886fb",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      35,
+                      35,
+                      127,
+                      195,
+                      75,
+                      20
+                    ],
+                    "Count": 6
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://www.fedex.com/fedextrack/?trknbr=512028227528",
+            "link": "https://reviveskincare.com/29939438/orders/fcf581908542b1639ffe90bbcd884ab8/authenticate?key=1b8abc6fc154fcce03544ac86673d01f",
+            "date_time": "2026-02-10 20:05:46.272",
+            "discount_amount": 0,
+            "orderNumber": "151131",
+            "order_tracking_link": "https://www.fedex.com/fedextrack/?trknbr=512028227528",
+            "total": 293.08
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-12-30",
+            "coupon": "VIPEVENT30,REVIVEONLY",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      150,
+                      65
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://www.fedex.com/fedextrack/?trknbr=496424973473",
+            "link": "https://reviveskincare.com/29939438/orders/793ea5d00e5090322f0f4e11273744de/authenticate?key=de6e9341102239d8d241770dc3d1c610",
+            "date_time": "2025-12-30 07:47:09.255",
+            "discount_amount": 0,
+            "orderNumber": "147961",
+            "order_tracking_link": "https://www.fedex.com/fedextrack/?trknbr=496424973473",
+            "total": 172.68
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-12-02",
+            "coupon": "CYBERMONDAY",
+            "items": [
+              {
+                "price": [
+                  65
+                ],
+                "productLink": "https://reviveskincare.myshopify.com/products/moisturizing-renewal-cream",
+                "name": "Moisturizing Renewal Cream / Nightly Retexturizer"
+              }
+            ],
+            "trackingLink": "https://webtrack.dhlglobalmail.com/?trackingnumber=9261290339637562670110",
+            "link": "https://reviveskincare.com/29939438/orders/ebd3d5fa67e2f006786a5be9c5c87d89/authenticate?key=c10db3fff47d7127cc2b750b515988dc",
+            "date_time": "2025-12-02 19:17:49.907",
+            "discount_amount": 0,
+            "orderNumber": "144245",
+            "order_tracking_link": "https://webtrack.dhlglobalmail.com/?trackingnumber=9261290339637562670110",
+            "total": 49.03
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-10-21",
+            "coupon": "PAULA20",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      75,
+                      495,
+                      176
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=9205590336772871056946",
+            "link": "https://reviveskincare.com/29939438/orders/3ae6a7cd7091728a3cf678c3221e0113/authenticate?key=52d311c792e3c5b24ef31053e90ac9c2",
+            "date_time": "2025-10-21 21:37:54.538",
+            "discount_amount": 0,
+            "orderNumber": "131099",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=9205590336772871056946",
+            "total": 530.06
+          }
+        ]
+      },
+      "companyWebsite": "https://reviveskincare.com",
+      "companyName": "RéVive Skincare",
+      "notes": {
+        "escalate": [
+          "For \"Gift with Purchase\" promos, ESC if cx ask if the free gift is in stock (don\u0027t reference the website for these imquiries)"
+        ],
+        "hurricane_storm_relief": [
+          "Please do not mention supporting anyone or anything during Hurricanes including Hurricane Helene and others affecting the Southern part of the United States. Do not offer help, mention brand support, etc."
+        ],
+        "samples": [
+          "Brand no longer offers 2 free samples with purchases."
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Johnnie-O: Welcome to johnnie-O! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: https://johnnie-o.attn.tv/a1oPbFoM6l7P .",
           "message_type": "system",
-          "date_time": "2026-02-09 13:25:41.039"
+          "message_text": "RéVive Skincare: Final moments to receive our full-size, best-selling Foaming Cleanser when you spend $300. Don\u0027t miss out! Shop Now: revive.attn.tv/a-8liv16KUPz \n\nText back if you have any questions!",
+          "date_time": "2026-01-25 17:00:48.493",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Johnnie-O: Welcome to the Family! Your 10% off coupon code is SMS10Jdv898 . Click here to shop now: https://johnnie-o.attn.tv/aKrUXulmnKOf .",
           "message_type": "system",
-          "date_time": "2026-02-09 13:25:45.035"
+          "message_text": "RéVive Skincare: Hey Taisiya, this is Charli . I see you left something in your cart. revive.attn.tv/angBIHCfM2W0 \n\nGreat choice! 😊 Any questions I can answer for you? ",
+          "date_time": "2026-01-26 21:49:14.509",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Johnnie-O: Don't forget to save our contact!",
           "message_type": "system",
-          "date_time": "2026-02-09 13:25:46.290"
+          "message_text": "RéVive Skincare: Enjoy a wondrous winter gift including 4 deluxe samples of our most nourishing formulas to protect \u0026 balance skin and replenish lost moisture. Yours with any $250 purchase ($256 value). Shop Now: revive.attn.tv/aLk5NewDdP53 \n\nText back if you have any questions!",
+          "date_time": "2026-01-31 22:15:18.176",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Johnnie-O: Thank you for your purchase! Your order number is 1852565. View more information about your order here: https://johnnie-o.attn.tv/aQu8ThnHr--g .",
           "message_type": "system",
-          "date_time": "2026-02-09 13:27:30.475"
+          "message_text": "RéVive Skincare: Hi Taisiya , Are you loving your Moisturizing Renewal Cream? Discover the daytime companion to this iconic cream. Shop Here: https://revive.attn.tv/aUbe-HQqnuCj ",
+          "date_time": "2026-02-03 15:38:21.494",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Johnnie-O: Thank you for shopping at johnnie-O! We hope you love your purchase. Any questions, don't hesitate to contact us, we are always here to help wingman@johnnie-o.com \njohnnie-o.attn.tv/aQAE8Du2TqIv \n\n",
           "message_type": "system",
-          "date_time": "2026-02-09 13:57:48.855"
+          "message_text": "RéVive Skincare: Indulge in renewal skin this Valentine\u0027s Day with 20% off sitewide. Use code: VDAY20.💖SHOP NOW: revive.attn.tv/asW1UVooKw7Y \n\nText back if you have any questions!",
+          "date_time": "2026-02-05 13:01:23.601",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Johnnie-O: Hey Nick , this is Darby . Thanks for stopping by! 😊 johnnie-o.attn.tv/aWPicNWY1wpp \n\nAny questions I can answer for you? ",
           "message_type": "system",
-          "date_time": "2026-02-10 13:46:22.657"
+          "message_text": "RéVive Skincare: Hey Taisiya, this is Charli . Thanks for checking out our powerful, science-backed formulas! 😊 https://revive.attn.tv/aQM8ysr5iOeR \n\nAny questions I can answer for you? ",
+          "date_time": "2026-02-05 16:33:35.377",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Johnnie-O: Thank you for your purchase! Your order number is 1853267. View more information about your order here: https://johnnie-o.attn.tv/ae1vE5TxNc4H .",
           "message_type": "system",
-          "date_time": "2026-02-10 14:02:37.325"
+          "message_text": "RéVive Skincare: Hey Taisiya, this is Charli . I see you left something in your cart. revive.attn.tv/amStveCmjPX1 \n\nGreat choice! 😊 Any questions I can answer for you? ",
+          "date_time": "2026-02-05 16:58:02.263",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Johnnie-O: Hi, if you need additional help please reach out to wingman@johnnie-o.com. Text STOP to opt out.",
           "message_type": "system",
-          "date_time": "2026-02-10 17:35:22.034"
+          "message_text": "RéVive Skincare: 💝Spoil your skin with our formulas this Valentine\u0027s. Use code VDAY20 for 20% off sitewide. SHOP NOW: revive.attn.tv/avCV8xKmC_xs \n\nText back if you have any questions!",
+          "date_time": "2026-02-08 12:30:25.241",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Hi Darby, is there any chance I could pay for overnight shipping or 2-3 day? Didn't see the option on the website",
+          "message_type": "system",
+          "message_text": "RéVive Skincare: Thank you for your purchase! Your order number is 151131. View more information about your order here: https://revive.attn.tv/alDdaDvLQQhL .",
+          "date_time": "2026-02-10 15:06:07.558",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "RéVive Skincare: Great news! Your order (151131) has shipped and will be to you soon. Click here to track your order: https://revive.attn.tv/avcjJI80gaij .",
+          "date_time": "2026-02-11 19:50:17.584",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "RéVive Skincare: Save 20% off our best sellers before it\u0027s too late! Use code: VDAY20 at checkout. This offer ends soon! SHOP NOW: revive.attn.tv/aRfi0cNReqSV \n\nText back if you have any questions!",
+          "date_time": "2026-02-14 12:02:31.709",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "RéVive Skincare: Hey Taisiya, this is Charli . Thanks for checking out our powerful, science-backed formulas! 😊 Is there anything we can help you with?https://revive.attn.tv/ac-UL_b3KrJ5 \n\nDrop your questions here!",
+          "date_time": "2026-02-16 16:11:48.839",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "RéVive Skincare: Celebrate Chinese New Year with RéVive! Save up to 30% on our rejuvenating formulas for refined, hydrated, and healthier-looking skin. SHOP NOW: revive.attn.tv/a2tjEYcotEbH \n\nText back if you have any questions!",
+          "date_time": "2026-02-17 13:00:53.389",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "RéVive Skincare: Hey Taisiya , order #151131 is out for delivery. Track your order here: https://revive.attn.tv/aDEKtQa6PdX7 .",
+          "date_time": "2026-02-17 15:33:09.201",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "RéVive Skincare: Hey Taisiya, this is Charli . I see you left something in your cart. revive.attn.tv/aQc1H0MnwDbg \n\nGreat choice! 😊 Any questions I can answer for you? ",
+          "date_time": "2026-02-17 15:46:54.644",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "RéVive Skincare: Hey Taisiya , order #151131 has been delivered! Track your order here: https://revive.attn.tv/aUA_WBGsXbpL .",
+          "date_time": "2026-02-17 16:08:48.412",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "RéVive Skincare: Thank you for your purchase! Your order number is 152118. View more information about your order here: https://revive.attn.tv/acSVD1m1qMTh .",
+          "date_time": "2026-02-20 15:24:50.463",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "RéVive Skincare: Ending Soon - Up to 30% off! Celebrate Chinese New Year and shop our most-coveted formulas for radiant, refreshed skin in the new year. SHOP NOW: revive.attn.tv/ah_HRA08fkqx \n\nText back if you have any questions!",
+          "date_time": "2026-02-22 12:01:23.521",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-10 17:35:31.066"
+          "message_text": "Hello,  I made an order last Friday but still haven\u0027t received information on shipping",
+          "date_time": "2026-02-23 18:34:26.241",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Johnnie-O: Thanks for getting in touch and for your interest! To ensure I provide the most accurate answer, I'll reach out to our team for more insights. We'll get back to you as soon as we have an update. Feel free to let me know if you need help with anything else in the meantime.",
-          "message_type": "agent",
-          "agent": "109840",
-          "message_id": "019c49b2-c863-44f7-f000-0000fa3fc7ed",
-          "date_time": "2026-02-10 17:36:19.448"
-        }
-      ],
-      "notes": {
-        "escalate": [
-          "ESC restock inquiries",
-          "ESC shipping/order inquiries",
-          "ESC cxs looking for a discount code"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://johnnie-o.com/",
-          "date": ""
+          "message_type": "template",
+          "message_text": "Template used: \"Shipping time\"; last updated: 2023-03-03 23:25:36.785",
+          "date_time": "2026-02-23 18:38:27.494",
+          "message_media": [
+            
+          ]
         },
-        "browsingHistory": [
-          {
-            "item": "Juliett Floral Cinch Waist Dress",
-            "link": "https://www.johnnie-o.com/collections/womens-new-arrivals/products/jwld100130_juliett_25fa?color=Ash%2520Rose",
-            "timeAgo": "2026-02-10"
-          },
-          {
-            "item": "Juliett Floral Cinch Waist Dress",
-            "link": "https://www.johnnie-o.com/collections/womens-new-arrivals/products/jwld100130_juliett_25fa?color=Ash%2520Rose",
-            "timeAgo": "2026-02-10"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "1853267",
-            "orderDate": "2026-02-10",
-            "items": [
-              {
-                "name": "Juliett Floral Cinch Waist Dress",
-                "price": 228,
-                "productLink": "https://johnnie-oadmin.myshopify.com/products/jwld100130_juliett_25fa"
-              }
-            ],
-            "link": "https://checkout.johnnie-o.com/22750137/orders/2f9b7c62ea2691474b85f587a945e5d0/authenticate?key=200c7fc152e3c785aec54fcfaa523a14",
-            "trackingLink": "https://www.fedex.com/fedextrack/?trknbr=496863882705",
-            "order_tracking_link": "https://www.fedex.com/fedextrack/?trknbr=496863882705",
-            "total": 237.97,
-            "date_time": "2026-02-10 19:02:21.845"
-          },
-          {
-            "orderNumber": "1852565",
-            "orderDate": "2026-02-09",
-            "items": [
-              {
-                "name": "Pepperdine Hoppin Performance Hoodie",
-                "price": 188,
-                "productLink": "https://johnnie-oadmin.myshopify.com/products/jmhd100071pd_hoppin_pepperdine_ncaa"
-              }
-            ],
-            "link": "https://checkout.johnnie-o.com/22750137/orders/91c0aa6913e5398256de02578171935e/authenticate?key=d926ea5f620950ada89765da517844c9",
-            "trackingLink": "https://www.fedex.com/fedextrack/?trknbr=496863883572",
-            "order_tracking_link": "https://www.fedex.com/fedextrack/?trknbr=496863883572",
-            "total": 353.06,
-            "coupon": "SMS10Jdv898",
-            "date_time": "2026-02-09 18:27:16.881"
-          }
-        ]
-      },
-      "escalation_preferences": [
-        "Restock questions",
-        "shipping",
-        "site issues",
-        "out of stock issues"
-      ],
-      "blocklisted_words": [
-        "Untuck-it"
-      ],
-      "has_shopify": true
+        {
+          "message_id": "019c8cde-5706-47db-f000-0000df4ef215",
+          "message_text": "RéVive Skincare: Thanks for reaching out! Our processing time takes 2 business days, and we usually ship via FedEx or USPS. Once shipped, it will take 2-5 business days for domestic orders. Rest assured, you\u0027ll receive tracking info as soon as your order is ready and shipped. ",
+          "message_type": "agent",
+          "agent": "43099",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-23 18:38:27.496"
+        }
+      ]
     },
     "57": {
-      "id": "019c533a-e2f7-45c4-f000-0000ef3c25f9",
-      "companyName": "Dorado Fashion",
-      "companyWebsite": "https://dorado.com",
-      "agentName": "Kiara",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "DORADO: Roses are red.\nJewelry is better.\n\nGet up to 75% OFF with code: LOVELY\n\nGifts for her, the girls, \nor yourself (obviously).\n \nShop Now: \nhttps://dorado.attn.tv/avgNcK5-mlQ8 . \n\nValentine's Delivery Cutoff:\nOrder by 01/30 @ 11:59 PM EST",
-          "message_type": "system",
-          "date_time": "2026-01-23 13:33:37.037"
-        },
-        {
-          "message_media": [],
-          "message_text": "DORADO: Hello Melissa, it's Kiara! I noticed you haven't completed your order yet. \n\nClick below to recover your cart and use code D20 for an extra 20% OFF! (72 hours only):\n \nhttps://dorado.attn.tv/al909uWp_oJm \n\nPlease let me know if there's anything I can help with :)",
-          "message_type": "system",
-          "date_time": "2026-01-23 19:49:53.247"
-        },
-        {
-          "message_media": [],
-          "message_text": "DORADO: Group chat-approved gifts only.\n\nUse code: LOVELY for up to 75% OFF!\n \nShop Now: \nhttps://dorado.attn.tv/av4K9OzkI9ac \n\nGalentine's secured if you order by 01/30",
-          "message_type": "system",
-          "date_time": "2026-01-25 18:15:58.131"
-        },
-        {
-          "message_media": [],
-          "message_text": "DORADO: last chance\n\npersonalized Valentine's gifts\n\nget up to 75% off with code: LOVELY \n \nonly 12 hours left: \nhttps://dorado.attn.tv/aKvQnELEdR8R .",
-          "message_type": "system",
-          "date_time": "2026-01-30 12:07:05.833"
-        },
-        {
-          "message_media": [],
-          "message_text": "DORADO: Hey, this is Kiara. Thanks for checking out our site! https://dorado.attn.tv/ahCRuMZ_IWXY \n\nLet me know if you have any questions or if you want me to get you a discount :)",
-          "message_type": "system",
-          "date_time": "2026-02-01 12:53:55.213"
-        },
-        {
-          "message_media": [],
-          "message_text": "DORADO: In-stock. Ships fast. Valentine's Day ready. \n\nUp to 75% OFF | Code: LOVELY \n \nDon't overthink it:\nhttps://dorado.attn.tv/arHSMPktuhle .",
-          "message_type": "system",
-          "date_time": "2026-02-03 12:04:33.711"
-        },
-        {
-          "message_media": [],
-          "message_text": "DORADO: Hi Melissa I personally want to thank you for shopping with us!\n\nTo show my appreciation, I'm giving you $25 OFF your next order of Custom Jewelry!\n\nJust use code: GIVE25 at checkout or click the link below! https://dorado.attn.tv/a_riq9XlR8fa \n\nThis is simply my way of saying THANK YOU for becoming a part of the Dorado Family.",
-          "message_type": "system",
-          "date_time": "2026-02-03 12:14:12.020"
-        },
-        {
-          "message_media": [],
-          "message_text": "DORADO: Hey, this is Kiara. Thanks for checking out our custom jewelry! https://dorado.attn.tv/aaXGwAQw0FTn \n\nDo you have any questions or need any help?",
-          "message_type": "system",
-          "date_time": "2026-02-12 12:58:18.710"
-        },
-        {
-          "message_media": [],
-          "message_text": "When will my order arrive?",
-          "message_type": "customer",
-          "date_time": "2026-02-12 13:51:51.838"
-        },
-        {
-          "message_media": [],
-          "message_text": "DORADO: Thank you for reaching out! I can see that your order includes personalized items. These items are made to order and require 2 to 3 weeks for production. We will send you updates via email throughout the process.\n\nYour items are currently in production. You can also check the status of your personalized items at any time by visiting our tracking page here: https://dorado.attn.tv/ao_znUvxchWu\n\nThe estimated delivery date is February 24 to March 8.\n\nI hope this helps! If you have any questions, feel free to text me.",
-          "message_type": "agent",
-          "agent": "87295",
-          "message_id": "019c533a-e2f7-45c4-f000-0000ef3c25f9",
-          "date_time": "2026-02-12 14:01:34.099"
-        }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues"
-        ]
-      },
+      "agentName": "",
+      "has_shopify": true,
+      "id": "019c720e-731c-43cd-f000-0000bedcaf26",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://dorado.com",
-          "date": ""
-        },
-        "browsingHistory": [
+        "promotions": [
           {
-            "item": "Double Plated Pop Out Heart Name Necklace w/ Figaro Chain - 18K Gold Plated / Standard - 18\" (45cm)",
-            "link": "https://dorado.com/collections/name-necklaces/products/double-plated-pop-out-heart-name-necklace-w-figaro-chain?externalId=7HGkG",
-            "timeAgo": "2026-02-12"
+            "title": "Black Friday Sale",
+            "content": [
+              "• November 1st - December 1st, all Pants and Joggers are $99\n\n• November 24th - Dec 1st, all Pants and Joggers are $99 + 20% off everything else sitewide"
+            ]
           },
           {
-            "item": "Double Plated Pop Out Heart Name Necklace w/ Figaro Chain",
-            "link": "https://dorado.com/collections/name-necklaces/products/double-plated-pop-out-heart-name-necklace-w-figaro-chain?variant=39715429449799",
-            "timeAgo": "2026-02-12"
+            "title": "Free T-Shirt",
+            "content": [
+              "• Customer must add eligible T-Shirt to the cart\n\n• Order total must be over $99\n\n• Use the template \"Why is my Free Shirt code not working?\" for any issues applying this promotion"
+            ]
           },
           {
-            "item": "Double Plated Pop Out Heart Name Necklace w/ Figaro Chain - 18K Gold Plated / 20\" (50cm)",
-            "link": "https://dorado.com/collections/name-necklaces/products/double-plated-pop-out-heart-name-necklace-w-figaro-chain?variant=39715429449799",
-            "timeAgo": "2026-02-12"
+            "title": "Free Hoodie and Flannel Sale",
+            "content": [
+              "Get a free hoodie on orders of $99+ or a free Frontier flannel on orders of $198+.  Discount applies automatically when the item is added to cart."
+            ]
           },
           {
-            "item": "Double Plated Pop Out Heart Name Necklace w/ Figaro Chain",
-            "link": "https://dorado.com/collections/name-necklaces/products/double-plated-pop-out-heart-name-necklace-w-figaro-chain?variant=39715429417031",
-            "timeAgo": "2026-02-12"
-          },
-          {
-            "item": "Double Plated Pop Out Heart Name Necklace w/ Figaro Chain - 18K Gold Plated / 16\" (40cm)",
-            "link": "https://dorado.com/collections/name-necklaces/products/double-plated-pop-out-heart-name-necklace-w-figaro-chain?variant=39715429417031",
-            "timeAgo": "2026-02-12"
+            "title": "Pants Delay",
+            "content": [
+              "• Orders that contain Athletic Fit Jeans or Chinos will ship by the 18th of November.  \n\n→ This information is provided on the product pages"
+            ]
           }
         ],
-        "orders": [
+        "coupons": [
           {
-            "orderNumber": "6479620571207",
-            "orderDate": "2026-02-03",
-            "items": [
-              {
-                "name": "Infinity Name Necklace",
-                "price": 49,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/infinity-name-necklace-1"
-              },
-              {
-                "name": "Letter Choker w/ XL Cuban Chain",
-                "price": 79,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/letter-choker-w-xl-cuban-chain"
-              },
-              {
-                "name": "XOXO Name Hoop Earrings",
-                "price": 79,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/xo-bamboo-name-hoop-earrings"
-              }
-            ],
-            "total": 207,
-            "date_time": "2026-02-03 17:16:26.778"
+            "subscriber_id": 3202133798,
+            "description": "Free Tshirt over $99 ",
+            "company_id": 21,
+            "coupon_url": "https://barbellapparel.myshopify.com/discount/FSAgZ7Tq2?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=free-shirt",
+            "name": "FSATTENTIVE",
+            "coupon": "FSAgZ7Tq2",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://barbellapparel.com/products/slim-athletic-fit-chino-pant",
+            "item": "Slim Athletic Fit Chino Pant - 28 / Khaki / 34",
+            "timeAgo": "2026-02-11"
           },
           {
-            "orderNumber": "6479620571207",
+            "link": "https://barbellapparel.com/products/mens-ultralight-jogger",
+            "item": "Ultralight Jogger - S / Black",
+            "timeAgo": "2026-02-11"
+          },
+          {
+            "link": "https://barbellapparel.com/products/adapt-jogger?variant=53094533169518",
+            "item": "Adapt Jogger - S / Cinder",
+            "timeAgo": "2026-02-11"
+          },
+          {
+            "link": "https://barbellapparel.com/products/barbell-elite-membership?utm_medium=sms\u0026utm_source=attentive\u0026externalId=XaUFk",
+            "item": "Barbell Elite Membership - Trainee/Legacy",
+            "timeAgo": "2026-02-03"
+          },
+          {
+            "link": "https://barbellapparel.com/products/havok-short-sleeve?variant=40380142583880",
+            "item": "Havok Short Sleeve - M / Sage",
+            "timeAgo": "2025-04-20"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://barbellapparel.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
             "orderDate": "2026-02-03",
             "items": [
               {
-                "name": "Infinity Name Necklace",
-                "price": 49,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/infinity-name-necklace-1"
-              },
-              {
-                "name": "Letter Choker w/ XL Cuban Chain",
-                "price": 79,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/letter-choker-w-xl-cuban-chain"
-              },
-              {
-                "name": "XOXO Name Hoop Earrings",
-                "price": 79,
-                "productLink": "https://sk-custom-concepts.myshopify.com/products/xo-bamboo-name-hoop-earrings"
+                "price": [
+                  {
+                    "value": [
+                      99,
+                      24,
+                      129,
+                      99
+                    ],
+                    "Count": 4
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "total": 143.46,
-            "coupon": "LOVELY",
-            "date_time": "2026-02-03 17:12:24.167"
+            "date_time": "2026-02-03 17:19:58.691",
+            "discount_amount": 0,
+            "orderNumber": "11783794229614",
+            "total": 379.99
           }
         ]
       },
+      "companyWebsite": "https://barbellapparel.com",
+      "companyName": "Barbell Apparel",
+      "notes": {
+        
+      },
+      "blocklisted_words": [
+        
+      ],
       "escalation_preferences": [
-        "Shipping Issues: Where's my order? Any order issues, direct to customer service"
+        
       ],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "58": {
-      "id": "019c71df-8f0e-4fa5-f000-0000fa93619e",
-      "companyName": "Beis Travel",
-      "companyWebsite": "https://beistravel.com",
-      "agentName": "Annie",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from BÉIS Travel.",
-          "message_type": "system",
-          "date_time": "2026-02-11 18:20:46.339"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Welcome to BÉIS Travel! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-11 18:21:26.739"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Hey there, newbie! First time shopping with us? We've handpicked some essentials to get you started: https://beistravel.attn.tv/arKwd4bgWZOb . \n\nEnjoy 20% OFF with code WELCOMEp4YMe9 \nbeistravel.attn.tv/aqqtsLVONWRO .",
-          "message_type": "system",
-          "date_time": "2026-02-11 18:21:30.697"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Bags designed to make your every day easier. Save our contact to make getting all of our latest updates easy.",
-          "message_type": "system",
-          "date_time": "2026-02-11 18:21:31.953"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: This friendship is forever... but your 20% OFF code isn't. Don't forget to use code WELCOMEp4YMe9 to save on our bestsellers. \n\nhttps://beistravel.attn.tv/a88qo_sJjXYH .",
-          "message_type": "system",
-          "date_time": "2026-02-12 18:21:40.865"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Save up to 50% off select styles! Limited time only: beistravel.attn.tv/apfZ7RUpqTVC .",
-          "message_type": "system",
-          "date_time": "2026-02-14 09:35:52.036"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Still thinking about The Medium Check-In Roller in Atlas Pink? Great taste - Take another look before it's gone!\nbeistravel.attn.tv/a-ehtpNVX99y .",
-          "message_type": "system",
-          "date_time": "2026-02-15 12:17:31.585"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Hi there. If you need additional help please reach us at hello@beistravel.com. Text STOP to opt out.",
-          "message_type": "system",
-          "date_time": "2026-02-15 13:38:45.954"
-        },
-        {
-          "message_media": [],
-          "message_text": "Can I call you? I did a return on line, where is my label for ups? Also I want to order the medium check in roller in Atlas Pink",
-          "message_type": "customer",
-          "date_time": "2026-02-18 12:43:18.841"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Can't take calls - All brands\"; last updated: 2023-10-10 18:11:21.727",
-          "message_type": "template",
-          "date_time": "2026-02-18 12:50:02.550"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Thanks for reaching out! This number is for SMS only, so I'm not able to make or receive calls. Is it okay if we continue chatting by text? \n\nWhen you complete a return request online, your UPS return label is generated through our returns portal and sent to you via email. If you haven't received it, please check your spam or promotions folder.\n\nYou may check our The Medium Check-in Roller in Atlas Pink here: https://beistravel.attn.tv/agoruswDo7qF",
-          "message_type": "agent",
-          "agent": "109972",
-          "message_id": "019c71df-8f0e-4fa5-f000-0000fa93619e",
-          "date_time": "2026-02-18 12:50:02.552"
-        }
-      ],
-      "notes": {
-        "escalate": [
-          "We don't ESC for this client, use ESC shortcut",
-          "If cx ask how to get/redeem the discount for downloading the app use ESC shortcut"
-        ],
-        "templates": [
-          "For Limited edition items don't use restock temps, they will not be restocked"
-        ],
-        "dos_and_don_ts": [
-          "Don't share the duration of the sale/sale dates with customers!"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://beistravel.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "The Large Check-In Roller in Maple",
-            "link": "https://beistravel.com/products/the-29-large-check-in-roller-in-maple",
-            "timeAgo": "2026-02-15"
-          },
-          {
-            "item": "The Large Check-In Roller in Atlas Pink",
-            "link": "https://beistravel.com/products/the-29-large-check-in-roller-in-atlas-pink",
-            "timeAgo": "2026-02-15"
-          },
-          {
-            "item": "The Medium Check-In Roller in Atlas Pink",
-            "link": "https://beistravel.com/products/the-26-check-in-roller-in-atlas-pink?variant=40703321964680&utm_source=2024%20US%20-%20Abandoned%20Cart&utm_medium=email&utm_campaign=Email%20%233%20US%20-%20Abandon%20Cart%20-%20Never%20Purchased%20%28V6pCUW%29&utm_id=WzJfa2&utm_term=Klaviyo&utm_klaviyo_id=01KB6H4KY6MSD44Y926HB73103&tw_source=klaviyo&tw_profile_id=01KB6H4KY6MSD44Y926HB73103&tw_medium=flow&_kx=9aek3M7QerGnhstIMfaEWVhBfDSZZFhWYvvQaLfhn-E.LZSJR7",
-            "timeAgo": "2026-02-15"
-          },
-          {
-            "item": "The Carry-On Roller in Atlas Pink",
-            "link": "https://beistravel.com/products/the-carry-on-roller-in-atlas-pink?utm_source=Espresso%20Shot&utm_medium=email&utm_campaign=1.7.25%20US%20-%20New%20Year%20Trips%20%28Retarget%29%20%2801KEDWWWYA9R2KJRF2K6QTGJ0F%29&utm_id=01KEDWWWYA9R2KJRF2K6QTGJ0F&utm_term=Klaviyo&utm_klaviyo_id=01KB6H4KY6MSD44Y926HB73103&tw_source=klaviyo&tw_profile_id=01KB6H4KY6MSD44Y926HB73103&tw_medium=campaign&_kx=9aek3M7QerGnhstIMfaEWVhBfDSZZFhWYvvQaLfhn-E.LZSJR7",
-            "timeAgo": "2026-01-08"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "3997428",
-            "orderDate": "2026-02-15",
-            "items": [
-              {
-                "name": "The Large Check-In Roller in Atlas Pink",
-                "price": 368,
-                "productLink": "https://beistravel.myshopify.com/products/the-29-large-check-in-roller-in-atlas-pink"
-              }
-            ],
-            "link": "https://beistravel.com/3234234479/orders/a6c69381313f547c5f6129e75f05bbb4/authenticate?key=68e5f46275579882f14489f33a1a821d",
-            "total": 312.06,
-            "coupon": "DXG5PZ2D",
-            "date_time": "2026-02-15 01:01:36.890"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "59": {
-      "id": "019c5cb9-6704-48ac-f000-00004ae2b0b3",
-      "companyName": "The Frye Company",
-      "companyWebsite": "https://thefryecompany.com",
-      "agentName": "Sarah",
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "FRYE: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/ePe",
           "message_type": "system",
-          "date_time": "2026-02-14 08:20:43.729"
-        },
-        {
-          "message_media": [],
-          "message_text": "FRYE: Welcome! Your code to save $30 off your next $275+ order is WF30XF25 . Click here to auto-apply it and shop now: frye.attn.tv/axbwEL6vJ5d4 .",
-          "message_type": "system",
-          "date_time": "2026-02-14 08:20:45.997"
-        },
-        {
-          "message_media": [],
-          "message_text": "FRYE: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nCheck out our newest arrivals and get ready for the season: https://frye.attn.tv/awgd1qO2POV3 .",
-          "message_type": "system",
-          "date_time": "2026-02-14 08:21:52.360"
-        },
-        {
-          "message_media": [],
-          "message_text": "FRYE: Your cart: OLIVIA BUCKLE TALL, CARSON 2 PIPING TALL, MELISSA BELTED RIDING\n\nUse code WF30XF25 to take $30 off with a minimum purchase of $275: https://frye.attn.tv/awSkaF4DgJfD .",
-          "message_type": "system",
-          "date_time": "2026-02-14 08:32:26.619"
-        },
-        {
-          "message_media": [],
-          "message_text": "Why is the code not working",
-          "message_type": "customer",
-          "date_time": "2026-02-14 08:46:32.724"
-        },
-        {
-          "message_media": [],
-          "message_text": "FRYE: Thank you for reaching out. I'm sorry to hear that your code is not working. Can you please send me a screenshot of the items in your cart? This will help me troubleshoot the possible problem of why the code didn't work.\n\nAlso, please note that discount codes do not work on items that are on sale and your cart should be at least $275. I hope this helps.",
-          "message_type": "agent",
-          "agent": "48804",
-          "message_id": "019c5c91-3a92-49d1-f000-00004ae2b0b3",
-          "date_time": "2026-02-14 09:32:27.572"
-        },
-        {
+          "message_text": "Barbell Apparel: The Rapid Short is back.\n\nWhen performance doesn\u0027t slow down, your gear shouldn\u0027t either. Lightweight and built for unrestricted movement at full intensity.\n\nFor a limited time, get your pair FREE with any $149+ order.\n\nShop Now: barbell.attn.tv/aM-ik_y9NYb8 ",
+          "date_time": "2026-01-20 13:00:57.728",
           "message_media": [
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1771079820554_7a5b4077-edd3-4313-b608-dc472d4c2317-1.png"
-          ],
-          "message_text": "My cart",
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: FINAL CALL: Our Free Gear Sale ends TONIGHT!\n\nDon\u0027t miss out on this chance to grab any pair of shorts with orders of $149+ or any pair of joggers with orders of $199+. Stock up on your favorites before the sale is over!\n\nShop Now: barbell.attn.tv/aaO2WiSLglkU ",
+          "date_time": "2026-01-29 13:01:01.075",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Our Annual Swolemate Sale is here! \n\nFor a limited time, grab any pair of jeans, chinos, adapt pants, or joggers for just $99.\n\nInventory is limited and popular styles will sell out fast! Get your favorites before they\u0027re gone.\n\nShop The Sale: barbell.attn.tv/aRSojFPgK59x ",
+          "date_time": "2026-02-02 15:40:08.547",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Hey Nico ! Join Barbell Elite and get up to $125 in bonus credit for your first month, plus free lifetime products guarantees and size exchanges, free 2-day shipping. barbell.attn.tv/aQPhsGm8wQpR ",
+          "date_time": "2026-02-03 13:59:46.478",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Hey Nico, this is Sarah. Thanks for checking us out! https://barbell.attn.tv/aCy8eS21WRXC \n\nAny questions I can answer for you?",
+          "date_time": "2026-02-03 14:01:33.322",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Hey Nico, don\u0027t forget to join Join Barbell Elite and get up to $125 in bonus credit on your first month, plus free lifetime products guarantees and size exchanges + expedited shipping! barbell.attn.tv/andY1RXbrsEB ",
+          "date_time": "2026-02-05 14:00:04.533",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: New seasonal colors just landed. The Havok Polo is now available in kiln and forest. Same flextek performance, same athletic fit that everyone loves.\n\nGrab yours before they\u0027re gone.\n\nShop now: barbell.attn.tv/aSmEFLUksE8e ",
+          "date_time": "2026-02-11 18:00:38.167",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Hey Nico, this is Sarah. Thanks for checking us out! https://barbell.attn.tv/aMt_XUkjFdK3 \n\nAny questions I can answer for you?",
+          "date_time": "2026-02-11 18:02:21.633",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Roses are red, violets are blue... your favorite pair of pants are only $99 too.\n\nDon\u0027t miss out on The Swolemate Sale and grab any pair of jeans, chinos or joggers for just $99 while supplies last.\n\nShop The Sale: barbell.attn.tv/a0D8mTTyR37H ",
+          "date_time": "2026-02-14 13:30:20.674",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Liking your Motive Dress Shirt? You’ll love our new arrivals. Shop our new best sellers: https://barbell.attn.tv/a_E9ECpWFudO .",
+          "date_time": "2026-02-18 13:19:28.682",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-14 09:37:12.338"
+          "message_text": "I will need to coordinate a return/exchange for one of the pants I bought, how do I do this?",
+          "date_time": "2026-02-18 13:38:30.061",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "I'm a long time customer. Why can't they make a one time exception even though the boots are on sale.",
-          "message_type": "customer",
-          "date_time": "2026-02-14 09:37:32.385"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Can I use two discounts? - All brands\"; last updated: 2023-10-10 16:38:40.074",
           "message_type": "template",
-          "date_time": "2026-02-14 10:16:20.385"
+          "message_text": "Template used: \"Return policy\"; last updated: 2022-09-03 20:02:56.197",
+          "date_time": "2026-02-18 13:41:15.580",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Template used: \"Automatic discount - All brands\"; last updated: 2023-10-10 16:40:19.306",
           "message_type": "template",
-          "date_time": "2026-02-14 10:16:20.385"
+          "message_text": "Template used: \"How do I start a return?\"; last updated: 2023-07-18 20:20:38.558",
+          "date_time": "2026-02-18 13:41:15.580",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "FRYE: Thank you for sharing that. I apologize for the delayed response. I also understand how frustrating this must be, especially as a long-time customer. Unfortunately, our system can't stack multiple promos at checkout. Even so, please feel free to use the one that gives you the best value! I'm truly sorry for the inconvenience.",
+          "message_id": "019c720e-731c-43cd-f000-0000bedcaf26",
+          "message_text": "Barbell Apparel: You can check out our return policy in detail here: https://barbell.attn.tv/a51j4adqk9Dj\nAnd you can start your return here: https://barbell.attn.tv/abrUENYT-fGM/#/ \nIs there anything else that I can do for you today?",
           "message_type": "agent",
-          "agent": "109968",
-          "message_id": "019c5cb9-6704-48ac-f000-00004ae2b0b3",
-          "date_time": "2026-02-14 10:16:20.389"
+          "agent": "82441",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 13:41:15.584"
         }
+      ]
+    },
+    "58": {
+      "agentName": "Sam",
+      "has_shopify": true,
+      "id": "019c878b-69dd-4267-f000-0000f6528703",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "11/29 Doorbuster: Green Wolf 50% Off",
+            "content": [
+              "GOES LIVE AT 3AM ON 11/29\n\nApplies to Green Wolf Golf styles, 50% off. Available to everyone. Does  NOT apply to Shady Rays Golf.\n\nhttps://shadyrays.com/collections/green-wolf\n\n\nEnds at 11:59pm PST"
+            ]
+          },
+          {
+            "title": "GREEN35",
+            "content": [
+              "Applies to green wolf items. Only send to those asking about green wolf."
+            ]
+          },
+          {
+            "title": "PD26",
+            "content": [
+              "Applies to select shades items. Only send to those asking about presidents day sale. $20 off pairs. Excludes elite, snow."
+            ]
+          },
+          {
+            "title": "11/27 Doorbuster - $19 Founder\u0027s Picks",
+            "content": [
+              "GOES LIVE AT 3AM EST ON 11/27\n\nApplies to select styles. Available to everyone. This link has all the pairs on it that apply for the $19 promotion: \n\nhttps://shadyrays.com/collections/offers\n\nEnds at 11:59pm PST"
+            ]
+          },
+          {
+            "title": "GREEN35",
+            "content": [
+              "Applies to Green Wolf collection only. Only send to people asking about Green Wolf. 35% off."
+            ]
+          },
+          {
+            "title": "Promotions: AT20 and SHADE25",
+            "content": [
+              "NOT VALID DURING SITEWIDE SALES INCLUDING BLACK FRIDAY\n\n• Send AT20 (20% off), if a customer asks for a discount, but specify that is only for their first order. \n\n→ If they are an existing customer, AT20 will not work. \n\n• Only send SHADE25 (25% off), if the cx has already used AT20"
+            ]
+          },
+          {
+            "title": "Valentine\u0027s Day Sale",
+            "content": [
+              "DOES NOT START UNTIL 10AM EST\n\nApplies to sunglasses 40% off when you buy 2 or more pairs. Available to everyone. Some exclusions apply."
+            ]
+          },
+          {
+            "title": "Cyber Monday",
+            "content": [
+              "GOES LIVE AT 3AM EST ON 12/1\n\n• Up to 60% off sitewide. Applies to all customers.\n\n• Includes: \n→ 30%: COLORUSH, S|R Fish, S|R Golf (and collabs), Green Wolf, Snow Goggles,  Prescription (frames and add-ons), Shirts, React Frames \u0026 Lenses\n\n→ 40%: Pro, Tangle Free, Select Original Variants (Apex, Cayman, Mojave, Reign, Rival, Talon, Tangle Free Aston/Melrose/Oakmont, Titan), Kids/Youth, Barstool Rival\n\n→ 60%: Original Variants (except exclusions listed above), Blue Light, Readers"
+            ]
+          },
+          {
+            "title": "Black Friday",
+            "content": [
+              "• Up to 60% off sitewide. Applies to all customers.\n\n• Includes: \n→ 30%: COLORUSH, S|R Fish, S|R Golf (and collabs), Green Wolf, Snow Goggles,  Prescription (frames and add-ons), Shirts, React Frames \u0026 Lenses\n\n→ 40%: Pro, Tangle Free, Select Original Variants (Apex, Cayman, Mojave, Reign, Rival, Talon, Tangle Free Aston/Melrose/Oakmont, Titan), Kids/Youth, Barstool Rival\n\n→ 60%: Original Variants (except exclusions listed above), Blue Light, Readers"
+            ]
+          },
+          {
+            "title": "11/28 Black Friday Doorbuster: 50% Off Colorush",
+            "content": [
+              "GOES LIVE AT 11/28 AT 3AM EST\n\nApplies to Colorush styles, 50% off. Available to everyone.\n\nEnds 11:59pm PST"
+            ]
+          },
+          {
+            "title": "Cyber Monday Doorbuster",
+            "content": [
+              "Buy 2+ pairs and get a free mystery pair. Automatically adds to cart. Valid on Cyber Monday 12/1 only. Available to everyone."
+            ]
+          },
+          {
+            "title": "New Years Sale",
+            "content": [
+              "STARTS AT 9AM EST\n\nApplies to 30% off items, excludes accessories and mystery pairs. Can send to anyone as it is sitewide. Code will be auto-applied at checkout."
+            ]
+          },
+          {
+            "title": "GIFT",
+            "content": [
+              "Applies to E-gift cards. Send to anyone who asks about holiday deals."
+            ]
+          },
+          {
+            "title": "11/30 Doorbuster: 50% Off Barstool",
+            "content": [
+              "GOES LIVE AT 3AM ON 11/30 \n\nApplies to 50% off Barstool Rival shades. Available to everyone. \n\nEnds at 11:59pm PST"
+            ]
+          },
+          {
+            "title": "End of Winter Sale",
+            "content": [
+              "Applies sitewide, up to 40% off. Available to everyone. Excludes hard cases and mystery pairs. Snow is 30% off."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 4132603651,
+            "company_id": 1418,
+            "coupon_url": "http://shadyrays.com/discount/AT20/?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "static_code": "AT20",
+            "name": "AT20",
+            "coupon": "AT20",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://shadyrays.com/products/frontier-goggle-curve-chrome?pr_prod_strat=e5_desc\u0026pr_rec_id=6140f23ba\u0026pr_rec_pid=8077375897647\u0026pr_ref_pid=8077377765423\u0026pr_seq=uniform",
+            "item": "Frontier Snow Goggle - Curve Chrome",
+            "timeAgo": "2026-02-22"
+          },
+          {
+            "link": "https://shadyrays.com/products/denali-snow-goggle-black",
+            "item": "Denali Snow Goggles - Black Magnetic Frame + Strap",
+            "timeAgo": "2026-02-22"
+          },
+          {
+            "link": "https://shadyrays.com/products/frontier-goggle-independence-infrared",
+            "item": "Frontier Snow Goggle - Independence Infrared",
+            "timeAgo": "2026-01-28"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://shadyrays.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2026-02-17",
+            "coupon": "SPARK",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      12,
+                      84,
+                      49,
+                      98,
+                      16,
+                      24
+                    ],
+                    "Count": 6
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=9434650899561130614356",
+            "link": "https://shadyrays.com/3505401/orders/7bc677ec1f03450a56da017eace52787/authenticate?key=497cc6d84215cade0cca78cc43c64ed0",
+            "date_time": "2026-02-17 23:47:04.220",
+            "discount_amount": 0,
+            "orderNumber": "7143297",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=9434650899561130614356",
+            "total": 241.71
+          }
+        ]
+      },
+      "companyWebsite": "https://shadyrays.com",
+      "companyName": "Shady Rays",
+      "notes": {
+        "escalate": [
+          "ESC restock inquiries, but use STOF shortcut first"
+        ],
+        "tone": [
+          "Close the convo if the cx first message doesn\u0027t warrant a response (e.g. Them thanking us, saying they\u0027re browsing, etc.)"
+        ],
+        "templates": [
+          "For product prescription inquiries use RPP shortcut",
+          "For prescription orders questions use RPO shortcut"
+        ],
+        "dos_and_donts": [
+          "If customers want to return an item - clarify if they’re trying to return a recently purchased pair or if they need a replacement"
+        ]
+      },
+      "blocklisted_words": [
+        
       ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-01-27 21:50:32.971",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Thanks for subscribing! Enter code AT20 at checkout for 20% off your next purchase: shadyrays.attn.tv/afHVCQp_mFgn",
+          "date_time": "2026-01-27 21:50:36.601",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Hey , this is Sam. Thanks for stopping by! shadyrays.attn.tv/a4fgbDmXt55n .\n\nCan I help with any questions on our shades?",
+          "date_time": "2026-01-27 21:51:51.338",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Nice pick! Don\u0027t wait any longer for your new favorite shades. Get Frontier Snow Goggle - Independence Infrared Now: shadyrays.attn.tv/aG-EeUyeZyeL",
+          "date_time": "2026-01-28 10:48:27.249",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Save us as a contact so you don\u0027t miss out on all future announcements and exclusive deals!",
+          "date_time": "2026-01-28 21:50:40.989",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Still deciding? In case you missed it, enter code AT20 for 20% off your next purchase! shadyrays.attn.tv/arjVafFXgxCB",
+          "date_time": "2026-01-29 21:50:47.864",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Your 20% off discount is about to expire, enter the code AT20 at checkout for 20% off! shadyrays.attn.tv/ac9onBs2eXSk .\n",
+          "date_time": "2026-01-31 21:50:56.184",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: We want to make it even easier to pick out your shades. Get 30% off your first pair with code SPARK: shadyrays.attn.tv/aIJe9JQAVQxU .",
+          "date_time": "2026-02-02 21:50:58.008",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Hey, don\u0027t miss out on your new favorite shades. \n\nCheck out our new arrivals: shadyrays.attn.tv/aLoLZfI8XHT2 .",
+          "date_time": "2026-02-03 10:27:25.702",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: FLASH SALE! Save 35% on limited Green Wolf frames for the course. Use code GREEN35: shadyrays.attn.tv/ay_8f29vNFAo \n\nEnds 2/5 at 11:59pm PST.",
+          "date_time": "2026-02-04 20:15:11.402",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Back by popular demand: Azalea \u0026 Calico. The retired shades you loved are back! \n\nShop the launch: shadyrays.attn.tv/aApMkPGcsh7D ",
+          "date_time": "2026-02-05 16:00:37.923",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Early Access! Snag $20 OFF shades for Presidents Day using code PD26 at checkout before the rest.\n\nShop now: shadyrays.attn.tv/a92roIYz9TM9 ",
+          "date_time": "2026-02-12 15:30:23.537",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Last chance! Don\u0027t miss out on $20 savings on shades using code PD26 at checkout. Exclusions apply.\n\nEnds tonight: shadyrays.attn.tv/a6r8gD3mWT8B ",
+          "date_time": "2026-02-16 14:00:20.932",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Welcome Back! Thank you for your continued support of our brand and the Impact we\u0027re making! Check out our story: https://shadyrays.attn.tv/aBVFoGlCY-6Q ",
+          "date_time": "2026-02-17 20:12:17.281",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Shady Rays: Hey Chad , this is Sam. Thanks for stopping by! shadyrays.attn.tv/aQdj9GCZr5RP .\n\nCan I help with any questions on our shades?",
+          "date_time": "2026-02-22 15:52:21.743",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yeah can I buy the gold lenses for the Denali glasses just the lenses ...theyre like gold/bronze color but I cant figure out how to checkout with just those.",
+          "date_time": "2026-02-22 17:43:54.578",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c878b-69dd-4267-f000-0000f6528703",
+          "message_text": "Shady Rays: I appreciate your inquiry! Are you referring to this one? https://shadyrays.attn.tv/akIHfLuhiJ0h I am afraid the lense is not available. You can find our available Denali lenses here: https://shadyrays.attn.tv/aN7iV5Rz3WUB ",
+          "message_type": "agent",
+          "agent": "31385",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-22 17:49:46.749"
+        }
+      ]
+    },
+    "59": {
+      "agentName": "Emma",
+      "has_shopify": true,
+      "id": "019c777b-f0ec-455e-f000-00009931ea76",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.cecilandlou.com/products/pink-seersucker-bubble3",
+            "item": "Pink Seersucker Bubble - NB",
+            "timeAgo": "2026-02-19"
+          },
+          {
+            "link": "https://www.cecilandlou.com/products/pink-seersucker-scalloped-bubble7?variant=50843814560042\u0026utm_source=facebook\u0026utm_medium=paidsocial\u0026utm_campaign=TNT+Advantage%2B+Shopping+Campaign\u0026utm_content=TNT+-+Advantage%2B+Shopping+-+In+Stock+Catalog\u0026term=TNT+Advantage%2B+Shopping+Ad+set\u0026utm_id=6583599369024\u0026utm_term=6583599368824\u0026fbclid=PAZXh0bgNhZW0BMABhZGlkAAAvyCWoeMRzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAac6TxKmQGNfyGV1_Z0gr9LtzDzJcrj9UCdZfgRVt6rQ5RsKFQntZ1rId0d2vA_aem_ytB_pIIAYgQ1sLZDDyoc2w\u0026campaign_id=6583599369024\u0026ad_id=6583599369224",
+            "item": "Pink Seersucker Scalloped Bubble - 3T",
+            "timeAgo": "2026-02-19"
+          },
+          {
+            "link": "https://www.cecilandlou.com/products/floral-smocked-ruffle-neck-diaper-set5?variant=51099940553002",
+            "item": "Floral Smocked Ruffle Neck Diaper Set - 2T",
+            "timeAgo": "2026-02-19"
+          },
+          {
+            "link": "https://www.cecilandlou.com/products/pink-stripe-embroidered-bunnies-bubble3",
+            "item": "Pink Stripe Embroidered Bunnies Bubble - 6M",
+            "timeAgo": "2026-02-19"
+          },
+          {
+            "link": "https://www.cecilandlou.com/products/pink-gingham-eyelet-bunny-bubble3",
+            "item": "Pink Gingham Eyelet Bunny Bubble - 3M",
+            "timeAgo": "2026-02-19"
+          }
+        ],
+        "coupons": [
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 2570185334,
+            "company_id": 1021,
+            "name": "15% off - August 12, 2024",
+            "coupon": "B3263693"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 2570185334,
+            "company_id": 1021,
+            "name": "Concierge 15% Off - 2025",
+            "coupon": "WA6685RT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://cecilandlou.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "total": 28.58,
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      1.5,
+                      1.5,
+                      19.99,
+                      19.99
+                    ],
+                    "Count": 4
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "link": "https://www.cecilandlou.com/89183584554/orders/0c95e1daef11dccde01127cba13f0aea/authenticate?key=705d2b2e2cd7755d69a78007af6eb1fa",
+            "orderDate": "2025-11-14",
+            "discount_amount": 0,
+            "orderNumber": "522751",
+            "date_time": "2025-11-14 16:01:55.596"
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-08-11",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      19.99,
+                      19.99
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150899562129035723",
+            "link": "https://www.cecilandlou.com/89183584554/orders/5b8c17f041efb3ed365d6ecd3e55c087/authenticate?key=8b6be7215d97842bf563a63a09a180a0",
+            "date_time": "2025-08-11 01:36:10.261",
+            "discount_amount": 0,
+            "orderNumber": "479076",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150899562129035723",
+            "total": 47.46
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-08-11",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      19.99,
+                      1.5,
+                      19.99,
+                      1.5
+                    ],
+                    "Count": 4
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150899562129035723",
+            "link": "https://www.cecilandlou.com/89183584554/orders/5b8c17f041efb3ed365d6ecd3e55c087/authenticate?key=8b6be7215d97842bf563a63a09a180a0",
+            "date_time": "2025-08-11 01:36:10.260",
+            "discount_amount": 0,
+            "orderNumber": "479076",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150899562129035723",
+            "total": 47.46
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-12-10",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      1.5,
+                      37,
+                      1.5
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2024-12-10 22:57:06.000",
+            "discount_amount": 0,
+            "orderNumber": "6412892897578",
+            "total": 41.78
+          }
+        ]
+      },
+      "companyWebsite": "https://cecilandlou.com",
+      "companyName": "Cecil and Lou",
       "notes": {
         "send_to_cs": [
           "No ESC for this client, send everything to CS"
         ],
-        "tone": [
-          "Close the convo once the client takes over"
+        "ai_instructions": [
+          "Do not escalate anything, if the customer question cannot be handled, send template titled Customer support",
+          "If inbound question references \u0027pre-order\u0027 or \u0027preorder\u0027 send template titled Customer Support"
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://thefryecompany.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Melissa Belted Riding - Merlot / 5.5",
-            "link": "https://www.thefryecompany.com/products/melissa-belted-riding-merlot?externalId=ipvz9",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "item": "Melissa Belted Riding - Merlot / 5.5",
-            "link": "https://www.thefryecompany.com/products/melissa-belted-riding-merlot?utm_campaign=welcome-ai&utm_medium=sms-auto&utm_source=attentive&externalId=ipvz9",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "item": "Carson 2 Piping Tall - Black / 5.5",
-            "link": "https://www.thefryecompany.com/products/carson-2-piping-tall-black",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "item": "Carson 2 Piping Tall - Saddle / 5.5",
-            "link": "https://www.thefryecompany.com/products/carson-2-piping-tall-saddle",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "item": "Carson 2 Piping Tall - Dark Brown / 6",
-            "link": "https://www.thefryecompany.com/products/carson-2-piping-tall-dark-brown",
-            "timeAgo": "2026-02-14"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "1070453",
-            "orderDate": "2025-09-26",
-            "items": [
-              {
-                "name": "AfterShip Protection 3.00",
-                "price": 3,
-                "productLink": "https://thefryecompany.myshopify.com/products/aftership-protection"
-              },
-              {
-                "name": "Kenzie Venetian Cognac / 9.5",
-                "price": 99.98,
-                "productLink": "https://thefryecompany.myshopify.com/products/kenzie-venetian-cognac-old"
-              },
-              {
-                "name": "Kenzie Venetian Black Floral / 9.5",
-                "price": 99.98,
-                "productLink": "https://thefryecompany.myshopify.com/products/kenzie-venetian-black-floral-old"
-              }
-            ],
-            "link": "https://www.thefryecompany.com/14033715254/orders/89b9339bb32f1684dc520a6a2db8146e/authenticate?key=b3d3002129a02e803fe2e2ac9d838d8f",
-            "total": 134.98,
-            "coupon": "REFRESH40",
-            "date_time": "2025-09-26 19:15:42.000"
-          },
-          {
-            "orderNumber": "1070453",
-            "orderDate": "2025-09-22",
-            "items": [
-              {
-                "name": "AfterShip Protection",
-                "price": 3,
-                "productLink": "https://thefryecompany.myshopify.com/products/aftership-protection"
-              }
-            ],
-            "link": "https://www.thefryecompany.com/14033715254/orders/89b9339bb32f1684dc520a6a2db8146e/authenticate?key=b3d3002129a02e803fe2e2ac9d838d8f",
-            "total": 134.98,
-            "coupon": "REFRESH40",
-            "date_time": "2025-09-22 23:16:13.955"
-          },
-          {
-            "orderNumber": "1070453",
-            "orderDate": "2025-09-22",
-            "items": [
-              {
-                "name": "Kenzie Venetian",
-                "price": 99.98,
-                "productLink": "https://thefryecompany.myshopify.com/products/kenzie-venetian-cognac-old"
-              }
-            ],
-            "link": "https://www.thefryecompany.com/14033715254/orders/89b9339bb32f1684dc520a6a2db8146e/authenticate?key=b3d3002129a02e803fe2e2ac9d838d8f",
-            "total": 134.98,
-            "coupon": "REFRESH40",
-            "date_time": "2025-09-22 23:16:13.935"
-          },
-          {
-            "orderNumber": "1070453",
-            "orderDate": "2025-09-22",
-            "items": [
-              {
-                "name": "Kenzie Venetian",
-                "price": 99.98,
-                "productLink": "https://thefryecompany.myshopify.com/products/kenzie-venetian-black-floral-old"
-              }
-            ],
-            "link": "https://www.thefryecompany.com/14033715254/orders/89b9339bb32f1684dc520a6a2db8146e/authenticate?key=b3d3002129a02e803fe2e2ac9d838d8f",
-            "total": 134.98,
-            "coupon": "REFRESH40",
-            "date_time": "2025-09-22 23:16:13.928"
-          },
-          {
-            "orderNumber": "1070453",
-            "orderDate": "2025-09-22",
-            "items": [
-              {
-                "name": "Kenzie Venetian - Cognac / 9.5",
-                "price": 99.98,
-                "productLink": "https://thefryecompany.myshopify.com/products/kenzie-venetian-cognac-old"
-              },
-              {
-                "name": "AfterShip Protection - 3.00",
-                "price": 3,
-                "productLink": "https://thefryecompany.myshopify.com/products/aftership-protection"
-              },
-              {
-                "name": "Kenzie Venetian - Black Floral / 9.5",
-                "price": 99.98,
-                "productLink": "https://thefryecompany.myshopify.com/products/kenzie-venetian-black-floral-old"
-              }
-            ],
-            "link": "https://www.thefryecompany.com/14033715254/orders/89b9339bb32f1684dc520a6a2db8146e/authenticate?key=b3d3002129a02e803fe2e2ac9d838d8f",
-            "total": 134.98,
-            "date_time": "2025-09-22 23:16:13.836"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "60": {
-      "id": "019c5f39-ad64-4d02-f000-0000fb817cd8",
-      "companyName": "Covercraft",
-      "companyWebsite": "https://covercraft.com",
-      "agentName": "Sarah",
-      "messageTone": "Casual",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Pre Orders"
+      ],
+      "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Covercraft: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Covercraft.",
           "message_type": "system",
-          "date_time": "2026-02-14 14:49:12.100"
+          "message_text": "Cecil and Lou: ♥️It\u0027s time for a sweet treat! 30% off Valentine\u0027s Styles - TODAY only. Shop NOW! candl.attn.tv/a3hWLnc8cgj_",
+          "date_time": "2026-02-03 11:45:22.050",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Covercraft: Welcome to Covercraft! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
           "message_type": "system",
-          "date_time": "2026-02-14 14:49:37.227"
+          "message_text": "Cecil and Lou: Hey, we noticed you checking us out. Shop all our collections now. https://candl.attn.tv/a-1wXAacT975 ",
+          "date_time": "2026-02-04 11:37:25.358",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Covercraft: Enjoy $10 Off with code SAVE10. Find Your Custom Cover Today!\n\nView Active Deals: https://covercraft.attn.tv/aiYENz_laFDH ",
           "message_type": "system",
-          "date_time": "2026-02-14 14:49:41.251"
+          "message_text": "Cecil and Lou: 💗 Thanks for visiting Cecil and Lou! This is Emma, I\u0027m happy to help you discover darling styles!\n\nWho are you shopping for today?",
+          "date_time": "2026-02-05 11:32:35.510",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Covercraft: Hi there! Need any help? Send us a text, or give us a call at 1-800-274-7006\nMon - Fri 9AM - 9PM EST. https://covercraft.attn.tv/akJ8iTQmkFLR - Sarah ",
           "message_type": "system",
-          "date_time": "2026-02-14 17:09:11.388"
+          "message_text": "Cecil and Lou: 🚨 Flash Sale Alert! $21.99 swim \u0026 spring styles-limited quantities, limited time. Don\u0027t miss out! candl.attn.tv/aA--zpo6OGf6 ",
+          "date_time": "2026-02-06 09:10:27.197",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Don't want to pay that ridiculous shipping cost",
+          "message_type": "system",
+          "message_text": "Cecil and Lou: Flash Sale-Last Day! 🥳\n$21.99 swim \u0026 spring styles ending tonight. Don\u0027t miss it! candl.attn.tv/aKVmGy_63nKe ",
+          "date_time": "2026-02-08 14:30:36.740",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: ⏰ Just a reminder! That $21.99 flash sale on swim \u0026 spring styles is ending soon. Shop before it\u0027s gone! candl.attn.tv/aX9uvrTJDg1R ",
+          "date_time": "2026-02-08 20:30:19.603",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🎉 SALE EXTENDED! $21.99 spring \u0026 swim styles. Ends TONIGHT! candl.attn.tv/ac_zEJjx2jpc ",
+          "date_time": "2026-02-09 16:30:26.396",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 💗 We miss you! Have you seen the latest at Cecil and Lou? Shop now: https://candl.attn.tv/a41VYmCPTfhu ",
+          "date_time": "2026-02-10 08:35:49.499",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🎉FREE MONOGRAMS! All in-stock items - for a limited time! Shop now! candl.attn.tv/aE7HrnUluMaS ",
+          "date_time": "2026-02-13 09:30:31.876",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🎉 See something that caught your eye? Grab it before it\u0027s gone! candl.attn.tv/apiVBnanPDiQ\n\nIs there anything I can help you with?\n- Emma",
+          "date_time": "2026-02-14 09:24:02.125",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🎉 FREE Monograms end soon - save $12 per monogram! candl.attn.tv/aMLxAxxSGMRH ",
+          "date_time": "2026-02-15 14:30:28.440",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: ⏰ By popular demand - Sale EXTENDED! FREE Monograms ending soon. Save $12 each! candl.attn.tv/ahjsur1dLyy3 ",
+          "date_time": "2026-02-16 10:00:59.843",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cecil and Lou: 🎀 Hey Melissa! Thanks for shopping with us! You\u0027ve earned enough points to redeem a $5 discount. Shop our site: https://candl.attn.tv/a0HiYpXn7f6H ",
+          "date_time": "2026-02-19 14:31:27.753",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-14 17:10:33.524"
+          "message_text": "Hey!",
+          "date_time": "2026-02-19 14:39:16.294",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Covercraft: We offer free ground shipping on domestic orders over $75 and all Boat Covers and Bimini Tops ship free with no minimum required. ",
+          "message_type": "customer",
+          "message_text": "I placed an order back in November and still haven\u0027t received the bubble",
+          "date_time": "2026-02-19 14:39:26.267",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Customer support\"; last updated: 2023-11-20 20:47:00.228",
+          "date_time": "2026-02-19 14:58:57.291",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c777b-f0ec-455e-f000-00009931ea76",
+          "message_text": "Cecil and Lou: Hello! I\u0027m sorry to hear that. The best way to handle this is to email us directly at help@cecilandlou.com. Our team is happy to help out! Please note, our team\u0027s business hours are Monday - Friday, 8 am - 5 pm CST. ",
           "message_type": "agent",
-          "agent": "110072",
-          "message_id": "019c5e6a-a4fe-470f-f000-0000fb817cd8",
-          "date_time": "2026-02-14 18:09:33.340"
-        },
-        {
-          "message_media": [],
-          "message_text": "Well it was 70 something dollars but you guys had a discount because it's Valentine's Day so now I'm stuck with the shipping which is almost as much as the item itself why can't I get a break on the shipping",
-          "message_type": "customer",
-          "date_time": "2026-02-14 19:58:23.208"
-        },
-        {
-          "message_media": [],
-          "message_text": "Covercraft: I understand! Since your order is just below the $75 free shipping threshold, one option is to add a small item to reach the minimum. For example, a floor mat or sunshade could help you get free shipping while also adding value to your order. You can shop our special offers here: https://covercraft.attn.tv/aMmuCj3FrT6-",
-          "message_type": "agent",
-          "agent": "42041",
-          "message_id": "019c5eeb-1092-4da7-f000-0000fb817cd8",
-          "date_time": "2026-02-14 20:29:49.483"
-        },
-        {
-          "message_media": [],
-          "message_text": "I already ordered that from you",
-          "message_type": "customer",
-          "date_time": "2026-02-14 21:21:52.946"
-        },
-        {
-          "message_media": [],
-          "message_text": "I was looking for anything else but you don't have any only big items",
-          "message_type": "customer",
-          "date_time": "2026-02-14 21:22:32.539"
-        },
-        {
-          "message_media": [],
-          "message_text": "Covercraft: I understand. I'll make sure to send that as feedback to the team as well for consideration. Should you need any further assistance, please don't hesitate to reach out. ",
-          "message_type": "agent",
-          "agent": "82260",
-          "message_id": "019c5f39-ad64-4d02-f000-0000fb817cd8",
-          "date_time": "2026-02-14 21:55:41.450"
+          "agent": "43099",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 14:58:57.294"
         }
-      ],
-      "notes": {
-        "templates": [
-          "For custom full vehicle covers use FVC shortcut",
-          "For cx that can't see the cover pattern/images of their vehicle use CPI shortcut",
-          "If we don't have a pattern/color the cx is looking for use PRR shortcut"
-        ],
-        "dos_and_don_ts": [
-          "Do not tell customers that the base price is the final price! The cost changes by the fitment and depends on the vehicle",
-          "Rebates are discounts for this brand!",
-          "Custom dim pattern sheets are only available for Vehicle Covers (Car, Truck, Van,RV)",
-          "➜https://www.covercraft.com/us/en/covercrafter"
-        ],
-        "drive_to_purchase": [
-          "Before sharing any product links, confirm the vehicle’s Year, Make, and Model"
-        ]
-      },
+      ]
+    },
+    "60": {
+      "agentName": "Taylor",
+      "has_shopify": true,
+      "id": "019c71f5-4c2d-4f9b-f000-0000f6337bc8",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://covercraft.com",
-          "date": ""
-        },
+        "promotions": [
+          {
+            "title": "NATIONAL STICKER DAY SALE",
+            "content": [
+              "NATIONAL STICKER DAY\n1/13/26 12am PT through 1/15/26 11:59pm PT\n\nURL: https://thehappyplanner.com/collections/national-sticker-day\n\nPromos:\n- 7 Select Sticker Books for $29.99\n- 5 Select Sticker Sheets for $8.99\n- 25% Off all other Stickers\n\n\nNo promo code; discounts will automatically apply in cart based on skus\n\nAll skus that are part of the 7 sticker book bundle and 5 sticker sheet bundles will be 25% Off until the quantity thresholds are met, and then will automatically switch to the bundle pricing.\n\nExclusions apply. Cannot be combined with any other sale, promotion, discount, coupon, and/or offers.\n\nReward redemptions can not be used if discount is applied in cart."
+            ]
+          },
+          {
+            "title": "CYBER WEEK SALE - DAY 1 - 11.24.25",
+            "content": [
+              "Monday, 11.24.25 | 12am PT-11:59 PT\u0026nbsp;\n\n11 NEW ARRIVALS / CYBER EXCLUSIVES\n\n40% OFF PLANNER ACCESSORIES\n\nFREE SHIPPING OVER $50 (CONTIGUOUS US ONLY)\n\n• Cannot be combined with any other promotions, discounts, coupons, or rewards.\n\n• Rewards and additional discounts cannot be used on new exclusive items or other select discounted items.\n\n• Valid only during the promo period. Promo ends 11/24/25 at 11:59 PM PT.\n\n• Prices as marked; no code needed.\n\n• Free Standard Shipping within the Contiguous US only.\n\n• Rewards and discounts are not eligible on Custom Planners."
+            ]
+          },
+          {
+            "title": "CYBER WEEK SALE - DAY 2 - 11.25.25",
+            "content": [
+              "Tuesday, 11.25.25 | 12am PT-11:59 PT\n\n35% Off Planners (Get ready for 2026!)\n\nFree Shipping on Order $50+\n\n• Cannot be combined with any other sales, promotions, discounts, coupons, or offers.\n\n• Rewards and additional discounts cannot be used on new exclusive items, select discounted items, or custom planners.\n\n• Valid only during the promotion. Promo ends 11/25/25 at 11:59 PM PT.\n\n• Prices as marked; no promo code required.\n\n• No price matching.\n\n• Limited quantities available.\n\n• Free Standard Shipping within the Contiguous US only.\n\n• Rewards, promotions, and discounts do not apply to custom planners."
+            ]
+          },
+          {
+            "title": "VIPSHIPPING",
+            "content": [
+              "FREE SHIPPING NO MINIMUM FOR REWARD MEMBERS | USE CODE: VIPSHIPPING\n\nValid 2/28/26 12am PT through 3/1/26 11:59pm PT\n\n- Promo code: VIPSHIPPING must be entered at checkout to receive free shipping\n\n- Customer must be signed into their reward member account in order for promo code to work. Non-members can join for free and take advantage of this promotion.\n\n- Free shipping is for standard ground methods, and within the Contiguous US only\n\n- Reward redemptions can be used with the free shipping code."
+            ]
+          },
+          {
+            "title": "30% OFF Galentine\u0027s Day",
+            "content": [
+              "30% Off Select BFF Items + $2 Shipping\n\nValid 2/13/26 12am PT through 11:59pm PT\n\nNo promo code required; discount will automatically apply in cart on valid items\n\nValid items are in this collection: https://thehappyplanner.com/collections/bff-collection\n\n$2 Shipping will be an option in cart. Valid only on ground methods, within the Contiguous US\n\nReward Redemptions cannot be used if the \n30% discount is applied in cart.\n\nCannot be combined with any other sale, promotion, discount, coupon, and/or offers"
+            ]
+          },
+          {
+            "title": "CYBER WEEK SALE - DAY 3 \u0026 4 - 11.26.25-11.27.25",
+            "content": [
+              "Wednesday, 11.26.25 - Thursday, 11/27/25 | 12am PT-11:59 PT\n\nHAPPY THANKSGIVING!\n\nCreate Your Own Sticker Bundle! Choose 7 select sticker books for $29.99!\n\nFree Shipping on Order $50+\n\n• Cannot be combined with any other sales, promotions, discounts, coupons, or offers.\n\n• Rewards and additional discounts cannot be used on new exclusive items or other select discounted items.\n\n• Not eligible for price matching.\n\n• Valid only during the promotion. Promo ends 11/27/25 at 11:59 PM PT.\n\n• Free Standard Shipping within the Contiguous US only.\n\n• Prices as marked; no promo code required.\n\n• Limited quantities available.\n\n• The promotional price of $29.99 is automatically applied when the customer has 7 eligible sticker books in their cart."
+            ]
+          },
+          {
+            "title": "CYBER WEEK SALE - CYBER MONDAY EXTENDED - 12.2.25",
+            "content": [
+              "Tuesday, 12.2.25 | 12am PT-11:59 PT\n\nCyber Monday Deals\n\n• 30% Off Sitewide — prices as marked; no code needed.\n\n• Free Standard Shipping (No Minimum!) within the Contiguous US.\n\n• Extra 20% Off sale items.\n\n• Two New Mystery Bags* — limited availability.\n\n• Seasonal Sticker Book Bundle featuring 4 past favorites\n\n• Valid only during the promotion. Promo ends 12/2/25 at 11:59 PM PT.\n\n• 30% Off Sitewide — prices as marked; no promo code required.\n\n• Extra 20% Off automatically applies to eligible items in cart.\n\n• Free Shipping available at checkout on eligible carts (standard shipping, Contiguous US only).\n\n• Limited quantities available.\n\n• Final Sale Items\n\n• Mystery Bags are FINAL SALE (limit 4 per order).\n\n• All sale items are FINAL SALE."
+            ]
+          },
+          {
+            "title": "GAMEPLAN25",
+            "content": [
+              "25% Off Orders + Free Shipping\nValid 2/8/26 12am PT through 11:59pm PT\n\n25% Off Orders with Code: GAMEPLAN25\n\nPromo code must be entered in cart in order for discount to apply.\n\n25% OFF promotion is excluded on Custom Planners (Build Your Own).\n\nFree shipping will be an option in valid carts\n\nFree shipping is within the Contiguous US Only, on standard ground methods\n\nReward redemptions cannot be combined with 25% OFF discount."
+            ]
+          },
+          {
+            "title": "End of Season Sale - up to 85% OFF",
+            "content": [
+              "Up to 85% OFF End of Season Sale + Free Shipping over $50*\n\nPromotion ends at 11:59pm PST on 2/19/26\n\n- Prices are as marked. No promo code required.\n- Free shipping is for orders over $50 and shipping within the contiguous US only\n- Rewards are eligible on select items and in combination with the end of season sale"
+            ]
+          },
+          {
+            "title": "SMS VIP EXCLUSIVE",
+            "content": [
+              "25% OFF + FREE SHIPPING for SMS customers who received the promotional text. \n\nPROMO CODE GIVE IS UNIQUE TO EACH SUBSCRIBER.\n\nCUSTOM PLANNERS ARE EXCLUDED FROM DISCOUNT. \n\nFREE SHIPPING PROMOTION ONLY VALID FOR ORDERS SHIPPING WITHIN THE CONTIGUOUS US.\n\nENDS 11:59PM ON 1/30/2026"
+            ]
+          },
+          {
+            "title": "CYBER WEEK SALE - BLACK FRIDAY - 11.28.25-11.30.25",
+            "content": [
+              "Friday, 11.28.25 through Sunday, 11.30.25 | 12am PT-11:59 PT + Doorbusters end at 12pm PT on 11.28.25\n\nBlack Friday is HERE!\n\n30% Off Sitewide! (Prices as marked on the site, no promo code required)\n\nNEW! PEANUTSTM - Celebrate the Seasons - Be Happy Box\n\nDoorbusters\n• 100+ Doorbusters (Stickers, Accessories \u0026 more) at 80%+ off.\n\n• Runs 11/28/25 from 12:00 AM PT to 12:00 PM PT.\n\nShipping\n\n• Free Shipping on orders $50+ (standard shipping, Contiguous US only).\n\nOffer Rules \u0026 Exclusions\n\n• Cannot be combined with any other sales, promotions, discounts, coupons, or offers.\n\n• Rewards and additional discounts cannot be used on:\n\n• Not eligible for price matching.\n\n• Promo ends 11/30/25 at 11:59 PM PT.\n\n• Prices as marked; no promo code required.\n\n• Limited quantities available."
+            ]
+          },
+          {
+            "title": "BUY MORE, SAVE MORE SALE",
+            "content": [
+              "Buy More, Save More Sitewide\nValid 12/8/25 9am PT through 12/12/25 11:59pm PT\n\nSpend $75+, Get 15% Off\nSpend $100+, Get 20% Off\nSpend $150+, Get 25% Off\n\n- Discount automatically applied in cart based on cart thresholds\n- Custom Planner are excluded from the promo and do not count towards the thresholds\n- Reward redemptions can be used but are excluded from custom planners."
+            ]
+          },
+          {
+            "title": "CYBER WEEK SALE - CYBER MONDAY - 12.1.25",
+            "content": [
+              "Monday, 12.1.25 | 12am PT-11:59 PT\n\nCyber Monday Deals\n\n• 30% Off Sitewide — prices as marked; no code needed.\n\n• Free Standard Shipping (No Minimum!) within the Contiguous US.\n\n• Extra 20% Off sale items.\n\n• Two New Mystery Bags* — limited availability.\n\n• Seasonal Sticker Book Bundle featuring 4 past favorites\n\n• Valid only during the promotion. Promo ends 12/1/25 at 11:59 PM PT.\n\n• 30% Off Sitewide — prices as marked; no promo code required.\n\n• Extra 20% Off automatically applies to eligible items in cart.\n\n• Free Shipping available at checkout on eligible carts (standard shipping, Contiguous US only).\n\n• Limited quantities available.\n\n• Final Sale Items\n\n• Mystery Bags are FINAL SALE (limit 4 per order).\n\n• All sale items are FINAL SALE."
+            ]
+          },
+          {
+            "title": "Secret Sale up to 70% OFF",
+            "content": [
+              "Up to 70% Off Secret Sale + Free Shipping with Custom Planners\n\nValid 1/21/26 12am PT through 1/28/26 11:59pm PT\n\n- No promo code; prices as marked. \n\n- Secret Sale items in this collection: https://thehappyplanner.com/collections/secret-sale\n\n- Free standard shipping will appear as an option in valid carts that have a custom planner in cart. Valid for orders shipping within the Contiguous only. \n\n- Reward Redemptions are combinable with the Secret Sale"
+            ]
+          },
+          {
+            "title": "30% OFF Floral Collection",
+            "content": [
+              "30% Off Floral Collection\n\nValid 3/3/26 12am PT through 3/5/26 11:59pm PT\n\nNo promo code required; discount will automatically apply in cart on valid items\n\nValid items are in this collection: https://thehappyplanner.com/collections/florals\n\nReward redemptions cannot be used if automatic discount is in cart."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 4130569160,
+            "company_id": 4213,
+            "coupon_url": "https://thehappyplanner.com/discount/WELlvgSLk?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome20",
+            "value": "20",
+            "name": "Welcome 20% Off $50+ Purchase",
+            "coupon": "WELlvgSLk",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          }
+        ],
         "browsingHistory": [
           {
-            "item": "Original Carpet DashMat Custom Dashboard Cover",
-            "link": "https://www.covercraft.com/product/original-carpet-dashmat-custom-dashboard-cover/DMC",
-            "timeAgo": "2026-02-14"
+            "link": "https://thehappyplanner.com/products/undated-see-the-good-customizable-planner-classic-vertical-layout-12-months?variant=41973758492734\u0026country=US\u0026currency=USD\u0026utm_medium=product_sync\u0026utm_source=google\u0026utm_content=sag_organic\u0026utm_campaign=sag_organic\u0026utm_source=google\u0026utm_medium=paid\u0026utm_campaign={{campaign.name}}\u0026gad_source=1\u0026gad_campaignid=22537824173\u0026gclid=CjwKCAiAs4HMBhBJEiwACrfNZTe5fnnF18iykiNvCtkOGAdg8FR4iaImWqTE8u9NsqFq1J70ll4JpBoCZNUQAvD_BwE",
+            "item": "Undated See the Good Customizable Planner - Classic Vertical Layout - 12 Months",
+            "timeAgo": "2026-02-02"
           },
           {
-            "item": "Original Carpet DashMat Custom Dashboard Cover",
-            "link": "https://www.covercraft.com/product/original-carpet-dashmat-custom-dashboard-cover/DMC",
-            "timeAgo": "2026-02-14"
+            "link": "https://thehappyplanner.com/collections/new-arrivals/products/see-the-good-dotted-lined-classic-notebook-60-sheets",
+            "item": "See the Good - Dotted Lined Classic Notebook - 60 Sheets",
+            "timeAgo": "2026-02-02"
           },
           {
-            "item": "Original Carpet DashMat Custom Dashboard Cover",
-            "link": "https://www.covercraft.com/product/original-carpet-dashmat-custom-dashboard-cover/DMC",
-            "timeAgo": "2026-02-14"
+            "link": "https://thehappyplanner.com/collections/new-arrivals/products/cornflower-vegan-leather-deluxe-classic-planner-folio",
+            "item": "Cornflower Vegan Leather - Deluxe Classic Planner Folio",
+            "timeAgo": "2026-02-02"
           },
           {
-            "item": "Original Carpet DashMat Custom Dashboard Cover",
-            "link": "https://www.covercraft.com/product/original-carpet-dashmat-custom-dashboard-cover/DMC",
-            "timeAgo": "2026-02-14"
+            "link": "https://thehappyplanner.com/products/2025-2026-soft-pop-customizable-spiral-planner-big-dashboard-layout-12-months?_pos=11\u0026_sid=81c581a9d\u0026_ss=r",
+            "item": "2025–2026 Soft Pop Customizable Spiral Planner - Big Dashboard Layout - 12 Months",
+            "timeAgo": "2026-02-02"
           },
           {
-            "item": "Original Carpet DashMat Custom Dashboard Cover",
-            "link": "https://www.covercraft.com/product/original-carpet-dashmat-custom-dashboard-cover/DMC",
-            "timeAgo": "2026-02-14"
+            "link": "https://thehappyplanner.com/products/2025-2026-cafecore-customizable-spiral-planner-big-dashboard-layout-12-months?_pos=10\u0026_sid=81c581a9d\u0026_ss=r",
+            "item": "2025–2026 Cafécore Customizable Spiral Planner - Big Dashboard Layout - 12 Months",
+            "timeAgo": "2026-02-02"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://thehappyplanner.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2026-02-06",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      4.49,
+                      12.99
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2026-02-06 16:20:22.473",
+            "discount_amount": 0,
+            "orderNumber": "7771439169598",
+            "total": 27.21
           }
         ]
       },
-      "escalation_preferences": [
-        "Discount code errors"
+      "companyWebsite": "https://thehappyplanner.com",
+      "companyName": "The Happy Planner",
+      "notes": {
+        "important": [
+          "Make sure links you\u0027re sending customers are for THE HAPPY PLANNER!",
+          "Example of what NOT to send: thehappinessplanner.com (The Happiness Planner is completely different company)"
+        ],
+        "tone": [
+          "Use a more upbeat, but professional tone",
+          "Don\u0027t say \"My bad\""
+        ],
+        "promo_and_exclusions": [
+          "🅿️ Promote customers to sign up to Happy Rewards, use RWD shortcut",
+          "DON\u0027T ask customers to check their email if they didn\u0027t get the code for signing up for emails \u0026 texts OR for spinning the wheel! The code should be in the texts!",
+          "Custom Planners and Specialty Packs are excluded from discount codes"
+        ],
+        "old_expired_codes": [
+          "Please do not send old or expired codes to subscribers. This includes recycling old codes that may have previously gone to the sub and is no longer valid."
+        ]
+      },
+      "blocklisted_words": [
+        "cheers",
+        "gear"
       ],
-      "blocklisted_words": [],
-      "has_shopify": false
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-01-26 20:15:26.149",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Welcome! Get ready for exciting offers and exclusive deals. As a special thank you, here\u0027s a treat: Use WELlvgSLk to enjoy 20% off your first purchase of $50 or more. Exclusions may apply. \n\n happyp.attn.tv/ahdk3oAV_qEe\n\nIf you need anything, we\u0027re here to help, just reply!\n",
+          "date_time": "2026-01-26 20:15:30.607",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Don\u0027t forget to add us as a contact on your phone to be the first to receive exclusive deals and updates!",
+          "date_time": "2026-01-27 12:03:58.844",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: SMS Exclusive! Kick off the weekend with Free Shipping + 25% OFF SITEWIDE* with code: SMSVIP25.\n\nTODAY ONLY! happyp.attn.tv/aMUuvcfrFJdf \n.",
+          "date_time": "2026-01-30 15:21:11.454",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Hi there! We noticed you left an item in your cart Butterfly Botanics - Dotted Lined Big Notebook - 60 Sheets.\nWe hate to see you miss out on this great deal so act fast! Click the link to return to your cart: happyp.attn.tv/aESQLz8erpO4 \n\nQuestions? Text us! - Taylor\n",
+          "date_time": "2026-02-02 17:27:17.307",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Exclusively for you: Free Shipping + 25% OFF SITEWIDE* with code: PLANS25.\n\nHurry, today only! happyp.attn.tv/arzHTi-I2oHI \n.",
+          "date_time": "2026-02-03 13:45:55.439",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: For list lovers + coffee drinkers alike, our Gilmore Girls collection is BACK! Now undated + your fave accessories! happyp.attn.tv/aeWRbUyT68eP ",
+          "date_time": "2026-02-06 13:03:56.346",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Game Day Deal! Score 25% OFF Sitewide* + Free Shipping with code GAMEPLAN25. \n\nTake your goals to the end zone: happyp.attn.tv/axSH9f8BLqdm \n.",
+          "date_time": "2026-02-08 14:16:40.241",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Hey Galentine, enjoy 30% off BFF items + $2 shipping*!\n\nBecause besties deserve a little extra love. \n\nToday only! happyp.attn.tv/aCys3e5bRFiw \n.",
+          "date_time": "2026-02-13 13:04:03.718",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Just landed: The Disney Stitch \u0026 Angel Be Happy Box! happyp.attn.tv/adPwY68AnT7W \n\nPlus, we\u0027re closing out the season with up to 80% off the favorites you love. happyp.attn.tv/a2mM-LZIxpE8 \n",
+          "date_time": "2026-02-14 15:06:52.860",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: ICYMI: Up to 85% OFF Sale is on! happyp.attn.tv/aEkhGkNU8ZjB \n\n+ Meet the NEW Disney Stitch \u0026 Angel Be Happy Box, featuring a Deluxe Skinny Classic Planner, Micro Notebooks, Stickers + more: happyp.attn.tv/a_4zTLd_A_Em \n.",
+          "date_time": "2026-02-15 14:20:44.194",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Hey Jill, we noticed you checking us out. Have you seen our best sellers yet? https://happyp.attn.tv/aLk-xbf2SAJs . \n\nWe would love to help you find the perfect planner for your day-to-day! Do you have a specific goal in mind for your planning journey?",
+          "date_time": "2026-02-18 13:07:43.949",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I have not gotten my original order placed February 6th.",
+          "date_time": "2026-02-18 13:10:29.936",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Shipping time\"; last updated: 2025-11-13 19:19:11.015",
+          "date_time": "2026-02-18 13:13:47.213",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Where is my order? - All brands\"; last updated: 2025-02-19 23:26:07.239",
+          "date_time": "2026-02-18 13:13:47.213",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Order status/order tracking\"; last updated: 2025-03-08 11:15:20.793",
+          "date_time": "2026-02-18 13:13:47.213",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c71f5-4c2d-4f9b-f000-0000f6337bc8",
+          "message_text": "Happy Planner: I am very sorry for the inconvenience. Our processing time takes 5-7 business days, and we usually ship via FedEx or USPS. The delivery time will depend on the option chosen at checkout. \n\nYou can use our convenient online tool to see the latest updates on your order: https://happyp.attn.tv/aWVD-lbV-YeW\nLet me know how that goes!",
+          "message_type": "agent",
+          "agent": "82441",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 13:13:47.219"
+        }
+      ]
     }
   }
 }

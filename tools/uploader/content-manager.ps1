@@ -904,13 +904,84 @@ function Normalize-ConversationMessageType {
     return $value
 }
 
+function Test-IsScalarValue {
+    param($Value)
+
+    if ($null -eq $Value) { return $true }
+    if ($Value -is [string]) { return $true }
+    if ($Value -is [bool]) { return $true }
+    if ($Value -is [ValueType]) { return $true }
+    return $false
+}
+
+function Convert-ToBool {
+    param($Value)
+
+    $raw = (Get-StringValue $Value).Trim().ToLowerInvariant()
+    if (-not $raw) { return $false }
+    return $raw -in @("true", "1", "yes", "y")
+}
+
+function Convert-InputToPromotion {
+    param($PromotionMap)
+
+    $title = (Get-StringValue (@(
+        $PromotionMap.title,
+        $PromotionMap.name,
+        $PromotionMap.promotion,
+        $PromotionMap.coupon |
+        Where-Object { $null -ne $_ } |
+        Select-Object -First 1
+    ))).Trim()
+    if (-not $title) { $title = "Promotion" }
+
+    $contentLines = @()
+    $couponCode = (Get-StringValue (@($PromotionMap.coupon, $PromotionMap.code | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
+    $description = (Get-StringValue (@($PromotionMap.description, $PromotionMap.details | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
+    $terms = (Get-StringValue (@($PromotionMap.terms, $PromotionMap.terms_and_conditions | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
+    $starts = (Get-StringValue (@($PromotionMap.start_time, $PromotionMap.starts_at | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
+    $ends = (Get-StringValue (@($PromotionMap.end_time, $PromotionMap.expires_at, $PromotionMap.expiration | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
+    $link = (Get-StringValue (@($PromotionMap.link, $PromotionMap.url | Where-Object { $null -ne $_ } | Select-Object -First 1))).Trim()
+    $rawContent = $PromotionMap.content
+
+    if ($rawContent -is [System.Array]) {
+        foreach ($line in $rawContent) {
+            $text = (Get-StringValue $line).Trim()
+            if ($text) { $contentLines += $text }
+        }
+    } elseif ($rawContent -is [string] -and -not [string]::IsNullOrWhiteSpace($rawContent)) {
+        $rawContent.Split([Environment]::NewLine) | ForEach-Object {
+            $line = (Get-StringValue $_).Trim()
+            if ($line) { $contentLines += $line }
+        }
+    }
+
+    if ($couponCode) { $contentLines += "Code: $couponCode" }
+    if ($description) { $contentLines += $description }
+    if ($terms) { $contentLines += "Terms: $terms" }
+    if ($starts) { $contentLines += "Starts: $starts" }
+    if ($ends) { $contentLines += "Ends: $ends" }
+    if ($link) { $contentLines += "Link: $link" }
+
+    $promotion = [ordered]@{
+        title = $title
+    }
+    if ($contentLines.Count -gt 0) { $promotion.content = $contentLines }
+
+    $activeStatus = @($PromotionMap.active_status, $PromotionMap.active, $PromotionMap.is_active | Where-Object { $null -ne $_ } | Select-Object -First 1)
+    if ($null -ne $activeStatus -and -not [string]::IsNullOrWhiteSpace((Get-StringValue $activeStatus))) {
+        $promotion.active_status = $activeStatus
+    }
+    return $promotion
+}
+
 function Convert-CsvRowToScenario {
     param([Parameter(Mandatory = $true)]$Row)
 
     $conversation = @()
     $conversationRaw = Get-RowValue -Row $Row -Candidates @("CONVERSATION_JSON", "CONVERSATION", "MESSAGES_JSON", "MESSAGES")
     $conversationParsed = Parse-JsonText -Text $conversationRaw
-    $conversationItems = Convert-JsonParsedToArray -Value $conversationParsed
+    $conversationItems = @(Convert-JsonParsedToArray -Value $conversationParsed)
     if ($conversationItems.Count -gt 0) {
         foreach ($msg in $conversationItems) {
             if ($null -eq $msg) { continue }
@@ -955,7 +1026,7 @@ function Convert-CsvRowToScenario {
     $browsingHistory = @()
     $productsRaw = Get-RowValue -Row $Row -Candidates @("LAST_5_PRODUCTS", "LAST5_PRODUCTS", "BROWSING_HISTORY", "RECENT_PRODUCTS")
     $productsParsed = Parse-JsonText -Text $productsRaw
-    $productItems = Convert-JsonParsedToArray -Value $productsParsed
+    $productItems = @(Convert-JsonParsedToArray -Value $productsParsed)
     if ($productItems.Count -gt 0) {
         foreach ($p in $productItems) {
             if ($null -eq $p) { continue }
@@ -973,12 +1044,13 @@ function Convert-CsvRowToScenario {
     $ordersOut = @()
     $ordersRaw = Get-RowValue -Row $Row -Candidates @("ORDERS", "ORDER_HISTORY", "PAST_ORDERS")
     $ordersParsed = Parse-JsonText -Text $ordersRaw
-    $orderItems = Convert-JsonParsedToArray -Value $ordersParsed
+    $orderItems = @(Convert-JsonParsedToArray -Value $ordersParsed)
     if ($orderItems.Count -gt 0) {
         foreach ($order in $orderItems) {
             if ($null -eq $order) { continue }
+            $orderMap = Convert-RecordToHashtable -InputObject $order
             $itemsOut = @()
-            $productsForOrder = Convert-JsonParsedToArray -Value (@($order.products, $order.items, $order.line_items | Where-Object { $null -ne $_ } | Select-Object -First 1))
+            $productsForOrder = @(Convert-JsonParsedToArray -Value (@($order.products, $order.items, $order.line_items | Where-Object { $null -ne $_ } | Select-Object -First 1)))
             if ($productsForOrder.Count -gt 0) {
                 foreach ($prod in $productsForOrder) {
                     if ($null -eq $prod) { continue }
@@ -1013,8 +1085,66 @@ function Convert-CsvRowToScenario {
             if ($null -ne $order.total -and -not [string]::IsNullOrWhiteSpace((Get-StringValue $order.total))) {
                 $orderOut.total = $order.total
             }
+            $orderExcluded = @(
+                "products", "items", "line_items",
+                "order_number", "order_id", "number",
+                "order_date", "date", "created_at",
+                "order_status_url", "order_status_link", "link", "status_url", "status_link",
+                "order_tracking_link", "tracking_link", "tracking_url", "order_tracking_url"
+            )
+            foreach ($key in $orderMap.Keys) {
+                $name = [string]$key
+                if ($orderExcluded -contains $name) { continue }
+                if ($orderOut.ContainsKey($name)) { continue }
+                $value = $orderMap[$key]
+                if (-not (Test-IsScalarValue -Value $value)) { continue }
+                if ([string]::IsNullOrWhiteSpace((Get-StringValue $value))) { continue }
+                $orderOut[$name] = $value
+            }
             if ($orderOut.orderNumber -or $orderOut.orderDate -or $orderOut.items.Count -gt 0 -or $orderOut.link -or $orderOut.total -or $orderOut.trackingLink) {
                 $ordersOut += $orderOut
+            }
+        }
+    }
+
+    $couponsOut = @()
+    $promotionsOut = @()
+    $couponsRaw = Get-RowValue -Row $Row -Candidates @("COUPONS", "CODES")
+    $couponsParsed = Parse-JsonText -Text $couponsRaw
+    $couponItems = @(Convert-JsonParsedToArray -Value $couponsParsed)
+    if ($couponItems.Count -gt 0) {
+        foreach ($coupon in $couponItems) {
+            if ($null -eq $coupon) { continue }
+            $couponMap = Convert-RecordToHashtable -InputObject $coupon
+            if ($couponMap.Keys.Count -gt 0) {
+                $couponOut = [ordered]@{}
+                foreach ($key in $couponMap.Keys) {
+                    $name = [string]$key
+                    if (-not $name) { continue }
+                    $value = $couponMap[$key]
+                    if ($null -eq $value) { continue }
+                    if ($value -is [string] -and [string]::IsNullOrWhiteSpace($value)) { continue }
+                    if ($value -is [System.Array] -and $value.Count -eq 0) { continue }
+                    $couponOut[$name] = $value
+                }
+                if ($couponOut.Keys.Count -gt 0) {
+                    $couponsOut += $couponOut
+                }
+            }
+        }
+    }
+
+    $promotionsRaw = Get-RowValue -Row $Row -Candidates @("COMPANY_PROMOTIONS", "PROMOTIONS", "OFFERS")
+    $promotionsParsed = Parse-JsonText -Text $promotionsRaw
+    $promotionItems = @(Convert-JsonParsedToArray -Value $promotionsParsed)
+    if ($promotionItems.Count -gt 0) {
+        foreach ($promotion in $promotionItems) {
+            if ($null -eq $promotion) { continue }
+            $promotionMap = Convert-RecordToHashtable -InputObject $promotion
+            if ($promotionMap.Keys.Count -eq 0) { continue }
+            $promotionOut = Convert-InputToPromotion -PromotionMap $promotionMap
+            if ($promotionOut.content -and $promotionOut.content.Count -gt 0) {
+                $promotionsOut += $promotionOut
             }
         }
     }
@@ -1029,13 +1159,15 @@ function Convert-CsvRowToScenario {
     }
     if ($browsingHistory.Count -gt 0) { $rightPanel.browsingHistory = $browsingHistory }
     if ($ordersOut.Count -gt 0) { $rightPanel.orders = $ordersOut }
+    if ($couponsOut.Count -gt 0) { $rightPanel.coupons = $couponsOut }
+    if ($promotionsOut.Count -gt 0) { $rightPanel.promotions = $promotionsOut }
 
     $notesText = [string](Get-RowValue -Row $Row -Candidates @("COMPANY_NOTES", "NOTES", "GUIDELINES", "INTERNAL_NOTES"))
     if ($null -eq $notesText) { $notesText = "" }
     $notesText = $notesText.Trim()
     $notes = Parse-CompanyNotesToCategories -NotesText $notesText
 
-    return @{
+    $scenario = @{
         id                     = (Get-RowValue -Row $Row -Candidates @("SEND_ID", "SCENARIO_ID", "ID")).Trim()
         companyName            = (Get-RowValue -Row $Row -Candidates @("COMPANY_NAME", "BRAND", "COMPANY")).Trim()
         companyWebsite         = $companyWebsite
@@ -1047,6 +1179,13 @@ function Convert-CsvRowToScenario {
         escalation_preferences = Convert-ToStringArray -Value (Parse-ListLikeText -Text (Get-RowValue -Row $Row -Candidates @("ESCALATION_TOPICS", "ESCALATION_PREFERENCES", "ESCALATIONS")))
         blocklisted_words      = Convert-ToStringArray -Value (Parse-ListLikeText -Text (Get-RowValue -Row $Row -Candidates @("BLOCKLISTED_WORDS", "BLOCKLIST_WORDS", "BLOCKLIST", "BLOCKED_WORDS")))
     }
+
+    $hasShopifyRaw = (Get-RowValue -Row $Row -Candidates @("HAS_SHOPIFY", "SHOPIFY", "HAS_SHOPIFY_STORE")).Trim()
+    if ($hasShopifyRaw) {
+        $scenario.has_shopify = Convert-ToBool -Value $hasShopifyRaw
+    }
+
+    return $scenario
 }
 
 function Ensure-Directory {

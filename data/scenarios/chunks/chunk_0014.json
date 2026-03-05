@@ -3,771 +3,1357 @@
   "chunk": "chunk_0014",
   "scenarios": {
     "66": {
-      "id": "019c5414-3abf-4138-f000-0000f981103c",
-      "companyName": "First Tactical",
-      "companyWebsite": "https://firsttactical.com/",
-      "agentName": "Matthew",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "First Tactical: Welcome to First Tactical! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-06 20:05:26.604"
-        },
-        {
-          "message_media": [],
-          "message_text": "First Tactical: Welcome! Your coupon code is 1STAC. Click here to automatically apply it and shop now: firsttactical.attn.tv/agJiIHsSDPOd .\nReply back anytime with questions to reach our text-exclusive concierge, Matthew!",
-          "message_type": "system",
-          "date_time": "2026-02-06 20:05:30.544"
-        },
-        {
-          "message_media": [],
-          "message_text": "First Tactical: Hey Arturo, this is Matthew. Thanks for checking out Men's Defender Pants - Black / 28 / 30: firsttactical.attn.tv/aR4WEeAWZzGP \n\nAny questions I can answer for you today?",
-          "message_type": "system",
-          "date_time": "2026-02-06 20:51:44.830"
-        },
-        {
-          "message_media": [],
-          "message_text": "First Tactical: In case you missed it, take 15% off with code 1STAC. Click here to shop now: firsttactical.attn.tv/arIKy2ya9FnO .",
-          "message_type": "system",
-          "date_time": "2026-02-07 20:05:34.068"
-        },
-        {
-          "message_media": [],
-          "message_text": "First Tactical: Last call! Don't miss out on 15% off with code \n1STAC. Click here to shop now: firsttactical.attn.tv/aq9mwd-_MiJ7\n\nText back if you have any questions!",
-          "message_type": "system",
-          "date_time": "2026-02-10 20:05:42.325"
-        },
-        {
-          "message_media": [],
-          "message_text": "First Tactical: Your Presidents Day head start begins now.\n\nVIPs like you get 20% off sitewide before anyone else. Use code: PRES26VIP\n\nUnlock early access >> firsttactical.attn.tv/aDV9u6CLp05l ",
-          "message_type": "system",
-          "date_time": "2026-02-12 15:06:34.725"
-        },
-        {
-          "message_media": [],
-          "message_text": "First Tactical: Hey Arturo, this is Matthew. Thanks for checking out Men's Performance Long Sleeve Polo - OD Green / S / Regular: firsttactical.attn.tv/ajezrKikG5Q3 \n\nAny questions I can answer for you today?",
-          "message_type": "system",
-          "date_time": "2026-02-12 17:10:18.050"
-        },
-        {
-          "message_media": [],
-          "message_text": "Do you embroider uniform shirts for police agencies?",
-          "message_type": "customer",
-          "date_time": "2026-02-12 17:48:12.388"
-        },
-        {
-          "message_media": [],
-          "message_text": "Names, patches?",
-          "message_type": "customer",
-          "date_time": "2026-02-12 17:48:42.426"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Pre-purchase escalations - All brands\"; last updated: 2023-10-10 17:48:28.037",
-          "message_type": "template",
-          "date_time": "2026-02-12 17:58:57.879"
-        },
-        {
-          "message_media": [],
-          "message_text": "First Tactical: Thank you for reaching out! Good question! I will have to double-check that with my team to be sure. As soon as I hear back, I will send you a message right away!",
-          "message_type": "agent",
-          "agent": "87295",
-          "message_id": "019c5414-3abf-4138-f000-0000f981103c",
-          "date_time": "2026-02-12 17:58:57.882"
-        }
-      ],
-      "notes": {
-        "escalate": [
-          "For restock inquiries, use STOK shortcut and ESC",
-          "ESC inquiries about direct to agency sales"
-        ],
-        "templates": [
-          "If someone from a sales group/organisation wants to learn more use \"Sales group\" temp"
-        ]
-      },
+      "agentName": "Jonathan",
+      "has_shopify": true,
+      "id": "019c7748-c989-428b-f000-0000d6eddad7",
       "rightPanel": {
+        "promotions": [
+          {
+            "title": "Check Website",
+            "content": [
+              "• Please check the brand website for the most up to date holiday promotions."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "march",
+            "value_type": "PERCENT",
+            "value": "30"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "March bday",
+            "value_type": "PERCENT",
+            "value": "30"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "TAKE15OFF"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "TAKE15"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "September Birthday",
+            "value_type": "PERCENT",
+            "value": "30"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "testt"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "WINBACK20",
+            "value_type": "PERCENT",
+            "value": "20"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "MAY BIRTHDAY",
+            "value_type": "PERCENT",
+            "value": "30"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "description": "random 15 welcome",
+            "name": "Random",
+            "company_id": 2585
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "RE-ENGAGEMENT"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "WELCOME 10% OFF"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "November BIRTHDAY",
+            "value_type": "PERCENT",
+            "value": "30"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "30ONUS"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "description": "sitewide",
+            "name": "CONCIERGE",
+            "company_id": 2585
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "MISSYOU25"
+          },
+          {
+            "description": "sitewide",
+            "company_id": 2585,
+            "value": "10",
+            "name": "CONCIERGE10",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 2585,
+            "name": "MISSYOU15"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://firsttactical.com/",
+          "value": "https://elevatedfaith.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "item": "Women's Tactical Belt 1.5” - Black / S",
-            "link": "https://www.firsttactical.com/products/womens-tactical-belt-1-5?_pos=1&_psq=belt&_ss=e&_v=1.0",
-            "timeAgo": "2026-02-12"
+            "link": "https://elevatedfaith.com/collections/christian-hoodies/products/created-by-the-creator-unisex-hoodie?variant=44663059644567\u0026_rdiscovery-handle=created-by-the-creator-unisex-hoodie\u0026_rdiscovery-widget=298",
+            "item": "Created by the Creator Unisex Hoodie - XS",
+            "timeAgo": "2025-09-11"
           },
           {
-            "item": "Range Belt 1.75” - OD Green / XS",
-            "link": "https://www.firsttactical.com/products/range-belt-1-75?_pos=9&_psq=belts&_ss=e&_v=1.0",
-            "timeAgo": "2026-02-12"
+            "link": "https://elevatedfaith.com/collections/christian-hoodies/products/gods-still-working-unisex-hoodie?externalId=wTnLw\u0026utm_campaign=browse_abandonment-ai\u0026utm_medium=sms\u0026utm_source=attentive",
+            "item": "God\u0027s Still Working Unisex Hoodie - XS",
+            "timeAgo": "2025-09-11"
           },
           {
-            "item": "Tactical Belt 1.75” - Coyote - Coyote / M",
-            "link": "https://www.firsttactical.com/products/tactical-belt-1-75-coyote?_pos=8&_psq=belts&_ss=e&_v=1.0",
-            "timeAgo": "2026-02-12"
+            "link": "https://elevatedfaith.com/collections/sale/products/god-of-miracles-ivory-bomber-jacket?variant=43375147221143\u0026_rdiscovery-handle=god-of-miracles-ivory-bomber-jacket\u0026_rdiscovery-widget=2919",
+            "item": "God of Miracles Ivory Bomber Jacket - L",
+            "timeAgo": "2025-09-10"
           },
           {
-            "item": "Cobra Belt 1.5” - Black / M",
-            "link": "https://www.firsttactical.com/products/cobra-belt-1-5?_pos=6&_psq=belts&_ss=e&_v=1.0",
-            "timeAgo": "2026-02-12"
-          },
-          {
-            "item": "BDU Belt 1.5” - Black / XS",
-            "link": "https://www.firsttactical.com/products/bdu-belt-1-5?_pos=7&_psq=belts&_ss=e&_v=1.0",
-            "timeAgo": "2026-02-12"
+            "link": "https://elevatedfaith.com/collections/sale/products/god-of-miracles-denim-jacket",
+            "item": "God of Miracles Denim Jacket - XS",
+            "timeAgo": "2025-09-10"
           }
         ]
       },
-      "escalation_preferences": [
-        "Shipping questions",
-        "Exchanges and returns"
-      ],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "67": {
-      "id": "019c6814-373f-4fd0-f000-0000f8177ebe",
-      "companyName": "Covercraft",
-      "companyWebsite": "https://covercraft.com",
-      "agentName": "Sarah",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Covercraft: Welcome to Covercraft! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-05 16:32:41.922"
-        },
-        {
-          "message_media": [],
-          "message_text": "Covercraft: Enjoy $10 Off with code SAVE10. Find Your Custom Cover Today!\n\nView Active Deals: https://covercraft.attn.tv/aLPjcQ8Vil45 ",
-          "message_type": "system",
-          "date_time": "2026-02-05 16:32:45.886"
-        },
-        {
-          "message_media": [],
-          "message_text": "Covercraft: Hey there, this is Sarah. Thanks for checking us out! 😊 https://covercraft.attn.tv/axL0m09NF3kV\n\nAny questions I can answer for you?",
-          "message_type": "system",
-          "date_time": "2026-02-05 16:40:28.531"
-        },
-        {
-          "message_media": [],
-          "message_text": "Covercraft: Save 15% on our most popular covers, sunshades, and more during our Valentine's Day sale event!\ncovercraft.attn.tv/asYdtUFfcMXM ",
-          "message_type": "system",
-          "date_time": "2026-02-13 14:26:21.525"
-        },
-        {
-          "message_media": [],
-          "message_text": "Covercraft: Hey there, this is Sarah. Thanks for checking us out! 😊 https://covercraft.attn.tv/ap2ldH37G7sO\n\nAny questions I can answer for you?",
-          "message_type": "system",
-          "date_time": "2026-02-16 14:30:29.706"
-        },
-        {
-          "message_media": [],
-          "message_text": "Yes, which covers have the highest cotton content?",
-          "message_type": "customer",
-          "date_time": "2026-02-16 14:34:26.308"
-        },
-        {
-          "message_media": [],
-          "message_text": "Covercraft: Just to be sure, are you referring to a Seat Cover? If so, the closest one that we have with cotton material on the website is the Polycotton SeatSaver Custom Seat Covers and you may check it here: https://covercraft.attn.tv/ariuzVoSvWYo\n\nFor the highest cotton content information, I'll gladly check this with my team. Could you please share your vehicle's year, make, model, and submodel (if applicable)?",
-          "message_type": "agent",
-          "agent": "109964",
-          "message_id": "019c6814-373f-4fd0-f000-0000f8177ebe",
-          "date_time": "2026-02-16 15:11:21.309"
-        }
-      ],
+      "companyWebsite": "https://elevatedfaith.com",
+      "companyName": "Elevated Faith",
       "notes": {
-        "templates": [
-          "For custom full vehicle covers use FVC shortcut",
-          "For cx that can't see the cover pattern/images of their vehicle use CPI shortcut",
-          "If we don't have a pattern/color the cx is looking for use PRR shortcut"
-        ],
-        "dos_and_don_ts": [
-          "Do not tell customers that the base price is the final price! The cost changes by the fitment and depends on the vehicle",
-          "Rebates are discounts for this brand!",
-          "Custom dim pattern sheets are only available for Vehicle Covers (Car, Truck, Van,RV)",
-          "➜https://www.covercraft.com/us/en/covercrafter"
-        ],
-        "drive_to_purchase": [
-          "Before sharing any product links, confirm the vehicle’s Year, Make, and Model"
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://covercraft.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Polycotton SeatSaver Custom Seat Covers",
-            "link": "https://www.covercraft.com/product/polycotton-seatsaver-custom-seat-covers/SS-SSPC",
-            "timeAgo": "2026-02-16"
-          },
-          {
-            "item": "Polycotton SeatSaver Custom Seat Covers",
-            "link": "https://www.covercraft.com/product/polycotton-seatsaver-custom-seat-covers/SS-SSPC",
-            "timeAgo": "2026-02-16"
-          },
-          {
-            "item": "Polycotton SeatSaver Custom Seat Covers",
-            "link": "https://www.covercraft.com/product/polycotton-seatsaver-custom-seat-covers/SS-SSPC",
-            "timeAgo": "2026-02-16"
-          },
-          {
-            "item": "Polycotton SeatSaver Custom Seat Covers",
-            "link": "https://www.covercraft.com/product/polycotton-seatsaver-custom-seat-covers/SS-SSPC",
-            "timeAgo": "2026-02-16"
-          },
-          {
-            "item": "Polycotton SeatSaver Custom Seat Covers",
-            "link": "https://www.covercraft.com/product/polycotton-seatsaver-custom-seat-covers/SS-SSPC",
-            "timeAgo": "2026-02-16"
-          }
-        ]
-      },
+      "blocklisted_words": [
+        
+      ],
       "escalation_preferences": [
+        "Sizing questions",
         "Discount code errors"
       ],
-      "blocklisted_words": [],
-      "has_shopify": false
-    },
-    "68": {
-      "id": "019c68e3-3764-4d2d-f000-0000fa795c22",
-      "companyName": "Blenders Eyewear",
-      "companyWebsite": "https://blenderseyewear.com",
-      "agentName": "Kai",
       "messageTone": "Casual",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Blenders: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Blenders Eyewear",
           "message_type": "system",
-          "date_time": "2026-02-16 17:27:18.560"
-        },
-        {
-          "message_media": [],
-          "message_text": "Blenders: Welcome to Blenders! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-16 17:27:33.432"
-        },
-        {
-          "message_media": [],
-          "message_text": "Blenders: Get Blended! Your welcome code is WELCOME-n4hdtB. Shop now and automatically apply 15% off your order: https://blenderseyewear.attn.tv/afM6_kfRDWlT .\n\nReply back anytime for help! ",
-          "message_type": "system",
-          "date_time": "2026-02-16 17:27:36.935"
-        },
-        {
-          "message_media": [],
-          "message_text": "Blenders: Plus save our contact to receive exclusive updates!",
-          "message_type": "system",
-          "date_time": "2026-02-16 17:27:38.781"
-        },
-        {
-          "message_media": [],
-          "message_text": "Help",
-          "message_type": "customer",
-          "date_time": "2026-02-16 17:37:45.282"
-        },
-        {
-          "message_media": [],
-          "message_text": "Blenders: I would be more than happy to help out, ask away!",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c689a-755b-411b-f000-0000fa795c22",
-          "date_time": "2026-02-16 17:37:59.025"
-        },
-        {
-          "message_media": [],
-          "message_text": "!",
-          "message_type": "customer",
-          "date_time": "2026-02-16 17:38:05.323"
-        },
-        {
-          "message_media": [],
-          "message_text": "I'm buying a pair of glasses I have a gift card and I have the 15% off you gave me but the price is not correct on the initial price of the glasses they were on sale for 2990 they're marked at 2999 and then I'm trying to be charged 59+ my $30 discount makes it down to not much at all I got a $30 gift card from Nift and IFT and your 15% off and they're trying to charge me $31 that's not even right the initial price was less than that they're charging me $30 more than the initial price from the beginning",
-          "message_type": "customer",
-          "date_time": "2026-02-16 17:39:05.471"
-        },
-        {
-          "message_media": [],
-          "message_text": "Blenders: I'm sorry to hear that. Could you kindly share a screenshot of the items in your cart? I'll be happy to look into the issue! ",
-          "message_type": "agent",
-          "agent": "39001",
-          "message_id": "019c68a6-8bcb-4c67-f000-0000fa795c22",
-          "date_time": "2026-02-16 17:51:11.202"
-        },
-        {
+          "message_text": "Elevated Faith: NEW markdowns just added to the Sale Collection! Styles will not be restocked. Shop up to 70% off now elevatedfaith.attn.tv/a9cPpPvtMY76 .",
+          "date_time": "2026-01-25 19:45:08.437",
           "message_media": [
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1771282533201_fb3e42d0-b306-4a43-9046-a72c642c2cbe-1.png",
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1771282533201_fb3e42d0-b306-4a43-9046-a72c642c2cbe-1.png"
-          ],
-          "message_text": "Hrllog",
-          "message_type": "customer",
-          "date_time": "2026-02-16 17:55:45.462"
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "You can see it's 2999 and it doesn't state that on the first photo the price is that's not even it's not right it's there's they're not even taking the $30 off for my Nift gift which I was given $30 and then you guys gave me 15 so it should be free and chipping free",
-          "message_type": "customer",
-          "date_time": "2026-02-16 17:56:55.177"
+          "message_type": "system",
+          "message_text": "Elevated Faith: 4 NEW Valentine\u0027s Day jewelry pieces. Order now to receive before 2/14 elevatedfaith.attn.tv/aDosoxjqO1_i .",
+          "date_time": "2026-02-03 11:45:55.378",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Blenders: Thank you for sending that over! Could you also provide a screenshot of the item(s) in your cart so I can take a closer look and assist you further?",
+          "message_type": "system",
+          "message_text": "Elevated Faith: B2G1 FREE! All accessories + jewelry included. Tap in to save \u003e elevatedfaith.attn.tv/ae9-dS_-My-V .",
+          "date_time": "2026-02-13 11:16:08.162",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Hey fam, thanks for stopping by!\n\nSee jewelry worth exploring: https://elevatedfaith.attn.tv/ahvMcrWDykfb .",
+          "date_time": "2026-02-13 11:50:10.757",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Buy 2, Get 1 FREE is still happening! Select styles won\u0027t be restocked. Make your final selections now elevatedfaith.attn.tv/aqMQLRkvnWM_ .",
+          "date_time": "2026-02-14 14:45:40.096",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: LAST DAY. Buy 2, Get 1 FREE ends at midnight.\n\nStack your favorites before they\u0027re gone elevatedfaith.attn.tv/axbDDP42N4zt.",
+          "date_time": "2026-02-15 19:45:06.760",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Josh from EF here. We just launched a new capsule I\u0027m really excited about. 5 pieces made to be worn daily elevatedfaith.attn.tv/ageADim0bQSK .",
+          "date_time": "2026-02-19 13:49:02.426",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "When I get my credit from your company first!!",
+          "date_time": "2026-02-19 13:52:17.132",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7741-8c45-4714-f000-0000d6eddad7",
+          "message_text": "Elevated Faith: I\u0027m sorry for the inconvenience! Just to be sure, have you received a response from the team yet? Be sure to check your spam and promo folders as well, as our emails sometimes end up there. ",
           "message_type": "agent",
           "agent": "37648",
-          "message_id": "019c68ae-3a1c-41aa-f000-0000fa795c22",
-          "date_time": "2026-02-16 17:59:34.575"
-        },
-        {
-          "message_media": [],
-          "message_text": "The second photo is from my cart",
-          "message_type": "customer",
-          "date_time": "2026-02-16 18:00:05.266"
-        },
-        {
-          "message_media": [],
-          "message_text": "Blenders: Thank you for getting back to me and providing that information! Unfortunately, you won't be able to use multiple deals at checkout, but feel free to use the one that gives you the best value! We offer free shipping on domestic orders over $50. Maybe you can add something else to reach the minimum?",
-          "message_type": "agent",
-          "agent": "109840",
-          "message_id": "019c68b1-9930-4c08-f000-0000fa795c22",
-          "date_time": "2026-02-16 18:03:15.527"
-        },
-        {
-          "message_media": [],
-          "message_text": "I would if I had any money but I'm homeless and jobless and I'm just disabled and was given a gift I guess it's not a gift anymore set a qualified for free shipping right there on that piece of paper or on my cart everything said I qualified for free shipping why doesn't it also not qualify for shipping and they still haven't taken my $30 gift card off",
-          "message_type": "customer",
-          "date_time": "2026-02-16 18:06:44.501"
-        },
-        {
-          "message_media": [],
-          "message_text": "Blenders: I totally understand where you're coming from. May I know what item you are trying to purchase? Based on your screenshot, I can see that your $30 gift card was successfully applied to your cart. \n\nIf the item is currently on sale for $29.99, then it is possible that the item went back to its original price after you applied the gift card since discount codes and gift cards don't apply to sale items. I hope this clarifies it.",
-          "message_type": "agent",
-          "agent": "48804",
-          "message_id": "019c68ba-b520-4455-f000-0000fa795c22",
-          "date_time": "2026-02-16 18:13:12.512"
-        },
-        {
-          "message_media": [],
-          "message_text": "Yes it's I think discounted or not discounted discontinued sage cruisers",
-          "message_type": "customer",
-          "date_time": "2026-02-16 18:40:04.143"
-        },
-        {
-          "message_media": [],
-          "message_text": "Blenders: Thanks for letting me know! I just checked and it looks like the Sage Cruisers are back to their original price, $59. Also, upon checking the screenshot that had been sent, since you've already used a code that takes $30 off, another discount can't be applied. You can only use one deal per checkout, so feel free to choose the one that gives you the best value.\n\nPlease let me know how I can assist you further today, I'm just a text away!",
-          "message_type": "agent",
-          "agent": "109617",
-          "message_id": "019c68e3-3764-4d2d-f000-0000fa795c22",
-          "date_time": "2026-02-16 18:57:27.300"
-        }
-      ],
-      "notes": {
-        "templates": [
-          "When closing the conversation use CC shortcut",
-          "For all inqiuries about refunds/replacement orders use RRO shortcut"
-        ],
-        "promo_and_promo_exclusions": [
-          "Discount codes or rewards points can be used with a gift card",
-          "Discount codes and rewards points can not be used together",
-          "Discount codes can not be used on sale items"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://blenderseyewear.com",
-          "date": ""
-        }
-      },
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Refund"
-      ],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "69": {
-      "id": "019c3e78-e0fa-4552-f000-0000f7dd6ded",
-      "companyName": "Nectar Sleep",
-      "companyWebsite": "https://nectarsleep.com",
-      "agentName": "Quinn",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Nectar: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Nectar.",
-          "message_type": "system",
-          "date_time": "2026-02-04 13:20:57.066"
-        },
-        {
-          "message_media": [],
-          "message_text": "Nectar: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (888) 863-2827.",
-          "message_type": "system",
-          "date_time": "2026-02-04 19:44:20.619"
-        },
-        {
-          "message_media": [],
-          "message_text": "Nectar: You're in!",
-          "message_type": "system",
-          "date_time": "2026-02-04 19:44:24.640"
-        },
-        {
-          "message_media": [],
-          "message_text": "Nectar: You've unlocked savings up to 66% on a mattress + base + bedding set. Better sleep starts here. \n\nClaim your savings:\nnectarsleep.attn.tv/aC0oIIO8f8_c ",
-          "message_type": "system",
-          "date_time": "2026-02-04 19:44:26.668"
-        },
-        {
-          "message_media": [],
-          "message_text": "Nectar: From box to bliss in 3 easy steps! Unbox, unroll, & fall in love with your new Nectar mattress. Save up to 50% NOW: nectarsleep.attn.tv/aiH7Vyzgw5yQ\n.",
-          "message_type": "system",
-          "date_time": "2026-02-06 10:47:39.696"
-        },
-        {
-          "message_media": [],
-          "message_text": "Nectar: Quinn here: Monica L.'s sleeping soundly (even with a partner): \"We sleep so well on this mattress. If either of us move we can't tell the difference, no motion whatsoever. We have a nice cool sleep.\" - Verified Buyer: nectarsleep.attn.tv/aJkCg5_Db1kz\n.",
-          "message_type": "system",
-          "date_time": "2026-02-07 10:47:52.491"
-        },
-        {
-          "message_media": [],
-          "message_text": "Nectar: Invest in your health & comfort! Save up to 66% on the Adjustable Bundle: base, mattress & bedding.\n\nShop now: nectarsleep.attn.tv/a_z2hY_xBMLT \n.",
-          "message_type": "system",
-          "date_time": "2026-02-08 10:48:01.752"
-        },
-        {
           "message_media": [
-            "https://d3vkheyf3b92pv.cloudfront.net/hgp-mms-content/2C6C7A60-D5C4-4AEB-98AA-37625572D80A?Expires=1771438559&Signature=FXgMy~kbuBU46UqevCaHWKK0rd-I6Kuj-9fIUVrj4YAwX6ZrG7oeL3wbioz5-jLXHKc4aMQR0pViH8hjJ3blOoCwzvCH3LXMBv~Divm6-kVxxzsKae8Og5LOtCL8Wmn8wJs6Wz9V3wVSjEwzIMgAIHQQx-BOwQnWr49Btuvt-9gr5QiLba57r-uS94H6yUi~wAJWGubBOJVR33vnHwkaQrsxggIEn5Bi~Oq3W8rf6-56XZhD2TcUsLS9ljfgeTcOmR3MHBXmo7rRSWkDfOaZqCpmg8zsyY-em93eupeqdZiLeKXZOsXYbSbN17Kr03vlkGAkWDXKpNTG7TNJ4VXYjw__&Key-Pair-Id=APKAJYKFVWTTAQLYS7LA",
-            "https://d3vkheyf3b92pv.cloudfront.net/hgp-mms-content/1D22F3FB-FF2C-4DB1-B02B-0EB30C55F995?Expires=1771438559&Signature=SXWZRhITKqAJE-spT9rZR0Y5Kxj7DQxxQJioogie1TbFPN07yZCzfrw-DthfW~JUFmtgP-qEqHYCdeGUN7ViuyEIrQBWkQkGHwJlPrQMrBx8rIaxECs4FsoRK~36KwOedl5lN2z-~x9pucLJCcASorC~rm0JrV8qplxZGJbjLyOkEeA5ue0VqV~jDMT9IYqh0CBTsv9-e8s54FjkkuSFfABk51zGsTR~oZVcZ~w6XkFy5frrZmk~e1r1g6WjYM2xhj95QojSaw-mlPZDmlyWaJXGDyonnrwpyYit3R-d4NFzIr17Y27IiOUbN~2VoEL9gzGxP-1hYvzqXtne5Nb-6g__&Key-Pair-Id=APKAJYKFVWTTAQLYS7LA",
-            "https://d35742m9b1cssv.cloudfront.net/hgp-mms-content/017564DA-764A-4E09-9C8D-4D15DE71193C?Expires=1771438559&Signature=HAQ5NaZp6ShXe1tMAgfoSwU14S9gTdi3rcV8WbauYyvEnAZmSXD0hODVGPuycQVFG3mifslEIqmKUl54Mu25RCfhJo8UkMUIOIiHii1TlbUQj0sbRno1361wYQEGc3wesUChPbyD6NnNSBQauCVmR1ccPTwDfKjyoVjR1KLIzZvE25FGSqeoHChXQDKyTaKmFVtFTODkVdmzX5t~bjWR9hHp22JrTVBcK0CEZbIJ9JR1qlm~UaQQMDq7RaJYaEq5ujGbmzrdw~gfYJ8euE4HMzo1MrH9AuxEoRwOJ2~Iv7Osob6~VemvdHvGL5YFzXEOOjzkOLaZsJhfGGwE3BZoAw__&Key-Pair-Id=APKAJYKFVWTTAQLYS7LA",
-            "https://d35742m9b1cssv.cloudfront.net/hgp-mms-content/381FE075-DC51-4770-824B-76C52829AE24?Expires=1771438559&Signature=LDHKeQOpIHeFqrHXJ8zJROZLTxBWN7FRJ9yeCTmcxhi97g26Br3TPtXWPYh0fhyMCOfB8PM6MzPpTiid1-vsMLFMJYQ5LY56O2J8IWYk~FRhTX4eZEska5JDgWvFNZKm52R4kBQsIUfbLGQ9fMtdxwAJyvKO9qODRdKeZ0bCWkRHcwTCUXnR1VRJ3~5yjLx705J1G5QbLycikWWHopwI3qd0h7WenRQwzjlR-m52JnB6rM10A6NF5ML10YKxLKoPrxMccb0kczn3S2sRA8EiKBLsqiTUze67M8lrGNY4jmoF1~B-u2URUFe5EjA5Yyl26IrfXldqnHqCi9-pH6L4-Q__&Key-Pair-Id=APKAJYKFVWTTAQLYS7LA",
-            "https://d3vkheyf3b92pv.cloudfront.net/hgp-mms-content/912E94E9-2D78-4DFF-B5BA-7933C07CC219?Expires=1771438560&Signature=bLt3aDp2tKN3OprElnXGDmfOvTXI8wiRSTv4iLeEx1STF~bZFPM1Uguu1JdKGIHHxEYgrd2ZzqmGw~p6nhmF2IIAviX~GK8B9I0FNjG8~dYZuid0bK-KXUU~pxS3sQxhPZTCYOlMGZVUFfb~fxtjprBx8WoRXi~aCf6v8OSM5XAIjJA4bZ3JHtskirPWL0rtcaD1jQ1jqlZ5CFjLuS-Bpjb3mvekPQIKVF1ksQuRvLn1TjHrf58VEevMoQP07y9rpH6hw6Cs~g~drZkDvj6QOw1bBgQemmQ5Xn5tH3VyzpX7v99r1QaYlc5VqALM9u448kladSsiuj4vhilKUD64qA__&Key-Pair-Id=APKAJYKFVWTTAQLYS7LA",
-            "https://d35742m9b1cssv.cloudfront.net/hgp-mms-content/0767D219-AA03-45F6-B9E4-3A2EB76CED59?Expires=1771438560&Signature=B6uFJy4nMyn9RPei1jqReBQcFuaFn-GZNK8XdYuzB3fyUiIoRcw0hsZVqYFNARHDAcezBUR8wgHKKy1u0kevb6yGmlFuMXWX-z9M3LiVgIP69ctiNJRztyFJGV5OvtrwG57u1RuppiG1FFQubTSg-xu13Wi2pmpb2aTjnSlu4gOr2zO9TVtiDugs-3XJCTmpd6Yju029y3W-0BmwsrMJ~2WftgDmx5hnOlvuitbEKxPqonSd1G3DCchyQkGJQzW6RzihDXBWPmHn1xFjmG4f53dJSkyhlMT5n~2algvINsFJVP9ujIG6RIsKzmpV-nOSAl4rOwZu7J6TARaBp2SqHw__&Key-Pair-Id=APKAJYKFVWTTAQLYS7LA",
-            "https://d35742m9b1cssv.cloudfront.net/hgp-mms-content/709F6839-15CB-4207-B35E-B9DFCC05DDE8?Expires=1771438560&Signature=NTU6Mx1yvHuiXXN1~SlY5UpZR27NAgZqgBzc8OAw50UTGTo-dae~~NbZvLYif~bzRs3~xFixJI7dionsUSDuh0o6zDpsSG2grVtyXelHkO-nwXfQ9yCj4U1YAKlVaqBefC4EgyfwlMHU0--jLu-K5W6BoSjaJD9G5qDBT7BnETuGJ~7xO7BkIO5eZq3SOunMPvR2qbybK0BQ39GdVvwCxL2vRzzH5mkDm8cBGzenr-4cJoi6z~GkJUPkzRhQsDtNo4jBnMlW0hqu28kV0-2yYfp2Lo6Yd8xCWWaNog7-sMASybSjMWqU0U2tdrmvDNH89fQAf7PsIMP1Fr~P8rzA-g__&Key-Pair-Id=APKAJYKFVWTTAQLYS7LA",
-            "https://d35742m9b1cssv.cloudfront.net/hgp-mms-content/7DC58910-2E37-4B6F-8952-F9C366863A17?Expires=1771438560&Signature=TvpRVUVKlz6QE6gMECMbXy~jm8fObURWzW70yeRb5hAgItlelhQAexQYjl1Jpa3Qxm3Ku3PijkbJI3AMxeN0ImeR3QFkB57Kv9WcvNXMlhPsiP-5eaAxn6rz~5ch34VfXA6OiTZey86TCBYQyuWZem6Qq~2G-a7qguNSfauJHPSzcBx07~BMkvLS9B0v6gUmcFu3InCaL2~FTCcWA1bjgOeU-QWuDkLm9YaCJMxxc~2eJTRC9uNjNcu-WrO0E828p4YNLbDDeDiANACX8KQnB-ztcvpntI~6v3J4U~OCIgdRq3it57yjgLgyGHWkZBqh01bJs39VPo2gEGbpBlQHLw__&Key-Pair-Id=APKAJYKFVWTTAQLYS7LA"
+            
           ],
-          "message_text": "Box very damaged did not open yet.???",
+          "date_time": "2026-02-19 13:55:10.432"
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-08 13:16:06.766"
+          "message_text": "I have been trying since October to get my balance back to me for a delivery. I never received and I get zero reply from your company. It\u0027s ridiculous.",
+          "date_time": "2026-02-19 13:55:47.198",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Template used: \"Customer support\"; last updated: 2024-05-28 16:56:57.736",
-          "message_type": "template",
-          "date_time": "2026-02-08 13:17:15.278"
-        },
-        {
-          "message_media": [],
-          "message_text": "Nectar: Thanks for reaching out, and I'm sorry to hear about this. The best way to handle this is to email us at support@nectarsleep.com or give us a call at +1 (888) 863-2827. Our sleep specialists are available 24/7, and they'll be more than happy to help!",
+          "message_id": "019c7745-15e6-4d8e-f000-0000d6eddad7",
+          "message_text": "Elevated Faith: We sincerely apologize for the wait! It\u0027s not the experience we want you to have. As much as I would love to help out directly, I\u0027m afraid my access is limited. Only our support team can look into this and process your request. Just to be sure, have you been sending your emails at hello@elevatedfaith.com?",
           "message_type": "agent",
-          "agent": "109972",
-          "message_id": "019c3e78-e0fa-4552-f000-0000f7dd6ded",
-          "date_time": "2026-02-08 13:17:15.280"
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 13:59:02.277"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes I have what a joke",
+          "date_time": "2026-02-19 13:59:47.399",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"No response from customer support - All brands\"; last updated: 2023-10-10 17:43:52.689",
+          "date_time": "2026-02-19 14:03:04.866",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c7748-c989-428b-f000-0000d6eddad7",
+          "message_text": "Elevated Faith: Thank you for confirming, and I\u0027m so sorry again for the inconvenience. I totally understand the frustration with this! Our team handles emails in the order they come in. Rest assured that one of my colleagues will follow up with you in no time!",
+          "message_type": "agent",
+          "agent": "43099",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 14:03:04.868"
         }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS",
-          "Send to CS for refund inquiries"
-        ],
-        "tone": [
-          "Close the convo once the client takes over",
-          "Close the convo if the cx first message is ok, no, etc.",
-          "Don't use the word \"off\" when talking about promotions"
-        ],
-        "dos_and_don_ts": [
-          "Don't proactively offer to find pricing info, redirect them to the website instead"
-        ],
-        "promo_and_promo_exclusions": [
-          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
-        ]
-      },
+      ]
+    },
+    "67": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "019c81db-eba1-430f-f000-00005738b847",
       "rightPanel": {
+        "promotions": [
+          {
+            "title": "WELCOME10",
+            "content": [
+              "• This offer is sitewide"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 1463334983,
+            "company_id": 2703,
+            "coupon_url": "https://bellzi.myshopify.com/discount/WELCOME15?utm_source=attentive\u0026utm_medium=text",
+            "static_code": "WELCOME15",
+            "name": "WELCOME15",
+            "coupon": "WELCOME15",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 1463334983,
+            "company_id": 2703,
+            "coupon_url": "https://bellzi.myshopify.com/discount/BELLZI15?utm_source=attentive\u0026utm_medium=text",
+            "static_code": "BELLZI15",
+            "name": "winback 15",
+            "coupon": "BELLZI15",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://bellzi.com/collections/new-products/products/mini-muddy-phanti-the-elephant",
+            "item": "Mini Muddy Phanti the Elephant",
+            "timeAgo": "2025-11-21"
+          },
+          {
+            "link": "https://bellzi.com/collections/new-products/products/muddy-phanti-the-elephant",
+            "item": "Muddy Phanti the Elephant",
+            "timeAgo": "2025-11-21"
+          },
+          {
+            "link": "https://bellzi.com/collections/new-products/products/muddy-piggi-the-pig",
+            "item": "Muddy Piggi the Pig",
+            "timeAgo": "2025-11-21"
+          },
+          {
+            "link": "https://bellzi.com/products/spyni-with-witch-outfit",
+            "item": "Spyni with Witch Outfit",
+            "timeAgo": "2025-11-21"
+          },
+          {
+            "link": "https://bellzi.com/collections/new-products/products/snowman-pengi",
+            "item": "Snowman Pengi",
+            "timeAgo": "2025-11-15"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://nectarsleep.com",
+          "value": "https://bellzi.com",
           "date": ""
         },
         "orders": [
           {
-            "orderNumber": "N-17475856",
-            "orderDate": "2026-02-04",
+            "currency": "USD",
+            "orderDate": "2025-11-21",
+            "coupon": "bb9d4314f284",
             "items": [
               {
-                "name": "Nectar Premier Hybrid Mattress",
-                "price": 1178,
-                "productLink": "http://www.nectarsleep.com/hybrid-premier-mattress"
+                "price": [
+                  {
+                    "value": [
+                      16.8,
+                      28.8,
+                      28.8
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "total": 1178,
-            "date_time": "2026-02-04 18:23:34.003"
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9434650206217120420075",
+            "link": "https://bellzi.com/2928017443/orders/03e4ba3bd4e4d3afa4b7e9cf98ba45b8/authenticate?key=86c586695015dd1a931a439fdc779704",
+            "date_time": "2025-11-21 19:34:50.725",
+            "discount_amount": 0,
+            "orderNumber": "298466",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9434650206217120420075",
+            "total": 59.15
           },
           {
-            "orderNumber": "N-16060866",
-            "orderDate": "2025-02-02",
+            "currency": "USD",
+            "orderDate": "2025-11-15",
             "items": [
               {
-                "name": "the-stf-box-king",
-                "price": 0
+                "price": [
+                  {
+                    "value": [
+                      36,
+                      36
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "total": 1778,
-            "date_time": "2025-02-02 19:00:18.481"
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9434650206217116034163",
+            "link": "https://bellzi.com/2928017443/orders/ba4f8f6409ed55ead699937e0b2beaa1/authenticate?key=d584e126f4e71f4e0b9e32cba59d52c2",
+            "date_time": "2025-11-15 03:24:58.700",
+            "discount_amount": 0,
+            "orderNumber": "297533",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9434650206217116034163",
+            "total": 78.3
           },
           {
-            "orderNumber": "N-16060866",
-            "orderDate": "2025-02-02",
+            "currency": "USD",
+            "orderDate": "2025-09-05",
             "items": [
               {
-                "name": "accidental-hybrid-premier-mattress-extend-coverage",
-                "price": 0,
-                "productLink": "https://www.nectarsleep.com"
+                "price": [
+                  16
+                ],
+                "productLink": "https://bellzi.myshopify.com/products/mini-ankli-the-ankylosaurus",
+                "name": "Mini Ankli the Ankylosaurus"
               }
             ],
-            "total": 1778,
-            "date_time": "2025-02-02 19:00:18.479"
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150105501148927730",
+            "link": "https://bellzi.com/2928017443/orders/eb87493790714304034fe112f2dca8b3/authenticate?key=7d44284882d1aa00747ea02f85a73450",
+            "date_time": "2025-09-05 16:30:29.964",
+            "discount_amount": 0,
+            "orderNumber": "294107",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150105501148927730",
+            "total": 61.46
           },
           {
-            "orderNumber": "N-16060866",
-            "orderDate": "2025-02-02",
+            "currency": "USD",
+            "orderDate": "2025-09-05",
             "items": [
               {
-                "name": "nectar-hybrid-premier",
-                "price": 1299,
-                "productLink": "http://www.nectarsleep.com/hybrid-premier-mattress"
-              },
-              {
-                "name": "mornington-upholstered",
-                "price": 479,
-                "productLink": "http://www.sienasleep.com/bed-frame-with-headboard"
-              },
-              {
-                "name": "mornington-upholstered",
-                "price": 479,
-                "productLink": "http://www.nectarsleep.com/bed-frame-with-headboard"
-              },
-              {
-                "name": "mornington-upholstered",
-                "price": 479,
-                "productLink": "http://www.dreamcloudsleep.com/bed-frame-with-headboard"
+                "price": [
+                  {
+                    "value": [
+                      30,
+                      10.5
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "total": 1778,
-            "date_time": "2025-02-02 19:00:18.478"
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150105501148927730",
+            "link": "https://bellzi.com/2928017443/orders/eb87493790714304034fe112f2dca8b3/authenticate?key=7d44284882d1aa00747ea02f85a73450",
+            "date_time": "2025-09-05 16:30:29.957",
+            "discount_amount": 0,
+            "orderNumber": "294107",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150105501148927730",
+            "total": 61.46
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-30",
+            "items": [
+              {
+                "price": [
+                  15
+                ],
+                "productLink": "https://bellzi.myshopify.com/products/mini-parasauri-the-parasaurolophus",
+                "name": "Mini Parasauri the Parasaurolophus"
+              }
+            ],
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9434611105500172441505",
+            "link": "https://bellzi.com/2928017443/orders/dd5b3ba23e7bdcf0269c0488621366c3/authenticate?key=58173e3d3b333975357e6d272fa75796\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-30 16:32:37.822",
+            "discount_amount": 0,
+            "orderNumber": "262624",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9434611105500172441505",
+            "total": 87.02
           }
         ]
       },
-      "escalation_preferences": [
-        "Shipping questions",
-        "Exchanges and returns",
-        "Discount code errors",
-        "Recall",
-        "BBB",
-        "fiberglass",
-        "lawyer",
-        "class action"
+      "companyWebsite": "https://bellzi.com",
+      "companyName": "Bellzi",
+      "notes": {
+        
+      },
+      "blocklisted_words": [
+        "worries"
       ],
-      "blocklisted_words": [],
-      "has_shopify": false
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Bellzi: Valentine Giraffi is here. A sweet gift for you or someone special. Tap to shop. bellzi.attn.tv/a67eFnjVdHrB ",
+          "date_time": "2026-01-31 15:30:26.026",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bellzi: Happy Valentine\u0027s Day. Buy any red or pink plush and get 15% off your entire order. Ends today! bellzi.attn.tv/aZXg-SjSsiK5 ",
+          "date_time": "2026-02-14 15:00:43.922",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bellzi: Full of curious charm, Gecki the Gecko climbs into your heart with the softest cuddles. Grab yours before it crawls away bellzi.attn.tv/aXS7ahfWLH1Q ",
+          "date_time": "2026-02-21 15:00:50.658",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "We were right",
+          "date_time": "2026-02-21 15:02:28.782",
+          "message_media": [
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1771704135424_e33d6328-7cd9-4014-8ca1-d8657592427b-1.png"
+          ]
+        },
+        {
+          "message_id": "019c81db-eba1-430f-f000-00005738b847",
+          "message_text": "Bellzi: Thank you for sharing; did you have any questions that I can help you with?",
+          "message_type": "agent",
+          "agent": "82441",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-21 15:19:59.543"
+        }
+      ]
     },
-    "70": {
-      "id": "019c4d91-60ab-438d-f000-0000a5a5fcc9",
-      "companyName": "Boston Scally",
-      "companyWebsite": "https://bostonscally.com/",
-      "agentName": "Jordan",
+    "68": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "019c77ac-d9ce-4faf-f000-0000993d9d0f",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://hellobonafide.com/products/relizen?_pos=3\u0026_fid=2d66048d7\u0026_ss=c",
+            "item": "Relizen",
+            "timeAgo": "2026-02-19"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2570951951,
+            "company_id": 5529,
+            "coupon_url": "https://www.hellobonafide.com/discount/SMS20?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "static_code": "SMS20",
+            "name": "SMS20",
+            "coupon": "SMS20",
+            "redemption_status": "USED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://hellobonafide.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "total": 120,
+            "items": [
+              {
+                "price": [
+                  120
+                ],
+                "productLink": "https://jds-therapeutics.myshopify.com/products/thermella-3-month-plan",
+                "name": "Thermella 3 Month Plan"
+              }
+            ],
+            "link": "https://hellobonafide.com/1185906751/orders/7675cf95f996137ada1e8c7ec25d26c3/authenticate?key=27563a67d45845333dbe92442306e755",
+            "orderDate": "2024-10-15",
+            "discount_amount": 0,
+            "orderNumber": "6230042",
+            "date_time": "2024-10-15 19:59:02.042"
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-10-15",
+            "coupon": "SMS20",
+            "items": [
+              {
+                "price": [
+                  120
+                ],
+                "productLink": "https://jds-therapeutics.myshopify.com/products/thermella-3-month-plan",
+                "name": "Thermella 3 Month Plan"
+              }
+            ],
+            "date_time": "2024-10-15 19:53:44.617",
+            "discount_amount": 24,
+            "orderNumber": "6022379700287",
+            "total": 104.59
+          }
+        ]
+      },
+      "companyWebsite": "https://hellobonafide.com",
+      "companyName": "Bonafide",
+      "notes": {
+        "escalate": [
+          "ESC all medical/scientific inquiries immediately",
+          "ESC return requests that are past the 30-day policy"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "templates": [
+          "For exact measurements of ingredients, use \"MOI\" shortcut"
+        ],
+        "dos_and_donts": [
+          "When sending the quiz - always suggest a specific product if customers mention a certain symptom"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Boston Scally: Grateful Dead x Boston Scally Dancing Bears Cap is here to bring the vibes 🎸 but won't last long ⚡️\n\nSHOP NOW: bostonscally.attn.tv/aPRg1DqEK8nZ ",
           "message_type": "system",
-          "date_time": "2026-01-12 12:05:14.691"
+          "message_text": "Bonafide: Perimenopause makeover? Load up on good fats \u0026 protein, skip the sugar slump, and feel fabulous from the inside out bonafide.attn.tv/a9Qpb1tBtYrN \n",
+          "date_time": "2026-01-26 14:02:11.780",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Boston Scally: These Roses never wilt - they earn their place in your rotation. Get 10% off the iconic Rose Collection scally caps with code ROSE.\n\nGrab yours before they're gone.\n \n SHOP NOW: bostonscally.attn.tv/as02XHEDIrwJ ",
           "message_type": "system",
-          "date_time": "2026-01-14 12:03:44.380"
+          "message_text": "Bonafide: Spice things up with playful moves, fresh routines, and a sexy mindset-your spark just got an upgrade. \nbonafide.attn.tv/asjbE8mvlCqw ",
+          "date_time": "2026-02-02 14:01:08.646",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Boston Scally: NEW! The 'Box of Chocolates' is NOW AVAILABLE! Plus, The 'Valentine Rose', 'All Heart', and 'Cupid' are BACK! \n\nSHOP NOW: bostonscally.attn.tv/aj_zbr5I4cs9 ",
           "message_type": "system",
-          "date_time": "2026-01-16 14:03:40.186"
+          "message_text": "Bonafide: Stay intimate, stay vibrant - sex after menopause supports health and happiness. bonafide.attn.tv/a9ex9hnT_gLY \n",
+          "date_time": "2026-02-09 14:01:11.787",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Boston Scally: Match made in heaven. The 'Box of Chocolates' and 'Valentine Rose' 🌹 Plus, shop the Valentine's Collection now: bostonscally.attn.tv/a-7KjILHMvoE ",
           "message_type": "system",
-          "date_time": "2026-01-19 12:05:10.976"
+          "message_text": "Bonafide: More restful nights, coming soon 🌙\nIn the meantime, here\u0027s what impacts sleep → bonafide.attn.tv/aKkTUheR8ugV ",
+          "date_time": "2026-02-12 14:02:59.373",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Boston Scally: The 'Scot' is HERE! 10% OFF with code: SCOT. Grab yours quick before it's gone!\n\nSHOP NOW: bostonscally.attn.tv/aa7OSGIzE3sh ",
           "message_type": "system",
-          "date_time": "2026-01-23 14:12:17.126"
+          "message_text": "Bonafide: Menopause messing with your sleep? Try a cool room, a calm wind-down, and less caffeine to help you snooze again. bonafide.attn.tv/aIY4TjcSEZx5 ",
+          "date_time": "2026-02-16 14:03:38.705",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Boston Scally: NEW! In case you missed it, the 'Scot' has arrived! \n\nGrab yours today and get 10% OFF with code SCOT: bostonscally.attn.tv/aj4MrQiF1AO3 ",
           "message_type": "system",
-          "date_time": "2026-01-26 12:04:00.474"
+          "message_text": "Bonafide: Hi, this is Heather from Bonafide! Any questions about our products? bonafide.attn.tv/aoCw0eUju5uj .\n\n",
+          "date_time": "2026-02-19 11:16:58.827",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Boston Scally: NEW: The 'Cloverland' is here! Plus, The 'Bareknuckle Irish Edition' is back in stock! Don't miss this!\n\nSHOP NOW: bostonscally.attn.tv/ajVsiUabEDfR ",
-          "message_type": "system",
-          "date_time": "2026-01-30 14:06:41.354"
-        },
-        {
-          "message_media": [],
-          "message_text": "Boston Scally: Take 10% off the NEW 'Cloverland' and this season's best selling scally caps with code: CLOVERLAND\n\nSHOP NOW: bostonscally.attn.tv/amg416v2ELRz ",
-          "message_type": "system",
-          "date_time": "2026-02-02 18:07:25.409"
-        },
-        {
-          "message_media": [],
-          "message_text": "Boston Scally: The 'Kilkenny' is HERE! Plus, our favorite 'Irish Baker Boy' is back! Limited quantities available, don't let these get away! \n\nSHOP NOW: bostonscally.attn.tv/aCkFDg4nw_L6 ",
-          "message_type": "system",
-          "date_time": "2026-02-06 14:07:00.933"
-        },
-        {
-          "message_media": [],
-          "message_text": "Boston Scally: Did you see? The 'Kilkenny' and 'Irish Baker Boy' dropped and they're going FAST! Grab these St. Pat's favorites before they're gone!\n\nSHOP NOW: bostonscally.attn.tv/a-5KTkEqtt3y ",
-          "message_type": "system",
-          "date_time": "2026-02-07 15:01:14.294"
-        },
-        {
-          "message_media": [],
-          "message_text": "Boston Scally: The highly anticipated St. Patrick's Day Collection is BACK! Here's your chance to grab the season's best sellers before they sell out again! \n\nSHOP NOW: bostonscally.attn.tv/aoP8a6pLm7ep ",
-          "message_type": "system",
-          "date_time": "2026-02-09 12:02:40.946"
-        },
-        {
-          "message_media": [],
-          "message_text": "Boston Scally: Don't leave Boston Scally The Guinness Cap Pin Set behind! Finish your order now before it's gone for good: bostonscally.attn.tv/aYtMC1-1u-AI",
-          "message_type": "system",
-          "date_time": "2026-02-11 11:18:39.923"
-        },
-        {
-          "message_media": [],
-          "message_text": "I'm waiting for the Guinness hat",
           "message_type": "customer",
-          "date_time": "2026-02-11 11:25:30.253"
+          "message_text": "Hi Heather I have been taking Thermella for over a year now and my hot flashes are still waking me up all night long. I am currently at my physicians office asking if Relizen is safe for me since I am post breast cancer treatment. Do you have any other suggestions to improve sleep and hot flashes/night sweats",
+          "date_time": "2026-02-19 11:19:00.418",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Template used: \"Restock (website & social)\"; last updated: 2025-10-09 21:41:33.472",
-          "message_type": "template",
-          "date_time": "2026-02-11 11:38:19.113"
-        },
-        {
-          "message_media": [],
-          "message_text": "Boston Scally: Glad to see yoou've taken an interest in our offering. I'm afraid I currently don't have the exact date of a possible restock, but I recommend checking our website and social media frequently. In the meantime, you can check our newest arrivals here: https://bostonscally.attn.tv/aqjdXbsPWSuv",
+          "message_id": "019c76b5-4412-42df-f000-0000993d9d0f",
+          "message_text": "Bonafide: I\u0027m sorry about that! The Relizen is also a good choice, but it will be great to consult it with your physician. Thermella and Relizen were both shown in separate clinical studies to relieve hot flashes and night sweats. However, Thermella relieves hot flashes as early as just two weeks. It relieves hot flashes at the source by blocking NKB, a peptide in the body\u0027s thermoregulatory center that triggers hot flashes and night sweats. On the other hand, Relizen works as early as two months by inhibiting the reuptake of serotonin in the body. Both treatments are effective, but Thermella has been shown to provide more hot flash and night sweat relief, faster. \n\nPlease note that these results for Thermella and Relizen are based on separate clinical studies for each product. Hope this helps! ",
           "message_type": "agent",
-          "agent": "109968",
-          "message_id": "019c4d91-60ab-438d-f000-0000a5a5fcc9",
-          "date_time": "2026-02-11 11:38:19.116"
+          "agent": "50269",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 11:21:56.913"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you",
+          "date_time": "2026-02-19 11:23:00.569",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Could the two be used together?  And does the relizen contain green tea extract?",
+          "date_time": "2026-02-19 11:23:50.722",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "How are your studies on bioavailability?  Maybe I am just not absorbing the product",
+          "date_time": "2026-02-19 11:24:10.783",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c76ba-cf41-491c-f000-0000993d9d0f",
+          "message_text": "Bonafide: No worries! Thermella and Relizen can be used together and work differently in the body to relieve hot flashes and night sweats. Thermella relieves hot flashes at the source by blocking NKB, a peptide in the body\u0027s thermoregulatory center that triggers hot flashes and night sweats. Relizen relieves hot flashes by inhibiting the reuptake of serotonin in the body. In independent clinical studies on each of these treatments, they were shown to be effective in reducing hot flashes and night sweats, as well as improving sleep.\n\nAnd no, the relizen does not contain green tea extract. You can check out the ingredients here: https://bonafide.attn.tv/ac81GRegBPnw \n\n\nRegarding your last question, let me pass this along to my team for further checking, and I\u0027ll text you as soon as I get an update on this. I\u0027ll be in touch!",
+          "message_type": "agent",
+          "agent": "50271",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 11:28:00.224"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Do you have samples of the relizen that I can try",
+          "date_time": "2026-02-19 15:39:19.632",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Do you have samples?\"; last updated: 2022-12-16 22:33:01.018",
+          "date_time": "2026-02-19 15:52:22.646",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c77ac-d9ce-4faf-f000-0000993d9d0f",
+          "message_text": "Bonafide: At this time, we don\u0027t provide samples directly to patients; however, you can check with your healthcare provider to see if they have samples of our products. ",
+          "message_type": "agent",
+          "agent": "43099",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-19 15:52:22.651"
         }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
-        ]
-      },
+      ]
+    },
+    "69": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "019c71f6-b9fb-4c84-f000-0000f62aa3e5",
       "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 4129989605,
+            "company_id": 6816,
+            "coupon_url": "https://shoprumours.myshopify.com/discount/RMRDSNW9JF",
+            "name": "smswelcome$",
+            "coupon": "RMRDSNW9JF",
+            "redemption_status": "UNUSED"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://bostonscally.com/",
+          "value": "https://shoprumored.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "item": "Boston Scally The Guinness Cap Pin Set",
-            "link": "https://www.bostonscally.com/products/boston-scally-guinness-pin-set",
-            "timeAgo": "2026-02-11"
+            "link": "https://www.shoprumored.com/products/heirloom-mini-dress-dove?utm_content=sid-23851874302550093-sn-%5Bs1--asc-mix%5D-%5Bs2--wc-p%5D-%5Bs3-20221116%5D-%5Bs4-7dc1dv%5D-%5Bs5-auto%5D-%5Bs6-bid-auto%5D-%5Bs7--broad%5D%5B18-65%2B%5D%5Bag%5D-%5Bs8-n%5D-%5Bs9-static%5D-%5Bspec-evergreen%5D\u0026utm_source=meta\u0026variant=40757660287065\u0026utm_medium=paid-social\u0026utm_source_platform=ssn-ig-p-Instagram_Stories\u0026utm_campaign=cid-23851874302520093-cn-%5Bc1--asc-mix%5D-%5Bc2-scale%5D-%5Bc3--wc-p%5D-%5Bc4--20221116%5D-%5Bc5-asb%5D-%5Bc6--bid-auto%5D-%5Bc7-n%5D-%5Bc8--asc-evergreen%5D-%5Bc9-all%5D\u0026utm_term=aid-120223288137270094-an-%5Ba0--na%5D-%5Ba1--catalog%5D-%5Ba2--20250530%5D-%5Ba3--dresses-catalog%5D-%5Ba4--copy-dresses%5D-%5Ba5--lp-dresses%5D-%5Ba6--na%5D-%5Ba7--na%5D-%5Ba8--mixed%5D\u0026utm_id=23851874302520093\u0026fbclid=PAZXh0bgNhZW0BMABhZGlkAasmUIyYSp5zcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafWuqMjKQ_fJsWQSAN4sNFWhGUQ4wCv5B_dnPdwcWVS4kcTTknSP8UHNIHMkg_aem__gjhRgLYvpHQoJ8ZHPeGsQ\u0026campaign_id=23851874302520093\u0026ad_id=120223288137270094",
+            "item": "Heirloom Mini Dress | Dove - S",
+            "timeAgo": "2026-02-18"
           },
           {
-            "item": "Boston Scally Happy Gilmore Cap Pin Set",
-            "link": "https://www.bostonscally.com/products/boston-scally-the-happy-gilmore-pin-pack",
-            "timeAgo": "2026-02-11"
+            "link": "https://www.shoprumored.com/products/thelma-midi-dress-ivory",
+            "item": "Thelma Midi Dress | Ivory - S",
+            "timeAgo": "2026-02-16"
           },
           {
-            "item": "The Bareknuckle Boston Scally Cap - Irish Edition - X-Small [54cm]",
-            "link": "https://www.bostonscally.com/products/the-irish-bareknuckle-boston-scally-cap",
-            "timeAgo": "2026-02-11"
+            "link": "https://www.shoprumored.com/collections/best-sellers/products/vintage-slip-maxi-dress-prosecco",
+            "item": "Vintage Slip Maxi Dress | Prosecco - S",
+            "timeAgo": "2026-02-16"
           },
           {
-            "item": "The Guinness Boston Scally Cap - Medium/Large [58cm]",
-            "link": "https://www.bostonscally.com/products/the-guinness-boston-scally-cap",
-            "timeAgo": "2026-02-09"
+            "link": "https://www.shoprumored.com/collections/made-for-the-brides/products/monarch-midi-dress-ivory",
+            "item": "Monarch Midi Dress | Cream - S",
+            "timeAgo": "2026-02-16"
           },
           {
-            "item": "The Guinness Boston Scally Cap - X-Small [54cm]",
-            "link": "https://www.bostonscally.com/products/the-guinness-boston-scally-cap",
-            "timeAgo": "2026-02-09"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "7429041815639",
-            "orderDate": "2025-11-05",
-            "items": [
-              {
-                "name": "The Scrapyard Boston Scally Cap - Black",
-                "price": 52,
-                "productLink": "https://boston-scally-co.myshopify.com/products/the-leather-boston-scally-cap-black"
-              }
-            ],
-            "total": 56.09,
-            "coupon": "SCRAPYARD",
-            "date_time": "2025-11-05 00:08:25.832"
-          },
-          {
-            "orderNumber": "1911471",
-            "orderDate": "2025-03-17",
-            "items": [
-              {
-                "name": "The Goon Boston Scally Cap - Black & Gold",
-                "price": 52,
-                "productLink": "https://boston-scally-co.myshopify.com/products/the-goon-boston-scally-cap"
-              }
-            ],
-            "link": "https://www.bostonscally.com/2339765/orders/b2e9d958290ff068d2a20aa0f27afe8a/authenticate?key=bd33f7ec4ea87cddae7c9cd3e0633722",
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&text28777=&tLabels=9400136208303284631720",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&text28777=&tLabels=9400136208303284631720",
-            "total": 55.59,
-            "coupon": "GOON",
-            "date_time": "2025-03-17 16:47:24.827"
-          },
-          {
-            "orderNumber": "1670511",
-            "orderDate": "2024-12-03",
-            "items": [
-              {
-                "name": "The Flap Cap Boston Scally Cap - Grey Herringbone",
-                "price": 56,
-                "productLink": "https://boston-scally-co.myshopify.com/products/herringbone-ear-flap-boston-scally-cap"
-              }
-            ],
-            "link": "https://www.bostonscally.com/2339765/orders/1e8ac95785ec210673be47415ba036ea/authenticate?key=24670f795ad1ba23997444af05c8604d",
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&text28777=&tLabels=9400136208271293379639",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&text28777=&tLabels=9400136208271293379639",
-            "total": 53.59,
-            "coupon": "BLACKFRIDAY",
-            "date_time": "2024-12-03 12:49:47.143"
+            "link": "https://www.shoprumored.com/collections/made-for-the-brides/products/archive-bias-maxi-skirt-ivory",
+            "item": "Archive Bias Maxi Skirt | Ivory - XL",
+            "timeAgo": "2026-02-16"
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
+      "companyWebsite": "https://shoprumored.com",
+      "companyName": "Rumored",
+      "notes": {
+        
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Welcome to Rumored! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-01-26 16:02:52.332",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: You\u0027re going to love it here! Shop and use shoprumored.attn.tv/a3ZNX3esyFu4 at checkout for $25 off your first order RMRDSNW9JF",
+          "date_time": "2026-01-26 16:02:56.309",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Hi there, here\u0027s some new arrivals made for you... shoprumored.attn.tv/at0xBKwp0rCH ",
+          "date_time": "2026-01-26 17:29:05.239",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Let\u0027s get to know each other... save our number to get exclusive updates!",
+          "date_time": "2026-01-26 20:03:30.674",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Rumor has it, these styles were made for you... shoprumored.attn.tv/avi9oDyl5lUy\n\nPS. Your $25 off expires soon",
+          "date_time": "2026-01-27 20:03:36.704",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: This weekend only... 30% off Sherpas ❄️\n\nUse code SHERPA30 at checkout: shoprumored.attn.tv/ake5WfGJbFdo ",
+          "date_time": "2026-01-31 12:01:27.723",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Thinking about you + Shipping Protection by Route\n\nYou would look good together... shoprumored.attn.tv/aAvcDY0-DqIX",
+          "date_time": "2026-01-31 13:17:54.106",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: You have great taste! Come back and take another look... shoprumored.attn.tv/abBFGDD1_T9x",
+          "date_time": "2026-02-02 13:27:03.332",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Thinking about you + Shipping Protection by Route\n\nYou would look good together... shoprumored.attn.tv/aVR9Ur8hNlhz",
+          "date_time": "2026-02-02 13:53:44.801",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: You\u0027re invited to shop the Suede Jacket Flash Sale! 30% off the bestselling Kennedy Trench and Yellowstone Jackets for a limited time. Use code SUEDE at checkout.\n\nShop the Sale: shoprumored.attn.tv/artAhpkPJgCc ",
+          "date_time": "2026-02-04 12:15:37.435",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: You have great taste! Come back and take another look... shoprumored.attn.tv/aM0qzq34Bt19",
+          "date_time": "2026-02-05 13:06:51.717",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Thinking about you + Shipping Protection by Route\n\nYou would look good together... shoprumored.attn.tv/aj49hbNGnHhF",
+          "date_time": "2026-02-05 13:13:39.041",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Last chance... the suede jacket flash sale ends tonight ⌛ 30% off the Yellowstone Jacket and Kennedy Trench with code SUEDE at checkout. \n\nShop the Genuine Suede collection before it\u0027s too late: shoprumored.attn.tv/a83TlRD0AP7C ",
+          "date_time": "2026-02-08 19:12:06.909",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Feeling romantic 🌹 Flirty tops and vintage-inspired dresses, made for daytime rendezvous and candlelit evenings... shoprumored.attn.tv/aJJmbt_qGGsf ",
+          "date_time": "2026-02-10 15:07:07.752",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: You have great taste! Come back and take another look... shoprumored.attn.tv/acr2QjwRwvnm",
+          "date_time": "2026-02-12 13:19:42.584",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Thinking about you + Shipping Protection by Route\n\nYou would look good together... shoprumored.attn.tv/aHkH0_6gw6_F",
+          "date_time": "2026-02-12 13:29:44.322",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: The Long Weekend Sale starts now! Up to 70% off sitewide, including new arrivals and best sellers.\n\nShop first before your favorites sell out: shoprumored.attn.tv/aSy8YgLYZR0r ",
+          "date_time": "2026-02-13 12:01:17.028",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Love is all you need but a little retail therapy doesn\u0027t hurt 💌\n\nDon\u0027t miss up to 70% off sitewide during our long weekend sale: shoprumored.attn.tv/aoHktvqb85X- ",
+          "date_time": "2026-02-14 14:31:29.235",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Thinking about you + Shipping Protection by Route\n\nYou would look good together... shoprumored.attn.tv/adhxDbmnaxn-",
+          "date_time": "2026-02-14 17:48:38.944",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Thinking about you + Sun Valley Sherpa | Fatale\n\nYou would look good together... shoprumored.attn.tv/av9WB48W5gJm",
+          "date_time": "2026-02-14 19:06:32.364",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: You have great taste! Come back and take another look... shoprumored.attn.tv/aAM8hAcUBSkp",
+          "date_time": "2026-02-16 18:16:41.269",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Sale Extended One More Day! Last chance to shop up to 70% off sitewide... shoprumored.attn.tv/aNUn3F--S3cA ",
+          "date_time": "2026-02-17 11:30:28.918",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Rumored: Hey, this is Jordan, from Rumored. Thanks for checking out our site! https://shoprumored.attn.tv/aaR7y2ZWgJvQ \n\nAre there any questions I can answer for you?",
+          "date_time": "2026-02-18 13:08:03.364",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes actually! I was trying all weekend to get the sun valley Sherpa in fatale with your sale and it kept adding the discount and they not letting me checkout with my card! I sent an email but then never heard anything back!",
+          "date_time": "2026-02-18 13:10:19.899",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c71f4-02a9-4209-f000-0000f62aa3e5",
+          "message_text": "Rumored: I understand how frustrating this situation must be, especially when dealing with payment difficulties. \n\nPlease double-check that the billing ZIP code you entered matches the one linked to your credit card. I also recommend trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Are you seeing any specific error messages on your end? \n\nSince you already emailed us, someone from the team will get back to you as soon as possible. Please check your spam and promo folders as well, as our emails sometimes end up there. ",
+          "message_type": "agent",
+          "agent": "46498",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 13:12:22.868"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It says shipping can not be completed",
+          "date_time": "2026-02-18 13:13:50.010",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c71f6-b9fb-4c84-f000-0000f62aa3e5",
+          "message_text": "Rumored: I am very sorry for the inconvenience. What about in an incognito window? Are you still having the same issue?",
+          "message_type": "agent",
+          "agent": "82441",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-18 13:15:20.847"
+        }
+      ]
+    },
+    "70": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "019ca59e-e19f-4c8b-f000-000010442863",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.samedelman.com/product/womens-nola-mule-slide-3032383/gold-leather-ec0209459?icid=SamEdelmanRecommendationsPDPTop_Sam%20Edelman_3032383_99900_EC0209459",
+            "item": "nola mule slide",
+            "timeAgo": "2026-02-28"
+          },
+          {
+            "link": "https://www.samedelman.com/product/womens-shira-woven-ballet-flat-3032382/green-woven-leather-ec0209889",
+            "item": "shira woven ballet flat",
+            "timeAgo": "2026-02-28"
+          },
+          {
+            "link": "https://www.samedelman.com/product/womens-felicity-woven-ballet-flat-3032193/modern-ivory-ec0208905?partnerid=sms_marketing_attentive_nonpromo_felicity-ballet-flat_20260204-WK01-SAMUS\u0026utm_campaign=2%2F4%2F26%20Felicity%20Woven%20Ballet%20Flat_base\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=6taxA",
+            "item": "felicity woven ballet flat",
+            "timeAgo": "2026-02-04"
+          },
+          {
+            "link": "https://www.samedelman.com/product/womens-cora-kitten-heel-sandal-3033523/deep-scarlet-leather-ec0209833",
+            "item": "cora kitten heel sandal",
+            "timeAgo": "2026-02-02"
+          },
+          {
+            "link": "https://www.samedelman.com/product/womens-marcie-ballet-flat-3031316/terazzo-brown-faux-leather-ec0209106?partnerid=sms_marketing_attentive_nonpromo_marcie-flat_20260201-WK01-SAMUS\u0026utm_campaign=2%2F1%2F26%20Marcie%20Ballet%20Flat_base\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=6taxA",
+            "item": "marcie ballet flat",
+            "timeAgo": "2026-02-01"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 272902243,
+            "company_id": 4347,
+            "value": "10",
+            "name": "10% Off",
+            "coupon": "SAMSMS10MQEGJZPB",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://samedelman.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2026-02-28",
+            "coupon": "aos 10 dollars off 50",
+            "items": [
+              {
+                "price": [
+                  140
+                ],
+                "productLink": "https://www.samedelman.com/product/womens-nola-mule-slide-3032383/black-leather-ec0209968",
+                "name": "nola mule slide"
+              }
+            ],
+            "date_time": "2026-02-28 18:52:37.916",
+            "discount_amount": 0,
+            "orderNumber": "005029424093",
+            "total": 140
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-03-16",
+            "items": [
+              {
+                "price": [
+                  57.99
+                ],
+                "productLink": "https://www.samedelman.com/product/womens-camila-platform-wedge-sandal-3029715/sand-raffia-ec0240076",
+                "name": "camila platform wedge sandal"
+              }
+            ],
+            "date_time": "2025-03-16 19:43:57.738",
+            "discount_amount": 0,
+            "orderNumber": "005024071992",
+            "total": 57.99
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-03-03",
+            "items": [
+              {
+                "price": [
+                  120
+                ],
+                "productLink": "https://www.samedelman.com/product/womens-cressa-strappy-kitten-heel-sandal-3030829/black-leather-ec0204960",
+                "name": "cressa strappy kitten heel sandal"
+              }
+            ],
+            "date_time": "2025-03-03 21:24:18.015",
+            "discount_amount": 0,
+            "orderNumber": "005023913886",
+            "total": 120
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-09-06",
+            "coupon": "fallfun",
+            "items": [
+              {
+                "price": [
+                  150
+                ],
+                "name": "ollie square toe mule"
+              }
+            ],
+            "date_time": "2024-09-06 20:58:23.317",
+            "discount_amount": 0,
+            "orderNumber": "005021406260",
+            "total": 150
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-08-13",
+            "items": [
+              {
+                "price": [
+                  130
+                ],
+                "name": "kara slingback flat"
+              }
+            ],
+            "date_time": "2023-08-13 19:42:26.360",
+            "discount_amount": 0,
+            "orderNumber": "005014834729",
+            "total": 130
+          }
+        ]
+      },
+      "companyWebsite": "https://samedelman.com",
+      "companyName": "Sam Edelman",
+      "notes": {
+        "send_to_cs": [
+          "If the cx sends us their credit card information (written or screenshot) and it\u0027s an issue we can\u0027t resolve - send the customer to CS",
+          "➜ Do NOT ESC any conversation that contains this type of information in the thread"
+        ],
+        "escalate": [
+          "When you ESC use ESC shortcut fisrt",
+          "ESC if the charge on cx account is pending"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: The spring must-have: our bestselling woven flat. Back in stock for the new season. \n\nShop now: samedelman.attn.tv/a5dTdikSzRoX ",
+          "date_time": "2026-02-01 16:08:09.736",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: The Felicity flat: exceptional comfort, now available in luxe woven leather.\n\nShop now: samedelman.attn.tv/alg7AAxsuyev ",
+          "date_time": "2026-02-04 16:11:09.950",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Polish off your Valentine\u0027s Day look with heels that double your dose of romance. \n\nShop now: samedelman.attn.tv/aciQnhjXudRy ",
+          "date_time": "2026-02-08 13:01:51.261",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: A minimal sneaker that\u0027s undeniably chic. Shop now. \n\nShop now: samedelman.attn.tv/aB6Jv5pLNRkw ",
+          "date_time": "2026-02-11 18:03:08.961",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: This weekend only join loyalty for $30 off $140+ w/ code FEB30, or take $25 off w/ code FEB25\n\nShop now: samedelman.attn.tv/a-zhuOsRwHON .",
+          "date_time": "2026-02-13 15:10:07.709",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Your Valentine\u0027s Day treat! Members save $30 off $140+ with code FEB30. Non-members save $25 off $140+ with code FEB25.\n\nShop now: samedelman.attn.tv/ajHrLo2RA1nK .",
+          "date_time": "2026-02-14 18:12:07.277",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Loyalty has its perks. \n\nTake $30 off $140+ with code FEB30. Non-members save $25 on orders $140+ with code FEB25.\n\nShop now: samedelman.attn.tv/alSPxF1x6CDq .",
+          "date_time": "2026-02-15 18:05:10.386",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: It\u0027s your last day to save: join our loyalty program for $30 off $140+ with code FEB30, or enjoy $25 off $140+ with code FEB25. Ends tonight. \n\nShop now: samedelman.attn.tv/aujR3Y9HEPIO .",
+          "date_time": "2026-02-16 13:16:41.032",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Spring \u002726: gorgeous strappy sandals and modern, sleek wedges are all new in the Sam Edelman world. \n\nShop now: samedelman.attn.tv/aKwobpusFNqD ",
+          "date_time": "2026-02-18 16:07:15.419",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: We miss you! Enjoy free shipping and free returns. Shop our latest collection now: https://samedelman.attn.tv/aOfkBUTWErMf .",
+          "date_time": "2026-02-20 18:54:33.312",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Shine bright: a fresh lineup of metallics just arrived. \n\nShop now: samedelman.attn.tv/a_ljPAkeCnhO ",
+          "date_time": "2026-02-22 17:04:10.771",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Signature iconic styles. Brand-new colorways. Shop the new Icons. \n\nShop now: samedelman.attn.tv/aapkh6L-RrLx ",
+          "date_time": "2026-02-25 13:09:18.086",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sam Edelman: Hey this is Jordan . Thanks for checking out our site! 😊 https://samedelman.attn.tv/a5B9Di2Q89kQ \n\nAre you looking for anything in particular today? ",
+          "date_time": "2026-02-28 13:39:20.780",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hey, I just bought woven mules. Thanks.",
+          "date_time": "2026-02-28 13:54:10.625",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019ca59a-c06a-4f9a-f000-000010442863",
+          "message_text": "Sam Edelman: That\u0027s great! Thank you for shopping with us, and I hope you enjoy your new purchase. Feel free to reach out anytime if you have questions!",
+          "message_type": "agent",
+          "agent": "87474",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-28 13:55:08.426"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you! I absolutely LOVE Sam Edelman. You should see the green boxes in my closet. 🤣",
+          "date_time": "2026-02-28 13:56:30.974",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019ca59d-8f89-495d-f000-000010442863",
+          "message_text": "Sam Edelman: We truly appreciate the love and support! You may also want to check out our apparel to consider on your next order here: https://samedelman.attn.tv/a064mIFsLCDs ",
+          "message_type": "agent",
+          "agent": "50269",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-28 13:58:12.517"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I will. Thank you.",
+          "date_time": "2026-02-28 13:59:10.970",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"You\u0027re welcome! - All brands\"; last updated: 2023-10-10 18:02:00.150",
+          "date_time": "2026-02-28 13:59:39.067",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019ca59e-e19f-4c8b-f000-000010442863",
+          "message_text": "Sam Edelman: You\u0027re welcome! ",
+          "message_type": "agent",
+          "agent": "31385",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-28 13:59:39.072"
+        }
+      ]
     }
   }
 }

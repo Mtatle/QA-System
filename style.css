@@ -774,6 +774,81 @@ input:checked + .slider:before {
     word-break: break-word;
     max-width: 100%;
 }
+
+.coupon-codes-container {
+    margin-top: 10px;
+    height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 4px;
+}
+
+.coupon-code-card {
+    background: #f2f4f7;
+    border: 0.5px solid #d8dde4;
+    border-radius: 12px;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+}
+
+.coupon-code-card:last-child {
+    margin-bottom: 0;
+}
+
+.coupon-code-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.coupon-code-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #1f2a33;
+    margin-bottom: 0;
+}
+
+.coupon-code-status {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 2px 8px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.coupon-code-status--used {
+    background: #fde8e8;
+    border-color: #f3b6b6;
+    color: #8a2c2c;
+}
+
+.coupon-code-status--unused {
+    background: #eaf7df;
+    border-color: #bddd98;
+    color: #2a5b24;
+}
+
+.coupon-code-line {
+    font-size: 11px;
+    color: #3d4650;
+    margin-bottom: 4px;
+    line-height: 1.35;
+}
+
+.coupon-code-line:last-child {
+    margin-bottom: 0;
+}
+
+.coupon-code-line--code {
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
 .status-indicator {
     background-color: #e6f7ff;
     border: 1px solid #91d5ff;
@@ -1723,97 +1798,70 @@ mark {
 
 /* Promotions/Gifts Section */
 .promotions-section {
-    background: #FFC5B9;
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 20px;
-    color: black;
+    background: #efefef;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    color: #111;
 }
 
 .promotions-header {
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .promotions-icon {
-    position: absolute;
-    top: 0;
-    left: 0;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    background: transparent;
 }
 
 .promotions-icon i {
-    width: 10px;
-    height: 10px;
+    width: 18px;
+    height: 18px;
+    color: #1f2328;
 }
 
 .promotions-info {
-    margin-left: 32px;
+    margin-left: 0;
+    min-width: 0;
 }
 
 .promotions-title {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
 }
 
 .promotions-title span {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
-}
-
-.active-badge {
-    background: #81B045;
-    color: white;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-size: 9px;
-    font-weight: 600;
-    text-transform: uppercase;
+    line-height: 1.2;
+    color: #111;
 }
 
 .promotions-description {
     font-size: 12px;
     line-height: 1.4;
-    opacity: 0.9;
-    margin-top: 8px;
-    margin-left: -32px;
+    opacity: 1;
+    margin-top: 0;
+    margin-left: 0;
     padding-left: 0;
+    color: #1f2a33;
 }
 
 .promotions-description p {
-    margin: 0 0 6px 0;
+    margin: 0 0 2px 0;
     padding-left: 0;
 }
 
 .promotions-description p:last-child {
     margin-bottom: 0;
-}
-
-.promotions-description ul {
-    padding-left: 0;
-    margin: 0;
-}
-
-.promotions-description ul li {
-    position: relative;
-    padding-left: 22px;
-    margin-bottom: 5px;
-    font-size: 12px;
-    line-height: 1.4;
-}
-
-.promotions-description ul li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Enhanced template search with keyboard shortcut support */

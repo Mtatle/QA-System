@@ -3,750 +3,1198 @@
   "chunk": "chunk_0015",
   "scenarios": {
     "71": {
-      "id": "019c4a11-778f-43e4-f000-000093cfb86b",
-      "companyName": "LensDirect",
-      "companyWebsite": "https://lensdirect.com",
-      "agentName": "Elaine",
+      "agentName": "Quinn",
+      "has_shopify": false,
+      "id": "019c6c5d-a3ac-45ce-f000-0000fbb73920",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Evergreen Discount",
+            "content": [
+              "• Save up to 50%. See site for additional details."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 4223088928,
+            "company_id": 214,
+            "name": "30-Day Post Purchase 2025",
+            "coupon": "sppbun25-asvu36"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://www.nectarsleep.com/bed-frames/adjustable-bed-frame/frame-classic",
+            "item": "Classic Adjustable Bed Frame",
+            "timeAgo": "2026-02-17"
+          },
+          {
+            "link": "https://www.nectarsleep.com/mattress-bundles/foundation-mattress-set",
+            "item": "Mattress Foundation",
+            "timeAgo": "2026-02-17"
+          },
+          {
+            "link": "https://www.nectarsleep.com/bed-frames/adjustable-bed-frame/size-queen+frame-premier",
+            "item": "Premier Adjustable Bed Frame",
+            "timeAgo": "2026-02-17"
+          },
+          {
+            "link": "https://www.nectarsleep.com/mattress",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-02-17"
+          },
+          {
+            "link": "https://www.nectarsleep.com/mattresses/luxe-memory-foam-mattress",
+            "item": "Nectar Luxe Memory Foam Mattress",
+            "timeAgo": "2026-02-17"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://nectarsleep.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2026-02-17",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      649,
+                      179
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2026-02-17 00:52:07.193",
+            "discount_amount": 0,
+            "orderNumber": "N-17539574",
+            "total": 828
+          }
+        ]
+      },
+      "companyWebsite": "https://nectarsleep.com",
+      "companyName": "Nectar Sleep",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS",
+          "Send to CS for refund inquiries"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Close the convo if the cx first message is ok, no, etc.",
+          "Don\u0027t use the word \"off\" when talking about promotions"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t proactively offer to find pricing info, redirect them to the website instead"
+        ],
+        "promo_and_exclusions": [
+          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns",
+        "Discount code errors",
+        "Recall",
+        "BBB",
+        "fiberglass",
+        "lawyer",
+        "class action"
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "LensDirect: Hey there! We love that you stopped by! What're you in the market for? \n\nWe have contacts, eyewear, lens replacement and so much more. Come on back and if you have any questions, let us know how we can help! https://lensdirect.attn.tv/a9NTK7PCE9-j ",
           "message_type": "system",
-          "date_time": "2026-01-27 18:36:40.133"
+          "message_text": "Nectar: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (888) 863-2827.",
+          "date_time": "2026-02-16 11:45:58.916",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "LensDirect: Hi, Elaine here! It looks like you left some items in your cart - use 4D9269CE5E to save 20% on contacts and 30% on eyewear and lens replacement!\n\nText back if you have any questions!",
           "message_type": "system",
-          "date_time": "2026-02-08 15:30:44.384"
+          "message_text": "Nectar: You\u0027re in!",
+          "date_time": "2026-02-16 11:46:02.934",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "LensDirect: Hi, Elaine here! It looks like you left some items in your cart - use 4D9269CE5E to save 20% on contacts and 30% on eyewear and lens replacement!\n\nText back if you have any questions!",
           "message_type": "system",
-          "date_time": "2026-02-10 19:06:47.942"
+          "message_text": "Nectar: You\u0027ve unlocked savings up to 66% on a mattress + base + bedding set. Better sleep starts here. \n\nClaim your savings:\nnectarsleep.attn.tv/a83ckooeMyce ",
+          "date_time": "2026-02-16 11:46:03.935",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Hello, I actually completed the order about an hour ago, but I didn't realize you sent a discount code. 😣",
+          "message_type": "system",
+          "message_text": "Nectar: Hi, this is Quinn. Save up to 50% on mattresses plus get free delivery (usually within a week). Everything you need to sleep better, delivered to your door.\n\nnectarsleep.attn.tv/ao80g_hSlLZE\n\nQuestions? Text us back!\n.",
+          "date_time": "2026-02-16 11:47:40.128",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Hi, this is Quinn. Thanks for signing up! Bundle with an adjustable base for our BIGGEST savings (up to 66%). Just need a mattress? Save up to 50% on memory foam or hybrid. Questions? Text me back!\n\nBundle: nectarsleep.attn.tv/acXHrEztB2-8 \n\nMattress: nectarsleep.attn.tv/aJYoIHPlc1Oh ",
+          "date_time": "2026-02-16 11:51:15.350",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Quinn here: You can save up to 50% on your cart.\nWondering if now\u0027s the time? It is. Need help? Just say the word: nectarsleep.attn.tv/a6Nl072ybBAg\n.",
+          "date_time": "2026-02-16 19:32:40.305",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: You are already subscribed. Click here to shop now: https://nectarsleep.attn.tv/cl/mfp .",
+          "date_time": "2026-02-16 19:50:55.581",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-10 19:12:00.213"
+          "message_text": "Hi Quinn.  I ordered the bed. Will need to order the adjustable base as soon as I have the money.  Can I still get the bundle price please?",
+          "date_time": "2026-02-17 11:07:37.461",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Template used: \"Retroactive discount request - All brands\"; last updated: 2023-10-10 16:41:51.799",
           "message_type": "template",
-          "date_time": "2026-02-10 19:19:44.683"
+          "message_text": "Template used: \"Customer support\"; last updated: 2024-05-28 16:56:57.736",
+          "date_time": "2026-02-17 11:10:02.049",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "LensDirect: Thanks for reaching out, and I'm sorry to hear about this. I can check with my team to see if we can apply the code to your order. Could you please send me your order number, email address, and the code you wish to apply?",
+          "message_id": "019c6c5d-a3ac-45ce-f000-0000fbb73920",
+          "message_text": "Nectar: Thank you so much for your purchase! Please note that the bundle price is only available if you purchase the bundle directly. I cannot make any promises but you can reach out to our team just to be sure and they will be able to clarify this further for you! The best way to handle this is to email us at support@nectarsleep.com or give us a call at +1 (888) 863-2827. Our sleep specialists are available 24/7 and they\u0027ll be more than happy to help! ",
           "message_type": "agent",
-          "agent": "109972",
-          "message_id": "019c4a11-778f-43e4-f000-000093cfb86b",
-          "date_time": "2026-02-10 19:19:44.685"
+          "agent": "126033",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 11:10:02.051"
         }
+      ]
+    },
+    "72": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "019c6c6f-cb72-44e9-f000-0000f47d4936",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "ATTJH3PTY8",
+            "content": [
+              "WELCOME CODE for 10% off"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 4101851446,
+            "description": "For Concierge use as appropriate",
+            "company_id": 8148,
+            "coupon_url": "https://igloocoolers.myshopify.com/discount/ATTJH3PTY8?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "ATTJH3PTY8",
+            "name": "Concierge 10% off",
+            "coupon": "ATTJH3PTY8",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://igloocoolers.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.igloocoolers.com/products/12424-playmate-mini-4-qt-cooler-red?pr_prod_strat=jac\u0026pr_rec_id=af7fd64a9\u0026pr_rec_pid=7894275909\u0026pr_ref_pid=3523650879571\u0026pr_seq=uniform",
+            "item": "Igloo Coolers | Playmate Mini 4 Qt Cooler-Diablo Red",
+            "timeAgo": "2026-01-17"
+          }
+        ]
+      },
+      "companyWebsite": "https://igloocoolers.com",
+      "companyName": "Igloo",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for legal and fraud related inquires",
+          "Send to CS for product safety inquires and threats",
+          "Send to CS for website technical issues"
+        ],
+        "escalate": [
+          "ESC if cx claims bodily injury as result of a product",
+          "ESC if cx highlights dangers to health/safety as a result of product"
+        ],
+        "templates": [
+          "For all post-purchase \u0026 warranty inquiries use \"SUPPORT\" temp (SPT)",
+          "For discount code issues use \"SUPPORT\" temp (SPT)",
+          "For product info that you can\u0027t find on the site use \"SUPPORT\" temp (SPT)",
+          "If cx reach out about 90 qt cooler recall, use shortcut RCC",
+          "For custom order cancellation and edit requests, don\u0027t use CED, use the designated templates instead"
+        ]
+      },
+      "blocklisted_words": [
+        
       ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "warranty",
+        "broken product claims",
+        "parts",
+        "missing shipment",
+        "leaks"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Adventure across America with Trailmate. Shop the SPECIAL-EDITION red, white \u0026 blue collection now. \n\nShop Now: igloo.attn.tv/a9k3Yn2w9WVN ",
+          "date_time": "2026-02-13 09:25:13.328",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hello! I just wanted to see if there was any update from our messages on Jan 17th. Thanks!!",
+          "date_time": "2026-02-17 11:26:03.789",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6c6d-6c1d-4bac-f000-0000f47d4936",
+          "message_text": "Igloo: Hi! I\u0027m so sorry, but I don\u0027t see a message from January 17th on our thread here. Did you send us an email at customerservice@shop.igloocoolers.com or somewhere else?",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 11:27:16.413"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I sent through this text chain. I spoke to someone named Sarah",
+          "date_time": "2026-02-17 11:28:03.573",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6c6f-cb72-44e9-f000-0000f47d4936",
+          "message_text": "Igloo: I truly apologize but unfortunately, I cannot access the history of this chat right now I cannot look into this. Would you be able to repeat the query if possible? I\u0027d be happy to look into it!",
+          "message_type": "agent",
+          "agent": "126033",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-17 11:29:51.896"
+        }
+      ]
+    },
+    "73": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "019c672d-b371-4793-f000-00007faaef07",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Presidents\u0027 Day Sale",
+            "content": [
+              "40% Off Full-Price Styles. Discount Auto-Applies To Checkout. Excludes Sale, Final Sale, and Sport Coat Styles"
+            ]
+          },
+          {
+            "title": "Free Shipping Code",
+            "content": [
+              "• ONLY share if a customer is asking for free shipping!\n➜  If they have a purchase history use shortcut: FPP\n➜  If they DON\u0027T have a purchase history use shortcut: FNP\n\n• Code is: SHIPV6XNRTD8"
+            ]
+          },
+          {
+            "title": "WELCOME20",
+            "content": [
+              "• Feel free to share this code if the unique one doesn\u0027t work for the customer! \n\n→ ONLY share with new subscribers!"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2141908743,
+            "description": "free shipping",
+            "company_id": 282,
+            "coupon_url": "https://untuckit.myshopify.com/discount/FRS-6FXJGC",
+            "name": "Abandoned Cart \u0026 Checkout Free Shipping Test",
+            "coupon": "FRS-6FXJGC",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://www.untuckit.com/products/coufran?variant=21464425201742\u0026nobi-conversation-id=22942d21-2ff6-4633-b2ed-7d67df3cfa65\u0026utm_source=nobi\u0026utm_medium=nobi_search_bar\u0026utm_campaign=assistant\u0026_gl=1*k599sw*_gcl_au*MTc1Mjg3NDMyMy4xNzcxMTg1MjMz",
+            "item": "Classic Short-Sleeve Coufran Shirt",
+            "timeAgo": "2026-02-16"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://untuckit.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2020-09-02",
+            "items": [
+              {
+                "price": [
+                  50
+                ],
+                "productLink": "https://untuckit.myshopify.com/products/la-sierra-wrinkle-free",
+                "name": "La Sierra - Wrinkle Free"
+              }
+            ],
+            "date_time": "2020-09-02 12:11:00.000",
+            "discount_amount": 0,
+            "orderNumber": "UN003196329",
+            "total": 50
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2017-08-11",
+            "coupon": "WELCOMEWILLIAMG20",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      88,
+                      88
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2017-08-11 14:16:02.000",
+            "discount_amount": 0,
+            "orderNumber": "4884718853",
+            "total": 140.8
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2017-08-10",
+            "items": [
+              {
+                "price": [
+                  98
+                ],
+                "productLink": "https://untuckit.myshopify.com/products/pommery",
+                "name": "Pommery - Navy Medium / Navy"
+              }
+            ],
+            "date_time": "2017-08-10 20:12:35.000",
+            "discount_amount": 0,
+            "orderNumber": "4882610053",
+            "total": 98
+          }
+        ]
+      },
+      "companyWebsite": "https://untuckit.com",
+      "companyName": "UNTUCKit",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS If product recommendation convos are taking too long"
+        ],
+        "escalate": [
+          "ESC immediately payment processing issues",
+          "ESC if cx ask to speak to a rep/sales associate from Newstore SMS (this is their clienteling service)",
+          "When a customer asks to be unsubscribed of emails too, use UFE shortcut and ESC after",
+          "For any inquiries about local stores/ in-store shopping, use SI shortcut and ESC with this escalation note:",
+          "➜ Forward to k.gottlieb@untuckit.com and m.maran@untuckit.com + store location"
+        ],
+        "tone": [
+          "Don\u0027t reply and close the convo if the customer replies \"no, okay, no thank you or similar \".",
+          "Let the customer have the last word"
+        ],
+        "templates": [
+          "For cx\u0027s who haven\u0027t made a purchase before and are looking for free shipping, use NFS shortcut"
+        ],
+        "dos_and_donts": [
+          "There is a scam website using UNTUCKit products, educate cx if they encounter one and redirect to our website"
+        ],
+        "drive_to_purchase": [
+          "Send the customer who\u0027s looking to get a fit to our virtual fitter \"Find your fit\"",
+          "If a cx is looking to get something, send a catalogue of offers first, unless they\u0027re looking to get something specific",
+          "When sending the SZ template educate the cx about styles that are appropriate for them"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Discount code errors"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "UNTUCKit: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from UNTUCKit.",
+          "date_time": "2026-02-15 15:22:18.621",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "UNTUCKit: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-15 15:25:10.852",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "UNTUCKit: You\u0027re officially on the VIP list!\nDiscover your new favorite styles while you can get 40% off Sitewide!\n\nShop Now: untuckit.attn.tv/aJIomZO7wlIE ",
+          "date_time": "2026-02-15 15:25:14.876",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Still need my 40% discount code",
+          "date_time": "2026-02-16 10:43:36.120",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c671f-4d5c-4ad0-f000-00007faaef07",
+          "message_text": "UNTUCKit: Enjoy 40% off full-price styles with our Presidents\u0027 Day Sale! Discount auto-applies at checkout. Visit untuckit.com to shop now.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 10:43:50.648"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It did not give me the discount at payment I want to cancel",
+          "date_time": "2026-02-16 10:48:15.912",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6724-ca47-4eac-f000-00007faaef07",
+          "message_text": "UNTUCKit: I\u0027m sorry to hear that! Please note that there is no discount code for the sitewide sale. You can get up to 40% off, but not all items will have that discount. I can check if it\u0027s still possible to cancel your order, though. Can I please have your order number and email address?",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 10:49:50.310"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The site seemed to show the discount price. There is no order number on my confirmation. My email is gullungmnr@comcast.net",
+          "date_time": "2026-02-16 10:54:15.960",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It said 40%off with code sale. I\u0027m sure it was your legitimate site",
+          "date_time": "2026-02-16 10:58:16.175",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c672d-b371-4793-f000-00007faaef07",
+          "message_text": "UNTUCKit: I am sorry to hear that! Unfortunately, I don\u0027t see a recent order from your account on my end. Would you be able to send a screenshot of the order confirmation email you got? I\u0027d be happy to double-check this for you. ",
+          "message_type": "agent",
+          "agent": "126033",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-16 10:59:34.287"
+        }
+      ]
+    },
+    "74": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "019c8314-1d39-4afe-f000-0000f6dab8e7",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "PROMO",
+            "content": [
+              "The 10% text sign-up code only works for these items: http://attn.tv/lg/offerdetails.html\n\nEligible Models:\nVacuums:\nA905RM\nA907GMS\nA927KGMS\nA927KVMS\nA908VMR\nA929KVM\nA939KBMS\nA913BM\nA900BM\nR975GM1\nA925KSM\n\nAir Purifiers:\nAS560DWR0\nAS330DWR0\nAP151MBA1\nAP151MWA1\n\nAeroTowers:\nU9CS1C\nU9CV2B\n\nHeadphones:\nHBS-FN6.ACUSBKI\nHBS-FN6.ACUSWHI\nHBS-FN5W.ACUSBKI\nHBS-FN5W.ACUSWHI\nHBS-FN4.ACUSBKI\nHBS-FN4.ACUSWHI\nTONE-FP8.AUSACLK\nTONE-FP9.AUSACLK\nTONE-FP5.AUSACLK\n\nLG Stylers:\nS3MFBN\nS3RFBN\nS3WFBN\nS5MSB\nS3CW\n\nWireless Speakers:\nPL2\nPL5\nPL5W\n\nDisclaimer:\nExtra 10% off select vacuums, PuriCare air purifiers, TONE Free headphones and XBOOM Go wireless speakers is off the pre-tax sale price on LG.com only. Offer valid for one-time use only within 30 days of code being sent. To receive the additional 10% off savings, promotion code must be entered at online checkout and will be applied to eligible products only. If any of the qualifying items are removed from the cart, canceled or returned, the promotional savings will be void. Availability, prices and terms of offer are subject to change without notice. No adjustments to prior purchases and non-redeemable for cash.\nQualifying Vacuums: A905RM, A907GMS, A927KGMS, A927KVMS, A908VMR, A929KVM, R975GM1\nQualifying PuriCare Air Purifiers: AS560DWR0, AS330DWR0, AP151MBA1, AP151MWA1\nQualifying TONE Free headphones: HBS-FN6.ACUSBKI, HBS-FN6.ACUSWHI, HBS-FN5W.ACUSBKI, HBS-FN5W.ACUSWHI, HBS-FN4.ACUSBKI, HBS-FN4.ACUSWHI, TONE-FP8.AUSACLK, TONE-FP9.AUSACLK, TONE-FP5.AUSACLK\nQualifying LG Styler: S3MFBN, S3RFBN, S3WFBN, S5MSB, S3CW\nQualifying XBOOM Go Wireless Speakers: PL2, PL5, PL5W"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 4141529319,
+            "company_id": 6714,
+            "coupon_url": "https://www.lg.com/us/cart?campaign_coupon=CAE101ZQN2",
+            "name": "2025_XBU_Abandoned_Cart_Email_with_extra_10__off",
+            "coupon": "CAE101ZQN2",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 4141529319,
+            "company_id": 6714,
+            "name": "2025 XBU New Subscriber Welcome Sign-up 5% off",
+            "coupon": "XBUWEL5FCMNJ"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://www.lg.com/us/washers-dryers/lg-sc5mar4g-styler-steam-closet",
+            "item": "Lg Styler® Smart Steam Closet With Dual Truesteam® Technology And Dynamic MovinghangerTM",
+            "timeAgo": "2026-02-08"
+          },
+          {
+            "link": "https://www.lg.com/us/washers-dryers/lg-wm5500hwa-front-load-washer",
+            "item": "4.5 Cu. Ft. Capacity Smart Front Load Energy Star Washer With Turbowash® 360° And Ai Dd® Built-in Intelligence",
+            "timeAgo": "2026-02-07"
+          },
+          {
+            "link": "https://www.lg.com/us/washers-dryers/lg-wm5500hva-front-load-washer",
+            "item": "4.5 Cu. Ft. Capacity Smart Front Load Energy Star Washer With Turbowash® 360° And Ai Dd® Built-in Intelligence",
+            "timeAgo": "2026-02-07"
+          },
+          {
+            "link": "https://www.lg.com/us/washers-dryers/lg-wm5800hva-front-load-washer",
+            "item": "5.0 Cu. Ft. Mega Capacity Smart Front Load Washer With Turbowash® 360°, Ai Sensing And Hybrid Electronic Controls With Lcd Display",
+            "timeAgo": "2026-02-02"
+          },
+          {
+            "link": "https://www.lg.com/us/washers-dryers/lg-wm3470cw-front-load-washer",
+            "item": "5.0 Cu. Ft. Mega Capacity Front Load Washer",
+            "timeAgo": "2026-02-02"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://lg.com/us",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2026-02-07",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      749,
+                      749,
+                      749
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2026-02-07 16:33:35.836",
+            "discount_amount": 0,
+            "orderNumber": "1117433661",
+            "total": 749
+          }
+        ]
+      },
+      "companyWebsite": "https://lg.com/us",
+      "companyName": "LG",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS using the \"Escalation template\""
+        ],
+        "templates": [
+          "For 10% off welcome code issues use temp \u0027Follow up 1\u0027, then \u0027Follow up 2\u0027 after confirming the item is excluded from promos",
+          "For fridge recommendations use FRR shortcut",
+          "For service-related issues/scheduled repair service appointments use SRI shortcut",
+          "For cxs looking for replacement parts/accessories from an affiliate Parts Distributor use RPA shortcut",
+          "If a cx has an inquiry for finding the serial number/model number of an item:",
+          "➜ If it\u0027s a TV, use mnt shortcut",
+          "➜ If it\u0027s another product, use mna shortcut"
+        ],
+        "dos_and_donts": [
+          "If it\u0027s a new conversation and we didn\u0027t introduce ourselves in the automated message, start your message with: \"This is Jordan at LG.\""
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Welcome to LG Electronics USA! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-07 11:12:28.443",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Welcome! We\u0027ll text you about qualifying new arrivals \u0026 special offers as they happen. For now, claim your code for 5% off: lg.attn.tv/a36ZeKjQ3aLN\n\nText back with any questions!",
+          "date_time": "2026-02-07 11:12:32.472",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Texts may be retained for customer support \u0026 other purposes. For more info, see Terms (lg.com/us/legal) and Privacy (lg.com/us/privacy)",
+          "date_time": "2026-02-07 11:12:33.468",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Thank you for signing up, you\u0027re already subscribed. Click here to shop now: lg.com/us.",
+          "date_time": "2026-02-07 11:45:53.467",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Thanks for your purchase on LG.com! We\u0027ll send another message when your order is ready for shipping. 📦\nOrder #: 1117433661\nEstimated delivery date: 02-11-2026\nJust tap here to manage your order: https://lg.attn.tv/aeFcYNmyQjhV .",
+          "date_time": "2026-02-07 13:14:44.103",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Your LG Order #:1117433661 is ready for delivery! \n\nDelivery scheduled for: 02-11-2026\n\nBecause plans can change, select a date that works best for you. lg.attn.tv/aaNdav6mH_am .",
+          "date_time": "2026-02-07 17:11:24.472",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Hi, I\u0027m Jordan - your go-to LG specialist. Feel free to text me any time, and save our contact so you don\u0027t miss any updates!",
+          "date_time": "2026-02-08 13:54:32.963",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Explore top laptop \u0026 monitor deals. Find your partner in productivity, or enjoy next-gen gaming with savings on award-winning laptops and monitors. Shop Now: lg.attn.tv/aj2draBc_pop ",
+          "date_time": "2026-02-09 14:00:27.581",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: 🎉 Amazing news! The item you were looking at is now back in stock! Grab it now\u003e LG Capacity Smart Front Load ENERGY STAR Washer with TurboWash® 360° and AI DD® Built-In Intelligence, Graphite Steel, 4.5 cu. ft. lg.attn.tv/a01TlgRjS6IH\n*Check online for most accurate availability based on your location.",
+          "date_time": "2026-02-10 13:47:19.351",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: How was your experience with our delivery service? Please share your feedback with us: https://lg.attn.tv/aRmoGdwN94VU .",
+          "date_time": "2026-02-11 13:21:51.146",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Yay! Your LG order has been delivered! We just know you\u0027ll love your new LG product 💗\nOrder #: 1117433661\nDelivered on: 02-11-2026\nTo register your new product, click here: https://lg.attn.tv/aRaaxnh1xfPI .",
+          "date_time": "2026-02-11 13:34:34.501",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Bundle 2 or more eligible LG and/or LG STUDIO appliances from America’s Most Reliable \u0026 #1 Appliance Brand*, now with Presidents’ Day Price Guaranteed. Shop Now: lg.attn.tv/aedqceGbn6TL ",
+          "date_time": "2026-02-11 14:00:26.589",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: 30% off select LG accessories ends soon. Use code ACCESSORY30 at checkout to save. Valid through 2/18/26. Terms may apply. Shop Now: lg.attn.tv/a_rqcc1PpFfb ",
+          "date_time": "2026-02-12 14:00:50.929",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Your all-in-one display: work, stream, and create your way with LG’s latest displays—featuring flexible design, an intuitive touchscreen, and smart webOS. Shop Now: lg.attn.tv/aPOY6pj_cp3l ",
+          "date_time": "2026-02-13 14:01:12.745",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Save up to 58% on select appliances! Upgrade your kitchen \u0026 laundry with LG and we’ll haul away your old appliances FREE. Valid only on 2/14/26. Terms may apply. Shop Now: lg.attn.tv/aPwe3UUP54xz ",
+          "date_time": "2026-02-14 14:00:12.672",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Explore Presidents’ Day top appliance deals and create the space you’ve been waiting for with modern home appliances from America’s Most Reliable \u0026 #1 Appliance Brand.* Shop Now: lg.attn.tv/acaNY3l3VER6 ",
+          "date_time": "2026-02-16 14:00:12.891",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Presidents’ Day Savings are still on! Shop LG refrigerators, ranges, washers, dryers, and more—plus free shipping, haul-away, and select free installation. Shop Now: lg.attn.tv/ag3xZA8ERcpj ",
+          "date_time": "2026-02-18 14:00:38.673",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Four appliances. One seamless setup. Save on eligible laundry sets and get installation and haul away on us. Shop Now: lg.attn.tv/ao9-J5OtsvSh ",
+          "date_time": "2026-02-19 14:00:18.381",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Our 24-hour flash sale is live! Get the 65\" OLED C5 TV, at its lowest price ever, for $1,299. Plus, get FREE shipping and installation. Valid only on 2/20/26. Terms may apply. Shop Now: lg.attn.tv/a05HK9G3iZ9R ",
+          "date_time": "2026-02-20 14:00:57.693",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Save up to 58% on select appliances. Upgrade your kitchen \u0026 laundry with FREE haul-away. Valid only on 2/21/26. Terms may apply. Shop Now: lg.attn.tv/axo30t15vYPa ",
+          "date_time": "2026-02-21 14:00:54.713",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi I had our washer installed on the 11 of February and we just now noticed that the water hose were installed backwards. The hot is cold and the cold is hot. That ended up shrinking my son\u0027s clothes cause it was washed in hot water instead of cold. Please reach out to us as soon as possible.",
+          "date_time": "2026-02-21 20:57:16.450",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Escalation template (esc temp)\"; last updated: 2025-04-01 19:42:53.703",
+          "date_time": "2026-02-21 21:00:59.474",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c8314-1d39-4afe-f000-0000f6dab8e7",
+          "message_text": "LG Electronics USA: I apologize for the inconvenience this has caused. This is not the experience we strive to provide for our customers. For the best resolution, you\u0027ll want to reach out to our Support team directly via email here: https://lg.attn.tv/auhHRh0x3oFq or phone at 800-243-0000 where they are available 7 days/week from 8am-9pm EST. You can also chat with the team here: https://lg.attn.tv/ajxb8UkKWMOi ",
+          "message_type": "agent",
+          "agent": "31385",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-21 21:00:59.475"
+        }
+      ]
+    },
+    "75": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "019c8846-c334-41ed-f000-00002b1237c0",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.statelinetack.com/products/tough1-snuggit-1200d-turnout-blanket-belly-wrap?variant=43798615392393",
+            "item": "Tough1 Snuggit 1200D Turnout Blanket Belly Wrap - Royal Blue / 72",
+            "timeAgo": "2026-02-23"
+          },
+          {
+            "link": "https://www.statelinetack.com/products/tough1-420-denier-turnout-sheet?variant=43799730684041",
+            "item": "Tough1 420 Denier Turnout Sheet - Navy Blue / 72",
+            "timeAgo": "2026-02-23"
+          },
+          {
+            "link": "https://www.statelinetack.com/products/tough1-420d-turnout-sheet-pony?utm_campaign=Concierge\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=lrVFF",
+            "item": "Tough1 420D Turnout Sheet Pony - Purple / 63",
+            "timeAgo": "2026-02-23"
+          },
+          {
+            "link": "https://www.statelinetack.com/products/saratoga-antisweat-sheet-68-black-gry?utm_campaign=Concierge\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=lrVFF",
+            "item": "Saratoga Antisweat Sheet 68 Black/Gry - Hunter Green/Navy / 84",
+            "timeAgo": "2026-02-23"
+          },
+          {
+            "link": "https://www.statelinetack.com/products/tough1-600-denier-stable-blanket-with-belly-warmer?variant=43800302223497\u0026\u0026adlclid=dc42e5b1b43e153563c98c2a19cb8848\u0026srccode=GPSLTB\u0026utm_source=bing\u0026utm_medium=paid_search\u0026utm_campaign=adl_slt_bing_pla_nonbrand\u0026msclkid=dc42e5b1b43e153563c98c2a19cb8848\u0026utm_source=bing\u0026utm_medium=cpc\u0026utm_campaign=adl_slt_bing_pla_nonbrand\u0026utm_term=4584482479991334\u0026utm_content=Blankets%20%26%20Sheets",
+            "item": "Tough1 600 Denier Stable Blanket with Belly Warmer - Royal Blue / 72",
+            "timeAgo": "2026-02-23"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 722614208,
+            "description": "Email Buyers - 20% Off over $29 or 30% Off over $129*",
+            "company_id": 3089,
+            "coupon_url": "https://www.statelinetack.com/?utm_source=attentive\u0026utm_medium=email\u0026utm_campaign=E23122SA\u0026srccode=E23122SA",
+            "static_code": "E23122SA",
+            "name": "E23122SA",
+            "coupon": "E23122SA",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 722614208,
+            "company_id": 3089,
+            "static_code": "E24222SA",
+            "name": "15% Off + Free Shipping",
+            "coupon": "E24222SA",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 722614208,
+            "company_id": 3089,
+            "coupon_url": "https://www.statelinetack.com/?srccode=TXTSLT25\u0026utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=welcome",
+            "static_code": "TXTSLT25",
+            "name": "25% off",
+            "coupon": "TXTSLT25",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://statelinetack.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2026-02-23",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      70.99,
+                      54.95,
+                      5
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2026-02-23 01:43:02.397",
+            "discount_amount": 0,
+            "orderNumber": "7326364565641",
+            "total": 180.8
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-07-11",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      45.46,
+                      23.99
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2025-07-11 01:04:28.000",
+            "discount_amount": 0,
+            "orderNumber": "6355601162377",
+            "total": 152.43
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-07-10",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      86.91,
+                      0,
+                      84
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2025-07-10 13:27:12.000",
+            "discount_amount": 0,
+            "orderNumber": "6351168602249",
+            "total": 198.2
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-07-10",
+            "items": [
+              {
+                "price": [
+                  50.88
+                ],
+                "productLink": "https://a22259-53.myshopify.com/products/mare-magic-horse-supplements",
+                "name": "Mare Magic Horse Supplements 32 oz 32 Oz."
+              }
+            ],
+            "date_time": "2025-07-10 01:58:09.000",
+            "discount_amount": 0,
+            "orderNumber": "6347506450569",
+            "total": 64.42
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-07-09",
+            "items": [
+              {
+                "price": [
+                  41.99
+                ],
+                "productLink": "https://a22259-53.myshopify.com/products/mare-magic-horse-supplements",
+                "name": "Mare Magic Horse Supplements 32 oz 32 Oz."
+              }
+            ],
+            "date_time": "2025-07-09 22:34:40.000",
+            "discount_amount": 0,
+            "orderNumber": "6346034937993",
+            "total": 101.49
+          }
+        ]
+      },
+      "companyWebsite": "https://statelinetack.com",
+      "companyName": "State Line Tack",
       "notes": {
         "send_to_cs": [
           "Send to CS for post purchase issues, use PPI shortcut"
         ],
-        "templates": [
-          "For medical inquiries about contacts or lens replacement use MQ shortcut"
+        "promo_and_exclusions": [
+          "Some items aren’t eligible for discounts due to manufacturers’ policy, add to cart to double-check!"
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://lensdirect.com",
-          "date": ""
-        }
-      },
+      "blocklisted_words": [
+        
+      ],
       "escalation_preferences": [
-        "Shipping questions",
-        "Sizing questions",
-        "Exchanges and returns",
-        "Discount code errors",
-        "Existing orders",
-        "Stock questions",
-        "online vision test",
-        "prescription questions"
-      ],
-      "blocklisted_words": [],
-      "has_shopify": false
-    },
-    "72": {
-      "id": "019c733a-6590-490a-f000-0000fc568aee",
-      "companyName": "Wee Squeak",
-      "companyWebsite": "https://weesqueak.com",
-      "agentName": "",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Wee Squeak: Welcome to Wee Squeak! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-18 18:27:23.485"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wee Squeak: Welcome! Use the offer MOBILE10 at checkout for a discount when you shop https://weesqueak.attn.tv/aJMQ6evT94GO .",
-          "message_type": "system",
-          "date_time": "2026-02-18 18:27:28.481"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wee Squeak: Don't forget to save our contact to get exclusive updates!",
-          "message_type": "system",
-          "date_time": "2026-02-18 18:27:28.639"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wee Squeak: Hey , this is Sarah. I see you left something in your cart. https://weesqueak.attn.tv/auWI5_EJGybL \n\nGreat choice! 😊 Any questions I can answer for you? ",
-          "message_type": "system",
-          "date_time": "2026-02-18 18:48:28.250"
-        },
-        {
-          "message_media": [],
-          "message_text": "I tried to buy 2 different f the imperfect boots but couldn't add them.",
-          "message_type": "customer",
-          "date_time": "2026-02-18 18:51:45.252"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wee Squeak: Thank you for reaching out. I'm sorry about that. Are you referring to this? - https://weesqueak.attn.tv/a5zJ9Qjkoha-\n\nIf yes, then what size are you referring to so I can create a cart for you?",
-          "message_type": "agent",
-          "agent": "48804",
-          "message_id": "019c7334-cdba-4712-f000-0000fc568aee",
-          "date_time": "2026-02-18 19:02:46.356"
-        },
-        {
-          "message_media": [],
-          "message_text": "No, rferring to the imperfect western boot brown.",
-          "message_type": "customer",
-          "date_time": "2026-02-18 19:05:41.231"
-        },
-        {
-          "message_media": [],
-          "message_text": "Wee Squeak: Got it. Is it this one? - https://weesqueak.attn.tv/aOLPsfr_FfGb - If so, just send me your size, and I'd be happy to help you.",
-          "message_type": "agent",
-          "agent": "109630",
-          "message_id": "019c733a-6590-490a-f000-0000fc568aee",
-          "date_time": "2026-02-18 19:08:52.911"
-        }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://weesqueak.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Hunter Boot (IMPERFECT) - 3",
-            "link": "https://weesqueak.com/products/hunter-boot-imperfect?externalId=e8pzS",
-            "timeAgo": "2026-02-19"
-          },
-          {
-            "item": "Hunter Boot (IMPERFECT) - 3",
-            "link": "https://weesqueak.com/products/hunter-boot-imperfect?pr_prod_strat=jac&pr_rec_id=908b54cfe&pr_rec_pid=4429731561526&pr_ref_pid=4431977709622&pr_seq=uniform",
-            "timeAgo": "2026-02-18"
-          },
-          {
-            "item": "Western Brown Boot (IMPERFECT) - 3",
-            "link": "https://weesqueak.com/products/western-boot-imperfect?variant=31572890353718",
-            "timeAgo": "2026-02-18"
-          },
-          {
-            "item": "Western Boot Brown - 3 / Brown",
-            "link": "https://weesqueak.com/products/western-boot-brown",
-            "timeAgo": "2026-02-18"
-          },
-          {
-            "item": "Western Boot Brown - 3 / Brown",
-            "link": "https://weesqueak.com/products/western-boot-brown",
-            "timeAgo": "2026-02-18"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "73": {
-      "id": "019c6df6-d25a-4597-f000-00004e76a04b",
-      "companyName": "Mission Mercantile",
-      "companyWebsite": "https://missionmercantile.com",
-      "agentName": "Sarah",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Mission Mercantile: Welcome to Mission Mercantile! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-17 17:33:55.476"
-        },
-        {
-          "message_media": [],
-          "message_text": "Mission Mercantile: Hey this is Sarah, how can I help you? Stop to stop",
-          "message_type": "system",
-          "date_time": "2026-02-17 17:33:57.973"
-        },
-        {
-          "message_media": [],
-          "message_text": "Hey, I need help. I need a contact number for Haley. I just received a repair item and there are multiple issues. Thank you.",
-          "message_type": "customer",
-          "date_time": "2026-02-17 17:34:27.064"
-        },
-        {
-          "message_media": [],
-          "message_text": "I would like to speak to someone.",
-          "message_type": "customer",
-          "date_time": "2026-02-17 17:34:57.107"
-        },
-        {
-          "message_media": [],
-          "message_text": "Mission Mercantile: I'm sorry to hear that! Email us directly at shopkeeper@missionmercantile.com or give us a call at 210-504-6698 and we'll take great care of you. Our team is happy to help! ",
-          "message_type": "agent",
-          "agent": "50271",
-          "message_id": "019c6dbe-d7ac-4c69-f000-00004e76a04b",
-          "date_time": "2026-02-17 17:35:49.584"
-        },
-        {
-          "message_media": [],
-          "message_text": "Thanks Sarah!\nI think Haley would be best to address this issue but if she is unavailable I would be happy to speak to anyone.",
-          "message_type": "customer",
-          "date_time": "2026-02-17 17:36:36.902"
-        },
-        {
-          "message_media": [],
-          "message_text": "Mission Mercantile: I'm sorry, but I don't have Haley's direct contact information. You can try reaching out to the team, and they should be able to point you in the right direction.",
-          "message_type": "agent",
-          "agent": "37648",
-          "message_id": "019c6dc1-0ca3-45e5-f000-00004e76a04b",
-          "date_time": "2026-02-17 17:38:14.212"
-        },
-        {
-          "message_media": [],
-          "message_text": "The phone number is saying after hours and leave a message. I would like to address this issue ASAP as I have waited for months for repair of this item and it was returned  without having the promised work completed and  in very poor condition. Thank you.",
-          "message_type": "customer",
-          "date_time": "2026-02-17 17:42:36.979"
-        },
-        {
-          "message_media": [],
-          "message_text": "Are you able to help Sarah?",
-          "message_type": "customer",
-          "date_time": "2026-02-17 17:43:37.162"
-        },
-        {
-          "message_media": [],
-          "message_text": "Mission Mercantile: I'm so sorry to hear that, and I completely understand your frustration. Please know that I have limited access on my end. \n\nI'll check on this with our team. As soon as I hear back, I will send you a message right away.",
-          "message_type": "agent",
-          "agent": "87592",
-          "message_id": "019c6dc9-4552-4125-f000-00004e76a04b",
-          "date_time": "2026-02-17 17:47:13.013"
-        },
-        {
-          "message_media": [],
-          "message_text": "Ok. I understand and truly appreciate your concern and assistance. \nI am very frustrated at this point but hope that all will work out!\nBest regards,\nBrian",
-          "message_type": "customer",
-          "date_time": "2026-02-17 17:49:37.221"
-        },
-        {
-          "message_media": [],
-          "message_text": "Mission Mercantile: I apologize for this experience. I'll be sure to keep you posted. ",
-          "message_type": "agent",
-          "agent": "87595",
-          "message_id": "019c6dcc-17f0-4c92-f000-00004e76a04b",
-          "date_time": "2026-02-17 17:50:17.993"
-        },
-        {
-          "message_media": [],
-          "message_text": "Great. I appreciate that. Hope you have a nice evening!",
-          "message_type": "customer",
-          "date_time": "2026-02-17 17:52:07.155"
-        },
-        {
-          "message_media": [],
-          "message_text": "Mission Mercantile: You're welcome! While I wait to hear back from my team, is there anything else I can assist you with in the meantime? ",
-          "message_type": "agent",
-          "agent": "87592",
-          "message_id": "019c6dce-94fb-44d2-f000-00004e76a04b",
-          "date_time": "2026-02-17 17:53:01.090"
-        },
-        {
-          "message_media": [],
-          "message_text": "That's all for now. Thank you so much!",
-          "message_type": "customer",
-          "date_time": "2026-02-17 17:53:56.959"
-        },
-        {
-          "message_media": [],
-          "message_text": "Is there a site to upload photos?  Or is it best to wait until I connect with a representative tomorrow?",
-          "message_type": "customer",
-          "date_time": "2026-02-17 18:30:16.821"
-        },
-        {
-          "message_media": [],
-          "message_text": "Mission Mercantile: Sorry, there isn't a site to upload photos, but you can send them to shopkeeper@missionmercantile.com Since I've already forwarded this to our team, it's best to wait for their guidance to avoid any mix-ups. If they need the photo, we'll let you know. I'll make sure this is prioritized and will monitor it closely. ",
-          "message_type": "agent",
-          "agent": "87595",
-          "message_id": "019c6df3-8cbd-40fe-f000-00004e76a04b",
-          "date_time": "2026-02-17 18:33:23.801"
-        },
-        {
-          "message_media": [],
-          "message_text": "Perfect. Many thanks Sarah!",
-          "message_type": "customer",
-          "date_time": "2026-02-17 18:35:27.227"
-        },
-        {
-          "message_media": [],
-          "message_text": "Mission Mercantile: Thanks for getting back to me, and you're most welcome! Rest assured, we'll get back to you as soon as possible. Feel free to let me know if you need help with anything else in the meantime.",
-          "message_type": "agent",
-          "agent": "109840",
-          "message_id": "019c6df6-d25a-4597-f000-00004e76a04b",
-          "date_time": "2026-02-17 18:36:58.247"
-        }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for repair/customization requests"
-        ],
-        "escalate": [
-          "If a cx had issues after a sale is over, ESC to see if they can honor the deal",
-          "ESC immediately, if the customer asks when an order will ship",
-          "If a cx has a request for urgent delivery ESC and they'll prioritize it",
-          "ESC if a cx is having trouble placing an order",
-          "If a cx asks for an update regarding an email they sent, ask for their email address, then ESC",
-          "ESC immediately if a cx is very upset",
-          "ESC if cx's have issues applying both loyalty codes"
-        ],
-        "tone": [
-          "Close the convo once the client takes over"
-        ],
-        "templates": [
-          "For Ellington repair:",
-          "➜ Ask which item the customer has",
-          "➜ If it's an Ellington item from before 2016, use ECR shortcut"
-        ],
-        "dos_and_don_ts": [
-          "For stock questions, check the product page to look for possible back-in-stock dates",
-          "If cx calls after hours, advise them to leave a voicemail and the team will be sure to call back"
-        ],
-        "drive_to_purchase": [
-          "When recommending a pre-order item - set proper expectations and mention the date it'll be back in stock"
-        ],
-        "promo_and_promo_exclusions": [
-          "They have a loyalty program where cx's can use code MMLEGACY20 & FAITHFULSHIPPING at the same time to receive 20% off plus free shipping. The MMLEGACY20 code only applies to cxs who have spent $2000+",
-          "➜ These are the only 2 codes that can be stacked, and they can only be stacked with each other and no other code",
-          "Welcome code works on discounted/sale items",
-          "DO NOT share the WELCOME15 code with cx's, it's no longer valid"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://missionmercantile.com",
-          "date": ""
-        }
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "74": {
-      "id": "019c53f1-ea17-4e3f-f000-000092b3bf14",
-      "companyName": "John Fluevog Shoes",
-      "companyWebsite": "https://fluevog.com",
-      "agentName": "Jordan",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Fluevog: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Fluevog.",
-          "message_type": "system",
-          "date_time": "2026-02-03 18:05:55.503"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: Welcome to Fluevog! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-03 18:06:13.078"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: You've officially doubled your chances to snag a $200 GC! It's like winning the shoe lottery, but without the confetti clean-up. Start shopping: usvog.attn.tv/a5Q2Pb8LDj9- \nQuestions? Just give us a shout!\n",
-          "message_type": "system",
-          "date_time": "2026-02-03 18:06:17.051"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: Did you mean to leave Dollyvogs Waldorf: Black/Rhinestone behind? It's still waiting for your return. Take another look: usvog.attn.tv/aFMxm8Xl6maG",
-          "message_type": "system",
-          "date_time": "2026-02-04 17:41:58.866"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: Hey there, sole-searcher! We noticed you eyeing our fabulous kicks. Have you checked out our best sellers yet? They're so popular, even the floor is jealous! Take another look: usvog.attn.tv/aFHwx-fq5Iyz ",
-          "message_type": "system",
-          "date_time": "2026-02-10 16:30:24.832"
-        },
-        {
-          "message_media": [],
-          "message_text": "No. I'm still waiting on an order. I do not believe I will be doing business with you anymore once my order comes.",
-          "message_type": "customer",
-          "date_time": "2026-02-10 16:31:20.697"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: I'm sorry to hear that, and I understand the frustration! Are you referring to the order placed on 2/3? If so, please note that after you place your order, it goes through an order processing stage (preparing, packaging, etc.), which can take up to 3 business days. Just to be sure, did you receive any tracking info? Please check your spam and promo folders as well, as our emails sometimes end up there. ",
-          "message_type": "agent",
-          "agent": "87310",
-          "message_id": "019c497a-c13d-4e44-f000-000092b3bf14",
-          "date_time": "2026-02-10 16:35:07.614"
-        },
-        {
-          "message_media": [],
-          "message_text": "Yes. I did. the zip code was wrong so they were shipped back to New Orleans and there has not been an update since the 6th.",
-          "message_type": "customer",
-          "date_time": "2026-02-10 16:36:10.543"
-        },
-        {
-          "message_media": [],
-          "message_text": "They made it to Oakcreek which is 30-45 minutes away and would not update the zip and shipped them back for them to be shipped back to me again. if that makes a sense whatsoever. Where are my shoes?",
-          "message_type": "customer",
-          "date_time": "2026-02-10 16:38:20.907"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: I'm really sorry for all the inconvenience. Since the package is already with the carrier, it's best to contact them directly. Have you tried giving them a call? They should have the most up-to-date information.",
-          "message_type": "agent",
-          "agent": "82222",
-          "message_id": "019c497e-672f-48f2-f000-000092b3bf14",
-          "date_time": "2026-02-10 16:39:06.700"
-        },
-        {
-          "message_media": [],
-          "message_text": "No, I haven't called. I have horrible Social phobia. I am unable to use the phone. I used UPS's website and cannot get any answers. So more or less I have to eat the cost of the shoes.",
-          "message_type": "customer",
-          "date_time": "2026-02-10 16:40:50.866"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: I'm so sorry about that. Let me double-check this with my team. Can I please have your order number, full name, email, and the region you are shopping from? ",
-          "message_type": "agent",
-          "agent": "43099",
-          "message_id": "019c4982-d3a9-4777-f000-000092b3bf14",
-          "date_time": "2026-02-10 16:43:56.604"
-        },
-        {
-          "message_media": [],
-          "message_text": "20260203-00593198 Shannon R Bishop bisho022@uwalumni.com Kenosha, WI 53144",
-          "message_type": "customer",
-          "date_time": "2026-02-10 16:51:10.717"
-        },
-        {
-          "message_media": [],
-          "message_text": "voc: I'm still waiting on an order. I do not believe I will be doing business with you anymore once my order comes. 20260203-00593198 Shannon R Bishop bisho022@uwalumni.com Kenosha, WI 53144",
-          "message_type": "escalation",
-          "date_time": "2026-02-10 16:54:13.342"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: Thanks! Let me pass this on to my team. I'll be in touch as soon as I get an update. ",
-          "message_type": "agent",
-          "agent": "82427",
-          "message_id": "019c498c-530a-4ec9-f000-000092b3bf14",
-          "date_time": "2026-02-10 16:54:19.047"
-        },
-        {
-          "message_media": [],
-          "message_text": "Thank you.",
-          "message_type": "customer",
-          "date_time": "2026-02-10 16:56:50.766"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: You're welcome! We appreciate your patience.",
-          "message_type": "agent",
-          "agent": "46059",
-          "message_id": "019c498e-ef9a-4e41-f000-000092b3bf14",
-          "date_time": "2026-02-10 16:57:10.199"
-        },
-        {
-          "message_media": [],
-          "message_text": "Any word on my shoes? This is getting ridiculous .",
-          "message_type": "customer",
-          "date_time": "2026-02-11 16:11:54.330"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: My sincere apologies. I'm still waiting to hear back from my team regarding this, but rest assured, I'm keeping an eye out. As soon as I get an update, I'll let you know right away. ",
-          "message_type": "agent",
-          "agent": "43099",
-          "message_id": "019c4e92-409f-4cb4-f000-000092b3bf14",
-          "date_time": "2026-02-11 16:18:53.630"
-        },
-        {
-          "message_media": [],
-          "message_text": "It's been two days and you still don't know where my shoes are? It's almost been a week since they were sent back to New Orleans. Where are my shoes? I have been nice and patient.",
-          "message_type": "customer",
-          "date_time": "2026-02-12 16:49:55.237"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: I completely understand your frustration, and I'm so sorry again for the inconvenience. Our team might currently be experiencing a high volume of inquiries, which is causing some delays.\n\nPlease be assured that I'm actively following this up, and I will update you as soon as I receive a response. Thank you so much for your patience and understanding.",
-          "message_type": "agent",
-          "agent": "43099",
-          "message_id": "019c53d7-c2fd-4dcb-f000-000092b3bf14",
-          "date_time": "2026-02-12 16:52:55.065"
-        },
-        {
-          "message_media": [],
-          "message_text": "6 days ago a label was created. Where are they? I've not been offered my money back, partial refund. No answers. Never again.",
-          "message_type": "customer",
-          "date_time": "2026-02-12 17:06:44.937"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: I'm truly sorry for the frustration and the lack of updates, I completely understand how upsetting it is to wait this long without a clear resolution. Our team is still looking into this, and I really appreciate your patience. This is not the experience we want for our customers, and I sincerely apologize for the inconvenience. Alternatively, you can email us directly at service@fluevog.com. Our team is happy to help!",
-          "message_type": "agent",
-          "agent": "87589",
-          "message_id": "019c53ed-ad53-46fb-f000-000092b3bf14",
-          "date_time": "2026-02-12 17:16:51.311"
-        },
-        {
-          "message_media": [],
-          "message_text": "I have emailed your team. I sent an email a week ago and no one answered it.",
-          "message_type": "customer",
-          "date_time": "2026-02-12 17:17:55.088"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fluevog: We sincerely apologize for the delay! The team is experiencing a high volume of emails, but they'll respond to you as soon as possible. We really appreciate your patience on this and hope you can give us more time to reply. Please check your spam and promotions folders, as our emails sometimes end up there. Our team is happy to help!",
-          "message_type": "agent",
-          "agent": "87295",
-          "message_id": "019c53f1-ea17-4e3f-f000-000092b3bf14",
-          "date_time": "2026-02-12 17:21:29.011"
-        }
-      ],
-      "notes": {
-        "escalate": [
-          "Add the cx's full name & which region they're shopping from (US, CA, or AU) in the ESC notes",
-          "Add the product links cx are inquiring about to your ESC notes"
-        ],
-        "templates": [
-          "For post purchase issues, use OIS shortcut",
-          "For gift exchange inquiries, use GEX shortcut",
-          "If the cx didn't receive the gift from the gift exchange program!, use GGE shortcut",
-          "If cx's say the item they want isn't on sale, don't use ncode, use SGS temp"
-        ],
-        "dos_and_don_ts": [
-          "Send links only from the US site",
-          "Use NordLayer when accessing their website"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://fluevog.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Dollyvogs Waldorf: Black/Rhinestone",
-            "link": "https://www.fluevog.com/shop/8280-waldorf-black-rhinestone?utm_campaign=Question&utm_source=attentive&utm_medium=sms&externalId=Uc9vC",
-            "timeAgo": "2026-02-04"
-          },
-          {
-            "item": "Dollyvogs Waldorf: Black/Rhinestone",
-            "link": "https://www.fluevog.com/shop/8280-waldorf-black-rhinestone",
-            "timeAgo": "2026-02-04"
-          },
-          {
-            "item": "Play Grounders Hula Hoop: Blue Paisley",
-            "link": "https://www.fluevog.com/shop/8261-hula-hoop-blue-paisley",
-            "timeAgo": "2026-02-02"
-          },
-          {
-            "item": "Miracles Revelation: Black Mesh",
-            "link": "https://www.fluevog.com/shop/8010-revelation-black-mesh",
-            "timeAgo": "2026-02-02"
-          },
-          {
-            "item": "Baroque Murillo: Grey Paisley",
-            "link": "https://www.fluevog.com/shop/4049-murillo-grey-paisley",
-            "timeAgo": "2026-02-02"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "20260203-00593198",
-            "orderDate": "2026-02-03",
-            "items": [
-              {
-                "name": "Play Grounders Hula Hoop: Blue Paisley",
-                "price": 399,
-                "productLink": "https://www.fluevog.com/shop/8261?location=US"
-              }
-            ],
-            "total": 399,
-            "date_time": "2026-02-03 23:02:31.141"
-          },
-          {
-            "orderNumber": "20251226-00587778",
-            "orderDate": "2025-12-26",
-            "items": [
-              {
-                "name": "Miracles Revelation: Black Mesh",
-                "price": 249.99,
-                "productLink": "https://www.fluevog.com/shop/8010?location=US"
-              }
-            ],
-            "total": 249.99,
-            "date_time": "2025-12-26 20:21:13.629"
-          }
-        ]
-      },
-      "escalation_preferences": [
-        "Shipping questions",
-        "Sizing questions",
         "Exchanges and returns"
       ],
-      "blocklisted_words": [],
-      "has_shopify": false
-    },
-    "75": {
-      "id": "019c7368-32a8-4a48-f000-0000fc58d672",
-      "companyName": "Oral-B and Crest",
-      "companyWebsite": "https://oralb.com",
-      "agentName": "Sam",
-      "messageTone": "Polished",
+      "messageTone": "Casual",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Oral-B: Welcome to Oral-B! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
           "message_type": "system",
-          "date_time": "2026-02-18 19:50:30.726"
+          "message_text": "State Line Tack: Winter Storm Flash SALE! Get up to 70% OFF top brands! slt.attn.tv/aeTkI1hfk4-R Supplies are limited act fast!",
+          "date_time": "2026-01-27 13:25:37.129",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Oral-B: Hey! I'm Sam with Oral-B and Crest! Just wanted to say thanks for joining. If you're looking for great savings check out our Deals page! https://oral-b.attn.tv/aM9vbUSMFfFr \n\nText me any time with questions!",
           "message_type": "system",
-          "date_time": "2026-02-18 19:50:35.560"
+          "message_text": "State Line Tack: Kick the week off with savings! Get up to 30% OFF over $49 on select items today only! slt.attn.tv/axhINMykzhjP ",
+          "date_time": "2026-02-02 13:25:32.121",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Oral-B: Hi there, this is Sam. Thanks for checking out our products! oral-b.attn.tv/ae5kKLPcFGX9 .\n\nCan I assist you with any questions today? ",
           "message_type": "system",
-          "date_time": "2026-02-18 19:56:23.727"
+          "message_text": "State Line Tack: Love is in the air! Who wouldn\u0027t love 30% OFF on orders over $49 today? Act fast! slt.attn.tv/abgmClO_kQkN ",
+          "date_time": "2026-02-09 13:25:27.247",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Coupons",
+          "message_type": "system",
+          "message_text": "State Line Tack: Presidents day SALE is here! 24 HOURS ONLY get FREE $5 off any order + up to 30% OFF over $49! slt.attn.tv/aC-Z_D_snmMo ",
+          "date_time": "2026-02-16 13:35:43.529",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Hey, Sarah here! Looks like you left something behind, anything I can help with?: slt.attn.tv/aL-RKDJx65m_ .",
+          "date_time": "2026-02-22 20:32:10.672",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-18 19:57:05.368"
+          "message_text": "Trying to size turnout sheet.  Cart didn\u0027t populate extras added",
+          "date_time": "2026-02-22 20:33:20.427",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
-          "message_type": "template",
-          "date_time": "2026-02-18 19:58:54.541"
-        },
-        {
-          "message_media": [],
-          "message_text": "Oral-B: Thanks for reaching out! I'm sorry, I don't have any coupons available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our current deals here: https://oral-b.attn.tv/awcd4_A1Vglw/",
+          "message_id": "019c8821-5b47-426e-f000-00002b1237c0",
+          "message_text": "State Line Tack: Can I have the measurements of your horse? I\u0027d be happy to check for you! You can also reference our size chart here: https://slt.attn.tv/aW3BqslH2RFJ",
           "message_type": "agent",
-          "agent": "87310",
-          "message_id": "019c7368-32a8-4a48-f000-0000fc58d672",
-          "date_time": "2026-02-18 19:58:54.543"
-        }
-      ],
-      "notes": {
-        "important": [
-          "When sending a link, if you see a \"/\" at the end of the URL, remove it"
-        ],
-        "send_to_cs": [
-          "Send to CS for damaged items that aren't available on the website"
-        ],
-        "escalate": [
-          "ESC immediately if the order is delivered, but cx did not receive it",
-          "ESC if cx wants to use an expired code",
-          "ESC sales end date questions",
-          "ESC invalid codes / expired code issues",
-          "Before ESC for retroactive discount requests, check if the item is on sale or if they met the minimum",
-          "Don't make suggestions of replacements - if unsure, ESC",
-          "ESC false advertising complaints",
-          "ESC if cx state they regret placing the order after the CANCEL/ORDER temp has been sent",
-          "Before ESC products not functioning properly",
-          "→ Inquire what exact brush/product they have",
-          "→ Provide any user guides available",
-          "Don't ask for the cx's shipping address as secondary info, include their phone number instead"
-        ],
-        "tone": [
-          "Keep messages shorter and more direct",
-          "Don't use the term \"cart tracking\", or let cxs know we can see what they have in their cart"
-        ],
-        "templates": [
-          "If the cx asks where there order is, and it's a confirmed order within the standard processing and shipping time, only share the \"Order status/order tracking\" temp",
-          "If the cx reaches out saying they're having issue with their code, first use CWW temp",
-          "If cx needs assistance with brush function/operations use FOQ shortcut",
-          "For product complaints/bad experiences use PBE shortcut",
-          "If cx says they're dentists/hygienists & want to shop use RDH shortcut",
-          "If cx is a short amount away from reaching the $100 threshold for the welcome discount to apply use SRT shortcut",
-          "If cx ask why their order was canceled, use MOC shortcut",
-          "If cx purchased from their dentist and looking for rebate ($30, $20, $10 back) use RBT shortcut",
-          "For post-purchase issues with Amazon orders, use PS shortcut",
-          "For post-purchase issues where cxs are dental professionals, dentists, hygienists, use DPS shortcut"
-        ],
-        "dos_and_don_ts": [
-          "If customers are looking for brush heads always confirm what type of brush they have, iO or non iO",
-          "If you can't find the products on the website, refer to this one https://crest.com/en-us",
-          "Hold to policy and do not offer to check if deviation from policy is acceptable",
-          "If customers ask about the warranty registration code OR say it's not accepting theirs (they might refer to it as a promo code for registration)- send them this one OB59185 (it's always the same)"
-        ],
-        "drive_to_purchase": [
-          "For general recommendations use CFR shortcut",
-          "Always refer cxs to iO series products, when possible"
-        ],
-        "promo_and_promo_exclusions": [
-          "The $85 welcome promo code isn't for % off, once applied a free item is added to the cart",
-          "Please check the last letters of a code to determine when they were sent",
-          "→ I.e. WCOBDC means it is a December code (DC) and will likely expire in Jan",
-          "Discount codes do not work on Amazon",
-          "If cx is looking for a discount on replacement brush heads, encourage to subscribe for savings on the product page"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://oralb.com",
-          "date": ""
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-22 20:33:33.402"
         },
-        "browsingHistory": [
-          {
-            "item": "iO Series 10 Rechargeable Electric Toothbrush, Cosmic Black",
-            "link": "https://oralb.com/en-us/products/electric-toothbrushes/io-series-10-rechargeable-electric-toothbrush-cosmic-black/",
-            "timeAgo": "2026-02-19"
-          }
-        ]
-      },
-      "escalation_preferences": [
-        "All product complaints or bad experiences with a product"
-      ],
-      "blocklisted_words": [
-        "seems",
-        "shoot",
-        "worries"
-      ],
-      "has_shopify": false
+        {
+          "message_type": "customer",
+          "message_text": "72\"",
+          "date_time": "2026-02-22 20:34:10.513",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c8822-2040-4bcd-f000-00002b1237c0",
+          "message_text": "State Line Tack: For a 72\" turnout sheet, check out the 1200D Tough-1 Turnout Sheet 72 Black here: https://slt.attn.tv/afk-Vt72c3tX/",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-22 20:34:23.828"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Looking for 1200d belly wrap and light turnout sheets",
+          "date_time": "2026-02-22 20:34:50.144",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c8822-ca75-407e-f000-00002b1237c0",
+          "message_text": "State Line Tack: Check out the 1200D Tough-1 Turnout Sheet 72 Blue/Navy here: https://slt.attn.tv/a0br99esZ-oY/",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-22 20:35:07.402"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Both of those came up in accurate the turnout sheet was for a pony, and the other one was not tough one",
+          "date_time": "2026-02-22 20:36:00.332",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m on your website on my computer now looking",
+          "date_time": "2026-02-22 20:36:10.358",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I found one I like tough one snug fit 1200 D turn out blanket with belly wrap why is a 72 inch more expensive than a 75 inch?",
+          "date_time": "2026-02-22 20:38:40.301",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c8826-3246-4e33-f000-00002b1237c0",
+          "message_text": "State Line Tack: Prices can vary due to stock levels or demand. Adding the item to your cart will show the final price.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-22 20:38:50.591"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I did not go down till $118 for 72 inch and I can buy 75 inch for $74 doesn\u0027t make sense",
+          "date_time": "2026-02-22 20:40:50.180",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c8846-c334-41ed-f000-00002b1237c0",
+          "message_text": "State Line Tack: Apologies for the inconvenience this caused. Please note that pricing and promotions may vary based on the specific size and color you choose. Different sizes and colors may have varying discounts applied. I\u0027ll be sure to submit your feedback to my team for improvements. Let me know if you got any other questions. ",
+          "message_type": "agent",
+          "agent": "31385",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-22 21:14:24.846"
+        }
+      ]
     }
   }
 }

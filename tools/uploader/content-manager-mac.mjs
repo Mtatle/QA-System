@@ -177,6 +177,61 @@ function parseBool(value) {
   return ['true', '1', 'yes', 'y'].includes(raw);
 }
 
+function isScalarValue(value) {
+  return (
+    value === null ||
+    value === undefined ||
+    typeof value === 'string' ||
+    typeof value === 'number' ||
+    typeof value === 'boolean'
+  );
+}
+
+function normalizePromotionRecord(promotionInput) {
+  const title =
+    getStringValue(
+      promotionInput.title ?? promotionInput.name ?? promotionInput.promotion ?? promotionInput.coupon
+    ).trim() || 'Promotion';
+  const content = [];
+  const code = getStringValue(promotionInput.coupon ?? promotionInput.code).trim();
+  const description = getStringValue(promotionInput.description ?? promotionInput.details).trim();
+  const terms = getStringValue(promotionInput.terms ?? promotionInput.terms_and_conditions).trim();
+  const starts = getStringValue(promotionInput.start_time ?? promotionInput.starts_at).trim();
+  const ends = getStringValue(
+    promotionInput.end_time ?? promotionInput.expires_at ?? promotionInput.expiration
+  ).trim();
+  const link = getStringValue(promotionInput.link ?? promotionInput.url).trim();
+  const rawContent = promotionInput.content;
+
+  if (Array.isArray(rawContent)) {
+    rawContent.forEach((line) => {
+      const text = getStringValue(line).trim();
+      if (text) content.push(text);
+    });
+  } else if (typeof rawContent === 'string' && rawContent.trim()) {
+    rawContent
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .forEach((line) => content.push(line));
+  }
+
+  if (code) content.push(`Code: ${code}`);
+  if (description) content.push(description);
+  if (terms) content.push(`Terms: ${terms}`);
+  if (starts) content.push(`Starts: ${starts}`);
+  if (ends) content.push(`Ends: ${ends}`);
+  if (link) content.push(`Link: ${link}`);
+
+  const promotion = { title };
+  if (content.length) promotion.content = content;
+  const activeRaw = promotionInput.active_status ?? promotionInput.active ?? promotionInput.is_active;
+  if (activeRaw !== undefined && getStringValue(activeRaw).trim()) {
+    promotion.active_status = activeRaw;
+  }
+  return promotion;
+}
+
 function parseCompanyNotesToCategories(notesText) {
   const text = getStringValue(notesText).trim();
   if (!text) return {};
@@ -492,6 +547,35 @@ function convertCsvRowToScenario(row) {
       }
     }
 
+    // Preserve additional scalar order metadata from CSV payloads.
+    const orderExclude = new Set([
+      'products',
+      'items',
+      'line_items',
+      'order_number',
+      'order_id',
+      'number',
+      'order_date',
+      'date',
+      'created_at',
+      'order_status_url',
+      'order_status_link',
+      'link',
+      'status_url',
+      'status_link',
+      'order_tracking_link',
+      'tracking_link',
+      'tracking_url',
+      'order_tracking_url',
+    ]);
+    Object.entries(order).forEach(([key, value]) => {
+      if (orderExclude.has(key)) return;
+      if (Object.prototype.hasOwnProperty.call(orderOut, key)) return;
+      if (!isScalarValue(value)) return;
+      if (!getStringValue(value).trim()) return;
+      orderOut[key] = value;
+    });
+
     if (
       orderOut.orderNumber ||
       orderOut.orderDate ||
@@ -506,6 +590,31 @@ function convertCsvRowToScenario(row) {
     }
   }
 
+  const couponsRaw = getRowValue(row, ['COUPONS', 'CODES']);
+  const couponItems = toArray(parseJsonText(couponsRaw));
+  const coupons = [];
+  for (const coupon of couponItems) {
+    if (!coupon || typeof coupon !== 'object') continue;
+    const couponOut = {};
+    Object.entries(coupon).forEach(([key, value]) => {
+      if (!getStringValue(key).trim()) return;
+      if (value === undefined || value === null) return;
+      if (typeof value === 'string' && !value.trim()) return;
+      if (Array.isArray(value) && value.length === 0) return;
+      couponOut[key] = value;
+    });
+    if (Object.keys(couponOut).length) coupons.push(couponOut);
+  }
+
+  const companyPromotionsRaw = getRowValue(row, ['COMPANY_PROMOTIONS', 'PROMOTIONS', 'OFFERS']);
+  const companyPromotionsItems = toArray(parseJsonText(companyPromotionsRaw));
+  const promotions = [];
+  for (const promotionItem of companyPromotionsItems) {
+    if (!promotionItem || typeof promotionItem !== 'object') continue;
+    const promotionOut = normalizePromotionRecord(promotionItem);
+    if (promotionOut.content && promotionOut.content.length) promotions.push(promotionOut);
+  }
+
   const companyWebsite = getRowValue(row, ['COMPANY_WEBSITE', 'WEBSITE', 'SITE_URL']).trim();
   const rightPanel = {
     source: {
@@ -516,6 +625,8 @@ function convertCsvRowToScenario(row) {
   };
   if (browsingHistory.length) rightPanel.browsingHistory = browsingHistory;
   if (orders.length) rightPanel.orders = orders;
+  if (coupons.length) rightPanel.coupons = coupons;
+  if (promotions.length) rightPanel.promotions = promotions;
 
   const notesText = getRowValue(row, ['COMPANY_NOTES', 'NOTES', 'GUIDELINES', 'INTERNAL_NOTES']);
 
