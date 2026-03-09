@@ -46,6 +46,6 @@ The script calls Apps Script action `resetAssignmentsFromAudit` and:
 
 1. clears `Assignments` sheet rows (keeps header),
 2. inserts one row per `send_id` with status `AVAILABLE`,
-3. clears/rebuilds `Pool` as `AVAILABLE` for those same `send_id`s.
+3. clears/rebuilds `Pool` with columns `send_id`, `send_text`, `status` (with `send_text` blank and `status=AVAILABLE`) for those same `send_id`s.
 
 If you use this action, deploy the latest `tools/uploader/pool-upload.gs` to your Apps Script Web App first.

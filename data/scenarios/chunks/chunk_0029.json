@@ -3,929 +3,1295 @@
   "chunk": "chunk_0029",
   "scenarios": {
     "141": {
-      "id": "019c7830-3bf9-4ea2-f000-0000b46ed3a0",
-      "companyName": "Fazoli's",
-      "companyWebsite": "https://fazolis.com/",
-      "agentName": "Maria",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Fazoli's: Craving Breadsticks? We got you covered with $5 off $20 when you order now at fazolis.attn.tv/aKcoUcQQLedE Use code QA3455 valid until 1/26.",
-          "message_type": "system",
-          "date_time": "2026-01-21 11:02:07.541"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fazoli's: Kick off February with an Italian feast! Enjoy $3 off $15 when you order online at fazolis.attn.tv/aBeXXOfv9L2S and use code: BK4492. Valid until 2/8.",
-          "message_type": "system",
-          "date_time": "2026-02-02 11:02:55.564"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fazoli's: Hey, this is Jordan from Fazoli's. Thanks for checking out our online ordering site! https://fazolis.attn.tv/ahzI3Q2kCefv \n\nIs there anything I can help you with today?",
-          "message_type": "system",
-          "date_time": "2026-02-02 13:47:25.755"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fazoli's: Alfredo Fest is here! Enjoy $8.99 Loaded Fettuccine Alfredo. Order now at fazolis.attn.tv/aOmZnbPt2W6R use code: FA6798. Valid until 2/22.",
-          "message_type": "system",
-          "date_time": "2026-02-16 11:02:43.918"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fazoli's: It looks like you forgot Baked Lasagna in your cart...complete your checkout today: Take $3 off when you spend $10 add B29KC3B at checkout visit: fazolis.attn.tv/a8Y1NcYJgxYs ",
-          "message_type": "system",
-          "date_time": "2026-02-19 18:03:20.181"
-        },
-        {
-          "message_media": [],
-          "message_text": "Hey thank you got that code 🙏",
-          "message_type": "customer",
-          "date_time": "2026-02-19 18:15:12.203"
-        },
-        {
-          "message_media": [],
-          "message_text": "Fazoli's: No worries. I got you! Is there anything else I can help with?",
-          "message_type": "agent",
-          "agent": "109630",
-          "message_id": "019c7830-3bf9-4ea2-f000-0000b46ed3a0",
-          "date_time": "2026-02-19 18:15:53.008"
-        }
-      ],
-      "notes": {
-        "escalate": [
-          "If cx's want to change their order, direct them to contact the location, use CED shortcut"
-        ],
-        "promo_and_promo_exclusions": [
-          "Coupon codes can be used at stores",
-          "If cx's ask for a discount code & we don't have one (Concierge or in automated messages):",
-          "➜ Send the 'dhd' shortcut"
-        ]
-      },
+      "agentName": "Kelsey",
+      "has_shopify": true,
+      "id": "018fe324-f161-42e6-f000-00008b487667",
       "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "Static FARMACY15 coupon code",
+            "coupon": "FARMACY15"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://fazolis.com/",
+          "value": "https://farmacybeauty.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "item": "Baked Fettuccine Alfredo",
-            "link": "https://order.fazolis.com/menu/westerville-oh/products/101956104?source=vendor-menu",
-            "timeAgo": "2026-02-19"
+            "link": "https://www.farmacybeauty.com/products/green-clean-jumbo",
+            "item": "Green Clean Jumbo - 200 ml | 6.8 fl. oz",
+            "timeAgo": "2024-06-02"
           },
           {
-            "item": "Baked Lasagna",
-            "link": "https://order.fazolis.com/menu/westerville-oh/products/16235061?source=local-favorite-product",
-            "timeAgo": "2026-02-19"
+            "link": "https://www.farmacybeauty.com/collections/clean-skin-care-products/products/green-clean-cleansing-balm",
+            "item": "Green Clean - 100 ml | 3.4 fl. oz",
+            "timeAgo": "2024-06-02"
           },
           {
-            "item": "Baked Spaghetti with Meatballs",
-            "link": "https://order.fazolis.com/menu/westerville-oh/products/16234857?source=vendor-menu",
-            "timeAgo": "2026-02-03"
-          },
-          {
-            "item": "Baked Spaghetti with Meatballs",
-            "link": "https://order.fazolis.com/menu/westerville-oh/products/16234857?source=vendor-menu",
-            "timeAgo": "2026-02-03"
-          },
-          {
-            "item": "Oven-Baked Classic Sampler",
-            "link": "https://order.fazolis.com/menu/westerville-oh/products/16238121?source=vendor-menu",
-            "timeAgo": "2026-02-03"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "36180711454015488",
-            "orderDate": "2025-06-23",
-            "items": [
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://lightingandsupplies.com/qysd-offshr-boots-blk-gr-45-qy19045/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.evo.com/shorts/dakine-vectra?image=216139/901175/dakine-vectra-shorts-.jpg"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.shopakira.com/lotus-flower-bomb-faux-leather-flare-pant"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://venue.com/product/hee-haw-pfft-you-was-gone-2-discs-dvd/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://leadersrpmshop.com/sea-doo-new-oem-12v-power-outlet-snap-mount-710005374/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://checkout.fascinatingdiamonds.com/0-50-carat-round-cut-diamond-xsher024/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.maurices.com/product/girls-lemon-ruffle-bikini-swimsuit/216139"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.everest.com/hella-marine-module-70-gen-4-led-floodlight-white-housing-long-range-2100-lumens.html"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://homedone.co.uk/set-of-2-storage-pouffes-pink-wichita.html"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.cardkingdom.com/mtg/promotional/glory-seeker-welcome-2017"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://mcprod.petflow.com/conairpro-grooming-kit-for-dogs-cats/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.thesocietees.com/product/nasa-earth-from-space-mens-t-shirt/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.chairish.com/product/id/918109?utm_content=Console+Tables&utm_medium=text&utm_source=attentive&utm_term=918109"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.sportsworldchicago.com/arkansas-state-red-wolves-cardinal-red-big-tall-forge-polo-multi-stripe-by-cutter-buck/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.vitalitymedical.com/20250703-bnd305970-cs.html"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.sanity.com.au/products/2786386/Batin"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.staples.com/nahanco-display-it-hook-black-500-pack-500-pack/product_216139"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.sportsmansguide.com/product/index/easton-g-nock-tool?a=1585393"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.modaoperandi.com/women/p/area/poplin-scallop-mini-dress/552986"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.plumbersstock.com/pfister-hhl-089tbbg-tisbury.html"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.coolwick.com/product/ebonite-apex-mens-deviate-bowling-pullover/?attribute_pa_color-options=scarlet&attribute_pa_size=medium"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://lamsonproducts.com/product/bb-vintage-precision-block-16-group-4-3/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.evo.com/en-ca/shorts/dakine-vectra?image=216139/901175/dakine-vectra-shorts-.jpg"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://lightingandsupplies.com/rab-lighting-ffled26sfnb44-pc-future-flood-26w-4x4-120v-pc-neutral-led-slipfitter-on-bnz/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.jbtools.com/arb-old-man-emu-nitrocharger-sport-rear-shock-for-toyota-hilux-vigo-arb60006/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.raneystruckparts.com/angled-conspicuity-reflective-tape-strips/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.replacements.com/crystal-dorothy-thorpe-hydrangea-lilac-water-goblet/p/9181091"
-              }
-            ],
-            "total": 14.48,
-            "coupon": "HKQ2U22",
-            "date_time": "2025-06-23 23:54:00.000"
-          },
-          {
-            "orderNumber": "33303641118998529",
-            "orderDate": "2025-02-19",
-            "items": [
-              {
-                "name": "Creamy Linguine Bake",
-                "price": 5.99
-              }
-            ],
-            "total": 14.48,
-            "date_time": "2025-02-19 22:49:14.779"
-          },
-          {
-            "orderNumber": "33303641118998529",
-            "orderDate": "2025-02-19",
-            "items": [
-              {
-                "name": "Baked Lasagna",
-                "price": 11.49
-              }
-            ],
-            "total": 14.48,
-            "date_time": "2025-02-19 22:49:14.776"
-          },
-          {
-            "orderNumber": "33303641118998529",
-            "orderDate": "2025-02-19",
-            "items": [
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.shopakira.com/lotus-flower-bomb-faux-leather-flare-pant"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.vitalitymedical.com/20250703-bnd305970-cs.html"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.sportsmansguide.com/product/index/easton-g-nock-tool?a=1585393"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://mcprod.petflow.com/conairpro-grooming-kit-for-dogs-cats/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.jbtools.com/arb-old-man-emu-nitrocharger-sport-rear-shock-for-toyota-hilux-vigo-arb60006/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.evo.com/shorts/dakine-vectra?image=216139/901175/dakine-vectra-shorts-.jpg"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://lightingandsupplies.com/rab-lighting-ffled26sfnb44-pc-future-flood-26w-4x4-120v-pc-neutral-led-slipfitter-on-bnz/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://venue.com/product/hee-haw-pfft-you-was-gone-2-discs-dvd/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.sportsworldchicago.com/arkansas-state-red-wolves-cardinal-red-big-tall-forge-polo-multi-stripe-by-cutter-buck/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.homeshoppingmalls.com/starlight-round-glass-top-dining-table-clear-and-brass-coaster-192641bg"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.sanity.com.au/products/2747527/Lexicon"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.evo.com/en-ca/shorts/dakine-vectra?image=216139/901175/dakine-vectra-shorts-.jpg"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://lightingandsupplies.com/pont-top-only-sunbrella-96x56-84005ar/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://homedone.co.uk/set-of-2-storage-pouffes-pink-wichita.html"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.raneystruckparts.com/angled-conspicuity-reflective-tape-strips/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://images.fun.com/avatar-the-last-airbender-aang-360-character-socks.html"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.thesocietees.com/product/nasa-earth-from-space-mens-t-shirt/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.cardkingdom.com/mtg/promotional/glory-seeker-welcome-2017"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.staples.com/nahanco-display-it-hook-black-500-pack-500-pack/product_216139"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.maurices.com/product/girls-lemon-ruffle-bikini-swimsuit/216139"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.everest.com/hella-marine-module-70-gen-4-led-floodlight-white-housing-long-range-2100-lumens.html"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://lamsonproducts.com/product/bb-vintage-precision-block-16-group-4-3/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://checkout.fascinatingdiamonds.com/0-50-carat-round-cut-diamond-xsher024/"
-              },
-              {
-                "name": "",
-                "price": 0,
-                "productLink": "https://www.coolwick.com/product/ebonite-apex-mens-deviate-bowling-pullover/?attribute_pa_color-options=scarlet&attribute_pa_size=medium"
-              }
-            ],
-            "total": 14.48,
-            "coupon": "GTWNQ1C",
-            "date_time": "2025-02-19 22:42:00.000"
+            "link": "https://www.farmacybeauty.com/collections/clean-skin-care-products/products/honey-vanilla-green-clean",
+            "item": "Honey Vanilla Clean - 100 ml | 3.4 fl. oz",
+            "timeAgo": "2024-06-02"
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": false
-    },
-    "142": {
-      "id": "019c7737-1feb-468c-f000-0000fb34b991",
-      "companyName": "Modern Gents Trading Co",
-      "companyWebsite": "https://modgents.com",
-      "agentName": "Sarah",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Modern Gents: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Modern Gents.",
-          "message_type": "system",
-          "date_time": "2026-02-13 11:10:03.660"
-        },
-        {
-          "message_media": [],
-          "message_text": "Modern Gents: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/Rnh",
-          "message_type": "system",
-          "date_time": "2026-02-13 11:12:52.021"
-        },
-        {
-          "message_media": [],
-          "message_text": "Modern Gents: Yay! You're in!\n\nGet 60% off a single item! \nCode: MG60\n\n*Must have 2 items in cart\n\nShop Now: modgents.attn.tv/a6HKIMQidiPy ",
-          "message_type": "system",
-          "date_time": "2026-02-13 11:12:54.946"
-        },
-        {
-          "message_media": [],
-          "message_text": "Modern Gents: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nExplore our latest additions! Don't miss out: https://modgents.attn.tv/aAJ-DkCrUMLR .",
-          "message_type": "system",
-          "date_time": "2026-02-13 11:23:02.104"
-        },
-        {
-          "message_media": [],
-          "message_text": "Modern Gents: Steve, You're a VIP now! Here's $10 credit on your next order >$50. Code: 2pUs1o Expires in 72 hrs! https://modgents.attn.tv/aQ43R-Puu3_c .",
-          "message_type": "system",
-          "date_time": "2026-02-13 15:43:22.925"
-        },
-        {
-          "message_media": [],
-          "message_text": "Modern Gents: Just a heads up. Your $10 credit expires in 24 hours! If you wanted something, now's the time! code: 2pUs1o https://modgents.attn.tv/as5-KqEAOu46 ",
-          "message_type": "system",
-          "date_time": "2026-02-15 15:43:29.583"
-        },
-        {
-          "message_media": [],
-          "message_text": "Modern Gents: OMG our new ring is STUNNING!\n\nmodgents.attn.tv/ayYGj0U0oqJ6\n\nPS: You unlocked Store Credit!\n\nUse Your VIP Code: NR21767 @checkout (EXPIRES SOON!)",
-          "message_type": "system",
-          "date_time": "2026-02-17 18:35:19.833"
-        },
-        {
-          "message_media": [],
-          "message_text": "Modern Gents: Something exciting is here, Steve — thanks for stopping by!\n\nUse code SA2A5s for 25% off your order.\n\nFind your next ring: https://modgents.attn.tv/aHcob8vzKLhV .",
-          "message_type": "system",
-          "date_time": "2026-02-19 13:34:20.517"
-        },
-        {
-          "message_media": [],
-          "message_text": "Never received one of the rings",
-          "message_type": "customer",
-          "date_time": "2026-02-19 13:35:07.715"
-        },
-        {
-          "message_media": [],
-          "message_text": "Modern Gents: I'm sorry to hear that! Can you please send me a photo of the items that you received, along with your email address? This is for Order #1787578, is that right?",
-          "message_type": "agent",
-          "agent": "33482",
-          "message_id": "019c7730-e772-4caf-f000-0000fb34b991",
-          "date_time": "2026-02-19 13:36:59.659"
-        },
-        {
-          "message_media": [],
-          "message_text": "Missing the Chelsea, I put it on original order but the now shows I ordered 2 of the heathers",
-          "message_type": "customer",
-          "date_time": "2026-02-19 13:38:36.318"
-        },
-        {
-          "message_media": [],
-          "message_text": "Modern Gents: That appears to be the case. You may need to place a new order. I apologize for the inconvenience.",
-          "message_type": "agent",
-          "agent": "109968",
-          "message_id": "019c7737-1feb-468c-f000-0000fb34b991",
-          "date_time": "2026-02-19 13:43:47.332"
-        }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over!"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://modgents.com",
-          "date": ""
-        },
-        "orders": [
-          {
-            "orderNumber": "1787578",
-            "orderDate": "2026-02-13",
-            "items": [
-              {
-                "name": "Modern Ring Box",
-                "price": 10,
-                "productLink": "https://modern-bro.myshopify.com/products/modern-ring-box"
-              },
-              {
-                "name": "Mini Princess Studs",
-                "price": 70,
-                "productLink": "https://modern-bro.myshopify.com/products/mini-princess-studs-1"
-              },
-              {
-                "name": "The Heather",
-                "price": 130,
-                "productLink": "https://modern-bro.myshopify.com/products/the-heather"
-              }
-            ],
-            "link": "https://checkout.modgents.com/21933013/orders/1c3dd2566ac346431521a155c2556d55/authenticate?key=beb993cf2a8ca9bb54fcd12ce918522f",
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150899563303279117",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150899563303279117",
-            "total": 196.02,
-            "coupon": "MY70",
-            "date_time": "2026-02-13 16:27:02.602"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "143": {
-      "id": "019c4de3-f9ef-4476-f000-0000fa74f446",
-      "companyName": "Loverboy",
-      "companyWebsite": "https://drinkloverboy.com",
-      "agentName": "Amanda, Kyle, Carl, Emily, Kayla, Dylan",
-      "messageTone": "Super Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Loverboy: Welcome to Loverboy! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-10 21:01:32.872"
-        },
-        {
-          "message_media": [],
-          "message_text": "Loverboy: Hey it's Loverboy! We'll text you about fresh flavors, new arrivals & special offers. Take 10% OFF your first order with code CRUSH10. Shop our latest and greatest: loverboy.attn.tv/asUYgnBd78Ru \n\n💖",
-          "message_type": "system",
-          "date_time": "2026-02-10 21:01:37.786"
-        },
-        {
-          "message_media": [],
-          "message_text": "Loverboy: Don't forget to save our contact to get exclusive updates!",
-          "message_type": "system",
-          "date_time": "2026-02-10 21:01:39.158"
-        },
-        {
-          "message_media": [],
-          "message_text": "Loverboy: Hey, we noticed you checking us out. Have you seen our latest merch drop yet? https://loverboy.attn.tv/a-34iTu2-_vt ",
-          "message_type": "system",
-          "date_time": "2026-02-11 12:29:41.875"
-        },
-        {
-          "message_media": [],
-          "message_text": "Loverboy: Hey , this is Jordan. Thanks for checking out our site! 😊 https://loverboy.attn.tv/aa0N1F0ABm-D \n\nAny questions I can answer for you? ",
-          "message_type": "system",
-          "date_time": "2026-02-11 12:35:08.570"
-        },
-        {
-          "message_media": [],
-          "message_text": "I have not been ableTo find loverboy in any locations near me.  Can it only be ordered online and shipped?   Any restrictions delivering to Pennsylvania?",
-          "message_type": "customer",
-          "date_time": "2026-02-11 13:01:50.199"
-        },
-        {
-          "message_media": [],
-          "message_text": "Loverboy: Thank you for reaching out, and I'm sorry to hear that! I'll pass your feedback to our team for future improvement.\n\nYes, Loverboy drinks can be ordered online and shipped directly to you. Delivery requires a signature from someone 21 or older at a residential address, we cannot ship to pickup locations, P.O. boxes, or business addresses. We do not have specific shipping restrictions for Pennsylvania. Hope this helps! If you have any questions, feel free to text me.",
-          "message_type": "agent",
-          "agent": "87295",
-          "message_id": "019c4de3-f9ef-4476-f000-0000fa74f446",
-          "date_time": "2026-02-11 13:08:32.270"
-        }
-      ],
+      "companyWebsite": "https://farmacybeauty.com",
+      "companyName": "Farmacy Beauty",
       "notes": {
         "escalate": [
-          "ESC if the customer is asking for the App code"
-        ],
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use CS shortcut"
-        ],
-        "tone": [
-          "If customers reply negatively to the pride merchandise, close the convo"
+          "Before you ESC use ESC shortcut"
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://drinkloverboy.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Naughty Nightcap Pack - 12 Pack",
-            "link": "https://drinkloverboy.com/products/the-naughty-nightcap-pack?variant=48180243726560",
-            "timeAgo": "2026-02-11"
-          }
-        ]
-      },
+      "blocklisted_words": [
+        
+      ],
       "escalation_preferences": [
         "Shipping questions",
         "Discount code errors",
-        "Sizing questions",
         "Exchanges and returns"
       ],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "144": {
-      "id": "019c3f86-19a6-470a-f000-0000cfc3ff8e",
-      "companyName": "Gardner-White",
-      "companyWebsite": "https://gardner-white.com",
-      "agentName": "Jordan",
-      "messageTone": "Casual",
+      "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Gardner White: ONE DAY SALE!\nShop Monday 10a-9pm.\nSave up to 50% off sale prices! Shop Now: https://gw.attn.tv/a-sisreU8zBK .",
           "message_type": "system",
-          "date_time": "2026-01-19 10:47:03.142"
+          "message_text": "Farmacy Beauty: Welcome to Farmacy Beauty! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/aF1",
+          "date_time": "2024-06-01 00:38:16.896",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Gardner White: Have you seen the newest arrivals in the Clearance Center inside Gardner White? Shop Now: gw.attn.tv/av07uHAEHiM3 .",
           "message_type": "system",
-          "date_time": "2026-01-21 16:50:47.432"
+          "message_text": "Farmacy Beauty: Welcome! We believe good skin is rooted in healthy ingredients. Start your journey for conscious beauty with 15% off using code: FARMACY15\nShop Now https://farmacy.attn.tv/a00AiYzP34HD \nFeel free to text us if you ever have any questions!",
+          "date_time": "2024-06-01 00:38:20.879",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Gardner White: Presidents Day savings are here! Enjoy an extra 30% off sale prices storewide. Don't wait, shop now: gw.attn.tv/aX4erRN9q9OZ .",
           "message_type": "system",
-          "date_time": "2026-01-29 09:55:23.158"
+          "message_text": "Farmacy Beauty: Don\u0027t forget to save our contact for exclusive updates!",
+          "date_time": "2024-06-01 00:38:21.918",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Gardner White: CLEARANCE DEAL OF THE DAY! The comfy Sparta Sofa with 2 Built-In Recliners is now only $595! Shop Now: gw.attn.tv/aADPoKwNbsi5 .",
           "message_type": "system",
-          "date_time": "2026-02-04 14:07:07.160"
+          "message_text": "Farmacy Beauty: Time to stock up on your Green Clean stash! Get 25% off our best-selling balm and limited edition options with code: SKINRESET. Shop Now https://farmacy.attn.tv/aU3GjFORNr0r ",
+          "date_time": "2024-06-02 15:00:40.158",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Gardner White: Hey, this is Jordan. Thanks for checking out our site! https://gw.attn.tv/a_qZcDEkfEUD \n\nAny questions I can answer for you? ",
           "message_type": "system",
-          "date_time": "2026-02-08 17:18:23.437"
+          "message_text": "Farmacy Beauty: Hi! This is Kelsey. I see you left something in your cart https://farmacy.attn.tv/aF5nVpQIozEt \nIs there anything you\u0027ve been looking for that I can help find? Text back with any questions!",
+          "date_time": "2024-06-02 15:36:46.275",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Looking at a couch but I am curious if the cushions are removable or not",
           "message_type": "customer",
-          "date_time": "2026-02-08 17:25:25.109"
+          "message_text": "I couldn\u0027t check out",
+          "date_time": "2024-06-03 01:18:52.607",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Gardner White: Could you please provide the name or model of the couch you're interested in? I'll be happy to check the details for you!",
+          "message_type": "customer",
+          "message_text": "I will try it again",
+          "date_time": "2024-06-03 01:19:12.628",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fddfd-a38c-468f-f000-00008b487667",
+          "message_text": "Farmacy Beauty: I\u0027m sorry for the trouble. Any specific error you\u0027re getting? Mind sending me a screenshot?",
           "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c3f5c-4c04-4801-f000-0000cfc3ff8e",
-          "date_time": "2026-02-08 17:25:39.353"
+          "agent": "49192",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-03 08:05:38.330"
         },
         {
-          "message_media": [],
-          "message_text": "Thank you",
           "message_type": "customer",
-          "date_time": "2026-02-08 17:26:25.204"
+          "message_text": "When I click head into the last step to complete my order, i couldn\u0027t complete my payment. It will automatically bring me back to the confirm place order page",
+          "date_time": "2024-06-04 00:59:52.906",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Haven-dove-4p-skt",
           "message_type": "customer",
-          "date_time": "2026-02-08 17:41:55.142"
+          "message_text": "It keep bring me back to pay now page",
+          "date_time": "2024-06-04 01:00:13.435",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Gardner White: Great question! I want to make sure I give you the most accurate information, so I'll check in with my team. Since it's the weekend, I may not hear back until Monday, but I'll be sure to follow up with you as soon as I do!",
+          "message_type": "customer",
+          "message_text": "I try couple of times, it still not working",
+          "date_time": "2024-06-04 01:00:43.511",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"The Site Won\u0027t take my Card - All brands\"; last updated: 2023-10-10 16:56:54.019",
+          "date_time": "2024-06-04 08:06:40.238",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fe324-f161-42e6-f000-00008b487667",
+          "message_text": "Farmacy Beauty: I\u0027m sorry for the trouble. Make sure your billing information zip and the zip on your credit card match. I also suggest trying a different internet browser, as certain ones have issues with ecommerce stores. Let me know how this goes, I\u0027ll be on stand by. ",
           "message_type": "agent",
-          "agent": "82222",
-          "message_id": "019c3f71-3d02-4458-f000-0000cfc3ff8e",
-          "date_time": "2026-02-08 17:48:31.781"
-        },
-        {
-          "message_media": [],
-          "message_text": "Okay sounds good",
-          "message_type": "customer",
-          "date_time": "2026-02-08 17:49:34.833"
-        },
-        {
-          "message_media": [],
-          "message_text": "Gardner White: Thank you for your time. Should you have any further concerns, please don't hesitate to reach out. ",
-          "message_type": "agent",
-          "agent": "82260",
-          "message_id": "019c3f86-19a6-470a-f000-0000cfc3ff8e",
-          "date_time": "2026-02-08 18:11:18.985"
+          "agent": "49192",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-04 08:06:40.240"
         }
+      ]
+    },
+    "142": {
+      "agentName": "Charlotte",
+      "has_shopify": false,
+      "id": "0191a3dd-dd2d-4138-f000-0000960d6b62",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "value": "15",
+            "coupon": "MBLIZTJGKJC5THR"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://us.elemis.com/",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://us.elemis.com/elemis-x-shrimps-travel-icons-collection.html",
+            "item": "ELEMIS x Shrimps Travel Icons Collection",
+            "timeAgo": "2024-08-30"
+          },
+          {
+            "link": "https://us.elemis.com/pro-collagen-night-cream-duo-kit.html",
+            "item": "Pro-Collagen Night Cream Duo",
+            "timeAgo": "2024-08-30"
+          },
+          {
+            "link": "https://us.elemis.com/elemis-travel-exclusive-kit.html",
+            "item": "ELEMIS Travel Exclusive Kit",
+            "timeAgo": "2024-08-30"
+          },
+          {
+            "link": "https://us.elemis.com/superfood-midnight-facial.html",
+            "item": "Superfood Midnight Facial",
+            "timeAgo": "2024-08-30"
+          },
+          {
+            "link": "https://us.elemis.com/pro-collagen-future-restore-serum.html?utm_campaign=Concierge-Site-Visitor\u0026utm_source=attentive\u0026utm_medium=text\u0026externalId=AKji0",
+            "item": "Pro-Collagen Future Restore Serum",
+            "timeAgo": "2024-08-30"
+          }
+        ]
+      },
+      "companyWebsite": "https://us.elemis.com/",
+      "companyName": "ELEMIS",
+      "notes": {
+        "tone": [
+          "Let the customer have the last word!"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t reply to messages like \"ok\", \"thanks\", etc"
+        ],
+        "promo_and_exclusions": [
+          "Welcome Code:",
+          "➜ Cannot be used for new products!",
+          "➜ Recommend to cx to take advantage of the Gift With Purchase (found on the Offers page) with new products so they can get a deal",
+          "Check their offers page for up-to-date info on codes \u0026 offers",
+          "If cx asks about a code that isn\u0027t on this page, it\u0027s likely expired!",
+          "Offers page: https://us.elemis.com/offers"
+        ]
+      },
+      "blocklisted_words": [
+        
       ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "ELEMIS: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from ELEMIS.",
+          "date_time": "2024-08-29 01:12:42.798",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "ELEMIS: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/A2s",
+          "date_time": "2024-08-29 01:13:42.980",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "ELEMIS: Fancy seeing you here, enjoy 15% off your first purchase! \n\nAnd now that we text, you\u0027ll get exclusive perks, early access to new launches \u0026 more sent straight to your phone.\n\nShop now using code: MBLIZTJGKJC5THR \u003e\u003e https://elemis.attn.tv/akC3v6Hrv_aD .",
+          "date_time": "2024-08-29 01:13:46.975",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "ELEMIS: Hi, this is Charlotte. Thanks for popping by Elemis.com! \n\nAny skincare or product questions I can answer for you?\n\nShop Now \u003e\u003e https://elemis.attn.tv/aClZXXPhZm-O . ",
+          "date_time": "2024-08-29 12:38:26.931",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The promotional code doesn\u0027t work. Please explain. Thanks",
+          "date_time": "2024-08-29 23:59:48.117",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0191a377-ff36-411f-f000-0000960d6b62",
+          "message_text": "ELEMIS: Hi, thanks for reaching out and I\u0027m sorry to hear that! Are you getting any error messages? Can you please send me a screenshot of the message along with the items in your cart? I\u0027ll be happy to check it out for you! ",
+          "message_type": "agent",
+          "agent": "87398",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-30 09:27:16.032"
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"My code isn\u0027t working\"; last updated: 2024-03-01 17:25:18.190",
+          "date_time": "2024-08-30 11:18:31.991",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0191a3dd-dd2d-4138-f000-0000960d6b62",
+          "message_text": "ELEMIS: sorry to hear that! We recommend checking the terms and conditions for eligibility of the products and ensuring you are only using one code. Please visit https://elemis.attn.tv/a-92q5WXggmw\nI\u0027ve tried the code from my end, and it\u0027s worked well. \nIf this continues to still not apply, please let us know which items you are trying to purchase alongside the code for us to assist further.",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-30 11:18:31.992"
+        }
+      ]
+    },
+    "143": {
+      "agentName": "Carla",
+      "has_shopify": true,
+      "id": "0195157e-7d11-46c2-f000-0000b383c54e",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "redeemed": "2025-02-11 02:57:07.311",
+            "coupon": "CS-C1GM8Y"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://churchsource.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-02-11",
+            "items": [
+              {
+                "price": [
+                  10
+                ],
+                "productLink": "https://churchsourcestore.myshopify.com/products/acts-bible-study-guide-plus-streaming-video-the-revolution-of-faith",
+                "name": "Acts Bible Study Guide plus Streaming Video: The Revolution of Faith"
+              }
+            ],
+            "date_time": "2025-02-11 03:01:57.916",
+            "discount_amount": 0,
+            "orderNumber": "",
+            "total": 10
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-02-11",
+            "coupon": "CS-C1GM8Y",
+            "items": [
+              {
+                "price": [
+                  10
+                ],
+                "productLink": "https://churchsourcestore.myshopify.com/products/acts-bible-study-guide-plus-streaming-video-the-revolution-of-faith",
+                "name": "Acts Bible Study Guide plus Streaming Video: The Revolution of Faith"
+              }
+            ],
+            "date_time": "2025-02-11 02:57:07.311",
+            "discount_amount": 7.5,
+            "orderNumber": "5923851993185",
+            "total": 45.05
+          }
+        ]
+      },
+      "companyWebsite": "https://churchsource.com",
+      "companyName": "ChurchSource",
+      "notes": {
+        "drive_to_purchase": [
+          "Recommend collections instead of specific products",
+          "Don\u0027t recommend bestsellers! Stick to the top categories: Top Bibles in Bulk, Small Group Studies, and Church \u0026 Pastor Resources"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Discount code errors",
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "ChurchSource: Welcome to ChurchSource! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/dkM",
+          "date_time": "2025-02-10 21:47:02.430",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "ChurchSource: We bring the most trusted Christian resources so you can focus on what\u0027s truly important - your ministry.\n\nTake an extra 15% off already discounted prices with code CS-C1GM8Y Shop now: https://churchsource.attn.tv/atMN9Xr6aCfa .",
+          "date_time": "2025-02-10 21:47:06.471",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "ChurchSource: Hey Duane, this is Carla. Thank for considering us for your church! https://churchsource.attn.tv/aEZzfg63R4g9 \n\nHow can I help you today?",
+          "date_time": "2025-02-11 13:24:32.476",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Checking on my order status",
+          "date_time": "2025-02-17 14:50:32.872",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01951577-0be6-4419-f000-0000b383c54e",
+          "message_text": "ChurchSource: Thanks for your order as well! For help tracking your order, please make sure you sign in to your account (register or sign in here: https://churchsource.attn.tv/a-OtevP6J_nJ= You will be able to access order tracking from your profile page!",
+          "message_type": "agent",
+          "agent": "46355",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-17 14:51:18.262"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Order CS667421\nI did not open a profile",
+          "date_time": "2025-02-17 14:57:32.870",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Shipping time\"; last updated: 2022-09-03 12:39:23.479",
+          "date_time": "2025-02-17 14:59:25.983",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0195157e-7d11-46c2-f000-0000b383c54e",
+          "message_text": "ChurchSource: Got you! Can I please have the email address associated with your order? ",
+          "message_type": "agent",
+          "agent": "40539",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-17 14:59:25.985"
+        }
+      ]
+    },
+    "144": {
+      "agentName": "Taylor",
+      "has_shopify": true,
+      "id": "0190cbd8-846d-4422-f000-00003d00a1b2",
+      "rightPanel": {
+        "coupons": [
+          {
+            "coupon": "15OFFLDFL5c",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "15dx6hNT",
+            "status": "ACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://safishing.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://safishing.com/products/keys-straw-hats-re10?utm_campaign=7%2F19%2F24+Keys+Image\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=bV82p\u0026variant=44505974669473",
+            "item": "Keys Straw Hats",
+            "timeAgo": "2024-07-19"
+          },
+          {
+            "link": "https://safishing.com/products/keys-straw-hats?builder=true\u0026variant=43096904728737",
+            "item": "Keys Straw Hats",
+            "timeAgo": "2024-07-17"
+          },
+          {
+            "link": "https://safishing.com/products/keys-straw-hats?builder=true\u0026variant=43096904728737",
+            "item": "Keys Straw Hats",
+            "timeAgo": "2024-07-17"
+          },
+          {
+            "link": "https://safishing.com/products/keys-straw-hats?builder=true\u0026variant=43096904728737",
+            "item": "Keys Straw Hats",
+            "timeAgo": "2024-07-16"
+          },
+          {
+            "link": "https://safishing.com/collections/soul-of-adventure/products/2-straw-hats-for-40?utm_campaign=6%2F16%2F24+2+Straw+Hats\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=bV82p\u0026variant=42952489533601",
+            "item": "2 STRAW HATS FOR $40",
+            "timeAgo": "2024-06-16"
+          }
+        ]
+      },
+      "companyWebsite": "https://safishing.com",
+      "companyName": "SA Company",
       "notes": {
         "send_to_cs": [
           "Send to CS for post purchase issues, use PPI shortcut"
         ],
-        "templates": [
-          "If Cx texts in GIFT:",
-          "➜ Use CTO shortcut",
-          "➜ When they answer \"yes\", use CTT shortcut"
-        ],
-        "dos_and_don_ts": [
-          "The stock in-store and online are the same; all in-stock items are here: https://www.gardner-white.com/promo/on-sale-now/in-stock",
-          "Don't push for AFFIRM; offer their white label card, then Fortiva, and then Affirm"
-        ],
-        "promo_and_promo_exclusions": [
-          "Clearance center items do not qualify for additional discounts",
-          "Items priced with .95 do not qualify for promotions"
+        "promo_and_exclusions": [
+          "Do not share the Concierge 15% off offer, the code is currently not valid"
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://gardner-white.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Haven Dove 4-Piece Sectional with Right- Arm Facing Chaise",
-            "link": "https://www.gardner-white.com/product/198064-haven-dove-4-piece-sectional-with-right-arm-facing-chaise",
-            "timeAgo": "2026-02-08"
-          },
-          {
-            "item": "Haven Dove 4-Piece Sectional with Right- Arm Facing Chaise",
-            "link": "https://www.gardner-white.com/product/198064-haven-dove-4-piece-sectional-with-right-arm-facing-chaise",
-            "timeAgo": "2026-02-08"
-          },
-          {
-            "item": "Haven Cocoa 3-Piece Sectional with Right Arm Facing Chaise",
-            "link": "https://www.gardner-white.com/product/198060-haven-cocoa-3-piece-sectional-with-right-arm-facing-chaise",
-            "timeAgo": "2026-02-08"
-          },
-          {
-            "item": "Overnight Blue 3-Piece Sleeper Sectional with Dual Chaises",
-            "link": "https://www.gardner-white.com/package/193297-overnight-blue-3-piece-sleeper-sectional-with-dual-chaises",
-            "timeAgo": "2026-02-08"
-          },
-          {
-            "item": "Overnight Grey 4-Piece Sleeper Sectional with Right Arm Facing Chaise",
-            "link": "https://www.gardner-white.com/package/193304-overnight-grey-4-piece-sleeper-sectional-with-right-arm-facing-chaise",
-            "timeAgo": "2026-02-08"
-          }
-        ]
-      },
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Discount code errors",
-        "Shipping questions"
+      "blocklisted_words": [
+        
       ],
-      "blocklisted_words": [],
-      "has_shopify": false
-    },
-    "145": {
-      "id": "019c7366-9858-482d-f000-0000c90f3b28",
-      "companyName": "Lovesac",
-      "companyWebsite": "https://lovesac.com",
-      "agentName": "",
+      "escalation_preferences": [
+        
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Lovesac: This Is That Sale. 40% Off Ends Tonight! Don't miss your chance to get what you've always wanted.\n\nShop now: lovesac.attn.tv/ajtmU7KSTpox .",
           "message_type": "system",
-          "date_time": "2026-01-25 15:05:19.044"
+          "message_text": "SA Company: Cowboy UP! New patriotic cowboy straw hat just in time for summer! VIP first ONLY 500\n\nShop Now\nhttps://safishing.attn.tv/aSrPos7GplXX ",
+          "date_time": "2024-06-21 10:35:40.069",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: Sending a little love made for your home - 40% off everything for 4 days during our Friends & Family Event.\n\nShop now: lovesac.attn.tv/aREg511rrVAA .",
           "message_type": "system",
-          "date_time": "2026-01-28 13:05:28.844"
+          "message_text": "SA Company: Hey there! We couldn\u0027t help but notice you\u0027ve been checking us out. Have you seen our best sellers yet? Trust us, they\u0027re worth a look!\n\nShop Now:\nhttps://safishing.attn.tv/aUg0OC7QcBLP",
+          "date_time": "2024-06-23 14:13:27.660",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: Last chance for a little love and LOTS of comfort. Our Friends & Family get 40% off for one last day.\n\nDon't miss it: lovesac.attn.tv/ahcEZPwShplG .",
           "message_type": "system",
-          "date_time": "2026-01-31 13:05:36.184"
+          "message_text": "SA Company: Suns out...no problem! Polarized Sunglasses Only $28. Plus Free Strap + Microfiber Bag\n\nShop Now\nhttps://safishing.attn.tv/aAVBB2Qqu5vq ",
+          "date_time": "2024-06-26 12:35:38.232",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: Hey there! We noticed you stopped by. Need some help? Just let us know which products you're interested in below. \n\nA. Sactionals\nB. Sacs\nC. StealthTech\nD. Snugg\n\nReply back \"A\", \"B\", \"C\", or \"D\"\n\nOr shop them all with 40% off: lovesac.attn.tv/av27Nw8gucCj .",
           "message_type": "system",
-          "date_time": "2026-01-31 16:45:24.913"
+          "message_text": "SA Company: 4th Of July sale starts now! $22 Bucket Hats, $28 Snap Backs \u0026 more + Free gift for sms VIP ;-)\n\nShop Now\nhttps://safishing.attn.tv/aftBIoZwYjAl ",
+          "date_time": "2024-06-28 12:31:33.288",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: Deep discounts on Total Comfort - Shop Clearance for up to 70% off: lovesac.attn.tv/aVBlnZyDmmDh .",
           "message_type": "system",
-          "date_time": "2026-02-02 16:45:30.739"
+          "message_text": "SA Company: Hey there! We couldn\u0027t help but notice you\u0027ve been checking us out. Have you seen our best sellers yet? Trust us, they\u0027re worth a look!\n\nShop Now:\nhttps://safishing.attn.tv/aeAJtxXEl1si",
+          "date_time": "2024-06-28 17:00:56.789",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: It's time to end your uncomfortable SIT-uationship - Get 40% off with Presidents' Day savings.\n\nShop now: lovesac.attn.tv/a14AIj-3YkGX .",
           "message_type": "system",
-          "date_time": "2026-02-06 13:06:00.706"
+          "message_text": "SA Company: Hey we\u0027re selling out fast!\nGet yours today before it\u0027s too late!\nhttps://safishing.attn.tv/a1ZlHN__8o0S .\n\nReach out with any questions!\n- Taylor",
+          "date_time": "2024-06-29 16:30:35.228",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: If sitting down feels like settling, choose better comfort with a PillowSac Chair. \n\nBig comfort in two sizes: lovesac.attn.tv/axLr4DP4gKxY .",
           "message_type": "system",
-          "date_time": "2026-02-07 15:00:25.446"
+          "message_text": "SA Company: Cant Spell USA without SA! 2 Straw hats + Free Gift ONLY $40\n\nShop Now\nhttps://safishing.attn.tv/am9dmQML3uo_ ",
+          "date_time": "2024-06-30 15:03:19.744",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: 40% off everything continues. Shop our Presidents' Day Sale for furniture that adapts to you.\n\nShop now: lovesac.attn.tv/abalMP21e7mv .",
           "message_type": "system",
-          "date_time": "2026-02-11 15:15:09.307"
+          "message_text": "SA Company: Hey there! We couldn\u0027t help but notice you\u0027ve been checking us out. Have you seen our best sellers yet? Trust us, they\u0027re worth a look!\n\nShop Now:\nhttps://safishing.attn.tv/aqI6cHxAQjF2",
+          "date_time": "2024-07-04 15:15:51.135",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: Just two days left to shop the Presidents' Day Sale and save 40% on everything.\n\nShop now: lovesac.attn.tv/adXvt_jr6S1f .",
           "message_type": "system",
-          "date_time": "2026-02-15 15:05:52.920"
+          "message_text": "SA Company: Red, White \u0026 BOOOM is still going! Captain USA Limited Edition Straw Hat is here to save the day! ONLY 200 so hurry!\n\nShop Now\nhttps://safishing.attn.tv/aigDfT5e8WxF ",
+          "date_time": "2024-07-05 11:04:46.873",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: Presidents' Day Sale ends tonight - take 40% off before it's gone.\n\nLast call to save on the styles you've been eyeing: lovesac.attn.tv/aykB75GC5ta9 .",
           "message_type": "system",
-          "date_time": "2026-02-16 13:15:32.979"
+          "message_text": "SA Company: USA USA USA only 50 Captain USA straw hats left! Hurry before their gone!\n\nShop Now\nhttps://safishing.attn.tv/asjDwM9CZtuV ",
+          "date_time": "2024-07-06 11:01:24.184",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: Hey there! We noticed you eyeing something on our site...come back and get 40% off: lovesac.attn.tv/aQWBCVzRh6BH .",
           "message_type": "system",
-          "date_time": "2026-02-18 13:28:16.228"
+          "message_text": "SA Company: Celebrate the stars and stripes with our patriotic Bucket Hats for just $22! Join our SMS VIP list and receive a free gift with your purchase.\n\nShop Now\nhttps://safishing.attn.tv/a3-CzzGHlQz2 ",
+          "date_time": "2024-07-06 11:46:41.955",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Need help",
+          "message_type": "system",
+          "message_text": "SA Company: Final Day 🇺🇸 2 Straw Hats ONLY $40 + Free Gift on all your favorite patriotic designs\n\nShop Now\n https://safishing.attn.tv/ae1HyCRUmeec ",
+          "date_time": "2024-07-07 16:03:27.234",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: 🦈 Shark Week Limited Edition Bucket Hat is Here. Finn Diesel is here to take a bite out of Summer. SMS vip first look ONLY 500 \n\nJoin the Frenzy\nhttps://safishing.attn.tv/amL7lXjEAg8r ",
+          "date_time": "2024-07-10 11:15:29.394",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Go Team USA! Gear up for the Summer Olympics in style. Special 24% off on all patriotic gear ends at midnight! Discount auto applied in link\n\nShop Now\nhttps://safishing.attn.tv/aonkt2Wrf0JL ",
+          "date_time": "2024-07-12 12:32:59.112",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Hey there! We couldn\u0027t help but notice you\u0027ve been checking us out. Have you seen our best sellers yet? Trust us, they\u0027re worth a look!\n\nShop Now:\nhttps://safishing.attn.tv/ao-zT19oCz_K",
+          "date_time": "2024-07-13 16:59:31.290",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Sunday Flash Sale! 2 Straw Hats Only $40 + Gift ($20 value). Ends at midnight\n\nShop Now\nhttps://safishing.attn.tv/a5TyixncFz58 ",
+          "date_time": "2024-07-14 16:01:31.511",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Last Chance hurry before 2 straw hats ONLY $40 + free gift goes away!\n\nShop Now\nhttps://safishing.attn.tv/ap1ZB2uxvX19 ",
+          "date_time": "2024-07-15 12:01:43.971",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Congrats you\u0027ve been selected for our Prime Day Sale! Free Shipping + Free Gift! Click link for auto applied discount. Code: BIGDAYSHIP\n\nShop Now\nhttps://safishing.attn.tv/ag8BOxfPyTuT ",
+          "date_time": "2024-07-16 13:21:46.043",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: 12 Hours Left VIP Prime Day Sale Free Shipping + Free Gift. Hurry before it goes away. Code: BIGDAYSHIP\n\nShop Now\nhttps://safishing.attn.tv/aQSi4TI_IgE2 ",
+          "date_time": "2024-07-17 14:06:49.657",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Hi Eric, it\u0027s Taylor. I\u0027m a personal concierge here to answer your questions or share recommendations. Would you like to see if I can get you a discount code?\n\nhttps://safishing.attn.tv/aLH5NxGPvsQF .",
+          "date_time": "2024-07-17 14:38:04.835",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-18 19:42:05.176"
+          "message_text": "I want one of those new keys hats",
+          "date_time": "2024-07-17 14:38:47.740",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: Hi, how can I help you today?",
+          "message_id": "0190c1fd-a5af-4c28-f000-00003d00a1b2",
+          "message_text": "SA Company: Check out our Keys Straw Hat collection here: \n\nhttps://safishing.attn.tv/aXeprTUc3L7M",
           "message_type": "agent",
-          "agent": "109630",
-          "message_id": "019c7359-3399-40e6-f000-0000c90f3b28",
-          "date_time": "2026-02-18 19:42:31.735"
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-17 14:39:04.115"
         },
         {
-          "message_media": [],
-          "message_text": "Need help ordering",
           "message_type": "customer",
-          "date_time": "2026-02-18 19:43:05.283"
+          "message_text": "Can I get two for $40?",
+          "date_time": "2024-07-17 14:39:47.886",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: I'm here to help. Could you please send me the items you would like?\n",
+          "message_id": "0190c1fe-87f5-4841-f000-00003d00a1b2",
+          "message_text": "SA Company: Yes, you can get 2 straw hats for $40 plus a free gift. Shop now:\n\nhttps://safishing.attn.tv/aoAAfafoiEz9",
           "message_type": "agent",
-          "agent": "39001",
-          "message_id": "019c735c-0cd8-4cf6-f000-0000c90f3b28",
-          "date_time": "2026-02-18 19:45:38.422"
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-17 14:40:02.040"
         },
         {
-          "message_media": [],
-          "message_text": "I'm looking at sectional, the soft, with speakers",
           "message_type": "customer",
-          "date_time": "2026-02-18 19:53:55.262"
+          "message_text": "I want two keys hats for 40",
+          "date_time": "2024-07-17 14:40:57.598",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Lovesac: Thank you for getting back to me and providing that information! We have a wide selection available for you to choose from: https://lovesac.attn.tv/aDVR59RXCkPB How many seats are you interested in?",
+          "message_type": "system",
+          "message_text": "SA Company: First time EVER! Discount on ALL Keys Straw Hats now ONLY $32...Run dont walk...\n\nShop Now\nhttps://safishing.attn.tv/a9DYl57qtea6 ",
+          "date_time": "2024-07-19 12:21:47.301",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Discount code?",
+          "date_time": "2024-07-19 12:29:27.593",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Free shipping?",
+          "date_time": "2024-07-19 12:29:28.316",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190cbd3-f124-44d8-f000-00003d00a1b2",
+          "message_text": "SA Company: You can use the code 15OFFLDFL5c for 15% off your purchase at safishing.com. For free shipping, use the code 2022CSFREESHIP. Enjoy your new Keys hats!",
           "message_type": "agent",
-          "agent": "109840",
-          "message_id": "019c7366-9858-482d-f000-0000c90f3b28",
-          "date_time": "2026-02-18 19:57:09.499"
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-19 12:29:43.080"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "15% off not working",
+          "date_time": "2024-07-19 12:32:46.144",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190cbd6-f5ae-4442-f000-00003d00a1b2",
+          "message_text": "SA Company: You can use the code 2022CSFREESHIP for free shipping on your order at safishing.com. If you continue to have issues with the 15% off code, please share a screenshot.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-19 12:33:00.853"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Free shipping code worked. 15 off does not",
+          "date_time": "2024-07-19 12:34:28.451",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190cbd8-846d-4422-f000-00003d00a1b2",
+          "message_text": "SA Company: You can use the code 2022CSFREESHIP for free shipping on your order of two Keys hats at safishing.com. Enjoy your shopping!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-19 12:34:42.928"
         }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over!"
-        ]
-      },
+      ]
+    },
+    "145": {
+      "agentName": "Olivia",
+      "has_shopify": true,
+      "id": "018ecdae-2252-46a4-f000-000028d2e80a",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://lovesac.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "2 Standard Seats + 4 Deep Seats + 1 Storage Seat + 8 Standard Sides",
-            "link": "https://www.lovesac.com/sactionals/build/2-seats-4-deep-seats-1-storage-seat-8-sides-sky-grey-corded-velvet?utm_campaign=Browse-Abandonment-Message&utm_medium=sms&utm_source=attentive&externalId=D4jbP",
-            "timeAgo": "2026-02-19"
+            "link": "https://pinklily.com/products/a-beautiful-day-navy-printed-maxi-skirt?variant=40313522094135",
+            "item": "A Beautiful Day Navy Printed Maxi Skirt - M",
+            "timeAgo": "2024-04-11"
           },
           {
-            "item": "2 Standard Seats + 4 Deep Seats + 1 Storage Seat + 8 Standard Sides",
-            "link": "https://www.lovesac.com/sactionals/build/2-seats-4-deep-seats-1-storage-seat-8-sides-sky-grey-corded-velvet?utm_campaign=Browse-Abandonment-Message&utm_medium=sms&utm_source=attentive&externalId=D4jbP",
-            "timeAgo": "2026-02-19"
+            "link": "https://pinklily.com/products/a-beautiful-day-navy-printed-maxi-skirt?variant=40313522094135",
+            "item": "A Beautiful Day Navy Printed Maxi Skirt - S",
+            "timeAgo": "2024-04-11"
           },
           {
-            "item": "6 Standard Seats + 2 Deep Seats + 7 Standard Sides + 2 Deep Sides",
-            "link": "https://www.lovesac.com/sactionals/build/6-seats-2-deep-seats-7-sides-2-deep-sides-abyss-ultra-velvet?fabric=5367",
-            "timeAgo": "2026-02-18"
+            "link": "https://pinklily.com/products/you-make-my-heart-race-lilac-maxi-dress?variant=40497826332727",
+            "item": "You Make My Heart Race Lilac Maxi Dress - M",
+            "timeAgo": "2024-04-11"
           },
           {
-            "item": "2 Standard Seats + 4 Deep Seats + 1 Storage Seat + 8 Standard Sides",
-            "link": "https://www.lovesac.com/sactionals/build/2-seats-4-deep-seats-1-storage-seat-8-sides-sky-grey-corded-velvet",
-            "timeAgo": "2026-02-18"
+            "link": "https://pinklily.com/products/you-make-my-heart-race-lilac-maxi-dress?variant=40497826299959",
+            "item": "You Make My Heart Race Lilac Maxi Dress - S",
+            "timeAgo": "2024-04-11"
           },
           {
-            "item": "Sactionals StealthTech Sound + Charge Angled Side Pillow Insert",
-            "link": "https://www.lovesac.com/products/sactionals-stealthtech-sound-charge-angled-side-pillow-insert",
-            "timeAgo": "2025-10-31"
+            "link": "https://pinklily.com/products/time-for-something-new-black-knit-maxi-dress?variant=40113901928503",
+            "item": "Time For Something New Black Knit Maxi Dress - S",
+            "timeAgo": "2024-04-10"
+          }
+        ],
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "value": "25",
+            "coupon": "7BN9W5"
+          },
+          {
+            "status": "ACTIVE",
+            "value": "30",
+            "coupon": "Q4767N"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "Exclusive 40% Offer",
+            "value": "40",
+            "coupon": "BMK2S5"
+          },
+          {
+            "status": "ACTIVE",
+            "value": "50",
+            "coupon": "2N2DG4"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "sitewide through March 31st, 2025.  Some exclusions apply.",
+            "coupon": "74S3JZ"
+          },
+          {
+            "status": "ACTIVE",
+            "redeemed": "2022-01-14 02:24:26.000",
+            "value": "20",
+            "coupon": "pinklilyKNVDPQ"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "20% Off Winback",
+            "value": "20",
+            "coupon": "W92TJ8"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "Magenta Exclusive 30% Off",
+            "coupon": "T5C246"
+          },
+          {
+            "coupon": "FT8ZC4",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "20% OFF for 1 Year Subscriber Anniversary",
+            "value": "20",
+            "coupon": "CGT6K7"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://pinklily.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2023-08-31",
+            "coupon": "Take30",
+            "items": [
+              {
+                "price": [
+                  46
+                ],
+                "productLink": "https://pinklilyboutique.myshopify.com/products/sundown-awaits-knit-oatmeal-cardigan",
+                "name": "Sundown Awaits Knit Oatmeal Cardigan"
+              }
+            ],
+            "date_time": "2023-08-31 03:02:55.981",
+            "discount_amount": 48.6,
+            "orderNumber": "5287218708535",
+            "total": 151.38
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-08-31",
+            "coupon": "Take30",
+            "items": [
+              {
+                "price": [
+                  1.15
+                ],
+                "productLink": "https://pinklilyboutique.myshopify.com/products/routeins",
+                "name": "Route Package Protection"
+              }
+            ],
+            "date_time": "2023-08-31 03:02:55.941",
+            "discount_amount": 48.6,
+            "orderNumber": "5287218708535",
+            "total": 151.38
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-08-31",
+            "coupon": "Take30",
+            "items": [
+              {
+                "price": [
+                  62
+                ],
+                "productLink": "https://pinklily.com/products/susan-taupe-block-heel-tall-boots",
+                "name": "Susan Taupe Block Heel Tall Boots"
+              }
+            ],
+            "date_time": "2023-08-31 03:02:55.873",
+            "discount_amount": 48.6,
+            "orderNumber": "5287218708535",
+            "total": 151.38
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-08-31",
+            "coupon": "Take30",
+            "items": [
+              {
+                "price": [
+                  28
+                ],
+                "productLink": "https://pinklilyboutique.myshopify.com/products/pulling-heartstrings-olive-quarter-zip-pullover",
+                "name": "Pulling Heartstrings Olive Quarter Zip Pullover DOORBUSTER"
+              }
+            ],
+            "date_time": "2023-08-31 03:02:55.868",
+            "discount_amount": 48.6,
+            "orderNumber": "5287218708535",
+            "total": 151.38
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-08-31",
+            "coupon": "Take30",
+            "items": [
+              {
+                "price": [
+                  54
+                ],
+                "productLink": "https://pinklilyboutique.myshopify.com/products/treat-yourself-brown-floral-long-sleeve-mini-dress",
+                "name": "Treat Yourself Brown Floral Long Sleeve Mini Dress"
+              }
+            ],
+            "date_time": "2023-08-31 03:02:55.492",
+            "discount_amount": 48.6,
+            "orderNumber": "5287218708535",
+            "total": 151.38
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": false
+      "companyWebsite": "https://pinklily.com",
+      "companyName": "The Pink Lily Boutique",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS",
+          "➜ For post purchase issues use PPI shortcut"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!"
+        ],
+        "templates": [
+          "if cx message \"CREATOR,\" use CR shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: You\u0027re in luck: 25% off sitewide starts tomorrow, but for you it starts RN w/code: LUCKY\n\nCode ends @ midnight\n\nhttps://pinklily.attn.tv/l/daH/fNeKP ",
+          "date_time": "2024-03-12 14:32:20.661",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Hey! I love the items in your cart, but they\u0027re selling fast! Any q\u0027s I can answer before they sell out?\n-Olivia\n\nhttps://pinklily.attn.tv/l/Vvq/fNeKP",
+          "date_time": "2024-03-12 17:24:48.154",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Hey! You\u0027ve got your eye on something super cute: https://pinklily.attn.tv/sl/idNwrRjE\n\nCan I help with any style or size questions today?\n- Olivia",
+          "date_time": "2024-03-13 15:27:13.641",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: EARLY ACCESS: Paradise City Pt. 2! \n\nFrom vibrant sets to tropical swim, be the 1st to shop the new styles!\n\nhttps://pinklily.attn.tv/l/bcO/fNeKP ",
+          "date_time": "2024-03-14 19:03:08.519",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Easter Sale: 300+ styles starting at only $10!\n\nFind the perfect head-to-toe look in time for Easter Sunday!\n\nhttps://pinklily.attn.tv/l/1Gr/fNeKP",
+          "date_time": "2024-03-17 10:01:51.424",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: EASTER SALE: new styles added!\n\nShop 350+ styles starting at only $10! Plus, get it in time for Easter Sunday! \n\nhttps://pinklily.attn.tv/l/yXn/fNeKP",
+          "date_time": "2024-03-19 10:15:25.077",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Hey! I love the items in your cart, but they\u0027re selling fast! Any q\u0027s I can answer before they sell out?\n-Olivia\n\nhttps://pinklily.attn.tv/l/Vvq/fNeKP",
+          "date_time": "2024-03-19 14:54:31.424",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Hey girl, it\u0027s Olivia - your new OOTD is so close! Do you have any questions I can help answer? \n\nCheckout now: https://pinklily.attn.tv/sl/am8EYzhK",
+          "date_time": "2024-03-19 20:27:19.348",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: VIP exclusive: EARLY ACCESS to our Big Spring $20 Sale! \n\nShop 200+ styles including swim, sweaters \u0026 more!\n\nhttps://pinklily.attn.tv/l/ESh/fNeKP",
+          "date_time": "2024-03-21 19:03:02.887",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: It\u0027s Fri-YAY \u0026 we\u0027re celebrating!\n\nParadise City Pt. 3 just dropped + our Big Spring $20 Sale starts RIGHT NOW!\n\nhttps://pinklily.attn.tv/l/OaF/fNeKP",
+          "date_time": "2024-03-22 10:01:02.408",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Guess what?! We just added 200+ styles to our BIG SPRING $20 SALE!\n\nSave on your closet refresh today: https://pinklily.attn.tv/l/GqF/fNeKP",
+          "date_time": "2024-03-24 10:00:42.513",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Take 30% OFF select fan-fave graphic tees \u0026 sweatshirts!\n\nShop these super soft \u0026 oversized must-haves NOW: https://pinklily.attn.tv/l/od7/fNeKP",
+          "date_time": "2024-03-26 10:00:50.543",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Hey! You\u0027ve got your eye on something super cute: https://pinklily.attn.tv/sl/Xgf2YLBj\n\nCan I help with any style or size questions today?\n- Olivia",
+          "date_time": "2024-03-28 10:54:44.494",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Hey! I love the items in your cart, but they\u0027re selling fast! Any q\u0027s I can answer before they sell out?\n-Olivia\n\nhttps://pinklily.attn.tv/l/Vvq/fNeKP",
+          "date_time": "2024-03-28 14:54:02.626",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Let\u0027s Go Girls: it\u0027s concert season!\n\nFrom denim dresses to stand-out sequins styles, all eyes will be on you!\n\nhttps://pinklily.attn.tv/l/vGR/fNeKP",
+          "date_time": "2024-03-29 10:00:55.642",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: SALE on SALE: shop 1000+ sale styles and take an ADDITIONAL 25% OFF with code: EXTRA25\n\nSave now: https://pinklily.attn.tv/l/Rjt/fNeKP ",
+          "date_time": "2024-03-30 10:02:23.942",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Make a splash! Get summer ready with our SWIM SALE! Styles starting from $10!\n\nSave now: \nhttps://pinklily.attn.tv/l/RuI/fNeKP ",
+          "date_time": "2024-04-01 09:03:31.627",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: SWIM SALE LAST DAY \u0026 we added NEW ITEMS! \n\nSwim, sandals, sunnies \u0026 more all starting @ ONLY $10!\n\nShop now: \nhttps://pinklily.attn.tv/l/3oV/fNeKP ",
+          "date_time": "2024-04-03 11:03:44.158",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Hey girl, it\u0027s Olivia - your new OOTD is so close! Do you have any questions I can help answer? \n\nCheckout now: https://pinklily.attn.tv/sl/gV5Gf25d",
+          "date_time": "2024-04-03 12:35:56.706",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Hey girl! I noticed you browsing PL Beauty, do you have any q\u0027s? LMK \u0026 check out our newest drop!\nhttps://pinklily.attn.tv/l/xiN/fNeKP \n-Olivia",
+          "date_time": "2024-04-04 09:17:58.230",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Krista X Pink Lily is LIVE! This highly anticipated collection is bright, fun \u0026 sure to sell out!\n\nShop now: https://pinklily.attn.tv/l/9op/fNeKP",
+          "date_time": "2024-04-05 12:04:42.679",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: SPRING SALE: up to 50% OFF select styles! \n\nGive your closet the spring refresh it deserves!\n\nSave now: https://pinklily.attn.tv/l/5HZ/fNeKP ",
+          "date_time": "2024-04-06 09:01:06.763",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Hey! I love the items in your cart, but they\u0027re selling fast! Any q\u0027s I can answer before they sell out?\n-Olivia\n\nhttps://pinklily.attn.tv/l/Vvq/fNeKP",
+          "date_time": "2024-04-06 09:36:15.179",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Spring Refresh Sale: 100+ NEW STYLES ADDED!\n\nShop up to 50% OFF spring \u0026 summer styles your closet craves!\n\nhttps://pinklily.attn.tv/l/Ebi/fNeKP ",
+          "date_time": "2024-04-07 10:05:25.040",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Guess what?! That chic Grey Ribbed Striped Dress you loved is still waiting in your cart!\n\nDon\u0027t let it get away: https://pinklily.attn.tv/sl/8OkokLEy .",
+          "date_time": "2024-04-08 12:50:32.956",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: HAPPY HOUR BLACKOUT: 25% OFF from 12-3PM CST w/code: BLACKOUT\n \nTreating yourself is \"totality\" worth it!\n\nhttps://pinklily.attn.tv/l/K6i/fNeKP ",
+          "date_time": "2024-04-08 13:02:39.120",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Spring Refresh Sale: ENDS AT MIDNIGHT! \n\nLast chance - up to 50% OFF 200+ styles!\n\nShop now:\nhttps://pinklily.attn.tv/l/Cni/fNeKP ",
+          "date_time": "2024-04-09 10:00:36.685",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Hey Lisa, that chic black knit maxi dress in your cart is just what your wardrobe needs for a fresh look!\n\nDon\u0027t miss out: https://pinklily.attn.tv/sl/_eLLimTd .",
+          "date_time": "2024-04-10 10:30:30.811",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Hey! You\u0027ve got your eye on something super cute: https://pinklily.attn.tv/sl/A0tjyxMs\n\nCan I help with any style or size questions today?\n- Olivia",
+          "date_time": "2024-04-11 10:24:37.924",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pink Lily: Your cart is missing something - that stunning printed maxi skirt you were checking out. Just perfect for a beautiful day! \n\nDon\u0027t wait, grab it now: https://pinklily.attn.tv/sl/2sdVnhVw .",
+          "date_time": "2024-04-11 10:30:30.908",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Send me a coupon code.",
+          "date_time": "2024-04-11 10:31:11.326",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ecd92-30da-40f0-f000-000028d2e80a",
+          "message_text": "Pink Lily: Sure, I can help with that! You can use the coupon code FT8ZC4 for your next purchase on our website pinklily.com. Enjoy shopping!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-11 10:31:33.854"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Coupon code did not work to make the purchase. Please provide a discount code for a percentage off my order so I can make the purchase.",
+          "date_time": "2024-04-11 10:47:51.449",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ecda1-702b-4844-f000-000028d2e80a",
+          "message_text": "Pink Lily: I\u0027m sorry to hear that the previous coupon didn\u0027t work. You can try using the code \"T5C246\" for a 30% off on your order. Visit pinklily.com to use this coupon.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-11 10:48:13.107"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "When I try to use the code it says\n\"Unable to find a valid discount matching the code entered\"",
+          "date_time": "2024-04-11 11:01:39.728",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ecdae-2252-46a4-f000-000028d2e80a",
+          "message_text": "Pink Lily: I\u0027m sorry to hear that you\u0027re having trouble with the discount codes. Here\u0027s a valid one you can use: \"T5C246\" for a 30% off. You can apply this at checkout on our website, pinklily.com.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-11 11:02:05.145"
+        }
+      ]
     }
   }
 }

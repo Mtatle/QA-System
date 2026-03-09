@@ -3,913 +3,1560 @@
   "chunk": "chunk_0023",
   "scenarios": {
     "111": {
-      "id": "019c7c2a-4737-4ffb-f000-0000fc4f9a65",
-      "companyName": "Brilliant Earth",
-      "companyWebsite": "https://brilliantearth.com",
-      "agentName": "Ava",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Brilliant Earth: Welcome to Brilliant Earth! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-18 15:47:37.597"
-        },
-        {
-          "message_media": [],
-          "message_text": "Brilliant Earth: Hi! I'm Ava, your personal jewelry concierge. Do you have any questions I can help answer? brilliantearth.attn.tv/aKP0HT5Q_x2B .",
-          "message_type": "system",
-          "date_time": "2026-02-18 15:47:41.645"
-        },
-        {
-          "message_media": [],
-          "message_text": "I want to be entered into $1000 gift card engagement ring",
-          "message_type": "customer",
-          "date_time": "2026-02-18 15:48:06.112"
-        },
-        {
-          "message_media": [],
-          "message_text": "Brilliant Earth: Thanks for your interest! You will receive one (1) entry for subscribing to email marketing messages and one (1) entry for subscribing to SMS marketing messages. You can read more details here: https://brilliantearth.attn.tv/aAOZMT1Va-Ro/ \n\nIn the meantime, are you looking for anything in particular? Do you have any specific style, or material in mind? I'd recommend checking out this page to select your ideal engagement ring setting and pair it with a Beyond Conflict Free Diamond: https://brilliantearth.attn.tv/akXUZM2-aaUV\n",
-          "message_type": "agent",
-          "agent": "46498",
-          "message_id": "019c7284-f875-41f5-f000-0000fc4f9a65",
-          "date_time": "2026-02-18 15:50:42.961"
-        },
-        {
-          "message_media": [],
-          "message_text": "https://share.google/SX5UVwV4pBpq9Jks6",
-          "message_type": "customer",
-          "date_time": "2026-02-20 12:42:08.781"
-        },
-        {
-          "message_media": [],
-          "message_text": "Thai would be my dream ring, trying to figure out how to bring the price down",
-          "message_type": "customer",
-          "date_time": "2026-02-20 12:42:18.813"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"No promotions available\"; last updated: 2025-07-21 16:54:43.544",
-          "message_type": "template",
-          "date_time": "2026-02-20 12:47:51.505"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Do you offer financing or layaway?\"; last updated: 2025-07-21 16:52:58.141",
-          "message_type": "template",
-          "date_time": "2026-02-20 12:47:51.505"
-        },
-        {
-          "message_media": [],
-          "message_text": "Brilliant Earth: Great choice! We price fairly from the start rather than marking up our items to mark them down. We opt to run promotions that feature diamond earrings or other fine jewelry that act as sparkling additions to the lifelong, heirloom-in-the-making investment in a Brilliant Earth design. Our current promo can always be found on our website: https://brilliantearth.attn.tv/agTzIBvWws1-\n\nFor our US customers, we offer Affirm financing with interest rates from as low as 0% APR with approved credit, as well as Wells Fargo special 12-month financing with approved credit. We also offer a layaway option that allows customers to pay for their purchase with 20% down and monthly installments. You can learn more about our flexible payment options here: https://brilliantearth.attn.tv/aiaTYJkWKhnE",
-          "message_type": "agent",
-          "agent": "87295",
-          "message_id": "019c7c2a-4737-4ffb-f000-0000fc4f9a65",
-          "date_time": "2026-02-20 12:47:51.508"
-        }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "Inquiries regarding orders",
-          "Shipping inquiries on a current order",
-          "Post-purchase issues",
-          "For product or general inquiries you can't find the answer to, use PGI shortcut"
-        ],
-        "escalate": [
-          "No escalations for this client, send everything to CS"
-        ],
-        "tone": [
-          "Don't use the word \"unfortunately\" to discuss our appointment structure",
-          "Don't use the word \"best\" to reference a product (e.g., best ring, etc.)"
-        ],
-        "templates": [
-          "If cx are looking for an engagement ring and don't provide specifics, use LER shortcut"
-        ],
-        "dos_and_don_ts": [
-          "If the customer responds incorrectly to the journey, don't send jny temp, recommend items based on their selection instead",
-          "Cx can create their own engagement ring on the webiste by choosing a setting, stone and size",
-          "Cx can customize rings by working with designers who will use their ideas, drawings, images to create the ring they want",
-          "Don't disclose the locations of their labs/production facilities"
-        ],
-        "drive_to_purchase": [
-          "Be MORE SALESY, if the customer is showing intent to purchase then:",
-          "➜ Ask open-ended general questions such as style & material",
-          "➜ After asking open-ended questions, transition to specific questions such as center stone, etc.",
-          "➜ If the customer liked our recommendation, push for the sale by asking about payment options or when they hope to have the item"
-        ],
-        "promo_and_promo_exclusions": [
-          "Please see here for current offer details: https://www.brilliantearth.com/promo-codes-and-offers/",
-          "Codes can be used in-store"
-        ]
-      },
+      "agentName": "Alexa",
+      "has_shopify": true,
+      "id": "019a931c-026a-463c-f000-00000891175d",
       "rightPanel": {
+        "coupons": [
+          {
+            "coupon": "FN115-jjkjqb",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "FN44-f4jkb6",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "FN123-bu4yqw",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "FN44-u68v8n",
+            "status": "INACTIVE"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://brilliantearth.com",
+          "value": "https://fashionnova.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "item": "3.02 Carat Radiant Lab Diamond",
-            "link": "https://www.brilliantearth.com/rings/cyorings/purchase_review/?sid=49219836&did=63573304",
-            "timeAgo": "2026-02-20"
+            "link": "https://www.fashionnova.com/products/sierra-seamless-jumpsuit-black?variant=39257308299388\u0026utm_source=google\u0026utm_medium=cpc\u0026utm_id=20463356378\u0026utm_campaign=gg_nb_performance_max_smart_womens_jumpsuits_rompers\u0026gad_source=1\u0026gclid=EAIaIQobChMIiKbUkJyagwMVAdTCBB29ow6uEA0YAiABEgK_JfD_BwE",
+            "item": "Sierra Seamless Jumpsuit - Teal - OS",
+            "timeAgo": "2023-12-19"
           },
           {
-            "item": "18K Yellow Gold Secret Halo 2mm Diamond Ring",
-            "link": "https://www.brilliantearth.com/rings/cyorings/purchase_review/?sid=49219836&did=63573304",
-            "timeAgo": "2026-02-20"
+            "link": "https://www.fashionnova.com/products/sierra-seamless-jumpsuit-black?variant=39257308299388\u0026utm_source=google\u0026utm_medium=cpc\u0026utm_id=20463356378\u0026utm_campaign=gg_nb_performance_max_smart_womens_jumpsuits_rompers\u0026gad_source=1\u0026gclid=EAIaIQobChMIiKbUkJyagwMVAdTCBB29ow6uEA0YAiABEgK_JfD_BwE\u0026modal=discovery_button",
+            "item": "Sierra Seamless Jumpsuit - Teal - OS",
+            "timeAgo": "2023-12-19"
           },
           {
-            "item": "18K Yellow Gold Secret Halo 2mm Lab Diamond Ring",
-            "link": "https://www.brilliantearth.com/rings/cyorings/purchase_review/?sid=49219836&did=63573304",
-            "timeAgo": "2026-02-20"
-          },
-          {
-            "item": "18K Yellow Gold Secret Halo 2mm Lab Diamond Ring",
-            "link": "https://www.brilliantearth.com/rings/cyorings/purchase_review/?sid=49219836&did=63573304",
-            "timeAgo": "2026-02-18"
-          },
-          {
-            "item": "18K Yellow Gold Secret Halo 2mm Diamond Ring",
-            "link": "https://www.brilliantearth.com/rings/cyorings/purchase_review/?sid=49219836&did=63573304",
-            "timeAgo": "2026-02-18"
+            "link": "https://www.fashionnova.com/products/sierra-seamless-jumpsuit-black?variant=39257308299388\u0026utm_source=google\u0026utm_medium=cpc\u0026utm_id=20463356378\u0026utm_campaign=gg_nb_performance_max_smart_womens_jumpsuits_rompers\u0026gad_source=1\u0026gclid=EAIaIQobChMIiKbUkJyagwMVAdTCBB29ow6uEA0YAiABEgK_JfD_BwE",
+            "item": "Sierra Seamless Jumpsuit - Teal - OS",
+            "timeAgo": "2023-12-19"
           }
         ]
       },
-      "escalation_preferences": [
-        "Shipping questions",
-        "Exchanges and returns",
-        "For questions regarding order",
-        "service",
-        "shipping questions on a current order",
-        "post-purchase will go to cssupport@brilliantearth.com",
-        "For product or general inquiry questions",
-        "please contact info@brilliantearth.com"
-      ],
+      "companyWebsite": "https://fashionnova.com",
+      "companyName": "Fashion Nova",
+      "notes": {
+        "send_to_cs": [
+          "No escalations for this client, send to CS using the Support templates",
+          "For post-purchase inquiries send to CS using the Support template (shortcut: ESC)",
+          "➜ If the cx is having difficulties sending an email to CS via the link in the ESC temp - use Support 2 template (shortcut: TESC)",
+          "➜ If the cx is facing technical website issues while accessing the link, do NOT immediately send the TESC shortcut, troubleshoot first instead",
+          "For pre-purchase inquiries send to CS using the Support 2 template (shortcut: TESC)"
+        ],
+        "tone": [
+          "🅿️ Use wording that is in line with the brand\u0027s voice and terminology found on the website",
+          "➜ e.g. Nova Kids, Nova Babes, Insta-worthy, slays, snatched, baddie, etc.",
+          "➜ Always look up the term\u0027s meaning before using it!"
+        ],
+        "templates": [
+          "For expired discounts use EXP shortcut",
+          "For login issues use LGI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "If cx are looking for their 30% welcome code, ask to check their email (spam \u0026 promo)",
+          "Gift cards can be used on discounted items"
+        ]
+      },
       "blocklisted_words": [
-        "bestsellers",
-        "sale",
-        "sales",
-        "budget"
+        
       ],
-      "has_shopify": true
-    },
-    "112": {
-      "id": "019c44d3-a344-495a-f000-0000d5e3a4b9",
-      "companyName": "Greenpan",
-      "companyWebsite": "https://greenpan.us",
-      "agentName": "Sarah",
+      "escalation_preferences": [
+        
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "GreenPan: FINAL WEEKEND TO SAVE!\n\nUp to 60% Off Sitewide + FREE Cookbook. New year glow-up starts in the kitchen. \n\nShop Now: greenpan.attn.tv/axSi4jxUulbL ",
           "message_type": "system",
-          "date_time": "2026-01-18 17:40:12.491"
+          "message_text": "Fashion Nova: Congrats! Your order #170730646 is confirmed.\n\nCheck the status of your order here: http://sms.fashionnova.com/apuQ47x-tJKa .",
+          "date_time": "2025-11-06 15:25:15.514",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: This is it! FINAL HOURS!\n\nNew Year New You Sale: Up to 60% Off Sitewide + FREE Gift.\n \nDon't miss your chance to reset: greenpan.attn.tv/aJ1voGico42y ",
           "message_type": "system",
-          "date_time": "2026-01-22 18:20:05.703"
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aG5mqi37-sKQ .",
+          "date_time": "2025-11-13 14:08:12.127",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Lowest Prices of the Season Start... NOW!\n \nOur Premiere Air Fryer Oven is just $319.99 (reg $399.99) + Free Shipping + Free Cookbook.\n \nAir fry wings, toast sliders, bake dips and so much more - perfect for game day and every gathering. \n \nShop Now: greenpan.attn.tv/a9mFcHYUd7RS ",
           "message_type": "system",
-          "date_time": "2026-01-24 13:30:11.867"
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/anM43GxE_ghX .",
+          "date_time": "2025-11-13 14:16:31.409",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Game Day Made Easy! \n \nOur large capacity Locking Lid Slow Cooker ensures your favorite chilis, pulled pork, queso & more can go from kitchen to party without spills. Set it, forget it, and keep everything warm through every quarter. (Plus, clean-up is a breeze with our PFAS-free nonstick!)\n \nOrder TODAY to get your slow cooker for Game Day + FREE Shipping: greenpan.attn.tv/aVF9snImuEgZ ",
           "message_type": "system",
-          "date_time": "2026-01-26 17:20:05.961"
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aaMsW4vdFc4j .",
+          "date_time": "2025-11-13 14:16:56.810",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Hi Jenna, this is Sarah from GreenPan. Thanks for checking out our site! 😊 greenpan.attn.tv/ae0fAaUfNO6d Is there a product we can help you find?",
           "message_type": "system",
-          "date_time": "2026-01-26 18:39:21.741"
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aI1bNh2OF0nV .",
+          "date_time": "2025-11-13 14:19:51.364",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Hey Jenna! Holding off on that new recipe because of missing essentials? \n\nLet's change that, what product can I make a recommendation for today?\n\ngreenpan.attn.tv/aIuiWb8JdRYU .",
           "message_type": "system",
-          "date_time": "2026-01-27 18:39:36.777"
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aQOib4kyTjY6 .",
+          "date_time": "2025-11-13 14:21:35.895",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: LOWEST Price of the Season!\n \nOur 5-Star Rated Spectra Hybrid 10-Piece Set is $120 OFF + Free Shipping + Free Utensil Set.\n \nPowered by our advanced Thermobond technology this is the world's best hybrid cookware.\n \nChoose from stainless or gold handles: greenpan.attn.tv/am5g15lGDinf ",
           "message_type": "system",
-          "date_time": "2026-01-28 15:25:05.782"
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aLZq6WBXiQzP .",
+          "date_time": "2025-11-13 14:23:07.497",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Love is in the Oven: 48 HOURS ONLY Valentine's Day Sweetheart Deal\n \n$50 OFF our top-rated Reserve 7-Piece Bakeware Set + FREE Baking Cookbook. \n \nShop bakeware you'll use long after the chocolate's gone: greenpan.attn.tv/ain3AckapH9V ",
           "message_type": "system",
-          "date_time": "2026-01-31 15:30:10.271"
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aK938Tkn7_Ay .",
+          "date_time": "2025-11-13 14:27:40.314",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Thank you for your purchase! Your order number is 723063. View more information about your order here: https://greenpan.attn.tv/anCv6M5sIxrj .",
           "message_type": "system",
-          "date_time": "2026-02-02 12:43:48.071"
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aAvYxCdaNwsS .",
+          "date_time": "2025-11-13 14:34:18.253",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Hey Jenna, I'm Sarah from GreenPan. Welcome to our exclusive VIP list!\n\nIs there a product we can help you find?\n\nhttps://greenpan.attn.tv/aJKKhfCR5FZw .",
           "message_type": "system",
-          "date_time": "2026-02-03 16:50:35.059"
+          "message_text": "Fashion Nova: Hi raya, order #170730646 was refunded for $72.02 .\n\nView status \u0026 details here: http://sms.fashionnova.com/aTDAeBLRkKNc .",
+          "date_time": "2025-11-13 14:41:39.805",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Green by design, our cookware is forever free of forever chemicals. Have you seen our best sellers yet? Shop now: https://greenpan.attn.tv/ak5Q0COCVlRM ",
           "message_type": "system",
-          "date_time": "2026-02-04 16:40:34.603"
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/ah6nvGvXEjcE .",
+          "date_time": "2025-11-13 14:50:22.095",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Hey, it's Sarah again. I have a quick tip! Make sure to save our contact card, so that you never miss an exclusive VIP offer. \n\nIs there anything else I can help you with?\n\nhttps://greenpan.attn.tv/aDFuOH1GzYYR .",
           "message_type": "system",
-          "date_time": "2026-02-05 16:50:40.153"
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/a81uCMXiXx9x .",
+          "date_time": "2025-11-15 14:04:15.026",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Hear ye, hear ye: Presidents' Day Sale Early Access is LIVE!\n \nUp to 50% OFF deals + FREE Cookbook.\n \nShop first: greenpan.attn.tv/al-EInKTY5iX ",
           "message_type": "system",
-          "date_time": "2026-02-05 18:35:06.232"
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aI6kjMa08dd8 .",
+          "date_time": "2025-11-15 14:11:10.029",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: $100 OFF = Love at First Blend 💘\n\nOur 15-in-1 Frost Ice Cream & Frozen Drink Maker in Cotton Candy Pink is the sweetest Valentine's deal... but only for a limited time! \n \nFree Frozen Treat Recipe Book + Free Shipping: greenpan.attn.tv/atMYtQeQistM ",
           "message_type": "system",
-          "date_time": "2026-02-06 16:10:07.647"
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/axhrL9Lxqyx2 .",
+          "date_time": "2025-11-15 14:16:11.965",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Great news! Your order (723063) has shipped and will be to you soon. Click here to track your order: https://greenpan.attn.tv/asDLv7WIRhaX .",
           "message_type": "system",
-          "date_time": "2026-02-06 16:13:02.226"
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/aMnYcbaIJKXo .",
+          "date_time": "2025-11-15 14:17:50.205",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Hey Jenna! Holding off on that new recipe because of missing essentials? \n\nLet's change that, what product can I make a recommendation for today?\n\ngreenpan.attn.tv/aj8HgSr5GKgP .",
           "message_type": "system",
-          "date_time": "2026-02-07 17:24:00.760"
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/ap0qRIHlC6Wf .",
+          "date_time": "2025-11-15 14:18:20.798",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Hey Jenna, order #723063 is out for delivery. Track your order here: https://greenpan.attn.tv/a_C2yeRWbOR8 .",
           "message_type": "system",
-          "date_time": "2026-02-08 16:12:56.779"
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/aTaAVVYWZIt2 .",
+          "date_time": "2025-11-15 14:18:30.206",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Hey Jenna, order #723063 has been delivered! Track your order here: https://greenpan.attn.tv/aYj45J5Vwc3V .",
           "message_type": "system",
-          "date_time": "2026-02-08 16:19:09.014"
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/akVG50IEwHZV .",
+          "date_time": "2025-11-15 14:21:25.280",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Hi Jenna, this is Sarah from GreenPan. Thanks for checking out our site! 😊 greenpan.attn.tv/aL0xCuu9kIu0 Is there a product we can help you find?",
           "message_type": "system",
-          "date_time": "2026-02-09 18:46:46.085"
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/aTpPjqgvsMCC .",
+          "date_time": "2025-11-15 14:29:53.556",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Hi Sarah I was wondering what the difference was between the blue haze and the navy muffin pan was?",
+          "message_type": "system",
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/alYrCiEidcre .",
+          "date_time": "2025-11-15 14:31:15.587",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/agSs8_A6L8nW .",
+          "date_time": "2025-11-15 14:31:24.416",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/aGHBqMXjKOTm .",
+          "date_time": "2025-11-15 14:32:11.608",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/aBSMHKpX51hO .",
+          "date_time": "2025-11-15 14:33:21.545",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aTxl91-P41Gm .",
+          "date_time": "2025-11-15 14:45:00.015",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/aC9PiO4T0gw7 .",
+          "date_time": "2025-11-15 14:45:38.610",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Great news! Your order #170730646 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aWVOZV2ROE83 .",
+          "date_time": "2025-11-15 14:48:30.591",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/a1JJ0sSS2uiU .",
+          "date_time": "2025-11-15 14:48:32.133",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Your order #170730646 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/aHNiy1zbbPJl .",
+          "date_time": "2025-11-15 14:52:01.866",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s here! Order #170730646 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/akqSEk5RW-6K .",
+          "date_time": "2025-11-15 14:53:37.863",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s here! Order #170730646 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/aAdB5Y8xpigD .",
+          "date_time": "2025-11-15 14:54:41.160",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s here! Order #170730646 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/a5gHIL1Iiian .",
+          "date_time": "2025-11-15 14:55:43.110",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s here! Order #170730646 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/ayJB6Z-u5uFy .",
+          "date_time": "2025-11-15 14:55:44.037",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s here! Order #170730646 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/auPCKEzSd9sd .",
+          "date_time": "2025-11-15 14:57:10.046",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s here! Order #170730646 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/agKoMQqbeZUt .",
+          "date_time": "2025-11-15 14:57:43.713",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s here! Order #170730646 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/aCq-_sxQMZ7n .",
+          "date_time": "2025-11-15 14:57:46.373",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s here! Order #170730646 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/aaaPpRmzcUxD .",
+          "date_time": "2025-11-15 14:58:40.519",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s here! Order #170730646 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/apEy11NnOpn0 .",
+          "date_time": "2025-11-15 14:59:43.866",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi, if you need additional help please check out our Help Center at https://www.fashionnova.com/pages/help-center. Reply STOP to stop.",
+          "date_time": "2025-11-16 18:45:58.041",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Terms: http://sms.fashionnova.com/cl/Vbi Privacy: http://sms.fashionnova.com/cl/EzD",
+          "date_time": "2025-11-16 18:46:52.747",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: You made the FN list! Now, tap the link to get 30% OFF the ENTIRE site with code FN115-jjkjqb! -\u003e http://sms.fashionnova.com/avgl4BB8aQpt .",
+          "date_time": "2025-11-16 18:46:56.767",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-09 18:47:50.011"
+          "message_text": "i\u0027m returning my items because they are defective and we\u0027re not made correctly. Why am I only getting $406 in store credit and then having to pay an extra five dollars to get the items shipped back???? do I need to file a dispute with my bank instead???",
+          "date_time": "2025-11-16 18:47:43.249",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "GreenPan: Thank you for reaching out! Just to be sure, are you referring to GreenLife Ceramic Nonstick Muffin Pan? If so, the Blue Haze and Navy muffin pans share the same features, including a heavy-duty steel construction for quick and even heating, and a healthy ceramic nonstick coating for effortless release. Let me know if you need more help!",
+          "message_type": "customer",
+          "message_text": "I spent close to $1200, hate majority of the clothes and shoes that I bought in all you guys want to offer me is a store credit and then you\u0027re forcing me to pay a five dollars to ship everything back??? absolutely not. I paid way too much money. This is horrible. I don\u0027t want the credit. I want my money back because I will never be shopping there again.",
+          "date_time": "2025-11-16 18:51:32.838",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019a8f15-61d1-410f-f000-00000891175d",
+          "message_text": "Fashion Nova: I\u0027m very sorry to hear this happened, and I understand how disappointing and frustrating that must be! This question will be best handled by visiting http://sms.fashionnova.com/a8eQdMXMIpgY and beginning an inquiry with our team! ",
           "message_type": "agent",
-          "agent": "109964",
-          "message_id": "019c44d3-a344-495a-f000-0000d5e3a4b9",
-          "date_time": "2026-02-09 18:54:06.566"
+          "agent": "27727",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-11-16 18:52:14.572"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "it doesn\u0027t even let me create an inquiry. How can I get my money back? This is so frustrating.",
+          "date_time": "2025-11-16 18:54:03.247",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "there\u0027s absolutely no way I want $406 in store credit. And I definitely don\u0027t want to have to pay five dollars extra to return the merchandise to you for that reason.",
+          "date_time": "2025-11-16 18:54:33.328",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019a8f1b-871e-432e-f000-00000891175d",
+          "message_text": "Fashion Nova: I\u0027m sorry for the inconvenience! Please submit your inquiry via this link instead: http://sms.fashionnova.com/ajTwGM5uZtcM Please select the option \"Something Else\" and then select the same option again. I\u0027m so sorry that I can\u0027t help with this directly, but my system isn\u0027t set up for this type of issue. I recommend reaching out to our customer support team, as they\u0027re best equipped to help and will take great care of you!",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-11-16 18:58:57.332"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Who can I speak to about this? This is fucking fraudulent. How are you guys going to try to give me store credit when I paid in cash?? and then you want me to turn around and pay an extra five dollars in cash to return the items is that not fucking fraud???",
+          "date_time": "2025-11-17 13:34:19.789",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "my items are not as subscribed they\u0027re defective and they don\u0027t fucking fit. I want my fucking money back. Do I need to dispute the entire fucking charge and when I submitted my request, they got back to me and said that they will issue a gift card. I don\u0027t want a fucking gift card. I do not want a gift card. What the fuck is wrong with you guys?? you guys just had a fucking lawsuit for this shit not too long ago and you\u0027re still scamming people??",
+          "date_time": "2025-11-17 13:34:57.430",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019a931c-026a-463c-f000-00000891175d",
+          "message_text": "Fashion Nova: I\u0027m sorry for the confusion. If you received damaged, wrong, or incomplete items, please do not send these items through the return portal. Instead, contact Customer Care through our Fashion Nova Help Center: http://sms.fashionnova.com/anGqaw4RGBiW We will verify the issue, send a complimentary label if needed, and refund the item to your original payment method.",
+          "message_type": "agent",
+          "agent": "82447",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-11-17 13:37:57.772"
         }
+      ]
+    },
+    "112": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "01915715-5d8f-4844-f000-000092fc397e",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "30% off",
+            "coupon": "BBCXJvnmJp"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://brooklynbedding.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://brooklynbedding.com/products/brooklyn-signature-hybrid",
+            "item": "25% Off Sitewide. Use Code SCHOOL25. Sale Ends 8/15/2024.",
+            "timeAgo": "2024-08-15"
+          },
+          {
+            "link": "https://brooklynbedding.com/products/brooklyn-aurora-hybrid?utm_campaign=concierge\u0026utm_medium=SMS\u0026utm_source=attentive\u0026externalId=ZN_rI",
+            "item": "25% Off Sitewide. Use Code SCHOOL25. Sale Ends 8/15/2024.",
+            "timeAgo": "2024-08-15"
+          },
+          {
+            "link": "https://brooklynbedding.com/products/brooklyn-aurora-hybrid?utm_campaign=concierge\u0026utm_medium=SMS\u0026utm_source=attentive\u0026externalId=ZN_rI",
+            "item": "Aurora Luxe Cooling",
+            "timeAgo": "2024-08-14"
+          },
+          {
+            "link": "https://brooklynbedding.com/products/brooklyn-aurora-hybrid?utm_campaign=concierge\u0026utm_medium=SMS\u0026utm_source=attentive\u0026externalId=ZN_rI",
+            "item": "Aurora Luxe Cooling",
+            "timeAgo": "2024-08-14"
+          },
+          {
+            "link": "https://brooklynbedding.com/products/brooklyn-aurora-hybrid?utm_campaign=concierge\u0026utm_medium=SMS\u0026utm_source=attentive\u0026externalId=ZN_rI",
+            "item": "Aurora Luxe Cooling",
+            "timeAgo": "2024-08-13"
+          }
+        ]
+      },
+      "companyWebsite": "https://brooklynbedding.com",
+      "companyName": "Brooklyn Bedding",
+      "notes": {
+        "escalate": [
+          "ESC if cx are looking to purchase from one of their other brands:",
+          "➜ RV Mattresses",
+          "➜ Plank Mattress",
+          "➜ Titan Mattress",
+          "➜ EcoSleep",
+          "➜ Propel Sleep",
+          "➜ Mattress Topper",
+          "➜ Dreamfoam Bedding"
+        ],
+        "tone": [
+          "Close the convo if the cx texts in \"ok\"",
+          "Only send ONE sign-off or goodbye message",
+          "Let the cx have the last word!"
+        ],
+        "templates": [
+          "If cx are looking for an RV mattress, use RVM shortcut"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t recommend The plank firm Natural because it has been discontinued"
+        ],
+        "drive_to_purchase": [
+          "Push the clearance section to any cx who have price concerns"
+        ]
+      },
+      "blocklisted_words": [
+        "AI"
       ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Brooklyn Bedding: Welcome to Brooklyn Bedding! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/Gcg",
+          "date_time": "2024-08-02 14:07:35.538",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brooklyn Bedding: Congrats! Your offer has been activated and can be redeemed here: https://brooklynbedding.attn.tv/ao5m0lTIxtxc ",
+          "date_time": "2024-08-02 14:07:39.516",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brooklyn Bedding: PS Don\u0027t forget to add us to your phonebook! Stop to stop",
+          "date_time": "2024-08-02 14:07:43.160",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brooklyn Bedding: Hey , better sleep is waiting for you. 😴\n\nCome back and add Sedona Elite to your cart! https://brooklynbedding.attn.tv/ayM85li5Ie1D  Stop to stop",
+          "date_time": "2024-08-02 14:10:16.840",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brooklyn Bedding: Need some convincing? See our reviews and redeem your offer now!\nSee All Reviews: https://brooklynbedding.attn.tv/ap8uXxWtQjiA  Stop to stop",
+          "date_time": "2024-08-03 14:07:45.697",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brooklyn Bedding: If you need additional help please email us at support@brooklynbedding.com. Text STOP to opt out.",
+          "date_time": "2024-08-03 15:06:00.401",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brooklyn Bedding: Kick off the school year right with 25% off mattresses, pillows, and more! Shop now: https://brooklynbedding.attn.tv/aOaaHzFjkUUW  Stop to stop",
+          "date_time": "2024-08-06 13:40:27.313",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brooklyn Bedding: Upgrade their sleep, upgrade their grades! Save 25% on all mattresses, pillows, and more. Shop now: https://brooklynbedding.attn.tv/a-zGf7h1Zlly  Stop to stop",
+          "date_time": "2024-08-10 13:01:13.484",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brooklyn Bedding: Hi again! It’s Sarah, your personalized concierge. Is there anything I can help you with today? \n\nWe just slashed prices, check out our sale on the website: https://brooklynbedding.attn.tv/aDPCF7iaXfys  Stop to stop",
+          "date_time": "2024-08-13 14:29:58.891",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m looking for an RV mattress.",
+          "date_time": "2024-08-13 14:31:23.507",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "And a decent discount on it too.",
+          "date_time": "2024-08-13 14:31:43.499",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01914d19-d35d-4f44-f000-000092fc397e",
+          "message_text": "Brooklyn Bedding: Thanks for reaching out! Let me know what you think about our best on a budget Dreamfoam Essential - https://brooklynbedding.attn.tv/anAbvODsvBWu\n \nWe also have it available on multiple RV sizes and is currently all on sale! Let me know what you think. ",
+          "message_type": "agent",
+          "agent": "82224",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-13 14:57:03.849"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "What\u0027s the difference in that and the Aurora Luxe?",
+          "date_time": "2024-08-13 15:29:30.181",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01914d3f-4c4e-4ce8-f000-000092fc397e",
+          "message_text": "Brooklyn Bedding: The Dreamfoam provides customizable comfort to find the size that best fits your sleep space. Our dense foams are built to last and focus on comfort. The Aurora specializes in cooling, our top comfort layer is evenly infused with cooling fibers, a clinically proven method that absorbs excess body heat and releases heat back to you as needed. You can find more information on the Aurora Luxe here - https://brooklynbedding.attn.tv/arJySw7D4H1L",
+          "message_type": "agent",
+          "agent": "82433",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-13 15:37:59.646"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "If I have an air conditioned RV do I need the Aurora Luxe?",
+          "date_time": "2024-08-13 15:44:49.268",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01914d4d-0c45-4b52-f000-000092fc397e",
+          "message_text": "Brooklyn Bedding: The cooling-infused foam on the Aurora Luxe actually does more than just remove excess body heat. It helps regulate your body temperature for maximum comfort so the fibres can also release heat back to you as needed. You can totally go for it even if your RV is air-conditioned, the cooling fibres will still work as intended to keep you at the most comfortable temperature! \n\nI hope this helps!",
+          "message_type": "agent",
+          "agent": "34582",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-13 15:53:00.758"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Is it more supportive since it is thicker?  Or is it softer? Less supportive?",
+          "date_time": "2024-08-13 16:20:37.866",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m sorry to keep asking g so many questions. The Aurora Luxe is quite a bit more expensive and it is much taller/thicker. I simply can\u0027t make up my mind and either is a whole lot of money!",
+          "date_time": "2024-08-13 16:23:07.274",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01914d6e-d0b0-4bff-f000-000092fc397e",
+          "message_text": "Brooklyn Bedding: No worries at all and I understand! Typically, you should expect that your mattress will take around 30-45 nights to entirely break-in and the same amount of time for your body to adjust to the sensation of a new mattress. During this period of time, your mattress will reach its optimal softness and become fully aerated.\n\nFor these reasons, we require a 30 day adjustment period before processing your risk-free return within our generous 120 night trial.",
+          "message_type": "agent",
+          "agent": "82448",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-13 16:29:53.724"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "At the rate we came it will take three to four years to get that many nights!  I\u0027m not retired yet so I can\u0027t be gone all the time.",
+          "date_time": "2024-08-13 16:33:06.431",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01914d74-84ab-4025-f000-000092fc397e",
+          "message_text": "Brooklyn Bedding: I totally understand and I appreciate the info. Is there anything else I can help you with? ",
+          "message_type": "agent",
+          "agent": "39115",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-13 16:36:07.479"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank You. No.",
+          "date_time": "2024-08-13 16:36:36.530",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I do have one question, I\u0027d like to see if and how much of a discount you can offer me on the Aurora Luxe if I purchase.",
+          "date_time": "2024-08-14 11:42:20.232",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01915192-1759-4588-f000-000092fc397e",
+          "message_text": "Brooklyn Bedding: You can use the code SCHOOL25 for 25% off. For RV mattresses, you can check out our collection here: https://brooklynbedding.attn.tv/aMv2EoDvhG_J\n\nHere\u0027s the link for the Aurora Luxe RV mattress: https://brooklynbedding.attn.tv/aAFRYUzsAjTN",
+          "message_type": "agent",
+          "agent": "40170",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-14 11:46:54.439"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Can you offer a larger discount?",
+          "date_time": "2024-08-14 11:49:09.873",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01915195-9a06-4c78-f000-000092fc397e",
+          "message_text": "Brooklyn Bedding: Here\u0027s a 30% off code just for you: BBCXJvnmJp - Just follow the link to use it: https://brooklynbedding.attn.tv/a7sTqTKGXFHw I hope this helps!",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-14 11:50:44.498"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thanks Very Much!",
+          "date_time": "2024-08-14 12:00:30.211",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brooklyn Bedding: Don\u0027t be tardy! ⏰ Our Back-to-School sale ends TONIGHT. Save 25% before it\u0027s too late: https://brooklynbedding.attn.tv/a7eqisjQVDu5  Stop to stop",
+          "date_time": "2024-08-14 14:20:24.320",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The code you gave me for 30% is invalid.",
+          "date_time": "2024-08-15 08:40:11.972",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01915610-8a28-4492-f000-000092fc397e",
+          "message_text": "Brooklyn Bedding: I\u0027m sorry to hear that. Can you share with me a screenshot of the error and the items on your cart so I can look into it further? Thank you.",
+          "message_type": "agent",
+          "agent": "82444",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-15 08:43:30.228"
+        },
+        {
+          "message_id": "01915615-2af6-4083-f000-000092fc397e",
+          "message_text": "Brooklyn Bedding: I\u0027m sorry, I can\u0027t open the image you\u0027ve sent. Would you mind sending it again? ",
+          "message_type": "agent",
+          "agent": "46498",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-15 08:48:33.537"
+        },
+        {
+          "message_id": "01915617-5155-4b27-f000-000092fc397e",
+          "message_text": "Brooklyn Bedding: Thank you for trying but I\u0027m afraid the image is still coming in broken. Can you please upload the image(s) here: https://brooklynbedding.attn.tv/axVigWguElcU and send me the generated link? Thank you for your patience! ",
+          "message_type": "agent",
+          "agent": "82222",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-15 08:50:54.433"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I can\u0027t get it to upload. Sorry!  Not very tech savvy!",
+          "date_time": "2024-08-15 13:28:11.845",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01915715-5d8f-4844-f000-000092fc397e",
+          "message_text": "Brooklyn Bedding: No problem! Please try using the code SCHOOL25 for 25% off at checkout. If you still face issues, you can call us at +1 623-624-1222 for further assistance.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-15 13:28:23.702"
+        }
+      ]
+    },
+    "113": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "0194ade9-88e1-44b5-f000-0000ad019670",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Soundbars, Soundbar Accessories, Vacuum, Wireless Speaker. Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Vacuum, Wireless Speakers is off the pre-tax sale price on LG.com only. Offer valid for one-time use only within 30 days of code being sent. To receive the additional 10% off savings, promotion code must be entered at online checkout and will be applied to eligible products only. If any of the qualifying items are removed from the cart, canceled or returned, the promotional savings will be void. Availability, prices and terms of offer are subject to change without notice. No adjustments to prior purchases and non-redeemable for cash. ualifying AeroTower: U9CS1C  Qualifying PuriCare Air Purifiers: AP151MBA1, AP151MWA1, AS330DWR0, AS560DWR0, U9CV1C, U9CV2B  Qualifying Dehumidifier: UD501KOJ5  Qualifying TONE Free headphones: HBS-XL7.ACUSBKI, HBS-SL5.ACUSBKI, HBS-SL6S.ACUSBKI, HBS-510.ACUSBKI, HBS-830.ACUSBKI, HBS-830.ACUSWHI, HBS-FN4.ACUSBKI, HBS-FN6.ACUSBKI, HBS-FN5W.ACUSBKI, HBS-FN6.ACUSWHI, HBS-FN5W.ACUSWHI, TONE-FN7.ACUSBKI, TONE-FP8.AUSACLK, TONE-FP9.AUSACLK, TONE-FP5.AUSACLK, TONE-FP3.AUSACLK, TONE-NP3.AUSACLK, TONE-T90Q.AUSACBK, TONE-T90Q.AUSACWH, TONE-T60Q.AUSACBK TONE-TF8Q.AUSACBI, TONE-FP9W.AUSACLK, TONE-FP9E.AUSACLK, TONE-NP3C.AUSACLK  Qualifying LG Styler: S3CW, S3MFBN, S3RFBN, S3WFBN, S5MSB  Qualifying Soundbars: QP5, QP5W, S75Q, SP7Y, S65Q, SN6Y, SN5Y, SP2, SK1, SH2  Qualifying Soundbar Accessories: SPQ8-S, SPK8-S, WTP3  Qualifying Vacuums: A913BM, A925KSM, A927KGMS, A929KVM, A939KBGS, R975GM  Qualifying XBOOM Go Wireless Speakers: PL2, PL5, PL7, GP9, GP3, RP4G, RP4, RP4B, XG5QBK, XG7QBK, XO3QBK",
+            "value": "10",
+            "coupon": "TEXTYVEEZ9ZZ5J"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://lg.com/us",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://lg.com/us",
+      "companyName": "LG",
       "notes": {
         "send_to_cs": [
-          "For the following inbound message types use PPI shortcut:",
-          "➜ Post-purchase issues",
-          "➜ Product-specific questions & any q's about materials/heating/temperature-based q's etc.",
-          "➜ Damaged orders",
-          "➜ Any q's regarding aluminum or aluminium issues",
-          "➜ Voltage / Wattage inquiries",
-          "➜ Complaints about the quality of the products",
-          "➜ Q's about product differences/comparison",
-          "➜ Warranty issues",
-          "➜ Any q's or comments about the lawsuit"
+          "No ESC for this client, send everything to CS using the \"Escalation template\""
+        ],
+        "templates": [
+          "For 10% off welcome code issues use temp \u0027Follow up 1\u0027, then \u0027Follow up 2\u0027 after confirming the item is excluded from promos",
+          "For fridge recommendations use FRR shortcut",
+          "For service-related issues/scheduled repair service appointments use SRI shortcut",
+          "For cxs looking for replacement parts/accessories from an affiliate Parts Distributor use RPA shortcut",
+          "If a cx has an inquiry for finding the serial number/model number of an item:",
+          "➜ If it\u0027s a TV, use mnt shortcut",
+          "➜ If it\u0027s another product, use mna shortcut"
+        ],
+        "dos_and_donts": [
+          "If it\u0027s a new conversation and we didn\u0027t introduce ourselves in the automated message, start your message with: \"This is Jordan at LG.\""
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Reply Y to subscribe to LG recurring automated personalized marketing alerts (e.g. cart reminders, product tips, special offers) from LG Electronics USA.",
+          "date_time": "2025-01-22 11:15:44.364",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Welcome to LG Electronics USA! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/WBe",
+          "date_time": "2025-01-22 11:43:05.470",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: We\u0027re so glad you joined. Claim your code for 10% off on select products, valid for 30 days: https://lg.attn.tv/aEp6rAtASXV1 \n\nText back with any questions!",
+          "date_time": "2025-01-22 11:43:09.509",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Texts may be retained for customer support \u0026 other purposes. For more info, see Terms (lg.com/us/legal) and Privacy (lg.com/us/privacy)",
+          "date_time": "2025-01-22 11:43:10.522",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Thanks for your purchase on LG.com! We\u0027ll send another message when your order is ready for shipping. 📦\nOrder #: 1111203493\nEstimated delivery date: 01-27-2025\nJust tap here to manage your order: https://lg.attn.tv/awJJU4SXRGxS .",
+          "date_time": "2025-01-22 12:21:48.396",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Thanks for your purchase on LG.com! We\u0027ll send another message when your order is ready for shipping. 📦\nOrder #: 1111231804\nEstimated delivery date: 02-03-2025 - 02-18-2025\nJust tap here to manage your order: https://lg.attn.tv/a1ZgjCI7SgGX .",
+          "date_time": "2025-01-22 12:37:00.774",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Save up to $500 when you bundle 2 or more eligible appliances - plus get up to $100 off when you trade in your old appliance. Shop now: https://lg.attn.tv/adkFv9x0XwVE \n\nText back if you have any questions!",
+          "date_time": "2025-01-23 12:01:57.250",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Your LG order is ready to be shipped! It\u0027s time to check ✅ your calendar.\nOrder #: 1111231804\nEstimated delivery date: 02-03-2025 \nNeed to reschedule? No worries, just tap here: https://lg.attn.tv/aAxIq5O0ynAs .",
+          "date_time": "2025-01-23 12:36:26.910",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Hi, I\u0027m Jordan - your go-to LG specialist. Feel free to text me any time, and save our contact so you don\u0027t miss any updates!",
+          "date_time": "2025-01-23 12:52:45.025",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Save up to $200 off select UltraGear and UltraWide monitors, plus purchase a 38\" or larger monitor with another eligible monitor and get 20% off both monitors. Shop now: https://lg.attn.tv/aMuaTqzmhGUj \n\nText back if you have any questions!",
+          "date_time": "2025-01-24 12:02:37.565",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: 🚨24-Hours Only! Get big savings on select kitchen, laundry, vacuums, and more. Plus, trade in your old appliance and save $50-$100. Shop now: https://lg.attn.tv/aW4-pPogmknq \n\nText back if you have any questions!",
+          "date_time": "2025-01-25 12:01:41.144",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Hey there! It looks like you haven\u0027t redeemed your coupon code TEXTYVEEZ9ZZ5J. https://lg.attn.tv/aLmFo2Lqzq02\n\nAny questions I can help with before the deal runs out?\n- Jordan",
+          "date_time": "2025-01-26 12:52:55.493",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Our home delivery partner will contact you about your order and delivery schedule 📆, plus any last minute details.\nOrder #: 1111231804\nEstimated delivery date: 02-03-2025\nJust tap here to manage your order: https://lg.attn.tv/aWCD4p1ZumR1 .",
+          "date_time": "2025-01-28 12:03:27.267",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Thanks for texting us! If you need further assistance, please reach out to https://www.lg.com/us/support or 800-243-0000. Reply STOP to stop.",
+          "date_time": "2025-01-28 12:14:43.732",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "My delievery date is today why it is different ? 2/3",
+          "date_time": "2025-01-28 12:14:55.017",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Escalation template (esc temp)\"; last updated: 2025-04-01 19:42:53.703",
+          "date_time": "2025-01-28 12:15:50.907",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0194ade9-88e1-44b5-f000-0000ad019670",
+          "message_text": "LG Electronics USA: Thanks for letting me know. For the best answer, you\u0027ll want to reach out to our Support team directly via email here: https://lg.attn.tv/aEcVouKhQctM or phone at 800-243-0000 where they are available 7 days/week from 8am-9pm EST. You can also chat with the team here: https://lg.attn.tv/aDZHJOs2HyBk Our team is happy to help!",
+          "message_type": "agent",
+          "agent": "82220",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-01-28 12:15:50.910"
+        }
+      ]
+    },
+    "114": {
+      "agentName": "Taylor",
+      "has_shopify": false,
+      "id": "018ed8f4-7574-470d-f000-0000359f3448",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.birkenstock.com/us/sydney-birko-flor/sydney-graceful-birkoflor-0-eva-w_11569.html?dwvar_sydney-graceful-birkoflor-0-eva-w__11569_size=245\u0026region=US",
+            "item": "Sydney Birko-Flor Graceful Mars Red",
+            "timeAgo": "2024-04-13"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/sydney-birko-flor/sydney-graceful-birkoflor-0-eva-w_11569.html#utm_campaign=20240413_lastchance_us_sms\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=dKL88",
+            "item": "Sydney Birko-Flor Graceful Mars Red",
+            "timeAgo": "2024-04-13"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/madrid-big-buckle-natural-leather-oiled/madridbigbuckle-bigbuckle-oiledleather-0-eva-w_7.html#utm_campaign=20240413_lastchance_us_sms\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=dKL88",
+            "item": "Madrid Big Buckle Oiled Leather Blue | BIRKENSTOCK",
+            "timeAgo": "2024-04-13"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/sydney-birko-flor/sydney-graceful-birkoflor-0-eva-w_11569.html#utm_campaign=20240413_lastchance_us_sms\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=dKL88",
+            "item": "Sydney Birko-Flor Graceful Mars Red",
+            "timeAgo": "2024-04-13"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/arizona-nubuk-leather/arizona-nubucksplit-nubuckleather-0-eva-w_11572.html?utm_source=facebook\u0026utm_medium=cpc\u0026utm_campaign=fb-us_dr_rtg_dpa_cbo\u0026utm_content=120206376640750189\u0026fbclid=PAAaafZ2NXldyUVjVBvt7By3bAhe4zh_RPS4t3Phiviid76yqFMU3SdHyRe20_aem_AV9iOB8ksp3B1MTQxrkynRrK52x6VSH1hwaU6pdCq6V-RglzpMgaaIHuuaHTnxMc0N5YMUUmt9Pg_RN4HDverZlm",
+            "item": "Arizona Nubuck Leather Mars Red/Sandcastle",
+            "timeAgo": "2024-03-22"
+          }
+        ],
+        "coupons": [
+          {
+            "status": "INACTIVE",
+            "description": "Free Ground Shipping on full-priced items",
+            "coupon": "ATSHIP-P4XQ-CX5Z-PZQ4-XFV74"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://birkenstock.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-10",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      99.95,
+                      99.95
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-11-10 20:59:41.613",
+            "discount_amount": 0,
+            "orderNumber": "58062626",
+            "total": 99.95
+          }
+        ]
+      },
+      "companyWebsite": "https://birkenstock.com",
+      "companyName": "Birkenstock",
+      "notes": {
+        "escalate": [
+          "For all pre-purchase and post purchase ESC always include the customers full name in the notes",
+          "Don\u0027t ESC if they get an error with the fs code while logged in"
+        ],
+        "templates": [
+          "For free shipping retroactive code requests, use SRP shortcut",
+          "For holiday/extended returns - use the template"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over",
+          "🤖 If someone sends a product category, link them to the category and ask if they are looking for something specific"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping codes"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Welcome to Birkenstock! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/8y2",
+          "date_time": "2024-03-18 18:12:29.931",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: CLICK ON THE LINK to reveal your FREE GROUND SHIPPING CODE, good for your next full price purchase:\n\nhttps://birkenstock.attn.tv/sl/NCfXqZS3\n\nWelcome to the family!",
+          "date_time": "2024-03-18 18:12:34.484",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Don\u0027t forget to save our contact to get exclusive updates!",
+          "date_time": "2024-03-18 18:12:35.461",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Noticed you were eyeing the Arizona Nubuck Leather sandals. They\u0027re perfect for combining style with everyday comfort. \n\nDon\u0027t miss out: https://birkenstock.attn.tv/sl/8CbAcVFz .\n",
+          "date_time": "2024-03-18 18:33:29.479",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Still deciding? In case you missed it, enjoy free shipping on your next order. \n\nShop now: https://birkenstock.attn.tv/l/vVr/dKL88 .",
+          "date_time": "2024-03-19 18:12:38.801",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: RSVP: New High Shine. Shop plus-ones for your spring invites: https://birkenstock.attn.tv/l/s-d/dKL88 .\n\nText back if you have any questions!",
+          "date_time": "2024-03-20 15:00:32.421",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: These wedges are raising the bar for chic, seamless comfort. Shop the Theda \u0026 Almina: https://birkenstock.attn.tv/l/cD1/dKL88 .",
+          "date_time": "2024-03-22 15:01:06.653",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Raffia wedges are here \u0026 ready for adventure. Shop the new collection: https://birkenstock.attn.tv/l/x-4/dKL88 .\n",
+          "date_time": "2024-03-23 15:01:07.509",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Shades of suede. Shop new \u0026 best-selling colors for lighter, brighter days: https://birkenstock.attn.tv/l/A7Z/dKL88 .\n ",
+          "date_time": "2024-03-24 15:01:29.107",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Just bloomed - the Gizeh Flower sandal. Gorgeous petals, gold accents. Shop now: https://birkenstock.attn.tv/l/Ady/dKL88 .\nQuestions? Reply here.",
+          "date_time": "2024-03-27 15:00:48.591",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Introducing the Boston EVA clog. Lightweight, water-friendly \u0026 just your color. Shop now: https://birkenstock.attn.tv/l/AmF/dKL88 .\n",
+          "date_time": "2024-03-29 15:01:13.175",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Don\u0027t miss the March Last Chance Shop. Your next favorite style, right this way: https://birkenstock.attn.tv/l/xlU/dKL88 .\n\n",
+          "date_time": "2024-03-30 15:01:08.838",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: New iridescent big buckles. Catch the sun \u0026 shine just right. Shop the style: https://birkenstock.attn.tv/l/nzy/dKL88 .",
+          "date_time": "2024-04-01 10:32:50.493",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Introducing the Catalina sandal. Single strap style reimagined for perfect coverage. Shop now: https://birkenstock.attn.tv/l/D1W/dKL88 .",
+          "date_time": "2024-04-03 15:01:19.416",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: This month in Member\u0027s only styles. Shop noteworthy neutrals \u0026 more exclusives: https://birkenstock.attn.tv/l/6Fx/dKL88 .",
+          "date_time": "2024-04-04 15:00:49.533",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: The April Last Chance Shop. Color refresh ahead. Shop now: https://birkenstock.attn.tv/l/NST/dKL88 .\n\nText back if you have any questions!",
+          "date_time": "2024-04-05 15:00:44.108",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: The Lutry clog in new seasonal colors. Shop Gray Taupe, Eggshell \u0026 more that style easy: https://birkenstock.attn.tv/l/kxn/dKL88 .",
+          "date_time": "2024-04-06 15:01:32.056",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Spring colors just launched in vegan. Shop them first: https://birkenstock.attn.tv/l/klQ/dKL88 .\n\nText back if you have any questions!",
+          "date_time": "2024-04-08 15:01:01.033",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: New nubuck is in. Soft colors, softer leather. Shop the sandal destination: https://birkenstock.attn.tv/l/4Kh/dKL88 .",
+          "date_time": "2024-04-10 15:01:12.283",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: The Outdoor Collection: off-road tested \u0026 adventure-ready. Free ground shipping, for a limited time: https://birkenstock.attn.tv/l/kZg/dKL88 .",
+          "date_time": "2024-04-12 15:01:59.589",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Blues, yellows \u0026 more spring colors in Last Chance. Free ground shipping on all orders, limited time: https://birkenstock.attn.tv/l/YEh/dKL88 .",
+          "date_time": "2024-04-13 15:00:48.244",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Welcome! I\u0027m Taylor! I see you\u0027re eyeing the https://birkenstock.attn.tv/sl/i5mIg8Vb \n\nDo you need any help finding the perfect size?",
+          "date_time": "2024-04-13 15:04:48.090",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No but thank you",
+          "date_time": "2024-04-13 15:34:19.364",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ed8f4-1d71-4cf1-f000-0000359f3448",
+          "message_text": "Birkenstock: No problem. Feel free to reach out anytime, I\u0027m always here to help!",
+          "message_type": "agent",
+          "agent": "38773",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-13 15:34:20.791"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Are they true red or more pink?",
+          "date_time": "2024-04-13 15:34:29.368",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ed8f4-7574-470d-f000-0000359f3448",
+          "message_text": "Birkenstock: The Sydney Birko-Flor sandals in the color \u0027Graceful Raspberry\u0027 are more of a true red color. However, color perception can vary depending on individual screens. If you\u0027re not satisfied with the color upon receiving them, we do offer returns.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-13 15:34:43.321"
+        }
+      ]
+    },
+    "115": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "0191d7ee-6351-4f16-f000-00006533d358",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.montblanc.com/en-us/fountain-pens_cod1647597341708817.html",
+            "item": "Meisterstück The Origin Collection LeGrand Fountain Pen M - Luxury Fountain pens",
+            "timeAgo": "2024-09-09"
+          },
+          {
+            "link": "https://www.montblanc.com/en-us/fountain-pens_cod1647597341706334.html",
+            "item": "Meisterstück The Origin Collection 149 Fountain Pen M - Luxury Fountain pens",
+            "timeAgo": "2024-09-09"
+          },
+          {
+            "link": "https://www.montblanc.com/en-us/wrist-watches_cod1647597311033615.html",
+            "item": "Montblanc 1858 Iced Sea Automatic Date - Luxury Wrist watches",
+            "timeAgo": "2024-03-12"
+          },
+          {
+            "link": "https://www.montblanc.com/en-us/wrist-watches_cod1647597311033615.html",
+            "item": "Montblanc 1858 Iced Sea Automatic Date - Luxury Wrist watches",
+            "timeAgo": "2024-03-12"
+          },
+          {
+            "link": "https://www.montblanc.com/en-us/wrist-watches_cod1647597311033615.html",
+            "item": "Montblanc 1858 Iced Sea Automatic Date - Luxury Wrist watches",
+            "timeAgo": "2024-03-12"
+          }
+        ],
+        "coupons": [
+          {
+            "coupon": "MONTBLANCUS",
+            "status": "ACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://montblanc.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-09-09",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      1795,
+                      1795
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2024-09-09 17:17:41.052",
+            "discount_amount": 0,
+            "orderNumber": "0909ZCS2E2438K",
+            "total": 1795
+          }
+        ]
+      },
+      "companyWebsite": "https://montblanc.com",
+      "companyName": "Montblanc",
+      "notes": {
+        "send_to_cs": [
+          "If escalated do NOT send to CS"
+        ],
+        "escalate": [
+          "ESC if a cx wants to purchase an out of stock item",
+          "ESC if cx want someone from the cs team to call them directly",
+          "ESC when a cx asks for a call back",
+          "ESC if uncertain about refills or product specific questions",
+          "ESC if cx has issues registering",
+          "ESC if cx asks for help putting through an order"
         ],
         "tone": [
           "Close the convo once the client takes over",
-          "Don't say words like \"I'm not sure, or certain\"",
-          "Add \"Happy cooking!\" when closing a convo!",
-          "Let the cx have the last word"
+          "Don\u0027t use too many exclamation points",
+          "Use more formal language such as \"Hello\" instead of \"Hey\"",
+          "Avoid using smiley faces/emojis",
+          "Avoid responding to anything related to politics"
         ],
-        "templates": [
-          "For product recommendations, use DHR shortcut"
+        "dos_and_donts": [
+          "Always use your VPN when accessing their website \u0026 make sure you\u0027re sending US links",
+          "Don\u0027t ever release information on personnel related to the company",
+          "Don\u0027t share any authorized retailers, only boutiques",
+          "Don\u0027t ask cx to leave product reviews as they don\u0027t collect them",
+          "Don\u0027t offer holiday discounts/promos",
+          "Don\u0027t mention discounted items"
         ],
         "drive_to_purchase": [
-          "Send links to collections if customers aren't looking for a specific product!"
+          "When D2P\u0027ing, do not send links of the search results page, send either a related collection or product page",
+          "Do not recommend gift sets"
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://greenpan.us",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze - Blue Haze",
-            "link": "https://www.greenpan.us/products/greenlife-ceramic-nonstick-muffin-pan-navy-1",
-            "timeAgo": "2026-02-09"
-          },
-          {
-            "item": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze - Blue Haze",
-            "link": "https://www.greenpan.us/products/greenlife-ceramic-nonstick-muffin-pan-black",
-            "timeAgo": "2026-02-09"
-          },
-          {
-            "item": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze - Blue Haze",
-            "link": "https://www.greenpan.us/products/greenlife-ceramic-nonstick-muffin-pan-pink",
-            "timeAgo": "2026-02-09"
-          },
-          {
-            "item": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze - Blue Haze",
-            "link": "https://www.greenpan.us/products/greenlife-ceramic-nonstick-muffin-pan-blue-haze",
-            "timeAgo": "2026-02-09"
-          },
-          {
-            "item": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze - Blue Haze",
-            "link": "https://www.greenpan.us/products/greenlife-ceramic-nonstick-muffin-pan-navy-1",
-            "timeAgo": "2026-02-09"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "723063",
-            "orderDate": "2026-02-02",
-            "items": [
-              {
-                "name": "GreenLife Easy Reach Silicone Spatula, 2-Piece Set | Turquoise",
-                "price": 14.99,
-                "productLink": "https://greenpan-us.myshopify.com/products/greenlife-easy-reach-silicone-spatula-2-piece-set-turquoise"
-              },
-              {
-                "name": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze",
-                "price": 29.99,
-                "productLink": "https://greenpan-us.myshopify.com/products/greenlife-ceramic-nonstick-muffin-pan-blue-haze"
-              },
-              {
-                "name": "GreenLife Ceramic Nonstick Muffin Pan | Navy",
-                "price": 29.99,
-                "productLink": "https://greenpan-us.myshopify.com/products/greenlife-ceramic-nonstick-muffin-pan-navy-1"
-              },
-              {
-                "name": "Premiere Silicone Flat Whisk | Oxford Blue",
-                "price": 19.99,
-                "productLink": "https://greenpan-us.myshopify.com/products/premiere-silicone-flat-whisk-oxford-blue"
-              },
-              {
-                "name": "GreenPan's Shipping Protection",
-                "price": 4.95,
-                "productLink": "https://greenpan-us.myshopify.com/products/routeins"
-              }
-            ],
-            "link": "https://www.greenpan.us/53112176808/orders/417f2a9010b8799febc4186c089acceb/authenticate?key=bd6fea1a946c850a021dbaa1c1195a92",
-            "total": 99.91,
-            "date_time": "2026-02-02 17:47:34.951"
-          },
-          {
-            "orderNumber": "723063",
-            "orderDate": "2026-02-02",
-            "items": [
-              {
-                "name": "GreenPan's Shipping Protection",
-                "price": 4.95,
-                "productLink": "https://greenpan-us.myshopify.com/products/routeins"
-              },
-              {
-                "name": "Premiere Silicone Flat Whisk | Oxford Blue",
-                "price": 19.99,
-                "productLink": "https://greenpan-us.myshopify.com/products/premiere-silicone-flat-whisk-oxford-blue"
-              },
-              {
-                "name": "GreenLife Ceramic Nonstick Muffin Pan | Blue Haze",
-                "price": 29.99,
-                "productLink": "https://greenpan-us.myshopify.com/products/greenlife-ceramic-nonstick-muffin-pan-blue-haze"
-              },
-              {
-                "name": "GreenLife Ceramic Nonstick Muffin Pan | Navy",
-                "price": 29.99,
-                "productLink": "https://greenpan-us.myshopify.com/products/greenlife-ceramic-nonstick-muffin-pan-navy-1"
-              },
-              {
-                "name": "GreenLife Easy Reach Silicone Spatula, 2-Piece Set | Turquoise",
-                "price": 14.99,
-                "productLink": "https://greenpan-us.myshopify.com/products/greenlife-easy-reach-silicone-spatula-2-piece-set-turquoise"
-              }
-            ],
-            "link": "https://www.greenpan.us/53112176808/orders/417f2a9010b8799febc4186c089acceb/authenticate?key=bd6fea1a946c850a021dbaa1c1195a92",
-            "total": 105.9,
-            "date_time": "2026-02-02 17:43:34.576"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "113": {
-      "id": "019c5812-9792-4fb0-f000-00008877f3f2",
-      "companyName": "amika",
-      "companyWebsite": "https://loveamika.com",
-      "agentName": "Rachel",
+      "blocklisted_words": [
+        "deals",
+        "sales",
+        "promos",
+        "promo",
+        "promotion",
+        "promotions",
+        "sale",
+        "shoot",
+        "coupon",
+        "Hey"
+      ],
+      "escalation_preferences": [
+        "Discount code errors",
+        "Exchanges and returns",
+        "Shipping questions",
+        "Store location",
+        "store inventory",
+        "help placing an order",
+        "shipping times",
+        "cancel order"
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "amika: just dropped exclusive bundles: save 15% on signature faves + NEW soulstruck dry hair mask. shop now! amika.attn.tv/aa6_vV6un1ko",
           "message_type": "system",
-          "date_time": "2026-01-22 12:03:24.908"
+          "message_text": "Montblanc: Whether you\u0027re heading to college or back in the office, we have the impressive touches that will get you recognition for all the right reasons. Discover at https://montblanc.attn.tv/aUI1LbgFUqPI ",
+          "date_time": "2024-08-27 13:01:40.162",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "amika: save 30% on signature faves with our exclusive supersized superfruit set! shop now and treat your strands. amika.attn.tv/abSTaz1ha1C0 ",
           "message_type": "system",
-          "date_time": "2026-01-28 14:17:38.393"
+          "message_text": "Montblanc: \nA century after its introduction, we\u0027re celebrating our most famous writing instrument in collaboration with Wes Anderson. Discover more at \n https://montblanc.attn.tv/aSOMJus4qL1A ",
+          "date_time": "2024-09-09 13:01:24.022",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "amika: keep cold temp dryness at bay with NEW soulstruck dry hair mask-the perfect no-wash solution for all winter hair woes. amika.attn.tv/aH3Pe6QZWyMg ",
           "message_type": "system",
-          "date_time": "2026-02-06 12:01:43.785"
+          "message_text": "Montblanc: Hi Mark, this is Sarah. Thanks for visiting Montblanc.com. Do you have any questions that I can assist you with? https://montblanc.attn.tv/a336nWKL3YCk ",
+          "date_time": "2024-09-09 13:05:31.442",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "amika: 30% off ALL shampoos + conditioners (yes, even liters!) starts now. use code: WASH30 amika.attn.tv/aNxDJZtZlAg7 ",
-          "message_type": "system",
-          "date_time": "2026-02-13 12:05:46.940"
-        },
-        {
-          "message_media": [],
-          "message_text": "Any discounts for the hair mask?",
           "message_type": "customer",
-          "date_time": "2026-02-13 12:16:45.394"
+          "message_text": "Thank you Sarah. Do you have estimate on delivery of pen?",
+          "date_time": "2024-09-09 13:22:53.355",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "amika: You can use the code HAIR30 for 30% off sitewide at loveamika.com. Enjoy shopping!",
+          "message_id": "0191d7d0-56a0-42ff-f000-00006533d358",
+          "message_text": "Montblanc: You\u0027re welcome! Our processing time takes 2-3 business days and we usually ship via UPS. Once shipped it will take 5-8 business days for domestic orders. You\u0027ll receive tracking info via email as soon as it ships. Please check your spam folders as sometimes our emails end up there. \n\nYou can use our convenient online tool to see the latest updates on your order: https://montblanc.attn.tv/agH254pHSOh5",
           "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5801-aeeb-4bc2-f000-00008877f3f2",
-          "date_time": "2026-02-13 12:17:11.297"
+          "agent": "82447",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-09 13:24:00.816"
         },
         {
-          "message_media": [],
-          "message_text": "Thank you",
           "message_type": "customer",
-          "date_time": "2026-02-13 12:18:14.631"
+          "message_text": "Thank you.",
+          "date_time": "2024-09-09 13:26:13.322",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "HAIR30 Its not working?",
+          "message_id": "0191d7dd-c22a-4a90-f000-00006533d358",
+          "message_text": "Montblanc: You\u0027re welcome. Is there anything else I can help you with?",
+          "message_type": "agent",
+          "agent": "87398",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-09 13:38:40.311"
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-13 12:20:53.150"
+          "message_text": "I need another 2 pen holder case. I have a blue leather one. Is that available?",
+          "date_time": "2024-09-09 13:41:12.709",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "amika: The HAIR30 code should work for a 30% sitewide discount. Please try again on loveamika.com. If it still doesn't work, share a screenshot of the issue.",
+          "message_id": "0191d7ee-6351-4f16-f000-00006533d358",
+          "message_text": "Montblanc: Thanks for reaching out, Mark! I\u0027d be happy to help. You can check out our available blue leather 2-pen holder case here: https://montblanc.attn.tv/aU4JI3p_S68M\n\nIs there anything else you\u0027re interested in while I check on that? Let me know if you need further assistance!",
           "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5805-8f4d-4442-f000-00008877f3f2",
-          "date_time": "2026-02-13 12:21:25.390"
-        },
-        {
-          "message_media": [],
-          "message_text": "amika: Thanks for the screenshot! Could you also share a screenshot of the items in your cart? I'll be happy to look into the issue! ",
-          "message_type": "agent",
-          "agent": "46498",
-          "message_id": "019c580a-f444-44c9-f000-00008877f3f2",
-          "date_time": "2026-02-13 12:27:18.897"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Screenshot - All brands\"; last updated: 2023-10-10 18:09:41.020",
-          "message_type": "template",
-          "date_time": "2026-02-13 12:35:39.435"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Provide a discount (Concierge Offer)\"; last updated: 2025-12-19 19:14:56.656",
-          "message_type": "template",
-          "date_time": "2026-02-13 12:35:39.435"
-        },
-        {
-          "message_media": [],
-          "message_text": "amika: Thanks for the screenshot! I'm afraid that the code HAIR30 is no longer valid. Apologies for the oversight. For reference, our current offer is 30% off on shampoos + conditioners if you apply the code WASH30. \n\nIn the meantime, here's a 15% code for you to use: RACHEL15 - Please keep in mind that it can't be combined with other codes. Be sure to also check out our best sellers here: https://amika.attn.tv/a3s7NCCrltQE Hope this helps!",
-          "message_type": "agent",
-          "agent": "87310",
-          "message_id": "019c5812-9792-4fb0-f000-00008877f3f2",
-          "date_time": "2026-02-13 12:35:39.438"
+          "agent": "87588",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-09 13:56:50.147"
         }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for damaged/wrong/missing orders"
-        ],
-        "escalate": [
-          "If a cx order was canceled/marked as fraudulent ask if they entered a PO address:",
-          "➜ If they did use PAC shortcut",
-          "➜ If not ESC"
-        ],
-        "templates": [
-          "Use CED shortcut only during weekdays"
-        ],
-        "dos_and_don_ts": [
-          "Don't share details about upcoming promotions with customers"
-        ],
-        "promo_and_promo_exclusions": [
-          "NEWFRIEND, DESKTOP15, MOBILE15 are 1st-time purchase codes",
-          "Cx can select one free sample at checkout. Orders with more than one sample may be rejected",
-          "➜ Occasionally during high volume sales we may disable the sample selector, and will message on the site that one sample will automatically be included with each order"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://loveamika.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Something’s wrong here.",
-            "link": "https://loveamika.com/products/supernova-moisture-and-shine-cream?utm_term=&utm_campaign=&utm_source=adwords&utm_medium=ppc&hsa_acc=8777187491&hsa_cam=18193435903&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=18193451902&gbraid=0AAAAADyGkEim-Gt41lMrNhCdvt249Gl9q&gclid=CjwKCAjwmenCBhA4EiwAtVjzml1mwtbnKCNVqaEI4YvWOzbVNFIcRrIoVPXqK8Y5BuuYMA3PWns7nBoCBUoQAvD_BwE",
-            "timeAgo": "2025-06-24"
-          },
-          {
-            "item": "top gloss  hair shine spray",
-            "link": "https://loveamika.com/products/top-gloss-shine-spray",
-            "timeAgo": "2025-06-24"
-          },
-          {
-            "item": "soulfood  nourishing hair mask",
-            "link": "https://loveamika.com/products/soulfood-nourishing-mask?variant=1619180093458&utm_term=&utm_campaign=&utm_source=adwords&utm_medium=ppc&hsa_acc=8777187491&hsa_cam=18192899212&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=18197746451&gbraid=0AAAAADyGkEjj9dVOTsZom_kGn0qP5bCGV&gclid=CjwKCAjwmenCBhA4EiwAtVjzmkcvZU3vCcY95Gmu0ev9wU6nNmSkds6jRKpqaNRBzmOOqROm0Ih7rRoCQ04QAvD_BwE",
-            "timeAgo": "2025-06-24"
-          },
-          {
-            "item": "soulfood  nourishing hair mask",
-            "link": "https://loveamika.com/products/soulfood-nourishing-mask?option_Size=16+oz+%2F+500+ml&variant=1619180158994",
-            "timeAgo": "2025-04-27"
-          },
-          {
-            "item": "soulfood  nourishing hair mask",
-            "link": "https://loveamika.com/products/soulfood-nourishing-mask?variant=1619180093458",
-            "timeAgo": "2025-04-27"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "1672732",
-            "orderDate": "2025-06-24",
-            "items": [
-              {
-                "name": "soulfood | nourishing hair mask",
-                "price": 55,
-                "productLink": "https://amika-1.myshopify.com/products/soulfood-nourishing-mask"
-              }
-            ],
-            "link": "https://checkout.loveamika.com/21171151/orders/b28fc571f8d5863845b37184bfe0a17b/authenticate?key=489102abd5dd959bcd2d497a459a2bba",
-            "trackingLink": "https://www.fedex.com/fedextrack/?action=track&trackingnumber=390374188729",
-            "order_tracking_link": "https://www.fedex.com/fedextrack/?action=track&trackingnumber=390374188729",
-            "total": 50.26,
-            "date_time": "2025-06-24 19:31:27.994"
-          },
-          {
-            "orderNumber": "1672732",
-            "orderDate": "2025-06-24",
-            "items": [
-              {
-                "name": "soulfood | nourishing hair mask",
-                "price": 55,
-                "productLink": "https://amika-1.myshopify.com/products/soulfood-nourishing-mask"
-              }
-            ],
-            "link": "https://checkout.loveamika.com/21171151/orders/b28fc571f8d5863845b37184bfe0a17b/authenticate?key=489102abd5dd959bcd2d497a459a2bba",
-            "trackingLink": "https://www.fedex.com/fedextrack/?action=track&trackingnumber=390374188729",
-            "order_tracking_link": "https://www.fedex.com/fedextrack/?action=track&trackingnumber=390374188729",
-            "total": 50.26,
-            "coupon": "AMIKAWELCOME15",
-            "date_time": "2025-06-24 19:31:26.334"
-          },
-          {
-            "orderNumber": "50KJP8I0L",
-            "orderDate": "2024-05-07",
-            "items": [
-              {
-                "name": "soulfood | nourishing hair mask",
-                "price": 55,
-                "productLink": "https://amika-1.myshopify.com/products/soulfood-nourishing-mask"
-              }
-            ],
-            "total": 95,
-            "date_time": "2024-05-07 20:37:42.542"
-          },
-          {
-            "orderNumber": "50KJP8I0L",
-            "orderDate": "2024-05-07",
-            "items": [
-              {
-                "name": "dream routine | overnight hydration treatment 30ml",
-                "price": 0,
-                "productLink": "https://amika-1.myshopify.com/products/dream-routine-overnight-treatment-30ml"
-              }
-            ],
-            "total": 95,
-            "date_time": "2024-05-07 20:37:42.517"
-          },
-          {
-            "orderNumber": "50KJP8I0L",
-            "orderDate": "2024-05-07",
-            "items": [
-              {
-                "name": "velveteen dream | smoothing balm to tame frizzy hair",
-                "price": 30,
-                "productLink": "https://amika-1.myshopify.com/products/velveteen-dream-p-smoothing-balm"
-              }
-            ],
-            "total": 95,
-            "date_time": "2024-05-07 20:37:42.501"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "114": {
-      "id": "019c4f1a-5b33-40ea-f000-000035aebd1a",
-      "companyName": "Best Bully Sticks",
-      "companyWebsite": "https://bestbullysticks.com",
-      "agentName": "Morgan",
-      "messageTone": "Super Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Best Bully Sticks: Can't decide what your pup needs? Try our Buzzfeed-style \"Plan Your Ideal Day\" quiz to help you find the perfect chew. bestbullysticks.attn.tv/agLWIEBofLQY ",
-          "message_type": "system",
-          "date_time": "2026-01-18 11:45:25.890"
-        },
-        {
-          "message_media": [],
-          "message_text": "Best Bully Sticks: Thank you for your purchase! Your order number is 1573150. View more information about your order here: bestbullysticks.attn.tv/a0XoAktwfpuh .",
-          "message_type": "system",
-          "date_time": "2026-01-29 10:44:21.529"
-        },
-        {
-          "message_media": [],
-          "message_text": "Best Bully Sticks: Great news! Your order (1573150) has shipped and will be to you soon. Click here to view your order details: https://bestbullysticks.attn.tv/aSuLArHvF71z",
-          "message_type": "system",
-          "date_time": "2026-02-07 14:31:50.913"
-        },
-        {
-          "message_media": [],
-          "message_text": "Best Bully Sticks: Want to win $20 off your next order? Add a dog to our subscriber-only photo contest! You can win more than once, 3 winners selected monthly. bestbullysticks.attn.tv/amNjeIfgOg5u ",
-          "message_type": "system",
-          "date_time": "2026-02-10 10:23:00.039"
-        },
-        {
-          "message_media": [],
-          "message_text": "Best Bully Sticks: Looking for a chew deal? Shop chews & treats on sale! Just reply to this message and we'll assist you!\n\nhttps://bestbullysticks.attn.tv/ati92C23TCa3",
-          "message_type": "system",
-          "date_time": "2026-02-11 16:14:58.593"
-        },
-        {
-          "message_media": [],
-          "message_text": "Not sure how to sign up for the contest but here is my pic the link didn't have anything to add pics",
-          "message_type": "customer",
-          "date_time": "2026-02-11 18:38:12.288"
-        },
-        {
-          "message_media": [],
-          "message_text": "Best Bully Sticks: Please check our website, bestbullysticks.com, for the most up-to-date promotions and contests. You'll be the first to hear about new opportunities and how to participate.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c4f12-0058-4a4a-f000-000035aebd1a",
-          "date_time": "2026-02-11 18:38:25.771"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Site won't work - All brands\"; last updated: 2025-07-16 17:54:02.115",
-          "message_type": "template",
-          "date_time": "2026-02-11 18:47:33.322"
-        },
-        {
-          "message_media": [],
-          "message_text": "Best Bully Sticks: In the meantime, I might suggest trying to open the link in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes.",
-          "message_type": "agent",
-          "agent": "109630",
-          "message_id": "019c4f1a-5b33-40ea-f000-000035aebd1a",
-          "date_time": "2026-02-11 18:47:33.324"
-        }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "For side effects/dogs being sick from the Bully Sticks, use SDS shortcut"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://bestbullysticks.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "12-Inch Jumbo Bully Stick - 3 Pack",
-            "link": "https://www.bestbullysticks.com/products/12-inch-jumbo-bully-stick",
-            "timeAgo": "2025-11-30"
-          },
-          {
-            "item": "12-Inch Jumbo Odor-Free Bully Stick - 3 Pack",
-            "link": "https://www.bestbullysticks.com/products/12-inch-jumbo-odor-free-bully-stick",
-            "timeAgo": "2025-04-21"
-          },
-          {
-            "item": "XL Himalayan Golden Yak Cheese Odor-Free (3 Pack)",
-            "link": "https://www.bestbullysticks.com/products/himalayan-golden-yak-cheese-odor-free-3-pack?externalId=N1lKK&utm_campaign=browse-abandonment-4hours&utm_source=attentive&utm_medium=text",
-            "timeAgo": "2023-11-29"
-          },
-          {
-            "item": "Peanut Butter Beef Cheek - Large - 2 Pack",
-            "link": "https://www.bestbullysticks.com/products/large-peanut-butter-beef-cheek?externalId=N1lKK&utm_campaign=browse-abandonment-4hours&utm_medium=text&utm_source=attentive&variant=39537998233737",
-            "timeAgo": "2023-11-08"
-          },
-          {
-            "item": "Peanut Butter Beef Cheek - Large - 6 Pack",
-            "link": "https://www.bestbullysticks.com/products/large-peanut-butter-beef-cheek?externalId=N1lKK&utm_campaign=browse-abandonment-4hours&utm_medium=text&utm_source=attentive&variant=39275848695945",
-            "timeAgo": "2023-11-08"
-          }
-        ]
-      },
-      "escalation_preferences": [
-        "Shipping questions",
-        "Discount code errors",
-        "Exchanges and returns",
-        "Medical questions",
-        "mis-shipped items",
-        "incorrect items received",
-        "saying a dog died"
-      ],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "115": {
-      "id": "019c681d-d2f5-4f7e-f000-00006673545a",
-      "companyName": "NIRA",
-      "companyWebsite": "https://niraskin.com",
-      "agentName": "Sarah",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "NIRA: And the winner is... Pro Laser, taking home multiple 2025 beauty awards. 🏆 See why Who What Wear crowned it \"Best At-Home Laser.\"\n\nCheck out all awards: niraskin.attn.tv/ajvMbpmKclWO ",
-          "message_type": "system",
-          "date_time": "2026-02-03 16:00:57.770"
-        },
-        {
-          "message_media": [],
-          "message_text": "NIRA: Valentine's Day Sale is live! ❤️ Save $150 on the NIRA Pro Laser now. Show your skin some love with a clinically proven, pro-grade tool.\n\nShop & save: niraskin.attn.tv/amYEBvAJ1127 ",
-          "message_type": "system",
-          "date_time": "2026-02-05 13:30:37.288"
-        },
-        {
-          "message_media": [],
-          "message_text": "NIRA: Hi Virginia, this is Sarah. Discover radiance with your top pick niraskin.attn.tv/aqg7OaMFmNGz \n\nDo you have any questions that I can answer?",
-          "message_type": "system",
-          "date_time": "2026-02-05 13:50:25.475"
-        },
-        {
-          "message_media": [],
-          "message_text": "NIRA: This Valentine's Day, gift yourself a self-care treat. 🫶 Save $150 on the Pro Laser & start seeing smoother-looking skin within 90 days.\n\nShop & save: niraskin.attn.tv/a0SB3ugzp-Wy ",
-          "message_type": "system",
-          "date_time": "2026-02-06 14:25:22.625"
-        },
-        {
-          "message_media": [],
-          "message_text": "NIRA: Your V-Day treat is waiting! 💘 Only a few days left to save $150 on the Pro Laser, an award-winning tool for visibly smoother skin.\n\nDon't miss it: niraskin.attn.tv/a9a_D0T2LtVo ",
-          "message_type": "system",
-          "date_time": "2026-02-09 13:31:11.418"
-        },
-        {
-          "message_media": [],
-          "message_text": "NIRA: Hey Virginia, we're giving you 10% OFF the NIRA Pro Laser (2nd Gen) in your cart. Claim your exclusive savings now: niraskin.attn.tv/aLoF1PaDWd3S\n\nText back if you have any questions!",
-          "message_type": "system",
-          "date_time": "2026-02-09 14:27:15.750"
-        },
-        {
-          "message_media": [],
-          "message_text": "NIRA: Dealing with crow's feet? Smile lines? Under-eye wrinkles? NIRA Precision targets and smooths delicate spots easily.\n\nShop now: niraskin.attn.tv/af4hHtIGmZAF ",
-          "message_type": "system",
-          "date_time": "2026-02-16 14:00:54.739"
-        },
-        {
-          "message_media": [],
-          "message_text": "NIRA: Hi Virginia, this is Sarah. Discover radiance with your top pick niraskin.attn.tv/aiS_WYy4equl \n\nDo you have any questions that I can answer?",
-          "message_type": "system",
-          "date_time": "2026-02-16 14:03:17.245"
-        },
-        {
-          "message_media": [],
-          "message_text": "Dislike my smile lines but even the precision laser does not seem to help. Any other suggestions?",
-          "message_type": "customer",
-          "date_time": "2026-02-16 15:01:57.175"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Guarantee delivery dates - All brands\"; last updated: 2024-11-07 14:26:32.728",
-          "message_type": "template",
-          "date_time": "2026-02-16 15:21:50.997"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Weekend Escalations - All brands\"; last updated: 2024-02-12 17:46:12.047",
-          "message_type": "template",
-          "date_time": "2026-02-16 15:21:50.997"
-        },
-        {
-          "message_media": [],
-          "message_text": "NIRA: Thanks for reaching out, and sorry to hear that! I want to make sure I give you the most accurate information, so I'll check in with my team. I'll be sure to follow up with you as soon as I have an update. ",
-          "message_type": "agent",
-          "agent": "87310",
-          "message_id": "019c681d-d2f5-4f7e-f000-00006673545a",
-          "date_time": "2026-02-16 15:21:50.999"
-        }
-      ],
-      "notes": {
-        "escalate": [
-          "ESC post-purchase inquiries immediately",
-          "ESC shipping delay inquiries",
-          "ESC technical-specific inquiries",
-          "ESC inquiries regarding specific Influencer/Affiliates code",
-          "ESC if cx wants to return their order, don't send RP template!"
-        ],
-        "tone": [
-          "Don't use slang (ex: gotcha)",
-          "Refer to Bundles as Collections",
-          "Close the convo once the brand's customer service team takes over"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://niraskin.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "NIRA Precision Laser",
-            "link": "https://www.niraskin.com/products/nira-skincare-laser-device-only?externalId=X0zh9&_fpt=djNfMTc3MTI3MzIwNTY3Mw&skincare=one-time",
-            "timeAgo": "2026-02-16"
-          },
-          {
-            "item": "NIRA Precision Laser",
-            "link": "https://www.niraskin.com/products/nira-skincare-laser-device-only?externalId=X0zh9&_fpt=djNfMTc3MTI3MTgyMDg5Ng&skincare=one-time",
-            "timeAgo": "2026-02-16"
-          },
-          {
-            "item": "NIRA Pro Laser (2nd Gen) - White",
-            "link": "https://www.niraskin.com/products/nira-pro-laser?utm_campaign=20260209+SMS%3A+Valentine%27s+Promo+Reminder+2&utm_medium=sms&utm_source=attentive&externalId=X0zh9",
-            "timeAgo": "2026-02-09"
-          },
-          {
-            "item": "NIRA Pro Laser (2nd Gen) - White",
-            "link": "https://www.niraskin.com/products/nira-pro-laser",
-            "timeAgo": "2026-02-09"
-          },
-          {
-            "item": "NIRA Pro Laser (2nd Gen) - Champagne*",
-            "link": "https://www.niraskin.com/products/nira-pro-laser?variant=52955689320814",
-            "timeAgo": "2026-02-09"
-          }
-        ]
-      },
-      "escalation_preferences": [
-        "Shipping questions",
-        "Discount code errors",
-        "Exchanges and returns",
-        "ESC post purchase questions right away",
-        "technical-specific questions",
-        "NIRA Pro Laser questions",
-        "questions comparing NIRA against other skincare device technologies",
-        "troubleshooting the device questions"
-      ],
-      "blocklisted_words": [],
-      "has_shopify": true
+      ]
     }
   }
 }

@@ -3,820 +3,1422 @@
   "chunk": "chunk_0017",
   "scenarios": {
     "81": {
-      "id": "019c6369-e603-4ffb-f000-0000fba196b8",
-      "companyName": "Critic's Choice Video",
-      "companyWebsite": "https://ccvideo.com",
-      "agentName": "Jordan",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Critics' Choice Video: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-15 16:44:01.893"
-        },
-        {
-          "message_media": [],
-          "message_text": "Critics' Choice Video: Welcome! This is Jordan, your personal Concierge. \n\nYour code is CCV10. Use it at checkout for 10% off your order! Shop now: https://criticschoice.attn.tv/an4aQaNrQ03v \n\nAnything I can help you with? Stop to stop",
-          "message_type": "system",
-          "date_time": "2026-02-15 16:44:06.849"
-        },
-        {
-          "message_media": [],
-          "message_text": "Critics' Choice Video: It looks like you forgot The Beekeeper in your cart...complete your checkout today: criticschoice.attn.tv/aAPRt4fZYlVW  Stop to stop",
-          "message_type": "system",
-          "date_time": "2026-02-15 17:08:40.853"
-        },
-        {
-          "message_media": [],
-          "message_text": "Is this still Jordan?",
-          "message_type": "customer",
-          "date_time": "2026-02-15 17:10:25.523"
-        },
-        {
-          "message_media": [],
-          "message_text": "Critics' Choice Video: Yes, it is! How may I help you today?",
-          "message_type": "agent",
-          "agent": "37648",
-          "message_id": "019c635d-0034-4968-f000-0000fba196b8",
-          "date_time": "2026-02-15 17:12:45.265"
-        },
-        {
-          "message_media": [],
-          "message_text": "I got 3 movies in my cart can they sit there til next week when I get paid so I can make my purchase? If not do I need to make a purchase soon? How long does my 10% off last?",
-          "message_type": "customer",
-          "date_time": "2026-02-15 17:17:24.783"
-        },
-        {
-          "message_media": [],
-          "message_text": "Critics' Choice Video: Thanks for checking in! Items in your cart aren't reserved, so availability can change if they sell out. The code CCV10 is valid for your first order on our site. Let me know if there's anything else I can help you with.",
-          "message_type": "agent",
-          "agent": "109972",
-          "message_id": "019c6369-e603-4ffb-f000-0000fba196b8",
-          "date_time": "2026-02-15 17:26:50.534"
-        }
-      ],
-      "notes": {
-        "promo_and_promo_exclusions": [
-          "🅿 Refer to brand's site for the most up to date promotional information where applicable."
-        ]
-      },
+      "agentName": "Allie",
+      "has_shopify": true,
+      "id": "0192e010-ba0c-48ab-f000-00009f337f8f",
       "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "value": "20",
+            "coupon": "SMS5hZfRc"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://ccvideo.com",
+          "value": "https://stevemadden.com",
           "date": ""
-        }
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.stevemadden.com/products/hayward-black-leather?variant=39434779394181\u0026utm_source=facebook\u0026utm_medium=paidsocial\u0026utm_campaign=plat%3Afb_br%3Astevemadden_subchan%3Apaidsocial-prospecting_temp%3Aevergreen-standard_obj%3Atraffic_cat%3Aall_reg%3Aus\u0026utm_term=subchan%3Apaidsocial-prospecting_plc%3Aall_subplc%3Aall_audtype%3Ainterest_aud%3Afastfashion_subreg%3Ana_demo%3Awomen-1865_event%3Alinkclicks\u0026utm_content=cta%3Ashopnow_prodft%3Awomensboots_copy%3Acommencingpeakboot-oct16_lp%3Aplp_adtype%3Acollection_len%3Ana_prod%3Alucid\u0026campaign_id=6463046554863\u0026adset_id=6545919314063\u0026ad_id=6613889820063\u0026fbclid=IwZXh0bgNhZW0BMABhZGlkAAAGA-qRMv8BHQSm0gjwHamYdlwrIJege5wIv97PJunjH8QwwdmlMCdWcSealIkx5YgGWw_aem_AjDRIz92qsGdPzLr7yGAEQ",
+            "item": "HAYWARD BLACK LEATHER - BLACK LEATHER / 8 / 17",
+            "timeAgo": "2024-10-28"
+          }
+        ]
       },
-      "escalation_preferences": [
-        "Exchanges and returns"
-      ],
-      "blocklisted_words": [],
-      "has_shopify": false
-    },
-    "82": {
-      "id": "019c43bb-a24c-40cd-f000-0000fa1a7bc3",
-      "companyName": "Sauder",
-      "companyWebsite": "https://sauder.com",
-      "agentName": "Ashley",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Sauder: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-08 20:07:43.254"
-        },
-        {
-          "message_media": [],
-          "message_text": "Sauder: Welcome! Click this link for your 20% OFF coupon code: https://sauder.attn.tv/ajhHjlk1opQY",
-          "message_type": "system",
-          "date_time": "2026-02-08 20:07:47.340"
-        },
-        {
-          "message_media": [],
-          "message_text": "Sauder: Hey there! We noticed you left something in your cart!\nhttps://sauder.attn.tv/audO-dcYZRce \n\nUse code XPBZB2E2 for 20% off your first order!\n\nWas there anything I could help you with? \n- Ashley ",
-          "message_type": "system",
-          "date_time": "2026-02-09 13:16:19.029"
-        },
-        {
-          "message_media": [],
-          "message_text": "Thank you! I am seeing the same nightstands listed on Walmart for $167.00. Is there a way to price match?",
-          "message_type": "customer",
-          "date_time": "2026-02-09 13:17:32.267"
-        },
-        {
-          "message_media": [],
-          "message_text": "Sauder: Happy to help, and thank you so much for sharing those details. We strive to offer the best possible options available to our consumers when it comes to purchasing our products. Our intention is not to compete with our retailers on price and service but to simply offer online shopping as a convenience.",
-          "message_type": "agent",
-          "agent": "87589",
-          "message_id": "019c43a3-e4ec-4b59-f000-0000fa1a7bc3",
-          "date_time": "2026-02-09 13:22:20.424"
-        },
-        {
-          "message_media": [],
-          "message_text": "Where else is the dresser sold outside of your website directly?",
-          "message_type": "customer",
-          "date_time": "2026-02-09 13:38:42.162"
-        },
-        {
-          "message_media": [],
-          "message_text": "Sauder: I'll be happy to check this for you. Can you please share the specific item you're eyeing and your zip code?\n\nAlternatively, you can find us at a store near you here: https://sauder.attn.tv/a5RuS2dRZrbx",
-          "message_type": "agent",
-          "agent": "109955",
-          "message_id": "019c43b6-9495-4757-f000-0000fa1a7bc3",
-          "date_time": "2026-02-09 13:42:45.043"
-        },
-        {
-          "message_media": [],
-          "message_text": "6 Drawer Bedroom Dresser in Pacific Maple - thank you!Zip code: 55414",
-          "message_type": "customer",
-          "date_time": "2026-02-09 13:44:12.053"
-        },
-        {
-          "message_media": [],
-          "message_text": "Sauder: Thanks for sharing the details! The Sauder 6-Drawer Bedroom Dresser in Pacific Maple is also sold at Walmart and Target near zip code 55414, in addition to our website. Both retailers ship directly to your area. Let me know if there's anything else I can help you with.",
-          "message_type": "agent",
-          "agent": "109972",
-          "message_id": "019c43bb-a24c-40cd-f000-0000fa1a7bc3",
-          "date_time": "2026-02-09 13:48:16.229"
-        }
-      ],
+      "companyWebsite": "https://stevemadden.com",
+      "companyName": "Steve Madden",
       "notes": {
         "send_to_cs": [
-          "Send to CS for post-purchase inquiries for items purchased through a retailer"
-        ],
-        "templates": [
-          "If customers already purchased use TFP shortcut"
+          "No ESC for this client, send everything to CS"
         ],
         "tone": [
-          "Let the customer have the last word!"
-        ],
-        "drive_to_purchase": [
-          "Don't recommend Retailer Exclusive items"
-        ],
-        "promo_and_promo_exclusions": [
-          "Discount codes CAN be applied to clearance items"
+          "Close the convo once the client takes over!"
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://sauder.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "6-Drawer Bedroom Dresser in Pacific Maple",
-            "link": "https://www.sauder.com/furniture/433257/6-drawer-bedroom-dresser-in-pacific-maple",
-            "timeAgo": "2026-02-09"
-          },
-          {
-            "item": "6-Drawer Bedroom Dresser in Pacific Maple",
-            "link": "https://www.sauder.com/furniture/433257/6-drawer-bedroom-dresser-in-pacific-maple",
-            "timeAgo": "2026-02-09"
-          },
-          {
-            "item": "6-Drawer Wood Dresser in Pacific Maple",
-            "link": "https://www.sauder.com/furniture/433547/6-drawer-wood-dresser-in-pacific-maple",
-            "timeAgo": "2026-02-09"
-          },
-          {
-            "item": "Dresser",
-            "link": "https://www.sauder.com/furniture/420946/dresser?gad_source=1&gad_campaignid=21210587906&gbraid=0AAAAADlg5LFMw2gXrmpdrK5o0Dp2SWwx6&gclid=CjwKCAiAqKbMBhBmEiwAZ3UboKtGuLbaQC9GapDsQYsRE3Q96QN1dXBx5uzi0U1DeQ6rp9wikwUo_BoCae4QAvD_BwE",
-            "timeAgo": "2026-02-09"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": false
-    },
-    "83": {
-      "id": "019c4e8f-77fd-41b6-f000-0000f653c908",
-      "companyName": "Shoppe Amber Interiors",
-      "companyWebsite": "https://shoppe.amberinteriordesign.com",
-      "agentName": "Olivia",
+      "blocklisted_words": [
+        "ma\u0027am",
+        "maam",
+        "knock-off",
+        "Gucci",
+        "Prada",
+        "Bottega",
+        "Versace",
+        "dupe"
+      ],
+      "escalation_preferences": [
+        "Discount code errors",
+        "Exchanges and returns",
+        "Shipping questions"
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Welcome to Shoppe Amber Interiors! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
           "message_type": "system",
-          "date_time": "2026-01-27 22:59:25.654"
+          "message_text": "Steve Madden: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/EyJ",
+          "date_time": "2024-10-28 15:08:25.852",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Hey, this is Olivia, your personal concierge! Feel free to text me with any questions. Enjoy 10% off with code WL-7VU909X3457 . https://shoppeamberinteriors.attn.tv/ayZ6VgAWmB52 ",
           "message_type": "system",
-          "date_time": "2026-01-27 22:59:29.549"
+          "message_text": "Steve Madden: Welcome to Steve Madden! Enjoy an exclusive 20% OFF your first order when you click here: http://stevemadden.io/ay16qppTWuMP .\n\nHappy shopping!",
+          "date_time": "2024-10-28 15:08:29.662",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Let's make it official. Save us in your contacts to stay in the know about all things Shoppe!",
           "message_type": "system",
-          "date_time": "2026-01-27 22:59:30.869"
+          "message_text": "Steve Madden: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nNeed help finding your sole-mate? Check out what\u0027s new this month to find the perfect style for this season \u003e http://stevemadden.io/ap2Ux75fXtof .",
+          "date_time": "2024-10-28 15:09:35.438",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Hey, Olivia here! We noticed you eyeing Harding Cabinet... anything I can help with? Shoppe the collection: shoppeamberinteriors.attn.tv/apIXZPC1MCSK .",
           "message_type": "system",
-          "date_time": "2026-01-28 15:07:04.942"
+          "message_text": "Steve Madden: Your Hayward black leather is waiting in your cart.  \n\n39 people are currently viewing this. Use code SMS5hZfRc for 20% off and grab them before they\u0027re gone!  \n\nShop now: http://stevemadden.io/aLpkQaZg4A2o .",
+          "date_time": "2024-10-28 15:20:38.166",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Hey , this is Olivia. Thank you so much for shopping our site! \n\nAre you looking for anything in particular today? shoppeamberinteriors.attn.tv/aufxtSby4c11 ",
           "message_type": "system",
-          "date_time": "2026-01-28 15:34:11.162"
+          "message_text": "Steve Madden: \"Comfortable, versatile, and oh-so-comfy!\"\n\nThese must-have styles are a fan favorite for a reason \u003e\n\nhttp://stevemadden.io/asq8K9URAHGh \n",
+          "date_time": "2024-10-29 13:15:15.726",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Hey, Olivia here! We noticed you eyeing Bari Desk... anything I can help with? Don't forget to use code WL-7VU909X3457 for 10% off your next purchase shoppeamberinteriors.attn.tv/aMct-HAB7DfR .",
           "message_type": "system",
-          "date_time": "2026-01-29 16:07:59.674"
+          "message_text": "Steve Madden: 35 people recently purchased that HAYWARD BLACK LEATHER, complete your order before it disappears!\n\nUse code SMS5hZfRc for 20% off! Free shipping on orders $50+ and free returns for 30 days to store.\n\nShop now: http://stevemadden.io/a5GZxsNr6Fqd .",
+          "date_time": "2024-10-29 15:20:42.653",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Ready to elevate your space? Shop our best sellers below: shoppeamberinteriors.attn.tv/aE27kHDaqpiL ",
           "message_type": "system",
-          "date_time": "2026-01-31 16:24:40.993"
+          "message_text": "Steve Madden: Your faves are almost sold out! Skip the FOMO \u0026 take 10% OFF your order if you checkout now. Use code: CART1024\nhttp://stevemadden.io/aNxFNt0al6cm ",
+          "date_time": "2024-10-29 20:49:58.183",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Final Reminder: Don't forget to use WL-7VU909X3457 for 10% off your first purchase: https://shoppeamberinteriors.attn.tv/aqcpvxitFKAZ .",
           "message_type": "system",
-          "date_time": "2026-02-01 15:47:14.330"
+          "message_text": "Steve Madden: You clearly have great taste. The item you are eyeing is popular!! Get it before it sells out:\n\nhttp://stevemadden.io/a8I0dkFg_RB1 ",
+          "date_time": "2024-10-30 20:49:37.980",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Thank you for your purchase! Your order number is 288863. View more information about your order here: https://shoppeamberinteriors.attn.tv/aiplTypLz8L7 .",
-          "message_type": "system",
-          "date_time": "2026-02-03 19:01:41.382"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: New lighting styles are here! From table lamps to sconces and more, this new collection is designed to complement every corner of your space.\n\nShop new lighting: shoppeamberinteriors.attn.tv/a9UDgoa-PWce ",
-          "message_type": "system",
-          "date_time": "2026-02-04 18:06:05.331"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Hey Natalene, this is Olivia. Thank you so much for shopping our site! \n\nWhat room are you shopping for today? shoppeamberinteriors.attn.tv/ad1J3NYCgZu7 ",
-          "message_type": "system",
-          "date_time": "2026-02-05 16:57:58.027"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Hey, Olivia here! We noticed you eyeing Bari Desk... anything I can help with? Shoppe the collection: shoppeamberinteriors.attn.tv/aXXK-iVHmqM8 .",
-          "message_type": "system",
-          "date_time": "2026-02-08 15:58:40.051"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Hey, Olivia here! We noticed you eyeing Elbert Chandelier... anything I can help with? Shoppe the collection: shoppeamberinteriors.attn.tv/astBPUA7vHx6 .",
-          "message_type": "system",
-          "date_time": "2026-02-09 14:10:21.234"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Hey, Olivia here! We noticed you eyeing Olga Pendant - Small... anything I can help with? Shoppe the collection: shoppeamberinteriors.attn.tv/adIi7Ik8XS49 .",
-          "message_type": "system",
-          "date_time": "2026-02-10 16:59:00.530"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Hey, Olivia here! We saw you left Emilia Pendant in your cart, anything I can help with today? Come on back and complete your order today: shoppeamberinteriors.attn.tv/aB4gq6DtxTq8 ",
-          "message_type": "system",
-          "date_time": "2026-02-11 16:05:35.436"
-        },
-        {
-          "message_media": [],
-          "message_text": "I was looking at the Fayth bar stools but it says there's only 1 left but I need 4",
           "message_type": "customer",
-          "date_time": "2026-02-11 16:06:25.510"
+          "message_text": "Yall did take the card",
+          "date_time": "2024-10-30 20:50:29.955",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Template used: \"Restock (website & social)\"; last updated: 2025-10-09 21:41:33.472",
-          "message_type": "template",
-          "date_time": "2026-02-11 16:15:51.198"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shoppe Amber Interiors: Thanks for reaching out! Upon checking the Fayth Bar & Counter Stool, I can see that there is only 1 stock left. I understand that you need 4 of it, but unfortunately, I currently don't have the exact date of a possible restock, but I recommend checking our website and social media frequently. \n\nPlease let me know how I can assist you further today, I'm just a text away!",
+          "message_id": "0192e00d-f9d0-4dda-f000-00009f337f8f",
+          "message_text": "Steve Madden: Sorry, do you mind clarifying what you mean?",
           "message_type": "agent",
-          "agent": "109617",
-          "message_id": "019c4e8f-77fd-41b6-f000-0000f653c908",
-          "date_time": "2026-02-11 16:15:51.201"
+          "agent": "46059",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-30 20:51:05.308"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Them but it doesn\u0027t take capital one cardiMy son was trying to get",
+          "date_time": "2024-10-30 20:52:49.817",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e010-ba0c-48ab-f000-00009f337f8f",
+          "message_text": "Steve Madden: Are you experiencing issues with your payment method? If so, please make sure that you\u0027re entering the right information. If still the same, I recommend using a different internet browser as certain onehave issues with ecoomerce. Let me know how it goes!",
+          "message_type": "agent",
+          "agent": "87311",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-30 20:54:05.594"
         }
-      ],
+      ]
+    },
+    "82": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "018f5ae0-5bb0-4896-f000-0000873f3620",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Soundbars, Soundbar Accessories, Vacuum, Wireless Speaker. Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Vacuum, Wireless Speakers is off the pre-tax sale price on LG.com only. Offer valid for one-time use only within 30 days of code being sent. To receive the additional 10% off savings, promotion code must be entered at online checkout and will be applied to eligible products only. If any of the qualifying items are removed from the cart, canceled or returned, the promotional savings will be void. Availability, prices and terms of offer are subject to change without notice. No adjustments to prior purchases and non-redeemable for cash. ualifying AeroTower: U9CS1C  Qualifying PuriCare Air Purifiers: AP151MBA1, AP151MWA1, AS330DWR0, AS560DWR0, U9CV1C, U9CV2B  Qualifying Dehumidifier: UD501KOJ5  Qualifying TONE Free headphones: HBS-XL7.ACUSBKI, HBS-SL5.ACUSBKI, HBS-SL6S.ACUSBKI, HBS-510.ACUSBKI, HBS-830.ACUSBKI, HBS-830.ACUSWHI, HBS-FN4.ACUSBKI, HBS-FN6.ACUSBKI, HBS-FN5W.ACUSBKI, HBS-FN6.ACUSWHI, HBS-FN5W.ACUSWHI, TONE-FN7.ACUSBKI, TONE-FP8.AUSACLK, TONE-FP9.AUSACLK, TONE-FP5.AUSACLK, TONE-FP3.AUSACLK, TONE-NP3.AUSACLK, TONE-T90Q.AUSACBK, TONE-T90Q.AUSACWH, TONE-T60Q.AUSACBK TONE-TF8Q.AUSACBI, TONE-FP9W.AUSACLK, TONE-FP9E.AUSACLK, TONE-NP3C.AUSACLK  Qualifying LG Styler: S3CW, S3MFBN, S3RFBN, S3WFBN, S5MSB  Qualifying Soundbars: QP5, QP5W, S75Q, SP7Y, S65Q, SN6Y, SN5Y, SP2, SK1, SH2  Qualifying Soundbar Accessories: SPQ8-S, SPK8-S, WTP3  Qualifying Vacuums: A913BM, A925KSM, A927KGMS, A929KVM, A939KBGS, R975GM  Qualifying XBOOM Go Wireless Speakers: PL2, PL5, PL7, GP9, GP3, RP4G, RP4, RP4B, XG5QBK, XG7QBK, XO3QBK",
+            "value": "10",
+            "coupon": "TEXTGTZJZ1DQ24"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://lg.com/us",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://lg.com/us",
+      "companyName": "LG",
       "notes": {
         "send_to_cs": [
-          "Send to CS for order update requests",
-          "Send to CS for damaged products/quality complaints"
+          "No ESC for this client, send everything to CS using the \"Escalation template\""
         ],
         "templates": [
-          "DOn't use STE temp, their shipping prices depend on the order total"
+          "For 10% off welcome code issues use temp \u0027Follow up 1\u0027, then \u0027Follow up 2\u0027 after confirming the item is excluded from promos",
+          "For fridge recommendations use FRR shortcut",
+          "For service-related issues/scheduled repair service appointments use SRI shortcut",
+          "For cxs looking for replacement parts/accessories from an affiliate Parts Distributor use RPA shortcut",
+          "If a cx has an inquiry for finding the serial number/model number of an item:",
+          "➜ If it\u0027s a TV, use mnt shortcut",
+          "➜ If it\u0027s another product, use mna shortcut"
         ],
-        "promo_and_promo_exclusions": [
-          "Codes can't be used on sale, gift boxes, as well as some lighting and furniture pieces"
+        "dos_and_donts": [
+          "If it\u0027s a new conversation and we didn\u0027t introduce ourselves in the automated message, start your message with: \"This is Jordan at LG.\""
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://shoppe.amberinteriordesign.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Edmund Pendant Light 11\" - Black Walnut / Hardwired / Brass Canopy",
-            "link": "https://shoppe.amberinteriordesign.com/collections/pendants/products/edmund-pendant-light?variant=42080700137656",
-            "timeAgo": "2026-02-11"
-          },
-          {
-            "item": "Edmund Pendant Light 11\" - Black Walnut / Hardwired / Brass Canopy",
-            "link": "https://shoppe.amberinteriordesign.com/collections/pendants/products/edmund-pendant-light?variant=42080700170424",
-            "timeAgo": "2026-02-11"
-          },
-          {
-            "item": "Edmund Pendant Light 11\" - Black Walnut / Hardwired / Brass Canopy",
-            "link": "https://shoppe.amberinteriordesign.com/collections/pendants/products/edmund-pendant-light?variant=42080700137656",
-            "timeAgo": "2026-02-11"
-          },
-          {
-            "item": "Edmund Pendant Light 11\" - Black Walnut / Hardwired / Brass Canopy",
-            "link": "https://shoppe.amberinteriordesign.com/collections/pendants/products/edmund-pendant-light?variant=42080700170424",
-            "timeAgo": "2026-02-11"
-          },
-          {
-            "item": "Edmund Pendant Light 11\" - Black Walnut / Hardwired / Brass Canopy",
-            "link": "https://shoppe.amberinteriordesign.com/collections/pendants/products/edmund-pendant-light",
-            "timeAgo": "2026-02-11"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "6580428964024",
-            "orderDate": "2026-02-04",
-            "items": [
-              {
-                "name": "Bari Desk",
-                "price": 2400,
-                "productLink": "https://amberinteriordesign.myshopify.com/products/bari-desk"
-              }
-            ],
-            "total": 2578.2,
-            "coupon": "WL-7VU909X3457",
-            "date_time": "2026-02-04 00:01:28.164"
-          }
-        ]
-      },
-      "escalation_preferences": [
-        "Product quality questions"
-      ],
       "blocklisted_words": [
-        "couch",
-        "vendor",
-        "goodies"
+        
       ],
-      "has_shopify": true
-    },
-    "84": {
-      "id": "019c49c1-2cea-404d-f000-00009d28ec08",
-      "companyName": "SA Company",
-      "companyWebsite": "https://safishing.com",
-      "agentName": "Taylor",
+      "escalation_preferences": [
+        
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Soul of Adventure: Discover our Silicone Rings - Buy 1 and get 4 Free. With over 30+ designs, perfect fit any adventure!\n\nsafishing.attn.tv/ax3DCqE_W_8c ",
           "message_type": "system",
-          "date_time": "2026-01-14 11:00:56.636"
-        },
-        {
-          "message_media": [],
-          "message_text": "Soul of Adventure: FLASH SALE! 8 Neck Gaiters for just $12. This deal vanishes in 60 minutes.\n\nShop Now:\n safishing.attn.tv/aqv4zHD3GaT- \n",
-          "message_type": "system",
-          "date_time": "2026-01-16 12:00:54.985"
-        },
-        {
-          "message_media": [],
-          "message_text": "Soul of Adventure: Gear up with exclusive new arrivals! Check them out here 👉 https://safishing.attn.tv/a_zqzGw7KQaV \n\nReply for a special discount!",
-          "message_type": "system",
-          "date_time": "2026-01-18 12:19:50.034"
-        },
-        {
-          "message_media": [],
-          "message_text": "Soul of Adventure: LIGHTING DEAL! Get 8 Neck Gaiters for just $12! This deal vanishes in 60 minutes, so act fast!\n\nShop Now:\n safishing.attn.tv/ajwsjBHlK6bY \n",
-          "message_type": "system",
-          "date_time": "2026-01-23 12:02:32.760"
-        },
-        {
-          "message_media": [],
-          "message_text": "Soul of Adventure: Last chance! Time's running out on our 8 Neck Gaiters for just $12. Grab yours before it's gone! \n\nShop Now: safishing.attn.tv/aj1xaZKelnP5",
-          "message_type": "system",
-          "date_time": "2026-01-24 12:01:13.081"
-        },
-        {
-          "message_media": [],
-          "message_text": "Soul of Adventure: CLAIM YOUR DEAL: Buy 1 arm sleeve, get 3 FREE! \n\nHurry:\nsafishing.attn.tv/aQkDwO8wUmUe ",
-          "message_type": "system",
-          "date_time": "2026-01-25 14:01:56.044"
-        },
-        {
-          "message_media": [],
-          "message_text": "Soul of Adventure: Lock in 8 Neck Gaiters at $12 before this flash deal ends (60 min left).\n\nShop Now:\nsafishing.attn.tv/ao-pInqwhWiX \n",
-          "message_type": "system",
-          "date_time": "2026-01-30 13:01:19.298"
-        },
-        {
-          "message_media": [],
-          "message_text": "Soul of Adventure: Lock in 8 Neck Gaiters at $12 before this flash deal ends (60 min left).\n\nShop Now:\nsafishing.attn.tv/a6Y6_Ygceiop ",
-          "message_type": "system",
-          "date_time": "2026-01-31 13:05:39.438"
-        },
-        {
-          "message_media": [],
-          "message_text": "Soul of Adventure: BUY 1, GET 3 FREE! Stock up on arm sleeves today and save big. Simple as that. \n\nShop the deal here:\nsafishing.attn.tv/a3x-y4N_asPM ",
-          "message_type": "system",
-          "date_time": "2026-02-01 16:01:03.400"
-        },
-        {
-          "message_media": [],
-          "message_text": "Soul of Adventure: Lighting deal: Fintech Trucker Hat Only $9.99!\n\nHurry Limited Time Offer: \nsafishing.attn.tv/ak73ORr6db0K ",
-          "message_type": "system",
-          "date_time": "2026-02-06 15:02:13.137"
-        },
-        {
-          "message_media": [],
-          "message_text": "Soul of Adventure: Hi Randall, it's Taylor. I'm a personal concierge here to answer your questions or share recommendations. Would you like to see if I can get you a discount code?\n\nhttps://safishing.attn.tv/aWKivFhNwCL- .",
-          "message_type": "system",
-          "date_time": "2026-02-07 16:26:27.113"
-        },
-        {
-          "message_media": [],
-          "message_text": "Soul of Adventure: FLASH SALE: Buy 1 Arm Sleeve, Get 3 FREE! (Limited Time Only)\n\nHurry Show Now: \nsafishing.attn.tv/abBc4Qr_VVhl ",
-          "message_type": "system",
-          "date_time": "2026-02-08 13:01:58.657"
-        },
-        {
+          "message_text": "LG Electronics USA: Thanks for your purchase on LG.com! We\u0027ll send another message when your order is ready for shipping. 📦\nOrder #: 2008476714\nDelivery scheduled for: 05-07-2024\nJust tap here to manage your order: https://lg.attn.tv/sl/Jdkxv5QP .",
+          "date_time": "2024-04-28 16:14:13.842",
           "message_media": [
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1770763666142_50ae815d-42a9-410c-a393-4ff51f6f53f6-1.png"
-          ],
-          "message_text": "I have not received this order yet ?",
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Reply Y to subscribe to LG recurring automated personalized marketing alerts (e.g. cart reminders, product tips, special offers) from LG Electronics USA.",
+          "date_time": "2024-04-28 16:17:07.754",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Welcome to LG Electronics USA! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/WBe",
+          "date_time": "2024-04-28 18:11:03.032",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Thanks for your recent purchase. We\u0027re so glad you joined!\n\nGet ready for your new LG product by creating a MyLG account. Learn all the benefits: https://lg.attn.tv/l/BVC/3Nwr4 .",
+          "date_time": "2024-04-28 18:11:08.168",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Texts may be retained for customer support \u0026 other purposes. For more info, see Terms (lg.com/us/legal) and Privacy (lg.com/us/privacy)",
+          "date_time": "2024-04-28 18:11:09.043",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Your LG order is ready to be shipped! It\u0027s time to check ✅ your calendar.\nOrder #: 2008476714\nDelivery scheduled for: 05-07-2024\nNeed to reschedule? No worries, just tap here: https://lg.attn.tv/sl/pgRaCqqN .",
+          "date_time": "2024-04-29 12:42:27.425",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Hi, I\u0027m Jordan - your go-to LG specialist. Feel free to text me any time, and save our contact so you don\u0027t miss any updates!",
+          "date_time": "2024-04-29 18:11:13.165",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Bring home stunning picture and spectacular color with savings on select LG OLED and QNED TVs. Shop now: https://lg.attn.tv/a5P_Pn85VY5I \n\nText back if you have any questions! ",
+          "date_time": "2024-05-03 14:05:24.111",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: We noticed you checking us out. Text back here for recommendations on our top deals right now!\n\nhttps://lg.attn.tv/aEVHjcX-g2KN .",
+          "date_time": "2024-05-04 13:28:48.832",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Our home delivery partner will contact you about your order and delivery schedule 📆, plus any last minute details.\nOrder #: 2008476714\nDelivery scheduled for: 05-07-2024\nJust tap here to manage your order: https://lg.attn.tv/akKrqJs3e60n .",
+          "date_time": "2024-05-07 13:34:27.225",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Enjoy fresher, cleaner air in any room with the whisper-quiet filtration of the LG PuriCareTM 360 - only $249. Shop now: https://lg.attn.tv/angGhRNH97V6 \n\nText back if you have any questions! ",
+          "date_time": "2024-05-07 14:21:21.831",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Find a Mother\u0027s Day gift she\u0027ll love with savings on 4K portable screens, wireless speakers, and more. https://lg.attn.tv/aM2P8yb3v1ox \n\nText back if you have any questions!",
+          "date_time": "2024-05-08 15:03:22.417",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-10 17:47:53.728"
+          "message_text": "Hello - we just installed our new microwave and the extend vent won\u0027t close.  Help!",
+          "date_time": "2024-05-08 20:44:33.571",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Template used: \"Check spam - All brands\"; last updated: 2023-10-10 16:43:53.913",
-          "message_type": "template",
-          "date_time": "2026-02-10 17:52:02.710"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Order Lookup/Tracking\"; last updated: 2024-03-18 14:45:28.316",
-          "message_type": "template",
-          "date_time": "2026-02-10 17:52:02.710"
-        },
-        {
-          "message_media": [],
-          "message_text": "Soul of Adventure: Thanks for reaching out, and sorry to hear that! Just to be sure, are you referring to order #288981? If so, it appears that the order is already on its way. Did you receive a tracking info? Please check your spam and promo folders as well, as our emails sometimes end up there. \n\nIn the meantime, you can also use our convenient online tool to see the latest updates on your order: \n\nhttps://safishing.attn.tv/aC2rw5gzu0r5\n\nLet me know if you have any questions!",
+          "message_id": "018f5ad6-87e6-4b22-f000-0000873f3620",
+          "message_text": "LG Electronics USA: I\u0027m so sorry about that. Can you please tell me the model of your microwave?",
           "message_type": "agent",
-          "agent": "87310",
-          "message_id": "019c49c1-2cea-404d-f000-00009d28ec08",
-          "date_time": "2026-02-10 17:52:02.713"
-        }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
-        ],
-        "promo_and_promo_exclusions": [
-          "Do not share the Concierge 15% off offer, the code is currently not valid"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://safishing.com",
-          "date": ""
+          "agent": "82447",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-08 20:52:40.051"
         },
+        {
+          "message_type": "customer",
+          "message_text": "ThinQ MVEL2137f",
+          "date_time": "2024-05-08 20:53:22.942",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Slow reply - All brands\"; last updated: 2023-10-10 17:50:31.806",
+          "date_time": "2024-05-08 21:03:24.092",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f5ae0-5bb0-4896-f000-0000873f3620",
+          "message_text": "LG Electronics USA: Sorry for the slow reply! Can you tell me if the extendavent is stuck in the open position or if it won\u0027t close completely?",
+          "message_type": "agent",
+          "agent": "82447",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-08 21:03:24.094"
+        }
+      ]
+    },
+    "83": {
+      "agentName": "Mia",
+      "has_shopify": true,
+      "id": "01900358-2db3-4dff-f000-00007df391bc",
+      "rightPanel": {
         "browsingHistory": [
           {
-            "item": "Fintech United By Outdoors Hat - Dune",
-            "link": "https://safishing.com/products/united-by-hat",
-            "timeAgo": "2026-02-06"
+            "link": "https://www.happiestbaby.com/products/snoo-bear?_gl=1*1796qkf*_up*MQ..\u0026gclid=CjwKCAjwgpCzBhBhEiwAOSQWQT1D_ZP36XpagRFZpiPj8GWipEAlaFQtc6pe9_yCzWg2kTooLV6IxhoCePYQAvD_BwE",
+            "item": "SNOObear® 3-in-1 White Noise Lovey - One-size / Cocoa Woolly",
+            "timeAgo": "2024-06-08"
           },
           {
-            "item": "5 for $20 Fleece Neck Gaiters",
-            "link": "https://safishing.com/products/5-for-20-fleece-neck-gaiters?utm_campaign=1%2F9%2F26%20(Legacy)%205%20Fleece%20$20&utm_medium=sms&tw_source=attentive&tw_campaign=1%2F9%2F26%20(Legacy)%205%20Fleece%20$20&utm_source=attentive&externalId=zCB7C",
-            "timeAgo": "2026-01-09"
+            "link": "https://www.happiestbaby.com/products/preloved-snoo?pdp-price-comparison=true\u0026utm_source=google\u0026utm_campaign=\u0026gad_source=1\u0026gclid=CjwKCAjw34qzBhBmEiwAOUQcFyzUxqgzVudg1NzEPQPkM9RttAxzGuWePY5GaCGL80V9nnBGG0XamxoCbToQAvD_BwE",
+            "item": "SNOO Smart Sleeper—Certified Pre-Loved",
+            "timeAgo": "2024-06-08"
           },
           {
-            "item": "5 for $20 Fleece Neck Gaiters",
-            "link": "https://safishing.com/products/5-for-20-fleece-neck-gaiters?utm_campaign=1%2F9%2F26%20(Legacy)%205%20Fleece%20$20&utm_medium=sms&tw_source=attentive&tw_campaign=1%2F9%2F26%20(Legacy)%205%20Fleece%20$20&utm_source=attentive&externalId=zCB7C",
-            "timeAgo": "2026-01-09"
+            "link": "https://www.happiestbaby.com/products/preloved-snoo?pdp-price-comparison=true\u0026utm_source=google\u0026utm_campaign=\u0026gad_source=1\u0026gclid=CjwKCAjw34qzBhBmEiwAOUQcFyzUxqgzVudg1NzEPQPkM9RttAxzGuWePY5GaCGL80V9nnBGG0XamxoCbToQAvD_BwE",
+            "item": "SNOO Smart Sleeper—Certified Pre-Loved",
+            "timeAgo": "2024-06-07"
           },
           {
-            "item": "5 for $20 Fleece Neck Gaiters",
-            "link": "https://safishing.com/products/5-for-20-fleece-neck-gaiters?tw_campaign=12%2F1%2F25%20Cyber%20Monday%206pm&tw_source=attentive&utm_campaign=12%2F1%2F25%20Cyber%20Monday%206pm&utm_medium=sms&utm_source=attentive&externalId=zCB7C",
-            "timeAgo": "2025-12-02"
+            "link": "https://www.happiestbaby.com/products/preloved-snoo?pdp-price-comparison=true\u0026utm_source=google\u0026utm_campaign=\u0026gad_source=1\u0026gclid=CjwKCAjwvIWzBhAlEiwAHHWgvbmPKDv4NpTi091PUryPKuNas_0o1c3SzPgWNd-tqkGOS91fFaff3BoCTVgQAvD_BwE",
+            "item": "SNOO Smart Sleeper—Certified Pre-Loved",
+            "timeAgo": "2024-06-06"
           },
           {
-            "item": "5 for $20 Fleece Neck Gaiters",
-            "link": "https://safishing.com/products/5-for-20-fleece-neck-gaiters?tw_campaign=12%2F1%2F25%20Cyber%20Monday%206pm&tw_source=attentive&utm_campaign=12%2F1%2F25%20Cyber%20Monday%206pm&utm_medium=sms&utm_source=attentive&externalId=zCB7C",
-            "timeAgo": "2025-12-02"
+            "link": "https://www.happiestbaby.com/products/snoo-smart-bassinet?utm_source=google\u0026utm_campaign=\u0026gad_source=1\u0026gclid=Cj0KCQjwsPCyBhD4ARIsAPaaRf1LoedzEg9RMSGKfd2VGFSKR_xqDrLARmdxfIuMTcjjXXk6qaO3Sk4aArPeEALw_wcB",
+            "item": "SNOO Smart Sleeper Bassinet",
+            "timeAgo": "2024-06-02"
           }
         ],
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "Everything but rental or gift card",
+            "value": "10",
+            "coupon": "EMAILSAVE10-0429"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "10% off all products, excluding SNOO Rental and gift cards.",
+            "coupon": "MISSYOU-0309"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "10% off all products, excluding SNOO Rental and gift cards.",
+            "value": "10",
+            "coupon": "WELCOME10-0210"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "10% off everything excluding SNOO Rental and gift cards",
+            "value": "10",
+            "coupon": "JUSTFORYOU"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "100% off Swaddle Blanket",
+            "coupon": "BEMINE"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "$12.95 off a Swaddle Blanket",
+            "value": "12.95",
+            "coupon": "XOXOhp6vW8"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "10% off all products, excluding SNOO Rental and gift cards.",
+            "coupon": "MISSYOU-0419"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "$20 off when you spend $199",
+            "value": "20",
+            "coupon": "1YEAR-0323"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://happiestbaby.com",
+          "date": ""
+        },
         "orders": [
           {
-            "orderNumber": "4052467",
-            "orderDate": "2025-02-22",
+            "currency": "USD",
+            "total": 1292.23,
+            "coupon": "10FORYOU",
             "items": [
               {
-                "name": "4 FOR $16 FLEECE FACE SHIELDS®",
-                "price": 16,
-                "productLink": "https://safishing.com/products/4-for-17-fleece-face-shields-winter-outlet-re10"
-              },
-              {
-                "name": "Fleece Face Shield® | Reflective | Electric Orange",
-                "price": 30,
-                "productLink": "https://safishing.com/products/fleece-face-shield®-reflective-electric-orange-ptls"
-              },
-              {
-                "name": "Fleece Face Shields® | American Flag",
-                "price": 19,
-                "productLink": "https://sa-co1.myshopify.com/products/frost-tech-american-flag-royal-fleece-face-shield"
-              },
-              {
-                "name": "Fleece Face Shields® | Blackout American Flag",
-                "price": 30,
-                "productLink": "https://sa-co1.myshopify.com/products/frost-tech-blackout-american-flag-fleece-lined-face-shield"
-              },
-              {
-                "name": "Fleece Face Shield® | Geo Camo Surge",
-                "price": 21,
-                "productLink": "https://sa-co1.myshopify.com/products/fleece-face-shield®-geo-camo-surge"
+                "price": [
+                  {
+                    "value": [
+                      20.96,
+                      20.96,
+                      34.95,
+                      34.95,
+                      34.95,
+                      20.96
+                    ],
+                    "Count": 6
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "link": "https://safishing.com/46427766945/orders/aff412814aa6013cf71a608fb6185110/authenticate?key=78e05ee9d685038a1a5c8cf1caf54ac0",
-            "trackingLink": "https://www.ordertrackingupdates.com/track/9261290278833842147772",
-            "order_tracking_link": "https://www.ordertrackingupdates.com/track/9261290278833842147772",
-            "total": 15.52,
-            "date_time": "2025-02-22 19:34:22.422"
+            "link": "https://www.happiestbaby.com/14073324/orders/ad618db1d3bab840bd3474eccbe988c3/authenticate?key=1dfda7691989f0bfac38f5af0a887ba4\u0026none=Vw1SBVBBVw",
+            "orderDate": "2024-02-11",
+            "discount_amount": 2.09,
+            "orderNumber": "828108",
+            "date_time": "2024-02-11 19:55:59.225"
           },
           {
-            "orderNumber": "4052467",
-            "orderDate": "2024-11-21",
+            "currency": "USD",
+            "total": 1292.23,
+            "coupon": "10FORYOU",
             "items": [
               {
-                "name": "Kids Fleece Face Shields® | Blackout American Flag",
-                "price": 4.91,
-                "productLink": "https://safishing.com/products/kids-fleece-blackout-american-flag"
-              },
-              {
-                "name": "SA FREE FLEECE FACE SHIELD®",
-                "price": 0.98,
-                "productLink": "https://sa-co1.myshopify.com/products/sa-free-fleece-face-shield-ptls"
-              },
-              {
-                "name": "SA VIP Protection+",
-                "price": 2.55,
-                "productLink": "https://safishing.com/products/onward-package-protection"
-              },
-              {
-                "name": "Fleece Face Shields® | Tactical Navy",
-                "price": 5.9,
-                "productLink": "https://sa-co1.myshopify.com/products/frost-tech-navy"
-              },
-              {
-                "name": "Fleece Face Shields® | Lumberjack Red",
-                "price": 5.89,
-                "productLink": "https://safishing.com/products/fleece-lumberjack-plaid-red-face-shield"
-              },
-              {
-                "name": "Fleece Face Shield® | Chief",
-                "price": 5.89,
-                "productLink": "https://safishing.com/products/fleece-face-shield®-chief"
-              },
-              {
-                "name": "Fleece Face Shields® | Watercolor",
-                "price": 5.89,
-                "productLink": "https://safishing.com/products/fleece-face-shields®-watercolor-ptls"
-              },
-              {
-                "name": "Limited Edition 2L Dry Bag | Blackout American Flag",
-                "price": 10,
-                "productLink": "https://safishing.com/products/2l-dry-bag-blackout-american-flag"
+                "price": [
+                  {
+                    "value": [
+                      20.96,
+                      1186.5,
+                      1186.5,
+                      1186.5,
+                      20.96,
+                      20.96
+                    ],
+                    "Count": 6
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "link": "https://safishing.com/46427766945/orders/aff412814aa6013cf71a608fb6185110/authenticate?key=78e05ee9d685038a1a5c8cf1caf54ac0",
-            "total": 42.01,
-            "date_time": "2024-11-21 16:49:28.673"
+            "link": "https://www.happiestbaby.com/14073324/orders/ad618db1d3bab840bd3474eccbe988c3/authenticate?key=1dfda7691989f0bfac38f5af0a887ba4\u0026none=Vw1SBVBBVw",
+            "orderDate": "2024-02-11",
+            "discount_amount": 2.09,
+            "orderNumber": "828108",
+            "date_time": "2024-02-11 19:55:59.222"
           },
           {
-            "orderNumber": "4052467",
-            "orderDate": "2024-11-13",
+            "currency": "USD",
+            "total": 1292.23,
+            "coupon": "10FORYOU",
             "items": [
               {
-                "name": "Carbon Fiber",
-                "price": 10,
-                "productLink": "https://sa-co1.myshopify.com/products/carbon-fiber-2-face-shield"
-              },
-              {
-                "name": "Blackout American Flag",
-                "price": 10,
-                "productLink": "https://sa-co1.myshopify.com/products/blackout-american-flag-face-shield"
-              },
-              {
-                "name": "SA Forest Camo | Dregs",
-                "price": 10,
-                "productLink": "https://sa-co1.myshopify.com/products/sa-forest-camo-dregs-face-shield"
-              },
-              {
-                "name": "Blackout American Flag Skull",
-                "price": 10,
-                "productLink": "https://sa-co1.myshopify.com/products/blackout-american-flag-skull"
-              },
-              {
-                "name": "5 FREE FACE SHIELDS®",
-                "price": 0,
-                "productLink": "https://safishing.com/products/5-free-face-shields-re10"
+                "price": [
+                  {
+                    "value": [
+                      2.32,
+                      2.32
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "link": "https://safishing.com/46427766945/orders/aff412814aa6013cf71a608fb6185110/authenticate?key=78e05ee9d685038a1a5c8cf1caf54ac0",
-            "total": 40,
-            "date_time": "2024-11-13 19:22:43.342"
+            "link": "https://www.happiestbaby.com/14073324/orders/ad618db1d3bab840bd3474eccbe988c3/authenticate?key=1dfda7691989f0bfac38f5af0a887ba4\u0026none=Vw1SBVBBVw",
+            "orderDate": "2024-02-11",
+            "discount_amount": 2.09,
+            "orderNumber": "828108",
+            "date_time": "2024-02-11 19:55:59.221"
           },
           {
-            "orderNumber": "4052467",
-            "orderDate": "2024-10-15",
+            "currency": "USD",
+            "total": 1292.23,
+            "coupon": "10FORYOU",
             "items": [
               {
-                "name": "Fleece Face Shields®| Patriot Military Camo",
-                "price": 30,
-                "productLink": "https://safishing.com/products/frost-tech-patriot-military-camo-fleece-face-shield"
-              },
-              {
-                "name": "Fleece Face Shield® | Blackout Topography",
-                "price": 30,
-                "productLink": "https://safishing.com/products/fleece-face-shield®-blackout-topography"
-              },
-              {
-                "name": "BUY 1 FLEECE FACE SHIELD ® PICK 3 FREE | + FREE GIFT",
-                "price": 25,
-                "productLink": "https://safishing.com/products/buy-1-get-2-free-thermal-fleece"
-              },
-              {
-                "name": "SA FREE FACE SHIELD®",
-                "price": 10,
-                "productLink": "https://sa-co1.myshopify.com/products/sa-free-face-shield-ptls"
-              },
-              {
-                "name": "SA VIP Protection+",
-                "price": 2.55,
-                "productLink": "https://safishing.com/products/onward-package-protection"
-              },
-              {
-                "name": "Fleece Face Shields® | Blackout American Flag",
-                "price": 30,
-                "productLink": "https://sa-co1.myshopify.com/products/frost-tech-blackout-american-flag-fleece-lined-face-shield"
-              },
-              {
-                "name": "Fleece Face Shield® | Ghost American Flag",
-                "price": 30,
-                "productLink": "https://safishing.com/products/fleece-face-shield®-ghost-american-flag"
+                "price": [
+                  {
+                    "value": [
+                      24.46,
+                      24.46,
+                      24.46
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "link": "https://safishing.com/46427766945/orders/aff412814aa6013cf71a608fb6185110/authenticate?key=78e05ee9d685038a1a5c8cf1caf54ac0",
-            "total": 157.55,
-            "date_time": "2024-10-15 10:35:48.612"
+            "link": "https://www.happiestbaby.com/14073324/orders/ad618db1d3bab840bd3474eccbe988c3/authenticate?key=1dfda7691989f0bfac38f5af0a887ba4\u0026none=Vw1SBVBBVw",
+            "orderDate": "2024-02-11",
+            "discount_amount": 2.09,
+            "orderNumber": "828108",
+            "date_time": "2024-02-11 19:55:59.212"
           },
           {
-            "orderNumber": "3973613",
-            "orderDate": "2024-10-15",
+            "currency": "USD",
+            "total": 1292.23,
+            "coupon": "10FORYOU",
             "items": [
               {
-                "name": "Fleece Face Shields® | Blackout American Flag",
-                "price": 30,
-                "productLink": "https://sa-co1.myshopify.com/products/frost-tech-blackout-american-flag-fleece-lined-face-shield"
+                "price": [
+                  {
+                    "value": [
+                      20.96,
+                      20.96,
+                      20.96
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "link": "https://safishing.com/46427766945/orders/6a727783b22d216576ada4e4ce1e7d33/authenticate?key=12a03fc7224867f9317fee752d19ef95",
-            "total": 34.75,
-            "coupon": "Gift15",
-            "date_time": "2024-10-15 10:30:40.497"
+            "link": "https://www.happiestbaby.com/14073324/orders/ad618db1d3bab840bd3474eccbe988c3/authenticate?key=1dfda7691989f0bfac38f5af0a887ba4\u0026none=Vw1SBVBBVw",
+            "orderDate": "2024-02-11",
+            "discount_amount": 2.09,
+            "orderNumber": "828108",
+            "date_time": "2024-02-11 19:55:59.211"
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "85": {
-      "id": "019c6cf1-5631-4146-f000-00003e5ebc5f",
-      "companyName": "CALPAK",
-      "companyWebsite": "https://calpaktravel.com",
-      "agentName": "Jordan",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "CALPAK: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-17 13:01:48.690"
-        },
-        {
-          "message_media": [],
-          "message_text": "CALPAK: Thanks for traveling with CALPAK. Enjoy 10% off your first order with code AT1NT1V26GcEXlO.\n\nShop best sellers: calpak.attn.tv/aXyN2l1oI98Q \n*Offer expires in 7 days and excludes sale items. ",
-          "message_type": "system",
-          "date_time": "2026-02-17 13:01:53.837"
-        },
-        {
-          "message_media": [],
-          "message_text": "CALPAK: Save our number so you never miss an update!",
-          "message_type": "system",
-          "date_time": "2026-02-17 13:07:04.656"
-        },
-        {
-          "message_media": [],
-          "message_text": "This code did not work",
-          "message_type": "customer",
-          "date_time": "2026-02-17 13:24:49.967"
-        },
-        {
-          "message_media": [],
-          "message_text": "CALPAK: Hey Wende, thanks for stopping by\n\nFind your go-to luggage picks: https://calpak.attn.tv/a6e4zC3EBoVl .",
-          "message_type": "system",
-          "date_time": "2026-02-17 13:40:47.568"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Code won't work - brand specific\"; last updated: 2024-12-17 01:20:50.475",
-          "message_type": "template",
-          "date_time": "2026-02-17 13:51:21.543"
-        },
-        {
-          "message_media": [],
-          "message_text": "CALPAK: I'm sorry to hear that your code isn't working. Do you mind sharing a screenshot of your cart? I'm happy to take a closer look for you. Kindly note that our promo codes are only eligible for full-priced items. They don't work on already discounted products, including bundled sets. I'm sorry for the inconvenience.",
-          "message_type": "agent",
-          "agent": "109968",
-          "message_id": "019c6cf1-5631-4146-f000-00003e5ebc5f",
-          "date_time": "2026-02-17 13:51:21.544"
-        }
-      ],
+      "companyWebsite": "https://happiestbaby.com",
+      "companyName": "Happiest Baby",
       "notes": {
+        "important": [
+          "Ask the cx to share their order number and email before providing personal or order-specific information such as:",
+          "➜ Items they ordered",
+          "➜ Any order details",
+          "➜ Order confirmation page links",
+          "➜ Tracking information",
+          "➜ Order number"
+        ],
         "send_to_cs": [
-          "Send to CS for post purchase inquiries, use PPI shortcut",
-          "If cx needs help returning/exchanging a gift send to CS",
-          "Send to CS for discount code issues"
+          "Send to CS for all shipping issues"
         ],
         "escalate": [
-          "When ESC add email to notes for all escalations"
+          "If cx\u0027s mention pregnancy or infant loss, a grieving mother, or the incident with Brooklyn and Baby Rocky, DO NOT RESPOND. You can ESC these cases when needed without responding to the cx",
+          "Do NOT answer Premium App inquiries, ESC immediately",
+          "ESC rental portal issues",
+          "ESC when cx is looking for a supervisor",
+          "ESC when cx come back after emailing the CS team \u0026 haven\u0027t received a response",
+          "ESC any questions about the SNOO Sack inner bands (across the belly and the leg flap)",
+          "ESC in case the cx is asking if a product was discontinued"
+        ],
+        "tone": [
+          "Always type SNOO in all caps",
+          "Keep messages concise and not too long",
+          "Don\u0027t say the SNOO is an \"Investment\", say \"Premium product\""
+        ],
+        "templates": [
+          "For questions about future promos, sales or deals, use FUS shortcut",
+          "If there is no promo available for accessories use NPA shortcut",
+          "If cx can\u0027t connect SNOO to the app use CCA shortcut",
+          "If a product is on sale include that info when you use PTE shortcut",
+          "If cx says they\u0027re planning to purchase SNOO, use PGS shortcut",
+          "If cx are asking for items that we don\u0027t sell, use IDS shortcut",
+          "If cx are asking about refund for 6 month special, use PRR shortcut",
+          "If cx ask what is our return policy:",
+          "➜ Ask them which item they\u0027re referring to first",
+          "➜ Then send the correct information"
+        ],
+        "dos_and_donts": [
+          "Never refer them to check the website for more info on promotions or sales",
+          "Always provide the actual date and time the sale ends. If there\u0027s none available use the LMO shortcut",
+          "Don\u0027t send links for The Lola Crib, it\u0027s not available anymore",
+          "Share expedited shipping information where applicable",
+          "We don\u0027t have a buyback program available. There is no need to mention the donation email as this program is now closed.",
+          "Tell cx that as a member of the HB text fam community, they will receive alerts about future promotions first"
+        ],
+        "drive_to_purchase": [
+          "Don\u0027t recommend SNOO accessories unless SNOO was already purchased.",
+          "Always share the full price and highlight if there is a running promotion. For ex: \"SNOO at full price is $1695 but this weekend we are running a promotion of 20% of SNOO + FREE gifts, which makes SNOO $1356!\""
+        ],
+        "promo_and_exclusions": [
+          "The client does NOT offer special discount codes for foster parents/parents of foster children, share standard discounts with cx who inquire about this if they are eligible",
+          "The military discount CAN NOT be applied to rentals, only to new SNOO purchases",
+          "When sharing codes with cx/troubleshooting errors - explain the promo code terms",
+          "Don\u0027t tell customers that the code can\u0027t be applied to an item - instead inform them that it CAN only be applied to certain products",
+          "We do not offer a discount specifically for multiple SNOOs"
         ]
       },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Order Modification",
+        "Technical Issues with SNOO Functionality",
+        "Sleep/Safety Questions",
+        "TOG Rating",
+        "All medical issues; add KB140922S to ESC notes"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: Our Mother\u0027s Day Sale is here: save 30% SITEWIDE! Treat yourself or the special mom in your life! Shop now: https://happiestbaby.attn.tv/acHNBWVaO5nn ",
+          "date_time": "2024-05-11 16:20:41.916",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: Happiest Mother\u0027s Day! Treat yourself or the mom in your life to 30% off everything. Because let\u0027s face it, moms deserve it! Last chance, offer ends tonight! https://happiestbaby.attn.tv/aeJsczXEGf_I ",
+          "date_time": "2024-05-12 12:10:41.914",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: Get the latest trend! Shop for Sleepea® 5-Second Baby Swaddle now and enjoy a 10% off with discount code EMAILSAVE10-0429. Act fast!\nhttps://happiestbaby.attn.tv/a97LN0Z_v-pS .",
+          "date_time": "2024-05-18 19:00:57.814",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: \"Hey there! Don\u0027t forget to shop your favorite items. Use discount code EMAILSAVE10-0429 to get 10% off. Happy shopping!\"\nhttps://happiestbaby.attn.tv/aEgWlwHtSGQl .",
+          "date_time": "2024-05-19 19:01:07.502",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: Hey Tessa, Mia here! We noticed you checking us out 🤩 Any questions on our best sellers? https://happiestbaby.attn.tv/aLRSQINtB-KZ ",
+          "date_time": "2024-05-20 17:18:14.438",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: \"Countdown to Memorial Day! Enjoy a special offer of 10% off your purchase. Use discount code WELCOME10-0210 at checkout!\" https://happiestbaby.attn.tv/aK-mXIKNnCTc .",
+          "date_time": "2024-05-22 10:01:16.591",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: Hey Tessa, Mia here! We noticed you checking us out 🤩 Any questions on our best sellers? https://happiestbaby.attn.tv/aHwzKQdMwMOK ",
+          "date_time": "2024-05-26 19:19:05.762",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: Upgrade your little one\u0027s sleep game with our new White SNOObie! Enhanced volume, new soundtracks, and customizable App controls for better sleep and calmer days. Say hello to effortless routines! Shop now: https://happiestbaby.attn.tv/aj9ii7RVOlGX ",
+          "date_time": "2024-05-29 18:26:58.765",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: Hi Tessa, this is Mia. Thanks for checking out SNOObie! 😊 https://happiestbaby.attn.tv/awEEHp4S8c-e \n\nIs there anything we can help you with?",
+          "date_time": "2024-05-29 18:29:52.649",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: Hey Tessa, Mia here! We noticed you checking us out 🤩 Any questions on our best sellers? https://happiestbaby.attn.tv/apWuisHBO3D0 ",
+          "date_time": "2024-06-02 10:19:15.689",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: Hey Tessa, Mia here! We noticed you checking us out 🤩 Any questions on our best sellers? https://happiestbaby.attn.tv/anbc-aHFhFEE ",
+          "date_time": "2024-06-06 10:35:25.013",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: Hi Tessa, this is Mia. Thanks for checking out SNOO! 😊 https://happiestbaby.attn.tv/aVaZS2GHxI2h \n\nIs there anything we can help you with?",
+          "date_time": "2024-06-06 13:42:03.162",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: Hi Tessa, Mia here! Don\u0027t sleep on SNOO...just get sleep! Any questions I can help with today? Come back and shop now: https://happiestbaby.attn.tv/aKIvrIjaAaRJ ",
+          "date_time": "2024-06-08 11:33:50.459",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happiest Baby: Dad loves a deal...so don\u0027t miss out on this one! Give the gift of sleep with 25% off for a limited time. Shop early for Father\u0027s Day: https://happiestbaby.attn.tv/ayr_W73XWegm ",
+          "date_time": "2024-06-08 19:50:43.341",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi",
+          "date_time": "2024-06-09 11:39:14.589",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ffda7-8f1d-411f-f000-00007df391bc",
+          "message_text": "Happiest Baby: Hello Tessa! How can I assist you today?",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-09 11:39:27.909"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I was wondering if you can confirm when my order will ship",
+          "date_time": "2024-06-09 11:39:54.167",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ffdaa-2eac-4eb8-f000-00007df391bc",
+          "message_text": "Happiest Baby: Happy to help! You should receive an email (\u0026 a text if you entered your phone # at checkout!) when your order ships including, your tracking details to keep a close eye on its arrival! It may go to your spam folder. If you need help tracking it, please fill out this form: https://happiestbaby.attn.tv/a9D2_1iGdK83",
+          "message_type": "agent",
+          "agent": "47992",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-09 11:42:19.830"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "But my problem is I haven\u0027t received one and I believe it should have shipped by now",
+          "date_time": "2024-06-10 12:22:46.703",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019002f9-22d0-4d4b-f000-00007df391bc",
+          "message_text": "Happiest Baby: I see, and I\u0027m sorry to hear that! When did you place your order? Please note that our orders are processed quickly and out to families in no time! Orders ship within 2 business days of your chosen ship date and spend up to 5 business days in transit for purchase orders and 3-7 business days in transit for rental orders (2-3 additional business days to Alaska and Hawaii).",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-10 12:26:40.220"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "2/11 the order was placed",
+          "date_time": "2024-06-10 12:27:47.063",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The ship date was supposed to be 6/7",
+          "date_time": "2024-06-10 12:35:06.908",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01900306-9b8c-40b0-f000-00007df391bc",
+          "message_text": "Happiest Baby: Understood! Let me check with the team and I\u0027ll get back to you. Can I have your order number and email address, please?",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-10 12:41:23.098"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "SH828108",
+          "date_time": "2024-06-10 12:49:35.145",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Tyoung12043@gmail.com",
+          "date_time": "2024-06-10 12:49:45.169",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01900314-9246-4ed5-f000-00007df391bc",
+          "message_text": "Happiest Baby: Thanks for providing me with this information. The best way for us to support you is for you to contact us via this link: https://happiestbaby.attn.tv/afMy87UPmNpO Our team is happy to help!",
+          "message_type": "agent",
+          "agent": "82501",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-10 12:56:38.229"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m really frustrated with the lack of customer support I\u0027m receiving",
+          "date_time": "2024-06-10 13:39:21.682",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01900341-a305-4803-f000-00007df391bc",
+          "message_text": "Happiest Baby: We\u0027re really sorry about this and surely, this isn\u0027t the experience we want you to have. For shipping issues, please reach out to us through the link provided earlier. Our team will prioritize resolving your concerns promptly. Thank you for your patience and understanding. ",
+          "message_type": "agent",
+          "agent": "50272",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-10 13:45:51.631"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I filled it out but there wasn\u0027t a shipping issues link",
+          "date_time": "2024-06-10 13:58:01.739",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Shipping time\"; last updated: 2025-01-17 22:02:45.697",
+          "date_time": "2024-06-10 14:10:28.926",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"When will my order arrive?\"; last updated: 2024-01-08 21:33:39.167",
+          "date_time": "2024-06-10 14:10:28.926",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01900358-2db3-4dff-f000-00007df391bc",
+          "message_text": "Happiest Baby: I\u0027m sorry to hear that you are having trouble tracking your order. Please note that orders ship within 2 business days of your chosen ship date (06/07 - 06/09) and spend up to 5 business days in transit for purchase orders and 3-7 business days in transit for rental orders (2-3 additional business days to Alaska and Hawaii).\n\nYou will receive an email (\u0026 a text if you entered your phone # at checkout!) when your order ships including, your tracking details to keep a close eye on its arrival! It may go to your spam folder. I hope this clarifies.",
+          "message_type": "agent",
+          "agent": "82433",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-10 14:10:28.929"
+        }
+      ]
+    },
+    "84": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "018ebf2a-276a-45aa-f000-00007dc994c2",
       "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.lg.com/us/tvs/lg-oled77c3pua-oled-4k-tv",
+            "item": "lg oled evo c3 77 inch 4k smart tv 2023",
+            "timeAgo": "2024-03-01"
+          },
+          {
+            "link": "https://www.lg.com/us/tvs/lg-oled77c3pua-oled-4k-tv",
+            "item": "lg oled evo c3 77 inch 4k smart tv 2023",
+            "timeAgo": "2024-03-01"
+          },
+          {
+            "link": "https://www.lg.com/us/refrigerators/lg-lrmvs3006s-french-4-door-refrigerator",
+            "item": "30 cu. ft. smart instaview® door-in-door® refrigerator with craft iceTM",
+            "timeAgo": "2024-02-23"
+          },
+          {
+            "link": "https://www.lg.com/us/refrigerators/lg-lrmvs3006s-french-4-door-refrigerator",
+            "item": "30 cu. ft. smart instaview® door-in-door® refrigerator with craft iceTM",
+            "timeAgo": "2024-02-23"
+          },
+          {
+            "link": "https://www.lg.com/us/refrigerators/lg-lrmvs3006s-french-4-door-refrigerator",
+            "item": "30 cu. ft. smart instaview® door-in-door® refrigerator with craft iceTM",
+            "timeAgo": "2024-02-21"
+          }
+        ],
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Soundbars, Soundbar Accessories, Vacuum, Wireless Speaker. Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Vacuum, Wireless Speakers is off the pre-tax sale price on LG.com only. Offer valid for one-time use only within 30 days of code being sent. To receive the additional 10% off savings, promotion code must be entered at online checkout and will be applied to eligible products only. If any of the qualifying items are removed from the cart, canceled or returned, the promotional savings will be void. Availability, prices and terms of offer are subject to change without notice. No adjustments to prior purchases and non-redeemable for cash. ualifying AeroTower: U9CS1C  Qualifying PuriCare Air Purifiers: AP151MBA1, AP151MWA1, AS330DWR0, AS560DWR0, U9CV1C, U9CV2B  Qualifying Dehumidifier: UD501KOJ5  Qualifying TONE Free headphones: HBS-XL7.ACUSBKI, HBS-SL5.ACUSBKI, HBS-SL6S.ACUSBKI, HBS-510.ACUSBKI, HBS-830.ACUSBKI, HBS-830.ACUSWHI, HBS-FN4.ACUSBKI, HBS-FN6.ACUSBKI, HBS-FN5W.ACUSBKI, HBS-FN6.ACUSWHI, HBS-FN5W.ACUSWHI, TONE-FN7.ACUSBKI, TONE-FP8.AUSACLK, TONE-FP9.AUSACLK, TONE-FP5.AUSACLK, TONE-FP3.AUSACLK, TONE-NP3.AUSACLK, TONE-T90Q.AUSACBK, TONE-T90Q.AUSACWH, TONE-T60Q.AUSACBK TONE-TF8Q.AUSACBI, TONE-FP9W.AUSACLK, TONE-FP9E.AUSACLK, TONE-NP3C.AUSACLK  Qualifying LG Styler: S3CW, S3MFBN, S3RFBN, S3WFBN, S5MSB  Qualifying Soundbars: QP5, QP5W, S75Q, SP7Y, S65Q, SN6Y, SN5Y, SP2, SK1, SH2  Qualifying Soundbar Accessories: SPQ8-S, SPK8-S, WTP3  Qualifying Vacuums: A913BM, A925KSM, A927KGMS, A929KVM, A939KBGS, R975GM  Qualifying XBOOM Go Wireless Speakers: PL2, PL5, PL7, GP9, GP3, RP4G, RP4, RP4B, XG5QBK, XG7QBK, XO3QBK",
+            "value": "10",
+            "coupon": "TEXTSZCV2VXB24"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://calpaktravel.com",
+          "value": "https://lg.com/us",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-02-23",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      3199,
+                      3199,
+                      3199
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2024-02-23 19:36:47.773",
+            "discount_amount": 0,
+            "orderNumber": "2007994794",
+            "total": 3199
+          }
+        ]
+      },
+      "companyWebsite": "https://lg.com/us",
+      "companyName": "LG",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS using the \"Escalation template\""
+        ],
+        "templates": [
+          "For 10% off welcome code issues use temp \u0027Follow up 1\u0027, then \u0027Follow up 2\u0027 after confirming the item is excluded from promos",
+          "For fridge recommendations use FRR shortcut",
+          "For service-related issues/scheduled repair service appointments use SRI shortcut",
+          "For cxs looking for replacement parts/accessories from an affiliate Parts Distributor use RPA shortcut",
+          "If a cx has an inquiry for finding the serial number/model number of an item:",
+          "➜ If it\u0027s a TV, use mnt shortcut",
+          "➜ If it\u0027s another product, use mna shortcut"
+        ],
+        "dos_and_donts": [
+          "If it\u0027s a new conversation and we didn\u0027t introduce ourselves in the automated message, start your message with: \"This is Jordan at LG.\""
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Secure your spot for the ultimate home entertainment experience! Preorder the OLED evo G4, C4, and QNED TVs today. Shop now: https://lg.attn.tv/l/f1u/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-03-12 16:49:43.424",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Don\u0027t miss out! Get room-filling sound and sensational color with savings on select LG QNED TVs and soundbars. Shop now: https://lg.attn.tv/l/EBg/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-03-15 13:00:37.780",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Find our best prices of the season on select LG refrigerators-plus a free LT1000P water filter with select models. Valid through 5/12/24. Terms and conditions apply. Shop now: https://lg.attn.tv/l/TrB/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-03-20 16:36:03.211",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Watch every upset with savings on select 65\"-86\" OLED, QNED and UHD TVs. Free wall-mounting or stand setup with purchase. Shop now: https://lg.attn.tv/l/ek0/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-03-21 14:01:03.066",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: 3 DAYS ONLY: Get the gear you need for work and play with savings on eligible LG laptops, monitors, and projectors. Shop now: https://lg.attn.tv/l/i0Q/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-03-22 15:07:27.961",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Introducing the new LG CineBeam Q Projector-preorder today and get a free leather case, free speaker and a $200 Mastercard® Virtual Prepaid Card. Shop now: https://lg.attn.tv/l/CP5/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-03-23 14:00:37.006",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Maximize your productivity. Buy an LG gram Pro \u0026 get a free 34\" UltraWideTM Curved Monitor ($279.99 value)-plus free shipping. Shop now: https://lg.attn.tv/l/4nA/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-03-25 16:08:11.190",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Simplify laundry day with amazing deals on select LG washers \u0026 pedestal storage drawer companions. Shop now: https://lg.attn.tv/l/1sP/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-03-26 14:00:50.800",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Experience the jaw-dropping picture with 2024 OLED evo G4, C4 and QNED TVs-plus savings on premium soundbars. Shop now: https://lg.attn.tv/l/knp/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-03-28 19:00:54.018",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Find the perfect touch for your home with savings on sleek refrigerators, ultra-modern laundry, and more. Shop now: https://lg.attn.tv/l/s1T/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-03-30 15:14:40.819",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Enjoy extended service plans from $1 to $20 with LG Premium Care when you purchase select refrigerators or laundry. Shop now: https://lg.attn.tv/l/PUw/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-04-01 14:01:05.043",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Shop now for up to 35% off select TVs and up to 40% off eligible soundbars, plus get 30-day free returns on select soundbars. Shop now: https://lg.attn.tv/l/pRZ/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-04-05 14:05:26.177",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Don\u0027t fold on these deals! Discover huge discounts across LG laundry appliances when you shop now. 🧺 Shop now: https://lg.attn.tv/l/XFd/wLP-L \n\nText back if you have any questions! ",
+          "date_time": "2024-04-06 14:00:43.205",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Final Hours to save on select 65\"-86\" OLED, QNED and UHD TVs. Free wall-mounting or stand setup with purchase. Shop now: https://lg.attn.tv/l/ZTp/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-04-07 12:03:48.487",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Use promo code LGENERGYSTAR for Earth Day savings on ENERGY STAR®-certified refrigerators, laundry and more. Shop now: https://lg.attn.tv/l/DqA/wLP-L \n\nText back if you have any questions!",
+          "date_time": "2024-04-08 15:13:57.834",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I don\u0027t buy any LG branch until I resolve my case case number is CNN240304752449 until I get my rebate then I might take by another LG",
+          "date_time": "2024-04-08 15:18:51.804",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ebf27-1027-4730-f000-00007dc994c2",
+          "message_text": "LG Electronics USA: I understand. Regrettably, we don\u0027t have access to case numbers, apologies for the inconvenience! Our Customer Service Center at (800) 243-0000 is the only department that gives case numbers and has access to the case numbers so you will need to contact them with your case number to get an update on the case. ",
+          "message_type": "agent",
+          "agent": "46578",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-08 15:19:52.119"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Excuses excuses is all I heard from last three months that I got this case going on send it to your supervisor and they will findthe case",
+          "date_time": "2024-04-08 15:21:11.664",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ebf2a-276a-45aa-f000-00007dc994c2",
+          "message_text": "LG Electronics USA: I am afraid my resources are limited and I am unable to do that. Please reach out to my team for more info. My team is happy to help.",
+          "message_type": "agent",
+          "agent": "34839",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-08 15:23:14.673"
+        }
+      ]
+    },
+    "85": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "018ec473-f89b-407f-f000-0000326be19a",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "17% Off. Excludes: already discounted products, final sale products, and subscription products",
+            "coupon": "STAYGOOD17"
+          },
+          {
+            "coupon": "DRp1RG7",
+            "status": "ACTIVE"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "Codes for VIP Journey",
+            "coupon": "VIPB4K77"
+          },
+          {
+            "coupon": "BCB-98J338",
+            "status": "ACTIVE"
+          },
+          {
+            "coupon": "Dl11ct8",
+            "status": "ACTIVE"
+          },
+          {
+            "coupon": "BCB-763725",
+            "status": "ACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://darngoodyarn.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "item": "Hue Carry-On Luggage",
-            "link": "https://www.calpaktravel.com/web-pixels@7cecd0b6w90c54c6cpe92089d5m57a67346/custom/web-pixel-90374202@56/sandbox/modern/products/hue-carry-on-luggage",
-            "timeAgo": "2026-01-14"
+            "link": "https://www.darngoodyarn.com/products/darn-good-yarn-editors-box?utm_source=fb\u0026utm_medium=cpc\u0026utm_campaign=rc-mof-vc-social-proof-elevar-pixel-purchasers180\u0026utm_content=Facebook_Mobile_Feed-tof071-introducing-our-editors-box-slideshow-pp-10159697773557615\u0026fbclid=IwAR2zrCXvnOByKQ52UONIHSkcBM4teJXR8LvM-KbQnH6nRucj0ZZZnyXb0WI_aem_AbQo1BejChieja1HDQyQRywD_WZZjsb-uEflwP1GyUiwc-0MKBoAHXRG-eP-cFUdauwWWMvutnVLaf5LVpjLs_aM",
+            "item": "Darn Good Yarn Editor\u0027s Box - Witches\u0027 Brew Edition (wool free)",
+            "timeAgo": "2023-09-18"
           },
           {
-            "item": "Hue Carry-On Luggage",
-            "link": "https://www.calpaktravel.com/web-pixels@7cecd0b6w90c54c6cpe92089d5m57a67346/custom/web-pixel-90374202@56/sandbox/modern/products/hue-carry-on-luggage",
-            "timeAgo": "2026-01-14"
+            "link": "https://www.darngoodyarn.com/products/10-pack-savings-bundle?variant=40252549234801",
+            "item": "Yarn Lovers 10 Pack Bulk Yarn Bundle - Sport Weight Silk Yarn - Caribbean Current",
+            "timeAgo": "2023-09-17"
           },
           {
-            "item": "Hue Carry-On Luggage",
-            "link": "https://www.calpaktravel.com/products/hue-carry-on-luggage",
-            "timeAgo": "2026-01-14"
+            "link": "https://www.darngoodyarn.com/products/10-pack-savings-bundle?variant=40252549202033",
+            "item": "Yarn Lovers 10 Pack Bulk Yarn Bundle - Silk Roving Worsted Weight Yarn - Mist",
+            "timeAgo": "2023-09-17"
           },
           {
-            "item": "Hue Carry-On Luggage",
-            "link": "https://www.calpaktravel.com/products/hue-carry-on-luggage",
-            "timeAgo": "2026-01-14"
+            "link": "https://www.darngoodyarn.com/products/10-pack-savings-bundle?variant=40252549103729",
+            "item": "Yarn Lovers 10 Pack Bulk Yarn Bundle - Twist Sport Weight Silk Yarn - Rain Boots",
+            "timeAgo": "2023-09-17"
           },
           {
-            "item": "Hue Carry-On Luggage",
-            "link": "https://www.calpaktravel.com/web-pixels@7cecd0b6w90c54c6cpe92089d5m57a67346/custom/web-pixel-90374202@56/sandbox/modern/products/hue-carry-on-luggage",
-            "timeAgo": "2026-01-14"
+            "link": "https://www.darngoodyarn.com/products/10-pack-savings-bundle?variant=40167733723249",
+            "item": "Yarn Lovers 10 Pack Bulk Yarn Bundle - Lace Weight Silk - Sparkle Enchanted Forest",
+            "timeAgo": "2023-09-17"
           }
         ]
       },
-      "escalation_preferences": [
-        "change of address"
+      "companyWebsite": "https://darngoodyarn.com",
+      "companyName": "Darn Good Yarn",
+      "notes": {
+        "escalate": [
+          "Don\u0027t send to CS for this client, ESC everything"
+        ]
+      },
+      "blocklisted_words": [
+        
       ],
-      "blocklisted_words": [],
-      "has_shopify": true
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Super Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: EXTENDED FOR VIPS!\n\n* BUY 1, GET 1 FREE *\nSkirt Layering Goody bags\n\nIncludes skirt, medley + bandana!\n\nSave $158! https://dgy.attn.tv/l/4tp/4bYTH .",
+          "date_time": "2024-03-11 16:35:14.902",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Yarn: Deal of the Day $10 Luxury Peruvian Highland Wool\nDye it or stock up for the sweater you wanna make!\nShop now: https://dgy.attn.tv/l/fxG/4bYTH ",
+          "date_time": "2024-03-12 14:10:44.069",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Reward Points are back! Thank you for your awesomeness\nVIP discounted skirts collection. Secret Link Click Here Today https://dgy.attn.tv/l/vTW/4bYTH",
+          "date_time": "2024-03-13 15:25:15.040",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Adore luxury yarns but not luxury prices? Today is your day. BOGO FREE: Mystery Boxes of brilliant yarn. Shop Now: \nhttps://dgy.attn.tv/l/6OL/4bYTH ",
+          "date_time": "2024-03-14 14:45:19.824",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Color your world. Exotic yarns from around the globe. Buy 1 Get 1 FREE Today\nCreate something eye-catching\nShop now:\nhttps://dgy.attn.tv/l/hKr/4bYTH ",
+          "date_time": "2024-03-16 13:20:13.886",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Show your true rainbow of colors. 25% Almost Everything! Today Only! - Use Code: LUCKY25\nShop Now: https://dgy.attn.tv/l/0Uj/4bYTH ",
+          "date_time": "2024-03-17 15:15:26.465",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Be a Yarn-icorn!\nMini Surprise Yarn Boxes! Buy 2, get 1 FREE. A yarn party at your doorstep!\nSave $110 Today! https://dgy.attn.tv/l/7Al/4bYTH ",
+          "date_time": "2024-03-21 14:32:35.623",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Uncover the magic of sari ribbon! Try our Exploration Kit with vibrant upcycled fibers. Limited stock! Shop Now: https://dgy.attn.tv/l/268/4bYTH",
+          "date_time": "2024-03-23 14:50:23.970",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: 62% off Just $10 A super easy DIY kit! \n*Succulents* Each kit makes 3 plants that you can\u0027t kill :-0\nTap for deal https://dgy.attn.tv/l/3eU/4bYTH ",
+          "date_time": "2024-03-26 15:45:21.753",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: HUGE RIBBON RESTOCK!\n\n15 NEW colors to explore!\n\n* Get 5 for $60 *\nMix \u0026 Match\n\nUse Code: RIBBON60\n\nGet the Deal:https://dgy.attn.tv/l/PNk/4bYTH .",
+          "date_time": "2024-03-28 14:17:24.906",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: CRAZY YARN SPECIAL!\n\nBUY 2, GET 1 FREE - Overstock Yarn Kits!\n\nThat\u0027s 9 Skeins of Yarn! Save $107!\n\nGet the Deal! https://dgy.attn.tv/l/rLP/4bYTH .",
+          "date_time": "2024-03-30 14:45:27.586",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: We HOP You Love This!\n\n25% off Your Next Purchase!\nCrafts, Clothing, Home + More!\n\nUse Code: HOP25\n\nTwo Days Only! https://dgy.attn.tv/l/Ol1/4bYTH .",
+          "date_time": "2024-03-31 15:15:34.319",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Fiber Flash Sale!\n\nSilk DK Weight 5-Packs are BACK!\n\nSave 37% + Get 10 FREE Patterns with purchase!\n\nGet the Deal: https://dgy.attn.tv/l/4Ar/4bYTH .",
+          "date_time": "2024-04-02 15:35:23.360",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Eclipse Ready!\n\nOuter Space Craft Kits - 5 for choose from\nIncludes Yarn, Notions + 3 Patterns!\n\nBUY 2, GET 1 FREE\n\nhttps://dgy.attn.tv/l/INT/4bYTH .",
+          "date_time": "2024-04-04 15:15:36.703",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: It\u0027s Finally FRI-YAY!\n\nTreat Yourself - $10 off your $30+ Purchase!\n\nExpires Monday!\n\nUse Code: TGIF\n\nhttps://dgy.attn.tv/l/h0Y/4bYTH .",
+          "date_time": "2024-04-05 15:15:26.138",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: THIS IS IT!\n\nLast Call EVER for Wool Stash Builder Boxes!\n\nIncludes 8 Skeins for just $60!\n\nOnly 20 Left! Act Fast!\nhttps://dgy.attn.tv/l/bgP/4bYTH .",
+          "date_time": "2024-04-06 15:00:43.355",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: FINAL HOURS!\n\nSpring Skirt Layering Bundles\nIncludes 2 Skirts, Scrunchies + Medley\n\n* BOGO FREE - SAVE $135! *\n\n https://dgy.attn.tv/l/AvG/4bYTH .",
+          "date_time": "2024-04-07 15:45:23.974",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: BACK IN STOCK!\n\nSurprise Silk or Wool Yarn Kits! - New Colors Available!\n\n* BUY 1, GET 1 FREE *\n\nShop \u0026 Save $60 Now!\nhttps://dgy.attn.tv/l/3F2/4bYTH",
+          "date_time": "2024-04-09 16:00:50.926",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Hi! If you need additional help, reply SUPPORT and we\u0027ll get back to you! Text STOP to opt out.",
+          "date_time": "2024-04-09 16:01:25.998",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Price?",
+          "date_time": "2024-04-09 16:01:28.876",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ec473-f89b-407f-f000-0000326be19a",
+          "message_text": "Darn Good: Hi there! What specific item/s were you referring to so I can check the price for you",
+          "message_type": "agent",
+          "agent": "41075",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-09 16:01:58.437"
+        }
+      ]
     }
   }
 }

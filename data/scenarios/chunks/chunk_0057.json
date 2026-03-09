@@ -1,0 +1,1291 @@
+{
+  "version": 1,
+  "chunk": "chunk_0057",
+  "scenarios": {
+    "281": {
+      "agentName": "Katie",
+      "has_shopify": false,
+      "id": "0190621a-c2c4-4eb9-f000-00008f3a7a1b",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "INACTIVE",
+            "description": "Memorial Day 2024",
+            "value": "25",
+            "coupon": "MDW25"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://mykitsch.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.mykitsch.com/products/essential-bobby-pin-tortoise?_pos=1\u0026_sid=c1154f1d9\u0026_ss=r",
+            "item": "Bobby Pins 45pc (Brown)",
+            "timeAgo": "2024-06-29"
+          },
+          {
+            "link": "https://www.mykitsch.com/products/enamel-bobby-pins-6pcs-terracotta?_pos=2\u0026_sid=c1154f1d9\u0026_ss=r",
+            "item": "Enamel Bobby Pins 6pcs- Terracotta",
+            "timeAgo": "2024-06-29"
+          },
+          {
+            "link": "https://www.mykitsch.com/products/volumizing-roller-clips?variant=42508522356917",
+            "item": "Volumizing Roller Clips",
+            "timeAgo": "2024-06-29"
+          },
+          {
+            "link": "https://www.mykitsch.com/products/ceramic-thermal-roller-variety-pack?variant=31497092759586",
+            "item": "Hair Rollers | Ceramic 8 Pack",
+            "timeAgo": "2024-06-29"
+          },
+          {
+            "link": "https://www.mykitsch.com/products/flat-lay-claw-clip-3pc-flat-terracotta",
+            "item": "Flat Lay Claw Clip 3pc Flat- Terracotta",
+            "timeAgo": "2024-06-29"
+          }
+        ]
+      },
+      "companyWebsite": "https://mykitsch.com",
+      "companyName": "Kitsch",
+      "notes": {
+        "templates": [
+          "For receiving 1 pillowcase instead of 2, check if they ordered \"Satin Sleep Set\" and use SSS shortcut"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!",
+          "Close the convo if the customer replies with SUPPORT \u0026 doesn\u0027t send any follow-up messages",
+          "➜  If they do, you can respond"
+        ]
+      },
+      "blocklisted_words": [
+        "Fabulous"
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Kitsch: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/ayo",
+          "date_time": "2024-06-28 22:18:30.178",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kitsch: Thank you for helping our small, woman-owned business grow! Your 25% off code is MDW25 . Click here to shop: https://mykitsch.attn.tv/aEUNrxGtVV1x .\n\nNeed help? You can always reply back to this text or call 424-240-5551 if you have questions",
+          "date_time": "2024-06-28 22:18:34.189",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kitsch: Hey, this is Katie at Kitsch! Thanks for checking out our site. 😊 https://mykitsch.attn.tv/ahJl1ptQTVhY .\n\nAnything in particular you are shopping for today? ",
+          "date_time": "2024-06-28 22:21:05.084",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I just had a question regarding the 25% off code MDW 25 is that only good on full priced items?",
+          "date_time": "2024-06-28 22:21:48.833",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019061cc-9f30-4c7f-f000-00008f3a7a1b",
+          "message_text": "Kitsch: The 25% off code MDW25 can be used on our website mykitsch.com. It doesn\u0027t specify that it\u0027s only for full-priced items, so feel free to apply it to your cart and see the discount!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-28 22:21:58.452"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I tried and it says code does not apply...?",
+          "date_time": "2024-06-28 22:22:58.991",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019061d3-8685-4f51-f000-00008f3a7a1b",
+          "message_text": "Kitsch: I\u0027m sorry about that! Can you send me a screenshot that shows the error as well as the items so I can check on my end, please? Thank you.",
+          "message_type": "agent",
+          "agent": "82432",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-28 22:29:30.897"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Surely one moment",
+          "date_time": "2024-06-28 22:30:29.115",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01906203-0224-4e2c-f000-00008f3a7a1b",
+          "message_text": "Kitsch: Thank you for sending the screenshot! I just checked and what you\u0027re looking to purchase already has a discount pre-applied which is why the code isn\u0027t working as the system typically can\u0027t stack more than one promo at checkout. Please use it on regular-priced items instead. ",
+          "message_type": "agent",
+          "agent": "39375",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-28 23:21:22.739"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "That\u0027s what I figured but previous was told it could be...probably an auto response, no worries, thanks.",
+          "date_time": "2024-06-28 23:23:19.054",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Can I use two discounts? - All brands\"; last updated: 2023-10-10 16:38:40.074",
+          "date_time": "2024-06-28 23:47:19.377",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190621a-c2c4-4eb9-f000-00008f3a7a1b",
+          "message_text": "Kitsch: I appreciate your understanding. While you won\u0027t be able to use multiple deals at checkout, feel free to use the one that has better value for you. Check out all on-sale items here: https://mykitsch.attn.tv/aRLMURmuhowS",
+          "message_type": "agent",
+          "agent": "82501",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-28 23:47:19.379"
+        }
+      ]
+    },
+    "282": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "0190da8b-2f5c-449a-f000-00000a231488",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "INACTIVE",
+            "description": "100 min $50 off for session abandonment flow",
+            "coupon": "SE3Vhllv"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "Batch 9, 200,000, February 29th 2024",
+            "coupon": "2756SA50"
+          },
+          {
+            "coupon": "WELCOME10",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "Tydo 35% #2",
+            "coupon": "TY35ZTTH6T"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "Batch 12 - 100,00 codes, Oct 14 2024",
+            "coupon": "NP50B4ZX7"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "Automated random dynamic codes for session abandon - 4/1/24",
+            "value": "50",
+            "coupon": "SA50-gP6xZb"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://cozyearth.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://cozyearth.com/products/womens-soft-woven-nightgown?utm_campaign=Concierge-reply\u0026utm_medium=sms\u0026utm_source=attentive\u0026variant=42753126826164\u0026externalId=IEBd7",
+            "item": "Women\u0027s Soft Woven Nightgown - Eclipse / M",
+            "timeAgo": "2024-07-22"
+          },
+          {
+            "link": "https://cozyearth.com/products/womens-soft-woven-nightgown?utm_campaign=Concierge-reply\u0026utm_medium=sms\u0026utm_source=attentive\u0026variant=42753126826164\u0026externalId=IEBd7",
+            "item": "Women\u0027s Soft Woven Nightgown - Eclipse / M",
+            "timeAgo": "2024-07-22"
+          },
+          {
+            "link": "https://cozyearth.com/products/bamboo-jersey-quilt?_pos=1\u0026_sid=ef3f1809f\u0026_ss=r\u0026utm_campaign=bamboojerseylaunch-texturehero-july2024\u0026utm_medium=email\u0026utm_source=attentive\u0026variant=43296109953204\u0026externalId=IEBd7",
+            "item": "Bamboo Jersey Quilt - Birch / Toddler",
+            "timeAgo": "2024-07-08"
+          },
+          {
+            "link": "https://cozyearth.com/products/bamboo-jersey-quilt?_pos=1\u0026_sid=ef3f1809f\u0026_ss=r\u0026utm_campaign=bamboojerseylaunch-texturehero-july2024\u0026utm_medium=email\u0026utm_source=attentive\u0026variant=43296109822132\u0026externalId=IEBd7",
+            "item": "Bamboo Jersey Quilt - Birch / Toddler",
+            "timeAgo": "2024-07-08"
+          },
+          {
+            "link": "https://cozyearth.com/products/bamboo-jersey-quilt?_pos=1\u0026_sid=ef3f1809f\u0026_ss=r\u0026utm_campaign=bamboojerseylaunch-texturehero-july2024\u0026utm_medium=email\u0026utm_source=attentive\u0026variant=43296109953204\u0026externalId=IEBd7",
+            "item": "Bamboo Jersey Quilt - Birch / Toddler",
+            "timeAgo": "2024-07-08"
+          }
+        ]
+      },
+      "companyWebsite": "https://cozyearth.com",
+      "companyName": "Cozy Earth",
+      "notes": {
+        "escalate": [
+          "ESC all MyFitness pall App inquiries"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t share sale end dates with customers"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Enjoy up to 55% off on summer must-haves, from bedding to apparel. Dive into our Summer Warehouse Sale now!\n\nShop Now: https://cozyearth.attn.tv/aozWv8n7cJ3f\n",
+          "date_time": "2024-06-22 18:00:32.400",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey Alona, this is Sarah. Thanks for stopping by Cozy Earth! https://cozyearth.attn.tv/aFO1EEDsuNmh \n\nCan I help you find your next cozy favorite?",
+          "date_time": "2024-06-23 17:32:26.091",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: FLASH SALE - Up to 75% OFF for 3 HOURS ONLY IS HERE!\n\nHurry...Shop the Best Sale of the Summer: https://cozyearth.attn.tv/aGlMf8ewTUoO ",
+          "date_time": "2024-06-24 15:02:55.711",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Want free flights? Join us LIVE for a Q\u0026A with our CEO and Founder to get an exclusive 40% off, enter to win two FREE flights, and more!\n\nJoin the live now: https://cozyearth.attn.tv/aXfMJU9wxzmh",
+          "date_time": "2024-06-24 16:36:31.688",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: We\u0027ve missed you! Enjoy a special offer on your next purchase with us. Use code COZYUP at checkout for 10% off. Happy shopping! https://cozyearth.attn.tv/a7NJN60FQ4yn ",
+          "date_time": "2024-06-25 19:36:05.389",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: NEW COLOR ALERT! Olive is finally available in our best-selling jogger set!\n\nShop Now: https://cozyearth.attn.tv/atElaJIvzkn5",
+          "date_time": "2024-06-28 18:01:22.133",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: LAST CALL: Fourth of July Sale ENDS TONIGHT! 🎇\n\nShop Up To 25% Off: https://cozyearth.attn.tv/a1H20jVA1Pp9",
+          "date_time": "2024-07-04 17:11:11.001",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Host of the World\u0027s #1 Educational Podcast, Mel Robbins, has chosen Cozy Earth as her favorite luxury home and apparel brand. \n\nTreat yourself to 40% off Mel\u0027s favorites with code: COZYMEL\n\nShop Now: https://cozyearth.attn.tv/a5M7Fl3JXqsO",
+          "date_time": "2024-07-05 17:09:11.679",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: You\u0027re hearing it first! Our Fourth of July sale continues! Enjoy up to 25% off, but hurry!\n\nShop Extended: https://cozyearth.attn.tv/aUAreicW7v4f",
+          "date_time": "2024-07-06 17:12:09.412",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: We are LIVE now with a deep dive into our newest Jersey Bedding Collection. Enjoy 35% off as you upgrade your space with cozy textures.\n\nJoin Livestream: https://cozyearth.attn.tv/akSutE8qVzHV",
+          "date_time": "2024-07-08 16:31:15.573",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: HURRY! Up to 25% off Fourth of July Sale ENDS TONIGHT! Stock up on your favorite essentials now!\n\nShop Now: https://cozyearth.attn.tv/akmc9iL1uwyE\n",
+          "date_time": "2024-07-10 17:15:21.639",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Get a $165 welcome gift \u0026 monthly credits with the Cozy Earth Membership today. It\u0027s a no-brainer!\n\nJoin Now: https://cozyearth.attn.tv/aAnz9OITj2Lg",
+          "date_time": "2024-07-14 18:10:16.839",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: FLASH SALE - 40% OFF BEDDING. 3 HOURS ONLY. GO!\n\nShop the BEST SALE of the summer! https://cozyearth.attn.tv/a_uQKlEE2YmM",
+          "date_time": "2024-07-16 15:03:20.787",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: The countdown is ON! 1 HOUR LEFT for 40% off bedding!\n\nHurry, don\u0027t miss out on the BEST SALE of the summer: https://cozyearth.attn.tv/a9R6KV7xMBSd",
+          "date_time": "2024-07-16 17:04:54.070",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: FLASH SALE! 40% OFF APPAREL\n\n3 HOURS ONLY...\n\nThe BEST SALE of the summer continues! Shop now: https://cozyearth.attn.tv/arRzFyvBe9IY",
+          "date_time": "2024-07-17 15:03:49.659",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: 1 HOUR LEFT! 40% OFF APPAREL!\n\nThe countdown is on...\n\nDon\u0027t miss the BEST SALE of the summer: https://cozyearth.attn.tv/afc0jbnGjAZd",
+          "date_time": "2024-07-17 17:03:02.293",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Only 15 minutes left for 40% off ALL apparel\n\nShop Black Friday in July for just a few more minutes:\nhttps://cozyearth.attn.tv/aALRkbD4NheU",
+          "date_time": "2024-07-17 17:45:24.359",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Cozy Days continue!\n\nSave up to 35% off sitewide on customer-favorite styles, but not for much longer!\n\nShop the Best Sale of the summer: https://cozyearth.attn.tv/a_HZoFulOkhY",
+          "date_time": "2024-07-18 18:11:32.011",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Guess who\u0027s back? Our best-selling Toile pajama print!\n\nThree dreamy colorways: Lilac, Celadon, and Blue.\n\nPlus, don\u0027t forget, Cozy Days is now extended with up to 35% off sitewide!\n\nShop Now: https://cozyearth.attn.tv/aYRVmG00m-f-",
+          "date_time": "2024-07-19 18:02:53.812",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey Alona, this is Sarah. Thanks for stopping by Cozy Earth! https://cozyearth.attn.tv/aGgvDi50yLV0 \n\nCan I help you find your next cozy favorite?",
+          "date_time": "2024-07-21 12:26:25.773",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Not at this time. Not feeling great. Thank you.",
+          "date_time": "2024-07-22 08:43:05.404",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190da77-8e09-44eb-f000-00000a231488",
+          "message_text": "Cozy Earth: No problem. Feel free to reach out anytime, I\u0027m always here to help!",
+          "message_type": "agent",
+          "agent": "38773",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-22 08:43:06.642"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you.",
+          "date_time": "2024-07-22 08:43:25.392",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190da79-1f1b-4027-f000-00000a231488",
+          "message_text": "Cozy Earth: You\u0027re welcome! Have a great day and if you have any questions, feel free to shoot me a text.\n\nIn the meantime, feel free to check out our best-selling bedding. Maybe you\u0027ll find something you like!\nhttps://cozyearth.attn.tv/aW8m70Tjp__u",
+          "message_type": "agent",
+          "agent": "82445",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-22 08:44:49.317"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Will do. .... thank you",
+          "date_time": "2024-07-22 08:48:44.697",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190da7e-23d3-46cb-f000-00000a231488",
+          "message_text": "Cozy Earth: My pleasure. Have a good one.",
+          "message_type": "agent",
+          "agent": "31580",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-22 08:50:18.209"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "You as well.",
+          "date_time": "2024-07-22 08:50:44.992",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "What I would need is something like a long snug nightgown. If not too expensive. I am 5\u00277 And now weigh about 123 or 124 . Have one from \u0027Dagsmejan\u0027 that fits great in M. Otherwise, don\u0027t need now. Thank you.",
+          "date_time": "2024-07-22 08:54:05.008",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190da85-45f6-46f8-f000-00000a231488",
+          "message_text": "Cozy Earth: Got it! What do you think about these?\nhttps://cozyearth.attn.tv/a3llCTcCnFpu\nhttps://cozyearth.attn.tv/aJrT_z3qblQE\n\nOur sleepwear and loungewear is generously sized for maximum around-the-house comfort. If you\u0027re between sizes, we recommend sizing down for the best fit. We have a find your size questionnaire on each product page as well!\n",
+          "message_type": "agent",
+          "agent": "40591",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-22 08:58:05.701"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No thanks. I wear long sleeves and maxi length. Also hand many older pajamas from cozy earth and they are huge. Can\u0027t wear them. Thank you anyway for trying.",
+          "date_time": "2024-07-22 09:00:14.939",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190da8b-2f5c-449a-f000-00000a231488",
+          "message_text": "Cozy Earth: No worries, it\u0027s my pleasure! Have you considered something like this? - https://cozyearth.attn.tv/a4Xl1iCRlq_a\nThey\u0027re stylish and super comfy! ",
+          "message_type": "agent",
+          "agent": "39646",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-22 09:04:33.126"
+        }
+      ]
+    },
+    "283": {
+      "agentName": "Amy",
+      "has_shopify": true,
+      "id": "019017a2-1ee1-498f-f000-00008a853031",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://clearstem.com/products/mindbodyskin-hormonal-acne-supplement-no-5-htp",
+            "item": "MINDBODYSKIN® 2 Supplement (No 5-HTP)",
+            "timeAgo": "2024-06-14"
+          },
+          {
+            "link": "https://clearstem.com/products/mindbodyskin-hormonal-acne-supplement-no-5-htp",
+            "item": "MINDBODYSKIN® 2 Supplement (No 5-HTP)",
+            "timeAgo": "2024-05-30"
+          },
+          {
+            "link": "https://clearstem.com/products/mindbodyskin-hormonal-acne-supplement-no-5-htp",
+            "item": "MINDBODYSKIN® 2 Supplement (No 5-HTP)",
+            "timeAgo": "2024-04-26"
+          }
+        ],
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "your first order",
+            "value": "15",
+            "coupon": "BECLEAR15"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://clearstem.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-25",
+            "items": [
+              {
+                "price": [
+                  2
+                ],
+                "productLink": "https://clearstem-skincare.myshopify.com/products/package-protection",
+                "name": "Package Protection"
+              }
+            ],
+            "trackingLink": "http://wwwapps.ups.com/WebTracking/track?track=yes\u0026trackNums=92612902712318543403182674\u0026loc=en_us",
+            "link": "https://clearstem.com/56349720736/orders/dd44f35310ffe8efb206594d3b488161/authenticate?key=da23da3eb94fbc5c20d3404b8df2c97b\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-25 20:19:43.919",
+            "discount_amount": 0,
+            "orderNumber": "470719",
+            "order_tracking_link": "http://wwwapps.ups.com/WebTracking/track?track=yes\u0026trackNums=92612902712318543403182674\u0026loc=en_us",
+            "total": 56
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-25",
+            "items": [
+              {
+                "price": [
+                  58
+                ],
+                "productLink": "https://clearstem-skincare.myshopify.com/products/mindbodyskin-hormonal-acne-supplement-no-5-htp",
+                "name": "MINDBODYSKIN® 2 Supplement (No 5-HTP)"
+              }
+            ],
+            "trackingLink": "http://wwwapps.ups.com/WebTracking/track?track=yes\u0026trackNums=92612902712318543403182674\u0026loc=en_us",
+            "link": "https://clearstem.com/56349720736/orders/dd44f35310ffe8efb206594d3b488161/authenticate?key=da23da3eb94fbc5c20d3404b8df2c97b\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-25 20:19:43.912",
+            "discount_amount": 0,
+            "orderNumber": "470719",
+            "order_tracking_link": "http://wwwapps.ups.com/WebTracking/track?track=yes\u0026trackNums=92612902712318543403182674\u0026loc=en_us",
+            "total": 56
+          }
+        ]
+      },
+      "companyWebsite": "https://clearstem.com",
+      "companyName": "CLEARSTEM",
+      "notes": {
+        "promo_and_exclusions": [
+          "MINDBODYSKIN is not eligible for any discount codes!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "nutrition, diet, unhappy with product, personalized questions"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from CLEARSTEM.",
+          "date_time": "2024-05-25 16:13:47.852",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Welcome to CLEARSTEM! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/T4W",
+          "date_time": "2024-05-25 16:13:58.902",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Hey, this is Amy, your personal concierge! Feel free to text me with any questions! ",
+          "date_time": "2024-05-25 16:14:02.913",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Click for your offer: https://clearstem.attn.tv/a4-qRW2uph06 .",
+          "date_time": "2024-05-25 16:14:05.692",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: ☀️ Sun\u0027s out, sale\u0027s on. 🎉\n\nGet 20% off sitewide with code MDW24 at checkout.\n\nHappy shopping! \nhttps://clearstem.attn.tv/aLKfmM0v_MOS .",
+          "date_time": "2024-05-27 12:34:23.032",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Our 20% off sale is on now! 🛍️ \n\nUse code MDW24 at checkout to save sitewide:\nhttps://clearstem.attn.tv/amEcee46gWTS .",
+          "date_time": "2024-05-28 12:03:37.565",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Great news! Your order (470719) has shipped and will be to you soon. Click here to track your order: https://clearstem.attn.tv/asnZSvFERdDe .",
+          "date_time": "2024-05-29 15:30:00.429",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: 👋 Hi! This is the CLEARSTEM concierge team, what skincare questions can I answer for you? ",
+          "date_time": "2024-05-30 15:47:22.784",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: LAST CHANCE! 20% off ends tonight!⏰ \n\nThese are the final few hours for 20% off sitewide with code: MDW24.\n\n🛍️ Shop now! https://clearstem.attn.tv/aAH-QHUZbbt4 .",
+          "date_time": "2024-05-31 14:03:33.609",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Hi friend! We noticed you checking us out... If you don\u0027t know where to start, try looking at our best sellers. Our top products are HYDRAGLOW and MINDBODYSKIN, but you really can\u0027t go wrong! https://clearstem.attn.tv/aJ6i1wRcmZhE .",
+          "date_time": "2024-05-31 22:04:51.849",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Hey Brandi, order #470719 is out for delivery. Track your order here: https://clearstem.attn.tv/am7lAUgll849 .",
+          "date_time": "2024-06-01 15:10:41.405",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Hi Brandi, thanks for your recent purchase! \n\nDM us for questions on your skincare routine! @clearstemskincare\nhttps://clearstem.attn.tv/aCLc8cOqrZVg ",
+          "date_time": "2024-06-01 16:20:08.119",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Get the step-by-step guide to your best skin ever. 🎧 Listen in as Founders Kayleigh \u0026 Danielle join Note to Self\u0027s Payton Sartain: https://clearstem.attn.tv/abvP5l6G9ELG .",
+          "date_time": "2024-06-04 14:16:39.066",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Sweet dreams! 😴 Get a FREE sleep mask with orders $75+. Just add the mask \u0026 your favorite skincare items to cart. Use code DREAMY at checkout.\n\nShop now: https://clearstem.attn.tv/aUEIXHytXfrZ .",
+          "date_time": "2024-06-06 12:07:34.755",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Last Chance: Enjoy a FREE sleep mask! 🌙 Add it to your cart along with your favorite products on orders $75+ and use code DREAMY at checkout. https://clearstem.attn.tv/aSDKMmjH4a2i .",
+          "date_time": "2024-06-07 13:03:53.363",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: New on the blog! 📝 We\u0027re exploring 4 benefits of Hypochlorous Acid and how it can help acne-prone skin. \n\nGet the scoop: https://clearstem.attn.tv/awUkzM4sIEHw .",
+          "date_time": "2024-06-12 17:02:14.468",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: 👋 Hi! This is the CLEARSTEM concierge team, what skincare questions can I answer for you? ",
+          "date_time": "2024-06-14 12:13:55.925",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Am I supposed to be purging when I start the acne supplement",
+          "date_time": "2024-06-14 12:14:48.151",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190178b-cd6b-47b0-f000-00008a853031",
+          "message_text": "CLEARSTEM: There\u0027s a small percentage of people that purge when switching products, but it\u0027s not typical. Not saying it couldn\u0027t happen, but just not the typical result. There are many acne products on the market that will cause a purge because they contain harsh chemicals and pore-clogging ingredients. If you\u0027re naturally acne-prone, you always want to check your skincare, makeup, and hair conditioner against our pore clogging ingredients list - https://clearstem.attn.tv/a7fONY4PAozh to ensure once you get clear, other products won\u0027t break you out all over again.",
+          "message_type": "agent",
+          "agent": "82444",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-14 12:19:16.467"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Okay yeah bc I broke out super bad over the last few days and I\u0027ve been using it for about a week",
+          "date_time": "2024-06-14 12:31:37.044",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019017a2-1ee1-498f-f000-00008a853031",
+          "message_text": "CLEARSTEM: I understand where you are coming from, but it would be a good idea to first fully understand what purging means to our body. You can read more about it here: https://clearstem.attn.tv/aai1ranVUdqm Let me know what you think! ",
+          "message_type": "agent",
+          "agent": "82224",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-14 12:43:39.117"
+        }
+      ]
+    },
+    "284": {
+      "agentName": "Alexa",
+      "has_shopify": true,
+      "id": "01944744-4f1a-47eb-f000-00002fd258f4",
+      "rightPanel": {
+        "coupons": [
+          {
+            "coupon": "SPRING40",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "GIFT40",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "TAKE10",
+            "status": "ACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2025-10-13 04:11:34.199",
+            "coupon": "FAM40"
+          },
+          {
+            "coupon": "YAY10",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "SAVE30",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "Journey discount",
+            "coupon": "SECRET30"
+          },
+          {
+            "status": "ACTIVE",
+            "redeemed": "2025-08-19 17:25:04.965",
+            "coupon": "TAKE10"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://fashionnova.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.fashionnova.com/products/not-on-my-watch-jumpsuit-set-black?variant=39277482999932",
+            "item": "Not On My Watch Jumpsuit Set - Black",
+            "timeAgo": "2025-01-03"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/not-on-my-watch-jumpsuit-set-black?variant=39277482999932",
+            "item": "Not On My Watch Jumpsuit Set - Black",
+            "timeAgo": "2025-01-03"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/not-on-my-watch-jumpsuit-set-black?variant=39277482999932",
+            "item": "Not On My Watch Jumpsuit Set - Black",
+            "timeAgo": "2025-01-01"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/not-on-my-watch-jumpsuit-set-brown",
+            "item": "Not On My Watch Jumpsuit Set - Brown",
+            "timeAgo": "2025-01-01"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/not-on-my-watch-jumpsuit-set-black",
+            "item": "Not On My Watch Jumpsuit Set - Black",
+            "timeAgo": "2025-01-01"
+          }
+        ]
+      },
+      "companyWebsite": "https://fashionnova.com",
+      "companyName": "Fashion Nova",
+      "notes": {
+        "send_to_cs": [
+          "No escalations for this client, send to CS using the Support templates",
+          "For post-purchase inquiries send to CS using the Support template (shortcut: ESC)",
+          "➜ If the cx is having difficulties sending an email to CS via the link in the ESC temp - use Support 2 template (shortcut: TESC)",
+          "➜ If the cx is facing technical website issues while accessing the link, do NOT immediately send the TESC shortcut, troubleshoot first instead",
+          "For pre-purchase inquiries send to CS using the Support 2 template (shortcut: TESC)"
+        ],
+        "tone": [
+          "🅿️ Use wording that is in line with the brand\u0027s voice and terminology found on the website",
+          "➜ e.g. Nova Kids, Nova Babes, Insta-worthy, slays, snatched, baddie, etc.",
+          "➜ Always look up the term\u0027s meaning before using it!"
+        ],
+        "templates": [
+          "For expired discounts use EXP shortcut",
+          "For login issues use LGI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "If cx are looking for their 30% welcome code, ask to check their email (spam \u0026 promo)",
+          "Gift cards can be used on discounted items"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Last Chance!! Don\u0027t Rain On My Puffer Jacket - Camel is almost sold out. Grab it before someone else does! -\u003e http://sms.fashionnova.com/a_ERANnC4C93 .",
+          "date_time": "2024-12-09 15:24:05.886",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: HURRY!! The price just dropped! Check out and buy the Julia Long Sleeve Top - Black - 1X before the price goes up again! -\u003e http://sms.fashionnova.com/arrFtMGW3h78 .",
+          "date_time": "2024-12-10 16:33:59.375",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Don\u0027t forget you put these jeans in your cart! They\u0027re selling fast, so get them before we\u0027re sold out! Use code: TAKE10 at checkout NOW for 10% OFF your ENTIRE order! \n-\u003e http://sms.fashionnova.com/afUOeMMcTtFK .",
+          "date_time": "2024-12-11 13:36:18.057",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Tyheetah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2024-12-11 13:52:41.125",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: A matching set in your cart is selling fast! Buy it before someone else does! \n\nUse code: SAVE30 at checkout NOW for 30% OFF your entire cart! \n-\u003e http://sms.fashionnova.com/ad87z--Cctth .",
+          "date_time": "2024-12-13 13:32:56.359",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Tyheetah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2024-12-13 13:53:19.749",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Treat yourself! Here\u0027s a code for 40% off the entire site: GIFT40 -\u003e http://sms.fashionnova.com/aKPZky9QHRmc .",
+          "date_time": "2024-12-16 12:22:42.749",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREE 1-DAY SHIPPING + 40% OFF EVERYTHING!!\n\nShop B4 3PM EST, Get It TOMORROW... Hurry, GO! -\u003e http://sms.fashionnova.com/a5QW3zFlQX4s .",
+          "date_time": "2024-12-18 10:36:24.510",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Tyheetah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2024-12-18 12:30:44.173",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Treat yourself! Here\u0027s a code for 40% off the entire site: GIFT40 -\u003e http://sms.fashionnova.com/aCJtflRCFIYX .",
+          "date_time": "2024-12-18 12:37:42.907",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: The matching set in your cart is selling fast! Take 40% off with code: GIFT40 -\u003e \n http://sms.fashionnova.com/afuML9GuPDG_ .",
+          "date_time": "2024-12-18 12:48:22.198",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: **Attention** Incomplete Checkout! FREE 1-DAY Shipping + 40% OFF SITEWIDE!! Use Code: GIFT40\n\nOrder B4 3PM EST \u0026 Get it TMRW -\u003e http://sms.fashionnova.com/a3riBdeGR4Kc .",
+          "date_time": "2024-12-19 10:18:57.864",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Tyheetah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2024-12-19 12:24:32.155",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: The matching set in your cart is selling fast! Take 40% off with code: GIFT40 -\u003e \n http://sms.fashionnova.com/aYlE6oxc2VvQ .",
+          "date_time": "2024-12-19 12:45:37.224",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Last Chance!! Flex Game Strong Mid Rise Skinny Jeans - Medium Blue Wash is almost sold out. Grab it before someone else does! -\u003e http://sms.fashionnova.com/aOFa4rdvoshj .",
+          "date_time": "2024-12-21 12:29:27.194",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: HURRY! The items in your cart are selling fast! Take 40% off with code: GIFT40 -\u003e\n http://sms.fashionnova.com/apX6znLP0mDD .",
+          "date_time": "2024-12-21 12:33:43.139",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Tyheetah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2024-12-21 12:58:26.721",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: LAST CALL FOR XMAS! FREE 1-DAY SHIPPING + 40% OFF EVERYTHING!! Code: GIFT40\n\nOrder Today, Get It Tuesday!! | T\u0026C Apply -\u003e http://sms.fashionnova.com/ahF2E4djpBVO .",
+          "date_time": "2024-12-22 11:06:20.817",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: DELIVERY BY XMAS EVE! FREE 1-DAY Shipping + 40% OFF SITEWIDE! Use Code: GIFT40\n\nHURRY! ORDER By 3PM EST \u0026 Get Ur Order TMRW! -\u003e http://sms.fashionnova.com/auhDsasNQpjz .",
+          "date_time": "2024-12-23 10:19:52.879",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: We\u0027ll send you a text when Brianna Faux Leather Skirt Set - Black is back in stock for the size you requested! In the meantime, check out our new arrivals and use code: GIFT40 to get 40% OFF the ENTIRE site! -\u003e\nhttp://sms.fashionnova.com/aPRXfxFrZC23 .",
+          "date_time": "2024-12-24 08:44:48.211",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Tyheetah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2024-12-24 12:09:58.767",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: This dress is selling fast! Take 40% off your order with code: GIFT40 -\u003e\n http://sms.fashionnova.com/azVpH_X2JCw2",
+          "date_time": "2024-12-24 12:11:15.079",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: The matching set in your cart is selling fast! Take 40% off with code: NYE40 -\u003e \n http://sms.fashionnova.com/acBp9gwWsFwF .",
+          "date_time": "2024-12-26 19:47:24.809",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Tyheetah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2024-12-27 12:15:51.171",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Treat yourself! Here\u0027s a code for 40% off the entire site: NYE40 -\u003e http://sms.fashionnova.com/a-HbK07lCiCp .",
+          "date_time": "2024-12-28 15:51:43.931",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Get Ur Outfit B4 NYE!!️FREE 1-DAY Shipping +40% OFF SITEWIDE!!\n\nUse CODE: NYE40 RIGHT NOW! | T\u0026C Apply -\u003e\nhttp://sms.fashionnova.com/avXYihIcryaU \n.\n",
+          "date_time": "2024-12-29 11:14:54.547",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Get Ur Order By NYE For FREEEE!!! Must Order B4 3pm Est!\n\n+40% OFF SITEWIDE Ends At Midnight!! Use Code: NYE40\n\nLast Chance! Shop NOW | T\u0026C Apply -\u003e http://sms.fashionnova.com/aHtmujwF_sSO .",
+          "date_time": "2024-12-30 10:21:05.891",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Surprise! Here\u0027s a code for 10% off the entire site: TAKE10 - Go on, treat yourself! -\u003e http://sms.fashionnova.com/afaEBfPuw0OE .",
+          "date_time": "2025-01-02 20:09:55.037",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREE 1-DAY SHIPPING!! + BOGO FREE Dresses, Sets, \u0026 Jumpsuits!!\n\nShop NOW, Get it TMRW! | T\u0026C Apply -\u003e\nhttp://sms.fashionnova.com/avI7hxDltNNq \n.\n",
+          "date_time": "2025-01-08 10:37:31.641",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Tyheetah, what happened? You may have missed something! Check out our New Arrivals before they sell out... you won\u0027t regret it: http://sms.fashionnova.com/aUHpGHCChpYH . ",
+          "date_time": "2025-01-08 13:48:56.956",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Im missing my store credits that you guys haven\u0027t sent me yet been waiting almost a month now",
+          "date_time": "2025-01-08 13:50:08.171",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01944744-4f1a-47eb-f000-00002fd258f4",
+          "message_text": "Fashion Nova: I\u0027m sorry about that. Did you contact our support team via the link I sent earlier? ",
+          "message_type": "agent",
+          "agent": "40539",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-01-08 13:54:06.629"
+        }
+      ]
+    },
+    "285": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "0190959b-cb0c-45a9-f000-0000902f0ec7",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "20% codes, 200k Jan 29 2024",
+            "coupon": "U48-GPKP-ZXRZ-XPP8"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://usa.philips.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.usa.philips.com/c-p/S9985_84/norelco-shaver-9500-wet-dry-electric-shaver",
+            "item": "https://www.usa.philips.com/c-p/S9985_84/norelco-shaver-9500-wet-dry-electric-shaver",
+            "timeAgo": "2024-07-09"
+          }
+        ]
+      },
+      "companyWebsite": "https://usa.philips.com",
+      "companyName": "Philips",
+      "notes": {
+        "escalate": [
+          "When ESC include email for all escalations",
+          "When ESC code issues, specify that the customer is based in the US",
+          "Don\u0027t ESC if an item isn\u0027t available on the website or if no retailers are listed",
+          "If Dental Professionals have q\u0027s for which you don\u0027t have the answer - don\u0027t ESC, use shortcut QDP",
+          "Don\u0027t ESC inquiries related to these categories, use LAH shortcut",
+          "➜ lighting",
+          "➜ automotive",
+          "➜ hearing",
+          "➜ TV",
+          "➜ audio",
+          "➜ order changes",
+          "➜ Philips Sonicare Toothbrush repair"
+        ],
+        "templates": [
+          "For Philips Sonicare Toothbrush troubleshooting inquiries use PST shortcut",
+          "For inquiries about kitchen appliances, coffee makers, humidifiers use QKA shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Don\u0027t share our code unless the customer has a different code that is not working or we are apologising for a certain inconvenience!",
+          "Codes ONLY work on grooming (norelco) \u0026 beauty products, sonicare products and avent products",
+          "Codes DON\u0027T work on categories like lighting, automotive, hearing, TV, audio etc.",
+          "➜  For questions on these categories, send the customer to reach out to that brand directly: https://www.usa.philips.com/c-w/support-home/support-contact-page#n62Contact="
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Philips: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/UqK",
+          "date_time": "2024-07-08 23:17:32.030",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Philips: Hey, I\u0027m Jordan with Philips! Just wanted to say thanks for joining! Click this link for your 20% off code: https://philips.attn.tv/ab2w2KorpyOg .\n\nText me any time with questions!",
+          "date_time": "2024-07-08 23:17:35.089",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Philips: Don\u0027t forget to save our contact!",
+          "date_time": "2024-07-08 23:17:37.389",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I don\u0027t know how to use the discount code",
+          "date_time": "2024-07-08 23:23:28.782",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01909590-bf49-4805-f000-0000902f0ec7",
+          "message_text": "Philips: I\u0027m sorry about that! You\u0027ll find the discount box at checkout. If you\u0027re on a desktop you\u0027ll see it at the right side of your screen when you enter your shipping details. If you\u0027re using a phone, you\u0027ll need to enter your info and shipping method, and then expand the \"Order Details\" at the top of the order section in order to reveal the discount code box! Let me know if you can\u0027t find it.",
+          "message_type": "agent",
+          "agent": "38972",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-08 23:36:49.748"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you, I made my purchase and I also want an s9985 device. How should I proceed for the 20% discount code?",
+          "date_time": "2024-07-08 23:43:59.149",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
+          "date_time": "2024-07-08 23:48:53.656",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190959b-cb0c-45a9-f000-0000902f0ec7",
+          "message_text": "Philips: You\u0027re welcome! If I understand correctly, you already made your order, and want to another another s9985? Unfortunately, the code is a one-time use only. I\u0027m sorry, I don\u0027t have any other codes available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! Let me know if you have any other questions.",
+          "message_type": "agent",
+          "agent": "82455",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-08 23:48:53.658"
+        }
+      ]
+    }
+  }
+}

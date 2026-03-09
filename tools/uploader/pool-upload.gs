@@ -31,7 +31,10 @@ const ASSIGNMENTS_HEADERS = [
   'assigned_at'
 ];
 
-const POOL_HEADERS = ['send_id', 'status'];
+const POOL_HEADERS = ['send_id', 'send_text', 'status'];
+const POOL_COL_SEND_ID = 0;
+const POOL_COL_SEND_TEXT = 1;
+const POOL_COL_STATUS = 2;
 const SESSION_HEADERS = [
   'session_id',
   'agent_email',
@@ -267,9 +270,11 @@ function doPost(e) {
     }
 
     if (action === 'addToPool') {
-      const sendIds = Array.isArray(data.send_ids) ? data.send_ids : [];
+      const poolEntries = Array.isArray(data.pool_entries)
+        ? data.pool_entries
+        : (Array.isArray(data.send_ids) ? data.send_ids : []);
       return withScriptLock_(function() {
-        const result = addSendIdsToPool_(sendIds);
+        const result = addSendIdsToPool_(poolEntries);
         if (result.error) return jsonResponse_({ error: result.error });
         return jsonResponse_(result);
       });
@@ -1033,7 +1038,7 @@ function appendSessionRow_(state, session) {
 function setPoolStatusByIndex_(state, index, status) {
   const idx = Number(index);
   if (!Number.isFinite(idx) || idx < 0 || idx >= state.poolRows.length) return;
-  state.poolRows[idx][1] = String(status || '');
+  state.poolRows[idx][POOL_COL_STATUS] = String(status || '');
   markDirtyIndex_(state.poolDirty, idx);
 }
 
@@ -1242,8 +1247,8 @@ function assignFromPool_(state, email, sessionId, nowIso, appBase, count) {
   const assignedInThisPass = {};
 
   for (let i = 0; i < state.poolRows.length && needed > 0; i++) {
-    const poolSendId = String(state.poolRows[i][0] || '').trim();
-    const poolStatus = String(state.poolRows[i][1] || '').toUpperCase();
+    const poolSendId = String(state.poolRows[i][POOL_COL_SEND_ID] || '').trim();
+    const poolStatus = String(state.poolRows[i][POOL_COL_STATUS] || '').toUpperCase();
     if (!poolSendId) continue;
     if (poolStatus && poolStatus !== 'AVAILABLE') continue;
     if (assignedInThisPass[poolSendId]) continue;
@@ -1315,7 +1320,7 @@ function releaseSingleAssignment_(state, assignment, fromStatus, nowIso, reason)
   const sendId = String(assignment.send_id || '');
   const poolIndex = findPoolIndexBySendId_(state.poolRows, sendId);
   if (poolIndex >= 0) {
-    const poolStatus = String(state.poolRows[poolIndex][1] || '').toUpperCase();
+    const poolStatus = String(state.poolRows[poolIndex][POOL_COL_STATUS] || '').toUpperCase();
     if (poolStatus !== 'DONE') {
       setPoolStatusByIndex_(state, poolIndex, 'AVAILABLE');
     }
@@ -1346,10 +1351,8 @@ function releaseSingleAssignment_(state, assignment, fromStatus, nowIso, reason)
 }
 
 function addSendIdsToPool_(sendIds) {
-  const ids = Array.isArray(sendIds)
-    ? sendIds.map(function(v) { return String(v || '').trim(); }).filter(function(v) { return !!v; })
-    : [];
-  if (!ids.length) {
+  const entries = normalizePoolEntries_(sendIds);
+  if (!entries.length) {
     return { error: 'Missing send_ids' };
   }
 
@@ -1357,17 +1360,18 @@ function addSendIdsToPool_(sendIds) {
   const poolSheet = getOrCreateSheet_(spreadsheet, POOL_SHEET, POOL_HEADERS);
   const poolValues = getSheetDataRows_(poolSheet, POOL_HEADERS.length);
 
-  const uniqueIds = [];
+  const uniqueEntries = [];
   const seen = {};
-  for (let i = 0; i < ids.length; i++) {
-    if (seen[ids[i]]) continue;
-    seen[ids[i]] = true;
-    uniqueIds.push(ids[i]);
+  for (let i = 0; i < entries.length; i++) {
+    const sendId = entries[i].send_id;
+    if (seen[sendId]) continue;
+    seen[sendId] = true;
+    uniqueEntries.push(entries[i]);
   }
 
   const indexBySendId = {};
   for (let i = 0; i < poolValues.length; i++) {
-    const existing = String(poolValues[i][0] || '').trim();
+    const existing = String(poolValues[i][POOL_COL_SEND_ID] || '').trim();
     if (!existing) continue;
     if (indexBySendId[existing] == null) {
       indexBySendId[existing] = i;
@@ -1378,27 +1382,35 @@ function addSendIdsToPool_(sendIds) {
   let reactivated = 0;
   const newRows = [];
 
-  for (let i = 0; i < uniqueIds.length; i++) {
-    const sendId = uniqueIds[i];
+  for (let i = 0; i < uniqueEntries.length; i++) {
+    const sendId = uniqueEntries[i].send_id;
+    const sendText = uniqueEntries[i].send_text;
     const idx = indexBySendId[sendId];
     if (idx == null) {
-      newRows.push([sendId, 'AVAILABLE']);
+      newRows.push([sendId, sendText, 'AVAILABLE']);
       added++;
       continue;
     }
 
-    const currentStatus = String(poolValues[idx][1] || '').trim().toUpperCase();
+    if (sendText && !String(poolValues[idx][POOL_COL_SEND_TEXT] || '').trim()) {
+      poolValues[idx][POOL_COL_SEND_TEXT] = sendText;
+    }
+
+    const currentStatus = String(poolValues[idx][POOL_COL_STATUS] || '').trim().toUpperCase();
     if (currentStatus !== 'ASSIGNED') {
       if (currentStatus !== 'AVAILABLE') {
         reactivated++;
       }
-      poolValues[idx][1] = 'AVAILABLE';
+      poolValues[idx][POOL_COL_STATUS] = 'AVAILABLE';
     }
   }
 
   if (poolValues.length > 0) {
-    const statusColumn = poolValues.map(function(row) { return [row[1]]; });
-    poolSheet.getRange(2, 2, statusColumn.length, 1).setValues(statusColumn);
+    poolSheet.getRange(2, 2, poolValues.length, 2).setValues(
+      poolValues.map(function(row) {
+        return [row[POOL_COL_SEND_TEXT], row[POOL_COL_STATUS]];
+      })
+    );
   }
 
   if (newRows.length > 0) {
@@ -1406,7 +1418,7 @@ function addSendIdsToPool_(sendIds) {
     poolSheet.getRange(startRow, 1, newRows.length, POOL_HEADERS.length).setValues(newRows);
   }
 
-  return { ok: true, added: added, reactivated: reactivated, total: uniqueIds.length };
+  return { ok: true, added: added, reactivated: reactivated, total: uniqueEntries.length };
 }
 
 function resetAssignmentsFromAudit_(sendIds) {
@@ -1459,7 +1471,7 @@ function resetAssignmentsFromAudit_(sendIds) {
   });
 
   const poolRows = uniqueIds.map(function(sendId) {
-    return [sendId, 'AVAILABLE'];
+    return [sendId, '', 'AVAILABLE'];
   });
 
   assignmentsSheet.getRange(2, 1, assignmentRows.length, ASSIGNMENTS_HEADERS.length).setValues(assignmentRows);
@@ -1732,11 +1744,33 @@ function findAssignmentById_(rows, assignmentId) {
 
 function findPoolIndexBySendId_(poolRows, sendId) {
   for (let i = 0; i < poolRows.length; i++) {
-    if (String(poolRows[i][0] || '') === String(sendId || '')) {
+    if (String(poolRows[i][POOL_COL_SEND_ID] || '') === String(sendId || '')) {
       return i;
     }
   }
   return -1;
+}
+
+function normalizePoolEntries_(values) {
+  const list = Array.isArray(values) ? values : [];
+  const out = [];
+  for (let i = 0; i < list.length; i++) {
+    const value = list[i];
+    if (value && typeof value === 'object' && !Array.isArray(value)) {
+      const sendId = String(value.send_id || value.SEND_ID || '').trim();
+      if (!sendId) continue;
+      out.push({
+        send_id: sendId,
+        send_text: String(value.send_text || value.SEND_TEXT || '').trim()
+      });
+      continue;
+    }
+
+    const sendId = String(value || '').trim();
+    if (!sendId) continue;
+    out.push({ send_id: sendId, send_text: '' });
+  }
+  return out;
 }
 
 function findSessionIndex_(sessionsRows, sessionId) {

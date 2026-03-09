@@ -3,1070 +3,1537 @@
   "chunk": "chunk_0016",
   "scenarios": {
     "76": {
-      "id": "019c5964-179c-4db5-f000-0000d48d6b35",
-      "companyName": "Shady Rays",
-      "companyWebsite": "https://shadyrays.com",
-      "agentName": "Sam",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: The weekend is here, so is our BOGO sale. Double up on shades with code BOGOJAN through 1/28. Exc. apply.\n\nShop Now: shadyrays.attn.tv/aNUvv1WCw6KR ",
-          "message_type": "system",
-          "date_time": "2026-01-16 20:15:17.265"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Hey, it's been a while! Let's get you back in your next favorite style! Check out our new arrivals here: shadyrays.attn.tv/aZ7GdjLUev7o \n\nAnything we can help with today? Text back with any questions!",
-          "message_type": "system",
-          "date_time": "2026-01-17 15:26:03.756"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: For a limited time, enjoy 30% OFF Sunglasses with a Snow purchase! Get your gear for the sun and the slopes: shadyrays.attn.tv/aSszTnYZk--Q ",
-          "message_type": "system",
-          "date_time": "2026-01-18 18:01:14.869"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Our Valentine's Day Sale is live! Get 40% off when you buy 2 or more pairs.\n\nSave now & spread the love: shadyrays.attn.tv/aMaXT5T2eJhO ",
-          "message_type": "system",
-          "date_time": "2026-01-22 15:00:39.750"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Last Chance! Our Valentine's Day sale ends tonight. Save 40% on 2+ pairs while you can. \n\nShop Now: shadyrays.attn.tv/aQeH5aiu_uP7 ",
-          "message_type": "system",
-          "date_time": "2026-01-25 16:00:16.688"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Hey, it's been a while! Let's get you back in your next favorite style! Check out our new arrivals here: shadyrays.attn.tv/ar66PbkHvQ4r \n\nAnything we can help with today? Text back with any questions!",
-          "message_type": "system",
-          "date_time": "2026-01-29 15:33:27.949"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Beat winter glare! 35% off sunglasses w/ code 35OFF and 55% off new outlet styles. Grab yours before they're gone:\n\nshadyrays.attn.tv/amioyj_vOAfn ",
-          "message_type": "system",
-          "date_time": "2026-01-30 17:15:13.027"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: FLASH SALE! Save 35% on limited Green Wolf frames for the course. Use code GREEN35: shadyrays.attn.tv/anJ9YRL1C97N \n\nEnds 2/5 at 11:59pm PST.",
-          "message_type": "system",
-          "date_time": "2026-02-04 16:00:23.330"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Back by popular demand: Azalea & Calico. The retired shades you loved are back! \n\nShop the launch: shadyrays.attn.tv/asVtIVpGvpMz ",
-          "message_type": "system",
-          "date_time": "2026-02-05 18:00:22.857"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Valid through Halftime only! 50% OFF your next pair of shades with code: BG60 shadyrays.attn.tv/anxqXP-SFlqQ \n\nLimit one pair. Exclusions apply.",
-          "message_type": "system",
-          "date_time": "2026-02-08 20:01:28.419"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Hey, it's been a while! Let's get you back in your next favorite style! Check out our new arrivals here: shadyrays.attn.tv/aHUdQBPZuFyK \n\nAnything we can help with today? Text back with any questions!",
-          "message_type": "system",
-          "date_time": "2026-02-09 15:20:53.913"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: The long weekend is here! Take $20 OFF shades for Presidents Day using code PD26 at checkout. Excl. apply.\n\nShop: shadyrays.attn.tv/aTh9bIaHZt2j ",
-          "message_type": "system",
-          "date_time": "2026-02-13 18:10:08.635"
-        },
-        {
-          "message_media": [],
-          "message_text": "I'm OK I never received my second pair and when I asked you guys about it, I never gotten an explanation. Why?",
-          "message_type": "customer",
-          "date_time": "2026-02-13 18:12:58.639"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Thank you for reaching out, and I'm truly sorry to hear about this. Could you share a few more details so I can better understand the situation and assist you right away?",
-          "message_type": "agent",
-          "agent": "109972",
-          "message_id": "019c5964-179c-4db5-f000-0000d48d6b35",
-          "date_time": "2026-02-13 18:44:17.849"
-        }
-      ],
-      "notes": {
-        "escalate": [
-          "ESC restock inquiries, but use STOF shortcut first"
-        ],
-        "tone": [
-          "Close the convo if the cx first message doesn't warrant a response (e.g. Them thanking us, saying they're browsing, etc.)"
-        ],
-        "templates": [
-          "For product prescription inquiries use RPP shortcut",
-          "For prescription orders questions use RPO shortcut"
-        ],
-        "dos_and_don_ts": [
-          "If customers want to return an item - clarify if they’re trying to return a recently purchased pair or if they need a replacement"
-        ]
-      },
+      "agentName": "Taylor",
+      "has_shopify": false,
+      "id": "018f5529-23e3-40ae-f000-00005a35e8db",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://shadyrays.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "Classic Timber - Black Ocean Polarized - ORIGINAL / Standard",
-            "link": "https://shadyrays.com/products/classic-black-emerald-timber-polarized",
-            "timeAgo": "2025-08-28"
+            "link": "https://www.birkenstock.com/us/arizona-big-buckle-natural-leather-patent/arizonabigbuckle-patent-naturalleatherpatent-0-eva-w_2135.html",
+            "item": "Arizona Big Buckle Natural Leather Patent High Shine Fondant Pink",
+            "timeAgo": "2024-05-07"
           },
           {
-            "item": "Classic Timber - Black Ocean Polarized - Colorush / Standard",
-            "link": "https://shadyrays.com/products/classic-black-ocean-timber-polarized?_pos=1&_sid=1a2090e30&_ss=r&variant=41682097897519",
-            "timeAgo": "2025-08-28"
+            "link": "https://www.birkenstock.com/us/arizona-big-buckle-natural-leather-patent/arizonabigbuckle-patent-naturalleatherpatent-0-eva-w_11567.html",
+            "item": "Arizona Big Buckle Natural Leather Patent High Shine Fondant Pink",
+            "timeAgo": "2024-05-07"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/arizona-shearling-suede-leather%2Ffur/arizonashearling-shearling-suedeleather-0-eva-w_2215.html?dwvar_arizonashearling-shearling-suedeleather-0-eva-w__2215_width=S\u0026dwvar_arizonashearling-shearling-suedeleather-0-eva-w__2215_size=270\u0026region=US",
+            "item": "Arizona Shearling Suede Leather Antique White",
+            "timeAgo": "2024-05-07"
           }
         ],
-        "orders": [
+        "coupons": [
           {
-            "orderNumber": "6833984",
-            "orderDate": "2025-08-28",
-            "items": [
-              {
-                "name": "Priority Order Processing",
-                "price": 3.99,
-                "productLink": "https://shady-rays.myshopify.com/products/priority-vip-processing"
-              },
-              {
-                "name": "Signature Live Hard Case EXCLUSIVE – Large",
-                "price": 10,
-                "productLink": "https://shady-rays.myshopify.com/products/signature-live-hard-case-exclusive-test"
-              }
-            ],
-            "link": "https://shadyrays.com/3505401/orders/43a35f64c05302832a731eb5f0c711e9/authenticate?key=5a8d1bc2de4572b4dfd4eb98fb234db0",
-            "total": 64.37,
-            "coupon": "AT20",
-            "date_time": "2025-08-28 04:30:43.746"
+            "status": "ACTIVE",
+            "description": "Free Ground Shipping on full-priced items",
+            "coupon": "ATSHIP-F5WQ-R6XB-X2XL-GDW5Z"
           },
           {
-            "orderNumber": "6833984",
-            "orderDate": "2025-08-28",
+            "status": "INACTIVE",
+            "description": "Free Ground Shipping on full-priced items",
+            "coupon": "ATSHIP-2397-3S5C-9CVZ-VF7GV"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "Free Ground Shipping on full-priced items",
+            "coupon": "ATSHIP-W6NW-SQ2G-3VS5-73PBQ"
+          },
+          {
+            "coupon": "ATSHIP-7Q4X-LPBV-WBTK-D2GFM",
+            "status": "INACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://birkenstock.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-07",
             "items": [
               {
-                "name": "Classic Timber - Black Emerald Polarized",
-                "price": 59,
-                "productLink": "https://shady-rays.myshopify.com/products/classic-black-emerald-timber-polarized"
+                "price": [
+                  {
+                    "value": [
+                      160,
+                      160
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "link": "https://shadyrays.com/3505401/orders/43a35f64c05302832a731eb5f0c711e9/authenticate?key=5a8d1bc2de4572b4dfd4eb98fb234db0",
-            "total": 64.37,
-            "coupon": "AT20",
-            "date_time": "2025-08-28 04:30:43.744"
+            "date_time": "2024-05-07 22:09:42.380",
+            "discount_amount": 0,
+            "orderNumber": "510089948",
+            "total": 160
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
+      "companyWebsite": "https://birkenstock.com",
+      "companyName": "Birkenstock",
+      "notes": {
+        "escalate": [
+          "For all pre-purchase and post purchase ESC always include the customers full name in the notes",
+          "Don\u0027t ESC if they get an error with the fs code while logged in"
+        ],
+        "templates": [
+          "For free shipping retroactive code requests, use SRP shortcut",
+          "For holiday/extended returns - use the template"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over",
+          "🤖 If someone sends a product category, link them to the category and ask if they are looking for something specific"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping codes"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Birkenstock.",
+          "date_time": "2024-05-07 18:03:16.711",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Welcome to Birkenstock! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/8y2",
+          "date_time": "2024-05-07 18:21:38.013",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Don\u0027t forget to save our contact to get exclusive updates!",
+          "date_time": "2024-05-07 18:21:42.028",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: CLICK ON THE LINK to reveal your FREE GROUND SHIPPING CODE, good for your next full price purchase:\n\nhttps://birkenstock.attn.tv/aT367B7eWEHA\n\nWelcome to the family!",
+          "date_time": "2024-05-07 18:21:42.070",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Welcome! I\u0027m Taylor! I see you\u0027re eyeing the https://birkenstock.attn.tv/aXejVxwM8oaN \n\nDo you need any help finding the perfect size?",
+          "date_time": "2024-05-07 18:24:01.982",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi Taylor, yes thank you.....size 11/42",
+          "date_time": "2024-05-07 18:24:40.642",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f5529-23e3-40ae-f000-00005a35e8db",
+          "message_text": "Birkenstock: Great! The size 11/42 is equivalent to a Birkenstock size 42. This size typically fits those with a standard men\u0027s size 11 or a standard women\u0027s size 13. If you need more assistance, feel free to ask!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-07 18:25:10.631"
+        }
+      ]
     },
     "77": {
-      "id": "019c5f1d-2293-4f7e-f000-0000fae60cf4",
-      "companyName": "Julie Vos",
-      "companyWebsite": "https://julievos.com",
-      "agentName": "Rebecca",
+      "agentName": "Darby",
+      "has_shopify": true,
+      "id": "01976511-243e-465f-f000-000014422e7b",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.johnnie-o.com/collections/mens-polos/products/callan-jmpo100900-sp25?color=Black\u0026variant=44476153725103",
+            "item": "Dri-Release Performance Polo - Callan",
+            "timeAgo": "2025-06-12"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/mens-polos/products/slade-jmpo101170-sp25?color=Lake\u0026variant=44476159426735",
+            "item": "Performance Jersey Polo - Slade",
+            "timeAgo": "2025-05-14"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/mens-polos/products/tee-time-jmpo101190-sp25?color=Thunder\u0026variant=44476161228975",
+            "item": "Performance Jersey Polo - Tee Time Print",
+            "timeAgo": "2025-05-14"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/mens-polos/products/slade-jmpo101170-sp25?color=Lake\u0026variant=44476159426735",
+            "item": "Performance Jersey Polo - Slade",
+            "timeAgo": "2025-05-14"
+          },
+          {
+            "link": "https://www.johnnie-o.com/products/caspian-jmws100100-sp25?variant=44476210217135",
+            "item": "Short Sleeve Hangin\u0027 Out Knit Button Down Shirt - Caspian",
+            "timeAgo": "2025-05-10"
+          }
+        ],
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "May7 WInback upload",
+            "value": "15",
+            "coupon": "WB15A-ccsfcj"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "May7 WInback upload",
+            "value": "15",
+            "coupon": "WB15AN-rca7st"
+          },
+          {
+            "coupon": "SMS10g7Nn55",
+            "status": "ACTIVE"
+          },
+          {
+            "coupon": "VIP26A8G7",
+            "status": "ACTIVE"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "May7 WInback upload",
+            "value": "15",
+            "coupon": "WB15A-79f7ry"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "May7 WInback upload",
+            "value": "15",
+            "coupon": "WB15A-umzx4z"
+          },
+          {
+            "coupon": "AWB15",
+            "status": "ACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://johnnie-o.com/",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-05-14",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      98,
+                      110
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2025-05-14 15:08:29.154",
+            "discount_amount": 0,
+            "orderNumber": "6486478946479",
+            "total": 208
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-05-04",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      198,
+                      158
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2025-05-04 11:12:18.995",
+            "discount_amount": 0,
+            "orderNumber": "6472368259247",
+            "total": 316
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-05-04",
+            "items": [
+              {
+                "price": [
+                  158
+                ],
+                "productLink": "https://johnnie-oadmin.myshopify.com/products/caspian-jmws100100-sp25",
+                "name": "Short Sleeve Hangin\u0027 Out Knit Button Down Shirt - Caspian"
+              }
+            ],
+            "date_time": "2025-05-04 11:12:18.994",
+            "discount_amount": 0,
+            "orderNumber": "6472368259247",
+            "total": 316
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-04-24",
+            "items": [
+              {
+                "price": [
+                  98
+                ],
+                "productLink": "https://johnnie-oadmin.myshopify.com/products/tee-time-jmpo101190-sp25",
+                "name": "Performance Jersey Polo - Tee Time Print"
+              }
+            ],
+            "date_time": "2025-04-24 19:04:11.673",
+            "discount_amount": 0,
+            "orderNumber": "6458718683311",
+            "total": 187
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-04-24",
+            "items": [
+              {
+                "price": [
+                  89
+                ],
+                "productLink": "https://johnnie-oadmin.myshopify.com/products/the-original-polo-2019",
+                "name": "Original 4-Button Polo"
+              }
+            ],
+            "date_time": "2025-04-24 19:04:11.661",
+            "discount_amount": 0,
+            "orderNumber": "6458718683311",
+            "total": 187
+          }
+        ]
+      },
+      "companyWebsite": "https://johnnie-o.com/",
+      "companyName": "johnnie-O",
+      "notes": {
+        "escalate": [
+          "ESC restock inquiries",
+          "ESC shipping/order inquiries",
+          "ESC cxs looking for a discount code"
+        ]
+      },
+      "blocklisted_words": [
+        "Untuck-it"
+      ],
+      "escalation_preferences": [
+        "Restock questions",
+        "shipping",
+        "site issues",
+        "out of stock issues"
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Julie Vos: Welcome to Julie Vos! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/N9l",
           "message_type": "system",
-          "date_time": "2026-02-12 16:33:58.293"
+          "message_text": "johnnie-O: Thank you for your purchase! Your order number is 1528962. View more information about your order here: https://johnnie-o.attn.tv/aNnNH-gN0V9f .",
+          "date_time": "2025-05-14 11:08:46.336",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Julie Vos: Hey, this is Rebecca, your personal concierge ✨ Feel free to text me with any questions! Use code WELCOMEK8V2 for 10% off your order to shop now: julievos.attn.tv/aSDqD3uWHjTa .",
           "message_type": "system",
-          "date_time": "2026-02-12 16:34:01.501"
+          "message_text": "johnnie-O: Memorial Day is just around the corner! Grab Free Expedited Shipping to get your perfect outfit for the celebration johnnie-o.attn.tv/akK6swBkZeLX ",
+          "date_time": "2025-05-17 10:00:37.717",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Julie Vos: Oh, also, a lot of people like getting personal recs from us. Over the next few days we'll try to help you find something that you will love.\n\nIn the meantime, check out our newest arrivals > https://julievos.attn.tv/ap0H4B1X5iUj .",
           "message_type": "system",
-          "date_time": "2026-02-12 16:35:09.048"
+          "message_text": "johnnie-O: Last Chance! Tomorrow is the FINAL day to get 2-Day FREE Shipping on all orders. Don\u0027t miss out-shop now! johnnie-o.attn.tv/anb8udUT9JUg ",
+          "date_time": "2025-05-19 09:55:19.887",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Julie Vos: Fall in love with the Beaded Station Bracelet—elegant, wearable style you'll reach for daily.\n\nUse code WELCOMEK8V2 for 10% off at checkout: https://julievos.attn.tv/aE3d5loDFyoo .",
           "message_type": "system",
-          "date_time": "2026-02-12 16:45:15.982"
+          "message_text": "johnnie-O: No matter if you call them sandals, flip flops or slippers - you need these for Summer. Check out the Starboard johnnie-o.attn.tv/ajYje7wS1nzX ",
+          "date_time": "2025-05-21 10:00:41.863",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Julie Vos: You are already subscribed. Click here to shop what's trending now: https://julievos.attn.tv/cl/9Oj",
           "message_type": "system",
-          "date_time": "2026-02-13 16:21:10.952"
+          "message_text": "johnnie-O: Make a Splash with cool prints on Men\u0027s and Boys\u0027 trunks \n\nMen\u0027s\njohnnie-o.attn.tv/aRAdlD6aDf5H \n\nBoys\u0027\njohnnie-o.attn.tv/a1YoUD15QfIj ",
+          "date_time": "2025-05-24 10:01:02.393",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Julie Vos: Use code WELCOMEK8V2 for 10% off and free shipping on your order.\n\nShop now: https://julievos.attn.tv/aM_QpU_33Eze .",
           "message_type": "system",
-          "date_time": "2026-02-13 16:54:24.014"
+          "message_text": "johnnie-O: Summer is here! Embrace the season with our classic white pant - lightweight and comfortable johnnie-o.attn.tv/ahQ3spoHgLCH ",
+          "date_time": "2025-05-27 10:01:01.430",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Julie Vos: Fall for the Cannes Hinge Cuff — a 24K gold‐plated cuff with sparkling rose‐cut endcaps and pear‐shaped gemstones that elevate your look.\n\nEnjoy free shipping.\n\nMake it yours: https://julievos.attn.tv/ahAnPM1R5Iud .",
           "message_type": "system",
-          "date_time": "2026-02-14 13:37:31.038"
+          "message_text": "johnnie-O: Introducing our NEW Sunglasses! Style meets function with Zeiss lenses that provide the ultimate UV protection johnnie-o.attn.tv/ak7wh-3TcRxz ",
+          "date_time": "2025-05-28 10:05:20.428",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Can I wear my Catalina hinge bangle with clear crystal wear in water pool or shower? I wear it every day ? And what I can stack with this ? How I can find out the size ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 13:43:08.785"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Avoid wearing the Catalina Hinge Bangle in water or while showering to maintain its quality. For stacking, consider the Marbella or Milano bangles. Find sizing info here: https://julievos.attn.tv/ahRRCDme432j",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5d77-00de-4fa4-f000-0000fae60cf4",
-          "date_time": "2026-02-14 13:43:26.071"
-        },
-        {
-          "message_media": [],
-          "message_text": "One of each or two of one kind ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 13:50:38.639"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Pair the Catalina Hinge Bangle with one Marbella and one Milano bangle for a balanced stack.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5d7d-dab1-4013-f000-0000fae60cf4",
-          "date_time": "2026-02-14 13:50:55.043"
-        },
-        {
-          "message_media": [],
-          "message_text": "Can u send me picture of showing them to-gather please ? What color of Milano will go with clear crystals Catalina ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 13:52:28.499"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: I recommend the Milano Bangle in Clear Crystal to complement your Catalina Hinge Bangle. You can view the Milano Bangle here: https://julievos.attn.tv/as2FmgoFTVBw",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5d7f-8585-4963-f000-0000fae60cf4",
-          "date_time": "2026-02-14 13:52:44.311"
-        },
-        {
-          "message_media": [],
-          "message_text": "Small Marbella u don't have ? My Catalina is Cz not crystal. Milano cz and then what else u recomend ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:12:23.432"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: The Marbella Bangle is available in small. Pair your CZ Catalina with a CZ Milano and a Marbella for a chic look. Check availability here: https://julievos.attn.tv/agx_LIVHue7u",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5d91-c833-4880-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:12:41.033"
-        },
-        {
-          "message_media": [],
-          "message_text": "Are these both bangles are hinge ? \nI want in gold ? \nI also have one of your cuff with black and in gold.",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:15:03.429"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: The Milano Bangle is not hinged, but the Marbella is. Both are available in gold. Pair them with your gold cuff for a stylish stack.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5d94-31dd-40da-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:15:19.161"
-        },
-        {
-          "message_media": [],
-          "message_text": "I think if it is not hinge then I might need bigger size then it will not fit well ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:17:00.321"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: For a non-hinged bangle, consider sizing up for comfort. Check our size guide for accurate measurements: https://julievos.attn.tv/aTVwQcKyU4N8",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5d95-fb13-4c00-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:17:16.197"
-        },
-        {
-          "message_media": [],
-          "message_text": "In your webside is showing maribella gold in small is sold out ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:21:37.214"
-        },
-        {
-          "message_media": [],
-          "message_text": "U said u have Maribella gold in small i can find on your webside ? Can u help me to\nFind it ? I want to order right now ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:29:57.288"
-        },
-        {
-          "message_media": [],
-          "message_text": "Do u have any retailer in Cincinnati ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:30:17.350"
-        },
-        {
-          "message_media": [],
-          "message_text": "Or Ohio ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:30:46.949"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Sorry for the confusion! I rechecked, and it looks like the Marbella Bangle in small is already sold out. I don't have the exact date of a possible restock, but I recommend checking our website and social media frequently. In the meantime, what do you think about this instead? https://julievos.attn.tv/amdt8BxEa9MG \n\nWe are carried in fine boutiques and in jewelry stores throughout the U.S.A. To find a store near you, please email us at customercare@julievos.com or give us a call at (646)448-4345. One of my colleagues will be more than happy to help out! ",
-          "message_type": "agent",
-          "agent": "46498",
-          "message_id": "019c5daa-55af-4803-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:39:30.126"
-        },
-        {
-          "message_media": [],
-          "message_text": "I tried u guys are closed today. \nWhat else I replace Maribella with ? I liked that combination. But 😞!! \nAny other suggestions? I like to finish my order please ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:45:22.205"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Consider the Avalon Hinge Bangle in Iridescent Coral or Chalcedony Blue as an alternative. It pairs beautifully with your existing pieces. Check it out here: https://julievos.attn.tv/afoqe23xKbJH",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5daf-ed26-41bf-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:45:36.580"
-        },
-        {
-          "message_media": [],
-          "message_text": "Is it versatile?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:46:40.969"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Yes, the Avalon Hinge Bangle is versatile and complements various styles, making it a great addition to your collection.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5db1-1660-4be4-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:46:52.660"
-        },
-        {
-          "message_media": [],
-          "message_text": "As I like statement and different pieces.",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:47:40.707"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: For a statement piece, consider the Cannes Statement Hinge Bangle. It's bold and unique. View it here: https://julievos.attn.tv/aUGF374vw1LO",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5db2-0757-480d-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:47:54.345"
-        },
-        {
-          "message_media": [],
-          "message_text": "I can't find Avalon hinge bangle ? Can u send me picture ? Cannes bangle looks to wide for stacking ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:53:20.728"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: The Avalon Hinge Bangle is available in Iridescent Chalcedony Blue and Coral. View it here: https://julievos.attn.tv/aN2X4lOqyJmw",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5db7-3dd7-457c-f000-0000fae60cf4",
-          "date_time": "2026-02-14 14:53:35.980"
-        },
-        {
-          "message_media": [],
-          "message_text": "I don't see it or search it ? Can u send me screen shot ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 14:55:50.690"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: I'm so sorry for the confusion! It looks like we no longer have the Avalon Hinge Bangle on the website.\nFor a stone bangle, what do you think of our 'Carnaby Stone Bangle' - https://julievos.attn.tv/amiudB5LSWlK\nYou may also check our 'Colette Bangle' that looks great on stacking! - https://julievos.attn.tv/adW0iepavUoW",
-          "message_type": "agent",
-          "agent": "109964",
-          "message_id": "019c5dbe-5614-4db2-f000-0000fae60cf4",
-          "date_time": "2026-02-14 15:01:20.954"
-        },
-        {
-          "message_media": [],
-          "message_text": "What kind of material is this ? It looks white ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 15:06:21.780"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Our jewelry is hand set in 24k gold plate over nickel-free brass. The white appearance may be due to the stone or enamel used in the design.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5dc3-30c7-4436-f000-0000fae60cf4",
-          "date_time": "2026-02-14 15:06:39.072"
-        },
-        {
-          "message_media": [],
-          "message_text": "What kind of plating is those? It is not gold ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 15:07:38.535"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Our jewelry is hand set in 24k gold plate over nickel-free brass.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5dc4-5cdd-4576-f000-0000fae60cf4",
-          "date_time": "2026-02-14 15:07:55.893"
-        },
-        {
-          "message_media": [],
-          "message_text": "I spend so much time today and I think I deserve better deal or discount ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 15:08:58.335"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Thank you for shopping with us! Use code WELCOMEK8V2 for 10% off your first purchase at julievos.com. Keep an eye on our website for more deals!",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5dc5-8ddb-424c-f000-0000fae60cf4",
-          "date_time": "2026-02-14 15:09:13.973"
-        },
-        {
-          "message_media": [],
-          "message_text": "I wish u had retail here ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 15:09:28.430"
-        },
-        {
-          "message_media": [],
-          "message_text": "I already have this discount but I am hoping u can do better than this ?",
-          "message_type": "customer",
-          "date_time": "2026-02-14 15:10:28.122"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: Complete your Milano Bangle — lightly hammered 24K gold-plated bangle with six circular gemstones for elegant layering.\n\nUse code WELCOMEK8V2 for 10% off.\n\nShop now: https://julievos.attn.tv/aFcMu25ihaSo .",
           "message_type": "system",
-          "date_time": "2026-02-14 15:15:45.033"
+          "message_text": "johnnie-O: The U.S. Open is almost here! Gear up in style with our logo\u0027d apparel, perfect for the course or cheering from your couch! johnnie-o.attn.tv/a66QTbqbPQ0y ",
+          "date_time": "2025-05-31 10:00:35.347",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "But that only make one piece but I need two ? That's what we are struggling from this morning ? Unless u want to discount more on 2nd piece since all the pieces we struggling on are out of stock u recomended. I already have the code u send me.",
+          "message_type": "system",
+          "message_text": "johnnie-O: Father\u0027s Day is coming! Don\u0027t forget to show him your appreciation. We have gift ideas for any type of Dad. johnnie-o.attn.tv/aXUKcvdzHNzw ",
+          "date_time": "2025-06-02 10:00:32.237",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "johnnie-O: Introducing our NEW Sunglasses! Style meets function with Zeiss lenses that provide the ultimate UV protection johnnie-o.attn.tv/a-6LMgJK2CPS ",
+          "date_time": "2025-06-04 10:00:47.820",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "johnnie-O: Designed for that perfect untucked look, the Tasca knit pique button down is your new go-to for laid-back outings. johnnie-o.attn.tv/aavl4qva1bN7 ",
+          "date_time": "2025-06-08 10:00:38.635",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "johnnie-O: Join us at the U.S. Open merchandise tent at Oakmont June 12 - 15 to explore our latest styles! Can\u0027t make it? No worries, you can still grab your U.S. Open gear here: johnnie-o.attn.tv/a0EQqGZICQan ",
+          "date_time": "2025-06-11 10:00:31.848",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "johnnie-O: Hey Scott , I\u0027m Darby your personal shopping assistant. Welcome to our exclusive VIP list!\n\nYou can text me anytime for support, recommendations, or anything in between. Is there anything I can assist you with today?\n\njohnnie-o.attn.tv/a7-EuIg-s3gB ",
+          "date_time": "2025-06-12 12:47:24.341",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-14 15:51:36.315"
+          "message_text": "Can I get a discount ? I always through my coupons away when I order",
+          "date_time": "2025-06-12 12:48:52.091",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "I ordered that !!",
           "message_type": "customer",
-          "date_time": "2026-02-14 16:01:56.227"
+          "message_text": "Sri-Release performance polo - Gallan medium Green grass",
+          "date_time": "2025-06-12 12:49:49.128",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Julie Vos: Thanks for your order. I added 2 Milano Bangle Cubic Zirconia / Medium in my cart and it worked with the code. I'm afraid we are unable to make any changes to an order once it has been placed. I can check if it's possible to cancel. If you'd like to proceed, please confirm your email address. ",
+          "message_type": "template",
+          "message_text": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
+          "date_time": "2025-06-12 12:55:11.692",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Sales Collection\"; last updated: 2024-05-30 13:54:59.581",
+          "date_time": "2025-06-12 12:55:11.692",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01976511-243e-465f-f000-000014422e7b",
+          "message_text": "johnnie-O: I\u0027m sorry, I don\u0027t have any codes available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our sales collection here: You can take a look at our sale collection here: https://johnnie-o.attn.tv/aD_mlVphpVRh",
           "message_type": "agent",
-          "agent": "31385",
-          "message_id": "019c5e26-92cf-4078-f000-0000fae60cf4",
-          "date_time": "2026-02-14 16:55:12.248"
-        },
-        {
-          "message_media": [],
-          "message_text": "I did not get it ? I mean understand !",
-          "message_type": "customer",
-          "date_time": "2026-02-14 20:36:22.198"
-        },
-        {
-          "message_media": [],
-          "message_text": "This is how I am wearing today.",
-          "message_type": "customer",
-          "date_time": "2026-02-14 21:22:42.191"
-        },
-        {
-          "message_media": [],
-          "message_text": "Julie Vos: I do apologize for the confusion. Just to confirm, you are currently looking for an additional discount code so you could add another piece, correct? Please let me know so I can check further on this for you. ",
-          "message_type": "agent",
-          "agent": "82260",
-          "message_id": "019c5f1d-2293-4f7e-f000-0000fae60cf4",
-          "date_time": "2026-02-14 21:24:30.895"
+          "agent": "33953",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-06-12 12:55:11.697"
         }
-      ],
-      "notes": {
-        "escalate": [
-          "When ESC during the weekend/late Friday use the \"Weekend escalation template\" template"
-        ],
-        "tone": [
-          "Don't use the term \"customer service team\", use \"customer care\" instead"
-        ],
-        "dos_and_don_ts": [
-          "Do not direct cx to contact the carrier",
-          "Do not provide customers with dates for restock before checking with our team."
-        ],
-        "promo_and_promo_exclusions": [
-          "They have only 2 sales per year (June/November) - when those end the sale items are removed from the site"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://julievos.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Colette Bangle - Alabaster / S",
-            "link": "https://www.julievos.com/products/colette-bangle?variant=42406799376482&_pos=1&_psq=colette+ban&_ss=e&_v=1.0",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "item": "Colette Bangle - Alabaster / S",
-            "link": "https://www.julievos.com/products/colette-bangle?variant=42406799376482",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "item": "Tribeca Bangle - Pearl / Small",
-            "link": "https://www.julievos.com/products/tribeca-bangle?variant=42074211582050&vslyvid=2b273345-7f0b-442c-a71c-a6730bad1e88&vslywgid=4120b0aef951499c8b1d3bd0fbd75912&vslysid=_loomi_addon_1687780495364_dup1688068203_dup1688656408",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "item": "Catalina Hinge Bangle - Gold",
-            "link": "https://www.julievos.com/products/catalina-hinge-bangle?externalId=F5nHd",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "item": "Solara Nova Hinge Bangle - Gold",
-            "link": "https://www.julievos.com/products/solara-nova-hinge-bangle?srsltid=AfmBOooaK8-hQTBi3vbiDWE0iU159S9QLREacrLu_Q9PdgAF_3zCQxx9",
-            "timeAgo": "2026-02-14"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "691201",
-            "orderDate": "2026-02-14",
-            "items": [
-              {
-                "name": "Milano Bangle",
-                "price": 95,
-                "productLink": "https://juliecollection.myshopify.com/products/milano-bangle"
-              }
-            ],
-            "link": "https://www.julievos.com/57472/orders/09a21d880ba4c29db57e837c3e731ee6/authenticate?key=4ff99b05347ec8575021201854b6737a",
-            "trackingLink": "https://www.ups.com/WebTracking?loc=en_US&requester=ST&trackNums=1ZH4Y248YN39584887",
-            "order_tracking_link": "https://www.ups.com/WebTracking?loc=en_US&requester=ST&trackNums=1ZH4Y248YN39584887",
-            "total": 91.06,
-            "coupon": "WELCOMEK8V2",
-            "date_time": "2026-02-14 20:53:35.531"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
+      ]
     },
     "78": {
-      "id": "019c538d-82a8-4187-f000-0000fae3a890",
-      "companyName": "HEYDUDE US",
-      "companyWebsite": "https://heydude.com",
-      "agentName": "Casey",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from HEYDUDE.",
-          "message_type": "system",
-          "date_time": "2026-02-12 14:52:07.971"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: Welcome to HEYDUDE! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/o76",
-          "message_type": "system",
-          "date_time": "2026-02-12 14:52:23.074"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: We're so stoked you made it in time for the Winter Savings Event!\n\nUse code FEB25 to take 25% off almost everything.\n\nShop Now:\nhttps://heydudeshoes.attn.tv/aNUtyb_gVIEt .",
-          "message_type": "system",
-          "date_time": "2026-02-12 14:52:23.721"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: Over the next few days we'll try to help you find something that you will love!\n\nUntil then, shop our viral best-sellers: https://heydudeshoes.attn.tv/a4JP6mwTalDa .",
-          "message_type": "system",
-          "date_time": "2026-02-12 14:53:30.251"
-        },
-        {
-          "message_media": [],
-          "message_text": "Code didn't work",
-          "message_type": "customer",
-          "date_time": "2026-02-12 15:22:09.764"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: Please check our website, heydude.com, for the latest promotions and sales. If you're having trouble with a coupon, please share a screenshot for assistance.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5384-f9d5-470d-f000-0000fae3a890",
-          "date_time": "2026-02-12 15:22:29.612"
-        },
-        {
-          "message_media": [],
-          "message_text": "FEB25 does not work",
-          "message_type": "customer",
-          "date_time": "2026-02-12 15:23:09.897"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: Please check our website, heydude.com, for the most up-to-date promotions and sales. If you're having trouble with a coupon, please share a screenshot for further assistance.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c5385-ce61-46ca-f000-0000fae3a890",
-          "date_time": "2026-02-12 15:23:24.018"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: Grab the Wally Vintage Classic — effortless vintage style with elastic laces and a cushioned outsole, perfect for all-day comfort.\n\nOver 20K people have recently viewed it: https://heydudeshoes.attn.tv/aVhWYUwcz0Uc .",
-          "message_type": "system",
-          "date_time": "2026-02-12 15:27:16.405"
-        },
-        {
-          "message_media": [],
-          "message_text": "Not available online",
-          "message_type": "customer",
-          "date_time": "2026-02-12 15:27:59.669"
-        },
-        {
-          "message_media": [],
-          "message_text": "Just tried to purchase them",
-          "message_type": "customer",
-          "date_time": "2026-02-12 15:28:29.764"
-        },
-        {
-          "message_media": [],
-          "message_text": "False advertising",
-          "message_type": "customer",
-          "date_time": "2026-02-12 15:29:39.545"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Code won't work - All brands\"; last updated: 2023-10-10 16:36:42.859",
-          "message_type": "template",
-          "date_time": "2026-02-12 15:31:48.932"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Code won't work\"; last updated: 2025-11-12 15:43:55.752",
-          "message_type": "template",
-          "date_time": "2026-02-12 15:31:48.932"
-        },
-        {
-          "message_media": [],
-          "message_text": "HEYDUDE: I'm so sorry that you are having trouble using the code. Have you encountered any error messages? Also, could you kindly share a screenshot of the items in your cart? I'll be happy to look into the issue!\n\nPlease note that discount codes are valid for items available on this link: https://heydudeshoes.attn.tv/aILUIU3eYvlR They cannot be combined with any other offer or promotion, including sale styles. Please note that additional exclusions may apply. \n\nFor the item, are you referring to Wally Vintage Classic? If so, it is currently available and you may purchase it here: https://heydudeshoes.attn.tv/alqhy48-5lVy",
-          "message_type": "agent",
-          "agent": "109964",
-          "message_id": "019c538d-82a8-4187-f000-0000fae3a890",
-          "date_time": "2026-02-12 15:31:48.935"
-        }
-      ],
-      "notes": {
-        "important": [
-          "There is a scam website that customers are texting in from (https://heydudestores.com/)",
-          "If you notice this, reroute customers to the correct website!"
-        ],
-        "send_to_cs": [
-          "Don't ESC post-purchase issues, use PPI shortcut"
-        ],
-        "templates": [
-          "For wrong items received use WMP shortcut",
-          "For damaged items received use DMI shortcut",
-          "For order status requests use OSR shortcut"
-        ],
-        "promo_and_promo_exclusions": [
-          "The welcome code is valid for first-time customers only.",
-          "➜ Applies to full-price styles",
-          "➜ Can't be combined with any other discounts or offers, including sale styles",
-          "➜  Use cww temp for code issues",
-          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
-        ]
-      },
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "0191a5b5-f69a-411f-f000-000029bdb462",
       "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "value": "20",
+            "coupon": "97487868237371"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://heydude.com",
+          "value": "https://chicos.com/store",
           "date": ""
         },
         "browsingHistory": [
           {
-            "item": "Wally Stretch Canvas - Black/Black - 7",
-            "link": "https://www.heydude.com/products/wally-stretch-canvas-dgn",
-            "timeAgo": "2026-02-12"
+            "link": "https://www.chicos.com/store/product/Faux-Pearl-Rhinestone-Cardigan-Sweater/570356513?color=176\u0026catId=",
+            "item": "Faux Pearl \u0026 Rhinestone Cardigan Sweater",
+            "timeAgo": "2023-11-09"
           },
           {
-            "item": "Wally Stretch Canvas - Black/Black",
-            "link": "https://www.heydude.com/products/wally-stretch-canvas-black-black",
-            "timeAgo": "2026-02-12"
+            "link": "https://www.chicos.com/store/product/Petite-Wool-Blend-Coat/570356441?color=001\u0026catId=",
+            "item": "Petite Wool Blend Coat",
+            "timeAgo": "2023-11-09"
           },
           {
-            "item": "Wally Stretch Canvas - Black/Black - 7",
-            "link": "https://www.heydude.com/products/wally-stretch-canvas-black-black",
-            "timeAgo": "2026-02-12"
+            "link": "https://www.chicos.com/store/product/Faux-Leather-Peplum-Jacket/570354428?color=5903\u0026catId=",
+            "item": "Faux Leather Peplum Jacket",
+            "timeAgo": "2023-10-12"
           },
           {
-            "item": "Wally Washed Quilt - Black/Grey",
-            "link": "https://www.heydude.com/products/wally-washed-quilt-blk-grey",
-            "timeAgo": "2026-02-12"
+            "link": "https://www.chicos.com/store/category/fall+sale/cat11969291/?utm_medium=sms\u0026utm_source=attentive\u0026utm_campaign=091523_CHS_FallSale_REM\u0026externalId=YFOsh",
+            "item": "Spun Rayon Cardigan",
+            "timeAgo": "2023-09-15"
           },
           {
-            "item": "Wally Washed Quilt - Black/Grey",
-            "link": "https://www.heydude.com/products/wally-washed-quilt-stormy-blue-multi",
-            "timeAgo": "2026-02-12"
+            "link": "https://www.chicos.com/store/product/Faux-Leather-Peplum-Jacket/570354428?color=5903\u0026catId=",
+            "item": "Faux Leather Peplum Jacket",
+            "timeAgo": "2023-08-21"
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "79": {
-      "id": "019c5ce1-d980-4bee-f000-0000fa94e362",
-      "companyName": "Comfrt",
-      "companyWebsite": "https://comfrt.com",
-      "agentName": "Samantha",
+      "companyWebsite": "https://chicos.com/store",
+      "companyName": "Chico\u0027s",
+      "notes": {
+        "escalate": [
+          "DO NOT ESC - send everything to CS!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Comfrt: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Comfrt.",
           "message_type": "system",
-          "date_time": "2026-02-11 19:30:08.935"
+          "message_text": "Chico\u0027s: Discover the season\u0027s most wanted tops now 25% OFF! Refresh your look with our latest collection. Shop now: https://chicos.attn.tv/a6_EToO3-NCp .",
+          "date_time": "2024-08-01 12:20:22.677",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Comfrt: Welcome to Comfrt! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
           "message_type": "system",
-          "date_time": "2026-02-11 19:30:52.537"
+          "message_text": "Chico\u0027s: The Soma Panty Party Starts NOW!\n\n10 for $40 Panties! Save up to $100.\n\nShop Soma Panties: https://chicos.attn.tv/aCYFgCauJYZf .",
+          "date_time": "2024-08-02 16:02:45.283",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Comfrt: Welcome to Comfrt! We're so excited to have you. Here's your exclusive 15% off code: W15NwowLz\n\nClick here to auto-apply your discount and shop our viral best-sellers: comfrt.attn.tv/a-2kNb-tcXHB",
           "message_type": "system",
-          "date_time": "2026-02-11 19:30:57.057"
+          "message_text": "Chico\u0027s: Crop to it ASAP!\nTime\u0027s running out for $39+ crops and capris. \nGreat savings on the best bottoms! https://chicos.attn.tv/aKBO-129VIzi .",
+          "date_time": "2024-08-03 12:19:24.986",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Comfrt: Let's be friends!\n\nSave our contact to make sure we land directly in your messages.",
           "message_type": "system",
-          "date_time": "2026-02-11 19:31:00.531"
+          "message_text": "Chico\u0027s: Don\u0027t miss out on your favorite bottoms starting at $39!\nFind the perfect fit and style now: https://chicos.attn.tv/aj5CVqGLrfoc .",
+          "date_time": "2024-08-03 18:15:56.562",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Hi",
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Today, Online Only\nFLASH SALE! \n\n40% off when you buy 2 or more sale styles.\n\nStock up now! https://chicos.attn.tv/ae5t8Wj_I0Ig \n\nReply Stop to Stop",
+          "date_time": "2024-08-04 12:20:33.019",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Top Reason To Shop? \n25% off tops ENDS TODAY! \nTreat yourself to style... before it\u0027s too late! https://chicos.attn.tv/a8r8PnrU8QtE \n.",
+          "date_time": "2024-08-05 12:22:36.707",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: HAPPENING NOW!\n\nUp to 50% off SALE styles.\n\nHurry, lots of great pieces selling fast! https://chicos.attn.tv/aFX9ryFM5uyb \n\nReply Stop to Stop",
+          "date_time": "2024-08-06 12:21:11.632",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: First of Fall Sneak Peek! \nPreview our new collection. Plus, enjoy extra 25% off sale items.\nShop now: https://chicos.attn.tv/axoqIa2Piro6",
+          "date_time": "2024-08-08 12:21:02.031",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Discover the must-have styles of the season in our exclusive fall collection! https://chicos.attn.tv/a-fSXH9GNorz + an extra 25% off SALE - Ends 8/13",
+          "date_time": "2024-08-08 18:15:58.556",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Extra 25% off SALE is happening NOW!\n\nFind your perfect jacket today.\n\nSave today: https://chicos.attn.tv/amTdRDqzVpAI\n\nEnds 8/13",
+          "date_time": "2024-08-09 12:16:13.249",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: SALE IS ON SALE!\n\nSave an EXTRA 25% Off already-reduced styles.\n\nShop now for best selection: https://chicos.attn.tv/a-z5dwtRtJ3y .",
+          "date_time": "2024-08-10 12:18:23.249",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Time\u0027s running out to save an EXTRA 25% Off already-reduced styles. Shop now for best selection: https://chicos.attn.tv/ai366uvtYcN7 Ends 8/13",
+          "date_time": "2024-08-10 18:15:47.940",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Today, Online Only! \n\n25% off Travelers.\n\nWrinkle-resistant \u0026 event ready looks, what could be better?\nShop now: https://chicos.attn.tv/aiI5f46SYPC_ .",
+          "date_time": "2024-08-11 12:19:55.083",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Bottoms Up!\n\n25% off pants \u0026 jeans - new arrivals included!\n\nStock up on just-in fall styles. https://chicos.attn.tv/acZQcPdjkTOq \n\nIn Store and Online",
+          "date_time": "2024-08-12 12:19:32.016",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Now Extended-Online Only!\nExtra 25% off sale styles.\nHurry, new styles added \u0026 selling fast! https://chicos.attn.tv/aQ5j911SiMEG \n\nReply Stop to Stop",
+          "date_time": "2024-08-14 12:20:52.198",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: $29 Tees? Yes, please!\n\nFind your perfect base layer for fall. https://chicos.attn.tv/accnKNAWLXjX Plus, extra 25% off SALE styles.",
+          "date_time": "2024-08-15 13:23:54.219",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Can\u0027t get enough of Brigitte \u0026 Juliet? \n\nYou\u0027re in luck! All our newest pant styles are 25% off.\n\nShop now: https://chicos.attn.tv/afZB5hQ9srYe .",
+          "date_time": "2024-08-16 12:52:26.617",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Get ready for fall with our $29 Tees! Whether you wear them now or layer up for the season https://chicos.attn.tv/a8-KHbuuhGD1 + Extra 25% off SALE",
+          "date_time": "2024-08-17 12:19:13.989",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: TODAY, ONLINE ONLY!\n\nStyles starting at $29.\n\nRefresh your closet with sale picks of the day! https://chicos.attn.tv/aEdq_M70nfDT \n\nReply Stop to Stop",
+          "date_time": "2024-08-18 12:19:48.317",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: TODAY ALL DAY! \nExtra 40% Off Sale \nWhen you buy 2 or more.\nSAVE on great styles. https://chicos.attn.tv/atl7aK5nV_Mh Don\u0027t miss out!",
+          "date_time": "2024-08-19 12:18:43.764",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: It\u0027s FALL about TEES!\n\nStock up now for the season\u0027s essential layering pieces starting at $29 https://chicos.attn.tv/aSFHjjJIIZ_S \nNew Colors \u0026 Prints",
+          "date_time": "2024-08-20 12:19:34.329",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: $29 SOMA BRAS ENDS TODAY\n\nTry new bras RISK FREE with free shipping + returns.\n\nShop Soma: https://chicos.attn.tv/abN53sPq96Xp .",
+          "date_time": "2024-08-20 15:32:53.455",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: More Is More Outfit Event.\nStarts Today - In Store \u0026 Online.\n$20 off $100+\n$50 off $200+\nReady, set, shop! https://chicos.attn.tv/aCbVa5hfYuaV .",
+          "date_time": "2024-08-21 12:18:34.926",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Save Today with $20 off $100+ or $50 off $200+ on your favorite styles.\nDon\u0027t miss out: https://chicos.attn.tv/a6xNlWd9padT .",
+          "date_time": "2024-08-21 18:15:34.741",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: You\u0027ve heard it here first! \nStyles you love were JUST added to sale\n+\nSave up to $50 off!\nAdd to bag ASAP! https://chicos.attn.tv/afKXQK_4q_Fq .",
+          "date_time": "2024-08-22 12:18:32.291",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Heard the news? \nUp to $50 off on NEW or sale styles happening now! https://chicos.attn.tv/afjRQa-KYZGT \nDon\u0027t miss out - offer ends 8/26",
+          "date_time": "2024-08-24 12:16:56.997",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: End of Season Sale starts now with up to 60% off sale styles!\n\nSoak up summer\u0027s last days with savings https://chicos.attn.tv/axQvEzkuYj2h .",
+          "date_time": "2024-08-27 12:20:25.724",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: End of Season Sale continues! \nLots of amazing sale styles are up to 60% off!\nFind your favorite here: https://chicos.attn.tv/aunHUMhMPyTO .",
+          "date_time": "2024-08-28 12:19:01.381",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Long weekend plans? Shop our End of Season Sale! \n\nSave up to 60% off SALE styles - In Store \u0026 Online https://chicos.attn.tv/aTPL-uS8xlCL .",
+          "date_time": "2024-08-29 12:19:40.478",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: You\u0027ll love our End of Season Sale!\n\nSave on Jackets just your style. https://chicos.attn.tv/a5Wjpz2-medi \nMake them yours before they sell out.",
+          "date_time": "2024-08-30 12:16:14.654",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-12 12:50:12.898"
+          "message_text": "Hello",
+          "date_time": "2024-08-30 18:50:41.515",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Did my item ship yet?",
           "message_type": "customer",
-          "date_time": "2026-02-12 12:50:22.879"
+          "message_text": "Hello",
+          "date_time": "2024-08-30 18:51:11.551",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Comfrt: You can check your order status here: https://comfrt.attn.tv/aJpp4GFqtgex",
+          "message_id": "0191a5b5-f69a-411f-f000-000029bdb462",
+          "message_text": "Chico\u0027s: Thank you for reaching out! Please clarify for me how I can help, do you have any questions about our products? I\u0027m happy to help.",
           "message_type": "agent",
-          "agent": "62551",
-          "message_id": "019c52fa-12a3-41fc-f000-0000fa94e362",
-          "date_time": "2026-02-12 12:50:46.449"
-        },
-        {
-          "message_media": [],
-          "message_text": "Comfrt: Upgrade to first class.\n\nThe VIP Airplane Mode Hoodie with a satin-lined hood and eye mask has officially landed! \n\nAlso, four new limited shades just got added to our original collection.\n\nGet it while you can: comfrt.attn.tv/aOqp8shetQdl \n",
-          "message_type": "system",
-          "date_time": "2026-02-13 18:30:58.753"
-        },
-        {
-          "message_media": [],
-          "message_text": "Where is my order",
-          "message_type": "customer",
-          "date_time": "2026-02-14 10:52:56.604"
-        },
-        {
-          "message_media": [],
-          "message_text": "I paid express shipping",
-          "message_type": "customer",
-          "date_time": "2026-02-14 10:53:02.072"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Customer support\"; last updated: 2022-09-13 01:43:33.168",
-          "message_type": "template",
-          "date_time": "2026-02-14 11:00:31.139"
-        },
-        {
-          "message_media": [],
-          "message_text": "Comfrt: Thank you for reaching out! I'm sorry to hear that you haven't received your order yet, especially since you paid for express shipping. It certainly isn't the experience I want you to have. The best way to handle this is to email us directly at info@comfrt.com. Our team is happy to help!",
-          "message_type": "agent",
-          "agent": "109968",
-          "message_id": "019c5ce1-d980-4bee-f000-0000fa94e362",
-          "date_time": "2026-02-14 11:00:31.141"
+          "agent": "87359",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-30 19:54:11.493"
         }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post-purchase issues"
-        ],
-        "escalate": [
-          "ESC if the discount % is not the same as indicated in the automated message"
-        ],
-        "templates": [
-          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
-        ]
-      },
+      ]
+    },
+    "79": {
+      "agentName": "",
+      "has_shopify": false,
+      "id": "0198a503-609c-4f59-f000-0000333ad74a",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://comfrt.com",
-          "date": ""
-        },
         "browsingHistory": [
           {
-            "item": "VIP Airplane Mode Travel Hoodie",
-            "link": "https://comfrt.com/products/vip-airplane-mode-travel-hoodie?variant=45241147293740",
-            "timeAgo": "2026-02-13"
+            "link": "https://www.michaels.com/product/blue-imperial-jasper-nugget-beads-by-bead-landing-10473032",
+            "item": "B",
+            "timeAgo": "2025-08-13"
           },
           {
-            "item": "VIP Airplane Mode Travel Hoodie",
-            "link": "https://comfrt.com/products/vip-airplane-mode-travel-hoodie?variant=45241147293740",
-            "timeAgo": "2026-02-13"
+            "link": "https://www.michaels.com/makerplace/product/wavy-blue-waist-beads-383816496233136128",
+            "item": "W",
+            "timeAgo": "2025-08-03"
           },
           {
-            "item": "Ember Heated Blanket",
-            "link": "https://comfrt.com/products/ember-heated-blanket?variant=45246089068588",
-            "timeAgo": "2026-02-13"
+            "link": "https://www.michaels.com/makerplace/product/imperial-waist-beads-376217443780313088",
+            "item": "I",
+            "timeAgo": "2025-08-03"
           },
           {
-            "item": "Ember Heated Blanket",
-            "link": "https://comfrt.com/products/ember-heated-blanket?variant=45246089068588",
-            "timeAgo": "2026-02-13"
+            "link": "https://www.michaels.com/product/black-jasper-teardrop-pendant-by-bead-landing-10715511",
+            "item": "Black Jasper Teardrop Pendant by Bead LandingTM",
+            "timeAgo": "2025-07-10"
           },
           {
-            "item": "Signature Sweatpants",
-            "link": "https://comfrt.com/products/signature-fit-sweatpants?variant=40692760641580",
-            "timeAgo": "2026-02-12"
+            "link": "https://www.michaels.com/product/black-jasper-teardrop-pendant-by-bead-landing-10715511",
+            "item": "Black Jasper Teardrop Pendant by Bead LandingTM",
+            "timeAgo": "2025-07-10"
           }
         ],
+        "coupons": [
+          {
+            "coupon": "XHLB86W945RD",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "XQ5ZJ77SGGM9",
+            "status": "INACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://michaels.com",
+          "date": ""
+        },
         "orders": [
           {
-            "orderNumber": "10040276",
-            "orderDate": "2026-02-12",
+            "currency": "USD",
+            "orderDate": "2025-04-27",
             "items": [
               {
-                "name": "Ember Heated Blanket",
-                "price": 85,
-                "productLink": "https://comfrtclothing.myshopify.com/products/ember-heated-blanket"
+                "price": [
+                  11.99
+                ],
+                "productLink": "https://www.replacements.com/china-fraureuth-aurora-12-chop-plate-round-platter/p/107155111",
+                "name": "Black Jasper Teardrop Pendant by Bead LandingTM"
               }
             ],
-            "link": "https://comfrt.com/56940298284/orders/c45ec4aca7b32fe08f3081fec0e26b6b/authenticate?key=1315ad896917d1dd3e3fae2105030d10",
-            "trackingLink": "https://track.flexport.com/UUS62C6610073499193",
-            "order_tracking_link": "https://track.flexport.com/UUS62C6610073499193",
-            "total": 85,
-            "date_time": "2026-02-12 02:12:13.547"
+            "date_time": "2025-04-27 18:46:23.462",
+            "discount_amount": 0,
+            "orderNumber": "5000110654675321",
+            "total": 23.98
           },
           {
-            "orderNumber": "10040276",
-            "orderDate": "2026-02-12",
+            "currency": "USD",
+            "orderDate": "2025-03-02",
+            "coupon": "MARSAVE30",
             "items": [
               {
-                "name": "Ember Heated Blanket",
-                "price": 85,
-                "productLink": "https://comfrtclothing.myshopify.com/products/ember-heated-blanket"
+                "price": [
+                  4.99
+                ],
+                "name": "Bead LandingTM Beading Wire, Silver"
               }
             ],
-            "link": "https://comfrt.com/56940298284/orders/c45ec4aca7b32fe08f3081fec0e26b6b/authenticate?key=1315ad896917d1dd3e3fae2105030d10",
-            "trackingLink": "https://track.flexport.com/UUS62C6610073499193",
-            "order_tracking_link": "https://track.flexport.com/UUS62C6610073499193",
-            "total": 92.24,
-            "coupon": "W15NwowLz",
-            "date_time": "2026-02-12 02:08:11.619"
+            "date_time": "2025-03-02 12:36:31.402",
+            "discount_amount": 0,
+            "orderNumber": "4000109488129657",
+            "total": 9.48
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-03-02",
+            "coupon": "MARSAVE30",
+            "items": [
+              {
+                "price": [
+                  4.49
+                ],
+                "productLink": "https://www.allposters.com/-sp/Wukoki-Pueblo-Inhabited-from-Approximately-1100-Ad-to-1250-Ad-Wupatki-National-Monument-Posters_i10442857_.htm?UPI=Q12QPT40",
+                "name": "24 Gauge Gold Beading Wire by Bead LandingTM"
+              }
+            ],
+            "date_time": "2025-03-02 12:36:31.390",
+            "discount_amount": 0,
+            "orderNumber": "4000109488129657",
+            "total": 9.48
           }
         ]
       },
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Sizing questions",
-        "Discount code errors"
-      ],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "80": {
-      "id": "019c4e78-7e42-4367-f000-0000f96d5426",
-      "companyName": "Beis Travel",
-      "companyWebsite": "https://beistravel.com",
-      "agentName": "Annie",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Welcome to BÉIS Travel! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-06 16:22:51.415"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Hey there, newbie! First time shopping with us? We've handpicked some essentials to get you started: https://beistravel.attn.tv/aX3hRG1o0ZLq . \n\nEnjoy 20% OFF with code WELCOMEDYA961 \nbeistravel.attn.tv/aZhlklTgKgvQ .",
-          "message_type": "system",
-          "date_time": "2026-02-06 16:22:55.429"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Bags designed to make your every day easier. Save our contact to make getting all of our latest updates easy.",
-          "message_type": "system",
-          "date_time": "2026-02-06 16:22:56.639"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: This friendship is forever... but your 20% OFF code isn't. Don't forget to use code WELCOMEDYA961 to save on our bestsellers. \n\nhttps://beistravel.attn.tv/aU3kLC1hvkaV .",
-          "message_type": "system",
-          "date_time": "2026-02-07 16:23:05.128"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Psst! Your items are in someone else's cart... Get 15% OFF using code welcomenWzXa9 when you check out now before they're gone. beistravel.attn.tv/aILlYmdvE8un .",
-          "message_type": "system",
-          "date_time": "2026-02-07 16:46:57.628"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Not late, but definitely cutting it close. \n\nOrder today for Valentine's Day delivery: beistravel.attn.tv/aWRJQahRDsjc .",
-          "message_type": "system",
-          "date_time": "2026-02-07 19:02:11.662"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: PSA- The Weekender in Maple is almost sold out. Don't wait-order yours now! beistravel.attn.tv/a9Ld2ooPEpvZ .",
-          "message_type": "system",
-          "date_time": "2026-02-08 08:09:27.639"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Last chance to get yourself what you *actually* want by Valentine's Day. \n\nCall it self love: beistravel.attn.tv/aZ9vDpiP1z9S .",
-          "message_type": "system",
-          "date_time": "2026-02-09 12:10:09.916"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: NEW! Style and function for every phase of life. \n\nMeet The Ultimate Family Collection: beistravel.attn.tv/a5zkdMeZQNFk .",
-          "message_type": "system",
-          "date_time": "2026-02-10 16:02:12.493"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Roses are red. Love's overdue.\n\nOrder today. 2-day shipping comes thru: beistravel.attn.tv/aolgMEk7tRXF .",
-          "message_type": "system",
-          "date_time": "2026-02-11 15:08:14.763"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Hi there. If you need additional help please reach us at hello@beistravel.com. Text STOP to opt out.",
-          "message_type": "system",
-          "date_time": "2026-02-11 15:26:33.247"
-        },
-        {
-          "message_media": [],
-          "message_text": "My discount code isn't working ",
-          "message_type": "customer",
-          "date_time": "2026-02-11 15:26:40.242"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: I'm sorry to hear that. Have you encountered any error messages? Also, could you kindly share a screenshot of the items in your cart? I'll be happy to look into the issue! ",
-          "message_type": "agent",
-          "agent": "82427",
-          "message_id": "019c4e63-6d78-448c-f000-0000f96d5426",
-          "date_time": "2026-02-11 15:27:44.915"
-        },
-        {
-          "message_media": [],
-          "message_text": "It applies it but when I go to complete checkout it goes away",
-          "message_type": "customer",
-          "date_time": "2026-02-11 15:30:30.421"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Thank you for sending that over, and I'm sorry for any inconvenience. Can you please try this cart link instead?- https://beistravel.attn.tv/aFuOl-AzcVBv Please let me k now how that goes, I'm here to assist you. ",
-          "message_type": "agent",
-          "agent": "87300",
-          "message_id": "019c4e71-9373-4269-f000-0000f96d5426",
-          "date_time": "2026-02-11 15:43:12.141"
-        },
-        {
-          "message_media": [
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1770842934228_d09c839d-0f2e-4fda-b1c7-d74d2c303f4e-2.png",
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1770842934228_d09c839d-0f2e-4fda-b1c7-d74d2c303f4e-2.png"
-          ],
-          "message_text": "Still does not work.",
-          "message_type": "customer",
-          "date_time": "2026-02-11 15:49:00.462"
-        },
-        {
-          "message_media": [],
-          "message_text": "BÉIS Travel: Thank you for the screenshot. I can see that the discount code is applied to your cart, so could you please let me know what the issue is?",
-          "message_type": "agent",
-          "agent": "87295",
-          "message_id": "019c4e78-7e42-4367-f000-0000f96d5426",
-          "date_time": "2026-02-11 15:50:45.461"
-        }
-      ],
+      "companyWebsite": "https://michaels.com",
+      "companyName": "Michaels",
       "notes": {
         "escalate": [
-          "We don't ESC for this client, use ESC shortcut",
-          "If cx ask how to get/redeem the discount for downloading the app use ESC shortcut"
-        ],
-        "templates": [
-          "For Limited edition items don't use restock temps, they will not be restocked"
-        ],
-        "dos_and_don_ts": [
-          "Don't share the duration of the sale/sale dates with customers!"
+          "No escalations for this client, send everything to CS"
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://beistravel.com",
-          "date": ""
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Last Day! 100s of BOGOs are waiting for you at our Schools Days Sale. Shop fine art, Crayola, frames \u0026 more \u003e michaels.attn.tv/aVULXI13AHTD .",
+          "date_time": "2025-07-19 14:39:36.127",
+          "message_media": [
+            
+          ]
         },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Our Back to Class Sale starts NOW! Grab BOGOs on 1,000s of items. Start checking off your school list today. michaels.attn.tv/aKsYpU0ELmNM .",
+          "date_time": "2025-07-20 14:33:09.629",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Last Call! Get a 30% off reg. price item in store coupon + shop 1,000s of BOGO during our Back to Class Sale \u003e michaels.attn.tv/aJDbsbzCk2GK .",
+          "date_time": "2025-07-26 14:38:50.315",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Hey, we noticed you noticing us. We\u0027ve got even more deals we think you\u0027ll love! Check them out \u003e michaels.attn.tv/a0lg4SzNSEkD .",
+          "date_time": "2025-07-26 14:54:31.015",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Scoop up school essentials for less! Grab BOGO deals on all of your semester faves. Get it now! michaels.attn.tv/aPKgO3pPuL1j .",
+          "date_time": "2025-07-27 14:33:08.170",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: MICHAELS: REWARDS MEMBERS: You scored a free $5 Bonus Reward! Redeem in store https://michaels.attn.tv/aGho9dUu0elh or online https://michaels.attn.tv/cl/MbA",
+          "date_time": "2025-07-28 16:16:54.466",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: MICHAELS: Hurry! Your free Rewards voucher is expiring. Redeem it in store https://michaels.attn.tv/aYmKK2X0PhU1 or online https://michaels.attn.tv/cl/MbA",
+          "date_time": "2025-07-31 15:50:50.400",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Don\u0027t waste savings. Get BOGOs during our Back to Class Sale + use your FREE $5 Reward before it expires TODAY! michaels.attn.tv/au6lXDNSgG9t .",
+          "date_time": "2025-08-01 14:36:52.770",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: It\u0027s your last chance! Grab FREE school supplies when you shop BOGO deals during our Back to Class Sale. michaels.attn.tv/a4bijWV1MEgm .",
+          "date_time": "2025-08-02 14:38:54.774",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Maker Haul starts NOW! Save on 1,000s of BOGO deals on crafting essentials + a 20% off reg. price item coupon! michaels.attn.tv/aDKkS4Omqsq1 .",
+          "date_time": "2025-08-03 14:41:48.586",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Earn MORE Rewards. Plus, Score our BOGO deals! Earn $10 in Rewards when you spend $40+. Shop our Maker Haul \u003e michaels.attn.tv/aB6mykSuNotD .",
+          "date_time": "2025-08-08 14:40:56.030",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Restock your stash with FREE crafting essentials! Score BOGO deals and more of your faves. Shop Maker Haul \u003e michaels.attn.tv/aICNnFwLAAAa .",
+          "date_time": "2025-08-09 14:37:42.971",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Thanks for stopping by! 😊\n\nShop now to discover creative inspiration and variety for every Maker. https://michaels.attn.tv/a3CSmMQnY2tb .",
+          "date_time": "2025-08-09 14:53:51.891",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Restock ALERT! Buy three, get three FREE on ALL strung beads! Shop deals at our Maker Haul sale \u003e michaels.attn.tv/aJ5W-NVqg6G9 .",
+          "date_time": "2025-08-13 14:31:00.753",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Bring your creative ideas to life with B, the perfect pick to personalize your next project.\n\n137 people have recently viewed this.\n\nShop now https://michaels.attn.tv/aAgLv5mbnYo_ .",
+          "date_time": "2025-08-13 15:32:24.283",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Michaels: Bring your ideas to life with Blue Agate Slice Beads By Bead Landing, perfect for customizing your next project.\n\n137 people have recently viewed these beads.\n\nShop now https://michaels.attn.tv/a4FAu49yG0Z7 .",
+          "date_time": "2025-08-13 15:51:07.408",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "You don\u0027t have in stock and can\u0027t get the free ones",
+          "date_time": "2025-08-13 15:52:42.181",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0198a503-609c-4f59-f000-0000333ad74a",
+          "message_text": "Michaels: Thanks for reaching out! Please let me know which specific items you are eyeing so I can help you out. If you are referring to the Blue Agate Slice Beads above, they are available in our online store. Check them out here: https://michaels.attn.tv/a8MFdt6Lxlos\n\nLet me know if that helps!",
+          "message_type": "agent",
+          "agent": "109676",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-13 15:58:38.780"
+        }
+      ]
+    },
+    "80": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "0193a3b3-0ca9-41b7-f000-00002ff88320",
+      "rightPanel": {
         "browsingHistory": [
           {
-            "item": "The Weekender in Black",
-            "link": "https://beistravel.com/products/the-weekender-in-black",
-            "timeAgo": "2026-02-11"
+            "link": "https://www.fragrancenet.com/cologne/christian-dior/dior-sauvage/eau-de-parfum#308500",
+            "item": "DIOR SAUVAGE",
+            "timeAgo": "2024-10-04"
           },
           {
-            "item": "The East To West Tote in Maple",
-            "link": "https://beistravel.com/products/the-east-to-west-tote-in-maple",
-            "timeAgo": "2026-02-06"
+            "link": "https://www.fragrancenet.com/cologne/giorgio-armani/acqua-di-gio/edt?utm_campaign=sms_bis_c_v2\u0026mv_pc=sms_bis_c_v2\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=AqOX4#126343",
+            "item": "Acqua Di Gio Eau De Toilette Spray 3.4 oz",
+            "timeAgo": "2024-07-04"
+          },
+          {
+            "link": "https://www.fragrancenet.com/cologne/christian-dior/dior-sauvage/edt?utm_campaign=sms_bis_c_v2\u0026mv_pc=sms_bis_c_v2\u0026utm_medium=text\u0026utm_source=attentive\u0026externalId=AqOX4#283046",
+            "item": "Dior Sauvage Eau De Toilette Spray 2 oz",
+            "timeAgo": "2024-06-25"
+          },
+          {
+            "link": "https://www.fragrancenet.com/cologne/christian-dior/dior-sauvage/edt?utm_campaign=sms_bis_c_v2\u0026mv_pc=sms_bis_c_v2\u0026utm_medium=text\u0026utm_source=attentive\u0026externalId=AqOX4#283046",
+            "item": "Dior Sauvage Eau De Toilette Spray 2 oz",
+            "timeAgo": "2024-06-24"
+          },
+          {
+            "link": "https://www.fragrancenet.com/cologne/christian-dior/dior-sauvage/edt#287314",
+            "item": "Dior Sauvage For Men",
+            "timeAgo": "2024-05-26"
+          }
+        ],
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "value": "30",
+            "coupon": "MOBILE30"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://fragrancenet.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-10-04",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      60.89,
+                      60.89,
+                      60.89,
+                      60.89,
+                      60.89,
+                      60.89,
+                      60.89,
+                      60.89
+                    ],
+                    "Count": 8
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2024-10-04 01:17:24.971",
+            "discount_amount": 0,
+            "orderNumber": "331301651",
+            "total": 60.89
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
+      "companyWebsite": "https://fragrancenet.com",
+      "companyName": "FragranceNet",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Don\u0027t use emojis/special characters"
+        ],
+        "templates": [
+          "For issues relating to free shipping with no minimum purchase, use \"FSB\" shortcut",
+          "If a product is not available on their website, use \"PNA\" shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Join Purpl Rewards! Earn points, unlock perks \u0026 get early access to exclusive offers!\n\nGet 50 Points: https://fragrancenet.attn.tv/aWQynhGsH6vv .",
+          "date_time": "2024-11-08 19:06:00.373",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Fall is calling! Discover new fragrances and shop up to 80% off department store prices with us today: https://fragrancenet.attn.tv/amzWQ5EneZlT .",
+          "date_time": "2024-11-09 10:30:28.575",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Celebrate Singles\u0027 Day with a deal just for YOU! Treat yourself \u0026 save $22 off $50: https://fragrancenet.attn.tv/aH0_FnIpMryw \n\nEnds 11/13",
+          "date_time": "2024-11-11 13:03:49.976",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: *1/2 PRICE* We\u0027re cutting prices on top fragrance brands. TAP TO SHOP 50% OFF: https://fragrancenet.attn.tv/aDFP5eKVFI1z .",
+          "date_time": "2024-11-12 13:04:49.441",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: The holiday spirit is in the air \u0026 we\u0027re gifting you early access to flash savings: https://fragrancenet.attn.tv/ay13BRlJVjal \n\nEnds 11/15",
+          "date_time": "2024-11-14 18:10:46.252",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: 40 days till Christmas - it\u0027ll be gone in a FLASH!\n\nSave $40* today only: https://fragrancenet.attn.tv/aIf8qiPP4AiM \n\nEnds 11:59pm ET",
+          "date_time": "2024-11-15 11:15:21.674",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: \u0027Tis the season for savings! Enjoy $40 OFF when you spend $100 - Today only: https://fragrancenet.attn.tv/arG6IpleN2L_ \n\nEnds 11:59pm ET",
+          "date_time": "2024-11-15 19:25:25.262",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Skip the box, add the SAVINGS! Shop deeper discounts in our Unboxed \u0026 Testers collection: https://fragrancenet.attn.tv/a9cX_dJmoTEm .",
+          "date_time": "2024-11-16 14:05:55.306",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: SURPRISE: You\u0027ve been selected for an exclusive mystery offer!\n\nUnlock your deal: https://fragrancenet.attn.tv/ad4Ei4zH0tPS \n\nEnds 11/18",
+          "date_time": "2024-11-17 11:05:47.853",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Looking for the perfect gift? Let us know your budget:\n1 - Under $100\n2 - Under $50\n3 - Under $25\n\n https://fragrancenet.attn.tv/aFCHD5PxvTlR .",
+          "date_time": "2024-11-19 18:11:25.367",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Enjoy 50% OFF - because you 100% deserve it. SHOP NOW\u003e\u003e https://fragrancenet.attn.tv/az_fdjZKLLtO .",
+          "date_time": "2024-11-20 11:02:31.951",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: EAU MY! You\u0027ve been granted early access to PURPL FRIDAY!\n\nSHOP NOW: https://fragrancenet.attn.tv/aSjHrzvmGi_Y \n\nEnds 11:59pm ET",
+          "date_time": "2024-11-20 19:11:42.954",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: PURPL FRIDAY is here! Treat yourself to exclusive savings.\n\nShop Now: https://fragrancenet.attn.tv/aEWpXGcpAhJj \n\nEnd 11/19",
+          "date_time": "2024-11-22 10:40:45.413",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Purpl Friday only comes once a year - Don\u0027t miss out on 2 exclusive ways to save: https://fragrancenet.attn.tv/a2RWeHfkgkNL \n\nEnds 11/24",
+          "date_time": "2024-11-22 19:05:57.730",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Dior Sauvage Edt Spray Vial is back (but not for long!)\nBuy it while you can: https://fragrancenet.attn.tv/aaf90CuuB76L .",
+          "date_time": "2024-11-23 09:55:35.379",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: ***HOLIDAY BONUS UNLOCKED ***\n\nHere\u0027s a FREE reward from FragranceNet - REDEEM NOW: https://fragrancenet.attn.tv/akdtBLehykeL \n\nEnds 11/24",
+          "date_time": "2024-11-23 19:05:49.109",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: HO-HO-HURRY! Up to 80% off merrier markdowns when you take 35% OFF*: https://fragrancenet.attn.tv/a_-eJoWQLvzc \n\nEnds 11:59pm ET",
+          "date_time": "2024-11-24 10:54:07.252",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Hurry, last chance to save BIG!\n\nCLICK TO REDEEM: https://fragrancenet.attn.tv/a3oCDDcuJS0D \n\nEnds 11:59pm ET",
+          "date_time": "2024-11-24 19:02:35.402",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Feeling festive? Celebrate with 30% OFF*\n\nGet your code: https://fragrancenet.attn.tv/aF4IIKnA_t7V \n\nTODAY ONLY",
+          "date_time": "2024-11-25 11:11:11.139",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: It\u0027s the most wonderful time for a deal! \n\nShop now \u0026 save 30% OFF*: https://fragrancenet.attn.tv/adQUH838Yd8U \n\nEnds 11:59pm ET",
+          "date_time": "2024-11-25 19:11:15.058",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Need gift ideas? Find the perfect presents for everyone on your list in our holiday gift guide: https://fragrancenet.attn.tv/atXUFtgLBHjN .",
+          "date_time": "2024-11-26 13:06:20.481",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Ready for the biggest shopping day of the year? How about\n*EARLY ACCESS*\n\nRedeem Now: https://fragrancenet.attn.tv/aa5OGkYmPtF6 \n\nEnds 11/29",
+          "date_time": "2024-11-27 11:06:14.593",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Black Friday starts NOW (but just for YOU!)\n\nGet early access: https://fragrancenet.attn.tv/aFPsGNqJ4Ycz \n\nEnds 11/29",
+          "date_time": "2024-11-27 19:14:40.968",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Happy Thanksgiving! We\u0027re so thankful for YOU!\n\nEnjoy a little gift from us: https://fragrancenet.attn.tv/aPUspdlA66rE \n\nEnds 11/29",
+          "date_time": "2024-11-28 19:10:54.812",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: *BLACK FRIDAY* IS HERE! \n\nUnlock your exclusive deal NOW: https://fragrancenet.attn.tv/aBpfBI285FEu \n\nEnds 12/2",
+          "date_time": "2024-11-29 10:31:49.022",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Black Friday savings are in full swing! Take up to 35% OFF*\n\nShop NOW: https://fragrancenet.attn.tv/a383F32JM0DA \n\nEnds 12/2",
+          "date_time": "2024-11-29 19:02:04.175",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: We\u0027re spreading joy! Take $25 OFF $50 - today only.\n\nHurry, this deal won\u0027t last: https://fragrancenet.attn.tv/aJKMENmGU8XZ \n\nEnds 11:59pm ET",
+          "date_time": "2024-11-30 10:09:59.633",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Sleigh bells are ringing \u0026 so are the savings! $25 Off* ends TONIGHT!\n\nShop Now: https://fragrancenet.attn.tv/aYr8xkX00kW9 \n\nEnds 11:59pm ET",
+          "date_time": "2024-11-30 19:06:41.466",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Two ways to save = twice the joy!\n\n35% OFF $150: https://fragrancenet.attn.tv/aduZy6x_ZS5L \n\n33% OFF: https://fragrancenet.attn.tv/aAlOCnWHlCvp .",
+          "date_time": "2024-12-01 11:16:49.485",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Why wait till Cyber Monday to save?\n\n35% OFF $150: https://fragrancenet.attn.tv/aYTPqt4_tkuK\n\n33% OFF: https://fragrancenet.attn.tv/a0IoR7N5gU1Q .",
+          "date_time": "2024-12-01 19:06:43.006",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Our best deals are HERE!\nCelebrate Cyber Monday with TWO ways to save: https://fragrancenet.attn.tv/aXjnQHGgl9Wm \n\nEnds Tonight",
+          "date_time": "2024-12-02 10:33:04.751",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: It\u0027s now or never! Shop our best holiday deals before they\u0027re gone: https://fragrancenet.attn.tv/awlS_LFh4i5c \n\nEnds 11:59pm ET",
+          "date_time": "2024-12-02 18:07:59.695",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Get your FLASH on! Score 33% OFF sitewide when you shop now: https://fragrancenet.attn.tv/af56HjzQuPVC \n\nEnds 11:59pm ET",
+          "date_time": "2024-12-03 10:14:49.212",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: HO-HO-HURRY! Up to 80% off merrier markdowns when you take 33% OFF: https://fragrancenet.attn.tv/aUpOpwVp7Bti \n\nEnds 11:59pm ET",
+          "date_time": "2024-12-03 18:25:41.907",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: The magic of the season is here - unlock a mystery offer, just for you!\n\nClick to reveal: https://fragrancenet.attn.tv/aLcFW15NC4VR \n\nEnds 12/5",
+          "date_time": "2024-12-04 10:01:23.435",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: Festive Fragrance Flash! Take $25 OFF when you spend $50+\n\nShop NOW: https://fragrancenet.attn.tv/ayRL3AsroVj1 \n\nEnds 11:59pm ET",
+          "date_time": "2024-12-05 09:14:57.413",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: You\u0027ve received a gift from your *SECRET SCENT-A*\n\nTap to unwrap \u003e \u003e https://fragrancenet.attn.tv/a96RbuWZNstN \n\nEnds 12/7",
+          "date_time": "2024-12-06 11:01:39.494",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: It\u0027s the season of savings \u0026 we got a gift for you!\n\nUnwrap your gift: https://fragrancenet.attn.tv/aLh8pu2L65Jf \n\nEnds 12/7",
+          "date_time": "2024-12-06 19:10:55.015",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: *Holiday Must-Haves*\nShop festive \u0026 fabulous fragrances for them (or you!): https://fragrancenet.attn.tv/aK9zdW4GRMXX .",
+          "date_time": "2024-12-07 19:01:14.241",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FragranceNet: This is an automated service. If you need additional help, please email us here: https://fragrancenet.attn.tv/cl/qpz . Reply STOP to unsubscribe.",
+          "date_time": "2024-12-07 19:37:05.046",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Espera",
+          "date_time": "2024-12-07 19:37:08.164",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0193a3b3-0ca9-41b7-f000-00002ff88320",
+          "message_text": "FragranceNet: Sure, let me know how I can assist you further!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-12-07 19:37:20.688"
+        }
+      ]
     }
   }
 }
