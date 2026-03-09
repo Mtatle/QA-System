@@ -31,9 +31,9 @@ const ASSIGNMENTS_HEADERS = [
   'assigned_at'
 ];
 
-const POOL_HEADERS = ['send_id', 'send_text', 'status'];
+const POOL_HEADERS = ['send_id', 'agent_message', 'status'];
 const POOL_COL_SEND_ID = 0;
-const POOL_COL_SEND_TEXT = 1;
+const POOL_COL_AGENT_MESSAGE = 1;
 const POOL_COL_STATUS = 2;
 const SESSION_HEADERS = [
   'session_id',
@@ -293,7 +293,9 @@ function doPost(e) {
       const scenarios = Array.isArray(data.scenarios) ? data.scenarios : [];
       return withScriptLock_(function() {
         writeUploadedJsonList_(UPLOADED_SCENARIOS_SHEET, scenarios);
-        return jsonResponse_({ ok: true, scenarios: scenarios });
+        const poolResult = addScenariosToPool_(scenarios);
+        if (poolResult.error) return jsonResponse_({ error: poolResult.error });
+        return jsonResponse_({ ok: true, scenarios: scenarios, pool: poolResult });
       });
     }
 
@@ -303,7 +305,9 @@ function doPost(e) {
       return withScriptLock_(function() {
         const result = appendUploadedJsonList_(UPLOADED_SCENARIOS_SHEET, scenarios, { reset: reset });
         if (result.error) return jsonResponse_({ error: result.error });
-        return jsonResponse_({ ok: true, added: result.added, total: result.total });
+        const poolResult = addScenariosToPool_(scenarios);
+        if (poolResult.error) return jsonResponse_({ error: poolResult.error });
+        return jsonResponse_({ ok: true, added: result.added, total: result.total, pool: poolResult });
       });
     }
 
@@ -1384,16 +1388,16 @@ function addSendIdsToPool_(sendIds) {
 
   for (let i = 0; i < uniqueEntries.length; i++) {
     const sendId = uniqueEntries[i].send_id;
-    const sendText = uniqueEntries[i].send_text;
+    const agentMessage = uniqueEntries[i].agent_message;
     const idx = indexBySendId[sendId];
     if (idx == null) {
-      newRows.push([sendId, sendText, 'AVAILABLE']);
+      newRows.push([sendId, agentMessage, 'AVAILABLE']);
       added++;
       continue;
     }
 
-    if (sendText && !String(poolValues[idx][POOL_COL_SEND_TEXT] || '').trim()) {
-      poolValues[idx][POOL_COL_SEND_TEXT] = sendText;
+    if (agentMessage && String(poolValues[idx][POOL_COL_AGENT_MESSAGE] || '').trim() !== agentMessage) {
+      poolValues[idx][POOL_COL_AGENT_MESSAGE] = agentMessage;
     }
 
     const currentStatus = String(poolValues[idx][POOL_COL_STATUS] || '').trim().toUpperCase();
@@ -1408,7 +1412,7 @@ function addSendIdsToPool_(sendIds) {
   if (poolValues.length > 0) {
     poolSheet.getRange(2, 2, poolValues.length, 2).setValues(
       poolValues.map(function(row) {
-        return [row[POOL_COL_SEND_TEXT], row[POOL_COL_STATUS]];
+        return [row[POOL_COL_AGENT_MESSAGE], row[POOL_COL_STATUS]];
       })
     );
   }
@@ -1761,16 +1765,96 @@ function normalizePoolEntries_(values) {
       if (!sendId) continue;
       out.push({
         send_id: sendId,
-        send_text: String(value.send_text || value.SEND_TEXT || '').trim()
+        agent_message: String(
+          value.agent_message ||
+          value.AGENT_MESSAGE ||
+          value.send_text ||
+          value.SEND_TEXT ||
+          ''
+        ).trim()
       });
       continue;
     }
 
     const sendId = String(value || '').trim();
     if (!sendId) continue;
-    out.push({ send_id: sendId, send_text: '' });
+    out.push({ send_id: sendId, agent_message: '' });
   }
   return out;
+}
+
+function addScenariosToPool_(scenarios) {
+  const entries = buildPoolEntriesFromScenarios_(scenarios);
+  if (!entries.length) {
+    return { ok: true, added: 0, reactivated: 0, total: 0 };
+  }
+  return addSendIdsToPool_(entries);
+}
+
+function buildPoolEntriesFromScenarios_(scenarios) {
+  const list = Array.isArray(scenarios) ? scenarios : [];
+  const out = [];
+  for (let i = 0; i < list.length; i++) {
+    const scenario = list[i];
+    if (!scenario || typeof scenario !== 'object' || Array.isArray(scenario)) continue;
+    const sendId = String(
+      scenario.send_id ||
+      scenario.SEND_ID ||
+      scenario.id ||
+      scenario.ID ||
+      ''
+    ).trim();
+    if (!sendId) continue;
+    out.push({
+      send_id: sendId,
+      agent_message: extractLastAgentMessageFromScenario_(scenario)
+    });
+  }
+  return out;
+}
+
+function extractLastAgentMessageFromScenario_(scenario) {
+  const convo = Array.isArray(scenario.conversation)
+    ? scenario.conversation
+    : (Array.isArray(scenario.messages) ? scenario.messages : []);
+  for (let i = convo.length - 1; i >= 0; i--) {
+    const message = convo[i];
+    if (!message || typeof message !== 'object') continue;
+    const role = String(
+      message.role ||
+      message.message_type ||
+      message.type ||
+      message.speaker ||
+      message.sender ||
+      ''
+    ).trim().toLowerCase();
+    if (role !== 'agent' && role !== 'assistant') continue;
+    const content = String(
+      message.content ||
+      message.message_text ||
+      message.text ||
+      ''
+    ).trim();
+    if (content) return content;
+  }
+
+  let bestIndex = -1;
+  let bestMessage = '';
+  for (const key in scenario) {
+    if (!Object.prototype.hasOwnProperty.call(scenario, key)) continue;
+    const match = String(key || '').match(/^AgentMessage(\d+)$/i);
+    if (!match) continue;
+    const index = Number(match[1]);
+    const content = String(scenario[key] || '').trim();
+    if (!content) continue;
+    if (index > bestIndex) {
+      bestIndex = index;
+      bestMessage = content;
+    }
+  }
+  if (bestMessage) return bestMessage;
+
+  return String(scenario.agent_message || scenario.agentMessage || '').trim();
 }
 
 function findSessionIndex_(sessionsRows, sessionId) {
