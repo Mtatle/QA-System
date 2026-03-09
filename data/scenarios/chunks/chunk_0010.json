@@ -3,816 +3,66 @@
   "chunk": "chunk_0010",
   "scenarios": {
     "46": {
-      "agentName": "Amy",
-      "has_shopify": true,
-      "id": "019c973c-c297-44c4-f000-0000fc51d548",
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "01902d2d-71a9-45fa-f000-000003f49daa",
       "rightPanel": {
-        "promotions": [
-          {
-            "title": "BECLEAR15",
-            "content": [
-              "Code for Spin to Win $15 off share ONLY if a cx is asking for the code."
-            ]
-          }
-        ],
-        "coupons": [
-          {
-            "subscriber_id": 4233221448,
-            "description": "your first order",
-            "value": "15",
-            "company_id": 6086,
-            "coupon_url": "https://clearstem-skincare.myshopify.com/discount/BECLEAR15?utm_source=attentive\u0026utm_medium=sms",
-            "static_code": "BECLEAR15",
-            "name": "STW $15 Off",
-            "coupon": "BECLEAR15",
-            "redemption_status": "UNUSED",
-            "value_type": "FLAT_FIXED_CURRENCY"
-          }
-        ],
         "browsingHistory": [
           {
-            "link": "https://clearstem.com/products/hydraglow",
-            "item": "HYDRAGLOWTM Stem Cell Moisturizer",
-            "timeAgo": "2026-02-25"
+            "link": "https://www.fluevog.com/shop/7352-cadet-black?utm_campaign=conciergeca\u0026utm_medium=sms\u0026utm_source=attentive\u0026item=1\u0026of=3\u0026anchor=true\u0026externalId=hWKMt",
+            "item": "Cadet - Black | Fluevog x Star Trek: Strange New WorldsTM | Fluevog Shoes",
+            "timeAgo": "2024-06-18"
           },
           {
-            "link": "https://clearstem.com/products/clearity",
-            "item": "CLEARITY® - \"The Blackhead Dissolver\"",
-            "timeAgo": "2026-02-20"
+            "link": "https://www.fluevog.com/shop/7352-cadet-black?utm_campaign=conciergeca\u0026utm_medium=sms\u0026utm_source=attentive\u0026item=1\u0026of=3\u0026anchor=true\u0026externalId=hWKMt",
+            "item": "Manifold Cadet: Black",
+            "timeAgo": "2024-06-18"
+          },
+          {
+            "link": "https://www.fluevog.com/shop/7352-cadet-black?item=1\u0026of=3\u0026anchor=true",
+            "item": "Manifold Cadet: Black",
+            "timeAgo": "2024-06-12"
+          },
+          {
+            "link": "https://www.fluevog.com/shop/7352-cadet-black?item=1\u0026of=3\u0026anchor=true",
+            "item": "Manifold Cadet: Black",
+            "timeAgo": "2024-06-12"
+          },
+          {
+            "link": "https://www.fluevog.com/shop/6873-starfleet-black?item=2\u0026of=3\u0026anchor=true",
+            "item": "Manifold Starfleet: Black",
+            "timeAgo": "2024-06-12"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://clearstem.com",
+          "value": "https://fluevog.com",
           "date": ""
-        },
-        "orders": [
-          {
-            "currency": "USD",
-            "orderDate": "2026-02-24",
-            "items": [
-              {
-                "price": [
-                  58
-                ],
-                "productLink": "https://clearstem-skincare.myshopify.com/products/hydraglow",
-                "name": "HYDRAGLOWTM Stem Cell Moisturizer"
-              }
-            ],
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction!input.action?tRef=qt\u0026tLc=0\u0026tLabels=9261290318421513232109",
-            "link": "https://clearstem.com/56349720736/orders/8f4b4381bfed4da6333adb4945ae5644/authenticate?key=94230637ddc5114dd438f27f0c73793c",
-            "date_time": "2026-02-24 23:13:15.883",
-            "discount_amount": 0,
-            "orderNumber": "1214420",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction!input.action?tRef=qt\u0026tLc=0\u0026tLabels=9261290318421513232109",
-            "total": 97.49
-          }
-        ]
+        }
       },
-      "companyWebsite": "https://clearstem.com",
-      "companyName": "CLEARSTEM",
+      "companyWebsite": "https://fluevog.com",
+      "companyName": "John Fluevog Shoes",
       "notes": {
-        "promo_and_exclusions": [
-          "MINDBODYSKIN is not eligible for any discount codes!"
+        "escalate": [
+          "Add the cx\u0027s full name \u0026 which region they\u0027re shopping from (US, CA, or AU) in the ESC notes",
+          "Add the product links cx are inquiring about to your ESC notes"
+        ],
+        "templates": [
+          "For post purchase issues, use OIS shortcut",
+          "For gift exchange inquiries, use GEX shortcut",
+          "If the cx didn\u0027t receive the gift from the gift exchange program!, use GGE shortcut",
+          "If cx\u0027s say the item they want isn\u0027t on sale, don\u0027t use ncode, use SGS temp"
+        ],
+        "dos_and_donts": [
+          "Send links only from the US site",
+          "Use NordLayer when accessing their website"
         ]
       },
       "blocklisted_words": [
         
       ],
       "escalation_preferences": [
-        "nutrition, diet, unhappy with product, personalized questions"
-      ],
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Welcome to CLEARSTEM! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/T4W",
-          "date_time": "2026-02-18 17:17:53.220",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Welcome! Click here for your offer: clearstem.attn.tv/aeaYsKBFHnXg .",
-          "date_time": "2026-02-18 17:17:57.665",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nTo start, take our 60-second quiz to help us create the perfect skincare routine for you \u003e https://clearstem.attn.tv/aJdXY49P4AQC .",
-          "date_time": "2026-02-18 17:19:02.681",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Complete your HYDRAGLOWTM STEM CELL MOISTURIZER in cart — hydrates and plumps fast with zero pore blockers.\n\nUse code BECLEAR15 to take $15 off your first order.\n\nDiscover: https://clearstem.attn.tv/aGZ9fvywfixh .",
-          "date_time": "2026-02-18 17:30:59.981",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Over 20K people have recently viewed HYDRAGLOWTM STEM CELL MOISTURIZER.\n\nUse code BECLEAR15 for $15 off your first order; free shipping on orders $75+.\n\nShop now: https://clearstem.attn.tv/aSllVKsD9Vrg .",
-          "date_time": "2026-02-19 17:31:06.442",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Check out CLEARITY BLACKHEAD DISSOLVER SERUM — dissolves blackheads, brightens skin, unclogs pores, firms for smoother skin.\n\nFree shipping on orders $75+.\n\nTime to glow: https://clearstem.attn.tv/ar8YFnP13ufb .",
-          "date_time": "2026-02-20 14:18:31.767",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Hi Angels, your 222 sale starts today! Get 22% off your entire basket of favorites with code 22LOVE.\n\nShop now: clearstem.attn.tv/aNe8YbyuaIdA .",
-          "date_time": "2026-02-21 12:02:19.444",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Happy 2.22!!! You know what that means: 22% OFF your entire order.\n\nUSE CODE 22LOVE: clearstem.attn.tv/ajCnKlkUD9vQ .",
-          "date_time": "2026-02-22 12:02:26.684",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Shop BY MIDNIGHT to get 22% off EVERYTHING! \n\nUse Code 22LOVE: clearstem.attn.tv/ak8iWNz4FEyP .",
-          "date_time": "2026-02-24 12:30:59.748",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Hi Friend, Your final sign! 222 sale ENDS NOW. \n\nGet 22% off with code 22LOVE: clearstem.attn.tv/a0CX3L5MxotD .",
-          "date_time": "2026-02-24 18:00:51.369",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Thank you for your purchase! Your order number is 1214420. View more information about your order here: https://clearstem.attn.tv/ayWiz87RToJF .",
-          "date_time": "2026-02-24 18:13:30.527",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: SALE EXTENDED! 22% off is on for one more day - just for being a VIP. \n\nUse code 22LOVE: clearstem.attn.tv/aWGVRDcTFToQ .",
-          "date_time": "2026-02-25 12:02:27.397",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Grab HYDRAGLOWTM STEM CELL MOISTURIZER, Grace — hydrates and plumps fast with zero pore blockers and a fresh berry scent.\n\nFree shipping on orders $75+.\n\nTry it here: https://clearstem.attn.tv/ab_GTUdrUZp5 .",
-          "date_time": "2026-02-25 12:03:56.743",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "CLEARSTEM: Hi Grace! Ok it\u0027s OVER OVER. For real this time. Last reminder for 22% off EVERYTHING.\n\nUse code 22LOVE by midnight: clearstem.attn.tv/a9z0Vb05w3s- .",
-          "date_time": "2026-02-25 18:00:57.725",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Is my free gift coming in my current order or do I have to place another one?",
-          "date_time": "2026-02-25 18:24:51.229",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c9722-c2af-404e-f000-0000fc51d548",
-          "message_text": "CLEARSTEM: Thank you for reaching out. I\u0027m sorry, but are you referring to the free cleansing pads? If yes, then unfortunately, it is not included in your recent order since the code 22LOVE for 22% discount was already applied to it. Unfortunately, you won\u0027t be able to use multiple deals at checkout. I hope this clarifies it.",
-          "message_type": "agent",
-          "agent": "48804",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-25 18:29:23.661"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "No, the SULFUR SPOT\u0026MASK",
-          "date_time": "2026-02-25 18:33:04.674",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "I received an email about it",
-          "date_time": "2026-02-25 18:33:14.708",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c9727-845d-488c-f000-0000fc51d548",
-          "message_text": "CLEARSTEM: I see. Can you please send a screenshot of the offer you received so I can double-check? ",
-          "message_type": "agent",
-          "agent": "43099",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-25 18:34:35.384"
-        },
-        {
-          "message_id": "019c9735-71d7-4b82-f000-0000fc51d548",
-          "message_text": "CLEARSTEM: Thank you for sending over the screenshot. Just to confirm, did you receive this email after you placed your first purchase? If so, it might apply to your next order. Let me know so I can clarify!",
-          "message_type": "agent",
-          "agent": "82223",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-25 18:49:48.140"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Yes, I placed my order yesterday, and received this email today. I\u0027m bummed if it\u0027s applying to my next order though because I stocked up on my order yesterday and won\u0027t need more product for a while",
-          "date_time": "2026-02-25 18:51:04.910",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c9739-271c-4000-f000-0000fc51d548",
-          "message_text": "CLEARSTEM: Thank you for clarifying. I can check with my team to see if we can apply the code to your order. Could you please send me your order number, email address?",
-          "message_type": "agent",
-          "agent": "39001",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-25 18:53:51.161"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Order #CS1214420",
-          "date_time": "2026-02-25 18:54:54.581",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "gghowrsrluvr@gmail.com",
-          "date_time": "2026-02-25 18:55:14.638",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "gghowrseluvr@gmail.com",
-          "date_time": "2026-02-25 18:55:24.667",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Forgot the \"e\" in the first one, sorry",
-          "date_time": "2026-02-25 18:55:34.699",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "I appreciate it!",
-          "date_time": "2026-02-25 18:55:44.742",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c973b-a747-487b-f000-0000fc51d548",
-          "message_text": "CLEARSTEM: Thank you for the info! Let me check on this with my team, and I\u0027ll get back to you as soon as I have more information. I\u0027ll keep you updated!",
-          "message_type": "agent",
-          "agent": "46059",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-25 18:56:35.037"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Great! Thanks again!",
-          "date_time": "2026-02-25 18:57:04.463",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c973c-c297-44c4-f000-0000fc51d548",
-          "message_text": "CLEARSTEM: My pleasure! ",
-          "message_type": "agent",
-          "agent": "43099",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-25 18:57:47.566"
-        }
-      ]
-    },
-    "47": {
-      "agentName": "",
-      "has_shopify": true,
-      "id": "019c8cd0-82a8-420a-f000-00000cc9678a",
-      "rightPanel": {
-        "browsingHistory": [
-          {
-            "link": "https://simonpearce.com/products/woodbury-vase-m-2nd",
-            "item": "Woodbury Vase - M 2nd",
-            "timeAgo": "2024-12-02"
-          },
-          {
-            "link": "https://simonpearce.com/products/vintner-red-wine-2nd",
-            "item": "Vintner Red Wine - 2nd",
-            "timeAgo": "2024-12-02"
-          },
-          {
-            "link": "https://simonpearce.com/products/shelburne-bowl-l-2nd",
-            "item": "Shelburne Bowl - L 2nd",
-            "timeAgo": "2024-12-02"
-          },
-          {
-            "link": "https://simonpearce.com/products/woodstock-snow-globe?attn_pos=2\u0026utm_campaign=241104_GTM7_Snow%20Globe%20Drop\u0026utm_medium=email\u0026utm_source=attentive\u0026externalId=MZdmX",
-            "item": "Woodstock Snow Globe",
-            "timeAgo": "2024-11-04"
-          },
-          {
-            "link": "https://simonpearce.com/products/ascutney-wine-decanter-2nd",
-            "item": "Ascutney Wine Decanter - 2nd",
-            "timeAgo": "2024-08-27"
-          }
-        ],
-        "coupons": [
-          {
-            "subscriber_id": 214525834,
-            "description": "$20 off your first purchase of $250+",
-            "company_id": 4650,
-            "coupon_url": "https://simonpearce.myshopify.com/discount/PS$20-25-IEJbP2?utm_content=SIGN_UP_UNIT\u0026utm_term=WEBSITE",
-            "value": "20",
-            "name": "PS$20-25",
-            "coupon": "PS$20-25-IEJbP2",
-            "redemption_status": "UNUSED",
-            "value_type": "FLAT_FIXED_CURRENCY"
-          },
-          {
-            "subscriber_id": 214525834,
-            "description": "off your first purchase",
-            "company_id": 4650,
-            "coupon_url": "https://simonpearce.myshopify.com/discount/PS$20-LwGnV7?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=PS$20",
-            "value": "20",
-            "name": "PS$20",
-            "coupon": "PS$20-LwGnV7",
-            "redemption_status": "UNUSED",
-            "value_type": "FLAT_FIXED_CURRENCY"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://simonpearce.com",
-          "date": ""
-        },
-        "orders": [
-          {
-            "currency": "USD",
-            "orderDate": "2024-07-13",
-            "items": [
-              {
-                "price": [
-                  80
-                ],
-                "productLink": "https://simonpearce.myshopify.com/products/addison-pitcher",
-                "name": "Addison Pitcher"
-              }
-            ],
-            "date_time": "2024-07-13 19:53:59.496",
-            "discount_amount": 0,
-            "orderNumber": "5996367937849",
-            "total": 101.41
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2023-09-02",
-            "items": [
-              {
-                "price": [
-                  {
-                    "value": [
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63,
-                      50.63
-                    ],
-                    "Count": 88
-                  }
-                ],
-                "productLink": "System.Object[]",
-                "name": "System.Object[]"
-              }
-            ],
-            "date_time": "2023-09-02 15:28:04.763",
-            "discount_amount": 0,
-            "orderNumber": "000396667",
-            "total": 394.13
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2023-09-02",
-            "items": [
-              {
-                "price": [
-                  {
-                    "value": [
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25,
-                      131.25
-                    ],
-                    "Count": 110
-                  }
-                ],
-                "productLink": "System.Object[]",
-                "name": "System.Object[]"
-              }
-            ],
-            "date_time": "2023-09-02 15:28:04.758",
-            "discount_amount": 0,
-            "orderNumber": "000396667",
-            "total": 394.13
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2023-09-02",
-            "items": [
-              {
-                "price": [
-                  {
-                    "value": [
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13,
-                      103.13
-                    ],
-                    "Count": 109
-                  }
-                ],
-                "productLink": "System.Object[]",
-                "name": "System.Object[]"
-              }
-            ],
-            "date_time": "2023-09-02 15:28:04.705",
-            "discount_amount": 0,
-            "orderNumber": "000396667",
-            "total": 394.13
-          }
-        ]
-      },
-      "companyWebsite": "https://simonpearce.com",
-      "companyName": "Simon Pearce",
-      "notes": {
-        "escalate": [
-          "ESC any wholesale or bulk discount pricing inquiries",
-          "ESC if cx wants to unsubscribe from emails after sending the TME shortcut",
-          "ESC if cx requests a call"
-        ],
-        "dos_and_donts": [
-          "If a cx asks about \"seconds\", they are referring to https://simonpearce.com/collections/seconds A collection of pieces that have natural and slight variations.",
-          "If cx sends “GLASS” they’re entering a giveaway",
-          "Do not share codes or promotions with subscribers"
-        ],
-        "drive_to_purchase": [
-          "Don\u0027t recommend \"seconds\" to cx",
-          "Do not advertise free shipping"
-        ]
-      },
-      "blocklisted_words": [
-        "esteemed"
-      ],
-      "escalation_preferences": [
         "Shipping questions",
-        "Discount code errors",
         "Sizing questions",
         "Exchanges and returns"
       ],
@@ -820,121 +70,112 @@
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "Simon Pearce: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Simon Pearce.",
-          "date_time": "2026-02-22 17:02:37.095",
+          "message_text": "Fluevog: Get your funk on! The NEW Fluevog x George Clinton collection has arrived, and it\u0027s funkadelic! Shop now: https://usvog.attn.tv/aJMRg2SqkEVu ",
+          "date_time": "2024-05-31 12:35:36.867",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Simon Pearce: Welcome to Simon Pearce! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "date_time": "2026-02-22 17:03:10.730",
+          "message_text": "Fluevog: FLASH SALE! Take an EXTRA 30% OFF all sale styles! But hurry! Offer ends Monday, June 10. Shop now to secure your faves: https://usvog.attn.tv/aix61hb4319k ",
+          "date_time": "2024-06-07 14:06:58.017",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Simon Pearce: Welcome! Enjoy $20 off your first purchase. Enter PS$20-25-IEJbP2 at checkout, or click here to auto-apply + shop now: https://simonpearce.attn.tv/ay5sOrr59_y6 .\n\n*Offer valid on orders over $250.",
-          "date_time": "2026-02-22 17:03:14.743",
+          "message_text": "Fluevog: HURRY! Extra 30% off all sale ends TONIGHT. Don\u0027t let your feet stay sad! Shop now: https://usvog.attn.tv/aTYv6QvZW2BN ",
+          "date_time": "2024-06-10 20:02:30.188",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Simon Pearce: Don\u0027t forget to save our contact to get exclusive updates!",
-          "date_time": "2026-02-22 17:03:16.483",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Handcrafted glass trees, perfect for tabletop displays.\n\nDiscover the collection: https://simonpearce.attn.tv/ae4frmurM3qQ .",
-          "date_time": "2026-02-22 17:19:09.842",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Don\u0027t miss our new arrivals, fresh from the workshop. Get inspired with these thoughtful handmade designs: https://simonpearce.attn.tv/aGT0Ke20dhze ",
-          "date_time": "2026-02-23 10:25:47.129",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Simon Pearce: Still deciding? In case you missed it, use offer PS$20-25-IEJbP2 at checkout. Shop now: https://simonpearce.attn.tv/aTo_nbPAsO9k .",
-          "date_time": "2026-02-23 17:03:28.403",
+          "message_text": "Fluevog: Hey, this is Jordan. Thanks for checking out our site! https://usvog.attn.tv/aM0BQKQxjtXO \n\nIs there anything I can help you find today? (I won\u0027t tell your other shoes.)",
+          "date_time": "2024-06-12 12:04:21.238",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "Offer did not work",
-          "date_time": "2026-02-23 18:12:58.381",
+          "message_text": "Somehow I didn\u0027t see this until just now! Sorry about that. I was looking at the Cadet boot, and am tempted, but I worry a bit about the foot bed. I have several pairs of Fluvog shoes sitting in a closet because their foot beds are too narrow. However, the 7th Heaven foot beds work well for me. What is the Cadet\u0027s foot bed like?",
+          "date_time": "2024-06-18 16:39:23.923",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "019c8cc7-b135-4801-f000-00000cc9678a",
-          "message_text": "Simon Pearce: Thanks for reaching out, and I\u0027m sorry to hear that! Could you kindly send me a screenshot of the items in your cart? I would like to check on this further for you. ",
+          "message_id": "01902d19-6e68-4c07-f000-000003f49daa",
+          "message_text": "Fluevog: Thanks for letting me know, and no problem at all! If you\u0027re referring to these boots - https://usvog.attn.tv/aaKIpG37HVQl These run small and narrow. We suggest sizing up by a half-size, or a full size for wider feet. The removable insole may be too thick, making the boots fit 1/2 size smaller. Without it, they fit true to size and give extra toe room. You can replace the insole with a thinner one if needed. If you\u0027re between sizes, it\u0027s best to size up. \n\nOur shoe fitting is very specific to the style of the shoe. I\u0027d also recommend checking out the reviews on the product page as some shoes have quite a few reviews to help you with sizing questions. If you\u0027re still in doubt, let me know the size you usually wear so I can check on this with the team for you!",
           "message_type": "agent",
-          "agent": "109617",
+          "agent": "46578",
           "message_media": [
             
           ],
-          "date_time": "2026-02-23 18:13:43.251"
+          "date_time": "2024-06-18 16:45:59.799"
         },
         {
-          "message_id": "019c8cd0-82a8-420a-f000-00000cc9678a",
-          "message_text": "Simon Pearce: Thanks for the screenshot. Let me check this for you. One moment! ",
+          "message_type": "customer",
+          "message_text": "Those are indeed the shoes! It\u0027s good to know about the small and narrow fit. \n\nMy Super Vogs are all 9s, and fit like a dream. I have some that read \"Future Angel\" on the soles that are also 9s, and are comfortable. I have a pair that says \"Dadio\" on the sole that at 8.5 I can barely squeeze my foot into, and a dressier shoe that is an 8.5 and is tight, but wearable. I\u0027m not sure of the style name, but I can send you pictures if that would help.",
+          "date_time": "2024-06-18 16:59:13.543",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Oh. One pair of supervogs is an 8.5. it fits well, though.",
+          "date_time": "2024-06-18 17:06:53.275",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01902d2d-71a9-45fa-f000-000003f49daa",
+          "message_text": "Fluevog: Our shoe fittings are specific to each style, so I recommend checking out the reviews on the product page as some shoes have several reviews that can provide helpful insights on sizing.\n\nRegarding the Manifold Cadet Fluevog X Star Trek: Strange New Worlds, these shoes tend to fit small and narrow in the toe area. We suggest going half a size up from your usual size. If you have wider feet, consider sizing up by a whole size. It\u0027s worth noting that these boots feature a removable insole that may be too thick for some wearers.\n\nFor example, if you typically wear size 9 Vogfs, I would recommend getting size 9.5 or even 10 if your feet are wider.",
           "message_type": "agent",
-          "agent": "43099",
+          "agent": "82259",
           "message_media": [
             
           ],
-          "date_time": "2026-02-23 18:23:21.161"
+          "date_time": "2024-06-18 17:07:51.349"
         }
       ]
     },
-    "48": {
-      "agentName": "",
+    "47": {
+      "agentName": "Sarah",
       "has_shopify": false,
-      "id": "019c6c8a-3861-4d88-f000-0000fbdd486b",
+      "id": "018f370c-7a47-46f3-f000-0000875de7d5",
       "rightPanel": {
         "coupons": [
           {
-            "subscriber_id": 4225583211,
-            "company_id": 6199,
-            "value": "25",
-            "static_code": "WELCOME25",
-            "name": "Welcome25",
-            "coupon": "WELCOME25",
-            "redemption_status": "UNUSED",
-            "value_type": "PERCENT"
+            "status": "INACTIVE",
+            "description": "your order of $60+",
+            "coupon": "1318737032054787"
+          },
+          {
+            "coupon": "1986719639601328",
+            "status": "INACTIVE"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://allposters.com/",
+          "value": "https://staples.com",
           "date": ""
         }
       },
-      "companyWebsite": "https://allposters.com/",
-      "companyName": "AllPosters",
+      "companyWebsite": "https://staples.com",
+      "companyName": "Staples",
       "notes": {
         "send_to_cs": [
           "No ESC for this client, send everything to CS"
         ],
         "tone": [
-          "Close the convo once the client takes over"
+          "Close the convo once the client takes over!"
         ]
       },
       "blocklisted_words": [
@@ -947,635 +188,894 @@
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "AllPosters: Reply Y to subscribe to recurring automated personalized offer alerts (e.g. cart reminders) from AllPosters.",
-          "date_time": "2026-02-17 11:49:38.060",
+          "message_text": "Staples.com: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/kBB",
+          "date_time": "2024-04-29 19:23:36.164",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "AllPosters: Welcome to AllPosters! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/yKp",
-          "date_time": "2026-02-17 11:50:02.147",
+          "message_text": "Staples.com: Hey there - welcome to Staples.com! You just earned your $15 OFF $60+ code! Tap to claim your offer: https://staples.attn.tv/a4qjShkidGNp . Exclusions apply.",
+          "date_time": "2024-04-29 19:23:40.202",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "AllPosters: Welcome! Use code WELCOME25 for 25% off your order\nallposters.attn.tv/atkPDgeMCSje .\n\nSee site for details, cannot be combined with sitewide promos.",
-          "date_time": "2026-02-17 11:50:04.406",
+          "message_text": "Staples.com: Add us in your contacts to get exclusive updates on new products, promotions \u0026 more. Simply tap on card \u0026 save us as a new contact!",
+          "date_time": "2024-04-29 19:23:42.722",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "AllPosters: You want to stay up on all the trends which is why you should check out this collection of what\u0027s new in posters and wall art prints!\n\nWe update the what\u0027s new gallery frequently, take a look now: https://allposters.attn.tv/aguZ_c3yZmLJ .",
-          "date_time": "2026-02-17 11:51:15.139",
+          "message_text": "Staples.com: 1318737032054787",
+          "date_time": "2024-04-29 19:30:59.500",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Staples.com: Need to power up your work? Check out our deals that won\u0027t drain your wallet! https://staples.attn.tv/aw7-sGo-jrSs .",
+          "date_time": "2024-04-30 08:44:34.932",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Staples.com: Friendly little reminder: We\u0027re giving you a $15 OFF $60+ coupon code! Tap to access and shop: https://staples.attn.tv/aVasCNDsi9E8 .",
+          "date_time": "2024-04-30 19:23:47.163",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "35192",
-          "date_time": "2026-02-17 11:51:49.994",
+          "message_text": "Hi",
+          "date_time": "2024-05-01 21:53:09.291",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "019c6c84-3e3d-4a44-f000-0000fbdd486b",
-          "message_text": "AllPosters: How can I help you with the information you sent? ",
+          "message_id": "018f3701-b77d-4b3e-f000-0000875de7d5",
+          "message_text": "Staples.com: Hello! How can I assist you today?",
           "message_type": "agent",
-          "agent": "35256",
+          "agent": "62551",
           "message_media": [
             
           ],
-          "date_time": "2026-02-17 11:52:11.989"
+          "date_time": "2024-05-01 21:53:30.499"
         },
         {
           "message_type": "customer",
-          "message_text": "All I see so far is Audrey Hepburn. I was on the Art.Com site months ago and picked out specific Black+ White photos, is it possible to order over the phone?!",
-          "date_time": "2026-02-17 11:53:50.294",
+          "message_text": "My coupon code isn\u0027t working",
+          "date_time": "2024-05-01 21:53:59.388",
           "message_media": [
             
           ]
         },
         {
-          "message_type": "customer",
-          "message_text": "Not looking for posters.. looking for Black + white photos in black frames. Have a list + sizes....",
-          "date_time": "2026-02-17 11:55:10.028",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "template",
-          "message_text": "Template used: \"Phone support\"; last updated: 2025-02-26 15:50:24.771",
-          "date_time": "2026-02-17 11:58:43.709",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c6c8a-3861-4d88-f000-0000fbdd486b",
-          "message_text": "AllPosters: My apologies for any confusion but I am part of the customer support team with AllPosters. You can check out our website here: https://allposters.attn.tv/a69nq1lTYrU5\n\nYou can check out the different black and white photos we have here: https://allposters.attn.tv/anu_wa7PhdnZ\n\nCan you please confirm what sizes you are looking to get? I\u0027d be happy to help!\n\nHowever, if you wish to place an order over the phone; we do have a phone support number and you can reach out to them directly. You can give us a call at 1-888-654-0143. We\u0027re available Monday through Friday, from 9 AM to 6 PM EST.\n\nI hope this helps!",
+          "message_id": "018f3702-668b-4add-f000-0000875de7d5",
+          "message_text": "Staples.com: I\u0027m sorry to hear that you\u0027re having trouble with your coupon code. Could you please share a screenshot of the issue? This will help us assist you better.",
           "message_type": "agent",
-          "agent": "126033",
+          "agent": "62551",
           "message_media": [
             
           ],
-          "date_time": "2026-02-17 11:58:43.714"
+          "date_time": "2024-05-01 21:54:15.315"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I just sent it",
+          "date_time": "2024-05-01 22:01:19.540",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Why is my code not working",
+          "date_time": "2024-05-01 22:01:22.976",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f370c-7a47-46f3-f000-0000875de7d5",
+          "message_text": "Staples.com: Thank you for the screenshot! For me to further check, mind sending me a screenshot of the item/s in your cart so I can check?",
+          "message_type": "agent",
+          "agent": "49296",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-01 22:05:15.730"
+        }
+      ]
+    },
+    "48": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "018f3b2f-35e1-41eb-f000-000039014a7f",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.famousfootwear.com/product/khombu-womens-blend-water-resistant-bootie-1055077/black-suede-leather-46043?partnerid=email_retargeting_wunderkind_cartabandon_cust1-nonpromo_trigger-FFUS\u0026ibx_source=copuj1iej42s73b09no0\u0026ueh=4d983e64178d181b9d96cd9daba4c32a26e36ad1de264fe5eed988ef3198971e#bx_cart=eyJjb3VudCI6MSwiZWlkIjoiMmZ2R3RlUHBRd0xRN0RGa2c2MWhpa1Npa0ozIiwiaXRlbXMiOm51bGwsInRva2VuIjoiIiwidmFsdWUiOiIifQ==\u0026em=am1zZXZpY2tAYW9sLmNvbQ%3D%3D\u0026et_cid=4834786\u0026et_rid=jmsevick%40aol.com\u0026h=bx_cart%3DeyJjb3VudCI6MSwiZWlkIjoiMmZ2R3RlUHBRd0xRN0RGa2c2MWhpa1Npa0ozIiwiaXRlbXMiOm51bGwsInRva2VuIjoiIiwidmFsdWUiOiIifQ%3D%3D\u0026om_rid=jmsevick%40aol.com\u0026partnerID=email_____\u0026wk_rid=1044878142",
+            "item": "Shop all Khombu",
+            "timeAgo": "2024-05-02"
+          },
+          {
+            "link": "https://www.famousfootwear.com/product/khombu-womens-blend-water-resistant-bootie-1055077/black-suede-leather-46043",
+            "item": "Shop all Khombu",
+            "timeAgo": "2024-05-02"
+          },
+          {
+            "link": "https://www.famousfootwear.com/product/sperry-womens-rosefish-boat-shoe-1037297/linen-oat-75527",
+            "item": "Shop all Sperry",
+            "timeAgo": "2024-05-02"
+          },
+          {
+            "link": "https://www.famousfootwear.com/product/sperry-womens-pier-wave-ltt-canvas-sneaker-1047137/white-95045",
+            "item": "Shop all Sperry",
+            "timeAgo": "2024-05-02"
+          },
+          {
+            "link": "https://www.famousfootwear.com/product/sperry-womens-pier-wave-ltt-canvas-sneaker-1047137/grey-95039",
+            "item": "Shop all Sperry",
+            "timeAgo": "2024-05-02"
+          }
+        ],
+        "coupons": [
+          {
+            "coupon": "15SMSWELNNHDYKLL",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "batch 1 has 1Mcodes in file. codes are online only codes.  Codes expire 1/30/2023",
+            "coupon": "SMSWEL22NLALGIAO"
+          },
+          {
+            "coupon": "920151488291NNFHTPDY",
+            "status": "ACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://famousfootwear.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-02",
+            "coupon": "wk 37 2023 session ai non combinable",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98,
+                      49.98
+                    ],
+                    "Count": 39
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2024-05-02 19:38:46.901",
+            "discount_amount": 0,
+            "orderNumber": "005019583927",
+            "total": 49.98
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-12-05",
+            "coupon": "reward cash 5;2023 rewards extras 2x birthday bonus points;reward cash 5;reward cash 10",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99,
+                      39.99
+                    ],
+                    "Count": 32
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-12-05 17:21:08.609",
+            "discount_amount": 0,
+            "orderNumber": "005017577241",
+            "total": 39.99
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-09",
+            "coupon": "wk 41 2023 extra 15 off;reward cash 10;2023 rewards extra 2x bonus points day",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99,
+                      59.99
+                    ],
+                    "Count": 35
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-11-09 17:54:27.991",
+            "discount_amount": 0,
+            "orderNumber": "005017021021",
+            "total": 59.99
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-08-14",
+            "coupon": "wk 29 2023 bmsm",
+            "items": [
+              {
+                "price": [
+                  45.98
+                ],
+                "name": "women\u0027s lounge away 2 canvas sneaker"
+              }
+            ],
+            "date_time": "2023-08-14 20:43:33.158",
+            "discount_amount": 0,
+            "orderNumber": "005014858867",
+            "total": 135.97
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-08-14",
+            "coupon": "wk 29 2023 bmsm",
+            "items": [
+              {
+                "price": [
+                  89.99
+                ],
+                "name": "men\u0027s slip-ins ultra flex 3.0 medium/wide sneaker"
+              }
+            ],
+            "date_time": "2023-08-14 20:43:33.154",
+            "discount_amount": 0,
+            "orderNumber": "005014858867",
+            "total": 135.97
+          }
+        ]
+      },
+      "companyWebsite": "https://famousfootwear.com",
+      "companyName": "Famous Footwear",
+      "notes": {
+        "escalate": [
+          "🚨 DO NOT ESCALATE - send to CS🚨"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Did you see something you liked? Get it before it\u0027s gone! Shop: http://famoussms.co/sl/jlIUC0_g .",
+          "date_time": "2024-04-04 18:11:57.594",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Don\u0027t miss out on stepping into comfort and style with those Naturalizer shoes in your cart!\n\nShop now and score big: http://famoussms.co/sl/1nCo-bKc .",
+          "date_time": "2024-04-04 18:50:24.400",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Today only! Chase away the Sunday scaries with an extra 20% off online: http://famoussms.co/l/Ml0/L36T1 .",
+          "date_time": "2024-04-07 12:01:30.822",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Save an extra 20% off Skechers online or in-store via the app. Don\u0027t miss out: http://famoussms.co/l/Lq6/L36T1 \n\nUse code: BIGDEAL20",
+          "date_time": "2024-04-11 12:00:52.987",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: JUST IN! Save an extra 15% off during the Spring Rewards Event. Sign in or join now: http://famoussms.co/l/wms/L36T1 \n\nMembers use code: WOW15OFF",
+          "date_time": "2024-04-12 17:01:04.014",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Last day! Take an extra 15% off while you still can. The Spring Rewards Event ends TONIGHT: http://famoussms.co/l/xkN/L36T1 \n\nMembers use code: WOW15OFF",
+          "date_time": "2024-04-15 16:05:30.513",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: LAST CHANCE to save an extra 20% off Skechers online or in-store via the app: http://famoussms.co/l/Pnq/L36T1 \n\nUse code: BIGDEAL20",
+          "date_time": "2024-04-17 12:30:35.725",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Double the savings STARTS NOW! Buy one, get one 50% off clearance. Shop in-store and online: http://famoussms.co/l/qKZ/L36T1 ",
+          "date_time": "2024-04-18 12:01:43.078",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: BOGO 50% off clearance ends soon! Save in-store and online on brands like Nike, Crocs, Converse and more: http://famoussms.co/l/TlU/L36T1 ",
+          "date_time": "2024-04-21 12:01:15.589",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: The Sunday Funday Sale is on! Enjoy an extra 20% off online: http://famoussms.co/l/3KV/L36T1 \n\nEnds tonight!",
+          "date_time": "2024-04-28 12:01:55.857",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Save big with BOGO 1/2 OFF during The Famous BOGO Event. Get summer ready: http://famoussms.co/l/9fM/L36T1 .",
+          "date_time": "2024-05-02 12:01:45.714",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Spotted some trendy Khombu footwear in your cart! Don\u0027t let these comfy and stylish shoes slip away.\n\nTap to complete your purchase: http://famoussms.co/sl/r4e_reMp .",
+          "date_time": "2024-05-02 14:46:17.474",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Give me free shipping and I\u0027ll buy them.",
+          "date_time": "2024-05-02 15:15:41.636",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f3ad0-1409-414b-f000-000039014a7f",
+          "message_text": "FAMOUS: No worries! We offer free shipping on all orders by FAMOUSLY YOU REWARDS Members or orders over $75 for non-members. Maybe you can add something else to reach the minimum? You may want to also check out new arrivals here: http://famoussms.co/sl/JQ5izzis",
+          "message_type": "agent",
+          "agent": "50269",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-02 15:37:46.261"
+        },
+        {
+          "message_id": "018f3b0b-38b2-4d76-f000-000039014a7f",
+          "message_text": "FAMOUS: I\u0027m sorry, I don\u0027t have any codes available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our sales collection here:\n\nfamousfootwear.com",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-02 16:42:22.264"
+        },
+        {
+          "message_id": "018f3b0f-cfc3-475d-f000-000039014a7f",
+          "message_text": "FAMOUS: I\u0027m sorry, I don\u0027t have any codes available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our sales collection here:\n\nfamousfootwear.com",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-02 16:47:23.082"
+        },
+        {
+          "message_id": "018f3b2a-410c-4fa4-f000-000039014a7f",
+          "message_text": "FAMOUS: I\u0027m sorry, I don\u0027t have any codes available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our sales collection here:\n\nfamousfootwear.com",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-02 17:16:16.020"
+        },
+        {
+          "message_id": "018f3b2f-35e1-41eb-f000-000039014a7f",
+          "message_text": "FAMOUS: I\u0027m sorry, I don\u0027t have any codes available at the moment, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! In the meantime, you can check out our sales collection here:\n\nfamousfootwear.com",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-02 17:21:40.840"
         }
       ]
     },
     "49": {
       "agentName": "Sarah",
-      "has_shopify": true,
-      "id": "019c81a5-8300-4601-f000-0000dd4d9f30",
+      "has_shopify": false,
+      "id": "019098b9-1513-4461-f000-000065d422ea",
       "rightPanel": {
-        "promotions": [
-          {
-            "title": "CART15",
-            "content": [
-              "• Proactively share with customers asking for a code, discount, or showing purchase intent.\n\n• Do NOT share if they were previously offered a $10 discount via automated message.\n\n• Applies only to full-priced items.\n\n• DO NOT offer if abandoned cart message references a sale item."
-            ]
-          },
-          {
-            "title": "CART10",
-            "content": [
-              "• Proactively share with customers asking for a code if they were previously offered $10 via automated message.\n\n• Applies only to full-priced items.\n\n• DO NOT offer if abandoned cart message references a sale item."
-            ]
-          },
-          {
-            "title": "10WELCOME",
-            "content": [
-              "• Code for 10% off\n• Only offer to customers if they want a different code after sharing CART15"
-            ]
-          }
-        ],
         "coupons": [
           {
-            "subscriber_id": 3712851760,
-            "company_id": 14473,
-            "coupon_url": "https://wooden-ships.myshopify.com/discount/10WELCOMES0kJfl",
-            "name": "10WELCOME",
-            "coupon": "10WELCOMES0kJfl",
-            "redemption_status": "UNUSED"
+            "coupon": "CLATT-HHRCCXRF3P",
+            "status": "INACTIVE"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://wooden-ships.com",
+          "value": "https://claires.com/us",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.wooden-ships.com/collections/top-sellers/products/sunrise-zip-hoodie-cotton-sweater-breaker-white-mykonos-stripe",
-            "item": "SUNRISE ZIP HOODIE COTTON - X/S (2-4) / Breaker White/Mykonos Stripe",
-            "timeAgo": "2026-02-12"
-          },
-          {
-            "link": "https://www.wooden-ships.com/collections/valentines/products/heart-back-chunky-cardi-cotton-sweater-breaker-white-apple-red-2",
-            "item": "HEART BACK CHUNKY CARDI COTTON - X/S (2-4) / Breaker White/Apple Red",
-            "timeAgo": "2026-01-31"
-          },
-          {
-            "link": "https://www.wooden-ships.com/products/julia-crew-lightweight-sweater-caprice-pink?variant=42713103466544",
-            "item": "JULIA CREW LIGHTWEIGHT - X/S (2-4) / Blue Heaven",
-            "timeAgo": "2026-01-25"
-          },
-          {
-            "link": "https://www.wooden-ships.com/products/inez-striped-raglan-chunky-crew-cotton-sweater-beach-sky-blue-stripe?variant=42705716903984",
-            "item": "INEZ STRIPED RAGLAN CHUNKY CREW COTTON - X/S (2-4) / Almond Butter Stripe",
-            "timeAgo": "2026-01-24"
-          },
-          {
-            "link": "https://www.wooden-ships.com/collections/all-sweaters/products/harbour-hoodie-cotton-sweater-breaker-white-darkest-indigo",
-            "item": "HARBOUR HOODIE COTTON - X/S (2-4) / Breaker White/Darkest Indigo",
-            "timeAgo": "2026-01-24"
-          }
-        ]
+        }
       },
-      "companyWebsite": "https://wooden-ships.com",
-      "companyName": "Wooden Ships",
+      "companyWebsite": "https://claires.com/us",
+      "companyName": "Claire\u0027s",
       "notes": {
-        "important": [
-          "The client wants us to sound as ONE person",
-          "➜  Do NOT mention that you\u0027re reaching out to the team, you haven\u0027t heard back from the team, or any reference to the team or another team - we should sound as one person"
-        ],
         "send_to_cs": [
-          "Send to CS if cx sends photos of items from the website or if photos/screenshots are not coming through"
-        ],
-        "escalate": [
-          "Go the extra mile for cx\u0027s - ESC any q\u0027s you\u0027re unsure of",
-          "When ESC on weekdays, use ESC shortcut",
-          "When ESC on weekends, use WKD shortcut",
-          "ESC if a cx doesn\u0027t want to sign the package / provide a signature when receiving their order",
-          "ESC if a cx wants to know when an item will be available/back in stock",
-          "ESC if a cx wants to know where an item is shipped from",
-          "ESC immediately if a cx has an issue applying a code that we didn\u0027t share (it\u0027s not in the UI or website)"
-        ],
-        "templates": [
-          "If a cx is asking for updates after we\u0027ve escalated - use DUP shortcut. Don\u0027t tell the cx, you haven\u0027t heard back",
-          "If a cx shares an incorrect response to the Journey asking them to share their birthday month - use BRE shortcut"
+          "No ESC for this client, send everything to CS"
         ],
         "tone": [
-          "Do not take responsibility and directly apologize when the issue is not caused by the brand and all systems are functioning as intended",
-          "If the client takes over, do NOT send a message before 5 PM EST on the day the client responded",
-          "➜ Close the conversation immediately",
-          "➜ If 5PM, or a day has passed we should reply",
-          "If the convo is escalated, do NOT send a message before 5 PM EST on the day it was escalated",
-          "➜  Close immediately instead",
-          "➜  If 5PM, or a day has passed we should reply"
-        ],
-        "drive_to_purchase": [
-          "Don\u0027t tell cx\u0027s we\u0027ll restock an item which is not available on the website"
-        ],
-        "dos_and_donts": [
-          "Do not say that \"my system is limited\", limited access\" or similar phrases",
-          "Do not say \"I don\u0027t have better deals\", \"I don\u0027t have any codes available\", or similar phrases",
-          "Do not say \"sales collection\", say \"sale collection\""
-        ],
-        "promo_and_exclusions": [
-          "We have a brand-specific CWW template",
-          "If a cx shows any purchase intent, always share our code.",
-          "Examples, but not limited to:",
-          "➜ Asks when an item will go on sale",
-          "➜ Responds to the browsing/cart abandonment journey, showing interest",
-          "➜ Asks q\u0027s about products/items",
-          "If cx asks for a percentage code, share 10WELCOME code for 10% off",
-          "Cx\u0027s can use a code and receive free shipping as well"
+          "Close the convo once the client takes over!"
         ]
       },
       "blocklisted_words": [
-        "deal",
-        "deals"
+        
       ],
       "escalation_preferences": [
         
       ],
-      "messageTone": "Super Casual",
+      "messageTone": "Polished",
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "Wooden Ships: NEW RELEASE!\n\nInez, because beachy stripes are always right! Soft \u0026 Chunky!\n\nwoodenships.attn.tv/a-Tx_DRueZql ",
-          "date_time": "2026-01-24 11:00:29.884",
+          "message_text": "Claire\u0027s: Just In: New Pusheen Fruits Collection! Shop the sweetest styles yet: https://claires.attn.tv/aeqbIo-2da01 .",
+          "date_time": "2024-06-13 10:02:07.274",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Wooden Ships: Hey Colleen, this is Sarah. Thanks for checking us out! woodenships.attn.tv/aSrSfSj-He0p\n\nWould a $10 off discount code be helpful? Let me know if you have any questions!",
-          "date_time": "2026-01-24 14:37:47.519",
+          "message_text": "Claire\u0027s: The Ultimate Clearance Event just got bigger with 5 for $10 styles! Shop: https://claires.attn.tv/aPtgwmw-Q_ky Reply HELP for info or STOP to cancel.",
+          "date_time": "2024-07-03 10:01:33.164",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Wooden Ships: Easy to Love, Easy to Wear\n\nCozy, flattering, and effortless-Grab our Valentine\u0027s sweaters before they\u0027re gone!\n\nwoodenships.attn.tv/a_ZaF_vR7pLZ ",
-          "date_time": "2026-01-25 11:00:18.376",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: Hey Colleen, this is Sarah. Thanks for checking us out! woodenships.attn.tv/azB8NemtihpF\n\nWould a $15 off discount code be helpful? Let me know if you have any questions!",
-          "date_time": "2026-01-25 15:00:42.640",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: Order by Midnight\n\nTo receive in time for SUPER BOWL, order now! Free Shipping!\n\nwoodenships.attn.tv/a7i_GTBzWpg5 ",
-          "date_time": "2026-01-26 11:00:43.372",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: Hey Colleen, this is Sarah. Thanks for checking us out! woodenships.attn.tv/aYNxOQnbNOjd\n\nWould a $10 off discount code be helpful? Let me know if you have any questions!",
-          "date_time": "2026-01-29 14:58:01.320",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: Last Call for Valentines!\n\nOrder by midnight to ensure your Valentines look arrives right on time\n\nwoodenships.attn.tv/aBzsj54QpEKu ",
-          "date_time": "2026-01-30 12:00:42.766",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: Hey Colleen, this is Sarah. Thanks for checking us out! woodenships.attn.tv/aXrmnMCW6gnf\n\nWould a $10 off discount code be helpful? Let me know if you have any questions!",
-          "date_time": "2026-01-30 19:33:52.374",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: New Release!\n\nFresh, new styles for a new season. Light, soft, and easy! Free Shipping\n\nwoodenships.attn.tv/aIbiQMbCJl4J ",
-          "date_time": "2026-01-31 11:00:40.537",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: It looks like you forgot RIHANNA CHUNKY CARDI COTTON in your cart...anything I can help with? \n\nComplete your checkout today: woodenships.attn.tv/angRv_MjGrNq ",
-          "date_time": "2026-01-31 15:47:35.795",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: Ending soon!\n\nTime is running out for Love! Grab a topseller while you can!\n\nwoodenships.attn.tv/ap0uLHIeYC1_ ",
-          "date_time": "2026-02-01 11:00:39.400",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: Thanks for your purchase! We know you\u0027ll love RIHANNA CHUNKY CARDI COTTON - X/S (2-4) / Almond Butter. Plus, you just earned 139 points! Come visit us anytime: woodenships.attn.tv/ape6UTeyC3gn ",
-          "date_time": "2026-02-01 19:54:40.296",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: Last Call for Valentines!\n\nOrder by midnight to ensure your Valentines look arrives right on time!\n\nwoodenships.attn.tv/aYL1JFssWdMW ",
-          "date_time": "2026-02-02 11:00:22.439",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: NEW RELEASE!\n\nEasy, airy, and perfect for the first spring days. Free Shipping!\n\nwoodenships.attn.tv/aTrO0OOZkkqc ",
-          "date_time": "2026-02-07 11:00:40.378",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: GAME DAY!\n\nCelebrate with a custom knit! Free Shipping!\n\nwoodenships.attn.tv/ai-tTnAKRPM- ",
-          "date_time": "2026-02-08 11:00:20.344",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: Hey Colleen, this is Sarah. Thanks for checking us out! woodenships.attn.tv/aKHDrX72bMgB\n\nWould a $10 off discount code be helpful? Let me know if you have any questions!",
-          "date_time": "2026-02-12 14:54:38.846",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: new release!\n\nGrab a top seller from before it\u0027s gone! Free Shipping\n\nwoodenships.attn.tv/aBYPLGEnht2i ",
-          "date_time": "2026-02-14 11:00:25.602",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: New colors!\n\nLucky you! More cute knits! Free Shipping\n\nwoodenships.attn.tv/aeImDjM53pzg ",
-          "date_time": "2026-02-15 11:00:27.679",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: The Semi-Annual Sale is ON!\n\nBuy Any SALE Item, Get Any Other SALE Item 50% OFF!\n\nwoodenships.attn.tv/a704kr7yqNFT ",
-          "date_time": "2026-02-21 11:00:41.756",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Wooden Ships: Hey Colleen, this is Sarah. Thanks for checking us out! woodenships.attn.tv/ajqJ34AoVh2c\n\nWould a $15 off discount code be helpful? Let me know if you have any questions!",
-          "date_time": "2026-02-21 14:14:24.541",
+          "message_text": "Claire\u0027s: Hey Nakeyia! We hope you\u0027re in love with your new styles. You now have 125 points! Check your progress here: https://claires.attn.tv/aJqhtXBkYJrA .",
+          "date_time": "2024-07-09 10:39:48.190",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "Yes send code",
-          "date_time": "2026-02-21 14:16:28.985",
+          "message_text": "I\u0027m not Nokia",
+          "date_time": "2024-07-09 14:19:36.061",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "019c81a5-8300-4601-f000-0000dd4d9f30",
-          "message_text": "Wooden Ships: Great! You can use code CART15 for $15 off your order. Please note that it applies to full-priced items only. Feel free to browse our top sellers here: https://woodenships.attn.tv/aCzYBhfr55yT\n\nLet me know if there is anything else that I can do for you today!",
+          "message_id": "019098b9-1513-4461-f000-000065d422ea",
+          "message_text": "Claire\u0027s: Oh, please disregard the last text. It was sent by mistake. Sorry about that!",
           "message_type": "agent",
-          "agent": "82441",
+          "agent": "62551",
           "message_media": [
             
           ],
-          "date_time": "2026-02-21 14:20:33.821"
+          "date_time": "2024-07-09 14:19:44.795"
         }
       ]
     },
     "50": {
       "agentName": "Sarah",
-      "has_shopify": true,
-      "id": "019c8300-1782-4862-f000-0000f0f66d55",
+      "has_shopify": false,
+      "id": "018f87a9-4742-4762-f000-00003b2035b3",
       "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.iseeme.com/en-us/my-very-own-trucks-personalized-book.html",
+            "item": "My Very Own Trucks Personalized Book",
+            "timeAgo": "2024-05-17"
+          },
+          {
+            "link": "https://www.iseeme.com/en-us/reasons-why-i-love-you.html?sc_src=email_252718\u0026sc_lid=68372689\u0026sc_uid=Uu8hDLw3I9\u0026sc_llid=218739\u0026sc_eh=555ab8cb338346de1\u0026utm_source=Emarsys\u0026utm_medium=email\u0026utm_campaign=Order+Confirmation+%28ISM+Final%29",
+            "item": "Reasons Why I Love You Personalized Board Book",
+            "timeAgo": "2024-05-17"
+          }
+        ],
         "coupons": [
           {
-            "redemption_status": "UNUSED",
-            "company_id": 3089,
-            "name": "Spend $99, Save $5",
-            "static_code": "SAVE5"
+            "status": "ACTIVE",
+            "value": "20",
+            "coupon": "wel20att5t3qq26d856j"
           },
           {
-            "redemption_status": "UNUSED",
-            "static_code": "ADTXSLMB",
-            "description": "Microsoft Brand PPC",
-            "name": "20 off 29, 30 off 129 Microsoft Brand PPC",
-            "company_id": 3089
+            "coupon": "c8wheb3qr2",
+            "status": "ACTIVE"
           },
           {
-            "redemption_status": "UNUSED",
-            "static_code": "ADTXSLMN",
-            "description": "MS non brand PPC",
-            "name": "20 off 29, 30 off 129 Microsoft Non Brand PPC",
-            "company_id": 3089
+            "status": "ACTIVE",
+            "redeemed": "2024-05-17 13:40:35.397",
+            "value": "20",
+            "coupon": "wa20jfu62x"
           },
           {
-            "redemption_status": "UNUSED",
-            "company_id": 3089,
-            "name": "25% or 35%",
-            "static_code": "TXSL2535"
+            "status": "ACTIVE",
+            "description": "25% off",
+            "coupon": "wbsmsz249uxkpwkcn"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://statelinetack.com",
+          "value": "https://iseeme.com/en-us",
           "date": ""
         },
-        "browsingHistory": [
+        "orders": [
           {
-            "link": "https://www.statelinetack.com/products/royal-king-benton-barrel-saddle?variant=43799463264393",
-            "item": "Royal King Benton Barrel Saddle - Two Tone / 16\"",
-            "timeAgo": "2026-02-16"
-          },
-          {
-            "link": "https://www.statelinetack.com/products/tough1-pachanga-contour-wool-saddle-pad?variant=43797777973385",
-            "item": "Tough1 Pachanga Contour Wool Saddle Pad - Light Blue/Royal Blue/Black/White / 36\"x 34\"",
-            "timeAgo": "2026-02-16"
-          },
-          {
-            "link": "https://www.statelinetack.com/products/horze-spoon-mouth-loose-ring-snaffle-bit?variant=43800285577353",
-            "item": "Horze Spoon Mouth Loose Ring Snaffle Bit - Stainless Steel / 5",
-            "timeAgo": "2025-12-31"
+            "currency": "USD",
+            "orderDate": "2024-05-17",
+            "coupon": "wa20jfu62x",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98,
+                      45.98
+                    ],
+                    "Count": 133
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2024-05-17 13:40:35.397",
+            "discount_amount": 0,
+            "orderNumber": "3001727768",
+            "total": 45.98
           }
         ]
       },
-      "companyWebsite": "https://statelinetack.com",
-      "companyName": "State Line Tack",
+      "companyWebsite": "https://iseeme.com/en-us",
+      "companyName": "I See Me!",
       "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
-        ],
-        "promo_and_exclusions": [
-          "Some items aren’t eligible for discounts due to manufacturers’ policy, add to cart to double-check!"
-        ]
+        
       },
       "blocklisted_words": [
         
       ],
       "escalation_preferences": [
-        "Exchanges and returns"
+        
       ],
-      "messageTone": "Casual",
+      "messageTone": "Polished",
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "State Line Tack: Winter Storm Flash SALE! Get up to 70% OFF top brands \u0026 2X Rewards today! slt.attn.tv/aUnaJ-o8m_E- Supplies are limited act fast!",
-          "date_time": "2026-01-27 13:15:20.569",
+          "message_text": "I See Me!: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/prk",
+          "date_time": "2024-05-17 09:12:11.655",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "State Line Tack: Kick the week off with savings! Get up to 30% OFF over $49 + 5X REWARDS points no limit today only! slt.attn.tv/aY6fSacH-CBE ",
-          "date_time": "2026-02-02 13:15:29.177",
+          "message_text": "I See Me!: Welcome! Use code wa20jfu62x for 20% Off. Shop now: https://iseeme.attn.tv/aEXikbQR3i8R ",
+          "date_time": "2024-05-17 09:12:14.651",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "State Line Tack: Love is in the air! Who wouldn\u0027t love 30% OFF over $49 + 5X REWARDS points? Act fast! slt.attn.tv/apACMnxhtamp ",
-          "date_time": "2026-02-09 13:15:35.473",
+          "message_text": "I See Me!: Hi! This is Sarah. I saw you were interested in the Reasons Why I Love You Personalized Board Book ? Do you need help shopping or personalizing your book? Just text me back.\n\nhttps://iseeme.attn.tv/awKUNL9UQRH9",
+          "date_time": "2024-05-17 12:25:30.075",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "State Line Tack: Presidents day SALE is here! 24 HOURS ONLY get FREE $5 off any order + up to 30% OFF over $49 \u0026 2X REWARDS! slt.attn.tv/aSp8LPDxNe1d ",
-          "date_time": "2026-02-16 13:30:38.005",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "State Line Tack: Hey, Sarah here! Looks like you left something behind, anything I can help with?: slt.attn.tv/ahg1GntMQG62 .",
-          "date_time": "2026-02-16 13:53:18.562",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "State Line Tack: Hi , it\u0027s Sarah. I\u0027m a personal concierge here to answer questions or share give recommendations. Is there anything I can help you with today?\n\nhttps://slt.attn.tv/a2C63EpZj2QS .",
-          "date_time": "2026-02-17 14:21:34.013",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "State Line Tack: Hey, Sarah here! See something you liked? Reply back with any questions! slt.attn.tv/aimgId0bRwM8 ",
-          "date_time": "2026-02-18 16:27:44.174",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "State Line Tack: Hey, Sarah here! See something you liked? Reply back with any questions! slt.attn.tv/a4aQlPEinXd7 ",
-          "date_time": "2026-02-21 20:07:18.679",
+          "message_text": "I See Me!: Hey, this is Sarah. Thanks for checking out our site! 😊 https://iseeme.attn.tv/agneGWUOC5QB \n\nAre you looking for anything in particular today?",
+          "date_time": "2024-05-17 13:00:52.407",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "How do you guys ship saddles",
-          "date_time": "2026-02-21 20:09:22.138",
+          "message_text": "I ordered one this morning",
+          "date_time": "2024-05-17 13:41:38.932",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "019c82e5-04fa-4c8d-f000-0000f0f66d55",
-          "message_text": "State Line Tack: We ship saddles within the 50 United States, APO/FPO addresses, Canada, Guam, PO Boxes, Puerto Rico, and the Virgin Islands.",
+          "message_id": "018f87a9-4742-4762-f000-00003b2035b3",
+          "message_text": "I See Me!: Happy to hear that! The order should be filled in no time, if you do have any issues feel free to contact me.\nI\u0027m here to help!\n\nIn the meantime, you can take a look at our gift sets. Maybe, you\u0027ll find something you like!\nhttps://iseeme.attn.tv/sl/kpiz4Qud",
           "message_type": "agent",
-          "agent": "62551",
+          "agent": "82445",
           "message_media": [
             
           ],
-          "date_time": "2026-02-21 20:09:33.069"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Do the saddles ever get damaged when they ship out",
-          "date_time": "2026-02-21 20:10:21.755",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c82e5-ee63-4b89-f000-0000f0f66d55",
-          "message_text": "State Line Tack: We take great care in packaging saddles to prevent damage during shipping. If you receive a damaged item, please contact us with a photo, order number, and email.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-21 20:10:32.830"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Thank you so much. I have always worried about buying a saddle online.  I have a saddle in mind but i dont know how the quality is",
-          "date_time": "2026-02-21 20:13:31.829",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c82e8-d793-4e35-f000-0000f0f66d55",
-          "message_text": "State Line Tack: I understand your concern! If you have a specific saddle in mind, I can provide more details or recommendations. Let me know the name or model!",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-21 20:13:43.593"
-        },
-        {
-          "message_id": "019c82ee-046e-4c5a-f000-0000f0f66d55",
-          "message_text": "State Line Tack: Great pick! That is popular for both its functionality and aesthetic appeal, making it a favorite choice! Hope you can order yours soon: https://slt.attn.tv/aK76raayZ7_D",
-          "message_type": "agent",
-          "agent": "31385",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-21 20:19:22.767"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Thank you so much for helping me. I see there is a tack set that matches. When will that be restocked?",
-          "date_time": "2026-02-21 20:21:02.135",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c82fb-a6b1-4e2a-f000-0000f0f66d55",
-          "message_text": "State Line Tack: You\u0027re welcome! We don\u0027t have a matching tack set, but feel free to check this one out: https://slt.attn.tv/aG8XTL3y4G-s ",
-          "message_type": "agent",
-          "agent": "31385",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-21 20:34:16.267"
-        },
-        {
-          "message_type": "template",
-          "message_text": "Template used: \"Restock (website \u0026 social)\"; last updated: 2025-10-09 21:41:33.472",
-          "date_time": "2026-02-21 20:39:07.293",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c8300-1782-4862-f000-0000f0f66d55",
-          "message_text": "State Line Tack: Thanks for sending that over. Apologies for the oversight. I currently don\u0027t have the exact date of a possible restock, but I recommend checking our website and social media frequently. In the meantime, what do you think about this instead? https://slt.attn.tv/aIpM8_sU4QhZ",
-          "message_type": "agent",
-          "agent": "31385",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-21 20:39:07.296"
+          "date_time": "2024-05-17 13:46:09.098"
         }
       ]
     }

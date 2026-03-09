@@ -3,296 +3,1128 @@
   "chunk": "chunk_0008",
   "scenarios": {
     "36": {
-      "agentName": "Kelly",
+      "agentName": "Sarah",
       "has_shopify": true,
-      "id": "019c71ff-6e82-425e-f000-000025e8ac27",
+      "id": "01904d16-ca98-482a-f000-00004f7fd15a",
       "rightPanel": {
-        "promotions": [
+        "browsingHistory": [
           {
-            "title": "SMS40",
-            "content": [
-              "• Code for the Bonus Incentive\n\n• Feel free to offer it to customers who say the price is too high."
-            ]
+            "link": "https://cozyearth.com/products/women-s-ultra-soft-bamboo-midi-skirt?variant=41544978759860",
+            "item": "Women\u0027s Ultra-Soft Bamboo Midi Skirt - Olive / XS",
+            "timeAgo": "2024-06-24"
+          },
+          {
+            "link": "https://cozyearth.com/products/the-premium-plush-bath-mat?variant=40889704251572",
+            "item": "Premium Plush Bath Mat - Large / Charcoal",
+            "timeAgo": "2024-06-23"
+          },
+          {
+            "link": "https://cozyearth.com/products/the-premium-plush-bath-mat?variant=40889704218804",
+            "item": "Premium Plush Bath Mat - Large / White",
+            "timeAgo": "2024-06-23"
+          },
+          {
+            "link": "https://cozyearth.com/products/linen-pencil-stripe-quilt-bundle?variant=42984205287604",
+            "item": "Linen Pencil Stripe Quilt Bundle - Flax/White / Twin",
+            "timeAgo": "2024-06-19"
+          },
+          {
+            "link": "https://cozyearth.com/products/complete-premium-plush-bath-bundle?variant=42644604387508",
+            "item": "Complete Premium Plush Bath Bundle - Clay",
+            "timeAgo": "2024-05-17"
           }
         ],
         "coupons": [
           {
-            "subscriber_id": 636005415,
-            "description": "SMS Abandoned Cart 30",
-            "company_id": 6440,
-            "coupon_url": "https://bear-mattress.myshopify.com/discount/SMS30?utm_source=attentive\u0026utm_medium=text",
-            "static_code": "SMS30",
-            "name": "SMS30",
-            "coupon": "SMS30",
-            "redemption_status": "UNUSED"
+            "status": "ACTIVE",
+            "description": "Automated random dynamic codes for session abandon - 4/1/24",
+            "value": "50",
+            "coupon": "SA50-XhBvm2"
           },
           {
-            "subscriber_id": 636005415,
-            "company_id": 6440,
-            "coupon_url": "https://bear-mattress.myshopify.com/discount/CM25?utm_source=attentive\u0026utm_medium=text",
-            "static_code": "CM25",
-            "name": "Cyber Monday",
-            "coupon": "CM25",
-            "redemption_status": "UNUSED"
+            "status": "ACTIVE",
+            "description": "orders $100+",
+            "value": "50",
+            "coupon": "GETCOZY50"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "100 min $50 off for session abandonment flow",
+            "coupon": "SETRCKHh"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "Part C of the A/B/C test for the welcome flow February 2023",
+            "coupon": "50-2B7PSG68"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "Batch 9, 200,000, February 29th 2024",
+            "coupon": "D4T7SA50"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "Batch 12 - 100,00 codes, Oct 14 2024",
+            "coupon": "NP509T77"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "session $50 offer with a $100 minimum",
+            "value": "50",
+            "coupon": "74TFS4"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "Tydo 35% #2",
+            "coupon": "63DJW4"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://bearmattress.com/",
+          "value": "https://cozyearth.com",
           "date": ""
-        }
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-07",
+            "coupon": "APPAREL35",
+            "items": [
+              {
+                "price": [
+                  165
+                ],
+                "productLink": "https://cozyearth2.myshopify.com/products/womens-brushed-bamboo-jogger-pant",
+                "name": "Women\u0027s Bamboo Jogger Pant Black / XL / Regular"
+              }
+            ],
+            "date_time": "2023-11-07 03:27:01.000",
+            "discount_amount": 0,
+            "orderNumber": "5303701766324",
+            "total": 116.1
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-09-24",
+            "items": [
+              {
+                "price": [
+                  175
+                ],
+                "productLink": "https://cozyearth2.myshopify.com/products/womens-brushed-bamboo-wide-leg-pull-on-pant",
+                "name": "Women\u0027s Ultra-Soft Bamboo Wide Leg Pull On Pant"
+              }
+            ],
+            "date_time": "2023-09-24 23:49:09.330",
+            "discount_amount": 0,
+            "orderNumber": "5245930078388",
+            "total": 647.48
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-09-24",
+            "items": [
+              {
+                "price": [
+                  165
+                ],
+                "productLink": "https://cozyearth2.myshopify.com/products/mens-brushed-bamboo-jogger-pant",
+                "name": "Men\u0027s Ultra-Soft Bamboo Jogger Pant"
+              }
+            ],
+            "date_time": "2023-09-24 23:49:09.211",
+            "discount_amount": 0,
+            "orderNumber": "5245930078388",
+            "total": 647.48
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-09-24",
+            "items": [
+              {
+                "price": [
+                  160
+                ],
+                "productLink": "https://cozyearth2.myshopify.com/products/mens-brushed-bamboo-hoodie",
+                "name": "Men\u0027s Ultra-Soft Bamboo Hoodie"
+              }
+            ],
+            "date_time": "2023-09-24 23:49:09.210",
+            "discount_amount": 0,
+            "orderNumber": "5245930078388",
+            "total": 647.48
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-09-24",
+            "items": [
+              {
+                "price": [
+                  180
+                ],
+                "productLink": "https://cozyearth2.myshopify.com/products/womens-boardwalk-breeze-dress",
+                "name": "Women\u0027s Boardwalk Breeze Dress"
+              }
+            ],
+            "date_time": "2023-09-24 23:49:09.071",
+            "discount_amount": 0,
+            "orderNumber": "5245930078388",
+            "total": 647.48
+          }
+        ]
       },
-      "companyWebsite": "https://bearmattress.com/",
-      "companyName": "Bear Mattress",
+      "companyWebsite": "https://cozyearth.com",
+      "companyName": "Cozy Earth",
       "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
+        "escalate": [
+          "ESC all MyFitness pall App inquiries"
         ],
         "dos_and_donts": [
-          "The cub and trundle mattresses do not include any of the free promotional products (no pillows, protector, sheets)",
-          "All mattresses ship seperately, inform the cx if they inquire about different shipping times"
-        ],
-        "drive_to_purchase": [
-          "When recommending bestsellers via the NCODE temp suggest Bear Original, Star Hybrid, Bear Pillow, \u0026 GlacioTex Mattress Protector"
-        ],
-        "promo_and_exclusions": [
-          "We no longer offer free pillows with a mattress purchase"
+          "Don\u0027t share sale end dates with customers"
         ]
       },
       "blocklisted_words": [
-        "organic",
-        "all-natural"
+        
       ],
       "escalation_preferences": [
-        "Exchanges and returns",
-        "Shipping questions"
+        
       ],
       "messageTone": "Polished",
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "Bear Mattress: Welcome to Bear Mattress! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "date_time": "2026-02-18 13:18:44.256",
+          "message_text": "Cozy Earth: 30-35% off is ENDING SOON! Shop our best sale of the year while you still can!\n\nHurry, shop now: https://cozyearth.attn.tv/annMDqbE9qVu",
+          "date_time": "2024-05-26 19:01:16.011",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Bear Mattress: Hey this is Kelly , how can I help you?",
-          "date_time": "2026-02-18 13:18:48.317",
+          "message_text": "Cozy Earth: Hey Delonda, this is Sarah. Thanks for stopping by Cozy Earth! https://cozyearth.attn.tv/az9Bustnpxw8 \n\nCan I help you find your next cozy favorite?",
+          "date_time": "2024-05-27 13:20:49.167",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: ONE HOUR LEFT to save 40% OFF BEDDING - Hurry, time is ticking!\n\nShop the Flash Sale: https://cozyearth.attn.tv/ajn-9EbsXwOo",
+          "date_time": "2024-05-27 17:06:15.506",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Our LAST FLASH SALE of the day starts NOW - 40% OFF APPAREL for 3 hours ONLY\n\nShop the best sale of the year: https://cozyearth.attn.tv/axqcRjf7ta8C",
+          "date_time": "2024-05-27 20:23:31.876",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Join us live for a guide on our hosts favorite picks for the Memorial Day Sale! Enjoy an exclusive discount during the livestream! Plus, enter to win a bundle of Marley\u0027s favorite things.\n\nJoin the live now: https://cozyearth.attn.tv/a9h7wcOzP_bz ",
+          "date_time": "2024-05-28 16:31:18.869",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey Delonda, EXCITING NEWS, share your code in the month of June to your friends and family for them to get 1/3 off their order!\n\n https://cozyearth.attn.tv/aNKjOpu1dftX ",
+          "date_time": "2024-05-30 20:31:13.676",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Luxurious comfort and style await! Save $50 on premium bedding, loungewear, and bath items today. Use code NP509T77 at checkout. \n\nShop now: https://cozyearth.attn.tv/a-9JVbBZ227Z ",
+          "date_time": "2024-05-31 17:38:14.412",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Explore the latest additions to our Luxe Bath Collection. Experience the ultimate bath accessories with our new Luxe Bath Robe, Bath Wrap, and Hair Towel!\n\nShop New Arrivals: https://cozyearth.attn.tv/azNSeeDizJqz",
+          "date_time": "2024-06-03 17:02:06.517",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hi Delonda! Refer 3 friends in the next week using your personal code for the chance to win a Cuddle Blanket! Don\u0027t miss out on this cozy opportunity! \nhttps://cozyearth.attn.tv/a74EuIrQ07UP",
+          "date_time": "2024-06-06 16:01:38.806",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Get ready for warmer days with our Summer Sale - save up to 25% sitewide. Don\u0027t miss out on these exclusive savings, and get ready for your best summer yet!\n\nShop Summer Savings: https://cozyearth.attn.tv/afg7kMtF9aua ",
+          "date_time": "2024-06-08 19:01:00.705",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Join us LIVE to explore CityScape\u0027s fresh new styles and colors in depth. Enjoy a 35% discount sitewide and an exclusive giveaway!\n\nJoin the livestream: https://cozyearth.attn.tv/alWnWqCEzp-M\n",
+          "date_time": "2024-06-10 16:31:42.391",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hurry! Our Summer Sale ends TONIGHT. Enjoy up to 25% off and elevate your summer style!\n\nShop Now: https://cozyearth.attn.tv/am86Sc4rGxzc",
+          "date_time": "2024-06-15 19:00:42.767",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Tune in LIVE to explore our newest bedding hues 🍋 Refresh your collection with our latest additions, plus enjoy a 35% sitewide discount.\n\nJoin now: https://cozyearth.attn.tv/a52M7W5sb6Zp",
+          "date_time": "2024-06-17 16:31:41.321",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Want to win two FREE flights? Tune in to our livestream Monday, June 24th at 2:30 PM MST for a Q\u0026A with our CEO and Founder for an exclusive discount and a chance to win airfare for two!\n\nIn the meantime, prep for the livestream and explore new arrivals: https://cozyearth.attn.tv/altYRsFF5uZQ ",
+          "date_time": "2024-06-19 19:01:00.586",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Enjoy up to 55% off on summer must-haves, from bedding to apparel. Dive into our Summer Warehouse Sale now!\n\nShop Now: https://cozyearth.attn.tv/a3x4hkt-IbTF\n",
+          "date_time": "2024-06-22 19:00:53.579",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: We noticed you looking around our site...again! Welcome back, Delonda!\n\nCheckout now: https://cozyearth.attn.tv/aC-8KfIkBTk9",
+          "date_time": "2024-06-23 13:37:11.958",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: We noticed you looking around our site...again! Welcome back, Delonda!\n\nCheckout now: https://cozyearth.attn.tv/aYNY8D_mW6t5",
+          "date_time": "2024-06-24 14:10:43.737",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "Yes, yesterday I had a bear original in my shopping cart with the two free pillows. I thought I purchased it because I was paying via Apple Pay but it didn\u0027t go through. When I looked this morning in my email, and I didn\u0027t see like the purchase confirmation. I went back and checked my card and everything and realized I think it didn\u0027t process and today I went to go buy it again, but the pillows are gone. I don\u0027t know if I can still get that deal.",
-          "date_time": "2026-02-18 13:20:10.730",
+          "message_text": "Can\u0027t find what I need at a discounted price! Wanted a new skirt, I wear my black one like crazy!!",
+          "date_time": "2024-06-24 14:12:58.600",
           "message_media": [
             
           ]
         },
         {
-          "message_type": "template",
-          "message_text": "Template used: \"Customer support\"; last updated: 2023-01-26 20:06:44.060",
-          "date_time": "2026-02-18 13:24:51.356",
+          "message_type": "system",
+          "message_text": "Cozy Earth: Want free flights? Join us LIVE for a Q\u0026A with our CEO and Founder to get an exclusive 40% off, enter to win two FREE flights, and more!\n\nJoin the live now: https://cozyearth.attn.tv/aONExoe2_p1x",
+          "date_time": "2024-06-24 16:36:34.676",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "019c71ff-6e82-425e-f000-000025e8ac27",
-          "message_text": "Bear Mattress: I am very sorry to hear that! The best way to handle this is to email us directly at support@bearmattress.com. Our team would be happy to check if applying the deal would be possible. Is there anything else that I can do for you today?",
+          "message_id": "01904d16-ca98-482a-f000-00004f7fd15a",
+          "message_text": "Cozy Earth: You can take a look at our sale collection here: https://cozyearth.attn.tv/a8mxsm03hFGa",
           "message_type": "agent",
-          "agent": "82441",
+          "agent": "62551",
           "message_media": [
             
           ],
-          "date_time": "2026-02-18 13:24:51.360"
+          "date_time": "2024-06-24 21:50:57.691"
         }
       ]
     },
     "37": {
-      "agentName": "Maria",
-      "has_shopify": false,
-      "id": "019c6732-637b-4145-f000-000063748d9e",
+      "agentName": "Taylor",
+      "has_shopify": true,
+      "id": "018f4f6c-ccc3-43b2-f000-00001ff916fa",
       "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://thehappyplanner.com/collections/wellness-gratitude-guided-journals/products/bold-hope-classic-guided-gratitude-journal-80-sheets",
+            "item": "Bold Hope - Classic Guided Gratitude Journal - 80 Sheets",
+            "timeAgo": "2024-05-05"
+          },
+          {
+            "link": "https://thehappyplanner.com/collections/sale/products/value-pack-stickers-budget-goals",
+            "item": "Value Pack Stickers - Budget Goals",
+            "timeAgo": "2024-05-05"
+          },
+          {
+            "link": "https://thehappyplanner.com/collections/sale/products/bright-budget-classic-extension-pack",
+            "item": "Bright Budget Classic Extension Pack",
+            "timeAgo": "2024-05-05"
+          },
+          {
+            "link": "https://thehappyplanner.com/collections/sale/products/dont-forget",
+            "item": "Stickers - Don\u0027t Forget",
+            "timeAgo": "2024-05-05"
+          },
+          {
+            "link": "https://thehappyplanner.com/collections/sale/products/dont-forget",
+            "item": "Stickers - Don\u0027t Forget",
+            "timeAgo": "2024-05-05"
+          }
+        ],
         "coupons": [
           {
-            "redemption_status": "UNUSED",
-            "subscriber_id": 1668582814,
-            "company_id": 9256,
-            "name": "$2 Off $5",
-            "coupon": "OSLDK3F"
+            "status": "INACTIVE",
+            "description": "Welcome Series B",
+            "coupon": "WELzWRq5c"
+          },
+          {
+            "coupon": "wb3-79jpnj",
+            "status": "ACTIVE"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "Winback AB Test 2.2023",
+            "coupon": "WB-jmc78f"
+          },
+          {
+            "coupon": "vip30-fynytx",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "25% off stickers - 1 day only. One-time use unique promotion codes.",
+            "value": "25",
+            "coupon": "sms-rbeecm"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "Welcome Series B",
+            "coupon": "WELx6GMnh"
+          },
+          {
+            "coupon": "WB-gqjb63",
+            "status": "INACTIVE"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://fazolis.com/",
+          "value": "https://thehappyplanner.com",
           "date": ""
-        }
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2023-04-26",
+            "items": [
+              {
+                "price": [
+                  24.49
+                ],
+                "productLink": "https://mambi-shop.myshopify.com/products/2023-disney-winnie-the-pooh-wonderful-things-happy-planner-classic-dashboard-layout-12-months",
+                "name": "2023 Disney Winnie the Pooh Wonderful Things Happy Planner - Classic Dashboard Layout - 12 Months"
+              }
+            ],
+            "date_time": "2023-04-26 00:56:41.216",
+            "discount_amount": 0,
+            "orderNumber": "5363428491326",
+            "total": 96.13
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-04-26",
+            "items": [
+              {
+                "price": [
+                  11.99
+                ],
+                "productLink": "https://mambi-shop.myshopify.com/products/disney-winnie-the-pooh-true-to-you-classic-accessory-pack",
+                "name": "Disney Winnie the Pooh True to You -  Classic Accessory Pack"
+              }
+            ],
+            "date_time": "2023-04-26 00:56:41.203",
+            "discount_amount": 0,
+            "orderNumber": "5363428491326",
+            "total": 96.13
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-04-26",
+            "items": [
+              {
+                "price": [
+                  34.99
+                ],
+                "productLink": "https://mambi-shop.myshopify.com/products/2023-fresh-bouquet-happy-planner-classic-dashboard-layout-18-months",
+                "name": "2023 Mom\u0027s Fresh Bouquet Happy Planner - Classic Mom Dashboard Layout - 18 Months"
+              }
+            ],
+            "date_time": "2023-04-26 00:56:41.153",
+            "discount_amount": 0,
+            "orderNumber": "5363428491326",
+            "total": 96.13
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-04-26",
+            "items": [
+              {
+                "price": [
+                  2.79
+                ],
+                "productLink": "https://mambi-shop.myshopify.com/products/rainbow-stripe-adhesive-pocket",
+                "name": "Rainbow Stripe - Adhesive Pocket"
+              }
+            ],
+            "date_time": "2023-04-26 00:56:41.140",
+            "discount_amount": 0,
+            "orderNumber": "5363428491326",
+            "total": 96.13
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-04-26",
+            "items": [
+              {
+                "price": [
+                  6.59
+                ],
+                "productLink": "https://mambi-shop.myshopify.com/products/hp-cls-dashboard-everyday",
+                "name": "Classic Dashboards - Everyday Leopard"
+              }
+            ],
+            "date_time": "2023-04-26 00:56:41.066",
+            "discount_amount": 0,
+            "orderNumber": "5363428491326",
+            "total": 96.13
+          }
+        ]
       },
-      "companyWebsite": "https://fazolis.com/",
-      "companyName": "Fazoli\u0027s",
+      "companyWebsite": "https://thehappyplanner.com",
+      "companyName": "The Happy Planner",
       "notes": {
-        "escalate": [
-          "If cx\u0027s want to change their order, direct them to contact the location, use CED shortcut"
+        "important": [
+          "Make sure links you\u0027re sending customers are for THE HAPPY PLANNER!",
+          "Example of what NOT to send: thehappinessplanner.com (The Happiness Planner is completely different company)"
+        ],
+        "tone": [
+          "Use a more upbeat, but professional tone",
+          "Don\u0027t say \"My bad\""
         ],
         "promo_and_exclusions": [
-          "Coupon codes can be used at stores",
-          "If cx\u0027s ask for a discount code \u0026 we don\u0027t have one (Concierge or in automated messages):",
-          "➜ Send the \u0027dhd\u0027 shortcut"
+          "🅿️ Promote customers to sign up to Happy Rewards, use RWD shortcut",
+          "DON\u0027T ask customers to check their email if they didn\u0027t get the code for signing up for emails \u0026 texts OR for spinning the wheel! The code should be in the texts!",
+          "Custom Planners are excluded from discount codes"
+        ],
+        "old_expired_codes": [
+          "Please do not send old or expired codes to subscribers. This includes recycling old codes that may have previously gone to the sub and is no longer valid."
         ]
       },
       "blocklisted_words": [
-        
+        "cheers",
+        "gear"
       ],
       "escalation_preferences": [
         
       ],
-      "messageTone": "Casual",
+      "messageTone": "Polished",
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "Fazoli\u0027s: Craving Breadsticks? We got you covered with $5 off $20 when you order now at fazolis.attn.tv/ap6npAMJ9QAn Use code QA3455 valid until 1/26.",
-          "date_time": "2026-01-21 11:01:50.674",
+          "message_text": "Happy Planner: Self-care starts with a plan! Take 30% OFF our Wellness Collection with code: TAKECARE30.\n\nhttps://happyp.attn.tv/l/D3F/hWQj4\n.",
+          "date_time": "2024-04-07 14:06:49.208",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fazoli\u0027s: Kick off February with an Italian feast! Enjoy $3 off $15 when you order online at fazolis.attn.tv/axw9ovOf1zWI and use code: BK4492. Valid until 2/8.",
-          "date_time": "2026-02-02 11:02:30.791",
+          "message_text": "Happy Planner: A travel themed box packed w/ items SO GOOD, you\u0027ll take the plunge on planning your next trip.\n\nGrab yours: https://happyp.attn.tv/l/qXa/hWQj4\n.",
+          "date_time": "2024-04-10 12:06:42.574",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fazoli\u0027s: Alfredo Fest is here! Enjoy $8.99 Loaded Fettuccine Alfredo. Order now at fazolis.attn.tv/algi2Jj2WpNJ use code: FA6798. Valid until 2/22.",
-          "date_time": "2026-02-16 11:02:22.543",
+          "message_text": "Happy Planner: A plan is a wish your heart makes! Get up to 50% OFF everything Disney! Let your dreams take flight. https://happyp.attn.tv/l/aM5/hWQj4 \n.",
+          "date_time": "2024-04-16 13:46:37.592",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: A (FREE) gift for you! Pick an accessory when you buy any 18-month planner.\n\n+Get 25% OFF dated planners!\n\n https://happyp.attn.tv/l/L6P/hWQj4\n.",
+          "date_time": "2024-04-23 13:06:11.407",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Kick off the weekend with FREE SHIPPING, no minimum! \n\nUse code: VIPSHIPPING\n\nClaim your rewards perk now: https://happyp.attn.tv/l/AiY/hWQj4 \n.",
+          "date_time": "2024-04-26 13:20:54.110",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Hi there! We noticed you left an item in your cart 2024 Ink \u0026amp; Arbor Happy Planner - Classic Dashboard Layout - 18 Months.\nWe hate to see you miss out on this great deal so act fast! Click the link to return to your cart: https://happyp.attn.tv/a6UJjRLmV8i7 \n\nQuestions? Text us! - Taylor\n",
+          "date_time": "2024-05-01 13:15:35.876",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: NEW Teacher Collection is HERE! Psst, we think this year\u0027s collection is the best one yet (pass it on...). https://happyp.attn.tv/aDyBvnFiQB17 \n.",
+          "date_time": "2024-05-02 12:46:32.258",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Happy Planner: Taylor here, sending you the sign you\u0027ve been waiting for. We see you eyeing 2024 Happy Brights Happy Planner - Classic Dashboard Layout - 18 Months, any questions for me?\n\nCheck out before they\u0027re gone! https://happyp.attn.tv/aBmtPu30Kj5v .",
+          "date_time": "2024-05-06 13:37:22.077",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "They closed the Fazoli\u0027s by me",
-          "date_time": "2026-02-16 11:03:07.049",
+          "message_text": "I have received an email saying I have point to use but when I long in it says I have no points. Can someone review this for me. I would love to order my planner and use my points",
+          "date_time": "2024-05-06 13:40:00.590",
           "message_media": [
             
           ]
         },
         {
-          "message_type": "template",
-          "message_text": "Template used: \"Store location / retailer\"; last updated: 2022-10-07 23:50:46.806",
-          "date_time": "2026-02-16 11:04:41.493",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c6732-637b-4145-f000-000063748d9e",
-          "message_text": "Fazoli\u0027s: I am so sorry to hear that! Would you be able to confirm your zip code? I\u0027d be happy to check if there are other locations near-by you! \n\nYou can also find us near you here: https://fazolis.attn.tv/avaotqL7H-sy \n\nTo find the phone number, hours, or address for a specific location, select a store, click on \u0027begin order\u0027 and then choose \u0027store information\u0027 or \u0027view menus\u0027.",
+          "message_id": "018f4f6c-ccc3-43b2-f000-00001ff916fa",
+          "message_text": "Happy Planner: Thank you so much for reaching out, I understand how important it is for you to use your points for your planner purchase, Once you\u0027re logged in, you can easily check your point balance by visiting both the Rewards page and your Account page. If you encounter any further issues, feel free to let me know.",
           "message_type": "agent",
-          "agent": "126033",
+          "agent": "82223",
           "message_media": [
             
           ],
-          "date_time": "2026-02-16 11:04:41.494"
+          "date_time": "2024-05-06 15:41:21.487"
         }
       ]
     },
     "38": {
-      "agentName": "Samantha",
-      "has_shopify": true,
-      "id": "019c81b5-c01f-46fe-f000-0000f36db05b",
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "01900309-4646-41be-f000-0000246222a9",
       "rightPanel": {
         "browsingHistory": [
           {
-            "link": "https://comfrt.com/products/faux-fur-blanket?variant=45199989866540",
-            "item": "Faux Fur Blanket",
-            "timeAgo": "2026-01-17"
+            "link": "https://www.pikolinos.com/us-en/marina-w1c-0745cp.html?utm_campaign=Trans-Concierge-Site-Visitor\u0026utm_medium=text\u0026utm_source=attentive\u0026externalId=j4DP7\u0026dwvar_marina-w1c-0745cp_color=BLUE",
+            "item": "MARINA",
+            "timeAgo": "2024-06-10"
           },
           {
-            "link": "https://comfrt.com/products/travel-hoodie?variant=44845446561836",
-            "item": "Airplane Mode Travel Hoodie",
-            "timeAgo": "2026-01-17"
-          }
-        ],
-        "coupons": [
+            "link": "https://www.pikolinos.com/us-en/marina-w1c-0745cp.html?utm_campaign=Trans-Concierge-Site-Visitor\u0026utm_medium=text\u0026utm_source=attentive\u0026externalId=j4DP7\u0026dwvar_marina-w1c-0745cp_color=BLUE",
+            "item": "W1C-0745CP",
+            "timeAgo": "2024-06-10"
+          },
           {
-            "subscriber_id": 4084052059,
-            "company_id": 57888,
-            "coupon_url": "https://comfrt.com/discount/WELCOME15?utm_source=attentive\u0026utm_medium=sms",
-            "static_code": "WELCOME15",
-            "name": "WELCOME15",
-            "coupon": "WELCOME15",
-            "redemption_status": "USED"
+            "link": "https://www.pikolinos.com/us-en/olvera-m8a-4222c1.html?dwvar_olvera-m8a-4222c1_color=CUERO",
+            "item": "OLVERA",
+            "timeAgo": "2024-06-10"
+          },
+          {
+            "link": "https://www.pikolinos.com/us-en/olvera-m8a-4222c1.html?dwvar_olvera-m8a-4222c1_color=CUERO",
+            "item": "M8A-4222C1",
+            "timeAgo": "2024-06-10"
+          },
+          {
+            "link": "https://www.pikolinos.com/us-en/marina-w1c-0745cp.html?dwvar_marina-w1c-0745cp_color=BLUE",
+            "item": "MARINA",
+            "timeAgo": "2024-06-10"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://comfrt.com",
+          "value": "https://pikolinos.com",
           "date": ""
+        }
+      },
+      "companyWebsite": "https://pikolinos.com",
+      "companyName": "Pikolinos",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for code requests",
+          "Send to CS if the customer is looking for a specific style and you can\u0027t find it",
+          "Send to CS for payment/checkout/website issues"
+        ]
+      },
+      "blocklisted_words": [
+        "shoot"
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Pikolinos: Fresh Styles Just In! Find your perfect pair today.\nWOMEN: https://pikolinos.attn.tv/aDeQohH4Q_vg \nMEN: https://pikolinos.attn.tv/aa0eYTPCXxb7",
+          "date_time": "2024-05-13 12:20:02.221",
+          "message_media": [
+            
+          ]
         },
-        "orders": [
+        {
+          "message_type": "system",
+          "message_text": "Pikolinos: Discover our authentic styles, reflecting our DNA in its purest form. \nFor Women: https://pikolinos.attn.tv/a0TEQuIJdO1K \nFor Men: https://pikolinos.attn.tv/azvlWdq6ogCR",
+          "date_time": "2024-05-16 19:00:56.416",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pikolinos: Today, on Memorial Day, we honor our heroes! Enjoy up to 50% off your purchase with code EXTRA10. Limited time only! https://pikolinos.attn.tv/aV-8KpC7FFtI ",
+          "date_time": "2024-05-24 19:01:14.281",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pikolinos: Fresh Styles Just In! Find your perfect pair today. \nWOMEN: https://pikolinos.attn.tv/apQVf9NEnqTh \nMEN: https://pikolinos.attn.tv/aRNxizfyqdNQ ",
+          "date_time": "2024-05-25 12:48:37.980",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pikolinos: Missed our Memorial Day Sale? No worries! Enjoy up to 50% off on outlet with code EXTRA10. Hurry, ends soon! https://pikolinos.attn.tv/aE7U7IbqovzD ",
+          "date_time": "2024-05-27 19:01:12.971",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pikolinos: Experience the luxury of our top-quality cowhide leather crafted by skilled hands. Discover the softness and characteristic shine in every pair. WOMEN \u003e https://pikolinos.attn.tv/aVGRvu81ojLz MEN \u003e https://pikolinos.attn.tv/ax_q4UKo78ii ",
+          "date_time": "2024-06-04 19:00:26.641",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pikolinos: Discover our latest arrivals! Shop Women: https://pikolinos.attn.tv/aQrjuJukdm8l Shop Men: https://pikolinos.attn.tv/ajtK2bV3nped ",
+          "date_time": "2024-06-07 12:44:06.127",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pikolinos: Discover our latest arrivals! Shop Women: https://pikolinos.attn.tv/abbzqNeZc3XA Shop Men: https://pikolinos.attn.tv/aJuKP5uBPaF8 ",
+          "date_time": "2024-06-10 12:28:14.165",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Pikolinos: Hey there, this is Jordan . Thanks for checking out our site! https://pikolinos.attn.tv/af5S_6hq-VOf \n\nAre you looking for anything in particular today? ",
+          "date_time": "2024-06-10 12:34:56.182",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Mens",
+          "date_time": "2024-06-10 12:35:30.989",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Sandals men",
+          "date_time": "2024-06-10 12:36:00.562",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01900302-9c8d-493d-f000-0000246222a9",
+          "message_text": "Pikolinos: Sure thing! What size are you looking for?\nAs for sandals, they can be found here - https://pikolinos.attn.tv/aN1ed3MBVraP",
+          "message_type": "agent",
+          "agent": "26939",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-10 12:37:01.210"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "10",
+          "date_time": "2024-06-10 12:38:20.811",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "42 or 43",
+          "date_time": "2024-06-10 12:38:30.932",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01900309-4646-41be-f000-0000246222a9",
+          "message_text": "Pikolinos: What about our Tarifa strap sandal with velcro closure here https://pikolinos.attn.tv/arsvqfKGrBS4\nThe perfect model for summer. One of the key designs of the Pikolinos men\u0027s collection.\nWe also have our Men\u0027s double strap sandals here https://pikolinos.attn.tv/ab3AlLeU_b9h\nIf comfort is number one for you, so are these sandals. Quality materials, flexible fit and soles that hug your foot so they\u0027re easy to walk in. \nWhat do you think? Do you have any other preferences? Like color? style?",
+          "message_type": "agent",
+          "agent": "82236",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-10 12:44:17.878"
+        }
+      ]
+    },
+    "39": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "0191d7aa-cbac-4af2-f000-00005d0ab783",
+      "rightPanel": {
+        "coupons": [
           {
-            "currency": "USD",
-            "orderDate": "2026-01-17",
-            "items": [
-              {
-                "price": [
-                  {
-                    "value": [
-                      35.1,
-                      53.1
-                    ],
-                    "Count": 2
-                  }
-                ],
-                "productLink": "System.Object[]",
-                "name": "System.Object[]"
-              }
-            ],
-            "date_time": "2026-01-17 00:52:48.499",
-            "discount_amount": 0,
-            "orderNumber": "6422500147244",
-            "total": 88.2
+            "status": "ACTIVE",
+            "value": "15",
+            "coupon": "WELCOME15"
           },
           {
-            "currency": "USD",
-            "orderDate": "2026-01-17",
-            "coupon": "WELCOME15",
-            "items": [
-              {
-                "price": [
-                  88.2
-                ],
-                "productLink": "https://comfrtclothing.myshopify.com/products/pack-parent",
-                "name": "Airplane Mode Travel Bundle"
-              }
-            ],
-            "date_time": "2026-01-17 00:48:49.653",
-            "discount_amount": 0,
-            "orderNumber": "6422500147244",
-            "total": 87.42
+            "status": "INACTIVE",
+            "description": "8/9 35% OFF SWIM CODE (90 day active or rewards)",
+            "coupon": "SWIM90RM-3VG-JJ8"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://chubbiesshorts.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.chubbiesshorts.com/products/the-armadas-5-5",
+            "item": "The Armadas 5.5\" (Stretch)",
+            "timeAgo": "2024-09-09"
+          },
+          {
+            "link": "https://www.chubbiesshorts.com/products/the-armadas-5-5",
+            "item": "The Armadas 5.5\" (Stretch)",
+            "timeAgo": "2024-09-09"
+          },
+          {
+            "link": "https://www.chubbiesshorts.com/products/the-musts-5-5?Size=S",
+            "item": "The Musts 5.5\" (Stretch)",
+            "timeAgo": "2024-09-09"
+          },
+          {
+            "link": "https://www.chubbiesshorts.com/products/the-musts-5-5",
+            "item": "The Musts 5.5\" (Stretch)",
+            "timeAgo": "2024-09-09"
+          },
+          {
+            "link": "https://www.chubbiesshorts.com/products/the-musts-7",
+            "item": "The Musts 7\" (Stretch)",
+            "timeAgo": "2024-09-09"
           }
         ]
       },
-      "companyWebsite": "https://comfrt.com",
-      "companyName": "Comfrt",
+      "companyWebsite": "https://chubbiesshorts.com",
+      "companyName": "Chubbies",
       "notes": {
-        "send_to_cs": [
-          "Send to CS for post-purchase issues"
-        ],
         "escalate": [
-          "ESC if the discount % is not the same as indicated in the automated message"
+          "🚨 DO NOT ESCALATE - send to CS🚨"
         ],
         "templates": [
-          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
+          "If you\u0027re giving the CED temp, provide the RP temp as well"
+        ],
+        "drive_to_purchase": [
+          "Always try to upsell with our Bundle Offer temp"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: 🚨LAST CALL FOR 300+ STYLES UNDER $50🚨 Click it up, add to cart, and enjoy the best damn deals of the season: https://chubbies.attn.tv/aveEBB1o2a8i .",
+          "date_time": "2024-08-11 14:03:48.433",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: The Summer Olympics are returning to LA in 2028, and we\u0027re staying ahead of the game. Shop the exclusive LA \u002728 Collection here: https://chubbies.attn.tv/a72TkVcMB0_A .",
+          "date_time": "2024-08-12 14:16:02.537",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: 📣DROP ALERT: Fall must have styles (that you\u0027ll want to wear on repeat) just dropped! Prepare to rake in the compliments: https://chubbies.attn.tv/aHyIvEjGdmr- ",
+          "date_time": "2024-08-13 16:25:23.063",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: Keep a secret for us? George Kittle is about to drop an ALL-NEW collection with us based on his NFL training regimen, and you\u0027re getting ultra-exclusive early access NOW: https://chubbies.attn.tv/a47Ejgj9kNEX .",
+          "date_time": "2024-08-14 21:09:53.657",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: New swim styles just dropped and they\u0027re ready to ride the fashion tide. Trunk it up, baby! https://chubbies.attn.tv/av0-4P-ENDVP .",
+          "date_time": "2024-08-17 13:45:43.209",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: We call \u0027em the Everywear pants because they\u0027re designed to be worn everywhere. From couch to cafe they\u0027ve got your backside: https://chubbies.attn.tv/ahcTs9Dbe-07 .",
+          "date_time": "2024-08-18 17:17:15.800",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: Introducing BOYS ULTIMATE TRAINING SHORTS! Because they deserve to play hard \u0026 lounge harder. Check \u0027em out: https://chubbies.attn.tv/avFRLCFB76eZ .",
+          "date_time": "2024-08-20 14:05:49.075",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: Hey Scott! Ready to inject some fun into your wardrobe? \n\nDon\u0027t miss out on our latest collection: https://chubbies.attn.tv/aIlnbRq2ICk_ .",
+          "date_time": "2024-08-21 09:20:36.220",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: Introducing the all-new LEGACY SHIRT, inspired by the timeless rugby aesthetic. A tad oversized and absolutely perfect for the crispy days ahead: https://chubbies.attn.tv/ah63wUrSnTzN .",
+          "date_time": "2024-08-22 16:01:32.330",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: YOUR EARLY ACCESS STARTS NOW!\n\nTHE END OF SUMMER SALE is officially on with up to 65% off select styles! 🍍\n\nSHOP NOW: https://chubbies.attn.tv/aKl3XJAxktup ",
+          "date_time": "2024-08-22 21:16:53.389",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: You deserve a FREE gift. Head to the site, add to cart, and check out all our new FREE gifts with purchase: https://chubbies.attn.tv/aAJTztCeEsqQ .",
+          "date_time": "2024-08-23 12:38:37.341",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: \nCASUAL SHORTS starting at $20\nSPORT SHORTS starting at $20\nSWIM TRUNKS starting at $24\n\nDon\u0027t miss these End of Summer Sale deals! \n\nhttps://chubbies.attn.tv/ai3G34xmqYWV .",
+          "date_time": "2024-08-25 16:06:56.660",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: Have you shopped The End of Summer Sale yet? Water you waiting for? Up to 65% off deals won\u0027t last forever: https://chubbies.attn.tv/adQN3Otgi-Al .",
+          "date_time": "2024-08-28 13:25:57.726",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: THE END OF SUMMER SALE deals are flying off the proverbial shelf faster than ice cream melts in the hot August sun. SHOP NOW: https://chubbies.attn.tv/aMAY5He16vEe .",
+          "date_time": "2024-08-29 16:21:55.868",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: THE END OF SUMMER SALE is ending soon and so will these reminder texts.\n\nDeals up to 65% off are selling out fast!\n\nSHOP NOW: https://chubbies.attn.tv/acEDq3qhVzIW \n",
+          "date_time": "2024-08-31 14:31:05.531",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: ⚠️ LAST CALL ALERT ⚠️ Up to 65% off deals are disappearing faster than your socks in the dryer. \n\nTHE END OF SUMMER SALE ends TONIGHT: https://chubbies.attn.tv/aDYRFMlBq0ZC ",
+          "date_time": "2024-09-02 13:16:47.553",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: Time to school the playground in our recess-ready Boys Originals Shorts. \n\nSHOP NEW COLORS NOW: https://chubbies.attn.tv/aIFdH-wQk4V4 ",
+          "date_time": "2024-09-03 14:25:44.212",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: What do you call pants that tell jokes? Pun-ts.\n\nNEW ORIGINAL PUNTS just dropped. New colors, same great fit.\n\nShop Now: https://chubbies.attn.tv/aYD8gYYdLnRE ",
+          "date_time": "2024-09-07 17:12:11.972",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: \"Hoodie or not, here we come!\" ~ The Comfort Collection\n\nShop the coziest hoodies, crewnecks, and shorts we\u0027ve ever made: https://chubbies.attn.tv/aT2GtgbKM8rM .",
+          "date_time": "2024-09-08 17:16:55.570",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: You are already subscribed. Click here to shop now: chubbiesshorts.com .",
+          "date_time": "2024-09-09 11:58:42.551",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chubbies: Scott, your cart still has the musts 5.5 (stretch). These shorts are perfect for any adventure. Don\u0027t miss out!\n\nBuy here: https://chubbies.attn.tv/aA0RsveHCTGw .",
+          "date_time": "2024-09-09 12:30:38.303",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027ll buy if you give me some discount",
+          "date_time": "2024-09-09 12:32:00.426",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0191d7a0-e80d-4b46-f000-00005d0ab783",
+          "message_text": "Chubbies: You can use the code WELCOME15 for 15% off your purchase at chubbiesshorts.com. Enjoy shopping!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-09 12:32:12.307"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "This did not work",
+          "date_time": "2024-09-09 12:42:50.079",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0191d7aa-cbac-4af2-f000-00005d0ab783",
+          "message_text": "Chubbies: You can use the code WELCOME15 for 15% off your purchase at chubbiesshorts.com.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-09 12:43:00.403"
+        }
+      ]
+    },
+    "40": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "018ed891-a06c-4000-f000-00008522c6a2",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "redeemed": "2024-04-24 04:24:10.603",
+            "coupon": "ATTNvy4bRj"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://igloocoolers.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://igloocoolers.com",
+      "companyName": "Igloo",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for legal and fraud related inquires",
+          "Send to CS for product safety inquires and threats",
+          "Send to CS for website technical issues"
+        ],
+        "escalate": [
+          "ESC if cx claims bodily injury as result of a product",
+          "ESC if cx highlights dangers to health/safety as a result of product"
+        ],
+        "templates": [
+          "For all post-purchase \u0026 warranty inquiries use \"SUPPORT\" temp (SPT)",
+          "For discount code issues use \"SUPPORT\" temp (SPT)",
+          "For product info that you can\u0027t find on the site use \"SUPPORT\" temp (SPT)",
+          "If cx reach out about 90 qt cooler recall, use shortcut RCC",
+          "For custom order cancellation and edit requests, don\u0027t use CED, use the designated templates instead"
         ]
       },
       "blocklisted_words": [
@@ -300,844 +1132,63 @@
       ],
       "escalation_preferences": [
         "Exchanges and returns",
-        "Sizing questions",
-        "Discount code errors"
+        "warranty",
+        "broken product claims",
+        "parts",
+        "missing shipment",
+        "leaks"
       ],
       "messageTone": "Polished",
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "Comfrt: Winter storm? We\u0027ve got you covered.\n\nShop up to 70% off sitewide on the coziest essentials.\n\nShop now: comfrt.attn.tv/aWSfe321XuM_ ",
-          "date_time": "2026-01-23 16:40:19.194",
+          "message_text": "Igloo: Welcome to Igloo! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/sqw",
+          "date_time": "2024-04-13 01:35:44.568",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Comfrt: Made to move with you.\n\nComing 1.28. \n\nShop your favorites while you wait: comfrt.attn.tv/apzry9eZPn-s ",
-          "date_time": "2026-01-26 19:38:11.774",
+          "message_text": "Igloo: WE\u0027RE SO HAPPY YOU\u0027RE ALONG FOR THE RIDE! As a thank you for signing up, we\u0027re giving you 10% off your first order. USE CODE: ATTNvy4bRj.\n\nShop now: https://igloo.attn.tv/sl/cXRJzuWM \n\nHave a question? Text back anytime to reach our live concierge team.",
+          "date_time": "2024-04-13 01:35:48.557",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Comfrt: JUST DROPPED\n\nDesigned to move with you. Made to feel like you.\n\nIntroducing ComfrtCoreTM. Created for your body and mind.\n\nMove your way:\ncomfrt.attn.tv/abHwWfj83LmD",
-          "date_time": "2026-01-28 15:18:09.624",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: You are already subscribed. Click here to shop now: comfrt.com.",
-          "date_time": "2026-01-29 07:05:17.431",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: The finishing touch. \n\nThe NEW Basic Crop Zip Hoodie is the perfect layer for your ComfrtCoreTM sets. \n\nLightweight, cropped, and ready for your life in motion.\n\nComplete the look:\ncomfrt.attn.tv/atuX6Fpx8Arn",
-          "date_time": "2026-01-30 13:03:28.855",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: You reached the finish line. January is over and the weekend is here!\n\nReward yourself with the NEW Basic Quarter Zip.\n\nGrab your go-to:\ncomfrt.attn.tv/aLior_G-ti_x",
-          "date_time": "2026-01-31 12:09:22.938",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Whether your team wins or loses, your outfit shouldn\u0027t. \n\nFinal score: You look great.\n\nGrab your game day set:\ncomfrt.attn.tv/a7WMw-L-PLs8",
-          "date_time": "2026-02-01 16:02:38.613",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Hi Ellen, saw you stopped by!\n\nWe have a feeling you\u0027ll love more Comfrt. \n\nCome back and see all of our latest arrivals: comfrt.attn.tv/afyKMiOawvMx ",
-          "date_time": "2026-02-04 15:59:58.752",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Your winter remedy is here.\n\nMeet the Ember Heated Blanket. Perfectly warm, irresistibly soft, and made to feel like a dream you never want to wake up from.\n\nGet cozy: comfrt.attn.tv/aKfTwj7dVsx_",
-          "date_time": "2026-02-11 16:16:08.657",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Upgrade to first class.\n\nThe VIP Airplane Mode Hoodie with a satin-lined hood and eye mask has officially landed! \n\nAlso, four new limited shades just got added to our original collection.\n\nGet it while you can: comfrt.attn.tv/aAlmS6zzhD4h \n",
-          "date_time": "2026-02-13 15:35:36.153",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Forgot Valentine\u0027s Day is today? Your secret is safe with us.\n\nSend a Comfrt E-Gift Card and let them pick their new favorite set. Delivered instantly.\n\nNo shipping, no stress: comfrt.attn.tv/aSpa_zSk1et2 \n",
-          "date_time": "2026-02-14 11:19:45.322",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Five brand-new shades. One signature feel.\n\nPair the new Airplane Mode collection with the Anywhere Bag for seamless comfort from takeoff to landing.\n\nUpgrade your travel: comfrt.attn.tv/aOYCCsx5Bz4U \n",
-          "date_time": "2026-02-18 18:49:29.252",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: New Cloud and Waffle Lounge colors just landed.🌷✨\n\nGive your rotation a spring refresh: comfrt.attn.tv/aLH_lwIBk6XK \n",
-          "date_time": "2026-02-20 18:44:15.669",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Comfrt: Hi Ellen, saw you stopped by!\n\nWe have a feeling you\u0027ll love more Comfrt. \n\nCome back and see all of our latest arrivals: comfrt.attn.tv/aMJoc0-iIpDp ",
-          "date_time": "2026-02-21 13:54:52.709",
+          "message_text": "Igloo: It\u0027s not every day that you find the perfect cooler. Make the Trailmate® Marine 70 Qt Cooler - White/Black all \nyours before it\u0027s too late. https://igloo.attn.tv/sl/45imjZJj\n\nText back if you have any questions!",
+          "date_time": "2024-04-13 13:45:05.961",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "I\u0027m still waiting og my order last month",
-          "date_time": "2026-02-21 14:18:31.888",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c81b5-c01f-46fe-f000-0000f36db05b",
-          "message_text": "Comfrt: Thank you for reaching out! It looks like you purchased your set as a pre-order. The estimated shipping date should be in the order confirmation email you received. Hope this helps!\nIs there anything else that I can do for you today?",
-          "message_type": "agent",
-          "agent": "82441",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-21 14:38:18.041"
-        }
-      ]
-    },
-    "39": {
-      "agentName": "Allie",
-      "has_shopify": true,
-      "id": "019c9bcf-d529-4786-f000-0000f56dae4b",
-      "rightPanel": {
-        "coupons": [
-          {
-            "subscriber_id": 4117605963,
-            "company_id": 2635,
-            "coupon_url": "https://stevemadden.myshopify.com/discount/SMSs7m6Wm?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
-            "value": "20",
-            "name": "SMS-Welcome-20%Off",
-            "coupon": "SMSs7m6Wm",
-            "redemption_status": "UNUSED",
-            "value_type": "PERCENT"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://stevemadden.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.stevemadden.com/collections/womens-booties/products/jones-chocolate-brown-suede",
-            "item": "JONES CHOCOLATE BROWN SUEDE - CHOCOLATE BROWN SUEDE / 6 / 880",
-            "timeAgo": "2026-01-22"
-          }
-        ]
-      },
-      "companyWebsite": "https://stevemadden.com",
-      "companyName": "Steve Madden",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over!"
-        ]
-      },
-      "blocklisted_words": [
-        "ma\u0027am",
-        "maam",
-        "knock-off",
-        "Gucci",
-        "Prada",
-        "Bottega",
-        "Versace",
-        "dupe"
-      ],
-      "escalation_preferences": [
-        "Discount code errors",
-        "Exchanges and returns",
-        "Shipping questions"
-      ],
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Roses are red...so are these shoes. We\u0027re bringing the heat just in time for Valentine\u0027s day. http://stevemadden.io/afFCo_5Helwb .",
-          "date_time": "2026-01-30 12:17:23.810",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Ballet is back! It\u0027s time to channel your inner prima. Take these styles for a twirl... http://stevemadden.io/aJTCHd8PMI7c .",
-          "date_time": "2026-02-01 08:07:11.605",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Hey, thanks for stopping by! 🙌\n\nUse code SMSs7m6Wm for 20% off, valid on full-priced items.\n\nShop now: http://stevemadden.io/awqsBdqyz7U5 . LIMITED",
-          "date_time": "2026-02-01 10:55:58.967",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Your split-toe moment is here. The new silhouette you\u0027ve been seeing all over your feed. Discover tabi now: http://stevemadden.io/aahZrg1Qdhe6 .",
-          "date_time": "2026-02-05 19:26:24.582",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Spring is closer than it feels. Consider this your warm-up... http://stevemadden.io/aXXOIZ89dYxT .",
-          "date_time": "2026-02-07 12:08:17.453",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Warm weather? Ready when you are! Check out what just dropped. http://stevemadden.io/arFxTZwOCA3X .",
-          "date_time": "2026-02-09 19:43:05.792",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: As the world competes on ice, we\u0027re dreaming of sunnier days - shop our new sandals. http://stevemadden.io/a9S-UtYn_OHJ .",
-          "date_time": "2026-02-10 13:09:26.343",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Step into our Myer Brown Suede Bootie — ankle zipper, 1.5 inch heel, vegan leather sock for comfy, polished wear.\n\nFree shipping on orders $50+ and hassle-free returns within 30 days.\n\nYour next pair is here: http://stevemadden.io/aMh4szDJ-mz8 .",
-          "date_time": "2026-02-10 18:26:37.791",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Thanks for your purchase! Track order 10927636 here: http://stevemadden.io/aNT8_5rpE8vO ",
-          "date_time": "2026-02-10 20:17:15.879",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Long weekend agenda: this sale. 25% off select styles are live now http://stevemadden.io/apM2EbKEQ5ug .",
-          "date_time": "2026-02-11 08:14:18.203",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Don\u0027t overthink it. If you like it, get it now. Take 25% OFF while you can: http://stevemadden.io/abf3hCZ4QU_2 .",
-          "date_time": "2026-02-12 17:01:44.615",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Your faves are almost sold out! Skip the FOMO \u0026 take 10% OFF your order if you checkout now. \nUse code: SAVE10\nhttp://stevemadden.io/at3LTD0UiO7b ",
-          "date_time": "2026-02-13 12:47:31.473",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: So. Much. Sale. Use code WEEKEND to take 25% off. http://stevemadden.io/arwke_qoiupc .",
-          "date_time": "2026-02-15 09:08:41.360",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Uh-oh! The style you\u0027ve been obsessing over is almost gone in your size.\nGrab it now: http://stevemadden.io/abZlJtOei3xJ",
-          "date_time": "2026-02-15 18:20:40.172",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Say goodbye to 25% off. Sale ends soon. Use code WEEKEND now: http://stevemadden.io/aXFm-AdcEXWD .",
-          "date_time": "2026-02-16 09:04:59.409",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: \"The compliments don\u0027t stop!\" \nIt\u0027s your turn to steal the spotlight. \u003e\nhttp://stevemadden.io/aBuyM8VbNvgM",
-          "date_time": "2026-02-17 12:15:46.968",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: You clearly have great taste. The item you are eyeing is popular!! Get it before it sells out:\n\nhttp://stevemadden.io/aOk5_xKgcydZ ",
-          "date_time": "2026-02-18 12:09:53.707",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Ballet , but make it spicy. We\u0027re talking punchy prints, loud color, and serious height. http://stevemadden.io/aA3_8t0lyZvb .",
-          "date_time": "2026-02-19 08:07:44.536",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: You clearly have great taste. The item you are eyeing is popular!! Get it before it sells out:\n\nhttp://stevemadden.io/au-WKlrBKD97 ",
-          "date_time": "2026-02-20 14:20:45.524",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Uh-oh! The style you\u0027ve been obsessing over is almost gone in your size.\nGrab it now: http://stevemadden.io/aSoekUeCcD0x",
-          "date_time": "2026-02-21 12:17:56.755",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Hey—thanks for stopping by!\n\nYour next pair is here: http://stevemadden.io/aQrg5kABj-2a .",
-          "date_time": "2026-02-21 19:18:43.284",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Pack bright tones, woven textures, and soft prints. The resort edit is live. See you in the sunshine. http://stevemadden.io/adRwA6Crrscs .",
-          "date_time": "2026-02-22 14:12:11.785",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Dreaming of spring? SAME. Let\u0027s get ready now. http://stevemadden.io/a0jHUQagMDj_ .",
-          "date_time": "2026-02-24 09:04:51.632",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: You\u0027ll be going viral wearing these on TikTok. \nGet ready for the spotlight. \u003e\n\nhttp://stevemadden.io/aGGYqZZYVjq0 ",
-          "date_time": "2026-02-25 12:11:41.510",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Great news! Your closet\u0027s new addition is on the way. Check out our new arrivals while you wait: http://stevemadden.io/aereKSe6KnTD ",
-          "date_time": "2026-02-25 12:38:50.532",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Steve Madden: Check out Myer Brown Suede Bootie — suede ankle bootie with back zipper and a comfy vegan leather sock.\n\nFree shipping on orders $50+ and hassle-free returns within 30 days.\n\nYour next pair is here: http://stevemadden.io/aS4xuP7ZeC1m .",
-          "date_time": "2026-02-25 13:36:34.955",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "What size did I order",
-          "date_time": "2026-02-26 16:09:31.246",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c9bca-bf07-452f-f000-0000f56dae4b",
-          "message_text": "Steve Madden: I\u0027m happy to help! To confirm, are you referring to Order #10927636? If so, I see that you ordered MYER BROWN SUEDE in size 8.5. Hope this helps! \n\nYou can find your order details in your order confirmation email. Be sure to check your spam and promo folders. Sometimes the emails can end up there. ",
-          "message_type": "agent",
-          "agent": "46498",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-26 16:11:21.637"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Do these boots run small or big",
-          "date_time": "2026-02-26 16:12:01.142",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c9bcb-9f2b-4115-f000-0000f56dae4b",
-          "message_text": "Steve Madden: Happy to help! Would you mind sharing your usual size? I\u0027d also recommend taking a look at our size chart which will guide you toward selecting the right shoe size: http://stevemadden.io/aCGDxblRu7Bv",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-26 16:12:19.005"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "39",
-          "date_time": "2026-02-26 16:12:41.268",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c9bcc-39c7-407a-f000-0000f56dae4b",
-          "message_text": "Steve Madden: For a size 39, you might consider a US size 8.5. Check our size chart for more details: http://stevemadden.io/azdmTd3jJxgT",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-26 16:12:58.582"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Ok when is my order supposed to come",
-          "date_time": "2026-02-26 16:13:51.485",
+          "message_text": "Why don\u0027t you have white gray in stock?",
+          "date_time": "2024-04-13 13:45:56.608",
           "message_media": [
             
           ]
         },
         {
           "message_type": "template",
-          "message_text": "Template used: \"Customer support\"; last updated: 2022-04-20 19:13:58.201",
-          "date_time": "2026-02-26 16:16:54.971",
+          "message_text": "Template used: \"Restock (notifications)\"; last updated: 2025-10-09 21:41:40.249",
+          "date_time": "2024-04-13 13:46:46.261",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "019c9bcf-d529-4786-f000-0000f56dae4b",
-          "message_text": "Steve Madden: The best way to check this is to email us directly at info@stevemaddendirect.com, live chat with one of our agents via the website, or give us a call at 1-888-762-3336. Our team is happy to help! ",
+          "message_id": "018ed891-a06c-4000-f000-00008522c6a2",
+          "message_text": "Igloo: I\u0027m sorry, I currently don\u0027t have the exact date of a possible restock, but I recommend signing up on the product page so you\u0027re notified the second it comes back in! What do you think about this instead? - https://igloo.attn.tv/sl/K_sJb994",
           "message_type": "agent",
-          "agent": "43099",
+          "agent": "50272",
           "message_media": [
             
           ],
-          "date_time": "2026-02-26 16:16:54.973"
-        }
-      ]
-    },
-    "40": {
-      "agentName": "Emma",
-      "has_shopify": true,
-      "id": "019c6c43-fc14-41c9-f000-0000983a39bb",
-      "rightPanel": {
-        "browsingHistory": [
-          {
-            "link": "https://www.cecilandlou.com/products/floral-scalloped-collar-dress7?variant=50843814658346",
-            "item": "Floral Scalloped Collar Dress - 4T",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "link": "https://www.cecilandlou.com/products/pink-windowpane-custom-smocked-dress6?variant=51031931388202",
-            "item": "Pink Windowpane Custom Smocked Dress - 4T",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "link": "https://www.cecilandlou.com/products/pink-swiss-dot-custom-smocked-dress6",
-            "item": "Pink Swiss Dot Custom Smocked Dress - NB",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "link": "https://www.cecilandlou.com/products/pink-custom-smocked-dress4",
-            "item": "Pink Custom Smocked Dress - NB",
-            "timeAgo": "2026-02-13"
-          },
-          {
-            "link": "https://www.cecilandlou.com/products/a-line-floral-bow-dress4?attn_idx=1\u0026utm_campaign=browse-abandoner-email3\u0026utm_medium=email\u0026utm_source=attentive\u0026externalId=ychtC\u0026attn_macro=dHJpZ2dlckV2ZW50LnByb2R1Y3QubGluaw%3D%3D\u0026attn_pos=4",
-            "item": "A-Line Floral Bow Dress - 6",
-            "timeAgo": "2026-02-07"
-          }
-        ],
-        "coupons": [
-          {
-            "redemption_status": "UNUSED",
-            "subscriber_id": 2553952699,
-            "company_id": 1021,
-            "name": "15% off - August 12, 2024",
-            "coupon": "481918C5"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://cecilandlou.com",
-          "date": ""
-        },
-        "orders": [
-          {
-            "currency": "USD",
-            "orderDate": "2026-02-03",
-            "items": [
-              {
-                "price": [
-                  {
-                    "value": [
-                      45,
-                      45,
-                      2,
-                      2
-                    ],
-                    "Count": 4
-                  }
-                ],
-                "productLink": "System.Object[]",
-                "name": "System.Object[]"
-              }
-            ],
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150899562284068611",
-            "link": "https://www.cecilandlou.com/89183584554/orders/ca3f0413e715a3dd9caf0db60141dc3b/authenticate?key=449c056f3d7026f1bb318745fb8bb2a8",
-            "date_time": "2026-02-03 01:35:46.671",
-            "discount_amount": 0,
-            "orderNumber": "554369",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150899562284068611",
-            "total": 58.15
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2026-01-09",
-            "items": [
-              {
-                "price": [
-                  {
-                    "value": [
-                      21.99,
-                      21.99
-                    ],
-                    "Count": 2
-                  }
-                ],
-                "productLink": "System.Object[]",
-                "name": "System.Object[]"
-              }
-            ],
-            "date_time": "2026-01-09 19:12:28.706",
-            "discount_amount": 0,
-            "orderNumber": "7179605737770",
-            "total": 30.75
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2025-10-06",
-            "coupon": "LL-WNSTLM55",
-            "items": [
-              {
-                "price": [
-                  {
-                    "value": [
-                      49,
-                      1.5,
-                      1.5
-                    ],
-                    "Count": 3
-                  }
-                ],
-                "productLink": "System.Object[]",
-                "name": "System.Object[]"
-              }
-            ],
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150899562133055830",
-            "link": "https://www.cecilandlou.com/89183584554/orders/f37fd8e6f0b83d42d98b1e6fc0725bab/authenticate?key=0802f21692ff04cea4aa89dff68fe4c0",
-            "date_time": "2025-10-06 22:18:23.857",
-            "discount_amount": 0,
-            "orderNumber": "502229",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150899562133055830",
-            "total": 50.24
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2025-01-15",
-            "items": [
-              {
-                "price": [
-                  {
-                    "value": [
-                      1.5,
-                      1.5
-                    ],
-                    "Count": 2
-                  }
-                ],
-                "productLink": "System.Object[]",
-                "name": "System.Object[]"
-              }
-            ],
-            "trackingLink": "http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0\u0026Requester=NES\u0026AgreeToTermsAndConditions=yes\u0026loc=en_US\u0026tracknum=92612903032812543475602833",
-            "link": "https://www.cecilandlou.com/89183584554/orders/c665da0fea080cfa75199e0338978b37/authenticate?key=feca89443ce514b8152ad4d055a8208c",
-            "date_time": "2025-01-15 19:45:42.006",
-            "discount_amount": 0,
-            "orderNumber": "377841",
-            "order_tracking_link": "http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0\u0026Requester=NES\u0026AgreeToTermsAndConditions=yes\u0026loc=en_US\u0026tracknum=92612903032812543475602833",
-            "total": 46.59
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2025-01-15",
-            "items": [
-              {
-                "price": [
-                  40
-                ],
-                "productLink": "https://cecil-and-lou.myshopify.com/products/ellis-dress",
-                "name": "Ellis Dress"
-              }
-            ],
-            "trackingLink": "http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0\u0026Requester=NES\u0026AgreeToTermsAndConditions=yes\u0026loc=en_US\u0026tracknum=92612903032812543475602833",
-            "link": "https://www.cecilandlou.com/89183584554/orders/c665da0fea080cfa75199e0338978b37/authenticate?key=feca89443ce514b8152ad4d055a8208c",
-            "date_time": "2025-01-15 19:45:42.000",
-            "discount_amount": 0,
-            "orderNumber": "377841",
-            "order_tracking_link": "http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0\u0026Requester=NES\u0026AgreeToTermsAndConditions=yes\u0026loc=en_US\u0026tracknum=92612903032812543475602833",
-            "total": 46.59
-          }
-        ]
-      },
-      "companyWebsite": "https://cecilandlou.com",
-      "companyName": "Cecil and Lou",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "ai_instructions": [
-          "Do not escalate anything, if the customer question cannot be handled, send template titled Customer support",
-          "If inbound question references \u0027pre-order\u0027 or \u0027preorder\u0027 send template titled Customer Support"
-        ]
-      },
-      "blocklisted_words": [
-        
-      ],
-      "escalation_preferences": [
-        "Pre Orders"
-      ],
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: 🎀 Hey Catherine! Thanks for shopping with us! You\u0027ve earned enough points to redeem a $5 discount. Shop our site: https://candl.attn.tv/aySU7csF8p2A ",
-          "date_time": "2026-01-23 14:20:11.777",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: 💗 Thanks for visiting Cecil and Lou! This is Emma, I\u0027m happy to help you discover darling styles!\n\nWho are you shopping for today?",
-          "date_time": "2026-01-23 14:24:33.889",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: Hey Catherine! I\u0027m Emma, your personal shopping assistant.\n\nI\u0027m here to answer any questions, share recommendations, or assist in any way. What can I help you with today?\n\nhttps://candl.attn.tv/a5w7O_RoSiZ9 .",
-          "date_time": "2026-01-24 14:34:05.096",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: Hey it\u0027s Emma! Thanks for checking us out. Do you need help finding what you\u0027re looking for? ",
-          "date_time": "2026-02-02 20:50:57.604",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: ♥️It\u0027s time for a sweet treat! 30% off Valentine\u0027s Styles - TODAY only. Shop NOW! candl.attn.tv/aEGpvdg7wPog",
-          "date_time": "2026-02-03 11:45:27.833",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: 💗 Thanks for visiting Cecil and Lou! This is Emma, I\u0027m happy to help you discover darling styles!\n\nWho are you shopping for today?",
-          "date_time": "2026-02-03 13:45:14.400",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: ❤️ Last chance to indulge in sweet Valentine\u0027s Styles at 30% off! Don\u0027t miss out - today only! Shop now: candl.attn.tv/aNxe9jdOHyj5",
-          "date_time": "2026-02-04 11:45:22.165",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: Hey Catherine! I\u0027m Emma and I\u0027m here to be a personal shopping assistant for you!\n\nDo you have any questions or need a recommendation? Let me know how I can help. \n\nhttps://candl.attn.tv/a9lnr8vrJn_a .",
-          "date_time": "2026-02-05 13:50:26.905",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: 🚨 Flash Sale Alert! $21.99 swim \u0026 spring styles-limited quantities, limited time. Don\u0027t miss out! candl.attn.tv/aEE92S5vW4wp ",
-          "date_time": "2026-02-06 09:10:34.122",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: Flash Sale-Last Day! 🥳\n$21.99 swim \u0026 spring styles ending tonight. Don\u0027t miss it! candl.attn.tv/a4N0MVTn-e0J ",
-          "date_time": "2026-02-08 14:30:46.314",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: ⏰ Just a reminder! That $21.99 flash sale on swim \u0026 spring styles is ending soon. Shop before it\u0027s gone! candl.attn.tv/aO5JJiPscukR ",
-          "date_time": "2026-02-08 20:30:18.763",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: 🎉 SALE EXTENDED! $21.99 spring \u0026 swim styles. Ends TONIGHT! candl.attn.tv/aNgy5zULcagE ",
-          "date_time": "2026-02-09 16:30:30.682",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: 🎉FREE MONOGRAMS! All in-stock items - for a limited time! Shop now! candl.attn.tv/a3AKiX0VUubZ ",
-          "date_time": "2026-02-13 09:30:38.131",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: 💗 Thanks for visiting Cecil and Lou! This is Emma, I\u0027m happy to help you discover darling styles!\n\nWho are you shopping for today?",
-          "date_time": "2026-02-13 13:19:20.108",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: Hey Catherine! I\u0027m Emma, your personal shopping assistant.\n\nI\u0027m here to answer any questions, share recommendations, or assist in any way. What can I help you with today?\n\nhttps://candl.attn.tv/a_nEIQsj_Bnx .",
-          "date_time": "2026-02-14 13:50:12.004",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: 🎉 FREE Monograms end soon - save $12 per monogram! candl.attn.tv/a53Bi0ZeNOmT ",
-          "date_time": "2026-02-15 14:30:34.590",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: ⏰ By popular demand - Sale EXTENDED! FREE Monograms ending soon. Save $12 each! candl.attn.tv/aHx3spL2md9z ",
-          "date_time": "2026-02-16 10:01:14.455",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Cecil and Lou: ⏰ Last chance! Don\u0027t miss out on FREE monograms for all in-stock items! candl.attn.tv/aROob94GEEFK",
-          "date_time": "2026-02-16 20:30:22.262",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Hi Emma,\r\nDoes this come as a dress? Can you send me the link?",
-          "date_time": "2026-02-17 10:39:15.987",
-          "message_media": [
-            "https://attentive-files.s3.amazonaws.com/receive-event-media/1771342741960_9fca0bb0-e9d8-4a6d-893b-9521ffb11730-1.png"
-          ]
-        },
-        {
-          "message_id": "019c6c43-fc14-41c9-f000-0000983a39bb",
-          "message_text": "Cecil and Lou: Hello! We do have some similar styles available in dresses. For instance, what do you think about these options here? https://candl.attn.tv/a1HoixUc9nfI\nhttps://candl.attn.tv/aQYrFuAtiraT",
-          "message_type": "agent",
-          "agent": "126033",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-17 10:42:00.760"
+          "date_time": "2024-04-13 13:46:46.263"
         }
       ]
     }

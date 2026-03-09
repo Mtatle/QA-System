@@ -1,0 +1,1161 @@
+{
+  "version": 1,
+  "chunk": "chunk_0030",
+  "scenarios": {
+    "146": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "0198d349-1d3e-4b67-f000-000058339348",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "For Concierge use as appropriate",
+            "coupon": "ATTJH3PTY8"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://igloocoolers.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.igloocoolers.com/products/bmx-overland-latch",
+            "item": "Latch for BMX and Overland Coolers",
+            "timeAgo": "2025-08-20"
+          },
+          {
+            "link": "https://www.igloocoolers.com/products/ecocool-16-qt-cooler",
+            "item": "ECOCOOL® Latitude 16 Qt Cooler",
+            "timeAgo": "2025-08-20"
+          },
+          {
+            "link": "https://www.igloocoolers.com/products/imx-24-qt-cooler",
+            "item": "IMX 24 Qt Cooler - Rugged Blue",
+            "timeAgo": "2025-08-20"
+          },
+          {
+            "link": "https://www.igloocoolers.com/products/new-orleans-saints-16-oz-can",
+            "item": "New Orleans Saints 16 Oz Can",
+            "timeAgo": "2023-09-23"
+          },
+          {
+            "link": "https://www.igloocoolers.com/products/new-orleans-saints-16-oz-can",
+            "item": "New Orleans Saints 16 Oz Can",
+            "timeAgo": "2023-09-22"
+          }
+        ]
+      },
+      "companyWebsite": "https://igloocoolers.com",
+      "companyName": "Igloo",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for legal and fraud related inquires",
+          "Send to CS for product safety inquires and threats",
+          "Send to CS for website technical issues"
+        ],
+        "escalate": [
+          "ESC if cx claims bodily injury as result of a product",
+          "ESC if cx highlights dangers to health/safety as a result of product"
+        ],
+        "templates": [
+          "For all post-purchase \u0026 warranty inquiries use \"SUPPORT\" temp (SPT)",
+          "For discount code issues use \"SUPPORT\" temp (SPT)",
+          "For product info that you can\u0027t find on the site use \"SUPPORT\" temp (SPT)",
+          "If cx reach out about 90 qt cooler recall, use shortcut RCC",
+          "For custom order cancellation and edit requests, don\u0027t use CED, use the designated templates instead"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "warranty",
+        "broken product claims",
+        "parts",
+        "missing shipment",
+        "leaks"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Welcome to Igloo! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2025-08-20 10:59:07.189",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Hey this is Sarah, how can I help you?",
+          "date_time": "2025-08-20 10:59:11.181",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Igloo: Still deciding? Use offer ATTJH3PTY8 at checkout. Shop now: \n\n\nText back if you have any more questions!",
+          "date_time": "2025-08-22 15:12:08.135",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I am needing replacement parts??",
+          "date_time": "2025-08-22 15:12:55.489",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0198d335-e4e1-4080-f000-000058339348",
+          "message_text": "Igloo: I understand! We have replacement parts here: https://igloo.attn.tv/a6Ut5oCiyHke And again, if the part you need is not available on the website, it\u0027s best to text \"SUPPORT\" here, and you will be directed to another team member. You may also email us directly at customerservice@shop.igloocoolers.com or give us a call at 1-800-273-7024 from Monday through Friday, 8:00 a.m. to 5:00 p.m. PST. The team is happy to help!",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-22 15:16:21.371"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I am just waiting for an answer from you guys. It might be still under warranty!!",
+          "date_time": "2025-08-22 15:17:45.243",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0198d339-bdf9-4016-f000-000058339348",
+          "message_text": "Igloo: So sorry for the delay! We are dealing with an influx of support messages but this does not make your concern any less important. The team is working as hard as possible to address each issue promptly. I\u0027m thankful for your patience and understanding. Our team will get back to you soon.",
+          "message_type": "agent",
+          "agent": "109940",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-22 15:20:33.558"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I was told maybe Monday that I would have an answer??",
+          "date_time": "2025-08-22 15:21:55.423",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0198d340-268e-4e3a-f000-000058339348",
+          "message_text": "Igloo: I am so sorry. I understand how frustrating this can be. Please rest assured that your concern is important to us, and someone from our team will get in touch with you as soon as possible.",
+          "message_type": "agent",
+          "agent": "109940",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-22 15:27:33.546"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Should be pretty simple, Trailblazer cooler, made 2-24, bought 3-25, warranty or no! Need parts either way!",
+          "date_time": "2025-08-22 15:31:25.500",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Warranty Policy\"; last updated: 2023-03-01 19:41:23.912",
+          "date_time": "2025-08-22 15:37:20.985",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"No response from customer support - All brands\"; last updated: 2023-10-10 17:43:52.689",
+          "date_time": "2025-08-22 15:37:20.985",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0198d349-1d3e-4b67-f000-000058339348",
+          "message_text": "Igloo: I understand your I totally understand the frustration and I really want to help you with this. If your Igloo product failed due to defects in material or workmanship and falls within the guidelines of the Warranty policy, you may submit a claim here: https://igloo.attn.tv/au4j5fkHK-LW \n\nYou can also check out our warranty policy here: https://igloo.attn.tv/ayHhOPJ2wEGU \n\nHowever, for replacement parts I will just ask you to please be patient for our team to come back to you.",
+          "message_type": "agent",
+          "agent": "109940",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-22 15:37:20.987"
+        }
+      ]
+    },
+    "147": {
+      "agentName": "Samantha",
+      "has_shopify": true,
+      "id": "01968c9f-e3be-4fbc-f000-0000ae849c89",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://comfrt.com/products/minimalist-hoodie?variant=43984110485548",
+            "item": "Minimalist Hoodie",
+            "timeAgo": "2025-04-19"
+          },
+          {
+            "link": "https://comfrt.com/products/minimalist-hoodie?variant=42678648471596",
+            "item": "Minimalist Hoodie",
+            "timeAgo": "2025-04-19"
+          },
+          {
+            "link": "https://comfrt.com/products/signature-fit-unisex-hoodie?variant=43983881011244",
+            "item": "Signature Hoodie",
+            "timeAgo": "2025-04-19"
+          },
+          {
+            "link": "https://comfrt.com/products/signature-fit-unisex-hoodie?variant=43983880978476",
+            "item": "Signature Hoodie",
+            "timeAgo": "2025-04-19"
+          },
+          {
+            "link": "https://comfrt.com/products/pastel-collection",
+            "item": "Pastel Hoodie",
+            "timeAgo": "2025-03-14"
+          }
+        ],
+        "coupons": [
+          {
+            "coupon": "COMFRT15",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "COMEBACK15",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2025-02-16 13:59:46.661",
+            "coupon": "WELCOME15"
+          },
+          {
+            "coupon": "B15qbRLdl",
+            "status": "ACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://comfrt.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "total": 97.15,
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      20.3,
+                      1.95,
+                      20.3,
+                      27.3,
+                      27.3
+                    ],
+                    "Count": 5
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "link": "https://comfrt.com/56940298284/orders/aa3e97c5d5f9731edfd00bc3e10cc268/authenticate?key=6865080bd94ebd4694438b9737c8672b",
+            "orderDate": "2025-02-16",
+            "discount_amount": 0,
+            "orderNumber": "2540787",
+            "date_time": "2025-02-16 14:05:02.787"
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-02-16",
+            "coupon": "WELCOME15",
+            "items": [
+              {
+                "price": [
+                  47.6
+                ],
+                "productLink": "https://comfrtclothing.myshopify.com/products/pack-parent",
+                "name": "Cloud Bundle"
+              }
+            ],
+            "trackingLink": "https://track.flexport.com/9261290316871730750504",
+            "link": "https://comfrt.com/56940298284/orders/aa3e97c5d5f9731edfd00bc3e10cc268/authenticate?key=6865080bd94ebd4694438b9737c8672b",
+            "date_time": "2025-02-16 13:59:46.661",
+            "discount_amount": 0,
+            "orderNumber": "2540787",
+            "order_tracking_link": "https://track.flexport.com/9261290316871730750504",
+            "total": 89.03
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-02-16",
+            "coupon": "WELCOME15",
+            "items": [
+              {
+                "price": [
+                  1.95
+                ],
+                "productLink": "https://comfrtclothing.myshopify.com/products/routeins",
+                "name": "Shipping Protection by Route"
+              }
+            ],
+            "trackingLink": "https://track.flexport.com/9261290316871730750504",
+            "link": "https://comfrt.com/56940298284/orders/aa3e97c5d5f9731edfd00bc3e10cc268/authenticate?key=6865080bd94ebd4694438b9737c8672b",
+            "date_time": "2025-02-16 13:59:46.659",
+            "discount_amount": 0,
+            "orderNumber": "2540787",
+            "order_tracking_link": "https://track.flexport.com/9261290316871730750504",
+            "total": 89.03
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-02-16",
+            "coupon": "WELCOME15",
+            "items": [
+              {
+                "price": [
+                  47.6
+                ],
+                "productLink": "https://comfrtclothing.myshopify.com/products/pack-parent",
+                "name": "Minimalist Bundle"
+              }
+            ],
+            "trackingLink": "https://track.flexport.com/9261290316871730750504",
+            "link": "https://comfrt.com/56940298284/orders/aa3e97c5d5f9731edfd00bc3e10cc268/authenticate?key=6865080bd94ebd4694438b9737c8672b",
+            "date_time": "2025-02-16 13:59:46.657",
+            "discount_amount": 0,
+            "orderNumber": "2540787",
+            "order_tracking_link": "https://track.flexport.com/9261290316871730750504",
+            "total": 89.03
+          }
+        ]
+      },
+      "companyWebsite": "https://comfrt.com",
+      "companyName": "Comfrt",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post-purchase issues"
+        ],
+        "escalate": [
+          "ESC if the discount % is not the same as indicated in the automated message"
+        ],
+        "templates": [
+          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Sizing questions",
+        "Discount code errors"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Our best-selling 20lb CuddleCloud Blanket just dropped in 3 cozy new shades.\n\n100% Cotton. Reduces anxiety. Boosts focus. Helps you actually sleep.\n\nThese won\u0027t last, grab yours now: comfrt.attn.tv/aTj0FXJuHr2_ .",
+          "date_time": "2025-04-02 16:24:20.577",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Hi!! We miss you and hope you and your family are doing amazing.\n\nWe recently launched new collections \u0026 colors that our customers are in love with!\n\nWe just did a restock and wanted to let you know first!\n\nWhen you shop use code VIP20 for 20% OFF \n\n comfrt.attn.tv/ajDdjTGqME-_ . ",
+          "date_time": "2025-04-02 18:05:34.263",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: This NEW arrival is going to sell out. Shop the 5lb Hoodie before it\u0027s gone: comfrt.attn.tv/axYll4CdUfK9 .",
+          "date_time": "2025-04-04 17:33:45.367",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Don\u0027t miss out, your fave is almost gone!\n\nGet 15% OFF with code COMFRT15 before it\u0027s too late: \ncomfrt.attn.tv/a8wnrlwhjrcw",
+          "date_time": "2025-04-09 12:09:53.947",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: You asked, we answered. The Minimalist Collection now in Obsidian, your favorite go-to shade.\n\nShop before it\u0027s gone: comfrt.attn.tv/a5wW8Kr_NItr . ",
+          "date_time": "2025-04-12 12:02:50.956",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: The plush, velvety-soft Dreamer Blanket just dropped in seven dreamy new shades. \n\nIrresistibly cozy, perfectly stretchy, and weighted just right, you\u0027ll want to take it everywhere.\n\nGrab your favorite before it\u0027s gone: comfrt.attn.tv/aPiY1Kqmz2et .",
+          "date_time": "2025-04-16 16:03:53.509",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Hey again :)\n\nIf you didn\u0027t get a chance to check our new collections do it soon, stock is running low.\n\n comfrt.attn.tv/aaSX_IEVQa8J .",
+          "date_time": "2025-04-17 18:05:41.206",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: NEW pastel outfits = Easter goals\n\nSoft, sweet \u0026 limited edition.\n\nHop to it before they\u0027re gone: comfrt.attn.tv/aK-ktSS9q5UC . ",
+          "date_time": "2025-04-18 17:04:24.904",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: NAVY IS HERE!\n\nIntroducing our most requested color ever.\n\nGrab yours before they\u0027re gone by the weekend: comfrt.attn.tv/azCzevodOGwW .",
+          "date_time": "2025-04-23 14:03:03.493",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Don\u0027t miss out, your fave is almost gone!\n\nGet 15% OFF with code COMFRT15 before it\u0027s too late: comfrt.attn.tv/aM1FUaztrbSr",
+          "date_time": "2025-04-24 12:29:35.842",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Mother\u0027s Day is almost here! \n\nSnag the perfect gift (think: soft, snuggly, and 100% Mom-approved).\n\nGet yours just in time for the big day: comfrt.attn.tv/al5SWTNhQyQB .",
+          "date_time": "2025-04-26 16:02:20.764",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: SHE\u0027S BACK\n\nAnd you\u0027re the first to know. This fan-favorite shade sells out FAST. \n\nShop Orchid before it\u0027s gone, again: comfrt.attn.tv/a9IMAF4WUMSz .",
+          "date_time": "2025-05-01 12:04:00.545",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Will not be ordering more until I receive the two sets ordered and paid for on February 16th...",
+          "date_time": "2025-05-01 12:08:04.879",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01968c9f-e3be-4fbc-f000-0000ae849c89",
+          "message_text": "Comfrt: Thanks for letting me know, and I completely understand where you\u0027re coming from. I checked, and I can see that you\u0027ve purchased pre-ordered items. I\u0027m afraid it might be due to my system\u0027s limited access that I\u0027m unable to view the estimated shipping date assigned to your pre-order. Can you please check if this information is available in the order confirmation email we sent? Make sure to check your spam and promo folders, sometimes our emails end up there. \n\nIf this helps, you can also check out our Pre-Order policy here: https://comfrt.attn.tv/aUkIvhkJl7eD Please let me know if you have further questions or need my assistance. I\u0027m happy to help!",
+          "message_type": "agent",
+          "agent": "82220",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-05-01 12:13:30.952"
+        }
+      ]
+    },
+    "148": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "01918f1e-5ed0-42e1-f000-000029b9cc1d",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.chicos.com/store/product/zenergy+scuba+caviar+bead+sweatshirt/570373822?color=5062\u0026catId=cat2580017",
+            "item": "Zenergy® Scuba Caviar Bead Sweatshirt",
+            "timeAgo": "2024-08-25"
+          },
+          {
+            "link": "https://www.chicos.com/store/category/zenergy/cat2580017/?mi_u=442400624\u0026mi_ecmp=160647\u0026j=160647\u0026sfmc_sub=200331\u0026l=27_HTML\u0026u=24321397\u0026mid=514013412\u0026jb=1032\u0026utm_id=160647\u0026sfmc_id=200331\u0026utm_term=M1+cta\u0026utm_source=marketing\u0026utm_medium=email\u0026utm_campaign=C_P_08_25_24_Flash+Zenergy_RESEND\u0026utm_content=ACT\u0026sfmc_id=200331\u0026page=1",
+            "item": "Zenergy® Scuba Caviar Bead Sweatshirt",
+            "timeAgo": "2024-08-25"
+          },
+          {
+            "link": "https://www.chicos.com/store/product/zenergy8482+textured+sweatshirt/570372906?color=176\u0026catId=cat2580017",
+            "item": "ZenergyTM Textured Sweatshirt",
+            "timeAgo": "2024-08-25"
+          },
+          {
+            "link": "https://www.chicos.com/store/product/zenergyu00ae+soft+essentials+3+4+sleeve+top/570372909?rootReferringURL=\u0026expanded=true\u0026color=5219\u0026catId=cat2580017\u0026fromSearch=",
+            "item": "Zenergy® Soft Essentials 3/4 Sleeve Top",
+            "timeAgo": "2024-08-25"
+          },
+          {
+            "link": "https://www.chicos.com/store/category/zenergy/cat2580017/?suc=\u0026mi_u=442400624\u0026mi_ecmp=160647\u0026j=160647\u0026sfmc_sub=200331\u0026l=27_HTML\u0026u=24321397\u0026mid=514013412\u0026jb=1032\u0026utm_id=160647\u0026sfmc_id=200331\u0026utm_term=M1+cta\u0026utm_source=marketing\u0026utm_medium=email\u0026utm_campaign=C_P_08_25_24_Flash+Zenergy_RESEND\u0026utm_content=ACT\u0026sfmc_id=200331",
+            "item": "Zenergy® Scuba Caviar Bead Sweatshirt",
+            "timeAgo": "2024-08-25"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://chicos.com/store",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-29",
+            "items": [
+              {
+                "price": [
+                  19.98
+                ],
+                "name": "Zenergy® French Terry Cowl Neck Top"
+              }
+            ],
+            "date_time": "2024-05-29 17:18:39.111",
+            "discount_amount": 0,
+            "orderNumber": "135622577",
+            "total": 19.98
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-06",
+            "coupon": "88236063033137",
+            "items": [
+              {
+                "price": [
+                  29
+                ],
+                "productLink": "https://www.chicos.com/store/product/Floral-Elbow-Sleeve-A-line-Tee/570362497?color=6347\u0026size=1%20(8/10-M)",
+                "name": "Floral Elbow Sleeve A-line Tee"
+              }
+            ],
+            "date_time": "2024-05-06 16:37:36.370",
+            "discount_amount": 0,
+            "orderNumber": "135363955",
+            "total": 29
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-28",
+            "items": [
+              {
+                "price": [
+                  32.3
+                ],
+                "productLink": "https://www.chicos.com/store/product/Black-Double-Knit-Pullover-Sweater/570356506?color=001\u0026size=0%20(4/6-S)",
+                "name": "Black Double Knit Pullover Sweater"
+              }
+            ],
+            "date_time": "2023-11-28 23:49:57.109",
+            "discount_amount": 0,
+            "orderNumber": "133756992",
+            "total": 32.3
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-21",
+            "items": [
+              {
+                "price": [
+                  28.48
+                ],
+                "name": "No Iron Linen Button Back Tunic"
+              }
+            ],
+            "date_time": "2023-11-21 19:26:29.351",
+            "discount_amount": 0,
+            "orderNumber": "133604545",
+            "total": 28.48
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-20",
+            "items": [
+              {
+                "price": [
+                  18.98
+                ],
+                "name": "Linen-Blend Gold \u0026 Orange Tunic"
+              }
+            ],
+            "date_time": "2023-11-20 18:46:00.814",
+            "discount_amount": 0,
+            "orderNumber": "133596719",
+            "total": 18.98
+          }
+        ]
+      },
+      "companyWebsite": "https://chicos.com/store",
+      "companyName": "Chico\u0027s",
+      "notes": {
+        "escalate": [
+          "DO NOT ESC - send everything to CS!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Stock up on versatile crops \u0026 capris starting at $39! Transition seamlessly from summer to fall. Shop now: https://chicos.attn.tv/af1udj3vUuSY .",
+          "date_time": "2024-07-27 12:16:21.251",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: FLASH SALE! \nToday, Online Only.\n\nStyles are just $29 (and up) starting...now!\n\nDon\u0027t let them slip away. https://chicos.attn.tv/a6JgAMffNf-M .\n",
+          "date_time": "2024-07-28 12:19:05.064",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: ATTENTION! Styles starting at $29 have been extended!\nHurry and shop, it ends at midnight est. https://chicos.attn.tv/a3t6QR6dNb3u \nReply Stop to Stop",
+          "date_time": "2024-07-29 12:18:16.343",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Explore SALE styles at up to 50% OFF. Add new favorites to your wardrobe and SAVE! https://chicos.attn.tv/aeefeW4fCi1G .",
+          "date_time": "2024-07-30 12:41:45.288",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Time to accessorize!\n\nJewelry is buy 1, get 1 50% OFF on select styles.\n\nNecklaces, bracelets \u0026 more. https://chicos.attn.tv/aXzbIWaSYAA1 .\n",
+          "date_time": "2024-07-31 12:16:01.420",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Celebrate National Girlfriend\u0027s Day with our versatile Girlfriend jeans, perfect for every day. $69 Today Only! https://chicos.attn.tv/afoxt_faT57U ",
+          "date_time": "2024-08-01 12:16:43.223",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Shop NEW outfit makers for less.\nElevate your style with 25% OFF full price tops.\nFind your perfect look Today! https://chicos.attn.tv/aHW-6FBzwf1c .",
+          "date_time": "2024-08-02 12:31:29.797",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Crop to it ASAP!\nTime\u0027s running out for $39+ crops and capris. \nGreat savings on the best bottoms! https://chicos.attn.tv/aPMkBUYoYph0 .",
+          "date_time": "2024-08-03 12:18:15.912",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Today, Online Only\nFLASH SALE! \n\n40% off when you buy 2 or more sale styles.\n\nStock up now! https://chicos.attn.tv/aNP7JXlHB6dD \n\nReply Stop to Stop",
+          "date_time": "2024-08-04 12:19:31.612",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Top Reason To Shop? \n25% off tops ENDS TODAY! \nTreat yourself to style... before it\u0027s too late! https://chicos.attn.tv/aG2Mrx3Nl6PP \n.",
+          "date_time": "2024-08-05 12:19:40.220",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Check out our latest collection of must-have tops! \nDiscover NEW styles at 25% off. Shop now: https://chicos.attn.tv/aWsHvLxD9-u5 Sale Ends Tonight.",
+          "date_time": "2024-08-05 18:15:51.107",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: HAPPENING NOW!\n\nUp to 50% off SALE styles.\n\nHurry, lots of great pieces selling fast! https://chicos.attn.tv/aiPRpHJueEUh \n\nReply Stop to Stop",
+          "date_time": "2024-08-06 12:19:57.077",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Summer soirée season is still on! \nShop stunning sale dresses that WOW.... https://chicos.attn.tv/auPLLvPBMrN3 \nStarting at just $59. \n",
+          "date_time": "2024-08-07 12:16:27.552",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: First of Fall Sneak Peek! \nPreview our new collection. Plus, enjoy extra 25% off sale items.\nShop now: https://chicos.attn.tv/apPWEshkQf5y",
+          "date_time": "2024-08-08 12:19:53.995",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Extra 25% off SALE is happening NOW!\n\nFind your perfect jacket today.\n\nSave today: https://chicos.attn.tv/amTdRDqzVpAI\n\nEnds 8/13",
+          "date_time": "2024-08-09 12:16:15.914",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: SALE IS ON SALE!\n\nSave an EXTRA 25% Off already-reduced styles.\n\nShop now for best selection: https://chicos.attn.tv/aX395OpIh2cM .",
+          "date_time": "2024-08-10 12:17:37.708",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Time\u0027s running out to save an EXTRA 25% Off already-reduced styles. Shop now for best selection: https://chicos.attn.tv/atB1JXbSCvWK Ends 8/13",
+          "date_time": "2024-08-10 18:15:51.298",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Today, Online Only! \n\n25% off Travelers.\n\nWrinkle-resistant \u0026 event ready looks, what could be better?\nShop now: https://chicos.attn.tv/aHrtmGhIG3AQ .",
+          "date_time": "2024-08-11 12:19:03.200",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Bottoms Up!\n\n25% off pants \u0026 jeans - new arrivals included!\n\nStock up on just-in fall styles. https://chicos.attn.tv/abNhadD5UvL2 \n\nIn Store and Online",
+          "date_time": "2024-08-12 12:18:37.868",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: 25% off denim including new arrivals!\n\nRefresh your jeans with a leg shape for every occasion. https://chicos.attn.tv/a8WKMUDkf_Af .",
+          "date_time": "2024-08-13 12:18:04.855",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Now Extended-Online Only!\nExtra 25% off sale styles.\nHurry, new styles added \u0026 selling fast! https://chicos.attn.tv/anExqZRk1zwA \n\nReply Stop to Stop",
+          "date_time": "2024-08-14 12:18:03.951",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: $29 Tees? Yes, please!\n\nFind your perfect base layer for fall. https://chicos.attn.tv/aOlBX9n_VBht Plus, extra 25% off SALE styles.",
+          "date_time": "2024-08-15 13:22:46.537",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Can\u0027t get enough of Brigitte \u0026 Juliet? \n\nYou\u0027re in luck! All our newest pant styles are 25% off.\n\nShop now: https://chicos.attn.tv/aFjFVQM65crg .",
+          "date_time": "2024-08-16 12:51:47.910",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Get ready for fall with our $29 Tees! Whether you wear them now or layer up for the season https://chicos.attn.tv/avBYj0uJKpf0 + Extra 25% off SALE",
+          "date_time": "2024-08-17 12:18:10.033",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: TODAY, ONLINE ONLY!\n\nStyles starting at $29.\n\nRefresh your closet with sale picks of the day! https://chicos.attn.tv/auapsdLwIa2o \n\nReply Stop to Stop",
+          "date_time": "2024-08-18 12:18:55.314",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: TODAY ALL DAY! \nExtra 40% Off Sale \nWhen you buy 2 or more.\nTreat yourself. https://chicos.attn.tv/aHekp4_-3LcK \nRewards+ Members Get Free Shipping!",
+          "date_time": "2024-08-19 12:15:59.188",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: It\u0027s FALL about TEES!\n\nStock up now for the season\u0027s essential layering pieces starting at $29 https://chicos.attn.tv/aoUJMDCLtaA9 \nNew Colors \u0026 Prints",
+          "date_time": "2024-08-20 12:18:12.955",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: More Is More Outfit Event.\nStarts Today - In Store \u0026 Online.\n$20 off $100+\n$50 off $200+\nReady, set, shop! https://chicos.attn.tv/a3P6yOPYAlEG .",
+          "date_time": "2024-08-21 12:17:42.538",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: You\u0027ve heard it here first! \nStyles you love were JUST added to sale\n+\nSave up to $50 off!\nAdd to bag ASAP! https://chicos.attn.tv/aglEJIX47GiX .",
+          "date_time": "2024-08-22 12:17:39.246",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Shop our # 1 No Iron Shirt at 25% off https://chicos.attn.tv/ap9WIwpXYlZ9 \nCombine it with $20 off $100 or $50 off $200+ and SAVE EVEN MORE.",
+          "date_time": "2024-08-23 12:16:09.288",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: Today, Online Only!\n\nEnjoy 25% off Zenergy for effortless style and comfort.\n\nShop now for the best selection. https://chicos.attn.tv/aBgCsLz285kd .",
+          "date_time": "2024-08-25 12:16:03.885",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Chico\u0027s: This Scuba Caviar Bead Sweatshirt is waiting in your cart. It is trendy and versatile, ideal for any season.\n\nDon\u0027t miss out: https://chicos.attn.tv/aG-BPz_Qgvfw .",
+          "date_time": "2024-08-25 19:29:34.496",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Up to $50.00 off, but I couldn\u0027t figure out how to do it",
+          "date_time": "2024-08-25 19:31:34.631",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01918be4-66eb-4c3b-f000-000029b9cc1d",
+          "message_text": "Chico\u0027s: Hi there!\n\nTo apply the $50 off, you need to enter the discount code at checkout. Make sure the code is entered in the \"Promo Code\" box before you finalize your purchase.\n\nIf you\u0027re still having trouble or need any more help, feel free to ask!",
+          "message_type": "agent",
+          "agent": "87311",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-25 19:34:47.285"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I gave up",
+          "date_time": "2024-08-26 10:34:42.455",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01918f1e-5ed0-42e1-f000-000029b9cc1d",
+          "message_text": "Chico\u0027s: I understand the frustration, and I sincerely apologize. Can you kindly send a screenshot so I can assist you better in troubleshooting?",
+          "message_type": "agent",
+          "agent": "87589",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-26 10:36:57.947"
+        }
+      ]
+    },
+    "149": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "018f4e89-d76d-4050-f000-000063bf4620",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "value": "10",
+            "coupon": "MKE1-LR7-M9T-BXG-FGZ"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://ariat.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://ariat.com",
+      "companyName": "Ariat",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "templates": [
+          "There are 2 sizing temps (adults/kids)"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Discount code errors"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Ariat: Find your perfect style for the spring festival season with these showstopping looks: https://ariat.attn.tv/l/NhS/1mAN8 .",
+          "date_time": "2024-04-06 13:01:21.562",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ariat: Spring denim has arrived! These new styles turn heads wherever they go. Explore the latest looks now: https://ariat.attn.tv/l/vay/1mAN8 .",
+          "date_time": "2024-04-12 20:01:51.413",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ariat: Thru 4/29 Buy $50 Get $15 Off, Buy $100 Get $35 Off or Buy $150 Get $60 Off Sale Styles. Use code SAVENOW: https://ariat.attn.tv/l/MFy/1mAN8 .",
+          "date_time": "2024-04-26 13:02:34.170",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ariat: You are already subscribed. Your coupon code is MKE1-LR7-M9T-BXG-FGZ. Click here to shop now: https://ariat.attn.tv/cl/vHs .",
+          "date_time": "2024-04-26 13:50:34.893",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ariat: Last Day! Buy $50 Get $15 Off, Buy $100 Get $35 Off or Buy $150 Get $60 Off Sale Styles. Use code SAVENOW: https://ariat.attn.tv/l/KAp/1mAN8 .",
+          "date_time": "2024-04-29 13:02:28.743",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ariat: Offer Extended! Buy $50 Get $15 Off, Buy $100 Get $35 Off or Buy $150 Get $60 Off Sale Styles. Use code SAVENOW: https://ariat.attn.tv/l/6oE/1mAN8 .",
+          "date_time": "2024-04-30 13:03:09.488",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ariat: Last Chance! Buy $50 Get $15 Off, Buy $100 Get $35 Off or Buy $150 Get $60 Off Sale Styles. Use code SAVENOW: https://ariat.attn.tv/l/APj/1mAN8 .",
+          "date_time": "2024-05-01 13:06:27.505",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ariat: Hey, I love what you picked out! Need anything to go with it? Check out the latest, and text with questions. Shop Now: https://ariat.attn.tv/l/BSp/1mAN8 .\n\nYou can text back if you have feedback or need any product recommendations!",
+          "date_time": "2024-05-03 15:09:34.497",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Can I make an exchange for a bigger size in boots?",
+          "date_time": "2024-05-05 11:38:38.796",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f4a3f-ceb2-48a6-f000-000063bf4620",
+          "message_text": "Ariat: For the fastest and most accurate processing of your return and replacement order we don\u0027t process direct exchanges, however, you may return and re-order in two separate transactions. We offer free and easy returns within 90 days of purchase, and you can initiate your return here: https://ariat.attn.tv/sl/Fao1zYW6 \n\nYou can also check out our detailed return policy here: https://ariat.attn.tv/sl/ywqubMI4 Let me know how that goes, and if you have any further questions or concerns, I\u0027m more than happy to help!",
+          "message_type": "agent",
+          "agent": "46578",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-05 15:34:06.781"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "But since I got it on sale would I be able to get it on sale again",
+          "date_time": "2024-05-05 20:59:10.089",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"ESCALATION template\"; last updated: 2022-09-07 17:37:56.878",
+          "date_time": "2024-05-06 11:33:27.540",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f4e89-d76d-4050-f000-000063bf4620",
+          "message_text": "Ariat: The best way to handle this is to use this form here: https://ariat.attn.tv/sl/lcKkavVR and your question will be routed to the correct department. Let me know if there\u0027s anything else I can do for you! ",
+          "message_type": "agent",
+          "agent": "82500",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-06 11:33:27.542"
+        }
+      ]
+    },
+    "150": {
+      "agentName": "Suzie",
+      "has_shopify": false,
+      "id": "01902def-ec4d-4156-f000-00008d3015cb",
+      "rightPanel": {
+        "coupons": [
+          {
+            "coupon": "LDLT-PJN5-HMBU",
+            "status": "ACTIVE"
+          },
+          {
+            "coupon": "ZKE6-Z3DD-39T6",
+            "status": "ACTIVE"
+          },
+          {
+            "coupon": "GQ8R-7BKP-KYAG",
+            "status": "INACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://discountdance.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://discountdance.com",
+      "companyName": "Discount Dance",
+      "notes": {
+        "escalate": [
+          "If ESC late Friday or over the weekend use WKD shortcut first"
+        ],
+        "templates": [
+          "If a cx wants to update or edit their payment method, use UPM shortcut",
+          "For custom product inquiries, use CI shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Discount code errors",
+        "Order Changes"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Discount Dance: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/wMk",
+          "date_time": "2024-06-18 20:33:53.421",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Discount Dance: Welcome! Click this link for your 20% off coupon code: https://discountdance.attn.tv/ak_rp5mMvZHv .",
+          "date_time": "2024-06-18 20:33:57.338",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Discount Dance: You’re already subscribed. Click here to keep shopping: https://discountdance.attn.tv/cl/l95 .",
+          "date_time": "2024-06-18 20:34:42.478",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Discount Dance: Let\u0027s make this friendship official. Save us in your contacts so you never miss a thing!",
+          "date_time": "2024-06-18 20:39:04.002",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Y",
+          "date_time": "2024-06-18 20:39:36.831",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01902def-ec4d-4156-f000-00008d3015cb",
+          "message_text": "Discount Dance: Glad to know that. May I know if there is anything in particular that I can assist you with today? I\u0027m more than happy to help.",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-18 20:40:16.729"
+        }
+      ]
+    }
+  }
+}

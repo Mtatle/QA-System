@@ -3,129 +3,523 @@
   "chunk": "chunk_0005",
   "scenarios": {
     "21": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "018ebf19-000a-4a22-f000-0000845a821e",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "value": "10",
+            "coupon": "MKE1-DWS-9PB-QT7-F5B"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://ariat.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.ariat.com/10021473_889359381639.html?utm_source=taboola_ecom\u0026utm_medium=native\u0026utm_campaign=TB_AI_EC_AL_NP_AG_AD_CR_99%7CDCO\u0026tblci=GiBzaZ8upybZoQvtL18a7lbA9TTxG2iAry5-YuO1P667xyCsolYo6cu3--rghKOEAQ\u0026dwvar_SIERRA__ST__M__FOO_Size=7\u0026dwvar_SIERRA__ST__M__FOO_color=BLACK\u0026dwvar_SIERRA__ST__M__FOO_width=D_Medium#tblciGiBzaZ8upybZoQvtL18a7lbA9TTxG2iAry5-YuO1P667xyCsolYo6cu3--rghKOEAQ",
+            "item": "Sierra Steel Toe Work Boot",
+            "timeAgo": "2024-04-08"
+          }
+        ]
+      },
+      "companyWebsite": "https://ariat.com",
+      "companyName": "Ariat",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "templates": [
+          "There are 2 sizing temps (adults/kids)"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Discount code errors"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Ariat: Welcome to Ariat! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/0zY",
+          "date_time": "2024-04-05 14:59:16.495",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ariat: Hey this is Jordan, how can I help you?\n\nWelcome to Ariat, as a thank you here is 10% off your next order: MKE1-DWS-9PB-QT7-F5B.",
+          "date_time": "2024-04-05 14:59:21.017",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ariat: Thanks for reaching out! If you need additional help, please reach us at info@Ariat.com or 877-702-7428. Text STOP to opt out.",
+          "date_time": "2024-04-05 15:00:22.206",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ariat: Layers that are soft and versatile, perfect for spring weather. Shop our Countryside collection now: https://ariat.attn.tv/l/UTr/l0DtP .",
+          "date_time": "2024-04-06 17:01:58.248",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Ariat: Hi there! We noticed you eyeing something on our site..\n\nDon\u0027t forget, you have 10% OFF to redeem using code MKE1-DWS-9PB-QT7-F5B at checkout! https://ariat.attn.tv/sl/Xd7b6DxP\n\nText back if you have any questions!",
+          "date_time": "2024-04-08 14:27:05.030",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Do not have my size",
+          "date_time": "2024-04-08 14:28:08.645",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ebef8-0a66-498a-f000-0000845a821e",
+          "message_text": "Ariat: I\u0027m sorry to hear that the Amos Western Boot in size 12 isn\u0027t available. I recommend checking back on our website regularly as our stock is updated frequently. You can also reach out to our customer service at info@ariat.com or 877-702-7428 for more assistance.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-08 14:28:30.444"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Do not have 12EEEE",
+          "date_time": "2024-04-08 14:46:28.530",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ebf08-f6f5-4947-f000-0000845a821e",
+          "message_text": "Ariat: I\u0027m sorry for the inconvenience. Currently, we don\u0027t offer boots in size 12 EEEE. Our wide sizes might be a good fit for you. I recommend trying our Groundbreaker Wide Square Toe Steel Toe Work Boot in size 12 Wide. Here\u0027s the link: https://ariat.attn.tv/sl/CYgs1WZz.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-08 14:46:59.580"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Already bought size 12, too small in width. Wasted 170 dollars that I couldn\u0027t get back",
+          "date_time": "2024-04-08 14:53:38.690",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ebf11-2fb7-4cc7-f000-0000845a821e",
+          "message_text": "Ariat: Apologies for the inconvenience. Did you try returning them? You can check out our detailed return policy here: https://ariat.attn.tv/sl/3u5auSQ9 ",
+          "message_type": "agent",
+          "agent": "34839",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-08 14:55:58.402"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Already tried getting money back. Even had them stretched",
+          "date_time": "2024-04-08 14:57:18.767",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ebf14-5f64-4030-f000-0000845a821e",
+          "message_text": "Ariat: I understand. You can check out our detailed size chart here for future reference: https://ariat.attn.tv/sl/ABl87L6B",
+          "message_type": "agent",
+          "agent": "34839",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-08 14:59:27.213"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Already know my size. I spent 170.00 dollars that I cannot get back. Future reference will not help me",
+          "date_time": "2024-04-08 15:01:58.505",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"ESCALATION template\"; last updated: 2022-09-07 17:37:56.878",
+          "date_time": "2024-04-08 15:04:30.484",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018ebf19-000a-4a22-f000-0000845a821e",
+          "message_text": "Ariat: I\u0027m really sorry about that! The best way to handle this is to use this form here: https://ariat.attn.tv/sl/7epr5Oe4 and your question will be routed to the correct department.",
+          "message_type": "agent",
+          "agent": "34839",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-08 15:04:30.485"
+        }
+      ]
+    },
+    "22": {
+      "agentName": "Trudy",
+      "has_shopify": false,
+      "id": "018f3e86-0540-4400-f000-000087eb6044",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "This is the welcome offer given to new SMS subscribers for signing up to our SMS list. This discount code does not expire.",
+            "value": "35",
+            "coupon": "WELCOMETEXT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://truelemon.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.truelemon.com/products/true-lemon-original-lemonade",
+            "item": "True Lemon Original Lemonade - 10 Count",
+            "timeAgo": "2024-05-03"
+          }
+        ]
+      },
+      "companyWebsite": "https://truelemon.com",
+      "companyName": "True Lemon",
+      "notes": {
+        "escalate": [
+          "ESC if the customers order was canceled \u0026 they can\u0027t use the code they used on the first order again",
+          "ESC for purchases from Amazon with product issues",
+          "For orders purchased from retailers ask for the order confirmation when ESC!"
+        ],
+        "templates": [
+          "For missing items use MIO shortcut"
+        ],
+        "drive_to_purchase": [
+          "Don\u0027t share this link with cx\u0027s: https://truelemon.com/collections/sample-packs"
+        ],
+        "dos_and_donts": [
+          "🤖 We do not provide invoices"
+        ]
+      },
+      "blocklisted_words": [
+        "all-natural",
+        "organic"
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns"
+      ],
+      "messageTone": "Super Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "True Lemon: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from True Lemon.",
+          "date_time": "2024-05-03 08:50:56.270",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "True Lemon: Welcome to True Lemon! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/TRZ",
+          "date_time": "2024-05-03 08:51:41.463",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "True Lemon: Hi this is Trudy, how can I help you?",
+          "date_time": "2024-05-03 08:51:46.503",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I need to know if the lemon drink mix is..clear as water..when used. No color ing",
+          "date_time": "2024-05-03 08:52:35.049",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f3e83-d7b3-493f-f000-000087eb6044",
+          "message_text": "True Lemon: Yes, our True Lemon Juice Mix is clear when mixed with water. It doesn\u0027t contain any artificial colors or preservatives. You can find more information about it here: https://truecitrus.attn.tv/sl/PtpE_3FI.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-03 08:52:58.935"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "In factories they use water bottles but it has to be clear like clear water so it\u0027s hard to find mixes that don\u0027t add dyes",
+          "date_time": "2024-05-03 08:53:05.088",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The pictures I saw online make it look like it\u0027s hazy that is why I\u0027m asking directly before I buy any",
+          "date_time": "2024-05-03 08:53:35.176",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f3e84-bd5b-4d68-f000-000087eb6044",
+          "message_text": "True Lemon: I understand your concern. Our True Lemon Juice Mix does not contain any artificial colors or dyes, so it should not make your water hazy or colored. However, as it is made from real lemons, it might not be as crystal clear as plain water. It\u0027s always a good idea to try a small amount first to see if it meets your requirements.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-03 08:53:57.730"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Well I would like to have just one little packet for I could try it but no one sells one packet it\u0027s all 10 packs 100 packs etc so it\u0027s a little difficult to just you know get a small amount",
+          "date_time": "2024-05-03 08:54:54.906",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f3e86-0540-4400-f000-000087eb6044",
+          "message_text": "True Lemon: I understand your situation. We do offer sample packs on our website which include a variety of our products. This could be a good way for you to try our True Lemon Juice Mix without committing to a larger pack. You can find our sample packs here: https://truecitrus.attn.tv/sl/flPCL4kQ",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-03 08:55:21.671"
+        }
+      ]
+    },
+    "23": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "0191fbc6-a9d7-4a39-f000-00009973d24e",
+      "rightPanel": {
+        "coupons": [
+          {
+            "coupon": "HELLO10",
+            "status": "ACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://braun.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://us.braun.com/en-us/male-grooming/electric-shavers/series-9-pro-comfort-9599cc",
+            "item": "Series 9 PRO+ Electric Shaver with PowerCase, 6-in-1 SmartCare Center, ProComfort Head, 9599cc",
+            "timeAgo": "2024-09-14"
+          },
+          {
+            "link": "https://us.braun.com/en-us/male-grooming/electric-shavers/series-8-8567cc",
+            "item": "Series 8 Electric Shaver with 5-in-1 SmartCare Center, 8567cc",
+            "timeAgo": "2024-09-14"
+          },
+          {
+            "link": "https://us.braun.com/en-us/male-grooming/electric-shavers/series-8-power-case-8577cc",
+            "item": "Series 8 Electric Shaver with PowerCase and 5-in-1 SmartCare Center, 8577cc",
+            "timeAgo": "2024-09-14"
+          },
+          {
+            "link": "https://us.braun.com/en-us/male-grooming/electric-shavers/series-9-pro-comfort-9599cc",
+            "item": "Series 9 PRO+ Electric Shaver with PowerCase, 6-in-1 SmartCare Center, ProComfort Head, 9599cc",
+            "timeAgo": "2024-09-14"
+          }
+        ]
+      },
+      "companyWebsite": "https://braun.com",
+      "companyName": "Braun",
+      "notes": {
+        "dos_and_donts": [
+          "Don\u0027t send any registration links"
+        ],
+        "templates": [
+          "For adverse events or product quality complaints use APQ shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Discount codes don\u0027t stack with sale items"
+        ]
+      },
+      "blocklisted_words": [
+        "staging"
+      ],
+      "escalation_preferences": [
+        "Adverse Events",
+        "Product Quality Complaints"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Braun: Welcome to Braun! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/EkP",
+          "date_time": "2024-09-14 09:25:56.438",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Braun: Welcome to the family! I\u0027m Jordan from Braun - use code HELLO10 for 10% off your first order. https://braun.attn.tv/afTLrKc1UCjS \n\nNeed help finding the best product for your grooming style? Text back anytime!",
+          "date_time": "2024-09-14 09:26:00.477",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Braun: Don\u0027t forget to save our contact for exclusive deals and updates!",
+          "date_time": "2024-09-14 09:26:01.823",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Braun: Jordan here! I snagged you an exclusive offer, take 15% off with code ENJOY15. https://braun.attn.tv/aiUWc-LndyAR \n\nHave any questions? Text back now!",
+          "date_time": "2024-09-16 12:52:51.717",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Already ordered an item with 10% off",
+          "date_time": "2024-09-16 12:54:07.585",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0191fbc2-8c75-42cf-f000-00009973d24e",
+          "message_text": "Braun: Thank you for your purchase. Please feel free to use the 15% off code on your next order. \nLet me know if there is anything else I can help with! I\u0027m always here to help.",
+          "message_type": "agent",
+          "agent": "82764",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-16 12:55:16.864"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Just wondering if my order is going through",
+          "date_time": "2024-09-16 12:57:28.115",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Customer confirms they have a pending charge and no email (edit accordingly) - All brands\"; last updated: 2023-10-10 16:58:00.370",
+          "date_time": "2024-09-16 12:59:46.529",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0191fbc6-a9d7-4a39-f000-00009973d24e",
+          "message_text": "Braun: If you didn\u0027t get an email confirmation, then it\u0027s possible that the order didn\u0027t go through. If the charge on your account is pending, the order has not gone through and should either be refunded within 24-48 hours or processed successfully. If the charge reverts, you can place the order again. If the order processes, you\u0027ll get a confirmation email soon. ",
+          "message_type": "agent",
+          "agent": "87592",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-16 12:59:46.531"
+        }
+      ]
+    },
+    "24": {
       "agentName": "Alexa",
       "has_shopify": true,
-      "id": "019ca1c5-fe7c-4207-f000-000009152731",
+      "id": "019419b4-36ff-484c-f000-0000028709f9",
       "rightPanel": {
-        "promotions": [
+        "browsingHistory": [
           {
-            "title": "SUPERBOWL \u002726 50% OFF",
-            "content": [
-              "• 50% Off Sitewide - No offer code needed"
-            ]
+            "link": "https://www.fashionnova.com/products/katy-mock-neck-bodysuit-black",
+            "item": "Katy Mock Neck Bodysuit - Black - S",
+            "timeAgo": "2023-11-25"
           },
           {
-            "title": "SPRING40 | MAR \u002726 40% OFF",
-            "content": [
-              "• 40% Off Sitewide with code SPRING40"
-            ]
+            "link": "https://www.fashionnova.com/products/fairfax-high-rise-stretch-cargo-jean-light-wash?refSrc=6539797201020\u0026nosto=perf-productpage-nosto-2-copy-copy-2\u0026variant=39259481669756",
+            "item": "Fairfax High Rise Stretch Cargo Jeans - Light Wash - 14 Plus",
+            "timeAgo": "2023-11-25"
           },
           {
-            "title": "BFCM \u002725 PROMO 2 50-90% Off",
-            "content": [
-              "• 50-90% Off Sitewide - No offer code needed"
-            ]
+            "link": "https://www.fashionnova.com/products/fairfax-high-rise-stretch-cargo-jean-light-wash?refSrc=6539797201020\u0026nosto=perf-productpage-nosto-2-copy-copy-2",
+            "item": "Fairfax High Rise Stretch Cargo Jeans - Light Wash - 0",
+            "timeAgo": "2023-11-25"
           },
           {
-            "title": "GIFT40 | DEC \u002725 40% OFF",
-            "content": [
-              "• 50-90% Off Sitewide with code GIFT40"
-            ]
+            "link": "https://www.fashionnova.com/products/level-you-up-cargo-pant-charcoal?variant=39272064745596",
+            "item": "Level You Up Cargo Pant - Charcoal - 1X",
+            "timeAgo": "2023-11-25"
           },
           {
-            "title": "LOVE40 | JAN \u002726 40% OFF",
-            "content": [
-              "• 40% Off Sitewide with code LOVE40"
-            ]
-          },
-          {
-            "title": "BFCM \u002725 PROMO 3 50-99% Off",
-            "content": [
-              "• 50-99% Off Sitewide - No offer code needed\n\n• End Date TBD - slated to end on 12/3 but subject to change"
-            ]
-          },
-          {
-            "title": "TAKE10",
-            "content": [
-              "We provide this to subscribers who trigger the abandon flows. Only send to subscribers that reach out to concierge asking about the 10% code they were offered in their abandonment message."
-            ]
-          },
-          {
-            "title": "BFCM \u002725 PROMO 1 50% Off",
-            "content": [
-              "• 50% Off Sitewide - No offer code needed"
-            ]
-          },
-          {
-            "title": "SEMI ANNUAL \u002726 40-80% OFF",
-            "content": [
-              "• 40-80% Off Sitewide with code SAVE40"
-            ]
+            "link": "https://www.fashionnova.com/products/level-you-up-cargo-pant-charcoal",
+            "item": "Level You Up Cargo Pant - Charcoal - XS",
+            "timeAgo": "2023-11-25"
           }
         ],
         "coupons": [
           {
-            "subscriber_id": 152381233,
-            "company_id": 235,
-            "coupon_url": "https://fnova.myshopify.com/discount/FN53-8y3txw?utm_source=attentive\u0026utm_medium=sms",
-            "name": "30% Off Dynamic_05/2-6/15",
-            "coupon": "FN53-8y3txw",
-            "redemption_status": "UNUSED"
+            "status": "ACTIVE",
+            "redeemed": "2023-10-22 14:08:02.004",
+            "coupon": "TAKE10"
           },
           {
-            "subscriber_id": 152381233,
-            "company_id": 235,
-            "coupon_url": "https://fnova.myshopify.com/discount/TAKE10?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
-            "static_code": "TAKE10",
-            "name": "10% Static (TAKE10)",
+            "coupon": "SMS20",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "Journey discount",
+            "coupon": "SECRET30"
+          },
+          {
             "coupon": "TAKE10",
-            "redemption_status": "UNUSED"
+            "status": "ACTIVE"
           },
           {
-            "subscriber_id": 152381233,
-            "company_id": 235,
-            "coupon_url": "https://www.fashionnova.com/discount/SUMMER?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=welcome",
-            "static_code": "SUMMER",
-            "name": "30% SUMMER",
-            "coupon": "SUMMER",
-            "redemption_status": "UNUSED"
-          },
-          {
-            "subscriber_id": 152381233,
-            "company_id": 235,
-            "coupon_url": "https://fnova.myshopify.com/discount/FN26-4bbqye",
-            "value": "30",
-            "name": "30% Welcome Dynamic 1/30/25 - 3/15/26",
-            "coupon": "FN26-4bbqye",
-            "redemption_status": "UNUSED",
-            "value_type": "PERCENT"
-          }
-        ],
-        "browsingHistory": [
-          {
-            "link": "https://www.fashionnova.com/products/katie-cami-slip-dress-black?utm_campaign=wishlist_low_stock\u0026utm_source=attentive\u0026utm_medium=sms\u0026externalId=dgFHR",
-            "item": "Katie Cami Slip Dress - Black",
-            "timeAgo": "2026-02-26"
-          },
-          {
-            "link": "https://www.fashionnova.com/products/ed-hardy-crawling-tigers-wide-leg-pant-black?utm_campaign=email_pricedrop_cust_1_of_2\u0026utm_medium=email\u0026utm_source=wunderkind\u0026utm_term=triggered\u0026ibx_source=d6fbs66p0epc73cd8djg\u0026ueh=594f3c6fd5768f98071e842a66928355295674ad77f718603f3cb5db463758e6\u0026_kx=17ywE0bgeheQuBPhj85CIBPhkorx-wAXk5oAiv0ac-0.XkHHQx",
-            "item": "Ed Hardy Crawling Tigers Wide Leg Pant - Black",
-            "timeAgo": "2026-02-25"
-          },
-          {
-            "link": "https://www.fashionnova.com/products/ed-hardy-love-kills-pant-set-blue?utm_campaign=email_pricedrop_cust_1_of_2\u0026utm_medium=email\u0026utm_source=wunderkind\u0026utm_term=triggered\u0026ibx_source=d6fbs66p0epc73cd8djg\u0026variant=39284215283836\u0026ueh=594f3c6fd5768f98071e842a66928355295674ad77f718603f3cb5db463758e6\u0026_kx=17ywE0bgeheQuBPhj85CIBPhkorx-wAXk5oAiv0ac-0.XkHHQx",
-            "item": "Ed Hardy Love Kills Pant Set - Blue",
-            "timeAgo": "2026-02-25"
-          },
-          {
-            "link": "https://www.fashionnova.com/products/valentina-snatched-straight-leg-pant-set-black",
-            "item": "Valentina Snatched Straight Leg Pant Set - Black",
-            "timeAgo": "2026-02-25"
-          },
-          {
-            "link": "https://www.fashionnova.com/products/star-design-studio-fleece-pant-set-pink",
-            "item": "Star Design Studio Fleece Pant Set - Pink",
-            "timeAgo": "2026-02-25"
+            "coupon": "SAVE10",
+            "status": "INACTIVE"
           }
         ],
         "source": {
@@ -136,31 +530,88 @@
         "orders": [
           {
             "currency": "USD",
-            "orderDate": "2026-02-08",
+            "orderDate": "2023-11-20",
             "items": [
               {
                 "price": [
-                  {
-                    "value": [
-                      10,
-                      10,
-                      24.99,
-                      24.99
-                    ],
-                    "Count": 4
-                  }
+                  20
                 ],
-                "productLink": "System.Object[]",
-                "name": "System.Object[]"
+                "productLink": "https://fnova.myshopify.com/products/cant-be-beat-cropped-puffer-jacket-black",
+                "name": "Can\u0027t Be Beat Cropped Puffer Jacket - Black"
               }
             ],
-            "trackingLink": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZE351H30338811313\u0026carrier=UPS\u0026order_numbers=178676741\u0026locale=en_US",
-            "link": "https://www.fashionnova.com/2939277/orders/9aee74c1aa1d949b0a93995701c472c8/authenticate?key=fc4d02a117a23405ce761c17c7ac4f93",
-            "date_time": "2026-02-08 18:03:37.541",
+            "date_time": "2023-11-20 02:00:53.941",
             "discount_amount": 0,
-            "orderNumber": "178676741",
-            "order_tracking_link": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZE351H30338811313\u0026carrier=UPS\u0026order_numbers=178676741\u0026locale=en_US",
-            "total": 84.15
+            "orderNumber": "5457428611196",
+            "total": 266.59
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-20",
+            "items": [
+              {
+                "price": [
+                  15
+                ],
+                "productLink": "https://fnova.myshopify.com/products/dont-rain-on-my-puffer-jacket-white",
+                "name": "Don\u0027t Rain On My Puffer Jacket - White"
+              }
+            ],
+            "date_time": "2023-11-20 02:00:53.932",
+            "discount_amount": 0,
+            "orderNumber": "5457428611196",
+            "total": 266.59
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-20",
+            "items": [
+              {
+                "price": [
+                  29.99
+                ],
+                "productLink": "https://fnova.myshopify.com/products/climate-change-puffer-jacket-rust",
+                "name": "Climate Change Puffer Jacket - Rust"
+              }
+            ],
+            "date_time": "2023-11-20 02:00:53.929",
+            "discount_amount": 0,
+            "orderNumber": "5457428611196",
+            "total": 266.59
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-20",
+            "items": [
+              {
+                "price": [
+                  7.98
+                ],
+                "productLink": "https://fnova.myshopify.com/products/chloe-cut-out-bodysuit-pink",
+                "name": "Chloe Cut Out Bodysuit - Pink"
+              }
+            ],
+            "date_time": "2023-11-20 02:00:53.851",
+            "discount_amount": 0,
+            "orderNumber": "5457428611196",
+            "total": 266.59
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-20",
+            "items": [
+              {
+                "price": [
+                  7.98
+                ],
+                "productLink": "https://fnova.myshopify.com/products/chloe-cut-out-bodysuit-ivory",
+                "name": "Chloe Cut Out Bodysuit - Ivory"
+              }
+            ],
+            "date_time": "2023-11-20 02:00:53.825",
+            "discount_amount": 0,
+            "orderNumber": "5457428611196",
+            "total": 266.59
           }
         ]
       },
@@ -198,1286 +649,611 @@
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Congrats! Your order #178431416 is confirmed.\n\nCheck the status of your order here: http://sms.fashionnova.com/ajdCHPgwPJ-Z .",
-          "date_time": "2026-02-05 07:28:43.665",
+          "message_text": "Fashion Nova: We\u0027ll send you a text when LA Champions Bomber Jacket - Black is back in stock for the size you requested! In the meantime, get 50-90% OFF EVERYTHING! This is our BIGGEST BLACK FRIDAY SALE EVER! -\u003e\nhttp://sms.fashionnova.com/a7rYVPEGN0aX .",
+          "date_time": "2024-12-01 01:39:33.269",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Fashion Nova.",
-          "date_time": "2026-02-05 07:28:47.172",
+          "message_text": "Fashion Nova: You\u0027re all set! Your order number is #148104111. You can view more information about your order here: http://sms.fashionnova.com/asQAwdqYr_IP .",
+          "date_time": "2024-12-01 10:22:55.448",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Terms: http://sms.fashionnova.com/cl/Vbi Privacy: http://sms.fashionnova.com/cl/EzD",
-          "date_time": "2026-02-05 07:29:10.753",
+          "message_text": "Fashion Nova: 99% OFF⚠️\nCYBER MONDAY IS EARLY!!️\n\n50-99% OFF EVERYTHING!!\n\nNew Styles Just Added! Shop NOW!! -\u003e http://sms.fashionnova.com/aXQP-21DjRyf .",
+          "date_time": "2024-12-01 11:24:24.794",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: You made the FN list! Now, tap the link to get 30% OFF the ENTIRE site with code FN26-4bbqye! -\u003e http://sms.fashionnova.com/aW4b7UfgAayl .",
-          "date_time": "2026-02-05 07:29:14.763",
+          "message_text": "Fashion Nova: NEXT 2,500 Orders GET FREEE $50 NOVA CREDIT!💰\n\n+ 50-99% OFF EVERYTHING CYBER MONDAY Early Access Is NOWWW!!️\n\nOrder Today, Receive $50 CREDIT Tmrw! GO GO GO!! | T\u0026C Apply -\u003e http://sms.fashionnova.com/afarxH_l_VFS .",
+          "date_time": "2024-12-01 19:14:05.929",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: HURRY! Your unique offer FN26-4bbqye expires in 14 days! Tap this link to apply 30% Off, NOW! -\u003e http://sms.fashionnova.com/a1QmfO33uoVv .",
-          "date_time": "2026-02-05 15:53:05.429",
+          "message_text": "Fashion Nova: 🚨99% OFF🚨CYBER MONDAY IS HERE!! $3 Graphics \u0026 Tees NEXT Few Hrs ONLY!!\n\n50-99% OFF EVERYTHING!!️\n\nIt\u0027s The BIGGEST SALE ON THE INTERNET!! Hurry, Shop NOW! -\u003e http://sms.fashionnova.com/adMWzU1ffzZb .",
+          "date_time": "2024-12-02 10:45:00.193",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Your wishlist fave is back in stock! Mini Chelsea Biker Short Set - Mint is available in your size! Act fast before it sells out again! -\u003e\nhttp://sms.fashionnova.com/auGrcWn0dYu2 .",
-          "date_time": "2026-02-06 15:20:17.536",
+          "message_text": "Fashion Nova: 🚨$5 JEANS \u0026 PANTS (Next 3 HRS ONLY!) Hurry, B4 They SELL OUT!!\n\n50-99% OFF EVERYTHING! + EXTRA 10% OFF Orders +$99, Code: CYBER10\n\n🤯 The Most VIRAL CYBER SALE ENDS @ MIDNIGHT! GO! -\u003ehttp://sms.fashionnova.com/aLPe6syh5jcv .",
+          "date_time": "2024-12-02 18:13:20.277",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Hi Takiah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
-          "date_time": "2026-02-06 19:51:02.889",
+          "message_text": "Fashion Nova: MORE FREEEEE! We\u0027re REFUNDING The Next 2,000 Orders Up To $100!! Ur Odds Got BETTER!\n\n💰50-99% OFF The ENTIRE SITE\n🔥$5 JEANS \u0026 PANTS (More Added!)\n🤑XTRA 10% OFF Code: CYBER10\n\nCyber ENDS In 5 HRS! See T\u0026Cs -\u003e http://sms.fashionnova.com/ad2ZPDvldbWj . ",
+          "date_time": "2024-12-02 21:28:05.732",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Let\u0027s F#CKING GO! 50% OFF EVERYTHING Starts NOW!\n\n+Next 6HRS Only: $10 SETS!\n\nIt\u0027s GAMEDAY! Shop NOW! -\u003e\nhttp://sms.fashionnova.com/aEyTgm7tYYDk .",
-          "date_time": "2026-02-08 11:14:40.662",
+          "message_text": "Fashion Nova: 2 HRS LEFT!! 🚨 50-99% OFF + EXTRA 15% OFF Code: CYBER15 Is NOWW!\n\nP.s. 👆 My Boss Made Me Send This Last Reminder \u0026 I Told Him To Chill...Just SHOP NOW!-\u003e http://sms.fashionnova.com/aBesidBZsUnw . ",
+          "date_time": "2024-12-02 23:21:06.970",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: 🚨We\u0027re REFUNDING The NEXT 2,000 Orders Up To $100!!!🚨\n\n+ 50% OFF EVERYTHING!\n\nHURRY! Ur Chance To Score Is... NOW! See T\u0026Cs. HURRY!! -\u003e\nhttp://sms.fashionnova.com/ah9Ec7wcXQI0 .",
-          "date_time": "2026-02-08 19:08:19.653",
+          "message_text": "Fashion Nova: EXTENDED! 50-99% OFF + XTRA 10% OFF w/ Code: CYBER10\n\nPlus, $6 Hoodies \u0026 Sweats, Tonight ONLY! Shop Now -\u003e http://sms.fashionnova.com/acL6_OrMdxDN . ",
+          "date_time": "2024-12-03 20:53:33.809",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: WTF?!🚨$5 JEANS Starts NOW!!🚨\n\n+ 50% OFF EVERYTHING ENDS Tonight!\n\nHurry, Don\u0027t Fumble This Deal! Shop Now! -\u003e\nhttp://sms.fashionnova.com/av_6ISYW_oqc .",
-          "date_time": "2026-02-08 21:01:29.445",
+          "message_text": "Fashion Nova: BACK IN STOCK ALERT!! LA Champions Bomber Jacket - Black is available in your size again! HURRY! Others are viewing this product RIGHT NOW. Shop before it\u0027s too late! -\u003e\nhttp://sms.fashionnova.com/aAFlr0gIezeB .",
+          "date_time": "2024-12-04 17:57:09.236",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: 2HRS LEFT! 50% OFF EVERYTHING Ending + Xtra 10% OFF! Code: WIN10\n\nHurry, Shop B4 Game Day Is OVER! -\u003e\nhttp://sms.fashionnova.com/as-Dbkfl7oHu .",
-          "date_time": "2026-02-08 23:17:52.183",
+          "message_text": "Fashion Nova: Great news! Your order is one step closer to you!\n\nOrder #148104111 has been picked up from our warehouse by the carrier! Click here to track your order: http://sms.fashionnova.com/ag1S-0roNvd3 .",
+          "date_time": "2024-12-13 16:45:17.003",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: EXTENDED! 50% OFF EVERYTHING Is Still Going!!\n\nT\u0026Cs Apply, Hurry \u0026 Shop B4 This SALE Is OVER! -\u003e\nhttp://sms.fashionnova.com/a3XpKyl8iQTZ .",
-          "date_time": "2026-02-09 19:32:04.844",
+          "message_text": "Fashion Nova: Great news! Your order is one step closer to you!\n\nOrder #148104111 has been picked up from our warehouse by the carrier! Click here to track your order: http://sms.fashionnova.com/aGcDYubYWm6m .",
+          "date_time": "2024-12-17 13:21:37.948",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Your wishlist fave is BACK in STOCK! Mini Chelsea Cutie In Camo Biker Short Set - Pink is available in your size! Act fast before it sells out again! -\u003e\nhttp://sms.fashionnova.com/a5fxBufT4dV_ .",
-          "date_time": "2026-02-10 17:50:11.212",
+          "message_text": "Fashion Nova: Hey Christian , your order #148104111 is out for delivery and should be delivered TODAY!\n\nYou can track your order here: http://sms.fashionnova.com/aviGaxCqmXyK .",
+          "date_time": "2024-12-17 13:22:12.935",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Don\u0027t miss the Super Sunday Sale! Get 50% OFF absolutely EVERYTHING! Treat yourself! -\u003e http://sms.fashionnova.com/ai_Y-b7M2tcr .",
-          "date_time": "2026-02-10 20:40:30.158",
+          "message_text": "Fashion Nova: Great news! Your order is one step closer to you!\n\nOrder #148104111 has been picked up from our warehouse by the carrier! Click here to track your order: http://sms.fashionnova.com/a2rQ34aCtuw9 .",
+          "date_time": "2024-12-17 13:31:20.601",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: FREE 1-Day Shipping! Get It B4 V-DAY!\n\n+The Semi-Annual SALE Is NOW! 40-80% OFF SITEWIDE!\n\nT\u0026C Apply -\u003e\nhttp://sms.fashionnova.com/aBRL_cTCb2gB .",
-          "date_time": "2026-02-11 11:14:44.122",
+          "message_text": "Fashion Nova: Hey Christian , your order #148104111 is out for delivery and should be delivered TODAY!\n\nYou can track your order here: http://sms.fashionnova.com/ar9arqk5m86E .",
+          "date_time": "2024-12-17 13:33:34.234",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Your order #178676741 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/aYfy0ANzm7D4 .",
-          "date_time": "2026-02-11 15:03:37.990",
+          "message_text": "Fashion Nova: Hey Christian , your order #148104111 is out for delivery and should be delivered TODAY!\n\nYou can track your order here: http://sms.fashionnova.com/a-W0Xwx4xq5z .",
+          "date_time": "2024-12-17 13:54:30.755",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: LAST CALL B4 VDAY! FREE 1-Day Shipping...\n\n+40-80% OFF SITEWIDE!\n\nT\u0026C Apply, Order NOW, Get It TMRW!-\u003e\nhttp://sms.fashionnova.com/aRBqzUVg8xM- .",
-          "date_time": "2026-02-12 11:02:08.501",
+          "message_text": "Fashion Nova: Hey Christian , your order #148104111 has been delivered! \n\nWe hope you love everything inside! You can check your delivery details with the carrier here: http://sms.fashionnova.com/a71fFUPdlYb7 . ",
+          "date_time": "2024-12-17 17:40:13.687",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Low stock alert! Your saved item is about to sell out! Get 40-80% off EVERYTHING with code SAVE40! http://sms.fashionnova.com/auaJnxXrHycJ .",
-          "date_time": "2026-02-13 22:49:15.473",
+          "message_text": "Fashion Nova: FREE 1-DAY SHIPPING + 40% OFF EVERYTHING!!\n\nShop B4 12PM PST, Get It TOMORROW... Hurry, GO! -\u003e http://sms.fashionnova.com/aQZB1KCUUpTw . ",
+          "date_time": "2024-12-18 10:23:56.382",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: FINAL 6HRS! 40-80% OFF EVERYTHING Is ENDING!!\n\nHURRY, Shop B4 Code: SAVE40 Expires!! -\u003e\nhttp://sms.fashionnova.com/a-eFw2y25gR2 .",
-          "date_time": "2026-02-15 18:37:06.813",
+          "message_text": "Fashion Nova: LAST CALL FOR XMAS! FREE 1-DAY SHIPPING + 40% OFF EVERYTHING!! Code: GIFT40\n\nOrder Today, Get It Tuesday!! | T\u0026C Apply -\u003e http://sms.fashionnova.com/aRbqsVRiO2Xy .",
+          "date_time": "2024-12-22 11:08:15.097",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Last Chance!! On The Go Fleece Pant Set - Charcoal is almost sold out. Grab it before someone else does! -\u003e http://sms.fashionnova.com/aGE9EC6hj_db .",
-          "date_time": "2026-02-16 15:23:45.357",
+          "message_text": "Fashion Nova: You are already on the FN list, so return to the site and shop NOW → FashionNova.com .",
+          "date_time": "2024-12-23 02:16:12.193",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: HURRY! The price dropped! Get the Ready For Vacay Wide Leg Pant Set - Brown - XL NOW before it sells out! -\u003e http://sms.fashionnova.com/aacky3nNMP0e .",
-          "date_time": "2026-02-17 15:33:56.319",
+          "message_text": "Fashion Nova: You\u0027re all set! Your order number is #149678873. You can view more information about your order here: http://sms.fashionnova.com/asx12ExQUjNI .",
+          "date_time": "2024-12-23 02:18:39.007",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Takiah, what happened? You may have missed something! Check out our New Arrivals before they sell out... you won\u0027t regret it: http://sms.fashionnova.com/amWRcB70hHBk . ",
-          "date_time": "2026-02-17 16:32:16.829",
+          "message_text": "Fashion Nova: DELIVERY B4 XMAS EVE! FREE SAME-DAY Shipping + 40% OFF SITEWIDE! Use Code: GIFT40\n\nHURRY! ORDER By NOON PST \u0026 Get Ur Order TONIGHT! -\u003e http://sms.fashionnova.com/aFrU1tiychbW .",
+          "date_time": "2024-12-23 10:46:43.817",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Want It TMRW?! FREE 1-Day Shipping + An XTRA $20 OFF UR $99+ Order!\n\nT\u0026C Apply, Don\u0027t Wait! Order NOW!-\u003e http://sms.fashionnova.com/a5Oa_7hAZ1ZR .",
-          "date_time": "2026-02-18 11:12:37.956",
+          "message_text": "Fashion Nova: Hi, Christian! Your order #149678873 was successfully canceled. You can check the status and details of your order here: http://sms.fashionnova.com/azASmv0Ar-FB .",
+          "date_time": "2024-12-23 13:37:15.441",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Hi Takiah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
-          "date_time": "2026-02-19 15:36:31.617",
+          "message_text": "Fashion Nova: You are already on the FN list, so return to the site and shop NOW → FashionNova.com .",
+          "date_time": "2024-12-23 14:00:11.065",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: A matching set in your cart is selling fast! Buy it before someone else does! \n\nUse code: TAKE10 at checkout NOW for 10% OFF your entire cart! \n-\u003e http://sms.fashionnova.com/a4ekYSBbABlQ .",
-          "date_time": "2026-02-19 15:40:20.668",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 is out for delivery and should be delivered TODAY!\n\nYou can track your order here: http://sms.fashionnova.com/a8fyss5Dlwbs .",
+          "date_time": "2024-12-27 13:25:25.388",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Don\u0027t forget you put this in your cart and it\u0027s selling out fast! Check out NOW and use code: TAKE10 for 10% OFF your ENTIRE order! \n-\u003e http://sms.fashionnova.com/ax36P3JEMIFQ .",
-          "date_time": "2026-02-21 15:37:44.493",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 is out for delivery and should be delivered TODAY!\n\nYou can track your order here: http://sms.fashionnova.com/av47gTg2SkyF .",
+          "date_time": "2024-12-27 13:25:27.072",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Hi Takiah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
-          "date_time": "2026-02-21 15:52:01.902",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 is out for delivery and should be delivered TODAY!\n\nYou can track your order here: http://sms.fashionnova.com/ah7VpP-bM9bA .",
+          "date_time": "2024-12-27 13:25:27.756",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Surprise! Here\u0027s a code for 10% off the entire site: TAKE10 - Go on, treat yourself! -\u003e http://sms.fashionnova.com/ap7soSa2WUaL .",
-          "date_time": "2026-02-21 16:12:37.553",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 is out for delivery and should be delivered TODAY!\n\nYou can track your order here: http://sms.fashionnova.com/aDd72FLUuXqL .",
+          "date_time": "2024-12-27 13:25:27.766",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: You\u0027ve Missed Out On So Much! 6,458+ New Arrivals Just Added. Come Back \u0026 Shop NOW To Receive 10% OFF Your Entire Order! Use Code: TAKE10 ASAP! Code Expires Soon! http://sms.fashionnova.com/a-V1rHipBOiZ .",
-          "date_time": "2026-02-23 15:13:08.293",
+          "message_text": "Fashion Nova: Great news! Your order is one step closer to you!\n\nOrder #149706329 has been picked up from our warehouse by the carrier! Click here to track your order: http://sms.fashionnova.com/a2AzimvfJtBs .",
+          "date_time": "2024-12-27 13:49:17.484",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: HURRY! The price dropped! Get the Steal The Moment Windbreaker Pant Set - Charcoal/combo - XL NOW before it sells out! -\u003e http://sms.fashionnova.com/anCWFKeMy7m8 .",
-          "date_time": "2026-02-24 15:50:23.256",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 is out for delivery and should be delivered TODAY!\n\nYou can track your order here: http://sms.fashionnova.com/a4WeapXByTNf .",
+          "date_time": "2024-12-27 13:52:54.977",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: FREE 1-Day Shipping + BOGO FREE All Jeans, Denim Shorts \u0026 Jackets!\n\nT\u0026C Apply, Shop Now, Get It TMRW! -\u003e\nhttp://sms.fashionnova.com/axMn_4crkuJp .",
-          "date_time": "2026-02-25 11:12:32.325",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 is out for delivery and should be delivered TODAY!\n\nYou can track your order here: http://sms.fashionnova.com/a-0FfGUTWKnu .",
+          "date_time": "2024-12-27 13:53:40.988",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Hi Takiah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
-          "date_time": "2026-02-25 15:31:18.552",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 is out for delivery and should be delivered TODAY!\n\nYou can track your order here: http://sms.fashionnova.com/aBdM_FpokD2R .",
+          "date_time": "2024-12-27 13:53:43.571",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: A matching set in your cart is selling fast! Buy it before someone else does! \n\nUse code: TAKE10 at checkout NOW for 10% OFF your entire cart! \n-\u003e http://sms.fashionnova.com/aa3eqpJERFuF .",
-          "date_time": "2026-02-25 15:35:19.618",
+          "message_text": "Fashion Nova: Great news! Your order is one step closer to you!\n\nOrder #149706329 has been picked up from our warehouse by the carrier! Click here to track your order: http://sms.fashionnova.com/aSoHyrjM22fE .",
+          "date_time": "2024-12-27 13:54:46.086",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Low stock alert! Your saved item is about to sell out! Shop before it\u0027s gone!\nhttp://sms.fashionnova.com/adYI5l1xngRq .",
-          "date_time": "2026-02-26 15:47:51.299",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 is out for delivery and should be delivered TODAY!\n\nYou can track your order here: http://sms.fashionnova.com/az3V8N2bjJfU .",
+          "date_time": "2024-12-27 13:56:00.900",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Don\u0027t forget you put this in your cart and it\u0027s selling out fast! Check out NOW and use code: TAKE10 for 10% OFF your ENTIRE order! \n-\u003e http://sms.fashionnova.com/aC7rcikgGX7j .",
-          "date_time": "2026-02-26 16:16:34.615",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 is out for delivery and should be delivered TODAY!\n\nYou can track your order here: http://sms.fashionnova.com/aNPArI2zpZG6 .",
+          "date_time": "2024-12-27 13:58:13.009",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Your wishlist fave is selling fast! Grab it now before it\u0027s gone for good.\nhttp://sms.fashionnova.com/aNLJa8KGr-yO .\n",
-          "date_time": "2026-02-26 16:46:15.877",
+          "message_text": "Fashion Nova: Great news! Your order is one step closer to you!\n\nOrder #149706329 has been picked up from our warehouse by the carrier! Click here to track your order: http://sms.fashionnova.com/aoT8PpWNISns .",
+          "date_time": "2024-12-27 13:59:21.857",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Fashion Nova: Hi Takiah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
-          "date_time": "2026-02-26 17:16:35.819",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 has been delivered! \n\nWe hope you love everything inside! You can check your delivery details with the carrier here: http://sms.fashionnova.com/aDKEVAeB06-Q . ",
+          "date_time": "2024-12-27 19:27:03.579",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 has been delivered! \n\nWe hope you love everything inside! You can check your delivery details with the carrier here: http://sms.fashionnova.com/axbn69_tB5fx . ",
+          "date_time": "2024-12-27 19:27:05.153",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 has been delivered! \n\nWe hope you love everything inside! You can check your delivery details with the carrier here: http://sms.fashionnova.com/aHm5-ZdjMsVg . ",
+          "date_time": "2024-12-27 19:27:05.906",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 has been delivered! \n\nWe hope you love everything inside! You can check your delivery details with the carrier here: http://sms.fashionnova.com/adP7kobp__jJ . ",
+          "date_time": "2024-12-27 19:27:05.909",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 has been delivered! \n\nWe hope you love everything inside! You can check your delivery details with the carrier here: http://sms.fashionnova.com/aM06gC5MMlaB . ",
+          "date_time": "2024-12-27 19:27:06.225",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hey Christian, your order #149706329 has been delivered! \n\nWe hope you love everything inside! You can check your delivery details with the carrier here: http://sms.fashionnova.com/ayzk1sjH6Ex3 . ",
+          "date_time": "2024-12-27 19:27:10.439",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Get Ur Outfit B4 NYE!!️FREE 1-DAY Shipping +40% OFF SITEWIDE!!\n\nUse CODE: NYE40 RIGHT NOW! | T\u0026C Apply -\u003e\nhttp://sms.fashionnova.com/aygMrOBhGiFu \n.\n",
+          "date_time": "2024-12-29 11:16:18.622",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Get Ur Order By NYE For FREEEE!!! Must Order B4 Noon!\n\n+40% OFF SITEWIDE Ends At Midnight!! Use Code: NYE40\n\nLast Chance! Shop NOW | T\u0026C Apply -\u003e http://sms.fashionnova.com/aiAjzX05BgIw .",
+          "date_time": "2024-12-30 10:24:21.606",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "You said I can make returns for store credit but I followed directions and it says item not eligible for returns?",
-          "date_time": "2026-02-27 19:26:14.781",
+          "message_text": "Order was stolen",
+          "date_time": "2024-12-30 13:39:43.974",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "019ca1ab-24de-4411-f000-000009152731",
-          "message_text": "Fashion Nova: I\u0027m really sorry about this, and surely, this isn\u0027t the experience I want you to have. What item are you trying to return? All items ending in $.48 and .98, bodysuits, swimwear, undergarments, beauty products, cosmetics, accessories, and \"Party Wear\" (such as Halloween costumes) are considered final sale, non-returnable and cannot be returned for store credit. I hope this helps. ",
+          "message_id": "019418e2-bec4-41fc-f000-0000028709f9",
+          "message_text": "Fashion Nova: I\u0027m so sorry to hear that! This will be best handled by visiting http://sms.fashionnova.com/a9c79ZnE6Qdr and beginning an inquiry with our team! ",
+          "message_type": "agent",
+          "agent": "82427",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-12-30 13:45:00.754"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027ve been trying for since Friday and it says no order is associated with my number or email",
+          "date_time": "2024-12-30 17:12:47.967",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019419a1-c3f1-4e03-f000-0000028709f9",
+          "message_text": "Fashion Nova: I\u0027m sorry about that! Can you please confirm the order number you\u0027re inputting?",
+          "message_type": "agent",
+          "agent": "33953",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-12-30 17:13:39.462"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "149706329",
+          "date_time": "2024-12-30 17:14:28.260",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019419a3-81c3-4e81-f000-0000028709f9",
+          "message_text": "Fashion Nova: Please include the number sign (#), like this #149706329 and let me know how it goes! ",
+          "message_type": "agent",
+          "agent": "82343",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-12-30 17:15:33.582"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No",
+          "date_time": "2024-12-30 17:18:48.099",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019419a8-ec0d-48c9-f000-0000028709f9",
+          "message_text": "Fashion Nova: Apologies for the confusion! Could you let me know which email you\u0027re using? It seems that a different email was used for this order compared to your previous ones.",
+          "message_type": "agent",
+          "agent": "29634",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-12-30 17:21:28.469"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Christian.l.Johnson92@gmail.com \nChrissyJ_royalty@icloud.com \nCljohnson2010@aol.com \n\nAll 3 and nothing even tried my phone number \n\n323-253-2295",
+          "date_time": "2024-12-30 17:23:57.998",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019419af-32d8-4d96-f000-0000028709f9",
+          "message_text": "Fashion Nova: Thanks for letting me know. The order placed on 12/23/24 shows that it has been placed using another email address. Your orders from 12/01/24 and before have been placed using the chrissyj_royalty@icloud.com email address. Can you please confirm the shipping address used for the order? I\u0027ll be happy to share the email address used for the order. ",
           "message_type": "agent",
           "agent": "39115",
           "message_media": [
             
           ],
-          "date_time": "2026-02-27 19:34:33.847"
+          "date_time": "2024-12-30 17:28:19.809"
         },
         {
           "message_type": "customer",
-          "message_text": "Ed Hardy love kills pants set blue",
-          "date_time": "2026-02-27 20:03:24.979",
+          "message_text": "816 East 116th place \nLos Angeles Ca 90059",
+          "date_time": "2024-12-30 17:30:28.173",
           "message_media": [
             
           ]
         },
         {
-          "message_type": "customer",
-          "message_text": "It\u0027s too big and XL is still not available after waiting",
-          "date_time": "2026-02-27 20:03:45.035",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019ca1c5-fe7c-4207-f000-000009152731",
-          "message_text": "Fashion Nova: Thanks. Apologies, but that one is part of our final sale. It is excluded from returns or exchanges. Hope that clarifies it. ",
+          "message_id": "019419b4-36ff-484c-f000-0000028709f9",
+          "message_text": "Fashion Nova: Thanks! The email address you used for Order #149706329 is caravan_gripe_0t@icloud.com. I hope this helps!",
           "message_type": "agent",
-          "agent": "31385",
+          "agent": "82427",
           "message_media": [
             
           ],
-          "date_time": "2026-02-27 20:03:53.495"
+          "date_time": "2024-12-30 17:33:48.553"
         }
       ]
     },
-    "22": {
-      "agentName": "",
-      "has_shopify": true,
-      "id": "019c71cd-85e0-49d5-f000-0000fc412ff3",
+    "25": {
+      "agentName": "Maria",
+      "has_shopify": false,
+      "id": "01928d61-2134-4785-f000-00004f825e09",
       "rightPanel": {
         "coupons": [
           {
-            "subscriber_id": 4232130547,
-            "description": "full priced items",
-            "company_id": 2320,
-            "coupon_url": "https://swigbyom.myshopify.com/discount/SMS20xdsXUQ?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=sms20",
-            "value": "20",
-            "name": "ATTENTIVE_SWIG20",
-            "coupon": "SMS20xdsXUQ",
-            "redemption_status": "UNUSED",
-            "value_type": "PERCENT"
+            "coupon": "OJBNG72",
+            "status": "ACTIVE"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://swiglife.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.swiglife.com/products/slider-lid?variant=42793342402752",
-            "item": "Slider Lid - X-Large",
-            "timeAgo": "2026-02-18"
-          }
-        ]
-      },
-      "companyWebsite": "https://swiglife.com",
-      "companyName": "Swig Life",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over"
-        ]
-      },
-      "blocklisted_words": [
-        
-      ],
-      "escalation_preferences": [
-        
-      ],
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Swig Life: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Swig Life.",
-          "date_time": "2026-02-18 10:41:03.258",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Swig Life: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/tjt",
-          "date_time": "2026-02-18 11:01:27.229",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Swig Life: Bunches of joy! Your 20% OFF coupon code is ready. Use code SMS20xdsXUQ on your next full-price purchase. Go ahead, spring it on! Shop New Arrivals now: swiglife.attn.tv/aigtsCKLOZXB . ",
-          "date_time": "2026-02-18 11:01:29.403",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Swig Life: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nIn the meantime, check out what\u0027s new: https://swiglife.attn.tv/a0o3CWDBr8-g .",
-          "date_time": "2026-02-18 11:02:33.794",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Swig Life: White/Aqua/Black Reusable Straw Set Mega Mugs, Caliente Flip + Sip Bottle 20oz, Neon Lime/Orange/Berry Reusable Straw Set Mega Mugs, Slider Lid are waiting in your cart\n\nUse code SMS20xdsXUQ for 20% off on full-priced items: https://swiglife.attn.tv/asQ3Rh5yRReS .",
-          "date_time": "2026-02-18 11:45:35.308",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Swig Life: FREE SHIPPING UNLOCKED! Still thinking it over ? You left some great stuff behind, check out now: swiglife.attn.tv/a9WvBU86qQao . ",
-          "date_time": "2026-02-18 12:02:45.851",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Swig Life: Hey there, your cart misses you! Come back and pick the Swigs you were eyeing: swiglife.attn.tv/aKTE0_8t9M9O .",
-          "date_time": "2026-02-18 12:14:11.665",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "After I added my 20% discount code I lost the free shipping which was not cool",
-          "date_time": "2026-02-18 12:16:07.087",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c71c1-af6b-4c04-f000-0000fc412ff3",
-          "message_text": "Swig Life: I\u0027m so sorry to hear that. We offer free shipping on domestic orders over $75 after any discount has been applied, pre-tax. Maybe you can add something else to reach the minimum? ",
-          "message_type": "agent",
-          "agent": "43099",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-18 12:17:24.747"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "My order was $95",
-          "date_time": "2026-02-18 12:25:16.765",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c71cd-85e0-49d5-f000-0000fc412ff3",
-          "message_text": "Swig Life: Can you please send a screenshot of your cart and the total? I\u0027m happy to take a look and check. ",
-          "message_type": "agent",
-          "agent": "43099",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-18 12:30:20.540"
-        }
-      ]
-    },
-    "23": {
-      "agentName": "",
-      "has_shopify": true,
-      "id": "019c8d0a-dee0-4e05-f000-0000202a8741",
-      "rightPanel": {
-        "promotions": [
-          {
-            "title": "WINTERGLOW",
-            "content": [
-              "Applies to Peppermint and Spearmint teeth whitening strips (Regular 14-pack box only). Subscriptions excluded."
-            ]
-          },
-          {
-            "title": "BOGONOW",
-            "content": [
-              "• Buy 1, Get 1 Free (14-pack box only). Subscriptions excluded.\n\n• Code valid: 11/21 – 12/4/25 for email and text subscribers.\n\n• General sale: Opens to all on 11/28/25."
-            ]
-          },
-          {
-            "title": "Black Friday/ Cyber Monday",
-            "content": [
-              "• Buy 1, Get 1 Free (14-pack strips only): Use code BOGONOW. Subscriptions excluded.\n\n• 20% Off teeth whitening kits and bundles: Use code KIT20. Subscriptions excluded."
-            ]
-          }
-        ],
-        "coupons": [
-          {
-            "subscriber_id": 539658049,
-            "company_id": 9140,
-            "coupon_url": "https://shopzimba.myshopify.com/discount/FREESHIPqDf9TF?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=freeship",
-            "name": "Free Shipping Promo Code ",
-            "coupon": "FREESHIPqDf9TF",
-            "redemption_status": "UNUSED"
-          },
-          {
-            "subscriber_id": 539658049,
-            "company_id": 9140,
-            "coupon_url": "https://shopzimba.myshopify.com/discount/FREESHIPlfsq6P?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=freeship",
-            "name": "Free Shipping Promo Code ",
-            "coupon": "FREESHIPlfsq6P",
-            "redemption_status": "UNUSED"
-          },
-          {
-            "subscriber_id": 539658049,
-            "description": "10% Off",
-            "company_id": 9140,
-            "coupon_url": "https://shopzimba.myshopify.com/discount/ZTXTtBpCTS?utm_source=attentive\u0026utm_medium=text",
-            "name": "Z10%Off",
-            "coupon": "ZTXTtBpCTS",
-            "redemption_status": "USED"
-          },
-          {
-            "subscriber_id": 539658049,
-            "company_id": 9140,
-            "coupon_url": "https://shopzimba.myshopify.com/discount/AC5TEXTnfH8QH",
-            "name": "AC5TEXT",
-            "coupon": "AC5TEXTnfH8QH",
-            "redemption_status": "UNUSED"
-          },
-          {
-            "subscriber_id": 539658049,
-            "company_id": 9140,
-            "coupon_url": "https://shopzimba.myshopify.com/discount/10OFFJZYtCp?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=browseabandon",
-            "name": "10% Off Browse Abandonment",
-            "coupon": "10OFFJZYtCp",
-            "redemption_status": "UNUSED"
-          },
-          {
-            "subscriber_id": 539658049,
-            "company_id": 9140,
-            "coupon_url": "https://shopzimba.myshopify.com/discount/FREESHIP2N3FTQ?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=freeship",
-            "name": "Free Shipping Promo Code ",
-            "coupon": "FREESHIP2N3FTQ",
-            "redemption_status": "UNUSED"
-          },
-          {
-            "subscriber_id": 539658049,
-            "company_id": 9140,
-            "coupon_url": "https://shopzimba.myshopify.com/discount/FREESHIPB51XfH?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=freeship",
-            "name": "Free Shipping Promo Code ",
-            "coupon": "FREESHIPB51XfH",
-            "redemption_status": "UNUSED"
-          },
-          {
-            "subscriber_id": 539658049,
-            "company_id": 9140,
-            "coupon_url": "https://shopzimba.myshopify.com/discount/10OFFYTjkFv?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=browseabandon",
-            "name": "10% Off Browse Abandonment",
-            "coupon": "10OFFYTjkFv",
-            "redemption_status": "UNUSED"
-          },
-          {
-            "subscriber_id": 539658049,
-            "company_id": 9140,
-            "coupon_url": "https://shopzimba.myshopify.com/discount/FREESHIPzhTGLt?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=freeship",
-            "name": "Free Shipping Promo Code ",
-            "coupon": "FREESHIPzhTGLt",
-            "redemption_status": "UNUSED"
-          }
-        ],
-        "browsingHistory": [
-          {
-            "link": "https://shopzimba.com/products/ultimate-teeth-whitening-kit?variant=42623225069726",
-            "item": "Ultimate Teeth Whitening Kit",
-            "timeAgo": "2025-02-06"
-          },
-          {
-            "link": "https://shopzimba.com/products/bamboo-toothbrush-3",
-            "item": "Bamboo Toothbrush",
-            "timeAgo": "2024-12-30"
-          },
-          {
-            "link": "https://shopzimba.com/products/whitening-trio-mint-kit?_pos=1\u0026_sid=20284b512\u0026_ss=r",
-            "item": "Teeth Whitening Strip Trio (Mint)",
-            "timeAgo": "2024-12-30"
-          },
-          {
-            "link": "https://shopzimba.com/products/teeth-whitening-strips-duo?utm_source=Klaviyo\u0026utm_medium=email\u0026utm_campaign=Flavor+Highlight+-+7%2F13%2F2023+%2801H56BBSYFW7SNE6ZHRH5N0PQM%29\u0026type=campaign\u0026utm_klaviyo_id=XuciQy\u0026_kx=a7wcLYHGE8DttkU_Il0h3QUGlc-v18ERfsO3qSmCEMo%3D.Hi2cPc",
-            "item": "Teeth Whitening Strips Duo - Mint / Mint",
-            "timeAgo": "2023-07-13"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://shopzimba.com",
+          "value": "https://fazolis.com/",
           "date": ""
         },
         "orders": [
           {
             "currency": "USD",
-            "orderDate": "2025-02-15",
-            "coupon": "VDAYBOGO",
-            "items": [
-              {
-                "price": [
-                  19.99
-                ],
-                "productLink": "https://shopzimba.myshopify.com/products/teeth-whitening-strips",
-                "name": "Teeth Whitening Strips"
-              }
-            ],
-            "trackingLink": "https://a1.asendiausa.com/tracking/?trackingnumber=AS003179772US",
-            "link": "https://shopzimba.com/44362727582/orders/a9ae187c0964aa191ece5f46c8c6d405/authenticate?key=cf3e97f9b03f487455234a742d787ba2",
-            "date_time": "2025-02-15 02:15:05.157",
-            "discount_amount": 19.99,
-            "orderNumber": "653307",
-            "order_tracking_link": "https://a1.asendiausa.com/tracking/?trackingnumber=AS003179772US",
-            "total": 49.99
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2025-02-15",
-            "coupon": "VDAYBOGO",
-            "items": [
-              {
-                "price": [
-                  19.99
-                ],
-                "productLink": "https://shopzimba.myshopify.com/products/teeth-whitening-strips",
-                "name": "Teeth Whitening Strips"
-              }
-            ],
-            "trackingLink": "https://a1.asendiausa.com/tracking/?trackingnumber=AS003179772US",
-            "link": "https://shopzimba.com/44362727582/orders/a9ae187c0964aa191ece5f46c8c6d405/authenticate?key=cf3e97f9b03f487455234a742d787ba2",
-            "date_time": "2025-02-15 02:15:05.156",
-            "discount_amount": 19.99,
-            "orderNumber": "653307",
-            "order_tracking_link": "https://a1.asendiausa.com/tracking/?trackingnumber=AS003179772US",
-            "total": 49.99
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2025-02-15",
-            "coupon": "VDAYBOGO",
-            "items": [
-              {
-                "price": [
-                  20
-                ],
-                "productLink": "https://shopzimba.myshopify.com/products/premium-teeth-whitening-pen",
-                "name": "Premium Teeth Whitening Pen"
-              }
-            ],
-            "trackingLink": "https://a1.asendiausa.com/tracking/?trackingnumber=AS003179772US",
-            "link": "https://shopzimba.com/44362727582/orders/a9ae187c0964aa191ece5f46c8c6d405/authenticate?key=cf3e97f9b03f487455234a742d787ba2",
-            "date_time": "2025-02-15 02:15:05.150",
-            "discount_amount": 19.99,
-            "orderNumber": "653307",
-            "order_tracking_link": "https://a1.asendiausa.com/tracking/?trackingnumber=AS003179772US",
-            "total": 49.99
-          }
-        ]
-      },
-      "companyWebsite": "https://shopzimba.com",
-      "companyName": "Zimba",
-      "notes": {
-        "dos_and_donts": [
-          "The cx must send a screenshot (no exceptions!) for all retroactive discounts"
-        ],
-        "promo_and_exclusions": [
-          "🅿Please direct subscribers to check the brand\u0027s website for the most up to date info where applicable"
-        ]
-      },
-      "blocklisted_words": [
-        
-      ],
-      "escalation_preferences": [
-        
-      ],
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Zimba: Lock in 20% savings with subscriptions. Make it easy to keep your smile bright, without overpaying or running out: zimba.attn.tv/aWQfjT8BmoR4 ",
-          "date_time": "2026-01-26 11:55:05.121",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Zimba: The best finishing touch for date night? A brighter smile. Whiten your teeth in just 30 minutes and step out smiling with confidence: zimba.attn.tv/aw_eOA0gs8aw ",
-          "date_time": "2026-02-03 12:30:21.662",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Zimba: BOGO alert! Buy 1 box of strawberry or watermelon teeth whitening strips, and get a second box FREE. Use code VDAY2026. \n\nA glow-up worth sharing: zimba.attn.tv/ag_GneP1Kaed \n\nSubscriptions excluded.\n",
-          "date_time": "2026-02-11 14:55:17.361",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Zimba: Happy Valentine\u0027s Day! Final days to get 2 boxes of strawberry or watermelon teeth whitening strips for ONLY $19.99. \n\nUse code VDAY2026: zimba.attn.tv/aj7V3N4J7CCm \n\n",
-          "date_time": "2026-02-14 12:15:07.099",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Zimba: Hey Chrishaun, this is Sarah. Thanks for checking out our site! 😁 zimba.attn.tv/ajIucaBfKW3X .\n\nI will be your Smile Care Expert, please let me know if you need any help!",
-          "date_time": "2026-02-14 12:48:40.589",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Zimba: Buy 1, get 1 free ends today (2/16). Use code VDAY2026 on strawberry or watermelon whitening strips, while supplies last: zimba.attn.tv/aTSywDWAx31o \n",
-          "date_time": "2026-02-16 13:30:29.878",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Zimba: Hey Chrishaun, this is Sarah. Thanks for checking out our site! 😁 zimba.attn.tv/a1JWTV1l_sQk .\n\nI will be your Smile Care Expert, please let me know if you need any help!",
-          "date_time": "2026-02-23 19:04:10.060",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "There\u0027s nth I stock",
-          "date_time": "2026-02-23 19:18:08.570",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c8d02-e208-4f09-f000-0000202a8741",
-          "message_text": "Zimba: I\u0027m sorry, I don\u0027t have the exact restock date. Please check our website and social media for updates.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-23 19:18:22.385"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "It\u0027s been down for weeks",
-          "date_time": "2026-02-23 19:22:38.291",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "template",
-          "message_text": "Template used: \"Site won\u0027t work - All brands\"; last updated: 2025-07-16 17:54:02.115",
-          "date_time": "2026-02-23 19:27:05.865",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c8d0a-dee0-4e05-f000-0000202a8741",
-          "message_text": "Zimba: I\u0027m so sorry to clarify, are you having trouble accessing our site? First, I might suggest trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes. ",
-          "message_type": "agent",
-          "agent": "43099",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-23 19:27:05.867"
-        }
-      ]
-    },
-    "24": {
-      "agentName": "Jordan",
-      "has_shopify": true,
-      "id": "019cab78-d0fe-40e1-f000-0000f585e4fb",
-      "rightPanel": {
-        "browsingHistory": [
-          {
-            "link": "https://www.customgoldgrillz.com/products/pisces-opal-zodiac-sign-double-cap-grillz?utm_campaign=shipping-confirmation-email\u0026utm_medium=email\u0026utm_content=product\u0026utm_term=link\u0026utm_source=OrderlyEmails",
-            "item": "Pisces Opal Zodiac Sign Double Cap Grillz - Sterling Silver / Silver (No Plating) / R1+R2",
-            "timeAgo": "2026-02-27"
-          },
-          {
-            "link": "https://www.customgoldgrillz.com/products/diy-tooth-gemz-kit",
-            "item": "CGG Gemz Kit - Clear",
-            "timeAgo": "2026-02-24"
-          },
-          {
-            "link": "https://www.customgoldgrillz.com/products/rose-gold-plated-8-tooth-premium-grillz?variant=38541228364",
-            "item": "Rose Gold Plated 8 Tooth Premium Grillz - 6 Bottom Grill Only",
-            "timeAgo": "2026-02-22"
-          },
-          {
-            "link": "https://www.customgoldgrillz.com/products/gold-plated-8-tooth-premium-grillz",
-            "item": "Gold Plated 8 Tooth Premium Grillz - 8 Top Grill Only",
-            "timeAgo": "2026-02-20"
-          },
-          {
-            "link": "https://www.customgoldgrillz.com/products/rose-gold-plated-6-tooth-premium-grillz?variant=38541483468",
-            "item": "Rose Gold Plated 6 Tooth Premium Grillz - Top + Bottom Grillz Set",
-            "timeAgo": "2026-02-20"
-          }
-        ],
-        "coupons": [
-          {
-            "subscriber_id": 4119192827,
-            "company_id": 9864,
-            "coupon_url": "https://custom-gold-grillz.myshopify.com/discount/CGGEGVjEV?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome10",
-            "name": "CGG10",
-            "coupon": "CGGEGVjEV",
-            "redemption_status": "UNUSED"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://customgoldgrillz.com",
-          "date": ""
-        },
-        "orders": [
-          {
-            "currency": "USD",
-            "orderDate": "2026-02-20",
-            "coupon": "UPGRADE15",
+            "orderDate": "2022-12-22",
             "items": [
               {
                 "price": [
                   {
                     "value": [
-                      20,
-                      19.99
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
                     ],
-                    "Count": 2
+                    "Count": 10
                   }
                 ],
                 "productLink": "System.Object[]",
                 "name": "System.Object[]"
               }
             ],
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9405550206217097320379",
-            "link": "https://www.customgoldgrillz.com/19575415/orders/94d2bc1ad0d4b34f2cb589e5e847f9ee/authenticate?key=3a5434e88e06507bafdd0e3c83415bb0",
-            "date_time": "2026-02-20 15:21:36.230",
+            "date_time": "2022-12-22 02:13:00.000",
             "discount_amount": 0,
-            "orderNumber": "135272",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9405550206217097320379",
-            "total": 58.99
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2026-02-05",
-            "coupon": "BNNWQMJD",
-            "items": [
-              {
-                "price": [
-                  245
-                ],
-                "productLink": "https://custom-gold-grillz.myshopify.com/products/pisces-opal-zodiac-sign-double-cap-grillz",
-                "name": "Pisces Opal Zodiac Sign Double Cap Grillz"
-              }
-            ],
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9405550106151013415767",
-            "link": "https://www.customgoldgrillz.com/19575415/orders/54593d12355f31288b843ef7bcace095/authenticate?key=5323bf03b59c17f569a24594af8f30d3",
-            "date_time": "2026-02-05 20:14:32.438",
-            "discount_amount": 0,
-            "orderNumber": "134483",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9405550106151013415767",
-            "total": 245.49
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2026-01-24",
-            "coupon": "MV9WN4G6",
-            "items": [
-              {
-                "price": [
-                  49.99
-                ],
-                "productLink": "https://custom-gold-grillz.myshopify.com/products/pre-made-gold-plated-fanged-cz-cluster-premium-grill-gsscz3gt",
-                "name": "Gold Plated Fanged CZ Cluster Premium Grillz"
-              }
-            ],
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150106151061003487",
-            "link": "https://www.customgoldgrillz.com/19575415/orders/3f02ef6de5b961fd193cea9520894893/authenticate?key=689e4d7bfc281d620c0de14c5c0d5a24",
-            "date_time": "2026-01-24 14:34:30.312",
-            "discount_amount": 0,
-            "orderNumber": "133849",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tLabels=9400150106151061003487",
-            "total": 49.99
+            "orderNumber": "14961526711451652",
+            "total": 13.69
           }
         ]
       },
-      "companyWebsite": "https://customgoldgrillz.com",
-      "companyName": "Custom Gold Grillz",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS immediately if cx did not receive their order",
-          "Send to CS immediately for post purchase inquiries about the status of the mold, or issues with the molds",
-          "Send to CS for pricing inquiries",
-          "Send to CS if cx is looking for a more specific piece not available on the website",
-          "Send to CS if cx is asking for a code and we don\u0027t have one"
-        ],
-        "escalate": [
-          "No escalations for this client, send everything to CS"
-        ],
-        "tone": [
-          "Use Teeth instead of Pieces (e.g 8 teeth at the top)"
-        ],
-        "templates": [
-          "If the image is not coming through a second time, send Broken Image temp",
-          "For CUSTOM GRILLZ \u0026 ACCESSORIES INQUIRIES for models not available on the website use PS shortcut",
-          "For urgent concerns/delayed escalation response use PS shortcut",
-          "For delayed orders and the customer is frustrated use PS shortcut",
-          "For customer service use shortcut CS which has both the direct email/number"
-        ],
-        "dos_and_donts": [
-          "Do not use the order history as a reference to order status",
-          "If customers want to cancel their order always ask for the reason for cancellation"
-        ],
-        "drive_to_purchase": [
-          "Don\u0027t recommend pre-made grillz! Upsell to fitted and custom grillz",
-          "When recommending an item, let the cx know they can customize their order on the product page",
-          "When recommending an item, ask the cx if they are working with a budget",
-          "Use LFG shortcut to gather information and provide recommendations when cx ask about:",
-          "➜ Grillz/Chain recommendation",
-          "➜ Grillz/Chain in general",
-          "➜ Grillz/Chains pricing"
-        ]
-      },
-      "blocklisted_words": [
-        
-      ],
-      "escalation_preferences": [
-        
-      ],
-      "messageTone": "Formal",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Custom Gold Grillz: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Custom Gold Grillz.",
-          "date_time": "2026-02-20 08:41:37.460",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Custom Gold Grillz: Welcome to Custom Gold Grillz! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "date_time": "2026-02-20 08:41:54.679",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Custom Gold Grillz: Welcome! Your 20% BACK offer is below!\n\nClick here to auto-apply it when you shop: https://customgoldgrillz.attn.tv/aPlR_eYtFkRI \n\nText back with any questions!\n- Jordan \n",
-          "date_time": "2026-02-20 08:41:58.546",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Custom Gold Grillz: Don\u0027t miss out: Add us as a contact to your phone to access exclusive content first!",
-          "date_time": "2026-02-20 08:41:59.798",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Custom Gold Grillz: Need pointing in the right direction?\n\nHere\u0027s what\u0027s trending this month: https://customgoldgrillz.attn.tv/a1RaYjlQ-WMd ",
-          "date_time": "2026-02-20 12:18:22.608",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Custom Gold Grillz: Hey it\u0027s Jordan! Still deciding? In case you missed it, click below to have 20% BACK auto applied at checkout on your next purchase!\nhttps://customgoldgrillz.attn.tv/aqYcKyEZlm1x \n\nYour unique offer expires soon!\n\nText back for help!\n- Jordan \n",
-          "date_time": "2026-02-21 10:39:05.888",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Custom Gold Grillz: Hey Durell, this is Jordan . I noticed you were interested in something customgoldgrillz.attn.tv/aGZGycp2iOvt .\n\nAnything I can help you with? Text me anytime",
-          "date_time": "2026-02-21 19:56:56.628",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Custom Gold Grillz: Need pointing in the right direction?\n\nHere\u0027s what\u0027s trending this month: https://customgoldgrillz.attn.tv/aQTvcE81r-5e ",
-          "date_time": "2026-02-22 10:49:13.827",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Custom Gold Grillz: Need pointing in the right direction?\n\nHere\u0027s what\u0027s trending this month: https://customgoldgrillz.attn.tv/a17ZKW-Nr67j ",
-          "date_time": "2026-02-24 10:21:54.143",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Custom Gold Grillz: Hey Durell we noticed you checking us out. Have you seen our best sellers yet? https://customgoldgrillz.attn.tv/aAZhh_IYTBO- . ",
-          "date_time": "2026-02-27 10:24:18.232",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Custom Gold Grillz: Hey Durell welcome back!\nThis is Jordan. Appreciate you stopping by! customgoldgrillz.attn.tv/apppdEBsLcFd \n\nAnything you got your eye on? ",
-          "date_time": "2026-02-27 16:09:09.707",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "No one has responded to my Emails",
-          "date_time": "2026-03-01 17:06:16.624",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019cab78-d0fe-40e1-f000-0000f585e4fb",
-          "message_text": "Custom Gold Grillz: I\u0027m really sorry for the delay! We are dealing with an influx of support messages but this does not make your concern any less important. The team is working as hard as possible to address each issue promptly. Rest assured that one of my colleagues will follow up with you in no time! Please check your spam and promo folders as sometimes our emails end up there.",
-          "message_type": "agent",
-          "agent": "31385",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-03-01 17:15:47.755"
-        }
-      ]
-    },
-    "25": {
-      "agentName": "Megan",
-      "has_shopify": true,
-      "id": "019c71f7-6a60-4068-f000-0000fb6d1bd8",
-      "rightPanel": {
-        "promotions": [
-          {
-            "title": "FLEURATTV2025",
-            "content": [
-              "Share with NEW customers if their free shipping welcome code isn\u0027t working. Please note code will only work on first order $199+"
-            ]
-          }
-        ],
-        "coupons": [
-          {
-            "subscriber_id": 4218231768,
-            "company_id": 2020,
-            "coupon_url": "https://venus-et-fleur.myshopify.com/discount/N796B45T?utm_source=attentive\u0026utm_medium=sms",
-            "name": "Welcome Series Part 3",
-            "coupon": "N796B45T",
-            "redemption_status": "UNUSED"
-          }
-        ],
-        "browsingHistory": [
-          {
-            "link": "https://www.venusetfleur.com/products/large-round-black-suede?variant=39676226699308",
-            "item": "Large Round - Black Suede / Pearl",
-            "timeAgo": "2026-02-14"
-          },
-          {
-            "link": "https://www.venusetfleur.com/products/large-round-black-classic?variant=44790602629164",
-            "item": "Large Round - Black Classic / Pearl",
-            "timeAgo": "2026-02-14"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://venusetfleur.com",
-          "date": ""
-        },
-        "orders": [
-          {
-            "currency": "USD",
-            "orderDate": "2026-02-14",
-            "items": [
-              {
-                "price": [
-                  479
-                ],
-                "productLink": "https://venus-et-fleur.myshopify.com/products/large-round-black-suede",
-                "name": "Large Round"
-              }
-            ],
-            "trackingLink": "https://www.ups.com/track?tracknum=1Z5EV2391396727465",
-            "link": "https://www.venusetfleur.com/8591856/orders/7aba6215a3cfadb1b3d57021e514f637/authenticate?key=a465d216a24a4159f4e27039192d30bc",
-            "date_time": "2026-02-14 01:58:53.473",
-            "discount_amount": 0,
-            "orderNumber": "1012752",
-            "order_tracking_link": "https://www.ups.com/track?tracknum=1Z5EV2391396727465",
-            "total": 564.96
-          }
-        ]
-      },
-      "companyWebsite": "https://venusetfleur.com",
-      "companyName": "Venus ET Fleur",
+      "companyWebsite": "https://fazolis.com/",
+      "companyName": "Fazoli\u0027s",
       "notes": {
         "escalate": [
-          "ESC if cx wants their account name to be changed",
-          "ESC if cx complains that their order was canceled",
-          "If cx\u0027s ask when their order will arrive/estimated delivery date",
-          "➜  Ask what shipping method they selected at checkout",
-          "➜ If it\u0027s standard shipping use STS shortcut",
-          "➜ If they insist to know exactly when ESC",
-          "Cx gets a code for free shipping for the first purchase; you can escalate any issues after troubleshooting"
-        ],
-        "tone": [
-          "Don\u0027t thank the cx for the purchase, thank them for their continuous support",
-          "Don\u0027t ask the customer to contact the courier"
-        ],
-        "drive_to_purchase": [
-          "Don\u0027t D2P when the cx already made a purchase"
+          "If cx\u0027s want to change their order, direct them to contact the location, use CED shortcut"
         ],
         "promo_and_exclusions": [
-          "Free shipping code is only valid for standard shipping",
-          "Standard shipping charge is usually ~ $20, if you see a charge higher than that, it means the method selected is NOT standard (create a mock cart to double-check)"
+          "Coupon codes can be used at stores",
+          "If cx\u0027s ask for a discount code \u0026 we don\u0027t have one (Concierge or in automated messages):",
+          "➜ Send the \u0027dhd\u0027 shortcut"
         ]
       },
       "blocklisted_words": [
-        "preserved",
-        "chemical",
-        "cant"
+        
       ],
       "escalation_preferences": [
-        "Exchanges and returns",
-        "arrangement damages",
-        "delivery issues",
-        "post-purchase questions",
-        "inventory"
+        
       ],
-      "messageTone": "Polished",
+      "messageTone": "Casual",
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "Venus et Fleur: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "date_time": "2026-02-13 20:50:13.084",
+          "message_text": "Fazoli\u0027s: Welcome to Fazoli\u0027s! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/qFo",
+          "date_time": "2024-10-14 19:23:44.219",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Venus et Fleur: Welcome to Venus et Fleur! I\u0027m Megan, your personal concierge and we are excited to have you experience our Eternity® Blooms. I\u0027ve arranged for Complimentary Standard Shipping on your first order with the code N796B45T. \n\nDiscover our garden of Real Flowers That Last A Year: \nhttps://venusetfleur.attn.tv/a6RjU6YUXv4a ",
-          "date_time": "2026-02-13 20:50:17.037",
+          "message_text": "Fazoli\u0027s: Welcome! Thanks for signing up. Use your unique one-time use code OJBNG72 online or in-store by 12/31/24 for $3 off $10 or more. Need help? Reply for assistance. Order now https://fazolis.attn.tv/ayTxPFq15QiN .",
+          "date_time": "2024-10-14 19:23:49.138",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Venus et Fleur: Don\u0027t forget to save our contact information:",
-          "date_time": "2026-02-14 11:38:12.208",
+          "message_text": "Fazoli\u0027s: Hey, this is Jordan from Fazoli\u0027s. Thanks for checking out our online ordering site! https://fazolis.attn.tv/aKOe-PWeCayb \n\nDo you have any questions for me?",
+          "date_time": "2024-10-14 19:26:08.074",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Venus et Fleur: Hello, I\u0027m Campbell, your personal concierge at Venus et Fleur. I wanted to personally extend a warm welcome as you join our VIP list. Thank you for being a valued client and entrusting us to enrich the beauty of your special occasions.\n\nPlease do not hesitate to reach out to us for support, inquiries, or tailored recommendations. venusetfleur.attn.tv/aaKx5Qi_9Dyw .",
-          "date_time": "2026-02-14 22:29:41.245",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Venus et Fleur: Carefully harvested at their peak from our farms in Ecuador and Japan, each floral undergoes a delicate preservation process, maintaining its natural beauty and scent for a year or longer. \n\nPlease feel free to use my exclusive gift to you N796B45T at checkout for Complimentary Shipping on your first order of Eternity® blooms \nhttps://venusetfleur.attn.tv/abJ4XO_AT5CL \n\n- Megan",
-          "date_time": "2026-02-15 11:38:22.290",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Venus et Fleur: Happy Lunar New Year! 🧧🏮 Step into the Year of the Horse with strength and prosperity. 💫 \n\nCelebrate with Real Flowers That Last A Year. Shop now: venusetfleur.attn.tv/ay7viCP6LuCD ",
-          "date_time": "2026-02-17 13:01:48.896",
+          "message_text": "Fazoli\u0027s: Thank you for your purchase! Your order number is 30335725763182592 ",
+          "date_time": "2024-10-14 19:30:02.054",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "Hi, my order hasn\u0027t been delivered yet",
-          "date_time": "2026-02-17 17:50:17.403",
+          "message_text": "Do you have military discount?",
+          "date_time": "2024-10-14 19:30:51.235",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "019c6dcd-2995-4b11-f000-0000fb6d1bd8",
-          "message_text": "Venus et Fleur: I\u0027m sorry for the delay and any inconvenience this has caused. I understand how important it is to receive your order on time. What I\u0027ll do is check this with my team for you. \n\nWas this regarding order #1012752? If so, could you please confirm the email address used at checkout so we can proceed? ",
+          "message_id": "01928d5f-5909-485d-f000-00004f825e09",
+          "message_text": "Fazoli\u0027s: Thank you for your service! We don\u0027t have any specific discounts like that, but our deals will always be shared with our SMS subscribers or on our website, so keep an eye out!",
           "message_type": "agent",
-          "agent": "87595",
+          "agent": "87301",
           "message_media": [
             
           ],
-          "date_time": "2026-02-17 17:51:28.049"
+          "date_time": "2024-10-14 19:31:29.172"
         },
         {
           "message_type": "customer",
-          "message_text": "bosefjunior@hotmail.com",
-          "date_time": "2026-02-17 21:37:33.223",
+          "message_text": "Okay thank you",
+          "date_time": "2024-10-14 19:32:00.852",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "019c6e9d-e99b-488e-f000-0000fb6d1bd8",
-          "message_text": "Venus et Fleur: Got it. I\u0027ll check this now with the team and get back to you as soon as I have a response. Please hang tight!",
-          "message_type": "agent",
-          "agent": "37648",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-17 21:39:28.702"
-        },
-        {
-          "message_id": "019c71e7-d07e-4979-f000-0000fb6d1bd8",
-          "message_text": "Venus et Fleur: Thanks for your patience! I just heard from the team, and we understand how important this is. Your recent Venus et Fleur order has been flagged for additional verification as part of our security measures.\n\nTo proceed, we kindly ask that you verify the four-digit number that appears after \"VENUS ET FLEUR\" on the transaction line in your bank or card statement. This information allows us to quickly confirm the purchase and continue processing your order.\n\nPlease reply within 48 hours with the requested verification. Once received, our team will promptly review the details and move forward.\n\nIf you have any further questions or need assistance, please don\u0027t hesitate to contact me. We\u0027re here to help! ",
-          "message_type": "agent",
-          "agent": "32937",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-18 12:59:03.584"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "4248",
-          "date_time": "2026-02-18 13:14:50.198",
+          "message_type": "template",
+          "message_text": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
+          "date_time": "2024-10-14 19:33:25.949",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "019c71f7-6a60-4068-f000-0000fb6d1bd8",
-          "message_text": "Venus et Fleur: Thank you! I\u0027ve passed this along to my team, and I\u0027ll let you know as soon as I have an update. Is there anything else that I can do for you today?",
+          "message_id": "01928d61-2134-4785-f000-00004f825e09",
+          "message_text": "Fazoli\u0027s: You\u0027re welcome! No worries, our deals will always be shared with our SMS subscribers or on our website, so keep an eye out! Have a great evening and if you have any questions, feel free to shoot me a text. In the meantime, check out our Fan Favorites here: https://fazolis.attn.tv/aYo5qpg-rX12",
           "message_type": "agent",
-          "agent": "82441",
+          "agent": "41075",
           "message_media": [
             
           ],
-          "date_time": "2026-02-18 13:16:06.014"
+          "date_time": "2024-10-14 19:33:25.951"
         }
       ]
     }
