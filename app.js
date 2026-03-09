@@ -3199,15 +3199,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 appendLinkifiedText(element, text);
                 return;
             }
-
-            const prefixEl = document.createElement('span');
-            prefixEl.className = 'message-company-prefix';
-            prefixEl.textContent = prefixCandidate;
-            element.appendChild(prefixEl);
-
-            if (text.length > companyName.length) {
-                appendLinkifiedText(element, text.slice(companyName.length));
-            }
+            const contentWithoutPrefix = text
+                .slice(companyName.length)
+                .replace(/^[:,]\s*/, '');
+            appendLinkifiedText(element, contentWithoutPrefix);
         };
 
         const appendMedia = (container, mediaList) => {
@@ -3303,19 +3298,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const requiredWidth = Math.ceil(dateEl.scrollWidth + 32); // 16px inset on both sides
                 if (requiredWidth <= baseWidth) return;
 
-                const growBy = requiredWidth - baseWidth;
                 bubble.style.maxWidth = 'none';
                 bubble.style.width = `${requiredWidth}px`;
                 bubble.style.minWidth = `${requiredWidth}px`;
-
-                if (bubble.classList.contains('received')) {
-                    // Customer: grow naturally to the right from left alignment.
-                    bubble.style.marginLeft = '';
-                    bubble.style.marginRight = '';
-                } else if (bubble.classList.contains('sent')) {
-                    // System/agent: keep inner/left edge stable and grow outward (right).
-                    bubble.style.marginRight = `-${growBy}px`;
-                }
+                // Keep expanded bubbles inside the chat viewport.
+                bubble.style.marginLeft = '';
+                bubble.style.marginRight = '';
             });
         };
 
@@ -3421,7 +3409,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log('Loading scenario:', scenarioNumber, scenario);
         
         // Update page title
-        document.title = `Training - Scenario ${scenarioNumber}`;
+        document.title = 'Concierge QA System';
         
         // Build conversation from scenario mapping or preloaded array
         let conversation = buildConversationFromScenario(scenario);
@@ -3517,13 +3505,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return '';
             };
 
-            const normalizeUsedStatus = (rawValue) => {
+            const normalizeCouponStatus = (rawValue, redeemedDate) => {
                 const lowered = String(rawValue || '').trim().toLowerCase();
-                if (!lowered) return '';
-                if (['used', 'redeemed', 'true', '1', 'yes', 'y'].includes(lowered)) return 'used';
-                if (['unused', 'not used', 'false', '0', 'no', 'n'].includes(lowered)) return 'unused';
-                if (lowered.includes('unuse') || lowered.includes('not used')) return 'unused';
-                if (lowered.includes('use') || lowered.includes('redeem')) return 'used';
+                if (['active', 'enabled', 'available'].includes(lowered)) return 'active';
+                if (['inactive', 'disabled', 'expired'].includes(lowered)) return 'inactive';
+                if (['used', 'redeemed', 'true', '1', 'yes', 'y'].includes(lowered)) return 'inactive';
+                if (['unused', 'not used', 'false', '0', 'no', 'n'].includes(lowered)) return 'active';
+                if (lowered.includes('unuse') || lowered.includes('not used')) return 'active';
+                if (lowered.includes('use') || lowered.includes('redeem')) return 'inactive';
+                if (String(redeemedDate || '').trim()) return 'inactive';
                 return '';
             };
 
@@ -3537,11 +3527,19 @@ document.addEventListener('DOMContentLoaded', async () => {
                     'status',
                     'redeemable',
                 ]);
+                const redeemedDate = readText(coupon, [
+                    'redeemed',
+                    'redeemed_at',
+                    'redeemedAt',
+                    'redemption_date',
+                    'redemptionDate',
+                ]);
                 const name = readText(coupon, ['name', 'title']);
                 const description = readText(coupon, ['description', 'details']);
-                const status = normalizeUsedStatus(rawStatus);
+                const status = normalizeCouponStatus(rawStatus, redeemedDate);
+                const titleText = couponCode || name || 'Coupon';
 
-                if (!couponCode && !name && !description && !status) return;
+                if (!couponCode && !name && !description && !status && !redeemedDate) return;
 
                 const card = document.createElement('div');
                 card.className = 'coupon-code-card';
@@ -3549,10 +3547,22 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const header = document.createElement('div');
                 header.className = 'coupon-code-header';
 
+                const titleWrap = document.createElement('div');
+                titleWrap.className = 'coupon-code-title-wrap';
+
                 const title = document.createElement('div');
                 title.className = 'coupon-code-title';
-                title.textContent = name || 'Coupon';
-                header.appendChild(title);
+                title.textContent = titleText;
+                titleWrap.appendChild(title);
+
+                if (redeemedDate) {
+                    const redeemedDateDisplay = redeemedDate.replace(/:\d{2}(?:\.\d{3})?$/, '');
+                    const redeemedLine = document.createElement('div');
+                    redeemedLine.className = 'coupon-code-redeemed';
+                    redeemedLine.textContent = `Coupon redeemed on ${redeemedDateDisplay}`;
+                    titleWrap.appendChild(redeemedLine);
+                }
+                header.appendChild(titleWrap);
 
                 if (status) {
                     const statusTag = document.createElement('span');
@@ -3562,7 +3572,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
                 card.appendChild(header);
 
-                if (couponCode) {
+                if (couponCode && couponCode !== titleText) {
                     const codeLine = document.createElement('div');
                     codeLine.className = 'coupon-code-line coupon-code-line--code';
                     codeLine.textContent = couponCode;
@@ -4963,7 +4973,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const notesRequiredIndicator = customForm.querySelector('h4 .required');
 
         function shouldRequireNotes() {
-            return true;
+            return false;
         }
 
         function updateNotesRequirementUI() {
@@ -5115,16 +5125,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             const zeroTolSel = document.getElementById('zeroTolerance');
             const zeroToleranceLabel = (zeroTolSel && zeroTolSel.value) ? zeroTolSel.options[zeroTolSel.selectedIndex].text : '';
             const notesVal = formData.get('notes') || '';
-            
-            // Validate required fields
-            const notesRequiredNow = updateNotesRequirementUI();
-            if (notesRequiredNow && !notesVal.trim()) {
-                if (formStatus) { 
-                    formStatus.textContent = 'Notes field is required.'; 
-                    formStatus.style.color = '#e74c3c'; 
-                }
-                return;
-            }
             
             const agentUsername = localStorage.getItem('agentName') || 'Unknown Agent';
             const agentEmail = localStorage.getItem('agentEmail') || '';
