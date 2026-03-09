@@ -4,9 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'https://script.google.com/macros/s/AKfycbxdYddYfnFwK4nWaaMmOgzhH6wD0i3jY_1G1XM8PB4NzfJDsmxLrF8abc142KEhagfAbw/exec'
     ).trim();
     const GOOGLE_CLIENT_ID = '874098291453-p4et32se0mpvq514ed20e996bofvv280.apps.googleusercontent.com';
+    const googleSignInBtn = document.getElementById('googleSignInBtn');
+    const googleSignInRendered = document.getElementById('googleSignInRendered');
     // Load allowed agents and emails list
     let allowedAgents = [];
     let allowedEmails = [];
+    let googleButtonRendered = false;
 
     // Load allowed agents from JSON file
     async function loadAllowedUsers() {
@@ -79,6 +82,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize Google Sign-In
+    function renderGoogleSignInButton() {
+        if (googleButtonRendered) return true;
+        if (!googleSignInRendered) return false;
+        if (!(typeof google !== 'undefined' && google.accounts && google.accounts.id)) return false;
+
+        try {
+            const containerWidth = Math.floor(
+                (googleSignInRendered.clientWidth || (googleSignInRendered.parentElement && googleSignInRendered.parentElement.clientWidth) || 320)
+            );
+            const buttonWidth = Math.max(220, Math.min(360, containerWidth));
+            googleSignInRendered.innerHTML = '';
+            google.accounts.id.renderButton(googleSignInRendered, {
+                type: 'standard',
+                theme: 'outline',
+                size: 'large',
+                text: 'signin_with',
+                shape: 'rectangular',
+                width: buttonWidth
+            });
+            googleButtonRendered = true;
+            googleSignInRendered.classList.add('show');
+            if (googleSignInBtn) {
+                googleSignInBtn.classList.add('hidden');
+                googleSignInBtn.setAttribute('aria-hidden', 'true');
+            }
+            console.log('Google Sign-In button rendered');
+            return true;
+        } catch (error) {
+            console.error('Google Sign-In button render failed:', error);
+            return false;
+        }
+    }
+
     function initializeGoogleSignIn() {
         console.log('Current origin:', window.location.origin);
         console.log('Current URL:', window.location.href);
@@ -89,11 +125,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     client_id: GOOGLE_CLIENT_ID,
                     callback: handleGoogleSignIn,
                     auto_select: false,
-                    cancel_on_tap_outside: false
+                    ux_mode: 'popup',
+                    cancel_on_tap_outside: false,
+                    itp_support: true,
+                    use_fedcm_for_prompt: true,
+                    use_fedcm_for_button: false
                 });
                 
                 console.log('Google Sign-In initialized successfully');
                 console.log('Allowed emails loaded:', allowedEmails);
+                renderGoogleSignInButton();
                 
             } catch (error) {
                 console.error('Google Sign-In initialization failed:', error);
@@ -108,6 +149,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle Google Sign-In response
     function handleGoogleSignIn(response) {
         try {
+            console.log('Google Sign-In callback received', {
+                hasCredential: !!(response && response.credential),
+                select_by: response && response.select_by ? response.select_by : 'unknown'
+            });
+            if (!response || !response.credential) {
+                showError('Google Sign-In did not return a credential. Please try again or use username login.');
+                return;
+            }
             // Decode the JWT token to get user info
             const payload = parseJwt(response.credential);
             const email = payload.email.toLowerCase();
@@ -183,25 +232,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Google Sign-In button click handler
-    document.getElementById('googleSignInBtn').addEventListener('click', function() {
+    if (googleSignInBtn) {
+        googleSignInBtn.addEventListener('click', function() {
         console.log('Google Sign-In button clicked');
         hideError();
 
         if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
             try {
+                renderGoogleSignInButton();
                 console.log('Attempting to show Google Sign-In prompt');
                 google.accounts.id.prompt((notification) => {
                     try {
-                        if (notification.isNotDisplayed && notification.isNotDisplayed()) {
-                            const reason = notification.getNotDisplayedReason ? notification.getNotDisplayedReason() : 'unknown_not_displayed_reason';
-                            console.warn('Google Sign-In not displayed:', reason);
-                            showError(`Google Sign-In not displayed (${reason}). Check OAuth authorized origins and Test users.`);
-                            return;
-                        }
                         if (notification.isSkippedMoment && notification.isSkippedMoment()) {
-                            const reason = notification.getSkippedReason ? notification.getSkippedReason() : 'unknown_skipped_reason';
-                            console.warn('Google Sign-In skipped:', reason);
-                            showError(`Google Sign-In skipped (${reason}). Try disabling strict tracking/popup blockers or use username fallback.`);
+                            console.warn('Google Sign-In prompt skipped or unavailable.');
+                            showError('Google One Tap was unavailable. Use the Google button above or the username fallback.');
                             return;
                         }
                         if (notification.isDismissedMoment && notification.isDismissedMoment()) {
@@ -223,7 +267,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Google Sign-In API not available');
             showError('Google Sign-In is not available. Please use username login below.');
         }
-    });
+        });
+    }
 
     // Username-only login with whitelist validation (fallback)
     document.getElementById('loginForm').addEventListener('submit', function(e) {

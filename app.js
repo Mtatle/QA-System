@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const SUBMIT_ADVANCE_DELAY_MS = 1200;
     const SUBMIT_OUTBOX_STORAGE_KEY = 'qaSubmitOutbox_v1';
     const SUBMIT_RETRY_DELAYS_MS = [5000, 15000, 45000, 120000, 300000];
+    const SUBMIT_DUPLICATE_GUARD_MS = 5 * 60 * 1000;
     const DEBUG_MODE = !!(
         (window.QA_CONFIG && window.QA_CONFIG.DEBUG === true) ||
         new URLSearchParams(window.location.search).has('debug')
@@ -74,6 +75,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let submitOutboxTimer = null;
     let submitOutboxProcessing = false;
     let pendingDoneAssignmentIds = new Set();
+    let recentSubmitGuardsByAssignmentId = {};
     let locallySkippedAssignmentIds = new Set();
     let assignmentWindowPrefetchPromises = {};
     let assignmentPayloadCache = {};
@@ -85,6 +87,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     let assignmentPrefetchActiveCount = 0;
     let assignmentNavigationInProgress = false;
     let pendingAssignmentNavigationDirection = 0;
+    let assignmentNavigationBaseDisabled = false;
+    let submitNavigationLockInProgress = false;
     let snapshotCreateInFlight = false;
     let uploadedScenariosCache = [];
     let uploadedScenariosLoaded = false;
@@ -472,9 +476,56 @@ document.addEventListener('DOMContentLoaded', async () => {
         return (Array.isArray(jobs) ? jobs : []).filter((job) => String(job && job.session_id || '').trim() === sid);
     }
 
-    function writeSubmitOutboxJobs(jobs) {
+    function writeSubmitOutboxJobs(jobs, options = {}) {
         const list = Array.isArray(jobs) ? jobs : [];
-        localStorage.setItem(SUBMIT_OUTBOX_STORAGE_KEY, JSON.stringify(list));
+        const sessionId = String(options.sessionId || '').trim();
+        if (!sessionId) {
+            localStorage.setItem(SUBMIT_OUTBOX_STORAGE_KEY, JSON.stringify(list));
+            return;
+        }
+        const latestAllJobs = readSubmitOutboxJobs();
+        const otherSessionJobs = latestAllJobs.filter((job) => String(job && job.session_id || '').trim() !== sessionId);
+        const sessionJobs = list.filter((job) => String(job && job.session_id || '').trim() === sessionId);
+        localStorage.setItem(SUBMIT_OUTBOX_STORAGE_KEY, JSON.stringify(otherSessionJobs.concat(sessionJobs)));
+    }
+
+    function mergeProcessedSubmitOutboxJobsForSession(processedJobs, sessionId) {
+        const sid = String(sessionId || '').trim();
+        const processedList = Array.isArray(processedJobs) ? processedJobs : [];
+        if (!sid) return processedList.slice();
+
+        const latestJobs = filterOutboxJobsForSession(readSubmitOutboxJobs(), sid);
+        const processedByJobId = {};
+        const latestHasAssignmentId = {};
+
+        processedList.forEach((job) => {
+            const jobId = String(job && job.job_id || '').trim();
+            if (!jobId) return;
+            processedByJobId[jobId] = job;
+        });
+        latestJobs.forEach((job) => {
+            const assignmentId = String(job && job.assignment_id || '').trim();
+            if (assignmentId) latestHasAssignmentId[assignmentId] = true;
+        });
+
+        const merged = latestJobs.map((job) => {
+            const jobId = String(job && job.job_id || '').trim();
+            if (!jobId || !processedByJobId[jobId]) return job;
+            const nextJob = processedByJobId[jobId];
+            delete processedByJobId[jobId];
+            return nextJob;
+        });
+
+        Object.keys(processedByJobId).forEach((jobId) => {
+            const job = processedByJobId[jobId];
+            const state = String(job && job.state || '').toLowerCase();
+            const assignmentId = String(job && job.assignment_id || '').trim();
+            if (state === 'done' || state === 'failed_terminal') return;
+            if (assignmentId && latestHasAssignmentId[assignmentId]) return;
+            merged.push(job);
+        });
+
+        return merged;
     }
 
     function refreshPendingDoneAssignmentsFromOutbox(jobs) {
@@ -493,6 +544,39 @@ document.addEventListener('DOMContentLoaded', async () => {
         const id = String(assignmentId || '').trim();
         if (!id) return false;
         return pendingDoneAssignmentIds.has(id);
+    }
+
+    function pruneRecentSubmitGuards(nowMs = Date.now()) {
+        const now = Number(nowMs) || Date.now();
+        Object.keys(recentSubmitGuardsByAssignmentId || {}).forEach((assignmentId) => {
+            const expiresAt = Number(recentSubmitGuardsByAssignmentId[assignmentId] || 0);
+            if (!expiresAt || expiresAt <= now) {
+                delete recentSubmitGuardsByAssignmentId[assignmentId];
+            }
+        });
+    }
+
+    function markRecentSubmitGuard(assignmentId, ttlMs = SUBMIT_DUPLICATE_GUARD_MS) {
+        const id = String(assignmentId || '').trim();
+        if (!id) return;
+        pruneRecentSubmitGuards();
+        recentSubmitGuardsByAssignmentId[id] = Date.now() + Math.max(1000, Number(ttlMs) || SUBMIT_DUPLICATE_GUARD_MS);
+    }
+
+    function clearRecentSubmitGuard(assignmentId) {
+        const id = String(assignmentId || '').trim();
+        if (!id) return;
+        if (recentSubmitGuardsByAssignmentId && Object.prototype.hasOwnProperty.call(recentSubmitGuardsByAssignmentId, id)) {
+            delete recentSubmitGuardsByAssignmentId[id];
+        }
+    }
+
+    function hasRecentSubmitGuard(assignmentId) {
+        const id = String(assignmentId || '').trim();
+        if (!id) return false;
+        pruneRecentSubmitGuards();
+        const expiresAt = Number(recentSubmitGuardsByAssignmentId[id] || 0);
+        return expiresAt > Date.now();
     }
 
     function getSubmitRetryDelayMs(attempts) {
@@ -529,16 +613,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         let success = false;
         let serverMsg = '';
+        let parsedJson = null;
+        let rawText = '';
         try {
-            const json = await res.json();
-            success = res.ok && json && json.status === 'success';
-            serverMsg = (json && json.message) ? json.message : '';
-        } catch (parseErr) {
+            rawText = await res.text();
+        } catch (_) {
+            rawText = '';
+        }
+
+        if (rawText) {
             try {
-                const txt = await res.text();
-                serverMsg = txt || '';
-            } catch (_) {}
-            success = res.ok;
+                parsedJson = JSON.parse(rawText);
+            } catch (_) {
+                parsedJson = null;
+            }
+        }
+
+        if (parsedJson) {
+            success = res.ok && parsedJson.status === 'success';
+            serverMsg = parsedJson.message ? String(parsedJson.message) : '';
+        } else {
+            success = false;
+            const preview = String(rawText || '').replace(/\s+/g, ' ').trim().slice(0, 180);
+            serverMsg = preview
+                ? `Non-JSON response from evaluation endpoint (status ${res.status}): ${preview}`
+                : `Non-JSON response from evaluation endpoint (status ${res.status}).`;
         }
 
         if (!success) {
@@ -552,7 +651,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             const activeSessionId = getAssignmentSessionId();
             let jobs = filterOutboxJobsForSession(readSubmitOutboxJobs(), activeSessionId);
-            writeSubmitOutboxJobs(jobs);
+            writeSubmitOutboxJobs(jobs, { sessionId: activeSessionId });
             if (!jobs.length) {
                 refreshPendingDoneAssignmentsFromOutbox([]);
                 return;
@@ -595,6 +694,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     job.state = 'done';
                     job.last_error = '';
+                    clearRecentSubmitGuard(job.assignment_id);
                     debugLog('outbox_done_success', {
                         assignmentId: String(job.assignment_id || ''),
                         attempts: Number(job.attempts || 0)
@@ -608,6 +708,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (isAlreadyDone) {
                         job.state = 'done';
                         job.last_error = '';
+                        clearRecentSubmitGuard(job.assignment_id);
                         debugLog('outbox_done_success', {
                             assignmentId: String(job.assignment_id || ''),
                             attempts: Number(job.attempts || 0),
@@ -626,6 +727,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         job.state = 'failed_terminal';
                         job.last_error = errorText;
                         job.next_retry_at = 0;
+                        clearRecentSubmitGuard(job.assignment_id);
                     } else {
                         hadRetryableFailure = true;
                         job.attempts = Math.max(0, Number(job.attempts || 0)) + 1;
@@ -643,11 +745,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             }
 
-            jobs = jobs.filter((job) => {
+            jobs = mergeProcessedSubmitOutboxJobsForSession(jobs, activeSessionId).filter((job) => {
                 const state = String(job.state || '').toLowerCase();
                 return state !== 'done' && state !== 'failed_terminal';
             });
-            writeSubmitOutboxJobs(jobs);
+            writeSubmitOutboxJobs(jobs, { sessionId: activeSessionId });
             refreshPendingDoneAssignmentsFromOutbox(jobs);
 
             if (jobs.length > 0) {
@@ -690,8 +792,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const jobs = existingJobs.filter((job) => String(job && job.assignment_id || '').trim() !== nextJob.assignment_id);
         const dedupedCount = Math.max(0, existingJobs.length - jobs.length);
         jobs.unshift(nextJob);
-        writeSubmitOutboxJobs(jobs);
+        writeSubmitOutboxJobs(jobs, { sessionId: nextJob.session_id });
         refreshPendingDoneAssignmentsFromOutbox(jobs);
+        markRecentSubmitGuard(nextJob.assignment_id);
         debugLog('outbox_job_enqueued', {
             assignmentId: String(nextJob.assignment_id || ''),
             sessionId: String(nextJob.session_id || ''),
@@ -2304,6 +2407,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         return openAssignmentInPage(params, options);
     }
 
+    function syncConversationNavigationDisabledState() {
+        const disabled = !!(
+            assignmentNavigationBaseDisabled ||
+            assignmentNavigationInProgress ||
+            submitNavigationLockInProgress
+        );
+        if (previousConversationBtn) previousConversationBtn.disabled = disabled;
+        if (nextConversationBtn) nextConversationBtn.disabled = disabled;
+    }
+
+    function setSubmitNavigationLockInProgress(isLocked) {
+        submitNavigationLockInProgress = !!isLocked;
+        syncConversationNavigationDisabledState();
+    }
+
     function setAssignmentReadOnlyState(isReadOnly) {
         if (isSnapshotMode) return;
         const effectiveReadOnly = !!isReadOnly;
@@ -2328,8 +2446,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (formSubmitBtn) formSubmitBtn.disabled = effectiveReadOnly;
         if (clearFormBtn) clearFormBtn.disabled = effectiveReadOnly;
         if (internalNotesEl) internalNotesEl.disabled = effectiveReadOnly;
-        if (previousConversationBtn) previousConversationBtn.disabled = effectiveReadOnly;
-        if (nextConversationBtn) nextConversationBtn.disabled = effectiveReadOnly;
+        assignmentNavigationBaseDisabled = effectiveReadOnly;
+        syncConversationNavigationDisabledState();
     }
 
     function parseStoredFormState(raw) {
@@ -3061,6 +3179,37 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         };
 
+        const appendAgentTextWithCompanyPrefix = (element, textValue) => {
+            if (!element) return;
+            const text = String(textValue || '');
+            const companyName = String((scenario && scenario.companyName) || '').trim();
+            if (!text || !companyName) {
+                appendLinkifiedText(element, text);
+                return;
+            }
+
+            const prefixCandidate = text.slice(0, companyName.length);
+            const nextChar = text.charAt(companyName.length);
+            const startsWithCompany =
+                prefixCandidate.length === companyName.length &&
+                prefixCandidate.toLowerCase() === companyName.toLowerCase() &&
+                (nextChar === ':' || nextChar === ',');
+
+            if (!startsWithCompany) {
+                appendLinkifiedText(element, text);
+                return;
+            }
+
+            const prefixEl = document.createElement('span');
+            prefixEl.className = 'message-company-prefix';
+            prefixEl.textContent = prefixCandidate;
+            element.appendChild(prefixEl);
+
+            if (text.length > companyName.length) {
+                appendLinkifiedText(element, text.slice(companyName.length));
+            }
+        };
+
         const appendMedia = (container, mediaList) => {
             if (!Array.isArray(mediaList) || mediaList.length === 0) return;
             const mediaWrap = document.createElement('div');
@@ -3193,7 +3342,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const systemContent = document.createElement('div');
                 systemContent.className = 'message-content';
                 const systemParagraph = document.createElement('p');
-                appendLinkifiedText(systemParagraph, message.content);
+                appendAgentTextWithCompanyPrefix(systemParagraph, message.content);
                 systemContent.appendChild(systemParagraph);
                 systemMessage.appendChild(systemContent);
                 appendMessageDateTime(systemMessage, message);
@@ -3214,7 +3363,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             const content = document.createElement('div');
             content.className = 'message-content';
             const p = document.createElement('p');
-            appendLinkifiedText(p, message.content);
+            if (isAgent) {
+                appendAgentTextWithCompanyPrefix(p, message.content);
+            } else {
+                appendLinkifiedText(p, message.content);
+            }
             content.appendChild(p);
             appendMedia(content, message.media);
 
@@ -4088,7 +4241,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 await releaseAssignmentSession('logout').catch(() => ({ ok: false }));
                 sendSessionLogout();
                 clearSubmitOutboxTimer();
-                writeSubmitOutboxJobs([]);
+                writeSubmitOutboxJobs([], { sessionId: getAssignmentSessionId() });
                 refreshPendingDoneAssignmentsFromOutbox([]);
                 assignmentSessionState = null;
                 clearAssignmentSessionId();
@@ -4178,8 +4331,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return true;
         }
         assignmentNavigationInProgress = true;
-        if (previousConversationBtn) previousConversationBtn.disabled = true;
-        if (nextConversationBtn) nextConversationBtn.disabled = true;
+        syncConversationNavigationDisabledState();
         try {
         let queue = assignmentQueue;
         if (!Array.isArray(queue) || !queue.length) {
@@ -4259,9 +4411,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         return true;
         } finally {
             assignmentNavigationInProgress = false;
-            const forceView = !!(assignmentContext && (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view'));
-            if (previousConversationBtn) previousConversationBtn.disabled = forceView;
-            if (nextConversationBtn) nextConversationBtn.disabled = forceView;
+            syncConversationNavigationDisabledState();
             const queuedDirection = pendingAssignmentNavigationDirection;
             pendingAssignmentNavigationDirection = 0;
             if (queuedDirection === 1 || queuedDirection === -1) {
@@ -4274,6 +4424,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function navigateConversation(direction) {
         if (isSnapshotMode) return;
+        if (submitNavigationLockInProgress) {
+            debugLog('navigateConversation blocked during submit transition', { direction });
+            return;
+        }
         const movedByAssignment = await navigateAssignmentQueue(direction);
         if (assignmentContext && assignmentContext.assignment_id) {
             return;
@@ -4389,6 +4543,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (event.repeat) return;
         if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
         if (isTypingTarget(event.target)) return;
+        if (submitNavigationLockInProgress) return;
 
         if (event.key === 'ArrowLeft') {
             if (previousConversationBtn && previousConversationBtn.disabled) return;
@@ -4583,7 +4738,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const hasSnapshot = !!(snapshotParams.snapshotId && snapshotParams.snapshotToken);
     const existingSessionId = getAssignmentSessionId();
     const existingSubmitOutboxJobs = filterOutboxJobsForSession(readSubmitOutboxJobs(), existingSessionId);
-    writeSubmitOutboxJobs(existingSubmitOutboxJobs);
+    writeSubmitOutboxJobs(existingSubmitOutboxJobs, { sessionId: existingSessionId });
     refreshPendingDoneAssignmentsFromOutbox(existingSubmitOutboxJobs);
     if (existingSubmitOutboxJobs.length && !hasSnapshot) {
         scheduleSubmitOutboxProcessing(0);
@@ -4895,6 +5050,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
                 return;
             }
+            if (assignmentContext && assignmentContext.assignment_id && hasRecentSubmitGuard(assignmentContext.assignment_id)) {
+                if (formStatus) {
+                    formStatus.textContent = 'This conversation was just queued for submission. Please wait a moment.';
+                    formStatus.style.color = '#e74c3c';
+                }
+                return;
+            }
             
             // Collect all form data
             const formData = new FormData(customForm);
@@ -4973,6 +5135,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             try {
                 if (formSubmitBtn) formSubmitBtn.disabled = true;
+                setSubmitNavigationLockInProgress(true);
                 if (formStatus) { 
                     formStatus.textContent = 'Submitting...'; 
                     formStatus.style.color = '#555'; 
@@ -5004,6 +5167,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     : null;
 
                 if (submitContext && submitContext.assignment_id && submitContext.token) {
+                    payload.assignmentId = submitContext.assignment_id;
                     const sessionId = getAssignmentSessionId();
                     if (!sessionId) {
                         throw new Error('Missing assignment session id.');
@@ -5059,6 +5223,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     formStatus.style.color = '#e74c3c'; 
                 }
             } finally {
+                setSubmitNavigationLockInProgress(false);
                 if (formSubmitBtn) formSubmitBtn.disabled = false;
             }
         });

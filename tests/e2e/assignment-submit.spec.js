@@ -42,4 +42,51 @@ test.describe('Assignment submit flow', () => {
     expect(currentUrl.searchParams.has('issue_identification')).toBeFalsy();
     expect(currentUrl.searchParams.has('notes')).toBeFalsy();
   });
+
+  test('locks previous/next controls and arrow shortcuts while submit transition is in progress', async ({
+    page,
+  }) => {
+    const api = createMockAssignmentApi();
+
+    await page.addInitScript(() => {
+      localStorage.setItem('agentName', 'Playwright QA');
+      localStorage.setItem('agentEmail', 'playwright@example.com');
+      localStorage.setItem('loginMethod', 'username');
+      localStorage.setItem('assignmentSessionId', 'pw_session_1');
+    });
+
+    await page.route('**/exec**', async (route) => api.routeHandler(route));
+    await page.goto('/app.html');
+
+    await expect
+      .poll(() => {
+        const currentUrl = new URL(page.url());
+        return String(currentUrl.searchParams.get('aid') || '').trim();
+      })
+      .toBe('aid-1');
+
+    await page.fill('#notes', 'Submit lock guardrail validation');
+    await page.click('#formSubmitBtn');
+
+    await expect(page.locator('#previousConversationBtn')).toBeDisabled();
+    await expect(page.locator('#nextConversationBtn')).toBeDisabled();
+
+    await page.keyboard.press('ArrowRight');
+    await page.waitForTimeout(400);
+
+    {
+      const currentUrl = new URL(page.url());
+      expect(String(currentUrl.searchParams.get('aid') || '').trim()).toBe('aid-1');
+    }
+
+    await expect
+      .poll(
+        () => {
+          const currentUrl = new URL(page.url());
+          return String(currentUrl.searchParams.get('aid') || '').trim();
+        },
+        { timeout: 10000 }
+      )
+      .toBe('aid-2');
+  });
 });

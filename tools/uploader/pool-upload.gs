@@ -69,6 +69,23 @@ const SNAPSHOT_HEADERS = [
   'status',
   'payload_json'
 ];
+const DATA_HEADERS = [
+  'Timestamp',
+  'Email Address',
+  'Message ID',
+  'Audit Time',
+  'Issue Identification',
+  'Proper Resolution',
+  'Product Sales',
+  'Accuracy',
+  'Workflow',
+  'Clarity',
+  'Tone',
+  'Efficient Troubleshooting Miss',
+  'Zero Tolerance',
+  'Notes',
+  'Assignment ID'
+];
 
 const UPLOADED_JSON_HEADERS = ['record_id', 'payload_json', 'updated_at'];
 const ACTIVE_ASSIGNMENT_STATUSES = { ASSIGNED: true, IN_PROGRESS: true };
@@ -1599,35 +1616,40 @@ function handleLegacyPost_(data) {
   }
 
   if (data && data.eventType === 'evaluationFormSubmission') {
-    let dataSheet = spreadsheet.getSheetByName(DATA_SHEET);
-    if (!dataSheet) {
-      dataSheet = spreadsheet.insertSheet(DATA_SHEET);
-      dataSheet.getRange(1, 1, 1, 14).setValues([[
-        'Timestamp', 'Email Address', 'Message ID', 'Audit Time',
-        'Issue Identification', 'Proper Resolution', 'Product Sales', 'Accuracy',
-        'Workflow', 'Clarity', 'Tone',
-        'Efficient Troubleshooting Miss', 'Zero Tolerance', 'Notes'
-      ]]);
-    }
+    return withScriptLock_(function() {
+      const dataSheet = getOrCreateSheet_(spreadsheet, DATA_SHEET, DATA_HEADERS);
+      const assignmentId = String((data.assignmentId != null ? data.assignmentId : data.assignment_id) || '').trim();
+      const existingRow = assignmentId ? findDataRowByAssignmentId_(dataSheet, assignmentId) : 0;
+      if (existingRow > 0) {
+        console.log('Skipping duplicate evaluation submission for assignment_id=%s (row %s)', assignmentId, existingRow);
+        return jsonResponse_({
+          status: 'success',
+          deduped: true,
+          row: existingRow,
+          assignmentId: assignmentId
+        });
+      }
 
-    safeAppendRow(dataSheet, [
-      data.timestamp || '',
-      data.emailAddress || '',
-      data.messageId || '',
-      data.auditTime || '',
-      data.issueIdentification || '',
-      data.properResolution || '',
-      data.productSales || '',
-      data.accuracy || '',
-      data.workflow || '',
-      data.clarity || '',
-      data.tone || '',
-      data.efficientTroubleshootingMiss || '',
-      data.zeroTolerance || '',
-      data.notes || ''
-    ]);
+      safeAppendRow(dataSheet, [
+        data.timestamp || '',
+        data.emailAddress || '',
+        data.messageId || '',
+        data.auditTime || '',
+        data.issueIdentification || '',
+        data.properResolution || '',
+        data.productSales || '',
+        data.accuracy || '',
+        data.workflow || '',
+        data.clarity || '',
+        data.tone || '',
+        data.efficientTroubleshootingMiss || '',
+        data.zeroTolerance || '',
+        data.notes || '',
+        assignmentId
+      ]);
 
-    return jsonResponse_({ status: 'success' });
+      return jsonResponse_({ status: 'success' });
+    });
   }
 
   const sessionKey = data.sessionId;
@@ -2113,6 +2135,22 @@ function getSheetDataRows_(sheet, expectedCols) {
   const lastRow = sheet.getLastRow();
   if (lastRow < 2) return [];
   return sheet.getRange(2, 1, lastRow - 1, expectedCols).getValues();
+}
+
+function findDataRowByAssignmentId_(dataSheet, assignmentId) {
+  const targetId = String(assignmentId || '').trim();
+  if (!dataSheet || !targetId) return 0;
+  const lastRow = dataSheet.getLastRow();
+  if (lastRow < 2) return 0;
+
+  const assignmentIdCol = DATA_HEADERS.length;
+  const values = dataSheet.getRange(2, assignmentIdCol, lastRow - 1, 1).getValues();
+  for (let i = 0; i < values.length; i++) {
+    if (String(values[i][0] || '').trim() === targetId) {
+      return i + 2;
+    }
+  }
+  return 0;
 }
 
 function generateOpaqueToken_() {

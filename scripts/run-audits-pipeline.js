@@ -81,7 +81,9 @@ function getSnowflakeConfig() {
   }
   const missing = Object.keys(required).filter((key) => !config[key]);
   if (missing.length) {
-    throw new Error(`Missing Snowflake env vars: ${missing.map((key) => required[key]).join(', ')}`);
+    throw new Error(
+      `Missing Snowflake env vars: ${missing.map((key) => required[key]).join(', ')}`
+    );
   }
 
   if (!config.role) delete config.role;
@@ -181,9 +183,7 @@ function splitSqlStatements(sqlText) {
 function connectSnowflake(config) {
   const connection = snowflake.createConnection(config);
   const authenticator = String(config.authenticator || '').toLowerCase();
-  const useAsyncConnect =
-    authenticator === 'externalbrowser' ||
-    authenticator.includes('okta');
+  const useAsyncConnect = authenticator === 'externalbrowser' || authenticator.includes('okta');
 
   return new Promise((resolve, reject) => {
     if (useAsyncConnect && typeof connection.connectAsync === 'function') {
@@ -311,7 +311,9 @@ async function postResetAssignments(googleScriptUrl, sendIds) {
   }
 
   if (!response.ok || data.error) {
-    throw new Error(data.error || `Assignments reset request failed with status ${response.status}`);
+    throw new Error(
+      data.error || `Assignments reset request failed with status ${response.status}`
+    );
   }
 
   return data;
@@ -339,7 +341,9 @@ async function run() {
     throw new Error('GOOGLE_SCRIPT_URL is not set and could not be read from qa-config.js');
   }
 
-  console.log(`Running ${statements.length} SQL statements from ${path.relative(ROOT_DIR, args.sql)} ...`);
+  console.log(
+    `Running ${statements.length} SQL statements from ${path.relative(ROOT_DIR, args.sql)} ...`
+  );
 
   const connection = await connectSnowflake(snowflakeConfig);
   let finalRows = [];
@@ -349,7 +353,9 @@ async function run() {
       const statement = statements[i];
       const startedAt = Date.now();
       const preview = statement.replace(/\s+/g, ' ').slice(0, 120);
-      console.log(`[${i + 1}/${statements.length}] ${preview}${preview.length >= 120 ? '...' : ''}`);
+      console.log(
+        `[${i + 1}/${statements.length}] ${preview}${preview.length >= 120 ? '...' : ''}`
+      );
       const result = await executeStatement(connection, statement);
       const elapsedMs = Date.now() - startedAt;
       console.log(
@@ -398,8 +404,12 @@ async function run() {
       targetSendIds.map((sendId) => ({ SEND_ID: sendId }))
     );
 
-    console.log(`\nWrote uploader CSV: ${path.relative(ROOT_DIR, uploaderCsvPath)} (${uploaderRows.length} rows)`);
-    console.log(`Wrote target send IDs: ${path.relative(ROOT_DIR, sendIdsCsvPath)} (${targetSendIds.length} rows)`);
+    console.log(
+      `\nWrote uploader CSV: ${path.relative(ROOT_DIR, uploaderCsvPath)} (${uploaderRows.length} rows)`
+    );
+    console.log(
+      `Wrote target send IDs: ${path.relative(ROOT_DIR, sendIdsCsvPath)} (${targetSendIds.length} rows)`
+    );
 
     if (!args.skipSheetUpdate) {
       console.log('Resetting assignments sheet from cqa_target_sends ...');
