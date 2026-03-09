@@ -336,6 +336,17 @@ function doPost(e) {
       });
     }
 
+    if (action === 'upsertInternalNotesBySendId') {
+      const noteEntries = Array.isArray(data.note_entries)
+        ? data.note_entries
+        : (Array.isArray(data.notes) ? data.notes : []);
+      return withScriptLock_(function() {
+        const result = upsertInternalNotesBySendId_(noteEntries);
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_(result);
+      });
+    }
+
     if (action === 'clearUploadedTemplates') {
       return withScriptLock_(function() {
         writeUploadedJsonList_(UPLOADED_TEMPLATES_SHEET, []);
@@ -1268,6 +1279,7 @@ function assignFromPool_(state, email, sessionId, nowIso, appBase, count) {
       continue;
     }
 
+    const inheritedInternalNote = findLatestInternalNoteBySendId_(state.assignmentsRows, poolSendId);
     const assignment = {
       send_id: poolSendId,
       assignee_email: email,
@@ -1279,7 +1291,7 @@ function assignFromPool_(state, email, sessionId, nowIso, appBase, count) {
       editor_token: generateOpaqueToken_(),
       viewer_token: generateOpaqueToken_(),
       form_state_json: '',
-      internal_note: '',
+      internal_note: inheritedInternalNote,
       assigned_session_id: sessionId,
       assigned_at: nowIso
     };
@@ -1561,6 +1573,83 @@ function appendUploadedJsonList_(sheetName, list, options) {
   return { added: rows.length, total: rows.length };
 }
 
+function upsertInternalNotesBySendId_(entriesInput) {
+  const entries = normalizeInternalNoteEntries_(entriesInput);
+  if (!entries.length) {
+    return { error: 'Missing note entries' };
+  }
+
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const assignmentsSheet = getOrCreateSheet_(spreadsheet, ASSIGNMENTS_SHEET, ASSIGNMENTS_HEADERS);
+  const rows = getSheetDataRows_(assignmentsSheet, ASSIGNMENTS_HEADERS.length);
+  if (!rows.length) {
+    return { ok: true, updated_rows: 0, matched_send_ids: 0, missing_send_ids: entries.length };
+  }
+
+  const noteBySendId = {};
+  for (let i = 0; i < entries.length; i++) {
+    noteBySendId[entries[i].send_id] = entries[i].internal_note;
+  }
+
+  const now = nowIso_();
+  let updatedRows = 0;
+  const matchedIds = {};
+
+  for (let i = 0; i < rows.length; i++) {
+    const assignment = rowToAssignmentObject_(rows[i]);
+    const sendId = String(assignment.send_id || '').trim();
+    if (!sendId || !Object.prototype.hasOwnProperty.call(noteBySendId, sendId)) continue;
+    const nextNote = String(noteBySendId[sendId] || '');
+    if (String(assignment.internal_note || '') === nextNote) {
+      matchedIds[sendId] = true;
+      continue;
+    }
+    assignment.internal_note = nextNote;
+    assignment.updated_at = now;
+    rows[i] = assignmentToRow_(assignment);
+    matchedIds[sendId] = true;
+    updatedRows++;
+  }
+
+  if (updatedRows > 0) {
+    assignmentsSheet.getRange(2, 1, rows.length, ASSIGNMENTS_HEADERS.length).setValues(rows);
+  }
+
+  const uniqueInputIds = {};
+  for (let i = 0; i < entries.length; i++) uniqueInputIds[entries[i].send_id] = true;
+  let matchedSendIds = 0;
+  let missingSendIds = 0;
+  for (const sendId in uniqueInputIds) {
+    if (!Object.prototype.hasOwnProperty.call(uniqueInputIds, sendId)) continue;
+    if (matchedIds[sendId]) matchedSendIds++;
+    else missingSendIds++;
+  }
+
+  return {
+    ok: true,
+    updated_rows: updatedRows,
+    matched_send_ids: matchedSendIds,
+    missing_send_ids: missingSendIds
+  };
+}
+
+function normalizeInternalNoteEntries_(values) {
+  const list = Array.isArray(values) ? values : [];
+  const out = [];
+  const seen = {};
+  for (let i = 0; i < list.length; i++) {
+    const value = list[i];
+    if (!value || typeof value !== 'object' || Array.isArray(value)) continue;
+    const sendId = String(value.send_id || value.SEND_ID || '').trim();
+    if (!sendId) continue;
+    const note = String(value.internal_note || value.NOTES || value.notes || '').trim();
+    if (seen[sendId]) continue;
+    seen[sendId] = true;
+    out.push({ send_id: sendId, internal_note: note });
+  }
+  return out;
+}
+
 function handleLegacyPost_(data) {
   const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
   const sheet = spreadsheet.getActiveSheet();
@@ -1781,6 +1870,18 @@ function normalizePoolEntries_(values) {
     out.push({ send_id: sendId, agent_message: '' });
   }
   return out;
+}
+
+function findLatestInternalNoteBySendId_(rows, sendId) {
+  const target = String(sendId || '').trim();
+  if (!target) return '';
+  for (let i = rows.length - 1; i >= 0; i--) {
+    const assignment = rowToAssignmentObject_(rows[i]);
+    if (String(assignment.send_id || '').trim() !== target) continue;
+    const note = String(assignment.internal_note || '').trim();
+    if (note) return note;
+  }
+  return '';
 }
 
 function addScenariosToPool_(scenarios) {

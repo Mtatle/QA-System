@@ -1290,6 +1290,7 @@ input:checked + .slider:before {
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 4px;
+    padding-bottom: 12px;
 }
 
 .coupon-code-card {
@@ -1306,10 +1307,14 @@ input:checked + .slider:before {
 
 .coupon-code-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 8px;
     margin-bottom: 6px;
+}
+
+.coupon-code-title-wrap {
+    min-width: 0;
 }
 
 .coupon-code-title {
@@ -1319,6 +1324,13 @@ input:checked + .slider:before {
     text-transform: uppercase;
     color: #1f2a33;
     margin-bottom: 0;
+}
+
+.coupon-code-redeemed {
+    margin-top: 2px;
+    font-size: 11px;
+    color: #5f6b76;
+    line-height: 1.2;
 }
 
 .coupon-code-status {
@@ -1331,21 +1343,21 @@ input:checked + .slider:before {
     white-space: nowrap;
 }
 
-.coupon-code-status--used {
-    background: #fde8e8;
-    border-color: #f3b6b6;
-    color: #8a2c2c;
-}
-
-.coupon-code-status--unused {
+.coupon-code-status--active {
     background: #eaf7df;
     border-color: #bddd98;
     color: #2a5b24;
 }
 
+.coupon-code-status--inactive {
+    background: #fde8e8;
+    border-color: #f3b6b6;
+    color: #8a2c2c;
+}
+
 .coupon-code-line {
     font-size: 11px;
-    color: #3d4650;
+    color: #5f6b76;
     margin-bottom: 4px;
     line-height: 1.35;
 }
@@ -1417,7 +1429,7 @@ input:checked + .slider:before {
 }
 .system-message .message-content p {
     margin: 0;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.5;
 }
 .system-message .message-sender-icon {
@@ -1476,17 +1488,13 @@ input:checked + .slider:before {
 }
 .message-content p {
     margin: 0 0 5px;
-    font-size: 15px;
+    font-size: 13px;
     word-wrap: break-word;
     overflow-wrap: break-word;
     word-break: break-word;
 }
 .message-content p:last-child {
     margin-bottom: 0;
-}
-
-.message-company-prefix {
-    font-weight: 600;
 }
 
 .message-content .message-inline-link {
@@ -1511,7 +1519,8 @@ input:checked + .slider:before {
     right: auto;
     display: block;
     white-space: nowrap;
-    font-size: 10px;
+    font-size: 11px;
+    font-weight: 700;
     line-height: 1;
     color: #6b7280;
     pointer-events: none;
@@ -1599,7 +1608,7 @@ input:checked + .slider:before {
 
 .message.center-system-note .message-content p {
     color: #666;
-    font-size: 0.84em;
+    font-size: 11px;
     margin: 0;
 }
 .message.sent .message-sender-icon {
@@ -2730,3 +2739,4 @@ mark {
         transform: rotate(360deg);
     }
 }
+
