@@ -327,18 +327,18 @@
       "has_shopify": false,
       "id": "019742af-ea42-4f32-f000-0000c80f2793",
       "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://covercraft.com",
+          "date": ""
+        },
         "coupons": [
           {
             "status": "ACTIVE",
             "description": "Excludes: WeatherTech, Boat Lift Canopy Covers, and Sheepskin Products. Valid through 2023",
             "coupon": "SARAH10"
           }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://covercraft.com",
-          "date": ""
-        }
+        ]
       },
       "companyWebsite": "https://covercraft.com",
       "companyName": "Covercraft",
@@ -779,45 +779,6 @@
       "has_shopify": false,
       "id": "0193cc63-4d25-4a94-f000-00004eae613d",
       "rightPanel": {
-        "browsingHistory": [
-          {
-            "link": "https://section119.com/products/grateful-dead-henley-bertha-on-black?variant=41867246698684",
-            "item": "Grateful Dead | Thermal Henley | Bertha in Black - L",
-            "timeAgo": "2024-12-13"
-          },
-          {
-            "link": "https://section119.com/collections/gd-all-new/products/grateful-dead-henley-bertha-on-black?_pos=18\u0026_fid=7bd871579\u0026_ss=c",
-            "item": "Grateful Dead | Thermal Henley | Bertha in Black - S",
-            "timeAgo": "2024-12-13"
-          },
-          {
-            "link": "https://section119.com/collections/allman-brothers-band/products/allman-brothers-watermelon-upf-50-hoodie?_pos=2\u0026_fid=ffc8f5558\u0026_ss=c\u0026variant=43376181280956",
-            "item": "Allman Brothers Band | UPF 50 Hoodie | Watermelon - L",
-            "timeAgo": "2024-12-13"
-          },
-          {
-            "link": "https://section119.com/products/grateful-dead-henley-bertha-on-black?variant=41867246698684",
-            "item": "Grateful Dead | Thermal Henley | Bertha in Black - L",
-            "timeAgo": "2024-12-13"
-          },
-          {
-            "link": "https://section119.com/products/grateful-dead-henley-bertha-on-black?variant=41867246698684",
-            "item": "Grateful Dead | Thermal Henley | Bertha in Black - L",
-            "timeAgo": "2024-12-13"
-          }
-        ],
-        "coupons": [
-          {
-            "status": "ACTIVE",
-            "redeemed": "2022-12-16 21:30:41.912",
-            "coupon": "STEALIE10"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://section119.com",
-          "date": ""
-        },
         "orders": [
           {
             "currency": "USD",
@@ -890,6 +851,45 @@
             "discount_amount": 18.74,
             "orderNumber": "5132677841084",
             "total": 65.25
+          }
+        ],
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "redeemed": "2022-12-16 21:30:41.912",
+            "coupon": "STEALIE10"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://section119.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://section119.com/products/grateful-dead-henley-bertha-on-black?variant=41867246698684",
+            "item": "Grateful Dead | Thermal Henley | Bertha in Black - L",
+            "timeAgo": "2024-12-13"
+          },
+          {
+            "link": "https://section119.com/collections/gd-all-new/products/grateful-dead-henley-bertha-on-black?_pos=18\u0026_fid=7bd871579\u0026_ss=c",
+            "item": "Grateful Dead | Thermal Henley | Bertha in Black - S",
+            "timeAgo": "2024-12-13"
+          },
+          {
+            "link": "https://section119.com/collections/allman-brothers-band/products/allman-brothers-watermelon-upf-50-hoodie?_pos=2\u0026_fid=ffc8f5558\u0026_ss=c\u0026variant=43376181280956",
+            "item": "Allman Brothers Band | UPF 50 Hoodie | Watermelon - L",
+            "timeAgo": "2024-12-13"
+          },
+          {
+            "link": "https://section119.com/products/grateful-dead-henley-bertha-on-black?variant=41867246698684",
+            "item": "Grateful Dead | Thermal Henley | Bertha in Black - L",
+            "timeAgo": "2024-12-13"
+          },
+          {
+            "link": "https://section119.com/products/grateful-dead-henley-bertha-on-black?variant=41867246698684",
+            "item": "Grateful Dead | Thermal Henley | Bertha in Black - L",
+            "timeAgo": "2024-12-13"
           }
         ]
       },
@@ -1094,21 +1094,22 @@
       "has_shopify": false,
       "id": "01927356-732f-49bb-f000-00009c4ae471",
       "rightPanel": {
-        "browsingHistory": [
+        "orders": [
           {
-            "link": "https://bonobos.com/products/cashmere-hoodie-737?color=black\u0026shirt-size=m",
-            "item": "Sale Medium Tops | Bonobos",
-            "timeAgo": "2024-10-07"
-          },
-          {
-            "link": "https://bonobos.com/products/cashmere-hoodie-737?color=grey",
-            "item": "Sale Medium Tops | Bonobos",
-            "timeAgo": "2024-10-07"
-          },
-          {
-            "link": "https://bonobos.com/sign-in?redirect_to=%2Fcheckout%2Fdetails",
-            "item": "Account Sign In | Bonobos",
-            "timeAgo": "2024-10-07"
+            "currency": "USD",
+            "orderDate": "2024-10-08",
+            "items": [
+              {
+                "price": [
+                  129
+                ],
+                "name": "Cashmere Hoodie"
+              }
+            ],
+            "date_time": "2024-10-08 13:07:27.860",
+            "discount_amount": 0,
+            "orderNumber": "324285775",
+            "total": 129
           }
         ],
         "coupons": [
@@ -1164,22 +1165,21 @@
           "value": "https://bonobos.com",
           "date": ""
         },
-        "orders": [
+        "browsingHistory": [
           {
-            "currency": "USD",
-            "orderDate": "2024-10-08",
-            "items": [
-              {
-                "price": [
-                  129
-                ],
-                "name": "Cashmere Hoodie"
-              }
-            ],
-            "date_time": "2024-10-08 13:07:27.860",
-            "discount_amount": 0,
-            "orderNumber": "324285775",
-            "total": 129
+            "link": "https://bonobos.com/products/cashmere-hoodie-737?color=black\u0026shirt-size=m",
+            "item": "Sale Medium Tops | Bonobos",
+            "timeAgo": "2024-10-07"
+          },
+          {
+            "link": "https://bonobos.com/products/cashmere-hoodie-737?color=grey",
+            "item": "Sale Medium Tops | Bonobos",
+            "timeAgo": "2024-10-07"
+          },
+          {
+            "link": "https://bonobos.com/sign-in?redirect_to=%2Fcheckout%2Fdetails",
+            "item": "Account Sign In | Bonobos",
+            "timeAgo": "2024-10-07"
           }
         ]
       },

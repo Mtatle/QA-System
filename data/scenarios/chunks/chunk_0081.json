@@ -1,0 +1,839 @@
+{
+  "version": 1,
+  "chunk": "chunk_0081",
+  "scenarios": {
+    "401": {
+      "agentName": "Samantha",
+      "has_shopify": true,
+      "id": "019c6318-efcc-467a-f000-0000f103959e",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://comfrt.com/products/minimalist-hoodie?variant=44020461371436",
+            "item": "Minimalist Hoodie",
+            "timeAgo": "2026-02-01"
+          },
+          {
+            "link": "https://comfrt.com/products/pastel-collection?variant=44358865190956",
+            "item": "Pastel Hoodie",
+            "timeAgo": "2026-02-01"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 4043543966,
+            "company_id": 57888,
+            "coupon_url": "https://comfrt.com/discount/WELCOME15?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "WELCOME15",
+            "name": "WELCOME15",
+            "coupon": "WELCOME15",
+            "redemption_status": "USED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://comfrt.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2026-01-01",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      45,
+                      39
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2026-01-01 05:00:06.224",
+            "discount_amount": 0,
+            "orderNumber": "6380746997804",
+            "total": 90.7
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2026-01-01",
+            "coupon": "WELCOME15",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      39,
+                      39,
+                      45
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2026-01-01 04:51:59.314",
+            "discount_amount": 0,
+            "orderNumber": "6380734742572",
+            "total": 123
+          }
+        ]
+      },
+      "companyWebsite": "https://comfrt.com",
+      "companyName": "Comfrt",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post-purchase issues"
+        ],
+        "escalate": [
+          "ESC if the discount % is not the same as indicated in the automated message"
+        ],
+        "templates": [
+          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Sizing questions",
+        "Discount code errors"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Winter storm? We\u0027ve got you covered.\n\nShop up to 70% off sitewide on the coziest essentials.\n\nShop now: comfrt.attn.tv/aZbpzI5qjgEr ",
+          "date_time": "2026-01-23 16:33:51.640",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Made to move with you.\n\nComing 1.28. \n\nShop your favorites while you wait: comfrt.attn.tv/alz7SMF80_YZ ",
+          "date_time": "2026-01-26 19:21:40.124",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: JUST DROPPED\n\nDesigned to move with you. Made to feel like you.\n\nIntroducing ComfrtCoreTM. Created for your body and mind.\n\nMove your way:\ncomfrt.attn.tv/aud84g4hBijs",
+          "date_time": "2026-01-28 15:09:49.569",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: You\u0027ve got great taste and your pick is going fast.\n\nMake it yours before it\u0027s gone: comfrt.attn.tv/aQyL_byXUbXk\n",
+          "date_time": "2026-01-30 15:10:08.845",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: You reached the finish line. January is over and the weekend is here!\n\nReward yourself with the NEW Basic Quarter Zip.\n\nGrab your go-to:\ncomfrt.attn.tv/aAoo0KBep-5C",
+          "date_time": "2026-01-31 16:08:42.439",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: You are already subscribed. Click here to shop now: comfrt.com.",
+          "date_time": "2026-02-01 12:08:16.768",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Whether your team wins or loses, your outfit shouldn\u0027t. \n\nFinal score: You look great.\n\nGrab your game day set:\ncomfrt.attn.tv/amgyT5O2hCO7",
+          "date_time": "2026-02-01 22:01:14.813",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Your winter remedy is here.\n\nMeet the Ember Heated Blanket. Perfectly warm, irresistibly soft, and made to feel like a dream you never want to wake up from.\n\nGet cozy: comfrt.attn.tv/aaEU0801ZNQg",
+          "date_time": "2026-02-11 17:15:44.446",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Upgrade to first class.\n\nThe VIP Airplane Mode Hoodie with a satin-lined hood and eye mask has officially landed! \n\nAlso, four new limited shades just got added to our original collection.\n\nGet it while you can: comfrt.attn.tv/aJUAkau76Vsd \n",
+          "date_time": "2026-02-13 18:30:52.476",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Forgot Valentine\u0027s Day is today? Your secret is safe with us.\n\nSend a Comfrt E-Gift Card and let them pick their new favorite set. Delivered instantly.\n\nNo shipping, no stress: comfrt.attn.tv/aUwiGDaSw9s_ \n",
+          "date_time": "2026-02-14 14:15:48.278",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Hey Maddie! It\u0027s been a while since your last Comfrt order...\n\nTake a moment to see which new arrivals are calling your name: https://comfrt.com/collections/new-arrivals",
+          "date_time": "2026-02-15 15:17:13.462",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Maybe it\u0027s been awhile because I still haven\u0027t gotten what I ordered!",
+          "date_time": "2026-02-15 15:48:40.643",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c6318-efcc-467a-f000-0000f103959e",
+          "message_text": "Comfrt: Hello, thank you for reaching out! I checked, and your order has an estimated shipping time of 77 days after purchase. The estimated shipping date for pre-order items will be displayed on the product page and in your order confirmation email. Please note that this date is an estimate and not a guaranteed delivery or receipt date. The estimated delivery date in your confirmation email is subject to change based on production, supplier availability, or other unforeseen circumstances.\n",
+          "message_type": "agent",
+          "agent": "39001",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-15 15:58:24.608"
+        }
+      ]
+    },
+    "402": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "019c9c1f-db45-41f9-f000-0000ffc3adf1",
+      "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 4291014129,
+            "description": "exclusions apply",
+            "company_id": 26762,
+            "value": "15",
+            "name": "15% Off Welcome April 2025",
+            "coupon": "LAC-WDQ-T46-MCR-SXP",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://lacoste.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.lacoste.com/us/lacoste/women/shoes/sneakers/50SFA0123.html?color=2R2",
+            "item": "Women\u0027s L003 Neo Shot Sneakers",
+            "timeAgo": "2026-02-26"
+          },
+          {
+            "link": "https://www.lacoste.com/us/lacoste/women/shoes/sneakers/47SFA0012.html?color=3E8",
+            "item": "Women\u0027s L003 2K24 Sneakers",
+            "timeAgo": "2026-02-26"
+          }
+        ]
+      },
+      "companyWebsite": "https://lacoste.com",
+      "companyName": "Lacoste",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over",
+          "Do use the Holiday Discounts template if you are unsure of the promotion"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Lacoste: Welcome to Lacoste! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/VyG",
+          "date_time": "2026-02-26 16:26:49.048",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lacoste: Welcome! Get 15% off your full price, online order with your one-time code LAC-WDQ-T46-MCR-SXP\n\nShop Here:\nlacoste.attn.tv/acl-ntqxhJK- ",
+          "date_time": "2026-02-26 16:26:54.190",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lacoste: Classic styles, perfect for every season!\n\nDiscover the latest here: https://lacoste.attn.tv/a5Pl15pfsZIw  .",
+          "date_time": "2026-02-26 16:27:55.064",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Lacoste: Complete your L003 Neo Shot Sneakers — leather upper with graphic panels and an oversized sole for a bold, sporty look.\n\nUse code LAC-WDQ-T46-MCR-SXP for 15% off; exclusions apply.\n\nShop now: https://lacoste.attn.tv/a2PJIWX0z9Ao .",
+          "date_time": "2026-02-26 16:49:06.147",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Help",
+          "date_time": "2026-02-26 16:49:51.933",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Won\u0027t let me apply the code",
+          "date_time": "2026-02-26 16:50:11.949",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c9bef-ab83-42cc-f000-0000ffc3adf1",
+          "message_text": "Lacoste: I\u0027m sorry you\u0027re having trouble applying the code! Have you encountered any error messages? Also, could you kindly share a screenshot of the items in your cart? I\u0027ll be happy to look into the issue! \n\nPlease note that the code applies to full priced orders only. ",
+          "message_type": "agent",
+          "agent": "46498",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-26 16:51:41.467"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "That is why because the one I have in my cart is on sale",
+          "date_time": "2026-02-26 17:02:02.084",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c9bf9-d57c-478a-f000-0000ffc3adf1",
+          "message_text": "Lacoste: Thanks for letting me know. Our system can\u0027t stack multiple promos at checkout. I\u0027m sorry about that! ",
+          "message_type": "agent",
+          "agent": "50269",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-26 17:02:47.586"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you",
+          "date_time": "2026-02-26 17:03:31.894",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c9bfa-f0cf-48a7-f000-0000ffc3adf1",
+          "message_text": "Lacoste: My pleasure. Is there anything else I can assist you with today? ",
+          "message_type": "agent",
+          "agent": "43099",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-26 17:04:00.101"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No, that’s all, I was really hoping to buy them today but I guess wasn\u0027t meant to buy them",
+          "date_time": "2026-02-26 17:05:22.221",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c9bff-a47f-4a5e-f000-0000ffc3adf1",
+          "message_text": "Lacoste: I\u0027m really sorry it worked out that way, and I understand how disappointing this must be. Hopefully, you can still consider placing an order with us soon. In the meantime, you can check out our new arrivals here: https://lacoste.attn.tv/aezkBsJuM-Jl/ \nhttps://lacoste.attn.tv/akdiL25sjZcw/ You might be able to find another item to which your code can be applied to.",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-26 17:09:08.251"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you",
+          "date_time": "2026-02-26 17:43:41.789",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c9c1f-db45-41f9-f000-0000ffc3adf1",
+          "message_text": "Lacoste: My pleasure! Is there anything else I can assist you with today? ",
+          "message_type": "agent",
+          "agent": "43099",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-26 17:44:19.427"
+        }
+      ]
+    },
+    "403": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "018fdf58-4117-4114-f000-00008b83a5d0",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Haven Collection Launch",
+            "content": [
+              "• Haven 16” Laptop Tote Bag\n• Haven 15” Laptop Tote Bag\n→  Colors: Buttercream, Mushroom, Navy\n• Haven 14” Laptop Tote Bag\n• Haven Mini Crossbody Bag\n→  Colors: Mushroom, Celadon, Buttercream, Navy.\n• Haven Tulip Tote - NEW\n→  Colors: Mushroom, Celadon, Navy, Buttercream, Black, Toffee."
+            ]
+          },
+          {
+            "title": "Early Access Luka Duffel Bag Charm",
+            "content": [
+              "• Retail: 1/20 10am- 10pm (store will honor, not promote)\n• Discount: Free Luka Duffel Bag Charm with any Haven Purchase\n• Promo Code: VITTULIP\n• Stack with VIT: Yes\n• Exclusions: Only applies to the purchase of Haven Collection\n• Final Sale: No"
+            ]
+          },
+          {
+            "title": "General Access Fit Zip Bag Charm GWP",
+            "content": [
+              "• Audience: Sitewide\n• Countries: All Markets\n• Discount: Free Fit Zip Bag Charm with any Fit Purchase\n• Promo Code: FIT\n• Stack with VIT: Yes\n• Exclusions: Only applies to the purchase of Fit Collection\n• Final Sale: No\n• Ends on Jan. 10th at 10am EST"
+            ]
+          },
+          {
+            "title": "Early Access Fit Zip Bag Charm GWP",
+            "content": [
+              "• Audience: Online and Retail\n• Discount: Free Fit Zip Bag Charm with any Fit Purchase\n• Promo Code: VITFIT\n• Stack with VIT: Yes\n• Exclusions: Only applies to the purchase of Fit Collection\n• Final Sale: No\n• Early access ends for online purchases on Jan. 9th, 10 am EST, and for retail at 10 pm EST"
+            ]
+          },
+          {
+            "title": "January Sale",
+            "content": [
+              "• Discount: Up to 60% off\n• Stack with VIT: Yes\n• Final Sale: Yes\n• Ends Jan. 30th at 10am EST"
+            ]
+          },
+          {
+            "title": "Luka Carry-On and Mini Carry-On (Launch + Restock)",
+            "content": [
+              "• Color: Walnut Monochrome\n→  Luka Carry-On - New\n→  Luka Mini Carry-On - New\n→  Luka Duffel - Restock\n→  Luka Mini Duffel - Restock"
+            ]
+          },
+          {
+            "title": "General Access Luka Duffel Bag Charm",
+            "content": [
+              "• Retail: 1/21 10am - 10pm (store will honor, not promote)\n• Discount: Free Luka Duffel BC with any Haven Purchase\n• Promo Code: TULIP\n• Stack with VIT: Yes\n• Exclusions: Only applies to the purchase of Haven Collection"
+            ]
+          },
+          {
+            "title": "Fit Collection Expansion",
+            "content": [
+              "• Colors: Iris, Indigo, Black, and Greige\n→  Fit Crossbody Gym Bag - New\n→ Fit Gym Backpack - New\n→  Fit Zip Bag Charm - New\n→  Fit Gym Duffel\n→  Fit Hanging Dopp Kit"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2340660688,
+            "description": "off your first order",
+            "company_id": 2281,
+            "coupon_url": "https://calpak.myshopify.com/discount/AT1NT1V23CK6ksd?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Welcome Promo Code - 10% Off",
+            "coupon": "AT1NT1V23CK6ksd",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://calpaktravel.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.calpaktravel.com/products/terra-hydration-backpack",
+            "item": "Terra Laptop Backpack - OBSIDIAN",
+            "timeAgo": "2024-06-03"
+          },
+          {
+            "link": "https://www.calpaktravel.com/products/terra-small-sling-bag/obsidian",
+            "item": "Terra Small Sling Bag - WHITE SANDS",
+            "timeAgo": "2024-06-03"
+          }
+        ]
+      },
+      "companyWebsite": "https://calpaktravel.com",
+      "companyName": "CALPAK",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase inquiries, use PPI shortcut",
+          "If cx needs help returning/exchanging a gift send to CS",
+          "Send to CS for discount code issues"
+        ],
+        "escalate": [
+          "When ESC add email to notes for all escalations"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "change of address"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/dY4",
+          "date_time": "2024-06-03 14:10:26.065",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Thanks for joining the crew! 👋 Get 10% off your first order with the code AT1NT1V23CK6ksd at checkout.\n\nShop Best Sellers: https://calpak.attn.tv/aoNgYj_kznqd \n\n*Offer expires in 7 days and excludes sale items. ",
+          "date_time": "2024-06-03 14:10:30.327",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Still thinking about us? \n\nUs too, bestie. \n\nIf you need some convincing, check out some best sellers: https://calpak.attn.tv/af0bJsAYBcHz \n\nText back if you have any questions!",
+          "date_time": "2024-06-03 14:10:39.755",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Can\u0027t use my code for items in my cart. Why?",
+          "date_time": "2024-06-03 14:13:17.641",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fdf4e-ec28-4a9c-f000-00008b83a5d0",
+          "message_text": "CALPAK: I see you\u0027re having trouble with the coupon code \"AT1NT1V23CK6ksd\". This code provides a 10% discount on our Travel More Collection. Please ensure that the items in your cart are from this collection. If you\u0027re still facing issues, could you please share a screenshot? You can apply the coupon on our website, calpaktravel.com.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-03 14:14:02.543"
+        },
+        {
+          "message_id": "018fdf58-4117-4114-f000-00008b83a5d0",
+          "message_text": "CALPAK: I\u0027m afraid the Terra Small Sling Bag isn\u0027t included in our Travel More Collection. What do you think of replacing it with this item - https://calpak.attn.tv/sl/YVtTsQta?\n\nYou can browse through our ",
+          "message_type": "agent",
+          "agent": "82502",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-03 14:24:14.115"
+        }
+      ]
+    },
+    "404": {
+      "agentName": "Kat",
+      "has_shopify": false,
+      "id": "01958205-748d-4a9b-f000-00007ff4634a",
+      "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 2146722634,
+            "company_id": 7367,
+            "static_code": "MOBILE20",
+            "name": "MOBILE20",
+            "coupon": "MOBILE20",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://restartmed.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.restartmed.com/product/hashimotos-ab-rx/?utm_campaign=Hashimoto%27s%20Ab%20Rx%20relaunch\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=z5THi",
+            "item": "https://www.restartmed.com/product/hashimotos-ab-rx/?utm_campaign=Hashimoto%27s%20Ab%20Rx%20relaunch\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=z5THi",
+            "timeAgo": "2025-03-08"
+          },
+          {
+            "link": "https://www.restartmed.com/product/essential-t2/",
+            "item": "https://www.restartmed.com/product/essential-t2/",
+            "timeAgo": "2025-03-05"
+          },
+          {
+            "link": "https://www.restartmed.com/product/thyroid-daily-essentials-thyroid-multivitamin/",
+            "item": "https://www.restartmed.com/product/thyroid-daily-essentials-thyroid-multivitamin/",
+            "timeAgo": "2025-03-04"
+          },
+          {
+            "link": "https://www.restartmed.com/product/thyroidectomy-rai-bundle/?add-to-cart=35048",
+            "item": "https://www.restartmed.com/product/thyroidectomy-rai-bundle/?add-to-cart=35048",
+            "timeAgo": "2025-03-02"
+          },
+          {
+            "link": "https://www.restartmed.com/product/thyroid-hair-regrowth-complex/?pp=0\u0026epik=dj0yJnU9WUdGbTgzQUp6WXJNZVd1V1Q1T0h1VnNyckxZT3NEVWImcD0xJm49dk82WFBvTDA5X0NhOTBZREZfNm92QSZ0PUFBQUFBR2FuVTNj",
+            "item": "https://www.restartmed.com/product/thyroid-hair-regrowth-complex/?pp=0\u0026epik=dj0yJnU9WUdGbTgzQUp6WXJNZVd1V1Q1T0h1VnNyckxZT3NEVWImcD0xJm49dk82WFBvTDA5X0NhOTBZREZfNm92QSZ0PUFBQUFBR2FuVTNj",
+            "timeAgo": "2024-07-29"
+          }
+        ]
+      },
+      "companyWebsite": "https://restartmed.com",
+      "companyName": "Dr.Westin Childs",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: Get 20% off THYROID B COMPLEX this weekend only. Long-lasting, jitter-free energy awaits: drwc.attn.tv/abmPZmEg1O-v",
+          "date_time": "2025-02-14 16:55:26.669",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: You are already subscribed. Click here to shop now: restartmed.com.",
+          "date_time": "2025-03-02 13:39:17.885",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: Hello, this is Kat! Thanks for checking out our site! https://drwc.attn.tv/aX6_8GzAN0RP \n\nCan I help answer any supplement questions? Reply here to chat.",
+          "date_time": "2025-03-02 13:41:08.054",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: [NEW] Hashimoto\u0027s Ab Rx now in CAPSULE form. Put Hashimoto\u0027s into remission the easy way: drwc.attn.tv/a35JzMJ6d9Uv",
+          "date_time": "2025-03-08 14:15:19.452",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: Ready to lower your thyroid antibodies? Take out the guesswork with Hashimoto\u0027s Ab Rx: drwc.attn.tv/a7ZZCtj1AK3m",
+          "date_time": "2025-03-09 15:15:18.642",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: Hello, this is Kat! Thanks for checking out our site! https://drwc.attn.tv/aI6PLK1GKdEi \n\nCan I help answer any supplement questions? Reply here to chat.",
+          "date_time": "2025-03-10 17:37:03.476",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I received the Supplement vitamins,  T-3 and \nT-2 how should I use this",
+          "date_time": "2025-03-10 17:39:17.863",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01958205-748d-4a9b-f000-00007ff4634a",
+          "message_text": "Dr. Westin Childs: For the T - 2, please take 1-2 capsules each day for best results, before noon, 30-60 minutes away from food. Can be taken at the same time as thyroid medication.\n\nAre you referring to the T3 Conversion Booster? If some, please take 2 capsules daily before noon at least 30-60 minutes away from your thyroid medication.\n\nLet me know if there is anything else I can help with!",
+          "message_type": "agent",
+          "agent": "87473",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-03-10 17:45:50.492"
+        }
+      ]
+    },
+    "405": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "019bede4-7558-4fb0-f000-0000f5b514bb",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.jaanuu.com/products/womens-perri-ultrasoft-yoga-scrub-pant-caribbean-blue?variant=50998465823009",
+            "item": "Perri UltraSOFTTM Yoga Scrub Pant - Carbon Gray - Carbon Gray / XXS / Regular",
+            "timeAgo": "2026-01-24"
+          },
+          {
+            "link": "https://www.jaanuu.com/products/womens-xenos-slim-essential-knit-waist-scrub-pant-black?variant=51174361497889",
+            "item": "Xenos Slim Knit-Waist Scrub Pant - Black - Black / M / Petite",
+            "timeAgo": "2026-01-24"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 4122285243,
+            "description": "your first order",
+            "company_id": 562,
+            "coupon_url": "https://a90147-9e.myshopify.com/discount/WELCOME87uyn8",
+            "value": "15",
+            "name": "UniqueWelcome15",
+            "coupon": "WELCOME87uyn8",
+            "redemption_status": "USED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://jaanuu.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "total": 56.48,
+            "coupon": "WELCOME87uyn8",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      58,
+                      3.98
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "link": "https://www.jaanuu.com/86674604321/orders/8ffd9a0d9c29aaf72b646be13c00ea7d/authenticate?key=16aadc95e896f94fe742b6aa65d73314",
+            "orderDate": "2026-01-24",
+            "discount_amount": 0,
+            "orderNumber": "191221",
+            "date_time": "2026-01-24 02:43:58.211"
+          }
+        ]
+      },
+      "companyWebsite": "https://jaanuu.com",
+      "companyName": "Jaanuu",
+      "notes": {
+        "drive_to_purchase": [
+          "Push these three collections when customers reach out asking for assistance:",
+          "The Lawren Set - all colors",
+          "https://www.jaanuu.com/scrub-sets-layering/the-lawren-essential-scrub-set/black",
+          "Heather Gray across Men\u0027s \u0026 Women\u0027s style",
+          "https://www.jaanuu.com/mens/collection/mens-heather-gray-scrubs",
+          "https://www.jaanuu.com/collection/heather-gray-womens-scrubs"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/SnU",
+          "date_time": "2026-01-23 21:36:12.217",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Welcome to comfort, quality, and all-around better scrubs. Use your code for 15% off your first order: WELCOME87uyn8\n\nShop Now: jaanuu.attn.tv/aRy-XwOcxeqe \n",
+          "date_time": "2026-01-23 21:36:16.219",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nReady to upgrade your workwear? Shop best-sellers and discover your next go-to: https://jaanuu.attn.tv/azm7g6mmYkuc .",
+          "date_time": "2026-01-23 21:37:19.668",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "JAANUU: We got your order. We\u0027ll get started on it and send you an update when it has shipped.\n\nView order status: https://jaanuu.attn.tv/aKcuZTNuQQFK\n\nShop More: https://jaanuu.attn.tv/aZ5Ts8cxXhs0 ",
+          "date_time": "2026-01-23 21:44:15.172",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Cancel order",
+          "date_time": "2026-01-23 21:44:39.324",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Cancel / edit order \"; last updated: 2022-12-12 18:26:18.808",
+          "date_time": "2026-01-23 21:45:31.120",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019bede4-7558-4fb0-f000-0000f5b514bb",
+          "message_text": "JAANUU: Thanks for reaching out. To cancel your order, please go to \"My Orders\", enter your order ID number, email address, and cancel the order - https://jaanuu.attn.tv/a_0fjIuK9QxN Please note that changes can only be made to an order within 30 min. from when it was submitted. We also can\u0027t add items to an existing order. What\u0027s the order number and the change you\u0027d like to make? 😭",
+          "message_type": "agent",
+          "agent": "48008",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-23 21:45:31.124"
+        }
+      ]
+    }
+  }
+}

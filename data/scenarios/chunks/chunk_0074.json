@@ -1,0 +1,1850 @@
+{
+  "version": 1,
+  "chunk": "chunk_0074",
+  "scenarios": {
+    "366": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "019bde5d-ace3-4434-f000-000053ab8515",
+      "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 1403749653,
+            "company_id": 5529,
+            "coupon_url": "https://www.hellobonafide.com/discount/SMS20?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "static_code": "SMS20",
+            "name": "SMS20",
+            "coupon": "SMS20",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://hellobonafide.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "total": 375,
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      105,
+                      129,
+                      141
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "link": "https://hellobonafide.com/1185906751/orders/93eaa53922c6ebaaf87ddf2f791d258c/authenticate?key=b6c0fbd91d8c8ff451c18b5ad3d29622",
+            "orderDate": "2025-07-28",
+            "discount_amount": 0,
+            "orderNumber": "6282318",
+            "date_time": "2025-07-28 20:04:22.319"
+          }
+        ]
+      },
+      "companyWebsite": "https://hellobonafide.com",
+      "companyName": "Bonafide",
+      "notes": {
+        "escalate": [
+          "ESC all medical/scientific inquiries immediately",
+          "ESC return requests that are past the 30-day policy"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "templates": [
+          "For exact measurements of ingredients, use \"MOI\" shortcut"
+        ],
+        "dos_and_donts": [
+          "When sending the quiz - always suggest a specific product if customers mention a certain symptom"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Revaree offers a gentle, hormone-free way to relieve vaginal dryness. See how it compares to estrogen cream. bonafide.attn.tv/aa3kkjRrBxDv ",
+          "date_time": "2025-12-22 13:07:30.299",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Did you know you\u0027ve got bonus points? 💎 Cash them in to save on your next order: bonafide.attn.tv/aQ7eLikuPlXQ ",
+          "date_time": "2025-12-27 14:02:18.383",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Don\u0027t let your FSA/HSA funds expire before the end of the year. Use them towards menopause care now! bonafide.attn.tv/aZWkRSgRwddD ",
+          "date_time": "2025-12-29 14:02:10.897",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Last chance for free Revaree! Start a new subscription before midnight to get your gift \u0026 save up to 25%: bonafide.attn.tv/a2mcYE3owbKe \n",
+          "date_time": "2026-01-08 14:02:51.103",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Vaginal itching during menopause is common - get 6 expert-backed tips for real relief and comfort. bonafide.attn.tv/anmqjFPoBWaF \n",
+          "date_time": "2026-01-19 14:02:04.544",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Great news! Your order (6282318) has shipped and will be to you soon. Click here to track your order: https://bonafide.attn.tv/aSdXW7vKZbeN \n\nVisit our website: https://bonafide.attn.tv/aGeyklZh1SN2 ",
+          "date_time": "2026-01-20 16:55:33.815",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "How do I cancel this?",
+          "date_time": "2026-01-20 20:58:47.058",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019bde47-bb82-40e5-f000-000053ab8515",
+          "message_text": "Bonafide: I understand you wish to cancel. To cancel your subscription, log in to your account and find the subscription you\u0027d like to cancel. Click the \"Cancel Subscription\" button, found underneath the product quantity on the right-hand side. In the box that pops up, select the reason you would like to cancel your subscription, and click \"Unsubscribe\". You\u0027ll receive a confirmation message that your subscription has been canceled, and the page will automatically refresh to remove the product.\n\nWe\u0027re sorry to see you go, and if you have any feedback that we can share with our internal team, please let us know as we\u0027re always working to improve our customers\u0027 experiences.",
+          "message_type": "agent",
+          "agent": "31385",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-20 21:00:01.704"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I already did this and I already asked for a refund from you guys which you did. I\u0027m not sure why I\u0027m still receiving these. I had a reaction to the product.",
+          "date_time": "2026-01-20 21:13:16.978",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019bde55-4bdd-46bd-f000-000053ab8515",
+          "message_text": "Bonafide: Sorry about what happened and this is definitely not the experience we want you to have. Kindly provide your email address and I\u0027ll check this with my team.",
+          "message_type": "agent",
+          "agent": "82454",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-20 21:14:50.615"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Beelsashley@gmail.com",
+          "date_time": "2026-01-20 21:19:47.122",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It\u0027s OK. You guys honestly handled it so well.  the reaction I got from the product was not fun. I was shocked I got a refund though. So I was very thankful.",
+          "date_time": "2026-01-20 21:20:37.267",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019bde5d-ace3-4434-f000-000053ab8515",
+          "message_text": "Bonafide: Thank you for sending the details. I\u0027ve forwarded your concern to the team and I\u0027ll update you as soon as I hear back from them!\n",
+          "message_type": "agent",
+          "agent": "82454",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-20 21:23:59.748"
+        }
+      ]
+    },
+    "367": {
+      "agentName": "Alexa",
+      "has_shopify": true,
+      "id": "0196cb13-434f-4606-f000-0000791c360f",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "SEMI ANNUAL \u002726 40-80% OFF",
+            "content": [
+              "• 40-80% Off Sitewide with code SAVE40"
+            ]
+          },
+          {
+            "title": "SUPERBOWL \u002726 50% OFF",
+            "content": [
+              "• 50% Off Sitewide - No offer code needed"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 1 50% Off",
+            "content": [
+              "• 50% Off Sitewide - No offer code needed"
+            ]
+          },
+          {
+            "title": "SPRING40 | MAR \u002726 40% OFF",
+            "content": [
+              "• 40% Off Sitewide with code SPRING40"
+            ]
+          },
+          {
+            "title": "LOVE40 | JAN \u002726 40% OFF",
+            "content": [
+              "• 40% Off Sitewide with code LOVE40"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 3 50-99% Off",
+            "content": [
+              "• 50-99% Off Sitewide - No offer code needed\n\n• End Date TBD - slated to end on 12/3 but subject to change"
+            ]
+          },
+          {
+            "title": "TAKE10",
+            "content": [
+              "We provide this to subscribers who trigger the abandon flows. Only send to subscribers that reach out to concierge asking about the 10% code they were offered in their abandonment message."
+            ]
+          },
+          {
+            "title": "GIFT40 | DEC \u002725 40% OFF",
+            "content": [
+              "• 50-90% Off Sitewide with code GIFT40"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 2 50-90% Off",
+            "content": [
+              "• 50-90% Off Sitewide - No offer code needed"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2031891983,
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/TAKE10?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "static_code": "TAKE10",
+            "name": "10% Static (TAKE10)",
+            "coupon": "TAKE10",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://www.fashionnova.com/products/pop-champagne-velvet-jumpsuit-black?externalId=nfwU5\u0026variant=39284504494204",
+            "item": "Pop Champagne Velvet Jumpsuit - Black",
+            "timeAgo": "2025-02-21"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/in-my-element-bandage-jumpsuit-black?nosto=pdp-rec-2",
+            "item": "In My Element Bandage Jumpsuit - Black",
+            "timeAgo": "2025-02-20"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/sweet-nights-jumpsuit-black?nosto=pdp-rec-2",
+            "item": "Sweet Nights Jumpsuit - Black",
+            "timeAgo": "2025-02-20"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/luxury-affair-jumpsuit-black?nosto=pdp-rec-2",
+            "item": "Luxury Affair Jumpsuit - Black",
+            "timeAgo": "2025-02-20"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/someone-else-velvet-jumpsuit-black?nosto=pdp-rec-1",
+            "item": "Someone Else Velvet Jumpsuit  - Black",
+            "timeAgo": "2025-02-20"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://fashionnova.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-02-11",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      22.49,
+                      12.49,
+                      17.49,
+                      29.99,
+                      19.99,
+                      14.99
+                    ],
+                    "Count": 6
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZE3500B0355354901\u0026carrier=UPS\u0026order_numbers=152506214\u0026locale=en_US",
+            "link": "https://www.fashionnova.com/2939277/orders/f1e632ee7c98db9fb81b572a1b1d6837/authenticate?key=bddb9986139aa1bd627d5488cf523eaa",
+            "date_time": "2025-02-11 22:32:51.801",
+            "discount_amount": 0,
+            "orderNumber": "152506214",
+            "order_tracking_link": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZE3500B0355354901\u0026carrier=UPS\u0026order_numbers=152506214\u0026locale=en_US",
+            "total": 117.44
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2021-07-15",
+            "items": [
+              {
+                "price": [
+                  27.99
+                ],
+                "productLink": "https://fnova.myshopify.com/products/drinks-on-the-beach-crochet-cover-up-dress-mint-combo",
+                "name": "Drinks On The Beach Crochet Cover Up Dress - Mint/combo S/M"
+              }
+            ],
+            "date_time": "2021-07-15 06:53:40.000",
+            "discount_amount": 0,
+            "orderNumber": "3903708397692",
+            "total": 32.98
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2021-06-17",
+            "coupon": "20MIL",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      34.99,
+                      39.99,
+                      39.99
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2021-06-17 03:13:06.000",
+            "discount_amount": 0,
+            "orderNumber": "3852213518460",
+            "total": 73.98
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2021-05-05",
+            "coupon": "7HTX45",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      64.99,
+                      19.99
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2021-05-05 09:55:06.000",
+            "discount_amount": 0,
+            "orderNumber": "3776121471100",
+            "total": 72.98
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2021-03-06",
+            "coupon": "SPRING",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      39.99,
+                      29.99,
+                      24.99
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2021-03-06 21:44:54.000",
+            "discount_amount": 0,
+            "orderNumber": "3656366948476",
+            "total": 71.47
+          }
+        ]
+      },
+      "companyWebsite": "https://fashionnova.com",
+      "companyName": "Fashion Nova",
+      "notes": {
+        "send_to_cs": [
+          "No escalations for this client, send to CS using the Support templates",
+          "For post-purchase inquiries send to CS using the Support template (shortcut: ESC)",
+          "➜ If the cx is having difficulties sending an email to CS via the link in the ESC temp - use Support 2 template (shortcut: TESC)",
+          "➜ If the cx is facing technical website issues while accessing the link, do NOT immediately send the TESC shortcut, troubleshoot first instead",
+          "For pre-purchase inquiries send to CS using the Support 2 template (shortcut: TESC)"
+        ],
+        "tone": [
+          "🅿️ Use wording that is in line with the brand\u0027s voice and terminology found on the website",
+          "➜ e.g. Nova Kids, Nova Babes, Insta-worthy, slays, snatched, baddie, etc.",
+          "➜ Always look up the term\u0027s meaning before using it!"
+        ],
+        "templates": [
+          "For expired discounts use EXP shortcut",
+          "For login issues use LGI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "If cx are looking for their 30% welcome code, ask to check their email (spam \u0026 promo)",
+          "Gift cards can be used on discounted items"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREE 1-Day Shipping + BOGO FREE Tops \u0026 Bottoms!\n\nShop FREE Outfits \u0026 Get Them TMRW! T\u0026C\u0027s Apply -\u003e \nhttp://sms.fashionnova.com/aSs0pMPdX6qk .",
+          "date_time": "2025-04-16 10:37:20.899",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Lisa, what happened? You may have missed something! Check out our New Arrivals before they sell out... you won\u0027t regret it: http://sms.fashionnova.com/a_98DS1RATiB . ",
+          "date_time": "2025-04-17 19:41:28.138",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 40% OFF SITEWIDE + FREE 1-Day Shipping Starts NOW!!\n\nGet HOT DEALS Fast AF!! Shop Now! T\u0026C\u0027s Apply -\u003e\nhttp://sms.fashionnova.com/aGjansbZ5yMn .",
+          "date_time": "2025-04-22 10:36:27.400",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: They Raised Prices \u0026 We DROPPED Ours!! 40% OFF EVERYTHING!\n\nLower Prices, Better Quality, And Faster Shipping! Hurry, ENDING SOON!\n\nT\u0026Cs Apply-\u003e http://sms.fashionnova.com/aQ7RpCu3jd6d .",
+          "date_time": "2025-04-27 18:50:00.665",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: She-In?! Nahh, SHE-OUT!! 40% Off EVERYTHING + FREE 1-Day Shipping!\n\nLower Prices, Faster Shipping!! Hurry, Sale Ends Soon! Use Code: SHEOUT40 -\u003e\nhttp://sms.fashionnova.com/a65PSsjgK5YJ .",
+          "date_time": "2025-04-29 15:34:36.454",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Born In The USA, Shipped From The USA! 40% OFF SITEWIDE ENDS IN 6HRS!\n\nNo Xtra Tariffs HERE! Go NOW -\u003e\nhttp://sms.fashionnova.com/a_4IK-mzmmd2 .",
+          "date_time": "2025-05-04 18:51:14.567",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREE 1-Day Shipping + 50% | 40% | 30% Off SITEWIDE!?\n\nSkip The 2-Week Overseas BS \u0026 Get It TMRW! -\u003e\nhttp://sms.fashionnova.com/aOqoo_d-OUEQ .",
+          "date_time": "2025-05-07 10:34:41.613",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Friends \u0026 Family = 50% Off EVERYTHING!\n\nNot EVERYONE Gets This TXT ;)\n\nStarts NOW! Code: THANKU50 -\u003e \nhttp://sms.fashionnova.com/aizXo1Y_L4Rd .",
+          "date_time": "2025-05-13 10:38:36.812",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Still waiting for my refund",
+          "date_time": "2025-05-13 10:49:42.763",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0196ca83-4dc4-4e06-f000-0000791c360f",
+          "message_text": "Fashion Nova: Thanks for your patience as you wait. Have you also tried checking your spam or promo folder? Sometimes, our emails can end up there. ",
+          "message_type": "agent",
+          "agent": "87733",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-05-13 12:38:44.942"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I need to speak to someone",
+          "date_time": "2025-05-13 12:39:08.976",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I sent a whole bunch of items back and I\u0027m waiting for my hundred dollar refund and I have not gotten it yet",
+          "date_time": "2025-05-13 12:39:19.511",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The email you had on file was incorrect and so that is the whole entire problem",
+          "date_time": "2025-05-13 12:39:29.547",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I have sent about 10 emails and no one is getting back to me",
+          "date_time": "2025-05-13 12:39:39.075",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Maroniochias@aol.com is the correct email .. \nI think what you have on file is one letter off and so in that case, I have not received my credit",
+          "date_time": "2025-05-13 12:40:09.176",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0196ca86-2848-4965-f000-0000791c360f",
+          "message_text": "Fashion Nova: I\u0027m sorry about that. Unfortunately, we do not offer phone support at this time. Please submit your inquiry via this link instead: http://sms.fashionnova.com/a49sIo1MRj4I Please select the option \"Something Else\" and then select the same option again. They\u0027ll be more than happy to help. ",
+          "message_type": "agent",
+          "agent": "35256",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-05-13 12:41:51.967"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ok so Jake can I do anything if the email you have is incorrect",
+          "date_time": "2025-05-13 12:43:38.821",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "How",
+          "date_time": "2025-05-13 12:43:42.752",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I sent Emil\u0027s to you times and going back",
+          "date_time": "2025-05-13 12:43:59.389",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I can\u0027t do anything on my end till the email is fixed",
+          "date_time": "2025-05-13 12:44:09.429",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0196ca8a-7f9e-48f0-f000-0000791c360f",
+          "message_text": "Fashion Nova: I really apologize for the inconvenience! It would be best to send an inquiry to the team using the link I sent earlier. Please let the team know that your email address was incorrect. I\u0027m sure they will do their best to help you and sort this out for you! ",
+          "message_type": "agent",
+          "agent": "42041",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-05-13 12:46:36.459"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I just sent an email. I\u0027ve sent about 10 emails that way and I haven\u0027t heard nothing back. Maybe you could forward it to a person that can help me reset my password on fashion nova\u0027s end because that\u0027s the only way I\u0027m gonna get my credit back or be able to do anything?",
+          "date_time": "2025-05-13 12:48:48.844",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Try their best. It\u0027s been about three months and I\u0027m still waiting for them to respond back to my email.",
+          "date_time": "2025-05-13 12:48:59.364",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "If you could please forward this or have the right person reach out to me so I can at least reset my password. I have to reset it. They have the wrong one letter off on my email.",
+          "date_time": "2025-05-13 12:49:18.959",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0196ca8f-314f-460f-f000-0000791c360f",
+          "message_text": "Fashion Nova: I totally understand the frustration with this! Our team handles emails in the order they come in and sending additional ones will further delay the team\u0027s response. Rest assured that one of my colleagues will follow up with you in no time!\n\nThe best way to get into contact with the team is to send an email using the link I sent you which you have done so now you can await the team\u0027s response. I\u0027m very sorry for all the inconvenience caused by the delay. Please check your spam and promo folders for their response as sometimes our emails end up there.",
+          "message_type": "agent",
+          "agent": "87597",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-05-13 12:51:44.091"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It\u0027s been three months how much longer do you think I should have to wait and they have $100 of my money",
+          "date_time": "2025-05-13 13:20:50.132",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I sent about 10 emails from the link that you sent me and I haven\u0027t heard nothing back so now what do I do?",
+          "date_time": "2025-05-13 13:21:10.191",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0196cadc-5d4f-435b-f000-0000791c360f",
+          "message_text": "Fashion Nova: I\u0027m sorry about that! When you sent an inquiry through the link we provided, did you include an email where we can reach you if the email associated with the order isn\u0027t working? ",
+          "message_type": "agent",
+          "agent": "50269",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-05-13 14:16:01.626"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes, I sent my email a telephone number. I told him that I\u0027m unable to access my account because the email that they have on file is incorrect so therefore I am not able to see if they even gave me my store credit back for the items that I sent back.",
+          "date_time": "2025-05-13 14:21:54.109",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "And I have received zero email back, very frustrating when I have $100 sitting somewhere that I can\u0027t even access",
+          "date_time": "2025-05-13 14:22:04.127",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"No response from customer support - All brands\"; last updated: 2023-10-10 17:43:52.689",
+          "date_time": "2025-05-13 15:15:59.449",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0196cb13-434f-4606-f000-0000791c360f",
+          "message_text": "Fashion Nova: I\u0027m sorry about that. I totally understand the frustration with this! Our team handles inquiries in the order they come in and sending additional ones will further delay the team\u0027s response. Rest assured that one of my colleagues will follow up with you in no time!",
+          "message_type": "agent",
+          "agent": "87602",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-05-13 15:15:59.455"
+        }
+      ]
+    },
+    "368": {
+      "agentName": "Taylor",
+      "has_shopify": false,
+      "id": "0191b39a-1887-4c28-f000-000066fc8c0a",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Free Ground Shipping",
+            "content": [
+              "• Valid only on orders with full-priced items.\n\n• Not valid on sale or Last Chance styles.\n\n• Cannot be combined with other codes"
+            ]
+          },
+          {
+            "title": "Birkenstock Membership Details",
+            "content": [
+              "• Existing members get free shipping on orders with full-priced items.\n\n• Must sign in at checkout for the benefit to apply automatically.\n\n• Free shipping is not valid on sale or Last Chance styles - this does not include full-priced items, which have been discounted by the use of a discount code"
+            ]
+          },
+          {
+            "title": "New Member 10% Off",
+            "content": [
+              "• 10% off one full-priced order for new members.\n\n• The unique code is in the account confirmation email after registration.\n\n• One-time use only; cannot be reused or reissued if the order is canceled.\n\n• Expires 30 days after issuance.\n\n• Only share if the customer asks."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 1727826954,
+            "company_id": 15801,
+            "name": "1x Free Ship",
+            "coupon": "ATSHIP-VPXW-ZSXR-3WD2-WSBLC"
+          },
+          {
+            "subscriber_id": 1727826954,
+            "description": "Free Ground Shipping on full-priced items",
+            "company_id": 15801,
+            "name": "1x Free Shipping Codes 3",
+            "coupon": "ATSHIP-MQW5-79L7-4T4D-ZFQ5P",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://www.birkenstock.com/us/tokio-suede-leather/tokio-265588-suedeleather-0-eva-u_11866.html?dwvar_tokio-265588-suedeleather-0-eva-u__11866_size=250\u0026region=EU",
+            "item": "Tokio Suede Leather",
+            "timeAgo": "2024-09-02"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/arizona-eva/arizonaessentials-tothebeachmetallic-eva-0-eva-u_1401.html?dwvar_arizonaessentials-tothebeachmetallic-eva-0-eva-u__1401_width=N",
+            "item": "Arizona EVA",
+            "timeAgo": "2024-08-15"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/arizona-eva/arizonaessentials-tothebeachmetallic-eva-0-eva-u_1401.html?dwvar_arizonaessentials-tothebeachmetallic-eva-0-eva-u__1401_width=N",
+            "item": "Arizona EVA",
+            "timeAgo": "2024-08-15"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/namica-suede-leather/namica-suede-suedeleather-0-tpu-w_3974.html?utm_campaign=Cart-Abandonment---Copy-Test-ai\u0026utm_medium=sms\u0026utm_source=attentive\u0026dwvar_namica-suede-suedeleather-0-tpu-w__3974_width=S\u0026dwvar_namica-suede-suedeleather-0-tpu-w__3974_size=250\u0026externalId=aLgGY",
+            "item": "Namica Suede Leather Black",
+            "timeAgo": "2024-08-11"
+          },
+          {
+            "link": "https://www.birkenstock.com/us/namica-suede-leather/namica-suede-suedeleather-0-tpu-w_3974.html?dwvar_namica-suede-suedeleather-0-tpu-w__3974_width=S\u0026dwvar_namica-suede-suedeleather-0-tpu-w__3974_size=250",
+            "item": "Namica Suede Leather",
+            "timeAgo": "2024-08-09"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://birkenstock.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-06-04",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      145,
+                      145
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2024-06-04 03:13:49.811",
+            "discount_amount": 0,
+            "orderNumber": "510620418",
+            "total": 90.77
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-13",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      150,
+                      150
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2024-05-13 20:14:54.711",
+            "discount_amount": 0,
+            "orderNumber": "510275395",
+            "total": 150
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-10-03",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      140,
+                      140
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-10-03 05:14:16.943",
+            "discount_amount": 0,
+            "orderNumber": "57775412",
+            "total": 144.95
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-09-20",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      120,
+                      120
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-09-20 20:27:56.602",
+            "discount_amount": 0,
+            "orderNumber": "57681906",
+            "total": 124.95
+          }
+        ]
+      },
+      "companyWebsite": "https://birkenstock.com",
+      "companyName": "Birkenstock",
+      "notes": {
+        "escalate": [
+          "For all pre-purchase and post purchase ESC always include the customers full name in the notes",
+          "Don\u0027t ESC if they get an error with the fs code while logged in"
+        ],
+        "templates": [
+          "For free shipping retroactive code requests, use SRP shortcut",
+          "For holiday/extended returns - use the template"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over",
+          "🤖 If someone sends a product category, link them to the category and ask if they are looking for something specific"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping codes"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: New clog colors. Shop the first of fall color on your favorite collection: https://birkenstock.attn.tv/ab4PVoAkyCHl .",
+          "date_time": "2024-08-06 16:02:41.696",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Water-friendly styles for the whole family. Shop matching colors for vacations \u0026 more: https://birkenstock.attn.tv/ajd0x2xNBu25 .",
+          "date_time": "2024-08-07 16:12:37.844",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Back-to-school is around the corner. Shop sandals, clogs and water-friendly styles for post-practice: https://birkenstock.attn.tv/anobA5xH6PjA .",
+          "date_time": "2024-08-08 12:01:33.174",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Last Chance Gizeh sandals. Shop High Shine, canvas \u0026 more favorites: https://birkenstock.attn.tv/ahujoe7fI5Mt .",
+          "date_time": "2024-08-09 16:02:50.861",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Get comfy with Namica Suede Leather shoes. Just the right blend of style and durability. \n\nBuy here: https://birkenstock.attn.tv/acHVqZLjB-kB .",
+          "date_time": "2024-08-09 19:57:22.282",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Hey there, we love what you picked out!\n\nGet it before it’s gone: https://birkenstock.attn.tv/aM58wxV_Yn7c .",
+          "date_time": "2024-08-09 20:57:26.168",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: NEW Birki Flow clog for post-sport recovery. Contoured comfort \u0026 water-friendly. Shop now: https://birkenstock.attn.tv/axTomo3u1Kfm .",
+          "date_time": "2024-08-10 16:01:35.952",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Step into comfort with the Namica suede leather in black. Perfect for any outfit.\n\nShop now: https://birkenstock.attn.tv/amBD-2RHpyTR .",
+          "date_time": "2024-08-11 12:28:55.786",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Hi, it\u0027s Taylor. I\u0027m a personal concierge here to help you find the perfect pair of Birkenstocks. Is there anything I can help you with today?\n\nhttps://birkenstock.attn.tv/aqeGpBwGqrk5 .",
+          "date_time": "2024-08-12 14:51:18.221",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Best of the Exquisite Collection. Shop icons wrapped in luxuriously smooth \nleather: https://birkenstock.attn.tv/a7SNyN9TFFPg .",
+          "date_time": "2024-08-13 16:25:19.008",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Just restocked. Water-friendly Essentials sandals in Eggshell. Shop now: https://birkenstock.attn.tv/agEZPtWEJ953 .\nQuestions? Text back! - Taylor\n",
+          "date_time": "2024-08-14 16:07:26.413",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Get ready for summer with the ArizonaEVA sandals. Lightweight and water-friendly. Don\u0027t miss out! \n\nShop now: https://birkenstock.attn.tv/aXGbJEi21DFk .",
+          "date_time": "2024-08-14 21:52:34.895",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: It\u0027s back in your #1 neutral. Shop Essentials sandals in Eggshell: https://birkenstock.attn.tv/aP-35OHip1cb .\nQuestions? Text back! - Taylor",
+          "date_time": "2024-08-15 16:01:23.952",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Hello there! \n\nDon\u0027t miss out, explore some great finds here: https://birkenstock.attn.tv/aoK3NgtEYrog .",
+          "date_time": "2024-08-15 16:53:36.273",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: The more you wear it, the better it gets. Shop oiled leather \u0026 bring out the best in every color: https://birkenstock.attn.tv/awlAf7PYC_KL .",
+          "date_time": "2024-08-16 16:09:28.378",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: On another level. New platforms \u0026 wedges make it comfortable to wear a higher heel: https://birkenstock.attn.tv/aZc7FG8bJsY2 .",
+          "date_time": "2024-08-17 12:01:18.955",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: The ones you\u0027ve been eyeing. Shop seasonal styles new to Last Chance: https://birkenstock.attn.tv/addUdGmxFlZJ .",
+          "date_time": "2024-08-18 16:03:39.589",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: It\u0027s getting closer. Get ready for back-to-school with sandals, clogs \u0026 more: https://birkenstock.attn.tv/aNGJAqK4pU31 .",
+          "date_time": "2024-08-19 16:08:27.616",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Just-in for men. Shop slides \u0026 shoes so easy to style, he\u0027ll never give them a second thought: https://birkenstock.attn.tv/a7q2yXXPWf5i .",
+          "date_time": "2024-08-20 16:06:31.642",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Clogs, clogs, more clogs. Shop pre-fall arrivals that make an outfit out of everything: https://birkenstock.attn.tv/aK2iBsrex0OW .",
+          "date_time": "2024-08-21 13:00:44.093",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Signature materials, best-selling sandals. Shop styles designed for comfort and durability: https://birkenstock.attn.tv/a5jaHEYD_E13 .",
+          "date_time": "2024-08-22 13:01:18.438",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Styles with backstraps. Keep sandals, clogs \u0026 post-sport recovery slides secure \u0026 stylish: https://birkenstock.attn.tv/arXm2ZSxltxc .",
+          "date_time": "2024-08-23 16:12:26.465",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Hey! Thanks for visiting us!\n\nDon\u0027t miss out on these popular picks: https://birkenstock.attn.tv/aYOodUt4Z8TB .",
+          "date_time": "2024-08-23 17:06:30.825",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Backstraps make a big difference. Stay locked into the styles you love most: https://birkenstock.attn.tv/ap--Zu0ETN-J .",
+          "date_time": "2024-08-24 16:08:18.699",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Member exclusives. Log in to shop \u0026 get free shipping on full-price orders: https://birkenstock.attn.tv/aNnuY5nd-EQ_ .",
+          "date_time": "2024-08-25 16:03:27.886",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Pre-practice, post-sport or just kicking around. Shop water-friendly Essentials with our footbed: https://birkenstock.attn.tv/aUkFE2F4J9d2 .",
+          "date_time": "2024-08-27 16:01:36.906",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Pre-fall exclusives. Discover styles you can only shop with us: https://birkenstock.attn.tv/ajqykjDoqIC_ .",
+          "date_time": "2024-08-28 16:01:32.677",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: The Zürich slide is so back. Celebrate 60 years of the mid-century favorite in today\u0027s favorite colors: https://birkenstock.attn.tv/aVpiychDEFKm .",
+          "date_time": "2024-08-29 11:30:37.720",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: New Faded Purple. Inspired by pressed flowers \u0026 dried lavender. Take your favorite color into fall: https://birkenstock.attn.tv/aT7KZfjYqAd8 .",
+          "date_time": "2024-08-30 12:30:37.808",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Hey there! Noticed you dropped by.\n\nWhy not explore our range of comfortable and stylish footwear? Don\u0027t miss out: https://birkenstock.attn.tv/apmuWcLMUE1p .",
+          "date_time": "2024-08-31 11:03:53.811",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: We miss you! Enjoy FREE ground shipping on your next full price order with code: ATSHIP-MQW5-79L7-4T4D-ZFQ5P \n\nhttps://birkenstock.attn.tv/a4AAg9RAK6Pu \n\nLet me know if I can help you find the perfect fit.\n - Taylor",
+          "date_time": "2024-09-01 14:18:36.704",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I am very disappointed in Birkenstock as I have worn their shoes for 50 years and now they will not take returns or refund Money because the shoes don\u0027t fit! My foot has swollen and can\u0027t wear!",
+          "date_time": "2024-09-01 14:29:59.765",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I would like a pair that fits but I\u0027m afraid I\u0027ll get stuck with another pair I can\u0027t wear.",
+          "date_time": "2024-09-01 14:31:19.935",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0191aedf-85aa-40ca-f000-000066fc8c0a",
+          "message_text": "Birkenstock: I\u0027m sorry to hear about your recent experience with our items. We truly value your support over the years. Please note that items can be returned in their original condition and packaging within 30 days of delivery, except for Last Chance items, which are final sale and cannot be returned or exchanged. Last Chance items will have a struck-through base price with a reduced price shown next to it. For more details, please visit our details return policy here: https://birkenstock.attn.tv/a5B73io7SAE0",
+          "message_type": "agent",
+          "agent": "37648",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-01 14:36:10.034"
+        },
+        {
+          "message_id": "0191aee0-3fe1-46f2-f000-000066fc8c0a",
+          "message_text": "Birkenstock: I\u0027d be happy to help find the right size. I\u0027d recommend taking a look at our Fitting Guide to find the best fit for you: https://birkenstock.attn.tv/aJlvwxWRlz3n. If you are between two sizes, choose the next higher one. \n\nMany Birkenstock models are available in two widths, narrow and regular, and we recommend following the sizing instructions on the link above. \n \nPlease note that our products are offered in European sizes. Please reference our Size and Width conversion charts on the link I provided. If you need any assistance, please let me know!",
+          "message_type": "agent",
+          "agent": "37648",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-01 14:36:57.707"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The shoes I ordered were the same size I always do ,  it like I said they were way to when I called about it they refused to do anything",
+          "date_time": "2024-09-01 14:40:18.843",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "So I\u0027m stuck with 145$ shoes I\u0027ll never order again",
+          "date_time": "2024-09-01 14:41:29.030",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027ll be telling my friends about this experience too!!",
+          "date_time": "2024-09-01 14:42:18.657",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "They got real short with me on the phone too! Not nice at all",
+          "date_time": "2024-09-01 14:43:09.297",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0191aee9-6597-4ada-f000-000066fc8c0a",
+          "message_text": "Birkenstock: I\u0027m really sorry about what happened! Feedback from our customers is really valuable for us and helps us constantly improve! I\u0027ll definitely pass this along to the team to consider in the future and thank you for the feedback! ",
+          "message_type": "agent",
+          "agent": "87310",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-01 14:46:57.187"
+        },
+        {
+          "message_type": "system",
+          "message_text": "Birkenstock: Tokio Suede Leather is calling your name! Don\u0027t miss out on this classic style. Shop now: https://birkenstock.attn.tv/aKNdJox8LBI7 .",
+          "date_time": "2024-09-02 12:28:55.205",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I will never buy another pair of Birkenstocks because of their no return policies. My size changed and they would not refund me or send me a different size!  So I\u0027m stuck with 145.00 shoes I can\u0027t wear!",
+          "date_time": "2024-09-02 12:34:28.416",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0191b39a-1887-4c28-f000-000066fc8c0a",
+          "message_text": "Birkenstock: Really sorry about the trouble. If this is about the Namica Suede Leather, it\u0027s on final sale and cannot be returned or exchanged. This was clearly stated on the product detail page. Thanks a lot for understanding. ",
+          "message_type": "agent",
+          "agent": "82343",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-02 12:38:26.193"
+        }
+      ]
+    },
+    "369": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "0197030e-335e-4fb0-f000-0000190fe168",
+      "rightPanel": {
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-21",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "Count": 26
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-11-21 18:23:00.000",
+            "discount_amount": 0,
+            "orderNumber": "22723544573378562",
+            "total": 9.99
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-10-16",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "Count": 53
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-10-16 17:09:00.000",
+            "discount_amount": 0,
+            "orderNumber": "21887406220656643",
+            "total": 13.98
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-08-24",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "Count": 26
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-08-24 18:02:00.000",
+            "discount_amount": 0,
+            "orderNumber": "20659045534040064",
+            "total": 9.99
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-04-18",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "Count": 14
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-04-18 17:03:00.000",
+            "discount_amount": 0,
+            "orderNumber": "17689411912187905",
+            "total": 12.85
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-02-23",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "Count": 12
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-02-23 19:04:00.000",
+            "discount_amount": 0,
+            "orderNumber": "16438959794143232",
+            "total": 9.95
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://nekterjuicebar.com/",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://nekterjuicebar.com/",
+      "companyName": "Nekter Juice Bars",
+      "notes": {
+        "drive_to_purchase": [
+          "Don\u0027t recommend \"skoop\" flavours"
+        ],
+        "promo_and_exclusions": [
+          "Offer for a Free 16oz Juice/Smoothie will be added to cx\u0027s account once they connect their first order/receipt to their account"
+        ]
+      },
+      "blocklisted_words": [
+        "organic",
+        "skoop"
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Nekter: NEW menu drops today! Try Protein Waffles, Raspberry Collagen Smoothie/Bowl, and new Protein Smoothies. Be the 1st to try! nekter.attn.tv/am7GL-ON7eC- ",
+          "date_time": "2025-05-22 12:16:51.537",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nekter: Hot off the waffle iron! Try our Protein Waffles for just $2 with any Smoothie, Juice, or Bowl purchase in-app thru 5/26. nekter.attn.tv/a2upUh_3cpZj ",
+          "date_time": "2025-05-24 12:03:47.334",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0197030e-335e-4fb0-f000-0000190fe168",
+          "message_text": "Nekter: I\u0027m sorry, but the image you sent does not load properly. Would it be possible to resend the image? Do you need assistance with an order or a product? I would be happy to check further. ",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-05-24 12:09:11.788"
+        }
+      ]
+    },
+    "370": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "019520a1-75d1-4c59-f000-00006edf00d7",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "PROMO",
+            "content": [
+              "The 10% text sign-up code only works for these items: http://attn.tv/lg/offerdetails.html\n\nEligible Models:\nVacuums:\nA905RM\nA907GMS\nA927KGMS\nA927KVMS\nA908VMR\nA929KVM\nA939KBMS\nA913BM\nA900BM\nR975GM1\nA925KSM\n\nAir Purifiers:\nAS560DWR0\nAS330DWR0\nAP151MBA1\nAP151MWA1\n\nAeroTowers:\nU9CS1C\nU9CV2B\n\nHeadphones:\nHBS-FN6.ACUSBKI\nHBS-FN6.ACUSWHI\nHBS-FN5W.ACUSBKI\nHBS-FN5W.ACUSWHI\nHBS-FN4.ACUSBKI\nHBS-FN4.ACUSWHI\nTONE-FP8.AUSACLK\nTONE-FP9.AUSACLK\nTONE-FP5.AUSACLK\n\nLG Stylers:\nS3MFBN\nS3RFBN\nS3WFBN\nS5MSB\nS3CW\n\nWireless Speakers:\nPL2\nPL5\nPL5W\n\nDisclaimer:\nExtra 10% off select vacuums, PuriCare air purifiers, TONE Free headphones and XBOOM Go wireless speakers is off the pre-tax sale price on LG.com only. Offer valid for one-time use only within 30 days of code being sent. To receive the additional 10% off savings, promotion code must be entered at online checkout and will be applied to eligible products only. If any of the qualifying items are removed from the cart, canceled or returned, the promotional savings will be void. Availability, prices and terms of offer are subject to change without notice. No adjustments to prior purchases and non-redeemable for cash.\nQualifying Vacuums: A905RM, A907GMS, A927KGMS, A927KVMS, A908VMR, A929KVM, R975GM1\nQualifying PuriCare Air Purifiers: AS560DWR0, AS330DWR0, AP151MBA1, AP151MWA1\nQualifying TONE Free headphones: HBS-FN6.ACUSBKI, HBS-FN6.ACUSWHI, HBS-FN5W.ACUSBKI, HBS-FN5W.ACUSWHI, HBS-FN4.ACUSBKI, HBS-FN4.ACUSWHI, TONE-FP8.AUSACLK, TONE-FP9.AUSACLK, TONE-FP5.AUSACLK\nQualifying LG Styler: S3MFBN, S3RFBN, S3WFBN, S5MSB, S3CW\nQualifying XBOOM Go Wireless Speakers: PL2, PL5, PL5W"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 1860108503,
+            "description": "Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Soundbars, Soundbar Accessories, Vacuum, Wireless Speaker. Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Vacuum, Wireless Speakers is off the pre-tax sale price on LG.com only. Offer valid for one-time use only within 30 days of code being sent. To receive the additional 10% off savings, promotion code must be entered at online checkout and will be applied to eligible products only. If any of the qualifying items are removed from the cart, canceled or returned, the promotional savings will be void. Availability, prices and terms of offer are subject to change without notice. No adjustments to prior purchases and non-redeemable for cash. ualifying AeroTower: U9CS1C  Qualifying PuriCare Air Purifiers: AP151MBA1, AP151MWA1, AS330DWR0, AS560DWR0, U9CV1C, U9CV2B  Qualifying Dehumidifier: UD501KOJ5  Qualifying TONE Free headphones: HBS-XL7.ACUSBKI, HBS-SL5.ACUSBKI, HBS-SL6S.ACUSBKI, HBS-510.ACUSBKI, HBS-830.ACUSBKI, HBS-830.ACUSWHI, HBS-FN4.ACUSBKI, HBS-FN6.ACUSBKI, HBS-FN5W.ACUSBKI, HBS-FN6.ACUSWHI, HBS-FN5W.ACUSWHI, TONE-FN7.ACUSBKI, TONE-FP8.AUSACLK, TONE-FP9.AUSACLK, TONE-FP5.AUSACLK, TONE-FP3.AUSACLK, TONE-NP3.AUSACLK, TONE-T90Q.AUSACBK, TONE-T90Q.AUSACWH, TONE-T60Q.AUSACBK TONE-TF8Q.AUSACBI, TONE-FP9W.AUSACLK, TONE-FP9E.AUSACLK, TONE-NP3C.AUSACLK  Qualifying LG Styler: S3CW, S3MFBN, S3RFBN, S3WFBN, S5MSB  Qualifying Soundbars: QP5, QP5W, S75Q, SP7Y, S65Q, SN6Y, SN5Y, SP2, SK1, SH2  Qualifying Soundbar Accessories: SPQ8-S, SPK8-S, WTP3  Qualifying Vacuums: A913BM, A925KSM, A927KGMS, A929KVM, A939KBGS, R975GM  Qualifying XBOOM Go Wireless Speakers: PL2, PL5, PL7, GP9, GP3, RP4G, RP4, RP4B, XG5QBK, XG7QBK, XO3QBK",
+            "company_id": 6714,
+            "value": "10",
+            "name": "(In Use) 10% Off Select Products",
+            "coupon": "TEXT0DVI6MYU23",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          },
+          {
+            "subscriber_id": 1860108503,
+            "company_id": 6714,
+            "coupon_url": "https://www.lg.com/us/cart?campaign_coupon=CAE10I43ZL",
+            "name": "2025_XBU_Abandoned_Cart_Email_with_extra_10__off",
+            "coupon": "CAE10I43ZL",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://lg.com/us",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.lg.com/us/tvs/lg-oled77t4pua-oled-4k-tv?utm_campaign=01062025-he-tv-transparent-tv_base\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=Djg1J",
+            "item": "77 inch class lg signature oled t: world’s first transparent 4k smart tv 2024 with true wireless...",
+            "timeAgo": "2025-01-07"
+          },
+          {
+            "link": "https://www.lg.com/us/refrigerators/lg-lryks3106d-french-3-door-refrigerator",
+            "item": "31 cu. ft. smart standard-depth maxTM french door refrigerator with four types of ice and mirror instaview®",
+            "timeAgo": "2024-08-17"
+          },
+          {
+            "link": "https://www.lg.com/us/speakers/lg-xl9t-portable-speaker",
+            "item": "xboom xl9t portable tower speaker with 1000w of power and pixel led lighting",
+            "timeAgo": "2024-07-24"
+          },
+          {
+            "link": "https://www.lg.com/us/home-audio/lg-LHB755W-home-theater-system",
+            "item": "3d-capable 5.1 ch blu-ray discTM home theater system with smart tv",
+            "timeAgo": "2024-07-17"
+          },
+          {
+            "link": "https://www.lg.com/us/wireless-headphones/lg-t80S-black-tone-free-earbuds",
+            "item": "lg tone free ® t80 dolby atmos® true wireless bluetooth earbuds, black",
+            "timeAgo": "2024-07-17"
+          }
+        ]
+      },
+      "companyWebsite": "https://lg.com/us",
+      "companyName": "LG",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS using the \"Escalation template\""
+        ],
+        "templates": [
+          "For 10% off welcome code issues use temp \u0027Follow up 1\u0027, then \u0027Follow up 2\u0027 after confirming the item is excluded from promos",
+          "For fridge recommendations use FRR shortcut",
+          "For service-related issues/scheduled repair service appointments use SRI shortcut",
+          "For cxs looking for replacement parts/accessories from an affiliate Parts Distributor use RPA shortcut",
+          "If a cx has an inquiry for finding the serial number/model number of an item:",
+          "➜ If it\u0027s a TV, use mnt shortcut",
+          "➜ If it\u0027s another product, use mna shortcut"
+        ],
+        "dos_and_donts": [
+          "If it\u0027s a new conversation and we didn\u0027t introduce ourselves in the automated message, start your message with: \"This is Jordan at LG.\""
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Play at outrageous speeds on an epic OLED screen. It\u0027s gaming so fast, it Hz. Shop now: https://lg.attn.tv/aZk5Z4OI5wQO \n\nText back if you have any questions!",
+          "date_time": "2025-01-22 12:01:45.580",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Save up to $500 when you bundle 2 or more eligible appliances - plus get up to $100 off when you trade in your old appliance. Shop now: https://lg.attn.tv/acKJVRe46Hes \n\nText back if you have any questions!",
+          "date_time": "2025-01-23 12:02:03.194",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Save up to $200 off select UltraGear and UltraWide monitors, plus purchase a 38\" or larger monitor with another eligible monitor and get 20% off both monitors. Shop now: https://lg.attn.tv/al1QzlVt0hwP \n\nText back if you have any questions!",
+          "date_time": "2025-01-24 12:02:43.881",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Add luminous color and infinite contrast to your playbook with savings on a brilliant LG OLED evo TV. Shop now: lg.attn.tv/a3fwsetpZe2m \n\nText back if you have any questions!",
+          "date_time": "2025-01-29 12:01:51.732",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: From space-saving refrigerators to time-saving laundry, refresh your home with LG home appliances. Plus, trade-in eligible appliances for $50-$100 off. Shop now: lg.attn.tv/aL9kv4Cnbof4 \n\nText back if you have any questions!",
+          "date_time": "2025-01-30 12:01:51.989",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Add luminous color and infinite contrast to your hosting playbook with savings on a brilliant LG OLED evo TV. Plus, buy online and pick up in-store as early as today. Shop now: lg.attn.tv/aM4i4G5JQ14w \n\nText back if you have any questions!",
+          "date_time": "2025-02-03 11:55:56.926",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Show off your gaming dominance with the ultra-high refresh rates and vivid displays of UltraGearTM OLED monitors. Shop now: lg.attn.tv/aDN0IdHx6nTB \n\nText back if you have any questions!",
+          "date_time": "2025-02-05 11:56:36.848",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Save on the #1 Appliance Brand in the US - plus Premium Care extended service plans starting at $1. Shop now: lg.attn.tv/anKEZH900Tg9 \n\nText back if you have any questions!",
+          "date_time": "2025-02-06 12:10:21.933",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: The Big Game is here! Who\u0027s your pick? Reply with KC for Kansas City or PH for Philadelphia and score an exclusive offer on stunning TVs. Hurry, limited time!",
+          "date_time": "2025-02-09 16:05:40.517",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Save on the #1 Appliance Brand in the US - plus extended service plans starting at $1. Shop now:\nlg.attn.tv/aw44YDIsPLWe \n\nText back if you have any questions!",
+          "date_time": "2025-02-11 11:57:02.365",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Make mealtime a breeze with savings on select kitchen packages. Plus, get a free 4K UHD TV or smart screen with eligible purchase. Shop now: lg.attn.tv/aTS0rhHG7AEr \n\nText back if you have any questions!",
+          "date_time": "2025-02-13 12:03:51.824",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Style meets innovation with LG appliances. Explore top deals on select ranges, refrigerators, laundry and more. Shop now: lg.attn.tv/aHAHTKKyFP1i \n\nText back if you have any questions!",
+          "date_time": "2025-02-17 12:11:09.485",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: \n\nCreate your ideal desktop with savings on brilliant UltraGearTM OLED monitors, immersive UltraWideTM monitors and more. Shop now: lg.attn.tv/ary3_xXvTZ9l ",
+          "date_time": "2025-02-18 18:31:48.662",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Make your kitchen upgrade even better with a FREE 4K UHD TV or smart screen-only with an eligible 4-piece bundle. Shop Now: lg.attn.tv/aV8mpOcQJzoX \n\nText back if you have any questions!",
+          "date_time": "2025-02-19 18:31:34.702",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Hi, it\u0027s Jordan here from LG. Are there any specific appliance or electronic questions I can help with today?\n\nPick back up where you left off: https://lg.attn.tv/ajCnE1Tub4YN .",
+          "date_time": "2025-02-19 18:37:18.255",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I was looking at the value kitchen package. Item numbers \n\nLT18S2100S-LDFN3432T-LREL6323S-MVEM1825F",
+          "date_time": "2025-02-19 18:38:11.143",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m curious if this includes delivery and removal of old appliances.",
+          "date_time": "2025-02-19 18:38:51.202",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01952096-b91f-4610-f000-00006edf00d7",
+          "message_text": "LG Electronics USA: You\u0027ve got a great taste! All of our major appliances come with free Room of Choice Delivery. The carrier will arrive at a scheduled time of your choosing and place the item in the preferred room of your home or office. However, regarding the removal of your old appliances, you may be able to upgrade your delivery to White Glove Installation, which includes product installation, parts, and removal service for your old appliance. Please note that it doesn\u0027t include hardwire installation, side venting, water line extension, or propane conversion. I hope this helps! Is there anything else I can assist you with?",
+          "message_type": "agent",
+          "agent": "82304",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-19 18:41:43.598"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "How much is white glove delivery. I have old models of everything already would just like new and matching.",
+          "date_time": "2025-02-19 18:43:10.470",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0195209d-ca1c-4b1d-f000-00006edf00d7",
+          "message_text": "LG Electronics USA: You can find the costs at checkout. If you have any questions, feel free to shoot me a text. ",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-19 18:49:26.697"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "K, thank you!",
+          "date_time": "2025-02-19 18:52:00.745",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Have a great day! - ALL BRANDS\"; last updated: 2022-07-05 16:55:29.721",
+          "date_time": "2025-02-19 18:53:27.262",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019520a1-75d1-4c59-f000-00006edf00d7",
+          "message_text": "LG Electronics USA: You\u0027re welcome! Have a great day and if you have any questions, feel free to shoot me a text.",
+          "message_type": "agent",
+          "agent": "48804",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-19 18:53:27.264"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1490 @@
+{
+  "version": 1,
+  "chunk": "chunk_0087",
+  "scenarios": {
+    "431": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "019c8735-721a-4da4-f000-0000fdee064d",
+      "rightPanel": {
+        "coupons": [
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 1399,
+            "name": "Influencer Exclusive - 25% - October 2023"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "description": "22% off",
+            "name": "CONCIERGE22",
+            "company_id": 1399
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 1399,
+            "name": "GRATEFULGLAMPING32"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "description": "Unique codes for concierge agents to distribute to customers. ",
+            "name": "Concierge 22%",
+            "company_id": 1399
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 1399,
+            "name": "1 Year 23% Off"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://helixsleep.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2026-02-22",
+            "items": [
+              {
+                "price": [
+                  1581.33
+                ],
+                "productLink": "https://helixsleep.myshopify.com/products/midnight",
+                "name": "Helix Midnight"
+              }
+            ],
+            "date_time": "2026-02-22 20:18:13.965",
+            "discount_amount": 0,
+            "orderNumber": "6042140213332",
+            "total": 1581.33
+          }
+        ]
+      },
+      "companyWebsite": "https://helixsleep.com",
+      "companyName": "Helix Sleep",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS immediately if customers send a Pickup Receipt"
+        ],
+        "escalate": [
+          "ESC ANY questions regarding existing orders immediately!"
+        ],
+        "promo_and_exclusions": [
+          "Don\u0027t share codes with the customers during promotional periods"
+        ]
+      },
+      "blocklisted_words": [
+        "AI"
+      ],
+      "escalation_preferences": [
+        "Escalate financing issues after troubleshooting with no luck"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Helix Sleep: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Helix Sleep.",
+          "date_time": "2026-02-22 16:08:47.541",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Helix Sleep: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-22 16:08:55.393",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Helix Sleep: Thanks for reaching out! To confirm you\u0027d like to chat with a Sleep Specialist, please reply SUPPORT. ",
+          "date_time": "2026-02-22 16:09:00.467",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "SUPPORT",
+          "date_time": "2026-02-22 16:09:32.948",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c872f-cb98-4d4b-f000-0000fdee064d",
+          "message_text": "Helix Sleep: The best way to handle this is to email us directly at help@helixsleep.com. Our team is happy to help!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-22 16:09:42.443"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I made a purchase by mistake and need to cancel it",
+          "date_time": "2026-02-22 16:10:52.656",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Support",
+          "date_time": "2026-02-22 16:13:12.593",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "SUPPORT",
+          "date_time": "2026-02-22 16:14:22.799",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Cancel / edit order \"; last updated: 2023-07-26 13:56:24.303",
+          "date_time": "2026-02-22 16:15:52.752",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c8735-721a-4da4-f000-0000fdee064d",
+          "message_text": "Helix Sleep: I\u0027m afraid that once an order has been placed, we can\u0027t make any changes to it. However, we can still cancel your order so you can reorder a different size or model. To help with this, may I please ask for your order number and email address?",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-22 16:15:52.755"
+        }
+      ]
+    },
+    "432": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "0190290d-8688-434d-f000-00003d2d6da4",
+      "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 1026387364,
+            "company_id": 26743,
+            "coupon_url": "https://fabulyssboutique.com/discount/TEXT?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=welcome",
+            "static_code": "TEXT",
+            "name": "Default Static Offer - TEXT",
+            "coupon": "TEXT",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://fabulyssboutique.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://fabulyssboutique.com/products/420-self-defense-keychain?_pos=1\u0026_sid=78b937658\u0026_ss=r\u0026variant=44903595606258",
+            "item": "420 Self Defense Keychain - With pepper spray / Keychain",
+            "timeAgo": "2023-11-27"
+          },
+          {
+            "link": "https://fabulyssboutique.com/products/cheetah-keychain?_pos=2\u0026_sid=50eec3829\u0026_ss=r\u0026variant=39328192069807",
+            "item": "Cheetah Self Defense Keychain - With pepper spray / Keychain",
+            "timeAgo": "2023-11-24"
+          }
+        ]
+      },
+      "companyWebsite": "https://fabulyssboutique.com",
+      "companyName": "Fabulyss Boutique",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "templates": [
+          "If cx gets a shipping message that some of the items can\u0027t be shipped to their address, use CSA shortcut"
+        ],
+        "tone": [
+          "Don\u0027t answer any inquiries regarding livestreams, lives, social media and close the convo instead!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping questions"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Fabulyss Boutique: Our Memorial Day sale is now LIVE 🇺🇸 Take 20% off our entire site with code MEMORIAL 💙 https://fabulyssboutique.attn.tv/aUe-AmlAk3I3  Stop to stop",
+          "date_time": "2024-05-24 12:33:08.833",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fabulyss Boutique: Last few hours to save 20% off our entire site with code MEMORIAL 🇺🇸 Don\u0027t miss out - shop now! https://fabulyssboutique.attn.tv/aNwxUaldGhds Stop to stop",
+          "date_time": "2024-05-27 19:45:59.256",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fabulyss Boutique: Indulge in our Juicy Collection 🍒 Discover 10 delicious new safety keychains now available 🍉🍍 https://fabulyssboutique.attn.tv/a_lEbYMtGBI1  Stop to stop",
+          "date_time": "2024-05-31 20:01:13.365",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fabulyss Boutique: 🔑 Our HUGE restock is now live! Check out our 3 new safety keychain designs to keep you stylish and safe on the go! ✨ https://fabulyssboutique.attn.tv/abcoxPCI_PLN  Stop to stop",
+          "date_time": "2024-06-07 20:01:38.752",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fabulyss Boutique: Hey there! Have you seen our fab best sellers? Get ready to be amazed! Check them out: https://fabulyssboutique.attn.tv/aJiNbRhhhldZ Stop to stop",
+          "date_time": "2024-06-17 15:19:15.144",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Do you have a stun gun in the color green?",
+          "date_time": "2024-06-17 21:51:02.401",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190290d-8688-434d-f000-00003d2d6da4",
+          "message_text": "Fabulyss Boutique: Thank you for reaching out. I\u0027m afraid we don\u0027t carry one in green. I\u0027m sorry about that. What do you think about yellow instead? It\u0027s the closest we can get to green: https://fabulyssboutique.attn.tv/a77_EDKoQ_0r",
+          "message_type": "agent",
+          "agent": "82220",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-17 21:54:30.681"
+        }
+      ]
+    },
+    "433": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "01951037-123c-4bc5-f000-0000ab87f44f",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "WOW40",
+            "content": [
+              "• Applies to All items. \n\n• Only send to new users. \n\n• Only send to users who abandon the cart and have not purchased before."
+            ]
+          },
+          {
+            "title": "YES2BOLD",
+            "content": [
+              "• 30% off purchases for browse abandoners + cart abandoners"
+            ]
+          },
+          {
+            "title": "MY30",
+            "content": [
+              "• 30% off welcome offer. \n\n• Only share with customers who haven\u0027t purchased before."
+            ]
+          },
+          {
+            "title": "BFCM 50% OFF SITEWIDE",
+            "content": [
+              "50% off sitewide."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2877813839,
+            "description": "30% off your order",
+            "company_id": 11971,
+            "static_code": "bold30",
+            "name": "Welcome 30% Off",
+            "coupon": "bold30",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2877813839,
+            "company_id": 11971,
+            "coupon_url": "https://sebastiancruz-pxs.myshopify.com/discount/SPRING40",
+            "static_code": "SPRING40",
+            "name": "SPRING40 - Campaign Warm Up",
+            "coupon": "SPRING40",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://sebastiancruzcouture.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.sebastiancruzcouture.com/products/vaniglia-honeycomb-cuffed-dinner-jacket",
+            "item": "Vaniglia Honeycomb Cuffed Dinner Jacket - 34S",
+            "timeAgo": "2025-02-16"
+          },
+          {
+            "link": "https://www.sebastiancruzcouture.com/products/pale-pink-retro-jacket",
+            "item": "Pale Pink Retro Jacket - 34S",
+            "timeAgo": "2025-02-16"
+          }
+        ]
+      },
+      "companyWebsite": "https://sebastiancruzcouture.com",
+      "companyName": "Sebastian Cruz Couture",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for order status updates",
+          "Send to CS if there\u0027s a pending ESC and cx ask for an update (even if it\u0027s been less than 2 business days)"
+        ],
+        "escalate": [
+          "ESC immediately if the customer wants an order to arrive at a specific time, or before our standard shipping time",
+          "ESC for product info that you can\u0027t find on the site"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "templates": [
+          "If cx sends us their measurements or asks about making a custom sizing order use the CUS template.",
+          "If cx mentions that they\u0027re going to lose weight, use \u0027Lose weight\u0027 template."
+        ],
+        "dos_and_donts": [
+          "Do not recommend the customer go to a place to get measured",
+          "\"@ The Vault\" items are designated for returns/exchanges, but may also be available in other sizes on The Vault website. Always check there first",
+          "When the color is closer to white and not cream we say off white",
+          "You should never direct the customer to the sizing chart when they mention custom sizing or they send their measurements",
+          "Don\u0027t tell the customer to hold off on purchase if they are going to lose weight."
+        ],
+        "drive_to_purchase": [
+          "When recommending products, make sure they\u0027re aligned with the colors, style the cx is looking for"
+        ],
+        "promo_and_exclusions": [
+          "If cx ask about pricing, tell them to add items to their cart and the best discount will apply automatically",
+          "The 40% discount applies automatically when cx add five or more items to their cart",
+          "If cx going to purchase a lot of products in one purchase, share with them what you can find on current offer page along with the link: https://www.sebastiancruzcouture.com/pages/current-offers"
+        ]
+      },
+      "blocklisted_words": [
+        "slow"
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Sebastian Cruz Couture: 😱 Have You Seen Our Latest Looks! \n\nSHOP NOW \u0026 USE CODE: GOT40\n👇\nhttps://sebastiancruzcouture.attn.tv/at2Q3lXaNCzk \nText back if you have any questions!",
+          "date_time": "2025-01-19 19:30:42.291",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sebastian Cruz Couture: \n\n😍 SHOP OUR LATEST LOOKS\n\nBuy Now \u0026 Receive Prior To Valentines Day! \n\nPay Later Using Klarna As Payment Method\n\nRedeem 40% OFF By Shopping The Look:\n👇\nsebastiancruzcouture.attn.tv/agU_TqhpTnvD \nText back if you have any questions!",
+          "date_time": "2025-01-26 19:01:08.412",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sebastian Cruz Couture: \n💰HUGE SAVINGS \u0026 NEW PIECES\n\nShop Our Latest Pieces In The Vault\n👇\nsebastiancruzcouture.attn.tv/aGHeie_CyNxB \n\nText back if you have any questions!",
+          "date_time": "2025-01-30 19:01:24.487",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sebastian Cruz Couture: \n⏰ LAST CHANCE! \n\nGet your look before Valentine\u0027s Day! \n\n- Order NOW\n\nUnlock 40% OFF Add 5 Items Or More To Your Cart! \n👇\nsebastiancruzcouture.attn.tv/aZwqjKCs5C6O \nText back if you have any questions!",
+          "date_time": "2025-02-02 19:01:06.491",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sebastian Cruz Couture: \n😱Insider Deal For Today! \n\nGet $20 Gift Card For Every $100 Spent! \n\nGet Up To A $1k Gift Card! \n\nSHOP NOW:\nsebastiancruzcouture.attn.tv/agcs-gerVoMu \n\nText back if you have any questions!",
+          "date_time": "2025-02-04 20:30:32.466",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sebastian Cruz Couture: \n😱 Say Hello To A Bold New Piece!\n\nSHOP OUR LATEST LIMITED COLLECTION NOW:\n👇\nsebastiancruzcouture.attn.tv/aBnC5vj4Z3ES \n\nText back if you have any questions!",
+          "date_time": "2025-02-11 19:02:09.372",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sebastian Cruz Couture: Hey . I\u0027m Jordan. I saw this caught your eye. 😊 https://sebastiancruzcouture.attn.tv/a_g6xzouKkGu \n\nAny questions I can answer for you? ",
+          "date_time": "2025-02-16 03:08:59.003",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yeah",
+          "date_time": "2025-02-16 13:51:15.303",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0195101a-9e29-4f97-f000-0000ab87f44f",
+          "message_text": "Sebastian Cruz Couture: I would be more than happy to help out, ask away!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-16 13:52:14.771"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I had an ex fiance Lisa Renee haskins who I had a person make a hand stitched short mid length jacket kinda  like this here in the picture but a little more tailored with burgundy red and black inlay stitching that made patterns similar to the men\u0027s jacket here I\u0027ll send pictures now to see if you all have something similar in design I can look at",
+          "date_time": "2025-02-16 13:54:52.895",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0195101f-5f1b-4bf0-f000-0000ab87f44f",
+          "message_text": "Sebastian Cruz Couture: I appreciate your interest in our products, I\u0027ll be waiting for the pictures and happy to help once I receive them.",
+          "message_type": "agent",
+          "agent": "87359",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-16 13:57:26.312"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The first picture with the lady in the jacket is how it seem to fit at the shoulders and the last picture of the girl with her back to you is kinda how it came around the front",
+          "date_time": "2025-02-16 13:59:02.968",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01951021-b306-4c19-f000-0000ab87f44f",
+          "message_text": "Sebastian Cruz Couture: Thank you for sharing this with me, however, I\u0027m afraid I did not receive any pictures. Can you please confirm if you have already sent them here?",
+          "message_type": "agent",
+          "agent": "82219",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-16 13:59:58.865"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "And the men\u0027s jacket is the color that is similar in design to what I had made for my ex fiance Lisa Renee haskins who passed away on me that I would like to see if there is something close that you might have that I can look at for someone else who has came into my life",
+          "date_time": "2025-02-16 14:01:02.778",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes they are being sent now",
+          "date_time": "2025-02-16 14:01:39.168",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01951025-da01-4889-f000-0000ab87f44f",
+          "message_text": "Sebastian Cruz Couture: On behalf of the team, I\u0027m truly sorry for your loss and wish you my deepest condolences. I\u0027m afraid I haven\u0027t received the pictures. Please send me another message once the pictures are sent.",
+          "message_type": "agent",
+          "agent": "87473",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-16 14:04:30.992"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I had to resend them I hope you received them this time",
+          "date_time": "2025-02-16 14:13:24.930",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It was something similar to the lady\u0027s jacket In design with the burgundy red and very close to the design of the men\u0027s jacket and came around the front like the picture of the girl with her back to you",
+          "date_time": "2025-02-16 14:15:24.189",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "If you have something close or similar I would like to take a look at them please thank you for your time",
+          "date_time": "2025-02-16 14:16:14.259",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01951031-25da-44eb-f000-0000ab87f44f",
+          "message_text": "Sebastian Cruz Couture: I\u0027m really sorry about this and surely, this isn\u0027t the experience I want you to have. Unfortunately, the pictures didn\u0027t come through again! The best way to handle this is to email us directly at hello@sebastiancruzcouture.com. Our team is happy to help!",
+          "message_type": "agent",
+          "agent": "87282",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-16 14:16:51.310"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Okay I sure will thank you sir once again I\u0027ll get right on that here in a moment",
+          "date_time": "2025-02-16 14:19:13.333",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"I emailed! (after being sent to CS) - All brands\"; last updated: 2023-10-10 17:42:48.638",
+          "date_time": "2025-02-16 14:23:19.499",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01951037-123c-4bc5-f000-0000ab87f44f",
+          "message_text": "Sebastian Cruz Couture: Perfect! once you emailed us, someone from the team will get back to you as soon as possible! You\u0027re in excellent hands! ",
+          "message_type": "agent",
+          "agent": "46498",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-16 14:23:19.500"
+        }
+      ]
+    },
+    "434": {
+      "agentName": "Samantha",
+      "has_shopify": true,
+      "id": "0192e85f-df8a-4937-f000-000099fd89b9",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://comfrt.com/products/rib-contour-tank",
+            "item": "Rib Contour Tank",
+            "timeAgo": "2024-11-01"
+          },
+          {
+            "link": "https://comfrt.com/products/coordinate-hoodie?variant=41171606798380",
+            "item": "Coordinate HoodieTM",
+            "timeAgo": "2024-10-30"
+          },
+          {
+            "link": "https://comfrt.com/products/logo-canvas-tote",
+            "item": "Logo Canvas Tote",
+            "timeAgo": "2024-10-18"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2583529913,
+            "company_id": 57888,
+            "coupon_url": "https://comfrtclothing.myshopify.com/discount/COMEBACK15?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "COMEBACK15",
+            "name": "COMEBACK15",
+            "coupon": "COMEBACK15",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2583529913,
+            "company_id": 57888,
+            "coupon_url": "https://comfrtclothing.myshopify.com/discount/WELCOME15?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "WELCOME15",
+            "name": "WELCOME15",
+            "coupon": "WELCOME15",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2583529913,
+            "company_id": 57888,
+            "coupon_url": "https://comfrtclothing.myshopify.com/discount/COMFRT15?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "COMFRT15",
+            "name": "COMFRT15",
+            "coupon": "COMFRT15",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2583529913,
+            "company_id": 57888,
+            "coupon_url": "https://comfrtclothing.myshopify.com/discount/WELCOME15?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "WELCOME15",
+            "name": "WELCOME15",
+            "coupon": "WELCOME15",
+            "redemption_status": "USED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://comfrt.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-10-31",
+            "coupon": "WELCOME15",
+            "items": [
+              {
+                "price": [
+                  91.8
+                ],
+                "productLink": "https://comfrtclothing.myshopify.com/products/pack-parent",
+                "name": "Cloud Bundle"
+              }
+            ],
+            "trackingLink": "https://track.flexport.com/1Z5F13W20315663375",
+            "link": "https://comfrt.com/56940298284/orders/94c9b8cfb2ec4fcb6213f1f48a7c81b4/authenticate?key=36edecac1063f688be57281920029a0a",
+            "date_time": "2024-10-31 21:22:30.515",
+            "discount_amount": 0,
+            "orderNumber": "1141301",
+            "order_tracking_link": "https://track.flexport.com/1Z5F13W20315663375",
+            "total": 94.36
+          }
+        ]
+      },
+      "companyWebsite": "https://comfrt.com",
+      "companyName": "Comfrt",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post-purchase issues"
+        ],
+        "escalate": [
+          "ESC if the discount % is not the same as indicated in the automated message"
+        ],
+        "templates": [
+          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Sizing questions",
+        "Discount code errors"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Last chance! There are only a few of our Pastel Sweatpants left! Click here to shop before it\u0027s gone with code Comfrt15 for 15% OFF! https://comfrt.attn.tv/awEu5KbZ3TwN ",
+          "date_time": "2024-10-02 12:49:02.566",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Low inventory alert! Our Pastel Sweatpants you were looking at is almost gone. Click here to grab it before it is too late! https://comfrt.attn.tv/aux_a7C5p38W .",
+          "date_time": "2024-10-03 14:30:21.637",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Last chance! There are only a few of our Pastel Sweatpants left! Click here to shop before it\u0027s gone with code Comfrt15 for 15% OFF! https://comfrt.attn.tv/aVYipfk6iXi- ",
+          "date_time": "2024-10-04 14:30:26.612",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Hey! My name is Samantha, I noticed you checking out our website. I wanted to let you know that we are very low on stock for most items and are running our biggest sale EVER. \n\nNow would be the absolute best time to grab a set from us! \n\nhttps://comfrt.attn.tv/abKTUPwtO-_U .",
+          "date_time": "2024-10-07 11:38:53.464",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Low inventory alert! Our Pastel Sweatpants you were looking at is almost gone. Click here to grab it before it is too late! https://comfrt.attn.tv/amJWyt4N8fmA .",
+          "date_time": "2024-10-07 12:04:33.168",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Last chance! There are only a few of our Pastel Sweatpants left! Click here to shop before it\u0027s gone with code Comfrt15 for 15% OFF! https://comfrt.attn.tv/aKYlVsVcZPcW ",
+          "date_time": "2024-10-08 12:06:11.433",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Low inventory alert! Our Pastel Sweatpants you were looking at is almost gone. Click here to grab it before it is too late! https://comfrt.attn.tv/aAGN3OYxifuP .",
+          "date_time": "2024-10-09 14:29:44.985",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Last chance! There are only a few of our Pastel Sweatpants left! Click here to shop before it\u0027s gone with code Comfrt15 for 15% OFF! https://comfrt.attn.tv/ap6O9-r_tFP5 ",
+          "date_time": "2024-10-10 14:29:53.462",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Low inventory alert! Our Pastel Sweatpants you were looking at is almost gone. Click here to grab it before it is too late! https://comfrt.attn.tv/aJ3g13bfiKgZ .",
+          "date_time": "2024-10-11 12:04:10.176",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Last chance! There are only a few of our Pastel Sweatpants left! Click here to shop before it\u0027s gone with code Comfrt15 for 15% OFF! https://comfrt.attn.tv/aBWpgM9KeHaE ",
+          "date_time": "2024-10-12 12:04:16.161",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Low inventory alert! Our Pastel Sweatpants you were looking at is almost gone. Click here to grab it before it is too late! https://comfrt.attn.tv/aeE7Xv0TrWf6 .",
+          "date_time": "2024-10-18 14:45:52.681",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Hey there, this is Samantha. Thanks for checking out our site! 😊 https://comfrt.attn.tv/aFOfA4v2gu5K\n\nAnything I can help with?\n",
+          "date_time": "2024-10-18 14:48:39.067",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Our Crimson Cloud Zip Hoodie JUST DROPPED! This is our top-selling color and will be sold out within 48hrs.\n\np.s. for early black friday access use code EBF15 for 15% off the entire store!\n\nhttps://comfrt.attn.tv/a_4V9Iv-9MTF .\n\n\n",
+          "date_time": "2024-10-22 11:01:03.845",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Hey! My name is Samantha, I noticed you checking out our website. I wanted to let you know that we are very low on stock for most items and are running our biggest sale EVER. \n\nNow would be the absolute best time to grab a set from us! \n\nhttps://comfrt.attn.tv/aRyn7aIQL7fX .",
+          "date_time": "2024-10-26 11:43:58.641",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: The Affirmation Collection JUST DROPPED! \n\nA collaborative effort to bring together style, comfort, and positivity. Featuring our FIRST straight-leg silhouette. We are truly obsessed.\n\nP.S. We still have our early Black Friday code active EBF15 for 15% off the entire store!\n\nhttps://comfrt.attn.tv/a2GkP7GuwPhm .\n\n",
+          "date_time": "2024-10-26 14:43:14.546",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: You are already subscribed. Click here to shop now: comfrt.com.",
+          "date_time": "2024-10-26 23:11:38.707",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Hey there, this is Samantha. Thanks for checking out our site! 😊 https://comfrt.attn.tv/auO9pQTFusqg\n\nAnything I can help with?\n",
+          "date_time": "2024-10-28 15:21:15.513",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: \n\nHey! We noticed you eyeing our top-selling collection.\n\n We are almost sold out of your size but wanted to give you a huge discount to join the Comfrt family and 1 million happy customers before it\u0027s sold out.\n\nUse COMFRT15 for 15% OFF (valid for 24hrs)\n\n https://comfrt.attn.tv/a4_R-gjjtCCR .",
+          "date_time": "2024-10-28 15:30:21.624",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: New Waffle Lounge Colors ALERT!\n\nOur most-requested shades have arrived: Truffle, Cocoa, and Ivory. Stock is super limited, so don\u0027t wait!\n\nP.S. Get a head start on Black Friday and use code EBF15 for 15% off sitewide.\n\nShop Now https://comfrt.attn.tv/atf-id1I3Vvh .",
+          "date_time": "2024-10-30 13:32:11.526",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: \n\nHey! We noticed you eyeing our top-selling collection.\n\n We are almost sold out of your size but wanted to give you a huge discount to join the Comfrt family and 1 million happy customers before it\u0027s sold out.\n\nUse COMFRT15 for 15% OFF (valid for 24hrs)\n\n https://comfrt.attn.tv/aIbYxEzt-pIw .",
+          "date_time": "2024-10-30 14:24:22.669",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: \n\nHey! We noticed you eyeing our top-selling collection.\n\n We are almost sold out of your size but wanted to give you a huge discount to join the Comfrt family and 1 million happy customers before it\u0027s sold out.\n\nUse COMFRT15 for 15% OFF (valid for 24hrs)\n\n https://comfrt.attn.tv/aW8yIcfQ5DN7 .",
+          "date_time": "2024-10-31 14:57:32.276",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: \n\nHey! We noticed you have an item from our top-selling collection in your cart.\n\nOur stock is very low, so we can only hold your cart for 10 more minutes. \n\nBefore we sell out - here is an extra 15% OFF!\n\ncode: COMEBACK15\n\n https://comfrt.attn.tv/a6qP9lPZoOYk .",
+          "date_time": "2024-10-31 15:30:44.756",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Does the cloud bundle mean Hoodie and sweatpants ? I want to make sure I\u0027m getting a small in both but it\u0027s saying 1 item in stone color",
+          "date_time": "2024-10-31 16:38:53.210",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e44f-8e61-4757-f000-000099fd89b9",
+          "message_text": "Comfrt: Yes, that\u0027s correct. Could you please share a screenshot of the items in your cart so I can double-check?",
+          "message_type": "agent",
+          "agent": "29634",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 16:41:12.042"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It looks like i have 2 items in sweat pants , I\u0027d better try and remove one",
+          "date_time": "2024-10-31 16:43:33.006",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I just want to make sure they are still in stock before ordering",
+          "date_time": "2024-10-31 16:45:43.387",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e453-fe1d-4ae5-f000-000099fd89b9",
+          "message_text": "Comfrt: Thanks for the screenshot. As I can see, it\u0027s actually the color storm. Can you confirm it for me, please?",
+          "message_type": "agent",
+          "agent": "82448",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 16:46:02.792"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes both colors for jacket and pants are Storm",
+          "date_time": "2024-10-31 16:47:03.128",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e459-aae5-491a-f000-000099fd89b9",
+          "message_text": "Comfrt: Are you trying to send a picture? For some reason this last image you sent is not appearing on my end. Can you try sending it again? Thank you",
+          "message_type": "agent",
+          "agent": "82218",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 16:52:14.701"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027ll send it again",
+          "date_time": "2024-10-31 16:52:53.142",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027ve sent 3 pictures. I was about to order but it says some things may be out of stock . I want to make sure the bundle is in stock before ordering",
+          "date_time": "2024-10-31 16:56:53.346",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e460-f39a-4c6a-f000-000099fd89b9",
+          "message_text": "Comfrt: Thank you for the details and the screenshots! The bundle means sweatpants and a hoodie. However, the bundles are out of stock right now. And you can order them separately:\nSweatpants: https://comfrt.attn.tv/a-o5cD7sleqI\nHoodie: https://comfrt.attn.tv/avtBvT_im-X1\nIf you have any questions, feel free to shoot me a text.",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 17:00:12.068"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It is still trying to combine as a bundle",
+          "date_time": "2024-10-31 17:03:23.030",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e466-8439-4076-f000-000099fd89b9",
+          "message_text": "Comfrt: Thank you for letting me know. Upon checking, I can see here that both of the items that you\u0027re looking for are in stock. I hope this helps and please let me know if you have further questions. ",
+          "message_type": "agent",
+          "agent": "87300",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 17:06:16.771"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "So I can still get the bundle or no ?",
+          "date_time": "2024-10-31 17:07:13.250",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "So I have to place 2 separate orders in ? Do I still get the 15 or 20 % off ?",
+          "date_time": "2024-10-31 17:08:42.995",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e46a-dbad-4cab-f000-000099fd89b9",
+          "message_text": "Comfrt: If there is an option on your end to get the bundle, I suggest that you get them. Regarding your second question, as long as you put the code on the promo box, you can still avail the code. I hope this answers your questions and please let me know if there is anything else that I can assist you with, I\u0027m here to help!",
+          "message_type": "agent",
+          "agent": "87300",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 17:11:01.301"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I ordered but was a little confused bc I put my card info in and for some reason I had to do it again , I hope I\u0027m not charged twice for the bundle , it said I couldn\u0027t get the comfrt discount but after completing it said I did get it . I\u0027m sick and I\u0027ve lost so much weight , I just hope everything fits well , thanks for the help",
+          "date_time": "2024-10-31 17:50:02.549",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e493-b38a-4b8c-f000-000099fd89b9",
+          "message_text": "Comfrt: I\u0027m sorry to hear about the confusion with your order! Upon checking here, it looks like your order went through. Could you please check your email, including your spam or promo folders, as sometimes emails end up there?\n\nI also see that you sent a photo, but it\u0027s still not visible. If you could send it again, that would really help. Thank you for your understanding, and I hope everything fits well for you!",
+          "message_type": "agent",
+          "agent": "87733",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 17:55:38.005"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The one that did not show up said paste so that may be why you did not get it , I sent you several other pics of jacket and pants in size small .",
+          "date_time": "2024-10-31 17:57:52.960",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e49c-46c4-4c3c-f000-000099fd89b9",
+          "message_text": "Comfrt: I did get the other photos you sent. It seems like your order went through successfully. Are you all set now?",
+          "message_type": "agent",
+          "agent": "29634",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 18:04:59.983"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes thank you",
+          "date_time": "2024-10-31 18:32:43.212",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e4b6-68a8-4bc7-f000-000099fd89b9",
+          "message_text": "Comfrt: Awesome! You\u0027re welcome! Have a great day and if you have any questions, feel free to shoot me a text. Don\u0027t forget to check out our accessories here: https://comfrt.attn.tv/aHa8Sl_sRhPK",
+          "message_type": "agent",
+          "agent": "82448",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 18:33:32.595"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Do you do returns ? I should\u0027ve ask that first in case the small jacket is too small ? I wasn\u0027t sure bc I\u0027ve been in a small this summer but I\u0027m around a small to medium so I hope it\u0027s over sixed enough . I\u0027ll definitely check your other accessories out . I love the throw you have . Thanks for all the help .",
+          "date_time": "2024-10-31 18:35:13.170",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e4b9-9bd7-4b72-f000-000099fd89b9",
+          "message_text": "Comfrt: You\u0027re welcome and I understand! Yes, we accept returns. You can check out our detailed return policy here: https://comfrt.attn.tv/aRB-lk3inM7v You can start your return here: https://comfrt.attn.tv/aTC5ZxawPQPG/#/\n\nAlso, our customers love how comfy our hoodies are, they usually purchase a size up. We always recommend comparing your measurements with our size guide on each product page to find your perfect fit!",
+          "message_type": "agent",
+          "agent": "46059",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 18:37:02.310"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I couldn\u0027t find the fabric tape measure and I\u0027ve not been out of the house since last Monday for a doc appt . I would just want to exchange not just send it back .",
+          "date_time": "2024-10-31 18:40:12.560",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e4bf-b3b8-476e-f000-000099fd89b9",
+          "message_text": "Comfrt: Yes, you can! Please note that exchanges must be requested within 30 days of delivery. Unfortunately, anything after the 30-day window period can not be approved. Also, tt seems like you sent us an image. Unfortunately, I can\u0027t see it on my end. Mind sending it again? I\u0027d be happy to help!",
+          "message_type": "agent",
+          "agent": "82448",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 18:43:41.636"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I ordered my bundle already , thank you",
+          "date_time": "2024-10-31 18:46:32.687",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thanks for all your help",
+          "date_time": "2024-10-31 18:47:15.836",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e4c3-d3e0-4ffb-f000-000099fd89b9",
+          "message_text": "Comfrt: My pleasure and thank you for the support! While you\u0027re here, check out our loungewear collection: https://comfrt.attn.tv/apla04uWmA-F\n\nAre you all set now?",
+          "message_type": "agent",
+          "agent": "46059",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 18:48:12.008"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes thank you",
+          "date_time": "2024-10-31 18:49:02.623",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e4c4-cb55-4c01-f000-000099fd89b9",
+          "message_text": "Comfrt: You\u0027re welcome! Have a great day and if you have any questions, feel free to shoot me a text. ",
+          "message_type": "agent",
+          "agent": "87311",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-31 18:49:15.361"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I will 😊",
+          "date_time": "2024-10-31 18:50:02.801",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I didn\u0027t know i was supposed to order a sz up , every comment I read said they could\u0027ve went a sz lower . It\u0027s the  jacket I\u0027m worried about , I started to get a medium,  should\u0027ve went with my gut instinct.  Oh well I pray it fits .",
+          "date_time": "2024-11-01 11:27:08.152",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e859-7910-49cf-f000-000099fd89b9",
+          "message_text": "Comfrt: Happy to help you find the right size! Our customers love how comfy our hoodies are, they usually purchase a size up. We always recommend comparing your measurements with our size guide on each product page to find your perfect fit! If you\u0027re still unsure, just let me know. \n\nPlease send us an email at info@comfrt.com immediately after purchasing if you want to make changes as our warehouse processes orders immediately. Our team is happy to help! \n\nWe offer exchanges for store credit only. In order to qualify for an even exchange all items must be approved/requested within 30 days of delivery. Unfortunately, anything after the 30 day window period can not be approved. All exchanges must be in exact condition with no signs of wear and tear, stains or other signs of usage; including in the original poly bag with SKU to return in. \n\nI\u0027m sorry, but it looks like the image didn\u0027t go through. Could you please send it again? Thank you!",
+          "message_type": "agent",
+          "agent": "40591",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-01 11:30:30.813"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I ordered it yesterday and it went thru on my credit card , I ordered the cloud bundle in stone . It says it will be here in 3 to 4 days . I\u0027ll contact you immediately if it doesn\u0027t fit and get a bigger size , thank you",
+          "date_time": "2024-11-01 11:33:16.856",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192e85f-df8a-4937-f000-000099fd89b9",
+          "message_text": "Comfrt: Okay, no problem. You will let me know. In the meantime, you can familiarize yourself with the return policy I sent you above.\n Unfortunately, the image is still not coming through. I\u0027m sorry for the inconvenience.",
+          "message_type": "agent",
+          "agent": "82236",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-01 11:37:30.260"
+        }
+      ]
+    },
+    "435": {
+      "agentName": "Quinn",
+      "has_shopify": false,
+      "id": "019bcce9-5253-4c74-f000-00008fce6bd7",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Evergreen Discount",
+            "content": [
+              "• Save up to 50%. See site for additional details."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 2412669911,
+            "company_id": 214,
+            "name": "Post BFCM Sale 2025: SSB Offer",
+            "coupon": "sbf25-w9sdkt"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://nectarsleep.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.nectarsleep.com/mattress-bundles/adjustable-frame-bundle?utm_campaign=p_1715077_15205410f9c5f6e850bc85045627e797\u0026utm_medium=ds\u0026utm_source=app\u0026alart=a3d1ac60-5aa6-4433-aadd-6fb77639d9f0\u0026aleid=43832a583107cbcea7ea428992f936c4f22d9433",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-01-17"
+          },
+          {
+            "link": "https://www.nectarsleep.com/mattresses/premier-memory-foam-mattress?utm_campaign=%5BN%5D_%5BP%5D_Cmp%5BJanWeek1%5D_SMS%5B1%5D_Off%5BSaveupto50%5D_CT%5BNonpurchasers%5D_01072026\u0026utm_medium=sms\u0026utm_source=Attentive\u0026externalId=mwp4u",
+            "item": "Nectar Premier Memory Foam Mattress",
+            "timeAgo": "2026-01-08"
+          }
+        ]
+      },
+      "companyWebsite": "https://nectarsleep.com",
+      "companyName": "Nectar Sleep",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS",
+          "Send to CS for refund inquiries"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Close the convo if the cx first message is ok, no, etc.",
+          "Don\u0027t use the word \"off\" when talking about promotions"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t proactively offer to find pricing info, redirect them to the website instead"
+        ],
+        "promo_and_exclusions": [
+          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns",
+        "Discount code errors",
+        "Recall",
+        "BBB",
+        "fiberglass",
+        "lawyer",
+        "class action"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Choose your FREE 2-Pack size (Standard or King) of Tri-Comfort Pillows with mattress order. Code STP25 exp. 12/28: nectarsleep.attn.tv/a38n8jAfvA2R\n.",
+          "date_time": "2025-12-18 19:05:51.669",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: \u0027Tis the season to sleep smarter using FSA/HSA dollars. Up to 90% of a mattress could be covered. Check eligibility: nectarsleep.attn.tv/aUPZgvhcSco6\n.",
+          "date_time": "2025-12-19 19:06:27.829",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Santa called. It\u0027s pillow time! Pick your 2 FREE Tri-Comfort Pillows with mattress order. Code STP25 ends 12/28: nectarsleep.attn.tv/aBqgsAXPULx8\n.",
+          "date_time": "2025-12-21 19:05:59.502",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Time\u0027s up soon! FSA funds expire 12/31. HSAs roll on. Up to 90% of a mattress could be covered. Check eligibility: nectarsleep.attn.tv/aEaOB0GkvIbb\n.",
+          "date_time": "2025-12-22 19:08:59.929",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: A holiday treat on us! Get 2 FREE Tri-Comfort Pillows ($258 value) with mattress order. Code STP25. Ends 12/28: nectarsleep.attn.tv/aUVdLebyRaaU\n.",
+          "date_time": "2025-12-23 19:06:28.960",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Wrapping up the year? See if your HSA or expiring FSA can cover up to 90% of a mattress. Check eligibility now: nectarsleep.attn.tv/aE1PeHN2EcWm\n.",
+          "date_time": "2025-12-26 19:05:54.360",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Ends tomorrow! Sleep cooler with 2 FREE Tri-Comfort Pillows ($258 value) with mattress order. Use code STP25: nectarsleep.attn.tv/aBU85yGZUfq8\n.",
+          "date_time": "2025-12-27 19:06:28.899",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Ends tonight! Pick your size (Standard or King) \u0026 enjoy 2 FREE Tri-Comfort Pillows with mattress order. Code STP25: nectarsleep.attn.tv/aKQh8DNcy_mS\n.",
+          "date_time": "2025-12-28 19:05:53.044",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Countdowns, confetti, cooler sleep! Save up to 50% on America\u0027s most awarded mattress brand before the ball drops: nectarsleep.attn.tv/aBvPI4Th9Bn4\n.",
+          "date_time": "2025-12-31 19:06:27.379",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Why sleep flat? Recline your way with our Adjustable Bundle \u0026 save up to 66%. Includes mattress, base \u0026 bedding: nectarsleep.attn.tv/ajWQn27TNf9J\n.",
+          "date_time": "2026-01-04 15:06:33.297",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Hi, this is Quinn. Thanks for stopping by! Save up to 50% on mattresses plus get free delivery (usually within a week). Sleep better and wake up energized every morning.\n\nnectarsleep.attn.tv/a4ac6MkvwlHK\n\nQuestions? Text us back!\n.",
+          "date_time": "2026-01-05 15:52:38.284",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Bundle for bigger savings! Save up to 66% on our best-selling adjustable bundle (mattress + base + bedding):\nnectarsleep.attn.tv/apFa89gGVEtq \n.",
+          "date_time": "2026-01-06 15:51:31.786",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Did you know? Great sleep can come in a box. Our mattresses arrive ready to unbox \u0026 unwind. Save up to 50% now: nectarsleep.attn.tv/aDi5u682OtMa\n.",
+          "date_time": "2026-01-07 19:06:24.882",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Tired from tossing \u0026 turning? Our memory foam eases aches \u0026 isolates partner movement so you both sleep soundly.\nnectarsleep.attn.tv/aj1gQA-FkBGO\n. ",
+          "date_time": "2026-01-08 15:51:35.381",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Up to 50% less than competitors. Better sleep, smarter price + free delivery (usually within a week).\nnectarsleep.attn.tv/aOBxROAVTy7F \n.",
+          "date_time": "2026-01-09 19:05:55.219",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Upgrade your bedroom! Our stylish frames \u0026 bases perfectly complement a new mattress. Build your bundle:\nnectarsleep.attn.tv/aJyM2sGr9WaX\n. ",
+          "date_time": "2026-01-10 15:51:47.081",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Save up to 66% on a King bundle with adjustable base + mattress + sheets + pillows. Everything you need, one order. \nnectarsleep.attn.tv/aaEyHkhyeZpq\n.",
+          "date_time": "2026-01-10 21:12:02.885",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Save up to 66% on our Adjustable Bundle. Get the bed, base \u0026 bedding included. Better sleep, set your way: nectarsleep.attn.tv/aK00hcj0WOCY\n.",
+          "date_time": "2026-01-11 15:05:57.553",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Save up to 50% on mattresses made for cooler rest. Less sweating for more comfortable, uninterrupted sleep: nectarsleep.attn.tv/aP427hidOTXZ\n.",
+          "date_time": "2026-01-12 19:06:03.370",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Hi, this is Quinn. Save up to 50% on mattresses plus get free delivery (usually within a week). Everything you need to sleep better, delivered to your door.\n\nnectarsleep.attn.tv/aygDbHN7B974\n\nQuestions? Text us back!\n.",
+          "date_time": "2026-01-14 14:19:27.632",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Save up to 66% when you bundle a bed + frame (sheets included). Your bedroom makeover starts here. \n\nShop bundles:\nnectarsleep.attn.tv/aAnkaoKzhj2_ ",
+          "date_time": "2026-01-14 18:56:13.455",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Save up to 66% on the Foundation Bundle. An all-in-one sleep setup with bed, base \u0026 bedding. Easy upgrade, done: nectarsleep.attn.tv/aU14SrJ3iDhp\n.",
+          "date_time": "2026-01-16 19:06:04.765",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Nectar: Still eyeing the adjustable frame bundle? Save up to 66% \u0026 get ready to unbox sweet ZZZs!\n\nnectarsleep.attn.tv/amcppKXV60fP\n",
+          "date_time": "2026-01-17 12:00:25.118",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "What is the time line for shipping? To Austin Tx?",
+          "date_time": "2026-01-17 12:01:29.975",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Shipping time\"; last updated: 2024-08-06 22:53:39.252",
+          "date_time": "2026-01-17 12:03:21.715",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Order status/order tracking\"; last updated: 2025-07-07 14:12:38.798",
+          "date_time": "2026-01-17 12:03:21.715",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019bcce9-5253-4c74-f000-00008fce6bd7",
+          "message_text": "Nectar: Hi, thanks for reaching out and good question! We process orders within 3-5 business days. We usually ship via FedEx or UPS Ground. Standard delivery of your Nectar products takes approximately 2-5 business days for arrival once they ship. \n\nYou can also use our convenient online tool to see the latest updates on your order: https://nectarsleep.attn.tv/av3eELzk7WOR",
+          "message_type": "agent",
+          "agent": "87584",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-17 12:03:21.718"
+        }
+      ]
+    }
+  }
+}

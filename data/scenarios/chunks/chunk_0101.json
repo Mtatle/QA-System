@@ -1,0 +1,1321 @@
+{
+  "version": 1,
+  "chunk": "chunk_0101",
+  "scenarios": {
+    "501": {
+      "agentName": "Annie",
+      "has_shopify": true,
+      "id": "019bc91c-7c75-4e12-f000-0000f466c184",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://beistravel.com/products/the-mini-weekender-in-pink",
+            "item": "The Mini Weekender in Atlas Pink",
+            "timeAgo": "2026-01-16"
+          },
+          {
+            "link": "https://beistravel.com/products/the-essential-mini-backpack-in-black?_pos=6\u0026_sid=71db3dbfa\u0026_ss=r",
+            "item": "The Essential Mini Backpack in Black",
+            "timeAgo": "2026-01-16"
+          },
+          {
+            "link": "https://beistravel.com/products/the-classic-backpack-in-black",
+            "item": "The Classic Backpack in Black",
+            "timeAgo": "2026-01-16"
+          },
+          {
+            "link": "https://beistravel.com/products/the-backpack-in-black",
+            "item": "The Travel Backpack in Black",
+            "timeAgo": "2026-01-16"
+          },
+          {
+            "link": "https://beistravel.com/products/the-travel-backpack-in-denim-blue",
+            "item": "Gap x BÉIS The Travel Backpack in Denim Blue",
+            "timeAgo": "2026-01-16"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 4100374916,
+            "company_id": 7142,
+            "coupon_url": "https://www.beistravel.com/discount/WELCOMEhTP5lH?utm_source=attentive\u0026utm_medium=sms",
+            "value": "20",
+            "name": "Welcome 20%",
+            "coupon": "WELCOMEhTP5lH",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://beistravel.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "total": 116.05,
+            "coupon": "69PXRD5S",
+            "items": [
+              {
+                "price": [
+                  118
+                ],
+                "productLink": "https://beistravel.myshopify.com/products/the-backpack-in-black",
+                "name": "The Travel Backpack in Black"
+              }
+            ],
+            "link": "https://beistravel.com/3234234479/orders/d0e778d3678500edc9567f7cc153d7fe/authenticate?key=ee740dd9d2f9bffc2f1b3ed9882e8162",
+            "orderDate": "2026-01-16",
+            "discount_amount": 0,
+            "orderNumber": "3949171",
+            "date_time": "2026-01-16 23:19:37.104"
+          }
+        ]
+      },
+      "companyWebsite": "https://beistravel.com",
+      "companyName": "Beis Travel",
+      "notes": {
+        "escalate": [
+          "We don\u0027t ESC for this client, use ESC shortcut",
+          "If cx ask how to get/redeem the discount for downloading the app use ESC shortcut"
+        ],
+        "templates": [
+          "For Limited edition items don\u0027t use restock temps, they will not be restocked"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t share the duration of the sale/sale dates with customers!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Welcome to BÉIS Travel! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-01-16 18:12:15.373",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Hey there, newbie! First time shopping with us? We\u0027ve handpicked some essentials to get you started: https://beistravel.attn.tv/aOiEvCpM2zJJ . \n\nEnjoy 20% OFF with code WELCOMEhTP5lH \nbeistravel.attn.tv/ayvxO2KwYKm9 .",
+          "date_time": "2026-01-16 18:12:19.381",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "BÉIS Travel: Bags designed to make your every day easier. Save our contact to make getting all of our latest updates easy.",
+          "date_time": "2026-01-16 18:12:21.773",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "This code does not work",
+          "date_time": "2026-01-16 18:19:19.811",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Already have discount but not working - All brands\"; last updated: 2023-10-13 21:49:08.054",
+          "date_time": "2026-01-16 18:20:45.960",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Invalid code for marketing texts - All brands\"; last updated: 2023-10-10 16:39:50.091",
+          "date_time": "2026-01-16 18:20:45.960",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019bc91c-7c75-4e12-f000-0000f466c184",
+          "message_text": "BÉIS Travel: I\u0027m sorry to hear you\u0027re having trouble with the code. Just to make sure, have you signed up for text or email alerts before? If so, our system is set up to give the same promo you previously received, which might be why that code isn\u0027t working! If not, can you share a screenshot of the error along with the items in your cart so I can take a closer look?",
+          "message_type": "agent",
+          "agent": "42041",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-16 18:20:45.962"
+        }
+      ]
+    },
+    "502": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "018fbbe0-5770-4c7f-f000-0000203daea7",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "COZYEMPLOYEE",
+            "content": [
+              "• 35% off any items. \n\n• You can share this discount ONLY if the customer receives an automated message asking them if they would want an employee discount"
+            ]
+          },
+          {
+            "title": "SUPERBOWL25",
+            "content": [
+              "• Applies to all items. 35% off for the next 72 hours. \n→ Only send to anyone who says Eagles in their response."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 540913319,
+            "description": "Batch 12 - 100,00 codes, Oct 14 2024",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth2.myshopify.com/discount/NP50D67-MF?utm_source=attentive\u0026utm_medium=sms",
+            "name": "$50 Credit (Non-Purchaser Flow)",
+            "coupon": "NP50D67-MF",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 540913319,
+            "description": "$50 Welcome Credit (Shopify Auto-Generated). Code in shopify is \"COZYEARTH-\"",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth2.myshopify.com/discount/50-16851q?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcomeoffer",
+            "value": "50",
+            "name": "$50 Welcome Credit Shopify Auto-Gen",
+            "coupon": "50-16851q",
+            "redemption_status": "UNUSED",
+            "value_type": "FLAT_FIXED_CURRENCY"
+          },
+          {
+            "subscriber_id": 540913319,
+            "description": "Tydo 35% #2",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth2.myshopify.com/discount/6G38CQ?utm_source=attentive\u0026utm_medium=sms",
+            "name": "DELETED - Tydo #2",
+            "coupon": "6G38CQ",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 540913319,
+            "description": "$50 Gift Card for Welcome Flow test",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth.com/discount/50-7M866C?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=gcwelcome",
+            "name": "$50 Welcome Gift Card",
+            "coupon": "50-7M866C",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 540913319,
+            "description": "$50 Welcome Credit (Shopify Auto-Generated). Code in shopify is \"COZYEARTH-\"",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth2.myshopify.com/discount/CjNLZx?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcomeoffer",
+            "value": "50",
+            "name": "$50 Welcome Credit Shopify Auto-Gen",
+            "coupon": "CjNLZx",
+            "redemption_status": "USED",
+            "value_type": "FLAT_FIXED_CURRENCY"
+          },
+          {
+            "subscriber_id": 540913319,
+            "description": "100 min $50 off for session abandonment flow",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth.com/discount/SE9FDg4m?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Session $50 (100 min)",
+            "coupon": "SE9FDg4m",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 540913319,
+            "description": "Codes for our our $50 credit overlay",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth2.myshopify.com/discount/CR50-58RC33?utm_source=attentive\u0026utm_medium=text",
+            "name": "$50 Welcome Credit (EVERGREEN)",
+            "coupon": "CR50-58RC33",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 540913319,
+            "description": "Automated random dynamic codes for session abandon - 4/1/24",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth2.myshopify.com/discount/SA50-t8lcX0?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcomeoffer",
+            "value": "50",
+            "name": "$50 Session Abandon Shopify Auto-Gen",
+            "coupon": "SA50-t8lcX0",
+            "redemption_status": "UNUSED",
+            "value_type": "FLAT_FIXED_CURRENCY"
+          },
+          {
+            "subscriber_id": 540913319,
+            "description": "Batch 9, 200,000, February 29th 2024",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth2.myshopify.com/discount/SA508T8-23?utm_source=attentive\u0026utm_medium=sms",
+            "name": "$50 Credit Session Abandonment Journey",
+            "coupon": "SA508T8-23",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 540913319,
+            "description": "75 min $30 Credit for Welcome Flow",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth.com/discount/WEWPnYCM?utm_source=attentive\u0026utm_medium=sms",
+            "name": "DELETED - $30 Credit *75 mine",
+            "coupon": "WEWPnYCM",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://cozyearth.com/products/waffle-blanket?variant=42335415861428#dialog-nav-mobile-women%27s",
+            "item": "Waffle Blanket - Charcoal / Queen",
+            "timeAgo": "2024-05-17"
+          },
+          {
+            "link": "https://cozyearth.com/products/bamboo-pajama-pant?variant=41317676449972",
+            "item": "Women\u0027s Bamboo Pajama Pant in Stretch-Knit - Navy / XS / Short",
+            "timeAgo": "2024-02-09"
+          },
+          {
+            "link": "https://cozyearth.com/products/bamboo-pajama-pant-30?utm_campaign=Concierge-reply\u0026utm_medium=sms\u0026utm_source=attentive\u0026variant=41362798051508\u0026externalId=EaAGr",
+            "item": "Women\u0027s Stretch-Knit Bamboo Pajama Pant - 30” Inseam - Navy / L",
+            "timeAgo": "2024-02-09"
+          },
+          {
+            "link": "https://cozyearth.com/products/rib-knit-bamboo-lounge-capri?utm_campaign=Concierge-reply\u0026utm_medium=sms\u0026utm_source=attentive\u0026variant=40339158139060\u0026externalId=EaAGr",
+            "item": "Women’s Bamboo Rib-Knit Lounge Capri - Navy / L",
+            "timeAgo": "2024-02-09"
+          },
+          {
+            "link": "https://cozyearth.com/products/womens-brushed-bamboo-pull-on-capri?variant=42336828981428",
+            "item": "Women\u0027s Ultra-Soft Bamboo Pull On Capri - Navy / L",
+            "timeAgo": "2024-01-08"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://cozyearth.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-05",
+            "coupon": "CjNLZx",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      389,
+                      9.25
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=9434636106092986185178",
+            "link": "https://cozyearth.com/21143697/orders/1def8c290b13801099ae01123e8fa873/authenticate?key=838633c766507d83dd345af3ff65c487\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-05 01:25:55.897",
+            "discount_amount": 0,
+            "orderNumber": "1757828",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=9434636106092986185178",
+            "total": 270.46
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-01-14",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      3.77,
+                      145
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2024-01-14 18:30:24.985",
+            "discount_amount": 0,
+            "orderNumber": "5446809288884",
+            "total": 74.38
+          }
+        ]
+      },
+      "companyWebsite": "https://cozyearth.com",
+      "companyName": "Cozy Earth",
+      "notes": {
+        "escalate": [
+          "ESC all MyFitness pall App inquiries"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t share sale end dates with customers"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: LAST DAY: 35% off bedding ends tonight! Don\u0027t miss your chance to snag the perfect Mother\u0027s Day gift at a discounted price. \n\nUse code MOMSGIFT: https://cozyearth.attn.tv/l/RxF/EaAGr ",
+          "date_time": "2024-04-28 17:00:45.504",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Join us for our Mother\u0027s Day Gift Guide livestream! Discover the perfect gifts to show your appreciation for Mom with luxurious Bamboo Sheet Sets, loungewear, and so much more.\n\nJoin The Live: https://cozyearth.attn.tv/atFSS-tqbCd1",
+          "date_time": "2024-04-29 16:31:32.258",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey Jan, Reminder: Mother\u0027s Day is just around the corner. Order by May 5th for standard shipping and May 8th for expedited. Don\u0027t wait; get your gifts on time!\n\nShop Now: https://cozyearth.attn.tv/agkgM_lH__ZF ",
+          "date_time": "2024-04-30 17:06:04.457",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Member Announcement: Your Cozy Earth Credit is here! Take advantage of your $35 membership perks and use your monthly credit before 5/31/24; use code: MAYCREDIT\n\nThis month\u0027s giveaway is the Ultimate Bath Bundle + Fount Society\u0027s five-step Routine. The winner will be chosen at month-end, so stay tuned for an email to claim your prize!\n\nRedeem My Credit: https://cozyearth.attn.tv/aprIzjgQH1HY ",
+          "date_time": "2024-05-01 17:09:22.145",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: MOTHER\u0027S DAY FLASH SALE - Shop 40% off our best-selling Jogger Sets for 3 HOURS ONLY\n\nShop the Flash Sale: https://cozyearth.attn.tv/a9GdFFegakQE",
+          "date_time": "2024-05-02 15:05:04.094",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: 1 HOUR LEFT! 40% OFF WOMEN\u0027S JOGGER SETS! \nYou won\u0027t want to miss this...\n\nShop the Mother\u0027s Day Flash Sale: https://cozyearth.attn.tv/aZhG6z02lgSc",
+          "date_time": "2024-05-02 17:04:05.375",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: HURRY: Shop 35% OFF our founder\u0027s Mother\u0027s Day Gift Guide this weekend only! Use code: GIFTGUIDE\n\nShop Offer: https://cozyearth.attn.tv/ayqmnrk26qeq",
+          "date_time": "2024-05-04 17:01:10.347",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: You are already subscribed. Your coupon code is CR50-58RC33. Click here to shop now: cozyearth.com.",
+          "date_time": "2024-05-04 20:24:05.575",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Thank you for your purchase! Your order number is 1757828. View more information about your order here: https://cozyearth.attn.tv/aGDJKDJgkC6j .",
+          "date_time": "2024-05-04 22:26:16.332",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey! Bailey here again, just following up! Want to use my employee discount? 35% off your order! The offer is still on the table: Reply \"Yes\" or \"No\" :)",
+          "date_time": "2024-05-06 20:55:59.194",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey jan, order #1757828 has been delivered! Track your order here: https://cozyearth.attn.tv/aY6fiQ8xFKBe .",
+          "date_time": "2024-05-10 20:53:05.855",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Celebrating you and all the incredible women around us. From the bottom of our hearts, thank you. Enjoy our exclusive Mother\u0027s Day offer: up to 30% off everything, just for you.\n\nTreat Yourself: https://cozyearth.attn.tv/aj85QVD2fwI8 ",
+          "date_time": "2024-05-12 17:01:55.841",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: EXTENDED: Up to 30% off SITEWIDE! Mother\u0027s Day savings are still going strong, but not for long!\n\nShop Now: https://cozyearth.attn.tv/aQXRlUF8R003",
+          "date_time": "2024-05-14 17:04:08.679",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: NEW MEN\u0027S CITYSCAPE IS HERE! Fresh colors and styles just in time for summer. Don\u0027t miss out!\n\nShop Now: https://cozyearth.attn.tv/akTO39VDGFKI",
+          "date_time": "2024-05-16 17:16:50.030",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: UP TO 55% OFF IS HERE! Save big during our We Made Too Much Sale. Hurry, it ends soon!\n\nShop the sale: https://cozyearth.attn.tv/aQwz07maOvoU",
+          "date_time": "2024-05-17 17:03:54.109",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey Jan, this is Sarah. Thanks for checking out our site! https://cozyearth.attn.tv/ajqpQP55NFmW \n\nAre you looking for anything in particular today?",
+          "date_time": "2024-05-17 17:33:21.741",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Time\u0027s running out! Last chance to save up to 55% on select products during our spring cleaning event. Shop now: https://cozyearth.attn.tv/akEWcp9UBwaL",
+          "date_time": "2024-05-18 17:01:01.920",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: 55% OFF ENDS TONIGHT! Don\u0027t miss your chance to save big!\n\nHurry, shop now: https://cozyearth.attn.tv/ayeVzmV7sIQB \n",
+          "date_time": "2024-05-20 17:03:10.060",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Don\u0027t forget about the Linen Bamboo Sheet Set - Natural / Cal King in your cart!\n\nComplete checkout: https://cozyearth.attn.tv/aC9nirSp5Fyb",
+          "date_time": "2024-05-20 17:36:03.586",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Memorial Day Sale! Elevate your style with up to 25% off our apparel collection.\n\nShop Now: https://cozyearth.attn.tv/aq4_q2HLr4Vd",
+          "date_time": "2024-05-23 17:02:08.546",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: 30-35% off THIS WEEKEND ONLY! Don\u0027t miss the best deals of the season!\n\nShop The Memorial Day Sale: https://cozyearth.attn.tv/aHXs7ww3HrTI\n",
+          "date_time": "2024-05-24 17:01:25.336",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Get up to 35% OFF this weekend only! Find your sanctuary during our BEST SALE of the year!\n\nShop now: https://cozyearth.attn.tv/aT1VYlNk7G6p",
+          "date_time": "2024-05-25 17:01:42.328",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: 30-35% off is ENDING SOON! Shop our best sale of the year while you still can!\n\nHurry, shop now: https://cozyearth.attn.tv/a-uIr6WKqVHM",
+          "date_time": "2024-05-26 17:02:23.697",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: FLASH SALE - 40% OFF BEDDING FOR 3 HOURS ONLY IS HERE\n\nShop the BEST SALE OF THE YEAR this Memorial Day: https://cozyearth.attn.tv/a6SlTGvaU2PT",
+          "date_time": "2024-05-27 15:08:54.269",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey Erin, this is Sarah. Thanks for stopping by Cozy Earth! https://cozyearth.attn.tv/agX6JGaE9ewC \n\nCan I help you find your next cozy favorite?",
+          "date_time": "2024-05-27 16:59:51.087",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Can I use the $50 ?",
+          "date_time": "2024-05-27 17:00:40.778",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: ONE HOUR LEFT to save 40% OFF BEDDING - Hurry, time is ticking!\n\nShop the Flash Sale: https://cozyearth.attn.tv/aBWl-kEfmUel",
+          "date_time": "2024-05-27 17:05:44.261",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fbbe0-5770-4c7f-f000-0000203daea7",
+          "message_text": "Cozy Earth: Thanks for reaching out. Just to be sure, do you mean whether you can use your $50 credit CR50-58RC33 with the items on sale? https://cozyearth.attn.tv/sl/5DUGda_N \n\nIf yes, I\u0027m afraid you won\u0027t be able to do that as the system can only accept one code per order. ",
+          "message_type": "agent",
+          "agent": "47996",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-27 17:06:32.957"
+        }
+      ]
+    },
+    "503": {
+      "agentName": "Allie",
+      "has_shopify": true,
+      "id": "019c5368-d9f1-41f1-f000-000023ed7914",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.stevemadden.com/products/kinzee-white-leather",
+            "item": "KINZEE WHITE LEATHER - WHITE LEATHER / 8.5 / 107",
+            "timeAgo": "2026-02-12"
+          },
+          {
+            "link": "https://www.stevemadden.com/products/lassy-bone-leather?variant=39970042577029",
+            "item": "LASSY BONE LEATHER - BONE LEATHER / 7 / 287",
+            "timeAgo": "2026-02-12"
+          },
+          {
+            "link": "https://www.stevemadden.com/products/harp-black",
+            "item": "HARP BLACK - BLACK / 9 / 1",
+            "timeAgo": "2025-11-29"
+          },
+          {
+            "link": "https://www.stevemadden.com/products/dodge-off-white",
+            "item": "DODGE OFF-WHITE - OFF-WHITE / 7.5 / 586",
+            "timeAgo": "2025-11-29"
+          },
+          {
+            "link": "https://www.stevemadden.com/products/dodge-bone-multi",
+            "item": "DODGE BONE MULTI - BONE MULTI / 8 / 350",
+            "timeAgo": "2025-11-29"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 602765588,
+            "company_id": 2635,
+            "coupon_url": "https://stevemadden.myshopify.com/discount/SMS8KRRL5?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "value": "20",
+            "name": "SMS-Welcome-20%Off",
+            "coupon": "SMS8KRRL5",
+            "redemption_status": "USED",
+            "value_type": "PERCENT"
+          },
+          {
+            "subscriber_id": 602765588,
+            "company_id": 2635,
+            "coupon_url": "https://stevemadden.myshopify.com/discount/SMSzpxgDq?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome2",
+            "value": "20",
+            "name": "Welcome-2_hs+rb_test",
+            "coupon": "SMSzpxgDq",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          },
+          {
+            "subscriber_id": 602765588,
+            "company_id": 2635,
+            "coupon_url": "https://www.stevemadden.com/collections/womens-new-arrivals/discount/PPNDaWXU?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=PostPurchase",
+            "value": "10",
+            "name": "Post Purchase Coupon Test",
+            "coupon": "PPNDaWXU",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://stevemadden.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-07-31",
+            "items": [
+              {
+                "price": [
+                  159.95
+                ],
+                "productLink": "https://stevemadden.myshopify.com/products/astor-black-leather",
+                "name": "ASTOR BLACK LEATHER"
+              }
+            ],
+            "trackingLink": "https://order.buywithprime.amazon.com/4ldrx95dj5/orders/322-9FVW-GEWVK6",
+            "link": "https://www.stevemadden.com/21708465/orders/d60a4c839c5fef19f2fae7ec65374525/authenticate?key=8c4dc248901812459c61e215d57ff4e6",
+            "date_time": "2025-07-31 16:44:16.775",
+            "discount_amount": 0,
+            "orderNumber": "10102530",
+            "order_tracking_link": "https://order.buywithprime.amazon.com/4ldrx95dj5/orders/322-9FVW-GEWVK6",
+            "total": 173.15
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-07-30",
+            "coupon": "SMS8KRRL5",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      159.95,
+                      209.95
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://www.fedex.com/fedextrack/?trknbr=472677347519",
+            "link": "https://www.stevemadden.com/21708465/orders/2902a216487612af55468bcca060f5aa/authenticate?key=1a3bef4920fbe83a21de1f679d2682e2",
+            "date_time": "2025-07-30 18:32:31.912",
+            "discount_amount": 0,
+            "orderNumber": "10099959",
+            "order_tracking_link": "https://www.fedex.com/fedextrack/?trknbr=472677347519",
+            "total": 320.34
+          }
+        ]
+      },
+      "companyWebsite": "https://stevemadden.com",
+      "companyName": "Steve Madden",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "blocklisted_words": [
+        "ma\u0027am",
+        "maam",
+        "knock-off",
+        "Gucci",
+        "Prada",
+        "Bottega",
+        "Versace",
+        "dupe"
+      ],
+      "escalation_preferences": [
+        "Discount code errors",
+        "Exchanges and returns",
+        "Shipping questions"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Have You SEEN This Sale? up to 70% OFF. This is your moment. http://stevemadden.io/aarzRBxgnHnR .",
+          "date_time": "2026-01-15 09:11:44.089",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Almost Gone: Up To 70% Off! Hurry, before it\u0027s too late: http://stevemadden.io/aF01fuvUCCjc .",
+          "date_time": "2026-01-19 10:22:20.289",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Being your own valentine is sooo in. Take it from JaNa Craig. Her Valentine\u0027s Day collection is out now: http://stevemadden.io/aKptUMeb0JUC .",
+          "date_time": "2026-01-20 20:37:32.952",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Turn it up this V-Day (or any day for that matter). Hot heels incoming... http://stevemadden.io/a9i51kMTe8eI .",
+          "date_time": "2026-01-22 20:10:25.658",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Today\u0027s forecast: dramatic. And we\u0027ve got just the thing...\nhttp://stevemadden.io/asR6m3HYCElb .",
+          "date_time": "2026-01-25 09:13:03.229",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Trapped inside? Perfect. You\u0027ve got time to see what\u0027s new. http://stevemadden.io/aNROC1dc1SZt .",
+          "date_time": "2026-01-26 09:09:27.337",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Shoveling through the week? These styles bring the heat... http://stevemadden.io/aNynOCAGbRNX .",
+          "date_time": "2026-01-27 09:06:45.109",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Roses are red...so are these shoes. We\u0027re bringing the heat just in time for Valentine\u0027s day. http://stevemadden.io/aosqaP8EQN-6 .",
+          "date_time": "2026-01-30 13:15:53.108",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Ballet is back! It\u0027s time to channel your inner prima. Take these styles for a twirl... http://stevemadden.io/a61LU-XhY8K8 .",
+          "date_time": "2026-02-01 09:06:37.488",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Your split-toe moment is here. The new silhouette you\u0027ve been seeing all over your feed. Discover tabi now: http://stevemadden.io/aY8PjvjEhBhl .",
+          "date_time": "2026-02-05 20:25:45.086",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Spring is closer than it feels. Consider this your warm-up... http://stevemadden.io/aj2g8fC274Tx .",
+          "date_time": "2026-02-07 13:07:18.295",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Warm weather? Ready when you are! Check out what just dropped. http://stevemadden.io/ajalm-LJYUAm .",
+          "date_time": "2026-02-09 20:41:10.365",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: As the world competes on ice, we\u0027re dreaming of sunnier days - shop our new sandals. http://stevemadden.io/a-tbCBZulbTX .",
+          "date_time": "2026-02-10 14:06:02.050",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Long weekend agenda: this sale. 25% off select styles are live now http://stevemadden.io/agzHPl1V6AsN .",
+          "date_time": "2026-02-11 09:15:44.578",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Don\u0027t overthink it. If you like it, get it now. Take 25% OFF while you can: http://stevemadden.io/a8LUh7ff-sI9 .",
+          "date_time": "2026-02-12 14:01:59.130",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Steve Madden: Grab the Kyndall Bone Suede Knee-High Boot — sleek suede, pointed toe, refined heel, perfect for a polished look, Brianna.\n\nEnjoy $59.96 off these boots — don\u0027t miss out.\n\nShop now: http://stevemadden.io/aA2etlpDkBaO .",
+          "date_time": "2026-02-12 14:47:10.753",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Dude that text is so misleading and such a lie give me an extra $60 off and I\u0027ll buy them",
+          "date_time": "2026-02-12 14:47:56.728",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5365-9f11-426b-f000-000023ed7914",
+          "message_text": "Steve Madden: I can\u0027t offer an additional $60 discount, but you can use the 20% off coupon code SMSzpxgDq at stevemadden.com. Check our website for more promotions and sales.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 14:48:14.756"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "That code isn\u0027t working",
+          "date_time": "2026-02-12 14:50:06.587",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Free shipping\"; last updated: 2025-12-17 23:47:25.551",
+          "date_time": "2026-02-12 14:51:46.440",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5368-d9f1-41f1-f000-000023ed7914",
+          "message_text": "Steve Madden: Sorry about that. Unfortunately, it looks like the code is no longer active. Our deals will always be shared with our SMS subscribers or on our website, so keep an eye out!",
+          "message_type": "agent",
+          "agent": "46059",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-12 14:51:46.441"
+        }
+      ]
+    },
+    "504": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "019b2366-188b-4b9f-f000-0000eba378bb",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "PROMO",
+            "content": [
+              "The 10% text sign-up code only works for these items: http://attn.tv/lg/offerdetails.html\n\nEligible Models:\nVacuums:\nA905RM\nA907GMS\nA927KGMS\nA927KVMS\nA908VMR\nA929KVM\nA939KBMS\nA913BM\nA900BM\nR975GM1\nA925KSM\n\nAir Purifiers:\nAS560DWR0\nAS330DWR0\nAP151MBA1\nAP151MWA1\n\nAeroTowers:\nU9CS1C\nU9CV2B\n\nHeadphones:\nHBS-FN6.ACUSBKI\nHBS-FN6.ACUSWHI\nHBS-FN5W.ACUSBKI\nHBS-FN5W.ACUSWHI\nHBS-FN4.ACUSBKI\nHBS-FN4.ACUSWHI\nTONE-FP8.AUSACLK\nTONE-FP9.AUSACLK\nTONE-FP5.AUSACLK\n\nLG Stylers:\nS3MFBN\nS3RFBN\nS3WFBN\nS5MSB\nS3CW\n\nWireless Speakers:\nPL2\nPL5\nPL5W\n\nDisclaimer:\nExtra 10% off select vacuums, PuriCare air purifiers, TONE Free headphones and XBOOM Go wireless speakers is off the pre-tax sale price on LG.com only. Offer valid for one-time use only within 30 days of code being sent. To receive the additional 10% off savings, promotion code must be entered at online checkout and will be applied to eligible products only. If any of the qualifying items are removed from the cart, canceled or returned, the promotional savings will be void. Availability, prices and terms of offer are subject to change without notice. No adjustments to prior purchases and non-redeemable for cash.\nQualifying Vacuums: A905RM, A907GMS, A927KGMS, A927KVMS, A908VMR, A929KVM, R975GM1\nQualifying PuriCare Air Purifiers: AS560DWR0, AS330DWR0, AP151MBA1, AP151MWA1\nQualifying TONE Free headphones: HBS-FN6.ACUSBKI, HBS-FN6.ACUSWHI, HBS-FN5W.ACUSBKI, HBS-FN5W.ACUSWHI, HBS-FN4.ACUSBKI, HBS-FN4.ACUSWHI, TONE-FP8.AUSACLK, TONE-FP9.AUSACLK, TONE-FP5.AUSACLK\nQualifying LG Styler: S3MFBN, S3RFBN, S3WFBN, S5MSB, S3CW\nQualifying XBOOM Go Wireless Speakers: PL2, PL5, PL5W"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 3953359035,
+            "company_id": 6714,
+            "name": "10% Off Welcome Flow",
+            "coupon": "WLCMN6QO4"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://lg.com/us",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-12-02",
+            "coupon": "capms101110wguko",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      299.99,
+                      299.99,
+                      1999.99,
+                      299.99,
+                      1999.99
+                    ],
+                    "Count": 5
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2025-12-02 05:04:12.710",
+            "discount_amount": 0,
+            "orderNumber": "1116555777",
+            "total": 2299.98
+          }
+        ]
+      },
+      "companyWebsite": "https://lg.com/us",
+      "companyName": "LG",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS using the \"Escalation template\""
+        ],
+        "templates": [
+          "For 10% off welcome code issues use temp \u0027Follow up 1\u0027, then \u0027Follow up 2\u0027 after confirming the item is excluded from promos",
+          "For fridge recommendations use FRR shortcut",
+          "For service-related issues/scheduled repair service appointments use SRI shortcut",
+          "For cxs looking for replacement parts/accessories from an affiliate Parts Distributor use RPA shortcut",
+          "If a cx has an inquiry for finding the serial number/model number of an item:",
+          "➜ If it\u0027s a TV, use mnt shortcut",
+          "➜ If it\u0027s another product, use mna shortcut"
+        ],
+        "dos_and_donts": [
+          "If it\u0027s a new conversation and we didn\u0027t introduce ourselves in the automated message, start your message with: \"This is Jordan at LG.\""
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Reply Y to subscribe to LG recurring automated personalized marketing alerts (e.g. cart reminders, product tips, special offers) from LG Electronics USA.",
+          "date_time": "2025-12-02 00:05:05.905",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Welcome to LG Electronics USA! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2025-12-02 00:05:31.004",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Thanks for your recent purchase. We\u0027re so glad you joined!\n\nGet ready for your new LG product by creating a MyLG account. Learn all the benefits: https://lg.attn.tv/aVEjSeoCxGub .",
+          "date_time": "2025-12-02 00:05:35.018",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Texts may be retained for customer support \u0026 other purposes. For more info, see Terms (lg.com/us/legal) and Privacy (lg.com/us/privacy)",
+          "date_time": "2025-12-02 00:05:36.050",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Thanks for your purchase on LG.com! We\u0027ll send another message when your order is ready for shipping. 📦\nOrder #: 1116555777\nEstimated delivery date: 12-05-2025 - 12-15-2025\nJust tap here to manage your order: https://lg.attn.tv/ah6WcZblyD-z .",
+          "date_time": "2025-12-02 12:55:51.163",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Hi, I\u0027m Jordan - your go-to LG specialist. Feel free to text me any time, and save our contact so you don\u0027t miss any updates!",
+          "date_time": "2025-12-03 12:41:34.692",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Your LG order has been processed and is out for delivery! Feel free to check up on its status: https://lg.attn.tv/auR1Yha2IIDd ✏️ \nOrder #: 1116555777\nEstimated delivery date: 12-15-2025",
+          "date_time": "2025-12-04 12:13:13.069",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Welcome back 🤩 Ready to level up your LG collection? Text back here for recommendations on our top deals right now!\n\nlg.attn.tv/aQ8I_KNCVw_y .",
+          "date_time": "2025-12-07 15:24:15.060",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: FINAL HOURS: Get 30-56% off select appliances. Enjoy extended access to our top deals of the year! Shop Now: lg.attn.tv/aECKjiwoKQdO ",
+          "date_time": "2025-12-10 13:02:34.561",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Welcome back 🤩 Ready to level up your LG collection? Text back here for recommendations on our top deals right now!\n\nlg.attn.tv/av5YQ86miGfz .",
+          "date_time": "2025-12-15 12:34:45.222",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi Jordan! My order is supposed to ship out today",
+          "date_time": "2025-12-15 13:34:33.069",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I tried calling customer service. I was on hold over 45 minutes",
+          "date_time": "2025-12-15 13:35:15.671",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b2350-a948-4604-f000-0000eba378bb",
+          "message_text": "LG Electronics USA: Sorry to hear you were on hold for so long. Are you referring to the order you placed on 12/02/25? If so, please find the details here: \nOrder #: 1116555777\nEstimated delivery date: 12-05-2025 - 12-15-2025\nJust tap here to manage your order: https://lg.attn.tv/abzjbrk54Mn9 .\nIt is estimated to be delivered today, at the latest. I hope this helps. Let me know if there\u0027s anything else I can assist you with. ",
+          "message_type": "agent",
+          "agent": "82222",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-12-15 13:40:47.451"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Everytime I attempt to enter in info on the track my order page...it will not go through",
+          "date_time": "2025-12-15 13:42:12.645",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027ve tried several times to obtain an update if my order would be delivered today",
+          "date_time": "2025-12-15 13:42:50.783",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b235d-e001-4275-f000-0000eba378bb",
+          "message_text": "LG Electronics USA: Hi, this is Jordan at LG. I\u0027m really sorry for the inconvenience. Have you tried chatting with our team here: https://lg.attn.tv/aqaBcITzLZ5p ? Let me know how it goes!",
+          "message_type": "agent",
+          "agent": "109955",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-12-15 13:55:13.435"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Unable to chat w/ rep.  Takes me to the track my order page",
+          "date_time": "2025-12-15 13:57:42.925",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I can\u0027t type in a message",
+          "date_time": "2025-12-15 13:58:31.107",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Escalation template (esc temp)\"; last updated: 2025-04-01 19:42:53.703",
+          "date_time": "2025-12-15 14:04:12.192",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b2366-188b-4b9f-f000-0000eba378bb",
+          "message_text": "LG Electronics USA: I understand the frustration, sorry about that. For the best answer, you\u0027ll want to reach out to our Support team directly via email here: https://lg.attn.tv/a-sF7ho7fhab or phone at 800-243-0000 where they are available 7 days/week from 8am-9pm EST. You can also chat with the team here: https://lg.attn.tv/aZaqXC_RbRlP ",
+          "message_type": "agent",
+          "agent": "82222",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-12-15 14:04:12.193"
+        }
+      ]
+    },
+    "505": {
+      "agentName": "Jonathan",
+      "has_shopify": true,
+      "id": "0194397d-6324-4cf0-f000-0000aa9ad66f",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Check Website",
+            "content": [
+              "• Please check the brand website for the most up to date holiday promotions."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2862274159,
+            "company_id": 2585,
+            "coupon_url": "https://elevated-faith.myshopify.com/discount/4MN78S?utm_source=attentive\u0026utm_medium=sms",
+            "value": "20",
+            "name": "WINBACK20",
+            "coupon": "4MN78S",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://elevatedfaith.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://elevatedfaith.com/collections/best-sellers/products/perfect-love-unisex-hoodie",
+            "item": "Perfect Love Unisex Hoodie",
+            "timeAgo": "2025-01-06"
+          },
+          {
+            "link": "https://elevatedfaith.com/collections/best-sellers/products/do-not-fear-grey-unisex-hoodie",
+            "item": "Do Not Fear Grey Unisex Hoodie",
+            "timeAgo": "2025-01-06"
+          },
+          {
+            "link": "https://elevatedfaith.com/collections/best-sellers/products/created-by-the-creator-unisex-hoodie?variant=44663059677335",
+            "item": "Created by the Creator Unisex Hoodie",
+            "timeAgo": "2025-01-06"
+          },
+          {
+            "link": "https://elevatedfaith.com/collections/new-arrivals/products/peace-of-god-unisex-crewneck",
+            "item": "Peace of God Unisex Crewneck",
+            "timeAgo": "2025-01-06"
+          },
+          {
+            "link": "https://elevatedfaith.com/collections/best-sellers/products/child-of-god-unisex-hoodie",
+            "item": "Child of God Unisex Hoodie",
+            "timeAgo": "2025-01-05"
+          }
+        ]
+      },
+      "companyWebsite": "https://elevatedfaith.com",
+      "companyName": "Elevated Faith",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Sizing questions",
+        "Discount code errors"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/VWD",
+          "date_time": "2025-01-04 19:06:31.361",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Welcome! Your 25% BACK offer is here! Tap here to automatically apply your offer and shop now: https://elevatedfaith.attn.tv/aU7E0XA9rP4b ",
+          "date_time": "2025-01-04 19:06:33.903",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love!\n\nStart with our best sellers because top styles sell out quickly \u003e https://elevatedfaith.attn.tv/aiXx9_GzQN6o .",
+          "date_time": "2025-01-04 19:07:40.990",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Our cozy unisex hoodies are perfect for any season.\n\n35 people are currently viewing the hoodie.\n\nShop now: https://elevatedfaith.attn.tv/a4-G0OfMQeI7 .",
+          "date_time": "2025-01-04 19:25:17.901",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Check out the No Greater Love unisex crewneck! A must-have addition to your wardrobe. \n\nShop now: https://elevatedfaith.attn.tv/ahrtifGiEhKb .",
+          "date_time": "2025-01-05 12:38:11.899",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Elevated Faith: Hey there! We have something exciting just for you.\n\nShop before it\u0027s too late! https://elevatedfaith.attn.tv/aACB9j2Pae41 .",
+          "date_time": "2025-01-05 13:38:14.388",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "discount code",
+          "date_time": "2025-01-05 21:40:29.637",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0194397d-6324-4cf0-f000-0000aa9ad66f",
+          "message_text": "Elevated Faith: Hi there! Your 25% back offer is here! Tap here to automatically apply your offer and shop now: https://elevatedfaith.attn.tv/ackRaQbDTV-A\n\nLet me know if you have any questions!",
+          "message_type": "agent",
+          "agent": "82455",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-01-05 21:41:46.291"
+        }
+      ]
+    }
+  }
+}
