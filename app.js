@@ -3550,10 +3550,22 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const titleWrap = document.createElement('div');
                 titleWrap.className = 'coupon-code-title-wrap';
 
+                const titleRow = document.createElement('div');
+                titleRow.className = 'coupon-code-title-row';
+
                 const title = document.createElement('div');
                 title.className = 'coupon-code-title';
                 title.textContent = titleText;
-                titleWrap.appendChild(title);
+                titleRow.appendChild(title);
+
+                if (status) {
+                    const statusTag = document.createElement('span');
+                    statusTag.className = `coupon-code-status coupon-code-status--${status}`;
+                    statusTag.textContent = status;
+                    titleRow.appendChild(statusTag);
+                }
+
+                titleWrap.appendChild(titleRow);
 
                 if (redeemedDate) {
                     const redeemedDateDisplay = redeemedDate.replace(/:\d{2}(?:\.\d{3})?$/, '');
@@ -3563,13 +3575,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     titleWrap.appendChild(redeemedLine);
                 }
                 header.appendChild(titleWrap);
-
-                if (status) {
-                    const statusTag = document.createElement('span');
-                    statusTag.className = `coupon-code-status coupon-code-status--${status}`;
-                    statusTag.textContent = status;
-                    header.appendChild(statusTag);
-                }
                 card.appendChild(header);
 
                 if (couponCode && couponCode !== titleText) {
