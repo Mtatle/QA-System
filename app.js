@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let templatesData = [];
     let assignmentQueue = [];
     let assignmentContext = null;
-    let draftSaveTimer = null;
+    let assignmentDraftSaveStateByAssignmentId = {};
     let monolithicScenariosLoaded = false;
     let runtimeScenariosIndex = null;
     let runtimeScenariosIndexPromise = null;
@@ -181,6 +181,35 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!keepIds.has(id)) {
                 locallySkippedAssignmentIds.delete(id);
             }
+        });
+    }
+
+    function getAssignmentDraftSaveState(assignmentId, options = {}) {
+        const id = String(assignmentId || '').trim();
+        if (!id) return null;
+        let state = assignmentDraftSaveStateByAssignmentId[id];
+        if (!state && options.create !== false) {
+            state = {
+                timer: null,
+                inFlight: false,
+                nextPayload: null,
+                latestVersion: 0
+            };
+            assignmentDraftSaveStateByAssignmentId[id] = state;
+        }
+        return state || null;
+    }
+
+    function clearAssignmentDraftSaveTimer(assignmentId) {
+        const state = getAssignmentDraftSaveState(assignmentId, { create: false });
+        if (!state || !state.timer) return;
+        clearTimeout(state.timer);
+        state.timer = null;
+    }
+
+    function clearAllAssignmentDraftSaveTimers() {
+        Object.keys(assignmentDraftSaveStateByAssignmentId || {}).forEach((assignmentId) => {
+            clearAssignmentDraftSaveTimer(assignmentId);
         });
     }
 
@@ -431,6 +460,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     function clearAssignmentSessionId() {
         localStorage.removeItem('assignmentSessionId');
         assignmentPayloadCacheSessionId = '';
+        clearAllAssignmentDraftSaveTimers();
+        assignmentDraftSaveStateByAssignmentId = {};
         clearAssignmentResponseCaches();
     }
 
@@ -461,6 +492,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     attempts: Number(job.attempts || 0),
                     next_retry_at: Number(job.next_retry_at || 0),
                     state: String(job.state || 'pending'),
+                    assignment_done: !!job.assignment_done,
                     evaluation_sent: !!job.evaluation_sent,
                     last_error: String(job.last_error || '')
                 }))
@@ -592,6 +624,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    function getAssignmentNotesStorageKeyForId(assignmentId) {
+        const id = String(assignmentId || '').trim();
+        if (!id) return '';
+        return `internalNotes_assignment_${id}`;
+    }
+
+    function getAssignmentFormStateStorageKeyForId(assignmentId) {
+        const id = String(assignmentId || '').trim();
+        if (!id) return '';
+        return `customFormState_assignment_${id}`;
+    }
+
+    function clearPersistedAssignmentClientState(assignmentId) {
+        const formKey = getAssignmentFormStateStorageKeyForId(assignmentId);
+        const notesKey = getAssignmentNotesStorageKeyForId(assignmentId);
+        try {
+            if (formKey) localStorage.removeItem(formKey);
+            if (notesKey) localStorage.removeItem(notesKey);
+        } catch (_) {}
+    }
+
     function scheduleSubmitOutboxProcessing(delayMs) {
         const delay = Math.max(0, Number(delayMs) || 0);
         clearSubmitOutboxTimer();
@@ -674,74 +727,99 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
 
                 try {
+                    if (!job.assignment_done) {
+                        try {
+                            const doneRes = await fetchAssignmentPost('done', {
+                                assignment_id: job.assignment_id,
+                                token: job.token,
+                                session_id: job.session_id,
+                                app_base: job.app_base || getCurrentAppBaseUrl()
+                            }, { timeoutMs: ASSIGNMENT_DONE_TIMEOUT_MS });
+                            applyAssignmentSessionState(doneRes && doneRes.session, { silent: true });
+                            const nextQueue = Array.isArray(doneRes.assignments) ? doneRes.assignments : [];
+                            renderAssignmentQueue(nextQueue);
+                            selectCurrentAssignmentInQueue();
+                            if (assignmentContext && assignmentContext.assignment_id) {
+                                prefetchAssignmentWindowInBackground(assignmentContext.assignment_id);
+                            }
+                            clearPersistedAssignmentClientState(job.assignment_id);
+                            job.assignment_done = true;
+                            job.last_error = '';
+                            clearRecentSubmitGuard(job.assignment_id);
+                            debugLog('outbox_done_success', {
+                                assignmentId: String(job.assignment_id || ''),
+                                attempts: Number(job.attempts || 0)
+                            });
+                        } catch (doneError) {
+                            const errorText = String((doneError && doneError.message) || doneError || 'Unknown background submit error');
+                            const lowerError = errorText.toLowerCase();
+                            const isAlreadyDone =
+                                lowerError.includes('assignment is not in an active state') ||
+                                lowerError.includes('already done');
+                            if (isAlreadyDone) {
+                                clearPersistedAssignmentClientState(job.assignment_id);
+                                job.assignment_done = true;
+                                job.last_error = '';
+                                clearRecentSubmitGuard(job.assignment_id);
+                                debugLog('outbox_done_success', {
+                                    assignmentId: String(job.assignment_id || ''),
+                                    attempts: Number(job.attempts || 0),
+                                    dedupedByState: true
+                                });
+                            } else {
+                                const isTerminal =
+                                    lowerError.includes('not reserved for this session') ||
+                                    lowerError.includes('assignment not found') ||
+                                    lowerError.includes('session not found') ||
+                                    lowerError.includes('invalid token');
+
+                                if (isTerminal) {
+                                    hadTerminalFailure = true;
+                                    job.state = 'failed_terminal';
+                                    job.last_error = errorText;
+                                    job.next_retry_at = 0;
+                                    clearRecentSubmitGuard(job.assignment_id);
+                                } else {
+                                    hadRetryableFailure = true;
+                                    job.attempts = Math.max(0, Number(job.attempts || 0)) + 1;
+                                    job.state = 'retrying';
+                                    job.last_error = errorText;
+                                    job.next_retry_at = Date.now() + getSubmitRetryDelayMs(job.attempts);
+                                    debugLog('outbox_done_retry', {
+                                        assignmentId: String(job.assignment_id || ''),
+                                        attempts: Number(job.attempts || 0),
+                                        nextRetryAt: Number(job.next_retry_at || 0),
+                                        error: errorText
+                                    });
+                                    nextRetryAt = nextRetryAt == null ? job.next_retry_at : Math.min(nextRetryAt, job.next_retry_at);
+                                }
+                                continue;
+                            }
+                        }
+                    }
+
                     if (!job.evaluation_sent) {
                         await submitEvaluationFormPayload(job.payload);
                         job.evaluation_sent = true;
                     }
-                    const doneRes = await fetchAssignmentPost('done', {
-                        assignment_id: job.assignment_id,
-                        token: job.token,
-                        session_id: job.session_id,
-                        app_base: job.app_base || getCurrentAppBaseUrl()
-                    }, { timeoutMs: ASSIGNMENT_DONE_TIMEOUT_MS });
-                    applyAssignmentSessionState(doneRes && doneRes.session, { silent: true });
-                    const nextQueue = Array.isArray(doneRes.assignments) ? doneRes.assignments : [];
-                    renderAssignmentQueue(nextQueue);
-                    selectCurrentAssignmentInQueue();
-                    if (assignmentContext && assignmentContext.assignment_id) {
-                        prefetchAssignmentWindowInBackground(assignmentContext.assignment_id);
-                    }
 
                     job.state = 'done';
                     job.last_error = '';
-                    clearRecentSubmitGuard(job.assignment_id);
-                    debugLog('outbox_done_success', {
-                        assignmentId: String(job.assignment_id || ''),
-                        attempts: Number(job.attempts || 0)
-                    });
+                    job.next_retry_at = 0;
                 } catch (error) {
                     const errorText = String((error && error.message) || error || 'Unknown background submit error');
-                    const lowerError = errorText.toLowerCase();
-                    const isAlreadyDone =
-                        lowerError.includes('assignment is not in an active state') ||
-                        lowerError.includes('already done');
-                    if (isAlreadyDone) {
-                        job.state = 'done';
-                        job.last_error = '';
-                        clearRecentSubmitGuard(job.assignment_id);
-                        debugLog('outbox_done_success', {
-                            assignmentId: String(job.assignment_id || ''),
-                            attempts: Number(job.attempts || 0),
-                            dedupedByState: true
-                        });
-                        continue;
-                    }
-                    const isTerminal =
-                        lowerError.includes('not reserved for this session') ||
-                        lowerError.includes('assignment not found') ||
-                        lowerError.includes('session not found') ||
-                        lowerError.includes('invalid token');
-
-                    if (isTerminal) {
-                        hadTerminalFailure = true;
-                        job.state = 'failed_terminal';
-                        job.last_error = errorText;
-                        job.next_retry_at = 0;
-                        clearRecentSubmitGuard(job.assignment_id);
-                    } else {
-                        hadRetryableFailure = true;
-                        job.attempts = Math.max(0, Number(job.attempts || 0)) + 1;
-                        job.state = 'retrying';
-                        job.last_error = errorText;
-                        job.next_retry_at = Date.now() + getSubmitRetryDelayMs(job.attempts);
-                        debugLog('outbox_done_retry', {
-                            assignmentId: String(job.assignment_id || ''),
-                            attempts: Number(job.attempts || 0),
-                            nextRetryAt: Number(job.next_retry_at || 0),
-                            error: errorText
-                        });
-                        nextRetryAt = nextRetryAt == null ? job.next_retry_at : Math.min(nextRetryAt, job.next_retry_at);
-                    }
+                    hadRetryableFailure = true;
+                    job.attempts = Math.max(0, Number(job.attempts || 0)) + 1;
+                    job.state = 'retrying';
+                    job.last_error = errorText;
+                    job.next_retry_at = Date.now() + getSubmitRetryDelayMs(job.attempts);
+                    debugLog('outbox_eval_retry', {
+                        assignmentId: String(job.assignment_id || ''),
+                        attempts: Number(job.attempts || 0),
+                        nextRetryAt: Number(job.next_retry_at || 0),
+                        error: errorText
+                    });
+                    nextRetryAt = nextRetryAt == null ? job.next_retry_at : Math.min(nextRetryAt, job.next_retry_at);
                 }
             }
 
@@ -781,6 +859,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             attempts: 0,
             next_retry_at: Date.now(),
             state: 'pending',
+            assignment_done: false,
             evaluation_sent: false,
             last_error: ''
         };
@@ -1932,17 +2011,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return { nextQueue, dedupedCountLocal };
         };
 
-        let { nextQueue, dedupedCountLocal } = buildQueue(true);
-        if (!nextQueue.length && rawQueue.length && locallySkippedAssignmentIds.size) {
-            debugLog('Recovered assignment queue after clearing local skips', {
-                rawTotal: rawQueue.length,
-                locallySkipped: locallySkippedAssignmentIds.size
-            });
-            locallySkippedAssignmentIds.clear();
-            const rebuilt = buildQueue(false);
-            nextQueue = rebuilt.nextQueue;
-            dedupedCountLocal = rebuilt.dedupedCountLocal;
-        }
+        const { nextQueue, dedupedCountLocal } = buildQueue(true);
         assignmentQueue = nextQueue;
         debugLog('Rendered assignment queue', {
             total: rawQueue.length,
@@ -2023,13 +2092,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function assignmentNotesStorageKey() {
-        if (!assignmentContext || !assignmentContext.assignment_id) return '';
-        return `internalNotes_assignment_${assignmentContext.assignment_id}`;
+        return getAssignmentNotesStorageKeyForId(assignmentContext && assignmentContext.assignment_id);
     }
 
     function assignmentFormStateStorageKey() {
-        if (!assignmentContext || !assignmentContext.assignment_id) return '';
-        return `customFormState_assignment_${assignmentContext.assignment_id}`;
+        return getAssignmentFormStateStorageKeyForId(assignmentContext && assignmentContext.assignment_id);
     }
 
     function buildAssignmentContextRecord(assignment, params, scenarioKey) {
@@ -2202,7 +2269,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const localFormStateKey = assignmentFormStateStorageKey();
         const localFormState = localFormStateKey ? parseStoredFormState(localStorage.getItem(localFormStateKey)) : null;
         applyDefaultCustomFormState(customForm);
-        applyCustomFormState(customForm, serverFormState || localFormState);
+        applyCustomFormState(customForm, localFormState || serverFormState);
         if (formStatusEl) {
             formStatusEl.textContent = '';
             formStatusEl.style.color = '';
@@ -2211,7 +2278,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (internalNotesEl) {
             const notesKey = assignmentNotesStorageKey();
             const localNote = notesKey ? (localStorage.getItem(notesKey) || '') : '';
-            internalNotesEl.value = assignmentContext.internal_note || localNote || '';
+            internalNotesEl.value = localNote || assignmentContext.internal_note || '';
         }
 
         const forceView = assignmentContext.role === 'viewer' || assignmentContext.mode === 'view';
@@ -2514,47 +2581,93 @@ document.addEventListener('DOMContentLoaded', async () => {
         return state;
     }
 
-    async function saveAssignmentDraft(customForm) {
-        if (isSnapshotMode) return;
-        if (!assignmentContext || assignmentContext.role !== 'editor') return;
-        if (!assignmentContext.assignment_id || !assignmentContext.token) return;
-        const sessionId = getAssignmentSessionId();
-        if (!sessionId) return;
-
+    function buildAssignmentDraftPayloadFromUi(customForm) {
+        if (isSnapshotMode) return null;
+        if (!assignmentContext || assignmentContext.role !== 'editor') return null;
+        const assignmentId = String(assignmentContext.assignment_id || '').trim();
+        const token = String(assignmentContext.token || '').trim();
+        const sessionId = String(getAssignmentSessionId() || '').trim();
+        if (!assignmentId || !token || !sessionId) return null;
         const formState = collectCustomFormState(customForm);
         const notesValue = internalNotesEl ? internalNotesEl.value : '';
-        const formStateRaw = JSON.stringify(formState);
-
-        const formKey = assignmentFormStateStorageKey();
-        if (formKey) localStorage.setItem(formKey, formStateRaw);
-        const notesKey = assignmentNotesStorageKey();
-        if (notesKey) localStorage.setItem(notesKey, notesValue || '');
-
-        const response = await fetchAssignmentPost('saveDraft', {
-            assignment_id: assignmentContext.assignment_id,
-            token: assignmentContext.token,
+        return {
+            assignment_id: assignmentId,
+            token,
             session_id: sessionId,
-            form_state_json: formStateRaw,
+            form_state_json: JSON.stringify(formState),
             internal_note: notesValue
+        };
+    }
+
+    async function saveAssignmentDraftPayload(payload) {
+        if (!payload || !payload.assignment_id || !payload.token || !payload.session_id) return null;
+        const response = await fetchAssignmentPost('saveDraft', {
+            assignment_id: payload.assignment_id,
+            token: payload.token,
+            session_id: payload.session_id,
+            form_state_json: payload.form_state_json || '{}',
+            internal_note: payload.internal_note || ''
         }, { timeoutMs: ASSIGNMENT_DRAFT_TIMEOUT_MS });
         applyAssignmentSessionState(response && response.session, { silent: true });
+        return response;
+    }
+
+    async function flushAssignmentDraftSave(assignmentId) {
+        const id = String(assignmentId || '').trim();
+        const state = getAssignmentDraftSaveState(id, { create: false });
+        if (!state || state.inFlight) return;
+        const payload = state.nextPayload;
+        if (!payload) return;
+        state.nextPayload = null;
+        state.inFlight = true;
+        try {
+            await saveAssignmentDraftPayload(payload);
+            const hasNewerPayloadQueued = !!state.nextPayload;
+            const isCurrentAssignment = !!(
+                assignmentContext &&
+                String(assignmentContext.assignment_id || '').trim() === id
+            );
+            if (isCurrentAssignment && !hasNewerPayloadQueued && !isAssignmentPendingDone(id)) {
+                setAssignmentsStatus('Draft saved.', false);
+            }
+        } catch (error) {
+            console.error('Draft save failed:', error);
+            const isCurrentAssignment = !!(
+                assignmentContext &&
+                String(assignmentContext.assignment_id || '').trim() === id
+            );
+            if (isCurrentAssignment) {
+                setAssignmentsStatus(`Draft save failed: ${error.message || error}`, true);
+            }
+        } finally {
+            state.inFlight = false;
+            if (state.nextPayload) {
+                setTimeout(() => {
+                    flushAssignmentDraftSave(id).catch(() => {});
+                }, 0);
+            }
+        }
+    }
+
+    function queueAssignmentDraftSavePayload(payload, options = {}) {
+        const assignmentId = String(payload && payload.assignment_id || '').trim();
+        if (!assignmentId) return;
+        const state = getAssignmentDraftSaveState(assignmentId);
+        if (!state) return;
+        state.latestVersion += 1;
+        state.nextPayload = Object.assign({}, payload, { version: state.latestVersion });
+        clearAssignmentDraftSaveTimer(assignmentId);
+        const delayMs = Math.max(0, Number(options.delayMs) || 0);
+        state.timer = setTimeout(() => {
+            state.timer = null;
+            flushAssignmentDraftSave(assignmentId).catch(() => {});
+        }, delayMs);
     }
 
     function scheduleAssignmentDraftSave(customForm) {
-        if (isSnapshotMode) return;
-        if (!assignmentContext || assignmentContext.role !== 'editor') return;
-        if (draftSaveTimer) {
-            clearTimeout(draftSaveTimer);
-        }
-        draftSaveTimer = setTimeout(async () => {
-            try {
-                await saveAssignmentDraft(customForm);
-                setAssignmentsStatus('Draft saved.', false);
-            } catch (error) {
-                console.error('Draft save failed:', error);
-                setAssignmentsStatus(`Draft save failed: ${error.message || error}`, true);
-            }
-        }, 1200);
+        const payload = buildAssignmentDraftPayloadFromUi(customForm);
+        if (!payload) return;
+        queueAssignmentDraftSavePayload(payload, { delayMs: 1200 });
     }
 
     function getCompanyInitial(companyName) {
@@ -5177,6 +5290,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (!sessionId) {
                         throw new Error('Missing assignment session id.');
                     }
+                    const draftPayload = buildAssignmentDraftPayloadFromUi(customForm);
+                    if (draftPayload) {
+                        queueAssignmentDraftSavePayload(draftPayload, { delayMs: 0 });
+                    }
 
                     queueSubmitOutboxJob({
                         assignment_id: submitContext.assignment_id,
@@ -5189,20 +5306,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                     customForm.reset();
                     applyDefaultCustomFormState(customForm);
                     resetTemplateSearch();
-                    try {
-                        localStorage.removeItem(`customFormState_assignment_${submitContext.assignment_id}`);
-                        localStorage.removeItem(`internalNotes_assignment_${submitContext.assignment_id}`);
-                    } catch (_) {}
 
                     if (formStatus) {
-                        formStatus.textContent = 'Submitted. Moving to next conversation...';
+                        formStatus.textContent = 'Queued. Moving to next conversation...';
                         formStatus.style.color = '#28a745';
                     }
-                    setAssignmentsStatus('Submitted. Syncing in background and opening next conversation...', false);
+                    setAssignmentsStatus('Queued. Finalizing assignment in background and opening next conversation...', false);
                     await new Promise((resolve) => setTimeout(resolve, SUBMIT_ADVANCE_DELAY_MS));
                     const moved = await openNextAssignmentAfterOptimisticSubmit(submitContext.assignment_id);
                     if (!moved) {
-                        goToAssignmentLoadingPage('Submitted. Syncing in background; checking queue...');
+                        goToAssignmentLoadingPage('Queued. Finalizing assignment in background; checking queue...');
                     }
                     return;
                 }

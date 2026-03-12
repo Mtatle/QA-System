@@ -17,6 +17,12 @@ function loadRuntimeSendIds(fallback = []) {
 function createMockAssignmentApi(options = {}) {
   const baseAppUrl = String(options.baseAppUrl || 'http://127.0.0.1:4173/app.html');
   const sessionId = String(options.sessionId || 'pw_session_1');
+  const saveDraftDelaySequence = Array.isArray(options.saveDraftDelaySequence)
+    ? options.saveDraftDelaySequence.map((value) => Math.max(0, Number(value) || 0))
+    : [];
+  const doneErrorsByAssignmentId = options.doneErrorsByAssignmentId && typeof options.doneErrorsByAssignmentId === 'object'
+    ? options.doneErrorsByAssignmentId
+    : {};
 
   const fallbackSendIds = [
     '019bebf7-17aa-48de-f000-0000f506a3fe',
@@ -24,7 +30,14 @@ function createMockAssignmentApi(options = {}) {
     '019bdd15-7512-4e9e-f000-0000d6364a39',
   ];
   const runtimeSendIds = loadRuntimeSendIds(fallbackSendIds);
-  const selectedSendIds = runtimeSendIds.slice(0, 3);
+  const selectedSendIds = (
+    Array.isArray(options.selectedSendIds) && options.selectedSendIds.length
+      ? options.selectedSendIds
+      : runtimeSendIds
+  )
+    .slice(0, 3)
+    .map((value) => String(value || '').trim())
+    .filter(Boolean);
   while (selectedSendIds.length < 3 && fallbackSendIds[selectedSendIds.length]) {
     selectedSendIds.push(fallbackSendIds[selectedSendIds.length]);
   }
@@ -45,6 +58,8 @@ function createMockAssignmentApi(options = {}) {
     doneCalls: 0,
     evaluationCalls: 0,
     heartbeatCalls: 0,
+    lastEvaluationPayload: null,
+    draftPayloads: [],
   };
 
   const activeStatuses = new Set(['ASSIGNED', 'IN_PROGRESS']);
@@ -103,6 +118,10 @@ function createMockAssignmentApi(options = {}) {
     });
   }
 
+  function delay(ms) {
+    return new Promise((resolve) => setTimeout(resolve, Math.max(0, Number(ms) || 0)));
+  }
+
   async function handleGet(route, url) {
     const action = String(url.searchParams.get('action') || '');
     if (action === 'queue') {
@@ -150,6 +169,7 @@ function createMockAssignmentApi(options = {}) {
     if (!action) {
       if (String(payload.eventType || '') === 'evaluationFormSubmission') {
         state.evaluationCalls += 1;
+        state.lastEvaluationPayload = payload;
       }
       return fulfillJson(route, { status: 'success', message: 'ok' });
     }
@@ -169,6 +189,14 @@ function createMockAssignmentApi(options = {}) {
       if (String(payload.token || '') !== String(assignment.token || '')) {
         return fulfillJson(route, { error: 'Unauthorized: editor token required' });
       }
+      state.draftPayloads.push({
+        assignment_id: String(payload.assignment_id || ''),
+        internal_note: String(payload.internal_note || ''),
+        form_state_json: String(payload.form_state_json || ''),
+      });
+      if (saveDraftDelaySequence.length) {
+        await delay(saveDraftDelaySequence.shift());
+      }
       assignment.form_state_json = String(payload.form_state_json || '');
       assignment.internal_note = String(payload.internal_note || '');
       assignment.status = 'IN_PROGRESS';
@@ -181,6 +209,10 @@ function createMockAssignmentApi(options = {}) {
       if (!assignment) return fulfillJson(route, { error: 'Assignment not found' });
       if (String(payload.token || '') !== String(assignment.token || '')) {
         return fulfillJson(route, { error: 'Unauthorized: editor token required' });
+      }
+      const configuredError = String(doneErrorsByAssignmentId[String(payload.assignment_id || '')] || '').trim();
+      if (configuredError) {
+        return fulfillJson(route, { error: configuredError });
       }
       const currentStatus = String(assignment.status || '').toUpperCase();
       if (!activeStatuses.has(currentStatus)) {
@@ -222,6 +254,10 @@ function createMockAssignmentApi(options = {}) {
   return {
     state,
     routeHandler,
+    getAssignment(assignmentId) {
+      const assignment = findAssignment(assignmentId);
+      return assignment ? { ...assignment } : null;
+    },
   };
 }
 
