@@ -9,6 +9,9 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const DEFAULT_GOOGLE_SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbxdYddYfnFwK4nWaaMmOgzhH6wD0i3jY_1G1XM8PB4NzfJDsmxLrF8abc142KEhagfAbw/exec';
+const SHEET_REQUEST_TIMEOUT_MS = 20000;
 
 function ensureDirectory(dirPath) {
   if (!fs.existsSync(dirPath)) {
@@ -25,6 +28,84 @@ function readJson(filePath, fallback = {}) {
 
 function writeJson(filePath, value) {
   fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`, 'utf8');
+}
+
+function uniqueFilePaths(paths) {
+  const seen = new Set();
+  const out = [];
+  for (const candidate of paths) {
+    const normalized = getStringValue(candidate).trim();
+    if (!normalized || seen.has(normalized)) continue;
+    seen.add(normalized);
+    out.push(normalized);
+  }
+  return out;
+}
+
+function extractGoogleScriptUrl(configText) {
+  const match = getStringValue(configText).match(/GOOGLE_SCRIPT_URL\s*:\s*['"]([^'"]+)['"]/);
+  return match ? getStringValue(match[1]).trim() : '';
+}
+
+function resolveGoogleScriptUrl(currentFolder) {
+  const envUrl = getStringValue(process.env.QA_GOOGLE_SCRIPT_URL || process.env.GOOGLE_SCRIPT_URL).trim();
+  if (envUrl) return envUrl;
+
+  const candidates = uniqueFilePaths([
+    path.join(currentFolder, 'qa-config.js'),
+    path.join(path.dirname(currentFolder), 'qa-config.js'),
+    path.resolve(__dirname, '../../qa-config.js'),
+    path.resolve(process.cwd(), 'qa-config.js'),
+  ]);
+
+  for (const filePath of candidates) {
+    if (!fs.existsSync(filePath)) continue;
+    const configUrl = extractGoogleScriptUrl(fs.readFileSync(filePath, 'utf8'));
+    if (configUrl) return configUrl;
+  }
+
+  return DEFAULT_GOOGLE_SCRIPT_URL;
+}
+
+async function fetchJsonWithTimeout(url, options = {}, timeoutMs = SHEET_REQUEST_TIMEOUT_MS) {
+  if (typeof fetch !== 'function') {
+    throw new Error('This version of Node.js does not support fetch().');
+  }
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    const response = await fetch(url, { ...options, signal: controller.signal });
+    const text = await response.text();
+    let data = {};
+
+    if (text) {
+      try {
+        data = JSON.parse(text);
+      } catch {
+        data = { raw: text };
+      }
+    }
+
+    if (!response.ok) {
+      const detail = getStringValue(data && data.error ? data.error : text).trim() || response.statusText;
+      throw new Error(`HTTP ${response.status}: ${detail}`);
+    }
+
+    if (data && data.error) {
+      throw new Error(getStringValue(data.error).trim() || 'Unknown sheet API error');
+    }
+
+    return data;
+  } catch (error) {
+    if (error && error.name === 'AbortError') {
+      throw new Error('request timed out');
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeoutId);
+  }
 }
 
 function getStringValue(value) {
@@ -282,6 +363,74 @@ function mergeScenariosById(existing, incoming) {
   }
 
   return { scenarios: result, added, updated };
+}
+
+function buildScenarioSheetBatch(mergedScenarios, incomingScenarios) {
+  const mergedList = Array.isArray(mergedScenarios) ? mergedScenarios : [];
+  const incomingList = Array.isArray(incomingScenarios) ? incomingScenarios : [];
+  const mergedById = new Map();
+
+  mergedList.forEach((item) => {
+    const normalized = normalizeScenarioRecordForStorage(item);
+    const id = getStringValue(normalized.id).trim();
+    if (id && !mergedById.has(id)) mergedById.set(id, normalized);
+  });
+
+  const batch = [];
+  const seenIds = new Set();
+
+  incomingList.forEach((item) => {
+    const normalized = normalizeScenarioRecordForStorage(item);
+    const id = getStringValue(normalized.id).trim();
+
+    if (!id) {
+      batch.push(normalized);
+      return;
+    }
+
+    if (seenIds.has(id)) return;
+    seenIds.add(id);
+    batch.push(mergedById.get(id) || normalized);
+  });
+
+  return mergeScenariosById([], batch).scenarios;
+}
+
+async function syncUploadedScenariosToSheet(currentFolder, scenarios) {
+  const googleScriptUrl = resolveGoogleScriptUrl(currentFolder);
+  const getUrl = new URL(googleScriptUrl);
+  getUrl.searchParams.set('action', 'getUploadedScenarios');
+
+  const existingResponse = await fetchJsonWithTimeout(getUrl.toString(), { method: 'GET' });
+  const existingScenarios = Array.isArray(existingResponse && existingResponse.scenarios)
+    ? existingResponse.scenarios
+    : [];
+  const canonicalExisting = mergeScenariosById([], existingScenarios).scenarios;
+  const nextRemoteState = mergeScenariosById(canonicalExisting, scenarios);
+
+  await fetchJsonWithTimeout(googleScriptUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      action: 'setUploadedScenarios',
+      scenarios: nextRemoteState.scenarios,
+    }),
+  });
+
+  return {
+    added: nextRemoteState.added,
+    updated: nextRemoteState.updated,
+    total: nextRemoteState.scenarios.length,
+  };
+}
+
+async function clearUploadedScenariosSheet(currentFolder) {
+  const googleScriptUrl = resolveGoogleScriptUrl(currentFolder);
+  await fetchJsonWithTimeout(googleScriptUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ action: 'clearUploadedScenarios' }),
+  });
 }
 
 function normalizeTemplateRecordForStorage(template) {
@@ -794,10 +943,18 @@ async function main() {
         }
 
         const merged = mergeScenariosById(existing, incoming);
+        const sheetBatch = buildScenarioSheetBatch(merged.scenarios, incoming);
         writeJson(path.join(currentFolder, 'scenarios.json'), { scenarios: merged.scenarios });
         const artifacts = buildRuntimeArtifacts(currentFolder);
+        let sheetMessage = '';
+        try {
+          const sheetSummary = await syncUploadedScenariosToSheet(currentFolder, sheetBatch);
+          sheetMessage = ` Sheet synced (added: ${sheetSummary.added}, updated: ${sheetSummary.updated}, total: ${sheetSummary.total}).`;
+        } catch (error) {
+          sheetMessage = ` Warning: sheet sync failed (${getStringValue(error && error.message).trim() || 'unknown error'}).`;
+        }
         console.log(
-          `scenarios.json updated. Added: ${merged.added}, Updated: ${merged.updated}. Runtime refreshed (${artifacts.scenarioChunks} chunks).`
+          `scenarios.json updated. Added: ${merged.added}, Updated: ${merged.updated}. Runtime refreshed (${artifacts.scenarioChunks} chunks).${sheetMessage}`
         );
         continue;
       }
@@ -840,7 +997,13 @@ async function main() {
       if (choice === '3') {
         writeJson(path.join(currentFolder, 'scenarios.json'), { scenarios: [] });
         const artifacts = buildRuntimeArtifacts(currentFolder);
-        console.log(`scenarios.json cleared. Runtime refreshed (${artifacts.scenarioChunks} chunks).`);
+        let sheetMessage = ' Sheet cleared.';
+        try {
+          await clearUploadedScenariosSheet(currentFolder);
+        } catch (error) {
+          sheetMessage = ` Warning: sheet clear failed (${getStringValue(error && error.message).trim() || 'unknown error'}).`;
+        }
+        console.log(`scenarios.json cleared. Runtime refreshed (${artifacts.scenarioChunks} chunks).${sheetMessage}`);
         continue;
       }
 

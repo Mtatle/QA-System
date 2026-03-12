@@ -7,16 +7,76 @@ on:
   pull_request:
 
 concurrency:
-  group: ci-${{ github.ref }}
+  group: ci-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
   contents: read
 
 jobs:
-  validate-and-test:
+  static-checks:
+    name: ${{ matrix.name }}
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Syntax Check
+            command: npm run check:syntax
+          - name: ESLint
+            command: npm run lint
+          - name: Runtime Data Check
+            command: npm run check:data
+          - name: Format Check
+            command: npm run format:check
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ${{ matrix.name }}
+        run: ${{ matrix.command }}
+
+  repo-preflight:
+    name: Item 5 Preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run repo preflight checks
+        run: bash ./scripts/item5-preflight-check.sh
+
+  e2e-suites:
+    name: E2E - ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Smoke
+            command: npm run test:e2e:smoke
+            artifact_name: playwright-artifacts-smoke
+          - name: Assignment Submit
+            command: npm run test:e2e:assignment
+            artifact_name: playwright-artifacts-assignment
+          - name: Snapshot View
+            command: npm run test:e2e:snapshot
+            artifact_name: playwright-artifacts-snapshot
+          - name: Multi Auditor Login
+            command: npm run test:e2e:multi-auditor
+            artifact_name: playwright-artifacts-multi-auditor
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,17 +93,14 @@ jobs:
       - name: Install Playwright browser + system deps
         run: npx playwright install --with-deps chromium
 
-      - name: Run static checks
-        run: npm run check
-
-      - name: Run end-to-end tests
-        run: npm run test:e2e
+      - name: Run ${{ matrix.name }}
+        run: ${{ matrix.command }}
 
       - name: Upload Playwright artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-artifacts
+          name: ${{ matrix.artifact_name }}
           path: |
             playwright-report/
             test-results/

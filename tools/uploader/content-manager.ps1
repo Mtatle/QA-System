@@ -173,6 +173,7 @@ foreach ($candidate in $candidateRoots) {
         break
     }
 }
+$script:DefaultGoogleScriptUrl = "https://script.google.com/macros/s/AKfycbxdYddYfnFwK4nWaaMmOgzhH6wD0i3jY_1G1XM8PB4NzfJDsmxLrF8abc142KEhagfAbw/exec"
 
 $form = New-Object System.Windows.Forms.Form
 $form.Text = "Scenario & Template Manager"
@@ -303,6 +304,162 @@ function Refresh-Meta {
     } catch {
         Set-Status -Message ("Failed to read JSON files: " + $_.Exception.Message) -IsError $true
     }
+}
+
+function Get-GoogleScriptUrl {
+    $envUrl = (Get-StringValue $env:QA_GOOGLE_SCRIPT_URL).Trim()
+    if (-not $envUrl) {
+        $envUrl = (Get-StringValue $env:GOOGLE_SCRIPT_URL).Trim()
+    }
+    if ($envUrl) {
+        return $envUrl
+    }
+
+    $scriptRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
+    $candidateConfigPaths = @(
+        (Join-Path $script:CurrentFolder "qa-config.js"),
+        (Join-Path (Split-Path -Parent $script:CurrentFolder) "qa-config.js"),
+        (Join-Path $scriptRoot "qa-config.js"),
+        (Join-Path (Get-Location).Path "qa-config.js")
+    ) | Select-Object -Unique
+
+    foreach ($configPath in $candidateConfigPaths) {
+        if (-not (Test-Path -LiteralPath $configPath)) { continue }
+        $raw = Get-Content -LiteralPath $configPath -Raw -ErrorAction Stop
+        $match = [regex]::Match($raw, 'GOOGLE_SCRIPT_URL\s*:\s*[''"]([^''"]+)[''"]')
+        if ($match.Success) {
+            $configUrl = (Get-StringValue $match.Groups[1].Value).Trim()
+            if ($configUrl) {
+                return $configUrl
+            }
+        }
+    }
+
+    return $script:DefaultGoogleScriptUrl
+}
+
+function Invoke-QaJsonRequest {
+    param(
+        [Parameter(Mandatory = $true)][string]$Method,
+        [Parameter(Mandatory = $true)][string]$Url,
+        $Body
+    )
+
+    try {
+        if ($Method -eq "GET") {
+            $response = Invoke-RestMethod -Uri $Url -Method Get -TimeoutSec 20
+        } else {
+            $payload = if ($null -eq $Body) { "{}" } else { $Body | ConvertTo-Json -Depth 100 -Compress }
+            $response = Invoke-RestMethod -Uri $Url -Method Post -ContentType "application/json" -Body $payload -TimeoutSec 20
+        }
+    } catch {
+        $message = $_.Exception.Message
+        if ($_.ErrorDetails -and $_.ErrorDetails.Message) {
+            $message = $_.ErrorDetails.Message
+        }
+        throw "sheet request failed: $message"
+    }
+
+    if ($null -ne $response -and $response.PSObject -and ($response.PSObject.Properties.Name -contains 'error')) {
+        $errorMessage = (Get-StringValue $response.error).Trim()
+        if ($errorMessage) {
+            throw $errorMessage
+        }
+    }
+
+    return $response
+}
+
+function Get-ScenarioSheetBatch {
+    param(
+        [array]$MergedScenarios = @(),
+        [array]$IncomingScenarios = @()
+    )
+
+    if ($null -eq $MergedScenarios) { $MergedScenarios = @() }
+    if ($null -eq $IncomingScenarios) { $IncomingScenarios = @() }
+
+    $mergedById = @{}
+    foreach ($scenario in $MergedScenarios) {
+        $normalized = Normalize-ScenarioRecordForStorage -Scenario $scenario
+        $scenarioId = (Get-StringValue $normalized.id).Trim()
+        if ($scenarioId -and -not $mergedById.ContainsKey($scenarioId)) {
+            $mergedById[$scenarioId] = $normalized
+        }
+    }
+
+    $batch = @()
+    $seenIds = @{}
+    foreach ($scenario in $IncomingScenarios) {
+        $normalized = Normalize-ScenarioRecordForStorage -Scenario $scenario
+        $scenarioId = (Get-StringValue $normalized.id).Trim()
+
+        if (-not $scenarioId) {
+            $batch += $normalized
+            continue
+        }
+
+        if ($seenIds.ContainsKey($scenarioId)) {
+            continue
+        }
+
+        $seenIds[$scenarioId] = $true
+        if ($mergedById.ContainsKey($scenarioId)) {
+            $batch += $mergedById[$scenarioId]
+        } else {
+            $batch += $normalized
+        }
+    }
+
+    $deduped = Merge-ScenariosById -Existing @() -Incoming $batch
+    return ,@($deduped.scenarios)
+}
+
+function Sync-UploadedScenariosSheet {
+    param(
+        [array]$Scenarios = @()
+    )
+
+    if ($null -eq $Scenarios) { $Scenarios = @() }
+
+    $googleScriptUrl = Get-GoogleScriptUrl
+    $uriBuilder = [System.UriBuilder]::new($googleScriptUrl)
+    if ([string]::IsNullOrWhiteSpace($uriBuilder.Query)) {
+        $uriBuilder.Query = "action=getUploadedScenarios"
+    } else {
+        $uriBuilder.Query = $uriBuilder.Query.TrimStart("?") + "&action=getUploadedScenarios"
+    }
+
+    $existingResponse = Invoke-QaJsonRequest -Method "GET" -Url $uriBuilder.Uri.AbsoluteUri
+    $existingScenarios = @()
+    if ($null -ne $existingResponse -and $existingResponse.PSObject -and ($existingResponse.PSObject.Properties.Name -contains 'scenarios')) {
+        if ($existingResponse.scenarios -is [System.Array]) {
+            $existingScenarios = @($existingResponse.scenarios)
+        } elseif ($null -ne $existingResponse.scenarios) {
+            $existingScenarios = @($existingResponse.scenarios)
+        }
+    }
+
+    $canonicalExisting = Merge-ScenariosById -Existing @() -Incoming $existingScenarios
+    $remoteMerge = Merge-ScenariosById -Existing @($canonicalExisting.scenarios) -Incoming $Scenarios
+
+    [void](Invoke-QaJsonRequest -Method "POST" -Url $googleScriptUrl -Body @{
+        action = "setUploadedScenarios"
+        scenarios = @($remoteMerge.scenarios)
+    })
+
+    return @{
+        added = $remoteMerge.added
+        updated = $remoteMerge.updated
+        total = @($remoteMerge.scenarios).Count
+    }
+}
+
+function Clear-UploadedScenariosSheet {
+    $googleScriptUrl = Get-GoogleScriptUrl
+    [void](Invoke-QaJsonRequest -Method "POST" -Url $googleScriptUrl -Body @{
+        action = "clearUploadedScenarios"
+    })
 }
 
 function Convert-ScenarioContainerToList {
@@ -1633,10 +1790,18 @@ function Import-ScenariosFromFile {
                 throw "No valid scenarios found in CSV. Ensure SEND_ID and COMPANY_NAME columns are populated."
             }
             $merge = Merge-ScenariosById -Existing $existingList -Incoming $incomingScenarios
+            $sheetBatch = @(Get-ScenarioSheetBatch -MergedScenarios $merge.scenarios -IncomingScenarios $incomingScenarios)
             Write-JsonObject -Path $TargetPath -Value @{ scenarios = $merge.scenarios }
             $artifactSummary = Build-RuntimeArtifacts -Quiet
+            $sheetMessage = ""
+            try {
+                $sheetSummary = Sync-UploadedScenariosSheet -Scenarios $sheetBatch
+                $sheetMessage = " Sheet synced (added: $($sheetSummary.added), updated: $($sheetSummary.updated), total: $($sheetSummary.total))."
+            } catch {
+                $sheetMessage = " Warning: sheet sync failed ($($_.Exception.Message))."
+            }
             Refresh-Meta
-            Set-Status -Message "scenarios.json updated from CSV. Added: $($merge.added), Updated: $($merge.updated), Skipped: $invalidRows, Parse errors: $parseErrorRows. Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) chunks)."
+            Set-Status -Message "scenarios.json updated from CSV. Added: $($merge.added), Updated: $($merge.updated), Skipped: $invalidRows, Parse errors: $parseErrorRows. Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) chunks).$sheetMessage"
             return
         }
 
@@ -1648,10 +1813,18 @@ function Import-ScenariosFromFile {
         }
         if ($null -eq $incomingList) { $incomingList = @() }
         $merge = Merge-ScenariosById -Existing $existingList -Incoming $incomingList
+        $sheetBatch = @(Get-ScenarioSheetBatch -MergedScenarios $merge.scenarios -IncomingScenarios $incomingList)
         Write-JsonObject -Path $TargetPath -Value @{ scenarios = $merge.scenarios }
         $artifactSummary = Build-RuntimeArtifacts -Quiet
+        $sheetMessage = ""
+        try {
+            $sheetSummary = Sync-UploadedScenariosSheet -Scenarios $sheetBatch
+            $sheetMessage = " Sheet synced (added: $($sheetSummary.added), updated: $($sheetSummary.updated), total: $($sheetSummary.total))."
+        } catch {
+            $sheetMessage = " Warning: sheet sync failed ($($_.Exception.Message))."
+        }
         Refresh-Meta
-        Set-Status -Message "scenarios.json updated from $($dialog.SafeFileName). Added: $($merge.added), Updated: $($merge.updated). Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) chunks)."
+        Set-Status -Message "scenarios.json updated from $($dialog.SafeFileName). Added: $($merge.added), Updated: $($merge.updated). Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) chunks).$sheetMessage"
     } catch {
         Set-Status -Message ("Failed to import scenarios source: " + $_.Exception.Message) -IsError $true
     }
@@ -1690,8 +1863,14 @@ $clearScenariosBtn.Add_Click({
     try {
         Write-JsonObject -Path (Get-ScenariosPath) -Value @{ scenarios = @() }
         $artifactSummary = Build-RuntimeArtifacts -Quiet
+        $sheetMessage = " Sheet cleared."
+        try {
+            Clear-UploadedScenariosSheet
+        } catch {
+            $sheetMessage = " Warning: sheet clear failed ($($_.Exception.Message))."
+        }
         Refresh-Meta
-        Set-Status -Message "scenarios.json cleared. Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) chunks)."
+        Set-Status -Message "scenarios.json cleared. Runtime artifacts refreshed ($($artifactSummary.scenarioChunks) chunks).$sheetMessage"
     } catch {
         Set-Status -Message ("Failed to clear scenarios.json: " + $_.Exception.Message) -IsError $true
     }
