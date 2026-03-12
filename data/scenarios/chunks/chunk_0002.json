@@ -3,840 +3,1498 @@
   "chunk": "chunk_0002",
   "scenarios": {
     "6": {
-      "id": "019c5efd-8c69-4962-f000-0000fb5d6e63",
-      "companyName": "Venus ET Fleur",
-      "companyWebsite": "https://venusetfleur.com",
-      "agentName": "Megan",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Venus et Fleur: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-13 17:58:36.075"
-        },
-        {
-          "message_media": [],
-          "message_text": "Venus et Fleur: Welcome to Venus et Fleur! I'm Megan, your personal concierge and we are excited to have you experience our Eternity® Blooms. I've arranged for Complimentary Standard Shipping on your first order with the code MZZ7KRM5. \n\nDiscover our garden of Real Flowers That Last A Year: \nhttps://venusetfleur.attn.tv/aiQKT0wcMmdc ",
-          "message_type": "system",
-          "date_time": "2026-02-13 17:58:39.048"
-        },
-        {
-          "message_media": [],
-          "message_text": "Venus et Fleur: Don't forget to save our contact information:",
-          "message_type": "system",
-          "date_time": "2026-02-13 17:58:43.934"
-        },
-        {
-          "message_media": [],
-          "message_text": "Venus et Fleur: Happy Valentine's Day! 🌹 There's STILL TIME to surprise them with Real Flowers That Last A Year. \n\nOrder by 12 NOON TODAY to receive your order with HAND-DELIVERY. (Available Only in the Tri-State Area) \n\nMake their day: venusetfleur.attn.tv/aJFW8C4sZtky ",
-          "message_type": "system",
-          "date_time": "2026-02-14 09:30:50.438"
-        },
-        {
-          "message_media": [],
-          "message_text": "Venus et Fleur: Enjoy Complimentary Standard Shipping for only a few more days. \n\nYou can use your exclusive code MZZ7KRM5 at checkout. Shop Eternity® florals for any occasion here:venusetfleur.attn.tv/a9URthUj-42S \n\nPlease do not hesitate to reach out via text if you have any questions. I would be happy to assist you with securing your order for this occasion and more.\n\n- Megan",
-          "message_type": "system",
-          "date_time": "2026-02-14 17:58:50.495"
-        },
-        {
-          "message_media": [],
-          "message_text": "Help",
-          "message_type": "customer",
-          "date_time": "2026-02-14 18:35:33.200"
-        },
-        {
-          "message_media": [],
-          "message_text": "Venus et Fleur: Hello, thank you for reaching out! How can I help you?\n",
-          "message_type": "agent",
-          "agent": "39001",
-          "message_id": "019c5ea4-e750-4ad1-f000-0000fb5d6e63",
-          "date_time": "2026-02-14 19:13:11.408"
-        },
-        {
-          "message_media": [],
-          "message_text": "I've been waiting for a delivery today",
-          "message_type": "customer",
-          "date_time": "2026-02-14 20:12:03.076"
-        },
-        {
-          "message_media": [],
-          "message_text": "When I ordered it showed that I would receive the order today. I sent emails and called and was told I'd get a call back today I have heard nothing at all. This is completely unacceptable.",
-          "message_type": "customer",
-          "date_time": "2026-02-14 20:12:52.712"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Experience - All brands\"; last updated: 2023-10-10 18:04:21.663",
-          "message_type": "template",
-          "date_time": "2026-02-14 20:50:00.841"
-        },
-        {
-          "message_media": [],
-          "message_text": "Venus et Fleur: I'm really sorry about this, and surely, this isn't the experience I want you to have. Rest assured that feedback will be sent to the team regarding this. To help with this, may I also ask for your order number and email address? ",
-          "message_type": "agent",
-          "agent": "82260",
-          "message_id": "019c5efd-8c69-4962-f000-0000fb5d6e63",
-          "date_time": "2026-02-14 20:50:00.843"
-        }
-      ],
-      "notes": {
-        "escalate": [
-          "ESC if cx wants their account name to be changed",
-          "ESC if cx complains that their order was canceled",
-          "If cx's ask when their order will arrive/estimated delivery date",
-          "➜  Ask what shipping method they selected at checkout",
-          "➜ If it's standard shipping use STS shortcut",
-          "➜ If they insist to know exactly when ESC",
-          "Cx gets a code for free shipping for the first purchase; you can escalate any issues after troubleshooting"
-        ],
-        "tone": [
-          "Don't thank the cx for the purchase, thank them for their continuous support",
-          "Don't ask the customer to contact the courier"
-        ],
-        "drive_to_purchase": [
-          "Don't D2P when the cx already made a purchase"
-        ],
-        "promo_and_promo_exclusions": [
-          "Free shipping code is only valid for standard shipping",
-          "Standard shipping charge is usually ~ $20, if you see a charge higher than that, it means the method selected is NOT standard (create a mock cart to double-check)"
-        ]
-      },
+      "agentName": "Sophia",
+      "has_shopify": false,
+      "id": "018fc704-9de6-49ff-f000-000085046725",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://venusetfleur.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Fleura Porcelain Vase - Roses / Red",
-            "link": "https://www.venusetfleur.com/products/fleura-vase?variant=39841289797676",
-            "timeAgo": "2026-02-13"
-          },
-          {
-            "item": "Large Round - White Classic / Pure White",
-            "link": "https://www.venusetfleur.com/products/large-round-white-classic?variant=39648680476716",
-            "timeAgo": "2026-02-13"
-          },
-          {
-            "item": "Large Square - Black Classic / Red",
-            "link": "https://www.venusetfleur.com/products/large-square-black-classic?variant=39767768268844",
-            "timeAgo": "2026-02-13"
-          },
-          {
-            "item": "Large Square - Black Classic / Pearl",
-            "link": "https://www.venusetfleur.com/products/large-square-black-classic?variant=39767768268844",
-            "timeAgo": "2026-02-13"
-          },
-          {
-            "item": "Le Mini Letter - C - C / Red",
-            "link": "https://www.venusetfleur.com/products/mini-letter-c?variant=40761403506732",
-            "timeAgo": "2026-02-13"
-          }
-        ],
         "orders": [
           {
-            "orderNumber": "1012676",
-            "orderDate": "2026-02-13",
+            "currency": "USD",
+            "orderDate": "2024-05-15",
+            "coupon": "mothersday24",
             "items": [
               {
-                "name": "Fleura Porcelain Vase",
-                "price": 429,
-                "productLink": "https://venus-et-fleur.myshopify.com/products/fleura-vase"
+                "price": [
+                  {
+                    "value": [
+                      84,
+                      84,
+                      84,
+                      84,
+                      84,
+                      84,
+                      84
+                    ],
+                    "Count": 7
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "link": "https://www.venusetfleur.com/8591856/orders/ede741760304192d3461dbca921e91aa/authenticate?key=cca09a212b14d3597080508c7571dd35",
-            "total": 541.58,
-            "date_time": "2026-02-13 23:15:07.221"
+            "date_time": "2024-05-15 01:06:10.367",
+            "discount_amount": 0,
+            "orderNumber": "804014",
+            "total": 84
+          }
+        ],
+        "coupons": [
+          {
+            "coupon": "BABYSHOWER",
+            "status": "ACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://sneakpeektest.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://sneakpeektest.com/early-at-home-baby-gender-blood-test/",
+            "item": "Gender Products",
+            "timeAgo": "2024-05-15"
+          },
+          {
+            "link": "https://sneakpeektest.com/early-at-home-baby-gender-blood-test/",
+            "item": "Gender Products",
+            "timeAgo": "2024-04-12"
+          },
+          {
+            "link": "https://sneakpeektest.com/early-at-home-baby-gender-blood-test/",
+            "item": "Gender Products",
+            "timeAgo": "2024-04-12"
+          },
+          {
+            "link": "https://sneakpeektest.com/early-at-home-baby-gender-blood-test/",
+            "item": "Gender Products",
+            "timeAgo": "2024-04-12"
+          },
+          {
+            "link": "https://sneakpeektest.com/early-at-home-baby-gender-blood-test/",
+            "item": "Gender Products",
+            "timeAgo": "2024-04-12"
           }
         ]
       },
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "arrangement damages",
-        "delivery issues",
-        "post-purchase questions",
-        "inventory"
-      ],
+      "companyWebsite": "https://sneakpeektest.com",
+      "companyName": "SneakPeek",
+      "notes": {
+        "escalate": [
+          "When ESC sample delays using the temp always include the 8-digit barcode \u0026 the return tracking number in your escalation notes!"
+        ],
+        "templates": [
+          "We have multiple order delay templates depending on circumstances (delivery from SneakPeak to cx)",
+          "We have multiple Sample delay templates depending on circumstance (delivery from cx to SneakPeak)"
+        ],
+        "promo_and_exclusions": [
+          "Codes are only valid on test kits purchased from SneakPeekTest.com",
+          "They\u0027re not valid on the lab fee or shipping charges that are associated with the test kit sold in stores (e.g. Walgreens)"
+        ]
+      },
       "blocklisted_words": [
-        "preserved",
-        "chemical",
-        "cant"
+        
       ],
-      "has_shopify": true
-    },
-    "7": {
-      "id": "019c4e85-7574-45f2-f000-00001958e645",
-      "companyName": "Saatchi Art",
-      "companyWebsite": "https://saatchiart.com",
-      "agentName": "Sofia",
+      "escalation_preferences": [
+        
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Saatchi Art: We asked our curators to share the 5 art trends gaining traction in 2026. Here's what they said: saatchiart.attn.tv/aamoVVsvBLLJ ",
           "message_type": "system",
-          "date_time": "2026-01-14 18:01:05.943"
+          "message_text": "SneakPeek: April Flash Sale ending! Last chance to save up to $25 on our test. Order now before it ends tonight.\n\nhttps://sneakpeektest.attn.tv/at-d1zU9Vk_C ",
+          "date_time": "2024-05-02 17:15:55.516",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Saatchi Art: In need of a mood shift? Spark energy with a vibrant orange or destress with blue tones in our new color therapy collection. saatchiart.attn.tv/aDt2inPZDg5N ",
           "message_type": "system",
-          "date_time": "2026-01-17 19:13:13.996"
+          "message_text": "SneakPeek: Happy Mother\u0027s Day! Until May 15th, discover fetal sex as early as 6 weeks into pregnancy with up to $25 off. \n\nhttps://sneakpeektest.attn.tv/ajUhlf0j7lPR ",
+          "date_time": "2024-05-08 18:01:01.184",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Saatchi Art: Let your art do the talking. Redefine your space with these immersive works certain to draw attention. saatchiart.attn.tv/aCafavs9zzdh ",
           "message_type": "system",
-          "date_time": "2026-01-20 18:12:05.760"
+          "message_text": "SneakPeek: Hey , I\u0027m Sophia your personal shopping assistant. Welcome to our exclusive VIP list!\n\nYou can text me anytime for support, recommendations, or anything in between. Is there anything I can assist you with today?\n\nhttps://sneakpeektest.attn.tv/apLM6rKWpg3z .",
+          "date_time": "2024-05-16 13:16:05.358",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Saatchi Art: You don't have to be in Italy to live La Dolce Vita. Embrace the joy of life with artwork from today's emerging Italian artists. saatchiart.attn.tv/auflrJ-7nVLF ",
           "message_type": "system",
-          "date_time": "2026-01-24 14:11:07.699"
+          "message_text": "SneakPeek: Hey, we noticed you checking us out. Have you seen our best-selling \u003e99% accurate Early Gender DNA At-Home test? https://sneakpeektest.attn.tv/aFfurZ0-HePt ",
+          "date_time": "2024-05-21 18:50:26.696",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Saatchi Art: The figure, redefined. Discover abstract figurative paintings that transform representation into pure feeling. saatchiart.attn.tv/agCT8Rvc706T ",
-          "message_type": "system",
-          "date_time": "2026-01-31 18:04:06.039"
-        },
-        {
-          "message_media": [],
-          "message_text": "Saatchi Art: Art buying, made easy. Explore acrylic paintings, rich in color and certain to elevate your living or dining room. saatchiart.attn.tv/ajHSQ0DtEuJa ",
-          "message_type": "system",
-          "date_time": "2026-02-03 14:05:16.208"
-        },
-        {
-          "message_media": [],
-          "message_text": "Saatchi Art: Small in scale, bold in impact. These pieces are perfect for a gallery wall or collecting sought-after artists at an accessible price. saatchiart.attn.tv/a-PEUzRVNWNO ",
-          "message_type": "system",
-          "date_time": "2026-02-07 19:02:09.253"
-        },
-        {
-          "message_media": [],
-          "message_text": "Saatchi Art: 10% off sitewide to banish those winter blues. Happy shopping: saatchiart.attn.tv/affh3vXBZiOB \n\nUse FLASH10 at checkout. Valid thru 2/17.",
-          "message_type": "system",
-          "date_time": "2026-02-11 15:14:08.599"
-        },
-        {
-          "message_media": [],
-          "message_text": "Where is my works \nArtist Khurshid Saleem",
           "message_type": "customer",
-          "date_time": "2026-02-11 15:22:33.500"
+          "message_text": "Can you please tell me the expected arrival date of my order? It\u0027s been stuck in the same location for 4-5 days now. Order number 804014",
+          "date_time": "2024-05-28 09:56:43.908",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Saatchi Art: I'll be happy to check on this for you. Do you mind telling me more about the issue?",
+          "message_id": "018fbf7f-dcda-4b2c-f000-000085046725",
+          "message_text": "SneakPeek: Sorry to hear that! Our apologies on behalf of our shipping carrier for the unexpected delay. If the tracking shows no movement after another day, please contact our Customer Care team to further assist: https://sneakpeektest.attn.tv/sl/Gq4FYUzx/",
           "message_type": "agent",
-          "agent": "33953",
-          "message_id": "019c4e68-9634-4e65-f000-00001958e645",
-          "date_time": "2026-02-11 15:33:23.033"
+          "agent": "26939",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-28 09:59:38.983"
         },
         {
-          "message_media": [],
-          "message_text": "Thanks for your cooperation",
           "message_type": "customer",
-          "date_time": "2026-02-11 15:34:37.631"
+          "message_text": "We are just expecting results this week, and need them by Friday at the latest, and I am concerned with it now being Tuesday. I shipped on Wednesday 5/22 first thing in the morning.",
+          "date_time": "2024-05-28 10:01:56.707",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Saatchi Art: I'm sorry, just to be sure, did you recently sell some artwork on our website? Please share more details so that I can assist you.",
+          "message_id": "018fbf87-d593-4a02-f000-000085046725",
+          "message_text": "SneakPeek: I\u0027ll have my team look into this further for you. Could you please provide your 8-digit test barcode, and your sample\u0027s return tracking number?\n",
+          "message_type": "agent",
+          "agent": "38972",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-28 10:08:21.410"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "S0300201 is the test barcode and the tracking is 9401916902668880169111",
+          "date_time": "2024-05-28 10:12:05.831",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fbf8d-afdd-47c7-f000-000085046725",
+          "message_text": "SneakPeek: Thanks for that information! I\u0027ll pass this along to my team and get back to you as soon as possible. Hang tight!",
+          "message_type": "agent",
+          "agent": "46578",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-28 10:14:44.965"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you",
+          "date_time": "2024-05-28 10:19:06.465",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc173-7cfc-4ae4-f000-000085046725",
+          "message_text": "SneakPeek: Thanks for your patience! I just heard from the team and we are sorry your sample has not arrived sooner, this appears to have been lost in transit with USPS: https://sneakpeektest.attn.tv/sl/BzZtZ0ns\n\nWe\u0027re happy to help, we\u0027ll get you set up with a new kit on us. Could you please provide your order date, order number, and the full name and email address under which your test was purchased? ",
+          "message_type": "agent",
+          "agent": "32937",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-28 19:05:22.436"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Oh no 😪 we have a gender reveal planned for Saturday",
+          "date_time": "2024-05-28 19:06:56.275",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc177-9f16-4d44-f000-000085046725",
+          "message_text": "SneakPeek: I\u0027m sorry for the trouble. It\u0027s not the experience we want you to have. If you\u0027d like us to send another kit, do let us know and we\u0027ll be happy to assist. Thanks for your patience. ",
+          "message_type": "agent",
+          "agent": "82343",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-28 19:09:53.311"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "How fast can a new kit arrive?",
+          "date_time": "2024-05-28 19:14:16.444",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc17c-fe97-4aae-f000-000085046725",
+          "message_text": "SneakPeek: Thank you for the question. For domestic orders, you can find detailed shipping info here: https://sneakpeektest.attn.tv/sl/m5ZoZt4u/ For Canadian and UK orders, shipping takes 1-2 business days, and for Australia, it takes 1-4 business days. I hope this helps! ",
+          "message_type": "agent",
+          "agent": "48804",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-28 19:15:45.445"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Could I pay an upgrade for fast track? We really need our results back by Saturday morning",
+          "date_time": "2024-05-28 19:20:56.505",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I ordered on 5/14/24, order number 804014, under Calli Martinez and email callikay97@yahoo.com",
+          "date_time": "2024-05-28 19:22:36.769",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "If there was a way to upgrade to fast track and have the kit arrive in time for my results to be sent by Saturday June 1st (in the morning) I\u0027d be more than happy to receive a new kit. But I needed results by the 1st.",
+          "date_time": "2024-05-28 19:49:22.025",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc1a1-29a5-4181-f000-000085046725",
+          "message_text": "SneakPeek: I totally understand! I\u0027d like to check this with my team. Please, hang tight! ",
+          "message_type": "agent",
+          "agent": "49198",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-28 19:55:15.754"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I have a Walgreens that says they carry the test kit also. If that were an easier way to go about this. I could test tonight and drop off at the post office in the morning, but I would need test activation and shipping label.",
+          "date_time": "2024-05-28 19:57:01.713",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc1a7-850a-49eb-f000-000085046725",
+          "message_text": "SneakPeek: Thanks for letting me know, and I understand. I\u0027m happy to also check that with my team for you, and I\u0027ll get back to you as soon as I hear back!",
+          "message_type": "agent",
+          "agent": "46578",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-28 20:02:12.369"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you.",
+          "date_time": "2024-05-28 20:03:31.761",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc1ae-1f5b-45f0-f000-000085046725",
+          "message_text": "SneakPeek: You\u0027re welcome! In the meantime, is there anything that I can assist you with while waiting for an update?",
+          "message_type": "agent",
+          "agent": "82448",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-28 20:09:25.090"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I don\u0027t think so, I will just be waiting.",
+          "date_time": "2024-05-28 20:12:21.646",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc1b3-3624-4460-f000-000085046725",
+          "message_text": "SneakPeek: Thank you. It\u0027s a little late so it\u0027s likely I won\u0027t hear back by today, though rest assured I\u0027ll reach out once business hours resume. ",
+          "message_type": "agent",
+          "agent": "47110",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-28 20:14:58.609"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Oh, okay",
+          "date_time": "2024-05-28 20:18:32.129",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "What are business hours?",
+          "date_time": "2024-05-28 20:29:31.828",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc1c1-db18-42a2-f000-000085046725",
+          "message_text": "SneakPeek: Good question! Our normal business hours are Monday through Friday from 9am to 5pm PST. I hope this helps.",
+          "message_type": "agent",
+          "agent": "39115",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-28 20:30:58.340"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Okay",
+          "date_time": "2024-05-28 20:32:11.755",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc1c5-9ebd-4a61-f000-000085046725",
+          "message_text": "SneakPeek: Thanks for understanding. Is there anything else that I can help with while I wait for a response from the team?",
+          "message_type": "agent",
+          "agent": "82343",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-28 20:35:05.031"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No thank you",
+          "date_time": "2024-05-28 20:35:21.766",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Good morning, please let me know as soon as possible if it\u0027s possible to do fast track shipping with me purchasing a kit from Walgreens and I can get that done on my lunch break and mail it out today.",
+          "date_time": "2024-05-29 12:06:26.016",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc51b-8360-4ff2-f000-000085046725",
+          "message_text": "SneakPeek: Hello, I have reached out to my team about fast-tracking your order, however I do not have a response yet. I will let you know as soon as I hear back! While I have you here, is there anything else I can help you with?",
+          "message_type": "agent",
+          "agent": "82441",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-29 12:07:45.770"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I just wanted to reach back out during business hours in hopes to hear back faster. Thank you.",
+          "date_time": "2024-05-29 12:09:05.955",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc51e-fd86-4e8b-f000-000085046725",
+          "message_text": "SneakPeek: I understand! Rest assured, I will let you know as soon as I get a response from the team. Thank you for your patience.",
           "message_type": "agent",
           "agent": "33482",
-          "message_id": "019c4e6b-0ea8-47e1-f000-00001958e645",
-          "date_time": "2026-02-11 15:36:04.938"
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-29 12:11:33.650"
         },
         {
-          "message_media": [],
-          "message_text": "No",
           "message_type": "customer",
-          "date_time": "2026-02-11 15:36:40.096"
+          "message_text": "Thank you",
+          "date_time": "2024-05-29 12:12:06.461",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "I have 11 works is listed",
           "message_type": "customer",
-          "date_time": "2026-02-11 15:37:50.334"
+          "message_text": "Do you have any updates?",
+          "date_time": "2024-05-29 15:13:47.200",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Saatchi Art: Thank you for the details. Could you please share your email address? I will be happy to check this with my team.",
+          "message_id": "018fc5cd-7962-4b3c-f000-000085046725",
+          "message_text": "SneakPeek: Thank you for reaching out. I\u0027m really sorry for the delay. It is not the experience that we want to have for our customers. Right now, I still have no response from the team. But rest assured, once I get an update, I will message you immediately. Please hang tight! ",
           "message_type": "agent",
-          "agent": "87295",
-          "message_id": "019c4e6f-ba41-4a35-f000-00001958e645",
-          "date_time": "2026-02-11 15:41:11.010"
+          "agent": "48804",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-29 15:22:08.623"
         },
         {
-          "message_media": [],
-          "message_text": "thenyartconnection@gmail.com",
           "message_type": "customer",
-          "date_time": "2026-02-11 15:42:50.274"
+          "message_text": "You are almost closed for today, I assume you haven\u0027t heard anything?",
+          "date_time": "2024-05-29 19:43:23.709",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Saatchi Art: Thank you! I do see your artwork here: https://saatchiart.attn.tv/aTPNFdwvv64B. They are all absolutely amazing. You are very talented! 😊 Can I help you with anything else today?",
+          "message_id": "018fc6bd-83d8-4caf-f000-000085046725",
+          "message_text": "SneakPeek: That\u0027s right and I apologize for the long wait. Our team is doing everything to respond to each inquiry in a timely manner. I\u0027ll let you know once there\u0027s an update. ",
           "message_type": "agent",
-          "agent": "33482",
-          "message_id": "019c4e7b-9569-46bf-f000-00001958e645",
-          "date_time": "2026-02-11 15:54:08.010"
+          "agent": "82343",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-29 19:44:19.940"
         },
         {
-          "message_media": [],
-          "message_text": "No I want at list saatchi art should promote my works like other artists",
           "message_type": "customer",
-          "date_time": "2026-02-11 15:56:40.400"
+          "message_text": "Okay.",
+          "date_time": "2024-05-29 19:44:53.941",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Template used: \"Customer support\"; last updated: 2022-12-15 17:43:08.916",
-          "message_type": "template",
-          "date_time": "2026-02-11 16:04:55.182"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Feedback - All brands\"; last updated: 2023-10-10 18:02:56.723",
-          "message_type": "template",
-          "date_time": "2026-02-11 16:04:55.182"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Feedback 1 - All brands\"; last updated: 2023-10-10 18:03:27.339",
-          "message_type": "template",
-          "date_time": "2026-02-11 16:04:55.182"
-        },
-        {
-          "message_media": [],
-          "message_text": "Saatchi Art: I completely understand where you're coming from, getting more visibility and promotion is very important for artists. I truly appreciate you sharing this, and I'll be sure to pass it along to our team for future consideration. Thank you so much!",
+          "message_id": "018fc6c1-e34f-453a-f000-000085046725",
+          "message_text": "SneakPeek: Thanks for your patience. Is there anything else that I can help with while I wait for a response from the team?",
           "message_type": "agent",
-          "agent": "109617",
-          "message_id": "019c4e85-7574-45f2-f000-00001958e645",
-          "date_time": "2026-02-11 16:04:55.186"
+          "agent": "82343",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-29 19:49:06.522"
+        },
+        {
+          "message_id": "018fc6d7-877e-4bd1-f000-000085046725",
+          "message_text": "SneakPeek: Hey again! I just heard from the team who let me know that we do offer an upgrade to a FastTrack return for $45. Your retest will come in 1 business day, with a FedEx Overnight return label for the return of your sample, along with expedited lab work and results delivered to you by 8:59pm Pacific Time the same day your sample is delivered.\n\nIf you\u0027d like to take advantage of this FastTrack upgrade, let me know by providing your order number tomorrow by 10 AM PST! We\u0027ll help set this up and send you a payment link here. We\u0027ve set up a secure payment link: Click Here to Upgrade Your Test Method: https://sneakpeektest.attn.tv/sl/tcCSA1j3\nReply to this message with the order number of your upgrade once you\u0027ve been able to submit this, and we\u0027ll request your retest is sent expedited tomorrow with our daily shipments. \n",
+          "message_type": "agent",
+          "agent": "27727",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-29 20:12:44.809"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "With this would my results be here by Saturday morning?",
+          "date_time": "2024-05-29 20:36:05.498",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc6ee-4198-4865-f000-000085046725",
+          "message_text": "SneakPeek: Thank you for this question! Your retest will come in 1 business day, with a FedEx Overnight return label for the return of your sample, along with expedited lab work and results delivered to you by 8:59pm Pacific Time the same day your sample is delivered.",
+          "message_type": "agent",
+          "agent": "49001",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-29 20:37:34.241"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "So if I ordered tonight the test could be here tomorrow for me to take and return tomorrow?",
+          "date_time": "2024-05-29 20:38:55.427",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc6f2-a305-4b30-f000-000085046725",
+          "message_text": "SneakPeek: I\u0027m circling back with the team and rest assured that I\u0027ll be back as soon as I have the info.",
+          "message_type": "agent",
+          "agent": "49001",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-29 20:42:21.328"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Okay. I just don\u0027t want to waste anymore money if my results are unable to be delivered by Friday evening.",
+          "date_time": "2024-05-29 20:53:55.778",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027ve spent the entire day upset because I\u0027m more than likely having to cancel my weekend and tell my family and friends not to drive out of their way to come to town.",
+          "date_time": "2024-05-29 20:54:35.880",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc702-242e-4665-f000-000085046725",
+          "message_text": "SneakPeek: I\u0027m very sorry for the delay and inconvenience that this transaction may have caused. I\u0027ve made sure to tag this with priority and I\u0027ll let you know immediately once I hear back from the team. ",
+          "message_type": "agent",
+          "agent": "48320",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-29 20:59:17.434"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "But it is after business hours now tonight so you probably will not hear back. Is that correct?",
+          "date_time": "2024-05-29 21:00:05.218",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Escalating after business hours - All brands\"; last updated: 2023-10-10 17:45:06.600",
+          "date_time": "2024-05-29 21:01:59.666",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018fc704-9de6-49ff-f000-000085046725",
+          "message_text": "SneakPeek: I understand that it\u0027s late, so it\u0027s unlikely that I will hear back from you today. But please rest assured that I\u0027ll reach out as soon as business hours resume. Appreciate your patience on this!\n ",
+          "message_type": "agent",
+          "agent": "48320",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-29 21:01:59.668"
         }
-      ],
-      "notes": {
-        "escalate": [
-          "Customer Details that need to be gathered for esc:",
-          "➜ Buyer Name: First & Last Name",
-          "➜ Email Address used for purchase",
-          "➜ Order Number",
-          "➜ Artwork Title/Artist",
-          "ESC any questions or concerns that need specific details about an order that cannot be answered with general information"
-        ],
-        "templates": [
-          "For art/painting/print-related questions that only the artist can answer, use ARQ shortcut"
-        ]
-      },
+      ]
+    },
+    "7": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "019b7b40-3831-4b6f-f000-0000ec54d708",
       "rightPanel": {
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2026-01-01",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249,
+                      249
+                    ],
+                    "Count": 47
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2026-01-01 04:36:56.626",
+            "discount_amount": 0,
+            "orderNumber": "101857",
+            "total": 249
+          }
+        ],
+        "coupons": [
+          {
+            "coupon": "WELCOME5",
+            "status": "ACTIVE"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://saatchiart.com",
+          "value": "https://bullionsharks.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "item": "Mountain air",
-            "link": "https://www.saatchiart.com/art/Painting-Mountain-air/1796740/12136895/view",
-            "timeAgo": "2025-01-28"
+            "link": "https://bullionsharks.com/2026-american-silver-eagle-ngcx-ms10-er-don-t-tread-on-me-1-of-99-w-box-coa/",
+            "item": "2026 American Silver Eagle NGCX MS10 ER - Don\u0026#x27;t Tread on Me (1 of 99) - w/Box \u0026amp; CoA",
+            "timeAgo": "2026-01-01"
           },
           {
-            "item": "Dimensional Abstraction- Holiday Season",
-            "link": "https://www.saatchiart.com/art/Painting-Dimensional-Abstraction-Holiday-Season/1040610/12130879/view?utm_campaign=2528&utm_source=attentive&utm_medium=sms&utm_content=sa_2528_product_abandon&externalId=sLUE9",
-            "timeAgo": "2025-01-27"
+            "link": "https://bullionsharks.com/1776-2026-w-silver-eagle-ngc-pf70-ucam-liberty-bell-privy-don-t-tread-on-me-1-of-250-w-box-coa/?utm_source=newsletter\u0026utm_medium=email\u0026utm_campaign=NGC_Partner_Newsletter\u0026utm_id=NGC_Partner_Newsletter+",
+            "item": "1776-2026 W Silver Eagle NGC PF70 UCAM - Liberty Bell Privy - Don\u0026#x27;t Tread on Me - (1 of 250) - w/Box \u0026amp; CoA",
+            "timeAgo": "2026-01-01"
           },
           {
-            "item": "Dimensional Abstraction- Holiday Season",
-            "link": "https://www.saatchiart.com/art/Painting-Dimensional-Abstraction-Holiday-Season/1040610/12130879/view?utm_campaign=2528&utm_source=attentive&utm_medium=sms&utm_content=sa_2528_product_abandon&externalId=sLUE9",
-            "timeAgo": "2025-01-27"
+            "link": "https://bullionsharks.com/1776-2026-w-silver-eagle-ngc-pf70-ucam-liberty-bell-privy-don-t-tread-on-me-1-of-250-w-box-coa/?utm_source=newsletter\u0026utm_medium=email\u0026utm_campaign=NGC_Partner_Newsletter\u0026utm_id=NGC_Partner_Newsletter+",
+            "item": "1776-2026 W Silver Eagle NGC PF70 UCAM - Liberty Bell Privy - Don\u0026#x27;t Tread on Me - (1 of 250) - w/Box \u0026amp; CoA",
+            "timeAgo": "2026-01-01"
           },
           {
-            "item": "Quayside",
-            "link": "https://www.saatchiart.com/art/Painting-Quayside/423640/9480469/view?utm_source=facebook&utm_medium=paid&utm_campaign=2321&utm_term=C3_AdvantageShopping-Holiday24_FBIG_US_CO_Conversions_Evergreen_Social_Saatchi_10-01-24_Ad-Set&utm_content=25-Artists-Asset-2C_Video-Collection_Promo_15s_01-16-25_ASC&fb_campaign=C3_AdvantageShopping-Holiday24_FBIG_US_CO_Conversions_Evergreen_Social_Saatchi_10-01-24_Campaign&fbclid=IwZXh0bgNhZW0BMABhZGlkAAAGDJBNiRwBHcA009ZLv8DNbLVotMW5mHW2na4FPvYdcCXEa6_h_QETGrAunt7i4uLnlA_aem_ZZtzid4-o164t2xbZaSihQ",
-            "timeAgo": "2025-01-27"
+            "link": "https://bullionsharks.com/1776-2026-w-silver-eagle-ngc-pf70-ucam-liberty-bell-privy-don-t-tread-on-me-1-of-250-w-box-coa/?utm_source=newsletter\u0026utm_medium=email\u0026utm_campaign=NGC_Partner_Newsletter\u0026utm_id=NGC_Partner_Newsletter+",
+            "item": "1776-2026 W Silver Eagle NGC PF70 UCAM - Liberty Bell Privy - Don\u0026#x27;t Tread on Me - (1 of 250) - w/Box \u0026amp; CoA",
+            "timeAgo": "2026-01-01"
           },
           {
-            "item": "Dimensional Abstraction- Holiday Season",
-            "link": "https://www.saatchiart.com/art/Painting-Dimensional-Abstraction-Holiday-Season/1040610/12130879/view",
-            "timeAgo": "2024-11-20"
+            "link": "https://bullionsharks.com/2025-army-navy-marine-privy-silver-eagle-250th-anniversary-3-coin-set-ngc-pf69/?utm_source=newsletter\u0026utm_medium=email\u0026utm_campaign=ArmedForcesSet\u0026utm_id=NGC",
+            "item": "2025 Army, Navy \u0026amp; Marine Privy Silver Eagle 250th Anniversary 3-Coin Set NGC PF69",
+            "timeAgo": "2025-12-05"
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": false
-    },
-    "8": {
-      "id": "019c4e21-f0c9-4303-f000-00007f69e4ce",
-      "companyName": "Shady Rays",
-      "companyWebsite": "https://shadyrays.com",
-      "agentName": "Sam",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: For a limited time, enjoy 30% OFF Sunglasses with a Snow purchase! Get your gear for the sun and the slopes: shadyrays.attn.tv/abz6o57FHTpn ",
-          "message_type": "system",
-          "date_time": "2026-01-18 13:01:23.565"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Our Valentine's Day Sale is live! Get 40% off when you buy 2 or more pairs.\n\nSave now & spread the love: shadyrays.attn.tv/aSLXXTflhPzQ ",
-          "message_type": "system",
-          "date_time": "2026-01-23 17:30:31.775"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Last Chance! Our Valentine's Day sale ends tonight. Save 40% on 2+ pairs while you can. \n\nShop Now: shadyrays.attn.tv/aPw04H98Wd2Q ",
-          "message_type": "system",
-          "date_time": "2026-01-25 14:00:35.754"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Back by popular demand: Azalea & Calico. The retired shades you loved are back! \n\nShop the launch: shadyrays.attn.tv/a-2041T1_wVx ",
-          "message_type": "system",
-          "date_time": "2026-02-05 16:00:52.069"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: Hey , this is Sam. Thanks for stopping by! shadyrays.attn.tv/ajtT-sxPba2B .\n\nCan I help with any questions on our shades?",
-          "message_type": "system",
-          "date_time": "2026-02-11 13:49:02.254"
-        },
-        {
-          "message_media": [],
-          "message_text": "I lost my pair of glasses, do you happen to remember which pair it was I ordered?",
-          "message_type": "customer",
-          "date_time": "2026-02-11 13:50:03.275"
-        },
-        {
-          "message_media": [],
-          "message_text": "I think they were Allure but I can't find my order email to make sure before I order. :)",
-          "message_type": "customer",
-          "date_time": "2026-02-11 13:50:43.361"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: I'm really sorry for the trouble! I'm afraid I'm not seeing an order placed from your account. Could you please share your email address, full name, and shipping address? I'll be happy to look into this with my team! Also, please check your spam and promo folders as well, as our emails sometimes end up there.",
-          "message_type": "agent",
-          "agent": "87473",
-          "message_id": "019c4e0c-0f41-4723-f000-00007f69e4ce",
-          "date_time": "2026-02-11 13:52:19.170"
-        },
-        {
-          "message_media": [],
-          "message_text": "I am not sure what email I used. Shipping address: w16233 rat road, blair wi 54616 Samantha Berg Beatysam@gmail.com maybe?",
-          "message_type": "customer",
-          "date_time": "2026-02-11 14:08:20.879"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: I completely understand and thank you. I'll now have the team look into this. As soon as I hear back, I will send you a message right away! ",
-          "message_type": "agent",
-          "agent": "35256",
-          "message_id": "019c4e1c-262b-4207-f000-00007f69e4ce",
-          "date_time": "2026-02-11 14:09:53.600"
-        },
-        {
-          "message_media": [],
-          "message_text": "Sorry I have no idea what email it was.",
-          "message_type": "customer",
-          "date_time": "2026-02-11 14:12:30.722"
-        },
-        {
-          "message_media": [],
-          "message_text": "Shady Rays: No worries at all! I've passed this on to my team and I'll get back to you as soon as I get an update.",
-          "message_type": "agent",
-          "agent": "87295",
-          "message_id": "019c4e21-f0c9-4303-f000-00007f69e4ce",
-          "date_time": "2026-02-11 14:16:13.165"
-        }
-      ],
+      "companyWebsite": "https://bullionsharks.com",
+      "companyName": "Bullion Shark",
       "notes": {
-        "escalate": [
-          "ESC restock inquiries, but use STOF shortcut first"
-        ],
-        "tone": [
-          "Close the convo if the cx first message doesn't warrant a response (e.g. Them thanking us, saying they're browsing, etc.)"
-        ],
-        "templates": [
-          "For product prescription inquiries use RPP shortcut",
-          "For prescription orders questions use RPO shortcut"
-        ],
-        "dos_and_don_ts": [
-          "If customers want to return an item - clarify if they’re trying to return a recently purchased pair or if they need a replacement"
+        "promo_and_exclusions": [
+          "Please check the brand website for the most up to date holiday promotions."
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://shadyrays.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Allure - Mahogany Polarized",
-            "link": "https://shadyrays.com/products/allure-translucent-dark-brown-polarized",
-            "timeAgo": "2026-02-11"
-          },
-          {
-            "item": "Allure - Mist Polarized",
-            "link": "https://shadyrays.com/products/allure-translucent-dark-brown-polarized",
-            "timeAgo": "2026-02-11"
-          },
-          {
-            "item": "Allure - Mist Polarized",
-            "link": "https://shadyrays.com/products/allure-translucent-matte-tan-polarized",
-            "timeAgo": "2026-02-11"
-          },
-          {
-            "item": "Allure - Mist Polarized",
-            "link": "https://shadyrays.com/products/allure-translucent-dark-brown-polarized",
-            "timeAgo": "2026-02-11"
-          },
-          {
-            "item": "Allure - Mist Polarized",
-            "link": "https://shadyrays.com/products/calimesa-blush",
-            "timeAgo": "2026-02-11"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "9": {
-      "id": "019c71b5-6733-4d63-f000-0000fc3d1b36",
-      "companyName": "Snipes",
-      "companyWebsite": "https://snipesusa.com",
-      "agentName": "Avery",
+      "blocklisted_words": [
+        "Investment"
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns"
+      ],
       "messageTone": "Formal",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "SNIPES: Welcome to SNIPES! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
           "message_type": "system",
-          "date_time": "2026-02-18 07:47:35.027"
+          "message_text": "Bullion Shark: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2025-12-31 23:33:56.427",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "SNIPES: Welcome to the crew! Download the app and join RESERVE for $10 OFF your first purchase over $75. Download here: snipes.attn.tv/aXcYRzdOK0eh .",
           "message_type": "system",
-          "date_time": "2026-02-18 07:47:38.921"
+          "message_text": "Bullion Shark: Welcome! Your coupon code is WELCOME5. Shop 2025 Silver Eagles \u0026 more: https://bullionshark.attn.tv/aqSH9yqlc6B1 .",
+          "date_time": "2025-12-31 23:34:00.402",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "SNIPES: Don't forget to save our contact to get exclusive updates!",
           "message_type": "system",
-          "date_time": "2026-02-18 07:47:40.246"
+          "message_text": "Bullion Shark: Sold out at the mint!\n\n2025 Marine Corps Privy American Eagle w/ OGP Box \u0026 COA - 250th Anniversary: bullionshark.attn.tv/adzgArhsYN1A ",
+          "date_time": "2026-01-01 12:00:21.973",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "I'm having an issue please help I tried to add money to the card and it's not letting me purchase",
+          "message_type": "system",
+          "message_text": "Bullion Shark: Hey there, this is Jordan. Thanks for checking us out! https://bullionshark.attn.tv/aktr4irYT6r5 \n\nAny questions I can answer for you? ",
+          "date_time": "2026-01-01 14:03:07.897",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bullion Shark: Hey there, this is Jordan. Thanks for checking us out!bullionshark.attn.tv/ajfqbjsBJ7y2 \n\nAny questions I can answer for you?",
+          "date_time": "2026-01-01 14:33:31.616",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-18 08:12:41.759"
+          "message_text": "Why was I triple billed for my order?",
+          "date_time": "2026-01-01 14:34:42.054",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "SNIPES: Thank you for reaching out. I'm sorry to hear that. Are you trying to use a prepaid card for your purchase? If yes, then our system accepts some cards and may reject others, so if it doesn't go through at checkout, unfortunately, it can't be used as a payment method. Do you have a credit card you could try instead?",
+          "message_id": "019b7b0f-bb6a-43de-f000-0000ec54d708",
+          "message_text": "Bullion Shark: I\u0027m so sorry to hear that! Upon checking from my end, I can only see one order placed on December 31, 2025. You may have this coordinated with your bank, or feel free to reach out directly at customerservice@bullionsharks.com, or give us a call at 516-739-5822. Our team is happy to help! ",
           "message_type": "agent",
-          "agent": "48804",
-          "message_id": "019c70f6-8b8f-4595-f000-0000fc3d1b36",
-          "date_time": "2026-02-18 08:35:31.753"
+          "agent": "109964",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-01 14:36:27.269"
         },
         {
-          "message_media": [],
-          "message_text": "I put money on the card Now it won't let me finish purchasing and all I was $10 more what am I doing wrong . I would actually like my money refunded so I could just buy it straight out with my debit",
           "message_type": "customer",
-          "date_time": "2026-02-18 10:57:09.934"
+          "message_text": "One order but three times I was billed for the one order. Why don\u0027t tou assist with contacting customer service?",
+          "date_time": "2026-01-01 14:37:45.088",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "SNIPES: I'm sorry to hear that! Since the order was not placed yet, we're not able to do any refunds. Please use a different card at checkout to finish placing your order. Thank you for your cooperation.",
+          "message_id": "019b7b11-8a51-4be2-f000-0000ec54d708",
+          "message_text": "Bullion Shark: I\u0027m sorry about that! Can you confirm if the other charges are currently pending or posted? ",
           "message_type": "agent",
-          "agent": "33482",
-          "message_id": "019c7179-5847-4e25-f000-0000fc3d1b36",
-          "date_time": "2026-02-18 10:58:23.840"
+          "agent": "50269",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-01 14:38:25.769"
         },
         {
-          "message_media": [],
-          "message_text": "But I put money on the snipes card",
           "message_type": "customer",
-          "date_time": "2026-02-18 11:20:59.841"
+          "message_text": "Pending. I will contest all if this isn\u0027t corrected ASAP so that there is only a single charge.",
+          "date_time": "2026-01-01 14:39:44.454",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "SNIPES: My sincere apologies for the inconvenience! Are you referring to a gift card? We currently do not offer the option of using gift cards online. Gift cards can only be used at any of our SNIPES retail stores. ",
-          "message_type": "agent",
-          "agent": "82427",
-          "message_id": "019c71a4-5029-4aae-f000-0000fc3d1b36",
-          "date_time": "2026-02-18 11:45:19.819"
-        },
-        {
-          "message_media": [],
-          "message_text": "I put money on the snipes reserve card",
           "message_type": "customer",
-          "date_time": "2026-02-18 11:46:29.807"
+          "message_text": " ​👍​ to “ Pending. I will contest all if this isn\u0027t corrected ASAP so that there is only a single charge.  ” ",
+          "date_time": "2026-01-01 14:40:24.615",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "I've been trying to find a phone number I can call to get in touch with somebody It's so hard to explain anything on text messaging",
-          "message_type": "customer",
-          "date_time": "2026-02-18 11:46:39.833"
-        },
-        {
-          "message_media": [],
-          "message_text": "And now I'm getting this and can't figure out what's going on",
-          "message_type": "customer",
-          "date_time": "2026-02-18 11:47:52.088"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Customer support\"; last updated: 2023-10-25 17:40:05.851",
-          "message_type": "template",
-          "date_time": "2026-02-18 12:03:59.827"
-        },
-        {
-          "message_media": [],
-          "message_text": "SNIPES: I'm really sorry for the inconvenience. As a product specialist, I'm here to assist you with any product and style-related questions. The best way to handle this is to contact our customer support team via this link https://snipes.attn.tv/a7GsBEowRC05 They'll be more than happy to help!",
+          "message_id": "019b7b13-f3f8-4b97-f000-0000ec54d708",
+          "message_text": "Bullion Shark: Thanks for letting me know. If the charge on your account is still showing as pending, it means the payment hasn\u0027t been completed yet. It should either be refunded within 24 - 48 hours or go through successfully. If it\u0027s refunded, you can try placing the order again. If it processes, you\u0027ll receive a confirmation email shortly.",
           "message_type": "agent",
           "agent": "109972",
-          "message_id": "019c71b5-6733-4d63-f000-0000fc3d1b36",
-          "date_time": "2026-02-18 12:03:59.828"
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-01 14:41:03.894"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Also I was supposed to get a 5% discount by adding my info. But on the order page there was never a place to put the discount code. I suppose that should have been a red flag.",
+          "date_time": "2026-01-01 14:41:41.840",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b7b18-fd6f-4c26-f000-0000ec54d708",
+          "message_text": "Bullion Shark: Thanks for sharing, and I apologize for the inconvenience. Could you please let me know where the discount was from? There\u0027s an option to add a coupon when viewing your cart and during checkout. Simply click on \"Coupon / gift certificate\" so the box to type in the code shows up.",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-01 14:46:33.992"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Bullion Shark: Welcome! Your coupon code is WELCOME5. Shop 2025 Silver Eagles \u0026 more: https://bullionshark.attn.tv/aqSH9yqlc6B1 .\n\nBut there wasn\u0027t such an option at the cart check out. I think I should cancel this order.  Can you assist in canceling?",
+          "date_time": "2026-01-01 15:21:27.707",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b7b3a-eaa2-48ec-f000-0000ec54d708",
+          "message_text": "Bullion Shark: I completely understand your concern, and I\u0027m really sorry for the trouble. I can check if that\u0027s possible. Can I please have the order number and your email address? Please let me know, I\u0027m here to assist you. ",
+          "message_type": "agent",
+          "agent": "87300",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-01 15:23:37.399"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Order # 101857. Email kbr1@cox.net\nI can block text and email if this is used for further advertising. I should have checked better business reviews for bullion shark. I will file bbb report if this is not corrected.",
+          "date_time": "2026-01-01 15:27:16.315",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Pass to the team - All brands\"; last updated: 2023-10-10 17:46:43.559",
+          "date_time": "2026-01-01 15:29:24.936",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Experience - All brands\"; last updated: 2023-10-10 18:04:21.663",
+          "date_time": "2026-01-01 15:29:24.936",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b7b40-3831-4b6f-f000-0000ec54d708",
+          "message_text": "Bullion Shark: Thanks for the info! I really apologize for your experience. I will pass this along to my team and get back to you as soon as possible, hang tight!",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-01 15:29:24.940"
         }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "Send to CS immediately for post-purchase issues",
-          "Send to CS for payment processing issues"
-        ],
-        "tone": [
-          "Don't use the term restock",
-          "Don't tell customers that we'll be restocking",
-          "Don't respond to blank messages",
-          "Don't use formal language",
-          "Close the conversation when a customer responds 'no'"
-        ],
-        "templates": [
-          "If a cx reaches out regarding the Early Access event, use EAE shortcut",
-          "For cx reaching out in Spanish use SSC shortcut",
-          "For checkout issues use the \"Check out Issues\" temp",
-          "For store item availability, use SPA shortcut",
-          "If cx's email doesn't work for early access, use EEA shortcut"
-        ],
-        "dos_and_don_ts": [
-          "They occasionally run sign-up campaigns where cx text certain keywords (“releases,” “early access”) to join a list. If a customer sends a similar keyword:",
-          "➜ Check the website banner or landing page to confirm if it's a current keyword trigger",
-          "➜ If confirmed, close the convo, if not you can respond",
-          "All clothing is true to size unless otherwise stated on the product page",
-          "You can use these sizing charts for reference (for internal use only): https://docs.google.com/spreadsheets/d/1kmra_vOwCJuHoAx9D4L4Qx95rxafHcrqn-ZGutfzLgg/edit?usp=sharing",
-          "🅿️ If customers say they want to purchase in store - encourage them to buy online & pick up in-store",
-          "For store info q's (phone number/additional info) - use the store locator with your VPN turned on!"
-        ],
-        "drive_to_purchase": [
-          "🅿️ If customers are looking for an outfit recommendation/item pairing - direct them to the \"shop the look\" section on each product page or use the LK shortcut"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://snipesusa.com",
-          "date": ""
-        }
-      },
-      "escalation_preferences": [
-        "Exchanges and returns"
-      ],
-      "blocklisted_words": [
-        "restock"
-      ],
-      "has_shopify": false
+      ]
     },
-    "10": {
-      "id": "019c6330-3ddc-49da-f000-00001160795e",
-      "companyName": "Joyride Dogs",
-      "companyWebsite": "https://joyrideharness.com",
-      "agentName": "Sarah",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Joyride Dogs: Have you seen Joyride's Kitchen food & treats? \n\nYou can get 50% off your first bag!\n\njoyrideharness.attn.tv/aHlA_sgXE78C\n\n*limited time offer",
-          "message_type": "system",
-          "date_time": "2026-01-18 17:55:19.115"
-        },
-        {
-          "message_media": [],
-          "message_text": "Joyride Dogs: [FREE SHIPPING FLASH SALE]\n\nFree shipping, no minimums!\n\nUse code: FREEFLASH\n\njoyrideharness.attn.tv/aKYpbBWoxYOd\n\nDon't miss it!",
-          "message_type": "system",
-          "date_time": "2026-01-24 15:30:17.086"
-        },
-        {
-          "message_media": [],
-          "message_text": "Joyride Dogs: 3 NEW single ingredient treats JUST ADDED...\n\nyour dog will love these!\n\nCheck them out here:\n\njoyrideharness.attn.tv/a2qt_1OSRpe_\n\n",
-          "message_type": "system",
-          "date_time": "2026-01-31 15:01:02.037"
-        },
-        {
-          "message_media": [],
-          "message_text": "Joyride Dogs: Hey, this is Sarah.\n\nCongrats on visiting our website during the BIGGEST sale of the year - get your discount while supplies last!\n\nIf you have any questions, Text back, I'm happy to help!\n\nhttps://joyrideharness.attn.tv/ay3H2NR7Z9bA",
-          "message_type": "system",
-          "date_time": "2026-02-02 12:52:27.228"
-        },
-        {
-          "message_media": [],
-          "message_text": "Joyride Dogs: [EARLY ACCESS PRES DAY SALE]\n\nGet 15% off + a $15 Seatbelt (FREE) ,\n\nUse code: PRES\n\njoyrideharness.attn.tv/aUNEVkiL5Yn7\n\nDon't miss it!",
-          "message_type": "system",
-          "date_time": "2026-02-07 15:15:18.567"
-        },
-        {
-          "message_media": [],
-          "message_text": "Joyride Dogs: [LAST CALL]\n\nPRES DAY SALE is Ending!\n\nGet 15% off + a $15 Seatbelt (FREE)\n\nCode: PRES\n\njoyrideharness.attn.tv/axYgFaSuR12a\n\nDon't miss it!",
-          "message_type": "system",
-          "date_time": "2026-02-15 15:05:42.716"
-        },
-        {
-          "message_media": [],
-          "message_text": "I have a m order  money taken from my account  received a text   ticket no longer active   removed   send me merchandise or refund my money.",
-          "message_type": "customer",
-          "date_time": "2026-02-15 15:12:12.646"
-        },
-        {
-          "message_media": [],
-          "message_text": "Joyride Dogs: I'm here to help. Mind checking if you've already received your tracking info for the order that you've placed? If you don't see it in your inbox, be sure to check your spam and promo folders, sometimes our emails end up there as well. \n\nYou can also use our convenient online tool to see the latest updates on your order: https://joyrideharness.attn.tv/aZ-AzWtUT2xy",
-          "message_type": "agent",
-          "agent": "50271",
-          "message_id": "019c62f1-0302-43ee-f000-00001160795e",
-          "date_time": "2026-02-15 15:14:48.104"
-        },
-        {
-          "message_media": [],
-          "message_text": "I had an order.  Payment has been taken from my checking account.  Have NOT RECEIVED THE GOODS.  PLEASE CORRECT",
-          "message_type": "customer",
-          "date_time": "2026-02-15 15:41:59.732"
-        },
-        {
-          "message_media": [],
-          "message_text": ".",
-          "message_type": "customer",
-          "date_time": "2026-02-15 15:42:04.783"
-        },
-        {
-          "message_media": [],
-          "message_text": "Joyride Dogs: I'm sorry this is happening, but I don't see any recent orders here. Could you please check your email to see if you received an order confirmation? Don't forget to check your spam and promotions folders, as our emails can sometimes end up there.\n",
-          "message_type": "agent",
-          "agent": "39001",
-          "message_id": "019c630a-fefe-442f-f000-00001160795e",
-          "date_time": "2026-02-15 15:43:11.002"
-        },
-        {
-          "message_media": [],
-          "message_text": "Send me the goods or refund my money.",
-          "message_type": "customer",
-          "date_time": "2026-02-15 15:46:50.111"
-        },
-        {
-          "message_media": [],
-          "message_text": "Joyride is messed up.  I sent my billing address and it was deleted by     one  of your techs.",
-          "message_type": "customer",
-          "date_time": "2026-02-15 15:49:09.545"
-        },
-        {
-          "message_media": [],
-          "message_text": "You took my money.",
-          "message_type": "customer",
-          "date_time": "2026-02-15 15:49:59.696"
-        },
-        {
-          "message_media": [],
-          "message_text": "Joyride Dogs: I'm very sorry this is happening. We never want you to feel misled. Since I don't have access to any recent order records in your account and my system has limitations for certain types of requests The best way to handle this is to email us directly at help@joyrideharness.com or live chat with one of our reps via our website: https://joyrideharness.attn.tv/aU3tK2_b_MC1/ Our team is happy to help! \n",
-          "message_type": "agent",
-          "agent": "39001",
-          "message_id": "019c6316-fbf5-4d7c-f000-00001160795e",
-          "date_time": "2026-02-15 15:56:16.661"
-        },
-        {
-          "message_media": [],
-          "message_text": "The order was placed on  February 11, 2026.",
-          "message_type": "customer",
-          "date_time": "2026-02-15 16:11:05.192"
-        },
-        {
-          "message_media": [],
-          "message_text": "Money has been deducted from my account.  No goods",
-          "message_type": "customer",
-          "date_time": "2026-02-15 16:12:05.361"
-        },
-        {
-          "message_media": [],
-          "message_text": "Joyride Dogs: Thank you for sharing this with me. I'd be happy to check this further with my team for you instead. Can you please share your order number and email address with me?",
-          "message_type": "agent",
-          "agent": "82219",
-          "message_id": "019c6326-3f7a-4ed2-f000-00001160795e",
-          "date_time": "2026-02-15 16:12:56.974"
-        },
-        {
-          "message_media": [],
-          "message_text": "I do not have an order number or a tracking number.",
-          "message_type": "customer",
-          "date_time": "2026-02-15 16:17:05.305"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Customer support\"; last updated: 2022-12-16 17:23:43.065",
-          "message_type": "template",
-          "date_time": "2026-02-15 16:23:51.930"
-        },
-        {
-          "message_media": [],
-          "message_text": "Joyride Dogs: I'm really sorry about this. The best way to handle this is to email us directly at help@joyrideharness.com or live chat with one of our reps via our website: https://joyrideharness.attn.tv/aO5c1inmjsSK/ Our team is happy to help!",
-          "message_type": "agent",
-          "agent": "109972",
-          "message_id": "019c6330-3ddc-49da-f000-00001160795e",
-          "date_time": "2026-02-15 16:23:51.935"
-        }
-      ],
-      "notes": {},
+    "8": {
+      "agentName": "Kate",
+      "has_shopify": false,
+      "id": "018f9d1c-90d6-4a74-f000-000006fcfa11",
       "rightPanel": {
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-27",
+            "items": [
+              {
+                "price": [
+                  24.99
+                ],
+                "productLink": "https://www.revelnail.com/products/d876-merry-dancers-multi-glitter-dip-powder",
+                "name": "D876 Merry Dancers Multi Glitter Dip Powder"
+              }
+            ],
+            "date_time": "2023-11-27 22:55:41.943",
+            "discount_amount": 0,
+            "orderNumber": "5396348141766",
+            "total": 30.37
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-11-27",
+            "items": [
+              {
+                "price": [
+                  7.5
+                ],
+                "productLink": "https://www.revelnail.com/products/p876-merry-dancers-multi-glitter-nail-polish",
+                "name": "P876 Merry Dancers Multi Glitter Nail Polish"
+              }
+            ],
+            "date_time": "2023-11-27 22:55:41.860",
+            "discount_amount": 0,
+            "orderNumber": "5396348141766",
+            "total": 30.37
+          }
+        ],
+        "coupons": [
+          {
+            "coupon": "MOBILE10",
+            "status": "ACTIVE"
+          },
+          {
+            "coupon": "ABbh5pMx",
+            "status": "ACTIVE"
+          },
+          {
+            "coupon": "5cn9kx-4uwzcg",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "RR-kdmbvz",
+            "status": "INACTIVE"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://joyrideharness.com",
+          "value": "https://revelnail.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "item": "Rainbow Joyride B Grade Premium Advanced Dog Harness 2.0 - XS",
-            "link": "https://joyrideharness.com/products/rainbow-joyride-harness-2-0",
-            "timeAgo": "2026-02-12"
+            "link": "https://www.revelnail.com/collections/exclusive-offers/products/d970-timeless-cheer-gold-dip-powder",
+            "item": "D970 Timeless Cheer Gold Dip Powder - 0.5 oz jar",
+            "timeAgo": "2023-12-26"
           },
           {
-            "item": "Joyride Premium Advanced Dog Harness 2.0 (Solid Colors) - Black Onyx / XS",
-            "link": "https://joyrideharness.com/products/worlds-best-dog-harness?tw_source=google&tw_adid=770610001665&tw_campaign=22925139251&gad_source=1&gad_campaignid=22925139251&gbraid=0AAAAADsABKjaVxVPvXtXaq_hdzFxX7Zy4&gclid=CjwKCAiAkbbMBhB2EiwANbxtbWHe5wz_1IEJ4_F4ITI-vdrJTo7mki28V_eawNktCAN-QTgrSc1S5hoCJIwQAvD_BwE",
-            "timeAgo": "2026-02-12"
+            "link": "https://www.revelnail.com/collections/exclusive-offers/products/d760-music-hall",
+            "item": "D760 Music Hall Red Flake Dip Powder - 0.5 oz jar",
+            "timeAgo": "2023-12-26"
           },
           {
-            "item": "Joyride Premium Advanced Dog Harness 2.0 (Solid Colors) - Black Onyx / XS",
-            "link": "https://joyrideharness.com/collections/harnesses-new/products/worlds-best-dog-harness",
-            "timeAgo": "2026-02-10"
+            "link": "https://www.revelnail.com/collections/exclusive-offers/products/holiday-drop-ins-city-lights-full-collection",
+            "item": "City Lights | Holiday Flakes Dip Powder Set - 0.5 oz jars",
+            "timeAgo": "2023-12-26"
           },
           {
-            "item": "Joyride Premium Advanced Dog Harness 2.0 (Patterns) - Ducky Delight / XS",
-            "link": "https://joyrideharness.com/collections/harnesses-new/products/joyride-harness-2-0-patterns",
-            "timeAgo": "2026-02-07"
+            "link": "https://www.revelnail.com/collections/exclusive-offers/products/d991-evermore-white-glitter-dip-powder",
+            "item": "D991 Evermore White Glitter Dip Powder - 0.5 oz jar",
+            "timeAgo": "2023-12-06"
           },
           {
-            "item": "Joyride Premium Advanced Dog Harness 2.0 (Solid Colors) - Black Onyx / XS",
-            "link": "https://joyrideharness.com/collections/harnesses-new/products/worlds-best-dog-harness",
-            "timeAgo": "2026-01-26"
+            "link": "https://www.revelnail.com/collections/exclusive-offers/products/d1003-paparazzi-metallic-flake-dip-powder",
+            "item": "D1003 Paparazzi Multi Metallic Flake Dip Powder - 0.5 oz jar",
+            "timeAgo": "2023-12-02"
           }
         ]
       },
-      "escalation_preferences": [],
+      "companyWebsite": "https://revelnail.com",
+      "companyName": "Revel Nail",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "templates": [
+          "For cuticle oil code issues use CCW shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Rewards cannot be combined with discount codes"
+        ]
+      },
       "blocklisted_words": [
-        "pet"
+        
       ],
-      "has_shopify": true
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: Save up to 75% in our Spring Cleaning Sale!\n\nhttps://revelnail.attn.tv/l/EIT/JLyds ",
+          "date_time": "2024-04-23 15:07:10.907",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: Don\u0027t miss Spring Blowout Savings up to 75% off! \n\nTime for a Clean Sweep: https://revelnail.attn.tv/l/kuw/JLyds ",
+          "date_time": "2024-04-24 10:01:06.138",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: Spring Cleaning Sale Alert! New items just added to our blowout sale. Don\u0027t miss out on these amazing deals! \nhttps://revelnail.attn.tv/l/2ZK/JLyds ",
+          "date_time": "2024-04-25 10:01:53.182",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: Spring Cleaning Blowout Sale happening now! Save up to 75% on your favorite nail products!\n\nhttps://revelnail.attn.tv/l/3nd/JLyds",
+          "date_time": "2024-04-26 18:05:35.806",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: More Savings Live Now! Sugar Rush Flakes + more just added to our Spring Cleaning Clearance Sale!\n\nhttps://revelnail.attn.tv/l/9UZ/JLyds ",
+          "date_time": "2024-04-27 10:05:42.062",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: \nNEW Reflective Glitters are here!\n+ Save 20% on select glitters with code REFLECT\n\nSparkle \u0026 Shine: https://revelnail.attn.tv/l/CCF/JLyds ",
+          "date_time": "2024-05-01 17:07:24.951",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: NEW Reflective Glitters are here! \n\nGet your shine on: https://revelnail.attn.tv/l/4mW/JLyds ",
+          "date_time": "2024-05-02 10:01:30.427",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: \nWe know Mother\u0027s Day can be a tough time for some, so if you\u0027d like to pause our texts related to Mother\u0027s Day, reply PAUSE.\n\nDon\u0027t worry, we\u0027ll still keep you up to date on everything else!",
+          "date_time": "2024-05-02 12:15:58.675",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: A Touch of Reflection Flakes - Just $10 for a limited time! Sparkle 24/7 and save!\n\nhttps://revelnail.attn.tv/l/yuX/JLyds ",
+          "date_time": "2024-05-03 19:05:45.328",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: \n\nEverything you need to shine all summer - Flakes, Glitter, + NEW Reflective Glitters!\n\nhttps://revelnail.attn.tv/l/YTC/JLyds ",
+          "date_time": "2024-05-05 19:05:47.121",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: Last chance to shop NEW Reflective Glitters in Dip \u0026 Gel + save on select glitters and nail art flakes! \n\nhttps://revelnail.attn.tv/l/Lp1/JLyds ",
+          "date_time": "2024-05-07 18:05:43.383",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: Thank you for your purchase! Your order number is 1861404. View more information about your order here: https://revelnail.attn.tv/sl/7h4Whj7B .",
+          "date_time": "2024-05-08 06:48:31.450",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: Congratulations! You have enough reward points for $20 voucher! Log in and redeem to use on your next purchase! https://revelnail.attn.tv/l/A2U/JLyds ",
+          "date_time": "2024-05-08 12:47:13.810",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: \nOur Mother\u0027s Day Event is on NOW! Two new trios, Freebies, plus every purchase is a chance to win 50 free dip powder shades! \n\nDon\u0027t miss it: https://revelnail.attn.tv/l/Onz/JLyds ",
+          "date_time": "2024-05-09 15:06:14.936",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: Treat yo\u0027self during our Mother\u0027s Day Event! Check out new Trios, score a freebie + enter to win 50 shades!\n\nhttps://revelnail.attn.tv/l/6bB/JLyds ",
+          "date_time": "2024-05-10 10:05:49.335",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: \nFINAL HOURS: Mother\u0027s Day Event ends soon! New + Returning Trios, Freebies, + Giveaway! Don\u0027t miss it!\n\nhttps://revelnail.attn.tv/a66C3RUi17TE ",
+          "date_time": "2024-05-15 19:05:58.482",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Revel Nail: Thank you for your purchase! Your order number is 1865127. View more information about your order here: https://revelnail.attn.tv/arCo1fPR6Dr- .",
+          "date_time": "2024-05-21 17:05:28.790",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I wanted to add to my order",
+          "date_time": "2024-05-21 17:06:32.928",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f9d1c-90d6-4a74-f000-000006fcfa11",
+          "message_text": "Revel Nail: Thank yo so much for your purchase! If you\u0027d like to add to your order, you can do so within the first hour of placing it by visiting your \"order status\" page and canceling the order. You can always check your order status by clicking on the link in your confirmation email.\n\nJust a heads up, selecting the \"edit\" button will cancel your order, and you\u0027ll need to place a new one with your desired changes. Unfortunately, our CS team can\u0027t directly edit orders due to system and fulfillment restrictions, but we\u0027re here to help with shipping address changes.\n\nI\u0027m here to assist you if you need any further guidance or have any questions.",
+          "message_type": "agent",
+          "agent": "82259",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-21 17:44:06.112"
+        }
+      ]
+    },
+    "9": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "0191edd7-7bce-4e01-f000-000094eb2a1c",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://covercraft.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC?utm_campaign=concierge\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=UQZbT",
+            "item": "Colgan Original Car Bra - Black Crush Fabric: Size T1",
+            "timeAgo": "2024-09-05"
+          },
+          {
+            "link": "https://www.covercraft.com/product/lebra-custom-front-end-cover/20L1",
+            "item": "https://www.covercraft.com/product/lebra-custom-front-end-cover/20L1",
+            "timeAgo": "2024-09-04"
+          },
+          {
+            "link": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC?utm_campaign=concierge\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=UQZbT",
+            "item": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC?utm_campaign=concierge\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=UQZbT",
+            "timeAgo": "2024-09-04"
+          },
+          {
+            "link": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC",
+            "item": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC",
+            "timeAgo": "2024-09-03"
+          },
+          {
+            "link": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC?externalId=UQZbT",
+            "item": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC?externalId=UQZbT",
+            "timeAgo": "2024-09-03"
+          }
+        ]
+      },
+      "companyWebsite": "https://covercraft.com",
+      "companyName": "Covercraft",
+      "notes": {
+        "templates": [
+          "For custom full vehicle covers use FVC shortcut",
+          "For cx that can\u0027t see the cover pattern/images of their vehicle use CPI shortcut",
+          "If we don\u0027t have a pattern/color the cx is looking for use PRR shortcut"
+        ],
+        "dos_and_donts": [
+          "Do not tell customers that the base price is the final price! The cost changes by the fitment and depends on the vehicle",
+          "Rebates are discounts for this brand!",
+          "Custom dim pattern sheets are only available for Vehicle Covers (Car, Truck, Van,RV)",
+          "➜https://www.covercraft.com/us/en/covercrafter"
+        ],
+        "drive_to_purchase": [
+          "Before sharing any product links, confirm the vehicle’s Year, Make, and Model"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Discount code errors"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Welcome to Covercraft! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/rgj",
+          "date_time": "2024-09-03 19:44:56.486",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Enjoy an Extra $10 Off with code: SUMMER10\n\nActive Deals: https://covercraft.attn.tv/arMcfSEHK2tq ",
+          "date_time": "2024-09-03 19:45:00.458",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Hey there, this is Sarah. Thanks for checking out our site! 😊 https://covercraft.attn.tv/afv2uMAUDwrf \n\nAre you looking for anything in particular today? ",
+          "date_time": "2024-09-03 19:50:42.244",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Shh Carhartt Deals are live \u0026 even better DEALS on our toughest Marathon Cordura Seat Covers!\nhttps://covercraft.attn.tv/aMGB-dRDx8aT \n#KeepItCustom",
+          "date_time": "2024-09-05 19:13:36.591",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Sun Defense \u0026 End of Summer Deal you Crave!\nhttps://covercraft.attn.tv/a0o82p3qz5l8 \n\n- Custom-Fit\n- Insulated Core\n- Compact Fold\n- Sleek Designs",
+          "date_time": "2024-09-06 19:40:20.782",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Hey there! I\u0027m Sarah, your personal shopping assistant.\n\nI\u0027m here to answer any questions, share recommendations, or assist in any way. What can I help you with today?\n\nhttps://covercraft.attn.tv/aW2bVey41JnZ .",
+          "date_time": "2024-09-08 11:00:14.814",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Custom Sun Shade with Exclusive American Flag Logos \u0026 More!\n\nBig Fall Deals: https://covercraft.attn.tv/a7qVIbeI5x1c ",
+          "date_time": "2024-09-11 19:10:41.329",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: The Ultimate Camouflage Seat Covers!\n- Waterproof\n- Perfect Fit\n- Washable\n- Cordura Tough\n- Up to 50% Off\n\nhttps://covercraft.attn.tv/aq9ComYYbEHz ",
+          "date_time": "2024-09-12 19:18:18.743",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Covercraft: Hey there! I\u0027m Sarah and I\u0027m here to be a personal shopping assistant for you!\n\nDo you have any questions or need a recommendation? Let me know how I can help. \n\nhttps://covercraft.attn.tv/aUaCReYKO9c2 .",
+          "date_time": "2024-09-13 19:39:20.943",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Do you have any nose bra on sale?",
+          "date_time": "2024-09-13 20:00:17.686",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0191edd7-7bce-4e01-f000-000094eb2a1c",
+          "message_text": "Covercraft: Thank you for your interest in our products! Yes we do! May I know what your vehicle\u0027s make and model is so I can help you look? You can find all our nose bras on sale here: https://covercraft.attn.tv/aKw8Wj14cYK-",
+          "message_type": "agent",
+          "agent": "82454",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-13 20:03:27.833"
+        }
+      ]
+    },
+    "10": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "019629f2-d28e-4399-f000-0000b53cef52",
+      "rightPanel": {
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-03-01",
+            "items": [
+              {
+                "price": [
+                  40
+                ],
+                "productLink": "https://dsanddurga.myshopify.com/products/customizable-sample-set-1",
+                "name": "Customizable Sample Set"
+              }
+            ],
+            "date_time": "2025-03-01 11:46:26.578",
+            "discount_amount": 0,
+            "orderNumber": "6565829476643",
+            "total": 45
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://dsanddurga.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.dsanddurga.com/products/murder-mystery-perfume-set?utm_source=90%20Day%20Engaged\u0026utm_medium=campaign-email\u0026utm_campaign=Murder%20Mystery%20Award\u0026tw_medium=campaign\u0026tw_source=Klaviyo\u0026tw_profile_id=01JN2NH0NWTTGY3G85RKN6C1TE\u0026_kx=s7SnbWtLue5MgJ1VlmwwF2GNhstnyeOU9hYnxarmsN2sbCzQqCpIipKLVvurNQeo.NFa9un",
+            "item": "Murder Mystery Set",
+            "timeAgo": "2025-04-11"
+          },
+          {
+            "link": "https://www.dsanddurga.com/products/murder-mystery-perfume-set?utm_source=90%20Day%20Engaged\u0026utm_medium=campaign-email\u0026utm_campaign=Murder%20Mystery%20Award\u0026tw_medium=campaign\u0026tw_source=Klaviyo\u0026tw_profile_id=01JN2NH0NWTTGY3G85RKN6C1TE\u0026_kx=s7SnbWtLue5MgJ1VlmwwF2GNhstnyeOU9hYnxarmsN2sbCzQqCpIipKLVvurNQeo.NFa9un",
+            "item": "Murder Mystery Set",
+            "timeAgo": "2025-04-11"
+          },
+          {
+            "link": "https://www.dsanddurga.com/products/murder-mystery-perfume-set?utm_source=90%20Day%20Engaged\u0026utm_medium=campaign-email\u0026utm_campaign=Murder%20Mystery%20Award\u0026tw_medium=campaign\u0026tw_source=Klaviyo\u0026tw_profile_id=01JN2NH0NWTTGY3G85RKN6C1TE\u0026_kx=s7SnbWtLue5MgJ1VlmwwF2GNhstnyeOU9hYnxarmsN2sbCzQqCpIipKLVvurNQeo.NFa9un",
+            "item": "Murder Mystery Set",
+            "timeAgo": "2025-04-11"
+          },
+          {
+            "link": "https://www.dsanddurga.com/products/murder-mystery-perfume-set?utm_source=90%20Day%20Engaged\u0026utm_medium=campaign-email\u0026utm_campaign=Murder%20Mystery%20Award\u0026tw_medium=campaign\u0026tw_source=Klaviyo\u0026tw_profile_id=01JN2NH0NWTTGY3G85RKN6C1TE\u0026_kx=s7SnbWtLue5MgJ1VlmwwF2GNhstnyeOU9hYnxarmsN2sbCzQqCpIipKLVvurNQeo.NFa9un",
+            "item": "Murder Mystery Set",
+            "timeAgo": "2025-04-11"
+          },
+          {
+            "link": "https://www.dsanddurga.com/products/dream-lychee?utm_campaign=Dream%20Lychee\u0026utm_medium=SMS\u0026utm_source=AttentiveSMS\u0026externalId=KwPKm",
+            "item": "Dream Lychee",
+            "timeAgo": "2025-03-15"
+          }
+        ]
+      },
+      "companyWebsite": "https://dsanddurga.com",
+      "companyName": "D.S. \u0026 Durga",
+      "notes": {
+        
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Discount code errors"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "D.S. \u0026 DURGA: Hey there! We noticed you eyeing something on our site...come back and shop now: https://dsanddurga.attn.tv/a__vyY5Ztv7h \n\nAre there any questions I can answer for you? Stop to stop",
+          "date_time": "2025-03-15 12:14:23.353",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "D.S. \u0026 DURGA: Prismatic spring color fumes this way \u003e\u003e\u003e Shop Steamed Rainbow: dsanddurga.attn.tv/ajRtVGplZvV5 \n\n\nText back if you have any questions! Stop to stop",
+          "date_time": "2025-03-17 12:30:57.658",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "D.S. \u0026 DURGA: FREE gift for hoopers! 🎁 Parquet Leather Candle on orders $210+. No code needed. Get your gift: dsanddurga.attn.tv/aRKAND0C3A_z \n\n\nText back if you have any questions! Stop to stop",
+          "date_time": "2025-03-19 17:30:19.690",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "D.S. \u0026 DURGA: Some say Brown Flowers is an unexpected floral perfume. We agree. Shop Now: dsanddurga.attn.tv/a0wpclFf63fG \n\n\nText back if you have any questions! Stop to stop",
+          "date_time": "2025-03-23 12:05:53.725",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "D.S. \u0026 DURGA: Radio Bombay is one of our cult classics. On skin shades of cedar, musk, iris, coconut, and peach enchant the nose. An everyday all season wonder. dsanddurga.attn.tv/apvPrYpe3Pu2 \n\n\n\nText back if you have any questions! Stop to stop",
+          "date_time": "2025-03-26 12:15:32.809",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "D.S. \u0026 DURGA: Sunday morning with strong coffee, buttery almond pastries, pipe tobacco \u0026 Breakfast Leipzig. Perfect. dsanddurga.attn.tv/a0HVyrcEXPOK \n\n\nText back if you have any questions! Stop to stop",
+          "date_time": "2025-03-30 12:02:20.655",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "D.S. \u0026 DURGA: A perfume for amateur modernists or the high-design inclined? Shop Brown Flowers Now: dsanddurga.attn.tv/aJaiK9X1fKGS \n\n\nText back if you have any questions! Stop to stop",
+          "date_time": "2025-04-02 18:05:36.579",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "D.S. \u0026 DURGA: Cult-fave WIPEOUT! is back for a limited time. Our surfside fume full of guava, ylang, vetiver, vanilla. 100 bottles! Grab one here: \ndsanddurga.attn.tv/a9IZnmpUY9jl  Stop to stop",
+          "date_time": "2025-04-06 12:05:37.438",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "D.S. \u0026 DURGA: This spring join the pink peony club with Cowgirl Grass. Shop Now: dsanddurga.attn.tv/a_qbTlO7CL48 \n\n\nText back if you have any questions! Stop to stop",
+          "date_time": "2025-04-09 18:05:24.624",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "D.S. \u0026 DURGA: Hey there! We noticed you eyeing something on our site...come back and shop now: https://dsanddurga.attn.tv/a7KtZhR5fdIe \n\nAre there any questions I can answer for you? Stop to stop",
+          "date_time": "2025-04-11 13:19:27.579",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes I never received my order 288095 so how can I trust you with another order?",
+          "date_time": "2025-04-11 14:01:45.485",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01962605-aacf-4b1f-f000-0000b53cef52",
+          "message_text": "D.S. \u0026 DURGA: I\u0027m sorry to hear that! Mind sharing the email address that you used for this order, please? I\u0027ll be happy to check on this with the team for you! ",
+          "message_type": "agent",
+          "agent": "50271",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-04-11 14:03:47.806"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank You",
+          "date_time": "2025-04-12 06:12:17.107",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019629f2-d28e-4399-f000-0000b53cef52",
+          "message_text": "D.S. \u0026 DURGA: Pleasure, I\u0027ll be here.",
+          "message_type": "agent",
+          "agent": "87474",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-04-12 08:21:41.659"
+        }
+      ]
     }
   }
 }

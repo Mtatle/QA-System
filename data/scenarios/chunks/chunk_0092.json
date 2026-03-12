@@ -1,0 +1,1156 @@
+{
+  "version": 1,
+  "chunk": "chunk_0092",
+  "scenarios": {
+    "456": {
+      "agentName": "Katie",
+      "has_shopify": false,
+      "id": "019884d6-3451-4d62-f000-00006cdd2441",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Cyber Monday",
+            "content": [
+              "Free bond repair bar on orders of $50+"
+            ]
+          },
+          {
+            "title": "Black Friday Sale",
+            "content": [
+              "Up to 55% off select items. Sitewide sale 30% off. \n\nSome exclusions may apply."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 1826432065,
+            "value": "25",
+            "company_id": 1859,
+            "coupon_url": "https://kitschllc.myshopify.com/discount/25WELCOME?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "25WELCOME",
+            "name": "25WELCOME",
+            "coupon": "25WELCOME",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          },
+          {
+            "subscriber_id": 1826432065,
+            "description": "20% Off Your Order",
+            "company_id": 1859,
+            "value": "20",
+            "static_code": "BEST20",
+            "name": "BEST20",
+            "coupon": "BEST20",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://mykitsch.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.mykitsch.com/products/harry-potter-x-kitsch-satin-pillowcase-owl-post",
+            "item": "Harry Potter x Kitsch Satin Pillowcase - Owl Post",
+            "timeAgo": "2023-10-02"
+          },
+          {
+            "link": "https://www.mykitsch.com/products/satin-pillowcase-white-terrazzo",
+            "item": "Satin Pillowcase - White Terrazzo",
+            "timeAgo": "2023-10-02"
+          }
+        ]
+      },
+      "companyWebsite": "https://mykitsch.com",
+      "companyName": "Kitsch",
+      "notes": {
+        "templates": [
+          "For receiving 1 pillowcase instead of 2, check if they ordered \"Satin Sleep Set\" and use SSS shortcut"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!",
+          "Close the convo if the customer replies with SUPPORT \u0026 doesn\u0027t send any follow-up messages",
+          "➜  If they do, you can respond"
+        ]
+      },
+      "blocklisted_words": [
+        "Fabulous"
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Kitsch: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2025-08-06 20:18:15.380",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kitsch: You\u0027re in! :)\n\nEnjoy 25% off your next order with code WELCOME-25.\n\nShop now: mykitsch.attn.tv/aP06TNA0rV_l ",
+          "date_time": "2025-08-06 20:18:19.405",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kitsch: Save our contact to make sure you get all the latest updates from Kitsch!",
+          "date_time": "2025-08-07 09:12:03.825",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I need a queen size pillow case the Gryffindor one . I got two king but needed standard / queen",
+          "date_time": "2025-08-07 09:53:47.971",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019884d6-3451-4d62-f000-00006cdd2441",
+          "message_text": "Kitsch: Thanks for reaching out,here is a link to the pillowcase https://mykitsch.attn.tv/arx6pYgb_Uyf .Are you looking for it in a particular color aswell? \n\nFeel free to check out our bundles here : https://mykitsch.attn.tv/aWijbCVBXXFD \n\nlet me know if any of the bundles catch your eye!",
+          "message_type": "agent",
+          "agent": "109676",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-07 10:01:27.418"
+        }
+      ]
+    },
+    "457": {
+      "agentName": "Jamie",
+      "has_shopify": true,
+      "id": "019a604c-4f1b-4e40-f000-000062b953be",
+      "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 1656312766,
+            "company_id": 11253,
+            "coupon_url": "https://www.capillus.com/pages/capillus-laser-devices?utm_source=attentive\u0026utm_medium=sms\u0026token=ZPDNB",
+            "static_code": "ZPDNB",
+            "name": "Welcome 30% Off",
+            "coupon": "ZPDNB",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://capillus.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.capillus.com/products/capillus-pro?externalId=L1F6Z",
+            "item": "Capillus PRO",
+            "timeAgo": "2025-10-31"
+          },
+          {
+            "link": "https://www.capillus.com/products/capillus-pro-s2?token=W4KKG\u0026utm_source=Meta\u0026utm_medium=Paid\u0026utm_campaign=120221591984850154\u0026utm_content=120236006485040154\u0026utm_id=120221591984850154\u0026utm_term=120222415439570154\u0026fbclid=PAYW9leANdN9VleHRuA2FlbQEwAGFkaWQBqypfS1A_egGn-lhhq5wMKF28UUTcFzNFeOpFt4ed65NCXY54uDk5P2BeaoUAF4gi-f0tQ1k_aem_6yh5klMKMVY2znIejWQg3w",
+            "item": "Capillus PRO S2",
+            "timeAgo": "2025-10-16"
+          },
+          {
+            "link": "https://www.capillus.com/products/capillus-hair-supplement?externalId=L1F6Z",
+            "item": "Capillus Hair Supplement",
+            "timeAgo": "2025-10-07"
+          },
+          {
+            "link": "https://www.capillus.com/products/capillus-pro-s1/?externalId=L1F6Z",
+            "item": "Capillus PRO S1",
+            "timeAgo": "2025-07-31"
+          },
+          {
+            "link": "https://www.capillus.com/products/capillus-one/?token=H7L2P\u0026externalId=L1F6Z",
+            "item": "Capillus ONE",
+            "timeAgo": "2025-07-13"
+          }
+        ]
+      },
+      "companyWebsite": "https://capillus.com",
+      "companyName": "Capillus",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS if a subscriber mentions a medical issue or an adverse effect from using products from this brand"
+        ],
+        "escalate": [
+          "ESC immediately discount code issues"
+        ],
+        "dos_and_donts": [
+          "Do not share any medical advice or guidance to subscribers outside of recommending appropriate products or directing them to purchase the right item",
+          "Do not comment on their medical situations",
+          "Close the covo if the customer says they\u0027re receiving too many messages/we\u0027re texting them too often - don\u0027t send TMT"
+        ],
+        "drive_to_purchase": [
+          "If cx says they will be ordering soon, offer to schedule a call if they need further assistance with their purchase (shortcut OS) - do not upsell",
+          "If cx already purchased, use specific TFP template - do not upsell"
+        ],
+        "tone": [
+          "Don\u0027t use the term \"hang tight\", just say that you\u0027ve passed the information to the team",
+          "Close the conversation once the client takes over"
+        ],
+        "promo_and_exclusions": [
+          "If a cx asks for a code and we don\u0027t have one, inform them of ongoing sales (if any)"
+        ]
+      },
+      "blocklisted_words": [
+        "Curallux",
+        "hang"
+      ],
+      "escalation_preferences": [
+        "Discount code errors",
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hey Daryl Boatner! We saw you checking out Capillus PRO S2! Don\u0027t wait, get your confidence today: capillus.attn.tv/atdfjXyRu4w_ .\n\nText back with questions! - Jamie",
+          "date_time": "2025-10-16 13:51:39.532",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Your VIP Black Friday Early Access starts NOW! Enjoy up to 40% off Capillus red light therapy devices - hair, skin, wellness \u0026 more. capillus.attn.tv/aqpnPeJPAn6d ",
+          "date_time": "2025-10-31 11:30:17.411",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hey Daryl Boatner, this is Jamie! We saw you checking out Capillus PRO! \n\nDon\u0027t wait, transform your confidence back today: capillus.attn.tv/aV-MjjUahNON .\n\nText back if you need assistance.",
+          "date_time": "2025-10-31 13:20:07.715",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hi Daryl Boatner, it\u0027s Jamie. I\u0027m a personal concierge here to answer your questions or share recommendations. Is there anything I can help you with today?\n\nhttps://capillus.attn.tv/ard0nJy5UkmR .",
+          "date_time": "2025-11-01 13:06:41.568",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Trust the science. Feel the results. Capillus, the real red light therapy leader in quality \u0026 safety. Our biggest sale of the year is here - up to 40% OFF while it lasts! 👉 capillus.attn.tv/aMig8axEJuD2 ",
+          "date_time": "2025-11-03 17:56:14.722",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hey Daryl Boatner! I\u0027m Jamie and I\u0027m here to be a personal shopping assistant for you!\n\nDo you have any questions or need a recommendation? Let me know how I can help. \n\nhttps://capillus.attn.tv/a0wLxRkezdE- .",
+          "date_time": "2025-11-04 17:56:52.943",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Hi there - Jamie here. Not sure where to start? \n\nTake our Find My Treatment quiz to discover the best products for your hair! Get personalized results now: capillus.attn.tv/a-2N65Fnf_w1 \n\nText me back with questions!",
+          "date_time": "2025-11-04 18:13:42.686",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Capillus: Your moment is NOW! The Spectrum, our most advanced device for hair regrowth, is available exclusively to our VIPs at special early pricing. LIMITED STOCK, act fast! 🔥 capillus.attn.tv/aMWKn10JfWTd .",
+          "date_time": "2025-11-07 16:14:30.379",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "How long warranty and if I don\u0027t want and can back \u0026 refund money back?",
+          "date_time": "2025-11-07 16:48:03.442",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Return policy\"; last updated: 2025-01-28 16:04:29.680",
+          "date_time": "2025-11-07 16:50:05.106",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Why is the warranty different on different Capillus models?\"; last updated: 2025-01-28 16:05:15.894",
+          "date_time": "2025-11-07 16:50:05.106",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Warranty policy\"; last updated: 2025-02-17 16:23:06.733",
+          "date_time": "2025-11-07 16:50:05.106",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019a604c-4f1b-4e40-f000-000062b953be",
+          "message_text": "Capillus: Each Capillus model is slightly different, with different levels of laser density. For example, the CapillusPlus and Pro models offer a greater number of laser density than the CapillusUltra. They also have different warranty lengths. The CapillusRX, available through physicians only, has the longest Warranty. You can take a look at our full warranty policy here: https://capillus.attn.tv/aaKOZew_9m_h\n\nWe guarantee your satisfaction or we will gladly accept returns of new laser devices purchased by customers on https://capillus.attn.tv/aUOmW1UNL6an within the first 6 months. You can check out our detailed return policy here: https://capillus.attn.tv/aa83J15q2CFk",
+          "message_type": "agent",
+          "agent": "37648",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-11-07 16:50:05.110"
+        }
+      ]
+    },
+    "458": {
+      "agentName": "John",
+      "has_shopify": false,
+      "id": "0198be6c-1968-4c7c-f000-0000d3016ce3",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "KITBAG24",
+            "content": [
+              "• This code is no longer active!"
+            ]
+          },
+          {
+            "title": "HELLO15",
+            "content": [
+              "• First purchase welcome code"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 3540085987,
+            "company_id": 1163,
+            "static_code": "HELLO15",
+            "name": "HELLO15",
+            "coupon": "HELLO15",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://theartofshaving.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.theartofshaving.com/products/razors-blades/king-c-gillette-double-edge-safety-razor/",
+            "item": "King C. Gillette Double Edge Safety Razor",
+            "timeAgo": "2025-08-18"
+          },
+          {
+            "link": "https://www.theartofshaving.com/products/razors-blades/black-5-8-blade-round-straight-razor/",
+            "item": "Black 5/8 Blade Round Straight Razor",
+            "timeAgo": "2025-08-18"
+          },
+          {
+            "link": "https://www.theartofshaving.com/products/gifts-kits/sandalwood-full-size-kit/#",
+            "item": "Sandalwood Full Size Kit",
+            "timeAgo": "2025-08-18"
+          },
+          {
+            "link": "https://www.theartofshaving.com/products/all/essential-shaving-collection-sandalwood/",
+            "item": "Essential Shaving Collection Sandalwood",
+            "timeAgo": "2025-08-18"
+          },
+          {
+            "link": "https://www.theartofshaving.com/products/all/essential-starter-set-sandalwood/",
+            "item": "Essential Starter Set Sandalwood",
+            "timeAgo": "2025-08-18"
+          }
+        ]
+      },
+      "companyWebsite": "https://theartofshaving.com",
+      "companyName": "The Art of Shaving",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS if cx wants us to place order for them, use CS shortcut"
+        ],
+        "templates": [
+          "For adverse events or product quality complaints, use PS shortcut"
+        ],
+        "tone": [
+          "Ensure the word \"staging\" isn\u0027t in any link you send"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Adverse Events,",
+        "Product Quality Complaints"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "The Art of Shaving: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2025-08-18 14:07:59.242",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "The Art of Shaving: Welcome to the ultimate grooming experience! Use code HELLO15 for 15% off your first order. Shop Now: https://aos.attn.tv/aJWHTUdoTU4u ",
+          "date_time": "2025-08-18 14:08:03.699",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "The Art of Shaving: Don\u0027t forget to save our contact for exclusive deals and updates!",
+          "date_time": "2025-08-18 14:08:05.055",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "The Art of Shaving: Hey, this is John. Thanks for stopping by! https://aos.attn.tv/aeS18b8gU7YE \n\nAre you looking for anything in particular today?",
+          "date_time": "2025-08-18 14:09:58.010",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m new to this, i\u0027m looking for something to start with, but basically an aftershave, shaving cream, razor blades, and any recommendations if matching my budget",
+          "date_time": "2025-08-18 14:17:19.312",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0198be6c-1968-4c7c-f000-0000d3016ce3",
+          "message_text": "The Art of Shaving: Hello there, John here!\n\nI am very happy to help with that.\n\nCould you please share some information regarding your budget so I could check out products that match it.\n\nIn the meantime, please check the following links for the products you mentioned.\n\nFor aftershave, check out the following link to check our collections:\nhttps://aos.attn.tv/aaic02xrZ4K6\n\nAs for the shaving cream: https://aos.attn.tv/asOI5QZfWElH\n\nFor the razor blades: https://aos.attn.tv/aUbmrXyaQvp8",
+          "message_type": "agent",
+          "agent": "109618",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-18 14:23:32.225"
+        }
+      ]
+    },
+    "459": {
+      "agentName": "",
+      "has_shopify": true,
+      "id": "01950bf3-a2ad-4be0-f000-0000aacb19d6",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Pre-order",
+            "content": [
+              "• 30% off spring collections. \n\n• Delivery for these items will come January/February. \n\n• Markdown is on site"
+            ]
+          },
+          {
+            "title": "SPECIAL",
+            "content": [
+              "$100 off, exclusions may apply"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2865437142,
+            "description": "off your first order! *Valid on full-priced shoes",
+            "value": "50",
+            "company_id": 88950,
+            "coupon_url": "https://larroude-com.myshopify.com/discount/SPECIAL?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "SPECIAL",
+            "name": "Welcome Code -  Special",
+            "coupon": "SPECIAL",
+            "redemption_status": "UNUSED",
+            "value_type": "FLAT_FIXED_CURRENCY"
+          },
+          {
+            "subscriber_id": 2865437142,
+            "company_id": 88950,
+            "coupon_url": "https://larroude-com.myshopify.com/discount/100OFF-XNPK3",
+            "value": "100",
+            "name": "$100 Off First Order Upload",
+            "coupon": "100OFF-XNPK3",
+            "redemption_status": "UNUSED",
+            "value_type": "FLAT_FIXED_CURRENCY"
+          },
+          {
+            "subscriber_id": 2865437142,
+            "company_id": 88950,
+            "coupon_url": "https://larroude-com.myshopify.com/discount/VIP100-44P2W",
+            "value": "100",
+            "name": "VIP100 6.29",
+            "coupon": "VIP100-44P2W",
+            "redemption_status": "UNUSED",
+            "value_type": "FLAT_FIXED_CURRENCY"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://larroude.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://larroude.com/products/black-milan-block-boot-leather?variant=45344658194598\u0026utm_campaign=Price%20Drop%20SMS%201\u0026utm_source=attentive\u0026utm_medium=text\u0026externalId=waaC1",
+            "item": "Milan Block Boot In Black Leather - 11.0 / Black",
+            "timeAgo": "2025-02-15"
+          },
+          {
+            "link": "https://larroude.com/products/navy-dew-drop-macrame-mule-leather",
+            "item": "Dew Drop Macrame Mule In Burnt Umber Leather - 5.0 / Burnt Umber",
+            "timeAgo": "2025-01-28"
+          },
+          {
+            "link": "https://larroude.com/products/black-milan-block-boot-leather",
+            "item": "Milan Block Boot In Cognac Leather - 5.0 / Cognac",
+            "timeAgo": "2025-01-07"
+          },
+          {
+            "link": "https://larroude.com/collections/holiday-shop/products/black-milan-sandal-wave-raffia",
+            "item": "Milan Sandal In Black Wave Raffia - 5.0 / Black",
+            "timeAgo": "2025-01-07"
+          },
+          {
+            "link": "https://larroude.com/collections/holiday-shop/products/black-milan-sandal-wave-raffia",
+            "item": "Milan Sandal In Caramel Leather - 5.0 / Caramel",
+            "timeAgo": "2025-01-07"
+          }
+        ]
+      },
+      "companyWebsite": "https://larroude.com",
+      "companyName": "Larroude",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Just dropped! Treat your feet to ultimate comfort with our new cozy clogs. Unlock $100 off with code SPECIAL: https://larroude.attn.tv/abseWddw8f3B ",
+          "date_time": "2025-01-16 19:04:51.662",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Enjoy $100 off your first shoe order! Limited time only. Unlock code SPECIAL: https://larroude.attn.tv/a2Mo81fotzGG \n\n*Applies to full-priced shoes.",
+          "date_time": "2025-01-18 19:11:34.725",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Just dropped! Get ready to shine with our new Evening Capsule! Enjoy $100 off your first order w/ code SPECIAL: https://larroude.attn.tv/aZVrOUcZ4Wqk",
+          "date_time": "2025-01-19 19:11:31.410",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Ready to elevate your look? The Dew Drop Macrame Mule in Navy Leather is just waiting for you in your cart. Don\u0027t miss out on this stylish silhouette!\n\nRemember you get $100 off your first order with SPECIAL.\n\nShop now: https://larroude.attn.tv/abGeihJ6DaOq .",
+          "date_time": "2025-01-19 19:26:44.007",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Hey there! We have something exciting just for you.\n\nShop before it\u0027s too late! https://larroude.attn.tv/afYu4xmrN5oO .",
+          "date_time": "2025-01-19 20:26:45.355",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Hey you, you left something in your cart! Grab $100 off your first order today with code SPECIAL.\n\nhttps://larroude.attn.tv/azG-BKz0NAI4 \n\n*Offer valid on full-priced shoes only.\n",
+          "date_time": "2025-01-20 11:55:22.275",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: New Drop Alert! The Stella Sneaker is here and she\u0027s going fast. Shop now before they sell out: https://larroude.attn.tv/atxlD3nF8F1D",
+          "date_time": "2025-01-22 19:02:39.681",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Shop last chance styles now 50% off! Limited stock available. Hurry, before they\u0027re gone for good: larroude.attn.tv/apdjX64t36rC ",
+          "date_time": "2025-01-26 17:54:48.892",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Don\u0027t miss out on $100 off your first shoe order! Offer ends soon. Unlock code SPECIAL: larroude.attn.tv/a7JSAFrPlwkZ \n\n*Applies to full-priced shoes.",
+          "date_time": "2025-01-27 19:15:51.349",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Step into elegance with our Dew Drop Macrame Mule! Its indigo leather and gold heel make a stunning statement.  \n\nShop now: https://larroude.attn.tv/asCD21rB1Z_P . ",
+          "date_time": "2025-01-27 20:29:17.377",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Annie! We have something exciting just for you.\n\nShop before it\u0027s too late! https://larroude.attn.tv/a_LMknaVOOas .",
+          "date_time": "2025-01-28 11:12:22.956",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: *Ending Soon* Enjoy $100 off your first order! Don\u0027t miss out. Unlock now: larroude.attn.tv/aBQjwsUAzdXK \n\n*Valid on full-priced shoe orders of $300+",
+          "date_time": "2025-01-30 16:11:18.473",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Valentine\u0027s Collection just dropped! Fall head over heels for these new styles before they sell out: larroude.attn.tv/aSBBW5_AcEhc \n\nEnjoy $100 off your first order with code SPECIAL. Valid on full-priced shoe orders of $300+",
+          "date_time": "2025-01-31 17:11:20.038",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Enjoy 50% off all last chance styles before they sell out! Once they\u0027re gone, they\u0027re gone. Shop now: larroude.attn.tv/aM3zjZNZoneO ",
+          "date_time": "2025-02-01 20:06:19.274",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Hi Annie! Thanks for stopping by! Discover chic kitten heels and sexy pumps you\u0027ll love. Shop now: https://larroude.attn.tv/aGMk_BnWIeWn .",
+          "date_time": "2025-02-01 20:23:02.656",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Hi Annie, our secret sale ends tonight! Enjoy 50% off any style in this collection: larroude.attn.tv/aXXDsVNdjAv- with code LARRCLUB_GH9AC. ",
+          "date_time": "2025-02-02 17:13:22.787",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Hey Annie, you left something in your cart! Grab $100 off your first order today with code SPECIAL.\n\nhttps://larroude.attn.tv/asniNfrnSBOX \n\n*Offer valid on full-priced shoes only.\n",
+          "date_time": "2025-02-03 11:16:10.537",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Step into love with our new Amore Collection - plus, take $50 off your first order with code SPECIAL. Shop now: larroude.attn.tv/a69h_RCIY_KH ",
+          "date_time": "2025-02-05 19:03:37.646",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Last call! Enjoy 30% off our Spring Collection by shopping early. Shipping Feb 25th. Grab them now before they\u0027re gone. larroude.attn.tv/almALJ0sQ5MR ",
+          "date_time": "2025-02-06 19:12:39.552",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: New colors just dropped in our popular Altuzarra collab pumps! Now in 10 colors total. Enjoy $50 off with code SPECIAL: larroude.attn.tv/aKTDOTKRdBgN",
+          "date_time": "2025-02-08 19:08:30.464",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Last call for 30% off all spring pre-orders! Shipping starts Feb 25. Get early access before it\u0027s too late: larroude.attn.tv/aycHiDKm5ve8 ",
+          "date_time": "2025-02-09 19:04:36.667",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: New Collab Alert! Larroudé x Jonathan Cohen is now available for pre-order! Shop now to get early access: larroude.attn.tv/aKlPydEVN3rp ",
+          "date_time": "2025-02-13 19:13:35.483",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Annie, the Dew Drop Mule in navy leather awaits you! Its bold gold heel and comfy design are showstoppers. \n\nShop now! https://larroude.attn.tv/alG66TETNy-E .",
+          "date_time": "2025-02-14 11:12:23.707",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: The price of the Milan Block Boot In Black Leather - 11.0 / Black has dropped! Shop now before it\u0027s gone: https://larroude.attn.tv/atEu7HuXX2pO",
+          "date_time": "2025-02-14 17:38:19.995",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Larroudé: Don\u0027t forget our Milan Block Boot In Black Leather - 11.0 / Black has dropped in price! Shop now before it\u0027s gone: https://larroude.attn.tv/a6MfzRZVCMJB ",
+          "date_time": "2025-02-15 17:38:28.169",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I did a notification for 11",
+          "date_time": "2025-02-15 18:15:02.591",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "If would have made a purchase if I had go a text message about the 50% off sale",
+          "date_time": "2025-02-15 18:16:32.745",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01950be8-4307-40df-f000-0000aacb19d6",
+          "message_text": "Larroudé: Thanks for signing up! Please rest assured we\u0027re working diligently to replenish our inventory as soon as possible! In the meantime, you might like to consider this alternative: https://larroude.attn.tv/aCjNyDC-6W4C \n\nCould you also clarify your question about the 50% off sale? You can explore the eligible items here: https://larroude.attn.tv/aspUl_B6-C60",
+          "message_type": "agent",
+          "agent": "87595",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-15 18:18:45.783"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I need an eleven (11)",
+          "date_time": "2025-02-15 18:28:22.244",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Sold out",
+          "date_time": "2025-02-15 18:29:32.429",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Restock (website \u0026 social)\"; last updated: 2025-10-09 21:41:33.472",
+          "date_time": "2025-02-15 18:31:11.164",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"No promotions available - All brands\"; last updated: 2023-10-10 16:37:45.165",
+          "date_time": "2025-02-15 18:31:11.164",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01950bf3-a2ad-4be0-f000-0000aacb19d6",
+          "message_text": "Larroudé: Thank you for the screenshot. Checking here, I do apologize as the size 11 for this product is still out of stock and I currently don\u0027t have the exact date of a possible restock, but I recommend checking our website and social media frequently. As for the sale, the offer might still be available on the next restock and rest assured that our deals will always be shared with our SMS subscribers or on our website.\n\nIf you have any other questions, please feel free to reach out. ",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-15 18:31:11.168"
+        }
+      ]
+    },
+    "460": {
+      "agentName": "Vivian",
+      "has_shopify": true,
+      "id": "019b24a3-3a2c-4941-f000-0000a1e3b048",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.organifishop.com/products/shilajit-gummies?quantity=3\u0026utm_campaign=09-18-25-shilajit\u0026utm_medium=SMS\u0026utm_source=attentive\u0026externalId=JHsTP",
+            "item": "Shilajit Gummies",
+            "timeAgo": "2025-09-18"
+          },
+          {
+            "link": "https://www.organifishop.com/products/happy-drops",
+            "item": "Happy Drops",
+            "timeAgo": "2025-08-22"
+          },
+          {
+            "link": "https://www.organifishop.com/products/collagen",
+            "item": "Collagen",
+            "timeAgo": "2025-08-22"
+          },
+          {
+            "link": "https://www.organifishop.com/products/glow?quantity=3\u0026utm_campaign=08-06-25-glow\u0026utm_medium=SMS\u0026utm_source=attentive\u0026externalId=JHsTP",
+            "item": "Glow",
+            "timeAgo": "2025-08-09"
+          },
+          {
+            "link": "https://www.organifishop.com/products/ultimate-womens-wellness-kit",
+            "item": "Ultimate Women\u0027s Kit",
+            "timeAgo": "2025-07-25"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2716053576,
+            "company_id": 2916,
+            "coupon_url": "https://organifi.myshopify.com/discount/SMS17?utm_source=attentive\u0026utm_medium=SMS",
+            "static_code": "SMS17",
+            "name": "SMS17",
+            "coupon": "SMS17",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2716053576,
+            "company_id": 2916,
+            "coupon_url": "https://organifi.myshopify.com/discount/HELLO15?utm_source=attentive\u0026utm_medium=SMS\u0026utm_campaign=welcome15",
+            "static_code": "HELLO15",
+            "name": "HELLO15",
+            "coupon": "HELLO15",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://organifishop.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-01-31",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      24.95,
+                      34.95,
+                      10
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0\u0026Requester=NES\u0026AgreeToTermsAndConditions=yes\u0026loc=en_US\u0026tracknum=1ZG2G439YW19139299",
+            "link": "https://www.organifishop.com/9408252/orders/f0b8674a6a54785db146bb669ee949cb/authenticate?key=f51304241c56f2972280033b00e2f884",
+            "date_time": "2025-01-31 21:51:45.765",
+            "discount_amount": 0,
+            "orderNumber": "1592025",
+            "order_tracking_link": "http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0\u0026Requester=NES\u0026AgreeToTermsAndConditions=yes\u0026loc=en_US\u0026tracknum=1ZG2G439YW19139299",
+            "total": 96.71
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-11-12",
+            "coupon": "OFFSMSB",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      14.95,
+                      34.95,
+                      29.95
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0\u0026Requester=NES\u0026AgreeToTermsAndConditions=yes\u0026loc=en_US\u0026tracknum=1ZG2G439YW38560547",
+            "link": "https://www.organifishop.com/9408252/orders/595d4efee8f10fb35750f920d8919200/authenticate?key=429c82b8599c5ebb9e249731488b108d",
+            "date_time": "2024-11-12 22:50:01.058",
+            "discount_amount": 0,
+            "orderNumber": "1537455",
+            "order_tracking_link": "http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0\u0026Requester=NES\u0026AgreeToTermsAndConditions=yes\u0026loc=en_US\u0026tracknum=1ZG2G439YW38560547",
+            "total": 75.08
+          }
+        ]
+      },
+      "companyWebsite": "https://organifishop.com",
+      "companyName": "Organifi",
+      "notes": {
+        "drive_to_purchase": [
+          "🅿 Push cx toward their subscription model, use TSW shortcut when appropriate"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Organifi: Hey Debbie, order #1746992 has been delivered! Track your order here: https://organifi.attn.tv/a91D___fbz2D .",
+          "date_time": "2025-11-17 13:01:58.768",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Organifi: EARLY BIRD BLACK FRIDAY: 25% off, A Free 30 day supply of Organifi Green Juice \u0026 Free shipping on orders over $200, plus many more savings! organifi.attn.tv/aSOmFfcAZNkV ",
+          "date_time": "2025-11-18 16:05:24.774",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Organifi: EARLY BIRD BLACK FRIDAY CONTINUES: 25% off, A Free 30 day supply of Organifi Green Juice \u0026 Free shipping on orders over $200, plus many more savings! organifi.attn.tv/aT4k80tac-wD ",
+          "date_time": "2025-11-20 16:05:25.600",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Organifi: Thank you for your purchase! Your order number is 1773806. View more information about your order here: https://organifi.attn.tv/abUpaxbOfDsp .",
+          "date_time": "2025-12-12 03:09:00.806",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Organifi: Thank you for your purchase! Still looking and want to add more to your order? Use code SMS17 for 17% off today! https://organifi.attn.tv/aQ5lVGl0YweT ",
+          "date_time": "2025-12-12 13:24:31.603",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Organifi: Start your journey now! Opt-in to accountability texts for the next 3 weeks as a reminder to drink your adaptogens. Respond FLOURISH to participate!",
+          "date_time": "2025-12-15 13:24:36.021",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Organifi: Great news! Your order (1773806) has shipped and will be to you soon. Click here to track your order: https://organifi.attn.tv/ap10pjroDDcy .",
+          "date_time": "2025-12-15 19:22:01.265",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I sent you an email ! I do not want this order ! I still have 3 bags !! Cancel the order !!!!!",
+          "date_time": "2025-12-15 19:23:37.328",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b248c-8bbe-44a6-f000-0000a1e3b048",
+          "message_text": "Organifi: I\u0027m so sorry to hear that! I can check if that\u0027s possible. Can I have your email address? In the meantime, please note that your subscription membership guarantees you the best possible price on your favorite blends. Subscribing also automates the reordering process, so your beloved adaptogens arrive at your front door before you run out. You can modify, pause, or cancel your membership whenever you\u0027d like by logging into your account. ",
+          "message_type": "agent",
+          "agent": "109954",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-12-15 19:25:49.278"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I don\u0027t need 6 bags of saffron gummies ! I will be happy to change the subscription to every 3 months .Debetheridge@gmail.com",
+          "date_time": "2025-12-15 19:27:26.037",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I am notifying my bank not to pay the charge \u0026 if you send it I am refusing it \u0026 sending back",
+          "date_time": "2025-12-15 19:28:26.237",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b248f-8ff5-408a-f000-0000a1e3b048",
+          "message_text": "Organifi: I completely understand! It sounds frustrating to have more than you need, and I\u0027m sorry for the confusion.\n\nI\u0027ll pass this along to the team so they can update your subscription to every 3 months. You should receive a confirmation once the change has been made. Thank you for your patience while we get this sorted!",
+          "message_type": "agent",
+          "agent": "87578",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-12-15 19:29:06.964"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "You can stop the shipment / it hasn\u0027t shipped yet . Please make it happen . Positive customer service reviews look way better on all the platforms than negative ones .",
+          "date_time": "2025-12-15 19:30:45.705",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b2492-caab-447d-f000-0000a1e3b048",
+          "message_text": "Organifi: I can assure you that our team is doing its best to handle the situation in the best way possible. I\u0027m just waiting to hear back from the team, but rest assured, I\u0027ll send you a text as soon as I have an update!",
+          "message_type": "agent",
+          "agent": "109722",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-12-15 19:32:38.598"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thanks 👍🏻",
+          "date_time": "2025-12-15 19:33:18.754",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b2494-d906-4cd1-f000-0000a1e3b048",
+          "message_text": "Organifi: You\u0027re welcome! Let me know if there\u0027s anything else I can assist you with. I\u0027ll be in touch! ",
+          "message_type": "agent",
+          "agent": "50269",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-12-15 19:34:53.348"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I just found this in my mail - I send my email on Friday to stop this shipment . \n\nYou can see the response .\n\nSo I will return or refuse it when it arrives . How long will refund take ?\n\nEasier for me to just have bank refuse it if it hasn\u0027t gone through",
+          "date_time": "2025-12-15 19:36:07.300",
+          "message_media": [
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1765845360953_88469d25-b380-4f46-993f-9297669c65f0-1.jpeg"
+          ]
+        },
+        {
+          "message_id": "019b2497-d4e8-41bd-f000-0000a1e3b048",
+          "message_text": "Organifi: Thanks for sending that screenshot over! If it would be more convenient for you, you could simply just refuse the package upon delivery. Please note that the refund will be credited to your original payment within 10 business days after we receive the product. \n\nPlease let me know how I can assist you further today, I\u0027m just a text away!",
+          "message_type": "agent",
+          "agent": "109617",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-12-15 19:38:08.900"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Well that would be great if I am here when they deliver it . It often goes in box @ the mailbox kios .",
+          "date_time": "2025-12-15 19:39:37.016",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b249d-3cc7-491d-f000-0000a1e3b048",
+          "message_text": "Organifi: I completely understand, and I know how frustrating this situation must be. I want to reassure you that I\u0027ve already passed this along to the team, and they\u0027re handling it. Once the return is processed, your refund will be credited to your original payment method within 10 business days.\n\nI\u0027m here if you need any further help or updates along the way!",
+          "message_type": "agent",
+          "agent": "87578",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-12-15 19:44:03.162"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It is frustrating . I am a retired educator \u0026 I don\u0027t have money growing on trees for subscriptions I don\u0027t need . Thank you for helping me.",
+          "date_time": "2025-12-15 19:46:22.388",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b24a3-3a2c-4941-f000-0000a1e3b048",
+          "message_text": "Organifi: I am truly sorry for the inconvenience. I understand how frustrating this feels, and I appreciate your patience. Once your return is processed, the refund will be credited back to your original payment method within 10 business days. Let me know if there\u0027s anything else I can help you with.",
+          "message_type": "agent",
+          "agent": "109972",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-12-15 19:50:35.729"
+        }
+      ]
+    }
+  }
+}

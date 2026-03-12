@@ -1,0 +1,1880 @@
+{
+  "version": 1,
+  "chunk": "chunk_0098",
+  "scenarios": {
+    "486": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "0199ac6a-7389-4010-f000-0000d9f9ce90",
+      "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 3657027216,
+            "company_id": 5529,
+            "coupon_url": "https://hellobonafide.com/collections/all/discount/FOUND20",
+            "static_code": "FOUND20",
+            "name": "FOUND20",
+            "coupon": "FOUND20",
+            "redemption_status": "USED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://hellobonafide.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-09-27",
+            "coupon": "FOUND20",
+            "items": [
+              {
+                "price": [
+                  105
+                ],
+                "productLink": "https://jds-therapeutics.myshopify.com/products/clairvee-3-packs",
+                "name": "Clairvee Probiotic 3 Month Plan"
+              }
+            ],
+            "trackingLink": "https://webtrack.dhlglobalmail.com/orders?trackingNumber=9261290357488552609971",
+            "link": "https://hellobonafide.com/1185906751/orders/90f4056c0785dc61e782ee7992a32f7b/authenticate?key=1d3050d89e780dc650c0102c7a12ff8e",
+            "date_time": "2025-09-27 19:40:32.778",
+            "discount_amount": 0,
+            "orderNumber": "5984585",
+            "order_tracking_link": "https://webtrack.dhlglobalmail.com/orders?trackingNumber=9261290357488552609971",
+            "total": 89.04
+          }
+        ]
+      },
+      "companyWebsite": "https://hellobonafide.com",
+      "companyName": "Bonafide",
+      "notes": {
+        "escalate": [
+          "ESC all medical/scientific inquiries immediately",
+          "ESC return requests that are past the 30-day policy"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "templates": [
+          "For exact measurements of ingredients, use \"MOI\" shortcut"
+        ],
+        "dos_and_donts": [
+          "When sending the quiz - always suggest a specific product if customers mention a certain symptom"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Welcome to Bonafide! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2025-09-27 15:33:28.738",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Welcome to Bonafide texts! Menopause relief is around the corner...and so is 20% off with code FOUND20. Click here to shop now: https://bonafide.attn.tv/aMsDg5OTTyNa",
+          "date_time": "2025-09-27 15:33:33.876",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Stay connected on your menopause journey with Bonafide! Save our number to your contacts for easy access to expert advice, tips, and support. https://bonafide.attn.tv/aOuqsXYvGX0O ",
+          "date_time": "2025-09-27 15:33:37.297",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Great news! Your order (5984585) has shipped and will be to you soon. Click here to track your order: https://bonafide.attn.tv/aghhavXs87_t \n\nVisit our website: https://bonafide.attn.tv/an2zfmhc-EPs ",
+          "date_time": "2025-09-30 10:40:15.449",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Hi, this is Heather from Bonafide! Any questions about our products? bonafide.attn.tv/aZpUyu0rTJFu .\n\n",
+          "date_time": "2025-10-03 19:24:46.055",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yo quería ordenar los supositorios vaginales pero por error me llegaron los pre Probioticos, que puedo hacer ?",
+          "date_time": "2025-10-03 19:28:22.176",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Sorry 2 - All brands\"; last updated: 2023-10-10 17:56:13.923",
+          "date_time": "2025-10-03 19:31:21.660",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"How do I start a return? \"; last updated: 2025-04-08 20:03:42.617",
+          "date_time": "2025-10-03 19:31:21.660",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Return policy\"; last updated: 2025-04-08 20:03:09.097",
+          "date_time": "2025-10-03 19:31:21.660",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0199ac6a-7389-4010-f000-0000d9f9ce90",
+          "message_text": "Bonafide: I\u0027m sorry about that! For new orders, we accept returns for unopened, unused products within 30 days of the order shipment date.\nYou can start your return here: https://bonafide.attn.tv/a0vWNihJHrWF/#/ and check out our detailed return policy here - https://bonafide.attn.tv/aO7cbV-Q5ETL Happy to help if you have any further questions! \n",
+          "message_type": "agent",
+          "agent": "33953",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-10-03 19:31:21.666"
+        }
+      ]
+    },
+    "487": {
+      "agentName": "Casey",
+      "has_shopify": false,
+      "id": "0190a1db-9814-4fd4-f000-00009076a384",
+      "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 2423694212,
+            "description": "Holiday 2022 - Cart Abandon",
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/ATTCA1-v743zcbkssvd?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Cart Abandon (15% Off)",
+            "coupon": "ATTCA1-v743zcbkssvd",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "description": "Holiday 2022 - Checkout Abandon",
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/ATTCH-pgu7v7sk8xjs?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Checkout Abandon",
+            "coupon": "ATTCH-pgu7v7sk8xjs",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "description": "Holiday 2022 - Cart Abandon",
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/AEVCA1-wbz3qj945fgd?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Cart Abandon (15% Off)",
+            "coupon": "AEVCA1-wbz3qj945fgd",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/90ATT20C-7evueew7qvf4?utm_source=attentive\u0026utm_medium=sms",
+            "name": "No Purchase \u0026 Winback - At Risk 90 Days (20%) ",
+            "coupon": "90ATT20C-7evueew7qvf4",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/120ATT20C-nqkc3ge3qhng?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Winback 180 Days, No Purchase (20%)",
+            "coupon": "120ATT20C-nqkc3ge3qhng",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "description": "$15 off your order of $50+",
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/ATTPP3-mf6gkry2gxvk?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Post Purchase - $15 off your order of $50+",
+            "coupon": "ATTPP3-mf6gkry2gxvk",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "description": "Holiday 2022 - Cart Abandon",
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/ATTCA2-jy6j5rk5qftq?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Cart Abandon (15% Off)",
+            "coupon": "ATTCA2-jy6j5rk5qftq",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/120ATT20B-2rsd2gs4xewp?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Winback 120 Days, No Purchase (20% Off)",
+            "coupon": "120ATT20B-2rsd2gs4xewp",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "description": "Holiday 2022 - Cart Abandon",
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/ATTCA3-zheetrsa45hc?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Cart Abandon (15% Off)",
+            "coupon": "ATTCA3-zheetrsa45hc",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "description": "Holiday 2022 - Cart Abandon",
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/ATTCA2-djy7rh2c6f26?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Cart Abandon (15% Off)",
+            "coupon": "ATTCA2-djy7rh2c6f26",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/ATT15C-qj2em64j9g5t?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Welcome, Main (15% Off)",
+            "coupon": "ATT15C-qj2em64j9g5t",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "description": "Holiday 2022 - Cart Abandon",
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/ATTCA2-sq9va48n22v4?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Cart Abandon (15% Off)",
+            "coupon": "ATTCA2-sq9va48n22v4",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "description": "$15 off your order of $50+",
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/ATTPP2-9n3rhbacwafv?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Post Purchase - $15 off your order of $50+",
+            "coupon": "ATTPP2-9n3rhbacwafv",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2423694212,
+            "description": "Holiday 2022 - Anniversary",
+            "company_id": 5841,
+            "coupon_url": "https://heydudeshoes.myshopify.com/discount/365ATT4-8c6bja5r7t3x?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Anniversary of Subscription (15% Off)",
+            "coupon": "365ATT4-8c6bja5r7t3x",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://heydude.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.heydude.com/products/wally-margaritaville-multi",
+            "item": "Wally Margaritaville - Multi",
+            "timeAgo": "2024-07-11"
+          }
+        ]
+      },
+      "companyWebsite": "https://heydude.com",
+      "companyName": "HEYDUDE US",
+      "notes": {
+        "important": [
+          "There is a scam website that customers are texting in from (https://heydudestores.com/)",
+          "If you notice this, reroute customers to the correct website!"
+        ],
+        "send_to_cs": [
+          "Don\u0027t ESC post-purchase issues, use PPI shortcut"
+        ],
+        "templates": [
+          "For wrong items received use WMP shortcut",
+          "For damaged items received use DMI shortcut",
+          "For order status requests use OSR shortcut"
+        ],
+        "promo_and_exclusions": [
+          "The welcome code is valid for first-time customers only.",
+          "➜ Applies to full-price styles",
+          "➜ Can\u0027t be combined with any other discounts or offers, including sale styles",
+          "➜  Use cww temp for code issues",
+          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Welcome to HEYDUDE! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/o76",
+          "date_time": "2024-07-11 08:39:27.815",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Hey, dude! We\u0027re so stoked you\u0027re here. Get 15% off your first purchase with code ATT15C-qj2em64j9g5t at checkout. \n\nHave a question? Reply here anytime!\n\nhttps://heydudeshoes.attn.tv/aRJd8nrL8inm \n*Full Price Styles only. Additional exclusions may apply.",
+          "date_time": "2024-07-11 08:39:31.816",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "This code is saying that it is not valid for what is in my cart. I have Wally Margaritaville shoes in my cart. Why is this not working?",
+          "date_time": "2024-07-11 08:42:34.540",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190a1d1-718b-4352-f000-00009076a384",
+          "message_text": "HEYDUDE: The coupon code ATT15C-qj2em64j9g5t should be valid. Please ensure you entered it correctly. If the issue persists, please share a screenshot. You can use the coupon on our website: heydudeshoesusa.com.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-11 08:42:56.274"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Still not working",
+          "date_time": "2024-07-11 08:45:44.499",
+          "message_media": [
+            "https://d3vkheyf3b92pv.cloudfront.net/hgp-mms-content/F0E58096-D5F8-4665-BFEE-56D8E28153D5?Expires=1721569537\u0026Signature=gDcCJr5Q5sG-jNPwAyNeL3rs9BVujDvGz2qS7q-YsxpDRidiLTG2NE85t0IvG0SDEb4yBxduT7p3bOAaDnzNKrdERP1VC3FDSN881tD1IisXwuorHFHgaKpMomhL7af1SIiEJkT3kjhdT3AHdH7hO04YB1GzdyJulsRas9dpRX98QlHuuecko99PdPi7EhQ-iCDXWiEP0HACPlfKogGhn9xtiXqwu0EzOmyG3UPnTu0f8nZ8VXib0CD1WFafoGAX5wyvAp39qbW1T8O02fAr~AKgmF9XOnnJBhU3t~w8JMV7ISCcdE-YJbzgWlDMc22ofvkM9m3PsdLF92F8vU0YWw__\u0026Key-Pair-Id=APKAJYKFVWTTAQLYS7LA"
+          ]
+        },
+        {
+          "message_id": "0190a1d5-44f1-45c7-f000-00009076a384",
+          "message_text": "HEYDUDE: Thank you, and really sorry but that item is excluded from any discounts as it\u0027s a new arrival. All items that are marked as new arrivals are excluded from all discounts. Sorry for the confusion. \n\nPlease note that discount codes are valid on select styles only. The discount excludes all licensed products: https://heydudeshoes.attn.tv/aZA3yQXZRMuC Doorbusters: https://heydudeshoes.attn.tv/aXMnz5gPxmoD, new arrivals, back in stock and final sale items. They cannot be combined with any other offer or promotion. \n ",
+          "message_type": "agent",
+          "agent": "26939",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-11 08:47:07.006"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "So there are no discounts for new arrivals????",
+          "date_time": "2024-07-11 08:49:44.597",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190a1da-26cf-4cbc-f000-00009076a384",
+          "message_text": "HEYDUDE: Unfortunately, new arrivals are not included in the promotional offers. So sorry about that. You can check our sale items here instead: https://heydudeshoes.attn.tv/agp1qKy1nCiZ",
+          "message_type": "agent",
+          "agent": "82225",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-11 08:52:26.967"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you!",
+          "date_time": "2024-07-11 08:52:54.575",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190a1db-9814-4fd4-f000-00009076a384",
+          "message_text": "HEYDUDE: You\u0027re welcome! Have a great day!",
+          "message_type": "agent",
+          "agent": "82226",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-11 08:54:01.509"
+        }
+      ]
+    },
+    "488": {
+      "agentName": "Alexa",
+      "has_shopify": true,
+      "id": "019a7e45-2aaf-4a8c-f000-00008f899fe1",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "SEMI ANNUAL \u002726 40-80% OFF",
+            "content": [
+              "• 40-80% Off Sitewide with code SAVE40"
+            ]
+          },
+          {
+            "title": "SUPERBOWL \u002726 50% OFF",
+            "content": [
+              "• 50% Off Sitewide - No offer code needed"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 1 50% Off",
+            "content": [
+              "• 50% Off Sitewide - No offer code needed"
+            ]
+          },
+          {
+            "title": "SPRING40 | MAR \u002726 40% OFF",
+            "content": [
+              "• 40% Off Sitewide with code SPRING40"
+            ]
+          },
+          {
+            "title": "LOVE40 | JAN \u002726 40% OFF",
+            "content": [
+              "• 40% Off Sitewide with code LOVE40"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 3 50-99% Off",
+            "content": [
+              "• 50-99% Off Sitewide - No offer code needed\n\n• End Date TBD - slated to end on 12/3 but subject to change"
+            ]
+          },
+          {
+            "title": "TAKE10",
+            "content": [
+              "We provide this to subscribers who trigger the abandon flows. Only send to subscribers that reach out to concierge asking about the 10% code they were offered in their abandonment message."
+            ]
+          },
+          {
+            "title": "GIFT40 | DEC \u002725 40% OFF",
+            "content": [
+              "• 50-90% Off Sitewide with code GIFT40"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 2 50-90% Off",
+            "content": [
+              "• 50-90% Off Sitewide - No offer code needed"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2408161249,
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/TAKE10?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "static_code": "TAKE10",
+            "name": "10% Static (TAKE10)",
+            "coupon": "TAKE10",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2408161249,
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/HOT?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "HOT",
+            "name": "June 40% Sale 2024 - HOT",
+            "coupon": "HOT",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://www.fashionnova.com/products/cindy-sequin-gown-black?recommendationAttributionId=plp-rec-1",
+            "item": "Cindy Sequin Gown - Black",
+            "timeAgo": "2025-11-13"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/cindy-sequin-gown-burgundy",
+            "item": "Cindy Sequin Gown - Burgundy",
+            "timeAgo": "2025-11-13"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/diva-long-sleeve-maxi-gown-burgundy",
+            "item": "Diva Long Sleeve Maxi Gown - Burgundy",
+            "timeAgo": "2025-11-13"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/worth-the-wait-draped-maxi-dress-black?recommendationAttributionId=plp-rec-1",
+            "item": "Worth The Wait Draped Maxi Dress - Black",
+            "timeAgo": "2025-11-13"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/adora-drop-waist-sweater-mini-dress-black?recommendationAttributionId=pdp-rec-1",
+            "item": "Adora Drop Waist Sweater Mini Dress - Black",
+            "timeAgo": "2025-11-13"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://fashionnova.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-04-08",
+            "coupon": "GET20",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      20.99,
+                      24
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X0244040399\u0026carrier=ups\u0026order_numbers=155934867\u0026locale=en_US",
+            "link": "https://www.fashionnova.com/2939277/orders/6256b2ea2d30fdc4e77acfe56a7d98b2/authenticate?key=34ce27c5b3884d5a85a3c461e6640a7e",
+            "date_time": "2025-04-08 01:53:07.202",
+            "discount_amount": 0,
+            "orderNumber": "155934867",
+            "order_tracking_link": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X0244040399\u0026carrier=ups\u0026order_numbers=155934867\u0026locale=en_US",
+            "total": 62.05
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-07-14",
+            "coupon": "TAKE10",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      47.99,
+                      27.99,
+                      35.99
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZE4G7300327448661\u0026carrier=UPS\u0026order_numbers=138823242\u0026locale=en_US",
+            "link": "https://www.fashionnova.com/2939277/orders/3a751903b88c6ea49eeeca0e275d157c/authenticate?key=733b18a006828cee182749878bc3d2ff\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-07-14 21:49:54.505",
+            "discount_amount": 11.17,
+            "orderNumber": "138823242",
+            "order_tracking_link": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZE4G7300327448661\u0026carrier=UPS\u0026order_numbers=138823242\u0026locale=en_US",
+            "total": 110.12
+          }
+        ]
+      },
+      "companyWebsite": "https://fashionnova.com",
+      "companyName": "Fashion Nova",
+      "notes": {
+        "send_to_cs": [
+          "No escalations for this client, send to CS using the Support templates",
+          "For post-purchase inquiries send to CS using the Support template (shortcut: ESC)",
+          "➜ If the cx is having difficulties sending an email to CS via the link in the ESC temp - use Support 2 template (shortcut: TESC)",
+          "➜ If the cx is facing technical website issues while accessing the link, do NOT immediately send the TESC shortcut, troubleshoot first instead",
+          "For pre-purchase inquiries send to CS using the Support 2 template (shortcut: TESC)"
+        ],
+        "tone": [
+          "🅿️ Use wording that is in line with the brand\u0027s voice and terminology found on the website",
+          "➜ e.g. Nova Kids, Nova Babes, Insta-worthy, slays, snatched, baddie, etc.",
+          "➜ Always look up the term\u0027s meaning before using it!"
+        ],
+        "templates": [
+          "For expired discounts use EXP shortcut",
+          "For login issues use LGI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "If cx are looking for their 30% welcome code, ask to check their email (spam \u0026 promo)",
+          "Gift cards can be used on discounted items"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Your order #167989361 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/ahsqMMwL1U84 .",
+          "date_time": "2025-10-15 13:08:51.912",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Your order #167989361 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/auCSURiguzQI .",
+          "date_time": "2025-10-15 13:42:37.116",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Great news! Your order #167989361 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aT6e_ktpPaKw .",
+          "date_time": "2025-10-15 13:58:26.887",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s here! Order #167989361 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/akaKv-0iUqg_ .",
+          "date_time": "2025-10-15 15:48:15.296",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 40% Off EVERYTHING + MORE 80% Off BLOWOUT Added!\n\nWe Said BIG SALE \u0026 We Meant It! Shop NOW! T\u0026C Apply-\u003e\nhttp://sms.fashionnova.com/aQK45fi-xBh7 .",
+          "date_time": "2025-10-15 20:44:23.776",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Want a $1K gift card? Leave a review for Order #167989361 \u0026 include #FNSweepstakes for chance to win! -\u003e http://sms.fashionnova.com/aJX05qR3FsYj .",
+          "date_time": "2025-10-17 16:21:02.398",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: HURRY! The Friends \u0026 Family Sale Won\u0027t Last Long! Take 40% off with code: FAM40 -\u003e http://sms.fashionnova.com/a5S7vpJreIrU .",
+          "date_time": "2025-10-19 15:09:02.918",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Rebekah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2025-10-19 16:09:03.533",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 40% OFF EVERYTHING ENDING SOON!!\n\n+ 50-70% Off ALL Halloween Starts NOW! Shop B4 They\u0027re Gone! -\u003e\nhttp://sms.fashionnova.com/aUUes6KQwFEh .",
+          "date_time": "2025-10-19 18:51:47.841",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Rebekah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2025-10-20 20:39:23.860",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Last Chance!! Maddie Bandage Mini Dress - Black/White is almost sold out. Grab it before someone else does! -\u003e http://sms.fashionnova.com/acr8cAAgDr6J .",
+          "date_time": "2025-10-22 13:07:03.030",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: HURRY! The price dropped! Get the 49ers Second Half Come-Back Zip Sweatshirt - Red - M NOW before it sells out! -\u003e http://sms.fashionnova.com/aJvtDWB9KApE .",
+          "date_time": "2025-10-24 13:51:56.456",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: WTF?! 75% Off ALL Sale + 1,000 Styles NOW $4 \u0026 Less!\n\n+ Last Call Halloween! 50-70% Off Everything! -\u003e \nhttp://sms.fashionnova.com/a67unJ8ba2kT .",
+          "date_time": "2025-10-26 18:50:00.926",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s A Boo Out Blowout! 50-70% Off Halloween Costumes!! LAST CALL!\n\n+ 75% Off Sale NOW! -\u003e\nhttp://sms.fashionnova.com/ag3jLzaJ2j_C .",
+          "date_time": "2025-10-29 19:04:17.929",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Surprise! Here\u0027s a code for 10% off the entire site: TAKE10 - Go on, treat yourself! -\u003e http://sms.fashionnova.com/a7l2_X47-Sel .",
+          "date_time": "2025-10-30 19:23:35.429",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Don\u0027t forget you put this in your cart and it\u0027s selling out fast! Check out NOW and use code: TAKE10 for 10% OFF your ENTIRE order! \n-\u003e http://sms.fashionnova.com/aSeHq2jP1lOL .",
+          "date_time": "2025-10-31 13:12:21.906",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Rebekah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2025-10-31 13:43:50.055",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: This dress is selling fast! \n\nUse code: TAKE10 for 10% OFF your ENTIRE order! \n\n-\u003e http://sms.fashionnova.com/araGM-Pox-ho .",
+          "date_time": "2025-11-02 20:41:09.805",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Rebekah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2025-11-03 13:32:28.711",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hello!!?? Need to refresh your closet? Here\u0027s a 10% OFF code: TAKE10. Hurry, it expires soon! http://sms.fashionnova.com/aLTHEAYmqOZu .",
+          "date_time": "2025-11-04 19:44:51.376",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: WTF?! 40% OFF EVERYTHING Starts NOW!\n\nDon\u0027t Wait! Use Code: FALL40 TODAY! -\u003e\nhttp://sms.fashionnova.com/aZOhPKMdow0I .",
+          "date_time": "2025-11-05 10:28:38.685",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Rebekah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2025-11-05 13:35:13.050",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Congrats! Your order #170661845 is confirmed.\n\nCheck the status of your order here: http://sms.fashionnova.com/aN8l24cMJM4q .",
+          "date_time": "2025-11-05 21:43:07.848",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Last Chance!! Ed Hardy Mesh Top - Ivory/combo is almost sold out. Grab it before someone else does! -\u003e http://sms.fashionnova.com/amjLK_doFnuO .",
+          "date_time": "2025-11-06 13:09:58.026",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Great news! Your order #170661845 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aPN8eOcBVerF .",
+          "date_time": "2025-11-06 15:56:57.571",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Great news! Your order #170661845 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/ax1ePc69qKfW .",
+          "date_time": "2025-11-06 16:21:43.060",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 40% OFF EVERYTHING + ALL Sale Is $4.98 \u0026 Under?!\n\nIt\u0027s The Biggest BLOWOUT Of The Year! Shop NOW! -\u003e\nhttp://sms.fashionnova.com/aoEDl12bJyvA .",
+          "date_time": "2025-11-09 18:30:53.488",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Your wishlist fave is selling fast! Grab it before it\u0027s gone \u0026 take 40% off sitewide with code: FALL40 -\u003e\nhttp://sms.fashionnova.com/aW0_xdlFN0Tw .",
+          "date_time": "2025-11-09 20:03:53.261",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Rebekah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2025-11-09 20:10:32.589",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: HURRY! The items in your cart are selling fast! Take 40% off with code: FALL40 -\u003e http://sms.fashionnova.com/ajy86htDp5ym .",
+          "date_time": "2025-11-10 19:54:11.498",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi Rebekah! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2025-11-10 20:54:10.533",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 40% OFF EVERYTHING ENDING SOON!\n\n+ ENTIRE Sale Collection Now $3.98 \u0026 Under!! Shop NOW! -\u003e\nhttp://sms.fashionnova.com/az35DmfL2Tya .",
+          "date_time": "2025-11-12 10:28:20.539",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Your order #170661845 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/a4iDKlxQcMy6 .",
+          "date_time": "2025-11-12 13:09:31.774",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Your order #170661845 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/a_sTH5PvOUHr .",
+          "date_time": "2025-11-12 13:16:26.186",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Great news! Your order #170661845 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aEskyHJR3c5t .",
+          "date_time": "2025-11-12 13:49:50.360",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s here! Order #170661845 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/aHZljek9Bm8u .",
+          "date_time": "2025-11-12 16:15:53.309",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I didn\u0027t get my belt with my black dress",
+          "date_time": "2025-11-13 12:28:41.014",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Damaged/broken item\"; last updated: 2026-02-12 20:13:55.426",
+          "date_time": "2025-11-13 12:30:53.508",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019a7e45-2aaf-4a8c-f000-00008f899fe1",
+          "message_text": "Fashion Nova: I\u0027m really sorry for the inconvenience. Please do not use the return portal for this. Instead, contact Customer Care through our Fashion Nova Help Center: http://sms.fashionnova.com/afx8SP6iVh7v We will verify the issue, send a complimentary label if needed, and do the needful to make this right for you. I really appreciate your patience and cooperation!",
+          "message_type": "agent",
+          "agent": "87600",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-11-13 12:30:53.510"
+        }
+      ]
+    },
+    "489": {
+      "agentName": "Alexa",
+      "has_shopify": true,
+      "id": "01973188-6ae7-4a6b-f000-0000011570a7",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "SEMI ANNUAL \u002726 40-80% OFF",
+            "content": [
+              "• 40-80% Off Sitewide with code SAVE40"
+            ]
+          },
+          {
+            "title": "SUPERBOWL \u002726 50% OFF",
+            "content": [
+              "• 50% Off Sitewide - No offer code needed"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 1 50% Off",
+            "content": [
+              "• 50% Off Sitewide - No offer code needed"
+            ]
+          },
+          {
+            "title": "SPRING40 | MAR \u002726 40% OFF",
+            "content": [
+              "• 40% Off Sitewide with code SPRING40"
+            ]
+          },
+          {
+            "title": "LOVE40 | JAN \u002726 40% OFF",
+            "content": [
+              "• 40% Off Sitewide with code LOVE40"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 3 50-99% Off",
+            "content": [
+              "• 50-99% Off Sitewide - No offer code needed\n\n• End Date TBD - slated to end on 12/3 but subject to change"
+            ]
+          },
+          {
+            "title": "TAKE10",
+            "content": [
+              "We provide this to subscribers who trigger the abandon flows. Only send to subscribers that reach out to concierge asking about the 10% code they were offered in their abandonment message."
+            ]
+          },
+          {
+            "title": "GIFT40 | DEC \u002725 40% OFF",
+            "content": [
+              "• 50-90% Off Sitewide with code GIFT40"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 2 50-90% Off",
+            "content": [
+              "• 50-90% Off Sitewide - No offer code needed"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 18182311,
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/FN55-xvmq3n",
+            "name": "30% Welcome Dynamic 5/7 - 6/15/25",
+            "coupon": "FN55-xvmq3n",
+            "redemption_status": "USED"
+          },
+          {
+            "subscriber_id": 18182311,
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/TAKE10?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "static_code": "TAKE10",
+            "name": "10% Static (TAKE10)",
+            "coupon": "TAKE10",
+            "redemption_status": "USED"
+          },
+          {
+            "subscriber_id": 18182311,
+            "description": "Journey discount",
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/SECRET30?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "SECRET30",
+            "name": "SECRET30 30% OFF",
+            "coupon": "SECRET30",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 18182311,
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/TAKE10?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "static_code": "TAKE10",
+            "name": "10% Static (TAKE10)",
+            "coupon": "TAKE10",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 18182311,
+            "description": "8.22.22",
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/WELCOME30?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "WELCOME30",
+            "name": "Welcome 30% \u0027WELCOME30\u0027",
+            "coupon": "WELCOME30",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 18182311,
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/FN45-prz5af",
+            "name": "30% Welcome Dynamic 3/31 - 5/15/25",
+            "coupon": "FN45-prz5af",
+            "redemption_status": "USED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://www.fashionnova.com/products/summer-spritz-3-piece-bikini-kimono-set-orange-combo",
+            "item": "Summer Spritz 3 Piece Bikini Kimono Set - Orange/combo",
+            "timeAgo": "2025-05-28"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/elise-triangle-drop-earrings-gold",
+            "item": "Elise Triangle Drop Earrings - Gold",
+            "timeAgo": "2025-05-21"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/kamira-bandage-mini-dress-black",
+            "item": "Kamira Bandage Mini Dress - Black",
+            "timeAgo": "2025-05-21"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/kamira-bandage-mini-dress-burgundy",
+            "item": "Kamira Bandage Mini Dress - Burgundy",
+            "timeAgo": "2025-05-21"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/lilia-mesh-mini-dress-black",
+            "item": "Lilia Mesh Mini Dress - Black",
+            "timeAgo": "2025-05-21"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://fashionnova.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-05-21",
+            "coupon": "FN55-xvmq3n",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      34.99,
+                      5.99,
+                      27.99
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1355169737\u0026carrier=ups\u0026order_numbers=159200465\u0026locale=en_US",
+            "link": "https://www.fashionnova.com/2939277/orders/64190cf165bf30ccb34690c7cc84a59e/authenticate?key=e1755394ebe735326d54b2f522645d0e",
+            "date_time": "2025-05-21 18:42:17.700",
+            "discount_amount": 0,
+            "orderNumber": "159200465",
+            "order_tracking_link": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1355169737\u0026carrier=ups\u0026order_numbers=159200465\u0026locale=en_US",
+            "total": 73.04
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-04-23",
+            "coupon": "SAVE40",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      34.99,
+                      29.99,
+                      10.48,
+                      44.99,
+                      29.99,
+                      10.99
+                    ],
+                    "Count": 6
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1347926102\u0026carrier=ups\u0026order_numbers=156965669\u0026locale=en_US",
+            "link": "https://www.fashionnova.com/2939277/orders/924cbbc3db961aaf88db796cc15511de/authenticate?key=445bd002c158ddf7d20f295f409dc0e6",
+            "date_time": "2025-04-23 18:13:33.997",
+            "discount_amount": 0,
+            "orderNumber": "156965669",
+            "order_tracking_link": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1347926102\u0026carrier=ups\u0026order_numbers=156965669\u0026locale=en_US",
+            "total": 108.16
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-03-02",
+            "coupon": "FREE25",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      21.99,
+                      27.99,
+                      23.99,
+                      43.99,
+                      19.99,
+                      13.99,
+                      13.99,
+                      27.99
+                    ],
+                    "Count": 8
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2024-03-02 03:07:52.583",
+            "discount_amount": 25,
+            "orderNumber": "5667461791868",
+            "total": 180.71
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-10-10",
+            "coupon": "GET20",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      16.99,
+                      16.99,
+                      5.99,
+                      23.99,
+                      13.99,
+                      8.99,
+                      9.99,
+                      23.99,
+                      16.99
+                    ],
+                    "Count": 9
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-10-10 14:21:26.571",
+            "discount_amount": 27.58,
+            "orderNumber": "5373427581052",
+            "total": 118.07
+          }
+        ]
+      },
+      "companyWebsite": "https://fashionnova.com",
+      "companyName": "Fashion Nova",
+      "notes": {
+        "send_to_cs": [
+          "No escalations for this client, send to CS using the Support templates",
+          "For post-purchase inquiries send to CS using the Support template (shortcut: ESC)",
+          "➜ If the cx is having difficulties sending an email to CS via the link in the ESC temp - use Support 2 template (shortcut: TESC)",
+          "➜ If the cx is facing technical website issues while accessing the link, do NOT immediately send the TESC shortcut, troubleshoot first instead",
+          "For pre-purchase inquiries send to CS using the Support 2 template (shortcut: TESC)"
+        ],
+        "tone": [
+          "🅿️ Use wording that is in line with the brand\u0027s voice and terminology found on the website",
+          "➜ e.g. Nova Kids, Nova Babes, Insta-worthy, slays, snatched, baddie, etc.",
+          "➜ Always look up the term\u0027s meaning before using it!"
+        ],
+        "templates": [
+          "For expired discounts use EXP shortcut",
+          "For login issues use LGI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "If cx are looking for their 30% welcome code, ask to check their email (spam \u0026 promo)",
+          "Gift cards can be used on discounted items"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Treat yourself! Here\u0027s a code for 40% off the entire site: SAVE40 -\u003e http://sms.fashionnova.com/akIOt5TSXJ9J ",
+          "date_time": "2025-05-04 14:43:27.631",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Born In The USA, Shipped From The USA! 40% OFF SITEWIDE ENDS IN 6HRS!\n\nNo Xtra Tariffs HERE! Go NOW -\u003e\nhttp://sms.fashionnova.com/ayVs-mMgnklW .",
+          "date_time": "2025-05-04 18:49:49.914",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: You are unsubscribed from messaging. No more messages will be sent. Help at support@attentivemobile.com",
+          "date_time": "2025-05-04 18:54:19.840",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Terms: http://sms.fashionnova.com/cl/Vbi Privacy: http://sms.fashionnova.com/cl/EzD",
+          "date_time": "2025-05-21 14:38:57.246",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: You made the FN list! Now, tap the link to get 30% OFF the ENTIRE site with code FN55-xvmq3n! -\u003e http://sms.fashionnova.com/avMK_549i8XA .",
+          "date_time": "2025-05-21 14:39:01.254",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: You are already on the FN list, so return to the site and shop NOW → FashionNova.com .",
+          "date_time": "2025-05-21 14:42:22.872",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Congrats! Your order #159200465 is confirmed.\n\nCheck the status of your order here: http://sms.fashionnova.com/a_z_OmPcAA1U .",
+          "date_time": "2025-05-21 14:42:27.377",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Great news! Your order #159200465 has been picked up by the carrier!\n\nTrack it here: http://sms.fashionnova.com/aPMo1Y6izcXL .",
+          "date_time": "2025-05-21 17:30:39.342",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Your order #159200465 is out for delivery and should arrive TODAY!\n\nTrack it here: http://sms.fashionnova.com/aFQo0uqyPkoQ .",
+          "date_time": "2025-05-22 12:08:23.254",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: It\u0027s here! Order #159200465 has been delivered!\n \nCheck delivery details here: http://sms.fashionnova.com/am-kjm4c8xcH .",
+          "date_time": "2025-05-22 14:18:26.452",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Last Chance!! No One Like Me Tights - Black is almost sold out. Grab it before someone else does! -\u003e http://sms.fashionnova.com/aQ4N3ssTD60o .",
+          "date_time": "2025-05-25 16:45:04.644",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Jamilett, what happened? You may have missed something! Check out our New Arrivals before they sell out... you won\u0027t regret it: http://sms.fashionnova.com/a_qgmucJ5w5p . ",
+          "date_time": "2025-05-25 19:47:25.124",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: TODAY ONLY!! 40-90% OFF EVERYTHING!\n\nThe Memorial Day Sale Is HERE! Don\u0027t Miss Out, Shop NOW! -\u003e\nhttp://sms.fashionnova.com/av5LGYWZYflT .",
+          "date_time": "2025-05-26 10:33:12.546",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Don\u0027t forget to save us to your contacts! It\u0027ll make things a whole lot easier... trust me.",
+          "date_time": "2025-05-26 14:39:16.131",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FINAL 6HRS!! 40-90% OFF SITEWIDE!!\n\nOur Memorial Day Sale ENDS 2NITE!...Hurry, Shop NOW!-\u003e\nhttp://sms.fashionnova.com/a0PqHb46Qrnk .",
+          "date_time": "2025-05-26 19:48:32.354",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREE 1-Day Shipping + BOGO FREE Tops \u0026 Bottoms!!\n\nDouble Up And Get It TMRW! Use Code: BOGO -\u003e\nhttp://sms.fashionnova.com/a-PEXA9WSXDN .",
+          "date_time": "2025-05-29 10:30:39.903",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Last Chance!! Your Doll 3 Piece Set - Neon Pink/combo is almost sold out. Grab it before someone else does! -\u003e http://sms.fashionnova.com/aWTmSEUYlhyN .",
+          "date_time": "2025-06-02 12:39:54.548",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I still have not received my package",
+          "date_time": "2025-06-02 12:40:49.099",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01973188-6ae7-4a6b-f000-0000011570a7",
+          "message_text": "Fashion Nova: Thank you for clarifying, and I\u0027m sorry for any confusion. Upon checking, order #159200465 was delivered on 05/22. If the tracking information indicates that your items have been delivered to the address provided on the purchase but you have not received it, please check surrounding houses, doorsteps, etc.. in case another home received it by mistake. Speak with any other tenants such as family, roommates or landlords, etc. in the event they received it on your behalf. The package may also have been left with property managers, an apartment office or your local postal provider. Let me know how that goes!",
+          "message_type": "agent",
+          "agent": "87398",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-06-02 12:45:13.330"
+        }
+      ]
+    },
+    "490": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "0190e10d-7d25-4bba-f000-000024b332c0",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.darngoodyarn.com/products/closeout-yarn-mini-kits?utm_campaign=copy_of_copy_of_copy_of_06.06.2024---Mini-Editor%27s-Boxes---Craft-Subs\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=XpfUx",
+            "item": "Closeout Mini Yarn Kits - Silk V1",
+            "timeAgo": "2024-07-04"
+          },
+          {
+            "link": "https://www.darngoodyarn.com/products/darn-good-bandana-1?utm_campaign=Message-01-21-22-2-50\u0026utm_source=attentive\u0026utm_medium=text\u0026externalId=XpfUx\u0026variant=40182815883377",
+            "item": "Darn Good Bandana",
+            "timeAgo": "2024-06-20"
+          },
+          {
+            "link": "https://www.darngoodyarn.com/products/one-of-a-kind-hand-embroidered-pouf?utm_campaign=copy_of_copy_of_copy_of_copy_of_copy_of_04.26.2024---Moonstone-Sari-Wrap-Skirt-Collection\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=XpfUx",
+            "item": "Hand Embroidered Floor Pouf",
+            "timeAgo": "2024-06-07"
+          },
+          {
+            "link": "https://www.darngoodyarn.com/collections/sale/products/cat-donut-stitch-markers-5-pack",
+            "item": "Enamel Cat Donut Stitch Markers",
+            "timeAgo": "2024-05-31"
+          },
+          {
+            "link": "https://www.darngoodyarn.com/collections/sale/products/rainbows-gold-plated-stitch-markers",
+            "item": "Magic Rainbows - Gold Plated Stitch Markers",
+            "timeAgo": "2024-05-31"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 615723712,
+            "company_id": 2363,
+            "coupon_url": "https://darn-good-yarn-2.myshopify.com/discount/CASTLrXNB?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=CAS",
+            "name": "Cart Abandoment_SMS Free Shipping",
+            "coupon": "CASTLrXNB",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 615723712,
+            "company_id": 2363,
+            "coupon_url": "https://www.darngoodyarn.com/discount/DbpNHGk?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=15-percent-off-unique",
+            "name": "15% off Unique Discount Codes",
+            "coupon": "DbpNHGk",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 615723712,
+            "description": "17% Off. Excludes: already discounted products, final sale products, and subscription products",
+            "company_id": 2363,
+            "coupon_url": "https://darn-good-yarn-2.myshopify.com/discount/STAYGOOD17?utm_source=attentive\u0026utm_medium=sms",
+            "static_code": "STAYGOOD17",
+            "name": "Concierge 17% Off",
+            "coupon": "STAYGOOD17",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://darngoodyarn.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-14",
+            "coupon": "YARNLOVER",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      20,
+                      150
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction_input?strOrigTrackNum=9434611206210765428438",
+            "link": "https://www.darngoodyarn.com/13465473/orders/c4e853bfa6a606e3f6e7182e6847f0a8/authenticate?key=c06747d6bebf375a8126ee7e10829057\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-14 19:16:21.937",
+            "discount_amount": 150,
+            "orderNumber": "1246181",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction_input?strOrigTrackNum=9434611206210765428438",
+            "total": 169.1
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-04-25",
+            "items": [
+              {
+                "price": [
+                  60
+                ],
+                "productLink": "https://darn-good-yarn-2.myshopify.com/products/sams-clothing-accessories",
+                "name": "Sam\u0027s Clothing \u0026 Accessories"
+              }
+            ],
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction_input?origTrackNum=92346903060085300023923816",
+            "link": "https://www.darngoodyarn.com/13465473/orders/e1c77a66c1ae53464c150c4301d1f82e/authenticate?key=f6e64b64bb0c15613b8b76baf8c58358\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-04-25 01:01:24.058",
+            "discount_amount": 0,
+            "orderNumber": "1242542",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction_input?origTrackNum=92346903060085300023923816",
+            "total": 212.7
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-04-09",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      75,
+                      60
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction_input?origTrackNum=92346903060085300022804116",
+            "link": "https://www.darngoodyarn.com/13465473/orders/b14d48e38e8e4e671e63f44dc22f07bc/authenticate?key=defd292f4e45a68b929b99518c2d6265\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-04-09 12:15:18.435",
+            "discount_amount": 0,
+            "orderNumber": "1239484",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction_input?origTrackNum=92346903060085300022804116",
+            "total": 233.97
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-02-08",
+            "items": [
+              {
+                "price": [
+                  75
+                ],
+                "productLink": "https://darn-good-yarn-2.myshopify.com/products/sams-sales-one-of-a-kind",
+                "name": "Sam\u0027s Sales One-of-a-Kind"
+              }
+            ],
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction_input?origTrackNum=92346903060085300017353995",
+            "link": "https://www.darngoodyarn.com/13465473/orders/e16e22053e55697b0e7d49b6853c90ec/authenticate?key=e37afa2e158b3b16d2a1772eb4c29003",
+            "date_time": "2024-02-08 21:37:24.057",
+            "discount_amount": 0,
+            "orderNumber": "1227751",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction_input?origTrackNum=92346903060085300017353995",
+            "total": 58.49
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2023-12-31",
+            "coupon": "BOXINGDAY",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      50,
+                      70
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-12-31 23:03:26.001",
+            "discount_amount": 100,
+            "orderNumber": "5278602559601",
+            "total": 158.43
+          }
+        ]
+      },
+      "companyWebsite": "https://darngoodyarn.com",
+      "companyName": "Darn Good Yarn",
+      "notes": {
+        "escalate": [
+          "Don\u0027t send to CS for this client, ESC everything"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Super Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: The perfect summer duster is back! Pair with jeans or with your bathing suit at the beach!\n\nBUY 1, GET 1 25% OFF\n\n https://dgy.attn.tv/akgusF3Ec0jf .",
+          "date_time": "2024-06-24 14:05:16.974",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: SALE ON SALE! Take an extra 10% off everything in the sale bin!\n\nUse Code: EXTRA10\n\nTwo days only! Act fast! \nhttps://dgy.attn.tv/aSRvIlKdFCUZ .",
+          "date_time": "2024-06-26 14:05:26.584",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: LAST CALL! Malabrigo is almost gone! BUY 2, GET 1 FREE!\n\nUse Code: MALABRIGO at checkout\n\nLimited Stock! Act Fast! https://dgy.attn.tv/a7-QIZoGA3mK .",
+          "date_time": "2024-06-27 13:02:11.866",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: NEW California Sunset Sari Wrap Skirt Collection!\n\nGet 2 for $75 + Free Sun Pendant with purchase.\n\nShop Now: https://dgy.attn.tv/aT6shutaugnK .",
+          "date_time": "2024-06-28 14:01:33.450",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: You need a treat! We have you covered These are our best finds so far this year. Plus get 17% off today STAYGOOD17 Explore https://dgy.attn.tv/aQu-fMjmEJX2 ",
+          "date_time": "2024-06-28 14:53:10.707",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Did someone say sari silk...SHORTS?! NEW Sari lounge shorts coming soon!\n\nSpecial pre-order - just $30\n\nGet yours:\nhttps://dgy.attn.tv/aMhNtndtj37k .",
+          "date_time": "2024-06-30 14:00:29.753",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: NEW - Long sari dusters are back! Hundreds of NEW colors and patterns!\n\n* GET 2 FOR $99 *\n\nTwo Days Only! Shop:\nhttps://dgy.attn.tv/ag5neJsx8Y1z .",
+          "date_time": "2024-07-01 14:00:28.984",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: VIP EARLY ACCESS! 25% Off Sitewide Sale! \n\nUse Code: STAR25 at checkout\n\nLimited time only! Shop the Sale: \nhttps://dgy.attn.tv/aRpa3R7Wi7T5 .",
+          "date_time": "2024-07-02 14:01:15.656",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Star Spangled Sale! BOGO Yarn Kits are back! This week only! Get 6 skeins of silk yarn for HALF PRICE!\n\nGet Yours:\nhttps://dgy.attn.tv/a5WXnGvzZb_t .",
+          "date_time": "2024-07-03 14:05:19.844",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Hey Jennifer, this is Jordan. Thanks for checking out our site! 😊 https://dgy.attn.tv/am63-oPzevXK \n\nAny questions I can answer for you? ",
+          "date_time": "2024-07-03 14:07:02.558",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Star Spangled Savings! 25% Off EVERYTHING! \n\nUse Code: STAR25 at checkout\n\nEnds Tonight! Don\u0027t Miss Out!: \nhttps://dgy.attn.tv/aYsBqZdX58_S .",
+          "date_time": "2024-07-04 10:00:38.004",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: BEACH DAY BOGO! Buy 1, Get 1 Free Beach Day Styling Bags! Includes Skirt + Accessories!\n\nSave $160! Today Only! https://dgy.attn.tv/ar_qw30jHwjo .",
+          "date_time": "2024-07-05 13:05:13.756",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Final Call! Patchwork dresses are almost gone! Get 2 dresses for $65\n\nUse Code: PATCHWORK\n\nToday Only! Shop: https://dgy.attn.tv/au0NDnLz8TL2 .",
+          "date_time": "2024-07-07 12:45:16.558",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: FLASH SALE - 2 for $25 Reclaimed Sari Medleys! Endless ways to style for Summer.\n\nSave $35!\n\nTwo Days Only! Shop: https://dgy.attn.tv/aplZnztUiBV7 .",
+          "date_time": "2024-07-08 14:20:10.735",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Ends Tonight! BUY 1, GET 2 FREE Mini Sari Wrap Skirts! Save $138\n\nUse Code: SUMMER\n\nLast Few Hours! Shop:\nhttps://dgy.attn.tv/aUHSL_Atai0- .",
+          "date_time": "2024-07-10 14:35:15.254",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Make a splash by the pool this summer! Bali Breeze Sari Bathing Suit Wraps are BACK! \n\nBUY 1, GET 1 FREE\n\nShop:\nhttps://dgy.attn.tv/a9paLpXdF4re .\n",
+          "date_time": "2024-07-11 13:40:08.383",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: CLEAR THE BINS! Overstocked yarn ON SALE!\n\n10 cakes of silk yarn for just $80!\n\nLimited stock left! Get your box!\nhttps://dgy.attn.tv/ak9pYezqKZ8J .",
+          "date_time": "2024-07-12 13:50:15.629",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: TODAY ONLY! Take 20% off must-have summer styles! Skirts, dresses, duster + more\n\nUse Code: NEWLOOK20\n\nShop Now:\nhttps://dgy.attn.tv/azwIPC_y6Mgx .",
+          "date_time": "2024-07-13 13:30:18.980",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: I don\u0027t want you to miss this! We just added some fabulous finds from around the world. Here\u0027s an offer just for you 17% off STAYGOOD17 Shop now https://dgy.attn.tv/aUuOCHyUjWNd ",
+          "date_time": "2024-07-13 14:53:14.964",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: COUPON UNLOCKED! $10 off your next purchase! \n\nUse Code: SUNNY10 at checkout\n\nThis week only! Don\u0027t let it expire! https://dgy.attn.tv/aam9cGXvFM_S .",
+          "date_time": "2024-07-14 14:35:08.350",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Deal Days start now! Buy 1, Get 1 FREE all Sari Wrap Skirts!\n\nAll Lengths, all colors!\n\nTwo Days Only! Act Fast! \nhttps://dgy.attn.tv/aDzNkYdfym21 ",
+          "date_time": "2024-07-15 13:35:09.145",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: DOOR BUSTER: 6 skeins of silk yarn + stitch markers and patterns for just $50!\n\nSave over 50%\n\nGet yours:\nhttps://dgy.attn.tv/a4idqDTq_rVQ\n\n",
+          "date_time": "2024-07-16 14:01:42.812",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Exclusive offer! Take an extra 15% off all closeout clearance! New Items added!\n\nUse Code: EXTRA15\n\nTwo Days Only!\nhttps://dgy.attn.tv/a_40fEP8urfN .",
+          "date_time": "2024-07-17 14:15:39.390",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: YARN LIQUIDATION SALE! Get 4 skeins of silk yarn for $25!\n\n4 Kits to choose from!\n\nLimited stock left! Shop:\nhttps://dgy.attn.tv/a1eK2m8q1SKM .\n\n",
+          "date_time": "2024-07-18 14:01:03.014",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Hey Jennifer, this is Jordan. Thanks for checking out our site! 😊 https://dgy.attn.tv/aosySbIE1esy \n\nAny questions I can answer for you? ",
+          "date_time": "2024-07-19 13:00:13.621",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: NEW ARRIVAL - Sari Hooded Ponchos are back in new colors and patterns!\n\nBUY 1, GET 1 25% OFF\n\nShop:\nhttps://dgy.attn.tv/aM9-AjwWDJab",
+          "date_time": "2024-07-20 13:02:31.147",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Introducing the Bermuda Beach wrap skirt collection! Embrace the serene vibes with 2 skirts for $75.\n\nLimited time only. Shop now:\nhttps://dgy.attn.tv/aTA9J6KbgAnN",
+          "date_time": "2024-07-21 13:46:58.942",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Summer Clearance Event! Get a skirt, tote bag, medley + bandana for just $45!\n\nSave 64%! Limited stock left!\nhttps://dgy.attn.tv/aNDolhHLw-th .",
+          "date_time": "2024-07-22 12:15:55.793",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Take an extra 10% off everything in the sale bin! Clothing, Yarn, Kits + More \n\nUse Code: SALE10\n\nTODAY ONLY! Shop:\nhttps://dgy.attn.tv/aRpAGg6TjYYk ",
+          "date_time": "2024-07-23 12:55:31.476",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Darn Good: Great news! Your order (1246183) has shipped and will be to you soon. Click here to track your order: https://dgy.attn.tv/a08e9HYDC84J .",
+          "date_time": "2024-07-23 13:13:16.783",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I did not order this",
+          "date_time": "2024-07-23 14:27:12.682",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190e0db-da65-40c8-f000-000024b332c0",
+          "message_text": "Darn Good: I\u0027m sorry for the confusion. Could you please clarify if you didn\u0027t place an order with us at all? or are you seeing a different item from the one that you placed an order for? I\u0027ll be happy to help.",
+          "message_type": "agent",
+          "agent": "82764",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-23 14:30:23.091"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Oh correct that, I ordered that so long ago I thought it was out of stock and never coming in, please forget that I bothered you, I did order that scarf",
+          "date_time": "2024-07-23 14:54:12.343",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190e10d-7d25-4bba-f000-000024b332c0",
+          "message_text": "Darn Good: Sorry for the wait, and thanks for your support and for being so patient. In the meantime, you can check out our new arrivals here - https://dgy.attn.tv/aDOecfFDsiwM\nFeel free to reach out if you need further assistance with your order or have any questions. Thank you for choosing us!",
+          "message_type": "agent",
+          "agent": "82433",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-23 15:24:36.019"
+        }
+      ]
+    }
+  }
+}

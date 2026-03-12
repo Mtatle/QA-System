@@ -1,0 +1,1663 @@
+{
+  "version": 1,
+  "chunk": "chunk_0062",
+  "scenarios": {
+    "306": {
+      "agentName": "COS AI Customer Service",
+      "has_shopify": false,
+      "id": "019120f1-a417-496c-f000-00009337b186",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://cos.com/en_usd",
+          "date": ""
+        },
+        "coupons": [
+          {
+            "coupon": "SWA9-4R8R",
+            "status": "INACTIVE"
+          }
+        ]
+      },
+      "companyWebsite": "https://cos.com/en_usd",
+      "companyName": "COS",
+      "notes": {
+        "escalate": [
+          "🚨 DO NOT ESCALATE - send to CS🚨"
+        ],
+        "tone": [
+          "Always respond to cx\u0027s in English even if they reach out in another language"
+        ],
+        "templates": [
+          "For checkout issues with the error RM1 - use the template"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "COS: Welcome to COS! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/lWN",
+          "date_time": "2024-08-05 01:09:04.771",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "COS: Welcome to COS, the destination for innovative design and sustainable collections. Enjoy 10% off your full-price order: https://cosstores.attn.tv/aNymyVu5X2NI .",
+          "date_time": "2024-08-05 01:09:08.764",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "SWA9-4R8R",
+          "date_time": "2024-08-05 01:09:43.258",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019120f1-a417-496c-f000-00009337b186",
+          "message_text": "COS: Please contact our customer service for assistance with this matter.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-05 01:09:52.798"
+        }
+      ]
+    },
+    "307": {
+      "agentName": "Amy",
+      "has_shopify": true,
+      "id": "01932c6c-4516-4589-f000-00009e3a1124",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "your first order",
+            "value": "15",
+            "coupon": "BECLEAR15"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://clearstem.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://clearstem.com/products/bounceback-repair-serum",
+            "item": "BOUNCEBACKTM Peptide Powerhouse Serum",
+            "timeAgo": "2024-10-26"
+          },
+          {
+            "link": "https://clearstem.com/products/bounceback-repair-serum",
+            "item": "BOUNCEBACKTM Peptide Powerhouse Serum",
+            "timeAgo": "2024-10-26"
+          },
+          {
+            "link": "https://clearstem.com/products/bounceback-repair-serum",
+            "item": "BOUNCEBACKTM Peptide Powerhouse Serum",
+            "timeAgo": "2024-10-26"
+          },
+          {
+            "link": "https://clearstem.com/products/bounceback-repair-serum",
+            "item": "BOUNCEBACKTM Peptide Powerhouse Serum",
+            "timeAgo": "2024-10-26"
+          },
+          {
+            "link": "https://clearstem.com/products/vitaminscrub?_pos=2\u0026_psq=Vitamin\u0026_ss=e\u0026_v=1.0",
+            "item": "VITAMINSCRUB® - Antioxidant-Infused Scrub Cleanser",
+            "timeAgo": "2024-10-26"
+          }
+        ]
+      },
+      "companyWebsite": "https://clearstem.com",
+      "companyName": "CLEARSTEM",
+      "notes": {
+        "promo_and_exclusions": [
+          "MINDBODYSKIN is not eligible for any discount codes!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "nutrition, diet, unhappy with product, personalized questions"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from CLEARSTEM.",
+          "date_time": "2024-10-21 23:18:23.195",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Welcome to CLEARSTEM! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/T4W",
+          "date_time": "2024-10-21 23:18:36.971",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Hey, this is Amy, your personal concierge! Feel free to text me with any questions! ",
+          "date_time": "2024-10-21 23:18:40.976",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Amazing news! Our Annual Wellness Sale starts NOW! Get 20% Off sitewide with code WELLNESS24. Happy shopping! \n\nShop Now: https://clearstem.attn.tv/asndoVxvOfok \n ",
+          "date_time": "2024-10-24 16:03:53.869",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Hey Iman, order #627198 is out for delivery. Track your order here: https://clearstem.attn.tv/aGF5bWIi7I0A .",
+          "date_time": "2024-10-25 14:29:16.442",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Get 20% off community faves like SKINSPRAY ALL DAY, GOLDENHOUR, and more-but only for a limited time! Use code WELLNESS24.\n\nShop Now: https://clearstem.attn.tv/aJvB4nH_4TNb .",
+          "date_time": "2024-10-26 12:16:27.812",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Last chance! Our Annual Wellness Sale ends tonight-use code WELLNESS24 before it\u0027s over. \n\nShop Now: https://clearstem.attn.tv/amThI-W1nXgf.",
+          "date_time": "2024-10-29 10:00:46.593",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Amazing news! That MINDBODYSKIN® Hormonal Acne Supplement you were looking at is now back in stock! Click here before it\u0027s too late! https://clearstem.attn.tv/aQCra18ceKH1 .",
+          "date_time": "2024-10-30 13:15:25.030",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Reminder! Get that MINDBODYSKIN® Hormonal Acne Supplement while supplies last! Click here to checkout: https://clearstem.attn.tv/aLNoji_Rdoz9 .",
+          "date_time": "2024-10-31 13:15:37.726",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: SURPRISE! 🎉 We\u0027re gifting you a full-size bottle of CELLRENEW-just add it to your cart with your favorite products and use code RENEW at checkout on any $75+ order. Shop now and enjoy your gift! \n\nShop Now: https://clearstem.attn.tv/alPOWpbQxfav.",
+          "date_time": "2024-11-01 12:15:27.724",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Now\u0027s the perfect time to try CELLRENEW, our powerhouse serum packed with antioxidants and nutrient-rich ingredients to hydrate and rejuvenate your skin.\n\nAdd it to your cart with your favorite products and use code RENEW at checkout. Valid on any $75+ order. Get your FREE full-size bottle now!\n\nShop Now: https://clearstem.attn.tv/aH9VCiNE3evf.",
+          "date_time": "2024-11-03 10:00:49.540",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Amazing news! That CLEARSTEM Clear Skin Kit you were looking at is now back in stock! Click here before it\u0027s too late! https://clearstem.attn.tv/au68nb9Mcjtk .",
+          "date_time": "2024-11-04 17:07:11.045",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Reminder! Get that CLEARSTEM Clear Skin Kit while supplies last! Click here to checkout: https://clearstem.attn.tv/aR8gEmZPVLXT .",
+          "date_time": "2024-11-05 17:07:17.787",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Ends Tonight! Don\u0027t miss your FREE full-size CELLRENEW Serum-just add it to your cart and use code RENEW at checkout. Hurry! Valid on any $75+ order. \n\nShop Now: https://clearstem.attn.tv/a-qe7_j5Mw_F.",
+          "date_time": "2024-11-07 11:00:47.926",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: New deal just dropped! 💖 Spend $75 and get BOUNCEBACK \"no botox\" serum ($98 value) for FREE when you add it to your cart and use code RESTORE at checkout. \n\nShop Now: https://clearstem.attn.tv/aArWT4sbb7go.",
+          "date_time": "2024-11-08 11:00:30.608",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: FINALLY 🤩 a super-effective anti-aging serum that WON\u0027T break you out. Get BOUNCEBACK FREE when you add it to your cart and use code RESTORE on orders $75+. \n\nShop Now: https://clearstem.attn.tv/awuR2BP3BkMT.",
+          "date_time": "2024-11-12 12:15:27.089",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CLEARSTEM: Last few moments! Grab your free BOUNCEBACK serum ($98 value)!\n\nWe 💗the smoothing effects of this serum. There\u0027s nothing like her!\n\nGrab yours free when you spend $75, just add BOUNCEBACK to your cart, use code RESTORE at checkout. Ends tonight at midnight!⏰\n\nShop Now: https://clearstem.attn.tv/aKah_yAkSqVr.",
+          "date_time": "2024-11-14 12:15:28.849",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi was your team able to find out?",
+          "date_time": "2024-11-14 15:33:59.243",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Never received an answer",
+          "date_time": "2024-11-14 15:34:03.096",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01932c67-b3f8-4071-f000-00009e3a1124",
+          "message_text": "CLEARSTEM: Really sorry to hear that. I have already sent you a message last Nov 9, 2024 about our team\u0027s response to your concern. You can scroll up to see the message I sent. ",
+          "message_type": "agent",
+          "agent": "82343",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-14 15:40:14.085"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I didn\u0027t receive any response",
+          "date_time": "2024-11-14 15:44:08.052",
+          "message_media": [
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1731617038982_1857162573787721728.png"
+          ]
+        },
+        {
+          "message_id": "01932c6c-4516-4589-f000-00009e3a1124",
+          "message_text": "CLEARSTEM: I\u0027m sorry about that. Let me resend it. My message goes like this:\n\n\"Thanks for your patience! I just heard from the team. Thanks for reaching out to us! Communication is everything! It sounds like there\u0027s a missing piece in the puzzle, and we are here to help!\n\nOur products have been tested rigorously, but everyone\u0027s skin is unique, and we want you to understand yours better.\n\nHere are the big questions to ask yourself that contribute to acne that very often get overlooked Please read and digest them thoroughly and take each one seriously, or you may never get to a place of peace with your skin. It should take you about 20 minutes to really analyze these factors and double-check all your skincare, makeup, and vitamins.\n\n1. Have you completely removed all pore-clogging ingredients from your makeup, lotions, other skincare products, and hair products? This is step 1 and it is absolutely crucial or you will just be re-clogging your pores. Here is our Pore Clogger Checker https://clearstem.attn.tv/aW2QMXzbqx4F!\n\n2. Are you using any retinols or tretinoin/ Retin-A? We generally advise against using these (or just take a long break) because they are notorious for causing long-lasting purging and high irritation. The white cream Retin-A actually has isopropyl myristate which is a major pore-clogger.\n\n3. Are you consistently using VITAMINSCUB and CLEARITY and allowing CLEARITY to fully penetrate for at least 10-15 minutes? If we do not let CLEARITY sit by itself for 10-15 minutes it will not have enough time to unclog the pore.\n\n4. Do any of your vitamins have excessive B12, excess Vitamin D, excess Zinc, or high levels of Biotin? We recommend staying below 125% RDV for these nutrients in supplement form to eliminate variables (unless expressly directed by your physician)\n\n5. Are you supplementing with a vitamin product that has a lot of Ashwaganda or Rhodiola in it? (Think of green juices or \"adaptogen\" items). These can spike testosterone and cause hormonal acne in some people.\n\n6. How often are you consuming eggs, soy, whey protein, gluten, or dairy? These will all contribute to acne\"",
+          "message_type": "agent",
+          "agent": "82448",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-14 15:45:13.382"
+        }
+      ]
+    },
+    "308": {
+      "agentName": "Su",
+      "has_shopify": true,
+      "id": "018f8809-5ae8-4022-f000-0000899f56fc",
+      "rightPanel": {
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-17",
+            "coupon": "express2024",
+            "items": [
+              {
+                "price": [
+                  149
+                ],
+                "productLink": "https://cariuma.myshopify.com/products/oca-low-white-premium-leather-sneaker",
+                "name": "OCA Low White Premium Leather Sneaker Women"
+              }
+            ],
+            "date_time": "2024-05-17 18:32:36.319",
+            "discount_amount": 0,
+            "orderNumber": "5362820677706",
+            "total": 149
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://cariuma.com/",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.cariuma.com/products/salvas-white-leather-sneaker-women",
+            "item": "SALVAS White Leather Sneaker Women - Women / White / 5",
+            "timeAgo": "2024-05-17"
+          },
+          {
+            "link": "https://www.cariuma.com/products/salvas-white-leather-sneaker-women",
+            "item": "SALVAS White Leather Sneaker Women - Women / White / 5",
+            "timeAgo": "2024-05-17"
+          },
+          {
+            "link": "https://www.cariuma.com/products/salvas-white-leather-sneaker-women",
+            "item": "SALVAS White Leather Sneaker Women - Women / White / 5",
+            "timeAgo": "2024-05-17"
+          },
+          {
+            "link": "https://www.cariuma.com/products/salvas-white-leather-sneaker-women",
+            "item": "SALVAS White Leather Sneaker Women - Women / White / 5",
+            "timeAgo": "2024-05-17"
+          },
+          {
+            "link": "https://www.cariuma.com/products/salvas-white-leather-sneaker-women",
+            "item": "SALVAS White Leather Sneaker Women - Women / White / 5",
+            "timeAgo": "2024-05-17"
+          }
+        ]
+      },
+      "companyWebsite": "https://cariuma.com/",
+      "companyName": "Cariuma",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "escalate": [
+          "Include email when ESC pre purchase inquiries"
+        ],
+        "templates": [
+          "For code issues for free socks/laces use FSL shortcut",
+          "For pre-order shipping/delivery inquiries, use PSD shortcut",
+          "For code issues via the shop app, use the CWW shortcut"
+        ],
+        "tone": [
+          "Approved emojis - 🙂😉🤟🏽🤙🏽💚🌎👟♻️🌿🌱⚡️🔥",
+          "Always use gender-neutral language",
+          "Use alternatives to \"sustainable\": low-impact, responsibly crafted, consciously crafted",
+          "Say \"made with\" instead \"made from\"",
+          "Don\u0027t say \"our deals will always be shared\" as they don\u0027t discount their shoes"
+        ],
+        "promo_and_exclusions": [
+          "If customers complain about the survey codes not working use CI shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        "sustainable",
+        "!",
+        "DEALS",
+        "DISCOUNTS"
+      ],
+      "escalation_preferences": [
+        "Where\u0027s my pre-order",
+        "pre-order questions"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Cariuma: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/fon",
+          "date_time": "2024-05-17 05:20:21.537",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cariuma: Hey! It\u0027s Ben, your personal shopper at CARIUMA. If you need sneaker recommendations, help navigating our website, or answers to your questions, you know who to text.\n\nBy the way - your welcome gift is here! Once you\u0027ve added sneakers to your cart, check the box that reads \u0027Add Extra Insoles\u0027 and enter code*: STAYCOZY at checkout. https://cariuma.attn.tv/ak23lax4PgUp \n\n*Exclusions apply.",
+          "date_time": "2024-05-17 05:20:25.587",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cariuma: Hey! It\u0027s Travis at Cariuma. \n\nYou left a little something in your cart, let us know if we can help you make a final decision! https://cariuma.attn.tv/ap678ArVgcln",
+          "date_time": "2024-05-17 12:25:49.856",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "What is the soonest I can get these shoes?",
+          "date_time": "2024-05-17 12:45:16.533",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "If I order them today?",
+          "date_time": "2024-05-17 12:47:56.945",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f877d-67d6-4df4-f000-0000899f56fc",
+          "message_text": "Cariuma: Hi Deborah, this is Su. We ship via multiple shipping partners and once shipped, it will take 3 to 5 business days domestically and internationally. We also offer express shipping which starts at USD $4.95 and takes 2-4 business days. So if you order them today with standard shipping, the estimate delivery is 3-5 days from today. If you\u0027re in a hurry then I suggest you avail the express shipping. I hope this helps you decide to purchase them. Let me know if you need further assistance and I\u0027m happy to help. ",
+          "message_type": "agent",
+          "agent": "82218",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 12:58:13.859"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ok thank you. You offered me a promo with offered free express shipping is that still on?",
+          "date_time": "2024-05-17 13:02:44.381",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f8785-c557-439c-f000-0000899f56fc",
+          "message_text": "Cariuma: Can you please confirm the promo that was offered to you so I can confirm this?",
+          "message_type": "agent",
+          "agent": "82454",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 13:07:22.079"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It\u0027s not showing up anymore.  It was showing up early this morning morning now is gone!",
+          "date_time": "2024-05-17 13:25:03.155",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It was added to price in the cart..",
+          "date_time": "2024-05-17 13:32:13.805",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Was free",
+          "date_time": "2024-05-17 13:32:23.331",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f87ab-30c0-4c6a-f000-0000899f56fc",
+          "message_text": "Cariuma: I see. For free shipping, this is the available promo code that we have: EXPRESS2024. When you check out, please enter it in the \"discount code or gift card\" box and click \"Apply,\" and it should automatically give you free shipping. Let me know how it goes, and if you have further questions, I\u0027m here to help. ",
+          "message_type": "agent",
+          "agent": "82218",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 13:48:14.410"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ok thank you!",
+          "date_time": "2024-05-17 13:48:49.493",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f87bb-bd4a-4d2c-f000-0000899f56fc",
+          "message_text": "Cariuma: No worries. Feel free to reach out if there\u0027s anything I can help with, and in the meantime, check out our best sellers here: https://cariuma.attn.tv/sl/8V6cDKEk",
+          "message_type": "agent",
+          "agent": "50269",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 14:06:18.968"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "So I got an offer that if I refer a friend I get $30 off my next purchase how do I get the $30 discount off my next purchase?",
+          "date_time": "2024-05-17 14:47:58.413",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f87e2-4e3a-4e24-f000-0000899f56fc",
+          "message_text": "Cariuma: To get the $30 discount, you need to share your unique referral link with your friend. Once they make a purchase using your link, you\u0027ll receive an email with your $30 discount code. You can find your referral link in your account dashboard on our website. Let me know if you need further assistance!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 14:48:26.441"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Oh I see. They need to make a purchase first! Ok",
+          "date_time": "2024-05-17 14:49:28.147",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The Salvas White Premium Leather Ice logo sneaker shows as $129 and when I put it in my cart it jumps to $149",
+          "date_time": "2024-05-17 14:59:08.158",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Why is this",
+          "date_time": "2024-05-17 14:59:28.209",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f87f0-6676-4b13-f000-0000899f56fc",
+          "message_text": "Cariuma: I\u0027m sorry for the confusion. The Salvas start at $129 and this price applies to the colors White LWG Leather/Ice, White LWG Leather/Black, and White LWG Leather/Leopard \u0026 Black. I hope this clarifies. \n",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 15:03:50.145"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "So the price shows online before I add it to the cart at $129 for White Lwg leather/ice Salvas why does it switch to $149 when I add it to the cart! Doesn\u0027t make sense",
+          "date_time": "2024-05-17 15:07:25.999",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f87f6-4268-4f95-f000-0000899f56fc",
+          "message_text": "Cariuma: I\u0027m so sorry about any confusion. The shoe price doesn\u0027t change on my end. Could you please provide more details and a screenshot of what you are looking at? I\u0027m happy to help.",
+          "message_type": "agent",
+          "agent": "82445",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 15:10:14.132"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ok so I have it in a previous cart and is showing $129 so will try to pay from that screen",
+          "date_time": "2024-05-17 15:12:14.281",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f87fa-0bab-48d9-f000-0000899f56fc",
+          "message_text": "Cariuma: Alright, let me know how it goes. ",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 15:14:22.262"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ok it did it again switched price to $149 after putting in payment info",
+          "date_time": "2024-05-17 15:14:54.202",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f87fd-e5fd-412f-f000-0000899f56fc",
+          "message_text": "Cariuma: I see. I\u0027m afraid the current price of the Salvas in White Premium Leather/Ice is really $149, based on the product page here: https://cariuma.attn.tv/sl/4S4LtY8I If you\u0027d like, you can get the White LWG Leather/Ice instead for $129 here: https://cariuma.attn.tv/sl/6rEnHqvV",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 15:18:34.758"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Oh I see",
+          "date_time": "2024-05-17 15:20:39.643",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Product too expensive\"; last updated: 2023-08-22 13:11:09.900",
+          "date_time": "2024-05-17 15:31:05.590",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Order tracking\"; last updated: 2025-08-05 14:45:33.093",
+          "date_time": "2024-05-17 15:31:05.590",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f8809-5ae8-4022-f000-0000899f56fc",
+          "message_text": "Cariuma: I see you\u0027ve made the purchase, congratulations on your order, Deborah. Once your order ships, you can track it here: https://cariuma.attn.tv/sl/Lj9aXob2.\n\nIn the meantime, feel free to browse through our new arrivals here: https://cariuma.attn.tv/sl/wC5sn549.\nIf you have any questions just reach out and I\u0027d love to help.",
+          "message_type": "agent",
+          "agent": "82497",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 15:31:05.593"
+        }
+      ]
+    },
+    "309": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "01920734-742a-44a3-f000-00008da7fbe8",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "value": "15",
+            "coupon": "WELCOME1OACYQVJA"
+          },
+          {
+            "status": "ACTIVE",
+            "value": "15",
+            "coupon": "WELCOME1OACKQJJK"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://famousfootwear.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.famousfootwear.com/product/nike-kids-sunray-protect-2-sandal-toddler-1042157/black-white-71576",
+            "item": "Shop all Nike",
+            "timeAgo": "2024-06-22"
+          }
+        ]
+      },
+      "companyWebsite": "https://famousfootwear.com",
+      "companyName": "Famous Footwear",
+      "notes": {
+        "escalate": [
+          "🚨 DO NOT ESCALATE - send to CS🚨"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Stock up on sandals under $30. Fill up your cart: http://famoussms.co/acvyWbyNrW9u \n\n+ Save even more with BOGO 1/2 Off.",
+          "date_time": "2024-08-21 12:03:01.205",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Your favorite styles are BOGO 1/2 Off. Shop now: http://famoussms.co/aK8Hp-o_lEXg \n\n+ Reward members earn 2X points on every purchase for a limited time",
+          "date_time": "2024-08-22 13:04:24.181",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Big swoosh! Up to 30% off Nike for a limited time. Shop now: http://famoussms.co/aD1pNlDQtFvR \n\n+ BOGO 1/2 Off the family\u0027s favorite styles",
+          "date_time": "2024-08-24 12:03:27.734",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: BOGO 1/2 off now!\nUnder $30: http://famoussms.co/apSfKtDX_XCK \nUnder $50: http://famoussms.co/a95PpmRjpC6M\nUnder $75: http://famoussms.co/agpTetyzzW3O .",
+          "date_time": "2024-08-25 12:02:52.489",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Celebrate Labor Day with BOGO 1/2 off for everyone!\nShop New: http://famoussms.co/auYC-3PQMwRa \nShop Sale: http://famoussms.co/a0lcSu1oNdxm .",
+          "date_time": "2024-08-30 12:05:34.557",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: BOGO 1/2 Off + 2X Points on every purchase ends soon! Shop now: http://famoussms.co/a8l7Fowb5VHB . ",
+          "date_time": "2024-08-31 12:04:01.884",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: LAST DAY to BOGO 1/2 off + earn 2X Points on every purchase. Don\u0027t wait: http://famoussms.co/ag9v4-BXn7LK .",
+          "date_time": "2024-09-02 11:05:15.214",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: ENDS TONIGHT! BOGO 1/2 Off: http://famoussms.co/aDhjtgoejkqn \n\nSave big while you still can.",
+          "date_time": "2024-09-02 17:03:39.714",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Oh, it\u0027s on! BOGO 1/2 off Clearance starts now, in-store and online: http://famoussms.co/aVqTXlBe3HAC . ",
+          "date_time": "2024-09-12 13:03:56.412",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: ICYMI...BOGO 1/2 off Clearance is almost gone. In-store and online. Shop: http://famoussms.co/aV_Ki_to9BfJ . ",
+          "date_time": "2024-09-18 11:10:26.854",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Going, going, almost gone. BOGO 1/2 off Clearance ends tonight: http://famoussms.co/aEDSFN3Jz6xE .",
+          "date_time": "2024-09-18 17:02:47.878",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Thanks for texting us! Please reach out to us at famousfootwear@mailmw.custhelp.com for assistance or STOP to opt out.",
+          "date_time": "2024-09-18 17:14:56.908",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "577 accounts",
+          "date_time": "2024-09-18 17:15:08.059",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01920706-7f90-461c-f000-00008da7fbe8",
+          "message_text": "FAMOUS: Please contact us at famousfootwear@mailmw.custhelp.com for assistance with your account.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-18 17:25:19.379"
+        },
+        {
+          "message_id": "01920734-742a-44a3-f000-00008da7fbe8",
+          "message_text": "FAMOUS: Please contact our support team for assistance with your account: http://famoussms.co/azuU2cqeLtcU.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-09-18 18:15:31.118"
+        }
+      ]
+    },
+    "310": {
+      "agentName": "Alexa",
+      "has_shopify": true,
+      "id": "0193c629-c8be-454e-f000-000001071713",
+      "rightPanel": {
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-23",
+            "coupon": "FN54-jq7w83",
+            "items": [
+              {
+                "price": [
+                  15.99
+                ],
+                "productLink": "https://fnova.myshopify.com/products/stephania-blouse-top-white",
+                "name": "Stephania Blouse Top - White"
+              }
+            ],
+            "trackingLink": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1367476927\u0026carrier=ups\u0026order_numbers=136077876\u0026locale=en_US",
+            "link": "https://www.fashionnova.com/2939277/orders/236b020c14cc78f3b879a7fe02058bcf/authenticate?key=38ad35163f52e9079f5ed84478681299\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-23 03:40:23.428",
+            "discount_amount": 60.14,
+            "orderNumber": "136077876",
+            "order_tracking_link": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1367476927\u0026carrier=ups\u0026order_numbers=136077876\u0026locale=en_US",
+            "total": 150.12
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-23",
+            "coupon": "FN54-jq7w83",
+            "items": [
+              {
+                "price": [
+                  103.99
+                ],
+                "productLink": "https://fnova.myshopify.com/products/chantilly-embellished-mini-dress-clear-silver",
+                "name": "Chantilly Embellished Mini Dress - Clear/Silver"
+              }
+            ],
+            "trackingLink": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1367476927\u0026carrier=ups\u0026order_numbers=136077876\u0026locale=en_US",
+            "link": "https://www.fashionnova.com/2939277/orders/236b020c14cc78f3b879a7fe02058bcf/authenticate?key=38ad35163f52e9079f5ed84478681299\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-23 03:40:23.413",
+            "discount_amount": 60.14,
+            "orderNumber": "136077876",
+            "order_tracking_link": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1367476927\u0026carrier=ups\u0026order_numbers=136077876\u0026locale=en_US",
+            "total": 150.12
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-23",
+            "coupon": "FN54-jq7w83",
+            "items": [
+              {
+                "price": [
+                  19.99
+                ],
+                "productLink": "https://fnova.myshopify.com/products/on-your-mind-linen-shirt-white",
+                "name": "On Your Mind Linen Shirt - White"
+              }
+            ],
+            "trackingLink": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1367476927\u0026carrier=ups\u0026order_numbers=136077876\u0026locale=en_US",
+            "link": "https://www.fashionnova.com/2939277/orders/236b020c14cc78f3b879a7fe02058bcf/authenticate?key=38ad35163f52e9079f5ed84478681299\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-23 03:40:23.365",
+            "discount_amount": 60.14,
+            "orderNumber": "136077876",
+            "order_tracking_link": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1367476927\u0026carrier=ups\u0026order_numbers=136077876\u0026locale=en_US",
+            "total": 150.12
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-23",
+            "coupon": "FN54-jq7w83",
+            "items": [
+              {
+                "price": [
+                  23.99
+                ],
+                "productLink": "https://fnova.myshopify.com/products/sweet-love-printed-plisse-pant-blue-combo",
+                "name": "Sweet Love Printed Plisse Pant - Blue/combo"
+              }
+            ],
+            "trackingLink": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1367476927\u0026carrier=ups\u0026order_numbers=136077876\u0026locale=en_US",
+            "link": "https://www.fashionnova.com/2939277/orders/236b020c14cc78f3b879a7fe02058bcf/authenticate?key=38ad35163f52e9079f5ed84478681299\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-23 03:40:23.348",
+            "discount_amount": 60.14,
+            "orderNumber": "136077876",
+            "order_tracking_link": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1367476927\u0026carrier=ups\u0026order_numbers=136077876\u0026locale=en_US",
+            "total": 150.12
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-05-23",
+            "coupon": "FN54-jq7w83",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      12.49,
+                      12
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1367476927\u0026carrier=ups\u0026order_numbers=136077876\u0026locale=en_US",
+            "link": "https://www.fashionnova.com/2939277/orders/236b020c14cc78f3b879a7fe02058bcf/authenticate?key=38ad35163f52e9079f5ed84478681299\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-23 03:40:23.279",
+            "discount_amount": 60.14,
+            "orderNumber": "136077876",
+            "order_tracking_link": "https://www.fashionnova.com/pages/tracking?tracking_numbers=1ZW6535X1367476927\u0026carrier=ups\u0026order_numbers=136077876\u0026locale=en_US",
+            "total": 150.12
+          }
+        ],
+        "coupons": [
+          {
+            "status": "INACTIVE",
+            "redeemed": "2024-08-16 18:25:47.052",
+            "coupon": "FN84-uwykc2"
+          },
+          {
+            "coupon": "FN16-wn2ka5",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2024-08-01 01:48:40.571",
+            "coupon": "FN74-dkhcsd"
+          },
+          {
+            "status": "INACTIVE",
+            "value": "30",
+            "coupon": "FN114-fnunge"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "October 2023",
+            "coupon": "FN103-e4x6c3"
+          },
+          {
+            "coupon": "FN75-f2a3jh",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "FN85-hnv7y6",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "value": "30",
+            "coupon": "FN114-yqbhtr"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2024-11-04 23:40:26.210",
+            "value": "40",
+            "coupon": "SAVE40"
+          },
+          {
+            "coupon": "FN125-dr4sru",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2024-12-16 18:00:13.396",
+            "coupon": "FN124-459beh"
+          },
+          {
+            "coupon": "FN34-jrvf6v",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "October 2023",
+            "coupon": "FN103-dzj6xq"
+          },
+          {
+            "coupon": "FN44-57924p",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "FN34-hmfgq8",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2024-10-24 18:46:35.546",
+            "value": "30",
+            "coupon": "FN104-e4dvte"
+          },
+          {
+            "coupon": "FN95-yan592",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "LOVE40",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "SECRET40",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2024-06-19 15:43:32.082",
+            "coupon": "FN64-j23sgc"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "January 30% Welcome Dynamic 1/24",
+            "coupon": "FN141-4xv8d3"
+          },
+          {
+            "coupon": "FN15-s5hcdt",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "FN83-8whkb5",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "FN35-w57kru",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "FN65-xc45ms",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2024-06-10 17:08:17.264",
+            "coupon": "FN64-negb7u"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2024-08-15 19:35:35.234",
+            "coupon": "FN84-zp75ht"
+          },
+          {
+            "coupon": "FN54-awwfke",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "value": "30",
+            "coupon": "FN104-fyx5cc"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "October 2023",
+            "redeemed": "2023-10-11 03:21:54.642",
+            "coupon": "FN103-wjurmt"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2024-05-23 03:40:23.348",
+            "coupon": "FN54-jq7w83"
+          },
+          {
+            "coupon": "FN84-hjchm8",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "FN65-48nm3b",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "ACTIVE",
+            "value": "30",
+            "coupon": "FN26-sm5y8m"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2024-07-04 16:54:19.942",
+            "coupon": "FN74-sywxnf"
+          },
+          {
+            "coupon": "FN35-cdgs65",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "TAKE10",
+            "status": "ACTIVE"
+          },
+          {
+            "coupon": "FN75-zxxwe2",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "FN115-r9mhwm",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2024-02-28 04:56:21.687",
+            "coupon": "FN24-xwxmza"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "Journey discount",
+            "coupon": "SECRET30"
+          },
+          {
+            "coupon": "FN94-zj92m3",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "FN1231-6e2nrs",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "November 2023",
+            "redeemed": "2023-12-04 14:51:50.988",
+            "coupon": "FN113-whqxvu"
+          },
+          {
+            "coupon": "FN16-m6xuym",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "ACTIVE",
+            "redeemed": "2024-03-04 16:00:00.028",
+            "coupon": "TAKE10"
+          },
+          {
+            "coupon": "FN85-zr9ert",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "redeemed": "2025-01-09 16:55:02.692",
+            "coupon": "FN124-9dyg4p"
+          },
+          {
+            "coupon": "FN123-uma6hv",
+            "status": "INACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://fashionnova.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.fashionnova.com/products/the-original-trendsetter-velour-set-burgundy?variant=12193470087292",
+            "item": "The Original Trendsetter Velour Set - Burgundy",
+            "timeAgo": "2024-12-14"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/cuddle-time-cozy-pant-set-black",
+            "item": "Cuddle Time Cozy Pant Set - Black",
+            "timeAgo": "2024-12-14"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/cuddle-time-cozy-pant-set-mauve",
+            "item": "Cuddle Time Cozy Pant Set - Mauve",
+            "timeAgo": "2024-12-14"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/mini-family-goals-crown-legging-red",
+            "item": "Mini Family Goals Crown Legging - Red",
+            "timeAgo": "2024-12-14"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/mini-stole-your-boyfriends-oversized-hoodie-nude",
+            "item": "Mini Stole Your Toys Oversized Hoodie - Nude",
+            "timeAgo": "2024-12-14"
+          }
+        ]
+      },
+      "companyWebsite": "https://fashionnova.com",
+      "companyName": "Fashion Nova",
+      "notes": {
+        "send_to_cs": [
+          "No escalations for this client, send to CS using the Support templates",
+          "For post-purchase inquiries send to CS using the Support template (shortcut: ESC)",
+          "➜ If the cx is having difficulties sending an email to CS via the link in the ESC temp - use Support 2 template (shortcut: TESC)",
+          "➜ If the cx is facing technical website issues while accessing the link, do NOT immediately send the TESC shortcut, troubleshoot first instead",
+          "For pre-purchase inquiries send to CS using the Support 2 template (shortcut: TESC)"
+        ],
+        "tone": [
+          "🅿️ Use wording that is in line with the brand\u0027s voice and terminology found on the website",
+          "➜ e.g. Nova Kids, Nova Babes, Insta-worthy, slays, snatched, baddie, etc.",
+          "➜ Always look up the term\u0027s meaning before using it!"
+        ],
+        "templates": [
+          "For expired discounts use EXP shortcut",
+          "For login issues use LGI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "If cx are looking for their 30% welcome code, ask to check their email (spam \u0026 promo)",
+          "Gift cards can be used on discounted items"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: HURRY!! The price just dropped! Check out and buy the Fairfax High Rise Stretch Cargo Jeans - Light Wash - 7 before the price goes up again! -\u003e http://sms.fashionnova.com/aWqfdApNkUuf .",
+          "date_time": "2024-11-15 12:16:03.612",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Surprise! Here\u0027s a code for 10% off the entire site: TAKE10 - Go on, treat yourself! -\u003e http://sms.fashionnova.com/aWKuYyTMuOb0 .",
+          "date_time": "2024-11-15 19:25:29.762",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: WHAT ARE YOU WAITING FOR?? LAST day to use code: FN114-yqbhtr for 30% off the ENTIRE site! Don\u0027t be shy, shop NOW! -\u003e http://sms.fashionnova.com/aDx9Niz3wr1x .",
+          "date_time": "2024-11-16 12:46:39.779",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: You are unsubscribed from messaging. No more messages will be sent. Help at support@attentivemobile.com",
+          "date_time": "2024-11-18 08:50:51.181",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: You are unsubscribed from messaging. No more messages will be sent. Help at support@attentivemobile.com",
+          "date_time": "2024-11-18 08:50:52.179",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Terms: http://sms.fashionnova.com/cl/Vbi Privacy: http://sms.fashionnova.com/cl/EzD",
+          "date_time": "2024-11-18 08:51:30.320",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: You made the FN list! Now, tap the link to get 30% OFF the ENTIRE site with code FN114-yqbhtr! -\u003e http://sms.fashionnova.com/ae4egClN7WVh .",
+          "date_time": "2024-11-18 08:51:34.320",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: HURRY! Your unique offer FN114-yqbhtr expires in 14 days! Tap this link to apply 30% Off, NOW! -\u003e http://sms.fashionnova.com/aM_gEfGdIyc2 .",
+          "date_time": "2024-11-18 12:19:46.963",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREE 1-Day Shipping + 30-80% Off Everything!\n\nEarly BLACK FRIDAY Deals From $2 Are Here! | T\u0026C Apply -\u003e\nhttp://sms.fashionnova.com/avCc9yqNONRO .",
+          "date_time": "2024-11-19 10:29:07.732",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Surprise! Here\u0027s a code for 10% off the entire site: TAKE10 - Go on, treat yourself! -\u003e http://sms.fashionnova.com/aL_lQ4o0Rfaj .",
+          "date_time": "2024-11-20 12:21:23.966",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Ruth, what happened? You may have missed something! Check out our New Arrivals before they sell out... you won\u0027t regret it: http://sms.fashionnova.com/aQAh7WwiiPWR . ",
+          "date_time": "2024-11-21 12:38:02.975",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Don\u0027t forget to save us to your contacts! It\u0027ll make things a whole lot easier... trust me.",
+          "date_time": "2024-11-23 12:32:55.383",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 50% OFF EVERYTHING🚨BLACK FRIDAY STARTS NOWW!!️\n\nWTF Are U Waiting For!? This Is IT! GO GO GO! | T\u0026C Apply -\u003e \nhttp://sms.fashionnova.com/ayxi5LMQQUUg .",
+          "date_time": "2024-11-24 10:29:35.803",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 🚨50% OFF🚨 ABSOLUTELY EVERYTHING!!\n\n**BLACK FRIDAY IS HERE**\n\n$5 Graphic Tees TODAY ONLY! Shop NOW! T\u0026C Apply -\u003e http://sms.fashionnova.com/astKWGr7YuPG .",
+          "date_time": "2024-11-24 19:02:54.745",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Ruth, what happened? Don\u0027t miss Black Friday! Shop 50% Off EVERYTHING! -\u003e\nhttp://sms.fashionnova.com/aZzigkTq2q9u .",
+          "date_time": "2024-11-25 15:42:58.868",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 50% OFF EVERYTHING! $5 Sweaters \u0026 Tops \u0027Til MIDNIGHT ONLY!\n\nHurry! Ur Late To BLACK FRIDAY! T\u0026C Apply -\u003e http://sms.fashionnova.com/aMvpkpUomp_W .",
+          "date_time": "2024-11-25 19:19:58.906",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 50% OFF EVERYTHING! $8 Hoodies \u0026 Sweats TODAY ONLY!!\n\nShop B4 We SELL OUT!! T\u0026C Apply -\u003e http://sms.fashionnova.com/aCZA2KheM3a2 .",
+          "date_time": "2024-11-26 19:21:22.642",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: WTF!? $4 Jeans TODAY ONLY! +50% Off EVERYTHING!!\n\nHurry, We\u0027ll Have Ur A$$ Lookin\u0027 THICC! 🦃🍑 Shop Now! | T\u0026C Apply -\u003e http://sms.fashionnova.com/a-37x4kR7j4A .",
+          "date_time": "2024-11-27 10:29:54.371",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Don\u0027t miss BLACK FRIDAY! Get 50% OFF absolutely EVERYTHING! Treat yourself! -\u003e\nhttp://sms.fashionnova.com/auwcTTkmAXv3 .",
+          "date_time": "2024-11-27 12:25:23.898",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREEEEE!!! 🤑 We\u0027re REFUNDING The Next 1,000 Orders Up To $100!!\n\n+ 50-90% OFF EVERYTHING STARTS NOW!!️\n\nGO GO GO!! | T\u0026C Apply -\u003e http://sms.fashionnova.com/a6ZccPzO28LW .",
+          "date_time": "2024-11-28 11:00:20.612",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: WE\u0027RE GIVING AWAY $100,000 CASH IN NEXT 3 HOURS!!!💰\n\nShop 50-90% OFF EVERYTHING!🚨Order NOWWW For A Chance To WIN \u0026 Change Ur LIFE!!\n\nBLACK FRIDAY IS HERE!🔥T\u0026C, Rules, Local Exclusions, \u0026 AMOE Apply -\u003e http://sms.fashionnova.com/aixCZdiw2--Y .",
+          "date_time": "2024-11-28 20:07:47.401",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: WAKE THE F*CK UP⏰50-90% OFF EVERYTHING!!️\n\n$5 Dresses + $1 Flash DEALS EVERY HOUR!! It\u0027s The BIGGEST BLACK FRIDAY SALE EVER!!!🤑\n\nShop NOW B4 These Deals Sell Out! -\u003e http://sms.fashionnova.com/avjTqMTja8Ug .",
+          "date_time": "2024-11-29 09:21:56.487",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Ruth, Black Friday just got BIGGER! The entire site is NOW 50-90% OFF! -\u003e\n http://sms.fashionnova.com/anteCK1aIJT9 . ",
+          "date_time": "2024-11-29 12:08:33.782",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: ⚠️5HRS ONLY⚠️ $5 JACKETS \u0026 COATS Starts NOWWW !!️\n\n+ 50-90% OFF EVERYTHING!!\n\nWe\u0027re NOT PLAYIN\u0027!! Black Friday Ends SOON! Shop NOW! -\u003e http://sms.fashionnova.com/aAlCgbW0bduk .",
+          "date_time": "2024-11-29 17:29:32.872",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 🚨WE\u0027RE PAYING UR F*CKING BILLS!!! NEXT 100 ORDERS GET $1,500 CASH!!💰\n\nORDER NOW To Be The First 100!!⏰\n\nOur 50-90% OFF EVERYTHING Black Friday Sale Ends TONIGHT! \n\nT\u0026C\u0027s Apply --\u003e http://sms.fashionnova.com/aGMobQY7DWpj .",
+          "date_time": "2024-11-29 20:30:39.643",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 3 HRS LEFT!!️BLACK FRIDAY IS ENDING!!!\n\n50-90% OFF EVERYTHING!!!\n\nShop Now! Or Wait \u0027Til NEXT YEAR -\u003e\nhttp://sms.fashionnova.com/aEzvu811wBwO .",
+          "date_time": "2024-11-29 22:29:09.839",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 1 HOUR LEFT🚨50-90% OFF EVERYTHING!!! BLACK FRIDAY Is ENDING!\n\nHurry, LAST CHANCE B4 U Miss This Year\u0027s SALE! SHOP NOW -\u003e\nhttp://sms.fashionnova.com/asIa1KR7_Vp8 .",
+          "date_time": "2024-11-30 00:08:54.542",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 99% OFF⚠️\nCYBER MONDAY IS EARLY!!️\n\n50-99% OFF EVERYTHING!!\n\nNew Styles Just Added! Shop NOW!! -\u003e http://sms.fashionnova.com/aRbEoxPiAnX5 .",
+          "date_time": "2024-12-01 10:58:50.556",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Ruth, Cyber Monday is our BIGGEST sale of the year!\n\nThe ENTIRE SITE is now 50-99% OFF! -\u003e\nhttp://sms.fashionnova.com/a1KfmEAlzTXb .",
+          "date_time": "2024-12-01 15:54:38.767",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: NEXT 2,500 Orders GET FREEE $50 NOVA CREDIT!💰\n\n+ 50-99% OFF EVERYTHING CYBER MONDAY Early Access Is NOWWW!!️\n\nOrder Today, Receive $50 CREDIT Tmrw! GO GO GO!! | T\u0026C Apply -\u003e http://sms.fashionnova.com/avFIxqI5lath .",
+          "date_time": "2024-12-01 18:45:04.974",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 🚨99% OFF🚨CYBER MONDAY IS HERE!! $3 Graphics \u0026 Tees NEXT Few Hrs ONLY!!\n\n50-99% OFF EVERYTHING!!️\n\nIt\u0027s The BIGGEST SALE ON THE INTERNET!! Hurry, Shop NOW! -\u003e http://sms.fashionnova.com/avggZ930a75u .",
+          "date_time": "2024-12-02 10:00:11.011",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 🚨$5 JEANS \u0026 PANTS (Next 3 HRS ONLY!) Hurry, B4 They SELL OUT!!\n\n50-99% OFF EVERYTHING! + EXTRA 10% OFF Orders +$99, Code: CYBER10\n\n🤯 The Most VIRAL CYBER SALE ENDS @ MIDNIGHT! GO! -\u003ehttp://sms.fashionnova.com/aTXlPcGAPiUz .",
+          "date_time": "2024-12-02 17:44:48.261",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: MORE FREEEEE! We\u0027re REFUNDING The Next 2,000 Orders Up To $100!! Ur Odds Got BETTER!\n\n💰50-99% OFF The ENTIRE SITE\n🔥$5 JEANS \u0026 PANTS (More Added!)\n🤑XTRA 10% OFF Code: CYBER10\n\nCyber ENDS In 5 HRS! See T\u0026Cs -\u003e http://sms.fashionnova.com/a8-xqBamRzQ3 . ",
+          "date_time": "2024-12-02 21:00:47.615",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 2 HRS LEFT!! 🚨 50-99% OFF + EXTRA 15% OFF Code: CYBER15 Is NOWW!\n\nP.s. 👆 My Boss Made Me Send This Last Reminder \u0026 I Told Him To Chill...Just SHOP NOW!-\u003e http://sms.fashionnova.com/am0B5_8uWPrp . ",
+          "date_time": "2024-12-02 22:59:46.270",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: EXTENDED! 50-99% OFF + XTRA 10% OFF w/ Code: CYBER10\n\nPlus, $6 Hoodies \u0026 Sweats, Tonight ONLY! Shop Now -\u003e http://sms.fashionnova.com/aMKhfM6OCAhX . ",
+          "date_time": "2024-12-03 20:53:34.799",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Don\u0027t forget this dress! Use Code: TAKE10 for 10% off your ENTIRE order! -\u003e http://sms.fashionnova.com/aLby0R3Jjwa9 .",
+          "date_time": "2024-12-05 12:34:00.162",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Surprise! Here\u0027s a code for 10% off the entire site: TAKE10 - Go on, treat yourself! -\u003e http://sms.fashionnova.com/arHGiBDaNrrS .",
+          "date_time": "2024-12-07 12:13:44.292",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: You are unsubscribed from messaging. No more messages will be sent. Help at support@attentivemobile.com",
+          "date_time": "2024-12-14 11:06:08.521",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: You are unsubscribed from messaging. No more messages will be sent. Help at support@attentivemobile.com",
+          "date_time": "2024-12-14 11:06:09.573",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Terms: http://sms.fashionnova.com/cl/Vbi Privacy: http://sms.fashionnova.com/cl/EzD",
+          "date_time": "2024-12-14 11:06:38.166",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: You made the FN list! Now, tap the link to get 30% OFF the ENTIRE site with code FN124-459beh! -\u003e http://sms.fashionnova.com/a7jMGkWkZcDc .",
+          "date_time": "2024-12-14 11:06:42.186",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I just wanted one day shipping",
+          "date_time": "2024-12-14 12:05:36.303",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0193c622-28f4-481f-f000-000001071713",
+          "message_text": "Fashion Nova: Yes, we offer 1 Business Day shipping if you order by 3pm ET.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-12-14 12:05:47.771"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I want free one day",
+          "date_time": "2024-12-14 12:06:19.912",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m a regular customer",
+          "date_time": "2024-12-14 12:06:25.945",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m ordering 350 worth of stuff",
+          "date_time": "2024-12-14 12:06:43.003",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "But I leave Tuesday",
+          "date_time": "2024-12-14 12:06:46.439",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hello",
+          "date_time": "2024-12-14 12:08:30.393",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0193c629-c8be-454e-f000-000001071713",
+          "message_text": "Fashion Nova: Hi, apologies for the late response and for the oversight! Kindly disregard our previous message. Our one day shipping is actually temporarily unavailable. I truly appreciate your continued support with us and hope to offer it again soon! I hope this clarifies, please let me know if there\u0027s anything else I can do for you today!",
+          "message_type": "agent",
+          "agent": "87583",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-12-14 12:14:07.437"
+        }
+      ]
+    }
+  }
+}

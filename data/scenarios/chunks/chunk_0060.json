@@ -1,0 +1,712 @@
+{
+  "version": 1,
+  "chunk": "chunk_0060",
+  "scenarios": {
+    "296": {
+      "agentName": "Casey",
+      "has_shopify": true,
+      "id": "01994302-12ea-41f6-f000-0000d7e17477",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "value": "20",
+            "coupon": "ATT20C-jsx7gm363k7h"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://heydude.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.heydude.com/products/mens-wally-realtree-edge-brown-natural",
+            "item": "Wally Realtree Edge® - Brown/Natural",
+            "timeAgo": "2025-09-13"
+          },
+          {
+            "link": "https://www.heydude.com/products/mens-wally-realtree-edge-brown-natural",
+            "item": "Wally Realtree Edge® - Brown/Natural - 4",
+            "timeAgo": "2025-09-13"
+          }
+        ]
+      },
+      "companyWebsite": "https://heydude.com",
+      "companyName": "HEYDUDE US",
+      "notes": {
+        "important": [
+          "There is a scam website that customers are texting in from (https://heydudestores.com/)",
+          "If you notice this, reroute customers to the correct website!"
+        ],
+        "send_to_cs": [
+          "Don\u0027t ESC post-purchase issues, use PPI shortcut"
+        ],
+        "templates": [
+          "For wrong items received use WMP shortcut",
+          "For damaged items received use DMI shortcut",
+          "For order status requests use OSR shortcut"
+        ],
+        "promo_and_exclusions": [
+          "The welcome code is valid for first-time customers only.",
+          "➜ Applies to full-price styles",
+          "➜ Can\u0027t be combined with any other discounts or offers, including sale styles",
+          "➜  Use cww temp for code issues",
+          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Welcome to HEYDUDE! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/o76",
+          "date_time": "2025-09-13 02:28:52.820",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Hey, Dude! We\u0027re so stoked you\u0027re here. Get 20% OFF your first purchase of the comfiest, lightest shoes around with code ATT20C-jsx7gm363k7h.\n\nheydudeshoes.attn.tv/agBJB6LIffhb .\n",
+          "date_time": "2025-09-13 02:28:59.085",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Over the next few days we\u0027ll try to help you find something that you will love!\n\nUntil then, shop our viral best-sellers: https://heydudeshoes.attn.tv/aphOKbaC-ain .",
+          "date_time": "2025-09-13 02:30:04.585",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HEYDUDE: Kick back in the Wally Slip Camp Realtree Edge - Dark Olive/Camo for cozy, easygoing comfort after a long day.\n\nOver 20K people have recently viewed this style. Use code ATT20C-jsx7gm363k7h for 20% off.\n\nShop now: https://heydudeshoes.attn.tv/apYW2I14EbYQ .",
+          "date_time": "2025-09-13 02:45:55.063",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Code not valid ??",
+          "date_time": "2025-09-13 02:48:13.183",
+          "message_media": [
+            "https://d35742m9b1cssv.cloudfront.net/hgp-mms-content/C95A7A55-B416-4C5F-8F4C-549693F68011?Expires=1758610085\u0026Signature=TSOnvjochVSq2mXvGBPYw9JJu47Jdj9ZVGwbyarW8mKuEwWg4O6s~k4dSNQMQEhKrvoKvwk9SddbwF6zPGDeW3xO4TtSMJp-NAVWNlydzexUVkwggWL5Qk1p365jmwdpQ3TT4yhaznHT4PWmKxr89mMzN7iD0qGmLiv6IMvQGtObbVZF9pEQ-gM2vfMcAL-YOZbRvANIoalS6iFKhcmVIgb02klUlhhFbE4oRV8DcWB7SvJdEKWUjLwR~e1ntreG0rdKDkn6syW18CzPGcZkR-lWE0cFyiGgXzj7v2v25Dc3b42~MXgioFe9fUgXRlWBiBLF5avakyDbdwhnbybUmA__\u0026Key-Pair-Id=APKAJYKFVWTTAQLYS7LA"
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Code won\u0027t work\"; last updated: 2025-11-12 15:43:55.752",
+          "date_time": "2025-09-13 08:17:13.489",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01994302-12ea-41f6-f000-0000d7e17477",
+          "message_text": "HEYDUDE: Good morning! Thank you for reaching out. I\u0027m here and happy to help. Thank you for sending a screenshot of the error message, it was a big help! \nI\u0027m so very sorry for the confusion and inconvenience about the code and the hassles that have come with it. I\u0027m afraid that discount codes are valid on select styles only, which includes new arrivals which the Wally Slip you have selected is. I\u0027m really sorry about the confusion. \nIs there anything else that I can help you with while I have you here?",
+          "message_type": "agent",
+          "agent": "109626",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-09-13 08:17:13.491"
+        }
+      ]
+    },
+    "297": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "018f0b34-1b53-42e6-f000-00008633d52f",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://neimanmarcus.com",
+          "date": ""
+        },
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "value": "15",
+            "coupon": "WELCNM-18T9-TFZC89H"
+          }
+        ]
+      },
+      "companyWebsite": "https://neimanmarcus.com",
+      "companyName": "Neiman Marcus",
+      "notes": {
+        "escalate": [
+          "🚨 DO NOT ESCALATE - send to CS🚨"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Neiman Marcus: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/Xw_",
+          "date_time": "2024-04-22 20:55:54.085",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Neiman Marcus: Treat yourself to 15% off select designer arrivals \u0026 more. Use code: WELCNM-18T9-TFZC89H. Exclusions apply. Shop Now: https://neimanmarcus.attn.tv/sl/GL7e3OBC .",
+          "date_time": "2024-04-22 20:55:58.133",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Neiman Marcus: Notice something missing from your collection? The Baccarat Rouge 540 Extrait de Parfum awaits in your cart. \n\nDon\u0027t hesitate, indulge NOW: https://neimanmarcus.attn.tv/sl/sef5bfbV .",
+          "date_time": "2024-04-23 09:23:43.627",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Neiman Marcus: WELCNM-18T9-TFZC89H",
+          "date_time": "2024-04-23 09:31:09.114",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi! I\u0027ve shared my Neiman Marcus shopping bag with you. I want you to see what I\u0027m loving right now!",
+          "date_time": "2024-04-23 09:44:51.836",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "https://www.neimanmarcus.com/cart/shareCart/5bc8d3fb-4c66-4080-b6d4-03126e58eb0c",
+          "date_time": "2024-04-23 09:44:55.968",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f0b34-1b53-42e6-f000-00008633d52f",
+          "message_text": "Neiman Marcus: I\u0027m sorry, but I\u0027m unable to view your shared shopping bag. However, if you have any questions about the items you\u0027re interested in, feel free to ask! I\u0027m here to help.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-04-23 09:45:15.354"
+        }
+      ]
+    },
+    "298": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "0192689b-e03a-490a-f000-0000998abfe1",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Soundbars, Soundbar Accessories, Vacuum, Wireless Speaker. Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Vacuum, Wireless Speakers is off the pre-tax sale price on LG.com only. Offer valid for one-time use only within 30 days of code being sent. To receive the additional 10% off savings, promotion code must be entered at online checkout and will be applied to eligible products only. If any of the qualifying items are removed from the cart, canceled or returned, the promotional savings will be void. Availability, prices and terms of offer are subject to change without notice. No adjustments to prior purchases and non-redeemable for cash. ualifying AeroTower: U9CS1C  Qualifying PuriCare Air Purifiers: AP151MBA1, AP151MWA1, AS330DWR0, AS560DWR0, U9CV1C, U9CV2B  Qualifying Dehumidifier: UD501KOJ5  Qualifying TONE Free headphones: HBS-XL7.ACUSBKI, HBS-SL5.ACUSBKI, HBS-SL6S.ACUSBKI, HBS-510.ACUSBKI, HBS-830.ACUSBKI, HBS-830.ACUSWHI, HBS-FN4.ACUSBKI, HBS-FN6.ACUSBKI, HBS-FN5W.ACUSBKI, HBS-FN6.ACUSWHI, HBS-FN5W.ACUSWHI, TONE-FN7.ACUSBKI, TONE-FP8.AUSACLK, TONE-FP9.AUSACLK, TONE-FP5.AUSACLK, TONE-FP3.AUSACLK, TONE-NP3.AUSACLK, TONE-T90Q.AUSACBK, TONE-T90Q.AUSACWH, TONE-T60Q.AUSACBK TONE-TF8Q.AUSACBI, TONE-FP9W.AUSACLK, TONE-FP9E.AUSACLK, TONE-NP3C.AUSACLK  Qualifying LG Styler: S3CW, S3MFBN, S3RFBN, S3WFBN, S5MSB  Qualifying Soundbars: QP5, QP5W, S75Q, SP7Y, S65Q, SN6Y, SN5Y, SP2, SK1, SH2  Qualifying Soundbar Accessories: SPQ8-S, SPK8-S, WTP3  Qualifying Vacuums: A913BM, A925KSM, A927KGMS, A929KVM, A939KBGS, R975GM  Qualifying XBOOM Go Wireless Speakers: PL2, PL5, PL7, GP9, GP3, RP4G, RP4, RP4B, XG5QBK, XG7QBK, XO3QBK",
+            "value": "10",
+            "coupon": "TEXTFEYLSPXX724"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://lg.com/us",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.lg.com/us/air-purifiers/lg-u10cs1c-air-purifier?utm_campaign=smartsendOFF-Concierge-Site-Visitor-1min\u0026utm_source=attentive\u0026utm_medium=sms\u0026externalId=9-oPt",
+            "item": "lg puricareTM aerotowerTM with nanofiber true hepa",
+            "timeAgo": "2024-10-07"
+          },
+          {
+            "link": "https://www.lg.com/us/air-purifiers/lg-u10cs1c-air-purifier",
+            "item": "lg puricareTM aerotowerTM with nanofiber true hepa",
+            "timeAgo": "2024-10-07"
+          }
+        ]
+      },
+      "companyWebsite": "https://lg.com/us",
+      "companyName": "LG",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS using the \"Escalation template\""
+        ],
+        "templates": [
+          "For 10% off welcome code issues use temp \u0027Follow up 1\u0027, then \u0027Follow up 2\u0027 after confirming the item is excluded from promos",
+          "For fridge recommendations use FRR shortcut",
+          "For service-related issues/scheduled repair service appointments use SRI shortcut",
+          "For cxs looking for replacement parts/accessories from an affiliate Parts Distributor use RPA shortcut",
+          "If a cx has an inquiry for finding the serial number/model number of an item:",
+          "➜ If it\u0027s a TV, use mnt shortcut",
+          "➜ If it\u0027s another product, use mna shortcut"
+        ],
+        "dos_and_donts": [
+          "If it\u0027s a new conversation and we didn\u0027t introduce ourselves in the automated message, start your message with: \"This is Jordan at LG.\""
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Welcome to LG Electronics USA! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/WBe",
+          "date_time": "2024-09-15 09:37:01.039",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: You\u0027ve been entered to win our prizes! For now, claim your code for 10% off: https://lg.attn.tv/aUVO03RTG8UR .",
+          "date_time": "2024-09-15 09:37:04.034",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Texts may be retained for customer support \u0026 other purposes. For more info, see Terms (lg.com/us/legal) and Privacy (lg.com/us/privacy)",
+          "date_time": "2024-09-15 09:37:05.034",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Hi, I\u0027m Jordan - your go-to LG specialist. Feel free to text me any time, and save our contact so you don\u0027t miss any updates!",
+          "date_time": "2024-09-16 12:33:04.798",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Hey there! It looks like you haven\u0027t redeemed your coupon code TEXTFEYLSPXX724. https://lg.attn.tv/agQ2P9w5rdf4\n\nAny questions I can help with before the deal runs out?\n- Jordan",
+          "date_time": "2024-09-19 12:33:10.058",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Take your work and play to the next level with limited-time savings on select LG monitors-plus an extra 10% off on us with code MONITOR10. Shop now: https://lg.attn.tv/air0HP3klfNC\n\nText back if you have any questions!",
+          "date_time": "2024-09-24 14:31:06.885",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Serve up style with savings on design-led appliances. Purchase an eligible LG STUDIO 4-piece kitchen package for just $5,999. \nShop now: https://lg.attn.tv/az31Qz1xO-d0 \n\nText back if you have any questions!",
+          "date_time": "2024-09-25 17:01:25.129",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Kick off Life\u0027s Good Deals with savings on select LG monitors and laptops. Plus buy more, save more on select LG tech. \nShop now: https://lg.attn.tv/a-HJGU1gqkS1 \n\nText back if you have any questions!",
+          "date_time": "2024-10-03 12:13:17.143",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Save on select vacuum and aircare, up to $1,400 off select OLED/QNED TVs, and up to 35% off select tech. Shop now: https://lg.attn.tv/aJcureKz5n8t \n\nText back if you have any questions!",
+          "date_time": "2024-10-07 14:31:21.272",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Hi, it\u0027s Jordan here from LG. Are there any specific appliance or electronic questions I can help with today?\n\nPick back up where you left off: https://lg.attn.tv/a7d1Ga2dfGje .",
+          "date_time": "2024-10-07 15:54:01.791",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m looking for an air purifier for a 1200 sq ft house. Preferably with a washable filter.",
+          "date_time": "2024-10-07 15:56:18.397",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "My wife has asthma",
+          "date_time": "2024-10-07 15:56:47.934",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ok then. How much are the filters for the pure tower?",
+          "date_time": "2024-10-07 16:00:58.136",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Areotower",
+          "date_time": "2024-10-07 16:01:48.289",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192689b-e03a-490a-f000-0000998abfe1",
+          "message_text": "LG Electronics USA: Thanks for reaching out! I\u0027m sorry to hear about your wife\u0027s cancer. You can check out our purifiers here- https://lg.attn.tv/ac3P8huqe5A8\nFilters for the LG Puricare AeroTower cost $99.99. You can find it here- https://lg.attn.tv/aThKI3N42Lni\nLet me know if you need help with anything else!",
+          "message_type": "agent",
+          "agent": "87474",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-10-07 16:11:38.947"
+        }
+      ]
+    },
+    "299": {
+      "agentName": "Samantha",
+      "has_shopify": true,
+      "id": "0190f509-b3e2-42c2-f000-000091ad4142",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://comfrt.com",
+          "date": ""
+        },
+        "coupons": [
+          {
+            "coupon": "COMFRT15",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "Comfy10",
+            "status": "INACTIVE"
+          },
+          {
+            "coupon": "WELCOME15",
+            "status": "INACTIVE"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "20% OFF 1 Time Use",
+            "redeemed": "2024-07-25 16:32:52.289",
+            "coupon": "NOW20"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "20% OFF",
+            "coupon": "COMFRT20"
+          }
+        ]
+      },
+      "companyWebsite": "https://comfrt.com",
+      "companyName": "Comfrt",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post-purchase issues"
+        ],
+        "escalate": [
+          "ESC if the discount % is not the same as indicated in the automated message"
+        ],
+        "templates": [
+          "If cx asks if Comfrt was formerly another brand, use CFB shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Sizing questions",
+        "Discount code errors"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Welcome to Comfrt! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/TiI",
+          "date_time": "2024-07-22 00:10:12.690",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Welcome to the Comfrt family! Your discount code is Comfy10. Click here to auto-apply it and shop now: https://comfrt.attn.tv/asjK4hfFa1HU .",
+          "date_time": "2024-07-22 00:10:16.667",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Don\u0027t forget to save our contact to get exclusive updates! Stop to stop",
+          "date_time": "2024-07-22 00:10:16.758",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Thousands of people are utilizing our hoodies for anxiety and stress relief. Your code expires today, join the family! https://comfrt.attn.tv/ahiyHogT56m6 . Stop to stop",
+          "date_time": "2024-07-23 00:10:20.588",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: \n\nHey! We noticed you have an item from our top-selling collection in your cart.\n\nOur stock is very low, so we can only hold your cart for 10 more minutes. \n\nBefore we sell out here is our biggest discount ever for an extra 20% OFF our sale!\n\ncode: COMFRT20\n\n https://comfrt.attn.tv/aw_-OPPMQBGe . Stop to stop",
+          "date_time": "2024-07-23 23:54:23.059",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: Hey! I got the approval for 20% OFF. This is our biggest discount ever and will not last long due to low stock. \n\nUse Code NOW20 We know you will have an incredible experience wearing our handcrafted hoodies. Welcome to the future of comfort wear https://comfrt.attn.tv/a4OWa9tWiGu1 .\n Stop to stop",
+          "date_time": "2024-07-25 00:10:29.133",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Comfrt: \n\nHey! We noticed you have an item from our top-selling collection in your cart.\n\nOur stock is very low, so we can only hold your cart for 10 more minutes. \n\nBefore we sell out here is our biggest discount ever for an extra 20% OFF our sale!\n\ncode: COMFRT20\n\n https://comfrt.attn.tv/aLAmhXNe00pf . Stop to stop",
+          "date_time": "2024-07-25 06:28:06.496",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Where is my package?",
+          "date_time": "2024-07-25 19:18:22.321",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190ec30-814c-499a-f000-000091ad4142",
+          "message_text": "Comfrt: When did you place your order, and did you receive tracking info? Make sure to check your spam and promo folders.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-25 19:18:40.207"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I place my order today but the app to track my stuff. Is it working for me?",
+          "date_time": "2024-07-25 19:19:22.454",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190ec38-474b-4ae8-f000-000091ad4142",
+          "message_text": "Comfrt: My apologies. Our processing time takes 1-2 business days, and once shipped, it will take 3-4 business days for domestic orders. You\u0027ll receive tracking info via email as soon as it ships. Please check your spam and promo folders as sometimes our emails end up there. Let me know if you have any further questions.",
+          "message_type": "agent",
+          "agent": "31580",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-25 19:27:09.653"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thx",
+          "date_time": "2024-07-25 19:28:12.305",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190ec46-c960-44cf-f000-000091ad4142",
+          "message_text": "Comfrt: You\u0027re welcome! Have a great day and if you have any questions, feel free to shoot me a text. And in case you missed it, check out our loungewear here too: https://comfrt.attn.tv/abdBZUdkPzyu",
+          "message_type": "agent",
+          "agent": "26438",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-25 19:43:00.456"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "What company will my package be delivered",
+          "date_time": "2024-07-27 12:27:55.552",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190f509-b3e2-42c2-f000-000091ad4142",
+          "message_text": "Comfrt: Hey Ethan thanks for reaching back. Samantha here. Happy ot help. I\u0027m sorry but what dou mean by that? Are you asking what\u0027s the courier that will fulfill your order? Per checking, it looks like your order is being handled by UPS. ",
+          "message_type": "agent",
+          "agent": "82218",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-27 12:32:52.213"
+        }
+      ]
+    },
+    "300": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "0192f8d6-332b-4730-f000-0000a03f2bca",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Soundbars, Soundbar Accessories, Vacuum, Wireless Speaker. Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Vacuum, Wireless Speakers is off the pre-tax sale price on LG.com only. Offer valid for one-time use only within 30 days of code being sent. To receive the additional 10% off savings, promotion code must be entered at online checkout and will be applied to eligible products only. If any of the qualifying items are removed from the cart, canceled or returned, the promotional savings will be void. Availability, prices and terms of offer are subject to change without notice. No adjustments to prior purchases and non-redeemable for cash. ualifying AeroTower: U9CS1C  Qualifying PuriCare Air Purifiers: AP151MBA1, AP151MWA1, AS330DWR0, AS560DWR0, U9CV1C, U9CV2B  Qualifying Dehumidifier: UD501KOJ5  Qualifying TONE Free headphones: HBS-XL7.ACUSBKI, HBS-SL5.ACUSBKI, HBS-SL6S.ACUSBKI, HBS-510.ACUSBKI, HBS-830.ACUSBKI, HBS-830.ACUSWHI, HBS-FN4.ACUSBKI, HBS-FN6.ACUSBKI, HBS-FN5W.ACUSBKI, HBS-FN6.ACUSWHI, HBS-FN5W.ACUSWHI, TONE-FN7.ACUSBKI, TONE-FP8.AUSACLK, TONE-FP9.AUSACLK, TONE-FP5.AUSACLK, TONE-FP3.AUSACLK, TONE-NP3.AUSACLK, TONE-T90Q.AUSACBK, TONE-T90Q.AUSACWH, TONE-T60Q.AUSACBK TONE-TF8Q.AUSACBI, TONE-FP9W.AUSACLK, TONE-FP9E.AUSACLK, TONE-NP3C.AUSACLK  Qualifying LG Styler: S3CW, S3MFBN, S3RFBN, S3WFBN, S5MSB  Qualifying Soundbars: QP5, QP5W, S75Q, SP7Y, S65Q, SN6Y, SN5Y, SP2, SK1, SH2  Qualifying Soundbar Accessories: SPQ8-S, SPK8-S, WTP3  Qualifying Vacuums: A913BM, A925KSM, A927KGMS, A929KVM, A939KBGS, R975GM  Qualifying XBOOM Go Wireless Speakers: PL2, PL5, PL7, GP9, GP3, RP4G, RP4, RP4B, XG5QBK, XG7QBK, XO3QBK",
+            "value": "10",
+            "coupon": "TEXTH62XSUKY724"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://lg.com/us",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.lg.com/us/cooking-appliances/lg-lrel6325d-electric-range-with-air-fryer",
+            "item": "6.3 cu ft. smart wi-fi enabled true convection  instaview® electric range with air fry",
+            "timeAgo": "2024-11-04"
+          },
+          {
+            "link": "https://www.lg.com/us/cooking-appliances/lg-lrel6325f-electric-range-with-air-fryer",
+            "item": "6.3 cu ft. smart wi-fi enabled true convection instaview® electric range with air fry",
+            "timeAgo": "2024-11-04"
+          }
+        ]
+      },
+      "companyWebsite": "https://lg.com/us",
+      "companyName": "LG",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS using the \"Escalation template\""
+        ],
+        "templates": [
+          "For 10% off welcome code issues use temp \u0027Follow up 1\u0027, then \u0027Follow up 2\u0027 after confirming the item is excluded from promos",
+          "For fridge recommendations use FRR shortcut",
+          "For service-related issues/scheduled repair service appointments use SRI shortcut",
+          "For cxs looking for replacement parts/accessories from an affiliate Parts Distributor use RPA shortcut",
+          "If a cx has an inquiry for finding the serial number/model number of an item:",
+          "➜ If it\u0027s a TV, use mnt shortcut",
+          "➜ If it\u0027s another product, use mna shortcut"
+        ],
+        "dos_and_donts": [
+          "If it\u0027s a new conversation and we didn\u0027t introduce ourselves in the automated message, start your message with: \"This is Jordan at LG.\""
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Welcome to LG Electronics USA! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/WBe",
+          "date_time": "2024-11-03 20:31:07.311",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: You\u0027ve been entered to win our prizes! For now, claim your code for 10% off: https://lg.attn.tv/a2DBV1ndGq_s .",
+          "date_time": "2024-11-03 20:31:11.313",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Texts may be retained for customer support \u0026 other purposes. For more info, see Terms (lg.com/us/legal) and Privacy (lg.com/us/privacy)",
+          "date_time": "2024-11-03 20:31:12.825",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Hi, it\u0027s Jordan here from LG. Are there any specific appliance or electronic questions I can help with today?\n\nPick back up where you left off: https://lg.attn.tv/aOOWGCtxTubz .",
+          "date_time": "2024-11-04 12:09:08.186",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I wish to buy  Electric Range",
+          "date_time": "2024-11-04 15:19:23.910",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "if you can recommend a suitable model",
+          "date_time": "2024-11-04 15:20:04.003",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0192f8d6-332b-4730-f000-0000a03f2bca",
+          "message_text": "LG Electronics USA: I would love, too! We actually have an amazing selection here: https://lg.attn.tv/avo74UCuT07G What type, features, and color are you looking to get?",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-04 15:20:40.376"
+        }
+      ]
+    }
+  }
+}

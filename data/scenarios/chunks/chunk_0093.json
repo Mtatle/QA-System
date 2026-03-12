@@ -1,0 +1,1571 @@
+{
+  "version": 1,
+  "chunk": "chunk_0093",
+  "scenarios": {
+    "461": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "019a0d0f-aeeb-41a0-f000-0000dfb019ee",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Welcome is 15% Off",
+            "content": [
+              "The coupon is link based and the customer should be able to click through the link in their email or sms to get it to apply"
+            ]
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://www.halloweencostumes.com/mens-zeus-costume.html",
+            "item": "Zeus Costume for Men",
+            "timeAgo": "2025-10-21"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://halloweencostumes.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-10-22",
+            "coupon": "hcsms15offwelcome",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      34.99,
+                      34.99,
+                      34.99,
+                      34.99,
+                      34.99,
+                      34.99,
+                      34.99,
+                      34.99,
+                      34.99
+                    ],
+                    "Count": 9
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2025-10-22 17:45:24.791",
+            "discount_amount": 0,
+            "orderNumber": "30556818",
+            "total": 34.99
+          }
+        ]
+      },
+      "companyWebsite": "https://halloweencostumes.com",
+      "companyName": "HalloweenCostumes.com",
+      "notes": {
+        "escalate": [
+          "ESC expired codes/discount code issues, ask for cart ID and add it in esc notes",
+          "Don\u0027t send to CS for this client, ESC if needed",
+          "For retroactive discount requests add discount % in ESC note",
+          "ESC if a customer requests a different resolution, after their escalation was resolved"
+        ],
+        "dos_and_donts": [
+          "Fun Bucks AREN\u0027T rewards points, those are given during exchanges"
+        ],
+        "promo_and_exclusions": [
+          "This brand does not use coupon codes or promotions. All of their discounts are exclusively link-based and are applied automatically to the shopping cart upon checkout when the appropriate conditions are met",
+          "Please do not advise customers to use promotional codes, do not provide them with any codes, and do not direct them to look on the website for additional codes",
+          "They do not have any promotional code text fields on site to facilitate use"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: Welcome to Halloween Costumes! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2025-10-21 17:50:30.198",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nThanks for subscribing! Shop this link to claim your 15% off. halloweencostumes.attn.tv/a6eplkL2diDL",
+          "date_time": "2025-10-21 17:50:34.212",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: Hi there! If you need additional help please reach us at support@halloweencostumes.com. Text STOP to opt out.",
+          "date_time": "2025-10-21 17:52:54.208",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The total of the costume is 39.98",
+          "date_time": "2025-10-21 17:52:59.679",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019a08d3-6957-4d3e-f000-0000dfb019ee",
+          "message_text": "Halloween Costumes: I\u0027m happy to assist you here as well. Do you have any questions about the total cost of the costume? ",
+          "message_type": "agent",
+          "agent": "35256",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-10-21 18:11:04.179"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No",
+          "date_time": "2025-10-21 18:11:28.606",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019a08e7-f216-46e1-f000-0000dfb019ee",
+          "message_text": "Halloween Costumes: I\u0027m sorry for the late reply, and no worries at all! Feel free to reach out if there\u0027s anything I can help with, and in the meantime, check out our new arrivals here: https://halloweencostumes.attn.tv/arWeOllo09qx",
+          "message_type": "agent",
+          "agent": "87733",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-10-21 18:33:29.916"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Am I able to cancel my order",
+          "date_time": "2025-10-22 13:47:04.489",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Cancel / edit order\"; last updated: 2022-07-26 12:31:03.978",
+          "date_time": "2025-10-22 13:55:23.005",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019a0d0f-aeeb-41a0-f000-0000dfb019ee",
+          "message_text": "Halloween Costumes: I can check if that\u0027s possible. What\u0027s the order number, email address, and the change you\u0027d like to make?",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-10-22 13:55:23.008"
+        }
+      ]
+    },
+    "462": {
+      "agentName": "Avery",
+      "has_shopify": false,
+      "id": "01983e7c-e02b-4c91-f000-0000cf0f3ff7",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Newsletter Signup",
+            "content": [
+              "For people who are having trouble signing up for our newsletter, have them create an account with this link: https://www.snipesusa.com/account/login"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 3473883127,
+            "company_id": 7818,
+            "name": "$15 off $75",
+            "coupon": "WJ15-LPKG-BA6Q-TUKT-HX9Y"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://snipesusa.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.snipesusa.com/air-jordan-3-retro-jordan-sail---cement-grey---metallic-silver-ck9246-100-1000123645.html?utm_campaign=concierge-reply\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=NzKSN",
+            "item": "Air Jordan 3 Retro",
+            "timeAgo": "2025-07-24"
+          },
+          {
+            "link": "https://www.snipesusa.com/big-kids--air-jordan-3-retro-jordan-metallic---silver---white-dm0967-111-1000126065.html",
+            "item": "Big Kids\u0027 Air Jordan 3 Retro",
+            "timeAgo": "2025-07-24"
+          },
+          {
+            "link": "https://www.snipesusa.com/air-jordan-11-retro-low-jordan-white---igloo-ah7860-103-1000123646.html?utm_campaign=concierge-reply\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=NzKSN",
+            "item": "Air Jordan 11 Retro Low",
+            "timeAgo": "2025-07-24"
+          }
+        ]
+      },
+      "companyWebsite": "https://snipesusa.com",
+      "companyName": "Snipes",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS immediately for post-purchase issues",
+          "Send to CS for payment processing issues"
+        ],
+        "tone": [
+          "Don\u0027t use the term restock",
+          "Don\u0027t tell customers that we\u0027ll be restocking",
+          "Don\u0027t respond to blank messages",
+          "Don\u0027t use formal language",
+          "Close the conversation when a customer responds \u0027no\u0027"
+        ],
+        "templates": [
+          "If a cx reaches out regarding the Early Access event, use EAE shortcut",
+          "For cx reaching out in Spanish use SSC shortcut",
+          "For checkout issues use the \"Check out Issues\" temp",
+          "For store item availability, use SPA shortcut",
+          "If cx\u0027s email doesn\u0027t work for early access, use EEA shortcut"
+        ],
+        "dos_and_donts": [
+          "They occasionally run sign-up campaigns where cx text certain keywords (“releases,” “early access”) to join a list. If a customer sends a similar keyword:",
+          "➜ Check the website banner or landing page to confirm if it\u0027s a current keyword trigger",
+          "➜ If confirmed, close the convo, if not you can respond",
+          "All clothing is true to size unless otherwise stated on the product page",
+          "You can use these sizing charts for reference (for internal use only): https://docs.google.com/spreadsheets/d/1kmra_vOwCJuHoAx9D4L4Qx95rxafHcrqn-ZGutfzLgg/edit?usp=sharing",
+          "🅿️ If customers say they want to purchase in store - encourage them to buy online \u0026 pick up in-store",
+          "For store info q\u0027s (phone number/additional info) - use the store locator with your VPN turned on!"
+        ],
+        "drive_to_purchase": [
+          "🅿️ If customers are looking for an outfit recommendation/item pairing - direct them to the \"shop the look\" section on each product page or use the LK shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        "restock"
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "messageTone": "Formal",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Welcome to SNIPES! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2025-07-18 23:49:09.589",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Welcome to the crew! We\u0027ll loop you in on hot releases, special promotions, and local events! Use the coupon below for $15 off your $75+ order. Exclusions apply. Shop now: snipes.attn.tv/ayHroPU10bNa \n\nNeed help finding the perfect look? Text back here anytime",
+          "date_time": "2025-07-18 23:49:13.597",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: WJ15-LPKG-BA6Q-TUKT-HX9Y",
+          "date_time": "2025-07-18 23:49:14.596",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Heads up! Don\u0027t forget to use WJ15-LPKG-BA6Q-TUKT-HX9Y for $15 off your $75+ purchase. Exclusions apply. Shop now: snipes.attn.tv/aMwEGjfQlVD3\n\nAny questions we can help with before this deal runs out?",
+          "date_time": "2025-07-20 10:22:36.293",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Shop the latest styles across our hottest brands 🔥 Take a sneak peak into our exclusive drops and streetwear today! snipes.attn.tv/a0ili7-WvVs_ .",
+          "date_time": "2025-07-22 10:22:40.631",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: FLASH SALE: Last day to save big on women\u0027s kicks! Styles start at $49.99. Shop now: snipes.attn.tv/aQE7W_C6nUCg ",
+          "date_time": "2025-07-23 12:07:22.914",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: FLASH SALE: Only a few hours left! Women\u0027s kicks starting at $49.99. Don\u0027t miss out! Shop now: snipes.attn.tv/ayNWK0WvybKL .",
+          "date_time": "2025-07-23 19:01:57.888",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "(attn) Hey, I need help with something: retro 11 cool Grey jordans in a size 7.5",
+          "date_time": "2025-07-24 17:55:09.862",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01983e6f-f050-4e95-f000-0000cf0f3ff7",
+          "message_text": "SNIPES: I\u0027m afraid we currently don\u0027t have that product in stock. For any updates please follow us on social media, we will post there as soon as more information is available. I\u0027d be more than happy to offer some recommendations. Are you looking for the same color or same silhouette? How about this one? https://snipes.attn.tv/a1bZRSG-PNYn ",
+          "message_type": "agent",
+          "agent": "39115",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-07-24 17:56:20.207"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Same color an NO rings",
+          "date_time": "2025-07-24 17:57:29.724",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No these shoes fir my son",
+          "date_time": "2025-07-24 17:58:19.867",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Thanks for being part of the crew! Reply with \"AJ4\" to be entered for early release reservation, or shop releases now: snipes.attn.tv/azqNxEIhIPB5 .",
+          "date_time": "2025-07-24 17:59:58.188",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01983e77-a20f-4ded-f000-0000cf0f3ff7",
+          "message_text": "SNIPES: I understand. What do you think about this instead? - https://snipes.attn.tv/arMtu58vGciq",
+          "message_type": "agent",
+          "agent": "82427",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-07-24 18:04:44.468"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "They don\u0027t like them they over here being choicy they gone fuck around an get some forces",
+          "date_time": "2025-07-24 18:06:29.359",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Oh my bad",
+          "date_time": "2025-07-24 18:06:36.440",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01983e7c-e02b-4c91-f000-0000cf0f3ff7",
+          "message_text": "SNIPES: I understand. How about this one? https://snipes.attn.tv/a_lGAxtDxXuO",
+          "message_type": "agent",
+          "agent": "46059",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-07-24 18:10:28.041"
+        }
+      ]
+    },
+    "463": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "0198aa49-e1f5-47e7-f000-0000b77826f8",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "VIP Valentine\u0027s Day Sale 💗",
+            "content": [
+              "Up to 70% off select sales styles using the code: VIPKISS25, some exclusions apply. Promotion begins at 9:00AM ET on 2/10/26 and ends at 11:59PM ET on 2/12/26. Items eligible for the promotion will be explicitly identified on the applicable product detail pages. Promotion is subject to modification, extension, or termination at any time without prior notice. Offer cannot be combined with any other promotion, discount, or coupon code. Offer is not valid on gift cards, prior purchases, taxes, shipping, or handling. No price adjustments will be made on previous purchases. Items designated as final sale are not eligible for return, exchange, or store credit under any circumstances. All sales are subject to availability while supplies last."
+            ]
+          },
+          {
+            "title": "❄️ Winter Sale ❄️",
+            "content": [
+              "Receive 30% off select sale styles with promo code CHEERS30, some exclusions apply. Promotion begins at 12:00AM ET on 12/24/25 and ends at 11:59PM ET on 1/2/26. Items eligible for the promotion will be explicitly identified on the applicable product detail pages. Promotion is subject to modification, extension, or termination at any time without prior notice. Offer cannot be combined with any other promotion, discount, or coupon code. Offer is not valid on gift cards, prior purchases, taxes, shipping, or handling. No price adjustments will be made on previous purchases. Items designated as final sale are not eligible for return, exchange, or store credit under any circumstances. All sales are subject to availability while supplies last."
+            ]
+          },
+          {
+            "title": "Cyber Sale",
+            "content": [
+              "Up to 80% off almost everything - prices as marked. \n\n\n• Some exclusions apply. \n\n• Promo dates:  12:00am ET 11/30/25 to 11:59 pm ET 12/2/25. \n\n• All items included in the sale will be noted on each product detail page. \n\n• Offer cannot be combined with any other promotion or coupon code.\n\n• Exclusions:\n→ Not valid on gift cards \n→ Not valid on previous purchases. \n→ No price adjustments on previous purchases. \n\n• Any items marked as final sale are not eligible for return, exchange, or credit - no exception."
+            ]
+          },
+          {
+            "title": "❄️ VIP Winter Sale ❄️",
+            "content": [
+              "Receive 30% off select sale styles with promo code VIPCHEERS30, some exclusions apply. Promotion begins at 12:00AM ET on 12/22/25 and ends at 11:59PM ET on 12/24/25. Items eligible for the promotion will be explicitly identified on the applicable product detail pages. Promotion is subject to modification, extension, or termination at any time without prior notice. Offer cannot be combined with any other promotion, discount, or coupon code. Offer is not valid on gift cards, prior purchases, taxes, shipping, or handling. No price adjustments will be made on previous purchases. Items designated as final sale are not eligible for return, exchange, or store credit under any circumstances. All sales are subject to availability while supplies last."
+            ]
+          },
+          {
+            "title": "Welcome code",
+            "content": [
+              "• Can be applied to all items, even final sale/sale items\n\n• Only valid for first purchases!"
+            ]
+          },
+          {
+            "title": "Valentine\u0027s Sale 💗",
+            "content": [
+              "Up to 70% off select sales styles using the code: KISSES25, some exclusions apply. Promotion begins at 9:00AM ET on 2/12/26 and ends at 11:59PM ET on 2/16/26. Items eligible for the promotion will be explicitly identified on the applicable product detail pages. Promotion is subject to modification, extension, or termination at any time without prior notice. Offer cannot be combined with any other promotion, discount, or coupon code. Offer is not valid on gift cards, prior purchases, taxes, shipping, or handling. No price adjustments will be made on previous purchases. Items designated as final sale are not eligible for return, exchange, or store credit under any circumstances. All sales are subject to availability while supplies last."
+            ]
+          },
+          {
+            "title": "End of Season Sale",
+            "content": [
+              "Up to 75% off select sales styles, some exclusions apply. Promotion begins at 9:00AM ET on 1/12/26 and ends at 11:59PM ET on 1/19/26. Items eligible for the promotion will be explicitly identified on the applicable product detail pages. Promotion is subject to modification, extension, or termination at any time without prior notice. Offer cannot be combined with any other promotion, discount, or coupon code. Offer is not valid on gift cards, prior purchases, taxes, shipping, or handling. No price adjustments will be made on previous purchases. Items designated as final sale are not eligible for return, exchange, or store credit under any circumstances. All sales are subject to availability while supplies last."
+            ]
+          },
+          {
+            "title": "PROMOS",
+            "content": [
+              "First-time customers asking for a code - let them know they can sign up for emails and receive 15% off their first order"
+            ]
+          },
+          {
+            "title": "Black Friday Sale",
+            "content": [
+              "Up to 75% off almost everything - prices as marked. \n\n\n• Some exclusions apply. \n\n• Promo dates:  12:00am ET 11/21/25 to 11:59 pm ET 11/30/25. \n\n• All items included in the sale will be noted on each product detail page. \n\n• Offer cannot be combined with any other promotion or coupon code.\n\n• Exclusions:\n→ Not valid on gift cards \n→ Not valid on previous purchases. \n→ No price adjustments on previous purchases. \n\n• Any items marked as final sale are not eligible for return, exchange, or credit - no exception."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 3078104824,
+            "company_id": 11504,
+            "coupon_url": "https://www.milly.com/discount/TXTxqbzb9?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "name": "WELCOME15",
+            "coupon": "TXTxqbzb9",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 3078104824,
+            "company_id": 11504,
+            "coupon_url": "https://millyny.myshopify.com/discount/TXTWNQNFZh?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=winback10",
+            "name": "Winback 10",
+            "coupon": "TXTWNQNFZh",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://www.milly.com/collections/wear-to-work/products/haddy-leather-pleated-combo-mini-dress-black-black?utm_campaign=Concierge%20Site%20Visitor%20-%206%20Hr%20Off%20-%20Browse%20-%20No%20SS\u0026utm_source=attentive\u0026utm_medium=sms\u0026externalId=O07TL",
+            "item": "Haddy Leather Pleated Combo Mini Dress",
+            "timeAgo": "2025-08-06"
+          },
+          {
+            "link": "https://www.milly.com/products/peggy-off-the-shoulder-red-peonia-mini-dress-red-multi",
+            "item": "Peggy Off The Shoulder Red Peonia Mini Dress",
+            "timeAgo": "2025-08-06"
+          },
+          {
+            "link": "https://www.milly.com/products/paloma-two-tone-lace-midi-dress-black-white",
+            "item": "Paloma Two Tone Lace Midi Dress",
+            "timeAgo": "2025-08-06"
+          },
+          {
+            "link": "https://www.milly.com/collections/wear-to-work/products/sleeveless-pleated-midi-dress-black-ecru",
+            "item": "Sleeveless Pleated Midi Dress",
+            "timeAgo": "2025-08-06"
+          },
+          {
+            "link": "https://www.milly.com/collections/wear-to-work/products/tile-wave-jacquard-knit-mini-dress-navy-ecru",
+            "item": "Tile Wave Jacquard Knit Mini Dress",
+            "timeAgo": "2025-08-06"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://milly.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-08-04",
+            "items": [
+              {
+                "price": [
+                  314.5
+                ],
+                "productLink": "https://millyny.myshopify.com/products/hayden-butterfly-eyelet-dress-white-blue",
+                "name": "Hayden Butterfly Eyelet Dress"
+              }
+            ],
+            "trackingLink": "https://www.fedex.com/fedextrack/?trknbr=883297204420",
+            "link": "https://www.milly.com/2623045676/orders/e8ce24365c08a239b61c6c5ecf4830c8/authenticate?key=05741972bc951060f209ac73f4dbe24b",
+            "date_time": "2025-08-04 13:30:32.172",
+            "discount_amount": 0,
+            "orderNumber": "257295",
+            "order_tracking_link": "https://www.fedex.com/fedextrack/?trknbr=883297204420",
+            "total": 314.5
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-05-24",
+            "coupon": "TXTCk0ZL1",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      265.5,
+                      325,
+                      250,
+                      275,
+                      315.5
+                    ],
+                    "Count": 5
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "trackingLink": "https://www.fedex.com/fedextrack/?trknbr=881550542519",
+            "link": "https://www.milly.com/2623045676/orders/1608c53e995e3dfa5d2b0cf259986fba/authenticate?key=0dfedebfc2d79a8191b27b483358d03a",
+            "date_time": "2025-05-24 14:05:08.070",
+            "discount_amount": 0,
+            "orderNumber": "248977",
+            "order_tracking_link": "https://www.fedex.com/fedextrack/?trknbr=881550542519",
+            "total": 1216.35
+          }
+        ]
+      },
+      "companyWebsite": "https://milly.com",
+      "companyName": "Milly",
+      "notes": {
+        "escalate": [
+          "ESC inquiries about sale start/end dates",
+          "ESC sizing inquiries",
+          "ESC order related inquiries",
+          "ESC fabric inquiries",
+          "ESC for orders cancelled for inventory reasons",
+          "ESC price match requests",
+          "ESC if you\u0027re not sure what item the cx is looking for"
+        ],
+        "tone": [
+          "Don\u0027t say skirt or pant, when the cx is asking if an item comes with the top or bottom, say \"matching set\"."
+        ],
+        "dos_and_donts": [
+          "Use VPN to see the restock notification option"
+        ],
+        "drive_to_purchase": [
+          "Don\u0027t recommend bestsellers, promote new arrivals instead!"
+        ]
+      },
+      "blocklisted_words": [
+        "Alright",
+        "slack"
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Discount code errors",
+        "Shipping questions",
+        "Sizing questions",
+        "Sale start/end dates"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "MILLY: You can NEVER have enough little black bathing suits! Shop our anything but basic bikinis and one-pieces now: milly.attn.tv/a-u6dI_zGYlD .",
+          "date_time": "2025-07-16 18:45:06.637",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: DRESS DROP! Shop this season\u0027s latest, from life-of-the-party styles to wear-to-work favorites: milly.attn.tv/aBYnQ1Blf_As .",
+          "date_time": "2025-07-19 09:50:06.173",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: The Yasmin Daisy Lace Dress is one of our most loved styles! You have to get it before it\u0027s gone: milly.attn.tv/a36gIJfuafDR .",
+          "date_time": "2025-07-19 17:12:33.427",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: VIP EARLY ACCESS: EXTRA 30% OFF SALE starts now! Shop a new outfit before this season ends with your exclusive code SUNSET30: milly.attn.tv/apg-FdCfIIng .",
+          "date_time": "2025-07-22 19:15:08.053",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: Last chance for SWIM ON SALE! Grab a glam new suit \u0026 cover-up now an extra 30% OFF with code SUNSET30 milly.attn.tv/avAwNtjtRNrk .",
+          "date_time": "2025-07-24 09:50:04.840",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: New summer styles are NOW ON SALE, but not for long! Use code SUNSET30 to shop before sale ends soon: milly.attn.tv/apll9iq-M6Ik .",
+          "date_time": "2025-07-26 09:50:04.660",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: The Orion Dream Rose Jacquard Dress is one of our most loved styles! You have to get it before it\u0027s gone: milly.attn.tv/asLanQLxysYs .",
+          "date_time": "2025-07-26 17:11:57.973",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: NOW UP TO 75% OFF! Shop this season\u0027s must-haves while you still can with code SUNSET30 milly.attn.tv/asWWQpyGZ0gA .",
+          "date_time": "2025-07-27 18:45:07.125",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: Final call for UP TO 75% OFF!! Hurry to shop styles to wear now, on sale until midnight with code SUNSET30 milly.attn.tv/aPtENy6Ef9G2 .",
+          "date_time": "2025-07-28 18:45:21.080",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: Low stock alert! The style you were looking at is almost gone in your size - hurry to check out now before it\u0027s too late: milly.attn.tv/ar8YBIjX8-jC .",
+          "date_time": "2025-07-29 08:10:58.250",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: We\u0027re about to sell out of your size! Don\u0027t wait to make the style you loved yours: milly.attn.tv/amDGVJR1AHaw .",
+          "date_time": "2025-07-30 08:11:02.926",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: VIP SNEAK PEEK! Show off your wild side with this month\u0027s new arrivals: milly.attn.tv/a0x9_FjMFTPs .",
+          "date_time": "2025-08-02 09:50:07.807",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: Hi, it\u0027s Jordan from MILLY! Thanks for checking out our site today. What events are you shopping for right now?\n\nThese are currently our best-selling styles, by the way: https://milly.attn.tv/aIlxXu1Z9NWc .",
+          "date_time": "2025-08-02 18:05:32.458",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: Low stock alert! The style you were looking at is almost gone in your size - hurry to check out now before it\u0027s too late: milly.attn.tv/aGxOHOlupY7b .",
+          "date_time": "2025-08-03 13:39:21.730",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: One of our best-selling styles is in your cart - check out now before it sells out! https://milly.attn.tv/aNEigw_IwtqS .",
+          "date_time": "2025-08-04 08:16:57.776",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: Hi, it\u0027s Jordan from MILLY! Any questions I can answer or events I can help you shop for today? \n\nThese are our best-selling styles right now, by the way: https://milly.attn.tv/al5t0B1NhtBl .",
+          "date_time": "2025-08-05 17:07:25.566",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: Make the office your runway this summer in all new hot-weather approved styles: milly.attn.tv/ayj7ypAKpPMT .",
+          "date_time": "2025-08-06 09:50:07.320",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: The Haddy Leather Pleated Combo Mini Dress is one of our most loved styles! You have to get it before it\u0027s gone: milly.attn.tv/agI97owz9d6I .",
+          "date_time": "2025-08-06 16:42:07.339",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: Wow from the welcome party to the after party! Shop new to the WEDDING GUEST SHOP now: milly.attn.tv/a2sLTQGBNIEJ .",
+          "date_time": "2025-08-09 09:50:12.567",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: Hi, it\u0027s Jordan from MILLY! Thanks for checking out our site today. What events are you shopping for right now?\n\nThese are currently our best-selling styles, by the way: https://milly.attn.tv/a927th-wLXbG .",
+          "date_time": "2025-08-09 15:54:25.151",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: You have impeccable taste! It\u0027s Jordan, your stylist at MILLY - I hope you\u0027re loving your latest MILLY order. I thought you\u0027d love these pieces, too: https://milly.attn.tv/ahlMIQeOQdTb .",
+          "date_time": "2025-08-11 09:30:53.351",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: Swim is NOW ON SALE! Shop 40% OFF these iconic styles before summer is over: milly.attn.tv/adEbK5DaTKi6 .",
+          "date_time": "2025-08-14 09:50:11.601",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "MILLY: Hi, it\u0027s Jordan from MILLY! Thanks for checking out our site today. What events are you shopping for right now?\n\nThese are currently our best-selling styles, by the way: https://milly.attn.tv/aNpgCEzUVBBl .",
+          "date_time": "2025-08-14 15:51:02.566",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I never received a 25% off code after reporting a damaged zipper to a piece I only wore twice. Very disappointing.",
+          "date_time": "2025-08-14 16:03:18.303",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I was told I would get 25% off code after and NEVER DID 👎🏼",
+          "date_time": "2025-08-14 16:03:58.281",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0198aa32-d4e4-47a1-f000-0000b77826f8",
+          "message_text": "MILLY: I\u0027m sorry for the inconvenience. This is not the experience we want for our valued customers. Have you already checked your spam and promo folders for a response? Unfortunately, sometimes our emails end up there. ",
+          "message_type": "agent",
+          "agent": "82220",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-14 16:08:34.820"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Got this and nothing more.",
+          "date_time": "2025-08-14 16:19:46.793",
+          "message_media": [
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1755202778251_50731060-3bf9-4e16-bb20-eddebe5b824e-1.png"
+          ]
+        },
+        {
+          "message_id": "0198aa40-2840-4525-f000-0000b77826f8",
+          "message_text": "MILLY: Sorry about that. Can you send a screenshot showing you were told you\u0027d get a 25% off code for the damaged zipper? And are you referring to Order #257295? If so, would you mind sharing your email address? I\u0027d be happy to check this with my team for you!",
+          "message_type": "agent",
+          "agent": "46578",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-14 16:23:08.127"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027d have to search and give details again. This has been ongoing now.",
+          "date_time": "2025-08-14 16:28:26.636",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0198aa49-e1f5-47e7-f000-0000b77826f8",
+          "message_text": "MILLY: I understand and I truly apologize for the inconvenience this has caused you. rest assured that I\u0027ll further check this with the team, once I received the information asked. ",
+          "message_type": "agent",
+          "agent": "109615",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-14 16:33:45.487"
+        }
+      ]
+    },
+    "464": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "019899ff-42b0-4199-f000-0000cfcc028a",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://us.braun.com/en-us/female-hair-removal/ipl/skin-i-expert-ipl-pl7387",
+            "item": "Braun Smart IPL, Skin i·Expert Pro 7: At Home Alternative to Laser Hair Removal with 4 Caps and Vanity Case, IPL7387",
+            "timeAgo": "2025-08-10"
+          },
+          {
+            "link": "https://us.braun.com/en-us/female-hair-removal/ipl/skin-i-expert-ipl-pl7243",
+            "item": "Braun Smart IPL, Skin i·Expert Pro 7: At Home Alternative to Laser Hair Removal with 3 Caps and Leather Pouch, IPL7243",
+            "timeAgo": "2025-07-31"
+          },
+          {
+            "link": "https://us.braun.com/en-us/female-hair-removal/ipls/silk-expert-pro-5-pl5157?irclickid=zQJ2h32QUxycTOrRPc1Gt0d7UkpxxgWJw2JPQg0\u0026utm_source=Impact\u0026utm_medium=affiliate\u0026utm_campaign=10579\u0026utm_content=3119285\u0026irgwc=1\u0026im_rewards=1\u0026searchid=7657717\u0026search_query=pl5157",
+            "item": "Braun Smart IPL, Silk·Expert Pro 5: At Home Alternative to Laser Hair Removal with 2 Caps and Leather Pouch, IPL5157",
+            "timeAgo": "2025-07-30"
+          }
+        ],
+        "coupons": [
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 3486253706,
+            "company_id": 10620,
+            "name": "Up to $125 off welcome codes",
+            "coupon": "BRA840J86I"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://braun.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-07-31",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99,
+                      599.99
+                    ],
+                    "Count": 164
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2025-07-31 03:52:14.070",
+            "discount_amount": 0,
+            "orderNumber": "367001",
+            "total": 599.99
+          }
+        ]
+      },
+      "companyWebsite": "https://braun.com",
+      "companyName": "Braun",
+      "notes": {
+        "dos_and_donts": [
+          "Don\u0027t send any registration links"
+        ],
+        "templates": [
+          "For adverse events or product quality complaints use APQ shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Discount codes don\u0027t stack with sale items"
+        ]
+      },
+      "blocklisted_words": [
+        "staging"
+      ],
+      "escalation_preferences": [
+        "Adverse Events",
+        "Product Quality Complaints"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Braun: Welcome to Braun! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2025-07-30 12:36:26.536",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Braun: Welcome to the family! Use code BRA840J86I and get up to $125 off your first purchase. Shop now: https://braun.attn.tv/aKgR4G4cLxld .\n",
+          "date_time": "2025-07-30 12:36:30.549",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Braun: Don\u0027t forget to save our contact for exclusive deals and updates!",
+          "date_time": "2025-07-30 12:36:31.819",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Braun: Loving your new IPL? Download the Braun Skin i-expert App for real-time guidance tailored to you. Avoid missed spots, personalize your hair removal plan, and track progress towards smooth skin. Download: braun.attn.tv/alY3Qz2IM1YS ",
+          "date_time": "2025-08-05 12:47:00.351",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Braun: Hey, we noticed you checking us out. Have you seen our best sellers yet? https://braun.attn.tv/ajCIxL-p7nay .",
+          "date_time": "2025-08-06 12:44:29.778",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Braun: Hey, this is Chase. I see you\u0027re checking out this great item: https://braun.attn.tv/a5O9BXNHPtGj \n\nNeed help deciding if this is the right one for you? Text back!",
+          "date_time": "2025-08-10 12:13:34.801",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I need return my order",
+          "date_time": "2025-08-10 12:26:24.300",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019894ce-ffc9-40a8-f000-0000cfcc028a",
+          "message_text": "Braun: I\u0027m really sorry to hear that you want to return your order! To initiate the return, just log in to your account here: https://braun.attn.tv/a19DOa86EHkx locate the order you want to return, and then click \"Return Items\". Once approved, you\u0027ll receive an email with the return label. \n\nYou can check out our detailed return policy here: https://braun.attn.tv/aWNng_LaXl0M . ",
+          "message_type": "agent",
+          "agent": "39375",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-10 12:27:30.658"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I cannot open my account I don\u0027t no why",
+          "date_time": "2025-08-10 14:12:20.215",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01989546-145c-4ea7-f000-0000cfcc028a",
+          "message_text": "Braun: I\u0027m sorry to hear that you\u0027re having trouble accessing your account. Was there any error message showing on your end? Please make sure to use the correct email address and password associated with your account.\n\nWould you mind sending me a screenshot of what is showing on your end? ",
+          "message_type": "agent",
+          "agent": "87733",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-10 14:37:34.713"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Your account has been blocked after multiple consecutive failed login attempts. Please try again later",
+          "date_time": "2025-08-10 15:47:11.501",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01989589-67ae-4a11-f000-0000cfcc028a",
+          "message_text": "Braun: Thank you for clarifying, and I\u0027m sorry for any inconvenience! Can you please send me your email address? I\u0027m happy to help!",
+          "message_type": "agent",
+          "agent": "87398",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-10 15:51:06.949"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "smsm.fadel1994@gmail.com",
+          "date_time": "2025-08-10 16:58:00.911",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019895c7-bbba-4519-f000-0000cfcc028a",
+          "message_text": "Braun: Thanks for the info! I have passed this on to my team and will get back to you as soon as I hear from them! Hang tight!\n",
+          "message_type": "agent",
+          "agent": "87473",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-10 16:59:11.699"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ok thanks",
+          "date_time": "2025-08-10 17:08:51.171",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019895d1-2dea-447f-f000-0000cfcc028a",
+          "message_text": "Braun: You\u0027re welcome! If you have any other questions, please feel free to reach out. ",
+          "message_type": "agent",
+          "agent": "82260",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-10 17:09:30.757"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Now I can\u0027t make a return",
+          "date_time": "2025-08-10 22:37:12.436",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "How can I do that",
+          "date_time": "2025-08-10 22:37:22.508",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01989738-c450-4c2d-f000-0000cfcc028a",
+          "message_text": "Braun: Can I have your order number please? I\u0027d be happy to check on this with my team for you as well. ",
+          "message_type": "agent",
+          "agent": "26438",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-10 23:42:16.686"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "367001",
+          "date_time": "2025-08-10 23:42:52.488",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "??",
+          "date_time": "2025-08-11 00:16:52.105",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01989913-194d-4ff1-f000-0000cfcc028a",
+          "message_text": "Braun: I\u0027m so sorry for the delayed response! I just passed this along to my team and I\u0027ll get back to you as soon as I have more info. Thank you for your patience and understanding. I\u0027ll be in touch.",
+          "message_type": "agent",
+          "agent": "26438",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-11 08:20:22.505"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ok",
+          "date_time": "2025-08-11 08:35:21.164",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Does this take a lot of time?",
+          "date_time": "2025-08-11 12:10:03.241",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019899ee-b937-4f75-f000-0000cfcc028a",
+          "message_text": "Braun: Hi, I apologize it\u0027s taking longer than expected. I\u0027ve followed this up with my team. As soon as I hear back, I will send you a message right away!",
+          "message_type": "agent",
+          "agent": "109665",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-11 12:20:15.832"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Please quickly",
+          "date_time": "2025-08-11 12:29:10.869",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019899ff-42b0-4199-f000-0000cfcc028a",
+          "message_text": "Braun: I understand you need this resolved as soon as possible. While I don\u0027t have the update yet from the team, I\u0027ll get back to you as soon as I received it. Your understanding is greatly appreciated!",
+          "message_type": "agent",
+          "agent": "109615",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-08-11 12:38:19.594"
+        }
+      ]
+    },
+    "465": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "019b9546-b207-4983-f000-0000e743f4cc",
+      "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 3879990476,
+            "company_id": 3089,
+            "coupon_url": "https://www.statelinetack.com/MPTXSL2A",
+            "static_code": "MPTXSL2A",
+            "name": "Shipping 20% off $29 or 30% off over $129",
+            "coupon": "MPTXSL2A",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 3879990476,
+            "company_id": 3089,
+            "coupon_url": "https://www.statelinetack.com/?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=google+brand+text\u0026srccode=MPSL1530",
+            "static_code": "MPSL1530",
+            "name": "15 off 29 30 off 129 modal",
+            "coupon": "MPSL1530",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://statelinetack.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.statelinetack.com/products/tough1-1200d-mini-serape-snuggit-blanket",
+            "item": "Tough1 1200D Mini Serape Snuggit Blanket - Serape / 39",
+            "timeAgo": "2025-12-29"
+          },
+          {
+            "link": "https://www.statelinetack.com/products/tough1-1200d-hand-carved-miniature-turnout-blanket-with-snuggit",
+            "item": "Tough1 1200D Hand Carved Miniature Turnout Blanket with Snuggit - Purple / 36\"",
+            "timeAgo": "2025-12-29"
+          },
+          {
+            "link": "https://www.statelinetack.com/products/gatsby-premium-fleece-dress-sheet",
+            "item": "Gatsby Premium Fleece Dress Sheet - Black / 69",
+            "timeAgo": "2025-12-29"
+          },
+          {
+            "link": "https://www.statelinetack.com/products/ivermectin-single-dose-wormer-1-87",
+            "item": "Ivermectin Single Dose Wormer (1.87) - 1 Dose",
+            "timeAgo": "2025-12-29"
+          },
+          {
+            "link": "https://www.statelinetack.com/products/stretchx-full-slicker-with-zipper",
+            "item": "StretchX Full Slicker with Zipper - Burgundy / X-Large (1400-1600lbs)",
+            "timeAgo": "2025-12-29"
+          }
+        ]
+      },
+      "companyWebsite": "https://statelinetack.com",
+      "companyName": "State Line Tack",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Some items aren’t eligible for discounts due to manufacturers’ policy, add to cart to double-check!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: GREEN MONDAY is here! Time to save you some GREEN! Get up to $100 off today NO EXCLUSIONS! slt.attn.tv/aGqwmYSC74pJ Spend more save more!",
+          "date_time": "2025-12-08 13:15:54.672",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: You are already subscribed. Enjoy 25% off your order today, click here to shop now: https://slt.attn.tv/cl/8ZE",
+          "date_time": "2025-12-08 15:56:16.176",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Hi John, it\u0027s Sarah. I\u0027m a personal concierge here to answer questions or share give recommendations. Is there anything I can help you with today?\n\nhttps://slt.attn.tv/a1tAtAReDC04 .",
+          "date_time": "2025-12-09 15:45:48.466",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: UPGRADED! Get up to $100 off today NO EXCLUSIONS + Bonus $5 FREE Ecert over $99! slt.attn.tv/aNz_ElplusDW Spend more save more!",
+          "date_time": "2025-12-10 13:16:09.986",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Shop our exclusive Holiday Store to find amazing deals on top brands! Plus 2X REWARDS points today! slt.attn.tv/aDx6EtBaAZ8M ",
+          "date_time": "2025-12-15 13:15:34.775",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: The price of the Gatsby 600D Ripstop Waterproof Dog Coat - Red / Black / X-Large has dropped! Click here to get this great deal! https://slt.attn.tv/an_4_pFc-xng",
+          "date_time": "2025-12-17 13:48:58.097",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Treat yourself to savings! Get up to 30% OFF + 5X Bonus REWARDS today! slt.attn.tv/aela3ebIwoV8 Need a last minute gift? Send an E-cert!",
+          "date_time": "2025-12-22 13:05:49.382",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Forget anything from your recent purchase? Come back and as a thank you get 30% on your next purchase by using the code SLT30.\n\nCode auto-applies if you click here: https://slt.attn.tv/a7cOEsWcjERX ",
+          "date_time": "2025-12-26 15:37:23.496",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: End the year with a bang! Enjoy up to 30% OFF + 5X REWARDS points today! Don\u0027t miss out on our exciting offers! slt.attn.tv/aiTZ6miEbqlR ",
+          "date_time": "2025-12-29 13:15:45.493",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Hey, Sarah here! Looks like you left something behind, anything I can help with?: slt.attn.tv/aC7jcMRnYN0A .",
+          "date_time": "2026-01-01 13:13:02.227",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Act now! That Tough1 1200D Mini Chevron Snuggit Blanket you were looking at is almost gone. Click here to grab it before it is too late! https://slt.attn.tv/aMrdHCMl76dp ",
+          "date_time": "2026-01-03 12:30:20.216",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: There are only a few of our Tough1 1200D Mini Chevron Snuggit Blanket left! Click here to shop before it\u0027s gone! https://slt.attn.tv/aBBEEj8teawN ",
+          "date_time": "2026-01-04 12:30:31.639",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Act now! That Tough1 1200D Mini Serape Snuggit Blanket you were looking at is almost gone. Click here to grab it before it is too late! https://slt.attn.tv/aSSoxGe71GLA ",
+          "date_time": "2026-01-05 12:14:55.931",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Hey, Sarah here! See something you liked? Reply back with any questions! slt.attn.tv/a9VA7_Cp4ZU5 ",
+          "date_time": "2026-01-05 13:32:22.587",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: There are only a few of our Tough1 1200D Mini Serape Snuggit Blanket left! Click here to shop before it\u0027s gone! https://slt.attn.tv/aD8oS13e7ljR ",
+          "date_time": "2026-01-06 12:32:02.195",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Hey, this is Sarah. Thanks for checking out our site! https://slt.attn.tv/aVvB8PYwmFu6\n\nAre you looking for anything in particular today?",
+          "date_time": "2026-01-06 14:58:08.563",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "State Line Tack: Hey, Sarah here! Looks like you left something behind, anything I can help with?: slt.attn.tv/a-_F1qdOfN5X .",
+          "date_time": "2026-01-06 15:25:47.513",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes I don\u0027t see my points from my last purchase",
+          "date_time": "2026-01-06 16:42:34.176",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Post purchase inquiries \"; last updated: 2024-02-02 18:52:12.905",
+          "date_time": "2026-01-06 16:46:36.959",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b9546-b207-4983-f000-0000e743f4cc",
+          "message_text": "State Line Tack: Thanks for getting back to us! We don\u0027t handle post-purchase requests via text. Please submit your request using this link: https://slt.attn.tv/azdDwhR1EBnF or feel free to call this number 1-844-384-6814. Please let me know if you have any questions about our products, I\u0027m more than happy to help you here! \n",
+          "message_type": "agent",
+          "agent": "109840",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-06 16:46:36.963"
+        }
+      ]
+    }
+  }
+}

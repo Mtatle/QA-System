@@ -1,0 +1,879 @@
+{
+  "version": 1,
+  "chunk": "chunk_0114",
+  "scenarios": {
+    "566": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "019a93c0-0966-40e2-f000-0000a29d0249",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "COZYEMPLOYEE",
+            "content": [
+              "• 35% off any items. \n\n• You can share this discount ONLY if the customer receives an automated message asking them if they would want an employee discount"
+            ]
+          },
+          {
+            "title": "SUPERBOWL25",
+            "content": [
+              "• Applies to all items. 35% off for the next 72 hours. \n→ Only send to anyone who says Eagles in their response."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2728198729,
+            "description": "$50 credit on orders over $100",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth.com/discount/WMjmHnlw?utm_source=attentive\u0026utm_medium=sms",
+            "name": "Welcome Flow $50 Credit $100 Min",
+            "coupon": "WMjmHnlw",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2728198729,
+            "description": "$50 Welcome Credit (Shopify Auto-Generated). Code in shopify is \"COZYEARTH-\"",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth2.myshopify.com/discount/50-t3PLt2?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcomeoffer",
+            "value": "50",
+            "name": "$50 Welcome Credit Shopify Auto-Gen",
+            "coupon": "50-t3PLt2",
+            "redemption_status": "UNUSED",
+            "value_type": "FLAT_FIXED_CURRENCY"
+          },
+          {
+            "subscriber_id": 2728198729,
+            "description": "orders $100+",
+            "value": "50",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth2.myshopify.com/discount/GETCOZY50",
+            "static_code": "GETCOZY50",
+            "name": "$50 OFF *$100 Min - Welcome",
+            "coupon": "GETCOZY50",
+            "redemption_status": "USED",
+            "value_type": "FLAT_FIXED_CURRENCY"
+          },
+          {
+            "subscriber_id": 2728198729,
+            "description": "session $50 offer with a $100 minimum",
+            "company_id": 2492,
+            "coupon_url": "https://cozyearth2.myshopify.com/discount/NN29WVS?utm_source=attentive\u0026utm_medium=sms",
+            "value": "50",
+            "name": "Main-JAS-50DWinback-Multichannel (Codes)",
+            "coupon": "NN29WVS",
+            "redemption_status": "UNUSED",
+            "value_type": "FLAT_FIXED_CURRENCY"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://cozyearth.com/products/bamboo-sheet-set?variant=40965917507764#dialog-cart",
+            "item": "Bamboo Sheet Set",
+            "timeAgo": "2025-11-15"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://cozyearth.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-11-15",
+            "coupon": "GETCOZY50",
+            "items": [
+              {
+                "price": [
+                  308
+                ],
+                "productLink": "https://cozyearth2.myshopify.com/products/bamboo-sheet-set",
+                "name": "Bamboo Sheet Set"
+              }
+            ],
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=9434636106092284598885",
+            "link": "https://cozyearth.com/21143697/orders/7206048943973e009782528e1d96390d/authenticate?key=6098609a2e747c30f21dd5477ecf768c",
+            "date_time": "2025-11-15 15:20:42.478",
+            "discount_amount": 0,
+            "orderNumber": "2939410",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=9434636106092284598885",
+            "total": 208.18
+          }
+        ]
+      },
+      "companyWebsite": "https://cozyearth.com",
+      "companyName": "Cozy Earth",
+      "notes": {
+        "escalate": [
+          "ESC all MyFitness pall App inquiries"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t share sale end dates with customers"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/S4E",
+          "date_time": "2025-11-15 10:17:25.466",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Use code GETCOZY50 at checkout - valid on orders over $100.\n\nBlack Friday Sale: Enjoy up to 25% off sitewide on top of your offer!\n\nHurry, these savings end soon...\ncozyearth.attn.tv/aH3dffvvCIak",
+          "date_time": "2025-11-15 10:17:28.759",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nYour ultimate coziness awaits! Luxuriate in our best-sellers: https://cozyearth.attn.tv/a25UXam01GCF .",
+          "date_time": "2025-11-15 10:18:32.477",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Thank you for your purchase! Your order number is #2939410. View more information about your order here: cozyearth.attn.tv/aDgnMdeNsZqi",
+          "date_time": "2025-11-15 10:20:59.833",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey Krys, this is Sarah from the Cozy Earth Care Team. Thanks for checking out our site! cozyearth.attn.tv/aVV0SGbHKq9I \n\nAre you looking for anything in particular today?",
+          "date_time": "2025-11-15 12:15:20.284",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Bamboo Sheet Set is a fan favorite, so let\u0027s make it yours with up to 25% off for Black Friday!\nSee what\u0027s trending: cozyearth.attn.tv/aZj0dkvbiqaH",
+          "date_time": "2025-11-15 12:42:41.578",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi I need a refund",
+          "date_time": "2025-11-17 15:10:06.155",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019a9370-ff35-476b-f000-0000a29d0249",
+          "message_text": "Cozy Earth: I\u0027m here to help. Could you please provide more details of your refund request so I can assist you better?",
+          "message_type": "agent",
+          "agent": "35256",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-11-17 15:10:47.495"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Not getting item. Going out of town.",
+          "date_time": "2025-11-17 15:16:42.214",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "2939410 order number",
+          "date_time": "2025-11-17 15:18:05.961",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019a937a-e41e-4e42-f000-0000a29d0249",
+          "message_text": "Cozy Earth: Just to be sure, are you then interested in cancelling the order altogether? If so, please reach out to our post-purchase support team directly to make any changes to your order here: https://cozyearth.attn.tv/atJdqV_HFtj8",
+          "message_type": "agent",
+          "agent": "109968",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-11-17 15:21:35.930"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "didn\u0027t arrive",
+          "date_time": "2025-11-17 15:23:38.465",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hello",
+          "date_time": "2025-11-17 16:31:05.365",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019a93bc-8b96-4e70-f000-0000a29d0249",
+          "message_text": "Cozy Earth: Thank you for letting me know! Please note that your order is still within the normal processing timeframe. Our processing time takes 2-3 business days, and we usually ship via USPS, UPS, DHL, and OnTrac. Once shipped, it will take 2-7 business days for domestic orders. \n\nToday is the 1st business day and you can expect your order to ship before Thursday. I hope this clarifies everything! If you have any questions, feel free to text me.",
+          "message_type": "agent",
+          "agent": "87295",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-11-17 16:33:18.642"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Please cancel order",
+          "date_time": "2025-11-17 16:34:33.948",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Cancel / edit order \"; last updated: 2024-03-22 19:31:49.487",
+          "date_time": "2025-11-17 16:37:07.456",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019a93c0-0966-40e2-f000-0000a29d0249",
+          "message_text": "Cozy Earth: Thank you for your response. Please reach out to our post-purchase support team directly to make any changes to your order here: https://cozyearth.attn.tv/aTClf7FakTPZ",
+          "message_type": "agent",
+          "agent": "82222",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-11-17 16:37:07.459"
+        }
+      ]
+    },
+    "567": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "0190db72-de46-483c-f000-000091b706f5",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "PROMO",
+            "content": [
+              "The 10% text sign-up code only works for these items: http://attn.tv/lg/offerdetails.html\n\nEligible Models:\nVacuums:\nA905RM\nA907GMS\nA927KGMS\nA927KVMS\nA908VMR\nA929KVM\nA939KBMS\nA913BM\nA900BM\nR975GM1\nA925KSM\n\nAir Purifiers:\nAS560DWR0\nAS330DWR0\nAP151MBA1\nAP151MWA1\n\nAeroTowers:\nU9CS1C\nU9CV2B\n\nHeadphones:\nHBS-FN6.ACUSBKI\nHBS-FN6.ACUSWHI\nHBS-FN5W.ACUSBKI\nHBS-FN5W.ACUSWHI\nHBS-FN4.ACUSBKI\nHBS-FN4.ACUSWHI\nTONE-FP8.AUSACLK\nTONE-FP9.AUSACLK\nTONE-FP5.AUSACLK\n\nLG Stylers:\nS3MFBN\nS3RFBN\nS3WFBN\nS5MSB\nS3CW\n\nWireless Speakers:\nPL2\nPL5\nPL5W\n\nDisclaimer:\nExtra 10% off select vacuums, PuriCare air purifiers, TONE Free headphones and XBOOM Go wireless speakers is off the pre-tax sale price on LG.com only. Offer valid for one-time use only within 30 days of code being sent. To receive the additional 10% off savings, promotion code must be entered at online checkout and will be applied to eligible products only. If any of the qualifying items are removed from the cart, canceled or returned, the promotional savings will be void. Availability, prices and terms of offer are subject to change without notice. No adjustments to prior purchases and non-redeemable for cash.\nQualifying Vacuums: A905RM, A907GMS, A927KGMS, A927KVMS, A908VMR, A929KVM, R975GM1\nQualifying PuriCare Air Purifiers: AS560DWR0, AS330DWR0, AP151MBA1, AP151MWA1\nQualifying TONE Free headphones: HBS-FN6.ACUSBKI, HBS-FN6.ACUSWHI, HBS-FN5W.ACUSBKI, HBS-FN5W.ACUSWHI, HBS-FN4.ACUSBKI, HBS-FN4.ACUSWHI, TONE-FP8.AUSACLK, TONE-FP9.AUSACLK, TONE-FP5.AUSACLK\nQualifying LG Styler: S3MFBN, S3RFBN, S3WFBN, S5MSB, S3CW\nQualifying XBOOM Go Wireless Speakers: PL2, PL5, PL5W"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2444691189,
+            "description": "Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Soundbars, Soundbar Accessories, Vacuum, Wireless Speaker. Extra 10% off select AeroTower, Air Purifier, Dehumidifier, Headphones, LG Styler, Vacuum, Wireless Speakers is off the pre-tax sale price on LG.com only. Offer valid for one-time use only within 30 days of code being sent. To receive the additional 10% off savings, promotion code must be entered at online checkout and will be applied to eligible products only. If any of the qualifying items are removed from the cart, canceled or returned, the promotional savings will be void. Availability, prices and terms of offer are subject to change without notice. No adjustments to prior purchases and non-redeemable for cash. ualifying AeroTower: U9CS1C  Qualifying PuriCare Air Purifiers: AP151MBA1, AP151MWA1, AS330DWR0, AS560DWR0, U9CV1C, U9CV2B  Qualifying Dehumidifier: UD501KOJ5  Qualifying TONE Free headphones: HBS-XL7.ACUSBKI, HBS-SL5.ACUSBKI, HBS-SL6S.ACUSBKI, HBS-510.ACUSBKI, HBS-830.ACUSBKI, HBS-830.ACUSWHI, HBS-FN4.ACUSBKI, HBS-FN6.ACUSBKI, HBS-FN5W.ACUSBKI, HBS-FN6.ACUSWHI, HBS-FN5W.ACUSWHI, TONE-FN7.ACUSBKI, TONE-FP8.AUSACLK, TONE-FP9.AUSACLK, TONE-FP5.AUSACLK, TONE-FP3.AUSACLK, TONE-NP3.AUSACLK, TONE-T90Q.AUSACBK, TONE-T90Q.AUSACWH, TONE-T60Q.AUSACBK TONE-TF8Q.AUSACBI, TONE-FP9W.AUSACLK, TONE-FP9E.AUSACLK, TONE-NP3C.AUSACLK  Qualifying LG Styler: S3CW, S3MFBN, S3RFBN, S3WFBN, S5MSB  Qualifying Soundbars: QP5, QP5W, S75Q, SP7Y, S65Q, SN6Y, SN5Y, SP2, SK1, SH2  Qualifying Soundbar Accessories: SPQ8-S, SPK8-S, WTP3  Qualifying Vacuums: A913BM, A925KSM, A927KGMS, A929KVM, A939KBGS, R975GM  Qualifying XBOOM Go Wireless Speakers: PL2, PL5, PL7, GP9, GP3, RP4G, RP4, RP4B, XG5QBK, XG7QBK, XO3QBK",
+            "company_id": 6714,
+            "value": "10",
+            "name": "(In Use) 10% Off Select Products",
+            "coupon": "TEXTCHG4MS2O724",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://lg.com/us",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://lg.com/us",
+      "companyName": "LG",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS using the \"Escalation template\""
+        ],
+        "templates": [
+          "For 10% off welcome code issues use temp \u0027Follow up 1\u0027, then \u0027Follow up 2\u0027 after confirming the item is excluded from promos",
+          "For fridge recommendations use FRR shortcut",
+          "For service-related issues/scheduled repair service appointments use SRI shortcut",
+          "For cxs looking for replacement parts/accessories from an affiliate Parts Distributor use RPA shortcut",
+          "If a cx has an inquiry for finding the serial number/model number of an item:",
+          "➜ If it\u0027s a TV, use mnt shortcut",
+          "➜ If it\u0027s another product, use mna shortcut"
+        ],
+        "dos_and_donts": [
+          "If it\u0027s a new conversation and we didn\u0027t introduce ourselves in the automated message, start your message with: \"This is Jordan at LG.\""
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Welcome to LG Electronics USA! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/WBe",
+          "date_time": "2024-07-22 11:49:36.840",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: You\u0027ve been entered to win our prizes! For now, claim your code for 10% off: https://lg.attn.tv/a6GMp-fSjOn3 .",
+          "date_time": "2024-07-22 11:49:39.824",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "LG Electronics USA: Texts may be retained for customer support \u0026 other purposes. For more info, see Terms (lg.com/us/legal) and Privacy (lg.com/us/privacy)",
+          "date_time": "2024-07-22 11:49:40.828",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "How do I get info on how to set up ice maker. My new ice box doesn\u0027t put out ice very good",
+          "date_time": "2024-07-22 13:00:25.420",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190db6a-5d9e-4c45-f000-000091b706f5",
+          "message_text": "LG Electronics USA: Thank you for reaching out and sorry to hear that. May I know which unit/model you have so I can take a look?",
+          "message_type": "agent",
+          "agent": "82444",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-22 13:08:19.493"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "LF29H8330s",
+          "date_time": "2024-07-22 13:10:15.066",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It has been running since Saturday and with very little ice taking out of it it was still almost empty this morning.",
+          "date_time": "2024-07-22 13:11:15.230",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190db6f-86ee-404e-f000-000091b706f5",
+          "message_text": "LG Electronics USA: Thank you for sharing that with me. If your refrigerator\u0027s ice maker is not making enough ice, it may be due to one of several common issues. If the freezer temperature is not set correctly, or your refrigerator has been recently installed it will make less ice.\nYou can follow the step-by-step guide here to see how you can fix the issue:\nhttps://lg.attn.tv/ar3kshJqdj-d\nLet me know if there is anything else I can help with! I\u0027ll be happy to help.\n",
+          "message_type": "agent",
+          "agent": "82764",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-22 13:13:57.750"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ok thanks it was installed sat .",
+          "date_time": "2024-07-22 13:15:54.973",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Have a great day! - ALL BRANDS\"; last updated: 2022-07-05 16:55:29.721",
+          "date_time": "2024-07-22 13:17:36.716",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190db72-de46-483c-f000-000091b706f5",
+          "message_text": "LG Electronics USA: Got you! You\u0027re welcome! Have a great day and if you need any further assistance, feel free to shoot me a text. ",
+          "message_type": "agent",
+          "agent": "40539",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-22 13:17:36.717"
+        }
+      ]
+    },
+    "568": {
+      "agentName": "",
+      "has_shopify": true,
+      "id": "019b13b4-d5b8-45e4-f000-0000edfc0ac1",
+      "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 3992718017,
+            "company_id": 3101,
+            "coupon_url": "https://faherty.myshopify.com/discount/SMS272ZW3G9",
+            "value": "15",
+            "name": "Oct2025_Welcome_Attentive15",
+            "coupon": "SMS272ZW3G9",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://fahertybrand.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://fahertybrand.com",
+      "companyName": "Faherty",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS",
+          "For order status inquiries/issues send to CS immediately"
+        ],
+        "tone": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Faherty Brand.",
+          "date_time": "2025-12-12 12:46:14.430",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/w08",
+          "date_time": "2025-12-12 12:47:13.448",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Welcome to the family! Enjoy 15% off your first purchase with code SMS272ZW3G9. Discover your new favorites in our latest collection: fahertybrand.attn.tv/aAvsi8BGfTkU",
+          "date_time": "2025-12-12 12:47:16.769",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Faherty Brand: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nHave you seen our new arrivals? They sell out fast, so check them out ASAP! https://fahertybrand.attn.tv/atefnS9R74aF .",
+          "date_time": "2025-12-12 12:48:20.603",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I cat not use the code on my first purchase",
+          "date_time": "2025-12-12 12:50:31.187",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Also I dont have free s hipping",
+          "date_time": "2025-12-12 12:50:39.164",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Even when I signed up",
+          "date_time": "2025-12-12 12:50:47.663",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b13b0-a600-4c6d-f000-0000edfc0ac1",
+          "message_text": "Faherty Brand: Thank you for reaching out and sorry about that! Have you encountered any error messages? Also, could you kindly share a screenshot of the items in your cart? I\u0027ll be happy to look into the issue! We offer free shipping on domestic orders over $150. Maybe you can add something else to reach the minimum? ",
+          "message_type": "agent",
+          "agent": "38972",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-12-12 12:51:42.616"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "And this will be my first purchase so It means that I couldn\u0027t use the code later because the items have already discount.. I never see that the discount on first purchase will be just on entire price.",
+          "date_time": "2025-12-12 12:52:25.510",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Can I use two discounts? - All brands\"; last updated: 2023-10-10 16:38:40.074",
+          "date_time": "2025-12-12 12:56:16.983",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019b13b4-d5b8-45e4-f000-0000edfc0ac1",
+          "message_text": "Faherty Brand: Thanks for the screenshot! Unfortunately, you won\u0027t be able to use multiple deals at checkout, but feel free to use the one that gives you the best value!",
+          "message_type": "agent",
+          "agent": "109722",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-12-12 12:56:16.985"
+        }
+      ]
+    },
+    "569": {
+      "agentName": "Alexa",
+      "has_shopify": true,
+      "id": "0199ca23-45aa-4653-f000-0000ce22faa7",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "SEMI ANNUAL \u002726 40-80% OFF",
+            "content": [
+              "• 40-80% Off Sitewide with code SAVE40"
+            ]
+          },
+          {
+            "title": "SUPERBOWL \u002726 50% OFF",
+            "content": [
+              "• 50% Off Sitewide - No offer code needed"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 1 50% Off",
+            "content": [
+              "• 50% Off Sitewide - No offer code needed"
+            ]
+          },
+          {
+            "title": "SPRING40 | MAR \u002726 40% OFF",
+            "content": [
+              "• 40% Off Sitewide with code SPRING40"
+            ]
+          },
+          {
+            "title": "LOVE40 | JAN \u002726 40% OFF",
+            "content": [
+              "• 40% Off Sitewide with code LOVE40"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 3 50-99% Off",
+            "content": [
+              "• 50-99% Off Sitewide - No offer code needed\n\n• End Date TBD - slated to end on 12/3 but subject to change"
+            ]
+          },
+          {
+            "title": "TAKE10",
+            "content": [
+              "We provide this to subscribers who trigger the abandon flows. Only send to subscribers that reach out to concierge asking about the 10% code they were offered in their abandonment message."
+            ]
+          },
+          {
+            "title": "GIFT40 | DEC \u002725 40% OFF",
+            "content": [
+              "• 50-90% Off Sitewide with code GIFT40"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 2 50-90% Off",
+            "content": [
+              "• 50-90% Off Sitewide - No offer code needed"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 3458398887,
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/TAKE10?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "static_code": "TAKE10",
+            "name": "10% Static (TAKE10)",
+            "coupon": "TAKE10",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 3458398887,
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/FN75-4qeu5n",
+            "name": "30% Welcome Dynamic 7/1/25 - 8/15/25",
+            "coupon": "FN75-4qeu5n",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 3458398887,
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/FN75-d8ddbe",
+            "name": "30% Welcome Dynamic 7/1/25 - 8/15/25",
+            "coupon": "FN75-d8ddbe",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://fashionnova.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.fashionnova.com/products/melanie-mock-neck-bodysuit-dark-purple?variant=39269785895036",
+            "item": "Melanie Mock Neck Bodysuit - Dark Purple",
+            "timeAgo": "2025-10-09"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/pure-connection-lace-corset-top-black?variant=39287977541756",
+            "item": "Pure Connection Lace Corset Top - Black",
+            "timeAgo": "2025-10-09"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/blessed-beauty-ruffle-rosette-bandage-mini-dress-black",
+            "item": "Blessed Beauty Ruffle Rosette Bandage Mini Dress - Black",
+            "timeAgo": "2025-10-08"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/out-with-rosette-mini-skirt-set-khaki",
+            "item": "Out With Rosette Mini Skirt Set - Khaki",
+            "timeAgo": "2025-09-16"
+          },
+          {
+            "link": "https://www.fashionnova.com/products/settle-the-score-crepe-halter-romper-navy?nosto=pdp-rec-2",
+            "item": "Settle The Score Crepe Halter Romper - Navy",
+            "timeAgo": "2025-07-12"
+          }
+        ]
+      },
+      "companyWebsite": "https://fashionnova.com",
+      "companyName": "Fashion Nova",
+      "notes": {
+        "send_to_cs": [
+          "No escalations for this client, send to CS using the Support templates",
+          "For post-purchase inquiries send to CS using the Support template (shortcut: ESC)",
+          "➜ If the cx is having difficulties sending an email to CS via the link in the ESC temp - use Support 2 template (shortcut: TESC)",
+          "➜ If the cx is facing technical website issues while accessing the link, do NOT immediately send the TESC shortcut, troubleshoot first instead",
+          "For pre-purchase inquiries send to CS using the Support 2 template (shortcut: TESC)"
+        ],
+        "tone": [
+          "🅿️ Use wording that is in line with the brand\u0027s voice and terminology found on the website",
+          "➜ e.g. Nova Kids, Nova Babes, Insta-worthy, slays, snatched, baddie, etc.",
+          "➜ Always look up the term\u0027s meaning before using it!"
+        ],
+        "templates": [
+          "For expired discounts use EXP shortcut",
+          "For login issues use LGI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "If cx are looking for their 30% welcome code, ask to check their email (spam \u0026 promo)",
+          "Gift cards can be used on discounted items"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREE 1-DAY SHIPPING! Order B4 Noon, Get Ur Order TMRW!\n\nPLUS, 30% Off Halloween Starts NOWW! Shop Now -\u003e\nhttp://sms.fashionnova.com/aSAey1uQg7_K .",
+          "date_time": "2025-09-10 11:10:22.271",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Surprise! Here\u0027s a code for 10% off the entire site: TAKE10 - Go on, treat yourself! -\u003e http://sms.fashionnova.com/aaEwIZWG4dqv .",
+          "date_time": "2025-09-12 13:59:37.441",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Surprise! Here\u0027s a code for 10% off the entire site: TAKE10 - Go on, treat yourself! -\u003e http://sms.fashionnova.com/aEKFPA31pW5- .",
+          "date_time": "2025-09-16 13:51:10.832",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Get It FAST!! FREE 1-Day Shipping!\n\nPLUS, BOGO FREE Dresses, Sets, \u0026 Jumpsuits! Shop NOW! -\u003e\nhttp://sms.fashionnova.com/aMCfORLafjY8 .",
+          "date_time": "2025-09-17 11:20:45.478",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Surprise! Here\u0027s a code for 10% off the entire site: TAKE10 - Go on, treat yourself! -\u003e http://sms.fashionnova.com/avTgtrIrK4Sg .",
+          "date_time": "2025-09-19 20:41:49.699",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: BOGO FREE Dresses, Sets \u0026 Jumpsuits! LAST DAY!\n\n+ FREE 1-Day Shipping?! Don\u0027t Miss Out, Shop NOW! -\u003e\nhttp://sms.fashionnova.com/aPT54jlslgjw .",
+          "date_time": "2025-09-24 11:16:32.393",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREE 1-Day Shipping + 30-70% Off Sitewide + ALL Halloween!\n\nIt\u0027s A Scary Good Deal! Get Ur Order TMRW -\u003e\nhttp://sms.fashionnova.com/agJgplug-z0X .",
+          "date_time": "2025-10-01 11:19:07.731",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: TODAY ONLY! 30-70% Off Sitewide + EXTRA $30 Off!\n\nUse Code: FREE30 On Ur $99+ Order NOW! Hurry! -\u003e\nhttp://sms.fashionnova.com/aPU5-3pFE6xg .",
+          "date_time": "2025-10-05 17:51:50.231",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Surprise! Here\u0027s a code for 10% off the entire site: TAKE10 - Go on, treat yourself! -\u003e http://sms.fashionnova.com/aDkua1TSDfJO .",
+          "date_time": "2025-10-05 20:04:35.282",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREE 1-Day Shipping + 40% Off Halloween Starts NOWW!\n\n+ EXTRA $20 Off $99+ Orders! Code: FREE20 -\u003e\nhttp://sms.fashionnova.com/aZRWJcspQOw4 .",
+          "date_time": "2025-10-08 11:33:42.997",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Don\u0027t forget this dress! Use Code: TAKE10 for 10% off your ENTIRE order! -\u003e http://sms.fashionnova.com/aeqVrfvT6PT0 .",
+          "date_time": "2025-10-08 17:09:55.923",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Don\u0027t forget you put this in your cart and it\u0027s selling out fast! Check out NOW and use code: TAKE10 for 10% OFF your ENTIRE order! \n-\u003e http://sms.fashionnova.com/auWs-Fvv7eQY .",
+          "date_time": "2025-10-08 20:41:06.617",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: Hi there! Curious about a product or want to make a purchase? We\u0027re happy to provide more details or make recommendations!\n\nReply with any questions you have!",
+          "date_time": "2025-10-09 13:40:32.564",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes I do",
+          "date_time": "2025-10-09 13:54:00.079",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0199ca1c-0b71-4626-f000-0000ce22faa7",
+          "message_text": "Fashion Nova: I would be more than happy to help out, ask away!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-10-09 13:54:19.653"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027ve been waiting for this product to come out Out With Rosette Mini Skirt Set - Black/White",
+          "date_time": "2025-10-09 13:55:20.245",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "For the longest but it hasn\u0027t came out yet",
+          "date_time": "2025-10-09 13:55:50.327",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "And I really loved this dress",
+          "date_time": "2025-10-09 13:56:09.877",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"When will you restock?\"; last updated: 2025-11-10 19:25:18.521",
+          "date_time": "2025-10-09 14:02:13.310",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0199ca23-45aa-4653-f000-0000ce22faa7",
+          "message_text": "Fashion Nova: I\u0027m sorry for the inconvenience! Unfortunetly I do not have an exact date of a possible restock but I recommend singing up for restock notifications on the product page. Simply click the out-of-stock item size, enter your details and we will ping you when it\u0027s back in stock! In the meantime, what do you think about this one instead: http://sms.fashionnova.com/auM7w01dPPrz",
+          "message_type": "agent",
+          "agent": "109618",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-10-09 14:02:13.312"
+        }
+      ]
+    }
+  }
+}

@@ -3,670 +3,1044 @@
   "chunk": "chunk_0021",
   "scenarios": {
     "101": {
-      "id": "019c5eda-3134-49d1-f000-0000fb7c9a80",
-      "companyName": "HalloweenCostumes.com",
-      "companyWebsite": "https://halloweencostumes.com",
-      "agentName": "Sarah",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Halloween Costumes: Welcome to Halloween Costumes! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-14 19:17:42.941"
-        },
-        {
-          "message_media": [],
-          "message_text": "Halloween Costumes: \nThanks for subscribing! Shop this link to claim your 15% off. halloweencostumes.attn.tv/asKqTqWyvnJh",
-          "message_type": "system",
-          "date_time": "2026-02-14 19:17:46.503"
-        },
-        {
-          "message_media": [],
-          "message_text": "Halloween Costumes: \nHi there! Need help finding something? Let me know how I can make your shopping easier. halloweencostumes.attn.tv/amR8MI-RXqql",
-          "message_type": "system",
-          "date_time": "2026-02-14 19:19:03.915"
-        },
-        {
-          "message_media": [],
-          "message_text": "Trying to find a military custom for a historical play",
-          "message_type": "customer",
-          "date_time": "2026-02-14 19:36:58.434"
-        },
-        {
-          "message_media": [],
-          "message_text": "Halloween Costumes: Thanks for your interest! Let me know what size you'd like and if you're shopping for men, women, or kids. In the meantime, have a look at these: https://halloweencostumes.attn.tv/aISJd1CV_0hU",
-          "message_type": "agent",
-          "agent": "87359",
-          "message_id": "019c5ed6-ad54-47cd-f000-0000fb7c9a80",
-          "date_time": "2026-02-14 20:07:33.367"
-        },
-        {
-          "message_media": [],
-          "message_text": "Size L for a woman",
-          "message_type": "customer",
-          "date_time": "2026-02-14 20:08:17.857"
-        },
-        {
-          "message_media": [],
-          "message_text": "Halloween Costumes: Thank you for sharing your preferences. You may check our current collection here: https://halloweencostumes.attn.tv/aWEsbchsKFqB\nMay I know if you are looking for a specific style or color? I would be happy to check your options further. ",
-          "message_type": "agent",
-          "agent": "82260",
-          "message_id": "019c5eda-3134-49d1-f000-0000fb7c9a80",
-          "date_time": "2026-02-14 20:11:23.720"
-        }
-      ],
-      "notes": {
-        "escalate": [
-          "ESC expired codes/discount code issues, ask for cart ID and add it in esc notes",
-          "Don't send to CS for this client, ESC if needed",
-          "For retroactive discount requests add discount % in ESC note",
-          "ESC if a customer requests a different resolution, after their escalation was resolved"
-        ],
-        "dos_and_don_ts": [
-          "Fun Bucks AREN'T rewards points, those are given during exchanges"
-        ],
-        "promo_and_promo_exclusions": [
-          "This brand does not use coupon codes or promotions. All of their discounts are exclusively link-based and are applied automatically to the shopping cart upon checkout when the appropriate conditions are met",
-          "Please do not advise customers to use promotional codes, do not provide them with any codes, and do not direct them to look on the website for additional codes",
-          "They do not have any promotional code text fields on site to facilitate use"
-        ]
-      },
+      "agentName": "",
+      "has_shopify": true,
+      "id": "0193a7fe-e6cf-4b12-f000-0000959e817e",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://halloweencostumes.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Plus Size Military General Women's Costume",
-            "link": "https://www.halloweencostumes.com/women-s-plus-size-military-general-costume.html",
-            "timeAgo": "2026-02-15"
-          },
-          {
-            "item": "Women's Vintage Combat Cutie Costume",
-            "link": "https://www.halloweencostumes.com/womens-vintage-combat-cutie.html",
-            "timeAgo": "2026-02-15"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": false
-    },
-    "102": {
-      "id": "019c4e8b-ae00-4d44-f000-000020d62645",
-      "companyName": "Dr.Westin Childs",
-      "companyWebsite": "https://restartmed.com",
-      "agentName": "Kat",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Dr. Westin Childs: You are already subscribed. Click here to shop now: restartmed.com.",
-          "message_type": "system",
-          "date_time": "2026-01-17 07:45:20.148"
-        },
-        {
-          "message_media": [],
-          "message_text": "Dr. Westin Childs: Hello! This is Kat. Thanks for checking out our store! https://drwc.attn.tv/a67xZ4wP4eNe \n\nDo you have any questions about Childs' supplements? Let me know! Stop to stop",
-          "message_type": "system",
-          "date_time": "2026-01-21 18:26:02.023"
-        },
-        {
-          "message_media": [],
-          "message_text": "Dr. Westin Childs: Hey there, it's Kat. Thanks for stopping by! https://drwc.attn.tv/aForQf6agmBm \n\nCan I answer any supplement questions for you? Reply back to chat with me! Stop to stop",
-          "message_type": "system",
-          "date_time": "2026-02-10 18:40:17.359"
-        },
-        {
-          "message_media": [],
-          "message_text": "Looking into the Leptin resistance supplement.  Don't know what my Leptin value is... how do I know if I'm Leptin resistant? I need to lose 50lbs",
-          "message_type": "customer",
-          "date_time": "2026-02-10 19:03:23.605"
-        },
-        {
-          "message_media": [],
-          "message_text": "VoC: Looking into the Leptin resistance supplement. Don't know what my Leptin value is... how do I know if I'm Leptin resistant? I need to lose 50lbs",
-          "message_type": "escalation",
-          "date_time": "2026-02-10 19:09:32.119"
-        },
-        {
-          "message_media": [],
-          "message_text": "Dr. Westin Childs: Good question! I will have to double-check that with my team to be sure. As soon as I hear back, I will send you a message right away!",
-          "message_type": "agent",
-          "agent": "109972",
-          "message_id": "019c4a08-3888-457f-f000-000020d62645",
-          "date_time": "2026-02-10 19:09:38.730"
-        },
-        {
-          "message_media": [],
-          "message_text": "My Leptin level was done two years ago and it was \"15\"",
-          "message_type": "customer",
-          "date_time": "2026-02-11 15:50:00.167"
-        },
-        {
-          "message_media": [],
-          "message_text": "Dr. Westin Childs: I understand! Thank you for letting me know. Is there anything else that I can help with while I wait for a response from the team? ",
-          "message_type": "agent",
-          "agent": "50271",
-          "message_id": "019c4e7e-07e2-4594-f000-000020d62645",
-          "date_time": "2026-02-11 15:56:48.380"
-        },
-        {
-          "message_media": [],
-          "message_text": "Does Dr Child's do virtual appointments? So impressed with his knowledge and stories of his patients successes!",
-          "message_type": "customer",
-          "date_time": "2026-02-11 16:01:40.348"
-        },
-        {
-          "message_media": [],
-          "message_text": "Dr. Westin Childs: Thank you for your interest in Dr. Childs, he indeed has helped many patients! Regarding virtual appointments, I would have to bring that forward as well to my team. I will get back to you with updates. Please hang tight!",
-          "message_type": "agent",
-          "agent": "109617",
-          "message_id": "019c4e8b-ae00-4d44-f000-000020d62645",
-          "date_time": "2026-02-11 16:11:42.878"
-        }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://restartmed.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "https://www.restartmed.com/product/leptin-resistance-rx/",
-            "link": "https://www.restartmed.com/product/leptin-resistance-rx/",
-            "timeAgo": "2026-02-10"
-          },
-          {
-            "item": "https://www.restartmed.com/product/hashimotos-ab-rx/",
-            "link": "https://www.restartmed.com/product/hashimotos-ab-rx/",
-            "timeAgo": "2026-02-10"
-          },
-          {
-            "item": "https://www.restartmed.com/product/thyro-adk/",
-            "link": "https://www.restartmed.com/product/thyro-adk/",
-            "timeAgo": "2026-02-10"
-          },
-          {
-            "item": "https://www.restartmed.com/product/thyro-mag/?utm_source=Restart+Medical+Newsletter&utm_campaign=33abf22b1e-EMAIL_CAMPAIGN_2025_09_10_05_35&utm_medium=email&utm_term=0_-33abf22b1e-329216848&goal=0_5171b97996-33abf22b1e-329216848&mc_cid=33abf22b1e&mc_eid=a39a1cb3da",
-            "link": "https://www.restartmed.com/product/thyro-mag/?utm_source=Restart+Medical+Newsletter&utm_campaign=33abf22b1e-EMAIL_CAMPAIGN_2025_09_10_05_35&utm_medium=email&utm_term=0_-33abf22b1e-329216848&goal=0_5171b97996-33abf22b1e-329216848&mc_cid=33abf22b1e&mc_eid=a39a1cb3da",
-            "timeAgo": "2026-01-21"
-          },
-          {
-            "item": "https://www.restartmed.com/product/thyro-mag/?utm_source=Restart+Medical+Newsletter&utm_campaign=33abf22b1e-EMAIL_CAMPAIGN_2025_09_10_05_35&utm_medium=email&utm_term=0_-33abf22b1e-329216848&goal=0_5171b97996-33abf22b1e-329216848&mc_cid=33abf22b1e&mc_eid=a39a1cb3da",
-            "link": "https://www.restartmed.com/product/thyro-mag/?utm_source=Restart+Medical+Newsletter&utm_campaign=33abf22b1e-EMAIL_CAMPAIGN_2025_09_10_05_35&utm_medium=email&utm_term=0_-33abf22b1e-329216848&goal=0_5171b97996-33abf22b1e-329216848&mc_cid=33abf22b1e&mc_eid=a39a1cb3da",
-            "timeAgo": "2026-01-21"
-          }
-        ],
         "orders": [
           {
-            "orderNumber": "257997",
-            "orderDate": "2024-09-29",
+            "currency": "USD",
+            "total": 108,
             "items": [
               {
-                "name": "Thyroid Daily Essentials | 34 in 1 Complete Thyroid Multivitamin (60-Day Supply)",
-                "price": 69.99
+                "price": [
+                  {
+                    "value": [
+                      0,
+                      108
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
               }
             ],
-            "total": 69.99,
-            "date_time": "2024-09-29 18:54:03.801"
+            "link": "https://www.brighton.com/63505268968/orders/284f7c8d021bc193fb3841c6b4d490e1/authenticate?key=cd8f3a154b83ff0ad20b099d99d0ce5f",
+            "orderDate": "2024-08-26",
+            "discount_amount": 0,
+            "orderNumber": "2306589",
+            "date_time": "2024-08-26 16:29:20.123"
           },
           {
-            "orderNumber": "226990",
-            "orderDate": "2024-03-18",
+            "currency": "USD",
+            "orderDate": "2024-08-26",
             "items": [
               {
-                "name": "Leptin Resistance Rx | Leptin Sensitizer with ORALVISC & GAGs for Metabolic Support (60 Count)",
-                "price": 69.95
+                "price": [
+                  108
+                ],
+                "productLink": "https://brighton-collectibles.myshopify.com/products/twinkle-drops-necklace",
+                "name": "Twinkle Drops Necklace"
               }
             ],
-            "total": 69.95,
-            "date_time": "2024-03-18 11:00:25.101"
+            "date_time": "2024-08-26 16:23:57.822",
+            "discount_amount": 0,
+            "orderNumber": "5913933316328",
+            "total": 116.91
           },
           {
-            "orderNumber": "222031",
-            "orderDate": "2024-02-21",
+            "currency": "USD",
+            "orderDate": "2024-08-26",
             "items": [
               {
-                "name": "(NEW) T2 Cream | Topical Bio-Identical T2 Thyroid Hormone (60 Servings)",
-                "price": 39.99
+                "price": [
+                  0
+                ],
+                "productLink": "https://brighton-collectibles.myshopify.com/products/gift-wrap",
+                "name": "Free Gift Wrapping"
               }
             ],
-            "total": 39.99,
-            "date_time": "2024-02-21 02:19:18.518"
+            "date_time": "2024-08-26 16:23:57.807",
+            "discount_amount": 0,
+            "orderNumber": "5913933316328",
+            "total": 116.91
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://brighton.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.brighton.com/products/twinkle-link-bracelet?g_acctid=8394181095\u0026g_adtype=shopping\u0026g_campaign=[ADL]_[Performance_Max]_Jewelry\u0026g_campaignid=20497759143\u0026g_adgroupid=\u0026g_adid=\u0026g_keyword=\u0026g_keywordid=\u0026g_adtype=pla_with_promotion\u0026g_merchantid=10301071\u0026g_productchannel=online\u0026g_productid=747708415285\u0026g_partition=\u0026g_network=x\u0026g_ifproduct=product\u0026g_ifcreative=\u0026g_device=m\u0026tw_source=google\u0026tw_adid=\u0026tw_campaign=20497759143\u0026gad_source=1\u0026gbraid=0AAAAADNYydjUkNQqlRYdCvEMNMVPlQxC6\u0026gclid=Cj0KCQiApNW6BhD5ARIsACmEbkX3wDo1WZgbyoHo3zHV1A4KExBOdH96LOtAeD5aH1d_9ppGaNtXyrYaAg6tEALw_wcB",
+            "item": "Twinkle Link Bracelet - Silver-Multi / OS",
+            "timeAgo": "2024-12-08"
           },
           {
-            "orderNumber": "",
-            "orderDate": "2023-12-14",
-            "items": [
-              {
-                "name": "",
-                "price": 0
-              }
-            ],
-            "total": 0,
-            "date_time": "2023-12-14 10:45:05.536"
+            "link": "https://www.brighton.com/products/twinkle-link-bracelet?variant=44593138532584",
+            "item": "Twinkle Link Bracelet - Silver-Multi / OS",
+            "timeAgo": "2024-12-05"
           },
           {
-            "orderNumber": "213674",
-            "orderDate": "2023-12-14",
-            "items": [
-              {
-                "name": "(NEW) Thyroid Collagen Complex | Patented Collagen Peptides & Collagen Precursors (30 Servings)",
-                "price": 59.99
-              }
-            ],
-            "total": 59.99,
-            "date_time": "2023-12-14 01:45:12.302"
+            "link": "https://www.brighton.com/products/gift-card?variant=43981988626664",
+            "item": "Gift Card - Multi / $50",
+            "timeAgo": "2024-12-03"
+          },
+          {
+            "link": "https://www.brighton.com/products/gift-card?variant=43981988626664",
+            "item": "Gift Card - Multi / $50",
+            "timeAgo": "2024-12-03"
+          },
+          {
+            "link": "https://www.brighton.com/products/gift-card?variant=43974418039016",
+            "item": "Gift Card - Multi / $25",
+            "timeAgo": "2024-12-03"
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": false
-    },
-    "103": {
-      "id": "019c53e9-3750-4dcd-f000-00001f9971f9",
-      "companyName": "Howitzer Clothing",
-      "companyWebsite": "https://howitzerclothing.com",
-      "agentName": "Kim",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Howitzer Clothing: Hi Mr. Santa, this is Kim. It looks like you left something in your cart! https://howitzerclothing.attn.tv/aZVpyZzAXsvM \n\nAre there any questions I can answer before they're gone?",
-          "message_type": "system",
-          "date_time": "2026-01-21 10:22:52.749"
-        },
-        {
-          "message_media": [],
-          "message_text": "Howitzer Clothing: Hey Mr. Santa, we noticed you checking us out. Have you seen our best sellers yet? https://howitzerclothing.attn.tv/aF9peRTllq5h \n\nText back with any questions!",
-          "message_type": "system",
-          "date_time": "2026-01-25 18:54:25.344"
-        },
-        {
-          "message_media": [],
-          "message_text": "Howitzer Clothing: Hey Mr. Santa, we noticed you checking us out. Have you seen our best sellers yet? https://howitzerclothing.attn.tv/aJNIRakGlqSN \n\nText back with any questions!",
-          "message_type": "system",
-          "date_time": "2026-01-26 21:08:52.002"
-        },
-        {
-          "message_media": [],
-          "message_text": "Howitzer Clothing: Hey Mr. Santa, this is Kim. Thanks for checking out our site! 😊 https://howitzerclothing.attn.tv/awUV41a2hsKf \n\nAny questions I can answer for you?",
-          "message_type": "system",
-          "date_time": "2026-01-28 10:56:28.567"
-        },
-        {
-          "message_media": [],
-          "message_text": "Howitzer Clothing: Hey Jeefrey, we noticed you checking us out. Have you seen our best sellers yet? https://howitzerclothing.attn.tv/a5PEx_yIn29n \n\nText back with any questions!",
-          "message_type": "system",
-          "date_time": "2026-01-29 21:07:14.958"
-        },
-        {
-          "message_media": [],
-          "message_text": "Howitzer Clothing: Hey Jeefrey, we noticed you checking us out. Have you seen our best sellers yet? https://howitzerclothing.attn.tv/aOuQiHOT7_Xv \n\nText back with any questions!",
-          "message_type": "system",
-          "date_time": "2026-01-31 10:33:08.978"
-        },
-        {
-          "message_media": [],
-          "message_text": "Howitzer Clothing: Hey Jeefrey, this is Kim. Thanks for checking out our site! 😊 https://howitzerclothing.attn.tv/a3mzvp6813CZ \n\nAny questions I can answer for you?",
-          "message_type": "system",
-          "date_time": "2026-02-05 13:58:09.351"
-        },
-        {
-          "message_media": [],
-          "message_text": "Howitzer Clothing: Hi Jeefrey, this is Kim. It looks like you left something in your cart! https://howitzerclothing.attn.tv/axicoclE40mi \n\nAre there any questions I can answer before they're gone?",
-          "message_type": "system",
-          "date_time": "2026-02-07 14:58:08.666"
-        },
-        {
-          "message_media": [],
-          "message_text": "I tried emailing them and no response",
-          "message_type": "customer",
-          "date_time": "2026-02-12 17:07:05.061"
-        },
-        {
-          "message_media": [],
-          "message_text": "Howitzer Clothing: We sincerely apologize for the delay! The team is experiencing a high volume of emails, but they'll respond to you as soon as possible. We really appreciate your patience on this and hope you can give us more time to reply. Please check your spam and promotions folders, as our emails sometimes end up there. Our team is happy to help!",
-          "message_type": "agent",
-          "agent": "87295",
-          "message_id": "019c53e9-3750-4dcd-f000-00001f9971f9",
-          "date_time": "2026-02-12 17:11:58.970"
-        }
-      ],
+      "companyWebsite": "https://brighton.com",
+      "companyName": "Brighton",
       "notes": {
         "send_to_cs": [
           "No ESC for this client, send everything to CS"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://howitzerclothing.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Patriot Hood - TEAK / L",
-            "link": "https://howitzerclothing.com/products/patriot-hood?variant=42060332630151",
-            "timeAgo": "2026-01-28"
-          },
-          {
-            "item": "Scout Pant - OLIVE / 30",
-            "link": "https://howitzerclothing.com/collections/mens-jeans-pants/products/scout-pant-v1",
-            "timeAgo": "2026-01-28"
-          },
-          {
-            "item": "Tiger Camo Scout Pants - DARK BROWN TIGER CAMO / 30",
-            "link": "https://howitzerclothing.com/collections/mens-jeans-pants/products/tiger-camo-scout-pants",
-            "timeAgo": "2026-01-27"
-          },
-          {
-            "item": "God And Country Hood - SILVER SAGE / L",
-            "link": "https://howitzerclothing.com/products/god-and-country-hood-1?variant=42060329877639",
-            "timeAgo": "2026-01-23"
-          },
-          {
-            "item": "Scout Pant - ASSORTED / 30",
-            "link": "https://howitzerclothing.com/products/scout-pant-3?tw_source=google&tw_adid=770472057813&tw_campaign=22916009700&tw_kwdid=pla-295133209182&gad_source=1&gad_campaignid=22916009700&gbraid=0AAAAACwjFMQGO5oH4AJBpzPpYLOfz4kKH&gclid=EAIaIQobChMIxNa5uveekgMVBJjuAR2euQMSEAQYCCABEgJlTfD_BwE",
-            "timeAgo": "2026-01-22"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "104": {
-      "id": "019c49cd-c9ac-4bee-f000-000024fce95e",
-      "companyName": "The Pink Lily Boutique",
-      "companyWebsite": "https://pinklily.com",
-      "agentName": "Olivia",
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: The wait is over. Our Semi-Annual Sale just dropped! \n\nUp to 70% OFF 500+ styles!\n\npinklily.attn.tv/auQHw3bkm7vN \n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-01-11 18:32:38.147"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: Semi-annual sale: NEW STYLES ADDED!\n\nOver 600 styles up to 70% OFF!\n\nSHOP NOW:\npinklily.attn.tv/aB9AahXhT8J9 \n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-01-13 10:07:13.502"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: Wait...35% OFF! New arrivals + Blue Horizon Collection. \n\nDon't miss this-use code STYLE35\n\npinklily.attn.tv/aE1B74Efm6D3\n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-01-16 11:16:29.208"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: Final call! 35% OFF your purchase! \n\nNew styles to wear now, wear everywhere. Use code: STYLE35\n\npinklily.attn.tv/adFSWmuwY2Gk\n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-01-18 09:02:20.952"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: NEW graphics, better prices.\n\nTake 35% off ALL graphics!\n\nGrab yours now: pinklily.attn.tv/aggKrR9UzsL0 \n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-01-20 11:32:19.192"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: 35% OFF ALL tops! \n\nUse code TOPS35. \n\nLimited time! Don't miss your faves.\npinklily.attn.tv/a4ElyNB9UKzc \n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-01-21 09:02:43.757"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: Happy Hour! 40% OFF sitewide for YOU only! Ends TONIGHT\n\nUse JAN40 before it's gone \npinklily.attn.tv/aFl8caBJ-Rt0 \n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-01-22 14:03:20.470"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: Final call! Bigger carts = bigger savings\n\n40% off $80+ or 35% off the rest\n\npinklily.attn.tv/aqXFLeXt6sgk \n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-01-25 09:32:19.856"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: FIRST EVER Pink Lily Outlet Sale!\n\nUp to 70% OFF + extra 20% OFF with code EXTRA20\n\npinklily.attn.tv/a7IaceXlNCsN \n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-01-26 09:03:04.162"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: Final hours!\n\nThe Outlet Sale=our biggest discounts yet w/ prices you won't see again. Ends soon!\n\npinklily.attn.tv/aElQZDQR8UKG\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-02-01 09:02:44.507"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: Just dropped:all-new tops you'll live in! Plus-Buy one, get one 50% off.\n\nMeet your new favorites\npinklily.attn.tv/aJ6wM58_KuDo\n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-02-03 09:02:56.491"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: Winter Must Go! Up to 60% OFF 800+ styles. Layers, knits & cold-weather faves.\n\nShop now.\npinklily.attn.tv/akmu3YyroHk5\n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-02-04 09:02:40.574"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: Your Soft Reset starts now! New spring styles just dropped + 30% off w/ code: reset30\n\npinklily.attn.tv/ay4zJmbz6np6\n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-02-06 09:02:56.409"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: LAST CHANCE! 30% OFF w/ code: reset30 ends TONIGHT! \n\nShop our newest spring arrivals: \npinklily.attn.tv/aapM36rf236x\n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-02-08 14:03:26.999"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: FREE shipping on EVERY order!\n\nAdd to cart, we'll handle the rest.\n\nLimited time only: \npinklily.attn.tv/a8M25e7uJAc1 \n\nText stop to opt out",
-          "message_type": "system",
-          "date_time": "2026-02-10 18:01:39.636"
-        },
-        {
-          "message_media": [],
-          "message_text": "Extra may be taxes?",
-          "message_type": "customer",
-          "date_time": "2026-02-10 18:02:00.338"
-        },
-        {
-          "message_media": [],
-          "message_text": "Pink Lily: Thanks for getting in touch! I'd be happy to help! Could you give me more context of your concern so I can assist you? Are you trying to purchase an item and are being charged for taxes?",
-          "message_type": "agent",
-          "agent": "109840",
-          "message_id": "019c49cd-c9ac-4bee-f000-000024fce95e",
-          "date_time": "2026-02-10 18:05:49.264"
-        }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS",
-          "➜ For post purchase issues use PPI shortcut"
         ],
         "tone": [
           "Close the convo once the client takes over!"
-        ],
-        "templates": [
-          "if cx message \"CREATOR,\" use CR shortcut"
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://pinklily.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "All Or Nothing Black Multi Striped Fitted Square Neck Sweater - Extra Small",
-            "link": "https://pinklily.com/products/black-multi-striped-fitted-square-neck-sweater",
-            "timeAgo": "2023-10-16"
-          }
-        ]
-      },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "105": {
-      "id": "019c6cc5-ed50-4b45-f000-0000fb90af02",
-      "companyName": "Plank Mattress",
-      "companyWebsite": "https://plankmattress.com",
-      "agentName": "",
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "Plank Mattress: Welcome to Plank Mattress! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
           "message_type": "system",
-          "date_time": "2026-02-15 01:23:31.637"
+          "message_text": "Brighton: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/ebR",
+          "date_time": "2024-11-25 19:54:39.593",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Plank Mattress: Congrats! Your offer has been activated and can be redeemed here: https://plankmattress.attn.tv/a4Xpl7kWH8He \n\nI'm Sarah. I'm here to answer any and all questions, just text back for personal shopping assistance! \nLet me know if you need any help!\n",
           "message_type": "system",
-          "date_time": "2026-02-15 01:23:35.596"
+          "message_text": "Brighton: \nWelcome to Brighton! We\u0027re a brand with a lot of heart and we hope you\u0027ll enjoy hearing exciting news about our products and details about our artisan crafting. We look forward to connecting with you!\n\nShop Now:\nhttps://brighton.attn.tv/avwW90KGi4GY .",
+          "date_time": "2024-11-25 19:54:43.092",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Plank Mattress: PS Don't forget to add us to your phonebook!",
           "message_type": "system",
-          "date_time": "2026-02-15 01:23:36.691"
+          "message_text": "Brighton: Also, to ensure you receive all of our messages add us to your contacts!",
+          "date_time": "2024-11-25 19:54:44.104",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Plank Mattress: Your Plank Firm Luxe is waiting patiently to give you your best night's sleep. Come back to complete your purchase! https://plankmattress.attn.tv/amwdS46M3ykZ ",
           "message_type": "system",
-          "date_time": "2026-02-15 12:19:45.794"
+          "message_text": "Brighton: Let\u0027s Get Gifting! Start your shopping early with our Great Gifts $50 \u0026 under.\n\nShop Now:\nhttps://brighton.attn.tv/aTiSamRvVoXE .",
+          "date_time": "2024-11-27 11:05:42.145",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Plank Mattress: Final chance to save 30% 🚨 Presidents Day deals are coming to an end. Shop now: plankmattress.attn.tv/av_-sIgOn7T7 ",
           "message_type": "system",
-          "date_time": "2026-02-16 12:10:12.762"
+          "message_text": "Brighton: Happy Thanksgiving! We are grateful for your loyalty.\n\nStart your holiday shopping now! For a limited time the Hearts a Flutter Utility bag is our gift to you, free with a purchase of $125+.\n\nShop Now:\nhttps://brighton.attn.tv/agRkO5sResid .",
+          "date_time": "2024-11-28 10:10:29.575",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Plank Mattress: Just HOURS left to get 30% OFF Plank! It's time to get the sleep you deserve. Shop now for a limited time: plankmattress.attn.tv/aYKUNFH_HzQ1 ",
           "message_type": "system",
-          "date_time": "2026-02-16 18:35:06.943"
+          "message_text": "Brighton: It\u0027s Bright Friday Weekend! Discover our Holiday Surprises. Treat your loved ones to a unique gift from our curated selection of holiday-ready treasures.\n\nShop Now:\nhttps://brighton.attn.tv/a0P1qd-qunlj .",
+          "date_time": "2024-11-29 10:16:25.520",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Plank Mattress: Hey there! Your Plank Firm Luxe is waiting patiently to give you your best night's sleep.\n\nDid you have any questions I could help with?\n-Sarah\n https://plankmattress.attn.tv/afgr49Czq47G \n",
           "message_type": "system",
-          "date_time": "2026-02-17 12:39:05.670"
+          "message_text": "Brighton: Need a Great Gift Idea? Our bestsellers are sure to delight everyone on your list! From timeless classics to this season\u0027s must-haves, these customer favorites are guaranteed to make her holiday extra special.\n\nShop Now:\nhttps://brighton.attn.tv/ahmvw5XqxHMG .",
+          "date_time": "2024-11-29 16:15:41.724",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Yes, I'm requesting the delivery be between March. Second, and march fifth, as I will not be available before then.Is that okay",
+          "message_type": "system",
+          "message_text": "Brighton: FINAL DAYS! It\u0027s the last weekend to get the Hearts a Flutter Utility Bag as our gift to you, free with a purchase of $125+.\n\nShop Now:\nhttps://brighton.attn.tv/a13EGla5NiU3 .",
+          "date_time": "2024-11-30 10:05:51.754",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brighton: Deck the Halls with our Holiday Jewelry! From collectible bracelets to whimsical mini posts these styles add the perfect touch of holiday magic to every gift.\n\nShop Now:\nhttps://brighton.attn.tv/auvPbZQASnMP .",
+          "date_time": "2024-11-30 16:10:34.472",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brighton: Back in Stock! One of the top selling gifts this holiday, the Illumina Bow Necklace, has been restocked. There is limited inventory so don\u0027t delay.\n\nShop Now:\n https://brighton.attn.tv/aQ1mPH0R5i_v .",
+          "date_time": "2024-12-01 10:15:49.976",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brighton: Does she LOVE color? The Trust Your Journey Collection features vibrant European crystals in unique shapes and sizes. Perfect for gifting! \n\nShop Now:\nhttps://brighton.attn.tv/apIYA5eajRJx .",
+          "date_time": "2024-12-01 16:15:36.033",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brighton: It\u0027s Cyber Monday! For TODAY ONLY, the Celebrate Holiday Tote is our gift to you, free with a purchase of $150+. Online Only While Supplies Last.\n\nShop Now:\nhttps://brighton.attn.tv/aIe5Rogj6UGa .",
+          "date_time": "2024-12-02 10:06:52.843",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brighton: Cyber Monday Specials End Tonight! Don\u0027t miss out on our great gifts at $20 \u0026 $35. \n\nShop Now:\nhttps://brighton.attn.tv/aq52pciHQsDY .",
+          "date_time": "2024-12-02 16:06:04.062",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brighton: Did you see something you liked? Come back and see what\u0027s new! https://brighton.attn.tv/awLlukZovgVN .",
+          "date_time": "2024-12-03 14:32:12.785",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brighton: Give Her a Meaningful Message! Our Meridian Stretch Bracelets with messages such as \"grateful\" and \"faithful\" make a heartfelt gift.\n\nShop Now:\nhttps://brighton.attn.tv/aJIYh-sJrR0I .",
+          "date_time": "2024-12-05 11:35:24.484",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brighton: Thanks for texting us! Please respond with \u0027Service\u0027 for assistance.",
+          "date_time": "2024-12-05 14:48:00.130",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brighton: Introducing the Glittering Love Tote! It\u0027s our gift to you, free with a purchase of $150+. If you spend $250+ you will also receive our Hearts a Flutter Jewelry Case. For a Limited Time.\n\nLearn More:\nhttps://brighton.attn.tv/aGXStAHk_JUq .",
+          "date_time": "2024-12-07 11:10:30.842",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Brighton: Elevate your style with the Twinkle Link Bracelet! Add a touch of elegance to your collection. \n\nShop now: https://brighton.attn.tv/aQsWBBXjGn1q .",
+          "date_time": "2024-12-08 15:37:24.190",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-17 12:40:01.899"
+          "message_text": "Can i get a discount code",
+          "date_time": "2024-12-08 15:37:42.442",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Plank Mattress: I understand your concern! All products shipped from our manufacturing facility are delivered via national carrier, typically FedEx. Once a shipping label is created and products leave our facility, the final delivery date is at the discretion of the carrier. While we cannot guarantee that a product shipment will arrive on a customer's preferred date, we can delay a shipment to ensure it arrives after a specified date. Please feel free to reach out to our customer service team at 1-888-210-8751 so that we can best accommodate any special requests.",
+          "message_id": "0193a7fe-3309-47fd-f000-0000959e817e",
+          "message_text": "Brighton: Please check our website, brighton.com, for the latest promotions and deals. You\u0027ll be the first to hear about new offers!",
           "message_type": "agent",
-          "agent": "46498",
-          "message_id": "019c6cb6-a1ce-46e7-f000-0000fb90af02",
-          "date_time": "2026-02-17 12:47:14.287"
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-12-08 15:37:54.575"
         },
         {
-          "message_media": [],
-          "message_text": "So could you please do that?Delay the shipment",
           "message_type": "customer",
-          "date_time": "2026-02-17 12:48:42.010"
+          "message_text": "Can i get a discount code",
+          "date_time": "2024-12-08 15:38:29.546",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Plank Mattress: Absolutely! We can help with that. While we can't guarantee delivery on a specific preferred date, we can delay your shipment to ensure it arrives after the date you specify. Please reach out to our customer service team at 1-888-210-8751 with the details, and we'll make sure your request is accommodated. Let me know if there's anything else I can help you with.",
+          "message_id": "0193a7fe-e6cf-4b12-f000-0000959e817e",
+          "message_text": "Brighton: Please check our website at brighton.com for the latest promotions and deals. You\u0027ll be the first to hear about new offers!",
           "message_type": "agent",
-          "agent": "109972",
-          "message_id": "019c6cc5-ed50-4b45-f000-0000fb90af02",
-          "date_time": "2026-02-17 13:03:56.654"
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-12-08 15:38:40.597"
         }
-      ],
-      "notes": {},
+      ]
+    },
+    "102": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "019170e8-93c2-4628-f000-00009375d0a9",
       "rightPanel": {
+        "coupons": [
+          {
+            "coupon": "TEXT15",
+            "status": "ACTIVE"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://plankmattress.com",
+          "value": "https://kathykuohome.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "item": "Plank Firm",
-            "link": "https://plankmattress.com/products/plank",
-            "timeAgo": "2026-02-17"
+            "link": "https://www.kathykuohome.com/Product/Detail/50763-Tommy-Industrial-Loft-Off-White-Upholstered-Black-Iron-Frame-Accent-Chair",
+            "item": "Tommy Industrial Loft Off White Upholstered Black Iron Frame Accent Chair",
+            "timeAgo": "2024-08-20"
           },
           {
-            "item": "Plank Firm Luxe",
-            "link": "https://plankmattress.com/products/plank-hybrid",
-            "timeAgo": "2026-02-17"
+            "link": "https://www.kathykuohome.com/Product/Detail/141253-Jacoby-Mid-Century-Modern-Palermo-Cognac-Leather-Wood-Iron-Legs-Arm-Chair",
+            "item": "Jacoby Mid Century Modern Palermo Cognac Leather Wood Iron Legs Arm Chair",
+            "timeAgo": "2024-08-20"
           },
           {
-            "item": "Plank Firm Luxe",
-            "link": "https://plankmattress.com/products/plank-hybrid/queen-no",
-            "timeAgo": "2026-02-17"
+            "link": "https://www.kathykuohome.com/Product/Detail/145124-Francine-French-Country-Natural-Floral-Patterned-Jute-Rug-x",
+            "item": "Francine French Country Natural Floral Patterned Jute Rug - 5\u0027x8\u0027",
+            "timeAgo": "2024-08-15"
           },
           {
-            "item": "Plank Firm Luxe",
-            "link": "https://plankmattress.com/products/plank-hybrid",
-            "timeAgo": "2026-02-17"
+            "link": "https://www.kathykuohome.com/Product/Detail/145122-Francine-French-Country-Natural-Floral-Patterned-Jute-Rug-x?gad_source=1\u0026gbraid=0AAAAADwTMm-cfBhkU9kN9acGrDlxX2iOw\u0026gclid=Cj0KCQjwq_G1BhCSARIsACc7NxoMD_KroApdogkB92ilG7N7aaQtavdamzOgEiZN4K4uaRhEAiG2BPwaAmNdEALw_wcB",
+            "item": "Francine French Country Natural Floral Patterned Jute Rug - 3\u00276\"x5\u00276\"",
+            "timeAgo": "2024-08-15"
           },
           {
-            "item": "Plank Firm Luxe",
-            "link": "https://plankmattress.com/products/plank-hybrid?irgwc=1&afsrc=1&irclickid=1mTwiT0RuxyZRdi0yhQwAxeEUkuxqTyHPQ7qTM0&utm_source=impact&utm_content=1316065&utm_medium=1295044&ir_campaignid=14794&ir_adid=1295044&ir_partnerid=1316065",
-            "timeAgo": "2026-02-17"
-          }
-        ],
-        "orders": [
-          {
-            "orderNumber": "6508312395912",
-            "orderDate": "2026-02-17",
-            "items": [
-              {
-                "name": "Luxury Cooling Mattress Protector",
-                "price": 129,
-                "productLink": "https://plankmattress.myshopify.com/products/luxury-cooling-mattress-protector"
-              },
-              {
-                "name": "Plank Firm",
-                "price": 1332,
-                "productLink": "https://plankmattress.myshopify.com/products/plank"
-              }
-            ],
-            "total": 1461,
-            "date_time": "2026-02-17 01:33:28.245"
+            "link": "https://www.kathykuohome.com/Product/Detail/96496-Juliska-Natural-Bamboo-Rim-White-Ceramic-Cereal-Bowl",
+            "item": "Juliska Natural Bamboo Rim White Ceramic Cereal Bowl",
+            "timeAgo": "2024-08-13"
           }
         ]
       },
-      "escalation_preferences": [],
+      "companyWebsite": "https://kathykuohome.com",
+      "companyName": "Kathy Kuo Home",
+      "notes": {
+        "escalate": [
+          "Esc inquiries about items not on the site",
+          "ESC if the cx missed a sale \u0026 wants to take advantage of it",
+          "ESC if the customer is asking for a discount and we don\u0027t have one",
+          "If cx is looking for general recommendations use LFR shortcut and ESC"
+        ],
+        "templates": [
+          "If cx is building a new home, interested in refurnishing their entire home or rooms in their home, use the IDS shortcut",
+          "If cx is shopping for a client use SFC shortcut",
+          "Any convo without a positive outcome (out of stock, not on sale, not shipping in time), use DSS shortcut"
+        ],
+        "dos_and_donts": [
+          "For product-specific delivery time-frame inquiries always check the product page for delivery info and share that with the cx"
+        ]
+      },
       "blocklisted_words": [
-        "AI"
+        
       ],
-      "has_shopify": true
+      "escalation_preferences": [
+        "Shipping questions",
+        "Discount code errors",
+        "Exchanges and returns",
+        "Lead time questions",
+        "Stock questions",
+        "Price matching",
+        "Angry or dissatisfied customer"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/fx8",
+          "date_time": "2024-08-07 00:43:46.124",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: You\u0027re on the list! Click here to enjoy your 15% OFF coupon: https://kathykuohome.attn.tv/aO1rG4OacyPg .",
+          "date_time": "2024-08-07 00:43:51.116",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Save our contact info for exclusive offers and updates!",
+          "date_time": "2024-08-07 00:43:51.574",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Got your eye on this? We promise you and your home won\u0027t regret it! Shop now: https://kathykuohome.attn.tv/aC9BBTBCa90t .",
+          "date_time": "2024-08-07 12:39:47.158",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Hey there, this is Sarah. Thanks for checking out our site! https://kathykuohome.attn.tv/a3zYTTlgmwxA . Are you working on a home design project we can help you with?",
+          "date_time": "2024-08-07 12:42:36.463",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Need help designing your dream home? Our expert team is here to help. Schedule a FREE phone consultation: https://kathykuohome.attn.tv/apCMMBj3-sdW .",
+          "date_time": "2024-08-11 15:42:53.032",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Reminder! You can SAVE 15% OFF furniture \u0026 decor with code TEXT15. Exclusions apply.\n\nShop our latest in-stock: https://kathykuohome.attn.tv/aSq_1r5wzdSV .\n",
+          "date_time": "2024-08-12 15:42:56.271",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Got your eye on this? We promise you and your home won\u0027t regret it! Shop now: https://kathykuohome.attn.tv/aQOCM6hdOLG1 .",
+          "date_time": "2024-08-13 15:23:53.967",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Hi, I\u0027m Sarah, your personal shopper for Kathy Kuo Home. Do you need help finding that perfect piece? \n\nhttps://kathykuohome.attn.tv/a6E-9TOb7rka .",
+          "date_time": "2024-08-14 15:27:29.335",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Hey there, this is Sarah. Thanks for checking out our site! https://kathykuohome.attn.tv/a7SMNp3NRtEq . Are you working on a home design project we can help you with?",
+          "date_time": "2024-08-15 15:24:06.453",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Hurry! Your 15% OFF welcome offer expires tonight. Use code TEXT15 to save now: https://kathykuohome.attn.tv/a-cT4xTYvPOn .\nExclusions apply.",
+          "date_time": "2024-08-17 15:43:06.397",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: 2 Days Only! Subscribers get 20% OFF end of summer savings + free shipping with code AUG2024. Shop now: https://kathykuohome.attn.tv/aiZy9o2RKLHO ",
+          "date_time": "2024-08-19 11:40:45.036",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Last Day! Your 20% Off end of summer subscriber savings expire today. Use code AUG2024 on styles you love: https://kathykuohome.attn.tv/a5SEgYqt__Qm ",
+          "date_time": "2024-08-20 11:55:39.478",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Kathy Kuo: Psst... there\u0027s something in your cart that needs another look 👀 Shop Tommy Industrial Loft Off White Upholstered Black Iron Frame Accent Chair now \u003e\u003e https://kathykuohome.attn.tv/aYu1nnLTWWR7 .\n\nText back if you have a question! - Sarah ",
+          "date_time": "2024-08-20 12:08:51.025",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi Sarah. I had a welcome code but it would not apply to this order last night when I was trying to place the order? I looked at the vendors on your website and did not see that this brand was excluded from promotions. Do you know why it would not have taken the code? This will be my first order with your site.",
+          "date_time": "2024-08-20 13:30:58.726",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019170da-dfd2-4d7b-f000-00009375d0a9",
+          "message_text": "Kathy Kuo: Sorry to hear that! We have quite a few vendors that don\u0027t participate in any of our sales so our codes won\u0027t work on their items. Our codes also won\u0027t work if an item is already discounted as discounts may not overlap. Mind sending a screenshot of your cart, please? Happy to check on this for you. ",
+          "message_type": "agent",
+          "agent": "50271",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-20 13:34:38.048"
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Why doesn\u0027t my discount work on some items?\"; last updated: 2022-10-18 00:34:34.308",
+          "date_time": "2024-08-20 13:49:36.077",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019170e8-93c2-4628-f000-00009375d0a9",
+          "message_text": "Kathy Kuo: Thanks for the screenshot! We actually have quite a few vendors that don\u0027t participate in any of our sales so our codes won\u0027t work on their items. Our codes also won\u0027t work if an item is already discounted as discounts may not overlap. I hope this clarifies! Let me know if you have any more questions.",
+          "message_type": "agent",
+          "agent": "45474",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-20 13:49:36.079"
+        }
+      ]
+    },
+    "103": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "01907c64-7a34-4ad9-f000-0000451c01cc",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://famousfootwear.com",
+          "date": ""
+        },
+        "coupons": [
+          {
+            "status": "INACTIVE",
+            "description": "batch 1 has 1Mcodes in file. codes are online only codes.  Codes expire 1/30/2023",
+            "coupon": "SMSWEL22NLBJUALC"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "codes valid in-store only.  same base promo set up as online welcome codes. codes expire 1/30/2023",
+            "coupon": "920201237725NLDVGMZW"
+          }
+        ]
+      },
+      "companyWebsite": "https://famousfootwear.com",
+      "companyName": "Famous Footwear",
+      "notes": {
+        "escalate": [
+          "🚨 DO NOT ESCALATE - send to CS🚨"
+        ],
+        "dos_and_donts": [
+          "Close the convo once the client takes over!"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Starting now! Up to 25% off Nike, Crocs, Converse \u0026 plenty more of your favorite brands. Get something for everyone: http://famoussms.co/afHJMWF7CELI . ",
+          "date_time": "2024-06-07 14:30:36.273",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Today only! Take an extra 20% off online during the Sunday Funday Sale: http://famoussms.co/agH0kNW-sZz4 . ",
+          "date_time": "2024-06-09 11:05:42.367",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Don\u0027t miss the Sunday Funday Sale! An extra 20% off online ends tonight: http://famoussms.co/am7VL7wLBG5e . ",
+          "date_time": "2024-06-09 18:01:35.007",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Starting today! Take up to an extra $20 off: http://famoussms.co/aRccGbPEZ9pC \n\n+ Earn $5 Bonus Reward Cash when you pick up in-store.",
+          "date_time": "2024-06-13 14:02:20.591",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Up to 60% off clearance starts NOW! Get something for everyone: http://famoussms.co/aDsi5lHK_c_W . ",
+          "date_time": "2024-06-21 14:02:40.534",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Cue the fireworks! BOGO 50% off clearance in-store and online for a limited time: http://famoussms.co/a14yQdLlKxqM . ",
+          "date_time": "2024-06-29 14:01:55.411",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Celebration time! Save up to 25% on Crocs \u0026 HEYDUDE right now: http://famoussms.co/ayUnQRF0n5uv . ",
+          "date_time": "2024-07-03 14:01:29.471",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FAMOUS: Hey there! Noticed you were browsing.\n\nFancy a peek at our most loved styles? http://famoussms.co/aRGiGjOWef88 .",
+          "date_time": "2024-07-03 21:35:37.543",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I can only use N and you don\u0027t have many",
+          "date_time": "2024-07-04 00:07:21.493",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01907c32-abe6-4fbd-f000-0000451c01cc",
+          "message_text": "FAMOUS: We have the Classic Crocs Flip Flop Sandal in stock. Check them out here:\n- Juice Pink: famousfootwear.com\n- Black: famousfootwear.com",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-04 01:23:33.997"
+        },
+        {
+          "message_id": "01907c37-45e6-462f-f000-0000451c01cc",
+          "message_text": "FAMOUS: You can find the Classic Crocs Flip Flop Sandal in Juice Pink here: famousfootwear.com and in Black here: famousfootwear.com.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-04 01:28:35.566"
+        },
+        {
+          "message_id": "01907c40-7adc-44da-f000-0000451c01cc",
+          "message_text": "FAMOUS: We have the Classic Crocs Flip Flop Sandal in stock. Check them out here:\n- Juice Pink: famousfootwear.com\n- Black: famousfootwear.com",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-04 01:38:38.949"
+        },
+        {
+          "message_id": "01907c64-7a34-4ad9-f000-0000451c01cc",
+          "message_text": "FAMOUS: We have the Classic Crocs Flip Flop Sandal in stock. Check them out here:\n- Juice Pink: famousfootwear.com\n- Black: famousfootwear.com",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-04 02:17:58.075"
+        }
+      ]
+    },
+    "104": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "018f5e5a-853b-4fac-f000-000078d0e161",
+      "rightPanel": {
+        "orders": [
+          {
+            "currency": "USD",
+            "total": 119,
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      57,
+                      62
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "link": "https://hellobonafide.com/1185906751/orders/56b7b04a12602eb138ab6f360f4b1813/authenticate?key=8193645798151ef073489983c6cdcba5",
+            "orderDate": "2024-01-02",
+            "discount_amount": 0,
+            "orderNumber": "6170255",
+            "date_time": "2024-01-02 21:53:10.618"
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-01-02",
+            "coupon": "NEW20",
+            "items": [
+              {
+                "price": [
+                  62
+                ],
+                "productLink": "https://jds-therapeutics.myshopify.com/products/revaree",
+                "name": "Revaree"
+              }
+            ],
+            "date_time": "2024-01-02 21:47:58.622",
+            "discount_amount": 0,
+            "orderNumber": "5533205266495",
+            "total": 228
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2024-01-02",
+            "coupon": "NEW20",
+            "items": [
+              {
+                "price": [
+                  57
+                ],
+                "productLink": "https://jds-therapeutics.myshopify.com/products/ristela",
+                "name": "Ristela"
+              }
+            ],
+            "date_time": "2024-01-02 21:47:58.612",
+            "discount_amount": 0,
+            "orderNumber": "5533205266495",
+            "total": 228
+          }
+        ],
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "General SMS Discount",
+            "coupon": "BONSMSw0fcTt"
+          },
+          {
+            "coupon": "SMS20",
+            "status": "ACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://hellobonafide.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://hellobonafide.com/products/revaree",
+            "item": "Revaree",
+            "timeAgo": "2024-04-19"
+          },
+          {
+            "item": "Revaree",
+            "timeAgo": "2024-01-20"
+          },
+          {
+            "item": "Ristela",
+            "timeAgo": "2024-01-02"
+          },
+          {
+            "item": "Ristela",
+            "timeAgo": "2024-01-02"
+          },
+          {
+            "item": "Ristela",
+            "timeAgo": "2024-01-02"
+          }
+        ]
+      },
+      "companyWebsite": "https://hellobonafide.com",
+      "companyName": "Bonafide",
+      "notes": {
+        "escalate": [
+          "ESC all medical/scientific inquiries immediately",
+          "ESC return requests that are past the 30-day policy"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "templates": [
+          "For exact measurements of ingredients, use \"MOI\" shortcut"
+        ],
+        "dos_and_donts": [
+          "When sending the quiz - always suggest a specific product if customers mention a certain symptom"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Hair and skin changes during menopause deserve attention. Here\u0027s a list of vitamins for hair and skin health. https://bonafide.attn.tv/l/eJp/pY3e0 ",
+          "date_time": "2024-04-10 13:02:25.282",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Do you know the three E\u0027s that impact your skin during menopause? https://bonafide.attn.tv/l/TXE/pY3e0 ",
+          "date_time": "2024-04-17 13:02:22.098",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Relief from vaginal dryness is around the corner with Revaree! Use code BONSMSw0fcTt for 20% your first subscription order. https://bonafide.attn.tv/sl/AcWxbMnE ",
+          "date_time": "2024-04-19 17:26:16.170",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: How to reverse thinning hair after menopause. https://bonafide.attn.tv/l/A3G/pY3e0 ",
+          "date_time": "2024-04-24 13:02:57.346",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Causes, natural remedies, and treatments for sleepless nights during menopause. https://bonafide.attn.tv/l/glO/pY3e0 ",
+          "date_time": "2024-05-05 15:03:11.902",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Bonafide: Hi Linda, this is Sarah! Thanks for checking out our site! https://bonafide.attn.tv/ajVXlRAu2ukQ .\n\nAny questions about Bonafide or our products?",
+          "date_time": "2024-05-09 11:42:33.084",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No when are you going to offer so sales or discounts",
+          "date_time": "2024-05-09 13:10:57.528",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f5e5a-853b-4fac-f000-000078d0e161",
+          "message_text": "Bonafide: You can use SARAH20 for 20% off any subscription products. Check it out here: https://bonafide.attn.tv/sl/EaSdzw7y\n",
+          "message_type": "agent",
+          "agent": "82432",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-09 13:15:41.766"
+        }
+      ]
+    },
+    "105": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "01991707-4e18-4a74-f000-0000d4dee61a",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "value": "100",
+            "coupon": "GETCOZY100"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "session $50 offer with a $100 minimum",
+            "value": "50",
+            "coupon": "7N29KZ"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://cozyearth.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-08-29",
+            "items": [
+              {
+                "price": [
+                  328
+                ],
+                "productLink": "https://cozyearth2.myshopify.com/products/bamboo-sheet-set",
+                "name": "Bamboo Sheet Set - Driftwood / King"
+              }
+            ],
+            "trackingLink": "https://track.amazon.com/tracking/TBA323989559243",
+            "link": "https://cozyearth.com/21143697/orders/d584ca27d1bb1df6315ac35d8dd6e045/authenticate?key=c306ae5f64b72bfacb89b251655ce709",
+            "date_time": "2025-08-29 14:03:41.947",
+            "discount_amount": 0,
+            "orderNumber": "2762048",
+            "order_tracking_link": "https://track.amazon.com/tracking/TBA323989559243",
+            "total": 213.14
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-08-29",
+            "coupon": "JINGER",
+            "items": [
+              {
+                "price": [
+                  328
+                ],
+                "productLink": "https://cozyearth2.myshopify.com/products/bamboo-sheet-set",
+                "name": "Bamboo Sheet Set"
+              }
+            ],
+            "trackingLink": "https://track.amazon.com/tracking/TBA323989559243",
+            "link": "https://cozyearth.com/21143697/orders/d584ca27d1bb1df6315ac35d8dd6e045/authenticate?key=c306ae5f64b72bfacb89b251655ce709",
+            "date_time": "2025-08-29 14:03:41.921",
+            "discount_amount": 0,
+            "orderNumber": "2762048",
+            "order_tracking_link": "https://track.amazon.com/tracking/TBA323989559243",
+            "total": 213.14
+          }
+        ]
+      },
+      "companyWebsite": "https://cozyearth.com",
+      "companyName": "Cozy Earth",
+      "notes": {
+        "escalate": [
+          "ESC all MyFitness pall App inquiries"
+        ],
+        "dos_and_donts": [
+          "Don\u0027t share sale end dates with customers"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Welcome to Cozy Earth! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2025-08-29 01:35:27.136",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Congrats on $100 Off! Use code GETCOZY100 at checkout. *only on orders over $250. \n\nHurry...offer expires in 48 hours!\ncozyearth.attn.tv/asEPNtEEYepp",
+          "date_time": "2025-08-29 01:35:30.087",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Thank you for your purchase! Your order number is 2762048. View more information about your order here: https://cozyearth.attn.tv/aCm5UQNGgXGK .",
+          "date_time": "2025-08-29 11:04:19.501",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey Sheila! Thrilled to have you as an Enthusiast! Check out your exclusive perks now: cozyearth.attn.tv/anvz9L8pI3UZ \n\nText back if you have any questions!\n\nKeaton\nHead of Cozy Earth Membership",
+          "date_time": "2025-08-29 15:39:08.901",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Keaton here! Join our Cozy Earth Membership for $149/year! Get 50% off new launches + a free jogger pant worth more than the fee. Save from day one with exclusive deals and perks!\n\nText back if you have any questions!|\n\ncozyearth.attn.tv/a_Bcd_AASMES ",
+          "date_time": "2025-09-01 00:29:25.309",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hi! We can\u0027t wait for you to try your new Bamboo Sheet Set - Driftwood / King!\n\nFind answers to common questions below or respond to this text \u0026 we\u0027ll be here to help right away!\ncozyearth.attn.tv/ar2kGcW3nBPh ",
+          "date_time": "2025-09-02 00:15:47.078",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey Sheila! Keaton here again, Just a reminder about our $149/year membership-includes a $165 welcome gift, $75 store credit, monthly discounts, seasonal gifts, and 20% cashback on every purchase. \n\nReply with any questions or click below to learn more. \ncozyearth.attn.tv/aLYLJEnupbGm ",
+          "date_time": "2025-09-03 00:44:32.615",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Keaton, any chance you could check on my order?  I\u0027m having them sent to my son as a gift and am trying to get a tracking number without getting the app. Thank you so much.",
+          "date_time": "2025-09-04 19:16:44.956",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01991707-4e18-4a74-f000-0000d4dee61a",
+          "message_text": "Cozy Earth: Thanks for reaching out. What a sweet gift! I am sure your son would appreciate this sweet gesture.\nYou can check the status of your order here - https://cozyearth.attn.tv/aZDR5tOspNAU\nI hope it gets there in time and I hope this helps. ",
+          "message_type": "agent",
+          "agent": "109614",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-09-04 19:19:38.802"
+        }
+      ]
     }
   }
 }

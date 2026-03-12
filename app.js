@@ -243,13 +243,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         return fallbackMatch && fallbackMatch.scenarioKey ? String(fallbackMatch.scenarioKey) : '';
     }
 
-    function hasRuntimeScenarioForSendId(sendId) {
-        const target = String(sendId || '').trim();
-        if (!target) return false;
-        const index = runtimeScenariosIndex;
-        return !!(index && index.byId && index.byId[target]);
-    }
-
     function isCsvScenarioMode() {
         return false;
     }
@@ -258,14 +251,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     function getCurrentUnlockedScenario() {
         const unlockedScenario = localStorage.getItem('unlockedScenario');
         return unlockedScenario ? parseInt(unlockedScenario) : 1; // Default to scenario 1
-    }
-    
-    function unlockNextScenario() {
-        const currentUnlocked = getCurrentUnlockedScenario();
-        const nextScenario = currentUnlocked + 1;
-        localStorage.setItem('unlockedScenario', nextScenario);
-        console.log(`Unlocked scenario ${nextScenario}`);
-        return nextScenario;
     }
     
     function canAccessScenario(scenarioNumber) {
@@ -843,12 +828,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         assignmentPrefetchQueue = [];
         assignmentPrefetchQueueSet = {};
         assignmentPrefetchActiveCount = 0;
-    }
-
-    function getCachedAssignmentResponse(params) {
-        const cacheKey = getAssignmentResponseCacheKey(params);
-        if (!cacheKey) return null;
-        return assignmentPayloadCache[cacheKey] || null;
     }
 
     function setCachedAssignmentResponse(params, response) {
@@ -3220,15 +3199,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 appendLinkifiedText(element, text);
                 return;
             }
-
-            const prefixEl = document.createElement('span');
-            prefixEl.className = 'message-company-prefix';
-            prefixEl.textContent = prefixCandidate;
-            element.appendChild(prefixEl);
-
-            if (text.length > companyName.length) {
-                appendLinkifiedText(element, text.slice(companyName.length));
-            }
+            const contentWithoutPrefix = text
+                .slice(companyName.length)
+                .replace(/^[:,]\s*/, '');
+            appendLinkifiedText(element, contentWithoutPrefix);
         };
 
         const appendMedia = (container, mediaList) => {
@@ -3324,19 +3298,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const requiredWidth = Math.ceil(dateEl.scrollWidth + 32); // 16px inset on both sides
                 if (requiredWidth <= baseWidth) return;
 
-                const growBy = requiredWidth - baseWidth;
                 bubble.style.maxWidth = 'none';
                 bubble.style.width = `${requiredWidth}px`;
                 bubble.style.minWidth = `${requiredWidth}px`;
-
-                if (bubble.classList.contains('received')) {
-                    // Customer: grow naturally to the right from left alignment.
-                    bubble.style.marginLeft = '';
-                    bubble.style.marginRight = '';
-                } else if (bubble.classList.contains('sent')) {
-                    // System/agent: keep inner/left edge stable and grow outward (right).
-                    bubble.style.marginRight = `-${growBy}px`;
-                }
+                // Keep expanded bubbles inside the chat viewport.
+                bubble.style.marginLeft = '';
+                bubble.style.marginRight = '';
             });
         };
 
@@ -3442,7 +3409,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log('Loading scenario:', scenarioNumber, scenario);
         
         // Update page title
-        document.title = `Training - Scenario ${scenarioNumber}`;
+        document.title = 'Concierge QA System';
         
         // Build conversation from scenario mapping or preloaded array
         let conversation = buildConversationFromScenario(scenario);
@@ -3511,6 +3478,135 @@ document.addEventListener('DOMContentLoaded', async () => {
             rowElement.style.display = 'flex';
         };
 
+        const renderCouponCodes = (scenarioObject) => {
+            const couponContainer = document.getElementById('couponCodesContainer');
+            if (!couponContainer) return;
+            couponContainer.innerHTML = '';
+
+            const rightPanelData =
+                scenarioObject && scenarioObject.rightPanel && typeof scenarioObject.rightPanel === 'object'
+                    ? scenarioObject.rightPanel
+                    : {};
+
+            const couponKeys = Object.keys(rightPanelData)
+                .filter((k) => /^coupons(_\d+)?$/.test(k))
+                .sort((a, b) => {
+                    const na = a === 'coupons' ? 1 : parseInt(a.split('_')[1] || '0', 10);
+                    const nb = b === 'coupons' ? 1 : parseInt(b.split('_')[1] || '0', 10);
+                    return na - nb;
+                });
+
+            const readText = (obj, keys) => {
+                for (const key of keys) {
+                    const value = obj && Object.prototype.hasOwnProperty.call(obj, key) ? obj[key] : '';
+                    const text = String(value || '').trim();
+                    if (text) return text;
+                }
+                return '';
+            };
+
+            const normalizeCouponStatus = (rawValue, redeemedDate) => {
+                const lowered = String(rawValue || '').trim().toLowerCase();
+                if (['active', 'enabled', 'available'].includes(lowered)) return 'active';
+                if (['inactive', 'disabled', 'expired'].includes(lowered)) return 'inactive';
+                if (['used', 'redeemed', 'true', '1', 'yes', 'y'].includes(lowered)) return 'inactive';
+                if (['unused', 'not used', 'false', '0', 'no', 'n'].includes(lowered)) return 'active';
+                if (lowered.includes('unuse') || lowered.includes('not used')) return 'active';
+                if (lowered.includes('use') || lowered.includes('redeem')) return 'inactive';
+                if (String(redeemedDate || '').trim()) return 'inactive';
+                return '';
+            };
+
+            const pushCouponCard = (couponRaw) => {
+                if (!couponRaw || typeof couponRaw !== 'object') return;
+                const coupon = couponRaw;
+                const couponCode = readText(coupon, ['coupon', 'code', 'promo_code', 'promoCode']);
+                const rawStatus = readText(coupon, [
+                    'redemption_status',
+                    'redemptionStatus',
+                    'status',
+                    'redeemable',
+                ]);
+                const redeemedDate = readText(coupon, [
+                    'redeemed',
+                    'redeemed_at',
+                    'redeemedAt',
+                    'redemption_date',
+                    'redemptionDate',
+                ]);
+                const name = readText(coupon, ['name', 'title']);
+                const description = readText(coupon, ['description', 'details']);
+                const status = normalizeCouponStatus(rawStatus, redeemedDate);
+                const titleText = couponCode || name || 'Coupon';
+
+                if (!couponCode && !name && !description && !status && !redeemedDate) return;
+
+                const card = document.createElement('div');
+                card.className = 'coupon-code-card';
+
+                const header = document.createElement('div');
+                header.className = 'coupon-code-header';
+
+                const titleWrap = document.createElement('div');
+                titleWrap.className = 'coupon-code-title-wrap';
+
+                const titleRow = document.createElement('div');
+                titleRow.className = 'coupon-code-title-row';
+
+                const title = document.createElement('div');
+                title.className = 'coupon-code-title';
+                title.textContent = titleText;
+                titleRow.appendChild(title);
+
+                if (status) {
+                    const statusTag = document.createElement('span');
+                    statusTag.className = `coupon-code-status coupon-code-status--${status}`;
+                    statusTag.textContent = status;
+                    titleRow.appendChild(statusTag);
+                }
+
+                titleWrap.appendChild(titleRow);
+
+                if (redeemedDate) {
+                    const redeemedDateDisplay = redeemedDate.replace(/:\d{2}(?:\.\d{3})?$/, '');
+                    const redeemedLine = document.createElement('div');
+                    redeemedLine.className = 'coupon-code-redeemed';
+                    redeemedLine.textContent = `Coupon redeemed on ${redeemedDateDisplay}`;
+                    titleWrap.appendChild(redeemedLine);
+                }
+                header.appendChild(titleWrap);
+                card.appendChild(header);
+
+                if (couponCode && couponCode !== titleText) {
+                    const codeLine = document.createElement('div');
+                    codeLine.className = 'coupon-code-line coupon-code-line--code';
+                    codeLine.textContent = couponCode;
+                    card.appendChild(codeLine);
+                }
+
+                if (description) {
+                    const descLine = document.createElement('div');
+                    descLine.className = 'coupon-code-line';
+                    descLine.textContent = description;
+                    card.appendChild(descLine);
+                }
+
+                couponContainer.appendChild(card);
+            };
+
+            let renderedCount = 0;
+            couponKeys.forEach((key) => {
+                const block = rightPanelData[key];
+                const items = Array.isArray(block) ? block : [block];
+                items.forEach((coupon) => {
+                    pushCouponCard(coupon);
+                    if (couponContainer.children.length > renderedCount) renderedCount += 1;
+                });
+            });
+
+            couponContainer.style.display = renderedCount > 0 ? '' : 'none';
+        };
+
         const blocklistedWords = normalizeScenarioLabelList(
             scenario.blocklisted_words != null ? scenario.blocklisted_words : scenario.blocklistedWords
         );
@@ -3520,6 +3616,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         renderBadges(blocklistedWordsRow, blocklistedWords);
         renderBadges(escalationPreferencesRow, escalationPreferences);
+        renderCouponCodes(scenario);
         
         if (phoneElement) phoneElement.textContent = scenario.customerPhone || '';
         else console.error('customerPhone element not found');
@@ -3660,21 +3757,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             titleSpan.textContent = promo.title || 'Promotion';
             titleRow.appendChild(titleSpan);
 
-            // Active badge if active_status truthy or equals "active"
-            const status = (promo.active_status ?? '').toString().toLowerCase();
-            if (promo.active_status === true || status === 'active' || status === 'true' || status === '1') {
-                const badge = document.createElement('div');
-                badge.className = 'active-badge';
-                badge.textContent = 'Active';
-                titleRow.appendChild(badge);
-            }
-
             const desc = document.createElement('div');
             desc.className = 'promotions-description';
 
             contentLines.forEach(line => {
                 const p = document.createElement('p');
-                p.textContent = `• ${line}`;
+                p.textContent = line;
                 desc.appendChild(p);
             });
 
@@ -4025,7 +4113,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Helper function to get current timer time
     function getCurrentTimerTime() {
         const timerElement = document.getElementById('sessionTimer');
-        return timerElement ? timerElement.textContent : '00:00';
+        return timerElement ? timerElement.textContent : '0';
     }
 
     // Function to send data to Google Sheets with custom timer value
@@ -4093,15 +4181,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
             return false;
         }
-    }
-    
-    // Get the last customer message for context
-    function getLastCustomerMessage() {
-        const customerMessages = document.querySelectorAll('.message.received .message-content p');
-        if (customerMessages.length > 0) {
-            return customerMessages[customerMessages.length - 1].textContent;
-        }
-        return 'No customer message found';
     }
     
     // Set the agent name from localStorage if available
@@ -4528,11 +4607,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const currentTime = Date.now();
             const elapsedTime = Math.floor((currentTime - timerStartTime) / 1000); // in seconds
             
-            const minutes = Math.floor(elapsedTime / 60);
-            const seconds = elapsedTime % 60;
-            
-            const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            timerElement.textContent = formattedTime;
+            timerElement.textContent = String(elapsedTime);
         }
 
         // Clear any existing timer interval
@@ -4903,7 +4978,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const notesRequiredIndicator = customForm.querySelector('h4 .required');
 
         function shouldRequireNotes() {
-            return true;
+            return false;
         }
 
         function updateNotesRequirementUI() {
@@ -5055,16 +5130,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             const zeroTolSel = document.getElementById('zeroTolerance');
             const zeroToleranceLabel = (zeroTolSel && zeroTolSel.value) ? zeroTolSel.options[zeroTolSel.selectedIndex].text : '';
             const notesVal = formData.get('notes') || '';
-            
-            // Validate required fields
-            const notesRequiredNow = updateNotesRequirementUI();
-            if (notesRequiredNow && !notesVal.trim()) {
-                if (formStatus) { 
-                    formStatus.textContent = 'Notes field is required.'; 
-                    formStatus.style.color = '#e74c3c'; 
-                }
-                return;
-            }
             
             const agentUsername = localStorage.getItem('agentName') || 'Unknown Agent';
             const agentEmail = localStorage.getItem('agentEmail') || '';

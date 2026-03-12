@@ -1,0 +1,1224 @@
+{
+  "version": 1,
+  "chunk": "chunk_0106",
+  "scenarios": {
+    "526": {
+      "agentName": "Sarah",
+      "has_shopify": true,
+      "id": "0196b13a-5af0-494f-f000-0000c2d20870",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "CONCIERGE",
+            "content": [
+              "• 10% off discount code\n\n• Only share if cx receive a message asking if they want a 10% code"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 3268544624,
+            "company_id": 3311,
+            "coupon_url": "https://skullshaver.myshopify.com/discount/HELLOhuPGGG?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=Welcome10percent",
+            "name": "HELLO - Welcome 10% off $100+",
+            "coupon": "HELLOhuPGGG",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://skullshaver.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://skullshaver.com",
+      "companyName": "Skull Shaver",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "If cx receive an automated message asking if they want a code, share CONCIERGE"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Skull Shaver: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2025-05-07 20:49:43.074",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Skull Shaver: Welcome to Skull Shaver! You\u0027ve taken the first step to upgrading your shaving game! We\u0027ll be sure to keep you updated on upcoming promotions, product launches and exciting developments in the world of Skull Shaver.\n\nGet started now and save 10% off $100+. Your welcome code is: HELLOhuPGGG\n\nAutomatically apply it \u0026 shop now: https://skullshaver.attn.tv/aAv1SYDfnmYB",
+          "date_time": "2025-05-07 20:49:47.077",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Skull Shaver: Also, don\u0027t forget to save our contact!",
+          "date_time": "2025-05-07 20:49:48.459",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Skull Shaver: Hey there, Sarah here! \n\nI noticed you eyeing our Pitbull Platinum PRO PX5 Head and Face Shaver | 2025 Version (with Deluxe Travel Case \u0026 Rinse Stand)...it\u0027s selling fast! Tap to get it before it\u0027s gone: https://skullshaver.attn.tv/a1_FyXUu4mds\n\nOtherwise, are there any questions I can answer for you? ",
+          "date_time": "2025-05-08 10:08:50.550",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes I wanted to purchase that but it kept including the cost to keep sending replacement blades and I don\u0027t want that can you help me.",
+          "date_time": "2025-05-08 14:46:10.729",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0196b13a-5af0-494f-f000-0000c2d20870",
+          "message_text": "Skull Shaver: Sure thing! You can just select \u0027Shaver Only\u0027 instead of the shaver and the Club Savings Plan. Let me know if you do not come right.",
+          "message_type": "agent",
+          "agent": "41046",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-05-08 14:48:33.792"
+        }
+      ]
+    },
+    "527": {
+      "agentName": "Alexa",
+      "has_shopify": true,
+      "id": "0197d5e1-8e03-47a9-f000-00004afec097",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "SEMI ANNUAL \u002726 40-80% OFF",
+            "content": [
+              "• 40-80% Off Sitewide with code SAVE40"
+            ]
+          },
+          {
+            "title": "SUPERBOWL \u002726 50% OFF",
+            "content": [
+              "• 50% Off Sitewide - No offer code needed"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 1 50% Off",
+            "content": [
+              "• 50% Off Sitewide - No offer code needed"
+            ]
+          },
+          {
+            "title": "SPRING40 | MAR \u002726 40% OFF",
+            "content": [
+              "• 40% Off Sitewide with code SPRING40"
+            ]
+          },
+          {
+            "title": "LOVE40 | JAN \u002726 40% OFF",
+            "content": [
+              "• 40% Off Sitewide with code LOVE40"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 3 50-99% Off",
+            "content": [
+              "• 50-99% Off Sitewide - No offer code needed\n\n• End Date TBD - slated to end on 12/3 but subject to change"
+            ]
+          },
+          {
+            "title": "TAKE10",
+            "content": [
+              "We provide this to subscribers who trigger the abandon flows. Only send to subscribers that reach out to concierge asking about the 10% code they were offered in their abandonment message."
+            ]
+          },
+          {
+            "title": "GIFT40 | DEC \u002725 40% OFF",
+            "content": [
+              "• 50-90% Off Sitewide with code GIFT40"
+            ]
+          },
+          {
+            "title": "BFCM \u002725 PROMO 2 50-90% Off",
+            "content": [
+              "• 50-90% Off Sitewide - No offer code needed"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 1258209431,
+            "company_id": 235,
+            "coupon_url": "https://fnova.myshopify.com/discount/TAKE10?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "static_code": "TAKE10",
+            "name": "10% Static (TAKE10)",
+            "coupon": "TAKE10",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://fashionnova.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://fashionnova.com",
+      "companyName": "Fashion Nova",
+      "notes": {
+        "send_to_cs": [
+          "No escalations for this client, send to CS using the Support templates",
+          "For post-purchase inquiries send to CS using the Support template (shortcut: ESC)",
+          "➜ If the cx is having difficulties sending an email to CS via the link in the ESC temp - use Support 2 template (shortcut: TESC)",
+          "➜ If the cx is facing technical website issues while accessing the link, do NOT immediately send the TESC shortcut, troubleshoot first instead",
+          "For pre-purchase inquiries send to CS using the Support 2 template (shortcut: TESC)"
+        ],
+        "tone": [
+          "🅿️ Use wording that is in line with the brand\u0027s voice and terminology found on the website",
+          "➜ e.g. Nova Kids, Nova Babes, Insta-worthy, slays, snatched, baddie, etc.",
+          "➜ Always look up the term\u0027s meaning before using it!"
+        ],
+        "templates": [
+          "For expired discounts use EXP shortcut",
+          "For login issues use LGI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "If cx are looking for their 30% welcome code, ask to check their email (spam \u0026 promo)",
+          "Gift cards can be used on discounted items"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREE 1-Day Shipping! EVERYTHING Is Now Up To 80% OFF!!\n\nDon\u0027t Miss Out! Get Ur Order TMRW! -\u003e\nhttp://sms.fashionnova.com/aPbvjjfV0-zq .",
+          "date_time": "2025-06-11 10:43:30.009",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREE 1-Day Shipping + Up To 80% Off Sitewide?!\n\nOrder TODAY, Wear It TMRW!! Shop Now! -\u003e\nhttp://sms.fashionnova.com/a8p1iqnUm56f .",
+          "date_time": "2025-06-18 11:20:58.766",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 40% OFF EVERYTHING Starts NOWW + FREE 1-Day Shipping!!\n\nHURRY, Get Ur Order Fast AF!! Shop Now-\u003e\nhttp://sms.fashionnova.com/a_dkVp_HnqmG .",
+          "date_time": "2025-06-24 10:35:45.468",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: 40% OFF EVERYTHING + FREE 1-Day Shipping Are Still On!!\n\nShop NOW, B4 This Sale ENDS \u0026 Get It TMRW! -\u003e\nhttp://sms.fashionnova.com/aHydEnypCUx- .",
+          "date_time": "2025-06-26 10:36:26.493",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FINAL 6 HRS! 40% OFF EVERYTHING Ends TONIGHT!!\n\nShop Now, B4 This Summer SALE Is OVER! Use Code: HOT -\u003e\nhttp://sms.fashionnova.com/a5SQe2PtOOKL .",
+          "date_time": "2025-06-29 19:08:58.623",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: FREE 1-Day Shipping + 50% Off Summer Collection!!\n\nGet Ur 4th Of July \u0027Fits TMRW, Shop NOWW! -\u003e\nhttp://sms.fashionnova.com/apYngqfSgsqF .",
+          "date_time": "2025-07-02 10:34:06.489",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Fashion Nova: We\u0027ll send you a text when Doris Belted Cargo Pant - Grey is back in stock for the size you requested! In the meantime, check out our new arrivals and use code: HOT to get 40% OFF the ENTIRE site! -\u003e\nhttp://sms.fashionnova.com/aybGWqXECTo4 .",
+          "date_time": "2025-07-02 18:42:23.331",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Can you please restock the belted grey cargo pants?",
+          "date_time": "2025-07-04 10:35:11.616",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0197d5dd-5908-4e44-f000-00004afec097",
+          "message_text": "Fashion Nova: The Doris Belted Cargo Pant - Grey is currently out of stock. Please check back later or explore similar styles on our website: http://sms.fashionnova.com/a-Zbu_cyCwkl.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-07-04 10:35:42.760"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Are they still being sold? They\u0027ve been out of stock for so long now.",
+          "date_time": "2025-07-04 10:37:10.918",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0197d5df-75a1-458e-f000-00004afec097",
+          "message_text": "Fashion Nova: Yes, they are. Some items do take a long time to be restocked, unfortunately. Sorry about that!",
+          "message_type": "agent",
+          "agent": "41046",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-07-04 10:38:01.155"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "That\u0027s okay. Thank you. Please let me know when they\u0027re back.",
+          "date_time": "2025-07-04 10:39:11.287",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0197d5e1-8e03-47a9-f000-00004afec097",
+          "message_text": "Fashion Nova: Have you signed up to be notified once they back? You can do so on the product page. As soon as it is back in stock, you will be notified. I hope this helps!",
+          "message_type": "agent",
+          "agent": "41046",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-07-04 10:40:18.470"
+        }
+      ]
+    },
+    "528": {
+      "agentName": "Nicole",
+      "has_shopify": true,
+      "id": "019aa2e4-1b44-4be9-f000-0000aa7184e8",
+      "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 2859566312,
+            "description": "May 2023",
+            "company_id": 6235,
+            "coupon_url": "https://the-gld-shop.myshopify.com/discount/GLD50WdK4nBb?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=Welcome",
+            "name": "GLD50W (Welcome Codes Auto)",
+            "coupon": "GLD50WdK4nBb",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2859566312,
+            "description": "(exclusions apply)",
+            "value": "55",
+            "company_id": 6235,
+            "coupon_url": "https://the-gld-shop.myshopify.com/discount/GETGLD",
+            "static_code": "GETGLD",
+            "name": "GETGLD",
+            "coupon": "GETGLD",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          },
+          {
+            "subscriber_id": 2859566312,
+            "company_id": 6235,
+            "coupon_url": "https://the-gld-shop.myshopify.com/discount/JULY4",
+            "static_code": "JULY4",
+            "name": "JULY4",
+            "coupon": "JULY4",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2859566312,
+            "description": "(exclusions apply)",
+            "company_id": 6235,
+            "coupon_url": "https://gld.com/discount/SDRIP50C-sbjncj",
+            "value": "50",
+            "name": "SDRIP50 (50% OFF SMS FLOWS)",
+            "coupon": "SDRIP50C-sbjncj",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          },
+          {
+            "subscriber_id": 2859566312,
+            "company_id": 6235,
+            "coupon_url": "https://the-gld-shop.myshopify.com/discount/GLD50SMS-WQ3gAf?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=Journey-50-OFF-ABANDONMENT\u0026redirect=/cart",
+            "name": "50% Off Abandonment",
+            "coupon": "GLD50SMS-WQ3gAf",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "subscriber_id": 2859566312,
+            "description": "(exclusions apply)",
+            "value": "50",
+            "company_id": 6235,
+            "coupon_url": "https://the-gld-shop.myshopify.com/discount/GETGLD50",
+            "static_code": "GETGLD50",
+            "name": "GETGLD50",
+            "coupon": "GETGLD50",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          },
+          {
+            "subscriber_id": 2859566312,
+            "description": "(exclusions apply)",
+            "company_id": 6235,
+            "coupon_url": "https://gld.com/discount/SDRIP50-e3qqux",
+            "value": "50",
+            "name": "SDRIP50 (50% OFF SMS FLOWS)",
+            "coupon": "SDRIP50-e3qqux",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          },
+          {
+            "subscriber_id": 2859566312,
+            "description": "(Exclusions apply including vermeil, moissanite, fine pieces, etc.)",
+            "value": "40",
+            "company_id": 6235,
+            "coupon_url": "https://the-gld-shop.myshopify.com/discount/GET40",
+            "static_code": "GET40",
+            "name": "GET40",
+            "coupon": "GET40",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          },
+          {
+            "subscriber_id": 2859566312,
+            "description": "(exclusions apply)",
+            "company_id": 6235,
+            "coupon_url": "https://gld.com/discount/SDRIP508-u2xnjc",
+            "value": "50",
+            "name": "SDRIP50 (50% OFF SMS FLOWS)",
+            "coupon": "SDRIP508-u2xnjc",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://gld.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.gld.com/products/rope-chain-4mm-original?variant=40248883052631\u0026glp=true\u0026rd_campaignid=%7B%7BCAMPAIGN_ID%7D%7D\u0026rd_adgroupid=%7B%7BADGROUP_ID%7D%7D\u0026rd_adid=%7B%7BAD_ID%7D%7D\u0026rd_maid=%7B%7BADVERTISING_ID%7D%7D\u0026rd_adgroup=%7B%7BADGROUP_NAME%7D%7D\u0026rd_ad=%7B%7BAD_NAME%7D%7D\u0026sc_campaign=US%25202024%2520Catalog%25207%252F0\u0026sc_campaignid=bbf52e52-ed75-4dc6-b5df-a4eb4cb4484f\u0026sc_adset=Purchase_7-0_RT_ViewAddCart-180_All_13%252B\u0026sc_adsetid=cc2dbf95-e4c3-4767-8a0b-fafb171addaa\u0026sc_adid=86788904-f880-4fa6-9d68-8540f84e0092\u0026nbt=nb:snapchat:Snapchat:bbf52e52-ed75-4dc6-b5df-a4eb4cb4484f:cc2dbf95-e4c3-4767-8a0b-fafb171addaa:86788904-f880-4fa6-9d68-8540f84e0092\u0026utm_source=Snapchat\u0026utm_campaign=bbf52e52-ed75-4dc6-b5df-a4eb4cb4484f\u0026utm_content=US%25202024%2520Catalog%25207%252F0\u0026snap_campaign_id=bbf52e52-ed75-4dc6-b5df-a4eb4cb4484f",
+            "item": "Rope Chain in Yellow Gold- 4mm",
+            "timeAgo": "2025-10-19"
+          },
+          {
+            "link": "https://www.gld.com/products/5mm-iced-flared-cross-chain-in-white-gold",
+            "item": "Flared Cross Chain in White Gold- 5mm",
+            "timeAgo": "2025-10-15"
+          },
+          {
+            "link": "https://www.gld.com/products/3mm-pave-round-earrings?collection-handle=mens-earrings",
+            "item": "3mm Pave Round Earrings in White Gold",
+            "timeAgo": "2025-10-15"
+          },
+          {
+            "link": "https://www.gld.com/products/new-york-yankees-micro-pendant-1?queryID=9b47c774361bf98fffc0149fb805e966",
+            "item": "New York Yankees Official MLB Micro Logo Pendant",
+            "timeAgo": "2025-10-15"
+          },
+          {
+            "link": "https://www.gld.com/products/micro-iced-celtic-cross-in-white-gold?variant=41300050739287",
+            "item": "Micro Iced Celtic Cross in White Gold",
+            "timeAgo": "2025-10-15"
+          }
+        ]
+      },
+      "companyWebsite": "https://gld.com",
+      "companyName": "The GLD Shop",
+      "notes": {
+        "templates": [
+          "If cx wants to refund their order after 14 days of receiving it, send the \"Return outside of 14 day policy\" temp"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "GLD: make a wish 😮‍💨🎂\n\nCelebrate 11 yrs of GLD with an exclusive 60% off site-wide.\n\nYou get first slice:\ngld.attn.tv/aADGKWZVkYh0 ",
+          "date_time": "2025-10-23 19:16:45.836",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: testing, testing 🎤👈\n\n🗣️ 70% OFF FLASH DEALS.\n🗣️ THIS WEEKEND.\u2028\u2028\n🗣️ STACK YO SH*T, FAM.\n\n👉🎤 gld.attn.tv/arJltFNXboiv ",
+          "date_time": "2025-10-24 18:38:00.599",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: you might be 0-7 in fantasy...\n\nbut you 7-0 with us. 🫂\n\n70% off fall flash deals have you feeling like a winner:\ngld.attn.tv/a4zNaKAX74yB ",
+          "date_time": "2025-10-25 18:07:02.585",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: MISSION ALERT ⚠️ 2 new pieces for only $99.\n\nOffer expires when this link self-detonates. \n\n gld.attn.tv/a5czWjcG-DRy 💣",
+          "date_time": "2025-10-26 19:16:53.137",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Pssst... Remember that Flared Cross Chain in White Gold- 5mm - 14k White Gold Plated / 20\" / White Gold It\u0027s ALMOST out of stock! 😱\n\nGrab yours while you still can: gld.attn.tv/aENpq5DUdTxW\n\nP.S. use code HEAT for 40% off",
+          "date_time": "2025-10-27 20:47:14.663",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: 50% off site-wide means 2 for the price of 1 😮‍💨\n\nTime to stack your collection: gld.attn.tv/aK5DE3may4rN ",
+          "date_time": "2025-10-28 19:16:28.502",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: the case? closed. killer deals caught. 😱🔪\n\n50-70% off deals start now.\n\ndon\u0027t wait for the plot twist...early access ends midnight: gld.attn.tv/azzNGk0pR7to ",
+          "date_time": "2025-10-30 18:46:28.392",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: We messed up 😬 Our site just crashed.\n\nConsider 60% OFF our \u0027sorry!!!\u0027\n\nCode: OHSHT60 (ends midnight): gld.attn.tv/adBiw721e_RK ",
+          "date_time": "2025-10-31 16:36:45.540",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Sale getting packed like a wemby poster. 📦👋\n\nup to 70% off deals extended.. but only 5 more hrs:\ngld.attn.tv/aZlaVzJogTDp .",
+          "date_time": "2025-11-01 19:35:52.654",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: FAM - last chance for 60% off site-wide \n\nFree limited-edition sticker pack while supplies last: gld.attn.tv/afW1qBZzXSZg .\n\n\nUse code FF-3010-GLD\n",
+          "date_time": "2025-11-02 19:06:43.545",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: 🚨 Price Drop Alert 🚨\nFree Returns + Package Protection - $5.19 is now 50% off! \n\nPlus add an extra 10% off when you join our VIP program.\n\nGet yours before it sells out: gld.attn.tv/aTOUcICaZNSZ",
+          "date_time": "2025-11-03 12:25:28.462",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Fall drip crazy rn 🍂🔥\n\nSets goin 50-60% off... Build ya stack \u0026 step outside like it\u0027s yo season.\ngld.attn.tv/aqy_yGTX9gIj ",
+          "date_time": "2025-11-04 19:07:06.972",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Early access for the GLD gang 🔓\n50% off site-wide + an extra 10% for you. \n\nBetter than Black Friday - starts now with code XTRA10VIP https://gld.attn.tv/azQLlABWSHE2 .",
+          "date_time": "2025-11-05 19:36:01.019",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: No cap, you was THIS close.\n\nSpin back and get 50% off + free chain still waitin on you.\n\nGlow up time: gld.attn.tv/aal9o-tWoXI6 .",
+          "date_time": "2025-11-06 19:07:06.881",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Free-Sh*t Friday is back. \n\niN tHiS eCoNoMy 🤯🫨\n\nCome get 50% off + some free sh*t gld.attn.tv/a4y62txxSEY7 ",
+          "date_time": "2025-11-07 15:47:04.200",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Friday night drop just for the text fam 🤫\n\n60% off chains - free shipping included.\n\nYep, it\u0027s Better than Black Friday: gld.attn.tv/aDCy2a_bROFO \n\nUse code: FF-3010-GLD",
+          "date_time": "2025-11-07 19:46:06.718",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: We not playin...flash sale just hit! \n\nGet up to 65% OFF the hottest fall drops.\n\nYou know what to do 👇 gld.attn.tv/a-lhpHFDYasF ",
+          "date_time": "2025-11-08 13:07:48.325",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Yo, don\u0027t fumble this.\n\nUp to 65% OFF ends TONIGHT.\n\nMidnight. No extensions. No cap.\ngld.attn.tv/aWraUanpoXYc ",
+          "date_time": "2025-11-09 13:37:48.138",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: One more look won\u0027t hurt.\n\n50% off sitewide, plus 10% stacked with code XTRA10VIP\n\nThe best time to grab those pieces you were eyeing is now\ngld.attn.tv/a-igIGkJCfzR ",
+          "date_time": "2025-11-09 19:46:32.926",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Better than Black Friday deals, live now.\n\n50% off site-wide + a free chain to get you started right.\n\nGo ahead, flex responsibly: gld.attn.tv/abXnsk2c-BJ_ ",
+          "date_time": "2025-11-10 19:36:43.951",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: 9 to 5? More like 24/7.\n\nGifts that are built different. \n\nFor a limited time get 50% off + every 2nd piece free with code BOGO\ngld.attn.tv/aDsZkuNMmjYe ",
+          "date_time": "2025-11-11 19:06:58.772",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Not gonna lie - we glitched.\n\nTo make up for it: 55% off + a limited-edition free chain\n\ngld.attn.tv/ar-QdtGW7EjN \n\nUse code GETGLD",
+          "date_time": "2025-11-12 19:26:41.573",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Buy now, pay later... \n\nPLUS, enjoy 55% off... \n\nIt\u0027s like student loans, but actually worth it. ⛓️✨\n\nShop now: gld.attn.tv/a_F3tx7UTxgP .",
+          "date_time": "2025-11-13 19:35:42.391",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Friday night flash 🚨 50-65% off early Black Friday deals\n\nYour move before it\u0027s gone. \n\nPlus get a limited-edition keychain when you spend $99: gld.attn.tv/ap3g_lce4SvS .",
+          "date_time": "2025-11-14 19:37:10.983",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Still feeling last night?\nUp to 65% flash deals are your pick-me-up.\n\nLive till the hangover\u0027s gone: gld.attn.tv/afO2VicR51Ra ",
+          "date_time": "2025-11-15 17:36:32.474",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Off the top like your barber on one ✂️🫠 \n\nTop picks Flash Sale ends midnight. 🚨🚨\n\n50-65% off our top hitters: gld.attn.tv/adAjR3x1GHnH ",
+          "date_time": "2025-11-16 13:46:35.466",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: Dark at 5pm? 🌒💎✨\n\nDaylight saved. Why can\u0027t you?\n\nShop 55% off site-wide, VIPs only. \n\nCop tonight \u0026 get your free chain, too:\ngld.attn.tv/axOi96Xr-nzq ",
+          "date_time": "2025-11-17 19:07:06.526",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: You can\u0027t teach taste...\n\nbut you can wrap it. 🎁⛓️\n\nGet the right gift this Holiday with 50% off.\n\nHit the link \u0026 we\u0027ll throw in free gift wrap.\n\nUse code BFCM2025\ngld.attn.tv/aMqUype6tweb .\n",
+          "date_time": "2025-11-18 17:36:13.774",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "GLD: GLD doesn\u0027t get re-gifted. \n\n50% off something they\u0027ll actually keep. \n\nHit the link \u0026 we\u0027ll throw in free gift wrap: gld.attn.tv/a5f9RnTQI0AJ ",
+          "date_time": "2025-11-19 18:46:09.734",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hi I have not received a tracking number yet",
+          "date_time": "2025-11-20 15:07:41.821",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Shipping time\"; last updated: 2023-02-15 02:43:39.150",
+          "date_time": "2025-11-20 15:10:49.567",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Tracking Info - All brands\"; last updated: 2023-10-10 16:47:28.277",
+          "date_time": "2025-11-20 15:10:49.567",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019aa2e4-1b44-4be9-f000-0000aa7184e8",
+          "message_text": "GLD: We process orders in 1-2 business days and usually ship via USPS, UPS or FedEx. Once shipped it will take 5-10 business days domestically. \n\nYou\u0027ll get a tracking email as soon as your order ships. If you don\u0027t see it in your inbox, be sure to check your spam and promo folders, sometimes our emails end up there as well.",
+          "message_type": "agent",
+          "agent": "87597",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-11-20 15:10:49.570"
+        }
+      ]
+    },
+    "529": {
+      "agentName": "Taylor",
+      "has_shopify": true,
+      "id": "01952461-bad1-4dbb-f000-0000a03f2725",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://safishing.com/collections/all/products/reversible-vest-lumberjack-grey-grey",
+            "item": "Reversible Vest | Lumberjack Grey | Grey",
+            "timeAgo": "2024-12-29"
+          },
+          {
+            "link": "https://safishing.com/products/20-off-reversible-vests",
+            "item": "20% OFF REVERSIBLE VESTS",
+            "timeAgo": "2024-12-29"
+          },
+          {
+            "link": "https://safishing.com/products/vacation-pack",
+            "item": "VACATION PACK",
+            "timeAgo": "2024-12-29"
+          },
+          {
+            "link": "https://safishing.com/products/3-hoodies?utm_source=Facebook\u0026utm_medium=Paid\u0026utm_campaign=HalfZip_TOF_CyberMonday_3for49_LC_12%2F2%2F24\u0026utm_content=HalfZip_CM5\u0026WickedSource=Facebook\u0026WickedID=6656182112110\u0026fbclid=PAZXh0bgNhZW0BMABhZGlkAAAGDjyDRUYBpt7wUO5EMh4my1C3OAlqwgmkpDjCe1XL9lnzA5Qn_BNi2_oZSkxHP3sG8A_aem_Bf3UsjDn_2pNYVbVSn0R4g\u0026campaign_id=6656182111510\u0026ad_id=6656182112110",
+            "item": "3 Hoodies from $49",
+            "timeAgo": "2024-12-11"
+          },
+          {
+            "link": "https://safishing.com/products/performance-half-zip-hoodie-20-off-acq?variant=43458598731937\u0026utm_source=Facebook\u0026utm_medium=Paid\u0026utm_campaign=AllProduct_Prospecting_Advantage%2B_PerformanceHoodiesV3_11%2F1\u0026utm_content=HalfzipHoodie2_11%2F1\u0026WickedSource=Facebook\u0026WickedID=6649090782910\u0026fbclid=PAZXh0bgNhZW0BMABhZGlkAAAGDBy1hPYBphH9EoQfrEsulsyISsG98NB7hgQznbs78MhGMMTAVnUovC8s4u9M62beqQ_aem_AtsmK1Sr-c9oKdlMTSb7fg\u0026campaign_id=6649090782110\u0026ad_id=6649090782910",
+            "item": "25% Half Zip Performance Hoodie",
+            "timeAgo": "2024-11-27"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2688493349,
+            "description": "OFF your next order + Free Gift",
+            "company_id": 8014,
+            "coupon_url": "https://sa-co1.myshopify.com/discount/Gift15ymfsnV?utm_source=attentive\u0026utm_medium=SMS\u0026utm_campaign=welcome-control",
+            "value": "15",
+            "name": "Gift15",
+            "coupon": "Gift15ymfsnV",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://safishing.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "total": 268.34,
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      4.91,
+                      2.44,
+                      4.15,
+                      8.75,
+                      2.95,
+                      0,
+                      2.55,
+                      1.34,
+                      6.06,
+                      30,
+                      16.5,
+                      1.27,
+                      4.49,
+                      15.66,
+                      50,
+                      0,
+                      40,
+                      1.8,
+                      1.35,
+                      0,
+                      5.01,
+                      8,
+                      50,
+                      0,
+                      3.03,
+                      8.73,
+                      1.05,
+                      10.66,
+                      2.22,
+                      1.28,
+                      4.9,
+                      39.5,
+                      10,
+                      3.13,
+                      6.08,
+                      10,
+                      30,
+                      15.66,
+                      1.34,
+                      14.79,
+                      25,
+                      2.4,
+                      6.3,
+                      6.29,
+                      3.35,
+                      0.96,
+                      39.99,
+                      0,
+                      2.35,
+                      8.33,
+                      10,
+                      21,
+                      11.2,
+                      6.69,
+                      21,
+                      7.8,
+                      50,
+                      7.32,
+                      30,
+                      0,
+                      1.4,
+                      5.04
+                    ],
+                    "Count": 62
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "link": "https://safishing.com/46427766945/orders/0d04c8bc3e1b8dd3a076baefc619e4a4/authenticate?key=fa64e2a48445d198bc94f5f8dd3f6b51",
+            "orderDate": "2025-01-20",
+            "discount_amount": 0,
+            "orderNumber": "4038590",
+            "date_time": "2025-01-20 16:07:59.394"
+          }
+        ]
+      },
+      "companyWebsite": "https://safishing.com",
+      "companyName": "SA Company",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ],
+        "promo_and_exclusions": [
+          "Do not share the Concierge 15% off offer, the code is currently not valid"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "SA Company: New Daily Deals!\n\nShop Deals: https://safishing.attn.tv/aAsQdAR3lYQb ",
+          "date_time": "2025-01-21 18:56:21.427",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Been having great adventures? \nWe have a ton of new packs and exclusive gear just waiting to be explored, check it out today. https://safishing.attn.tv/aW0B4MQdsji5 ",
+          "date_time": "2025-01-27 12:24:58.117",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Great news! Your order (4038590) has shipped and will be to you soon. Click here to track your order: https://safishing.attn.tv/a95RlMOEMSWm .\nHappy adventuring!",
+          "date_time": "2025-01-27 12:26:06.260",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Oops! We made too many!\n\nJUST PAY SHIPPING: safishing.attn.tv/aeY2nlf4dbU3 \n\nSee All Daily Deals: safishing.attn.tv/aTgNaR082VB5 ",
+          "date_time": "2025-01-27 12:55:41.339",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Great news! Your order (4038590) has shipped and will be to you soon. Click here to track your order: https://safishing.attn.tv/aCGMryrR37Q9 .\nHappy adventuring!",
+          "date_time": "2025-01-28 12:11:18.167",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Hi Steve, it\u0027s Taylor. I\u0027m a personal concierge here to answer your questions or share recommendations. Would you like to see if I can get you a discount code?\n\nhttps://safishing.attn.tv/aYVD1Zu1oav1 .",
+          "date_time": "2025-01-28 12:26:42.313",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: 20+ NEW Snapbacks JUST DROPPED\n\nShop All Snapbacks: safishing.attn.tv/awdl5R3Eq8t8 ",
+          "date_time": "2025-02-02 15:05:34.592",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Hi Steve, it\u0027s Taylor. I\u0027m a personal concierge here to answer your questions or share recommendations. Would you like to see if I can get you a discount code?\n\nhttps://safishing.attn.tv/aBt6-hrlYy2g .",
+          "date_time": "2025-02-04 12:10:18.992",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Friday Flash Sale! Buy 1 Arm Sleeve get 5 FREE we might even throw in something extra for ya :-)\n\nShop Now\nsafishing.attn.tv/aA6sfBtf3WM8 ",
+          "date_time": "2025-02-07 12:45:32.261",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Hi Steve, it\u0027s Taylor. I\u0027m a personal concierge here to answer your questions or share recommendations. Would you like to see if I can get you a discount code?\n\nhttps://safishing.attn.tv/aTqvbMO2MP9W .",
+          "date_time": "2025-02-08 13:29:47.005",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Pick The Winning Team from the Big Game and Win FREE $50 Gift\n\nPick your team!\nsafishing.attn.tv/aK4Nw7ikXty_ ",
+          "date_time": "2025-02-09 16:01:20.825",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Everyone loves silicone! Buy 1 silicone ring pick 4 FREE + 2 Free gifts\n\nShop Now \nsafishing.attn.tv/agC__i7Yg4ep ",
+          "date_time": "2025-02-12 18:30:32.599",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: IT\u0027S TIME! Winter Outlet $24 Hoodies, $8 Trapper Hats, $4 Fleece, $8 Beanies and FREE SHIPPING. \n\nShop Now\nsafishing.attn.tv/apz1I6CGm0F7 ",
+          "date_time": "2025-02-14 15:06:43.932",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SA Company: Winter Outlet is here! Grab cozy hoodies for $24, trapper hats for $8, fleece for $4, and beanies for $8. Limited inventory\n\nShop Now\nsafishing.attn.tv/az6qvgxGAp_N ",
+          "date_time": "2025-02-16 16:03:21.354",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: 60 Minute Lightning Deal! Up to 80% off + Free Shipping!\n\nShop Now\nsafishing.attn.tv/acgbdwfkpOHL ",
+          "date_time": "2025-02-19 12:00:48.017",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: 60 Minute Lightning Deal! Up to 80% off + Free Shipping! Time\u0027s running out to grab the best deals. Shop Now at safishing.attn.tv/aC_JCSqMKwbd",
+          "date_time": "2025-02-20 12:01:07.019",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Soul of Adventure: Hi Steve, it\u0027s Taylor. I\u0027m a personal concierge here to answer your questions or share recommendations. Would you like to see if I can get you a discount code?\n\nhttps://safishing.attn.tv/aj8yzWfnNAmH .",
+          "date_time": "2025-02-20 12:12:52.017",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I am interested to see what orders i have yet to be delivered before I order more. Can you help with that?",
+          "date_time": "2025-02-20 12:14:20.234",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Post Purchase Inquiries \"; last updated: 2024-08-01 20:51:51.076",
+          "date_time": "2025-02-20 12:22:19.487",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01952461-bad1-4dbb-f000-0000a03f2725",
+          "message_text": "Soul of Adventure: I\u0027m happy to help. I see about 5 orders on my end that have either been delivered partially or not at \n\nMy system is limited, so I may not see all of them. \n\n Please email your request to help@sateam.company, live chat with one of our representatives via the website: https://safishing.attn.tv/a8LyusSBp6Ir or feel free to call this number (561) 210-5475, Monday-Friday 9:30am-5:30pm EST to get an update on all the orders and the deliveries. \n\nHere are some of the order numbers - Order #4038590, Order #4027126, Order #4025877, Order #4007684 and Order #3991281.",
+          "message_type": "agent",
+          "agent": "82236",
+          "message_media": [
+            
+          ],
+          "date_time": "2025-02-20 12:22:19.489"
+        }
+      ]
+    },
+    "530": {
+      "agentName": "Rebecca",
+      "has_shopify": true,
+      "id": "019c5983-ba31-43f7-f000-0000fa727c6a",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Points + Promo Stacking",
+            "content": [
+              "Members with 75+ points can now combine rewards with store promo codes."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 4201806954,
+            "company_id": 12837,
+            "coupon_url": "https://faithgatewaystore.myshopify.com/discount/F-48iVgt?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcomecode",
+            "name": "WelcomeOffer_15%Off",
+            "coupon": "F-48iVgt",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://faithgateway.com/products/nkjv-charles-f-stanley-life-principles-bible-2nd-edition-comfort-print-growing-in-knowledge-and-understanding-of-god-through-his-word?variant=34351752675464",
+            "item": "NKJV, Charles F. Stanley Life Principles Bible, 2nd Edition, Comfort Print: Growing in Knowledge and Understanding of God Through His Word - LeathersoftTM / Burgundy / No",
+            "timeAgo": "2026-02-11"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://faithgateway.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2026-02-11",
+            "items": [
+              {
+                "price": [
+                  62.99
+                ],
+                "productLink": "https://faithgatewaystore.myshopify.com/products/nkjv-charles-f-stanley-life-principles-bible-2nd-edition-comfort-print-growing-in-knowledge-and-understanding-of-god-through-his-word",
+                "name": "NKJV, Charles F. Stanley Life Principles Bible, 2nd Edition, Comfort Print: Growing in Knowledge and Understanding of God Through His Word"
+              }
+            ],
+            "trackingLink": "https://wwwapps.ups.com/tracking/tracking.cgi?tracknum=1Z899E690330102990",
+            "link": "https://faithgateway.com/4413096047/orders/1f98bf54a7099bd2a4cfebf8f15abe47/authenticate?key=39789008ace24379bb59079596b04694",
+            "date_time": "2026-02-11 00:17:29.428",
+            "discount_amount": 0,
+            "orderNumber": "2273895",
+            "order_tracking_link": "https://wwwapps.ups.com/tracking/tracking.cgi?tracknum=1Z899E690330102990",
+            "total": 68.81
+          }
+        ]
+      },
+      "companyWebsite": "https://faithgateway.com",
+      "companyName": "FaithGateway",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase inquiries, use PPI shortcut",
+          "Send to CS if the customer doesn\u0027t receive the free printables with his purchase"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns",
+        "Discount code errors",
+        "Shipping questions"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: Welcome to FaithGateway! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-10 19:10:45.464",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: We\u0027re so glad you\u0027re here to embark on this journey of growing deeper in your faith. Save on your next order with code F-48iVgt Shop now: fg.attn.tv/aBDDG26Enmda .\n\nText back with any questions! - Rebecca",
+          "date_time": "2026-02-10 19:10:49.005",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: Hey , this is Rebecca. Thanks for checking out our site! https://fg.attn.tv/aXZHmfVu1WyV \n\nAre you looking for anything in particular today? ",
+          "date_time": "2026-02-10 19:13:19.626",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: You are signed up!",
+          "date_time": "2026-02-10 19:17:31.961",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: Congrats! You just earned points on your purchase! Create your Rewards account to keep earning and redeem your points. Learn more: https://fg.attn.tv/agiz32KFExML",
+          "date_time": "2026-02-10 19:32:07.380",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "FaithGateway: Just restocked! The Way of the Wildflower is here to help us release our burdens, overcome anxiety, and embrace a life rooted in God\u0027s care: fg.attn.tv/abQzDRbh_m65 \n\nTake $5 off $30+ during our Love Your Shelf Sale using code SHELF",
+          "date_time": "2026-02-13 13:06:56.624",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I didn\u0027t receive my bible today like I was supposed to???",
+          "date_time": "2026-02-13 19:06:20.337",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I hope i didn\u0027t get scammed 😕 im an old lady not very nice!!!",
+          "date_time": "2026-02-13 19:07:10.418",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"My item has been with UPS / USPS/ FedEx for a while now, it\u0027s not moving - All brands\"; last updated: 2023-10-10 16:48:27.752",
+          "date_time": "2026-02-13 19:18:51.085",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c5983-ba31-43f7-f000-0000fa727c6a",
+          "message_text": "FaithGateway: I\u0027m sorry to hear that. Are you referring to Order #2273895? If so, UPS has your package and will deliver it today, February 13, by 9:00 P.M. You can track it here: https://fg.attn.tv/abj4rHiBpVql\n\nSince the package is already with the carrier, it\u0027s best to contact them directly. Have you tried giving them a call? They should have the most up-to-date information. You can contact UPS support at 1-888-742-5877. ",
+          "message_type": "agent",
+          "agent": "48008",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-13 19:18:51.087"
+        }
+      ]
+    }
+  }
+}

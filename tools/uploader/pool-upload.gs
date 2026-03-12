@@ -31,7 +31,10 @@ const ASSIGNMENTS_HEADERS = [
   'assigned_at'
 ];
 
-const POOL_HEADERS = ['send_id', 'status'];
+const POOL_HEADERS = ['send_id', 'agent_message', 'status'];
+const POOL_COL_SEND_ID = 0;
+const POOL_COL_AGENT_MESSAGE = 1;
+const POOL_COL_STATUS = 2;
 const SESSION_HEADERS = [
   'session_id',
   'agent_email',
@@ -267,9 +270,11 @@ function doPost(e) {
     }
 
     if (action === 'addToPool') {
-      const sendIds = Array.isArray(data.send_ids) ? data.send_ids : [];
+      const poolEntries = Array.isArray(data.pool_entries)
+        ? data.pool_entries
+        : (Array.isArray(data.send_ids) ? data.send_ids : []);
       return withScriptLock_(function() {
-        const result = addSendIdsToPool_(sendIds);
+        const result = addSendIdsToPool_(poolEntries);
         if (result.error) return jsonResponse_({ error: result.error });
         return jsonResponse_(result);
       });
@@ -288,7 +293,9 @@ function doPost(e) {
       const scenarios = Array.isArray(data.scenarios) ? data.scenarios : [];
       return withScriptLock_(function() {
         writeUploadedJsonList_(UPLOADED_SCENARIOS_SHEET, scenarios);
-        return jsonResponse_({ ok: true, scenarios: scenarios });
+        const poolResult = addScenariosToPool_(scenarios);
+        if (poolResult.error) return jsonResponse_({ error: poolResult.error });
+        return jsonResponse_({ ok: true, scenarios: scenarios, pool: poolResult });
       });
     }
 
@@ -298,7 +305,9 @@ function doPost(e) {
       return withScriptLock_(function() {
         const result = appendUploadedJsonList_(UPLOADED_SCENARIOS_SHEET, scenarios, { reset: reset });
         if (result.error) return jsonResponse_({ error: result.error });
-        return jsonResponse_({ ok: true, added: result.added, total: result.total });
+        const poolResult = addScenariosToPool_(scenarios);
+        if (poolResult.error) return jsonResponse_({ error: poolResult.error });
+        return jsonResponse_({ ok: true, added: result.added, total: result.total, pool: poolResult });
       });
     }
 
@@ -324,6 +333,17 @@ function doPost(e) {
         const result = appendUploadedJsonList_(UPLOADED_TEMPLATES_SHEET, templates, { reset: reset });
         if (result.error) return jsonResponse_({ error: result.error });
         return jsonResponse_({ ok: true, added: result.added, total: result.total });
+      });
+    }
+
+    if (action === 'upsertInternalNotesBySendId') {
+      const noteEntries = Array.isArray(data.note_entries)
+        ? data.note_entries
+        : (Array.isArray(data.notes) ? data.notes : []);
+      return withScriptLock_(function() {
+        const result = upsertInternalNotesBySendId_(noteEntries);
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_(result);
       });
     }
 
@@ -1033,7 +1053,7 @@ function appendSessionRow_(state, session) {
 function setPoolStatusByIndex_(state, index, status) {
   const idx = Number(index);
   if (!Number.isFinite(idx) || idx < 0 || idx >= state.poolRows.length) return;
-  state.poolRows[idx][1] = String(status || '');
+  state.poolRows[idx][POOL_COL_STATUS] = String(status || '');
   markDirtyIndex_(state.poolDirty, idx);
 }
 
@@ -1242,8 +1262,8 @@ function assignFromPool_(state, email, sessionId, nowIso, appBase, count) {
   const assignedInThisPass = {};
 
   for (let i = 0; i < state.poolRows.length && needed > 0; i++) {
-    const poolSendId = String(state.poolRows[i][0] || '').trim();
-    const poolStatus = String(state.poolRows[i][1] || '').toUpperCase();
+    const poolSendId = String(state.poolRows[i][POOL_COL_SEND_ID] || '').trim();
+    const poolStatus = String(state.poolRows[i][POOL_COL_STATUS] || '').toUpperCase();
     if (!poolSendId) continue;
     if (poolStatus && poolStatus !== 'AVAILABLE') continue;
     if (assignedInThisPass[poolSendId]) continue;
@@ -1259,6 +1279,7 @@ function assignFromPool_(state, email, sessionId, nowIso, appBase, count) {
       continue;
     }
 
+    const inheritedInternalNote = findLatestInternalNoteBySendId_(state.assignmentsRows, poolSendId);
     const assignment = {
       send_id: poolSendId,
       assignee_email: email,
@@ -1270,7 +1291,7 @@ function assignFromPool_(state, email, sessionId, nowIso, appBase, count) {
       editor_token: generateOpaqueToken_(),
       viewer_token: generateOpaqueToken_(),
       form_state_json: '',
-      internal_note: '',
+      internal_note: inheritedInternalNote,
       assigned_session_id: sessionId,
       assigned_at: nowIso
     };
@@ -1315,7 +1336,7 @@ function releaseSingleAssignment_(state, assignment, fromStatus, nowIso, reason)
   const sendId = String(assignment.send_id || '');
   const poolIndex = findPoolIndexBySendId_(state.poolRows, sendId);
   if (poolIndex >= 0) {
-    const poolStatus = String(state.poolRows[poolIndex][1] || '').toUpperCase();
+    const poolStatus = String(state.poolRows[poolIndex][POOL_COL_STATUS] || '').toUpperCase();
     if (poolStatus !== 'DONE') {
       setPoolStatusByIndex_(state, poolIndex, 'AVAILABLE');
     }
@@ -1346,10 +1367,8 @@ function releaseSingleAssignment_(state, assignment, fromStatus, nowIso, reason)
 }
 
 function addSendIdsToPool_(sendIds) {
-  const ids = Array.isArray(sendIds)
-    ? sendIds.map(function(v) { return String(v || '').trim(); }).filter(function(v) { return !!v; })
-    : [];
-  if (!ids.length) {
+  const entries = normalizePoolEntries_(sendIds);
+  if (!entries.length) {
     return { error: 'Missing send_ids' };
   }
 
@@ -1357,17 +1376,18 @@ function addSendIdsToPool_(sendIds) {
   const poolSheet = getOrCreateSheet_(spreadsheet, POOL_SHEET, POOL_HEADERS);
   const poolValues = getSheetDataRows_(poolSheet, POOL_HEADERS.length);
 
-  const uniqueIds = [];
+  const uniqueEntries = [];
   const seen = {};
-  for (let i = 0; i < ids.length; i++) {
-    if (seen[ids[i]]) continue;
-    seen[ids[i]] = true;
-    uniqueIds.push(ids[i]);
+  for (let i = 0; i < entries.length; i++) {
+    const sendId = entries[i].send_id;
+    if (seen[sendId]) continue;
+    seen[sendId] = true;
+    uniqueEntries.push(entries[i]);
   }
 
   const indexBySendId = {};
   for (let i = 0; i < poolValues.length; i++) {
-    const existing = String(poolValues[i][0] || '').trim();
+    const existing = String(poolValues[i][POOL_COL_SEND_ID] || '').trim();
     if (!existing) continue;
     if (indexBySendId[existing] == null) {
       indexBySendId[existing] = i;
@@ -1378,27 +1398,35 @@ function addSendIdsToPool_(sendIds) {
   let reactivated = 0;
   const newRows = [];
 
-  for (let i = 0; i < uniqueIds.length; i++) {
-    const sendId = uniqueIds[i];
+  for (let i = 0; i < uniqueEntries.length; i++) {
+    const sendId = uniqueEntries[i].send_id;
+    const agentMessage = uniqueEntries[i].agent_message;
     const idx = indexBySendId[sendId];
     if (idx == null) {
-      newRows.push([sendId, 'AVAILABLE']);
+      newRows.push([sendId, agentMessage, 'AVAILABLE']);
       added++;
       continue;
     }
 
-    const currentStatus = String(poolValues[idx][1] || '').trim().toUpperCase();
+    if (agentMessage && String(poolValues[idx][POOL_COL_AGENT_MESSAGE] || '').trim() !== agentMessage) {
+      poolValues[idx][POOL_COL_AGENT_MESSAGE] = agentMessage;
+    }
+
+    const currentStatus = String(poolValues[idx][POOL_COL_STATUS] || '').trim().toUpperCase();
     if (currentStatus !== 'ASSIGNED') {
       if (currentStatus !== 'AVAILABLE') {
         reactivated++;
       }
-      poolValues[idx][1] = 'AVAILABLE';
+      poolValues[idx][POOL_COL_STATUS] = 'AVAILABLE';
     }
   }
 
   if (poolValues.length > 0) {
-    const statusColumn = poolValues.map(function(row) { return [row[1]]; });
-    poolSheet.getRange(2, 2, statusColumn.length, 1).setValues(statusColumn);
+    poolSheet.getRange(2, 2, poolValues.length, 2).setValues(
+      poolValues.map(function(row) {
+        return [row[POOL_COL_AGENT_MESSAGE], row[POOL_COL_STATUS]];
+      })
+    );
   }
 
   if (newRows.length > 0) {
@@ -1406,7 +1434,7 @@ function addSendIdsToPool_(sendIds) {
     poolSheet.getRange(startRow, 1, newRows.length, POOL_HEADERS.length).setValues(newRows);
   }
 
-  return { ok: true, added: added, reactivated: reactivated, total: uniqueIds.length };
+  return { ok: true, added: added, reactivated: reactivated, total: uniqueEntries.length };
 }
 
 function resetAssignmentsFromAudit_(sendIds) {
@@ -1459,7 +1487,7 @@ function resetAssignmentsFromAudit_(sendIds) {
   });
 
   const poolRows = uniqueIds.map(function(sendId) {
-    return [sendId, 'AVAILABLE'];
+    return [sendId, '', 'AVAILABLE'];
   });
 
   assignmentsSheet.getRange(2, 1, assignmentRows.length, ASSIGNMENTS_HEADERS.length).setValues(assignmentRows);
@@ -1543,6 +1571,83 @@ function appendUploadedJsonList_(sheetName, list, options) {
   const startRow = sheet.getLastRow() + 1;
   sheet.getRange(startRow, 1, rows.length, UPLOADED_JSON_HEADERS.length).setValues(rows);
   return { added: rows.length, total: rows.length };
+}
+
+function upsertInternalNotesBySendId_(entriesInput) {
+  const entries = normalizeInternalNoteEntries_(entriesInput);
+  if (!entries.length) {
+    return { error: 'Missing note entries' };
+  }
+
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const assignmentsSheet = getOrCreateSheet_(spreadsheet, ASSIGNMENTS_SHEET, ASSIGNMENTS_HEADERS);
+  const rows = getSheetDataRows_(assignmentsSheet, ASSIGNMENTS_HEADERS.length);
+  if (!rows.length) {
+    return { ok: true, updated_rows: 0, matched_send_ids: 0, missing_send_ids: entries.length };
+  }
+
+  const noteBySendId = {};
+  for (let i = 0; i < entries.length; i++) {
+    noteBySendId[entries[i].send_id] = entries[i].internal_note;
+  }
+
+  const now = nowIso_();
+  let updatedRows = 0;
+  const matchedIds = {};
+
+  for (let i = 0; i < rows.length; i++) {
+    const assignment = rowToAssignmentObject_(rows[i]);
+    const sendId = String(assignment.send_id || '').trim();
+    if (!sendId || !Object.prototype.hasOwnProperty.call(noteBySendId, sendId)) continue;
+    const nextNote = String(noteBySendId[sendId] || '');
+    if (String(assignment.internal_note || '') === nextNote) {
+      matchedIds[sendId] = true;
+      continue;
+    }
+    assignment.internal_note = nextNote;
+    assignment.updated_at = now;
+    rows[i] = assignmentToRow_(assignment);
+    matchedIds[sendId] = true;
+    updatedRows++;
+  }
+
+  if (updatedRows > 0) {
+    assignmentsSheet.getRange(2, 1, rows.length, ASSIGNMENTS_HEADERS.length).setValues(rows);
+  }
+
+  const uniqueInputIds = {};
+  for (let i = 0; i < entries.length; i++) uniqueInputIds[entries[i].send_id] = true;
+  let matchedSendIds = 0;
+  let missingSendIds = 0;
+  for (const sendId in uniqueInputIds) {
+    if (!Object.prototype.hasOwnProperty.call(uniqueInputIds, sendId)) continue;
+    if (matchedIds[sendId]) matchedSendIds++;
+    else missingSendIds++;
+  }
+
+  return {
+    ok: true,
+    updated_rows: updatedRows,
+    matched_send_ids: matchedSendIds,
+    missing_send_ids: missingSendIds
+  };
+}
+
+function normalizeInternalNoteEntries_(values) {
+  const list = Array.isArray(values) ? values : [];
+  const out = [];
+  const seen = {};
+  for (let i = 0; i < list.length; i++) {
+    const value = list[i];
+    if (!value || typeof value !== 'object' || Array.isArray(value)) continue;
+    const sendId = String(value.send_id || value.SEND_ID || '').trim();
+    if (!sendId) continue;
+    const note = String(value.internal_note || value.NOTES || value.notes || '').trim();
+    if (seen[sendId]) continue;
+    seen[sendId] = true;
+    out.push({ send_id: sendId, internal_note: note });
+  }
+  return out;
 }
 
 function handleLegacyPost_(data) {
@@ -1732,11 +1837,125 @@ function findAssignmentById_(rows, assignmentId) {
 
 function findPoolIndexBySendId_(poolRows, sendId) {
   for (let i = 0; i < poolRows.length; i++) {
-    if (String(poolRows[i][0] || '') === String(sendId || '')) {
+    if (String(poolRows[i][POOL_COL_SEND_ID] || '') === String(sendId || '')) {
       return i;
     }
   }
   return -1;
+}
+
+function normalizePoolEntries_(values) {
+  const list = Array.isArray(values) ? values : [];
+  const out = [];
+  for (let i = 0; i < list.length; i++) {
+    const value = list[i];
+    if (value && typeof value === 'object' && !Array.isArray(value)) {
+      const sendId = String(value.send_id || value.SEND_ID || '').trim();
+      if (!sendId) continue;
+      out.push({
+        send_id: sendId,
+        agent_message: String(
+          value.agent_message ||
+          value.AGENT_MESSAGE ||
+          value.send_text ||
+          value.SEND_TEXT ||
+          ''
+        ).trim()
+      });
+      continue;
+    }
+
+    const sendId = String(value || '').trim();
+    if (!sendId) continue;
+    out.push({ send_id: sendId, agent_message: '' });
+  }
+  return out;
+}
+
+function findLatestInternalNoteBySendId_(rows, sendId) {
+  const target = String(sendId || '').trim();
+  if (!target) return '';
+  for (let i = rows.length - 1; i >= 0; i--) {
+    const assignment = rowToAssignmentObject_(rows[i]);
+    if (String(assignment.send_id || '').trim() !== target) continue;
+    const note = String(assignment.internal_note || '').trim();
+    if (note) return note;
+  }
+  return '';
+}
+
+function addScenariosToPool_(scenarios) {
+  const entries = buildPoolEntriesFromScenarios_(scenarios);
+  if (!entries.length) {
+    return { ok: true, added: 0, reactivated: 0, total: 0 };
+  }
+  return addSendIdsToPool_(entries);
+}
+
+function buildPoolEntriesFromScenarios_(scenarios) {
+  const list = Array.isArray(scenarios) ? scenarios : [];
+  const out = [];
+  for (let i = 0; i < list.length; i++) {
+    const scenario = list[i];
+    if (!scenario || typeof scenario !== 'object' || Array.isArray(scenario)) continue;
+    const sendId = String(
+      scenario.send_id ||
+      scenario.SEND_ID ||
+      scenario.id ||
+      scenario.ID ||
+      ''
+    ).trim();
+    if (!sendId) continue;
+    out.push({
+      send_id: sendId,
+      agent_message: extractLastAgentMessageFromScenario_(scenario)
+    });
+  }
+  return out;
+}
+
+function extractLastAgentMessageFromScenario_(scenario) {
+  const convo = Array.isArray(scenario.conversation)
+    ? scenario.conversation
+    : (Array.isArray(scenario.messages) ? scenario.messages : []);
+  for (let i = convo.length - 1; i >= 0; i--) {
+    const message = convo[i];
+    if (!message || typeof message !== 'object') continue;
+    const role = String(
+      message.role ||
+      message.message_type ||
+      message.type ||
+      message.speaker ||
+      message.sender ||
+      ''
+    ).trim().toLowerCase();
+    if (role !== 'agent' && role !== 'assistant') continue;
+    const content = String(
+      message.content ||
+      message.message_text ||
+      message.text ||
+      ''
+    ).trim();
+    if (content) return content;
+  }
+
+  let bestIndex = -1;
+  let bestMessage = '';
+  for (const key in scenario) {
+    if (!Object.prototype.hasOwnProperty.call(scenario, key)) continue;
+    const match = String(key || '').match(/^AgentMessage(\d+)$/i);
+    if (!match) continue;
+    const index = Number(match[1]);
+    const content = String(scenario[key] || '').trim();
+    if (!content) continue;
+    if (index > bestIndex) {
+      bestIndex = index;
+      bestMessage = content;
+    }
+  }
+  if (bestMessage) return bestMessage;
+
+  return String(scenario.agent_message || scenario.agentMessage || '').trim();
 }
 
 function findSessionIndex_(sessionsRows, sessionId) {

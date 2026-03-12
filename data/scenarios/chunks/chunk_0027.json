@@ -3,795 +3,1343 @@
   "chunk": "chunk_0027",
   "scenarios": {
     "131": {
-      "id": "019c4d76-50e5-4ace-f000-0000fa817c43",
-      "companyName": "Igloo",
-      "companyWebsite": "https://igloocoolers.com",
       "agentName": "Sarah",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "Igloo: Welcome to Igloo! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-11 09:13:20.944"
-        },
-        {
-          "message_media": [],
-          "message_text": "Igloo: Hey this is Sarah, how can I help you?",
-          "message_type": "system",
-          "date_time": "2026-02-11 09:13:24.747"
-        },
-        {
-          "message_media": [],
-          "message_text": "Hi! I'm trying to find the 10 gallon jug in blue",
-          "message_type": "customer",
-          "date_time": "2026-02-11 09:13:51.334"
-        },
-        {
-          "message_media": [],
-          "message_text": "I need3-4 of them",
-          "message_type": "customer",
-          "date_time": "2026-02-11 09:14:01.328"
-        },
-        {
-          "message_media": [],
-          "message_text": "They're only online with the Lowe's emblem and I need it without that",
-          "message_type": "customer",
-          "date_time": "2026-02-11 09:14:11.332"
-        },
-        {
-          "message_media": [],
-          "message_text": "Igloo: Good morning! I'm sorry, I currently don't have the exact date of a possible restock, but I recommend checking our website and social media frequently. In the meantime, what do you think about this instead? https://igloo.attn.tv/a_oEFLlXuBIA It features a handy cup dispenser, a pressure-fit lid that won't spill, and the kind of industry-leading cold retention you to keep your drink cold and refreshing on long, hot days.",
-          "message_type": "agent",
-          "agent": "40170",
-          "message_id": "019c4d32-85fc-4caa-f000-0000fa817c43",
-          "date_time": "2026-02-11 09:54:42.723"
-        },
-        {
-          "message_media": [],
-          "message_text": "Ok. I'll keep an eye out",
-          "message_type": "customer",
-          "date_time": "2026-02-11 10:59:01.442"
-        },
-        {
-          "message_media": [],
-          "message_text": "I would really like the 10 gallon in blue. Is there a planned restock",
-          "message_type": "customer",
-          "date_time": "2026-02-11 10:59:11.464"
-        },
-        {
-          "message_media": [],
-          "message_text": "Igloo: I'm afraid I don't have a specific date at this time. If it helps, we do have 5 Gallon Seat Top Water Jugs With Cup Dispenser. Take a look here: https://igloo.attn.tv/a4z1VYUFfLM5",
-          "message_type": "agent",
-          "agent": "109968",
-          "message_id": "019c4d76-50e5-4ace-f000-0000fa817c43",
-          "date_time": "2026-02-11 11:08:45.570"
-        }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for legal and fraud related inquires",
-          "Send to CS for product safety inquires and threats",
-          "Send to CS for website technical issues"
-        ],
-        "escalate": [
-          "ESC if cx claims bodily injury as result of a product",
-          "ESC if cx highlights dangers to health/safety as a result of product"
-        ],
-        "templates": [
-          "For all post-purchase & warranty inquiries use \"SUPPORT\" temp (SPT)",
-          "For discount code issues use \"SUPPORT\" temp (SPT)",
-          "For product info that you can't find on the site use \"SUPPORT\" temp (SPT)",
-          "If cx reach out about 90 qt cooler recall, use shortcut RCC",
-          "For custom order cancellation and edit requests, don't use CED, use the designated templates instead"
-        ]
-      },
+      "has_shopify": true,
+      "id": "019bf694-b2e3-4154-f000-00006720e445",
       "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://igloocoolers.com",
-          "date": ""
-        }
-      },
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "warranty",
-        "broken product claims",
-        "parts",
-        "missing shipment",
-        "leaks"
-      ],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "132": {
-      "id": "019c4964-9433-4f7b-f000-0000f7acb347",
-      "companyName": "FaithGateway",
-      "companyWebsite": "https://faithgateway.com",
-      "agentName": "Rebecca",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "FaithGateway: Welcome to FaithGateway! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-04 07:00:07.266"
-        },
-        {
-          "message_media": [],
-          "message_text": "FaithGateway: We're so glad you're here to embark on this journey of growing deeper in your faith. Save on your next order with code F-g2KDqj Shop now: fg.attn.tv/aAyacGhn1XTW .\n\nText back with any questions! - Rebecca",
-          "message_type": "system",
-          "date_time": "2026-02-04 07:00:11.276"
-        },
-        {
-          "message_media": [],
-          "message_text": "FaithGateway: You are signed up!",
-          "message_type": "system",
-          "date_time": "2026-02-04 07:04:15.019"
-        },
-        {
-          "message_media": [],
-          "message_text": "FaithGateway: Hooray! Thank you for your purchase. Your order number is 2266474. Review your info here: https://fg.attn.tv/aBbXK2i0w11j",
-          "message_type": "system",
-          "date_time": "2026-02-04 07:04:20.989"
-        },
-        {
-          "message_media": [],
-          "message_text": "FaithGateway: Let's stay in touch! Save our contact card now so you never miss important updates, deals, and uplifting content.\n\nStart shopping now and don't forget to use code F-g2KDqj at checkout: fg.attn.tv/a4BJMqjgqjFJ ",
-          "message_type": "system",
-          "date_time": "2026-02-04 07:05:17.856"
-        },
-        {
-          "message_media": [],
-          "message_text": "FaithGateway: Welcome to our rewards program. YOU HAVE 72 POINTS! Keep shopping and earning points - every 75 points = $5 off! Learn more here: https://fg.attn.tv/aHssc_j2yxbz",
-          "message_type": "system",
-          "date_time": "2026-02-04 07:25:05.092"
-        },
-        {
-          "message_media": [],
-          "message_text": "FaithGateway: Great news! Your order (2266474) has shipped and will be to you soon. Click here to track your order: https://fg.attn.tv/aPLgf6qMy3NQ .",
-          "message_type": "system",
-          "date_time": "2026-02-05 10:55:34.081"
-        },
-        {
-          "message_media": [],
-          "message_text": "FaithGateway: Hi Stacey, order #2266474 has been delivered. Hooray! Track your order here: https://fg.attn.tv/aaLfeCbCJzDI",
-          "message_type": "system",
-          "date_time": "2026-02-05 15:11:07.807"
-        },
-        {
-          "message_media": [],
-          "message_text": "FaithGateway: Stacey, we hope you're as excited as we are about your recent purchase of Jesus in Me Bible Study Guide plus Streaming Video: Experiencing the Holy Spirit as a Constant Companion - Softcover. Looking for more inspiration? \n\nDiscover more books, Bible studies, and devotionals on sale now and save $10 on your next order of $45+ with code 10RETX23 at checkout. \n\nShop now: https://fg.attn.tv/a7nZZBylDqtd ",
-          "message_type": "system",
-          "date_time": "2026-02-08 10:45:37.604"
-        },
-        {
-          "message_media": [],
-          "message_text": "FaithGateway: There's still time to use your $10 coupon! Use promo code 10RETX23 at checkout and get $10 off your order of $45+ at checkout. \n\nShop Top Deals: https://fg.attn.tv/acdZkDhlBKb6 \n\nShop New & Popular: https://fg.attn.tv/ay3rER7yWUOE ",
-          "message_type": "system",
-          "date_time": "2026-02-10 10:59:04.973"
-        },
-        {
-          "message_media": [],
-          "message_text": "I havent even gotten my complete order",
-          "message_type": "customer",
-          "date_time": "2026-02-10 16:09:36.010"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Tracking available - All brands\"; last updated: 2023-10-10 16:53:12.249",
-          "message_type": "template",
-          "date_time": "2026-02-10 16:10:54.284"
-        },
-        {
-          "message_media": [],
-          "message_text": "FaithGateway: I'm sorry to hear that! Are you referring to order #2266474? If so, it appears that the rest of the order is still on its way. You can also track your order here: https://fg.attn.tv/aY0ofAwZKyHD Hope this helps!",
-          "message_type": "agent",
-          "agent": "87310",
-          "message_id": "019c4964-9433-4f7b-f000-0000f7acb347",
-          "date_time": "2026-02-10 16:10:54.286"
-        }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase inquiries, use PPI shortcut",
-          "Send to CS if the customer doesn't receive the free printables with his purchase"
-        ]
-      },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://faithgateway.com",
-          "date": ""
-        },
-        "orders": [
+        "coupons": [
           {
-            "orderNumber": "2266474",
-            "orderDate": "2026-02-04",
-            "items": [
-              {
-                "name": "Jesus in Me Study Guide + Devotional + Bible Premium Bundle",
-                "price": 55.99,
-                "productLink": "https://faithgatewaystore.myshopify.com/products/jesus-in-me-study-guide-devotional-bible-premium-bundle"
-              }
-            ],
-            "link": "https://faithgateway.com/4413096047/orders/dcacdfa016430d1bf30d0c0fdf9943c0/authenticate?key=6bc8bc9450f125eb819df7367ad78caf",
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction?tLabels=9249090315578505343231",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction?tLabels=9249090315578505343231",
-            "total": 52.24,
-            "coupon": "WINTER15",
-            "date_time": "2026-02-04 12:04:08.131"
+            "status": "INACTIVE",
+            "description": "100 min $50 off for session abandonment flow",
+            "redeemed": "2025-02-22 18:03:42.358",
+            "coupon": "SEVCxlVC"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "Automated random dynamic codes for session abandon - 4/1/24",
+            "value": "50",
+            "coupon": "SA50-G7ss2s"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "$50 Gift Card for Welcome Flow test",
+            "coupon": "50-4MSWP6"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "100,000 codes for the NCTY journey: $20 gift card emails",
+            "coupon": "NCGXVFTY"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "Automated random dynamic codes for session abandon - 4/1/24",
+            "redeemed": "2024-04-20 17:44:48.672",
+            "value": "50",
+            "coupon": "SA50-GtsbDl"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "session $50 offer with a $100 minimum",
+            "value": "50",
+            "coupon": "783D9N"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "100 min $50 off for session abandonment flow",
+            "coupon": "SEwv736g"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "Batch 9, 200,000, February 29th 2024",
+            "coupon": "D878SA50"
           }
-        ]
-      },
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Discount code errors",
-        "Shipping questions"
-      ],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "133": {
-      "id": "019c3dce-c373-4b59-f000-000063895897",
-      "companyName": "zestt",
-      "companyWebsite": "https://zesttorganics.com",
-      "agentName": "Julie",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "zestt: Co-Founders Benita & Jess here! We're so excited that you're back. Want to learn more about your purchase? zestt.attn.tv/aYexqKzkZOlY ",
-          "message_type": "system",
-          "date_time": "2026-01-10 10:35:11.426"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: LAST CHANCE! Your $15 gift card is waiting for you. Don't let it expire in 24 hours! Shop now with code GIFTCARD15 zestt.attn.tv/aafrOQTZEgIA ",
-          "message_type": "system",
-          "date_time": "2026-01-12 19:15:56.259"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: BACK IN STOCK! Our fan-favorite color, Latte, has returned! Don't miss your chance to grab it before it sells out. Shop now! zestt.attn.tv/amJ-l85CsSaY ",
-          "message_type": "system",
-          "date_time": "2026-01-16 10:05:17.643"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: THEY'RE BAAACK! The Million Miles Collection is fully restocked - every piece, every size. Shop now! zestt.attn.tv/aTrbyoXO4JtJ ",
-          "message_type": "system",
-          "date_time": "2026-01-18 10:10:12.765"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: $50 Dreamsoft Travel Scarves for our Snowed-In Flash Sale! Today only - stay warm & grab yours before they're gone. Shop now zestt.attn.tv/a8qswRepPdkm ",
-          "message_type": "system",
-          "date_time": "2026-01-25 09:15:24.781"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Get ready for compliments! You have great taste...this piece always sells out. Come back and shop now before it's gone zestt.attn.tv/ai6UWbMv68PH",
-          "message_type": "system",
-          "date_time": "2026-01-25 14:54:09.681"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: FINAL HOURS! Get $50 Dreamsoft Travel Scarves - our Snowed-In Flash Sale ends at midnight. Don't miss your chance, shop now! zestt.attn.tv/aX0QlZ_KvIrw ",
-          "message_type": "system",
-          "date_time": "2026-01-26 13:45:08.896"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Get ready for compliments! You have great taste...this piece always sells out. Come back and shop now before it's gone zestt.attn.tv/ayAzK5Xzfyu4",
-          "message_type": "system",
-          "date_time": "2026-01-26 17:25:17.310"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Want EARLY ACCESS? Our monthly color drop launches Friday, text back NEW to shop early. You won't want to miss this! zestt.attn.tv/aZaC-s7jBywj ",
-          "message_type": "system",
-          "date_time": "2026-01-27 09:15:16.604"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: EARLY ACCESS! Hey Insider, you've unlocked our monthly limited-edition color drop. Meet Petal Punch & Ballet Pink, shop now! zestt.attn.tv/aAkv44DJnd0D ",
-          "message_type": "system",
-          "date_time": "2026-01-29 09:10:19.483"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Thank you for your cozy organic purchase! Your order number is 190836. View more information about your order here: https://zestt.attn.tv/aXPiBZBrZwTe .",
-          "message_type": "system",
-          "date_time": "2026-01-29 15:12:47.615"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Your cart is expiring...Don't miss out on these cozy favorites - complete your order now zestt.attn.tv/ahMZnUB-s8Pi",
-          "message_type": "system",
-          "date_time": "2026-02-01 03:30:25.324"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Great news! Your order (190836) has shipped and will be to you soon. Click here to track your order: https://zestt.attn.tv/a8EEEGehz1RK .",
-          "message_type": "system",
-          "date_time": "2026-02-01 03:37:12.935"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Get ready for compliments! You have great taste...this piece always sells out. Come back and shop now before it's gone zestt.attn.tv/aY3oZyfSHSe0",
-          "message_type": "system",
-          "date_time": "2026-02-02 10:47:57.391"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Thank you for your cozy organic purchase! Your order number is 191738. View more information about your order here: https://zestt.attn.tv/aL-1ad77i5O_ .",
-          "message_type": "system",
-          "date_time": "2026-02-02 22:29:23.550"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Our Valentine's gift to you! Get a FREE Ivory Silk Sleep Mask Set with any $150+ purchase. Give the gift of comfort-shop now! zestt.attn.tv/a3k_HVssBGJj ",
-          "message_type": "system",
-          "date_time": "2026-02-03 09:15:24.312"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Great news! Your order (191738) has shipped and will be to you soon. Click here to track your order: https://zestt.attn.tv/ad8_WtmVfvvh .",
-          "message_type": "system",
-          "date_time": "2026-02-04 10:10:20.226"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Get ready for compliments! You have great taste...this piece always sells out. Come back and shop now before it's gone zestt.attn.tv/aKA_w7tRvBq-",
-          "message_type": "system",
-          "date_time": "2026-02-05 12:14:01.430"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: LAST CHANCE! Get a FREE Ivory Silk Sleep Mask Set with any purchase of $150+. This offer ends tonight, shop now! zestt.attn.tv/aXKmW9F5J24a ",
-          "message_type": "system",
-          "date_time": "2026-02-06 09:20:13.645"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Thank you for your cozy organic purchase! Your order number is 192162. View more information about your order here: https://zestt.attn.tv/aGLCDkhxJwiM .",
-          "message_type": "system",
-          "date_time": "2026-02-06 09:33:34.646"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Great news! Your order (192162) has shipped and will be to you soon. Click here to track your order: https://zestt.attn.tv/aWmdByWx1RRl .",
-          "message_type": "system",
-          "date_time": "2026-02-07 10:41:36.714"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Get ready for compliments! You have great taste...this piece always sells out. Come back and shop now before it's gone zestt.attn.tv/aMW-rzhdxrff",
-          "message_type": "system",
-          "date_time": "2026-02-07 15:49:04.834"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: TOUCHDOWN FLASH SALE! Score $50 Dreamsoft Travel Scarves! Hurry, this offer is only available until midnight. Shop now! zestt.attn.tv/adA_XDaahko6 ",
-          "message_type": "system",
-          "date_time": "2026-02-08 09:15:15.903"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Hi there! If you have a question or concern, please text \"CARE\" or call 866-673-1773 and we will get back to you as soon as we can! ",
-          "message_type": "system",
-          "date_time": "2026-02-08 09:22:23.080"
-        },
-        {
-          "message_media": [],
-          "message_text": "Help please. Just waiting for the red. Any updates?",
-          "message_type": "customer",
-          "date_time": "2026-02-08 09:22:34.308"
-        },
-        {
-          "message_media": [],
-          "message_text": "CARE. Morning. Just checking back for the out-if-stock red. Any updates? Will be buying two, one for myself and one for a gift. Thanks!",
-          "message_type": "customer",
-          "date_time": "2026-02-08 09:24:24.029"
-        },
-        {
-          "message_media": [],
-          "message_text": "zestt: Thank you for reaching out. May I know which item you are referring to? I would love to check on this further for you. ",
-          "message_type": "agent",
-          "agent": "82260",
-          "message_id": "019c3dce-c373-4b59-f000-000063895897",
-          "date_time": "2026-02-08 10:11:26.612"
-        }
-      ],
-      "notes": {},
-      "rightPanel": {
+        ],
         "source": {
           "label": "Website",
-          "value": "https://zesttorganics.com",
+          "value": "https://cozyearth.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "item": "The Dreamsoft Travel Scarf February Collection 2026 - Petal Punch",
-            "link": "https://zesttorganics.com/products/the-dreamsoft-travel-scarf-february-collection-2026?variant=42849602306111",
-            "timeAgo": "2026-02-02"
-          },
-          {
-            "item": "The Dreamsoft Travel Scarf February Collection 2026 - Petal Punch",
-            "link": "https://zesttorganics.com/products/the-dreamsoft-travel-scarf-february-collection-2026?variant=42849602306111",
-            "timeAgo": "2026-02-01"
-          },
-          {
-            "item": "The Alpaca Luxe Wrap - Mocha",
-            "link": "https://zesttorganics.com/products/the-alpaca-luxe-wrap-1",
+            "link": "https://cozyearth.com/products/womens-studio-cropped-wide-leg-pant?variant=44095903039668#x",
+            "item": "Women\u0027s Studio Cropped Wide Leg Pant",
             "timeAgo": "2026-01-25"
           },
           {
-            "item": "The Dreamsoft Travel Scarf January Collection 2026 - Santorini Blue",
-            "link": "https://zesttorganics.com/products/the-dreamsoft-travel-scarf-january-2026-collection?externalId=FUb52",
-            "timeAgo": "2026-01-08"
+            "link": "https://cozyearth.com/products/womens-studio-cropped-wide-leg-pant?variant=43831646453940",
+            "item": "Women\u0027s Studio Cropped Wide Leg Pant",
+            "timeAgo": "2026-01-25"
           },
           {
-            "item": "The Dreamsoft Travel Scarf January Collection 2026 - Blue Sky",
-            "link": "https://zesttorganics.com/products/the-dreamsoft-travel-scarf-january-2026-collection?variant=42783635701823",
-            "timeAgo": "2026-01-08"
+            "link": "https://cozyearth.com/products/womens-studio-cropped-wide-leg-pant?variant=44095903039668",
+            "item": "Women\u0027s Studio Cropped Wide Leg Pant",
+            "timeAgo": "2026-01-25"
+          },
+          {
+            "link": "https://cozyearth.com/products/womens-studio-wide-leg-pant?variant=43831646257332",
+            "item": "Women\u0027s Studio Wide Leg Pant",
+            "timeAgo": "2026-01-25"
+          },
+          {
+            "link": "https://cozyearth.com/products/womens-studio-wide-leg-pant?variant=44045102645428",
+            "item": "Women\u0027s Studio Wide Leg Pant",
+            "timeAgo": "2026-01-25"
           }
+        ]
+      },
+      "companyWebsite": "https://cozyearth.com",
+      "companyName": "Cozy Earth",
+      "notes": {
+        "escalate": [
+          "ESC all MyFitness pall App inquiries"
         ],
+        "dos_and_donts": [
+          "Don\u0027t share sale end dates with customers"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: The End Of Year Sale is here! 20% off select new arrivals from 2025...\n\nUse code: NEWCOZY\n\nShop Now: cozyearth.attn.tv/azcu0MJue_BG",
+          "date_time": "2025-12-27 18:11:22.636",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: The best surprises are kept for our text subscribers!\n\nWe\u0027re heading into 2026 with even more exclusive deals, collaborations, \u0026 product launches to keep you on your toes.\n\nAlso, don\u0027t miss 20% off new arrivals right now with code: \"NEWCOZY\"\n\nShop Sale: https://cozyearth.attn.tv/akQ83e62UC8t",
+          "date_time": "2025-12-29 13:02:22.499",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: 20% off select new arrivals from 2025 ends tomorrow night!\n\ncode: \"NEWCOZY\"\n\nShop End Of Year Sale: cozyearth.attn.tv/aBlUwoeNQ3fB",
+          "date_time": "2025-12-30 15:11:22.995",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: MEMBERS ONLY: 26% off before the ball drops!\n\ncode: MEMBER26\n\nShop The Final Sale Of 2025: cozyearth.attn.tv/a_d8znSy5W4S",
+          "date_time": "2025-12-31 18:12:15.937",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: You just earned $30 in credit as a Cozy Earth Member! View your profile to see your accumulated points: cozyearth.attn.tv/aT1UtQyXMZmh ",
+          "date_time": "2026-01-01 13:10:06.850",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: The pieces you use daily shape how you feel...\n\nThis weekend only, receive a FREE GIFT on orders $300+!\n\nDon\u0027t Wait: cozyearth.attn.tv/anrn5b5tGIGT",
+          "date_time": "2026-01-02 20:02:21.837",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Ends soon: FREE gift on orders over $300!\n\nDon\u0027t Wait, 48 Hours Left: cozyearth.attn.tv/a1XprZV6lnoy",
+          "date_time": "2026-01-03 13:05:29.911",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: This is it. Free gift with $300+ orders ends TONIGHT!\n\nShop Final Hours: cozyearth.attn.tv/aA_1Tc5lY0nz",
+          "date_time": "2026-01-04 19:14:23.185",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: The things you use daily need to be reliable, made well, and designed with comfort in the details.\n\nShop Upgrades: cozyearth.attn.tv/abuT2orEbJ2c",
+          "date_time": "2026-01-06 19:06:14.697",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: New year, new colors!\n\nOrganic cotton French terry. Oversized fit.\n\nShop Chelsea Collection: cozyearth.attn.tv/aQBN27sOEEnq",
+          "date_time": "2026-01-08 20:10:10.562",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey Jenny, this is Sarah from the Cozy Earth Care Team. Thanks for checking out our site! cozyearth.attn.tv/ak8697m9lKnB \n\nAre you looking for anything in particular today?",
+          "date_time": "2026-01-08 20:18:40.087",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Thank you for your purchase! Your order number is #3292194. View more information about your order here: cozyearth.attn.tv/aUQ_pYg7yz5o",
+          "date_time": "2026-01-08 21:01:30.538",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: An item in your cart\u0027s selling quickly! Don\u0027t worry - we saved it for you. Check out before it\u0027s gone: cozyearth.attn.tv/aGHkinwDEcI4",
+          "date_time": "2026-01-09 13:16:11.533",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: You just earned $7.54 in credit as a Cozy Earth Member! View your profile to see your accumulated points: cozyearth.attn.tv/aAKCiRAhqIPV ",
+          "date_time": "2026-01-09 13:29:35.299",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Your order #3292194 is out for delivery! \nTrack your order here: cozyearth.attn.tv/azqURsITroUI",
+          "date_time": "2026-01-11 13:31:47.732",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Your order #3292194 is out for delivery! \nTrack your order here: cozyearth.attn.tv/aV8jBB91Gtry",
+          "date_time": "2026-01-11 13:40:11.777",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Your order #3292194 has been delivered! \nCheck in on your order: cozyearth.attn.tv/aUV6BjUV0ptU\n",
+          "date_time": "2026-01-11 18:15:58.082",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Your order #3292194 has been delivered! \nCheck in on your order: cozyearth.attn.tv/abkbHrf9wYWu\n",
+          "date_time": "2026-01-11 18:16:03.856",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hi! We can\u0027t wait for you to try your new Candle CIDER - Last Chance!\n\nFind answers to common questions below or respond to this text \u0026 we\u0027ll be here to help right away!\ncozyearth.attn.tv/ahTN-_jlxq1z ",
+          "date_time": "2026-01-12 13:07:41.216",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: The weekend event: Take 20% off with code \"RESET\"\n\nPlus, get a free pajama set on orders $299+\n\nShop Now: cozyearth.attn.tv/agZSmWxRuFx5",
+          "date_time": "2026-01-16 13:05:33.699",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: For the little moments at home: 20% off with code \"RESET\"\n\nShop Subscriber-Only Event: cozyearth.attn.tv/aSUDwPl_mpd0\n\n+ free PJs with $299+ orders!",
+          "date_time": "2026-01-17 15:15:23.655",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Shopping Valentine\u0027s?\n\nUse code \"RESET\" for 20% OFF pajamas they\u0027ll actually wear \u0026 home pieces they\u0027ll actually use: cozyearth.attn.tv/aoMkpE7MY4aE",
+          "date_time": "2026-01-18 17:03:28.990",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: You have great taste! Seriously. And your loyalty is unmatched. View how many credits you have here:\n\ncozyearth.attn.tv/aXxbCyF0IoyN \n",
+          "date_time": "2026-01-19 13:07:51.864",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Valentine\u0027s is soon! These PJs make it easy...and they\u0027ll actually get used.\n\nShop Early: cozyearth.attn.tv/a1cecYrMGQxw\n\nFree gift w/ $299+ orders!",
+          "date_time": "2026-01-21 20:05:30.747",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Cozy PJs \u003e Flowers\n\n+ FREE gift on orders over $299...\n\nExplore The Valentine\u0027s Shop: cozyearth.attn.tv/aZmaGziYyDwY",
+          "date_time": "2026-01-24 17:08:11.206",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cozy Earth: Hey Jenny, this is Sarah from the Cozy Earth Care Team. Thanks for checking out our site! cozyearth.attn.tv/a7lsP0b8wEvE \n\nAre you looking for anything in particular today?",
+          "date_time": "2026-01-25 13:23:56.801",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m looking for a a lighter  weight for the hoodie/top or the long sleeve crew new pajama shirt and aching pants . I love the bottoms have pockets! So I have to wait til another holiday or birthday or something.  i dont have any coupons at the moment to keep the cost down!",
+          "date_time": "2026-01-25 13:33:39.229",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019bf66f-5e98-45b5-f000-00006720e445",
+          "message_text": "Cozy Earth: Check out our Men\u0027s Modern Modal Hoodie, a lighter option available here: https://cozyearth.attn.tv/aDW2O4ZslsID. For discounts, sign up for our email list for future promotions!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-25 13:34:12.521"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I am on the email list - it\u0027s just usually towels on sale! Or I don\u0027t check right away the only sizes left are like xs or or 44- large. I do have a membership but never get discounts for new items i order so it\u0027s a bit disappointing bc I love the pieces I have! Does the men\u0027s pants match with the shirt? I\u0027m looking for something that matches :)",
+          "date_time": "2026-01-25 13:38:37.624",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019bf673-b458-49db-f000-00006720e445",
+          "message_text": "Cozy Earth: For a matching set, consider the Men\u0027s CityScape Hoodie \u0026 Sweatpant Set. Available here: https://cozyearth.attn.tv/an1nqLgYtKGs. Perfect for a coordinated look!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-25 13:38:56.617"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Unfortunately they don\u0027t have my size bc im 5\u00271 and 120 pounds.",
+          "date_time": "2026-01-25 13:41:27.653",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I will try to keep looking!",
+          "date_time": "2026-01-25 13:41:57.745",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Is the city scape one similar? If I\u0027m a medium in clothes what size do I order for men\u0027s?",
+          "date_time": "2026-01-25 13:43:57.602",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019bf678-aefe-4ab6-f000-00006720e445",
+          "message_text": "Cozy Earth: Our sleepwear is generously sized. If you\u0027re between sizes, consider sizing down. Check the size guide on the product page for the best fit.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-25 13:44:22.929"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ok thank you so much!!",
+          "date_time": "2026-01-25 13:44:57.282",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Just kidding the city scape don\u0027t have any smalls",
+          "date_time": "2026-01-25 13:46:47.644",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m so sorry I just have one more question - for the women\u0027s waffle jogger set it says it\u0027s a new arrival. Do members get 50% of New arrivals?",
+          "date_time": "2026-01-25 14:00:47.290",
+          "message_media": [
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1769367633652_ca3a4880-3d14-4456-a3ad-8df1f57f832f-1.png"
+          ]
+        },
+        {
+          "message_id": "019bf694-b2e3-4154-f000-00006720e445",
+          "message_text": "Cozy Earth: Thanks for the image. Please note that the benefit included in the membership perks is 50% off New Product Launches, and not off New Arrivals. I hope that clarifies.",
+          "message_type": "agent",
+          "agent": "110072",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-01-25 14:14:58.942"
+        }
+      ]
+    },
+    "132": {
+      "agentName": "",
+      "has_shopify": true,
+      "id": "018ff2a9-19dc-44d5-f000-00008ab21e0c",
+      "rightPanel": {
         "orders": [
           {
-            "orderNumber": "192162",
-            "orderDate": "2026-02-06",
+            "currency": "USD",
+            "orderDate": "2024-05-27",
             "items": [
               {
-                "name": "The Dreamsoft Organic Cotton Travel Scarf",
-                "price": 75,
-                "productLink": "https://zestt-llc.myshopify.com/products/the-dreamsoft-organic-cotton-travel-scarf"
-              },
-              {
-                "name": "Silk Sleep Mask and Scrunchy Set",
-                "price": 49,
-                "productLink": "https://zestt-llc.myshopify.com/products/silk-sleep-mask-and-scrunchy-set"
-              },
-              {
-                "name": "Dreamsoft Travel Scarf Carry Pouch 2.0",
-                "price": 29,
-                "productLink": "https://zestt-llc.myshopify.com/products/dreamsoft-travel-scarf-carry-pouch-2-0"
+                "price": [
+                  25
+                ],
+                "productLink": "https://chrome-ind.myshopify.com/products/mini-buckle-keychain-1",
+                "name": "Mini Buckle Keychain"
               }
             ],
-            "link": "https://zesttorganics.com/12222870/orders/01ec41872fb27ef5a897964635264637/authenticate?key=e0cd4fc63e28332263689b0e4db8c050",
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&tLabels=9434650899562124534537",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&tLabels=9434650899562124534537",
-            "total": 156.06,
-            "date_time": "2026-02-06 14:33:23.224"
+            "trackingLink": "https://wwwapps.ups.com/tracking/tracking.cgi?tracknum=1ZY836770300522309",
+            "link": "https://chromeindustries.com/56707678268/orders/c2bb6f4c939658eadeda33039b87d94b/authenticate?key=3a847b4d7bc589375e70f3cd30bce080\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-27 16:30:18.758",
+            "discount_amount": 0,
+            "orderNumber": "118126",
+            "order_tracking_link": "https://wwwapps.ups.com/tracking/tracking.cgi?tracknum=1ZY836770300522309",
+            "total": 132.5
           },
           {
-            "orderNumber": "191738",
-            "orderDate": "2026-02-03",
+            "currency": "USD",
+            "orderDate": "2024-05-27",
             "items": [
               {
-                "name": "Dreamsoft Travel Scarf Carry Pouch 2.0",
-                "price": 29,
-                "productLink": "https://zestt-llc.myshopify.com/products/dreamsoft-travel-scarf-carry-pouch-2-0"
-              },
-              {
-                "name": "The Dreamsoft Organic Cotton Travel Scarf",
-                "price": 75,
-                "productLink": "https://zestt-llc.myshopify.com/products/the-dreamsoft-organic-cotton-travel-scarf"
-              },
-              {
-                "name": "Silk Sleep Mask and Scrunchy Set",
-                "price": 49,
-                "productLink": "https://zestt-llc.myshopify.com/products/silk-sleep-mask-and-scrunchy-set"
+                "price": [
+                  100
+                ],
+                "productLink": "https://chrome-ind.myshopify.com/products/kadet-sling-bag",
+                "name": "Kadet Sling"
               }
             ],
-            "link": "https://zesttorganics.com/12222870/orders/b800f4d8ecd008b959126280d34fedbc/authenticate?key=45862629bbb0fe77636a6e430c65918b",
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&tLabels=9434650899563126119883",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&tLabels=9434650899563126119883",
-            "total": 162.28,
-            "date_time": "2026-02-03 03:29:10.959"
+            "trackingLink": "https://wwwapps.ups.com/tracking/tracking.cgi?tracknum=1ZY836770300522309",
+            "link": "https://chromeindustries.com/56707678268/orders/c2bb6f4c939658eadeda33039b87d94b/authenticate?key=3a847b4d7bc589375e70f3cd30bce080\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-05-27 16:30:18.722",
+            "discount_amount": 0,
+            "orderNumber": "118126",
+            "order_tracking_link": "https://wwwapps.ups.com/tracking/tracking.cgi?tracknum=1ZY836770300522309",
+            "total": 132.5
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://chromeindustries.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://chromeindustries.com/products/vale-sling",
+            "item": "Vale 14L Sling 2.0 - Grey Black",
+            "timeAgo": "2024-05-31"
           },
           {
-            "orderNumber": "190836",
-            "orderDate": "2026-01-29",
-            "items": [
-              {
-                "name": "The Dreamsoft Travel Scarf February Collection 2026",
-                "price": 75,
-                "productLink": "https://zestt-llc.myshopify.com/products/the-dreamsoft-travel-scarf-february-collection-2026"
-              }
-            ],
-            "link": "https://zesttorganics.com/12222870/orders/02fe7c96675e8dae515d0517d8f0ef47/authenticate?key=744cb33832f7788909a42b0f02088dcc",
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&tLabels=9434650899563124206929",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&tLabels=9434650899563124206929",
-            "total": 100,
-            "date_time": "2026-01-29 20:12:37.207"
+            "link": "https://chromeindustries.com/products/vale-sling",
+            "item": "Vale 14L Sling 2.0 - Grey Black",
+            "timeAgo": "2024-05-31"
           },
           {
-            "orderNumber": "187010",
-            "orderDate": "2026-01-08",
-            "items": [
-              {
-                "name": "The Dreamsoft Travel Scarf January Collection 2026",
-                "price": 75,
-                "productLink": "https://zestt-llc.myshopify.com/products/the-dreamsoft-travel-scarf-january-2026-collection"
-              }
-            ],
-            "link": "https://zesttorganics.com/12222870/orders/47f6e147d5f9ebc9b342e293089dfad8/authenticate?key=443384d17f45203b5514deb314598002",
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&tLabels=9434650899561106789903",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&tLabels=9434650899561106789903",
-            "total": 80.95,
-            "date_time": "2026-01-08 14:19:08.988"
+            "link": "https://chromeindustries.com/products/vale-sling",
+            "item": "Vale 14L Sling 2.0 - Grey Black",
+            "timeAgo": "2024-05-29"
           },
           {
-            "orderNumber": "176272",
-            "orderDate": "2025-11-23",
-            "items": [
-              {
-                "name": "The Dreamsoft Organic Cotton Travel Scarf",
-                "price": 75,
-                "productLink": "https://zestt-llc.myshopify.com/products/the-dreamsoft-organic-cotton-travel-scarf"
-              },
-              {
-                "name": "Dreamsoft Travel Scarf Carry Pouch 2.0",
-                "price": 29,
-                "productLink": "https://zestt-llc.myshopify.com/products/dreamsoft-travel-scarf-carry-pouch-2-0"
-              }
-            ],
-            "link": "https://zesttorganics.com/12222870/orders/e83ca50a3a569d9a82aaec19ce3977d8/authenticate?key=45f1bb6e74875ffbefe159e71c3f7591",
-            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&tLabels=9434650899561071489464",
-            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&tLabels=9434650899561071489464",
-            "total": 80.31,
-            "date_time": "2025-11-23 15:19:07.274"
+            "link": "https://chromeindustries.com/products/vale-sling",
+            "item": "Vale 14L Sling 2.0 - Grey Black",
+            "timeAgo": "2024-05-29"
+          },
+          {
+            "link": "https://chromeindustries.com/products/vale-sling",
+            "item": "Vale 14L Sling 2.0 - Grey Black",
+            "timeAgo": "2024-05-29"
           }
         ]
       },
-      "escalation_preferences": [],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "134": {
-      "id": "019c6d18-b0c0-40f8-f000-00003e5ebc5f",
-      "companyName": "CALPAK",
-      "companyWebsite": "https://calpaktravel.com",
-      "agentName": "Jordan",
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_media": [],
-          "message_text": "CALPAK: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "message_type": "system",
-          "date_time": "2026-02-17 13:01:48.690"
-        },
-        {
-          "message_media": [],
-          "message_text": "CALPAK: Thanks for traveling with CALPAK. Enjoy 10% off your first order with code AT1NT1V26GcEXlO.\n\nShop best sellers: calpak.attn.tv/aXyN2l1oI98Q \n*Offer expires in 7 days and excludes sale items. ",
-          "message_type": "system",
-          "date_time": "2026-02-17 13:01:53.837"
-        },
-        {
-          "message_media": [],
-          "message_text": "CALPAK: Save our number so you never miss an update!",
-          "message_type": "system",
-          "date_time": "2026-02-17 13:07:04.656"
-        },
-        {
-          "message_media": [],
-          "message_text": "This code did not work",
-          "message_type": "customer",
-          "date_time": "2026-02-17 13:24:49.967"
-        },
-        {
-          "message_media": [],
-          "message_text": "CALPAK: Hey Wende, thanks for stopping by\n\nFind your go-to luggage picks: https://calpak.attn.tv/a6e4zC3EBoVl .",
-          "message_type": "system",
-          "date_time": "2026-02-17 13:40:47.568"
-        },
-        {
-          "message_media": [],
-          "message_text": "CALPAK: I'm sorry to hear that your code isn't working. Do you mind sharing a screenshot of your cart? I'm happy to take a closer look for you. Kindly note that our promo codes are only eligible for full-priced items. They don't work on already discounted products, including bundled sets. I'm sorry for the inconvenience.",
-          "message_type": "agent",
-          "agent": "109968",
-          "message_id": "019c6cf1-5631-4146-f000-00003e5ebc5f",
-          "date_time": "2026-02-17 13:51:21.544"
-        },
-        {
-          "message_media": [],
-          "message_text": "CALPAK: Thanks for traveling with CALPAK. Enjoy 10% off your first order with code AT1NT1V26GcEXlO.Shop best sellers: calpak.attn.tv/aXyN2l1oI98Q *Offer expires in 7 days and excludes sale items.",
-          "message_type": "customer",
-          "date_time": "2026-02-17 14:17:29.202"
-        },
-        {
-          "message_media": [],
-          "message_text": "I was trying to buy the large Luka duffel",
-          "message_type": "customer",
-          "date_time": "2026-02-17 14:17:59.291"
-        },
-        {
-          "message_media": [],
-          "message_text": "Template used: \"Site won't work - All brands\"; last updated: 2025-07-16 17:54:02.115",
-          "message_type": "template",
-          "date_time": "2026-02-17 14:34:20.631"
-        },
-        {
-          "message_media": [],
-          "message_text": "CALPAK: Thank you so much for that information! I have tried the code: AT1NT1V26GcEXlO on my end, and it worked! You may refer to this screenshot: https://calpak.attn.tv/aXhIWhCAZB8E\nCan you please retry? I would also suggest trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes.",
-          "message_type": "agent",
-          "agent": "109964",
-          "message_id": "019c6d18-b0c0-40f8-f000-00003e5ebc5f",
-          "date_time": "2026-02-17 14:34:20.635"
-        }
-      ],
+      "companyWebsite": "https://chromeindustries.com",
+      "companyName": "Chrome Industries",
       "notes": {
         "send_to_cs": [
-          "Send to CS for post purchase inquiries, use PPI shortcut",
-          "If cx needs help returning/exchanging a gift send to CS",
-          "Send to CS for discount code issues"
+          "Send to CS for code issues for REI or pro deals",
+          "Send to CS for post purchase inquiries"
         ],
         "escalate": [
-          "When ESC add email to notes for all escalations"
+          "ESC when customers complain about their experience, even if the issue was resolved"
+        ],
+        "promo_and_exclusions": [
+          "If cx is looking for their 10% welcome code, ask to check their email (spam \u0026 promo)",
+          "Promotion codes will not combine with other offers or apply during site-wide sale periods or to sale items"
         ]
       },
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://calpaktravel.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "item": "Hue Carry-On Luggage",
-            "link": "https://www.calpaktravel.com/web-pixels@7cecd0b6w90c54c6cpe92089d5m57a67346/custom/web-pixel-90374202@56/sandbox/modern/products/hue-carry-on-luggage",
-            "timeAgo": "2026-01-14"
-          },
-          {
-            "item": "Hue Carry-On Luggage",
-            "link": "https://www.calpaktravel.com/web-pixels@7cecd0b6w90c54c6cpe92089d5m57a67346/custom/web-pixel-90374202@56/sandbox/modern/products/hue-carry-on-luggage",
-            "timeAgo": "2026-01-14"
-          },
-          {
-            "item": "Hue Carry-On Luggage",
-            "link": "https://www.calpaktravel.com/products/hue-carry-on-luggage",
-            "timeAgo": "2026-01-14"
-          },
-          {
-            "item": "Hue Carry-On Luggage",
-            "link": "https://www.calpaktravel.com/products/hue-carry-on-luggage",
-            "timeAgo": "2026-01-14"
-          },
-          {
-            "item": "Hue Carry-On Luggage",
-            "link": "https://www.calpaktravel.com/web-pixels@7cecd0b6w90c54c6cpe92089d5m57a67346/custom/web-pixel-90374202@56/sandbox/modern/products/hue-carry-on-luggage",
-            "timeAgo": "2026-01-14"
-          }
-        ]
-      },
-      "escalation_preferences": [
-        "change of address"
+      "blocklisted_words": [
+        
       ],
-      "blocklisted_words": [],
-      "has_shopify": true
-    },
-    "135": {
-      "id": "019c6d0e-85ab-4852-f000-0000fbe174ee",
-      "companyName": "DreamCloud",
-      "companyWebsite": "https://dreamcloudsleep.com",
-      "agentName": "Sam",
+      "escalation_preferences": [
+        
+      ],
       "messageTone": "Polished",
       "conversation": [
         {
-          "message_media": [],
-          "message_text": "DreamCloud: Welcome! Msg & data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (833) 237-3269.",
           "message_type": "system",
-          "date_time": "2026-02-17 14:09:05.123"
+          "message_text": "Chrome: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/KnA",
+          "date_time": "2024-05-27 12:22:23.685",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "DreamCloud: You're in (& your deal is here)!",
           "message_type": "system",
-          "date_time": "2026-02-17 14:09:09.196"
+          "message_text": "Chrome: Welcome! You are signed up for VIP access to special offers and alerts on exclusive products drops: https://chromeindustries.attn.tv/aEfpvkZF9prW .",
+          "date_time": "2024-05-27 12:22:27.667",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "DreamCloud: Upgrade your old mattress for less. Save up to 60% + free shipping & returns.\n\nClaim your savings: dreamcloud.attn.tv/a05H4Cne5HzO .",
           "message_type": "system",
-          "date_time": "2026-02-17 14:09:10.200"
+          "message_text": "Chrome: Hey there, this is Sarah. Thanks for checking out our gear! https://chromeindustries.attn.tv/aBGHzNGg-mIX \n\nAny questions I can answer for you?",
+          "date_time": "2024-05-27 12:23:46.587",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "DreamCloud: Hello, this is Sam. Thanks for checking out DreamCloud! Why wait to sleep better? You can save up to 60% on mattresses right now.\ndreamcloud.attn.tv/aWyuct7ANAwn\n\nAny questions I can answer for you?\n.",
           "message_type": "system",
-          "date_time": "2026-02-17 14:10:38.301"
+          "message_text": "Chrome: Hurry, it\u0027s the last day to snag 60% off! Don\u0027t miss out on these epic deals before they disappear. https://chromeindustries.attn.tv/aTLoZJgHwf9u",
+          "date_time": "2024-05-31 14:15:29.176",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "DreamCloud: Hi, this is Sam. Save up to 66% on our popular adjustable bundle. Just need a mattress? Save up to 60% on our premier hybrid. Transform your sleep for better days! Questions? Text me back!\n\nBundle:\ndreamcloud.attn.tv/aJRaOAH2G12V \n\nMattress:\ndreamcloud.attn.tv/aZSSDqhs9flH ",
           "message_type": "system",
-          "date_time": "2026-02-17 14:14:20.762"
+          "message_text": "Chrome: Hey, we noticed you checking us out. Have you seen our best sellers yet? https://chromeindustries.attn.tv/aqGUbWbVRCA6 ",
+          "date_time": "2024-06-03 10:29:29.583",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Yeah I got the same deal without signing up 😡",
+          "message_type": "system",
+          "message_text": "Chrome: You\u0027ve heard of dad bods...we\u0027re talking dad bags. Check the gift guide for the best picks for dad: https://chromeindustries.attn.tv/aRoTkO3VuSCJ \n",
+          "date_time": "2024-06-04 13:40:29.236",
+          "message_media": [
+            
+          ]
+        },
+        {
           "message_type": "customer",
-          "date_time": "2026-02-17 14:14:59.473"
+          "message_text": "I\u0027d like to start a return",
+          "date_time": "2024-06-07 07:37:33.144",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "False advertising",
           "message_type": "customer",
-          "date_time": "2026-02-17 14:15:08.956"
+          "message_text": "Order CUS118126SP",
+          "date_time": "2024-06-07 07:37:53.155",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "Template used: \"Too many texts\"; last updated: 2025-12-23 20:03:19.058",
           "message_type": "template",
-          "date_time": "2026-02-17 14:23:14.240"
+          "message_text": "Template used: \"Return policy\"; last updated: 2023-05-24 18:59:30.249",
+          "date_time": "2024-06-07 08:25:19.590",
+          "message_media": [
+            
+          ]
         },
         {
-          "message_media": [],
-          "message_text": "DreamCloud: I'm so sorry for the frustration! That's definitely not our intention. Promotions can vary based on timing and eligibility.\nSigning up for SMS alerts ensures you're the first to know about new promotions, exclusive offers, and limited-time sales.\n\nHowever, if you'd prefer not to receive any more messages from us, just let me know and I'll be glad to coordinate this for you!",
+          "message_id": "018ff2a9-19dc-44d5-f000-00008ab21e0c",
+          "message_text": "Chrome: I\u0027m sorry for the delayed response. You can check out our detailed return policy here: https://chromeindustries.attn.tv/aXUIycEG_Qun",
           "message_type": "agent",
-          "agent": "109964",
-          "message_id": "019c6d0e-85ab-4852-f000-0000fbe174ee",
-          "date_time": "2026-02-17 14:23:14.241"
+          "agent": "82444",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-07 08:25:19.593"
         }
-      ],
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS, use ESC shortcut",
-          "Use escalation template if customer mentions any of the following:",
-          "➜ Exchanges or returns",
-          "➜ Premuim In - Home Setup Questions",
-          "➜ Discount code errors",
-          "➜ Recalls",
-          "➜ Better Business Bureau (BBB)",
-          "➜ Fiberglass",
-          "➜ Lawyers/Lawsuits",
-          "➜ Class Action",
-          "➜ Post Purchase Issues"
-        ],
-        "tone": [
-          "Let the customer have the last word"
-        ]
-      },
+      ]
+    },
+    "133": {
+      "agentName": "Ashley",
+      "has_shopify": false,
+      "id": "01937031-6d6f-451e-f000-0000918fb78c",
       "rightPanel": {
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-08-13",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      229.99,
+                      229.99,
+                      229.99,
+                      229.99,
+                      289.99,
+                      229.99,
+                      289.99,
+                      289.99,
+                      289.99,
+                      289.99,
+                      289.99,
+                      229.99,
+                      229.99,
+                      289.99,
+                      289.99,
+                      229.99,
+                      229.99,
+                      289.99,
+                      289.99
+                    ],
+                    "Count": 19
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2024-08-13 17:35:38.613",
+            "discount_amount": 0,
+            "orderNumber": "39037033",
+            "total": 519.98
+          }
+        ],
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "new codes created 8/29/2022 expiring 9/30/2023",
+            "coupon": "2J5H289C"
+          }
+        ],
         "source": {
           "label": "Website",
-          "value": "https://dreamcloudsleep.com",
+          "value": "https://sauder.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "item": "Premier Adjustable Bed Frame",
-            "link": "https://www.dreamcloudsleep.com/mattress-bundles/adjustable-frame-bundle",
-            "timeAgo": "2026-02-17"
+            "link": "https://www.sauder.com/furniture/419960/library-base",
+            "item": "Library Base",
+            "timeAgo": "2024-11-28"
           },
           {
-            "item": "Premier Adjustable Bed Frame",
-            "link": "https://www.dreamcloudsleep.com/mattress-bundles/adjustable-frame-bundle",
-            "timeAgo": "2026-02-17"
+            "link": "https://www.sauder.com/furniture/419960/library-base",
+            "item": "Library Base",
+            "timeAgo": "2024-11-28"
           },
           {
-            "item": "DreamCloud Classic Hybrid Mattress",
-            "link": "https://www.dreamcloudsleep.com/mattress?utm_campaign=B-(D)_TH-(BAU)_T-(flow)_ST-()_N-(welcome)_S-()_CT-(nonpurchasers)_SG-()_Nu-(1)_O-(percentoff)_CR-()_TE-()_V-()_D-(021326)&utm_medium=sms&utm_source=Attentive&externalId=9I686",
-            "timeAgo": "2026-02-17"
+            "link": "https://www.sauder.com/furniture/419958/hutch?utm_campaign=concierge\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=GOcBq",
+            "item": "Hutch",
+            "timeAgo": "2024-11-27"
+          },
+          {
+            "link": "https://www.sauder.com/furniture/419958/hutch?utm_campaign=concierge\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=GOcBq",
+            "item": "Hutch",
+            "timeAgo": "2024-11-27"
+          },
+          {
+            "link": "https://www.sauder.com/furniture/442786/library-base-cabinet-with-hutch-bundle",
+            "item": "Library Base Cabinet with Hutch Bundle",
+            "timeAgo": "2024-11-27"
           }
         ]
       },
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Discount code errors",
-        "Shipping questions",
-        "Recall",
-        "BBB",
-        "fiberglass",
-        "lawyer",
-        "class action"
-      ],
+      "companyWebsite": "https://sauder.com",
+      "companyName": "Sauder",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post-purchase inquiries for items purchased through a retailer"
+        ],
+        "templates": [
+          "If customers already purchased use TFP shortcut"
+        ],
+        "tone": [
+          "Let the customer have the last word!"
+        ],
+        "drive_to_purchase": [
+          "Don\u0027t recommend Retailer Exclusive items"
+        ],
+        "promo_and_exclusions": [
+          "Discount codes CAN be applied to clearance items"
+        ]
+      },
       "blocklisted_words": [
-        "organic"
+        
       ],
-      "has_shopify": false
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Sauder: Last chance to SAVE 25% on select furniture + storage for the home. Our Halloween Sale ends 11/3. Shop now: https://sauder.attn.tv/ax8hxJ3F7YMm ",
+          "date_time": "2024-10-31 16:04:40.800",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sauder: Hey there! We noticed you eyeing something on our site... \n\nDid you have any questions I could help with?\n\n-Ashley\n https://sauder.attn.tv/afY5leMx3pKH",
+          "date_time": "2024-11-10 12:20:20.157",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sauder: Hey there! We noticed you eyeing something on our site... \n\nDid you have any questions I could help with?\n\n-Ashley\n https://sauder.attn.tv/aMfE7SjINoMu",
+          "date_time": "2024-11-15 15:42:39.582",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sauder: Our biggest deal of the year! Save on a HUGE variety of furniture - desks, storage, bedroom, and more! Shop now: https://sauder.attn.tv/a_Mufyl3w0SF ",
+          "date_time": "2024-11-27 15:07:23.603",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sauder: Hey, this is Ashley . Thanks for stopping by! 😊 https://sauder.attn.tv/aasOQMv0oJPI \n\nWhich room are you shopping for today? ",
+          "date_time": "2024-11-27 18:20:57.006",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Still waiting for the Chalked Chestnut hutch",
+          "date_time": "2024-11-27 18:30:06.175",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01936ff9-60de-4b2f-f000-0000918fb78c",
+          "message_text": "Sauder: I\u0027m sorry, I currently don\u0027t have the exact date of a possible restock, but I recommend signing up on the product page so you\u0027re notified the second it comes back in! What do you think about this instead? - https://sauder.attn.tv/aigmZdFeT7H_ Let me know what you think. I\u0027ll be here! ",
+          "message_type": "agent",
+          "agent": "87587",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-27 18:33:54.539"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "No. I need the hutch. Already have the base. I have been waiting for over two months",
+          "date_time": "2024-11-27 18:37:41.036",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01936ffe-b103-47d3-f000-0000918fb78c",
+          "message_text": "Sauder: I apologize for the inconvenience this has caused. I\u0027ll be sure to share your feedback with my team. Please rest assured that we\u0027re working diligently to replenish our inventory as soon as possible! In the meantime, you can check out our Black Friday Sale here: https://sauder.attn.tv/aBNVWeZErrU- ",
+          "message_type": "agent",
+          "agent": "87595",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-27 18:39:42.737"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I have three pieces in that color and very disappointed that you are very misleading on your site and keep changing the date when it will be available. Wayfair has it for sale on their site now and says it will be delivered in 2 to 3 weeks. So is that true???",
+          "date_time": "2024-11-27 19:16:42.794",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01937028-2583-45bf-f000-0000918fb78c",
+          "message_text": "Sauder: I\u0027m sorry for the confusion. The first product I shared is a hutch and is available in your preferred color. Can you please let me know which desk/credenza you intend to pair it with? I\u0027ll be happy to check for its compatibility. ",
+          "message_type": "agent",
+          "agent": "82220",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-27 19:24:59.533"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "419960 Library Base",
+          "date_time": "2024-11-27 19:27:28.928",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Restock (notifications)\"; last updated: 2025-10-09 21:41:40.249",
+          "date_time": "2024-11-27 19:35:07.772",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01937031-6d6f-451e-f000-0000918fb78c",
+          "message_text": "Sauder: Thanks for the info! I\u0027m sorry the item Library Hutch (419961) is currently out of stock until 12/4/2024. I recommend signing up on the product page so you\u0027re notified the second it comes back in! Is there anything else that catches your eye? \n\nIn the meantime, you can check some other options here: https://sauder.attn.tv/anoI3H-YMBJL",
+          "message_type": "agent",
+          "agent": "46498",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-27 19:35:07.774"
+        }
+      ]
+    },
+    "134": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "019341de-7dbd-490d-f000-000026a5af0a",
+      "rightPanel": {
+        "coupons": [
+          {
+            "coupon": "6T89263R",
+            "status": "ACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://hammitt.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.hammitt.com/products/hunter-med-backpack-black-gunmetal",
+            "item": "Hunter | Black/Gunmetal | Med",
+            "timeAgo": "2024-11-18"
+          },
+          {
+            "link": "https://www.hammitt.com/collections/sale/products/benjamin-wallet-slim-wallet-pewter-brushed-silver",
+            "item": "Benjamin Wallet Slim | Pewter/Brushed Silver",
+            "timeAgo": "2024-11-18"
+          },
+          {
+            "link": "https://www.hammitt.com/collections/sale/products/hunter-med-backpack-black-gunmetal-red-zip",
+            "item": "Hunter | Black/Gunmetal Red-Zip | Med",
+            "timeAgo": "2024-11-18"
+          },
+          {
+            "link": "https://www.hammitt.com/collections/sale/products/vip-med-clutch-pink-sands-brushed-gold",
+            "item": "VIP | Pink Sands/Brushed Gold | Med",
+            "timeAgo": "2024-11-18"
+          },
+          {
+            "link": "https://www.hammitt.com/products/bryant-med-shoulder-bag-orchestra-brown-gunmetal",
+            "item": "Bryant | Orchestra Brown/Gunmetal | Med",
+            "timeAgo": "2024-11-18"
+          }
+        ]
+      },
+      "companyWebsite": "https://hammitt.com",
+      "companyName": "Hammitt",
+      "notes": {
+        "templates": [
+          "If a cx complains about pricing, use CAP shortcut"
+        ],
+        "tone": [
+          "Make sure you\u0027re using a formal and professional tone!",
+          "Only emojis, no smileys",
+          "Allow the cx to have the last word when possible",
+          "Don\u0027t say \u0027\u0027thanks for your purchase\u0027\u0027",
+          "Don\u0027t use the word “SALE”, it\u0027s a Retiring Styles Event"
+        ],
+        "dos_and_donts": [
+          "They will only have bundled deals rather than sale items in the future"
+        ],
+        "promo_and_exclusions": [
+          "The 10% Welcome Offer is valid for 10 days",
+          "If cx is asking about 10% code, use WLC shortcut",
+          "→ if they didn\u0027t find the code they\u0027ve probabaly subscribed before",
+          "→ if they push, you can ESC"
+        ]
+      },
+      "blocklisted_words": [
+        "purse",
+        ":)",
+        "sale"
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Formal",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: You asked, we designed. Here by popular demand, the new Mr. G Med is the perfect everyday bag. SHOP NOW: https://hammitt.attn.tv/aRQJ9mMK3llt .",
+          "date_time": "2024-10-22 20:35:23.359",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Hey Kimberly! Forgetting something? Get it before it\u0027s gone! We have FREE shipping + returns on every order:\nhttps://hammitt.attn.tv/a11Dv7en9Ad1 ",
+          "date_time": "2024-10-23 19:32:48.956",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Our Kyle bag is going viral for a reason. Wear it on your shoulder, or style as a crossbody. SHOP NOW: https://hammitt.attn.tv/aLu47UX6Kbmz .",
+          "date_time": "2024-10-24 21:00:52.030",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: This special drop has been a year in the making. Italian Green Room Suede is available now in limited quantities: https://hammitt.attn.tv/a9jX0slHg3BY ",
+          "date_time": "2024-10-25 20:35:13.407",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Hey Kimberly! Forgetting something? Get it before it\u0027s gone! We have FREE shipping + returns on every order:\nhttps://hammitt.attn.tv/aT5wUuBmNM9t ",
+          "date_time": "2024-10-26 12:38:44.425",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: The final restock of our Mulholland Collection is here. Preorder the pieces that SOLD OUT three times: https://hammitt.attn.tv/a0QSVo_dIdUl .",
+          "date_time": "2024-10-28 20:45:24.298",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: We have perfect bag for you this season. Don\u0027t miss out on these gorgeous new arrivals: https://hammitt.attn.tv/ariBvkqT06Fk ",
+          "date_time": "2024-10-29 19:02:38.360",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Halloween\u0027s here early - and we got you a treat at the perfect price! Enjoy the brand-new Charles Sml: https://hammitt.attn.tv/aOqRTIieVrw_ .",
+          "date_time": "2024-10-30 20:30:23.588",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: You are already subscribed. Click here to shop now: hammitt.com.",
+          "date_time": "2024-10-31 12:39:02.689",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Hey Kimberly! Forgetting something? Get it before it\u0027s gone! We have FREE shipping + returns on every order:\nhttps://hammitt.attn.tv/a8YwHpIK7lTP ",
+          "date_time": "2024-10-31 12:55:59.362",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: LAST CALL! Don\u0027t miss your chance for a free gift with your purchase of $650 or more. SHOP NOW: https://hammitt.attn.tv/an2HZjf2LWFz .",
+          "date_time": "2024-10-31 19:15:42.976",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: We kept your cart company! Complete your purchase here: https://hammitt.attn.tv/aB1yh29jnnv4 ",
+          "date_time": "2024-11-01 12:43:07.341",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Hey Kimberly! Forgetting something? Get it before it\u0027s gone! We have FREE shipping + returns on every order:\nhttps://hammitt.attn.tv/a6ZjSSxS5fCw ",
+          "date_time": "2024-11-01 12:56:06.033",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Don\u0027t miss our new Jazz Blues drop, featuring soft leather + a bright blue accent zipper. SHOP NOW: https://hammitt.attn.tv/aK38V9hXQcOP .",
+          "date_time": "2024-11-04 19:30:31.497",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: A new take on our bestselling Italian leather has arrived. Numbers are limited - explore Pirouette Patent today: https://hammitt.attn.tv/aKkQSO6R5vrF ",
+          "date_time": "2024-11-06 19:30:28.594",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Hey Kimberly, we noticed you checking us out. Have you seen our best sellers yet? https://hammitt.attn.tv/a72JlEan-wiR ",
+          "date_time": "2024-11-08 11:50:21.200",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Hey Kimberly! Forgetting something? Get it before it\u0027s gone! We have FREE shipping + returns on every order:\nhttps://hammitt.attn.tv/az_hLUDJCRIc ",
+          "date_time": "2024-11-09 14:45:47.470",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Our bestselling Mahogany Pebble leather is here in NEW silhouettes. SHOP THE DROP: https://hammitt.attn.tv/af0l8Yg4NZcp .",
+          "date_time": "2024-11-10 18:30:31.728",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Our first-ever travel drop has arrived. Meet The Business Class Collection, designed as a polished gift for the jetsetter you love: https://hammitt.attn.tv/aNOvn6Bq5QVV .",
+          "date_time": "2024-11-11 19:30:25.002",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Our last collaboration of 2024 has arrived. Inspired by interior design and bright resortwear, the new Wavy Dazey drop arrives in collectible packaging. Limited numbers are available. SHOP NOW: https://hammitt.attn.tv/aA1bNiRomEqT .",
+          "date_time": "2024-11-13 19:34:32.098",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Hey Kimberly, we noticed you checking us out. Have you seen our best sellers yet? https://hammitt.attn.tv/alA9yH5o_M_C ",
+          "date_time": "2024-11-15 12:03:15.026",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Discover the elegance of Sonnet Grey, designed to get softer with every wear. SHOP NOW: https://hammitt.attn.tv/a4aarzENxsem . ",
+          "date_time": "2024-11-16 19:30:27.476",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Hey Kimberly! Forgetting something? Get it before it\u0027s gone! We have FREE shipping + returns on every order:\nhttps://hammitt.attn.tv/aSb69xbypb1V ",
+          "date_time": "2024-11-18 12:15:19.586",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Do you price match from a retailer that carries Hammitt handbags?",
+          "date_time": "2024-11-18 12:16:47.922",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01934049-3e4c-4589-f000-000026a5af0a",
+          "message_text": "HAMMITT: Thank you for your inquiry. I\u0027ll be happy to check on this with my team. Could you please send me a screenshot or the link to the Hammitt handbag from the retailer you\u0027d like us to price match? This will help me assist you more efficiently.",
+          "message_type": "agent",
+          "agent": "82221",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-18 12:19:22.201"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Here are the screenshots per your request.",
+          "date_time": "2024-11-18 12:24:04.806",
+          "message_media": [
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1731950635756_705642a1-efa7-4856-a5e9-89ef3d5a9eb4-1.jpeg",
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1731950635756_705642a1-efa7-4856-a5e9-89ef3d5a9eb4-1.jpeg"
+          ]
+        },
+        {
+          "message_id": "0193404e-d5d2-4204-f000-000026a5af0a",
+          "message_text": "HAMMITT: Thank you for the screenshot! I will pass this along to my team and get back to you as soon as possible! Appreciate your patience!\n",
+          "message_type": "agent",
+          "agent": "82500",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-18 12:25:28.671"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "That will be great... thank you!",
+          "date_time": "2024-11-18 12:26:02.769",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0193404f-fdb3-49cf-f000-000026a5af0a",
+          "message_text": "HAMMITT: You\u0027re welcome! We\u0027re always here to help and ensure you have a great experience with us! I\u0027ll be back with you shortly. ",
+          "message_type": "agent",
+          "agent": "82226",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-18 12:26:44.415"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Liked “You\u0027re welcome! We\u0027re always here to help and ensu...”",
+          "date_time": "2024-11-18 12:28:42.786",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Just wondering if the price match is possible.",
+          "date_time": "2024-11-18 19:41:22.824",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019341de-7dbd-490d-f000-000026a5af0a",
+          "message_text": "HAMMITT: I\u0027m still checking this to my team, I will notify you once there\u0027s an update. ",
+          "message_type": "agent",
+          "agent": "87311",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-11-18 19:42:00.520"
+        }
+      ]
+    },
+    "135": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "01902cd0-8b96-4992-f000-00008d2869d5",
+      "rightPanel": {
+        "coupons": [
+          {
+            "coupon": "8J2979BC",
+            "status": "ACTIVE"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://hammitt.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.hammitt.com/products/bryant-med-shoulder-bag-toast-tan-brushed-gold",
+            "item": "Bryant | Toast Tan/Brushed Gold | Med",
+            "timeAgo": "2024-06-18"
+          },
+          {
+            "link": "https://www.hammitt.com/products/bryant-med-shoulder-bag-hermosa-saddle-gunmetal",
+            "item": "Bryant | Hermosa Saddle/Gunmetal | Med",
+            "timeAgo": "2024-06-18"
+          },
+          {
+            "link": "https://www.hammitt.com/products/bryant-med-shoulder-bag-black-brushed-gold-red-zip",
+            "item": "Bryant | Black/Brushed Gold Red Zip | Med",
+            "timeAgo": "2024-06-18"
+          },
+          {
+            "link": "https://www.hammitt.com/products/the-clean-up-kit?pr_prod_strat=jac\u0026pr_rec_id=66e0914c0\u0026pr_rec_pid=7267765747896\u0026pr_ref_pid=3938977513590\u0026pr_seq=uniform",
+            "item": "The Clean Up Kit",
+            "timeAgo": "2024-06-18"
+          },
+          {
+            "link": "https://www.hammitt.com/products/hammitt-leather-laundry-lrg-supplies",
+            "item": "Leather Laundry | Leather Conditioner | Lrg",
+            "timeAgo": "2024-06-18"
+          }
+        ]
+      },
+      "companyWebsite": "https://hammitt.com",
+      "companyName": "Hammitt",
+      "notes": {
+        "templates": [
+          "If a cx complains about pricing, use CAP shortcut"
+        ],
+        "tone": [
+          "Make sure you\u0027re using a formal and professional tone!",
+          "Only emojis, no smileys",
+          "Allow the cx to have the last word when possible",
+          "Don\u0027t say \u0027\u0027thanks for your purchase\u0027\u0027",
+          "Don\u0027t use the word “SALE”, it\u0027s a Retiring Styles Event"
+        ],
+        "dos_and_donts": [
+          "They will only have bundled deals rather than sale items in the future"
+        ],
+        "promo_and_exclusions": [
+          "The 10% Welcome Offer is valid for 10 days",
+          "If cx is asking about 10% code, use WLC shortcut",
+          "→ if they didn\u0027t find the code they\u0027ve probabaly subscribed before",
+          "→ if they push, you can ESC"
+        ]
+      },
+      "blocklisted_words": [
+        "purse",
+        ":)",
+        "sale"
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Formal",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from HAMMITT.",
+          "date_time": "2024-06-18 15:04:30.891",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/RyS",
+          "date_time": "2024-06-18 15:04:44.996",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Time for the VIP treatment! Look out for exclusive product drops, restock info and special announcements, coming soon. For now, it’s time for a little shopping fix: https://hammitt.attn.tv/aFPdtCf3f9SX .",
+          "date_time": "2024-06-18 15:04:49.073",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "HAMMITT: Don\u0027t forget to save our contact info to get early access \u0026 exclusive offers! \n\nHave a question? Text this number anytime to reach our concierge team!",
+          "date_time": "2024-06-18 15:04:50.802",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m trying to decide which product to use for my purse to clean it. I can send pic",
+          "date_time": "2024-06-18 15:09:04.640",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01902cc0-d700-48f9-f000-00008d2869d5",
+          "message_text": "HAMMITT: Please send a picture of your bag, and I\u0027ll help you choose the best cleaning product.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-18 15:09:13.864"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Let me say I absolutely love this bag.",
+          "date_time": "2024-06-18 15:24:50.756",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Which is better for cleaning your leather? Spray or balm?\"; last updated: 2022-03-18 18:02:08.039",
+          "date_time": "2024-06-18 15:26:23.146",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01902cd0-8b96-4992-f000-00008d2869d5",
+          "message_text": "HAMMITT: Thank you for the screenshot! I\u0027m glad to hear that you\u0027re loving the back. We recommend having a local leather care professional take a look and see what they can do/advise for your bag!",
+          "message_type": "agent",
+          "agent": "49296",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-18 15:26:23.148"
+        }
+      ]
     }
   }
 }

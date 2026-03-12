@@ -1,0 +1,948 @@
+{
+  "version": 1,
+  "chunk": "chunk_0041",
+  "scenarios": {
+    "201": {
+      "agentName": "Jordan",
+      "has_shopify": false,
+      "id": "0190932d-5cbe-4f9a-f000-000009f86b52",
+      "rightPanel": {
+        "coupons": [
+          {
+            "status": "INACTIVE",
+            "value": "15",
+            "coupon": "ATN1P576R5W6"
+          },
+          {
+            "status": "ACTIVE",
+            "value": "10",
+            "coupon": "ATN2HFN5CJMJ"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://cookieskids.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.cookieskids.com/product.aspx?l=00170206049002320000\u0026p=NIK04965",
+            "item": "Nike Baby Boys\u0027 Footed Coveralls",
+            "timeAgo": "2024-07-08"
+          }
+        ]
+      },
+      "companyWebsite": "https://cookieskids.com",
+      "companyName": "Cookie\u0027s Kids",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ],
+        "promo_and_exclusions": [
+          "If cx are looking for 15% welcome code, ask to check their email (spam \u0026 promo)"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Cookie\u0027s Kids: Hey, this is Jordan from CookiesKids. It\u0027s been a while and we\u0027ve got lots of new arrivals at great prices! Anything I can help you find?",
+          "date_time": "2024-06-13 13:52:50.269",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cookie\u0027s Kids: Hey, this is Jordan from CookiesKids again. We really miss you and have some great new items! Want an insider promo code? ",
+          "date_time": "2024-06-18 13:52:53.843",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cookie\u0027s Kids: Score HUGE Savings! LOWEST PRICES of the Year on School Uniforms! Stock up now before it\u0027s too late! https://cookieskids.attn.tv/aVSKhrirpvPY ",
+          "date_time": "2024-06-27 17:15:29.775",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cookie\u0027s Kids: You are already subscribed. Click here to shop now: cookieskids.com.",
+          "date_time": "2024-07-07 20:16:11.100",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cookie\u0027s Kids: Hey, we noticed you checking us out. Have you seen our best sellers yet? Come back and shop now with 15% OFF, using code: ATN1P576R5W6 -- Hurry, this offer ends soon! https://cookieskids.attn.tv/afEls8H7glA7",
+          "date_time": "2024-07-08 12:24:13.628",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Cookie\u0027s Kids: Hey, this is Jordan. Thanks for checking out our site! 😊 https://cookieskids.attn.tv/arydnLhRqGVR \n\nWant me to see if I can get you a discount code?",
+          "date_time": "2024-07-08 12:27:20.332",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Ive been looking for these every time you show them online. \nWhen I press on them it look for them they are not there",
+          "date_time": "2024-07-08 12:28:43.603",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190932d-5cbe-4f9a-f000-000009f86b52",
+          "message_text": "Cookie\u0027s Kids: Can you please tell me which item you are looking at? I\u0027ll be more than happy to check on this for you!",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-07-08 12:29:02.021"
+        }
+      ]
+    },
+    "202": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "018f887d-0b22-4065-f000-00003397dadd",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://illcurrency.com",
+          "date": ""
+        },
+        "coupons": [
+          {
+            "status": "ACTIVE",
+            "description": "Concierge Free Shipping offer",
+            "coupon": "freeshippingx83Z6y"
+          },
+          {
+            "coupon": "SAVE10NOW",
+            "status": "ACTIVE"
+          }
+        ]
+      },
+      "companyWebsite": "https://illcurrency.com",
+      "companyName": "illCurrency",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "templates": [
+          "If cx placed an order and wants to upgrade their shipping, use UFS shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Future Shoe Releases",
+        "Requests for Discount Code"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "illCurrency: Thanks for your purchase! Mind leaving us a review? As a gift back for you here\u0027s free shipping on your next order: https://illcurrency.attn.tv/aYj_BA7swgXX . Reply back with any questions!\n- Jordan",
+          "date_time": "2024-05-16 13:23:09.679",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "illCurrency: Hey Nikia, order #179328 is out for delivery. Track your order here: https://illcurrency.attn.tv/aa5eAie8d_F_ .",
+          "date_time": "2024-05-17 13:21:25.047",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I ordered a white shirt and received a beige shirt",
+          "date_time": "2024-05-17 17:17:56.694",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f886f-56f5-4c09-f000-00003397dadd",
+          "message_text": "illCurrency: I\u0027m sorry to hear that! Can you please send me a photo of the item(s) that you received along with your email address? ",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 17:22:29.253"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It isn\u0027t white at all",
+          "date_time": "2024-05-17 17:23:26.562",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "nikiafrazier@gmail.com",
+          "date_time": "2024-05-17 17:23:36.587",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f8871-4f2a-4838-f000-00003397dadd",
+          "message_text": "illCurrency: Thank you. Can you share a photo so I can raise it to the team?",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 17:24:38.326"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "The photo is still sending",
+          "date_time": "2024-05-17 17:25:06.339",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f8873-1df9-4989-f000-00003397dadd",
+          "message_text": "illCurrency: Sorry about that and thank you! Are the other shirts you received bright white? ",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 17:26:36.803"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes they are",
+          "date_time": "2024-05-17 17:26:56.614",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f8874-19b3-441f-f000-00003397dadd",
+          "message_text": "illCurrency: Understood. I\u0027ll get back to you as soon as I get an update from the team! In the meantime, can I help you with anything else?",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 17:27:41.245"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Nothing besides send my white shirt out! I ordered white not beige",
+          "date_time": "2024-05-17 17:28:26.851",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f887d-0b22-4065-f000-00003397dadd",
+          "message_text": "illCurrency: I will let you what the options the time gives once the team responds! Thank you for your patience in advanced.",
+          "message_type": "agent",
+          "agent": "33482",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-17 17:37:27.340"
+        }
+      ]
+    },
+    "203": {
+      "agentName": "Avery",
+      "has_shopify": false,
+      "id": "018f598e-222e-4778-f000-00002806ef2c",
+      "rightPanel": {
+        "coupons": [
+          {
+            "coupon": "ATWB-OZEN-CMU4-4ZCR-DNRA",
+            "status": "ACTIVE"
+          },
+          {
+            "coupon": "PU10-O6Q2-EIDZ-X2VI-KOA7",
+            "status": "ACTIVE"
+          },
+          {
+            "status": "ACTIVE",
+            "description": "04.04.23 Reload",
+            "coupon": "A10-QXUZ-ULKB-D39N-VAXH"
+          },
+          {
+            "status": "INACTIVE",
+            "description": "5-off-refill-corrected",
+            "coupon": "A5O-NNLT-GHXD-KB6G-YQP5"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://snipesusa.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.snipesusa.com/grade-school-9060-new-balance-olivine---lichen-green-gc9060ee-1000113834.html?queryID=26f017ff35fd737e263786852926df40\u0026objectID=1000113834\u0026indexName=production_na01_snipes_demandware_net__snipesusa__products__en_US",
+            "item": "Grade School 9060",
+            "timeAgo": "2024-05-08"
+          }
+        ]
+      },
+      "companyWebsite": "https://snipesusa.com",
+      "companyName": "Snipes",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS immediately for post-purchase issues",
+          "Send to CS for payment processing issues"
+        ],
+        "tone": [
+          "Don\u0027t use the term restock",
+          "Don\u0027t tell customers that we\u0027ll be restocking",
+          "Don\u0027t respond to blank messages",
+          "Don\u0027t use formal language",
+          "Close the conversation when a customer responds \u0027no\u0027"
+        ],
+        "templates": [
+          "If a cx reaches out regarding the Early Access event, use EAE shortcut",
+          "For cx reaching out in Spanish use SSC shortcut",
+          "For checkout issues use the \"Check out Issues\" temp",
+          "For store item availability, use SPA shortcut",
+          "If cx\u0027s email doesn\u0027t work for early access, use EEA shortcut"
+        ],
+        "dos_and_donts": [
+          "They occasionally run sign-up campaigns where cx text certain keywords (“releases,” “early access”) to join a list. If a customer sends a similar keyword:",
+          "➜ Check the website banner or landing page to confirm if it\u0027s a current keyword trigger",
+          "➜ If confirmed, close the convo, if not you can respond",
+          "All clothing is true to size unless otherwise stated on the product page",
+          "You can use these sizing charts for reference (for internal use only): https://docs.google.com/spreadsheets/d/1kmra_vOwCJuHoAx9D4L4Qx95rxafHcrqn-ZGutfzLgg/edit?usp=sharing",
+          "🅿️ If customers say they want to purchase in store - encourage them to buy online \u0026 pick up in-store",
+          "For store info q\u0027s (phone number/additional info) - use the store locator with your VPN turned on!"
+        ],
+        "drive_to_purchase": [
+          "🅿️ If customers are looking for an outfit recommendation/item pairing - direct them to the \"shop the look\" section on each product page or use the LK shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        "restock"
+      ],
+      "escalation_preferences": [
+        "Exchanges and returns"
+      ],
+      "messageTone": "Formal",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: Peep 100s of new styles in our Sale section! Cop some spring heat for the whole fam without breaking the bank now: https://snipes.attn.tv/l/H7h/7CpG8 .",
+          "date_time": "2024-04-14 11:47:01.209",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Pick up",
+          "date_time": "2024-05-08 12:11:22.053",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "SNIPES: You earned 10% off your next buy online, pickup in store order! Use code PU10-O6Q2-EIDZ-X2VI-KOA7 at checkout. Exclusions apply, shop now: https://snipes.attn.tv/a5HOPBzzntcW .",
+          "date_time": "2024-05-08 12:12:04.840",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f58fc-87c4-499d-f000-00002806ef2c",
+          "message_text": "SNIPES: Thank you for your interest in our products. Let me know if you need anything, I\u0027m just a message away!",
+          "message_type": "agent",
+          "agent": "82304",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-08 12:14:55.947"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I tried to use this online purchase for in store pick up and it stated the sneakers were in stock at that location..... after the order was placed it says they will not get to the store until 5/15",
+          "date_time": "2024-05-08 14:41:41.146",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f598b-08ea-42c8-f000-00002806ef2c",
+          "message_text": "SNIPES: I apologize for any confusion. The best way to handle this is to contact our customer support team via this link https://snipes.attn.tv/sl/gzRkZ6mA They will be more than happy to help!",
+          "message_type": "agent",
+          "agent": "82446",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-08 14:50:35.126"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I tried that, thanks",
+          "date_time": "2024-05-08 14:51:57.319",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Have a great day! - ALL BRANDS\"; last updated: 2022-07-05 16:55:29.721",
+          "date_time": "2024-05-08 14:53:58.199",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "018f598e-222e-4778-f000-00002806ef2c",
+          "message_text": "SNIPES: You\u0027re welcome! Have a great day and if you have any questions, feel free to shoot me a text.",
+          "message_type": "agent",
+          "agent": "82358",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-05-08 14:53:58.201"
+        }
+      ]
+    },
+    "204": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "0190500b-5dc5-42b6-f000-00008b79e895",
+      "rightPanel": {
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2024-06-05",
+            "items": [
+              {
+                "price": [
+                  215
+                ],
+                "productLink": "https://olive-wren.myshopify.com/products/eucalyptus-sheets",
+                "name": "AiryWeight Eucalyptus Sheet Set"
+              }
+            ],
+            "trackingLink": "https://tools.usps.com/go/TrackConfirmAction?tRef=fullpage\u0026tLc=2\u0026text28777=\u0026tLabels=9434611206210293722909",
+            "link": "https://sijohome.com/29943212/orders/735cb335ea95f9bacffa6bfaee562566/authenticate?key=91d399285056189d5d6c1ec291b5b83a\u0026none=Vw1SBVBBVw",
+            "date_time": "2024-06-05 15:02:35.317",
+            "discount_amount": 21.5,
+            "orderNumber": "139610",
+            "order_tracking_link": "https://tools.usps.com/go/TrackConfirmAction?tRef=fullpage\u0026tLc=2\u0026text28777=\u0026tLabels=9434611206210293722909",
+            "total": 193.5
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://sijohome.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://sijohome.com/products/eucalyptus-throw-blanket?variant=40427316215890",
+            "item": "Eucalyptus Throw Blanket - Dove",
+            "timeAgo": "2024-06-25"
+          },
+          {
+            "link": "https://sijohome.com/products/eucalyptus-throw-blanket?variant=40427315822674",
+            "item": "Eucalyptus Throw Blanket - Dove",
+            "timeAgo": "2024-06-25"
+          },
+          {
+            "link": "https://sijohome.com/products/eucalyptus-throw-blanket",
+            "item": "Eucalyptus Throw Blanket - Fog",
+            "timeAgo": "2024-06-25"
+          },
+          {
+            "link": "https://sijohome.com/collections/clearance/products/eucalyptus-tank?variant=39399917977682",
+            "item": "SoftStretch Tank - Pebble / XS",
+            "timeAgo": "2024-06-25"
+          },
+          {
+            "link": "https://sijohome.com/collections/clearance/products/eucalyptus-tank",
+            "item": "SoftStretch Tank - Pebble / XS",
+            "timeAgo": "2024-06-25"
+          }
+        ]
+      },
+      "companyWebsite": "https://sijohome.com",
+      "companyName": "Sijo",
+      "notes": {
+        
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "Shipping questions",
+        "Exchanges and returns"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Sijo.",
+          "date_time": "2024-06-03 08:52:43.672",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Welcome to Sijo! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/OaI",
+          "date_time": "2024-06-03 08:52:59.189",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Hey, this is Sarah, your personal concierge! Feel free to text me if you ever have any questions! Enjoy 10% off your order (code applies at checkout) and FREE SHIPPING on orders of $100+. Shop now! https://sijo.attn.tv/aASnNvopZbKb ",
+          "date_time": "2024-06-03 08:53:03.697",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Don\u0027t forget to save our contact to get exclusive updates!",
+          "date_time": "2024-06-03 08:53:04.215",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Need help choosing your best bedding match? Tell us how you sleep.\n\n1 for Hot sleeper\n2 for Cold sleeper\n3 for Both hot \u0026 cold at night\n4 for Comfortable",
+          "date_time": "2024-06-04 11:09:34.681",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Hey , this is Sarah. Thanks for checking out our site! 😊 https://sijo.attn.tv/al-D73tQghnn \n\nAny questions I can answer for you?",
+          "date_time": "2024-06-05 10:48:10.240",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: You are already subscribed. Click here to shop now: sijohome.com.",
+          "date_time": "2024-06-05 10:49:17.065",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: You are already subscribed. Click here to shop now: sijohome.com.",
+          "date_time": "2024-06-05 10:49:21.034",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Thank you for your purchase! Your order number is 139610. View more information about your order here: https://sijo.attn.tv/aK9BlfJAHenU .",
+          "date_time": "2024-06-05 11:02:36.013",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Hey Kerri, I\u0027m Sarah your personal shopping assistant. Welcome to our exclusive VIP list!\n\nYou can text me anytime for support, recommendations, or anything in between. Is there anything I can assist you with today?\n\nhttps://sijo.attn.tv/a5Neywgh39BB .",
+          "date_time": "2024-06-06 11:02:46.221",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: The perfect pillow DOES exist! Made from Talalay Latex our CloudSupport pillow relieves neck pressure while offering maximum head support. Discover now: https://sijo.attn.tv/aKh9UuxamcN5 ",
+          "date_time": "2024-06-06 14:01:19.679",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Great news! Your order (139610) has shipped and will be to you soon. Click here to track your order: https://sijo.attn.tv/axa_xgrH9pG7 .",
+          "date_time": "2024-06-06 20:56:32.960",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Great news! Your order (139610) has shipped and will be to you soon. Click here to track your order: https://sijo.attn.tv/aC5fvk3p9dpn .",
+          "date_time": "2024-06-07 12:18:32.462",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Hey! We caught you taking a peek 👀 Have you discovered our top-rated products yet? Find our best sellers here: https://sijo.attn.tv/a8XJPgmAaTN0 ",
+          "date_time": "2024-06-07 13:07:16.819",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Hey, it\u0027s Sarah again. I have a quick tip! Make sure to save our contact card, so that you never miss an exclusive VIP offer. \n\nIs there anything else I can help you with?\n\nhttps://sijo.attn.tv/an0qxOrUMWPC .",
+          "date_time": "2024-06-08 11:46:41.423",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Make your bed the highlight of your room! Learn how to choose the right duvet size for comfort and style. Check out our guide: https://sijo.attn.tv/ayDHGbQYdlCW ",
+          "date_time": "2024-06-09 18:00:56.878",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Hey! We caught you taking a peek 👀 Have you discovered our top-rated products yet? Find our best sellers here: https://sijo.attn.tv/aeQYYAetz_BE ",
+          "date_time": "2024-06-10 11:53:42.611",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Hey Sijo Insiders! Our Early Summer Sale starts NOW. Enjoy 15% off sitewide. Refresh your home and happy shopping: https://sijo.attn.tv/a_eLokr8aN0_ ",
+          "date_time": "2024-06-12 11:30:31.586",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Hi Kerri! Thanks for your recent SIJO order. We hope you\u0027re loving AiryWeight Eucalyptus Sheet Set! Let us know your thoughts by leaving a review here https://sijo.attn.tv/af8tEbR0FqCw ",
+          "date_time": "2024-06-13 15:55:45.631",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Get that item you\u0027ve been eyeing, now 15% off. Upgrade your sleep experience now: https://sijo.attn.tv/at21NU9aFd33 ",
+          "date_time": "2024-06-14 12:02:03.244",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Save BIG on our bestselling sheets and comfy loungewear. Get 15% off now: https://sijo.attn.tv/aP8dR7__-X2M ",
+          "date_time": "2024-06-16 16:30:31.662",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: LAST DAY to score big on some of our bestselling sheets. Score 15% off sitewide, code automatically applied at checkout. Shop now: https://sijo.attn.tv/aNQI6acWZVmf ",
+          "date_time": "2024-06-18 16:00:35.959",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Don\u0027t miss out, find some of our bestselling sheets up to 30% off. Happy shopping: https://sijo.attn.tv/akXFp_U_w6JZ ",
+          "date_time": "2024-06-20 11:01:22.658",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Introducing our bestselling AiryWeight bedding in stunning new hues! Elevate your sleep experience with our bestselling collection. Shop the new colors today: https://sijo.attn.tv/ascHf3REfDUX",
+          "date_time": "2024-06-23 18:30:28.070",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Elevate your bedding game with our AiryWeight Bedding - the perfect blend of style and comfort. Upgrade your sleep experience with Sijo today: https://sijo.attn.tv/a9g26TOPdAek ",
+          "date_time": "2024-06-24 11:01:00.058",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Sijo: Hi Kerri, Sarah welcome back! Still thinking about the AiryWeight Eucalyptus Pillowcase Set - Snow / Standard/Queen?. Can I help you decide?\n\nComplete your order: https://sijo.attn.tv/aSfnd0q0YD8r",
+          "date_time": "2024-06-25 11:34:17.322",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Are there any additional discounts you can offer?",
+          "date_time": "2024-06-25 11:37:06.364",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "0190500b-5dc5-42b6-f000-00008b79e895",
+          "message_text": "Sijo: Thank you for reaching out! Please check our website for the most up-to-date and upcoming promotions/sales. You will be the first to hear about new promotions: https://sijo.attn.tv/asMePuRGz9nm",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-06-25 11:37:20.588"
+        }
+      ]
+    },
+    "205": {
+      "agentName": "",
+      "has_shopify": true,
+      "id": "01912f78-9acb-4396-f000-0000591b43fe",
+      "rightPanel": {
+        "source": {
+          "label": "Website",
+          "value": "https://fromourplace.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://fromourplace.com/products/wonder-oven?utm_campaign=24_08_05-CreamWonderOven-EarlyAccessLaunch-EngagedL90D-NonCustomers\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=35omz\u0026altid=ChgIAhIUMDRYb0pXb0hoMEJvakxrWkxKUkw\u0026variant=44668519907522",
+            "item": "Wonder Oven",
+            "timeAgo": "2024-08-07"
+          },
+          {
+            "link": "https://fromourplace.com/products/perfect-power-pot?utm_campaign=cart_abandonment-ai\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=35omz\u0026altid=ChgIAhIUMDRYb0pXb0hoMEJvakxrWkxKUkw=\u0026variant=44584014446786",
+            "item": "Perfect Power Pot",
+            "timeAgo": "2024-07-29"
+          },
+          {
+            "link": "https://fromourplace.com/products/perfect-power-pot?utm_campaign=24_07_29-perfectpowerpot-recipes-engagedl90d-noncustomers-2024-07-29-01-15-PM\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=35omz\u0026altid=ChgIAhIUMDRYb0pXb0hoMEJvakxrWkxKUkw=\u0026variant=44584014446786",
+            "item": "Perfect Power Pot",
+            "timeAgo": "2024-07-29"
+          },
+          {
+            "link": "https://fromourplace.com/products/mini-always-pan",
+            "item": "Always Pan 2.0",
+            "timeAgo": "2024-07-14"
+          },
+          {
+            "link": "https://fromourplace.com/products/always-essential-cooking-pan?utm_campaign=24_07_14-alwayspan-viewedl180d-alwayspan-2024-07-14-05-15-PM\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=35omz\u0026variant=44558704705730",
+            "item": "Always Pan 2.0",
+            "timeAgo": "2024-07-14"
+          }
+        ]
+      },
+      "companyWebsite": "https://fromourplace.com",
+      "companyName": "Our Place",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "promo_and_exclusions": [
+          "If cx are looking for welcome code, ask to check their email (spam \u0026 promo)"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Fan-favorites are selling fast during Summer Sale. Don\u0027t miss out on up to 30% off these styles while you still can!\n\nShop now: https://ourplace.attn.tv/ams3zylx4rRH .",
+          "date_time": "2024-07-10 20:00:25.094",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Summer Sale + Cookware Bundles = You Win. Get up to 30% off our thoughtfully-curated cookware collections, designed for every occasion.\n\nFor a limited time only: https://ourplace.attn.tv/aZSkdE2QdFyQ .",
+          "date_time": "2024-07-12 20:15:39.390",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Our bestselling Always Pan, featuring our exclusive toxin-free nonstick Thermakind coating, is the 10-in-1 kitchen game changer you\u0027ve been searching for. \n\nShop now: https://ourplace.attn.tv/ao1wskzGtb2O \n\nP.S. save on this kitchen essential and more during our Summer Sale!",
+          "date_time": "2024-07-14 18:15:43.017",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: There\u0027s less than a week left to save up to 30% sitewide! Shop and SAVE on the summer\u0027s hottest cookware. \n\nShop Now: https://ourplace.attn.tv/a5HSINFAhoLB .",
+          "date_time": "2024-07-16 20:00:50.943",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Only a few days left in the Summer Sale! Run, don\u0027t walk for up to 30% OFF sitewide.\n\nShop Now: https://ourplace.attn.tv/afkt25fu6TQR .",
+          "date_time": "2024-07-19 13:01:11.190",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Ends Tonight | Up to 30% OFF Sitewide\n\nGo now for the kitchen upgrade you\u0027ve always wanted. \n\nHurry, shop now: https://ourplace.attn.tv/axsmGPvnwbMB .",
+          "date_time": "2024-07-21 13:00:46.344",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Perfectly crispy wings. Delicious, never-dry salmon. Let your oven take the summer off and do it all in the Wonder Oven.\n\nGet yours: https://ourplace.attn.tv/a2WMOP0Q4eGh .",
+          "date_time": "2024-07-24 20:01:16.461",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: You left something behind, but don\u0027t worry - we saved it for you. You\u0027re just a few clicks away from cooking and setting the table with your new favorites. Shop Titanium Always Pan Pro : https://ourplace.attn.tv/axayMl_XEpBq .",
+          "date_time": "2024-07-25 13:25:34.963",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Say goodbye to overcooked whites and undercooked yolks! The Egg Poacher custom fits your Always Pan to give you perfectly poached eggs at home, every time.\n\nShop now: https://ourplace.attn.tv/aHda7zsLRMUH .",
+          "date_time": "2024-07-27 18:15:28.938",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Oh, the dishes you\u0027ll cook without a kitchen in the Perfect Power Pot! Cook what you want, wherever you want.\n\nGet yours: https://ourplace.attn.tv/awFczoAzEwHO .",
+          "date_time": "2024-07-29 14:15:35.525",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: A friend to your kitchen awaits. This Perfect Power Pot is not just versatile, it\u0027s a game-changer. \n\nBag yours: https://ourplace.attn.tv/amqJzYdU6Dqf .",
+          "date_time": "2024-07-29 18:54:04.736",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Choose your color! From ethereal Steam to tranquil Lavender, each of our core shades brings its own pop of personality to your space - however you style it.\n\nShop our color collections here: https://ourplace.attn.tv/apd5zvs9tJpE .",
+          "date_time": "2024-07-31 13:15:18.037",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Upgrade to cooking with premium enameled cast iron. Think: higher heat retention for better braising and roasting - no pre-seasoning required! Our cast iron is meant to last a lifetime, but just to be sure, we offer a limited warranty.\n\nShop now: https://ourplace.attn.tv/aHcybWqxpj5p .",
+          "date_time": "2024-08-02 13:15:41.025",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Early access to Cream: The bestselling 6-in-1 Wonder Oven is available in an all-new, limited-edition color. Get yours before they sell out.\n\nShop now: https://ourplace.attn.tv/aRlM-_M7COGm .",
+          "date_time": "2024-08-05 19:00:54.562",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Ready to simplify your kitchen experience with a pan that does it all? The Titanium Always Pan Pro is your match.\n\nGet yours: https://ourplace.attn.tv/a_8UWvdCrN12 .",
+          "date_time": "2024-08-07 11:19:11.510",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Our Place: Hey there, we love what you picked out!\n\nGet it before it’s gone: https://ourplace.attn.tv/aczJnnIz1csA .",
+          "date_time": "2024-08-07 12:19:08.985",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I want the one with tje gold handle",
+          "date_time": "2024-08-07 20:51:43.823",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "01912f78-9acb-4396-f000-0000591b43fe",
+          "message_text": "Our Place: It sounds like you\u0027re looking for the Golden Fry Set. You can find it here: https://ourplace.attn.tv/apO5buF7S6AC.",
+          "message_type": "agent",
+          "agent": "62551",
+          "message_media": [
+            
+          ],
+          "date_time": "2024-08-07 20:51:58.801"
+        }
+      ]
+    }
+  }
+}
