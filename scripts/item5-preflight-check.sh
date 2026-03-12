@@ -17,11 +17,35 @@ check_grep() {
     local pattern="$1"
     local path="$2"
     local label="$3"
-    if rg -n --quiet "$pattern" "$path"; then
+    if check_pattern_exists "$pattern" "$path"; then
         pass "$label"
     else
         fail "$label"
     fi
+}
+
+check_pattern_exists() {
+    local pattern="$1"
+    local path="$2"
+
+    if command -v rg >/dev/null 2>&1; then
+        rg -n --quiet -- "$pattern" "$path"
+    else
+        grep -nEq -- "$pattern" "$path"
+    fi
+}
+
+count_pattern_matches() {
+    local pattern="$1"
+    local path="$2"
+
+    {
+        if command -v rg >/dev/null 2>&1; then
+            rg -n -- "$pattern" "$path" || true
+        else
+            grep -nE -- "$pattern" "$path" || true
+        fi
+    } | wc -l | tr -d ' '
 }
 
 check_file_exists "tools/uploader/pool-upload.gs" "Merged backend file exists"
@@ -32,8 +56,8 @@ else
     pass "No duplicate backend file in repo"
 fi
 
-DOGET_COUNT="$(rg -n "^function doGet\\(e\\)" tools/uploader/pool-upload.gs | wc -l | tr -d ' ')"
-DOPST_COUNT="$(rg -n "^function doPost\\(e\\)" tools/uploader/pool-upload.gs | wc -l | tr -d ' ')"
+DOGET_COUNT="$(count_pattern_matches "^function doGet\\(e\\)" "tools/uploader/pool-upload.gs")"
+DOPST_COUNT="$(count_pattern_matches "^function doPost\\(e\\)" "tools/uploader/pool-upload.gs")"
 [[ "$DOGET_COUNT" == "1" ]] && pass "Single doGet in tools/uploader/pool-upload.gs" || fail "Unexpected doGet count: $DOGET_COUNT"
 [[ "$DOPST_COUNT" == "1" ]] && pass "Single doPost in tools/uploader/pool-upload.gs" || fail "Unexpected doPost count: $DOPST_COUNT"
 
