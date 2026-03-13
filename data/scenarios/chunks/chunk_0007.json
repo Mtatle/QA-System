@@ -3,1113 +3,944 @@
   "chunk": "chunk_0007",
   "scenarios": {
     "31": {
-      "agentName": "Hunter",
+      "agentName": "Quinn",
       "has_shopify": false,
-      "id": "018fd618-dc1e-4e3a-f000-00005764c4d5",
+      "id": "019cc568-4208-4f42-f000-000100781342",
       "rightPanel": {
+        "promotions": [
+          {
+            "title": "Evergreen Discount",
+            "content": [
+              "• Save up to 50%. See site for additional details."
+            ]
+          }
+        ],
         "coupons": [
           {
-            "status": "ACTIVE",
-            "description": "15% off for A/B Test - Jan 2023",
-            "coupon": "15OFFGS"
-          },
-          {
-            "status": "ACTIVE",
-            "value": "15",
-            "coupon": "SAVE15"
+            "redemption_status": "UNUSED",
+            "subscriber_id": 4302836546,
+            "company_id": 214,
+            "name": "Welcome Test: SSB Offer",
+            "coupon": "sbun-dfdeaf"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://gruntstyle.com",
+          "value": "https://nectarsleep.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.gruntstyle.com/collections/mothers-day-graphic-tees-and-tanks/products/womens-mom-defined-boyfriend-fit-t-shirt-heather-mauve",
-            "item": "Women\u0027s Mom Defined Boyfriend Fit T-Shirt - Heather Mauve - Small",
-            "timeAgo": "2024-04-16"
+            "link": "https://www.nectarsleep.com/mattress?utm_campaign=B-(N)_TH-(BAU)_T-(flow)_ST-()_N-(Welcome)_S-()_CT-(nonpurchasers)_SG-(Else)_Nu-(3)_O-()_CR-(Review)_TE-()_V-()_D-(091725)\u0026utm_medium=sms\u0026utm_source=Attentive\u0026externalId=e99Oi",
+            "item": "Nectar Classic Memory Foam Mattress",
+            "timeAgo": "2026-03-06"
           },
           {
-            "link": "https://www.gruntstyle.com/collections/standard-issue-3-pack-core-basic-t-shirts/products/mens-standard-issue-3-pack-core-basics-patriot-pack",
-            "item": "Standard Issue Core Basic T-Shirts - Patriot Pack - 3 Pack - Small",
-            "timeAgo": "2024-04-16"
-          },
-          {
-            "link": "https://www.gruntstyle.com/products/f-cks-i-give-not-t-shirt-black?variant=41862023118899",
-            "item": "F*cks I Give Not T-Shirt - Black - 3XLarge",
-            "timeAgo": "2024-04-11"
-          },
-          {
-            "link": "https://www.gruntstyle.com/collections/new/products/f-cks-i-give-not-t-shirt-black?utm_campaign=F*cks-I-Give-Not\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=jZQ_o",
-            "item": "F*cks I Give Not T-Shirt - Black - Small",
-            "timeAgo": "2024-04-11"
-          },
-          {
-            "link": "https://www.gruntstyle.com/collections/up-to-60-off/products/womens-grateful-patriot-bro-fit-tee",
-            "item": "Women\u0027s Grateful Patriot Boyfriend Fit T-Shirt - Vintage Black - Small",
-            "timeAgo": "2024-03-22"
+            "link": "https://www.nectarsleep.com/mattresses/premier-memory-foam-mattress/queen",
+            "item": "Nectar Premier Memory Foam Mattress",
+            "timeAgo": "2026-03-06"
           }
         ]
       },
-      "companyWebsite": "https://gruntstyle.com",
-      "companyName": "Grunt Style",
+      "companyWebsite": "https://nectarsleep.com",
+      "companyName": "Nectar Sleep",
       "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS",
+          "Send to CS for refund inquiries"
+        ],
+        "tone": [
+          "Close the convo once the client takes over",
+          "Close the convo if the cx first message is ok, no, etc.",
+          "Don\u0027t use the word \"off\" when talking about promotions"
+        ],
         "dos_and_donts": [
-          "All exchange/warranty and returns are handled via the Beer Guarantee"
+          "Don\u0027t proactively offer to find pricing info, redirect them to the website instead"
         ],
         "promo_and_exclusions": [
-          "Club discount stacks with other sales",
-          "Don\u0027t give out coupon codes",
-          "The welcome code (PATRIOT15) can be used BOTH in store and online!"
+          "Do not offer a coupon to first time purchasers/subscribers. There is not an active discount code at this time. Use DCI shortcut"
         ]
       },
       "blocklisted_words": [
         
       ],
       "escalation_preferences": [
-        
+        "Shipping questions",
+        "Exchanges and returns",
+        "Discount code errors",
+        "Recall",
+        "BBB",
+        "fiberglass",
+        "lawyer",
+        "class action"
       ],
-      "messageTone": "Casual",
+      "messageTone": "Polished",
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "Grunt Style: Savings Alert: Get 3-Pack \u0026 5-Pack Tees from $49.99! That\u0027s only $16 per shirt! Hurry \u0026 Shop Now!\nhttps://gruntstyle.attn.tv/aV3Sb64AnwUk ",
-          "date_time": "2024-05-03 20:14:08.578",
+          "message_text": "Nectar: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Phone support: (888) 863-2827.",
+          "date_time": "2026-03-03 17:31:14.676",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Grunt Style: Introducing our Newest collection \"Sh*t Show Supervisor\", perfect for leaders like you. Hurry \u0026 Shop Now!\nhttps://gruntstyle.attn.tv/avYd3qn83uzc ",
-          "date_time": "2024-05-07 20:09:03.899",
+          "message_text": "Nectar: You\u0027re in!",
+          "date_time": "2026-03-03 17:31:18.689",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Grunt Style: Savings Alert: Hats, Tumblers from $9.99, Tees from $14.99 \u0026 more! Limited stock, act now \u0026 save up to 60%!\nhttps://gruntstyle.attn.tv/aga04NKIIJax",
-          "date_time": "2024-05-09 14:01:20.977",
+          "message_text": "Nectar: You\u0027ve unlocked savings up to 66% on a mattress + base + bedding set. Better sleep starts here. \n\nClaim your savings:\nnectarsleep.attn.tv/aVPCupjZtn5e ",
+          "date_time": "2026-03-03 17:31:19.697",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Grunt Style: Flash Sale, Tees for only $19.99! Act fast for $19.99 tees this weekend only. Shop now before they\u0027re gone! https://gruntstyle.attn.tv/atbimg79EMML",
-          "date_time": "2024-05-10 19:45:58.804",
+          "message_text": "Nectar: Hi, this is Quinn. Thanks for signing up! Bundle with an adjustable base for our BIGGEST savings (up to 66%). Just need a mattress? Save up to 50% on memory foam or hybrid. Questions? Text me back!\n\nBundle: nectarsleep.attn.tv/az82cKwsqF0a \n\nMattress: nectarsleep.attn.tv/a7J4kFd4srwO ",
+          "date_time": "2026-03-03 17:36:38.329",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Grunt Style: Act Fast: Hats \u0026 drinkware for only $9.99. Limited stock, save over 60%! Shop Now before we run out! https://gruntstyle.attn.tv/ayKOt8GzstQm",
-          "date_time": "2024-05-11 14:00:54.762",
+          "message_text": "Nectar: From box to bliss in 3 easy steps! Unbox, unroll, \u0026 fall in love with your new Nectar mattress. Save up to 50% NOW: nectarsleep.attn.tv/aP7o4yqbG5CB\n.",
+          "date_time": "2026-03-04 18:01:04.459",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Grunt Style: Final hours to get 60% OFF! Get Tees from $14.99 Hats \u0026 Drinkwear from $9.99 \u0026 much more! Hurry \u0026 shop now! https://gruntstyle.attn.tv/aIr_DVp_UoKm",
-          "date_time": "2024-05-12 19:40:59.990",
+          "message_text": "Nectar: Quinn here: Monica L.\u0027s sleeping soundly (even with a partner): \"We sleep so well on this mattress. If either of us move we can\u0027t tell the difference, no motion whatsoever. We have a nice cool sleep.\" - Verified Buyer: nectarsleep.attn.tv/arWOK7SxjBPt\n.",
+          "date_time": "2026-03-05 18:01:06.742",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Grunt Style: New Arrivals! Get new gear to show off your patriotism or find the perfect Father\u0027s Day Gift! Shop Now!\nhttps://gruntstyle.attn.tv/a1u4WhVf5A5B ",
-          "date_time": "2024-05-15 19:58:32.401",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: New Bundles Alert: Score shirts for as low as $16 in our latest bundles! Act fast before they\u0027re gone! https://gruntstyle.attn.tv/ar_CmUIcAPpM",
-          "date_time": "2024-05-18 14:01:18.804",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Father\u0027s Day is less than 1 month away. Find the perfect gift for dad! Act quickly before it\u0027s too late! https://gruntstyle.attn.tv/ak_PRoRodxDw",
-          "date_time": "2024-05-19 19:46:25.973",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Flash Sale: Save 50% on select Garage Buttondowns, $24.99 each! Limited stock available, Hurry \u0026 Shop Now! https://gruntstyle.attn.tv/alGi9_Yi18vL",
-          "date_time": "2024-05-21 19:45:19.002",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Early Access Get 20% off with code VIP20OFF at checkout. Hurry, \u0026 be the first to get this offer Shop Now! https://gruntstyle.attn.tv/adlesCTnXiT- ",
-          "date_time": "2024-05-22 21:10:20.280",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Time\u0027s ticking! Score epic gear at 20% OFF this weekend only. Don\u0027t wait, shop now before it\u0027s too late! https://gruntstyle.attn.tv/atmqg6gqXbeI",
-          "date_time": "2024-05-23 19:36:44.771",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: This weekend only! Enjoy 20% off your purchase and stock up on patriotic gear. Shop Now! https://gruntstyle.attn.tv/a-2AKWnzD4PI",
-          "date_time": "2024-05-24 20:05:31.500",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Sale on Sale! 20% OFF sitewide even sale items! Get tees \u0026 hats under $16 \u0026 more, act now before it\u0027s gone! https://gruntstyle.attn.tv/aMDul1qSz68M",
-          "date_time": "2024-05-25 14:18:29.895",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Final Hours! Get 20% OFF sitewide - act fast! New patriotic gear available! Don\u0027t miss out, Shop Now! https://gruntstyle.attn.tv/aSt6cwmWyEAe",
-          "date_time": "2024-05-26 19:45:26.233",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Memorial Day holds a special place in the hearts of Americans. Today, as we join together in remembrance, let us celebrate the lives of the courageous souls who gave everything for a grateful nation. Join us in honoring their legacy.\n\nhttps://gruntstyle.attn.tv/a9jtbWyk-Abk ",
-          "date_time": "2024-05-27 11:55:57.446",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Get our best-selling Tee Dad Tax! Perfect for Father\u0027s Day. Limited Stock is available, hurry \u0026 Shop Now! https://gruntstyle.attn.tv/a5byrkyoIp5B",
-          "date_time": "2024-05-29 20:20:29.533",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: This weekend only, check out our exclusive Father\u0027s Day Specials \u0026 save up to 55% on the perfect gift for dad. Don\u0027t miss out!\nhttps://gruntstyle.attn.tv/asMt7JrBIePz ",
-          "date_time": "2024-05-30 20:10:26.100",
+          "message_text": "Nectar: VIP Bonus! FREE sheet set, protector \u0026 more with your mattress purchase. Expires tomorrow. Code sbun-dfdeaf nectarsleep.attn.tv/aXKGVLqHEAxw \n.",
+          "date_time": "2026-03-06 18:01:14.183",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "Where\u0027s my order it said 3 to 5 days and it\u0027s been 3 weeks",
-          "date_time": "2024-05-30 21:10:23.867",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "And still nothing",
-          "date_time": "2024-05-30 21:11:13.984",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "I placed it ether the 16 or the 17",
-          "date_time": "2024-05-30 21:11:44.060",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "My thing to my email confirms on the 5-17-2024",
-          "date_time": "2024-05-30 21:12:14.139",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fcc35-5a82-425f-f000-00005764c4d5",
-          "message_text": "Grunt Style: Sorry for the delay! It\u0027s not the experience we want you to have. May I have your order number and email, please?",
-          "message_type": "agent",
-          "agent": "82343",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-30 21:13:19.754"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "The order number is kinesure24051701491671 justiceryan2022@yahoo.com",
-          "date_time": "2024-05-31 14:52:07.085",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fd002-8d7d-468c-f000-00005764c4d5",
-          "message_text": "Grunt Style: Thanks for sharing that info. I\u0027ll reach out to my team about this and get back to you as soon as I hear back. Hang tight! ",
-          "message_type": "agent",
-          "agent": "82433",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-31 14:56:19.339"
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: This weekend only get a 5-pack of tees for just $59.99 - that\u0027s only $12 per tee! Don\u0027t miss out, shop now!\nhttps://gruntstyle.attn.tv/avBwUeNmo5_I",
-          "date_time": "2024-05-31 19:50:43.842",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Did you guys figure anything out I can show you the list of stuff I naught or take a screen shot my friend f my order and the order place where u checkout where it gives me my order number so you can see",
-          "date_time": "2024-05-31 20:54:41.524",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Sorry a lot of them where fathers days gifts to my and my daughters dad so I\u0027m really hoping they get here before then it said 3 to 5 days it\u0027s been 12 days",
-          "date_time": "2024-05-31 20:55:41.652",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fd152-632f-46ee-f000-00005764c4d5",
-          "message_text": "Grunt Style: I\u0027m sorry about that. Unfortunately, I\u0027m still waiting to hear back from the team though rest assured I\u0027ll shoot you a text as soon as I have an update. Additionally, yes, you can send me a screenshot. ",
-          "message_type": "agent",
-          "agent": "39115",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-31 21:03:08.605"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "What\u0027s going on with my order",
-          "date_time": "2024-06-01 16:50:26.623",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fd592-f6e5-4246-f000-00005764c4d5",
-          "message_text": "Grunt Style: Thanks for following up! I don\u0027t have any info about your order yet, but I just sent a follow-up to the team to check its status. I\u0027ll be sure to text you the moment I hear back, I appreciate your patience!",
-          "message_type": "agent",
-          "agent": "42041",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-06-01 16:52:09.581"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Thank u for going and looking for me",
-          "date_time": "2024-06-01 18:58:15.738",
+          "message_text": "How long it will take about delivery",
+          "date_time": "2026-03-06 18:05:14.600",
           "message_media": [
             
           ]
         },
         {
           "message_type": "template",
-          "message_text": "Template used: \"While I wait for the team - All brands\"; last updated: 2023-10-10 17:48:53.656",
-          "date_time": "2024-06-01 19:18:24.550",
+          "message_text": "Template used: \"Shipping time\"; last updated: 2024-08-06 22:53:39.252",
+          "date_time": "2026-03-06 18:07:50.172",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018fd618-dc1e-4e3a-f000-00005764c4d5",
-          "message_text": "Grunt Style: No problem, it\u0027s my pleasure to help. While waiting for my team\u0027s response, is there anything else I can help you with? In the meantime, maybe you\u0027d like to check out our Father\u0027s Day collection for ideas on your next purchase: https://gruntstyle.attn.tv/sl/HSIX8GUN",
+          "message_id": "019cc568-4208-4f42-f000-000100781342",
+          "message_text": "Nectar: Thank you for reaching out and showing interest in our products! We process orders within 3-5 business days. We usually ship via FedEx or UPS Ground. Standard delivery of your Nectar products takes approximately 2-5 business days for arrival once they ship. While you\u0027re here, you can save up to 50% on mattresses and 66% on bundles! Let me know if you need help with anything. I\u0027m happy to assist!",
           "message_type": "agent",
-          "agent": "82220",
+          "agent": "82223",
           "message_media": [
             
           ],
-          "date_time": "2024-06-01 19:18:24.552"
+          "date_time": "2026-03-06 18:07:50.173"
         }
       ]
     },
     "32": {
-      "agentName": "Jordan",
+      "agentName": "",
       "has_shopify": true,
-      "id": "019c4dfb-5194-42bf-f000-0000fa60df67",
+      "id": "019ca68c-a5f9-45c7-f000-00007bc73e4a",
       "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://iliabeauty.com/products/hydrating-skin-blur-serum-concealer?variant=41978007388240",
+            "item": "Skin Blur Serum Concealer - Gauze 12O",
+            "timeAgo": "2026-02-28"
+          },
+          {
+            "link": "https://iliabeauty.com/products/limitless-lash-lengthening-mascara",
+            "item": "Limitless Lash Mascara - After Midnight / Full",
+            "timeAgo": "2026-02-28"
+          },
+          {
+            "link": "https://iliabeauty.com/products/minis-for-any-mood-set?externalId=XMJZd",
+            "item": "Minis for Any Mood Set",
+            "timeAgo": "2025-08-02"
+          },
+          {
+            "link": "https://iliabeauty.com/products/true-skin-hydrating-serum-concealer?syclid=8dfcfe26-43ed-4ff3-8a13-500858cdd6da\u0026variant=40816216571984",
+            "item": "True Skin Serum Concealer - Mallow SC.25",
+            "timeAgo": "2025-08-01"
+          },
+          {
+            "link": "https://iliabeauty.com/products/the-necessary-eyeshadow-palette?variant=40821110702160",
+            "item": "The Necessary Eyeshadow Palette - Cool Nude",
+            "timeAgo": "2025-07-31"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 2076655178,
+            "company_id": 7105,
+            "coupon_url": "https://ilia-beauty-v2.myshopify.com/discount/ILIAX34W9G?utm_source=attentive\u0026utm_medium=sms",
+            "value": "15",
+            "name": "15% OFF Codes (Manual Upload)",
+            "coupon": "ILIAX34W9G",
+            "redemption_status": "USED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://iliabeauty.com",
+          "date": ""
+        },
         "orders": [
           {
             "currency": "USD",
-            "total": 428.43,
-            "coupon": "RMRDTcQhkD",
+            "orderDate": "2025-07-31",
+            "coupon": "ILIAX34W9G",
             "items": [
               {
                 "price": [
                   {
                     "value": [
-                      12.63,
-                      448,
-                      12.63,
-                      448
+                      0,
+                      0,
+                      0,
+                      29,
+                      0,
+                      40,
+                      32
                     ],
-                    "Count": 4
+                    "Count": 7
                   }
                 ],
                 "productLink": "System.Object[]",
                 "name": "System.Object[]"
               }
             ],
-            "link": "https://www.shoprumored.com/9141223475/orders/63eaefbc7edc485ad8477ddd2da013e1/authenticate?key=5d3ae587f7e424b992cd669e2e33c4c9",
-            "orderDate": "2026-02-10",
+            "trackingLink": "https://www.ups.com/WebTracking?loc=en_US\u0026requester=ST\u0026trackNums=1ZR07H470213382631",
+            "link": "https://iliabeauty.com/56006738000/orders/d8040c3abd0e403df25534bf091ebb34/authenticate?key=0705f04181c592a367ac8f58a1e906a9",
+            "date_time": "2025-07-31 00:59:02.764",
             "discount_amount": 0,
-            "orderNumber": "243289",
-            "date_time": "2026-02-10 14:26:53.664"
-          }
-        ],
-        "coupons": [
-          {
-            "status": "ACTIVE",
-            "redeemed": "2026-02-10 14:26:53.664",
-            "coupon": "RMRDTcQhkD"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://shoprumored.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.shoprumored.com/collections/outerwear/products/kennedy-trench-espresso-suede",
-            "item": "Kennedy Trench | Espresso Suede - S",
-            "timeAgo": "2026-02-10"
+            "orderNumber": "2675613",
+            "order_tracking_link": "https://www.ups.com/WebTracking?loc=en_US\u0026requester=ST\u0026trackNums=1ZR07H470213382631",
+            "total": 112.32
           }
         ]
       },
-      "companyWebsite": "https://shoprumored.com",
-      "companyName": "Rumored",
+      "companyWebsite": "https://iliabeauty.com",
+      "companyName": "ILIA Beauty",
       "notes": {
-        
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ],
+        "tone": [
+          "Close the convo once the client takes over"
+        ]
       },
       "blocklisted_words": [
         
       ],
       "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "ILIA Beauty: In light of your VIP status...\n\nHere\u0027s a glowing gift. Enjoy a free Multi-Stick highlighter with any order, as our way of saying thanks for being a VIP.*\n\nClaim at checkout: iliabeauty.attn.tv/aCWG4ZrFuBJ6 \n\nAvailable while supplies last.*",
+          "date_time": "2026-02-03 17:30:53.900",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "ILIA Beauty: Our love language? Free VIP gifts (but they\u0027re almost gone). \n\nShop Valentine\u0027s gifts or restock your essentials to get a free Multi-Stick in Cosmic Dancer with any VIP order.* \n\nLog in to claim: iliabeauty.attn.tv/aaPAsnWcHIkO \n\nAvailable while supplies last.*",
+          "date_time": "2026-02-05 15:40:37.803",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "ILIA Beauty: When gloss meets free lipstick. \n\nThis gift was meant to be. Order Overglaze Hydrating Lip Gloss, and choose a free shade of Color Block Lipstick to go with it.*\n\nGet your gloss + gift: iliabeauty.attn.tv/ahZ14CI11B3- \n\n*See site for details.\n",
+          "date_time": "2026-02-12 18:11:38.766",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "ILIA Beauty: The Audrey Hobert Edit. 🎸\n\nMeet the singer-songwriter\u0027s favorite lip combo, featuring Lip Sketch Hydrating Crayon + Overglaze Hydrating Lip Gloss. \n\nCustomize your own duo, plus get Audrey\u0027s limited edition signature tote-only 500 available.* \n\nShop the edit: iliabeauty.attn.tv/a4xekgGUhJna \n\n*See site for details.",
+          "date_time": "2026-02-21 17:36:02.800",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "ILIA Beauty: Time is running out to claim your free mini. \n\nChoose between a mini Multi-Stick or a mini Liquid Powder Eye Tint with any $75+ order.*\n\nClaim in cart: iliabeauty.attn.tv/akx2MiSdAAtm \n\n*See site for details.",
+          "date_time": "2026-02-26 16:45:21.365",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "ILIA Beauty: The search for the holy grail concealer is over.\n\nAnd your VIP access starts now. Enter Skin Blur-the weightless formula that fuses seamlessly with skin for crease-resistant, 12-hour wear.\n\nSign in to shop: iliabeauty.attn.tv/aeKzHbqnUgRD ",
+          "date_time": "2026-02-28 16:40:58.664",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "ILIA Beauty: Buy The Cleanse PH-Balanced Foaming Cleanser, Kelly — it removes makeup and pollution while keeping your skin balanced and hydrated.\n\n557 people recently added it to their cart.\n\nShop now: https://iliabeauty.attn.tv/a8gbW6VouLEE .",
+          "date_time": "2026-02-28 18:10:30.214",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Your new concealer doesn\u0027t allow to use the old concealer numbers. Would be very helpful if this could happen. Please fix.",
+          "date_time": "2026-02-28 18:17:10.561",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Customer support\"; last updated: 2025-08-18 16:28:17.568",
+          "date_time": "2026-02-28 18:19:21.357",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019ca68c-a5f9-45c7-f000-00007bc73e4a",
+          "message_text": "ILIA Beauty: Thank you for reaching out. I\u0027m sorry to hear that. The best way to handle this is to email us directly at support@iliabeauty.com or submit in inquiry here: https://iliabeauty.attn.tv/as2p1OAbilWS Our team is happy to help! ",
+          "message_type": "agent",
+          "agent": "48804",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-28 18:19:21.359"
+        }
+      ]
+    },
+    "33": {
+      "agentName": "Taylor",
+      "has_shopify": true,
+      "id": "019cc0c2-c886-418f-f000-0000c9e68e79",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://nakednutrition.com/products/chocolate-goat-whey-protein-powder",
+            "item": "Chocolate Goat Whey Protein Powder | Naked Goat - 2lb",
+            "timeAgo": "2025-11-10"
+          },
+          {
+            "link": "https://nakednutrition.com/products/womens-multivitamin?utm_source=klaviyo\u0026utm_medium=email\u0026utm_campaign=Back%20in%20Stock%3A%20Email%20%232%20%28WWkZeH%29\u0026bxid=01JY9ZSWCBKFESX7WMP4PRKHPM\u0026tw_source=klaviyo\u0026utm_klaviyo_id=01JY9ZSWCBKFESX7WMP4PRKHPM\u0026_kx=0QdQp7kjSpw6Ek3XG1raODDKkJ2mBud4UirwTMWyVwsms3aOR8UY9QeRWGJJXXs9.LTmtGN",
+            "item": "Multivitamin for Women | Women\u0027s Multi - 60 Capsules",
+            "timeAgo": "2025-10-10"
+          },
+          {
+            "link": "https://nakednutrition.com/products/lemonade-electrolytes-powder-packets?variant=39955682820190",
+            "item": "Electrolytes Powder Packets - Strawberry Lemonade | Nakedade",
+            "timeAgo": "2025-09-30"
+          },
+          {
+            "link": "https://nakednutrition.com/products/gut-health-supplement?variant=39588425760862\u0026_rdiscovery-handle=gut-health-supplement\u0026_rdiscovery-widget=59772",
+            "item": "Gut Health Supplement | Naked Gut - 40 Servings",
+            "timeAgo": "2025-09-30"
+          },
+          {
+            "link": "https://nakednutrition.com/products/recovery-mushroom-supplement?utm_campaign=Naked%20Recovery\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=7MS6I",
+            "item": "Recovery Mushroom Supplement | Naked Recovery",
+            "timeAgo": "2025-09-30"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 3387330169,
+            "description": "For first time customers who enter both their email and phone number into the 2 step form.",
+            "company_id": 72786,
+            "coupon_url": "https://nakednutrition.com/discount/NNQS2384?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "name": "20% Off: Email + SMS Sign Up - Mobile",
+            "coupon": "NNQS2384",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://nakednutrition.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2025-10-18",
+            "items": [
+              {
+                "price": [
+                  44.49
+                ],
+                "productLink": "https://shopify9.myshopify.com/products/collagen-peptides-hyaluronic-acid",
+                "name": "Collagen Peptides with Hyaluronic Acid | Naked Collagen Advanced - 1.3 LB"
+              }
+            ],
+            "date_time": "2025-10-18 18:48:42.894",
+            "discount_amount": 0,
+            "orderNumber": "",
+            "total": 44.49
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-09-02",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      35.59,
+                      59.99
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2025-09-02 19:56:08.532",
+            "discount_amount": 0,
+            "orderNumber": "5865109553246",
+            "total": 104.58
+          },
+          {
+            "currency": "USD",
+            "orderDate": "2025-06-21",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      59.99,
+                      28.79
+                    ],
+                    "Count": 2
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2025-06-21 19:37:25.814",
+            "discount_amount": 0,
+            "orderNumber": "5754951630942",
+            "total": 97.78
+          }
+        ]
+      },
+      "companyWebsite": "https://nakednutrition.com",
+      "companyName": "Naked Nutrition",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for order status inquiries",
+          "Send to CS immediately for discount code errors"
+        ],
+        "promo_and_exclusions": [
+          "The text or quiz code is only valid for first-time orders"
+        ]
+      },
+      "blocklisted_words": [
+        "browser"
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Don\u0027t miss out on Gut Health Supplement | Naked Gut - 40 Servings. Add it to your cart in just two clicks - https://nakednutrition.attn.tv/afMB3J2FCKG3",
+          "date_time": "2026-02-04 20:29:26.862",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: 100% active ingredients. Clean burst of power, focus, and energy. One for the purists!\n\nShop: nakednutrition.attn.tv/aZhQqYKF0hXq ",
+          "date_time": "2026-02-10 19:30:27.856",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Hey Donna, it\u0027s been a while! We\u0027d love to continue being a part of your nutrition journey. Restock on your favorite Naked Nutrition products now and get closer to meeting your goals. Feel free to text back with any questions. - Taylor \n\nRestock: https://nakednutrition.attn.tv/aSuba0WWLFBQ ",
+          "date_time": "2026-02-12 18:42:30.910",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Hey, we noticed you checking us out. Can I help you with anything? See our top-rated here: https://nakednutrition.attn.tv/aXVOalt7Yi3K .",
+          "date_time": "2026-02-16 19:46:21.721",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Clean bulk easily with 50g of fast + slow proteins, plus 1000+ nutrient-dense calories per serving..\n\nShop:nakednutrition.attn.tv/a84huLEgtpTt ",
+          "date_time": "2026-02-17 19:30:26.502",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Active ingredients. Clean burst of power and focus. Naturally flavored, refreshing pre-workouts.\n\nShop: nakednutrition.attn.tv/aOAXEPbq9ei4 ",
+          "date_time": "2026-02-20 19:30:32.349",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: From Naked Protein to Supplements \u0026 Baking Mixes; meet your fitness goals by using Naked products, with nothing to hide. Shop here - https://nakednutrition.attn.tv/ae3pJ5HgVJzh ",
+          "date_time": "2026-02-22 18:42:50.832",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: 4 Days Left to Save 20%!\n\nNaked Sparkling Energy, Upgraded!\n\nNew Look. New Formula. Same Pure Energy.\n\nDelicious flavors, fewer calories, optimized for peak performance.\n\nTake 20% off till 3/3 with code: SPARKLING20\n\nShop: nakednutrition.attn.tv/aArF37b_OjQY ",
+          "date_time": "2026-02-27 19:30:30.055",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Last Day to Save 20%!\n\nNaked Sparkling Energy, Upgraded!\n\nNew look. New formula. Same pure, unaltered energy.\n\nDelicious flavors, fewer calories, optimized for peak performance.\n\n20% off with code: SPARKLING20. Ends tonight (3/3/26) \n\nShop Now: nakednutrition.attn.tv/aq5MBJ__1ADi ",
+          "date_time": "2026-03-03 19:30:33.335",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Naked Nutrition: Hey, we noticed you checking us out. Can I help you with anything? See our top-rated here: \n\nhttps://nakednutrition.attn.tv/aI-ojYsbhp9l ",
+          "date_time": "2026-03-05 16:36:57.178",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I have two subscriptions for the same product. I sent an email but no one has responded.",
+          "date_time": "2026-03-05 17:40:27.325",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019cc02a-5ab2-42f7-f000-0000c9e68e79",
+          "message_text": "Naked Nutrition: Hi there! I\u0027m sorry you haven\u0027t received a response yet. I completely understand how frustrating that can be.\n\nCould you please provide your order number and the email address associated with your subscriptions? Once I have that, I can check with the team and help get this sorted out.",
+          "message_type": "agent",
+          "agent": "87578",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-05 17:42:07.182"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Email address isOnehealingheart@yahoo.comDonna StelterI can\u0027t get the App to open to my subscriptionsIt is the women\u0027s multi vitamin. I still want to receive one bottle but not have two subscriptions a week apart",
+          "date_time": "2026-03-05 20:20:07.101",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "escalation",
+          "message_text": "Cx. I have two subscriptions for the same product. I sent an email but no one has responded. Email address isOnehealingheart@yahoo.comDonna StelterI can\u0027t get the App to open to my subscriptionsIt is the women\u0027s multi vitamin. I still want to receive one bottle but not have two subscriptions a week apart",
+          "date_time": "2026-03-05 20:28:31.813",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019cc0c2-c886-418f-f000-0000c9e68e79",
+          "message_text": "Naked Nutrition: Thank you for providing the details. I\u0027ve forwarded them to our team, and I\u0027ll let you know as soon as I hear back from them. I appreciate your patience as we work to resolve this for you. If you have any other questions or concerns in the meantime, feel free to let me know.",
+          "message_type": "agent",
+          "agent": "82223",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-05 20:28:36.770"
+        }
+      ]
+    },
+    "34": {
+      "agentName": "Kat",
+      "has_shopify": false,
+      "id": "019caa63-c53d-4d66-f000-0001002a0014",
+      "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 4297719828,
+            "company_id": 7367,
+            "static_code": "MOBILE20",
+            "name": "MOBILE20",
+            "coupon": "MOBILE20",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://restartmed.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://restartmed.com",
+      "companyName": "Dr.Westin Childs",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase issues, use PPI shortcut"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: Welcome to Dr. Westin Childs! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-03-01 10:19:19.190",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Dr. Westin Childs: Welcome! Click here to for your 20% off coupon: https://drwc.attn.tv/aYNZSn_LstLW ",
+          "date_time": "2026-03-01 10:19:23.158",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "You damn website wouldn\u0027t accept anything. I\u0027ve ordered here before but it kept saying spam I tried to do two different emails you need to fix that",
+          "date_time": "2026-03-01 10:33:32.510",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019caa09-c80c-4ec7-f000-0001002a0014",
+          "message_text": "Dr. Westin Childs: I\u0027m really sorry to hear about your experience, and I appreciate you sharing this feedback. I\u0027ll be sure to forward your comments to the team so they can look into it. Your input is important to us, and we\u0027re always working to improve. Thank you for bringing this to our attention.\n\nJust to be sure, are you having trouble with our checkout process or the website itself? First, I might suggest trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes. ",
+          "message_type": "agent",
+          "agent": "109955",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-01 10:34:53.746"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I do not go incognito.",
+          "date_time": "2026-03-01 10:36:12.383",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "It was $162 and I\u0027m really pissed off I\u0027ve tried four or five times",
+          "date_time": "2026-03-01 10:36:42.467",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I never had any goddamn trouble before",
+          "date_time": "2026-03-01 10:37:02.525",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019caa0c-2663-4310-f000-0001002a0014",
+          "message_text": "Dr. Westin Childs: I completely understand and I apologize for the inconvenience. Have you tried using Google Chrome? It usually works best since some browsers have issues with e-commerce sites. If you\u0027re still having trouble, could you send me a screenshot so I can take a closer look?",
+          "message_type": "agent",
+          "agent": "35256",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-01 10:37:28.967"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Okay, next time I get on there and attempt this again I\u0027ll make a screenshot for you. I appreciate your concern",
+          "date_time": "2026-03-01 11:00:52.228",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019caa23-174e-4cca-f000-0001002a0014",
+          "message_text": "Dr. Westin Childs: No problem at all! I\u0027m sorry again for the trouble you\u0027ve had trying to place your order. You can also give us a call at (480) 331-9431, and our team can assist you directly with placing your order. Whenever you\u0027re ready to try again, I\u0027ll be here to help however I can. Thank you so much for your understanding and patience.",
+          "message_type": "agent",
+          "agent": "82221",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-01 11:02:32.428"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m sorry that my personality sucks, but when you\u0027ve had grave\u0027s disease now hypothyroid and they pituitary microadenoma, you don\u0027t handle 😬 very well",
+          "date_time": "2026-03-01 11:20:52.460",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019caa36-41cb-4e9b-f000-0001002a0014",
+          "message_text": "Dr. Westin Childs: Gemini said,\nI am so sorry you\u0027re carrying all of that; navigating the heavy emotional toll of Graves\u0027 and pituitary issues is incredibly draining. Please be kind to yourself, as managing those complex hormonal shifts is a massive physical and mental battle that most people couldn\u0027t imagine. I highly suggest giving us a call so we can assist you further.",
+          "message_type": "agent",
+          "agent": "48804",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-01 11:23:28.493"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Thank you",
+          "date_time": "2026-03-01 11:24:32.098",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Unable to complete order considered spam",
+          "date_time": "2026-03-01 12:08:27.290",
+          "message_media": [
+            "https://attentive-files.s3.amazonaws.com/receive-event-media/1772384898806_2028155372677910528.jpeg"
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Site won\u0027t work - All brands\"; last updated: 2025-07-16 17:54:02.115",
+          "date_time": "2026-03-01 12:13:11.264",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019caa63-c53d-4d66-f000-0001002a0014",
+          "message_text": "Dr. Westin Childs: Thanks for sending the screenshot and I\u0027m once again so sorry for the inconvenience! Our official website is definitely not spam. First, I might suggest trying to open the site in an incognito or private window to rule out any browser cache or extension issues. Let me know how that goes.",
+          "message_type": "agent",
+          "agent": "87474",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-01 12:13:11.266"
+        }
+      ]
+    },
+    "35": {
+      "agentName": "Jamie",
+      "has_shopify": true,
+      "id": "019c9214-6507-4d7e-f000-0000fbb3293a",
+      "rightPanel": {
+        "browsingHistory": [
+          {
+            "link": "https://www.capillus.com/products/capillus-plus?srsltid=AfmBOoq_6rLTwMYjVJJt2L2htYDA1YS94GAfudHTYutarLnMDJ-9cAPj",
+            "item": "Capillus PLUS",
+            "timeAgo": "2026-02-22"
+          },
+          {
+            "link": "https://www.capillus.com/products/capillus-eyelift-therapy",
+            "item": "Capillus EyeLift",
+            "timeAgo": "2026-02-16"
+          },
+          {
+            "link": "https://www.capillus.com/products/capillus-healing-pod?variant=43177855221899",
+            "item": "Capillus Healing Pod",
+            "timeAgo": "2026-02-16"
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 4222822714,
+            "company_id": 11253,
+            "coupon_url": "https://www.capillus.com/pages/capillus-laser-devices?utm_source=attentive\u0026utm_medium=sms\u0026token=ZPDNB",
+            "static_code": "ZPDNB",
+            "name": "Welcome 30% Off",
+            "coupon": "ZPDNB",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://capillus.com",
+          "date": ""
+        },
+        "orders": [
+          {
+            "currency": "USD",
+            "orderDate": "2026-02-16",
+            "coupon": "ABEKITS",
+            "items": [
+              {
+                "price": [
+                  899
+                ],
+                "productLink": "https://shopcapillus.myshopify.com/products/capillus-plus",
+                "name": "Capillus PLUS"
+              }
+            ],
+            "date_time": "2026-02-16 14:32:52.925",
+            "discount_amount": 0,
+            "orderNumber": "6342235685003",
+            "total": 899
+          }
+        ]
+      },
+      "companyWebsite": "https://capillus.com",
+      "companyName": "Capillus",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS if a subscriber mentions a medical issue or an adverse effect from using products from this brand"
+        ],
+        "escalate": [
+          "ESC immediately discount code issues"
+        ],
+        "dos_and_donts": [
+          "Do not share any medical advice or guidance to subscribers outside of recommending appropriate products or directing them to purchase the right item",
+          "Do not comment on their medical situations",
+          "Close the covo if the customer says they\u0027re receiving too many messages/we\u0027re texting them too often - don\u0027t send TMT"
+        ],
+        "drive_to_purchase": [
+          "If cx says they will be ordering soon, offer to schedule a call if they need further assistance with their purchase (shortcut OS) - do not upsell",
+          "If cx already purchased, use specific TFP template - do not upsell"
+        ],
+        "tone": [
+          "Don\u0027t use the term \"hang tight\", just say that you\u0027ve passed the information to the team",
+          "Close the conversation once the client takes over"
+        ],
+        "promo_and_exclusions": [
+          "If a cx asks for a code and we don\u0027t have one, inform them of ongoing sales (if any)"
+        ]
+      },
+      "blocklisted_words": [
+        "Curallux",
+        "hang"
+      ],
+      "escalation_preferences": [
+        "Discount code errors",
         "Exchanges and returns"
       ],
       "messageTone": "Polished",
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "Rumored: Welcome to Rumored! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "date_time": "2026-02-10 09:25:03.734",
+          "message_text": "Capillus: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Capillus.",
+          "date_time": "2026-02-16 09:16:47.799",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Rumored: You\u0027re going to love it here! Shop and use https://shoprumored.attn.tv/az5gwts1j8w9 at checkout for 15% off your first order RMRDTcQhkD",
-          "date_time": "2026-02-10 09:25:07.762",
+          "message_text": "Capillus: Welcome to Capillus! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-16 09:18:07.011",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Rumored: Thank you for your order - we\u0027re getting it ready for you. Stay tuned for your shipping confirmation and tracking number x\n\nOrder #: 243289 \nOrder Status: https://shoprumored.attn.tv/a46dhKI-Y-Dy .",
-          "date_time": "2026-02-10 09:27:04.689",
+          "message_text": "Capillus: Welcome to Capillus 👋\nYou\u0027re officially in. Discover science-backed red light therapy designed for hair regrowth, recovery, and everyday wellness. Explore here: capillus.attn.tv/ao_tqTy01F0F \n*Up to 30% OFF. Discount is applied on site. No code needed. \n",
+          "date_time": "2026-02-16 09:18:10.890",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Rumored: You have great taste! Come back and take another look... shoprumored.attn.tv/aWz-WxqE7pH9",
-          "date_time": "2026-02-10 12:30:31.029",
+          "message_text": "Capillus: Don\u0027t forget to save our contact to get exclusive updates!",
+          "date_time": "2026-02-16 09:18:11.917",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Rumored: Let\u0027s get to know each other... save our number to get exclusive updates!",
-          "date_time": "2026-02-10 13:25:14.289",
+          "message_text": "Capillus: You are already subscribed. Click here to shop now: https://capillus.attn.tv/cl/7pV.",
+          "date_time": "2026-02-16 09:19:38.706",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Rumored: Rumor has it, these styles were made for you... https://shoprumored.attn.tv/a3OsmoG2UQUT ",
-          "date_time": "2026-02-11 13:25:23.231",
+          "message_text": "Capillus: Hey Lara, this is Jamie! We saw you checking out Capillus PLUS! \n\nDon\u0027t wait, transform your confidence back today: capillus.attn.tv/a6V8LDGpfBR_ .\n\nText back if you need assistance.",
+          "date_time": "2026-02-21 15:21:57.603",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "Maybe deliver my first package on time before I consider ever ordering from you again",
-          "date_time": "2026-02-11 13:28:18.020",
+          "message_text": "Just wanted to follow up on our text exchange above.",
+          "date_time": "2026-02-24 18:47:51.996",
           "message_media": [
             
           ]
         },
         {
-          "message_type": "template",
-          "message_text": "Template used: \"Shipping Time\"; last updated: 2023-02-17 22:57:17.434",
-          "date_time": "2026-02-11 13:34:02.030",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "template",
-          "message_text": "Template used: \"Guarantee delivery dates - All brands\"; last updated: 2024-11-07 14:26:32.728",
-          "date_time": "2026-02-11 13:34:02.030",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c4dfb-5194-42bf-f000-0000fa60df67",
-          "message_text": "Rumored: I\u0027m sorry for any inconvenience! Upon checking, your order is still processing! Our processing time takes 1-2 business days and we usually ship via USPS, UPS, and DHL. Once shipped, it will take 3-5 business days for domestic orders, and 5-10 business days for international orders. Upon checking, your order is still within our shipping timeframe. \n\nI\u0027m really sorry, but I can\u0027t guarantee exact delivery dates, only an estimate in business days. This is just in case the carrier runs into any unexpected delays along the way. I appreciate your understanding! ",
+          "message_id": "019c9214-6507-4d7e-f000-0000fbb3293a",
+          "message_text": "Capillus: I\u0027m really sorry about that. I am sorry that you have to wait and for how frustrating this is, but I have not yet received a response from the specialized team. Please rest assured that as soon as I hear back, I will message you immediately. Thank you for your understanding.\n",
           "message_type": "agent",
-          "agent": "87398",
+          "agent": "39001",
           "message_media": [
             
           ],
-          "date_time": "2026-02-11 13:34:02.032"
-        }
-      ]
-    },
-    "33": {
-      "agentName": "Sarah",
-      "has_shopify": false,
-      "id": "019c3e79-d5a4-4014-f000-0000968035e7",
-      "rightPanel": {
-        "orders": [
-          {
-            "currency": "USD",
-            "orderDate": "2024-09-01",
-            "items": [
-              {
-                "price": [
-                  96
-                ],
-                "productLink": "https://www.backcountry.com/b/vasque-talus-at-low-ultradry-hiking-shoe-womens?CMP_SKU=VSQ003V\u0026MER=0406\u0026skid=VSQ003V-BUNCOR-S6",
-                "name": "Talus AT Low UltraDry Hiking Shoe - Women\u0027s"
-              }
-            ],
-            "date_time": "2024-09-01 02:28:41.114",
-            "discount_amount": 0,
-            "orderNumber": "b4525594754",
-            "total": 288
-          }
-        ],
-        "coupons": [
-          {
-            "status": "ACTIVE",
-            "description": "full priced items, exclusions apply",
-            "value": "15",
-            "coupon": "BCNTFSMS25Q4MDB1CHA"
-          },
-          {
-            "status": "ACTIVE",
-            "description": "eligible full-price items. Brand exclusions apply. ",
-            "value": "20",
-            "coupon": "BCPPXSSMS26E4VV522"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://backcountry.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.backcountry.com/vasque-sundowner-gtx-boot-womens",
-            "item": "Sundowner GTX Backpacking Boot - Women\u0027s",
-            "timeAgo": "2026-02-08"
-          },
-          {
-            "link": "https://www.backcountry.com/vasque-sundowner-gtx-boot-womens",
-            "item": "Sundowner GTX Backpacking Boot - Women\u0027s",
-            "timeAgo": "2026-02-08"
-          },
-          {
-            "link": "https://www.backcountry.com/deathgrip-glove-co.-baldface-werewolf-glove",
-            "item": "Baldface Werewolf Glove",
-            "timeAgo": "2026-02-08"
-          },
-          {
-            "link": "https://www.backcountry.com/deathgrip-glove-co.-baldface-werewolf-glove",
-            "item": "Baldface Werewolf Glove",
-            "timeAgo": "2026-02-08"
-          },
-          {
-            "link": "https://www.backcountry.com/deathgrip-glove-co.-baldface-werewolf-glove",
-            "item": "Baldface Werewolf Glove",
-            "timeAgo": "2026-02-08"
-          }
-        ]
-      },
-      "companyWebsite": "https://backcountry.com",
-      "companyName": "Backcountry",
-      "notes": {
-        "escalate": [
-          "No escalations for this client, send everything to CS"
-        ],
-        "tone": [
-          "Close the convo once the client takes over"
-        ],
-        "promo_and_exclusions": [
-          "Welcome offer page:   https://www.backcountry.com/sc/new-customer-coupon-rules"
-        ]
-      },
-      "blocklisted_words": [
-        
-      ],
-      "escalation_preferences": [
-        
-      ],
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Backcountry: Welcome to Backcountry! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/iVG",
-          "date_time": "2026-02-08 10:48:51.791",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Backcountry: Welcome to the Herd! Our Winter Semi-Annual Sale just dropped. Get up to 50% off this years\u0027 best: http://bctxt.co/a5iugrG2RZDa ",
-          "date_time": "2026-02-08 10:48:54.608",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Backcountry: Oh, also, a lot of people like getting personal recs from us. Over the next few days we\u0027ll try to help you find something that you will love.\n\nSome of our favorite gear just went on sale! Get the best deals on our top brands before they\u0027re gone: http://bctxt.co/aooz64NPGN6d .",
-          "date_time": "2026-02-08 10:50:01.188",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Backcountry: Wp Insulated Knit Cuff Glove - Men\u0027s feels warm and versatile for cold-weather use\n\nUse code BCNTFSMS25Q4MDB1CHA for 15% off full-priced items; exclusions apply: http://bctxt.co/a22zeaRaMgQa .",
-          "date_time": "2026-02-08 11:29:14.537",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Where’s my 15% off coupon code?",
-          "date_time": "2026-02-08 12:51:47.877",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019c3e79-d5a4-4014-f000-0000968035e7",
-          "message_text": "Backcountry: Thanks for reaching out! Use code BCNTFSMS25Q4MDB1CHA for 15% off full-priced items; exclusions apply: http://bctxt.co/an6JEfFZN-qp . Let me know if there\u0027s anything else I can help you with.",
-          "message_type": "agent",
-          "agent": "109972",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-02-08 13:18:17.920"
-        }
-      ]
-    },
-    "34": {
-      "agentName": "Sarah",
-      "has_shopify": true,
-      "id": "0191d316-891e-4a77-f000-000096b9590a",
-      "rightPanel": {
-        "orders": [
-          {
-            "currency": "USD",
-            "orderDate": "2024-09-03",
-            "items": [
-              {
-                "price": [
-                  {
-                    "value": [
-                      0,
-                      0,
-                      3123.79,
-                      623.79
-                    ],
-                    "Count": 4
-                  }
-                ],
-                "productLink": "System.Object[]",
-                "name": "System.Object[]"
-              }
-            ],
-            "date_time": "2024-09-03 03:01:23.840",
-            "discount_amount": 0,
-            "orderNumber": "",
-            "total": 3747.58
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://birchliving.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://birchliving.com/products/birch-luxe-natural-mattress?\u0026g_keyword=birch%20mattress\u0026g_adtype=search\u0026g_keywordid=kwd-610448246792\u0026g_acctid=328-786-6445\u0026g_campaignid=1945328843\u0026g_network=g\u0026g_adid=710018401397\u0026g_campaign=US%7CBirch%7CPS%7CB%7CEXT%7CGeneral\u0026g_adgroupid=77591336064\u0026gad_source=1\u0026gclid=Cj0KCQjwlvW2BhDyARIsADnIe-Ljoddd9YT_DRwF5ClauJIuJvBM9rFdS1fwIdyzZ6fmBkR1ppTSvKcaAob8EALw_wcB",
-            "item": "Birch Luxe Natural Mattress",
-            "timeAgo": "2024-09-08"
-          },
-          {
-            "link": "https://birchliving.com/products/birch-luxe-natural-mattress/king",
-            "item": "Birch Luxe Natural Mattress",
-            "timeAgo": "2024-09-03"
-          },
-          {
-            "link": "https://birchliving.com/products/birch-luxe-natural-mattress?\u0026g_keyword=birch%20mattress\u0026g_campaign=US%7CBirch%7CPS%7CB%7CPHR%7CGeneral\u0026g_adtype=search\u0026g_keywordid=kwd-433263446634\u0026g_acctid=328-786-6445\u0026g_campaignid=1945328855\u0026g_network=g\u0026g_adid=710018401331\u0026g_adgroupid=77591339944\u0026gad_source=1\u0026gclid=CjwKCAjwxNW2BhAkEiwA24Cm9DTdzEbG3JB_vsp3zWlfapStsoswnajxQXmXxSfvY5aTfB4Ecm_w0xoC1AsQAvD_BwE",
-            "item": "Birch Luxe Natural Mattress",
-            "timeAgo": "2024-09-03"
-          }
-        ]
-      },
-      "companyWebsite": "https://birchliving.com",
-      "companyName": "Birch",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS"
-        ]
-      },
-      "blocklisted_words": [
-        "AI"
-      ],
-      "escalation_preferences": [
-        
-      ],
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Birch: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Birch.",
-          "date_time": "2024-09-02 22:56:08.749",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birch: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/91N",
-          "date_time": "2024-09-02 22:57:15.501",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birch: Welcome! Click this link and unlock 20% off your purchase: https://birchliving.attn.tv/aq6g3A-JvcEk ",
-          "date_time": "2024-09-02 22:57:18.474",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birch: Add us to your phonebook so you never miss a message from us!  Stop to stop",
-          "date_time": "2024-09-03 15:50:20.819",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birch: Hey there! Your product is almost ready to ship! In the meantime, check out some tips to clean and maintain your Birch mattress. https://birchliving.attn.tv/a6-bvpaoy9JF  Stop to stop",
-          "date_time": "2024-09-06 15:16:15.608",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birch: Hey Courtney , better sleep is waiting for you. 😴\n\nCome back and add Birch Luxe Natural Mattress to your cart! https://birchliving.attn.tv/aX44Cv2SWRCn  Stop to stop",
-          "date_time": "2024-09-08 15:21:46.663",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Delivery update",
-          "date_time": "2024-09-08 15:22:27.322",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "0191d316-891e-4a77-f000-000096b9590a",
-          "message_text": "Birch: You can use our convenient online tool to see the latest updates on your order: https://birchliving.attn.tv/ajJGqiIeffrn/",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-09-08 15:22:35.174"
-        }
-      ]
-    },
-    "35": {
-      "agentName": "",
-      "has_shopify": true,
-      "id": "018fb119-a6da-4f40-f000-00006de3877e",
-      "rightPanel": {
-        "orders": [
-          {
-            "currency": "USD",
-            "orderDate": "2023-10-11",
-            "items": [
-              {
-                "price": [
-                  49
-                ],
-                "productLink": "https://faherty.myshopify.com/products/cloud-ls-henley-light-citrus-heather",
-                "name": "Cloud Cotton Long-Sleeve Henley - Light Citrus Heather"
-              }
-            ],
-            "date_time": "2023-10-11 04:11:41.118",
-            "discount_amount": 112.8,
-            "orderNumber": "5095128563781",
-            "total": 290.18
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2023-10-11",
-            "items": [
-              {
-                "price": [
-                  89
-                ],
-                "productLink": "https://faherty.myshopify.com/products/stretch-terry-chino-32-desert-khaki-1",
-                "name": "Stretch Terry Chino (32\" Inseam) - Desert Khaki"
-              }
-            ],
-            "date_time": "2023-10-11 04:11:41.024",
-            "discount_amount": 112.8,
-            "orderNumber": "5095128563781",
-            "total": 290.18
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2023-10-11",
-            "items": [
-              {
-                "price": [
-                  99
-                ],
-                "productLink": "https://faherty.myshopify.com/products/stretch-terry-chino-32-iron-1",
-                "name": "Stretch Terry Chino (32\" Inseam) - Iron"
-              }
-            ],
-            "date_time": "2023-10-11 04:11:41.015",
-            "discount_amount": 112.8,
-            "orderNumber": "5095128563781",
-            "total": 290.18
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2023-10-11",
-            "items": [
-              {
-                "price": [
-                  139
-                ],
-                "productLink": "https://faherty.myshopify.com/products/reserve-cotton-linen-trouser-tropical-ivory",
-                "name": "Reserve All Season Linen Trouser - Tropical Ivory"
-              }
-            ],
-            "date_time": "2023-10-11 04:11:40.927",
-            "discount_amount": 112.8,
-            "orderNumber": "5095128563781",
-            "total": 290.18
-          }
-        ],
-        "coupons": [
-          {
-            "coupon": "MISSYOU23WBCL4Z3B",
-            "status": "ACTIVE"
-          },
-          {
-            "status": "ACTIVE",
-            "value": "15",
-            "coupon": "TEXT15"
-          },
-          {
-            "status": "ACTIVE",
-            "description": "off your next online order",
-            "value": "20",
-            "coupon": "WELCOME20"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://fahertybrand.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://fahertybrand.com/products/marled-cotton-cardigan-light-grey-marl-2?variant=40367825616965",
-            "item": "Marled Cotton Cardigan - Light Grey Marl - Light Grey Marl / M",
-            "timeAgo": "2024-01-20"
-          },
-          {
-            "link": "https://fahertybrand.com/products/wool-chore-jacket-charcoal?nosto=productcategory-nosto-3\u0026variant=40454371442757",
-            "item": "Wool Chore Jacket - Charcoal - Charcoal / XL",
-            "timeAgo": "2024-01-20"
-          },
-          {
-            "link": "https://fahertybrand.com/products/epic-quilted-fleece-vest-carbon-melange-2?variant=40483378495557",
-            "item": "Epic Quilted Fleece Vest - Carbon Melange - Carbon Melange / XS",
-            "timeAgo": "2024-01-20"
-          },
-          {
-            "link": "https://fahertybrand.com/products/marled-cotton-cardigan-light-grey-marl-2?variant=40367825616965",
-            "item": "Marled Cotton Cardigan - Light Grey Marl - Light Grey Marl / M",
-            "timeAgo": "2024-01-20"
-          },
-          {
-            "link": "https://fahertybrand.com/products/heritage-slub-cotton-hoodie-trail-olive?utm_campaign=email_lowstock_cust_2_of_2\u0026utm_medium=email\u0026utm_source=wunderkind\u0026utm_term=triggered\u0026ibx_source=cmjhdt0s0mgk71dne9d0\u0026ueh=0c8de4dfd75c3843278b11e903548b1960146df5bba529467dc6da0e225e2591\u0026_kx=g4a6hJwFFNtR6NEsDP-OjzHM1emNVD1oV9M1zCPOMfs%3D.aEU6Lb\u0026wk_destination=6860902072389\u0026wk_display_order=0\u0026wk_id=6860902072389\u0026wk_item_type=interaction\u0026wk_recommendation_source=eligibility-worker\u0026variant=40453795053637",
-            "item": "Sunwashed Slub Hoodie - Trail Olive - Trail Olive / M",
-            "timeAgo": "2024-01-17"
-          }
-        ]
-      },
-      "companyWebsite": "https://fahertybrand.com",
-      "companyName": "Faherty",
-      "notes": {
-        "send_to_cs": [
-          "No ESC for this client, send everything to CS",
-          "For order status inquiries/issues send to CS immediately"
-        ],
-        "tone": [
-          "Close the convo once the client takes over!"
-        ]
-      },
-      "blocklisted_words": [
-        
-      ],
-      "escalation_preferences": [
-        
-      ],
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: THIS WEEKEND ONLY-spring savings have entered the chat. Take $50 off $200 with code APR200. https://fahertybrand.attn.tv/l/FHt/A_Z-2 .",
-          "date_time": "2024-04-26 12:17:12.897",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: LAST CHANCE-unlock $50 off new spring styles with two simple steps. \n1. Spend $200+. \n2. Use code APR200. \nhttps://fahertybrand.attn.tv/l/sXl/A_Z-2 ",
-          "date_time": "2024-04-28 12:16:34.897",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Discover our May 2024 catalog filled with community stories \u0026 beautiful Hawaiian landscapes. Shop now: https://fahertybrand.attn.tv/akOjVIUq67Yo",
-          "date_time": "2024-05-01 12:16:29.781",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Embrace the season with our latest arrivals inspired by Hawaii. Check it out now: https://fahertybrand.attn.tv/aIQ4ZOGR4x1w",
-          "date_time": "2024-05-05 12:17:57.252",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Text SUPPORT for help. One of our dedicated customer specialists will reply. Text STOP to opt-out.",
-          "date_time": "2024-05-05 15:45:03.980",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Text SUPPORT for help. One of our dedicated customer specialists will reply. Text STOP to opt-out.",
-          "date_time": "2024-05-05 15:45:03.999",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Don\u0027t miss out on our Mother\u0027s Day gifts. Order by 12pm EST for on-time Mother\u0027s Day delivery. Shop now:https://fahertybrand.attn.tv/aUG-_ca9DtmL",
-          "date_time": "2024-05-06 11:03:06.588",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Introducing The Leisure Sport Collection: Sporty style, airy fabrics, peak comfort. Shop now https://fahertybrand.attn.tv/a20CzPs_25FY ",
-          "date_time": "2024-05-08 12:16:23.013",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: New markdowns alert! Shop 90+ new styles at up to 40% off. Hurry, they\u0027re going fast. Shop now. https://fahertybrand.attn.tv/aEKLSRd7hY9W",
-          "date_time": "2024-05-10 12:16:48.159",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Happy Mother\u0027s Day! Celebrating all amazing moms. Wishing you joy and cherished moments. https://fahertybrand.attn.tv/auhHJ2W76QGl ",
-          "date_time": "2024-05-12 12:16:14.048",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Text SUPPORT for help. One of our dedicated customer specialists will reply. Text STOP to opt-out.",
-          "date_time": "2024-05-12 13:38:01.104",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Text SUPPORT for help. One of our dedicated customer specialists will reply. Text STOP to opt-out.",
-          "date_time": "2024-05-12 13:38:01.187",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Don\u0027t miss out on shopping 90+ new markdown styles. Shop up to 40% off sale now. https://fahertybrand.attn.tv/apVK8Jkr5Vrp",
-          "date_time": "2024-05-13 12:16:18.297",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: We understand that Father\u0027s Day can be difficult, so we want to give you the chance to opt out of our messaging around the day. Text BREAK to unsubscribe. We\u0027ll keep you in the loop about other Faherty moments.",
-          "date_time": "2024-05-15 12:16:35.743",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Discover timeless summer styles in blue. Your perfect day-to-night dresses awaits. Shop now: https://fahertybrand.attn.tv/ahmumQkJdQLE",
-          "date_time": "2024-05-16 12:31:40.736",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Hurry, our bestselling Inlet Blazer is back in stock! Get it now before it\u0027s gone...again: https://fahertybrand.attn.tv/a8T0mEB46l7T",
-          "date_time": "2024-05-18 12:16:36.518",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Our Father\u0027s Day Shop is OPEN! Shop the perfect gifts that he\u0027ll wear year after year. https://fahertybrand.attn.tv/aPJ8FlL_1SHR ",
-          "date_time": "2024-05-20 12:16:13.099",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Our Summer Kickoff Event Starts Now! Get 25% Off Select Styles + Extra 25% Off Sale with Code SUMMER25. https://fahertybrand.attn.tv/aPNzgwV9JBXL",
-          "date_time": "2024-05-22 12:16:33.326",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Faherty Brand: Our Summer Kickoff Event is on! Shop now for an EXTRA 25% off new markdowns with code SUMMER25. https://fahertybrand.attn.tv/a-ZFeaRC3F2C ",
-          "date_time": "2024-05-24 12:31:48.185",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Faherty Brand: Our Summer Kickoff Event is on! Shop now for an EXTRA 25% off new markdowns with code SUMMER25.",
-          "date_time": "2024-05-25 14:52:50.422",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "https://fahertybrand.attn.tv/a-ZFeaRC3F2C",
-          "date_time": "2024-05-25 14:52:54.683",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fb119-a6da-4f40-f000-00006de3877e",
-          "message_text": "Faherty Brand: Absolutely, you can use the code SUMMER25 to get an extra 25% off on new markdowns. Here\u0027s the link to our website: https://fahertybrand.attn.tv/sl/1jQgPeaW. Enjoy shopping!",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-25 14:53:19.456"
+          "date_time": "2026-02-24 18:55:36.099"
         }
       ]
     }
