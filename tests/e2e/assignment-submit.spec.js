@@ -52,7 +52,9 @@ test.describe('Assignment submit flow', () => {
     expect(currentUrl.searchParams.has('notes')).toBeFalsy();
   });
 
-  test('keeps delayed draft saves attached to the assignment that scheduled them', async ({ page }) => {
+  test('keeps delayed draft saves attached to the assignment that scheduled them', async ({
+    page,
+  }) => {
     const api = createMockAssignmentApi();
 
     await page.addInitScript(() => {
@@ -117,11 +119,14 @@ test.describe('Assignment submit flow', () => {
 
     await expect.poll(() => api.state.saveDraftCalls, { timeout: 10000 }).toBe(2);
     await expect
-      .poll(() => {
-        const assignment = api.getAssignment('aid-1');
-        const savedState = JSON.parse((assignment && assignment.form_state_json) || '{}');
-        return String(savedState.notes || '');
-      }, { timeout: 10000 })
+      .poll(
+        () => {
+          const assignment = api.getAssignment('aid-1');
+          const savedState = JSON.parse((assignment && assignment.form_state_json) || '{}');
+          return String(savedState.notes || '');
+        },
+        { timeout: 10000 }
+      )
       .toBe('Second draft value');
   });
 
@@ -172,7 +177,9 @@ test.describe('Assignment submit flow', () => {
       .toBe('aid-2');
   });
 
-  test('keeps recoverable local assignment state when background finalize loses ownership', async ({ page }) => {
+  test('keeps recoverable local assignment state when background finalize loses ownership', async ({
+    page,
+  }) => {
     const api = createMockAssignmentApi({
       doneErrorsByAssignmentId: {
         'aid-1': 'Assignment is not reserved for this session',

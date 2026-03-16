@@ -12,7 +12,8 @@ test.describe('QA System smoke checks', () => {
     await page.goto('/app.html');
 
     await expect(page.locator('#customForm')).toBeVisible();
-    await expect(page.locator('.search-templates input')).toBeVisible();
+    await expect(page.locator('#auditorTemplateSearch')).toBeVisible();
+    await expect(page.locator('#templateSearch')).toBeVisible();
     await expect(page.locator('#nextConversationBtn')).toBeVisible();
     await expect(page.locator('#previousConversationBtn')).toBeVisible();
     await expect(page.locator('#snapshotShareBtn')).toBeVisible();

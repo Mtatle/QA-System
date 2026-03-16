@@ -20,9 +20,10 @@ function createMockAssignmentApi(options = {}) {
   const saveDraftDelaySequence = Array.isArray(options.saveDraftDelaySequence)
     ? options.saveDraftDelaySequence.map((value) => Math.max(0, Number(value) || 0))
     : [];
-  const doneErrorsByAssignmentId = options.doneErrorsByAssignmentId && typeof options.doneErrorsByAssignmentId === 'object'
-    ? options.doneErrorsByAssignmentId
-    : {};
+  const doneErrorsByAssignmentId =
+    options.doneErrorsByAssignmentId && typeof options.doneErrorsByAssignmentId === 'object'
+      ? options.doneErrorsByAssignmentId
+      : {};
 
   const fallbackSendIds = [
     '019bebf7-17aa-48de-f000-0000f506a3fe',
@@ -210,7 +211,9 @@ function createMockAssignmentApi(options = {}) {
       if (String(payload.token || '') !== String(assignment.token || '')) {
         return fulfillJson(route, { error: 'Unauthorized: editor token required' });
       }
-      const configuredError = String(doneErrorsByAssignmentId[String(payload.assignment_id || '')] || '').trim();
+      const configuredError = String(
+        doneErrorsByAssignmentId[String(payload.assignment_id || '')] || ''
+      ).trim();
       if (configuredError) {
         return fulfillJson(route, { error: configuredError });
       }
