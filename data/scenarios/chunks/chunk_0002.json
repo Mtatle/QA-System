@@ -3,94 +3,278 @@
   "chunk": "chunk_0002",
   "scenarios": {
     "6": {
-      "agentName": "Sophia",
+      "agentName": "Sarah",
       "has_shopify": false,
-      "id": "018fc704-9de6-49ff-f000-000085046725",
+      "id": "019c8bc0-881b-42b4-f000-0000fde6c78f",
       "rightPanel": {
+        "promotions": [
+          {
+            "title": "Welcome is 15% Off",
+            "content": [
+              "The coupon is link based and the customer should be able to click through the link in their email or sms to get it to apply"
+            ]
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://halloweencostumes.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://halloweencostumes.com",
+      "companyName": "HalloweenCostumes.com",
+      "notes": {
+        "escalate": [
+          "ESC expired codes/discount code issues, ask for cart ID and add it in esc notes",
+          "Don\u0027t send to CS for this client, ESC if needed",
+          "For retroactive discount requests add discount % in ESC note",
+          "ESC if a customer requests a different resolution, after their escalation was resolved"
+        ],
+        "dos_and_donts": [
+          "Fun Bucks AREN\u0027T rewards points, those are given during exchanges"
+        ],
+        "promo_and_exclusions": [
+          "This brand does not use coupon codes or promotions. All of their discounts are exclusively link-based and are applied automatically to the shopping cart upon checkout when the appropriate conditions are met",
+          "Please do not advise customers to use promotional codes, do not provide them with any codes, and do not direct them to look on the website for additional codes",
+          "They do not have any promotional code text fields on site to facilitate use"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: Reply Y to subscribe to recurring automated personalized marketing alerts (e.g. cart reminders) from Halloween Costumes.",
+          "date_time": "2026-02-22 11:40:30.634",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: Welcome to Halloween Costumes! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-22 11:40:41.033",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nThanks for subscribing! Shop this link to claim your 15% off. halloweencostumes.attn.tv/arYvda7n-dKB",
+          "date_time": "2026-02-22 11:40:46.047",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: Don\u0027t forget to save our contact to get exclusive updates!",
+          "date_time": "2026-02-22 12:40:49.649",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nYour 15% off is waiting for you. Check out our costumes \u0026 claim your discount! halloweencostumes.attn.tv/ah63S_fTuMkb",
+          "date_time": "2026-02-23 12:41:02.518",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nHey, this is Emily. \nThanks for checking out our site:halloweencostumes.attn.tv/aj9P8SjwLy3f\nAny questions I can answer for you?",
+          "date_time": "2026-02-23 13:00:59.065",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I need to make sure the measurements are correct before I order the costume",
+          "date_time": "2026-02-23 13:01:38.791",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c8baa-d35d-49bb-f000-0000fde6c78f",
+          "message_text": "Halloween Costumes: Thank you for letting me know. Our product measurements are taken in-house when we receive the product from the manufacturer to ensure accuracy. Please note that the measurements are of the costume itself, and not the person that will be inside of it. You can also check out our size guide here: https://halloweencostumes.attn.tv/aCAf9oOpWTKy",
+          "message_type": "agent",
+          "agent": "109955",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-23 13:02:34.231"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "With the snow blizzard in nyc, does weather affect delivery?",
+          "date_time": "2026-02-23 13:22:54.646",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Order status/tracking update\"; last updated: 2023-03-03 19:55:04.486",
+          "date_time": "2026-02-23 13:26:16.754",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019c8bc0-881b-42b4-f000-0000fde6c78f",
+          "message_text": "Halloween Costumes: That\u0027s a great question! It is possible that the shipment will be affected by the severe weather. Once you process your order, I highly suggest using our online tool for tracking your order to get updates about your delivery. \n\nYou can use our convenient online tool to see the latest updates on your order: https://halloweencostumes.attn.tv/aU6haf8Uz93k",
+          "message_type": "agent",
+          "agent": "48804",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-02-23 13:26:16.757"
+        }
+      ]
+    },
+    "7": {
+      "agentName": "",
+      "has_shopify": true,
+      "id": "019cab6b-e042-4f08-f000-0001002e998a",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Black Friday Sale",
+            "content": [
+              "• November 1st - December 1st, all Pants and Joggers are $99\n\n• November 24th - Dec 1st, all Pants and Joggers are $99 + 20% off everything else sitewide"
+            ]
+          },
+          {
+            "title": "Pants Delay",
+            "content": [
+              "• Orders that contain Athletic Fit Jeans or Chinos will ship by the 18th of November.  \n\n→ This information is provided on the product pages"
+            ]
+          },
+          {
+            "title": "Free T-Shirt",
+            "content": [
+              "• Customer must add eligible T-Shirt to the cart\n\n• Order total must be over $99\n\n• Use the template \"Why is my Free Shirt code not working?\" for any issues applying this promotion"
+            ]
+          },
+          {
+            "title": "Free Hoodie and Flannel Sale",
+            "content": [
+              "Get a free hoodie on orders of $99+ or a free Frontier flannel on orders of $198+.  Discount applies automatically when the item is added to cart."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 4298021258,
+            "company_id": 21,
+            "coupon_url": "https://barbellapparel.myshopify.com/discount/FSAk236NF?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=free-shirt",
+            "name": "FSATTENTIVE",
+            "coupon": "FSAk236NF",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "browsingHistory": [
+          {
+            "link": "https://barbellapparel.com/products/havok-short-sleeve?variant=39455372804168",
+            "item": "Havok Short Sleeve - XXXL / Black / Single",
+            "timeAgo": "2026-03-01"
+          },
+          {
+            "link": "https://barbellapparel.com/products/ultralight-tech-tee?variant=39456632832072",
+            "item": "Ultralight Tech Tee - XXL / Black",
+            "timeAgo": "2026-03-01"
+          },
+          {
+            "link": "https://barbellapparel.com/products/ultralight-polo?variant=51650420572526",
+            "item": "Ultralight Polo - XXXL / Sage",
+            "timeAgo": "2026-03-01"
+          },
+          {
+            "link": "https://barbellapparel.com/products/motive-pattern-short-sleeve-dress-shirt?variant=51819914920302",
+            "item": "Motive Pattern Short Sleeve Dress Shirt - XXXL / Black Dot",
+            "timeAgo": "2026-03-01"
+          },
+          {
+            "link": "https://barbellapparel.com/products/anything-dress-pant-straight?variant=39449443860552",
+            "item": "Anything Dress Pant Straight - 40 / Slate",
+            "timeAgo": "2026-03-01"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://barbellapparel.com",
+          "date": ""
+        },
         "orders": [
           {
             "currency": "USD",
-            "orderDate": "2024-05-15",
-            "coupon": "mothersday24",
+            "orderDate": "2024-06-05",
             "items": [
               {
                 "price": [
                   {
                     "value": [
-                      84,
-                      84,
-                      84,
-                      84,
-                      84,
-                      84,
-                      84
+                      2.98,
+                      68,
+                      78,
+                      68,
+                      78,
+                      2.98,
+                      68,
+                      68,
+                      78
                     ],
-                    "Count": 7
+                    "Count": 9
                   }
                 ],
                 "productLink": "System.Object[]",
                 "name": "System.Object[]"
               }
             ],
-            "date_time": "2024-05-15 01:06:10.367",
+            "date_time": "2024-06-05 18:57:29.000",
             "discount_amount": 0,
-            "orderNumber": "804014",
-            "total": 84
-          }
-        ],
-        "coupons": [
-          {
-            "coupon": "BABYSHOWER",
-            "status": "ACTIVE"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://sneakpeektest.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://sneakpeektest.com/early-at-home-baby-gender-blood-test/",
-            "item": "Gender Products",
-            "timeAgo": "2024-05-15"
+            "orderNumber": "6121909878856",
+            "total": 314.58
           },
           {
-            "link": "https://sneakpeektest.com/early-at-home-baby-gender-blood-test/",
-            "item": "Gender Products",
-            "timeAgo": "2024-04-12"
-          },
-          {
-            "link": "https://sneakpeektest.com/early-at-home-baby-gender-blood-test/",
-            "item": "Gender Products",
-            "timeAgo": "2024-04-12"
-          },
-          {
-            "link": "https://sneakpeektest.com/early-at-home-baby-gender-blood-test/",
-            "item": "Gender Products",
-            "timeAgo": "2024-04-12"
-          },
-          {
-            "link": "https://sneakpeektest.com/early-at-home-baby-gender-blood-test/",
-            "item": "Gender Products",
-            "timeAgo": "2024-04-12"
+            "currency": "USD",
+            "orderDate": "2023-01-03",
+            "items": [
+              {
+                "price": [
+                  {
+                    "value": [
+                      99,
+                      99,
+                      99
+                    ],
+                    "Count": 3
+                  }
+                ],
+                "productLink": "System.Object[]",
+                "name": "System.Object[]"
+              }
+            ],
+            "date_time": "2023-01-03 15:45:03.000",
+            "discount_amount": 0,
+            "orderNumber": "5021638262856",
+            "total": 297
           }
         ]
       },
-      "companyWebsite": "https://sneakpeektest.com",
-      "companyName": "SneakPeek",
+      "companyWebsite": "https://barbellapparel.com",
+      "companyName": "Barbell Apparel",
       "notes": {
-        "escalate": [
-          "When ESC sample delays using the temp always include the 8-digit barcode \u0026 the return tracking number in your escalation notes!"
-        ],
-        "templates": [
-          "We have multiple order delay templates depending on circumstances (delivery from SneakPeak to cx)",
-          "We have multiple Sample delay templates depending on circumstance (delivery from cx to SneakPeak)"
-        ],
-        "promo_and_exclusions": [
-          "Codes are only valid on test kits purchased from SneakPeekTest.com",
-          "They\u0027re not valid on the lab fee or shipping charges that are associated with the test kit sold in stores (e.g. Walgreens)"
-        ]
+        
       },
       "blocklisted_words": [
         
@@ -102,1397 +286,1199 @@
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "SneakPeek: April Flash Sale ending! Last chance to save up to $25 on our test. Order now before it ends tonight.\n\nhttps://sneakpeektest.attn.tv/at-d1zU9Vk_C ",
-          "date_time": "2024-05-02 17:15:55.516",
+          "message_text": "Barbell Apparel: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-03-01 13:16:57.274",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "SneakPeek: Happy Mother\u0027s Day! Until May 15th, discover fetal sex as early as 6 weeks into pregnancy with up to $25 off. \n\nhttps://sneakpeektest.attn.tv/ajUhlf0j7lPR ",
-          "date_time": "2024-05-08 18:01:01.184",
+          "message_text": "Barbell Apparel: Welcome! This is Sarah with Barbell Apparel. \n\nGet a FREE SHIRT w/ the code FSAk236NF on any orders over $99. \n\nClick here to auto-apply it instead: https://barbell.attn.tv/aaNK7lTHoqx2 .\n\nWe\u0027re here to help you Break Boundaries and empower your fitness.\n\nText me any time!",
+          "date_time": "2026-03-01 13:17:01.355",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "SneakPeek: Hey , I\u0027m Sophia your personal shopping assistant. Welcome to our exclusive VIP list!\n\nYou can text me anytime for support, recommendations, or anything in between. Is there anything I can assist you with today?\n\nhttps://sneakpeektest.attn.tv/apLM6rKWpg3z .",
-          "date_time": "2024-05-16 13:16:05.358",
+          "message_text": "Barbell Apparel: Don\u0027t forget to save our number. We give our best deals and exclusive drops over text message first. ",
+          "date_time": "2026-03-01 13:17:02.979",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "SneakPeek: Hey, we noticed you checking us out. Have you seen our best-selling \u003e99% accurate Early Gender DNA At-Home test? https://sneakpeektest.attn.tv/aFfurZ0-HePt ",
-          "date_time": "2024-05-21 18:50:26.696",
+          "message_text": "Barbell Apparel: Hey Doug, this is Sarah. Thanks for checking us out! https://barbell.attn.tv/abrrBAClmpTY \n\nAny questions I can answer for you?",
+          "date_time": "2026-03-01 13:18:42.150",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Barbell Apparel: Hey Doug, this is Sarah. I see you left something in your cart. https://barbell.attn.tv/a1_X5_kSNuTr \n\nI like Anything Dress Pant Straight too! Any questions I can answer for you?",
+          "date_time": "2026-03-01 16:00:41.890",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "Can you please tell me the expected arrival date of my order? It\u0027s been stuck in the same location for 4-5 days now. Order number 804014",
-          "date_time": "2024-05-28 09:56:43.908",
+          "message_text": "I tried to make a purchase but the free shirt code you provided didn\u0027t work",
+          "date_time": "2026-03-01 16:24:52.324",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018fbf7f-dcda-4b2c-f000-000085046725",
-          "message_text": "SneakPeek: Sorry to hear that! Our apologies on behalf of our shipping carrier for the unexpected delay. If the tracking shows no movement after another day, please contact our Customer Care team to further assist: https://sneakpeektest.attn.tv/sl/Gq4FYUzx/",
+          "message_type": "customer",
+          "message_text": "I\u0027d love to try to use it in the future given I just already placed a different order for just pants/shorts",
+          "date_time": "2026-03-01 16:25:21.862",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019cab4e-03fd-4b04-f000-0001002e998a",
+          "message_text": "Barbell Apparel: Sorry about that! I can check with my team to see if we can apply the code to your order. Could you please send me your order number, email address, and the free shirt you wish to get here: https://barbell.attn.tv/aZZJeqPkZsvI",
           "message_type": "agent",
-          "agent": "26939",
+          "agent": "109622",
           "message_media": [
             
           ],
-          "date_time": "2024-05-28 09:59:38.983"
+          "date_time": "2026-03-01 16:29:02.746"
         },
         {
           "message_type": "customer",
-          "message_text": "We are just expecting results this week, and need them by Friday at the latest, and I am concerned with it now being Tuesday. I shipped on Wednesday 5/22 first thing in the morning.",
-          "date_time": "2024-05-28 10:01:56.707",
+          "message_text": "No worries - if possible the Havok Short Sleeve XXXL in Black would be my preference. Order #475864If it\u0027s not possible I\u0027m good with the order and don\u0027t want to have the shirt added at an additional cost - only if it can be added with the code for a free shirt and no change to the final price I paid online. Thank you!",
+          "date_time": "2026-03-01 16:47:48.608",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018fbf87-d593-4a02-f000-000085046725",
-          "message_text": "SneakPeek: I\u0027ll have my team look into this further for you. Could you please provide your 8-digit test barcode, and your sample\u0027s return tracking number?\n",
+          "message_id": "019cab6b-e042-4f08-f000-0001002e998a",
+          "message_text": "Barbell Apparel: Thank you, and I totally understand! Can you please also provide me with your email address?",
           "message_type": "agent",
-          "agent": "38972",
+          "agent": "82219",
           "message_media": [
             
           ],
-          "date_time": "2024-05-28 10:08:21.410"
+          "date_time": "2026-03-01 17:01:39.677"
+        }
+      ]
+    },
+    "8": {
+      "agentName": "Jordan",
+      "has_shopify": true,
+      "id": "019cb135-c6ee-43c8-f000-0000ee265ce8",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Haven Collection Launch",
+            "content": [
+              "• Haven 16” Laptop Tote Bag\n• Haven 15” Laptop Tote Bag\n→  Colors: Buttercream, Mushroom, Navy\n• Haven 14” Laptop Tote Bag\n• Haven Mini Crossbody Bag\n→  Colors: Mushroom, Celadon, Buttercream, Navy.\n• Haven Tulip Tote - NEW\n→  Colors: Mushroom, Celadon, Navy, Buttercream, Black, Toffee."
+            ]
+          },
+          {
+            "title": "Early Access Luka Duffel Bag Charm",
+            "content": [
+              "• Retail: 1/20 10am- 10pm (store will honor, not promote)\n• Discount: Free Luka Duffel Bag Charm with any Haven Purchase\n• Promo Code: VITTULIP\n• Stack with VIT: Yes\n• Exclusions: Only applies to the purchase of Haven Collection\n• Final Sale: No"
+            ]
+          },
+          {
+            "title": "January Sale",
+            "content": [
+              "• Discount: Up to 60% off\n• Stack with VIT: Yes\n• Final Sale: Yes\n• Ends Jan. 30th at 10am EST"
+            ]
+          },
+          {
+            "title": "Fit Collection Expansion",
+            "content": [
+              "• Colors: Iris, Indigo, Black, and Greige\n→  Fit Crossbody Gym Bag - New\n→ Fit Gym Backpack - New\n→  Fit Zip Bag Charm - New\n→  Fit Gym Duffel\n→  Fit Hanging Dopp Kit"
+            ]
+          },
+          {
+            "title": "General Access Luka Duffel Bag Charm",
+            "content": [
+              "• Retail: 1/21 10am - 10pm (store will honor, not promote)\n• Discount: Free Luka Duffel BC with any Haven Purchase\n• Promo Code: TULIP\n• Stack with VIT: Yes\n• Exclusions: Only applies to the purchase of Haven Collection"
+            ]
+          },
+          {
+            "title": "General Access Fit Zip Bag Charm GWP",
+            "content": [
+              "• Audience: Sitewide\n• Countries: All Markets\n• Discount: Free Fit Zip Bag Charm with any Fit Purchase\n• Promo Code: FIT\n• Stack with VIT: Yes\n• Exclusions: Only applies to the purchase of Fit Collection\n• Final Sale: No\n• Ends on Jan. 10th at 10am EST"
+            ]
+          },
+          {
+            "title": "Early Access Fit Zip Bag Charm GWP",
+            "content": [
+              "• Audience: Online and Retail\n• Discount: Free Fit Zip Bag Charm with any Fit Purchase\n• Promo Code: VITFIT\n• Stack with VIT: Yes\n• Exclusions: Only applies to the purchase of Fit Collection\n• Final Sale: No\n• Early access ends for online purchases on Jan. 9th, 10 am EST, and for retail at 10 pm EST"
+            ]
+          },
+          {
+            "title": "Luka Carry-On and Mini Carry-On (Launch + Restock)",
+            "content": [
+              "• Color: Walnut Monochrome\n→  Luka Carry-On - New\n→  Luka Mini Carry-On - New\n→  Luka Duffel - Restock\n→  Luka Mini Duffel - Restock"
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 3995491560,
+            "company_id": 2281,
+            "coupon_url": "https://calpak.myshopify.com/discount/AT1NC0NC75ccsYC",
+            "name": "Concierge 10% Off - 2025",
+            "coupon": "AT1NC0NC75ccsYC",
+            "redemption_status": "USED"
+          },
+          {
+            "subscriber_id": 3995491560,
+            "company_id": 2281,
+            "coupon_url": "https://calpak.myshopify.com/discount/AT1NT1V26guYXWi",
+            "value": "10",
+            "name": "Welcome 10% Off - 2025",
+            "coupon": "AT1NT1V26guYXWi",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://calpaktravel.com",
+          "date": ""
         },
+        "browsingHistory": [
+          {
+            "link": "https://www.calpaktravel.com/products/luka-large-duffel/chocolate",
+            "item": "Luka Large Duffel",
+            "timeAgo": "2026-03-02"
+          },
+          {
+            "link": "https://www.calpaktravel.com/web-pixels@3c1f2529w4065d210p03530cb8m151179d6/custom/web-pixel-90374202@56/sandbox/modern/products/hue-large-luggage/glazed-black",
+            "item": "Hue Large Luggage",
+            "timeAgo": "2026-03-01"
+          },
+          {
+            "link": "https://www.calpaktravel.com/web-pixels@3c1f2529w4065d210p03530cb8m151179d6/custom/web-pixel-90374202@56/sandbox/modern/products/ambeur-2-piece-luggage-set/celadon",
+            "item": "Ambeur 2-Piece Luggage Set",
+            "timeAgo": "2026-03-01"
+          },
+          {
+            "link": "https://www.calpaktravel.com/products/car-organizer",
+            "item": "Car Organizer",
+            "timeAgo": "2026-02-28"
+          },
+          {
+            "link": "https://www.calpaktravel.com/products/compakt-zippered-pouch-set/celadon?_pos=1\u0026_sid=4ade4da3b\u0026_ss=r/celadon-tomato-picnic",
+            "item": "Compakt Zip Pouch Set",
+            "timeAgo": "2026-02-28"
+          }
+        ]
+      },
+      "companyWebsite": "https://calpaktravel.com",
+      "companyName": "CALPAK",
+      "notes": {
+        "send_to_cs": [
+          "Send to CS for post purchase inquiries, use PPI shortcut",
+          "If cx needs help returning/exchanging a gift send to CS",
+          "Send to CS for discount code issues"
+        ],
+        "escalate": [
+          "When ESC add email to notes for all escalations"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        "change of address"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
         {
-          "message_type": "customer",
-          "message_text": "S0300201 is the test barcode and the tracking is 9401916902668880169111",
-          "date_time": "2024-05-28 10:12:05.831",
+          "message_type": "system",
+          "message_text": "CALPAK: Our Most Wanted Pieces\n\nShop the icons that top our best sellers list year after year: calpak.attn.tv/a3X84MOAbwAe ",
+          "date_time": "2026-02-01 13:01:21.316",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018fbf8d-afdd-47c7-f000-000085046725",
-          "message_text": "SneakPeek: Thanks for that information! I\u0027ll pass this along to my team and get back to you as soon as possible. Hang tight!",
-          "message_type": "agent",
-          "agent": "46578",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-28 10:14:44.965"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Thank you",
-          "date_time": "2024-05-28 10:19:06.465",
+          "message_type": "system",
+          "message_text": "CALPAK: Hey there—thanks for stopping by!\n\nCheck out our luggage picks: https://calpak.attn.tv/a-os7OZny3TF . Shop now and grab your go-to travel bag.",
+          "date_time": "2026-02-01 13:22:09.082",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018fc173-7cfc-4ae4-f000-000085046725",
-          "message_text": "SneakPeek: Thanks for your patience! I just heard from the team and we are sorry your sample has not arrived sooner, this appears to have been lost in transit with USPS: https://sneakpeektest.attn.tv/sl/BzZtZ0ns\n\nWe\u0027re happy to help, we\u0027ll get you set up with a new kit on us. Could you please provide your order date, order number, and the full name and email address under which your test was purchased? ",
-          "message_type": "agent",
-          "agent": "32937",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-28 19:05:22.436"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Oh no 😪 we have a gender reveal planned for Saturday",
-          "date_time": "2024-05-28 19:06:56.275",
+          "message_type": "system",
+          "message_text": "CALPAK: Still deciding?\n\nIf you want a closer look, here\u0027s what\u0027s currently on sale: calpak.attn.tv/a7C9Ft9GzYnV \n\nText back if you have any questions!",
+          "date_time": "2026-02-01 13:26:08.263",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018fc177-9f16-4d44-f000-000085046725",
-          "message_text": "SneakPeek: I\u0027m sorry for the trouble. It\u0027s not the experience we want you to have. If you\u0027d like us to send another kit, do let us know and we\u0027ll be happy to assist. Thanks for your patience. ",
-          "message_type": "agent",
-          "agent": "82343",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-28 19:09:53.311"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "How fast can a new kit arrive?",
-          "date_time": "2024-05-28 19:14:16.444",
+          "message_type": "system",
+          "message_text": "CALPAK: They\u0027re Back - The Colors You\u0027ve Been Waiting For\n\nShop the restock of our Clear Cosmetics Cases: calpak.attn.tv/a8TpA3bvvxMY ",
+          "date_time": "2026-02-02 13:30:43.284",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018fc17c-fe97-4aae-f000-000085046725",
-          "message_text": "SneakPeek: Thank you for the question. For domestic orders, you can find detailed shipping info here: https://sneakpeektest.attn.tv/sl/m5ZoZt4u/ For Canadian and UK orders, shipping takes 1-2 business days, and for Australia, it takes 1-4 business days. I hope this helps! ",
-          "message_type": "agent",
-          "agent": "48804",
+          "message_type": "system",
+          "message_text": "CALPAK: So much has happened since we last saw you! \n\nShop 10% off on all the newness you\u0027ve been missing with code FIRST10: calpak.attn.tv/aGS5-0rQtyC9 ",
+          "date_time": "2026-02-02 16:07:47.929",
           "message_media": [
             
-          ],
-          "date_time": "2024-05-28 19:15:45.445"
+          ]
         },
         {
-          "message_type": "customer",
-          "message_text": "Could I pay an upgrade for fast track? We really need our results back by Saturday morning",
-          "date_time": "2024-05-28 19:20:56.505",
+          "message_type": "system",
+          "message_text": "CALPAK: Hey, it\u0027s Jordan from CALPAK!\n\nI thought you could use some inspiration for your next trip: calpak.attn.tv/aGib9BO1OMcD\n\nAny questions? I\u0027m here to help.",
+          "date_time": "2026-02-04 13:41:59.843",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Coming Soon - Your Passport to Blue Skies\n\nJoin the waitlist to see the collection first, with a surprise gift at the drop: calpak.attn.tv/aZFefeM3lF88 ",
+          "date_time": "2026-02-04 14:45:48.609",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Here\u0027s 10% off - we\u0027ve missed you! \n\nCome back for a bag that makes errands feel like the main event. \n\nUse code FIRST10: calpak.attn.tv/ah6nbprTQuDa ",
+          "date_time": "2026-02-04 16:08:33.496",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: February Deals just landed! \n\nShop up to 50% off travel and everyday picks you\u0027ll love to carry: calpak.attn.tv/aKoxkkZ_Ur_E ",
+          "date_time": "2026-02-05 12:15:49.978",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Grab the Terra 26L Laptop Duffel Backpack—eco friendly, spacious, travel-ready.\n\n1.9K people recently purchased Terra 26L Laptop Duffel Backpack; complete your order before it disappears!\n\nShop now: https://calpak.attn.tv/aLuoQBtDNOhV .",
+          "date_time": "2026-02-05 16:13:20.549",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Love this pick? Backpacks built for everyday travel and organized pockets make getting out the door easier.\n\nFree shipping on orders $75+.\n\nGrab yours here: https://calpak.attn.tv/a_VKoozShKd4 .",
+          "date_time": "2026-02-05 17:13:32.074",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Packs a ton, carries light, and fits under your airplane seat.\n\nSkip baggage claim with the backpack travelers love: calpak.attn.tv/av6I8KjXjtI3 ",
+          "date_time": "2026-02-06 11:45:09.445",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: NEW Collection - Your Passport to Blue Skies\n\nExplore calm tones of blue for your spring travel, plus a free gift: calpak.attn.tv/a6t3j3Qs8jlK ",
+          "date_time": "2026-02-11 13:31:04.769",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Your free Luka Bag Charm is departing!\n\nShop our newest collection to make it yours with code SPRING: calpak.attn.tv/aQc93o7qP-1b ",
+          "date_time": "2026-02-11 19:01:13.335",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Glazed finishes and pastel tones for easy, stylish packing.\n\nDiscover luggage you\u0027ll actually love: https://calpak.attn.tv/a4ZOIG1L_PSs .",
+          "date_time": "2026-02-12 14:26:49.038",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Something catch your eye?\n\nLuka 15 inch Laptop Backpack is still available, but popular colors are going fast.\n\nShop now to make it yours: calpak.attn.tv/a3MZ_fE4wcJs",
+          "date_time": "2026-02-12 17:14:49.948",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: It\u0027s all in the name - this organizer is *everything.* \n\nStore chargers, e-readers, and more for easy in-flight access: calpak.attn.tv/apKZrfgy8qCS ",
+          "date_time": "2026-02-14 11:45:11.037",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: On Its Way - A Taste of Spring\n\nJoin the waitlist to preview new colors and enjoy a gift at launch: calpak.attn.tv/aQD_SkSpNTCf ",
+          "date_time": "2026-02-16 14:46:57.244",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Grab the Luka Duffel Bag — 9 pockets, shoe compartment, lightweight, fits under airplane seats, your go-to duffel for organized travel.\n\n8.7K people recently purchased Luka Duffel Bag; complete your order before it disappears!\n\nShop now: https://calpak.attn.tv/alrYf53C5_xR .",
+          "date_time": "2026-02-17 12:34:33.097",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Loved the travel-ready duffels? They\u0027re lightweight, pocket-packed, and made for quick getaways.\n\nFree shipping on orders $75+.\n\nGrab your Luka Duffel: https://calpak.attn.tv/aTdN6tif3EVY .",
+          "date_time": "2026-02-17 13:34:41.128",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Still deciding?\n\nIf you want a closer look, here\u0027s what\u0027s currently on sale: calpak.attn.tv/aPcthEVs2VYw \n\nText back if you have any questions!",
+          "date_time": "2026-02-18 13:13:52.076",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Your favorites are up to 50% off. \n\nShop thoughtfully designed picks: calpak.attn.tv/akEl8LAYCbZm ",
+          "date_time": "2026-02-18 14:16:13.765",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Grab your Weekender Duffel—eco-friendly and organized with a shoe compartment and luggage sleeve.\n\n49 people recently purchased Weekender Duffel; complete your order before it disappears!\n\nShop now: https://calpak.attn.tv/a4cfwG7WvJ2x .",
+          "date_time": "2026-02-18 22:28:12.346",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Thinking about a carry-on that\u0027s lightweight, organized, and ready for every trip?\n\nFree shipping on orders $75+.\n\nThis one\u0027s travel-ready: https://calpak.attn.tv/aBT7uZUY-n1q .",
+          "date_time": "2026-02-19 09:58:08.393",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Weekend-ready weekender bags that pack light and look polished.\n\nGrab your next travel essential: https://calpak.attn.tv/a51ro_vRYfh3 .",
+          "date_time": "2026-02-19 17:12:20.162",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Something catch your eye?\n\nTerra 26L Laptop Duffel Backpack is still available, but popular colors are going fast.\n\nShop now to make it yours: calpak.attn.tv/ajFT2Sl-CvMS",
+          "date_time": "2026-02-19 17:57:21.675",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Hey, it\u0027s Jordan from CALPAK!\n\nI thought you could use some inspiration for your next trip: calpak.attn.tv/aqZF99d3WZ4q\n\nAny questions? I\u0027m here to help.",
+          "date_time": "2026-02-21 13:14:04.938",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Daydreaming about lunch under clear blue skies? \n\nMake it a moment in one of our latest colors: calpak.attn.tv/aIZ8Pp9W0MA3 ",
+          "date_time": "2026-02-22 11:45:15.406",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: See something you like? \n\nHere\u0027s 10% off for the next 48 hours, just in time for your next adventure. \n\nUse code: FIRST10\ncalpak.attn.tv/aOpE6jse0pDF \n",
+          "date_time": "2026-02-24 13:15:31.763",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: NEW Collection - A Taste of Spring\n\nSavor our latest seasonal prints and colors with a free gift: calpak.attn.tv/art9QdRPmyKg ",
+          "date_time": "2026-02-24 13:31:24.820",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Final hours for your free Luka! \n\nDiscover adventure with ease and use code SPRING for your gift: calpak.attn.tv/a0VhcJ8Nzo0Q ",
+          "date_time": "2026-02-24 19:00:42.482",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Grab your Luka Large Duffel—lightweight, pocket-packed, with a shoe compartment and removable crossbody strap.\n\nOver 20K people have recently viewed it.\n\nShop now: https://calpak.attn.tv/aPk9QzTqMaek .",
+          "date_time": "2026-02-25 13:01:04.716",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Just a heads up — the insulated pieces are perfect for keeping drinks cold on the go and fit right into any travel routine.\n\nGet free shipping on orders $75+.\n\nGrab your go-to insulated bag: https://calpak.attn.tv/aXcHo0hrQ7zt .",
+          "date_time": "2026-02-25 14:01:18.750",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Last Day - Up to 50% Off\n\nSave on go-to essentials before February Deals end: calpak.attn.tv/aMf6Xsd-fry8 ",
+          "date_time": "2026-02-26 12:16:17.625",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: New spring colors have arrived. \n\nMix and match our freshest shades, the perfect palette for the season: calpak.attn.tv/azCLLp66ubc_ ",
+          "date_time": "2026-02-27 11:45:15.576",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Light, travel-ready luggage for weekend escapes.\n\nFind your new go-to carry: https://calpak.attn.tv/aHY_94PWFe0m .",
+          "date_time": "2026-02-27 12:01:47.797",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: That piece you\u0027re eyeing is on sale. \n\nTake home the Weekender Duffel - ORCHID before it\u0027s back to full price:\n\ncalpak.attn.tv/anbOg2zo6x4M",
+          "date_time": "2026-02-27 13:02:21.909",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Something catch your eye?\n\nHue Large Luggage is still available, but popular colors are going fast.\n\nShop now to make it yours: calpak.attn.tv/aAyY3FLLuJ2E",
+          "date_time": "2026-02-27 13:09:50.433",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: This duffel sold out 5x.\n \nOwn the viral bag that made the Condé Nast Traveler\u0027s list: calpak.attn.tv/aM08uwYdSvtf ",
+          "date_time": "2026-02-27 16:16:28.999",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Your $5 off is waiting!\n\nSign up as a Very Important Traveler (VIT) to claim your savings: calpak.attn.tv/a7D9YyDisGwo",
+          "date_time": "2026-02-28 13:01:52.035",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Daydreaming about PTO? Might as well pack a bag.\n\nExplore new arrivals made for your next escape: calpak.attn.tv/aEpSlzqCfpFI ",
+          "date_time": "2026-03-01 16:16:31.659",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: You are already subscribed. Click here to shop now: calpaktravel.com.",
+          "date_time": "2026-03-01 17:46:27.967",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Grab your Hue Large Luggage—expandable polycarbonate with a TSA lock and smooth spinner wheels, your go-to for effortless travel.\n\nOver 20K people have recently viewed that luggage.\n\nShop now: https://calpak.attn.tv/adClr-tGcJ7Y .",
+          "date_time": "2026-03-01 18:00:09.398",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Lois—find lightweight, organized luggage that looks as good at the gate as it does in your photos.\n\nFree shipping on orders $75+.\n\nReady for your next trip: https://calpak.attn.tv/a3bcZkaOvO1m .",
+          "date_time": "2026-03-01 19:00:22.701",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Fresh finds, now up to 60% off.\n\nUpgrade your carry before takeoff: calpak.attn.tv/aJ95RHoEt1OU ",
+          "date_time": "2026-03-02 13:02:06.381",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Grab your Luka Large Duffel—lightweight, pocket-packed, with a shoe compartment and removable crossbody strap, Lois.\n\nOver 20K people have recently viewed it.\n\nShop now: https://calpak.attn.tv/ado1KwYf3AW- .",
+          "date_time": "2026-03-02 18:54:46.844",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Hi Lois, your cart expires soon. Revisit your Luka Large Duffel before it\u0027s gone.\ncalpak.attn.tv/aLKMo-3DJg-v",
+          "date_time": "2026-03-02 19:45:09.741",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "CALPAK: Lois — love a roomy, stylish duffel that\u0027s lightweight and pocket-packed for quick trips.\n\nGet free shipping on orders $75+.\n\nYour go-to duffel is waiting: https://calpak.attn.tv/aeRRJ2IAjzY- .",
+          "date_time": "2026-03-02 19:57:32.027",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "I ordered on 5/14/24, order number 804014, under Calli Martinez and email callikay97@yahoo.com",
-          "date_time": "2024-05-28 19:22:36.769",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "If there was a way to upgrade to fast track and have the kit arrive in time for my results to be sent by Saturday June 1st (in the morning) I\u0027d be more than happy to receive a new kit. But I needed results by the 1st.",
-          "date_time": "2024-05-28 19:49:22.025",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc1a1-29a5-4181-f000-000085046725",
-          "message_text": "SneakPeek: I totally understand! I\u0027d like to check this with my team. Please, hang tight! ",
-          "message_type": "agent",
-          "agent": "49198",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-28 19:55:15.754"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "I have a Walgreens that says they carry the test kit also. If that were an easier way to go about this. I could test tonight and drop off at the post office in the morning, but I would need test activation and shipping label.",
-          "date_time": "2024-05-28 19:57:01.713",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc1a7-850a-49eb-f000-000085046725",
-          "message_text": "SneakPeek: Thanks for letting me know, and I understand. I\u0027m happy to also check that with my team for you, and I\u0027ll get back to you as soon as I hear back!",
-          "message_type": "agent",
-          "agent": "46578",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-28 20:02:12.369"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Thank you.",
-          "date_time": "2024-05-28 20:03:31.761",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc1ae-1f5b-45f0-f000-000085046725",
-          "message_text": "SneakPeek: You\u0027re welcome! In the meantime, is there anything that I can assist you with while waiting for an update?",
-          "message_type": "agent",
-          "agent": "82448",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-28 20:09:25.090"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "I don\u0027t think so, I will just be waiting.",
-          "date_time": "2024-05-28 20:12:21.646",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc1b3-3624-4460-f000-000085046725",
-          "message_text": "SneakPeek: Thank you. It\u0027s a little late so it\u0027s likely I won\u0027t hear back by today, though rest assured I\u0027ll reach out once business hours resume. ",
-          "message_type": "agent",
-          "agent": "47110",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-28 20:14:58.609"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Oh, okay",
-          "date_time": "2024-05-28 20:18:32.129",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "What are business hours?",
-          "date_time": "2024-05-28 20:29:31.828",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc1c1-db18-42a2-f000-000085046725",
-          "message_text": "SneakPeek: Good question! Our normal business hours are Monday through Friday from 9am to 5pm PST. I hope this helps.",
-          "message_type": "agent",
-          "agent": "39115",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-28 20:30:58.340"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Okay",
-          "date_time": "2024-05-28 20:32:11.755",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc1c5-9ebd-4a61-f000-000085046725",
-          "message_text": "SneakPeek: Thanks for understanding. Is there anything else that I can help with while I wait for a response from the team?",
-          "message_type": "agent",
-          "agent": "82343",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-28 20:35:05.031"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "No thank you",
-          "date_time": "2024-05-28 20:35:21.766",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Good morning, please let me know as soon as possible if it\u0027s possible to do fast track shipping with me purchasing a kit from Walgreens and I can get that done on my lunch break and mail it out today.",
-          "date_time": "2024-05-29 12:06:26.016",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc51b-8360-4ff2-f000-000085046725",
-          "message_text": "SneakPeek: Hello, I have reached out to my team about fast-tracking your order, however I do not have a response yet. I will let you know as soon as I hear back! While I have you here, is there anything else I can help you with?",
-          "message_type": "agent",
-          "agent": "82441",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-29 12:07:45.770"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "I just wanted to reach back out during business hours in hopes to hear back faster. Thank you.",
-          "date_time": "2024-05-29 12:09:05.955",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc51e-fd86-4e8b-f000-000085046725",
-          "message_text": "SneakPeek: I understand! Rest assured, I will let you know as soon as I get a response from the team. Thank you for your patience.",
-          "message_type": "agent",
-          "agent": "33482",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-29 12:11:33.650"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Thank you",
-          "date_time": "2024-05-29 12:12:06.461",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Do you have any updates?",
-          "date_time": "2024-05-29 15:13:47.200",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc5cd-7962-4b3c-f000-000085046725",
-          "message_text": "SneakPeek: Thank you for reaching out. I\u0027m really sorry for the delay. It is not the experience that we want to have for our customers. Right now, I still have no response from the team. But rest assured, once I get an update, I will message you immediately. Please hang tight! ",
-          "message_type": "agent",
-          "agent": "48804",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-29 15:22:08.623"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "You are almost closed for today, I assume you haven\u0027t heard anything?",
-          "date_time": "2024-05-29 19:43:23.709",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc6bd-83d8-4caf-f000-000085046725",
-          "message_text": "SneakPeek: That\u0027s right and I apologize for the long wait. Our team is doing everything to respond to each inquiry in a timely manner. I\u0027ll let you know once there\u0027s an update. ",
-          "message_type": "agent",
-          "agent": "82343",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-29 19:44:19.940"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Okay.",
-          "date_time": "2024-05-29 19:44:53.941",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc6c1-e34f-453a-f000-000085046725",
-          "message_text": "SneakPeek: Thanks for your patience. Is there anything else that I can help with while I wait for a response from the team?",
-          "message_type": "agent",
-          "agent": "82343",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-29 19:49:06.522"
-        },
-        {
-          "message_id": "018fc6d7-877e-4bd1-f000-000085046725",
-          "message_text": "SneakPeek: Hey again! I just heard from the team who let me know that we do offer an upgrade to a FastTrack return for $45. Your retest will come in 1 business day, with a FedEx Overnight return label for the return of your sample, along with expedited lab work and results delivered to you by 8:59pm Pacific Time the same day your sample is delivered.\n\nIf you\u0027d like to take advantage of this FastTrack upgrade, let me know by providing your order number tomorrow by 10 AM PST! We\u0027ll help set this up and send you a payment link here. We\u0027ve set up a secure payment link: Click Here to Upgrade Your Test Method: https://sneakpeektest.attn.tv/sl/tcCSA1j3\nReply to this message with the order number of your upgrade once you\u0027ve been able to submit this, and we\u0027ll request your retest is sent expedited tomorrow with our daily shipments. \n",
-          "message_type": "agent",
-          "agent": "27727",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-29 20:12:44.809"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "With this would my results be here by Saturday morning?",
-          "date_time": "2024-05-29 20:36:05.498",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc6ee-4198-4865-f000-000085046725",
-          "message_text": "SneakPeek: Thank you for this question! Your retest will come in 1 business day, with a FedEx Overnight return label for the return of your sample, along with expedited lab work and results delivered to you by 8:59pm Pacific Time the same day your sample is delivered.",
-          "message_type": "agent",
-          "agent": "49001",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-29 20:37:34.241"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "So if I ordered tonight the test could be here tomorrow for me to take and return tomorrow?",
-          "date_time": "2024-05-29 20:38:55.427",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc6f2-a305-4b30-f000-000085046725",
-          "message_text": "SneakPeek: I\u0027m circling back with the team and rest assured that I\u0027ll be back as soon as I have the info.",
-          "message_type": "agent",
-          "agent": "49001",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-29 20:42:21.328"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Okay. I just don\u0027t want to waste anymore money if my results are unable to be delivered by Friday evening.",
-          "date_time": "2024-05-29 20:53:55.778",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "I\u0027ve spent the entire day upset because I\u0027m more than likely having to cancel my weekend and tell my family and friends not to drive out of their way to come to town.",
-          "date_time": "2024-05-29 20:54:35.880",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018fc702-242e-4665-f000-000085046725",
-          "message_text": "SneakPeek: I\u0027m very sorry for the delay and inconvenience that this transaction may have caused. I\u0027ve made sure to tag this with priority and I\u0027ll let you know immediately once I hear back from the team. ",
-          "message_type": "agent",
-          "agent": "48320",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-29 20:59:17.434"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "But it is after business hours now tonight so you probably will not hear back. Is that correct?",
-          "date_time": "2024-05-29 21:00:05.218",
+          "message_text": "I can\u0027t find my 10% off coupon",
+          "date_time": "2026-03-02 19:59:00.216",
           "message_media": [
             
           ]
         },
         {
           "message_type": "template",
-          "message_text": "Template used: \"Escalating after business hours - All brands\"; last updated: 2023-10-10 17:45:06.600",
-          "date_time": "2024-05-29 21:01:59.666",
+          "message_text": "Template used: \"Provide a discount (Concierge Offer)\"; last updated: 2025-12-19 19:14:56.656",
+          "date_time": "2026-03-02 20:00:17.539",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018fc704-9de6-49ff-f000-000085046725",
-          "message_text": "SneakPeek: I understand that it\u0027s late, so it\u0027s unlikely that I will hear back from you today. But please rest assured that I\u0027ll reach out as soon as business hours resume. Appreciate your patience on this!\n ",
+          "message_id": "019cb135-c6ee-43c8-f000-0000ee265ce8",
+          "message_text": "CALPAK: Here\u0027s a code for you to use: AT1NC0NC75ccsYC - Simply follow this link to redeem it: https://calpak.attn.tv/alUYTnfH7sXg I personally love this collection, it\u0027s definitely worth checking out: https://calpak.attn.tv/a3PVXi4lMw6h ",
           "message_type": "agent",
-          "agent": "48320",
+          "agent": "43099",
           "message_media": [
             
           ],
-          "date_time": "2024-05-29 21:01:59.668"
+          "date_time": "2026-03-02 20:00:17.541"
         }
       ]
     },
-    "7": {
+    "9": {
       "agentName": "Jordan",
-      "has_shopify": false,
-      "id": "019b7b40-3831-4b6f-f000-0000ec54d708",
+      "has_shopify": true,
+      "id": "019ccf36-9298-4159-f000-0000fa147e83",
       "rightPanel": {
-        "orders": [
-          {
-            "currency": "USD",
-            "orderDate": "2026-01-01",
-            "items": [
-              {
-                "price": [
-                  {
-                    "value": [
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249,
-                      249
-                    ],
-                    "Count": 47
-                  }
-                ],
-                "productLink": "System.Object[]",
-                "name": "System.Object[]"
-              }
-            ],
-            "date_time": "2026-01-01 04:36:56.626",
-            "discount_amount": 0,
-            "orderNumber": "101857",
-            "total": 249
-          }
-        ],
         "coupons": [
           {
-            "coupon": "WELCOME5",
-            "status": "ACTIVE"
+            "subscriber_id": 4195647107,
+            "company_id": 3469,
+            "static_code": "MU10",
+            "name": "10% OFF",
+            "coupon": "MU10",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 4195647107,
+            "company_id": 3469,
+            "name": "10% Welcome Email",
+            "coupon": "365RWA4N"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 4195647107,
+            "company_id": 3469,
+            "name": "$5 Off Abandon Cart",
+            "coupon": "CA66J6F2"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://bullionsharks.com",
+          "value": "https://moviesunlimited.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://bullionsharks.com/2026-american-silver-eagle-ngcx-ms10-er-don-t-tread-on-me-1-of-99-w-box-coa/",
-            "item": "2026 American Silver Eagle NGCX MS10 ER - Don\u0026#x27;t Tread on Me (1 of 99) - w/Box \u0026amp; CoA",
-            "timeAgo": "2026-01-01"
+            "link": "https://www.moviesunlimited.com/sonic-the-hedgehog-steelbook/843501045619",
+            "item": "Sonic the Hedgehog (Steelbook)",
+            "timeAgo": "2026-03-08"
           },
           {
-            "link": "https://bullionsharks.com/1776-2026-w-silver-eagle-ngc-pf70-ucam-liberty-bell-privy-don-t-tread-on-me-1-of-250-w-box-coa/?utm_source=newsletter\u0026utm_medium=email\u0026utm_campaign=NGC_Partner_Newsletter\u0026utm_id=NGC_Partner_Newsletter+",
-            "item": "1776-2026 W Silver Eagle NGC PF70 UCAM - Liberty Bell Privy - Don\u0026#x27;t Tread on Me - (1 of 250) - w/Box \u0026amp; CoA",
-            "timeAgo": "2026-01-01"
+            "link": "https://www.moviesunlimited.com/flashdance/843501044971",
+            "item": "Flashdance",
+            "timeAgo": "2026-03-08"
           },
           {
-            "link": "https://bullionsharks.com/1776-2026-w-silver-eagle-ngc-pf70-ucam-liberty-bell-privy-don-t-tread-on-me-1-of-250-w-box-coa/?utm_source=newsletter\u0026utm_medium=email\u0026utm_campaign=NGC_Partner_Newsletter\u0026utm_id=NGC_Partner_Newsletter+",
-            "item": "1776-2026 W Silver Eagle NGC PF70 UCAM - Liberty Bell Privy - Don\u0026#x27;t Tread on Me - (1 of 250) - w/Box \u0026amp; CoA",
-            "timeAgo": "2026-01-01"
+            "link": "https://www.moviesunlimited.com/dirty-dancing/031398335573",
+            "item": "Dirty Dancing",
+            "timeAgo": "2026-03-08"
           },
           {
-            "link": "https://bullionsharks.com/1776-2026-w-silver-eagle-ngc-pf70-ucam-liberty-bell-privy-don-t-tread-on-me-1-of-250-w-box-coa/?utm_source=newsletter\u0026utm_medium=email\u0026utm_campaign=NGC_Partner_Newsletter\u0026utm_id=NGC_Partner_Newsletter+",
-            "item": "1776-2026 W Silver Eagle NGC PF70 UCAM - Liberty Bell Privy - Don\u0026#x27;t Tread on Me - (1 of 250) - w/Box \u0026amp; CoA",
-            "timeAgo": "2026-01-01"
+            "link": "https://www.moviesunlimited.com/landman-season-one/191329277447",
+            "item": "Landman: Season One",
+            "timeAgo": "2026-03-08"
           },
           {
-            "link": "https://bullionsharks.com/2025-army-navy-marine-privy-silver-eagle-250th-anniversary-3-coin-set-ngc-pf69/?utm_source=newsletter\u0026utm_medium=email\u0026utm_campaign=ArmedForcesSet\u0026utm_id=NGC",
-            "item": "2025 Army, Navy \u0026amp; Marine Privy Silver Eagle 250th Anniversary 3-Coin Set NGC PF69",
-            "timeAgo": "2025-12-05"
+            "link": "https://www.moviesunlimited.com/landman-season-one/191329277621",
+            "item": "Landman: Season One",
+            "timeAgo": "2026-03-08"
           }
         ]
       },
-      "companyWebsite": "https://bullionsharks.com",
-      "companyName": "Bullion Shark",
+      "companyWebsite": "https://moviesunlimited.com",
+      "companyName": "Movies Unlimited",
       "notes": {
-        "promo_and_exclusions": [
-          "Please check the brand website for the most up to date holiday promotions."
-        ]
+        
       },
       "blocklisted_words": [
-        "Investment"
+        
       ],
       "escalation_preferences": [
-        "Shipping questions",
-        "Exchanges and returns"
+        
       ],
       "messageTone": "Formal",
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "Bullion Shark: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
-          "date_time": "2025-12-31 23:33:56.427",
+          "message_text": "Movies Unlimited: Welcome! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-02-21 11:31:36.206",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Bullion Shark: Welcome! Your coupon code is WELCOME5. Shop 2025 Silver Eagles \u0026 more: https://bullionshark.attn.tv/aqSH9yqlc6B1 .",
-          "date_time": "2025-12-31 23:34:00.402",
+          "message_text": "Movies Unlimited: Welcome! Your code is MU10 Use it at checkout for 10% off your order! Shop now: moviesunlimited.attn.tv/acNoGvwoMv5_ ",
+          "date_time": "2026-02-21 11:31:40.215",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Bullion Shark: Sold out at the mint!\n\n2025 Marine Corps Privy American Eagle w/ OGP Box \u0026 COA - 250th Anniversary: bullionshark.attn.tv/adzgArhsYN1A ",
-          "date_time": "2026-01-01 12:00:21.973",
+          "message_text": "Movies Unlimited: Hey, we noticed you checking us out. Have you seen our best sellers yet? https://moviesunlimited.attn.tv/aI1jZR_tm-to . ",
+          "date_time": "2026-02-21 12:23:03.002",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Bullion Shark: Hey there, this is Jordan. Thanks for checking us out! https://bullionshark.attn.tv/aktr4irYT6r5 \n\nAny questions I can answer for you? ",
-          "date_time": "2026-01-01 14:03:07.897",
+          "message_text": "Movies Unlimited: Still deciding? In case you missed it, enter MU10 at checkout for 10% off your purchase! moviesunlimited.attn.tv/ajy9vZirULLN ",
+          "date_time": "2026-02-22 12:37:14.910",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Bullion Shark: Hey there, this is Jordan. Thanks for checking us out!bullionshark.attn.tv/ajfqbjsBJ7y2 \n\nAny questions I can answer for you?",
-          "date_time": "2026-01-01 14:33:31.616",
+          "message_text": "Movies Unlimited: We\u0027re flipping the script! Explore our Page to Screen Sale for exciting book adaptations. Check it out! moviesunlimited.attn.tv/aUh6xq2KmLoG \n\nText STOP to opt out.",
+          "date_time": "2026-02-24 16:15:41.963",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Movies Unlimited: Hey, we noticed you checking us out. Have you seen our best sellers yet? https://moviesunlimited.attn.tv/aFB03BKOIknh . ",
+          "date_time": "2026-02-27 12:49:47.096",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Movies Unlimited: Hey, we noticed you checking us out. Have you seen our best sellers yet? https://moviesunlimited.attn.tv/ar22Gjd_24aC . ",
+          "date_time": "2026-03-01 12:58:24.727",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Movies Unlimited: Grab Shows for the She-Shed! Explore our collection of women-led films. Check it out! moviesunlimited.attn.tv/abVB30H_zBv- \n\nText STOP to opt out.",
+          "date_time": "2026-03-02 16:10:20.069",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Movies Unlimited: Hey, we noticed you checking us out. Have you seen our best sellers yet? https://moviesunlimited.attn.tv/aBw-93yQebxw . ",
+          "date_time": "2026-03-04 12:26:32.979",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Movies Unlimited: Snag 15% OFF on must-have films! Buy 3+ in-stock DVDs/Blu-rays and use 15OFF3. Don\u0027t miss out! moviesunlimited.attn.tv/aZXFPrskEJD0 \n\nText STOP opt out.",
+          "date_time": "2026-03-06 16:15:11.719",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Movies Unlimited: Hey, this is Jordan. Thanks for checking out our site! 😊 https://moviesunlimited.attn.tv/aNbTEzHoWwGM .\n\nAre you looking for anything in particular today? ",
+          "date_time": "2026-03-08 12:05:40.202",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "Why was I triple billed for my order?",
-          "date_time": "2026-01-01 14:34:42.054",
+          "message_text": "Just browsing and wondering how mad my wife will get at me for actually buying daddy\u0027s home one and two in 4k, which at 8.78 and a 15 percent discount is a deal, question is, do I need this and the answer there is usually no",
+          "date_time": "2026-03-08 12:06:42.928",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "019b7b0f-bb6a-43de-f000-0000ec54d708",
-          "message_text": "Bullion Shark: I\u0027m so sorry to hear that! Upon checking from my end, I can only see one order placed on December 31, 2025. You may have this coordinated with your bank, or feel free to reach out directly at customerservice@bullionsharks.com, or give us a call at 516-739-5822. Our team is happy to help! ",
+          "message_id": "019cce34-8dc4-4a68-f000-0000fa147e83",
+          "message_text": "Movies Unlimited: Thank you for browsing! I\u0027m sure she will understand. Especially if you enjoy the movies together. We appreciate the purchase and the support! If it helps, we offer free shipping on domestic orders over $50. ",
           "message_type": "agent",
-          "agent": "109964",
+          "agent": "39375",
           "message_media": [
             
           ],
-          "date_time": "2026-01-01 14:36:27.269"
+          "date_time": "2026-03-08 12:07:56.643"
         },
         {
           "message_type": "customer",
-          "message_text": "One order but three times I was billed for the one order. Why don\u0027t tou assist with contacting customer service?",
-          "date_time": "2026-01-01 14:37:45.088",
+          "message_text": "Is this a real person ? If so I\u0027m impressed.  Uber support the other night for a late order was an hour of maddening insanity with an ai bot",
+          "date_time": "2026-03-08 12:08:38.789",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "019b7b11-8a51-4be2-f000-0000ec54d708",
-          "message_text": "Bullion Shark: I\u0027m sorry about that! Can you confirm if the other charges are currently pending or posted? ",
+          "message_id": "019cce36-d189-4613-f000-0000fa147e83",
+          "message_text": "Movies Unlimited: I\u0027m actually a real person. We don\u0027t use bots in providing customer support. Feel free to message me if you have questions. I\u0027m here to help. ",
           "message_type": "agent",
-          "agent": "50269",
+          "agent": "48804",
           "message_media": [
             
           ],
-          "date_time": "2026-01-01 14:38:25.769"
+          "date_time": "2026-03-08 12:10:25.075"
         },
         {
           "message_type": "customer",
-          "message_text": "Pending. I will contest all if this isn\u0027t corrected ASAP so that there is only a single charge.",
-          "date_time": "2026-01-01 14:39:44.454",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": " ​👍​ to “ Pending. I will contest all if this isn\u0027t corrected ASAP so that there is only a single charge.  ” ",
-          "date_time": "2026-01-01 14:40:24.615",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019b7b13-f3f8-4b97-f000-0000ec54d708",
-          "message_text": "Bullion Shark: Thanks for letting me know. If the charge on your account is still showing as pending, it means the payment hasn\u0027t been completed yet. It should either be refunded within 24 - 48 hours or go through successfully. If it\u0027s refunded, you can try placing the order again. If it processes, you\u0027ll receive a confirmation email shortly.",
-          "message_type": "agent",
-          "agent": "109972",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-01-01 14:41:03.894"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Also I was supposed to get a 5% discount by adding my info. But on the order page there was never a place to put the discount code. I suppose that should have been a red flag.",
-          "date_time": "2026-01-01 14:41:41.840",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019b7b18-fd6f-4c26-f000-0000ec54d708",
-          "message_text": "Bullion Shark: Thanks for sharing, and I apologize for the inconvenience. Could you please let me know where the discount was from? There\u0027s an option to add a coupon when viewing your cart and during checkout. Simply click on \"Coupon / gift certificate\" so the box to type in the code shows up.",
-          "message_type": "agent",
-          "agent": "109972",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-01-01 14:46:33.992"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Bullion Shark: Welcome! Your coupon code is WELCOME5. Shop 2025 Silver Eagles \u0026 more: https://bullionshark.attn.tv/aqSH9yqlc6B1 .\n\nBut there wasn\u0027t such an option at the cart check out. I think I should cancel this order.  Can you assist in canceling?",
-          "date_time": "2026-01-01 15:21:27.707",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019b7b3a-eaa2-48ec-f000-0000ec54d708",
-          "message_text": "Bullion Shark: I completely understand your concern, and I\u0027m really sorry for the trouble. I can check if that\u0027s possible. Can I please have the order number and your email address? Please let me know, I\u0027m here to assist you. ",
-          "message_type": "agent",
-          "agent": "87300",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-01-01 15:23:37.399"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Order # 101857. Email kbr1@cox.net\nI can block text and email if this is used for further advertising. I should have checked better business reviews for bullion shark. I will file bbb report if this is not corrected.",
-          "date_time": "2026-01-01 15:27:16.315",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "template",
-          "message_text": "Template used: \"Pass to the team - All brands\"; last updated: 2023-10-10 17:46:43.559",
-          "date_time": "2026-01-01 15:29:24.936",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "template",
-          "message_text": "Template used: \"Experience - All brands\"; last updated: 2023-10-10 18:04:21.663",
-          "date_time": "2026-01-01 15:29:24.936",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019b7b40-3831-4b6f-f000-0000ec54d708",
-          "message_text": "Bullion Shark: Thanks for the info! I really apologize for your experience. I will pass this along to my team and get back to you as soon as possible, hang tight!",
-          "message_type": "agent",
-          "agent": "109972",
-          "message_media": [
-            
-          ],
-          "date_time": "2026-01-01 15:29:24.940"
-        }
-      ]
-    },
-    "8": {
-      "agentName": "Kate",
-      "has_shopify": false,
-      "id": "018f9d1c-90d6-4a74-f000-000006fcfa11",
-      "rightPanel": {
-        "orders": [
-          {
-            "currency": "USD",
-            "orderDate": "2023-11-27",
-            "items": [
-              {
-                "price": [
-                  24.99
-                ],
-                "productLink": "https://www.revelnail.com/products/d876-merry-dancers-multi-glitter-dip-powder",
-                "name": "D876 Merry Dancers Multi Glitter Dip Powder"
-              }
-            ],
-            "date_time": "2023-11-27 22:55:41.943",
-            "discount_amount": 0,
-            "orderNumber": "5396348141766",
-            "total": 30.37
-          },
-          {
-            "currency": "USD",
-            "orderDate": "2023-11-27",
-            "items": [
-              {
-                "price": [
-                  7.5
-                ],
-                "productLink": "https://www.revelnail.com/products/p876-merry-dancers-multi-glitter-nail-polish",
-                "name": "P876 Merry Dancers Multi Glitter Nail Polish"
-              }
-            ],
-            "date_time": "2023-11-27 22:55:41.860",
-            "discount_amount": 0,
-            "orderNumber": "5396348141766",
-            "total": 30.37
-          }
-        ],
-        "coupons": [
-          {
-            "coupon": "MOBILE10",
-            "status": "ACTIVE"
-          },
-          {
-            "coupon": "ABbh5pMx",
-            "status": "ACTIVE"
-          },
-          {
-            "coupon": "5cn9kx-4uwzcg",
-            "status": "INACTIVE"
-          },
-          {
-            "coupon": "RR-kdmbvz",
-            "status": "INACTIVE"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://revelnail.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.revelnail.com/collections/exclusive-offers/products/d970-timeless-cheer-gold-dip-powder",
-            "item": "D970 Timeless Cheer Gold Dip Powder - 0.5 oz jar",
-            "timeAgo": "2023-12-26"
-          },
-          {
-            "link": "https://www.revelnail.com/collections/exclusive-offers/products/d760-music-hall",
-            "item": "D760 Music Hall Red Flake Dip Powder - 0.5 oz jar",
-            "timeAgo": "2023-12-26"
-          },
-          {
-            "link": "https://www.revelnail.com/collections/exclusive-offers/products/holiday-drop-ins-city-lights-full-collection",
-            "item": "City Lights | Holiday Flakes Dip Powder Set - 0.5 oz jars",
-            "timeAgo": "2023-12-26"
-          },
-          {
-            "link": "https://www.revelnail.com/collections/exclusive-offers/products/d991-evermore-white-glitter-dip-powder",
-            "item": "D991 Evermore White Glitter Dip Powder - 0.5 oz jar",
-            "timeAgo": "2023-12-06"
-          },
-          {
-            "link": "https://www.revelnail.com/collections/exclusive-offers/products/d1003-paparazzi-metallic-flake-dip-powder",
-            "item": "D1003 Paparazzi Multi Metallic Flake Dip Powder - 0.5 oz jar",
-            "timeAgo": "2023-12-02"
-          }
-        ]
-      },
-      "companyWebsite": "https://revelnail.com",
-      "companyName": "Revel Nail",
-      "notes": {
-        "send_to_cs": [
-          "Send to CS for post purchase issues, use PPI shortcut"
-        ],
-        "templates": [
-          "For cuticle oil code issues use CCW shortcut"
-        ],
-        "promo_and_exclusions": [
-          "Rewards cannot be combined with discount codes"
-        ]
-      },
-      "blocklisted_words": [
-        
-      ],
-      "escalation_preferences": [
-        
-      ],
-      "messageTone": "Polished",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: Save up to 75% in our Spring Cleaning Sale!\n\nhttps://revelnail.attn.tv/l/EIT/JLyds ",
-          "date_time": "2024-04-23 15:07:10.907",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: Don\u0027t miss Spring Blowout Savings up to 75% off! \n\nTime for a Clean Sweep: https://revelnail.attn.tv/l/kuw/JLyds ",
-          "date_time": "2024-04-24 10:01:06.138",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: Spring Cleaning Sale Alert! New items just added to our blowout sale. Don\u0027t miss out on these amazing deals! \nhttps://revelnail.attn.tv/l/2ZK/JLyds ",
-          "date_time": "2024-04-25 10:01:53.182",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: Spring Cleaning Blowout Sale happening now! Save up to 75% on your favorite nail products!\n\nhttps://revelnail.attn.tv/l/3nd/JLyds",
-          "date_time": "2024-04-26 18:05:35.806",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: More Savings Live Now! Sugar Rush Flakes + more just added to our Spring Cleaning Clearance Sale!\n\nhttps://revelnail.attn.tv/l/9UZ/JLyds ",
-          "date_time": "2024-04-27 10:05:42.062",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: \nNEW Reflective Glitters are here!\n+ Save 20% on select glitters with code REFLECT\n\nSparkle \u0026 Shine: https://revelnail.attn.tv/l/CCF/JLyds ",
-          "date_time": "2024-05-01 17:07:24.951",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: NEW Reflective Glitters are here! \n\nGet your shine on: https://revelnail.attn.tv/l/4mW/JLyds ",
-          "date_time": "2024-05-02 10:01:30.427",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: \nWe know Mother\u0027s Day can be a tough time for some, so if you\u0027d like to pause our texts related to Mother\u0027s Day, reply PAUSE.\n\nDon\u0027t worry, we\u0027ll still keep you up to date on everything else!",
-          "date_time": "2024-05-02 12:15:58.675",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: A Touch of Reflection Flakes - Just $10 for a limited time! Sparkle 24/7 and save!\n\nhttps://revelnail.attn.tv/l/yuX/JLyds ",
-          "date_time": "2024-05-03 19:05:45.328",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: \n\nEverything you need to shine all summer - Flakes, Glitter, + NEW Reflective Glitters!\n\nhttps://revelnail.attn.tv/l/YTC/JLyds ",
-          "date_time": "2024-05-05 19:05:47.121",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: Last chance to shop NEW Reflective Glitters in Dip \u0026 Gel + save on select glitters and nail art flakes! \n\nhttps://revelnail.attn.tv/l/Lp1/JLyds ",
-          "date_time": "2024-05-07 18:05:43.383",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: Thank you for your purchase! Your order number is 1861404. View more information about your order here: https://revelnail.attn.tv/sl/7h4Whj7B .",
-          "date_time": "2024-05-08 06:48:31.450",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: Congratulations! You have enough reward points for $20 voucher! Log in and redeem to use on your next purchase! https://revelnail.attn.tv/l/A2U/JLyds ",
-          "date_time": "2024-05-08 12:47:13.810",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: \nOur Mother\u0027s Day Event is on NOW! Two new trios, Freebies, plus every purchase is a chance to win 50 free dip powder shades! \n\nDon\u0027t miss it: https://revelnail.attn.tv/l/Onz/JLyds ",
-          "date_time": "2024-05-09 15:06:14.936",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: Treat yo\u0027self during our Mother\u0027s Day Event! Check out new Trios, score a freebie + enter to win 50 shades!\n\nhttps://revelnail.attn.tv/l/6bB/JLyds ",
-          "date_time": "2024-05-10 10:05:49.335",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: \nFINAL HOURS: Mother\u0027s Day Event ends soon! New + Returning Trios, Freebies, + Giveaway! Don\u0027t miss it!\n\nhttps://revelnail.attn.tv/a66C3RUi17TE ",
-          "date_time": "2024-05-15 19:05:58.482",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Revel Nail: Thank you for your purchase! Your order number is 1865127. View more information about your order here: https://revelnail.attn.tv/arCo1fPR6Dr- .",
-          "date_time": "2024-05-21 17:05:28.790",
+          "message_text": "Do you think Landman will ever get a 4k ? Guessing unlikely",
+          "date_time": "2026-03-08 12:13:27.269",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "I wanted to add to my order",
-          "date_time": "2024-05-21 17:06:32.928",
+          "message_text": "I\u0027ve throughly searched the 8.78 4k blu rays and made some picks, any similar discounts in the sales ? I\u0027ve surfed through the various categories but those looked like the biggest discount on retail, beating sale prices anywhere else",
+          "date_time": "2026-03-08 12:14:44.038",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018f9d1c-90d6-4a74-f000-000006fcfa11",
-          "message_text": "Revel Nail: Thank yo so much for your purchase! If you\u0027d like to add to your order, you can do so within the first hour of placing it by visiting your \"order status\" page and canceling the order. You can always check your order status by clicking on the link in your confirmation email.\n\nJust a heads up, selecting the \"edit\" button will cancel your order, and you\u0027ll need to place a new one with your desired changes. Unfortunately, our CS team can\u0027t directly edit orders due to system and fulfillment restrictions, but we\u0027re here to help with shipping address changes.\n\nI\u0027m here to assist you if you need any further guidance or have any questions.",
-          "message_type": "agent",
-          "agent": "82259",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-05-21 17:44:06.112"
-        }
-      ]
-    },
-    "9": {
-      "agentName": "Sarah",
-      "has_shopify": false,
-      "id": "0191edd7-7bce-4e01-f000-000094eb2a1c",
-      "rightPanel": {
-        "source": {
-          "label": "Website",
-          "value": "https://covercraft.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC?utm_campaign=concierge\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=UQZbT",
-            "item": "Colgan Original Car Bra - Black Crush Fabric: Size T1",
-            "timeAgo": "2024-09-05"
-          },
-          {
-            "link": "https://www.covercraft.com/product/lebra-custom-front-end-cover/20L1",
-            "item": "https://www.covercraft.com/product/lebra-custom-front-end-cover/20L1",
-            "timeAgo": "2024-09-04"
-          },
-          {
-            "link": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC?utm_campaign=concierge\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=UQZbT",
-            "item": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC?utm_campaign=concierge\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=UQZbT",
-            "timeAgo": "2024-09-04"
-          },
-          {
-            "link": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC",
-            "item": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC",
-            "timeAgo": "2024-09-03"
-          },
-          {
-            "link": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC?externalId=UQZbT",
-            "item": "https://www.covercraft.com/product/colgan-original-car-bra-black-crush-fabric/BCBC?externalId=UQZbT",
-            "timeAgo": "2024-09-03"
-          }
-        ]
-      },
-      "companyWebsite": "https://covercraft.com",
-      "companyName": "Covercraft",
-      "notes": {
-        "templates": [
-          "For custom full vehicle covers use FVC shortcut",
-          "For cx that can\u0027t see the cover pattern/images of their vehicle use CPI shortcut",
-          "If we don\u0027t have a pattern/color the cx is looking for use PRR shortcut"
-        ],
-        "dos_and_donts": [
-          "Do not tell customers that the base price is the final price! The cost changes by the fitment and depends on the vehicle",
-          "Rebates are discounts for this brand!",
-          "Custom dim pattern sheets are only available for Vehicle Covers (Car, Truck, Van,RV)",
-          "➜https://www.covercraft.com/us/en/covercrafter"
-        ],
-        "drive_to_purchase": [
-          "Before sharing any product links, confirm the vehicle’s Year, Make, and Model"
-        ]
-      },
-      "blocklisted_words": [
-        
-      ],
-      "escalation_preferences": [
-        "Discount code errors"
-      ],
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Welcome to Covercraft! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/rgj",
-          "date_time": "2024-09-03 19:44:56.486",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Enjoy an Extra $10 Off with code: SUMMER10\n\nActive Deals: https://covercraft.attn.tv/arMcfSEHK2tq ",
-          "date_time": "2024-09-03 19:45:00.458",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Hey there, this is Sarah. Thanks for checking out our site! 😊 https://covercraft.attn.tv/afv2uMAUDwrf \n\nAre you looking for anything in particular today? ",
-          "date_time": "2024-09-03 19:50:42.244",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Shh Carhartt Deals are live \u0026 even better DEALS on our toughest Marathon Cordura Seat Covers!\nhttps://covercraft.attn.tv/aMGB-dRDx8aT \n#KeepItCustom",
-          "date_time": "2024-09-05 19:13:36.591",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Sun Defense \u0026 End of Summer Deal you Crave!\nhttps://covercraft.attn.tv/a0o82p3qz5l8 \n\n- Custom-Fit\n- Insulated Core\n- Compact Fold\n- Sleek Designs",
-          "date_time": "2024-09-06 19:40:20.782",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Hey there! I\u0027m Sarah, your personal shopping assistant.\n\nI\u0027m here to answer any questions, share recommendations, or assist in any way. What can I help you with today?\n\nhttps://covercraft.attn.tv/aW2bVey41JnZ .",
-          "date_time": "2024-09-08 11:00:14.814",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Custom Sun Shade with Exclusive American Flag Logos \u0026 More!\n\nBig Fall Deals: https://covercraft.attn.tv/a7qVIbeI5x1c ",
-          "date_time": "2024-09-11 19:10:41.329",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: The Ultimate Camouflage Seat Covers!\n- Waterproof\n- Perfect Fit\n- Washable\n- Cordura Tough\n- Up to 50% Off\n\nhttps://covercraft.attn.tv/aq9ComYYbEHz ",
-          "date_time": "2024-09-12 19:18:18.743",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Covercraft: Hey there! I\u0027m Sarah and I\u0027m here to be a personal shopping assistant for you!\n\nDo you have any questions or need a recommendation? Let me know how I can help. \n\nhttps://covercraft.attn.tv/aUaCReYKO9c2 .",
-          "date_time": "2024-09-13 19:39:20.943",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Do you have any nose bra on sale?",
-          "date_time": "2024-09-13 20:00:17.686",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "0191edd7-7bce-4e01-f000-000094eb2a1c",
-          "message_text": "Covercraft: Thank you for your interest in our products! Yes we do! May I know what your vehicle\u0027s make and model is so I can help you look? You can find all our nose bras on sale here: https://covercraft.attn.tv/aKw8Wj14cYK-",
-          "message_type": "agent",
-          "agent": "82454",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-09-13 20:03:27.833"
-        }
-      ]
-    },
-    "10": {
-      "agentName": "Sarah",
-      "has_shopify": true,
-      "id": "019629f2-d28e-4399-f000-0000b53cef52",
-      "rightPanel": {
-        "orders": [
-          {
-            "currency": "USD",
-            "orderDate": "2025-03-01",
-            "items": [
-              {
-                "price": [
-                  40
-                ],
-                "productLink": "https://dsanddurga.myshopify.com/products/customizable-sample-set-1",
-                "name": "Customizable Sample Set"
-              }
-            ],
-            "date_time": "2025-03-01 11:46:26.578",
-            "discount_amount": 0,
-            "orderNumber": "6565829476643",
-            "total": 45
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://dsanddurga.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.dsanddurga.com/products/murder-mystery-perfume-set?utm_source=90%20Day%20Engaged\u0026utm_medium=campaign-email\u0026utm_campaign=Murder%20Mystery%20Award\u0026tw_medium=campaign\u0026tw_source=Klaviyo\u0026tw_profile_id=01JN2NH0NWTTGY3G85RKN6C1TE\u0026_kx=s7SnbWtLue5MgJ1VlmwwF2GNhstnyeOU9hYnxarmsN2sbCzQqCpIipKLVvurNQeo.NFa9un",
-            "item": "Murder Mystery Set",
-            "timeAgo": "2025-04-11"
-          },
-          {
-            "link": "https://www.dsanddurga.com/products/murder-mystery-perfume-set?utm_source=90%20Day%20Engaged\u0026utm_medium=campaign-email\u0026utm_campaign=Murder%20Mystery%20Award\u0026tw_medium=campaign\u0026tw_source=Klaviyo\u0026tw_profile_id=01JN2NH0NWTTGY3G85RKN6C1TE\u0026_kx=s7SnbWtLue5MgJ1VlmwwF2GNhstnyeOU9hYnxarmsN2sbCzQqCpIipKLVvurNQeo.NFa9un",
-            "item": "Murder Mystery Set",
-            "timeAgo": "2025-04-11"
-          },
-          {
-            "link": "https://www.dsanddurga.com/products/murder-mystery-perfume-set?utm_source=90%20Day%20Engaged\u0026utm_medium=campaign-email\u0026utm_campaign=Murder%20Mystery%20Award\u0026tw_medium=campaign\u0026tw_source=Klaviyo\u0026tw_profile_id=01JN2NH0NWTTGY3G85RKN6C1TE\u0026_kx=s7SnbWtLue5MgJ1VlmwwF2GNhstnyeOU9hYnxarmsN2sbCzQqCpIipKLVvurNQeo.NFa9un",
-            "item": "Murder Mystery Set",
-            "timeAgo": "2025-04-11"
-          },
-          {
-            "link": "https://www.dsanddurga.com/products/murder-mystery-perfume-set?utm_source=90%20Day%20Engaged\u0026utm_medium=campaign-email\u0026utm_campaign=Murder%20Mystery%20Award\u0026tw_medium=campaign\u0026tw_source=Klaviyo\u0026tw_profile_id=01JN2NH0NWTTGY3G85RKN6C1TE\u0026_kx=s7SnbWtLue5MgJ1VlmwwF2GNhstnyeOU9hYnxarmsN2sbCzQqCpIipKLVvurNQeo.NFa9un",
-            "item": "Murder Mystery Set",
-            "timeAgo": "2025-04-11"
-          },
-          {
-            "link": "https://www.dsanddurga.com/products/dream-lychee?utm_campaign=Dream%20Lychee\u0026utm_medium=SMS\u0026utm_source=AttentiveSMS\u0026externalId=KwPKm",
-            "item": "Dream Lychee",
-            "timeAgo": "2025-03-15"
-          }
-        ]
-      },
-      "companyWebsite": "https://dsanddurga.com",
-      "companyName": "D.S. \u0026 Durga",
-      "notes": {
-        
-      },
-      "blocklisted_words": [
-        
-      ],
-      "escalation_preferences": [
-        "Exchanges and returns",
-        "Discount code errors"
-      ],
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "D.S. \u0026 DURGA: Hey there! We noticed you eyeing something on our site...come back and shop now: https://dsanddurga.attn.tv/a__vyY5Ztv7h \n\nAre there any questions I can answer for you? Stop to stop",
-          "date_time": "2025-03-15 12:14:23.353",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "D.S. \u0026 DURGA: Prismatic spring color fumes this way \u003e\u003e\u003e Shop Steamed Rainbow: dsanddurga.attn.tv/ajRtVGplZvV5 \n\n\nText back if you have any questions! Stop to stop",
-          "date_time": "2025-03-17 12:30:57.658",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "D.S. \u0026 DURGA: FREE gift for hoopers! 🎁 Parquet Leather Candle on orders $210+. No code needed. Get your gift: dsanddurga.attn.tv/aRKAND0C3A_z \n\n\nText back if you have any questions! Stop to stop",
-          "date_time": "2025-03-19 17:30:19.690",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "D.S. \u0026 DURGA: Some say Brown Flowers is an unexpected floral perfume. We agree. Shop Now: dsanddurga.attn.tv/a0wpclFf63fG \n\n\nText back if you have any questions! Stop to stop",
-          "date_time": "2025-03-23 12:05:53.725",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "D.S. \u0026 DURGA: Radio Bombay is one of our cult classics. On skin shades of cedar, musk, iris, coconut, and peach enchant the nose. An everyday all season wonder. dsanddurga.attn.tv/apvPrYpe3Pu2 \n\n\n\nText back if you have any questions! Stop to stop",
-          "date_time": "2025-03-26 12:15:32.809",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "D.S. \u0026 DURGA: Sunday morning with strong coffee, buttery almond pastries, pipe tobacco \u0026 Breakfast Leipzig. Perfect. dsanddurga.attn.tv/a0HVyrcEXPOK \n\n\nText back if you have any questions! Stop to stop",
-          "date_time": "2025-03-30 12:02:20.655",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "D.S. \u0026 DURGA: A perfume for amateur modernists or the high-design inclined? Shop Brown Flowers Now: dsanddurga.attn.tv/aJaiK9X1fKGS \n\n\nText back if you have any questions! Stop to stop",
-          "date_time": "2025-04-02 18:05:36.579",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "D.S. \u0026 DURGA: Cult-fave WIPEOUT! is back for a limited time. Our surfside fume full of guava, ylang, vetiver, vanilla. 100 bottles! Grab one here: \ndsanddurga.attn.tv/a9IZnmpUY9jl  Stop to stop",
-          "date_time": "2025-04-06 12:05:37.438",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "D.S. \u0026 DURGA: This spring join the pink peony club with Cowgirl Grass. Shop Now: dsanddurga.attn.tv/a_qbTlO7CL48 \n\n\nText back if you have any questions! Stop to stop",
-          "date_time": "2025-04-09 18:05:24.624",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "D.S. \u0026 DURGA: Hey there! We noticed you eyeing something on our site...come back and shop now: https://dsanddurga.attn.tv/a7KtZhR5fdIe \n\nAre there any questions I can answer for you? Stop to stop",
-          "date_time": "2025-04-11 13:19:27.579",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Yes I never received my order 288095 so how can I trust you with another order?",
-          "date_time": "2025-04-11 14:01:45.485",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "01962605-aacf-4b1f-f000-0000b53cef52",
-          "message_text": "D.S. \u0026 DURGA: I\u0027m sorry to hear that! Mind sharing the email address that you used for this order, please? I\u0027ll be happy to check on this with the team for you! ",
-          "message_type": "agent",
-          "agent": "50271",
-          "message_media": [
-            
-          ],
-          "date_time": "2025-04-11 14:03:47.806"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Thank You",
-          "date_time": "2025-04-12 06:12:17.107",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "019629f2-d28e-4399-f000-0000b53cef52",
-          "message_text": "D.S. \u0026 DURGA: Pleasure, I\u0027ll be here.",
+          "message_id": "019cce40-5bc3-45b6-f000-0000fa147e83",
+          "message_text": "Movies Unlimited: I don\u0027t have any info on whether the Landman series will be out in 4K but I certainly hope so. Regarding the discount, that\u0027s the best deal we have at this time. Is there anything else I can do for you while I still have you?",
           "message_type": "agent",
           "agent": "87474",
           "message_media": [
             
           ],
-          "date_time": "2025-04-12 08:21:41.659"
+          "date_time": "2026-03-08 12:20:50.292"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I\u0027m good browsing Ty !!!",
+          "date_time": "2026-03-08 12:30:14.057",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Really impressed and you\u0027ve earned my business for whatever I can find here competitively priced which will be plenty",
+          "date_time": "2026-03-08 12:30:34.121",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Over time",
+          "date_time": "2026-03-08 12:30:39.138",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019cce4b-97da-4eee-f000-0000fa147e83",
+          "message_text": "Movies Unlimited: You\u0027re welcome, Nicholas, and thank you for the kind words! Have a great day, and if you have any questions, feel free to text me. In the meantime, check out our Specials \u0026 Sales here: https://moviesunlimited.attn.tv/aihmu8g19X6J",
+          "message_type": "agent",
+          "agent": "82447",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-08 12:33:06.548"
+        },
+        {
+          "message_type": "system",
+          "message_text": "Movies Unlimited: Time\u0027s Ticking! Order 3+ in-stock DVDs/Blu-rays for 15% OFF with 15OFF3. Hurry, ends soon! moviesunlimited.attn.tv/aB3sCf8DBI7U \n\nText STOP to opt out.",
+          "date_time": "2026-03-08 16:20:17.092",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "15off3 doesn\u0027t work on 4k blu rays ?",
+          "date_time": "2026-03-08 16:24:05.935",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019ccf2e-0fd1-405b-f000-0000fa147e83",
+          "message_text": "Movies Unlimited: I\u0027m sorry, have you encountered any error messages? Also, could you kindly share a screenshot of the items in your cart? I\u0027ll be happy to look into the issue!",
+          "message_type": "agent",
+          "agent": "109622",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-08 16:40:28.391"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I have Le Mans discounted to 8.78 and the scary movie trilogy as actual blu rays",
+          "date_time": "2026-03-08 16:44:35.676",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Everything else is 4k",
+          "date_time": "2026-03-08 16:44:42.095",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Hence why I guessed that\u0027s the issue",
+          "date_time": "2026-03-08 16:44:45.712",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019ccf36-9298-4159-f000-0000fa147e83",
+          "message_text": "Movies Unlimited: Thank you for sending these over! Upon checking, the code 15OFF3 only applies to in-stock DVDs and Blu-rays. We appreciate your understanding on this! ",
+          "message_type": "agent",
+          "agent": "82219",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-08 16:49:46.159"
+        }
+      ]
+    },
+    "10": {
+      "agentName": "Darby",
+      "has_shopify": true,
+      "id": "019caa2c-edd8-45e4-f000-000028abe4c7",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "VIP Black Friday",
+            "content": [
+              "Tiered Discount \u0026 Gift Promotion\n\n• Spend $200 → 25% off\n\n• Spend $300 → 35% off\n\n• Discount applied automatically at checkout.\n\n• Excludes: Gift cards. Cannot combine with other offers. Non-transferable. Not valid on previous purchases.\n\nGift with Purchase\n\n• Use code VIP2025 for a free gift with orders $300+ (before taxes).\n\n• Valid 11/24/25 – 11/30/25, 11:59 PM EST, or while supplies last.\n\n• Limit one gift per order. Not eligible for return or exchange.\n\nExclusions \u0026 Rules\n\n• Cannot combine with other offers, codes, coupons, or promotions."
+            ]
+          },
+          {
+            "title": "Black Friday",
+            "content": [
+              "• Spend $200 → 25% off\n\n• Spend $300 → 35% off\n\n• Discount applied automatically at checkout.\n\n• Exclusions: Gift cards. Cannot combine with other offers, codes, coupons, or promotions.\n\n• Non-transferable and not valid on previous purchases.\n\n• Valid: 11/28/25 – 11/30/25."
+            ]
+          },
+          {
+            "title": "Cyber Monday",
+            "content": [
+              "• Spend $200 → 25% off\n\n• Spend $300 → 35% off\n\n• Discount applied automatically at checkout.\n\n• Exclusions: Gift cards. Cannot combine with other offers, codes, coupons, or promotions. Non-transferable and not valid on previous purchases.\n\n• Gift with Purchase: Available on orders $300+ (before taxes). Select at checkout. Limit one gift per order. Valid 12/1/25 or while supplies last. Not eligible for return or exchange.\n\n• Valid: 12/1/25 – 12/3/25."
+            ]
+          }
+        ],
+        "coupons": [
+          {
+            "subscriber_id": 682353863,
+            "company_id": 7473,
+            "coupon_url": "https://www.johnnie-o.com/discount/SMS10jZtJ2b?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=welcome",
+            "name": "SMS10",
+            "coupon": "SMS10jZtJ2b",
+            "redemption_status": "USED"
+          },
+          {
+            "subscriber_id": 682353863,
+            "company_id": 7473,
+            "coupon_url": "https://johnnie-oadmin.myshopify.com/discount/AWB15?utm_source=attentive\u0026utm_medium=text\u0026utm_campaign=WB15",
+            "static_code": "AWB15",
+            "name": "Winback 15%",
+            "coupon": "AWB15",
+            "redemption_status": "UNUSED"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 682353863,
+            "company_id": 7473,
+            "name": "Welcome Email 10%",
+            "coupon": "WelcomeQZxcTA"
+          },
+          {
+            "redemption_status": "UNUSED",
+            "subscriber_id": 682353863,
+            "company_id": 7473,
+            "name": "SMS10",
+            "coupon": "SMS10mE4RtV"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://johnnie-o.com/",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.johnnie-o.com/collections/mens-button-up-shirts/products/jmws100230_roadtrip_white_sp26?color=White",
+            "item": "Short Sleeve Performance Mesh Button Down Shirt - Roadtrip",
+            "timeAgo": "2026-03-01"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/short-sleeve-hangin-out-shirts/products/bento-jmws2890-24sp?variant=42814673453231",
+            "item": "Bento Jersey Knit Button Up Shirt",
+            "timeAgo": "2024-02-22"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/mens-new-arrivals/products/luis-jmws2990-24sp?utm_campaign=Site-Visitor-3\u0026utm_medium=sms\u0026externalId=pVYyK\u0026utm_source=attentive\u0026defaultItem=cary-jmwl7460-23sp\u0026variant=42814676402351",
+            "item": "Luis Printed Button Up Shirt",
+            "timeAgo": "2024-02-22"
+          },
+          {
+            "link": "https://www.johnnie-o.com/collections/mens-new-arrivals/products/luis-jmws2990-24sp?variant=42814676304047",
+            "item": "Luis Printed Button Up Shirt",
+            "timeAgo": "2024-02-22"
+          },
+          {
+            "link": "https://www.johnnie-o.com/products/dax-jmws2560-23sp?utm_source=criteo\u0026utm_medium=display\u0026utm_campaign=retargeting\u0026cto_pld=iLsW_MmTAABduWEB7oqt2Q\u0026variant=42049080295599",
+            "item": "Dax Featherweight Button Up Shirt",
+            "timeAgo": "2023-08-09"
+          }
+        ]
+      },
+      "companyWebsite": "https://johnnie-o.com/",
+      "companyName": "johnnie-O",
+      "notes": {
+        "escalate": [
+          "ESC restock inquiries",
+          "ESC shipping/order inquiries",
+          "ESC cxs looking for a discount code"
+        ]
+      },
+      "blocklisted_words": [
+        "Untuck-it"
+      ],
+      "escalation_preferences": [
+        "Restock questions",
+        "shipping",
+        "site issues",
+        "out of stock issues"
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Meet your new favorite long sleeve: moisture-wicking and so soft you will have to find an excuse to take it off. johnnie-o.attn.tv/a-0wRi8LaNtN ",
+          "date_time": "2026-01-31 11:00:18.951",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Going undefeated deserves to be celebrated! Check out the new Indiana Undefeated Season Logo, fit for a champ! johnnie-o.attn.tv/aiwTlGJeXcM_ ",
+          "date_time": "2026-02-02 11:00:45.913",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Our newest Sneaker features Argentine leather uppers and calfskin lining for effortless luxury and timeless style. johnnie-o.attn.tv/apget16NeY40 ",
+          "date_time": "2026-02-04 11:00:36.026",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Meet your new weather wingman: the Bauer Vest! It\u0027s lightweight, stylish, and keeps you the perfect temp every time. johnnie-o.attn.tv/ajFHoDLp0fT8 ",
+          "date_time": "2026-02-06 11:00:23.743",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Take the stress out of Valentine\u0027s Day, or just treat yourself!\n\nMens\njohnnie-o.attn.tv/aXNYdpb3vTxR \nWomens\njohnnie-o.attn.tv/asAJu3itcwdV ",
+          "date_time": "2026-02-07 11:00:26.752",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: The Bixler Hoodie needs no introduction. The performance and function speaks for itself. If you know, you know. johnnie-o.attn.tv/a3kWZzYpN_pl ",
+          "date_time": "2026-02-09 11:00:19.900",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: We built our brand refining style and function, so we built a backpack that carries everything and goes with anything johnnie-o.attn.tv/aIpw65VIHVIB ",
+          "date_time": "2026-02-11 11:00:47.715",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: The Coastal Wash Original Polo is garment dyed for a vintage feel with the same perfect fit of our most loved polo. johnnie-o.attn.tv/a6LF5BH-Mp22 ",
+          "date_time": "2026-02-15 11:00:34.043",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: If you haven\u0027t met our Talon Hoodie, now is the time. Moisture wicking, lightweight, and 10 colors to choose from. johnnie-o.attn.tv/a7S3j-SUl56n ",
+          "date_time": "2026-02-17 11:00:16.682",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: The Cross Country Flex Pant is built for elevated performance, and flexible enough for everything on your schedule. johnnie-o.attn.tv/aOOwmkpgK_hN ",
+          "date_time": "2026-02-18 11:00:36.021",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: A vest with a hidden hood? Stay ready for any weather, even those pesky scattered showers with the Crosswind Vest. johnnie-o.attn.tv/aQmytDG8nb07 ",
+          "date_time": "2026-02-20 11:00:36.726",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Spring is on the horizon and these short sleeve button downs are sure to make those sunny days even more relaxing johnnie-o.attn.tv/aTU2Tinc8jSo ",
+          "date_time": "2026-02-23 11:00:36.961",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Stay stylish and comfortable with the Genova 1/4 Zip! Perfect for layering, and effortlessly enhances any look. johnnie-o.attn.tv/a-Oz8RVeeJ70 ",
+          "date_time": "2026-02-28 11:00:35.675",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Johnnie-O: Hey Eddie , this is Darby . Thanks for checking out our site! 😊 johnnie-o.attn.tv/aNeRmUyI7d6a \n\nAre you looking for anything in particular today? ",
+          "date_time": "2026-03-01 11:04:52.130",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Yes I want the button down shirt sleeves in the stretchy fabric",
+          "date_time": "2026-03-01 11:07:15.644",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I usally have to buy in the store at destin fl because they don\u0027t have online ?",
+          "date_time": "2026-03-01 11:07:45.629",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019caa2c-edd8-45e4-f000-000028abe4c7",
+          "message_text": "Johnnie-O: I\u0027m sorry for the inconvenience! Let me check on this with my team; may I have the size you\u0027re looking for, please?",
+          "message_type": "agent",
+          "agent": "87474",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-01 11:13:17.179"
         }
       ]
     }

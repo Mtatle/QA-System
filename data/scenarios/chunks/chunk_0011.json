@@ -4,64 +4,70 @@
   "scenarios": {
     "51": {
       "agentName": "Sarah",
-      "has_shopify": false,
-      "id": "018fb639-73da-4ff6-f000-00008a96e1b5",
+      "has_shopify": true,
+      "id": "019cb01f-286d-4e5a-f000-0000f45d6f4f",
       "rightPanel": {
         "coupons": [
           {
-            "coupon": "920151488291NNGSBRQJ",
-            "status": "ACTIVE"
+            "redemption_status": "UNUSED",
+            "company_id": 1173,
+            "name": "15% Off Landing Page",
+            "static_code": "JOINTEXT"
           },
           {
-            "coupon": "15SMSWELNNIDFQSX",
-            "status": "INACTIVE"
+            "redemption_status": "UNUSED",
+            "static_code": "thanks",
+            "description": "$5 off all orders for dog size responders",
+            "name": "Dog Size Response $5 off",
+            "company_id": 1173
+          },
+          {
+            "redemption_status": "UNUSED",
+            "company_id": 1173,
+            "name": "BFCM BOGO 75% Off",
+            "static_code": "BFCM"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://famousfootwear.com",
+          "value": "https://joyrideharness.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://www.famousfootwear.com/product/crocs-classic-clog-1039626/army-green-93513",
-            "item": "Shop all Crocs",
-            "timeAgo": "2024-05-26"
+            "link": "https://joyrideharness.com/products/joyrides-kitchen-dog-food-beef?variant=45056590020804",
+            "item": "Joyride’s Kitchen Wholesome Beef Freeze-Dried Raw Dog Food - 1.5 lb",
+            "timeAgo": "2026-02-01"
           },
           {
-            "link": "https://www.famousfootwear.com/product/crocs-classic-clog-1039626/navy-73431",
-            "item": "Shop all Crocs",
-            "timeAgo": "2024-05-26"
+            "link": "https://joyrideharness.com/products/joyride-luxe-dog-harness?variant=41531782365380",
+            "item": "Joyride LUXE Dog Harness 1.0 - Red Rush / M",
+            "timeAgo": "2026-01-24"
           },
           {
-            "link": "https://www.famousfootwear.com/product/crocs-classic-clog-1039626/army-green-93513",
-            "item": "Shop all Crocs",
-            "timeAgo": "2024-05-26"
+            "link": "https://joyrideharness.com/products/joyride-b-grade-premium-advanced-dog-harness-2-0?variant=45384942092484",
+            "item": "Joyride B Grade Premium Advanced Dog Harness 2.0 (More Colors) - Rainbow / XS",
+            "timeAgo": "2026-01-24"
           },
           {
-            "link": "https://www.famousfootwear.com/product/crocs-classic-clog-1039626/black-70521",
-            "item": "Shop all Crocs",
-            "timeAgo": "2024-05-26"
+            "link": "https://joyrideharness.com/collections/clearance/products/rainbow-joyride-harness-2-0",
+            "item": "Rainbow Joyride B Grade Premium Advanced Dog Harness 2.0 - XS",
+            "timeAgo": "2026-01-24"
           },
           {
-            "link": "https://www.famousfootwear.com/product/crocs-classic-clog-1039626/bone-91264",
-            "item": "Shop all Crocs",
-            "timeAgo": "2024-05-26"
+            "link": "https://joyrideharness.com/collections/harnesses-new/products/joyride-dog-harness-1-0-plus-solid-colors",
+            "item": "Joyride Basic Essential Dog Harness 1.0+ (Solid Colors) - Black Onyx / XS",
+            "timeAgo": "2026-01-21"
           }
         ]
       },
-      "companyWebsite": "https://famousfootwear.com",
-      "companyName": "Famous Footwear",
+      "companyWebsite": "https://joyrideharness.com",
+      "companyName": "Joyride Dogs",
       "notes": {
-        "escalate": [
-          "🚨 DO NOT ESCALATE - send to CS🚨"
-        ],
-        "dos_and_donts": [
-          "Close the convo once the client takes over!"
-        ]
+        
       },
       "blocklisted_words": [
-        
+        "pet"
       ],
       "escalation_preferences": [
         
@@ -70,1072 +76,762 @@
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "FAMOUS: Welcome to FAMOUS! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel. Privacy: attnl.tv/p/M5R",
-          "date_time": "2024-05-26 11:38:55.640",
+          "message_text": "Joyride Dogs: 3 NEW single ingredient treats JUST ADDED...\n\nRuby will love these!\n\nCheck them out here:\n\njoyrideharness.attn.tv/acAQK-xtX0ZQ\n\n",
+          "date_time": "2026-01-31 15:01:08.551",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "FAMOUS: Thanks for joining. Tap to receive your 15% off coupon: http://famoussms.co/azYFv802ETZr Valid online only for 7 days, exclusions apply.",
-          "date_time": "2024-05-26 11:39:00.653",
+          "message_text": "Joyride Dogs: Hey there! We noticed you eyeing a Joyride’s Kitchen Wholesome Beef Freeze-Dried Raw Dog Food - 5.5 oz \n...your dog will love this! \nClick here to shop now: https://joyrideharness.attn.tv/a3YDwD33vEWY ",
+          "date_time": "2026-02-01 12:56:52.895",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "FAMOUS: Shopping in-store? Here is your coupon code 920151488291NNGSBRQJ Valid in-store only for 7 days, exclusions apply. http://famoussms.co/aMKsJZudzzUO .",
-          "date_time": "2024-05-26 11:41:07.283",
+          "message_text": "Joyride Dogs: [EARLY ACCESS PRES DAY SALE]\n\nGet 15% off + a $15 Seatbelt (FREE) ,\n\nUse code: PRES\n\njoyrideharness.attn.tv/aABRHp3aKZjo\n\nDon\u0027t miss it!",
+          "date_time": "2026-02-07 15:15:19.623",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "FAMOUS: Add Famous to your contacts and stay up to date on exclusive offers, new styles and more. Shop now: http://famoussms.co/acK44gNPMPL- .",
-          "date_time": "2024-05-26 11:46:13.635",
+          "message_text": "Joyride Dogs: [LAST CALL]\n\nPRES DAY SALE is Ending!\n\nGet 15% off + a $15 Seatbelt (FREE)\n\nCode: PRES\n\njoyrideharness.attn.tv/azN4Au3DpvSJ\n\nDon\u0027t miss it!",
+          "date_time": "2026-02-15 15:05:59.467",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "FAMOUS: You\u0027re so close to stepping out in style with your selection from the Crocs collection! These shoes are all about comfort and trend. \n\nDon\u0027t miss out: http://famoussms.co/sl/3LQNZYgP .",
-          "date_time": "2024-05-26 12:07:22.417",
+          "message_text": "Joyride Dogs: FINAL DAYS! Get 10% OFF + a $15 Seatbelt (FREE).\n\nUse Code: DOGS\n\nAct fast before it\u0027s gone!\n\njoyrideharness.attn.tv/a7NdHgIdGGTk",
+          "date_time": "2026-02-22 15:00:51.831",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Joyride Dogs: Free Shipping FLASH SALE-\n\nGet free shipping, no minimums:\n\nUse code: HORSE\n\njoyrideharness.attn.tv/a_XO6hFZZYlg\n\nEnds midnight tonight!\n\n",
+          "date_time": "2026-03-01 15:00:42.184",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "Crocs",
-          "date_time": "2024-05-26 13:15:01.872",
+          "message_text": "Can I text the costumer service over here as well?",
+          "date_time": "2026-03-02 14:30:17.922",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018fb603-43c2-4f8f-f000-00008a96e1b5",
-          "message_text": "FAMOUS: We have two variants of the Classic Crocs Flip Flop Sandal available. \n\n1. Juice Pink: famousfootwear.com\n2. Black: famousfootwear.com\n\nBoth are currently in stock.",
+          "message_id": "019cb007-fd3a-45c1-f000-0000f45d6f4f",
+          "message_text": "Joyride Dogs: We don\u0027t offer phone support right now but I\u0027d be happy to help you over text, let me know what I can do for you.",
           "message_type": "agent",
           "agent": "62551",
           "message_media": [
             
           ],
-          "date_time": "2024-05-26 13:46:58.377"
+          "date_time": "2026-03-02 14:30:39.601"
         },
         {
-          "message_id": "018fb60c-7bc0-4d21-f000-00008a96e1b5",
-          "message_text": "FAMOUS: We have two variants of the Classic Crocs Flip Flop Sandal available. \n\n1. Juice Pink: famousfootwear.com\n2. Black: famousfootwear.com\n\nBoth are currently in stock.",
-          "message_type": "agent",
-          "agent": "62551",
+          "message_type": "customer",
+          "message_text": "I have a question about the leash I purchased from you.",
+          "date_time": "2026-03-02 14:30:47.956",
           "message_media": [
             
-          ],
-          "date_time": "2024-05-26 13:57:02.535"
+          ]
         },
         {
-          "message_id": "018fb630-7ca6-4010-f000-00008a96e1b5",
-          "message_text": "FAMOUS: We have the Classic Crocs Flip Flop Sandal available in two colors. \n\nThe black variant can be found here: famousfootwear.com\n\nAnd the juice pink variant here: famousfootwear.com\n\nBoth are currently in stock.",
-          "message_type": "agent",
-          "agent": "62551",
+          "message_type": "customer",
+          "message_text": "The dog leash hook seems so extrem easy to open. There for I am feeling worried using it that it could open if my dog pulls hard. The other leashes I have it\u0027s strong clipped not to easy to open. I bought your leash because of the car seat buckle. But now I am worried that it could open if pulling and wiggle.",
+          "date_time": "2026-03-02 14:36:17.495",
           "message_media": [
             
-          ],
-          "date_time": "2024-05-26 14:36:22.059"
+          ]
         },
         {
-          "message_id": "018fb639-73da-4ff6-f000-00008a96e1b5",
-          "message_text": "FAMOUS: We have two variants of the Classic Crocs Flip Flop Sandal available. \n\n1. Juice Pink: famousfootwear.com\n2. Black: famousfootwear.com\n\nBoth are currently in stock. Enjoy shopping!",
+          "message_type": "customer",
+          "message_text": "When I say strong clipped I am mean not hard for me to open. But your is so easy to open my toddler could easily open it. It\u0027s not strong together or however you would call it.  I hope you understand what I try to explain.",
+          "date_time": "2026-03-02 14:38:27.898",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019cb014-4f6b-477d-f000-0000f45d6f4f",
+          "message_text": "Joyride Dogs: The Joyride 2-in-1 Dog Leash \u0026 Seatbelt Combo is made from heavy-duty nylon and built to be durable for both walks and car travel. You can relax on your daily walks knowing this adjustable dog harness with side rings stops pulling without adding so much pressure on your dog\u0027s throat. Learn more here: https://joyrideharness.attn.tv/aEL1-nOiAFmk .",
           "message_type": "agent",
-          "agent": "62551",
+          "agent": "109627",
           "message_media": [
             
           ],
-          "date_time": "2024-05-26 14:46:09.633"
+          "date_time": "2026-03-02 14:44:07.044"
+        },
+        {
+          "message_type": "customer",
+          "message_text": "I do understand that it\u0027s durable material nylon. But the part you open and close at the collar it feels to easy to opend. That\u0027s worried me and that\u0027s the question. Thank you",
+          "date_time": "2026-03-02 14:47:57.659",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019cb01f-286d-4e5a-f000-0000f45d6f4f",
+          "message_text": "Joyride Dogs: I totally understand your worry; it may seem easy to open, but it won\u0027t open easily, where your dog could wiggle out. You see, dogs are able to escape harnesses due to lack of adjustability for the perfect fit. Even a slight discrepancy in how the harness fits may allow your furbaby to find a way to get out of it. We recommend a slightly snug fit (but not too tight) and your dog won\u0027t be able to back out or escape from it! \n\nLet me know if you need help with anything else!",
+          "message_type": "agent",
+          "agent": "87474",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-02 14:55:57.956"
         }
       ]
     },
     "52": {
-      "agentName": "Casey",
-      "has_shopify": true,
-      "id": "01904a7f-1e6f-40a1-f000-00003ab48d0b",
-      "rightPanel": {
-        "coupons": [
-          {
-            "status": "ACTIVE",
-            "description": "sitewide excluding giftcards",
-            "value": "15",
-            "coupon": "RCCAArQha6"
-          },
-          {
-            "status": "ACTIVE",
-            "value": "20",
-            "coupon": "120ATT20-xa32earzgzyj"
-          },
-          {
-            "status": "ACTIVE",
-            "description": "Holiday 2022 - Cart Abandon",
-            "coupon": "ATTCA2-6ntvp9gxvhkb"
-          },
-          {
-            "status": "ACTIVE",
-            "description": "Holiday 2022 - Anniversary",
-            "coupon": "365ATT1-kyfj8v"
-          },
-          {
-            "status": "ACTIVE",
-            "description": "Holiday 2022 - Cart Abandon",
-            "coupon": "ATTCA2-qwvkb4w5r6t5"
-          },
-          {
-            "status": "ACTIVE",
-            "value": "20",
-            "coupon": "90ATT20B-pdtt8ccepvv6"
-          },
-          {
-            "status": "ACTIVE",
-            "value": "20",
-            "coupon": "180ATT20A-jmgxdq75mw8k"
-          },
-          {
-            "coupon": "180ATT1-58dwfx",
-            "status": "ACTIVE"
-          },
-          {
-            "coupon": "90ATT3LMPQ8V3",
-            "status": "ACTIVE"
-          },
-          {
-            "status": "ACTIVE",
-            "description": "$100+",
-            "value": "30",
-            "coupon": "ATTPPY9PU1q"
-          },
-          {
-            "status": "ACTIVE",
-            "description": "$15 off your order of $50+",
-            "value": "15",
-            "coupon": "ATTPP2-sczkuzt886vc"
-          },
-          {
-            "coupon": "90ATT-4fqy8nks98",
-            "status": "ACTIVE"
-          },
-          {
-            "coupon": "ATT153R7JNGQQ",
-            "status": "ACTIVE"
-          },
-          {
-            "status": "ACTIVE",
-            "value": "15",
-            "coupon": "120ATT-9mp8sq69dy"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://heydude.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.heydude.com/products/sirocco-sport-stripe-black",
-            "item": "Sirocco Sport Stripe - Black - 5",
-            "timeAgo": "2024-06-24"
-          },
-          {
-            "link": "https://www.heydude.com/products/sirocco-sport-stripe-black",
-            "item": "Sirocco Sport Stripe - Pink - 5",
-            "timeAgo": "2024-06-23"
-          },
-          {
-            "link": "https://www.heydude.com/products/wendy-metallic-shine-gold",
-            "item": "Wendy Metallic Shine - Silver - 5",
-            "timeAgo": "2024-06-23"
-          },
-          {
-            "link": "https://www.heydude.com/products/wendy-chambray-white-light-blue",
-            "item": "Wendy Chambray - Off Black - 4",
-            "timeAgo": "2024-06-23"
-          },
-          {
-            "link": "https://www.heydude.com/products/wendy-chambray-off-black-1",
-            "item": "Wendy Chambray - Off Black - 4",
-            "timeAgo": "2024-06-23"
-          }
-        ]
-      },
-      "companyWebsite": "https://heydude.com",
-      "companyName": "HEYDUDE US",
-      "notes": {
-        "important": [
-          "There is a scam website that customers are texting in from (https://heydudestores.com/)",
-          "If you notice this, reroute customers to the correct website!"
-        ],
-        "send_to_cs": [
-          "Don\u0027t ESC post-purchase issues, use PPI shortcut"
-        ],
-        "templates": [
-          "For wrong items received use WMP shortcut",
-          "For damaged items received use DMI shortcut",
-          "For order status requests use OSR shortcut"
-        ],
-        "promo_and_exclusions": [
-          "The welcome code is valid for first-time customers only.",
-          "➜ Applies to full-price styles",
-          "➜ Can\u0027t be combined with any other discounts or offers, including sale styles",
-          "➜  Use cww temp for code issues",
-          "The promotional price shown on the Heydude website may not always be guaranteed when cx is redirected to Prime for purchase if the item is out of stock"
-        ]
-      },
-      "blocklisted_words": [
-        
-      ],
-      "escalation_preferences": [
-        
-      ],
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: New kicks for summer for UNDER $40? Yes, please 🙋🏾‍♀️\n\nJust use code MEMDAY at checkout.\nhttps://heydudeshoes.attn.tv/aAepX5tdqVwn \n*Select Styles only",
-          "date_time": "2024-05-25 10:48:08.218",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Flash sale upgrade! Now get an EXTRA 30% off sale with code MEM30. Hurry, sizes are selling fast.\n\nhttps://heydudeshoes.attn.tv/al0Ot-yayZua \n*Limited time offer",
-          "date_time": "2024-05-26 15:02:22.959",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Psst - $35 styles just dropped! But hurry, these won\u0027t last long.\n\nhttps://heydudeshoes.attn.tv/aVJCcBsR7MP7 \n*Select styles only",
-          "date_time": "2024-05-30 19:01:35.144",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Get hooked on comfy, lightweight kicks! Fish, camo, and water prints perfect for everything from boat days to bonfires.\n\nhttps://heydudeshoes.attn.tv/aMSMsFN7usOg ",
-          "date_time": "2024-06-05 18:00:28.916",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: YOU GET FIRST DIBS! Take 25% off hundreds of styles with code JUNE25.\n\nShop Early Access: https://heydudeshoes.attn.tv/aznDVUMMnSFp \n*Limited time only",
-          "date_time": "2024-06-06 11:06:59.927",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: You are already subscribed. Your coupon code is ATT153R7JNGQQ. Click here to shop now: heydudeshoesusa.com.",
-          "date_time": "2024-06-07 06:30:19.000",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: These will look better on your feet than in your cart. Score your new faves:\n\nhttps://heydudeshoes.attn.tv/aW1fXB89GBv_",
-          "date_time": "2024-06-07 09:54:30.688",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: 😍Get ready for summer with 25% off almost everything! We\u0027re talking on-trend colors, prints and styles perfect for the season ahead.\n\nUse code JUNE25.\nhttps://heydudeshoes.attn.tv/aRjzoY3FxC3R ",
-          "date_time": "2024-06-07 21:07:57.640",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: White kicks for summer are a NEED not a want. Plus - score an EXTRA 25% off with code JUNE25\n\nDone and DONE:\nhttps://heydudeshoes.attn.tv/arW_Y8g8JP4M ",
-          "date_time": "2024-06-08 15:01:28.594",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: 😉It\u0027s been a minute since you\u0027ve treated your feet to comfort and style. Check out our summer sale and score an EXTRA 25% off almost everything!\n\nUse code JUNE25\nhttps://heydudeshoes.attn.tv/aHugOTFSCOyU ",
-          "date_time": "2024-06-09 15:10:32.943",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: The Summer Hours Edit is here! Check out this week\u0027s NEW product drop - Wendy Cowgirl Sparkle. Cushy, all-over cow print, with a dash of shimmer.\n\nGrab your size before they\u0027re gone: https://heydudeshoes.attn.tv/a0wRqcDaUgqq ",
-          "date_time": "2024-06-14 18:04:45.725",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: These lightweight, easy-on, comfy kicks are best sellers for a reason! Take 25% off tons of fan faves with code JUNE25.\n\nPLUS score an EXTRA 30% off all sale styles with code SALE30.\n\n https://heydudeshoes.attn.tv/aleMwj1mCRba \n*Limited time only.",
-          "date_time": "2024-06-15 11:53:48.955",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Forget something? Last chance for 25% off almost everything with code JUNE25!\n\nPlus get an EXTRA 30% off sale styles with code SALE30. \n\nSale ends at midnight: https://heydudeshoes.attn.tv/a0uA5m_OHz8x \n*Both codes can be used in checkout.",
-          "date_time": "2024-06-16 15:02:41.634",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: We can\u0027t stop the clock! Time is running out for 25% off select full-price styles with code JUNE25 + an extra 30% off sale styles with code SALE30.\n\n https://heydudeshoes.attn.tv/aK4-Blo5yS4X \n*Both codes can be used in checkout. Sale ends 6/16 at 11:59pm PST.",
-          "date_time": "2024-06-16 20:01:19.092",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Don\u0027t be left out of all the 4th of July fun with red, white and blue Dudes. Get (fire) crackin\u0027 before they\u0027re gone!\n\nShop Americana: https://heydudeshoes.attn.tv/aGtklSW3WWa7 ",
-          "date_time": "2024-06-22 18:15:47.979",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Ready for a Sunday Steal?! Score 2 pairs for just $69. Yep, that\u0027s right.\n\nUse code 2FOR\nhttps://heydudeshoes.attn.tv/ah70GU-CoC8j \n*Select Styles only",
-          "date_time": "2024-06-23 11:07:59.777",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: FINAL HOURS! 2 pairs for $69 ends at midnight. Tick, tock.\n\nUse code 2FOR: https://heydudeshoes.attn.tv/aizYHxHTvxsP\n*Select styles only.\n",
-          "date_time": "2024-06-23 19:21:44.986",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "HEYDUDE: Looks like you dropped this: https://heydudeshoes.attn.tv/a2U8G6kzxFUV \n\nCheckout now before we sell out. Text me back anytime you have questions!",
-          "date_time": "2024-06-24 09:41:15.733",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Yes I did I put in 2FOR and it didn\u0027t give me two for $70",
-          "date_time": "2024-06-24 09:45:48.532",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "01904a7f-1e6f-40a1-f000-00003ab48d0b",
-          "message_text": "HEYDUDE: Please check the company website at heydudeshoesusa.com for the most up-to-date and upcoming promotions. You\u0027ll be the first to hear about new deals! If you continue to have issues, please share a screenshot.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-06-24 09:46:03.254"
-        }
-      ]
-    },
-    "53": {
-      "agentName": "Hunter",
+      "agentName": "Sarah",
       "has_shopify": false,
-      "id": "0190b3b3-9743-4eff-f000-0000856fd87f",
+      "id": "019c97bc-0983-49ff-f000-000080f90916",
       "rightPanel": {
         "coupons": [
           {
-            "status": "ACTIVE",
-            "description": "10% off email flows",
-            "coupon": "Merica10"
+            "subscriber_id": 2163804438,
+            "description": "Free 2-Day Shipping on $150+",
+            "company_id": 33440,
+            "name": "Free 2-Day Shipping on $150+",
+            "coupon": "SNOW2DSHIPGC5ENPK",
+            "redemption_status": "UNUSED"
           },
           {
-            "status": "ACTIVE",
+            "subscriber_id": 2163804438,
+            "description": "off full-price items",
+            "company_id": 33440,
             "value": "15",
-            "coupon": "SAVE15"
+            "name": "15% Off NTF",
+            "coupon": "SMS12G74KQ6",
+            "redemption_status": "UNUSED",
+            "value_type": "PERCENT"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://gruntstyle.com",
+          "value": "https://backcountry.com",
           "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.gruntstyle.com/products/womens-easy-rider-eagle-slouchy-tee-black?variant=41233342005299",
-            "item": "Women\u0027s Easy Rider Eagle Slouchy T-Shirt - Black - Medium",
-            "timeAgo": "2024-04-16"
-          },
-          {
-            "link": "https://www.gruntstyle.com/collections/badass-graphics-for-badass-women/products/womens-easy-rider-eagle-slouchy-tee-black",
-            "item": "Women\u0027s Easy Rider Eagle Slouchy T-Shirt - Black - Small",
-            "timeAgo": "2024-04-16"
-          }
-        ]
-      },
-      "companyWebsite": "https://gruntstyle.com",
-      "companyName": "Grunt Style",
-      "notes": {
-        "dos_and_donts": [
-          "All exchange/warranty and returns are handled via the Beer Guarantee"
-        ],
-        "promo_and_exclusions": [
-          "Club discount stacks with other sales",
-          "Don\u0027t give out coupon codes",
-          "The welcome code (PATRIOT15) can be used BOTH in store and online!"
-        ]
-      },
-      "blocklisted_words": [
-        
-      ],
-      "escalation_preferences": [
-        
-      ],
-      "messageTone": "Casual",
-      "conversation": [
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Limited time offer: Score select tees at $19.99 AND spend $100 \u0026 get a free hat! Hurry, Shop now! https://gruntstyle.attn.tv/adux1L6NHAxo",
-          "date_time": "2024-06-14 20:25:44.234",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Flash Sale: $29.99 Polos! That\u0027s more than 30% off! Hurry, this is a limited-time offer, Shop Now! https://gruntstyle.attn.tv/a_rPu8QUHz_k",
-          "date_time": "2024-06-20 20:01:12.441",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: This weekend only! Up to 60% Off Select Items! Limited time offer \u0026 Limited Stock, so hurry and shop now! https://gruntstyle.attn.tv/aBLJQME5I-U7 ",
-          "date_time": "2024-06-21 19:21:43.445",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Flash SAL $19.99 or less! Get some of our best-selling tees \u0026 save more than 45% their original price ",
-          "date_time": "2024-06-22 13:30:55.036",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: FINAL HOURS Save up to 60% Off Select Items! Limited time offer \u0026 Limited Stock. Offer ends soon, shop now! https://gruntstyle.attn.tv/aIKRMv7YEsk6",
-          "date_time": "2024-06-23 19:41:10.082",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Gear up for Freedom Month! This weekend only, grab our top tees for just $19.99. Don\u0027t miss out, shop now! https://gruntstyle.attn.tv/aHqHdwqhbX5p ",
-          "date_time": "2024-06-28 19:51:17.054",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Time is running out! Act fast to score our best tees for just $19.99. Shop now before it\u0027s too late! https://gruntstyle.attn.tv/aXvWBJEQ9d7a",
-          "date_time": "2024-07-01 20:10:50.579",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Celebrate the 4th of July with our BOGO 50% off Tees, Tanks, \u0026 Tops sale! Limited time offer, so hurry and stock up on patriotic gear now! Happy Independence Day! https://gruntstyle.attn.tv/aN1cJvQuZ7e0",
-          "date_time": "2024-07-04 12:47:19.128",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Act fast and shop our BOGO 50% off Tees, Tanks, \u0026 Tops sale! It\u0027s the perfect time to stock up on patriotic gear and make Uncle Sam proud! https://gruntstyle.attn.tv/aMRXWG4-10lp ",
-          "date_time": "2024-07-06 18:09:15.966",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: BOGO 50% off on Tees, Tanks \u0026 Tops ends soon! Time is ticking! Don\u0027t miss out on this deal. Shop now! https://gruntstyle.attn.tv/a6J5zPTVKKUX",
-          "date_time": "2024-07-07 20:16:17.802",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Time to gear up, patriots! Our BOGO 50% off Tees, Tanks, \u0026 Tops Sale ends TONIGHT! Don\u0027t miss out on the chance to show off your American pride. Shop now! https://gruntstyle.attn.tv/az5rYAmyuqnv",
-          "date_time": "2024-07-08 19:40:39.127",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Gear up with our latest patriotic apparel, new arrivals hotter than the grill on the 4th of July! Shop now! https://gruntstyle.attn.tv/a8lU0SwihtJs",
-          "date_time": "2024-07-11 20:35:37.867",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Grunt Style: Maximum effort! Your little cinematic universe is about to change forever. Get ready for opening night with these two new styles! Shop now! https://gruntstyle.attn.tv/akPp872E_y8l ",
-          "date_time": "2024-07-13 08:11:14.259",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Info",
-          "date_time": "2024-07-14 20:00:31.069",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "0190b3b1-1a9b-4609-f000-0000856fd87f",
-          "message_text": "Grunt Style: Please specify the product you\u0027re interested in, and I\u0027ll provide more details.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-07-14 20:00:46.754"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Info",
-          "date_time": "2024-07-14 20:01:11.157",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "0190b3b1-a26d-4af2-f000-0000856fd87f",
-          "message_text": "Grunt Style: Please specify the product you\u0027re interested in, and I\u0027ll provide more details.",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-07-14 20:01:21.524"
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Info",
-          "date_time": "2024-07-14 20:03:20.987",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "0190b3b3-9743-4eff-f000-0000856fd87f",
-          "message_text": "Grunt Style: Can you please tell me which item you are looking at? I\u0027ll be more than happy to check on this for you!",
-          "message_type": "agent",
-          "agent": "62551",
-          "message_media": [
-            
-          ],
-          "date_time": "2024-07-14 20:03:29.737"
         }
-      ]
-    },
-    "54": {
-      "agentName": "Taylor",
-      "has_shopify": false,
-      "id": "018f82a7-2e20-409e-f000-0000788c6352",
-      "rightPanel": {
-        "coupons": [
-          {
-            "status": "INACTIVE",
-            "description": "Free Ground Shipping on full-priced items",
-            "coupon": "ATSHIP-D4WC-XSV5-GRTK-PD6PR"
-          }
-        ],
-        "source": {
-          "label": "Website",
-          "value": "https://birkenstock.com",
-          "date": ""
-        },
-        "browsingHistory": [
-          {
-            "link": "https://www.birkenstock.com/us/arizona-kids-birko-flor-birkibuc/arizonakids-core-birkoflornubuck-0-eva-b_3732.html",
-            "item": "Arizona Kids Birkibuc Mocha",
-            "timeAgo": "2024-05-16"
-          },
-          {
-            "link": "https://www.birkenstock.com/us/arizona-kids-birko-flor-birkibuc/arizonakids-core-birkoflornubuck-0-eva-b_3732.html",
-            "item": "Arizona Kids Birkibuc Mocha",
-            "timeAgo": "2024-05-16"
-          },
-          {
-            "link": "https://www.birkenstock.com/us/boston-soft-footbed-suede-leather/boston-suede-suedeleather-softfootbed-eva-u_7158.html",
-            "item": "Boston Soft Footbed Suede Leather Midnight Blue | BIRKENSTOCK",
-            "timeAgo": "2024-01-13"
-          },
-          {
-            "link": "https://www.birkenstock.com/us/prescott-slip-on-women-oiled-leather/prescott-slipon-naturalleather-0-rubber-w_19.html",
-            "item": "Prescott Slip On Women Natural Leather Black | BIRKENSTOCK",
-            "timeAgo": "2024-01-13"
-          },
-          {
-            "link": "https://www.birkenstock.com/us/boston-soft-footbed-suede-leather/boston-suede-suedeleather-softfootbed-eva-u_7158.html",
-            "item": "Boston Soft Footbed Suede Leather Midnight Blue | BIRKENSTOCK",
-            "timeAgo": "2024-01-13"
-          }
-        ]
       },
-      "companyWebsite": "https://birkenstock.com",
-      "companyName": "Birkenstock",
+      "companyWebsite": "https://backcountry.com",
+      "companyName": "Backcountry",
       "notes": {
         "escalate": [
-          "For all pre-purchase and post purchase ESC always include the customers full name in the notes",
-          "Don\u0027t ESC if they get an error with the fs code while logged in"
+          "No escalations for this client, send everything to CS"
         ],
-        "templates": [
-          "For free shipping retroactive code requests, use SRP shortcut",
-          "For holiday/extended returns - use the template"
+        "tone": [
+          "Close the convo once the client takes over"
         ],
-        "dos_and_donts": [
-          "Close the convo once the client takes over",
-          "🤖 If someone sends a product category, link them to the category and ask if they are looking for something specific"
+        "promo_and_exclusions": [
+          "Welcome offer page:   https://www.backcountry.com/sc/new-customer-coupon-rules"
         ]
       },
       "blocklisted_words": [
         
       ],
       "escalation_preferences": [
-        "Shipping codes"
+        
       ],
       "messageTone": "Polished",
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Mid-week boost: New wedges \u0026 platforms. Shop now \u0026 get free ground shipping: https://birkenstock.attn.tv/l/JML/-SW6e .\n",
-          "date_time": "2024-04-17 21:00:43.757",
+          "message_text": "Backcountry: 48 hrs only! Take 20% off full-price picks from The North Face, Osprey \u0026 more top brands. Sign in to gear up: http://bctxt.co/av89xEXMNWBp ",
+          "date_time": "2026-01-30 15:03:44.996",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Extra glossy styles in your favorite spring colors just landed in Last Chance: https://birkenstock.attn.tv/l/kKn/-SW6e . ",
-          "date_time": "2024-04-19 21:00:46.735",
+          "message_text": "Backcountry: Extra 20% off clearance just dropped! Stack deeper deals on already-marked-down gear for a limited time only: http://bctxt.co/aXX2t0Axq-BP ",
+          "date_time": "2026-01-31 13:03:53.520",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: From festivals to farmers markets. Stay up on style with chunky platforms \u0026 get free shipping: https://birkenstock.attn.tv/l/mLl/-SW6e . ",
-          "date_time": "2024-04-22 21:00:35.590",
+          "message_text": "Backcountry: Final hours! Last chance to score 20% off full-price favorites for all your upcoming adventures: http://bctxt.co/ak4XU4lmkOzK ",
+          "date_time": "2026-01-31 17:32:10.883",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Dripping in new colors. Shop ultra-bright, ultra-light EVA styles \u0026 get free shipping: https://birkenstock.attn.tv/l/rDT/-SW6e .",
-          "date_time": "2024-04-24 21:00:52.596",
+          "message_text": "Backcountry: Winter Semi-Annual Sale is on! Score up to 50% off this season\u0027s best, freshly marked down now: http://bctxt.co/aqHni-VYvp_b ",
+          "date_time": "2026-02-01 15:02:21.737",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Get 70 \u0026 sunny delivered with free shipping. Shop all-new Surf Green styles: https://birkenstock.attn.tv/l/dEt/-SW6e .",
-          "date_time": "2024-04-25 21:00:48.746",
+          "message_text": "Backcountry: Extra 20% off clearance ends tonight! Who doesn\u0027t love savings on top of savings? Get it while you can:http://bctxt.co/aB0EzHrOR5IV ",
+          "date_time": "2026-02-02 16:01:22.812",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Wedding 101: No uncomfortable shoes. Say \"I do\" to wedding whites \u0026 get free shipping: https://birkenstock.attn.tv/l/bzU/-SW6e .",
-          "date_time": "2024-04-26 21:00:30.941",
+          "message_text": "Backcountry: Nike Team USA gear just landed at the Park City store. Swing by \u0026 gear up for the festivities tonight! Directions:http://bctxt.co/a36M_hN3WJLY ",
+          "date_time": "2026-02-06 13:01:10.101",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Last call for April Last Chance styles. Shop platforms, Big Buckle \u0026 more: https://birkenstock.attn.tv/l/fwO/-SW6e .",
-          "date_time": "2024-04-27 21:00:48.798",
+          "message_text": "Backcountry: New sale drop! For 3 days only- get an extra 20% off clearance. Discount applies in cart. Shop now: http://bctxt.co/as_0N47dJOJm ",
+          "date_time": "2026-02-07 17:06:11.705",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: The Mother\u0027s Day Gift Guide. Shop styles as iconic as she is: https://birkenstock.attn.tv/l/yh2/-SW6e .",
-          "date_time": "2024-04-29 21:00:27.674",
+          "message_text": "Backcountry: Final hours! Extra 20% off clearance ends tonight. Save big while the deal lasts: http://bctxt.co/anY89nEJ-tRC ",
+          "date_time": "2026-02-09 16:01:38.609",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Inspired by sun, sand \u0026 sandals. It\u0027s the season of summer neutrals. Shop the shades: https://birkenstock.attn.tv/l/e3R/-SW6e .",
-          "date_time": "2024-05-02 21:00:56.707",
+          "message_text": "Backcountry: Looking for the latest price drops? Score new savings from The North Face, Mammut \u0026 more! Shop Semi-Annual Sale: http://bctxt.co/aftKxhvwVFID ",
+          "date_time": "2026-02-12 15:51:36.340",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: New month, new Last Chance styles. Shop what\u0027s new for May: https://birkenstock.attn.tv/l/KaT/-SW6e .",
-          "date_time": "2024-05-03 15:31:14.345",
+          "message_text": "Backcountry: Deeper discounts just landed! Get up to 60% off The North Face, Patagonia, Rab \u0026 more now: http://bctxt.co/aEKyb5nuPpuD ",
+          "date_time": "2026-02-13 20:13:06.372",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Sun-bright color with a heritage spin. Shop new shades in oiled leather: https://birkenstock.attn.tv/atySxB6y1FMt .",
-          "date_time": "2024-05-04 21:01:09.573",
+          "message_text": "Backcountry: Closeout Sale is ON! Score up to 70% off gear \u0026 apparel, 3 days only. Fill those gear gaps while it\u0027s this good: http://bctxt.co/aR1_LlGEvlSy ",
+          "date_time": "2026-02-14 20:15:05.460",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Send Mom your best. Find the perfect pair in the Mother\u0027s Day Shop: https://birkenstock.attn.tv/aHUtAveuLNNQ .\nQuestions? Text back. - Taylor",
-          "date_time": "2024-05-05 21:00:57.553",
+          "message_text": "Backcountry: Final hours! Up to 70% off Closeout Sale wraps tonight. Find last-chance deals here: http://bctxt.co/aUgkZpct7tKf ",
+          "date_time": "2026-02-16 15:01:45.427",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: The Arizona Sandal Edit. Shop the style you\u0027re about to see everywhere this season: https://birkenstock.attn.tv/aH8kq6JAVdDy .\n",
-          "date_time": "2024-05-06 21:00:43.881",
+          "message_text": "Backcountry: Extra 20% off clearance is now live! Gear up for less this weekend. Score apparel, footwear \u0026 other essentials: http://bctxt.co/a-5ofIcoDEvl ",
+          "date_time": "2026-02-21 17:07:07.363",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Canvas season \u0026 the sneakers to go with it. Boardwalk-ready comfort, coastal style. Shop now: https://birkenstock.attn.tv/aejMK_ZpuW07 .",
-          "date_time": "2024-05-07 21:00:58.357",
+          "message_text": "Backcountry: Extra clearance ends tonight! Until midnight, take an additional 20% off already-marked-down styles. Shop now: http://bctxt.co/aAu8Lbidjkv_ ",
+          "date_time": "2026-02-22 16:02:03.913",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Classic Arizona EVA colors. Black, White \u0026 more to go with every color swimsuit. Dive in: https://birkenstock.attn.tv/a-RADgVoQxK2 .",
-          "date_time": "2024-05-08 21:00:34.446",
+          "message_text": "Backcountry: Oops we got our dates wrong. Extra 20% off actually ends today! Grab your gear before it ends for real this time:http://bctxt.co/aCgJNk_nlQqd ",
+          "date_time": "2026-02-23 14:01:37.069",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Looking for extra cushioning? Shop soft footbeds on your favorite styles: https://birkenstock.attn.tv/ae6WZtGfDej3 .",
-          "date_time": "2024-05-09 21:01:01.238",
+          "message_text": "Backcountry: The end is near...Semi-Annual Sale wraps up Saturday! Shop up to 60% off this season\u0027s gear while it lasts:http://bctxt.co/aq9uYJ7F_zsu ",
+          "date_time": "2026-02-25 21:14:08.789",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Birkenstock: Slide from spring into summer. Shop the Kyoto in all the best colors, now in Last Chance: https://birkenstock.attn.tv/ampqFlUP33Ii .",
-          "date_time": "2024-05-10 21:00:41.477",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Perfect coverage, sun-ready shimmer. Slide from spring to summer in the Catalina sandal: https://birkenstock.attn.tv/a345n2PIEgvY .",
-          "date_time": "2024-05-11 11:31:05.668",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Easy like Sunday: The Boston clog. For park picnics, brunch \u0026 wherever weekends take you. Shop now: https://birkenstock.attn.tv/a0z45UB06TxZ .",
-          "date_time": "2024-05-12 21:00:53.858",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Grad, guest or getaway-bound, these wedges are going places. Shop what\u0027s just-in: https://birkenstock.attn.tv/awQCsPeQk7Dy .",
-          "date_time": "2024-05-13 21:00:55.313",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Low-key glamorous. Shop Big Buckle sandals that accessorize your style from the ground up: https://birkenstock.attn.tv/agbwx5kGYbHy .",
-          "date_time": "2024-05-14 21:00:42.696",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "system",
-          "message_text": "Birkenstock: Welcome! I\u0027m Taylor! I see you\u0027re eyeing the https://birkenstock.attn.tv/a63njxreKVyN \n\nDo you need any help finding the perfect size?",
-          "date_time": "2024-05-16 13:59:37.505",
+          "message_text": "Backcountry: Thanks for the text! If you need help now, chat with a Gearhead online or by calling 1-801-204-4655. Text STOP to opt out. backcountry.com",
+          "date_time": "2026-02-25 21:15:46.921",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "I\u0027m looking for my daughter, the kids 3-3.5 fit her perfect but she\u0027s 12 and growing so fast  I think I want the 4-4.5, I tried A 5 on her yesterday and they were to big and bulky, if that makes sense lol, she\u0027s very small",
-          "date_time": "2024-05-16 14:24:49.083",
+          "message_text": "Yes",
+          "date_time": "2026-02-25 21:15:56.486",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018f82a7-2e20-409e-f000-0000788c6352",
-          "message_text": "Birkenstock: I understand your concern. If the size 3-3.5 fits her perfectly now, the size 4-4.5 should be the next best fit. It\u0027s always better to go a size up rather than a size that\u0027s too big and uncomfortable. You can always return or exchange if the size doesn\u0027t work out.",
+          "message_id": "019c97bc-0983-49ff-f000-000080f90916",
+          "message_text": "Backcountry: Hello, thank you for reaching out! I will be happy to help. If you have any questions or need assistance, please do not hesitate to contact me.\n",
           "message_type": "agent",
-          "agent": "62551",
+          "agent": "39001",
           "message_media": [
             
           ],
-          "date_time": "2024-05-16 14:25:45.511"
+          "date_time": "2026-02-25 21:16:48.793"
         }
       ]
     },
-    "55": {
-      "agentName": "Jake",
-      "has_shopify": true,
-      "id": "018f59ad-caf6-433f-f000-0000438d9ce4",
+    "53": {
+      "agentName": "John",
+      "has_shopify": false,
+      "id": "019c9c3a-582a-4603-f000-00004bff380e",
       "rightPanel": {
-        "orders": [
+        "promotions": [
           {
-            "currency": "USD",
-            "orderDate": "2023-08-31",
-            "coupon": "NewHope",
-            "items": [
-              {
-                "price": [
-                  49.99
-                ],
-                "productLink": "https://drink-leilo.myshopify.com/products/lemon-ginger",
-                "name": "Lemon Ginger (12-Pack)"
-              }
-            ],
-            "date_time": "2023-08-31 17:25:16.606",
-            "discount_amount": 7.5,
-            "orderNumber": "5351384973529",
-            "total": 42.49
+            "title": "HELLO15",
+            "content": [
+              "• First purchase welcome code"
+            ]
+          },
+          {
+            "title": "KITBAG24",
+            "content": [
+              "• This code is no longer active!"
+            ]
           }
         ],
         "coupons": [
           {
-            "status": "ACTIVE",
-            "description": "10%",
-            "coupon": "DryJan"
+            "subscriber_id": 1275017230,
+            "company_id": 1163,
+            "static_code": "HELLO15",
+            "name": "HELLO15",
+            "coupon": "HELLO15",
+            "redemption_status": "UNUSED"
           },
           {
-            "coupon": "DAD",
-            "status": "ACTIVE"
+            "subscriber_id": 1275017230,
+            "company_id": 1163,
+            "static_code": "CUPID",
+            "name": "Valentine\u0027s Day 2025",
+            "coupon": "CUPID",
+            "redemption_status": "UNUSED"
           },
           {
-            "coupon": "KavaForDad",
-            "status": "ACTIVE"
-          },
-          {
-            "coupon": "MOBILE10",
-            "status": "ACTIVE"
-          },
-          {
-            "coupon": "KEEPGOING",
-            "status": "ACTIVE"
-          },
-          {
-            "coupon": "LDW",
-            "status": "ACTIVE"
-          },
-          {
-            "coupon": "STPATTY",
-            "status": "ACTIVE"
-          },
-          {
-            "status": "ACTIVE",
-            "description": "15% off Subscription",
-            "coupon": "Halloween"
+            "subscriber_id": 1275017230,
+            "company_id": 1163,
+            "static_code": "LUCK30",
+            "name": "St. Patrick\u0027s Day 2025",
+            "coupon": "LUCK30",
+            "redemption_status": "UNUSED"
           }
         ],
         "source": {
           "label": "Website",
-          "value": "https://leilo.com",
+          "value": "https://theartofshaving.com",
           "date": ""
         },
         "browsingHistory": [
           {
-            "link": "https://leilo.com/products/sunset-variety",
-            "item": "Sunset Variety (12-pack)",
-            "timeAgo": "2024-04-23"
+            "link": "https://www.theartofshaving.com/products/creams-soaps/sandalwood-shave-soap-w-bowl-3-3oz/?utm_campaign=concierge\u0026utm_medium=sms\u0026utm_source=taossms\u0026externalId=fu90V",
+            "item": "Sandalwood Shave Soap w/ Bowl 3.3oz",
+            "timeAgo": "2026-02-26"
           },
           {
-            "link": "https://leilo.com/collections/shop-all/products/the-leilo-sampler",
-            "item": "Leilo Sampler (6-Pack)",
-            "timeAgo": "2024-04-15"
+            "link": "https://www.theartofshaving.com/products/creams-soaps/sandalwood-shaving-cream-5-oz/",
+            "item": "Sandalwood Shaving Cream 5 OZ",
+            "timeAgo": "2025-09-24"
           },
           {
-            "link": "https://leilo.com/collections/shop-all/products/the-leilo-sampler",
-            "item": "Leilo Sampler (6-Pack)",
-            "timeAgo": "2024-04-15"
+            "link": "https://www.theartofshaving.com/products/creams-soaps/sandalwood-shaving-soap/?utm_campaign=concierge\u0026utm_medium=sms\u0026utm_source=taossms\u0026externalId=fu90V",
+            "item": "Sandalwood Shaving Soap",
+            "timeAgo": "2024-06-07"
           },
           {
-            "link": "https://leilo.com/products/sunset-variety",
-            "item": "Sunset Variety (12-pack)",
-            "timeAgo": "2024-04-15"
+            "link": "https://www.theartofshaving.com/products/gifts-kits/the-perfect-shave-sampler-sandalwood/",
+            "item": "The Perfect Shave Sampler – Sandalwood",
+            "timeAgo": "2024-06-07"
           },
           {
-            "link": "https://leilo.com/products/sunset-variety",
-            "item": "Sunset Variety (12-pack)",
-            "timeAgo": "2024-01-31"
+            "link": "https://www.theartofshaving.com/products/oils-balms/sandalwood-after-shave-balm-moisturizer/",
+            "item": "Sandalwood After-Shave Balm \u0026 Moisturizer",
+            "timeAgo": "2024-04-28"
           }
         ]
       },
-      "companyWebsite": "https://leilo.com",
-      "companyName": "Leilo",
+      "companyWebsite": "https://theartofshaving.com",
+      "companyName": "The Art of Shaving",
       "notes": {
-        "escalate": [
-          "ESC if you don\u0027t have the answer to the cx question instead of saying you don\u0027t know or don\u0027t have info"
+        "send_to_cs": [
+          "Send to CS if cx wants us to place order for them, use CS shortcut"
+        ],
+        "templates": [
+          "For adverse events or product quality complaints, use PS shortcut"
+        ],
+        "tone": [
+          "Ensure the word \"staging\" isn\u0027t in any link you send"
         ]
       },
       "blocklisted_words": [
-        "kratom"
+        
       ],
       "escalation_preferences": [
-        "Any Health/Safety Related Concerns"
+        "Adverse Events,",
+        "Product Quality Complaints"
       ],
-      "messageTone": "Super Casual",
+      "messageTone": "Polished",
       "conversation": [
         {
           "message_type": "system",
-          "message_text": "Leilo: Hey Jordan , this is Jake . Thanks for stopping by! 😊 https://kava.attn.tv/sl/NSR4p0a8 \n\nAre you looking for a ____ [insert product name] today?",
-          "date_time": "2024-04-15 17:02:00.342",
+          "message_text": "The Art of Shaving: Up to 30% Off for our Valentine\u0027s Sale!\n10% off $50\n20% off $100\n30% off $150. \nNo code required\naos.attn.tv/aVMw9mez4iS_ ",
+          "date_time": "2026-02-02 19:00:25.792",
           "message_media": [
             
           ]
         },
         {
           "message_type": "system",
-          "message_text": "Leilo: Hey Jordan , this is Jake . Thanks for checking us out! 😊 https://kava.attn.tv/sl/xLSzczJg \n\nAny questions I can answer for you? ",
-          "date_time": "2024-04-23 15:51:42.237",
+          "message_text": "The Art of Shaving: Check out our sale items and take an additional 20% off with code TAKE20. https://aos.attn.tv/aiB5pQcgllMT ",
+          "date_time": "2026-02-19 16:26:00.831",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "The Art of Shaving: Don\u0027t forget to take 20% off shaving essentials using TAKE20, while supplies last. Shop now: https://aos.attn.tv/aCx_ILYZG_gg \n\nText back if you have any questions!",
+          "date_time": "2026-02-26 16:26:04.826",
           "message_media": [
             
           ]
         },
         {
           "message_type": "customer",
-          "message_text": "Hello, I need help ordering",
-          "date_time": "2024-05-08 14:47:56.179",
+          "message_text": "Where\u0027s the soap? The body soap in sandalwood, the 7oz bar.",
+          "date_time": "2026-02-26 16:34:30.653",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018f5988-fd7d-4785-f000-0000438d9ce4",
-          "message_text": "Leilo: Sure thing, Jordan! I\u0027d be happy to help you with your order. Could you please tell me more about what you need help with? Is it a specific product you\u0027re interested in or are you having trouble with the checkout process? 🛒👍",
+          "message_id": "019c9be2-8e27-469f-f000-00004bff380e",
+          "message_text": "The Art of Shaving: Thanks for reaching out! Upon checking our site, it appears that the 7 oz. bar is currently unavailable. We do have it in 3 0z,, you can check it out here:\n\nhttps://aos.attn.tv/aTV4SZI7IGUu/\n\nLet me know how that goes.",
           "message_type": "agent",
-          "agent": "62551",
+          "agent": "109617",
           "message_media": [
             
           ],
-          "date_time": "2024-05-08 14:48:21.125"
+          "date_time": "2026-02-26 16:37:21.983"
         },
         {
           "message_type": "customer",
-          "message_text": "Well, we order our wholesale through fair with no issues, but we sell your product on our website, so when customers order, we order directly from Leilo.com and you guys basically drop ship for us.  But, since yesterday, there seems to be a problem with your website.  I can\u0027t access the cart, and the site seems off.  I\u0027ve never had this issue before?",
-          "date_time": "2024-05-08 14:51:19.710",
+          "message_text": "Will you be bringing back the 7 ounce bar? I believe it\u0027s Proctor and gamble that makes that product isn\u0027t it?",
+          "date_time": "2026-02-26 18:02:10.573",
           "message_media": [
             
           ]
         },
         {
-          "message_id": "018f5993-12fb-408e-f000-0000438d9ce4",
-          "message_text": "Leilo: Sorry to hear you\u0027re having trouble with our website. While we haven\u0027t received any widespread reports regarding this, it could be a browser issue. We find that Google Chrome works best with our site. If you\u0027re still having trouble accessing your cart, please let me know. I can also create the cart for you to make things easier! ",
+          "message_id": "019c9c33-a10a-4798-f000-00004bff380e",
+          "message_text": "The Art of Shaving: I\u0027m sorry about that. I\u0027m afraid we don\u0027t carry that item at the moment and unfortunately, it doesn\u0027t show me any info on it but I\u0027ll definitely pass this along to the team to consider again in the future, thank you for the feedback! If you have any more questions, feel free to let me know. For now, what do you think about the 3 OZ one I shared above? ",
           "message_type": "agent",
-          "agent": "82235",
+          "agent": "39115",
           "message_media": [
             
           ],
-          "date_time": "2024-05-08 14:59:21.987"
+          "date_time": "2026-02-26 18:05:55.239"
         },
         {
           "message_type": "customer",
-          "message_text": "Using chrome, MacBook Pro.  There\u0027s definitely an issue with Leilo.com.   I tried loading from an incognito window in chrome but the problem remains.  This is what\u0027s the /cart page looks like:",
-          "date_time": "2024-05-08 15:03:49.350",
+          "message_text": "I have seen that several times as being available in your advertising and on the website and I was using my sandalwood body soap at times as a shaving soap. It works good, but I really do enjoy the larger bar rather than a little 3 ounce one.",
+          "date_time": "2026-02-26 18:08:20.743",
           "message_media": [
             
           ]
         },
         {
-          "message_type": "customer",
-          "message_text": "Please have someone call me so I can place an order over the phone",
-          "date_time": "2024-05-08 15:04:17.412",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_type": "customer",
-          "message_text": "Hello is this AI or a person?",
-          "date_time": "2024-05-08 15:27:49.827",
-          "message_media": [
-            
-          ]
-        },
-        {
-          "message_id": "018f59ad-caf6-433f-f000-0000438d9ce4",
-          "message_text": "Leilo: Thank you so much for sending the photos! This number was set up for SMS messaging only, so I can\u0027t make or take calls. Are you ok with texting? \n\nI want to apologize for the inconvenience this has caused you. I\u0027d be more than happy to check on the cart issue with my team and I\u0027ll get back to you as soon as I have more information. I\u0027d appreciate your patience while we work on this. In the meantime, if you have any further questions, please let me know.",
+          "message_id": "019c9c3a-582a-4603-f000-00004bff380e",
+          "message_text": "The Art of Shaving: I understand how the larger bar is more advantageous; however, at the moment, unfortunately, we do not have this item available in stock. We are working to restock it as soon as possible, but we do not yet have a confirmed estimated date. As soon as the product becomes available again, it will be announced on our website and official channels. If you wish, you may follow our updates so you do not miss the release. I remain at your disposal for any other questions or to assist you with anything you may need.\n",
           "message_type": "agent",
-          "agent": "82224",
+          "agent": "39001",
           "message_media": [
             
           ],
-          "date_time": "2024-05-08 15:28:33.024"
+          "date_time": "2026-02-26 18:13:15.331"
+        }
+      ]
+    },
+    "54": {
+      "agentName": "Andrew",
+      "has_shopify": true,
+      "id": "019cc35e-9eb5-48b4-f000-0000fc39fee1",
+      "rightPanel": {
+        "coupons": [
+          {
+            "subscriber_id": 4231659233,
+            "company_id": 8580,
+            "coupon_url": "https://newyorksteak.com/discount/SMS10?utm_source=attentive\u0026utm_medium=sms\u0026utm_campaign=welcome",
+            "static_code": "SMS10",
+            "name": "Welcome 10$",
+            "coupon": "SMS10",
+            "redemption_status": "UNUSED"
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://newyorksteak.com",
+          "date": ""
+        }
+      },
+      "companyWebsite": "https://newyorksteak.com",
+      "companyName": "New York Steak",
+      "notes": {
+        "send_to_cs": [
+          "No ESC for this client, send everything to CS"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Polished",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "The NY Steak \u0026 Seafood Co.: Thank you for your purchase! Your order number is 77652. View more information about your order here: https://newyorksteak.attn.tv/a6WPHobx4KkA . Stop to stop",
+          "date_time": "2026-02-18 00:41:04.099",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "The NY Steak \u0026 Seafood Co.: Hey Monty, order #77652 is out for delivery. Track your order here: https://newyorksteak.attn.tv/aaLrOJ8EwKtd . Stop to stop",
+          "date_time": "2026-02-20 11:57:57.737",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "The NY Steak \u0026 Seafood Co.: Hey Monty, order #77652 has been delivered! Track your order here: https://newyorksteak.attn.tv/az0wNmHbpZe0 . Stop to stop",
+          "date_time": "2026-02-20 13:22:45.437",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "The NY Steak \u0026 Seafood Co.: Welcome to The NY Steak \u0026 Seafood Co.! Msg \u0026 data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.",
+          "date_time": "2026-03-06 06:43:43.518",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "The NY Steak \u0026 Seafood Co.: Hey this is Andrew, how can I help you? Stop to stop",
+          "date_time": "2026-03-06 06:43:47.518",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "Do you know when you will have Dungeness Crab Clusters\nBack in stock",
+          "date_time": "2026-03-06 06:44:21.927",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "template",
+          "message_text": "Template used: \"Restock (website \u0026 social)\"; last updated: 2025-10-09 21:41:33.472",
+          "date_time": "2026-03-06 08:38:04.127",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019cc35e-9eb5-48b4-f000-0000fc39fee1",
+          "message_text": "The NY Steak \u0026 Seafood Co.: Thank you for checking in. I\u0027m sorry for the late reply. I currently don\u0027t have the exact date of a possible restock, but I recommend checking our website and social media frequently. In the meantime, what do you think about this instead: https://newyorksteak.attn.tv/aiG5iWurMiHZ",
+          "message_type": "agent",
+          "agent": "87359",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-06 08:38:04.129"
+        }
+      ]
+    },
+    "55": {
+      "agentName": "Sarah",
+      "has_shopify": false,
+      "id": "019cab9b-94cb-4e98-f000-000082ca1cdf",
+      "rightPanel": {
+        "promotions": [
+          {
+            "title": "Welcome is 15% Off",
+            "content": [
+              "The coupon is link based and the customer should be able to click through the link in their email or sms to get it to apply"
+            ]
+          }
+        ],
+        "source": {
+          "label": "Website",
+          "value": "https://halloweencostumes.com",
+          "date": ""
+        },
+        "browsingHistory": [
+          {
+            "link": "https://www.halloweencostumes.com/wonder-woman-deluxe-womens-costume.html",
+            "item": "Women\u0027s Wonder Woman Deluxe Costume",
+            "timeAgo": "2026-03-01"
+          },
+          {
+            "link": "https://www.halloweencostumes.com/adult-womens-southern-belle-costume.html",
+            "item": "Southern Belle Costume for Women",
+            "timeAgo": "2026-03-01"
+          },
+          {
+            "link": "https://www.halloweencostumes.com/womens-cave-girl-costume.html?mpid=273600\u0026utm_campaign=uspmax\u0026gad_source=5\u0026gad_campaignid=22128582429\u0026gclid=EAIaIQobChMIieronI68kgMVB5mOCB3JyyM2EAEYASAOEgJ3F_D_BwE",
+            "item": "Women\u0027s Cave Girl Costume",
+            "timeAgo": "2026-02-03"
+          },
+          {
+            "link": "https://www.halloweencostumes.com/girls-cotton-candy-costume.html?mpid=272171\u0026gad_source=5\u0026gad_campaignid=22128582429\u0026gclid=EAIaIQobChMI7LCZuJa5kgMVf4mOCB3F0Qc3EAEYASAQEgKmPfD_BwE\u0026utm_campaign=(US)ProductAbandon-SMS1\u0026utm_medium=sms\u0026utm_source=attentive\u0026externalId=8pxDU",
+            "item": "Cotton Candy Costume for Girls",
+            "timeAgo": "2026-02-01"
+          },
+          {
+            "link": "https://www.halloweencostumes.com/sailor-mars-costume.html",
+            "item": "Sailor Moon Women\u0027s Sailor Mars Costume",
+            "timeAgo": "2026-01-28"
+          }
+        ]
+      },
+      "companyWebsite": "https://halloweencostumes.com",
+      "companyName": "HalloweenCostumes.com",
+      "notes": {
+        "escalate": [
+          "ESC expired codes/discount code issues, ask for cart ID and add it in esc notes",
+          "Don\u0027t send to CS for this client, ESC if needed",
+          "For retroactive discount requests add discount % in ESC note",
+          "ESC if a customer requests a different resolution, after their escalation was resolved"
+        ],
+        "dos_and_donts": [
+          "Fun Bucks AREN\u0027T rewards points, those are given during exchanges"
+        ],
+        "promo_and_exclusions": [
+          "This brand does not use coupon codes or promotions. All of their discounts are exclusively link-based and are applied automatically to the shopping cart upon checkout when the appropriate conditions are met",
+          "Please do not advise customers to use promotional codes, do not provide them with any codes, and do not direct them to look on the website for additional codes",
+          "They do not have any promotional code text fields on site to facilitate use"
+        ]
+      },
+      "blocklisted_words": [
+        
+      ],
+      "escalation_preferences": [
+        
+      ],
+      "messageTone": "Casual",
+      "conversation": [
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nGet it before it\u0027s gone! You don\u0027t want to miss out \u0026 leave a good thing behind! halloweencostumes.attn.tv/aAslTkX6d6BA",
+          "date_time": "2026-02-01 16:24:34.212",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nGet it before it\u0027s gone! You don\u0027t want to miss out \u0026 leave a good thing behind! halloweencostumes.attn.tv/afd2X_EMcBs2",
+          "date_time": "2026-02-02 20:26:00.896",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nPurim\u0027s all about the perfect disguise - get yours with 10% OFF all costumes! Shop now:\nhalloweencostumes.attn.tv/abzh5RN3lk_e",
+          "date_time": "2026-02-07 13:06:08.603",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nFrom powdered wigs to top hats - we\u0027ve got the historical looks to make President\u0027s Day fun.\nhalloweencostumes.attn.tv/a_ks5WPeu6lH",
+          "date_time": "2026-02-16 13:05:42.715",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nFrom clovers to costumes, we\u0027ve got what you need to stir up some St. Paddy\u0027s Day fun. Shop now:\nhalloweencostumes.attn.tv/aoCy5su-elAL",
+          "date_time": "2026-02-22 13:06:00.668",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nFrom trailblazers to queens, our historical costumes honor the women who shaped history. Shop now:\nhalloweencostumes.attn.tv/akp5ttCnrmWz",
+          "date_time": "2026-03-01 16:06:00.594",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "system",
+          "message_text": "Halloween Costumes: \nHey friend! Looks like you\u0027re exploring our site! I\u0027m here to assist you, just let me know what you\u0027re looking for! halloweencostumes.attn.tv/aWXVsTjYkG4v",
+          "date_time": "2026-03-01 17:51:52.973",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_type": "customer",
+          "message_text": "WonderWoman",
+          "date_time": "2026-03-01 17:52:28.317",
+          "message_media": [
+            
+          ]
+        },
+        {
+          "message_id": "019cab9b-94cb-4e98-f000-000082ca1cdf",
+          "message_text": "Halloween Costumes: Thanks for sharing this with me! What size do you need for the Wonder Woman costume?\n\nIn the meantime, you can take a look at our available Wonder Woman costumes here and find something you might like: https://halloweencostumes.attn.tv/ahuzbBop1UWY",
+          "message_type": "agent",
+          "agent": "82219",
+          "message_media": [
+            
+          ],
+          "date_time": "2026-03-01 17:53:46.090"
         }
       ]
     }
