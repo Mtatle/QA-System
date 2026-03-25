@@ -6,6 +6,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     const assignmentSelect = document.getElementById('assignmentSelect');
     const snapshotShareBtn = document.getElementById('snapshotShareBtn');
     const assignmentsStatus = document.getElementById('assignmentsStatus');
+    const regradeToggleBtn = document.getElementById('regradeToggleBtn');
+    const regradeBanner = document.getElementById('regradeBanner');
+    const regradeFormEl = document.getElementById('regradeForm');
+    const regradeMessageIdEl = document.getElementById('regradeMessageId');
+    const regradeSubmitBtn = document.getElementById('regradeSubmitBtn');
+    const regradeCancelBtn = document.getElementById('regradeCancelBtn');
+    const regradeStatusEl = document.getElementById('regradeStatus');
     const previousConversationBtn = document.getElementById('previousConversationBtn');
     const nextConversationBtn = document.getElementById('nextConversationBtn');
     const customFormEl = document.getElementById('customForm');
@@ -98,10 +105,109 @@ document.addEventListener('DOMContentLoaded', async () => {
     let uploadedScenariosCache = [];
     let uploadedScenariosLoaded = false;
     let uploadedScenariosLoadPromise = null;
+    let regradeRequestInFlight = false;
 
     if (snapshotShareBtn) {
         snapshotShareBtn.addEventListener('click', async () => {
             await createSnapshotAndCopyLink();
+        });
+    }
+
+    if (regradeToggleBtn) {
+        regradeToggleBtn.addEventListener('click', () => {
+            const shouldExpand = !!(regradeBanner && regradeBanner.hidden);
+            setRegradeExpanded(shouldExpand);
+        });
+    }
+
+    if (regradeCancelBtn) {
+        regradeCancelBtn.addEventListener('click', () => {
+            setRegradeExpanded(false);
+        });
+    }
+
+    if (regradeFormEl) {
+        regradeFormEl.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            if (!canUseRegradeMode()) {
+                setRegradeStatus('Regrade is only available in email assignment mode.', true);
+                updateRegradeUiVisibility({ keepStatus: true });
+                return;
+            }
+
+            const sendId = String(regradeMessageIdEl && regradeMessageIdEl.value || '').trim();
+            if (!sendId) {
+                setRegradeStatus('Enter a message ID to reopen.', true);
+                if (regradeMessageIdEl) regradeMessageIdEl.focus();
+                return;
+            }
+
+            const confirmed = window.confirm(
+                'Reopening this audit will immediately delete the existing sheet row for that message ID. If you close the page before submitting again, the old audit will stay removed. Continue?'
+            );
+            if (!confirmed) return;
+
+            const sessionId = getAssignmentSessionId({ createIfMissing: true });
+            const email = getLoggedInEmail();
+            if (!sessionId || !email) {
+                setRegradeStatus('Missing assignment session. Please reload and try again.', true);
+                return;
+            }
+
+            const customForm = document.getElementById('customForm');
+            const currentDraftPayload = buildAssignmentDraftPayloadFromUi(customForm);
+            if (currentDraftPayload) {
+                queueAssignmentDraftSavePayload(currentDraftPayload, { delayMs: 0 });
+            }
+
+            regradeRequestInFlight = true;
+            setRegradeControlsDisabled(true);
+            updateRegradeUiVisibility({ keepStatus: true });
+            setRegradeStatus('Reopening audit...', false);
+
+            try {
+                const response = await fetchAssignmentPost('regradeBySendId', {
+                    send_id: sendId,
+                    email,
+                    session_id: sessionId,
+                    app_base: getCurrentAppBaseUrl()
+                });
+
+                applyAssignmentSessionState(response && response.session, { silent: true });
+                const nextQueue = Array.isArray(response && response.assignments) ? response.assignments : [];
+                pruneLocallySkippedAssignments(nextQueue);
+                renderAssignmentQueue(nextQueue);
+
+                const reopenedAssignment = response && response.assignment ? response.assignment : null;
+                const reopenedQueueItem = reopenedAssignment && reopenedAssignment.assignment_id
+                    ? nextQueue.find((item) => String((item && item.assignment_id) || '').trim() === String(reopenedAssignment.assignment_id || '').trim())
+                    : null;
+                const targetUrl = getAssignmentUrlFromQueueItem(reopenedAssignment || reopenedQueueItem || {}, {
+                    prefersView: false
+                });
+                if (!targetUrl) {
+                    throw new Error('Reopened assignment URL is missing.');
+                }
+
+                const opened = await openAssignmentInPageByUrl(targetUrl, {
+                    updateHistory: true,
+                    replaceHistory: true,
+                    refreshQueue: false,
+                    maxAttempts: 3
+                });
+                if (!opened) {
+                    throw new Error('Reopened assignment could not be opened.');
+                }
+
+                setRegradeExpanded(false);
+            } catch (error) {
+                console.error('Regrade reopen failed:', error);
+                setRegradeStatus(`Unable to reopen audit: ${error.message || error}`, true);
+            } finally {
+                regradeRequestInFlight = false;
+                setRegradeControlsDisabled(false);
+                updateRegradeUiVisibility({ keepStatus: true });
+            }
         });
     }
 
@@ -445,6 +551,80 @@ document.addEventListener('DOMContentLoaded', async () => {
         assignmentsStatus.style.color = isError ? '#b00020' : '#4a4a4a';
         if (isError && text && !isElementVisible(assignmentsStatus)) {
             showTransientTopNotice(text, true);
+        }
+    }
+
+    function isAssignmentViewOnlyMode() {
+        return !!(
+            assignmentContext &&
+            (assignmentContext.role === 'viewer' || assignmentContext.mode === 'view')
+        );
+    }
+
+    function canUseRegradeMode() {
+        return !isSnapshotMode && canUseAssignmentMode() && !isAssignmentViewOnlyMode();
+    }
+
+    function setRegradeStatus(message, isError) {
+        if (!regradeStatusEl) return;
+        regradeStatusEl.textContent = String(message || '');
+        regradeStatusEl.style.color = isError ? '#b00020' : '#5e4830';
+    }
+
+    function setRegradeControlsDisabled(isDisabled) {
+        const disabled = !!isDisabled;
+        if (regradeMessageIdEl) regradeMessageIdEl.disabled = disabled;
+        if (regradeSubmitBtn) regradeSubmitBtn.disabled = disabled;
+        if (regradeCancelBtn) regradeCancelBtn.disabled = disabled;
+    }
+
+    function setRegradeExpanded(isExpanded, options = {}) {
+        if (!regradeBanner || !regradeToggleBtn) return;
+        const shouldExpand = !!isExpanded && canUseRegradeMode();
+        regradeBanner.hidden = !shouldExpand;
+        regradeToggleBtn.setAttribute('aria-expanded', shouldExpand ? 'true' : 'false');
+        if (!shouldExpand) {
+            if (options.keepStatus !== true) {
+                setRegradeStatus('', false);
+            }
+            if (options.clearInput !== false && regradeMessageIdEl && !regradeRequestInFlight) {
+                regradeMessageIdEl.value = '';
+            }
+            return;
+        }
+
+        if (options.keepStatus !== true) {
+            setRegradeStatus('', false);
+        }
+        if (regradeMessageIdEl && options.focus !== false) {
+            setTimeout(() => {
+                if (regradeMessageIdEl && !regradeMessageIdEl.disabled) {
+                    regradeMessageIdEl.focus();
+                    regradeMessageIdEl.select();
+                }
+            }, 0);
+        }
+    }
+
+    function updateRegradeUiVisibility(options = {}) {
+        const canUse = canUseRegradeMode();
+        if (regradeToggleBtn) {
+            regradeToggleBtn.hidden = !canUse;
+            regradeToggleBtn.disabled = !canUse || regradeRequestInFlight;
+            if (!canUse) {
+                regradeToggleBtn.setAttribute('aria-expanded', 'false');
+            }
+        }
+        if (!canUse) {
+            setRegradeExpanded(false, {
+                keepStatus: options.keepStatus === true,
+                clearInput: true
+            });
+            return;
+        }
+
+        if (regradeBanner && !regradeBanner.hidden) {
+            regradeToggleBtn.setAttribute('aria-expanded', 'true');
         }
     }
 
@@ -1584,6 +1764,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         snapshotShareBtn.title = isEditableAssignment
             ? 'Create assignment snapshot link'
             : 'Create snapshot link';
+        updateRegradeUiVisibility();
     }
 
     async function copyTextToClipboard(text) {
@@ -1875,6 +2056,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.body.classList.remove('assignment-view-only');
         document.body.classList.add('snapshot-share-view');
         updateSnapshotShareButtonVisibility();
+        updateRegradeUiVisibility();
     }
 
     function setSnapshotErrorState(message) {
@@ -2297,6 +2479,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         startAssignmentHeartbeat();
         selectCurrentAssignmentInQueue();
         updateSnapshotShareButtonVisibility();
+        updateRegradeUiVisibility();
         prefetchAssignmentDetailsInBackground(assignmentQueue);
         prefetchAssignmentWindowInBackground(assignmentContext.assignment_id);
 
@@ -2520,6 +2703,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (internalNotesEl) internalNotesEl.disabled = effectiveReadOnly;
         assignmentNavigationBaseDisabled = effectiveReadOnly;
         syncConversationNavigationDisabledState();
+        updateRegradeUiVisibility({ keepStatus: true });
     }
 
     function parseStoredFormState(raw) {
@@ -5111,6 +5295,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         scheduleSubmitOutboxProcessing(0);
     }
     updateSnapshotShareButtonVisibility();
+    updateRegradeUiVisibility();
     const assignmentParams = getAssignmentParamsFromUrl();
     const hasAid = !!assignmentParams.aid;
 

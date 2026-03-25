@@ -208,6 +208,21 @@ function doPost(e) {
       });
     }
 
+    if (action === 'regradeBySendId') {
+      const sendId = String(data.send_id || '').trim();
+      const email = normalizeEmail_(data.email);
+      const sessionId = String(data.session_id || '').trim();
+      if (!sendId || !email || !sessionId) {
+        return jsonResponse_({ error: 'Missing send_id, email, or session_id' });
+      }
+
+      return withScriptLock_(function() {
+        const result = regradeBySendIdForSession_(sendId, email, sessionId, data.app_base);
+        if (result.error) return jsonResponse_({ error: result.error });
+        return jsonResponse_(result);
+      });
+    }
+
     if (action === 'heartbeat') {
       const email = normalizeEmail_(data.email);
       const sessionId = String(data.session_id || '').trim();
@@ -656,6 +671,102 @@ function skipAssignmentForSession_(assignmentId, token, sessionId, appBaseUrl, r
     assignments: assignments,
     session: sessionToPayload_(session),
     skipped_assignment_id: String(assignmentId || '')
+  };
+}
+
+function regradeBySendIdForSession_(sendId, email, sessionId, appBaseUrl) {
+  const targetSendId = String(sendId || '').trim();
+  const normalizedEmail = normalizeEmail_(email);
+  const state = loadAssignmentState_();
+  const now = nowIso_();
+  const baseUrl = resolveAppBaseUrl_(appBaseUrl);
+
+  cleanupStaleSessions_(state, now);
+
+  const sessionIndex = findSessionIndex_(state.sessionsRows, sessionId);
+  if (sessionIndex < 0) return { error: 'Session not found' };
+  const session = rowToSessionObject_(state.sessionsRows[sessionIndex]);
+  if (!normalizedEmail || normalizeEmail_(session.agent_email) !== normalizedEmail) {
+    return { error: 'Session email mismatch' };
+  }
+  if (!isSessionActive_(session)) {
+    return { error: 'Session is not active' };
+  }
+
+  if (hasAssignmentForSendIdWithStatuses_(state.assignmentsRows, targetSendId, ACTIVE_ASSIGNMENT_STATUSES)) {
+    return { error: 'This message ID already has an active assignment.' };
+  }
+
+  let found = null;
+  let foundDifferentAuditor = false;
+  for (let i = state.assignmentsRows.length - 1; i >= 0; i--) {
+    const assignment = rowToAssignmentObject_(state.assignmentsRows[i]);
+    if (String(assignment.send_id || '').trim() !== targetSendId) continue;
+    if (String(assignment.status || '').toUpperCase() !== 'DONE') continue;
+    if (normalizeEmail_(assignment.assignee_email) === normalizedEmail) {
+      found = { index: i, assignment: assignment };
+      break;
+    }
+    foundDifferentAuditor = true;
+  }
+
+  if (!found) {
+    return {
+      error: foundDifferentAuditor
+        ? 'This message ID was audited by a different auditor.'
+        : 'No completed audit found for this message ID.'
+    };
+  }
+
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const dataSheet = getOrCreateSheet_(spreadsheet, DATA_SHEET, DATA_HEADERS);
+  const deletedRows = deleteMatchingDataRows_(dataSheet, {
+    assignmentId: '',
+    messageId: targetSendId
+  });
+
+  const assignment = found.assignment;
+  const beforeStatus = String(assignment.status || '').toUpperCase();
+  assignment.status = 'IN_PROGRESS';
+  assignment.assignee_email = normalizedEmail;
+  assignment.updated_at = now;
+  assignment.done_at = '';
+  assignment.assigned_session_id = sessionId;
+  assignment.assigned_at = now;
+
+  session.last_heartbeat_at = now;
+
+  setAssignmentRow_(state, found.index, assignment);
+  setSessionRow_(state, sessionIndex, session);
+
+  appendHistoryRow_(state.historyRowsToAppend, {
+    event_type: 'assignment_reopened_regrade',
+    assignment_id: assignment.assignment_id,
+    send_id: assignment.send_id,
+    from_status: beforeStatus,
+    to_status: 'IN_PROGRESS',
+    agent_email: normalizedEmail,
+    session_id: sessionId,
+    detail: `deleted_rows=${deletedRows}`
+  });
+
+  persistAssignmentState_(state);
+
+  const activeAssignments = getActiveAssignmentsForSession_(state.assignmentsRows, normalizedEmail, sessionId)
+    .map(function(activeAssignment) {
+      return assignmentToQueuePayload_(activeAssignment, baseUrl);
+    });
+  const reopenedAssignment = assignmentToQueuePayload_(assignment, baseUrl);
+  const remainingAssignments = activeAssignments.filter(function(item) {
+    return String(item.assignment_id || '') !== String(assignment.assignment_id || '');
+  });
+
+  return {
+    ok: true,
+    deleted_rows: deletedRows,
+    assignment: reopenedAssignment,
+    assignments: [reopenedAssignment].concat(remainingAssignments),
+    session: sessionToPayload_(session)
   };
 }
 
@@ -1712,21 +1823,16 @@ function handleLegacyPost_(data) {
     return withScriptLock_(function() {
       const dataSheet = getOrCreateSheet_(spreadsheet, DATA_SHEET, DATA_HEADERS);
       const assignmentId = String((data.assignmentId != null ? data.assignmentId : data.assignment_id) || '').trim();
-      const existingRow = assignmentId ? findDataRowByAssignmentId_(dataSheet, assignmentId) : 0;
-      if (existingRow > 0) {
-        console.log('Skipping duplicate evaluation submission for assignment_id=%s (row %s)', assignmentId, existingRow);
-        return jsonResponse_({
-          status: 'success',
-          deduped: true,
-          row: existingRow,
-          assignmentId: assignmentId
-        });
-      }
+      const messageId = String((data.messageId != null ? data.messageId : data.message_id) || '').trim();
+      const replacedRows = deleteMatchingDataRows_(dataSheet, {
+        assignmentId: assignmentId,
+        messageId: messageId
+      });
 
       safeAppendRow(dataSheet, [
         data.timestamp || '',
         data.emailAddress || '',
-        data.messageId || '',
+        messageId,
         data.auditTime || '',
         data.issueIdentification || '',
         data.properResolution || '',
@@ -1741,7 +1847,7 @@ function handleLegacyPost_(data) {
         assignmentId
       ]);
 
-      return jsonResponse_({ status: 'success' });
+      return jsonResponse_({ status: 'success', replaced_rows: replacedRows });
     });
   }
 
@@ -2200,6 +2306,16 @@ function assignmentToRow_(assignment) {
   ];
 }
 
+function assignmentToQueuePayload_(assignment, baseUrl) {
+  return {
+    assignment_id: String(assignment.assignment_id || ''),
+    send_id: String(assignment.send_id || ''),
+    status: String(assignment.status || ''),
+    edit_url: buildAssignmentUrl_(baseUrl, assignment.assignment_id, assignment.editor_token, 'edit'),
+    view_url: buildAssignmentUrl_(baseUrl, assignment.assignment_id, assignment.viewer_token, 'view')
+  };
+}
+
 function tokenRoleForAssignment_(assignment, token) {
   const rawToken = String(token || '');
   if (!rawToken) return '';
@@ -2336,6 +2452,58 @@ function findDataRowByAssignmentId_(dataSheet, assignmentId) {
     }
   }
   return 0;
+}
+
+function findMatchingDataRowsByColumn_(dataSheet, columnNumber, targetValue) {
+  const target = String(targetValue || '').trim();
+  if (!dataSheet || !columnNumber || !target) return [];
+  const lastRow = dataSheet.getLastRow();
+  if (lastRow < 2) return [];
+
+  const values = dataSheet.getRange(2, columnNumber, lastRow - 1, 1).getValues();
+  const rows = [];
+  for (let i = 0; i < values.length; i++) {
+    if (String(values[i][0] || '').trim() === target) {
+      rows.push(i + 2);
+    }
+  }
+  return rows;
+}
+
+function deleteRowsDescending_(sheet, rowNumbers) {
+  const seen = {};
+  const safeRows = [];
+  const list = Array.isArray(rowNumbers) ? rowNumbers : [];
+  for (let i = 0; i < list.length; i++) {
+    const rowNumber = Number(list[i]);
+    if (!Number.isFinite(rowNumber) || rowNumber < 2 || seen[rowNumber]) continue;
+    seen[rowNumber] = true;
+    safeRows.push(rowNumber);
+  }
+
+  safeRows.sort(function(a, b) { return b - a; });
+  for (let i = 0; i < safeRows.length; i++) {
+    sheet.deleteRow(safeRows[i]);
+  }
+  return safeRows.length;
+}
+
+function deleteMatchingDataRows_(dataSheet, options) {
+  const assignmentId = String(options && options.assignmentId || '').trim();
+  const messageId = String(options && options.messageId || '').trim();
+  const rowNumbers = [];
+
+  if (assignmentId) {
+    const assignmentRows = findMatchingDataRowsByColumn_(dataSheet, DATA_HEADERS.length, assignmentId);
+    for (let i = 0; i < assignmentRows.length; i++) rowNumbers.push(assignmentRows[i]);
+  }
+  if (messageId) {
+    const messageRows = findMatchingDataRowsByColumn_(dataSheet, 3, messageId);
+    for (let i = 0; i < messageRows.length; i++) rowNumbers.push(messageRows[i]);
+  }
+
+  if (!rowNumbers.length) return 0;
+  return deleteRowsDescending_(dataSheet, rowNumbers);
 }
 
 function generateOpaqueToken_() {

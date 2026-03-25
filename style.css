@@ -749,7 +749,8 @@ polyline[points="6 9 12 15 18 9"] {
 
 /* Top bar action buttons */
 .logout-btn,
-.next-conversation-btn {
+.next-conversation-btn,
+.regrade-toggle-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -777,6 +778,13 @@ polyline[points="6 9 12 15 18 9"] {
     color: #56322b;
 }
 
+.regrade-toggle-btn {
+    gap: 6px;
+    background: #fff4cb;
+    border-color: rgba(116, 67, 55, 0.18);
+    color: #5c3f14;
+}
+
 .next-conversation-btn.nav-arrow-btn {
     width: 35px;
     min-width: 35px;
@@ -796,7 +804,8 @@ polyline[points="6 9 12 15 18 9"] {
 }
 
 .logout-btn:hover,
-.next-conversation-btn:hover {
+.next-conversation-btn:hover,
+.regrade-toggle-btn:hover {
     transform: translateY(-1px);
 }
 
@@ -806,6 +815,12 @@ polyline[points="6 9 12 15 18 9"] {
     color: #56322b;
 }
 
+.regrade-toggle-btn:hover {
+    background: #ffe6a0;
+    border-color: rgba(116, 67, 55, 0.24);
+    color: #5c3f14;
+}
+
 .logout-btn:hover {
     background: #ffcdc2;
     border-color: rgba(116, 67, 55, 0.22);
@@ -813,7 +828,8 @@ polyline[points="6 9 12 15 18 9"] {
 }
 
 .logout-btn:active,
-.next-conversation-btn:active {
+.next-conversation-btn:active,
+.regrade-toggle-btn:active {
     transform: translateY(0);
 }
 
@@ -822,19 +838,26 @@ polyline[points="6 9 12 15 18 9"] {
     border-color: rgba(116, 67, 55, 0.25);
 }
 
+.regrade-toggle-btn:active {
+    background: #ffd777;
+    border-color: rgba(116, 67, 55, 0.28);
+}
+
 .logout-btn:active {
     background: #f7b9aa;
     border-color: rgba(116, 67, 55, 0.25);
 }
 
 .logout-btn:focus-visible,
-.next-conversation-btn:focus-visible {
+.next-conversation-btn:focus-visible,
+.regrade-toggle-btn:focus-visible {
     outline: 2px solid rgba(0, 0, 0, 0.7);
     outline-offset: 2px;
 }
 
 .logout-btn:disabled,
-.next-conversation-btn:disabled {
+.next-conversation-btn:disabled,
+.regrade-toggle-btn:disabled {
     opacity: 0.55;
     cursor: not-allowed;
     transform: none;
@@ -842,7 +865,8 @@ polyline[points="6 9 12 15 18 9"] {
     filter: grayscale(0.08);
 }
 
-.logout-btn .icon-small {
+.logout-btn .icon-small,
+.regrade-toggle-btn .icon-small {
     display: block;
     margin-right: 6px;
     color: currentColor;
@@ -922,6 +946,116 @@ polyline[points="6 9 12 15 18 9"] {
     font-size: 0.74em;
     color: #4a4a4a;
     min-height: 1em;
+}
+
+.regrade-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 20px;
+    border-bottom: 1px solid #eadb58;
+    background:
+        linear-gradient(180deg, rgba(255, 247, 197, 0.98) 0%, rgba(255, 239, 179, 0.98) 100%);
+}
+
+.regrade-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.regrade-label {
+    font-size: 0.82em;
+    font-weight: 700;
+    color: #5f4412;
+    white-space: nowrap;
+}
+
+.regrade-input {
+    flex: 1 1 340px;
+    min-width: 180px;
+    max-width: 520px;
+    border: 1px solid rgba(116, 67, 55, 0.2);
+    border-radius: 10px;
+    padding: 9px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    background: rgba(255, 255, 255, 0.82);
+    color: #3c2c0f;
+}
+
+.regrade-input:focus {
+    outline: 2px solid rgba(92, 63, 20, 0.2);
+    border-color: rgba(116, 67, 55, 0.32);
+}
+
+.regrade-submit-btn,
+.regrade-cancel-btn {
+    appearance: none;
+    border-radius: 10px;
+    height: 36px;
+    padding: 0 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.84em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.16s ease, background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.regrade-submit-btn {
+    border: 1px solid rgba(116, 67, 55, 0.18);
+    background: #f3a181;
+    color: #432118;
+}
+
+.regrade-submit-btn:hover {
+    transform: translateY(-1px);
+    background: #ed8d68;
+}
+
+.regrade-submit-btn:active {
+    transform: translateY(0);
+    background: #e17b51;
+}
+
+.regrade-cancel-btn {
+    border: 1px solid rgba(116, 67, 55, 0.16);
+    background: rgba(255, 255, 255, 0.62);
+    color: #5e4830;
+}
+
+.regrade-cancel-btn:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.regrade-cancel-btn:active {
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.regrade-submit-btn:focus-visible,
+.regrade-cancel-btn:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.7);
+    outline-offset: 2px;
+}
+
+.regrade-submit-btn:disabled,
+.regrade-cancel-btn:disabled,
+.regrade-input:disabled {
+    opacity: 0.62;
+    cursor: not-allowed;
+}
+
+.regrade-status {
+    flex: 0 0 auto;
+    min-width: 180px;
+    font-size: 0.78em;
+    color: #5e4830;
+    text-align: right;
 }
 
 
@@ -2608,6 +2742,26 @@ mark {
 
     .assignment-select {
         min-width: 0;
+    }
+
+    .regrade-banner {
+        align-items: stretch;
+        padding: 12px 15px;
+    }
+
+    .regrade-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .regrade-input {
+        min-width: 0;
+        max-width: none;
+    }
+
+    .regrade-status {
+        min-width: 0;
+        text-align: left;
     }
 }
 
