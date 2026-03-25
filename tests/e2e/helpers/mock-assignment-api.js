@@ -56,22 +56,24 @@ function createMockAssignmentApi(options = {}) {
     assignee_email: assigneeEmail,
     session_id: sessionId,
   }));
-  const defaultCompletedSendId = runtimeSendIds.find((sendId) => !selectedSendIds.includes(sendId)) || '';
+  const defaultCompletedSendId =
+    runtimeSendIds.find((sendId) => !selectedSendIds.includes(sendId)) || '';
   const completedAssignmentsInput = Array.isArray(options.completedAssignments)
     ? options.completedAssignments
-    : (options.includeDefaultCompletedAssignment && defaultCompletedSendId
-        ? [{
+    : options.includeDefaultCompletedAssignment && defaultCompletedSendId
+      ? [
+          {
             send_id: defaultCompletedSendId,
             form_state_json: '',
             internal_note: '',
             assignee_email: assigneeEmail,
-          }]
-        : []);
+          },
+        ]
+      : [];
   const completedAssignments = completedAssignmentsInput
     .map((entry, index) => {
-      const source = entry && typeof entry === 'object'
-        ? entry
-        : { send_id: String(entry || '').trim() };
+      const source =
+        entry && typeof entry === 'object' ? entry : { send_id: String(entry || '').trim() };
       const sendId = String(source.send_id || '').trim();
       if (!sendId) return null;
       const assignmentId = String(source.assignment_id || `aid-done-${index + 1}`).trim();
@@ -82,23 +84,27 @@ function createMockAssignmentApi(options = {}) {
         token: String(source.token || `token-${assignmentId}`),
         form_state_json: String(source.form_state_json || ''),
         internal_note: String(source.internal_note || ''),
-        assignee_email: String(source.assignee_email || assigneeEmail).trim().toLowerCase(),
+        assignee_email: String(source.assignee_email || assigneeEmail)
+          .trim()
+          .toLowerCase(),
         session_id: String(source.session_id || '').trim(),
         done_at: String(source.done_at || `2025-01-0${index + 1}T12:00:00.000Z`),
       };
     })
     .filter(Boolean);
-  assignments.push(...completedAssignments.map((assignment) => ({
-    assignment_id: assignment.assignment_id,
-    send_id: assignment.send_id,
-    status: assignment.status,
-    token: assignment.token,
-    form_state_json: assignment.form_state_json,
-    internal_note: assignment.internal_note,
-    assignee_email: assignment.assignee_email,
-    session_id: assignment.session_id,
-    done_at: assignment.done_at,
-  })));
+  assignments.push(
+    ...completedAssignments.map((assignment) => ({
+      assignment_id: assignment.assignment_id,
+      send_id: assignment.send_id,
+      status: assignment.status,
+      token: assignment.token,
+      form_state_json: assignment.form_state_json,
+      internal_note: assignment.internal_note,
+      assignee_email: assignment.assignee_email,
+      session_id: assignment.session_id,
+      done_at: assignment.done_at,
+    }))
+  );
 
   const state = {
     submitted_count: 0,
@@ -164,14 +170,20 @@ function createMockAssignmentApi(options = {}) {
 
   function findLatestCompletedAssignmentBySendId(sendId, email) {
     const targetSendId = String(sendId || '').trim();
-    const targetEmail = String(email || '').trim().toLowerCase();
+    const targetEmail = String(email || '')
+      .trim()
+      .toLowerCase();
     let ownedMatch = null;
     let differentAuditorMatch = null;
     for (let i = assignments.length - 1; i >= 0; i -= 1) {
       const assignment = assignments[i];
       if (String(assignment.send_id || '').trim() !== targetSendId) continue;
       if (String(assignment.status || '').toUpperCase() !== 'DONE') continue;
-      if (String(assignment.assignee_email || '').trim().toLowerCase() === targetEmail) {
+      if (
+        String(assignment.assignee_email || '')
+          .trim()
+          .toLowerCase() === targetEmail
+      ) {
         ownedMatch = assignment;
         break;
       }
@@ -187,8 +199,10 @@ function createMockAssignmentApi(options = {}) {
     const targetAssignmentId = String(assignmentId || '').trim();
     const targetMessageId = String(messageId || '').trim();
     const nextRows = state.dataRows.filter((row) => {
-      const matchesAssignment = targetAssignmentId && String(row.assignmentId || '').trim() === targetAssignmentId;
-      const matchesMessage = targetMessageId && String(row.messageId || '').trim() === targetMessageId;
+      const matchesAssignment =
+        targetAssignmentId && String(row.assignmentId || '').trim() === targetAssignmentId;
+      const matchesMessage =
+        targetMessageId && String(row.messageId || '').trim() === targetMessageId;
       return !(matchesAssignment || matchesMessage);
     });
     const deletedCount = Math.max(0, state.dataRows.length - nextRows.length);
@@ -268,8 +282,8 @@ function createMockAssignmentApi(options = {}) {
           messageId: payload.messageId || payload.message_id,
         });
         state.dataRows.push({
-          assignmentId: String((payload.assignmentId || payload.assignment_id) || '').trim(),
-          messageId: String((payload.messageId || payload.message_id) || '').trim(),
+          assignmentId: String(payload.assignmentId || payload.assignment_id || '').trim(),
+          messageId: String(payload.messageId || payload.message_id || '').trim(),
           notes: String(payload.notes || ''),
         });
       }
@@ -309,19 +323,25 @@ function createMockAssignmentApi(options = {}) {
       state.regradeCalls += 1;
       state.lastRegradePayload = payload;
       const sendId = String(payload.send_id || '').trim();
-      const email = String(payload.email || '').trim().toLowerCase();
+      const email = String(payload.email || '')
+        .trim()
+        .toLowerCase();
       if (!sendId || !email || String(payload.session_id || '').trim() !== sessionId) {
         return fulfillJson(route, { error: 'Missing send_id, email, or session_id' });
       }
-      const hasActiveAssignment = assignments.some((assignment) => (
-        String(assignment.send_id || '').trim() === sendId &&
-        activeStatuses.has(String(assignment.status || '').toUpperCase())
-      ));
+      const hasActiveAssignment = assignments.some(
+        (assignment) =>
+          String(assignment.send_id || '').trim() === sendId &&
+          activeStatuses.has(String(assignment.status || '').toUpperCase())
+      );
       if (hasActiveAssignment) {
         return fulfillJson(route, { error: 'This message ID already has an active assignment.' });
       }
 
-      const { ownedMatch, differentAuditorMatch } = findLatestCompletedAssignmentBySendId(sendId, email);
+      const { ownedMatch, differentAuditorMatch } = findLatestCompletedAssignmentBySendId(
+        sendId,
+        email
+      );
       if (!ownedMatch) {
         return fulfillJson(route, {
           error: differentAuditorMatch
@@ -345,9 +365,11 @@ function createMockAssignmentApi(options = {}) {
         edit_url: urls.edit_url,
         view_url: urls.view_url,
       };
-      const remainingAssignments = activeAssignments.filter((assignment) => (
-        String(assignment.assignment_id || '').trim() !== String(ownedMatch.assignment_id || '').trim()
-      ));
+      const remainingAssignments = activeAssignments.filter(
+        (assignment) =>
+          String(assignment.assignment_id || '').trim() !==
+          String(ownedMatch.assignment_id || '').trim()
+      );
       return fulfillJson(route, {
         ok: true,
         deleted_rows: deletedRows,

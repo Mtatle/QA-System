@@ -13,7 +13,9 @@ function loadRuntimeSendIds(fallback = []) {
   } catch (_) {
     // Ignore index read issues and use fallback ids instead.
   }
-  return Array.isArray(fallback) ? fallback.map((value) => String(value || '').trim()).filter(Boolean) : [];
+  return Array.isArray(fallback)
+    ? fallback.map((value) => String(value || '').trim()).filter(Boolean)
+    : [];
 }
 
 const fallbackSendIds = [
