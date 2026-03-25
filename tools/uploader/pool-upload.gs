@@ -677,15 +677,17 @@ function skipAssignmentForSession_(assignmentId, token, sessionId, appBaseUrl, r
 function regradeBySendIdForSession_(sendId, email, sessionId, appBaseUrl) {
   const targetSendId = String(sendId || '').trim();
   const normalizedEmail = normalizeEmail_(email);
-  const state = loadAssignmentState_();
   const now = nowIso_();
   const baseUrl = resolveAppBaseUrl_(appBaseUrl);
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const assignmentsSheet = getOrCreateSheet_(spreadsheet, ASSIGNMENTS_SHEET, ASSIGNMENTS_HEADERS);
+  const sessionsSheet = getOrCreateSheet_(spreadsheet, QA_SESSIONS_SHEET, SESSION_HEADERS);
+  const historySheet = getOrCreateSheet_(spreadsheet, QA_ASSIGNMENT_HISTORY_SHEET, HISTORY_HEADERS);
+  const dataSheet = getOrCreateSheet_(spreadsheet, DATA_SHEET, DATA_HEADERS);
 
-  cleanupStaleSessions_(state, now);
-
-  const sessionIndex = findSessionIndex_(state.sessionsRows, sessionId);
-  if (sessionIndex < 0) return { error: 'Session not found' };
-  const session = rowToSessionObject_(state.sessionsRows[sessionIndex]);
+  const sessionRowNumber = findFirstRowNumberByColumnValue_(sessionsSheet, 1, sessionId);
+  if (!sessionRowNumber) return { error: 'Session not found' };
+  const session = rowToSessionObject_(getSheetRowValues_(sessionsSheet, sessionRowNumber, SESSION_HEADERS.length));
   if (!normalizedEmail || normalizeEmail_(session.agent_email) !== normalizedEmail) {
     return { error: 'Session email mismatch' };
   }
@@ -693,18 +695,34 @@ function regradeBySendIdForSession_(sendId, email, sessionId, appBaseUrl) {
     return { error: 'Session is not active' };
   }
 
-  if (hasAssignmentForSendIdWithStatuses_(state.assignmentsRows, targetSendId, ACTIVE_ASSIGNMENT_STATUSES)) {
-    return { error: 'This message ID already has an active assignment.' };
-  }
-
   let found = null;
   let foundDifferentAuditor = false;
-  for (let i = state.assignmentsRows.length - 1; i >= 0; i--) {
-    const assignment = rowToAssignmentObject_(state.assignmentsRows[i]);
-    if (String(assignment.send_id || '').trim() !== targetSendId) continue;
-    if (String(assignment.status || '').toUpperCase() !== 'DONE') continue;
+  const matchingAssignmentRowNumbers = findRowNumbersByColumnValue_(assignmentsSheet, 1, targetSendId)
+    .sort(function(a, b) { return b - a; });
+
+  for (let i = 0; i < matchingAssignmentRowNumbers.length; i++) {
+    const rowNumber = matchingAssignmentRowNumbers[i];
+    const assignment = rowToAssignmentObject_(getSheetRowValues_(assignmentsSheet, rowNumber, ASSIGNMENTS_HEADERS.length));
+    const status = String(assignment.status || '').toUpperCase();
+
+    if (ACTIVE_ASSIGNMENT_STATUSES[status]) {
+      const ownerSessionId = String(assignment.assigned_session_id || '').trim();
+      let ownerSession = null;
+      if (ownerSessionId) {
+        const ownerSessionRowNumber = findFirstRowNumberByColumnValue_(sessionsSheet, 1, ownerSessionId);
+        if (ownerSessionRowNumber) {
+          ownerSession = rowToSessionObject_(getSheetRowValues_(sessionsSheet, ownerSessionRowNumber, SESSION_HEADERS.length));
+        }
+      }
+      if (ownerSession && isSessionLive_(ownerSession)) {
+        return { error: 'This message ID already has an active assignment.' };
+      }
+      continue;
+    }
+
+    if (status !== 'DONE') continue;
     if (normalizeEmail_(assignment.assignee_email) === normalizedEmail) {
-      found = { index: i, assignment: assignment };
+      found = { rowNumber: rowNumber, assignment: assignment };
       break;
     }
     foundDifferentAuditor = true;
@@ -718,8 +736,6 @@ function regradeBySendIdForSession_(sendId, email, sessionId, appBaseUrl) {
     };
   }
 
-  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
-  const dataSheet = getOrCreateSheet_(spreadsheet, DATA_SHEET, DATA_HEADERS);
   const deletedRows = deleteMatchingDataRows_(dataSheet, {
     assignmentId: '',
     messageId: targetSendId
@@ -736,23 +752,21 @@ function regradeBySendIdForSession_(sendId, email, sessionId, appBaseUrl) {
 
   session.last_heartbeat_at = now;
 
-  setAssignmentRow_(state, found.index, assignment);
-  setSessionRow_(state, sessionIndex, session);
+  assignmentsSheet
+    .getRange(found.rowNumber, 1, 1, ASSIGNMENTS_HEADERS.length)
+    .setValues([assignmentToRow_(assignment)]);
+  sessionsSheet
+    .getRange(sessionRowNumber, 1, 1, SESSION_HEADERS.length)
+    .setValues([sessionToRow_(session)]);
+  appendSingleHistoryEvent_(historySheet, regradeHistoryEvent_(
+    assignment,
+    beforeStatus,
+    normalizedEmail,
+    sessionId,
+    deletedRows
+  ));
 
-  appendHistoryRow_(state.historyRowsToAppend, {
-    event_type: 'assignment_reopened_regrade',
-    assignment_id: assignment.assignment_id,
-    send_id: assignment.send_id,
-    from_status: beforeStatus,
-    to_status: 'IN_PROGRESS',
-    agent_email: normalizedEmail,
-    session_id: sessionId,
-    detail: `deleted_rows=${deletedRows}`
-  });
-
-  persistAssignmentState_(state);
-
-  const activeAssignments = getActiveAssignmentsForSession_(state.assignmentsRows, normalizedEmail, sessionId)
+  const activeAssignments = listActiveAssignmentsForSessionFromSheet_(assignmentsSheet, normalizedEmail, sessionId)
     .map(function(activeAssignment) {
       return assignmentToQueuePayload_(activeAssignment, baseUrl);
     });
@@ -767,6 +781,88 @@ function regradeBySendIdForSession_(sendId, email, sessionId, appBaseUrl) {
     assignment: reopenedAssignment,
     assignments: [reopenedAssignment].concat(remainingAssignments),
     session: sessionToPayload_(session)
+  };
+}
+
+function appendSingleHistoryEvent_(historySheet, event) {
+  if (!historySheet) return;
+  historySheet
+    .getRange(historySheet.getLastRow() + 1, 1, 1, HISTORY_HEADERS.length)
+    .setValues([[
+      nowIso_(),
+      String(event.event_type || ''),
+      String(event.assignment_id || ''),
+      String(event.send_id || ''),
+      String(event.from_status || ''),
+      String(event.to_status || ''),
+      normalizeEmail_(event.agent_email),
+      String(event.session_id || ''),
+      String(event.detail || '')
+    ]]);
+}
+
+function listActiveAssignmentsForSessionFromSheet_(assignmentsSheet, email, sessionId) {
+  const rowNumbers = findRowNumbersByColumnValue_(assignmentsSheet, 12, sessionId);
+  const list = [];
+  for (let i = 0; i < rowNumbers.length; i++) {
+    const assignment = rowToAssignmentObject_(getSheetRowValues_(assignmentsSheet, rowNumbers[i], ASSIGNMENTS_HEADERS.length));
+    const assignee = normalizeEmail_(assignment.assignee_email);
+    const status = String(assignment.status || '').toUpperCase();
+    const ownerSession = String(assignment.assigned_session_id || '');
+    if (assignee === email && ownerSession === sessionId && ACTIVE_ASSIGNMENT_STATUSES[status]) {
+      list.push(assignment);
+    }
+  }
+  list.sort(function(a, b) {
+    return String(a.created_at || '').localeCompare(String(b.created_at || ''));
+  });
+  return list;
+}
+
+function findFirstRowNumberByColumnValue_(sheet, columnNumber, targetValue) {
+  const rowNumbers = findRowNumbersByColumnValue_(sheet, columnNumber, targetValue);
+  return rowNumbers.length ? rowNumbers[0] : 0;
+}
+
+function findRowNumbersByColumnValue_(sheet, columnNumber, targetValue) {
+  const target = String(targetValue || '').trim();
+  if (!sheet || !columnNumber || !target) return [];
+  const lastRow = sheet.getLastRow();
+  if (lastRow < 2) return [];
+
+  const finder = sheet
+    .getRange(2, columnNumber, lastRow - 1, 1)
+    .createTextFinder(target)
+    .matchEntireCell(true)
+    .matchCase(true);
+  const matches = finder.findAll();
+  const rows = [];
+  for (let i = 0; i < matches.length; i++) {
+    rows.push(matches[i].getRow());
+  }
+  return rows;
+}
+
+function getSheetRowValues_(sheet, rowNumber, expectedCols) {
+  const safeRowNumber = Number(rowNumber);
+  if (!sheet || !Number.isFinite(safeRowNumber) || safeRowNumber < 2) return [];
+  return sheet.getRange(safeRowNumber, 1, 1, expectedCols).getValues()[0] || [];
+}
+
+function regradeHistoryEventDetail_(deletedRows) {
+  return `deleted_rows=${deletedRows}`;
+}
+
+function regradeHistoryEvent_(assignment, beforeStatus, normalizedEmail, sessionId, deletedRows) {
+  return {
+    event_type: 'assignment_reopened_regrade',
+    assignment_id: String(assignment.assignment_id || ''),
+    send_id: String(assignment.send_id || ''),
+    from_status: beforeStatus,
+    to_status: 'IN_PROGRESS',
+    agent_email: normalizeEmail_(normalizedEmail),
+    session_id: String(sessionId || ''),
+    detail: regradeHistoryEventDetail_(deletedRows)
   };
 }
 
@@ -2455,19 +2551,7 @@ function findDataRowByAssignmentId_(dataSheet, assignmentId) {
 }
 
 function findMatchingDataRowsByColumn_(dataSheet, columnNumber, targetValue) {
-  const target = String(targetValue || '').trim();
-  if (!dataSheet || !columnNumber || !target) return [];
-  const lastRow = dataSheet.getLastRow();
-  if (lastRow < 2) return [];
-
-  const values = dataSheet.getRange(2, columnNumber, lastRow - 1, 1).getValues();
-  const rows = [];
-  for (let i = 0; i < values.length; i++) {
-    if (String(values[i][0] || '').trim() === target) {
-      rows.push(i + 2);
-    }
-  }
-  return rows;
+  return findRowNumbersByColumnValue_(dataSheet, columnNumber, targetValue);
 }
 
 function deleteRowsDescending_(sheet, rowNumbers) {
