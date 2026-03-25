@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const ASSIGNMENT_DONE_TIMEOUT_MS = 30000;
     const ASSIGNMENT_DRAFT_TIMEOUT_MS = 25000;
     const ASSIGNMENT_HEARTBEAT_TIMEOUT_MS = 35000;
+    const ASSIGNMENT_REGRADE_TIMEOUT_MS = 60000;
     const ASSIGNMENT_HEARTBEAT_MIN_GAP_MS = 15000;
     const ASSIGNMENT_PREFETCH_TIMEOUT_MS = 20000;
     const ASSIGNMENT_PREFETCH_CONCURRENCY = 1;
@@ -155,12 +156,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return;
             }
 
-            const customForm = document.getElementById('customForm');
-            const currentDraftPayload = buildAssignmentDraftPayloadFromUi(customForm);
-            if (currentDraftPayload) {
-                queueAssignmentDraftSavePayload(currentDraftPayload, { delayMs: 0 });
-            }
-
             regradeRequestInFlight = true;
             setRegradeControlsDisabled(true);
             updateRegradeUiVisibility({ keepStatus: true });
@@ -172,7 +167,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     email,
                     session_id: sessionId,
                     app_base: getCurrentAppBaseUrl()
-                });
+                }, { timeoutMs: ASSIGNMENT_REGRADE_TIMEOUT_MS });
 
                 applyAssignmentSessionState(response && response.session, { silent: true });
                 const nextQueue = Array.isArray(response && response.assignments) ? response.assignments : [];
@@ -1669,6 +1664,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function sendAssignmentHeartbeat(options = {}) {
         if (isSnapshotMode) return;
         if (!canUseAssignmentMode()) return;
+        if (regradeRequestInFlight) return;
         const email = getLoggedInEmail();
         const sessionId = getAssignmentSessionId();
         if (!email || !sessionId) return;

@@ -68,6 +68,7 @@ test.describe('Regrade by message ID', () => {
   test('reopens a completed audit, removes the prior data row, and allows resubmission', async ({
     page,
   }) => {
+    test.setTimeout(45000);
     const sendIds = buildSendIdSet();
     const restoredFormState = {
       'issue_identification::necessary_reply': false,
@@ -93,6 +94,7 @@ test.describe('Regrade by message ID', () => {
           notes: 'Old data row',
         },
       ],
+      regradeDelayMs: 16000,
     });
 
     await seedEmailLogin(page);
@@ -106,6 +108,7 @@ test.describe('Regrade by message ID', () => {
       })
       .toBe('aid-1');
     await expect(page.locator('#regradeToggleBtn')).toBeVisible();
+    await expect(page.locator('#regradeSubmitBtn')).toHaveText('');
 
     await page.click('#regradeToggleBtn');
     await expect(page.locator('#regradeBanner')).toBeVisible();
@@ -115,8 +118,8 @@ test.describe('Regrade by message ID', () => {
     await page.click('#regradeSubmitBtn');
     await confirmPromise;
 
-    await expect.poll(() => api.state.regradeCalls, { timeout: 10000 }).toBe(1);
-    await expect.poll(() => api.getDataRows().length, { timeout: 10000 }).toBe(0);
+    await expect.poll(() => api.state.regradeCalls, { timeout: 25000 }).toBe(1);
+    await expect.poll(() => api.getDataRows().length, { timeout: 25000 }).toBe(0);
     await expect
       .poll(() => {
         const currentUrl = new URL(page.url());

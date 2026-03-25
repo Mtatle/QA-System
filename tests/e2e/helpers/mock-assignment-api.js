@@ -23,6 +23,7 @@ function createMockAssignmentApi(options = {}) {
   const saveDraftDelaySequence = Array.isArray(options.saveDraftDelaySequence)
     ? options.saveDraftDelaySequence.map((value) => Math.max(0, Number(value) || 0))
     : [];
+  const regradeDelayMs = Math.max(0, Number(options.regradeDelayMs) || 0);
   const doneErrorsByAssignmentId =
     options.doneErrorsByAssignmentId && typeof options.doneErrorsByAssignmentId === 'object'
       ? options.doneErrorsByAssignmentId
@@ -348,6 +349,10 @@ function createMockAssignmentApi(options = {}) {
             ? 'This message ID was audited by a different auditor.'
             : 'No completed audit found for this message ID.',
         });
+      }
+
+      if (regradeDelayMs > 0) {
+        await delay(regradeDelayMs);
       }
 
       const deletedRows = deleteDataRowsMatching({ messageId: sendId });
