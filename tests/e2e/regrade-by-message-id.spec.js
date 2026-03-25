@@ -58,11 +58,11 @@ test.describe('Regrade by message ID', () => {
     await page.goto('/app.html');
 
     await expect
-      .poll(() => page.locator('#regradeToggleBtn').evaluate((element) => element.hidden))
+      .poll(() => page.locator('#regradeShell').evaluate((element) => element.hidden))
       .toBe(true);
     await expect
-      .poll(() => page.locator('#regradeBanner').evaluate((element) => element.hidden))
-      .toBe(true);
+      .poll(() => page.locator('#regradeToggleBtn').getAttribute('aria-expanded'))
+      .toBe('false');
   });
 
   test('reopens a completed audit, removes the prior data row, and allows resubmission', async ({
@@ -172,6 +172,7 @@ test.describe('Regrade by message ID', () => {
 
     await expect(page.locator('#regradeToggleBtn')).toBeVisible();
     await page.click('#regradeToggleBtn');
+    await expect(page.locator('#regradeBanner')).toBeVisible();
 
     await page.fill('#regradeMessageId', sendIds[3]);
     let confirmPromise = page.waitForEvent('dialog').then((dialog) => dialog.accept());

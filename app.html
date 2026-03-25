@@ -29,10 +29,30 @@
                     </select>
                     <p id="assignmentsStatus" class="assignments-status" aria-live="polite"></p>
                 </div>
-                <button type="button" id="regradeToggleBtn" class="regrade-toggle-btn" title="Reopen a completed audit by message ID" aria-label="Reopen a completed audit by message ID" aria-controls="regradeBanner" aria-expanded="false" hidden>
-                    <i data-feather="rotate-ccw" class="icon-small"></i>
-                    REGRADE
-                </button>
+                <div class="regrade-shell" id="regradeShell" hidden>
+                    <button type="button" id="regradeToggleBtn" class="regrade-toggle-btn regrade-toggle-icon-btn" title="Reopen a completed audit by message ID" aria-label="Reopen a completed audit by message ID" aria-controls="regradeBanner" aria-expanded="false">
+                        <i data-feather="rotate-ccw" class="icon-small"></i>
+                    </button>
+                    <div class="regrade-banner" id="regradeBanner" aria-hidden="true">
+                        <form id="regradeForm" class="regrade-form">
+                            <label for="regradeMessageId" class="sr-only">Message ID</label>
+                            <input
+                                type="text"
+                                id="regradeMessageId"
+                                name="regrade_message_id"
+                                class="regrade-input"
+                                placeholder="Enter a previously submitted message ID"
+                                autocomplete="off"
+                                spellcheck="false"
+                            >
+                            <button type="submit" class="regrade-submit-btn" id="regradeSubmitBtn">Open</button>
+                            <button type="button" class="regrade-cancel-btn" id="regradeCancelBtn" aria-label="Close regrade entry">
+                                <i data-feather="x" class="icon-small"></i>
+                            </button>
+                        </form>
+                        <p id="regradeStatus" class="regrade-status" aria-live="polite" hidden></p>
+                    </div>
+                </div>
                 <button type="button" id="snapshotShareBtn" class="snapshot-share-icon-btn" title="Create snapshot link" aria-label="Create snapshot link">
                     <i data-feather="link" class="icon-small"></i>
                 </button>
@@ -44,24 +64,6 @@
                 </button>
             </div>
         </div>
-        <div class="regrade-banner" id="regradeBanner" hidden>
-            <form id="regradeForm" class="regrade-form">
-                <label for="regradeMessageId" class="regrade-label">Message ID</label>
-                <input
-                    type="text"
-                    id="regradeMessageId"
-                    name="regrade_message_id"
-                    class="regrade-input"
-                    placeholder="Enter a previously submitted message ID"
-                    autocomplete="off"
-                    spellcheck="false"
-                >
-                <button type="submit" class="regrade-submit-btn" id="regradeSubmitBtn">Reopen Audit</button>
-                <button type="button" class="regrade-cancel-btn" id="regradeCancelBtn">Cancel</button>
-            </form>
-            <p id="regradeStatus" class="regrade-status" aria-live="polite"></p>
-        </div>
-
         <div class="main-content">
             <!-- Leftmost: Custom Form Panel -->
             <aside class="form-panel">

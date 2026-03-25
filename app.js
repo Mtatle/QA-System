@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const assignmentSelect = document.getElementById('assignmentSelect');
     const snapshotShareBtn = document.getElementById('snapshotShareBtn');
     const assignmentsStatus = document.getElementById('assignmentsStatus');
+    const regradeShell = document.getElementById('regradeShell');
     const regradeToggleBtn = document.getElementById('regradeToggleBtn');
     const regradeBanner = document.getElementById('regradeBanner');
     const regradeFormEl = document.getElementById('regradeForm');
@@ -115,7 +116,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (regradeToggleBtn) {
         regradeToggleBtn.addEventListener('click', () => {
-            const shouldExpand = !!(regradeBanner && regradeBanner.hidden);
+            const shouldExpand = !(regradeShell && regradeShell.classList.contains('is-expanded'));
             setRegradeExpanded(shouldExpand);
         });
     }
@@ -567,8 +568,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function setRegradeStatus(message, isError) {
         if (!regradeStatusEl) return;
-        regradeStatusEl.textContent = String(message || '');
+        const text = String(message || '');
+        regradeStatusEl.textContent = text;
         regradeStatusEl.style.color = isError ? '#b00020' : '#5e4830';
+        regradeStatusEl.hidden = !text;
     }
 
     function setRegradeControlsDisabled(isDisabled) {
@@ -579,9 +582,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function setRegradeExpanded(isExpanded, options = {}) {
-        if (!regradeBanner || !regradeToggleBtn) return;
+        if (!regradeBanner || !regradeToggleBtn || !regradeShell) return;
         const shouldExpand = !!isExpanded && canUseRegradeMode();
-        regradeBanner.hidden = !shouldExpand;
+        regradeShell.classList.toggle('is-expanded', shouldExpand);
+        regradeBanner.setAttribute('aria-hidden', shouldExpand ? 'false' : 'true');
         regradeToggleBtn.setAttribute('aria-expanded', shouldExpand ? 'true' : 'false');
         if (!shouldExpand) {
             if (options.keepStatus !== true) {
@@ -608,8 +612,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function updateRegradeUiVisibility(options = {}) {
         const canUse = canUseRegradeMode();
+        if (regradeShell) {
+            regradeShell.hidden = !canUse;
+        }
         if (regradeToggleBtn) {
-            regradeToggleBtn.hidden = !canUse;
             regradeToggleBtn.disabled = !canUse || regradeRequestInFlight;
             if (!canUse) {
                 regradeToggleBtn.setAttribute('aria-expanded', 'false');
@@ -623,7 +629,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        if (regradeBanner && !regradeBanner.hidden) {
+        if (regradeShell && regradeShell.classList.contains('is-expanded')) {
             regradeToggleBtn.setAttribute('aria-expanded', 'true');
         }
     }

@@ -704,7 +704,7 @@ polyline[points="6 9 12 15 18 9"] {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eadb58;
-    height: 60px; /* Increased height */
+    min-height: 60px;
     position: relative; /* For absolute positioning of timer */
     overflow: hidden;
     isolation: isolate;
@@ -779,10 +779,15 @@ polyline[points="6 9 12 15 18 9"] {
 }
 
 .regrade-toggle-btn {
-    gap: 6px;
     background: #fff4cb;
     border-color: rgba(116, 67, 55, 0.18);
     color: #5c3f14;
+}
+
+.regrade-toggle-icon-btn {
+    width: 35px;
+    min-width: 35px;
+    padding: 0;
 }
 
 .next-conversation-btn.nav-arrow-btn {
@@ -875,6 +880,10 @@ polyline[points="6 9 12 15 18 9"] {
     flex: 0 0 auto;
 }
 
+.regrade-toggle-icon-btn .icon-small {
+    margin-right: 0;
+}
+
 .snapshot-share-icon-btn {
     display: inline-flex;
     align-items: center;
@@ -925,6 +934,7 @@ polyline[points="6 9 12 15 18 9"] {
     display: flex;
     align-items: center;
     gap: 12px;
+    min-width: 0;
 }
 
 .assignments-panel {
@@ -948,54 +958,87 @@ polyline[points="6 9 12 15 18 9"] {
     min-height: 1em;
 }
 
-.regrade-banner {
+.regrade-shell {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 12px 20px;
-    border-bottom: 1px solid #eadb58;
-    background:
-        linear-gradient(180deg, rgba(255, 247, 197, 0.98) 0%, rgba(255, 239, 179, 0.98) 100%);
+    gap: 10px;
+    min-width: 0;
+    flex: 0 1 auto;
+}
+
+.regrade-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    min-width: 0;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translateX(6px);
+    transition:
+        max-width 0.24s ease,
+        opacity 0.18s ease,
+        transform 0.24s ease;
+}
+
+.regrade-shell.is-expanded .regrade-banner {
+    max-width: min(560px, 42vw);
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
 }
 
 .regrade-form {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     flex: 1 1 auto;
     min-width: 0;
+    padding: 5px;
+    border: 1px solid rgba(116, 67, 55, 0.14);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 12px 24px rgba(121, 89, 33, 0.08);
 }
 
-.regrade-label {
-    font-size: 0.82em;
-    font-weight: 700;
-    color: #5f4412;
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
     white-space: nowrap;
+    border: 0;
 }
 
 .regrade-input {
-    flex: 1 1 340px;
-    min-width: 180px;
+    flex: 1 1 320px;
+    min-width: 210px;
     max-width: 520px;
-    border: 1px solid rgba(116, 67, 55, 0.2);
-    border-radius: 10px;
-    padding: 9px 12px;
+    border: none;
+    border-radius: 12px;
+    padding: 9px 14px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9em;
-    background: rgba(255, 255, 255, 0.82);
+    font-size: 0.87em;
+    font-weight: 500;
+    background: #ffffff;
     color: #3c2c0f;
+    box-shadow: inset 0 0 0 1px rgba(116, 67, 55, 0.12);
 }
 
 .regrade-input:focus {
-    outline: 2px solid rgba(92, 63, 20, 0.2);
-    border-color: rgba(116, 67, 55, 0.32);
+    outline: 2px solid rgba(92, 63, 20, 0.14);
+    box-shadow: inset 0 0 0 1px rgba(116, 67, 55, 0.26);
 }
 
 .regrade-submit-btn,
 .regrade-cancel-btn {
     appearance: none;
-    border-radius: 10px;
+    border-radius: 12px;
     height: 36px;
     padding: 0 14px;
     font-family: 'Montserrat', sans-serif;
@@ -1007,34 +1050,42 @@ polyline[points="6 9 12 15 18 9"] {
 
 .regrade-submit-btn {
     border: 1px solid rgba(116, 67, 55, 0.18);
-    background: #f3a181;
+    background: #efaa83;
     color: #432118;
 }
 
 .regrade-submit-btn:hover {
     transform: translateY(-1px);
-    background: #ed8d68;
+    background: #ea966c;
 }
 
 .regrade-submit-btn:active {
     transform: translateY(0);
-    background: #e17b51;
+    background: #dd8258;
 }
 
 .regrade-cancel-btn {
     border: 1px solid rgba(116, 67, 55, 0.16);
-    background: rgba(255, 255, 255, 0.62);
+    width: 36px;
+    min-width: 36px;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.84);
     color: #5e4830;
 }
 
 .regrade-cancel-btn:hover {
     transform: translateY(-1px);
-    background: rgba(255, 255, 255, 0.9);
+    background: #ffffff;
 }
 
 .regrade-cancel-btn:active {
     transform: translateY(0);
-    background: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.regrade-cancel-btn .icon-small {
+    margin-right: 0;
+    color: currentColor;
 }
 
 .regrade-submit-btn:focus-visible,
@@ -1051,11 +1102,13 @@ polyline[points="6 9 12 15 18 9"] {
 }
 
 .regrade-status {
-    flex: 0 0 auto;
-    min-width: 180px;
-    font-size: 0.78em;
-    color: #5e4830;
-    text-align: right;
+    min-height: 1em;
+    margin: 0;
+    padding-left: 10px;
+    font-size: 0.72em;
+    font-weight: 600;
+    color: #755b30;
+    text-align: left;
 }
 
 
@@ -2732,8 +2785,9 @@ mark {
         order: 5;
         margin: 0;
         width: 100%;
-        flex-direction: column;
-        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
     }
 
     .assignments-panel {
@@ -2744,14 +2798,24 @@ mark {
         min-width: 0;
     }
 
-    .regrade-banner {
+    .regrade-shell {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .regrade-shell.is-expanded {
         align-items: stretch;
-        padding: 12px 15px;
+        flex-wrap: wrap;
+    }
+
+    .regrade-banner,
+    .regrade-shell.is-expanded .regrade-banner {
+        width: 100%;
+        max-width: none;
     }
 
     .regrade-form {
-        flex-direction: column;
-        align-items: stretch;
+        flex-wrap: wrap;
     }
 
     .regrade-input {
@@ -2778,6 +2842,10 @@ mark {
     
     .top-bar {
         padding: 8px 10px;
+    }
+
+    .regrade-submit-btn {
+        padding: 0 12px;
     }
 }
 
